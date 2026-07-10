@@ -1,0 +1,22 @@
+---
+description: Always deploy site changes to Firebase Hosting after edits
+alwaysApply: true
+---
+
+# Firebase deploy on every change
+
+This project is live at **https://ether-data-insights-blog.web.app** (Firebase project: `ether-data-insights-blog`).
+
+After **any** code, content, or asset change in this repo:
+
+1. Run `npm run deploy` from the project root (builds static export + deploys hosting).
+2. Confirm deploy succeeded before finishing the task.
+3. Do **not** leave changes local-only unless deploy fails — fix and retry.
+
+Deploy command:
+
+```bash
+npm run deploy
+```
+
+Only skip deploy if the user explicitly says not to deploy for that specific change.
