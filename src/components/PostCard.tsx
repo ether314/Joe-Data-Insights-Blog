@@ -8,6 +8,8 @@ import { GdpPostThumbnail } from "./visualizations/GdpPostThumbnail";
 import { CcpNomenklaturaThumbnail } from "./visualizations/CcpNomenklaturaThumbnail";
 import { ChinaFiscalRevenueThumbnail } from "./visualizations/ChinaFiscalRevenueThumbnail";
 import { SubsidiesTariffsThumbnail } from "./visualizations/SubsidiesTariffsThumbnail";
+import { ElectricityGenerationMixThumbnail } from "./visualizations/ElectricityGenerationMixThumbnail";
+import { RefugeeHostingBurdenThumbnail } from "./visualizations/RefugeeHostingBurdenThumbnail";
 
 interface PostCardProps {
   post: Post;
@@ -61,6 +63,12 @@ function PostThumbnail({
   }
   if (post.visualization === "china-fiscal-revenue") {
     return <ChinaFiscalRevenueThumbnail />;
+  }
+  if (post.visualization === "electricity-generation-mix") {
+    return <ElectricityGenerationMixThumbnail />;
+  }
+  if (post.visualization === "refugee-hosting-burden") {
+    return <RefugeeHostingBurdenThumbnail />;
   }
   return (
     <PostImage

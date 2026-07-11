@@ -1,18 +1,12 @@
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  orderBy,
-  query,
-  where,
-} from "firebase/firestore";
 import { samplePosts } from "@/data/posts";
-import { getDb, isFirebaseConfigured } from "@/lib/firebase";
 import type { Category, Post } from "@/types/post";
 import { categorySlug } from "@/types/post";
 
-const COLLECTION = "posts";
+/**
+ * Static-export blog: posts always come from local `samplePosts`.
+ * Live Firestore is intentionally not used at build/export time (API may be
+ * disabled; static hosting must not depend on it).
+ */
 
 function sortByDate(posts: Post[]): Post[] {
   return [...posts].sort(
@@ -21,21 +15,7 @@ function sortByDate(posts: Post[]): Post[] {
   );
 }
 
-async function fetchFromFirestore(): Promise<Post[]> {
-  const db = getDb();
-  const q = query(collection(db, COLLECTION), orderBy("publishedAt", "desc"));
-  const snapshot = await getDocs(q);
-  return snapshot.docs.map((d) => ({ id: d.id, ...d.data() }) as Post);
-}
-
 export async function getAllPosts(): Promise<Post[]> {
-  if (isFirebaseConfigured()) {
-    try {
-      return await fetchFromFirestore();
-    } catch {
-      return sortByDate(samplePosts);
-    }
-  }
   return sortByDate(samplePosts);
 }
 
@@ -51,34 +31,10 @@ export async function getFeaturedPosts(limit = 3): Promise<Post[]> {
 }
 
 export async function getPostsByCategory(category: Category): Promise<Post[]> {
-  if (isFirebaseConfigured()) {
-    try {
-      const db = getDb();
-      const q = query(
-        collection(db, COLLECTION),
-        where("category", "==", category),
-        orderBy("publishedAt", "desc"),
-      );
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map((d) => ({ id: d.id, ...d.data() }) as Post);
-    } catch {
-      return sortByDate(
-        samplePosts.filter((p) => p.category === category),
-      );
-    }
-  }
   return sortByDate(samplePosts.filter((p) => p.category === category));
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | undefined> {
-  if (isFirebaseConfigured()) {
-    try {
-      const posts = await fetchFromFirestore();
-      return posts.find((p) => p.slug === slug);
-    } catch {
-      return samplePosts.find((p) => p.slug === slug);
-    }
-  }
   return samplePosts.find((p) => p.slug === slug);
 }
 

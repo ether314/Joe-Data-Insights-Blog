@@ -9,6 +9,37 @@ import path from "node:path";
 import { spawn } from "node:child_process";
 import { chromium } from "playwright";
 
+function killProcessTree(proc) {
+  if (!proc || proc.exitCode !== null) return;
+  if (process.platform === "win32") {
+    spawn("taskkill", ["/PID", String(proc.pid), "/T", "/F"], {
+      stdio: "ignore",
+      windowsHide: true,
+    });
+    return;
+  }
+  try {
+    proc.kill("SIGTERM");
+  } catch {
+    // already exited
+  }
+}
+
+async function stopServer(proc) {
+  if (!proc) return;
+  killProcessTree(proc);
+  proc.stdout?.destroy();
+  proc.stderr?.destroy();
+  await new Promise((resolve) => {
+    if (proc.exitCode !== null) {
+      resolve();
+      return;
+    }
+    proc.once("exit", resolve);
+    setTimeout(resolve, 3000);
+  });
+}
+
 const root = process.cwd();
 const live = process.argv.includes("--live");
 const baseUrl = live
@@ -46,6 +77,16 @@ const POSTS = [
     marker: "Politburo",
     forbidden: "Loading interactive charts",
   },
+  {
+    slug: "global-electricity-generation-mix-2024",
+    marker: "Generation mix by source",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "global-refugee-hosting-burden-2024",
+    marker: "Hosting burden by country",
+    forbidden: "Loading interactive charts",
+  },
 ];
 
 function startServer(port) {
@@ -53,7 +94,7 @@ function startServer(port) {
     const proc = spawn(
       process.platform === "win32" ? "npx.cmd" : "npx",
       ["--yes", "serve", "out", "-l", String(port)],
-      { cwd: root, stdio: "pipe", shell: true },
+      { cwd: root, stdio: "pipe", shell: true, windowsHide: true },
     );
     let ready = false;
     const timer = setTimeout(() => {
@@ -145,7 +186,7 @@ async function main() {
     }
   } finally {
     await browser.close();
-    server?.kill("SIGTERM");
+    await stopServer(server);
   }
 
   if (failed > 0) {

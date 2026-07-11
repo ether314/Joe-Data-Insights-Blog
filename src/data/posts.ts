@@ -300,4 +300,160 @@ All GDP figures are rebased to constant 2025 US dollars using the US CPI (World 
     featured: true,
     visualization: "gdp-analysis",
   },
+  {
+    id: "electricity-generation-mix",
+    slug: "global-electricity-generation-mix-2024",
+    title: "Mapped: How Every Major Economy Powers Its Grid in 2024",
+    excerpt:
+      "Coal still supplies a third of world electricity — but France runs on nuclear, Brazil on hydro, and the US on gas. Compare generation mix across 21 economies totaling 30.9 PWh.",
+    content: `## The global split
+
+In 2024 the world generated **30.9 PWh** of electricity. Fossil fuels still account for **59.1%** of that total — coal alone delivers **34.3%**, more than hydro, nuclear, solar, and wind combined. Yet the picture varies wildly by country: Norway and Sweden exceed **98% low-carbon** generation, while India and South Africa remain above **75% fossil**.
+
+The interactive chart above compares **21 major economies** plus the world aggregate. Filter by region, sort by total generation or coal share, and inspect source-by-source breakdowns for each grid.
+
+## Coal's last strongholds
+
+Coal remains the dominant fuel in **China (58%)**, **India (75%)**, **Indonesia (61%)**, **Poland (54%)**, and **South Africa (82%)**. China alone produced **10.1 PWh** in 2024 — roughly one-third of global output — and still relies on coal for nearly three-fifths of its mix despite record solar and wind installations.
+
+The US has moved faster: coal fell to **14.9%** of American generation in 2024, displaced by **42.5% gas** and rising wind and solar. The UK is effectively off coal (**0.8%**), leaning on **30% wind**, **30% gas**, and **14.5% nuclear**.
+
+## Gas, hydro, and nuclear anchors
+
+Natural gas is the backbone of several large grids:
+
+- **Mexico:** 60.8% gas — cheap US pipeline imports and peaker plants
+- **Russia:** 44.4% gas — domestic reserves feed both export and home demand
+- **Saudi Arabia:** 63.3% gas plus **34.5% oil** — almost entirely fossil
+- **United States:** 42.5% gas — the shale revolution reshaped the fuel mix this century
+
+Hydro defines **Brazil (55.7%)**, **Canada (55.3%)**, **Norway (88.7%)**, and **Vietnam (31.3%)**. Nuclear anchors **France (68%)** and **South Korea (30.3%)**, while Germany exited nuclear entirely in 2023 and replaced capacity with **28% wind** and **15% solar**.
+
+## Renewables acceleration
+
+Solar and wind are no longer niche. **Germany** gets **43%** of generation from wind and solar combined. **Australia** reaches **29.5%**. Even **China** — often framed as a coal story — generated more absolute wind and solar TWh than any other country in 2024 because of scale.
+
+Globally, solar reached **6.9%** and wind **8.1%** of generation. Add hydro and the low-carbon share crosses **40.9%** — a milestone, but still short of what IPCC pathways require for a 1.5°C-aligned power sector by mid-century.
+
+## Why the mix matters
+
+Electricity is the lever for decarbonizing transport, buildings, and industry. A grid dominated by coal — as in India or South Africa — means every new EV or heat pump inherits a carbon-intensive upstream fuel. Conversely, France and Sweden offer near-zero-carbon power for electrification.
+
+For investors and policymakers, generation mix signals:
+
+- **Energy security:** gas-importing Europe vs. resource-rich North America and Middle East
+- **Transition speed:** UK and Germany retiring coal; Asia-Pacific still building coal capacity
+- **AI and data centers:** hyperscale siting decisions increasingly hinge on available clean power and interconnection queues
+
+## What to watch in 2025–2026
+
+- **China's coal plateau:** whether absolute coal TWh peaks as renewable additions accelerate
+- **India's solar surge:** 280 GW target and rising share from 6.5% solar in 2024
+- **US IRA effects:** tax credits pushing solar/wind share above 25% nationally
+- **European gas displacement:** LNG dependence vs. offshore wind build-out in the North Sea
+- **Nuclear restarts:** Japan and South Korea extending reactor lifetimes; SMR pilots in the US
+
+## Methodology
+
+Country-level data from **Our World in Data** (Ember & Energy Institute energy mix dataset), year **2024**. Generation totals in terawatt-hours; source shares as percent of national generation. Renewables aggregate includes hydro, solar, wind, and biofuels per OWID definitions. Regions assigned for dashboard grouping. World total is the OWID global aggregate row, not a sum of listed countries.`,
+    category: "Economics",
+    imageUrl: "/images/economics-electricity-generation-mix-hero.png",
+    imageAlt:
+      "Stacked bar chart of 2024 electricity generation mix across 21 major economies — coal, gas, nuclear, hydro, solar, and wind shares on a dark navy data-viz background",
+    publishedAt: "2026-07-10T22:00:00Z",
+    featured: true,
+    visualization: "electricity-generation-mix",
+    layout: "canvas",
+  },
+  {
+    id: "refugee-hosting-burden",
+    slug: "global-refugee-hosting-burden-2024",
+    title: "Mapped: Who Actually Hosts the World's Refugees — Not Where Headlines Point",
+    excerpt:
+      "73% of refugees live in low- and middle-income countries — Iran, Türkiye, Colombia, and Uganda outrank the US. Lebanon hosts 1 in 8 residents; Germany is the only top host with no border crisis next door.",
+    content: `## The narrative gap
+
+Most Western audiences assume refugees cluster in wealthy destination countries — Germany, the United States, or EU border states. UNHCR's **Global Trends 2024** report tells a different story: at end-2024, **73%** of refugees and other people in need of international protection lived in **low- and middle-income countries**, and **67%** stayed in countries **neighbouring** their homeland.
+
+The interactive chart above compares **25 major host countries** on absolute numbers and per-capita burden. Filter by income level or region, sort by total hosted or share of population, and inspect origin-country context for each row.
+
+## The real top hosts
+
+The five largest hosts at end-2024 were not EU members or the United States:
+
+1. **Iran — 3.5 million** — overwhelmingly Afghans across a long shared border
+2. **Türkiye — 2.9 million** — mostly Syrians, down 22% since 2021 but still the largest Syrian-hosting state
+3. **Colombia — 2.8 million** — Venezuelans granted temporary protection, not classical asylum cases
+4. **Germany — 2.7 million** — the only top-five host without a bordering displacement crisis; Ukrainians, Syrians, and Afghans
+5. **Uganda — 1.8 million** — South Sudanese and Congolese refugees in rural settlements
+
+**Pakistan** (1.6M), **Chad** (1.1M), **Peru** (1.1M), and **Bangladesh** (1.1M Rohingya) round out the next tier — none are G7 economies.
+
+## Per-capita: where the burden actually bites
+
+Absolute headcount understates strain. Relative to national population:
+
+- **Lebanon — 1 in 8** residents is a refugee or person in need of international protection (755,400 registered Syrians plus other nationalities; government estimates are higher)
+- **Chad — 1 in 16** — absorbing Sudan's war across a desert border
+- **Jordan — 1 in 18** — 611,500 Syrian refugees on top of 2.4 million Palestine refugees under UNRWA
+- **Uganda — 1 in 27** — one of the world's most generous refugee policies, on a low-income budget
+
+The **United States** hosted roughly **435,000** refugees under UNHCR mandate at end-2024 — about **1 in 790** residents. **Australia** hosted **29,500** — roughly **1 in 900**.
+
+## Income level mismatch
+
+High-income countries account for roughly **64% of global GDP** but hosted only **27%** of refugees and other people in need of international protection at end-2024. The split by World Bank income group:
+
+- **Upper-middle income — 37%** (Türkiye, Colombia, Iran reclassified in 2024, Peru)
+- **Low income — 19%** (Uganda, Chad, Ethiopia)
+- **High income — 27%** (Germany, Poland, Chile)
+- **Lower-middle income — 17%** (Pakistan, Bangladesh, Egypt)
+
+**Least Developed Countries** — 44 states with 1.4% of global GDP — hosted **23%** of the world's refugees. That is a tenfold overrepresentation relative to economic weight.
+
+## Regional patterns
+
+- **Latin America** absorbed the Venezuelan exodus: Colombia, Peru, Brazil, Chile, and Ecuador together host millions under temporary-protection frameworks
+- **East Africa and the Sahel** carry South Sudanese, Sudanese, and Somali displacement — often in camps with minimal international funding
+- **Europe's role** is real but narrower than perceived: Germany and Poland host large Ukrainian populations, but EU-wide totals are still below Iran or Türkiye alone
+- **Neighbouring-country hosting** persists: 67% of refugees remain next to their country of origin, consistent with a decade of UNHCR reporting
+
+## What changed in 2024
+
+Several forces reshaped the map:
+
+- **Sudan's war** pushed Sudanese refugee totals above **2.1 million**; Chad (+20%) and South Sudan (+36%) absorbed the surge
+- **Afghan returns** from Iran (-7%) and Pakistan (-22%) lowered Afghan-hosting totals amid deportation policies
+- **Venezuelan flows** stabilised in Colombia and Peru but remain the largest displacement crisis in the Americas
+- **Syrian returns** accelerated after the fall of the Assad government in December 2024, especially from Lebanon
+- **Ukrainian refugees** in Germany (+10%) and Poland (+4%) kept both in the global top ten
+
+## What to watch in 2025
+
+- **Iran–Afghanistan returns** after Tehran ended headcount-slip extensions in March 2025
+- **Pakistan's repatriation plan** for undocumented Afghans and its effect on Peshawar/Quetta hosting corridors
+- **Lebanon–Syria border dynamics** as spontaneous returns interact with new displacement from Israeli airstrikes
+- **Sudan spillover** into Chad, Egypt, and South Sudan as the world's largest displacement crisis grinds on
+- **EU burden-sharing debates** versus the statistical reality that most refugees never reach Europe
+
+## Methodology
+
+**Primary stock figures** (16 countries) from **UNHCR Global Trends Report 2024** (published June 2025), covering refugees, people in a refugee-like situation, and other people in need of international protection at **31 December 2024**. This is UNHCR's headline hosting metric — broader than "refugees under mandate" alone, and necessary to capture Venezuelans in Colombia and Afghans in Iran/Pakistan.
+
+**Supplementary comparison rows** (9 countries) use **Our World in Data** extracts of UNHCR Refugee Population Statistics — refugees under mandate only, end-2024 — for high-income states where Global Trends does not publish standalone totals in the main country table. These rows are flagged in the dataset as \`refugees_mandate_only\` and should not be summed with OPNIIP rows without deduplication.
+
+**Population denominators** from Our World in Data (UN World Population Prospects), year **2023** (latest in source extract). Per-capita ratios are illustrative hosting burden, not UNHCR official "1 in N" figures (which use slightly different population bases and inclusion rules for Lebanon/Jordan).
+
+**Income classifications** follow World Bank FY2024–2025 country income groups as cited in UNHCR Table 2. Iran's reclassification to upper-middle income in 2024 shifted regional shares materially.
+
+**Regional groupings** are editorial assignments for dashboard filters, not UNHCR geographic regions. Palestine refugees under UNRWA mandate (5.9M) are excluded from country hosting totals in this dataset; Jordan and Lebanon per-capita figures in UNHCR's public materials include UNRWA populations separately.`,
+    category: "Politics",
+    imageUrl: "/images/politics-refugee-hosting-burden-hero.png",
+    imageAlt:
+      "Bar chart of global refugee hosting burden by country — Iran, Türkiye, and Colombia outrank the United States; Lebanon and Jordan show highest per-capita strain",
+    publishedAt: "2026-07-10T23:00:00Z",
+    featured: true,
+    visualization: "refugee-hosting-burden",
+    layout: "canvas",
+  },
 ];

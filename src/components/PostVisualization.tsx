@@ -92,11 +92,41 @@ const ChinaFiscalRevenueDashboard = dynamic(
   },
 );
 
+const ElectricityGenerationMixDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/ElectricityGenerationMixDashboard").then(
+      (m) => m.ElectricityGenerationMixDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const RefugeeHostingBurdenDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/RefugeeHostingBurdenDashboard").then(
+      (m) => m.RefugeeHostingBurdenDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
 }: {
-  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue";
+  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden";
   embedded?: boolean;
 }) {
   if (type === "gdp-analysis") {
@@ -116,6 +146,12 @@ export function PostVisualization({
   }
   if (type === "china-fiscal-revenue") {
     return <ChinaFiscalRevenueDashboard embedded={embedded} />;
+  }
+  if (type === "electricity-generation-mix") {
+    return <ElectricityGenerationMixDashboard />;
+  }
+  if (type === "refugee-hosting-burden") {
+    return <RefugeeHostingBurdenDashboard />;
   }
   return null;
 }
