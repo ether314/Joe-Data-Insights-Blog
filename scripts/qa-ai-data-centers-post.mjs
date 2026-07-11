@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import { spawn } from "node:child_process";
 import { chromium } from "playwright";
+import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
 
 const root = process.cwd();
 const slug = "global-ai-data-center-build-tracker";
@@ -33,39 +33,8 @@ function fmtBeforeDisplayInBundle() {
   return false;
 }
 
-function startServer(port) {
-  return new Promise((resolve, reject) => {
-    const proc = spawn(
-      process.platform === "win32" ? "npx.cmd" : "npx",
-      ["--yes", "serve", "out", "-l", String(port)],
-      { cwd: root, stdio: "pipe", shell: true },
-    );
-    let ready = false;
-    const timer = setTimeout(() => {
-      if (!ready) reject(new Error("Static server did not start in time"));
-    }, 15000);
-    proc.stdout.on("data", (buf) => {
-      const text = buf.toString();
-      if (text.includes("Accepting") || text.includes("http://")) {
-        ready = true;
-        clearTimeout(timer);
-        resolve(proc);
-      }
-    });
-    proc.stderr.on("data", (buf) => {
-      const text = buf.toString();
-      if (text.includes("Accepting") || text.includes("http://")) {
-        ready = true;
-        clearTimeout(timer);
-        resolve(proc);
-      }
-    });
-    proc.on("error", reject);
-  });
-}
-
 async function browserSmoke(port) {
-  const url = `http://127.0.0.1:${port}/blog/${slug}`;
+  const url = `http://127.0.0.1:${port}/blog/${slug}.html`;
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   const consoleErrors = [];
@@ -112,7 +81,7 @@ if (failed > 0) {
 const port = 4173;
 let server;
 try {
-  server = await startServer(port);
+  server = await startStaticServer(path.join(root, "out"), port);
   const { consoleErrors, pageErrors, stuckLoading } = await browserSmoke(port);
 
   if (stuckLoading) {
@@ -138,7 +107,7 @@ try {
     console.log("✓ No console errors");
   }
 } finally {
-  server?.kill("SIGTERM");
+  await stopStaticServer(server);
 }
 
 if (failed > 0) process.exit(1);

@@ -1,44 +1,13 @@
 /**
  * Post-build smoke test: every visualization post must render (not stuck on loading).
  * Usage:
- *   node scripts/smoke-test-viz-posts.mjs           # test local `out/` via serve
+ *   node scripts/smoke-test-viz-posts.mjs           # test local `out/` via in-process static server
  *   node scripts/smoke-test-viz-posts.mjs --live    # test production after deploy
  */
 import fs from "node:fs";
 import path from "node:path";
-import { spawn } from "node:child_process";
 import { chromium } from "playwright";
-
-function killProcessTree(proc) {
-  if (!proc || proc.exitCode !== null) return;
-  if (process.platform === "win32") {
-    spawn("taskkill", ["/PID", String(proc.pid), "/T", "/F"], {
-      stdio: "ignore",
-      windowsHide: true,
-    });
-    return;
-  }
-  try {
-    proc.kill("SIGTERM");
-  } catch {
-    // already exited
-  }
-}
-
-async function stopServer(proc) {
-  if (!proc) return;
-  killProcessTree(proc);
-  proc.stdout?.destroy();
-  proc.stderr?.destroy();
-  await new Promise((resolve) => {
-    if (proc.exitCode !== null) {
-      resolve();
-      return;
-    }
-    proc.once("exit", resolve);
-    setTimeout(resolve, 3000);
-  });
-}
+import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
 
 const root = process.cwd();
 const live = process.argv.includes("--live");
@@ -89,31 +58,6 @@ const POSTS = [
   },
 ];
 
-function startServer(port) {
-  return new Promise((resolve, reject) => {
-    const proc = spawn(
-      process.platform === "win32" ? "npx.cmd" : "npx",
-      ["--yes", "serve", "out", "-l", String(port)],
-      { cwd: root, stdio: "pipe", shell: true, windowsHide: true },
-    );
-    let ready = false;
-    const timer = setTimeout(() => {
-      if (!ready) reject(new Error("Static server did not start in time"));
-    }, 20000);
-    const onData = (buf) => {
-      const text = buf.toString();
-      if (text.includes("Accepting") || text.includes("http://")) {
-        ready = true;
-        clearTimeout(timer);
-        resolve(proc);
-      }
-    };
-    proc.stdout.on("data", onData);
-    proc.stderr.on("data", onData);
-    proc.on("error", reject);
-  });
-}
-
 async function smokePost(page, { slug, marker, forbidden }) {
   const path = live ? `/blog/${slug}` : `/blog/${slug}.html`;
   const url = `${baseUrl}${path}`;
@@ -155,7 +99,7 @@ async function main() {
   let server;
   if (!live) {
     const port = Number(process.env.SMOKE_PORT || 4173);
-    server = await startServer(port);
+    server = await startStaticServer(path.join(root, "out"), port);
   }
 
   const browser = await chromium.launch({ headless: true });
@@ -186,7 +130,7 @@ async function main() {
     }
   } finally {
     await browser.close();
-    await stopServer(server);
+    await stopStaticServer(server);
   }
 
   if (failed > 0) {

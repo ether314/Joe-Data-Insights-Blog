@@ -1,38 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import { spawn } from "node:child_process";
 import { chromium } from "playwright";
-
-function killProcessTree(proc) {
-  if (!proc || proc.exitCode !== null) return;
-  if (process.platform === "win32") {
-    spawn("taskkill", ["/PID", String(proc.pid), "/T", "/F"], {
-      stdio: "ignore",
-      windowsHide: true,
-    });
-    return;
-  }
-  try {
-    proc.kill("SIGTERM");
-  } catch {
-    // already exited
-  }
-}
-
-async function stopServer(proc) {
-  if (!proc) return;
-  killProcessTree(proc);
-  proc.stdout?.destroy();
-  proc.stderr?.destroy();
-  await new Promise((resolve) => {
-    if (proc.exitCode !== null) {
-      resolve();
-      return;
-    }
-    proc.once("exit", resolve);
-    setTimeout(resolve, 3000);
-  });
-}
+import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
 
 const root = process.cwd();
 const slug = "global-electricity-generation-mix-2024";
@@ -54,37 +23,6 @@ function findInChunks(needle) {
     if (fs.readFileSync(path.join(chunksDir, file), "utf8").includes(needle)) return true;
   }
   return false;
-}
-
-function startServer(port) {
-  return new Promise((resolve, reject) => {
-    const proc = spawn(
-      process.platform === "win32" ? "npx.cmd" : "npx",
-      ["--yes", "serve", "out", "-l", String(port)],
-      { cwd: root, stdio: "pipe", shell: true, windowsHide: true },
-    );
-    let ready = false;
-    const timer = setTimeout(() => {
-      if (!ready) reject(new Error("Static server did not start in time"));
-    }, 15000);
-    proc.stdout.on("data", (buf) => {
-      const text = buf.toString();
-      if (text.includes("Accepting") || text.includes("http://")) {
-        ready = true;
-        clearTimeout(timer);
-        resolve(proc);
-      }
-    });
-    proc.stderr.on("data", (buf) => {
-      const text = buf.toString();
-      if (text.includes("Accepting") || text.includes("http://")) {
-        ready = true;
-        clearTimeout(timer);
-        resolve(proc);
-      }
-    });
-    proc.on("error", reject);
-  });
 }
 
 async function browserSmoke(port) {
@@ -145,7 +83,7 @@ if (failed > 0) {
 const port = 4173;
 let server;
 try {
-  server = await startServer(port);
+  server = await startStaticServer(path.join(root, "out"), port);
   const { consoleErrors, pageErrors, stuckLoading } = await browserSmoke(port);
 
   if (stuckLoading) {
@@ -171,7 +109,7 @@ try {
     console.log("✓ No console errors");
   }
 } finally {
-  await stopServer(server);
+  await stopStaticServer(server);
 }
 
 if (failed > 0) process.exit(1);
