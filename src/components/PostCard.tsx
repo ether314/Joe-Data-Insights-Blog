@@ -10,6 +10,7 @@ import { ChinaFiscalRevenueThumbnail } from "./visualizations/ChinaFiscalRevenue
 import { SubsidiesTariffsThumbnail } from "./visualizations/SubsidiesTariffsThumbnail";
 import { ElectricityGenerationMixThumbnail } from "./visualizations/ElectricityGenerationMixThumbnail";
 import { RefugeeHostingBurdenThumbnail } from "./visualizations/RefugeeHostingBurdenThumbnail";
+import { LastMileDeliveryRoboticsThumbnail } from "./visualizations/LastMileDeliveryRoboticsThumbnail";
 
 interface PostCardProps {
   post: Post;
@@ -69,6 +70,9 @@ function PostThumbnail({
   }
   if (post.visualization === "refugee-hosting-burden") {
     return <RefugeeHostingBurdenThumbnail />;
+  }
+  if (post.visualization === "last-mile-delivery-robotics") {
+    return <LastMileDeliveryRoboticsThumbnail />;
   }
   return (
     <PostImage

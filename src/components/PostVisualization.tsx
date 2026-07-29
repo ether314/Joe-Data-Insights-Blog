@@ -122,11 +122,26 @@ const RefugeeHostingBurdenDashboard = dynamic(
   },
 );
 
+const LastMileDeliveryRoboticsDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/LastMileDeliveryRoboticsDashboard").then(
+      (m) => m.LastMileDeliveryRoboticsDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
 }: {
-  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden";
+  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "last-mile-delivery-robotics";
   embedded?: boolean;
 }) {
   if (type === "gdp-analysis") {
@@ -152,6 +167,9 @@ export function PostVisualization({
   }
   if (type === "refugee-hosting-burden") {
     return <RefugeeHostingBurdenDashboard />;
+  }
+  if (type === "last-mile-delivery-robotics") {
+    return <LastMileDeliveryRoboticsDashboard />;
   }
   return null;
 }

@@ -56,6 +56,11 @@ const POSTS = [
     marker: "Hosting burden by country",
     forbidden: "Loading interactive charts",
   },
+  {
+    slug: "global-last-mile-delivery-robotics-2026",
+    marker: "Fleet size by company",
+    forbidden: "Loading interactive charts",
+  },
 ];
 
 async function smokePost(page, { slug, marker, forbidden }) {
