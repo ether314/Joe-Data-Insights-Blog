@@ -21,3 +21,15 @@ When creating or updating a blog post, **always generate a beautiful hero/thumbn
 5. Style: Visual Capitalist–inspired — dark navy palette, cinematic data-viz aesthetic, bold and readable at card thumbnail size, no clutter or illegible micro-text.
 
 `PostCard` uses PNG/JPG/WebP heroes directly on listing cards; SVG-only posts fall back to chart thumbnails instead of a custom image.
+
+## Cron blog-post generation lock
+
+The **Blog post generation** automation (every 15 minutes) must not overlap. Follow this sequence on every run:
+
+1. **Read lock** — `npm run blog:lock:status` (or `node scripts/blog-post-generation.mjs status`)
+2. **Skip if active** — exit successfully when `artifacts/blog-post-generation.lock.json` exists, `status` is `active`, and `expiresAt` is in the future
+3. **Acquire lock** — `npm run blog:lock:acquire` before any generation work; this commits and pushes the lock file
+4. **Continue making blog posts** — create/update posts, heroes, data files, QA, then `npm run deploy`
+5. **Release lock on stop** — `npm run blog:lock:release` when finished or interrupted; always release even on failure
+
+Lock file: `artifacts/blog-post-generation.lock.json`. Stale locks auto-expire after 2 hours (`BLOG_GEN_LOCK_TTL_MS` overrides TTL). Cloud Agent runs should set `CURSOR_AGENT_BC_ID` when available so overlapping runs are identifiable in the lock record.

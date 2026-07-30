@@ -11,6 +11,9 @@
     "deploy": "npm run build && npx tsx scripts/test-all-costs.ts && node scripts/smoke-test-viz-posts.mjs && npx firebase-tools@latest deploy --only hosting && node scripts/smoke-test-viz-posts.mjs --live",
     "smoke": "node scripts/smoke-test-viz-posts.mjs",
     "smoke:live": "node scripts/smoke-test-viz-posts.mjs --live",
+    "blog:lock:status": "node scripts/blog-post-generation.mjs status",
+    "blog:lock:acquire": "node scripts/blog-post-generation.mjs acquire",
+    "blog:lock:release": "node scripts/blog-post-generation.mjs release",
     "qa:gdp": "npm run build && node scripts/qa-gdp-post.mjs",
     "qa:ai-data-centers": "npm run build && node scripts/qa-ai-data-centers-post.mjs",
     "postinstall": "npx playwright install chromium || true"
