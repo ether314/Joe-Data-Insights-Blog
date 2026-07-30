@@ -1,0 +1,34 @@
+{
+  "handoffId": "canary-backend-comms-001",
+  "status": "done",
+  "summary": "Backend contract ping passed: ai-token-consumption-data.ts exports TOKEN_MONTHLY and GLOBAL_SUMMARY; node --check exited 0. No build or install executed.",
+  "artifacts": [
+    {
+      "kind": "path",
+      "value": "src/data/ai-token-consumption-data.ts",
+      "label": "exports TOKEN_MONTHLY, GLOBAL_SUMMARY"
+    },
+    {
+      "kind": "log_ref",
+      "value": "node --check src/data/ai-token-consumption-data.ts → exit 0",
+      "label": "validation command"
+    },
+    {
+      "kind": "note",
+      "value": "TOKEN_MONTHLY: 352 monthly records (8 brands × 44 months); GLOBAL_SUMMARY.monthEnd: 2026-06; totalTokensTrillionsJun2026: 3786.7",
+      "label": "contract snapshot"
+    }
+  ],
+  "followUpHandoffs": [
+    {
+      "toRole": "pm",
+      "objective": "Unblock canary-frontend-comms-002 — backend wave 1 complete",
+      "contextSummary": "Persisted SpecialistResult at artifacts/canary-backend-comms-001.json. Contract probe src/data/ai-token-consumption-data.ts verified; TOKEN_MONTHLY and GLOBAL_SUMMARY exported; node --check exit 0.",
+      "acceptanceCriteria": [
+        "Route frontend canary-frontend-comms-002 to import TOKEN_MONTHLY and GLOBAL_SUMMARY",
+        "Downstream waves must forbid npm run build and npm install"
+      ]
+    }
+  ],
+  "validatedAt": "2026-07-10T21:35:00-04:00"
+}

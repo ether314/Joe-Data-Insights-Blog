@@ -19,11 +19,15 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: {
-    default: "Data Insights | Visual Analytics Platform",
-    template: "%s | Data Insights",
+    default: "Theta Scribe | Research & Visual Analytics",
+    template: "%s | Theta Scribe",
   },
   description:
     "Data-driven visual stories exploring economics, technology, demographics, and the forces shaping our world.",
+  icons: {
+    icon: [{ url: "/images/theta-scribe-icon.png", sizes: "512x512", type: "image/png" }],
+    apple: "/images/theta-scribe-icon.png",
+  },
 };
 
 export default function RootLayout({

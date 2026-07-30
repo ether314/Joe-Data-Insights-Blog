@@ -1,0 +1,40 @@
+{
+  "handoffId": "backend-blog-table-audit",
+  "status": "done",
+  "summary": "Scanned src/data/posts.ts (10 posts) for GFM markdown table separator lines; exactly 2 slugs affected with 2 table blocks total. Inventory written to artifacts/blog-table-audit.json; node --check src/data/posts.ts exit 0.",
+  "artifacts": [
+    {
+      "kind": "path",
+      "value": "artifacts/blog-table-audit.json",
+      "label": "GFM table inventory (2 hits, 2 slugs)"
+    },
+    {
+      "kind": "path",
+      "value": "scripts/audit-blog-tables.mjs",
+      "label": "reproducible audit scanner"
+    },
+    {
+      "kind": "log_ref",
+      "value": "node --check src/data/posts.ts → exit 0",
+      "label": "syntax validation"
+    },
+    {
+      "kind": "note",
+      "value": "affectedSlugs: ai-gpu-packaging-memory-bottleneck-2025 (3 rows, CoWoS section), deflationary-growth-economies-2025 (5 rows, Who made the list? section)",
+      "label": "audit summary"
+    }
+  ],
+  "followUpHandoffs": [
+    {
+      "toRole": "pm",
+      "objective": "Route frontend wave — add GFM table parsing to renderPostContent",
+      "contextSummary": "Backend audit complete. Only ai-gpu-packaging-memory-bottleneck-2025 and deflationary-growth-economies-2025 contain GFM tables in posts.ts prose. Raw |---| separators currently render as paragraph text.",
+      "acceptanceCriteria": [
+        "Frontend implements table block parsing in src/lib/markdown.tsx",
+        "Both affected slugs render semantic <table> elements with prose styles",
+        "QA verifies rendered tables on both post pages"
+      ]
+    }
+  ],
+  "validatedAt": "2026-07-11T00:56:00-04:00"
+}

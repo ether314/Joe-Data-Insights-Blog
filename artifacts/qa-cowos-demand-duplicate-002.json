@@ -1,0 +1,96 @@
+{
+  "handoffId": "qa-cowos-demand-duplicate-002",
+  "status": "done",
+  "wave": "3-REGRESSION_GATE_COWOS_DEMAND_CHART",
+  "validatedAt": "2026-07-11T05:30:35.272Z",
+  "pass": true,
+  "summary": "Post-fix regression gate PASS: CoWoS wafer demand vs capacity gap LineChart renders exactly 3 dots (one per 2024/2025/2026); demandTrend filter narrowed to cowos-demand-* ids; build, QA script, and smoke all green.",
+  "upstreamArtifacts": [
+    "artifacts/qa-cowos-demand-duplicate-001.json"
+  ],
+  "chartTitle": "CoWoS wafer demand vs capacity gap",
+  "demandGapChartObservations": {
+    "dotCount": 3,
+    "cxValues": [
+      60,
+      285.5,
+      511
+    ],
+    "uniqueCxCount": 3,
+    "svgText": [
+      "2024",
+      "2025",
+      "2026",
+      "0K",
+      "250K",
+      "500K",
+      "750K",
+      "1000K"
+    ],
+    "yearCounts": {
+      "2024": 1,
+      "2025": 1,
+      "2026": 1
+    },
+    "duplicate2026": false,
+    "uniqueYearsOk": true,
+    "dotCountOk": true,
+    "uniqueCxOk": true,
+    "pass": true
+  },
+  "screenshot": "artifacts/qa-cowos-demand-duplicate-002.png",
+  "testCommandsRun": [
+    {
+      "label": "typecheck",
+      "cmd": "npx tsc --noEmit",
+      "exitCode": 0
+    },
+    {
+      "label": "build",
+      "cmd": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "label": "entry-script dry-run",
+      "cmd": "node scripts/qa-ai-packaging-bottleneck-post.mjs --emit-artifact",
+      "exitCode": 0
+    },
+    {
+      "label": "smoke",
+      "cmd": "npm run smoke",
+      "exitCode": 0
+    }
+  ],
+  "acceptanceCriteria": {
+    "ac1_buildAndQaScript": {
+      "pass": true
+    },
+    "ac2_uniqueYearsPerDemandGapChart": {
+      "pass": true,
+      "yearCounts": {
+        "2024": 1,
+        "2025": 1,
+        "2026": 1
+      }
+    },
+    "ac3_smokeCowosMarker": {
+      "pass": true
+    },
+    "ac4_emitArtifact": {
+      "pass": true,
+      "path": "artifacts/qa-cowos-demand-duplicate-002.json"
+    }
+  },
+  "followUpHandoffs": [
+    {
+      "toRole": "devops",
+      "objective": "Deploy frontend CoWoS demand chart fix to production hosting",
+      "contextSummary": "QA regression gate qa-cowos-demand-duplicate-002 PASS on local build. Live still serves old bundle per qa-cowos-demand-duplicate-001.",
+      "acceptanceCriteria": [
+        "npm run deploy or equivalent firebase hosting deploy",
+        "Post-deploy smoke: node scripts/smoke-test-viz-posts.mjs --live exit 0",
+        "Post-deploy repro: node scripts/qa-cowos-demand-duplicate-repro.mjs --live shows dotCount=3, duplicate2026=false"
+      ]
+    }
+  ]
+}

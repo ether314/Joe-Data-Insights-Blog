@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: category,
-    description: `Visual analytics and data stories in ${category}.`,
+    description: `Theta Scribe — research and data stories in ${category}.`,
   };
 }
 

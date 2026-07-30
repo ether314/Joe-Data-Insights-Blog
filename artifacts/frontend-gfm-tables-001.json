@@ -1,0 +1,35 @@
+{
+  "status": "done",
+  "generatedAt": "2026-07-11T05:00:00.000Z",
+  "role": "frontend",
+  "objective": "Add GFM markdown table block parsing to renderPostContent and prose table styles",
+  "summary": "Extended renderPostContent to detect GFM pipe-delimited table blocks (header + separator + body rows), parse into semantic table/thead/tbody markup with renderInlineMarkdown in cells. Added .prose-content table styles in globals.css. Build and lint pass; static export confirms <table> in both affected slugs with no raw |---| separators.",
+  "changedPaths": [
+    "src/lib/markdown.tsx",
+    "src/app/globals.css"
+  ],
+  "affectedSlugs": [
+    "ai-gpu-packaging-memory-bottleneck-2025",
+    "deflationary-growth-economies-2025"
+  ],
+  "acceptanceCriteria": {
+    "semanticTableMarkup": true,
+    "renderInlineMarkdownInCells": true,
+    "existingBlockRenderingUnchanged": true,
+    "proseContentTableStyles": true,
+    "npmRunBuildExit0": true,
+    "npmRunLintExit0": true
+  },
+  "verification": {
+    "buildCommand": "npm run build",
+    "buildExitCode": 0,
+    "lintCommand": "npm run lint",
+    "lintExitCode": 0,
+    "staticExportTableTags": [
+      "out/blog/ai-gpu-packaging-memory-bottleneck-2025.html",
+      "out/blog/deflationary-growth-economies-2025.html"
+    ],
+    "rawSeparatorLinesInExport": false
+  },
+  "inventoryRef": "artifacts/blog-table-audit.json"
+}

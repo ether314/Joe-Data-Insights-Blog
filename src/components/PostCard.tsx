@@ -10,7 +10,11 @@ import { ChinaFiscalRevenueThumbnail } from "./visualizations/ChinaFiscalRevenue
 import { SubsidiesTariffsThumbnail } from "./visualizations/SubsidiesTariffsThumbnail";
 import { ElectricityGenerationMixThumbnail } from "./visualizations/ElectricityGenerationMixThumbnail";
 import { RefugeeHostingBurdenThumbnail } from "./visualizations/RefugeeHostingBurdenThumbnail";
+import { AiPackagingBottleneckThumbnail } from "./visualizations/AiPackagingBottleneckThumbnail";
+import { AiTokenConsumptionThumbnail } from "./visualizations/AiTokenConsumptionThumbnail";
+import { DeflationaryGrowth2025Thumbnail } from "./visualizations/DeflationaryGrowth2025Thumbnail";
 import { LastMileDeliveryRoboticsThumbnail } from "./visualizations/LastMileDeliveryRoboticsThumbnail";
+import { GoldmanSachsAiCapexThumbnail } from "./visualizations/GoldmanSachsAiCapexThumbnail";
 
 interface PostCardProps {
   post: Post;
@@ -71,8 +75,20 @@ function PostThumbnail({
   if (post.visualization === "refugee-hosting-burden") {
     return <RefugeeHostingBurdenThumbnail />;
   }
+  if (post.visualization === "ai-packaging-bottleneck") {
+    return <AiPackagingBottleneckThumbnail />;
+  }
+  if (post.visualization === "ai-token-consumption") {
+    return <AiTokenConsumptionThumbnail />;
+  }
+  if (post.visualization === "deflationary-growth-2025") {
+    return <DeflationaryGrowth2025Thumbnail />;
+  }
   if (post.visualization === "last-mile-delivery-robotics") {
     return <LastMileDeliveryRoboticsThumbnail />;
+  }
+  if (post.visualization === "goldman-sachs-ai-capex") {
+    return <GoldmanSachsAiCapexThumbnail />;
   }
   return (
     <PostImage

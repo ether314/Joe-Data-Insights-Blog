@@ -57,8 +57,28 @@ const POSTS = [
     forbidden: "Loading interactive charts",
   },
   {
+    slug: "ai-gpu-packaging-memory-bottleneck-2025",
+    marker: "CoWoS packaging",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "major-ai-brands-token-consumption-2022-2026",
+    marker: "June 2026 provider comparison",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "deflationary-growth-economies-2025",
+    marker: "GDP growth vs CPI deflation",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "global-last-mile-delivery-robotics-2026",
     marker: "Fleet size by company",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "goldman-sachs-ai-capex-chips-data-centers-2027-2028",
+    marker: "Baseline AI capex by layer",
     forbidden: "Loading interactive charts",
   },
 ];

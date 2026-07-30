@@ -57,6 +57,18 @@ html {
   color: #0f172a;
 }
 
+.prose-content a {
+  font-weight: 600;
+  color: #0e7490;
+  text-decoration: underline;
+  text-decoration-color: rgb(14 116 144 / 0.4);
+  text-underline-offset: 2px;
+}
+
+.prose-content a:hover {
+  color: #155e75;
+}
+
 .prose-content ul {
   list-style: disc;
   padding-left: 1.5rem;
@@ -64,10 +76,50 @@ html {
   color: #475569;
 }
 
+.prose-content ol {
+  list-style: none;
+  counter-reset: prose-ol;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  color: #475569;
+}
+
 .prose-content li {
   margin-bottom: 0.625rem;
   line-height: 1.8;
   padding-left: 0.25rem;
+}
+
+.prose-content ol li {
+  position: relative;
+  padding: 0.875rem 1rem 0.875rem 3.25rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  line-height: 1.65;
+}
+
+.prose-content ol li:last-child {
+  margin-bottom: 0;
+}
+
+.prose-content ol li::before {
+  content: counter(prose-ol);
+  counter-increment: prose-ol;
+  position: absolute;
+  left: 1rem;
+  top: 0.95rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+  color: #0e7490;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  text-align: center;
 }
 
 .prose-content li::marker {

@@ -1,0 +1,120 @@
+{
+  "handoffId": "qa-cowos-demand-duplicate-001",
+  "status": "done",
+  "wave": "3-REPRODUCE_COWOS_2026_DUPLICATE",
+  "validatedAt": "2026-07-11T05:17:00.000Z",
+  "summary": "Bug reproduced on live: CoWoS wafer demand vs capacity gap LineChart renders 4 data points (two at year 2026) because deployed bundle uses metric.includes('CoWoS wafer demand'), pulling cowos-demand-2026 (~1000K) and google-cowos-2026 (~240K). Local build with frontend fix (id.startsWith('cowos-demand-')) renders 3 points with one 2026 tick.",
+  "liveUrl": "https://ether-data-insights-blog.web.app/blog/ai-gpu-packaging-memory-bottleneck-2025",
+  "chartTitle": "CoWoS wafer demand vs capacity gap",
+  "reproductionSteps": [
+    "Open https://ether-data-insights-blog.web.app/blog/ai-gpu-packaging-memory-bottleneck-2025",
+    "Wait for interactive dashboard to load (CoWoS packaging section visible)",
+    "Locate chart titled 'CoWoS wafer demand vs capacity gap'",
+    "Observe LineChart: 4 dots on the demand line (2024, 2025, and two stacked at 2026 x-position)",
+    "Optional: hover 2026 region — tooltips show ~1000K wafers/yr (Global forecast) and ~240K wafers/yr (Google target)"
+  ],
+  "liveObservations": {
+    "lineChartDotCount": 4,
+    "expectedDotCountAfterFix": 3,
+    "duplicate2026Confirmed": true,
+    "deployedBundleChunk": "https://ether-data-insights-blog.web.app/_next/static/chunks/3wc8t8dcs4415.js",
+    "deployedFilter": "metric.includes(\"CoWoS wafer demand\")",
+    "points2026": [
+      {
+        "recordId": "cowos-demand-2026",
+        "entity": "Global",
+        "metric": "CoWoS wafer demand forecast",
+        "valueRaw": 1000000,
+        "valueDisplayed": "1000K wafers/yr"
+      },
+      {
+        "recordId": "google-cowos-2026",
+        "entity": "Google",
+        "metric": "CoWoS wafer demand target",
+        "valueRaw": 240000,
+        "valueDisplayed": "240K wafers/yr"
+      }
+    ]
+  },
+  "localBuildObservations": {
+    "lineChartDotCount": 3,
+    "duplicate2026": false,
+    "filterInSource": "r.id.startsWith(\"cowos-demand-\")",
+    "paths": [
+      "src/components/visualizations/AiPackagingBottleneckDashboard.tsx",
+      "out/blog/ai-gpu-packaging-memory-bottleneck-2025.html"
+    ]
+  },
+  "rootCause": {
+    "component": "src/components/visualizations/AiPackagingBottleneckDashboard.tsx",
+    "hook": "demandTrend useMemo",
+    "buggyFilter": "SUPPLY_CHAIN.filter((r) => r.metric.includes('CoWoS wafer demand'))",
+    "includedRecordIds": [
+      "cowos-demand-2024",
+      "cowos-demand-2025",
+      "cowos-demand-2026",
+      "google-cowos-2026"
+    ],
+    "shouldExclude": [
+      {
+        "id": "google-cowos-2026",
+        "reason": "Per-customer demand target, not global annual CoWoS demand series; shares substring 'CoWoS wafer demand' via metric 'CoWoS wafer demand target'"
+      }
+    ],
+    "fixFilter": "SUPPLY_CHAIN.filter((r) => r.id.startsWith('cowos-demand-'))",
+    "fixIncludedRecordIds": [
+      "cowos-demand-2024",
+      "cowos-demand-2025",
+      "cowos-demand-2026"
+    ]
+  },
+  "acceptanceCriteria": {
+    "ac1_liveDuplicate2026": {
+      "pass": true,
+      "evidence": "Live LineChart dotCount=4; two SUPPLY_CHAIN rows share year=2026 under old metric.includes filter"
+    },
+    "ac2_document2026Values": {
+      "pass": true,
+      "values": {
+        "cowos-demand-2026": "1000K (1,000,000 wafers/yr)",
+        "google-cowos-2026": "240K (240,000 wafers/yr)"
+      }
+    },
+    "ac3_traceRootCause": {
+      "pass": true
+    },
+    "ac4_emitArtifact": {
+      "pass": true,
+      "path": "artifacts/qa-cowos-demand-duplicate-001.json"
+    }
+  },
+  "commands": [
+    { "label": "typecheck", "cmd": "npx tsc --noEmit", "exitCode": 0 },
+    { "label": "build", "cmd": "npm run build", "exitCode": 0 },
+    { "label": "entry-script dry-run", "cmd": "node scripts/qa-ai-packaging-bottleneck-post.mjs", "exitCode": 0 },
+    { "label": "repro-live", "cmd": "node scripts/qa-cowos-demand-duplicate-repro.mjs --live", "exitCode": 0 },
+    { "label": "repro-local", "cmd": "node scripts/qa-cowos-demand-duplicate-repro.mjs", "exitCode": 0 }
+  ],
+  "followUpHandoffs": [
+    {
+      "toRole": "qa",
+      "objective": "Wave 4 regression gate — confirm post-fix build shows exactly one 2026 point on demand chart after DevOps deploy",
+      "contextSummary": "Repro complete. Frontend fix merged locally: demandTrend narrowed to cowos-demand-* ids. Live still serves old bundle with metric.includes filter.",
+      "acceptanceCriteria": [
+        "Live LineChart dotCount=3 after deploy",
+        "Live bundle contains startsWith('cowos-demand-') not includes('CoWoS wafer demand') for demandTrend",
+        "node scripts/qa-cowos-demand-duplicate-repro.mjs --live reports duplicate2026=false"
+      ]
+    },
+    {
+      "toRole": "devops",
+      "objective": "Deploy frontend CoWoS demand chart fix to production hosting",
+      "contextSummary": "QA repro qa-cowos-demand-duplicate-001 confirms live duplicate 2026. Local build passes typecheck, build, and qa-ai-packaging-bottleneck-post.mjs.",
+      "acceptanceCriteria": [
+        "npm run deploy or equivalent firebase hosting deploy",
+        "Post-deploy smoke: node scripts/smoke-test-viz-posts.mjs --live exit 0",
+        "Post-deploy repro: node scripts/qa-cowos-demand-duplicate-repro.mjs --live shows dotCount=3"
+      ]
+    }
+  ]
+}

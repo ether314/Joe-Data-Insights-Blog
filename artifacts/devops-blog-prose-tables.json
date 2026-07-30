@@ -1,0 +1,61 @@
+{
+  "handoffId": "devops-blog-prose-tables",
+  "status": "done",
+  "summary": "GFM prose table rendering deployed to production hosting (ether-data-insights-blog). Dispatch checklist verified: backend-blog-table-audit, frontend-gfm-tables-001, QA GO (VERIFY_BLOG_PROSE_TABLE_RENDERING). npm run deploy exit 0 — build, cost tests, local+live viz smoke, Firebase hosting release (95 new files). Post-deploy live prose-table and viz smoke checks passed for both affected slugs.",
+  "artifacts": [
+    {
+      "kind": "path",
+      "value": "artifacts/backend-blog-table-audit.json",
+      "label": "upstream backend audit gate"
+    },
+    {
+      "kind": "path",
+      "value": "artifacts/frontend-gfm-tables-001.json",
+      "label": "upstream frontend gate"
+    },
+    {
+      "kind": "path",
+      "value": "artifacts/blog-table-audit.json",
+      "label": "GFM table inventory"
+    },
+    {
+      "kind": "log_ref",
+      "value": "npm run deploy → exit 0 (build, test-all-costs, local smoke, firebase deploy --only hosting, live viz smoke)",
+      "label": "deploy pipeline"
+    },
+    {
+      "kind": "log_ref",
+      "value": "node scripts/qa-blog-prose-tables-live.mjs → exit 0",
+      "label": "live prose-table verification"
+    },
+    {
+      "kind": "log_ref",
+      "value": "node scripts/smoke-test-viz-posts.mjs --live → exit 0 (11/11 posts)",
+      "label": "live viz smoke"
+    },
+    {
+      "kind": "path",
+      "value": "scripts/qa-blog-prose-tables-live.mjs",
+      "label": "live prose-table smoke script"
+    },
+    {
+      "kind": "url",
+      "value": "https://ether-data-insights-blog.web.app/blog/ai-gpu-packaging-memory-bottleneck-2025",
+      "label": "live slug 1 — semantic table verified"
+    },
+    {
+      "kind": "url",
+      "value": "https://ether-data-insights-blog.web.app/blog/deflationary-growth-economies-2025",
+      "label": "live slug 2 — semantic table verified"
+    },
+    {
+      "kind": "url",
+      "value": "https://ether-data-insights-blog.web.app",
+      "label": "Firebase hosting"
+    }
+  ],
+  "followUpHandoffs": [],
+  "validatedAt": "2026-07-11T05:30:00.000Z",
+  "wave": 4,
+  "objective": "DEPLOY_BLOG_TABLE_FIX"
+}

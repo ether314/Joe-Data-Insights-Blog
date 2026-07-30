@@ -1,0 +1,102 @@
+{
+  "handoffId": "devops-cowos-demand-fix-001",
+  "status": "done",
+  "wave": "4-DEPLOY_COWOS_DEMAND_FIX",
+  "deployedAt": "2026-07-11T05:52:00.000Z",
+  "redeployedAt": "2026-07-11T09:45:00.000Z",
+  "pass": true,
+  "summary": "CoWoS demand chart dedupe fix deployed and verified live on Firebase hosting (ether-data-insights-blog). Fresh build + firebase deploy (95 files uploaded). Live smoke 11/11 exit 0; live repro duplicate2026=false with totalLineDotsOnPage=3; bundle chunk 1hnbl3vlr55pm.js serves startsWith('cowos-demand-') filter.",
+  "upstreamQaHandoff": {
+    "id": "qa-cowos-demand-duplicate-002",
+    "status": "done",
+    "pass": true,
+    "validatedAt": "2026-07-11T05:30:35.272Z"
+  },
+  "deployUrl": "https://ether-data-insights-blog.web.app/blog/ai-gpu-packaging-memory-bottleneck-2025",
+  "hostingUrl": "https://ether-data-insights-blog.web.app",
+  "firebaseProject": "ether-data-insights-blog",
+  "deploy": {
+    "command": "npx firebase-tools@latest deploy --only hosting",
+    "exitCode": 0,
+    "filesUploaded": 95,
+    "totalFiles": 236,
+    "preDeployBuild": {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    "preDeploySmokeLocal": {
+      "command": "node scripts/smoke-test-viz-posts.mjs",
+      "exitCode": 0,
+      "postsPassed": 11,
+      "postsTotal": 11
+    }
+  },
+  "smokeLive": {
+    "command": "node scripts/smoke-test-viz-posts.mjs --live",
+    "exitCode": 0,
+    "postsPassed": 11,
+    "postsTotal": 11,
+    "aiGpuPackagingMarker": "CoWoS packaging"
+  },
+  "liveChartVerification": {
+    "command": "node scripts/qa-cowos-demand-duplicate-repro.mjs --live",
+    "exitCode": 0,
+    "totalLineDotsOnPage": 3,
+    "duplicate2026": false,
+    "pass": true,
+    "note": "repro script demandChartDotCount uses y-position heuristic (reports 1); totalLineDotsOnPage=3 and duplicate2026=false confirm fix"
+  },
+  "liveBundleVerification": {
+    "command": "node scripts/qa-cowos-live-bundle-check.mjs",
+    "exitCode": 0,
+    "dotCount": 3,
+    "deployedBundleFilter": "startsWith(\"cowos-demand-\")",
+    "oldFilterAbsent": true,
+    "bundleChunk": "https://ether-data-insights-blog.web.app/_next/static/chunks/1hnbl3vlr55pm.js",
+    "priorBrokenBundleChunk": "https://ether-data-insights-blog.web.app/_next/static/chunks/3wc8t8dcs4415.js"
+  },
+  "testCommandsRun": [
+    {
+      "label": "build",
+      "cmd": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "label": "smoke-local",
+      "cmd": "node scripts/smoke-test-viz-posts.mjs",
+      "exitCode": 0
+    },
+    {
+      "label": "firebase-deploy",
+      "cmd": "npx firebase-tools@latest deploy --only hosting",
+      "exitCode": 0
+    },
+    {
+      "label": "smoke-live",
+      "cmd": "node scripts/smoke-test-viz-posts.mjs --live",
+      "exitCode": 0
+    },
+    {
+      "label": "live-chart-repro",
+      "cmd": "node scripts/qa-cowos-demand-duplicate-repro.mjs --live",
+      "exitCode": 0,
+      "duplicate2026": false,
+      "totalLineDotsOnPage": 3
+    },
+    {
+      "label": "live-bundle-check",
+      "cmd": "node scripts/qa-cowos-live-bundle-check.mjs",
+      "exitCode": 0,
+      "dotCount": 3,
+      "hasNewFilter": true,
+      "hasOldFilter": false
+    }
+  ],
+  "acceptanceCriteria": {
+    "ac1_firebaseDeploySucceeds": { "pass": true, "filesUploaded": 95 },
+    "ac2_smokeLiveExit0": { "pass": true, "postsPassed": 11 },
+    "ac3_liveChartThreeDotsNotFour": { "pass": true, "totalLineDotsOnPage": 3, "duplicate2026": false },
+    "ac4_liveBundleNewFilter": { "pass": true, "hasNew": true, "hasOld": false },
+    "ac5_emitArtifact": { "pass": true, "path": "artifacts/devops-cowos-demand-fix-001.json" }
+  }
+}

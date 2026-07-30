@@ -1,0 +1,55 @@
+{
+  "handoffId": "canary-qa-comms-003",
+  "status": "done",
+  "summary": "QA Wave 3 canary contract ping passed. Upstream chain verified: canary-backend-comms-001 status=done, canary-frontend-comms-002 status=done. Contract probe files confirmed in-repo without npm run build or npm install. GO for DevOps wave.",
+  "artifacts": [
+    {
+      "kind": "path",
+      "value": "artifacts/canary-backend-comms-001.json",
+      "label": "upstream-backend-handoff status=done"
+    },
+    {
+      "kind": "path",
+      "value": "artifacts/canary-frontend-comms-002.json",
+      "label": "upstream-frontend-handoff status=done"
+    },
+    {
+      "kind": "path",
+      "value": "src/data/ai-token-consumption-data.ts",
+      "label": "exports TOKEN_MONTHLY, GLOBAL_SUMMARY"
+    },
+    {
+      "kind": "path",
+      "value": "src/components/visualizations/AiTokenConsumptionDashboard.tsx",
+      "label": "data-viz=ai-token-consumption; imports TOKEN_MONTHLY, GLOBAL_SUMMARY"
+    },
+    {
+      "kind": "path",
+      "value": "src/components/PostVisualization.tsx",
+      "label": "ai-token-consumption render branch"
+    },
+    {
+      "kind": "path",
+      "value": "scripts/smoke-test-viz-posts.mjs",
+      "label": "POSTS slug major-ai-brands-token-consumption-2022-2026"
+    },
+    {
+      "kind": "note",
+      "value": "Read-only aggregation; no npx tsc --noEmit, npm run build, or npm install executed",
+      "label": "verification-mode"
+    }
+  ],
+  "followUpHandoffs": [
+    {
+      "toRole": "devops",
+      "objective": "Wave 4 canary-devops-comms-004 read-only deploy gate ping",
+      "contextSummary": "QA chain complete: canary-backend-comms-001 → canary-frontend-comms-002 → canary-qa-comms-003 all status=done. Contract probe files verified. firebase.json redirect for /technology/major-ai-brands-token-consumption-2022-2026 configured.",
+      "acceptanceCriteria": [
+        "Confirm firebase.json redirect present",
+        "Persist artifacts/canary-devops-comms-004.json with status=done",
+        "Read-only verification unless deploy explicitly authorized"
+      ]
+    }
+  ],
+  "validatedAt": "2026-07-10T21:42:00-04:00"
+}

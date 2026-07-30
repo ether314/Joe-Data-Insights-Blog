@@ -122,6 +122,51 @@ const RefugeeHostingBurdenDashboard = dynamic(
   },
 );
 
+const AiPackagingBottleneckDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiPackagingBottleneckDashboard").then(
+      (m) => m.AiPackagingBottleneckDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const AiTokenConsumptionDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiTokenConsumptionDashboard").then(
+      (m) => m.AiTokenConsumptionDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const DeflationaryGrowth2025Dashboard = dynamic(
+  () =>
+    import("@/components/visualizations/DeflationaryGrowth2025Dashboard").then(
+      (m) => m.DeflationaryGrowth2025Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 const LastMileDeliveryRoboticsDashboard = dynamic(
   () =>
     import("@/components/visualizations/LastMileDeliveryRoboticsDashboard").then(
@@ -137,11 +182,26 @@ const LastMileDeliveryRoboticsDashboard = dynamic(
   },
 );
 
+const GoldmanSachsAiCapexDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/GoldmanSachsAiCapexDashboard").then(
+      (m) => m.GoldmanSachsAiCapexDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
 }: {
-  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "last-mile-delivery-robotics";
+  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex";
   embedded?: boolean;
 }) {
   if (type === "gdp-analysis") {
@@ -168,8 +228,20 @@ export function PostVisualization({
   if (type === "refugee-hosting-burden") {
     return <RefugeeHostingBurdenDashboard />;
   }
+  if (type === "ai-packaging-bottleneck") {
+    return <AiPackagingBottleneckDashboard />;
+  }
+  if (type === "ai-token-consumption") {
+    return <AiTokenConsumptionDashboard />;
+  }
+  if (type === "deflationary-growth-2025") {
+    return <DeflationaryGrowth2025Dashboard />;
+  }
   if (type === "last-mile-delivery-robotics") {
     return <LastMileDeliveryRoboticsDashboard />;
+  }
+  if (type === "goldman-sachs-ai-capex") {
+    return <GoldmanSachsAiCapexDashboard />;
   }
   return null;
 }
