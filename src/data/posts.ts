@@ -2,100 +2,109 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
-    id: "phosphate-fertilizer-export",
-    slug: "phosphate-fertilizer-export-dependence-2026",
-    title:
-      "Charted: Morocco, China, and Saudi Arabia Control 67% of Phosphate Fertilizer Exports",
+    id: "billion-dollar-disasters",
+    slug: "us-billion-dollar-weather-disasters-2026",
+    title: "Charted: US Billion-Dollar Disasters Now Cost $149B a Year — and the Increments Keep Growing",
     excerpt:
-      "Processed phosphate fertilizers — not just rock — are a seaborne chokepoint. TFI puts Morocco, China, and Saudi Arabia at 67% of MAP/DAP/TSP exports; add Russia and the top four clear ~82%. India's, Kenya's, and Brazil's DAP origins show which food systems sit downstream.",
-    content: `## The nutrient that has to arrive on a ship
+      "NOAA’s CPI-adjusted ledger shows annual US billion-dollar disaster costs averaging $149.3B in 2020–24 — 6.8× the 1980s — while decade-to-decade cost increments keep widening.",
+    content: `## The inflation-adjusted total is the right headline
 
-Phosphorus has no agricultural substitute. Farmers can stretch nitrogen with better timing and they can recycle some organic matter, but commercial grain systems still depend on **processed phosphate fertilizers** — chiefly **monoammonium phosphate (MAP)**, **diammonium phosphate (DAP)**, and **triple superphosphate (TSP)** — to replace what each harvest removes from soil. More than half of those finished products enter international trade. That is the chokepoint this post maps: **who exports the bags**, not who digs the rock.
+Everyone remembers the year a hurricane breaks the damage record. Fewer people ask whether **normalized** disaster cost is still accelerating after you strip out general inflation — and after you scale by the size of the economy.
 
-Our companion [phosphate rock supply concentration](/blog/phosphate-rock-supply-concentration-2024) piece used USGS mine and reserve tables: Morocco owns the geologic inventory; China digs the most rock. This dashboard answers a different question — **which food systems depend on a short list of phosphate fertilizer exporters** — with shares from The Fertilizer Institute (TFI), corridor evidence from IFPRI, and trade-context from FAO and UN Comtrade patterns.
+NOAA NCEI’s Billion-Dollar Weather and Climate Disasters series answers the first half cleanly. All costs are **CPI-adjusted to 2024 dollars**. On that yardstick, the **2020–2024** average is **$149.3 billion per year** in direct damages from events that individually clear **$1 billion**. In the **1980s** the average was **$22.0 billion**. That is a **6.8×** jump in the annual CPI total — not a media-cycle illusion.
 
-## Top-3 exporter share: 67%
+Event frequency moved in parallel: **23.0** billion-dollar disasters per year in 2020–24 versus **3.3** in the 1980s (**~7×**). Over the full **1980–2024** window NOAA counts **403** such events and **$2.915 trillion** in cumulative CPI-adjusted cost.
 
-TFI's 2025 phosphorus brief ranks **22 exporting countries** for processed phosphates and finds a brutal concentration at the top:
+**Unlike our [electricity generation mix](/blog/global-electricity-generation-mix-2024) map, this post is not about how grids are fueled — it is about the rising damage ledger those grids, coasts, and floodplains keep paying.**
 
-| Rank | Exporter | Export share | Production share |
-|---|---|---:|---:|
-| 1 | Morocco | **30%** | 14% |
-| 2 | China | **21%** | 44% |
-| 3 | Saudi Arabia | **16%** | 9% |
-| 4 | Russia | 15% | 9% |
-| 5 | United States | 4% | 8% |
-| — | Other | 14% | 16% |
+## Acceleration means first differences, not just levels
 
-**Morocco + China + Saudi Arabia = 67% of world exports.** Add Russia and the **top four reach about 82%** — the same ballpark IFPRI cites when it says China, Morocco, Russia, and Saudi Arabia constitute roughly **80% of global DAP and MAP exports**. Production is also tight: TFI puts the **top five producers above 80%** of MAP/DAP/TSP output among roughly **30 producing countries**, with **China alone at 44%**.
+A level can be high without still accelerating. The sharper test is whether the **decade-to-decade increment** in annual cost keeps getting larger.
 
-The scatter and gap charts above make the asymmetry visible. **China produces far more than it exports** — a food-security state that keeps nutrient tons at home when domestic rice and maize affordability stays tight. **Morocco and Saudi Arabia export well above their production shares** — they are the seaborne swing suppliers when Chinese licensing bites.
+| Step | Change in cost / year (2024$) |
+|------|-------------------------------|
+| 1980s → 1990s | **+$11.5B** |
+| 1990s → 2000s | **+$28.7B** |
+| 2000s → 2010s | **+$37.3B** |
+| 2010s → 2020–24 | **+$49.8B** |
 
-## China closed the tap; the rest did not refill it
+Each step’s increment is larger than the last. That is the acceleration signal in the official ledger: not merely “costs are high,” but “the climb itself is steepening.” The **2010s** already averaged **$99.5B/year**; the partial **2020–24** decade is running **$149.3B/year** — and the **2022–24** three-year average is even hotter at **$153.9B/year**.
 
-IFPRI's March 2025 review is blunt about the 2021–2024 shock path. China exported an average of about **9 million metric tons** of ammoniated phosphates in 2019–2020, hit a record **10 Mt in 2021**, then used export restrictions and licensing to prioritize the domestic market. By **2024**, Chinese exports were only **6.6 Mt** — roughly a **one-third cut** from the peak.
+Frequency tells the same story at the count level. The US has now posted **14 consecutive years** (2011–2024) with **10 or more** billion-dollar events. Over the last ten years (**2015–2024**), NOAA’s Climate.gov wrap counts **190** separate billion-dollar disasters and roughly **$1.4 trillion** in damage.
 
-Russia and Saudi Arabia were already near capacity; IFPRI expects little volume relief until new plants arrive around **2027–2028**. Morocco raised exports after 2022, but gradually, and diverted more of its processed mix into **TSP**, which many DAP/MAP-habituated farmers treat as a second-best product. The stacked area in the dashboard shows the shape of that story: China's band shrinks after 2021; peers inch up without restoring the old seaborne surplus.
+## 2024: second-most events, fourth-costliest year
 
-FAO's fertilizer focus note puts global phosphate trade near **30.4 Mt in 2023** — a rebound of about 1 Mt year-over-year, yet still **more than 4 Mt below 2021**. TFI adds that **2024 processed-phosphate exports were about 7% below 2021** even though **global production exceeded 2021 by roughly 4%**. Tons were made. They were not all allowed onto the water.
+**2024** logged **27** billion-dollar disasters and **$182.7 billion** in CPI-adjusted damage — second only to **2023’s record 28 events**, and fourth on the cost ranking behind **2017** ($395.9B), **2005** ($268.5B), and **2022** ($183.6B). Fatalities tied to these events reached **568**, among the higher years in the 45-year record.
 
-## Which food systems sit downstream
+Severe storms dominated the **count** (17 of 27 when tornado outbreaks and hail/wind events are grouped with the broader severe-weather category in Climate.gov’s narrative). Hurricanes dominated the **bill**: Helene (~$78.7B) and Milton ($34.3B) alone topped **$100B** across the Southeast in roughly two weeks. Beryl added another **$7.2B**; a May tornado outbreak added **$6.6B**.
 
-Export concentration becomes a food-system risk only when importers cannot diversify origins. IFPRI's corridor work shows how thin that diversification often is:
+That split matters for adaptation economics. A year can look “busy” on the event counter because localized severe storms keep clearing the $1B threshold, while the fiscal and insurance shock still concentrates in a handful of tropical cyclones.
 
-- **India (2023 DAP):** China about **39%**, Saudi Arabia ~18%, Morocco ~13%, Russia ~10%. China's share of Indian DAP swung from **19% in 2022 to 39% in 2023** as licensing eased — proof that New Delhi's planting calendar still tracks Beijing's permit desk.
-- **Brazil (2023 DAP):** a more plural mix, but still dominated by Morocco, Russia, and China (China alone ~**20%**, down from 27% in 2021 and up from 14% in 2022). Stocks looked healthier than in South Asia, yet much of the inventory was high-priced material that deterred farmer purchases.
-- **Kenya (2023 DAP):** a **two-origin market** — Saudi Arabia **83%**, Morocco **17%**. Russia held an 11% share in 2021 and then disappeared. That is not a contestable commodity market; it is a bilateral logistics relationship.
-- **European Union:** Morocco remains the primary origin, with Russia still material because fertilizers were exempted from EU sanctions — a political carve-out that keeps European phosphorus exposed to a sanctioned-state exporter.
+## Count vs dollars: two different hazard regimes
 
-Toggle the **Food-system importers** lens above to see origin donuts and single-origin dominance bars. The pattern repeats: large agrarian importers do not face "the world phosphate market." They face **two to four state-linked supply systems**.
+Over **1980–2024**, **severe storms** lead event counts (**203**) but average only about **$2.5B** each. **Tropical cyclones** are rarer (**67**) yet average about **$23B** and account for roughly **$1.54 trillion** of cumulative cost — more than triple severe-storm dollar totals. Drought (~$368B cumulative), inland flooding (~$203B), wildfire (~$148B), and winter storms (~$104B) fill out the ledger.
 
-## Rock chokepoint vs fertilizer chokepoint
+So “is disaster risk rising?” depends on which series you watch:
 
-Readers who know the USGS rock table sometimes assume fertilizer trade mirrors mine ranks. It does not. China's **44% production / 21% export** split is the clearest proof: the largest processor can starve the seaborne market while still running plants. Morocco's **14% production / 30% export** split is the mirror: OCP's integrated system is built to ship. Saudi Arabia punches similarly above its production weight.
+- **Frequency:** severe storms are the volume engine pushing more years over the artificial $1B line.
+- **Severity of the bill:** hurricanes still write the largest checks.
+- **Human cost:** tropical cyclones also lead cumulative deaths in the NOAA table, with drought/heat close behind.
 
-That is why pairing this post with the [phosphate rock](/blog/phosphate-rock-supply-concentration-2024) dashboard matters. Rock reserves answer "who owns the century." Fertilizer exports answer "who can cancel next season's application rates in India, Kenya, or Bangladesh." The same molecule; different binding constraint.
+For insurers, municipalities, and federal disaster budgets, the practical implication is portfolio-shaped: many mid-size convective losses plus fat-tailed hurricane years — not a single smooth trend line.
 
-For another physical chokepoint with a dig-versus-process split, see [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-concentration-2024). For a one-country mine monopoly in battery anodes, see [natural graphite](/blog/natural-graphite-mine-concentration-2024). Phosphate fertilizer is closer to copper's midstream logic than to graphite's mine monopoly — except the "midstream" here is acidulation and ammoniation of rock into MAP/DAP, and the customers are food systems rather than cable mills.
+## GDP normalization softens the story — it does not erase it
 
-## Prices, affordability, and the slow yield risk
+CPI adjustment removes general inflation. It does **not** remove the fact that the US economy and capital stock are much larger than in 1980. Dividing decade average disaster cost by a BEA nominal-GDP midpoint is a rough second normalization:
 
-All fertilizer prices fell from 2022 peaks, but IFPRI notes phosphate remains roughly **double** early-2020 levels while urea is closer to **1.5×**. Affordability — phosphate cost relative to crop prices — deteriorated because crop prices retreated faster than phosphate. IFA's November 2024 update revised phosphate demand growth down for 2024–2025 versus earlier forecasts.
+| Period | Cost / year (2024$) | ≈ GDP midpoint | Cost share of GDP |
+|--------|---------------------|----------------|-------------------|
+| 1980s | $22.0B | ~$4.3T | **0.51%** |
+| 1990s | $33.5B | ~$7.6T | **0.44%** |
+| 2000s | $62.2B | ~$13.1T | **0.48%** |
+| 2010s | $99.5B | ~$18.2T | **0.55%** |
+| 2020–24 | $149.3B | ~$25.7T | **0.58%** |
 
-The failure mode is slow. Skipping nitrogen shows up in the next harvest. Skipping phosphate can look fine for a season or two because soils buffer phosphorus — until they do not. IFPRI flags historical-low stocks in major markets by end-2024 and DAP scarcity protests during Indian sowing windows. Sub-Saharan application rates start low; Kenya still saw phosphate use contract about **42%** over 2020–2022. The global calorie system can absorb a one-year skim. A multi-year skim is how you bake lower yields into food prices.
+On this yardstick the rise is real but slower than the raw CPI multiple: from about **half a percent of GDP** in the 1980s to a bit under **0.6%** in 2020–24. Spike years still puncture the average — **2017** alone was on the order of **2% of that year’s GDP** when Harvey, Irma, and Maria stacked.
 
-## Who is exposed, who benefits, what would change the story
+Climate.gov’s per-capita framing is harsher than the GDP share: five-year-average disaster cost per US resident rose from roughly **$150** in the early 2000s to above **$400** by the late 2010s and has stayed elevated. Population growth alone does not absorb the CPI-adjusted climb.
 
-**Exposed:** South Asian and East African DAP buyers with two-to-four origin lists; any importer that treated 2019–2020 Chinese export volumes as a permanent feature of the market; US growers facing AD/CVD duties on Moroccan and Russian phosphates since 2019 that shifted imports toward costlier origins while domestic Florida plants took hurricane hits.
+Readers tracking fiscal pressure from another angle may want our [US industrial subsidies vs tariffs](/blog/us-industrial-subsidies-vs-tariffs-30-years) piece — adaptation and disaster outlays compete in the same long-run budget with industrial policy, interest, and tax expenditures.
 
-**Relative beneficiaries under current geography:** Morocco/OCP as the scalable seaborne alternative; Saudi and Russian exporters running near capacity into a short market; traders who can arbitrate TSP versus DAP acceptance.
+## Who is exposed — and what would change the story
 
-**What would change the story:** Chinese licensing that returns exports toward the **9–10 Mt** band; greenfield capacity in Saudi Arabia, Morocco, and elsewhere that IFPRI dates to **2027–2028**; a lasting shift in farmer acceptance of TSP/NPKs; or phosphorus recycling at a scale that actually dents primary MAP/DAP demand — still small relative to tens of millions of nutrient tons.
+Exposure concentrates where people and property keep filling hazard zones: Gulf and Atlantic hurricane coasts (Florida’s cumulative cost leads the state map at roughly **$450B** since 1980; Texas is close behind on both cost and event count), inland floodplains, and the Western wildland–urban interface. NOAA is explicit that rising losses mix **exposure** (more assets in harm’s way), **vulnerability** (how we build and insure), and **climate-driven extremes**. This post does **not** attribute shares among those drivers; attribution science and building-code studies sit outside the NCEI ledger.
 
-## Caveats
+The interactive dashboard above is built to stress-test the acceleration claim: toggle the rolling average between **CPI dollars**, **event counts**, and **GDP share**, and switch the window between **5** and **10** years. CPI dollars and counts rise steeply; GDP share rises more slowly — which is exactly why “normalized” needs a definition before the headline.
 
-- **Export and production shares are TFI aggregates for MAP/DAP/TSP**, not USGS phosphate-rock mine shares; do not mix the two tables.
-- **China export Mt figures are IFPRI-reported ammoniated phosphate exports**; product definitions can differ slightly from TFI share denominators.
-- **Importer corridor percentages** are IFPRI DAP-origin shares for cited years; Bangladesh is an illustrative South Asian pattern, not a primary IFPRI table reprint.
-- **Stacked volume history** anchors IFPRI's China 10→6.6 Mt path and interpolates peer volumes for visualization — treat peer Mt as approximate, not customs microdata.
-- **UN Comtrade HS codes** for phosphatic fertilizers fragment across DAP, MAP, and other headings; we use secondary research syntheses rather than a raw Comtrade scrape for headline shares.
-- **Western Sahara / Morocco** reporting conventions in rock statistics can differ from fertilizer-brand export statistics; TFI exporter shares follow commercial trade practice.
+What would change the story:
 
-## Methodology
+- A sustained multi-year stretch back toward the long-run **9.0 events / $64.8B** averages without a compensating mega-hurricane year.
+- Material downward revisions to 2020–24 costs as claims settle the other way (historically revisions more often rise).
+- A GDP boom that outruns CPI-adjusted losses enough to push the cost/GDP share back toward 1990s levels even if dollar losses stay high.
 
-Headline top-3 and top-4 export shares and production shares: TFI Phosphorus/phosphate one-pager (2025). China export volumes 2019–2024 and qualitative capacity notes: IFPRI (March 2025). Importer DAP origin shares for India, Brazil, Kenya, and EU context: IFPRI fertilizer-trade analyses (2021–2023 updates). Global phosphate trade tonnage: FAO Focus on Fertilizers. Dashboard gaps and scatter positions are derived from the disclosed TFI share pairs. This post is about **processed fertilizer trade dependence**; rock geology remains covered in the linked USGS-based companion.
+None of those is visible in the January 2025 Climate.gov update. The working conclusion: **yes — inflation-adjusted annual totals are still accelerating on a decade-difference basis**, while GDP-normalized shares are elevated and slowly rising rather than exploding.
 
-**Unlike our [helium supply concentration](/blog/global-helium-supply-concentration-2024) map — a two-country industrial-gas bottleneck — phosphate fertilizer exports are a four-country food-system bottleneck whose binding constraint is often an export license, not a depleted mine.**`,
-    category: "Global Systems",
-    themeId: "chokepoint-commodities",
-    imageUrl:
-      "/images/global-systems-phosphate-fertilizer-export-dependence-2026-hero.png",
+## Caveats and methodology
+
+- **Threshold artifact:** Events just under $1B (2024$) are excluded; 57 older events crossed the line only after CPI adjustment.
+- **Partial decade:** 2020–24 is five years, not ten — comparisons use per-year averages.
+- **Cost revisions:** 2024 totals (analysis through early January 2025) can still rise as claims data settle.
+- **GDP shares are estimated:** NOAA costs are disclosed; dividing by BEA nominal GDP midpoints is our normalization, not an NCEI field.
+- **No driver split:** The series does not isolate climate change vs exposure vs vulnerability.
+- **Direct damages only:** Broader macroeconomic and health costs are out of scope.
+
+**Primary sources:** [NOAA NCEI Billion-Dollar Disasters](https://www.ncei.noaa.gov/access/billions/) and [Climate.gov’s 2024 wrap-up](https://www.climate.gov/news-features/blogs/beyond-data/2024-active-year-us-billion-dollar-weather-and-climate-disasters); GDP context from [BEA](https://www.bea.gov/data/gdp/gross-domestic-product).
+
+**Unlike our [Goldman Sachs AI capex](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) scenario stack, this post tracks realized weather losses — not forward infrastructure spend.**`,
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl: "/images/energy-us-billion-dollar-weather-disasters-2026-hero.png",
     imageAlt:
-      "Dark navy data-viz hero of phosphate fertilizer export routes dominated by Morocco, China, and Saudi Arabia with a 67% top-3 callout",
-    publishedAt: "2026-07-31T10:00:00Z",
+      "Dark navy data visualization of rising US billion-dollar weather disaster bars morphing into storm systems with $149B/yr callout",
+    publishedAt: "2026-07-31T11:20:00.000Z",
     featured: true,
-    visualization: "phosphate-fertilizer-export",
-    layout: "default",
+    visualization: "billion-dollar-disasters",
+    layout: "fullscreen",
   },
   {
     id: "goldman-sachs-ai-capex",

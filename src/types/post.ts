@@ -23,7 +23,21 @@ export interface Post {
   publishedAt: string;
   featured?: boolean;
   /** Renders an interactive visualization instead of static images */
-  visualization?: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "hyperscaler-capex-intensity" | "semiconductor-equipment-cycle" | "us-data-center-power-grid" | "hyperscaler-ai-bond-issuance" | "ai-etf-flows" | "helium-supply-concentration" | "billion-dollar-disasters" | "household-debt-delinquency" | "personal-saving-rate" | "social-security-trust-fund" | "global-remittance-corridors" | "nato-defense-spending" | "manufacturing-robot-density" | "phosphate-rock-supply" | "nih-disease-funding" | "lng-export-capacity" | "credit-card-apr" | "immigration-court-backlog" | "us-lng-export-capacity" | "manufacturing-construction-chips" | "cre-bank-delinquency" | "us-goods-services-trade" | "nuclear-under-construction" | "tax-expenditures" | "copper-mine-refinery" | "oecd-rd-tax-support" | "china-robot-installations"   | "us-net-interest" | "global-shipbuilding" | "foreign-treasury-holders" | "sipri-military-expenditure" | "us-business-ai-adoption" | "commercial-aircraft-assembly" | "money-market-funds-deposits" | "oecd-dac-oda" | "irena-renewable-capacity" | "bank-loan-chargeoffs" | "natural-graphite-mine-concentration" | "jolts-openings-unemployed" | "rare-earth-mine-concentration" | "central-bank-gold-purchases" | "phosphate-fertilizer-export";
+  visualization?:
+    | "gdp-analysis"
+    | "subsidies-tariffs"
+    | "brokerage-bonuses"
+    | "ai-data-centers"
+    | "ccp-nomenklatura"
+    | "china-fiscal-revenue"
+    | "electricity-generation-mix"
+    | "refugee-hosting-burden"
+    | "ai-packaging-bottleneck"
+    | "ai-token-consumption"
+    | "deflationary-growth-2025"
+    | "last-mile-delivery-robotics"
+    | "goldman-sachs-ai-capex"
+    | "billion-dollar-disasters";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

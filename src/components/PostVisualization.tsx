@@ -197,10 +197,10 @@ const GoldmanSachsAiCapexDashboard = dynamic(
   },
 );
 
-const PhosphateFertilizerExportDashboard = dynamic(
+const BillionDollarDisastersDashboard = dynamic(
   () =>
-    import("@/components/visualizations/PhosphateFertilizerExportDashboard").then(
-      (m) => m.PhosphateFertilizerExportDashboard,
+    import("@/components/visualizations/BillionDollarDisastersDashboard").then(
+      (m) => m.BillionDollarDisastersDashboard,
     ),
   {
     ssr: false,
@@ -216,7 +216,7 @@ export function PostVisualization({
   type,
   embedded = false,
 }: {
-  type: NonNullable<import("@/types/post").Post["visualization"]>;
+  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "billion-dollar-disasters";
   embedded?: boolean;
 }) {
   if (type === "gdp-analysis") {
@@ -258,8 +258,8 @@ export function PostVisualization({
   if (type === "goldman-sachs-ai-capex") {
     return <GoldmanSachsAiCapexDashboard />;
   }
-  if (type === "phosphate-fertilizer-export") {
-    return <PhosphateFertilizerExportDashboard />;
+  if (type === "billion-dollar-disasters") {
+    return <BillionDollarDisastersDashboard />;
   }
   return null;
 }
