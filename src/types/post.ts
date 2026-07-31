@@ -42,7 +42,13 @@ export interface Post {
     | "ai-capex-spend-research-2026"
     | "global-remittance-corridors"
     | "phosphate-fertilizer-export"
-    | "billion-dollar-disasters";
+    | "billion-dollar-disasters"
+    | "commercial-aircraft-assembly"
+    | "money-market-funds-deposits"
+    | "oecd-dac-oda"
+    | "irena-renewable-capacity"
+    | "bank-loan-chargeoffs"
+    | "natural-graphite-mine-concentration";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

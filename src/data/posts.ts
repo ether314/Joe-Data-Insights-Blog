@@ -2,6 +2,511 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "natural-graphite-mine-concentration",
+    slug: "natural-graphite-mine-concentration-2024",
+    title: "Charted: China Mined 79% of the World’s Natural Graphite in 2024",
+    excerpt: "USGS MCS 2025: China alone produced 1.27 of 1.60 Mt of natural graphite. Top-3 countries hit ~90%. The US mined zero tons — and ran 100% net import reliance — while Brazil’s reserves rival China’s but its mine share does not.",
+    content: `Battery narratives talk endlessly about lithium, nickel, and cobalt. The anode feedstock that actually coats most lithium-ion cells gets quieter press: **natural graphite**. The U.S. Geological Survey’s Mineral Commodity Summaries 2025 puts a hard number on the geography. In **2024**, world mine production of natural graphite was an estimated **1.60 million metric tons**. **China** accounted for **1.27 Mt** — about **79%** of the global total. Madagascar and Mozambique filled most of what remained. The **top three** producers together supplied roughly **90%**.
+
+Unlike our [copper mine vs refinery](/blog/copper-mine-vs-refinery-concentration-2024) piece — which splits *who digs* from *who refines* the red metal — this post focuses on **natural graphite mine output**, where a single country already owns nearly four-fifths of the dug tons. Unlike our [helium supply concentration](/blog/global-helium-supply-concentration-2024) map — a two-country US–Qatar story — graphite’s chokepoint is a **one-country mine dominance** paired with a United States that mined **zero** tons and posted **100%** net import reliance.
+
+## The 79% number, not the “critical mineral” slogan
+
+| Producer (2024e, USGS) | Mine output | Share of world |
+| --- | --- | --- |
+| China | 1,270,000 t | ~79% |
+| Madagascar | 89,000 t | ~5.6% |
+| Mozambique | 75,000 t | ~4.7% |
+| Brazil | 68,000 t | ~4.3% |
+| India | 27,800 t | ~1.7% |
+| Tanzania | 25,000 t | ~1.6% |
+| Canada | 20,000 t | ~1.3% |
+| Russia | 20,000 t | ~1.3% |
+| World total (rounded) | 1,600,000 t | 100% |
+
+Shares use the USGS rounded world total. The headline is not that graphite is “strategic.” It is that **mine geography is already more concentrated than most readers’ mental model of battery metals**. Copper mining, for comparison, has Chile as a leader but nowhere near a four-fifths share. Cobalt mining is also extreme — Congo (Kinshasa) near three-quarters — but cobalt’s public narrative *already* centers on a single African producer. Natural graphite’s equivalent concentration sits mostly in China and still travels under the radar of social feeds that prefer lithium price charts.
+
+USGS notes that Chinese output is roughly **85% flake** and **15% amorphous**. Flake and high-purity grades are the grades that matter for spherical graphite going into battery anodes. Amorphous grades feed refractories and other industrial uses. The 79% figure is for **all natural graphite** mined; the battery-relevant flake subset is not less concentrated — if anything, downstream spherical and synthetic battery graphite, per the IEA’s Global Critical Minerals Outlook 2025, is even more geographically tight at the processing stage. We treat that IEA processing claim as **secondary context**, not as a substitute for the USGS mine table.
+
+## What changed from 2023 to 2024
+
+World mine output rose from about **1.53 Mt** in 2023 to **1.60 Mt** in 2024. China’s own estimate moved from **1.21 Mt** to **1.27 Mt** — still the overwhelming block. The interesting motion is in the second tier:
+
+- **Madagascar** jumped from **63 kt** to **89 kt** (+26 kt), the largest absolute gain outside China.
+- **Tanzania** nearly doubled from **13.2 kt** to **25 kt**, consistent with USGS notes on the Lindi Jumbo ramp (nameplate capacity cited around 40 kt/yr).
+- **Canada** more than tripled from **5.5 kt** to **20 kt**small in global share, large in percentage terms, and politically salient for North American supply-chain rhetoric.
+- **Mozambique** slipped from **98 kt** to **75 kt**, losing the #2 slot to Madagascar.
+- **Brazil** was roughly flat (~66–68 kt) despite holding one of the world’s largest disclosed reserve stocks.
+
+The dashboard’s slope view sorts countries by absolute change. The story it tells is not “diversification solved concentration.” It is that **Africa’s flake producers are reshuffling rank under a Chinese ceiling that barely moved as a share of world output**. Even after Madagascar’s jump, China’s share remains near four-fifths.
+
+## The reserves gap: Brazil’s quiet mismatch
+
+USGS world reserves of natural graphite total about **290 Mt**. **China** holds roughly **81 Mt** (~28%). **Brazil** holds about **74 Mt** (~26%) — nearly China’s reserve stock — yet Brazil mined only **~4%** of 2024 world output. Madagascar (~27 Mt) and Mozambique (~25 Mt) also hold large reserve bases relative to their current tons.
+
+That mismatch is the non-obvious chart. If your threat model is “graphite is scarce,” the reserve table disagrees. If your threat model is “graphite mine *capacity in production today* is concentrated,” the mine table agrees violently. Reserves are not tonnes on a ship. They are geological and economic claims that require capital, permitting, power, offtake contracts, and processing routes into spherical grades. Brazil’s reserve parity with China is a **future option**, not a present substitute for Chinese flake.
+
+Vietnam, Turkey, and Mexico show milder versions of the same pattern: non-trivial reserves, tiny 2024 mine shares. The scatter in the dashboard — reserves share on one axis, mine share on the other — puts China in the upper-right and Brazil far to the right but low on the mine axis. That geometry is the diversification problem in one glance.
+
+## Who is exposed: the United States mined nothing
+
+The United States produced **no** natural graphite from mines in 2024. USGS estimates **apparent consumption** at **52,000 t**, down from **65,700 t** in 2023 (−21%), with imports around **60,000 t**. Net import reliance is **100%** of apparent consumption. Import sources (2020–23 average) were **China 43%**, then **Canada, Mexico, and Mozambique at 13% each**, with **18%** other.
+
+Two implications follow. First, even a US consumer that “diversifies away from China” on paper still faces a market where **China sets the marginal mine supply**. Second, 2024’s drop in US apparent consumption tracks USGS commentary on softer battery demand and more available **synthetic** graphite battery material from China — meaning the US dependence story is not only about natural flake mines, but about a broader anode complex still dominated by Chinese processing. Policy has noticed: USGS cites temporary US EV tax-credit rule extensions on graphite, a scheduled tariff path on Chinese natural graphite, Defense Production Act and Bipartisan Infrastructure Law awards for Canadian mining and US spherical/recycling capacity, and multiple US exploration projects (Alabama, Alaska, Montana, New York). Those are **real industrial-policy bets**. They are not yet visible as mine tons in the 2024 USGS table — the US row is still zero.
+
+Pair this with our [phosphate rock supply concentration](/blog/phosphate-rock-supply-concentration-2024) post: fertilizer phosphate and battery graphite are different molecules, but they share the chokepoint logic — **a handful of jurisdictions control the dug feedstock** that every downstream narrative assumes will keep arriving.
+
+## Who wins, who loses, and what “diversification” would require
+
+**Exposed:** anode and cell makers outside China that price as if flake is a globally contestable commodity; OEMs whose IRA / local-content clocks assume North American graphite will appear on schedule; any security analysis that treats “critical mineral list membership” as equivalent to “supply is diversified.” **Relative winners under current geography:** Chinese flake miners and processors; African projects that can sell into non-China offtake at competitive cash costs; synthetic-graphite producers who steal share when natural flake prices or export licenses wobble.
+
+**What would change the story:** a sustained multi-hundred-kiloton ramp in Brazil, Tanzania, Mozambique, Canada, and the US that actually shows up in USGS mine tables; successful spherical capacity outside China at cost parity; or a demand shock (LFP mix, silicon-dominant anodes, slower EV sales) that shrinks natural-flake call on the market. The IEA’s 2025 outlook argues that refining/processing concentration for battery-grade graphite remains extreme and that diversification through 2035 is slow under announced projects — secondary to our USGS mine focus, but directionally consistent with the idea that **digging more outside China is necessary but not sufficient**.
+
+China’s own export licensing for flake and spherical grades, noted by USGS for 2024, already showed how quickly shipped volumes can dip when permits lag. That is a processing/trade valve on top of the mine concentration — another reason the 79% mine share understates full supply-chain fragility for importers.
+
+## Historical context and the battery-metal peer set
+
+Natural graphite is an old industrial mineral (refractories, brake linings, steelmaking) that acquired a new identity as EV anode feedstock. The USGS end-use note for the US still lists batteries among major uses alongside traditional categories. That dual identity matters: steel and refractory demand will not disappear if EV growth slows, so mine investment cases are not pure battery call options. It also means price signals mix industrial and energy-tech cycles.
+
+Among USGS battery-adjacent minerals, graphite’s mine concentration sits in the same “extreme” bucket as Congo-dominated cobalt, not in the more plural lithium club (Australia, Chile, China, Argentina, Zimbabwe). Nickel’s 2024 story is Indonesia-dominated at the mine and increasingly at the refined stage — different geography, similar chokepoint math. Copper, as our earlier post showed, splits mine leadership (Chile, DRC, Peru) from refine leadership (China). Graphite’s 2024 mine table does not need that split to look alarming: **the dug tons are already one-country heavy**.
+
+## Caveats and methodology
+
+- **2024 figures are USGS estimates (e).** Final Minerals Yearbook revisions can move country tons and the world total; shares will shift slightly.
+- **Natural ≠ battery-ready.** Mine tons include amorphous and flake grades; spherical purification and coating are additional steps. IEA processing shares are cited as secondary context, not as USGS-disclosed mine statistics.
+- **Reserves ≠ production capacity.** Large Brazilian or Tanzanian reserves do not imply 2025–26 tonnes without capital and offtake.
+- **World totals are rounded.** Country shares are computed against USGS rounded world figures (1.53 Mt / 1.60 Mt) and may not sum to 100% if you re-add every row.
+- **US import-source shares are 2020–23 averages**, not a 2024 snapshotuseful for structural dependence, not for one-year trade spikes.
+- **Synthetic graphite** competes in batteries and is outside this natural-mine dashboard; USGS attributes part of the 2024 US consumption drop to synthetic availability.
+
+## The shareable takeaway
+
+In **2024**, China mined about **79%** of the world’s natural graphite, the top three producers cleared roughly **90%**, and the United States mined **zero** while running **100%** import reliance — even as Brazil sat on reserves nearly as large as China’s with only a mid-single-digit mine share. Battery security talk that skips anode feedstock is skipping the mineral whose mine map is already a near-monopoly.
+
+Related reading: [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-concentration-2024) and [global helium supply concentration](/blog/global-helium-supply-concentration-2024).`,
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl: "/images/global-systems-natural-graphite-mine-concentration-2024-hero.png",
+    imageAlt: "Dark navy data visualization of global natural graphite mine concentration",
+    publishedAt: "2026-07-31T18:00:00Z",
+    featured: true,
+    visualization: "natural-graphite-mine-concentration",
+    layout: "default",
+  },
+  {
+    id: "bank-loan-chargeoffs",
+    slug: "bank-loan-chargeoffs-2026",
+    title: "Charted: Credit-Card Charge-Offs Run 23× Commercial Real Estate",
+    excerpt: "Fed SA data for 2026 Q1: net charge-offs hit 3.84% on credit cards versus 0.17% on CRE. Delinquency headlines about office loans miss the loss ledger — cards still dominate realized bank credit costs.",
+    content: `Banking commentary still orbits **commercial real estate**. Office vacancies, regional-bank CRE shares, and “extend and pretend” dominate the narrative. The Federal Reserve’s own charge-off table tells a different loss story. In **2026 Q1**, seasonally adjusted **net charge-offs** on credit cards were **3.84%** of average card loans. On commercial real estate loans booked in domestic offices, the same meter printed **0.17%**. Cards write off roughly **23×** what CRE does.
+
+Unlike our [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026) piece — which charts *past-due* rates and the top-100 vs smaller-bank split — this post focuses on **realized losses**: net charge-offs (charge-offs minus recoveries, annualized). Unlike our [household debt delinquency split](/blog/us-household-debt-delinquency-split-2026) — NY Fed borrower-side transitions — this is the **bank Call Report** loss ledger that hits provision expense and capital.
+
+## The loss ledger, not the past-due headline
+
+| Category (2026 Q1, Fed SA) | Net charge-off % | Delinquency % |
+| --- | --- | --- |
+| Credit cards | 3.84 | 2.92 |
+| Other consumer | 1.17 | 2.28 |
+| C&I loans | 0.59 | 1.34 |
+| Leases | 0.37 | 1.16 |
+| Commercial RE | 0.17 | 1.56 |
+| Agricultural | 0.13 | 1.12 |
+| Residential RE | ~0.00 | 1.89 |
+| Total loans & leases | 0.56 | 1.48 |
+
+Two facts jump out. First, **cards dominate the charge-off ranking** and have for every year-end snapshot in our heatmap from 2019 through 2025. Second, **CRE’s delinquency (1.56%) is nearly 10× its charge-off rate (0.17%)** — a classic “past due but not yet written off” gap. Residential mortgages show an even starker version: nearly **1.9%** delinquent with essentially **zero** net charge-offs, because recovery values and workout norms keep losses off the annualized meter.
+
+The shareable cut is not “banks have credit risk.” It is that the **loss machine** and the **headline stress machine** are different categories. CRE can look stressed on delinquency slides while cards quietly generate most of the realized credit cost.
+
+## What charge-offs measure (and why the multiple matters)
+
+Net charge-off rates are annualized write-offs net of recoveries, divided by average loans. They are closer to an **income-statement loss rate** than delinquency, which is a **stock of past-due balances**. A loan can sit delinquent for quarters — especially secured real estate with collateral and forbearance — before a charge-off. Unsecured revolving credit moves from late to loss much faster.
+
+That mechanics gap is why **3.84% vs 0.17%** is not a quirk of one quarter. Cards peaked recently at **4.64%** in **2024 Q3**, still well below the GFC card peak near **10.5%**, but high enough that consumer credit — not office towers — has been the primary source of bank credit costs in this cycle. CRE charge-offs did rise from near-zero in 2021–22 to a local crest around **0.26%** in 2023–24, then eased to **0.14–0.17%**. That is a real uptick from a trough; it is not remotely card-scale.
+
+Total loans and leases charge off at **0.56%** — pulled up by consumer books and diluted by the huge mortgage and CRE stocks that barely write off. Portfolio mix, not just underwriting skill, determines how painful a “1% delinquency” world feels in earnings.
+
+## Path since the pandemic trough
+
+From the **2021 Q4** trough — cards at **1.63%**, CRE at **0.02%**, C&I at **0.12%** — every major category except residential climbed. Cards more than doubled to the mid-4s before drifting to **3.84%**. Other consumer loans moved from **0.36%** to about **1.2%**. C&I rose into the mid-0.5s. CRE’s path is the one markets watch, but on the charge-off scale it remains a thin amber line under a blazing card series.
+
+The dashboard’s post-trough path and year-end heatmap make the same point in two shapes: **cards never leave rank #1**, and the color intensity on consumer rows dwarfs CRE and residential. If your mental model of “bank credit stress 2023–26” is office CMBS and regional CRE concentrations, you are describing a **collateral and funding narrative**. The Fed’s charge-off table is describing a **consumer revolving-credit loss narrative**.
+
+Pair this with [credit card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026): sticky ~21–23% APRs coexist with elevated charge-offs. Issuers price for loss content; the loss content is still concentrated in cards even as policy rates ease.
+
+## Delinquency vs charge-offs: the scatter that breaks the story
+
+Plot each category’s **delinquency** against its **charge-off** and the CRE/residential outliers appear immediately. CRE sits rightward (higher delinquency) but low on the loss axis. Residential is extreme: high past-due stock, ~zero net charge-offs. Cards sit high on *both* axes — and uniquely, **charge-offs (3.84%) exceed delinquency (2.92%)** in 2026 Q1, consistent with a fast flow of accounts through the delinquency pipeline into write-off (and with how annualized flows relate to end-of-period stocks).
+
+That scatter is the analytical heart of the post. **Delinquency rankings ≠ loss rankings.** CRE ranks near the middle of delinquency and near the bottom of charge-offs. Cards rank #1 on losses and near the top on delinquency. Commentators who treat “rising CRE delinquency” as synonymous with “banks are eating CRE losses at scale” are conflating two Fed tables that disagree on magnitude by an order of magnitude.
+
+Our [CRE size-split](/blog/cre-bank-delinquency-size-split-2026) analysis showed the **100 largest banks** printing **higher** CRE delinquency than smaller banks — already a counter-narrative to the regional-bank-only story. Charge-offs add a second counter-narrative: even where CRE is past due, **realized industry losses remain small** relative to consumer credit.
+
+## Who wins, who is exposed
+
+**Exposed:** monoline and heavy card issuers whose earnings track the 3–5% charge-off band; households already stressed in the NY Fed transition data; equity narratives that treat CRE as the sole “credit cycle” proxy and miss consumer loss content. **Less exposed than headlines imply (on this meter):** the banking system’s CRE book *as a source of current charge-off expense* — still low in absolute SA rates, even after the post-2022 rise. That does **not** mean CRE is safe: concentrated exposures, collateral gaps on office, and future charge-off catch-up remain live risks. It means **today’s P&L loss rate** is still a consumer story.
+
+**Winners of the framing:** analysts who separate **stock stress** from **flow losses**; risk managers who provision off category-specific loss curves rather than a single “credit” dial; readers of both Fed tables instead of one.
+
+## Historical context and what would change the story
+
+GFC peaks still dwarf today’s readings: cards near **10.5%**, CRE near **2.9%**. The current cycle is elevated consumer normalization after the 2021 trough, not a 2009 remake. Cards have already rolled over from **4.64%** toward **3.84%** — a soft landing signal *within* consumer credit — while CRE charge-offs remain contained.
+
+Several developments would rewrite the interpretation. A **CRE charge-off breakout** toward 1%+ would finally align the office narrative with the loss ledger. A **renewed card spike** above 5% would reopen recession-loss fears even if CRE stays quiet. A **residential charge-off surge** would signal that mortgage forbearance and home equity cushions had failed — currently the opposite of what the table shows. Changes in **recovery rates** (charge-offs are net) can move the meter without changing gross defaults. And **portfolio mix shifts** — banks exiting cards or growing CRE — change how total charge-offs map to category rates.
+
+## Caveats and methodology
+
+- **Net of recoveries.** Negative or near-zero rates (especially residential) can reflect recoveries exceeding new charge-offs in a quarternot “perfect credit.”
+- **All banks, SA.** Size splits and NSA series can differ; our CRE delinquency post covers the size cut on the *delinquency* table.
+- **Category definitions.** CRE here is commercial real estate booked in domestic offices (construction, multifamily, nonfarm nonresidential), matching the Fed footnotenot every CRE-adjacent exposure on bank balance sheets.
+- **Rates ≠ dollars.** A low CRE charge-off *rate* on a large stock can still be material dollars; cards’ high *rate* on a smaller stock can also be large. This post ranks rates, not dollar loss totals.
+- **Timing.** Charge-offs lag delinquency; today’s CRE past-dues may become tomorrow’s charge-offs. The gap is the point, not proof that CRE losses will never rise.
+
+## The shareable takeaway
+
+In **2026 Q1**, US banks charged off credit cards at **3.84%** and CRE at **0.17%** — about a **23×** gap — while CRE delinquency (**1.56%**) still looks more alarming than CRE losses. Cards never leave the top of the charge-off ranking. The banking stress story that fits the Fed’s **loss** table is still **consumer revolving credit**, not office towers. Watch both meters; do not let the louder headline overwrite the quieter P&L.
+
+Related reading: [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026) and [household debt’s two-speed delinquency](/blog/us-household-debt-delinquency-split-2026).`,
+    category: "Finance",
+    themeId: "bank-commercial-credit",
+    imageUrl: "/images/finance-bank-loan-chargeoffs-2026-hero.png",
+    imageAlt: "Dark navy chart of US bank loan charge-off rates by category",
+    publishedAt: "2026-07-31T17:30:00Z",
+    featured: true,
+    visualization: "bank-loan-chargeoffs",
+    layout: "default",
+  },
+  {
+    id: "irena-renewable-capacity",
+    slug: "irena-renewable-capacity-record-2024",
+    title: "Charted: Renewables Added a Record 585 GW in 2024 — China Took 64%",
+    excerpt: "IRENA’s 2025 capacity highlights: world renewable power stock hit 4,448 GW after +15.1% growth. Solar alone was 77% of additions; Africa got 0.7%. Even repeating 2024’s pace still misses the COP28 tripling path.",
+    content: `Energy headlines love generation mix pie charts — who burned what last year. IRENA’s Renewable Capacity Highlights for 2024 force a different meter: **who is installing gigawatts now**. The world added a record **585 GW** of renewable power capacity in 2024, lifting the stock to **4,448 GW** (+**15.1%**). Solar alone supplied **452 GW** — **77.3%** of renewable additions — and **China alone accounted for 63.9%** of the global renewable build.
+
+Unlike our [global electricity generation mix](/blog/global-electricity-generation-mix-2024) map — which shows *how countries generate TWh today* — this post tracks *capacity additions and stocks*: the industrial pipeline that will shape tomorrow’s mix. Unlike our [nuclear under-construction](/blog/nuclear-under-construction-china-share-2026) ledger — which counts reactors being poured — this is the intermittent-plus-hydro buildout that now dominates *all* power-capacity expansion (**92.5%** of total new power capacity in 2024, up from **85.8%** in 2023).
+
+## The headline ledger
+
+| Metric (2024, IRENA) | Value |
+| --- | --- |
+| Renewable stock, end-2024 | 4,448 GW |
+| Net renewable additions | 585 GW |
+| Stock growth | +15.1% |
+| Solar additions | 452 GW (77.3%) |
+| Wind additions | 113 GW |
+| Solar + wind share of renewables adds | 96.6% |
+| Renewables’ share of *all* power capacity expansion | 92.5% |
+| China’s share of renewable additions | 63.9% (373.6 GW) |
+| Africa’s share of renewable additions | 0.7% (4.2 GW) |
+| COP28 2030 triple path (IRENA) | ~11.2 TW |
+| Path if 2024 growth persists | ~10.4 TW |
+
+The non-obvious cut is not “renewables are rising” — everyone already knows that. It is **concentration plus shortfall**: a record year that is still *too China-centric* and *still short* of the COP28 tripling arithmetic IRENA publishes alongside the celebration.
+
+## Solar ate the year
+
+Technology composition in 2024 was almost a single-fuel story. Solar’s **452 GW** dwarfed wind’s **113 GW**. Hydropower (excluding pure pumped storage) added about **15 GW**; bioenergy **4.6 GW**; geothermal **0.4 GW**; marine effectively **0**. Solar plus wind were **96.6%** of renewable additions. Everything else is rounding error on the flow — even though hydro remains a large *stock* (**1,283 GW**, **29%** of renewable capacity).
+
+That flow-vs-stock gap is the first analytical fork. End-2024 renewable stock is still a three-pillar mix: **solar 42% / hydro 29% / wind 25%**, with other renewables about **4%**. Solar has overtaken hydro as the largest renewable stock, but hydro’s installed base still stabilizes grids that solar’s annual torrent has not yet replaced. Debates that treat “renewables” as synonymous with “solar farms” are describing the *addition* curve, not the *fleet* that actually exists.
+
+Wind’s **11.1%** stock growth looks healthy in isolation and small next to solar’s **32.2%**. Policy narratives that bundle “solar and wind” as one growth machine obscure a solar monopoly on *incremental* GW. If your mental model of the energy transition is a balanced solar–wind–storage triad, 2024’s addition ledger says the world is mostly buying solar modules at industrial scale — and China is selling and installing most of them.
+
+## China is the buildout; Africa is the footnote
+
+Asia took **421.5 GW** of renewable additions — **72%** of the world total — on a stock of **2,382 GW** (**53.6%** of global renewable capacity). Inside that Asia number, China’s **373.6 GW** is the system. Europe added **70.1 GW**; North America **45.9 GW**; South America **22.5 GW**. Africa added **4.2 GW** — **0.7%** of global renewable additions — on a stock of only **67 GW**.
+
+That is the shareable geopolitical cut. A continent with enormous solar resource and rising electricity demand received less than one percent of the world’s renewable capacity growth in the record year. Middle East additions (**3.3 GW**) were in the same rounding-error band. Oceania’s **8.7 GW** on a small base produced a **13.3%** regional growth rate — faster than Europe — without changing the global concentration story.
+
+Country solar leaders make the China outlier visceral: China **278 GW** of solar alone, then the United States **38.3**, India **24.5**, Brazil **15.2**, Germany **15.1**, South Korea **3.1**. China added more solar than the next five countries *combined*. Our [nuclear construction](/blog/nuclear-under-construction-china-share-2026) piece showed China holding roughly half the world’s reactor build pipeline; IRENA shows China holding roughly two-thirds of renewable *capacity* additions. Different technologies, same industrial-scale concentration.
+
+## Renewables now dominate *all* expansion — and still miss the path
+
+IRENA’s second chart that markets under-read is the renewable share of *total* power capacity expansion: **85.8% in 2023 → 92.5% in 2024**. Fossil and other non-renewable capacity additions have been crowded to the margin of the *flow*. That does not mean fossil fleets are gone — stocks linger for decades — but it does mean the *new* machine the world is buying is overwhelmingly renewable, and overwhelmingly solar.
+
+Yet IRENA’s own COP28 tripling arithmetic remains unmet on current trajectories. The published path needs roughly **11.2 TW** of renewable capacity by 2030. End-2024 stock is **4.45 TW**. Even if the world *repeats* 2024’s **15.1%** growth every year through 2030, IRENA’s published arithmetic lands near **10.4 TW** — still about **0.8 TW short**. Persist at the slower 2018–23 CAGR and the shortfall widens toward an **8 TW** world. Record years can be both historically large and strategically insufficient.
+
+That dual message is why this post pairs celebration panels with a path panel. “Record additions” without the 2030 gap is marketing. “Missed path” without the 92.5% expansion share is doom without industrial evidence. Both are in the same IRENA release.
+
+## Who wins, who is exposed
+
+**Winners of the 2024 capacity machine:** Chinese module makers, EPC contractors, and grid operators absorbing hundreds of GW; countries and firms that can finance and interconnect solar at multi-GW annual rates; hydro-heavy systems that still provide the stock ballast while solar scales. **Exposed:** African grids and industry that remain off the addition map; European and US narratives that treat domestic GW as the global story when they are single-digit shares of the world flow; climate diplomacy that counts pledges in TWh rhetoric while GW concentration sits in one national industrial system; and any planner who assumes wind and hydro will co-expand with solar at similar rates — 2024 says they will not.
+
+Pair this with [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025): demand spikes in one country can still outrun local interconnection even while *global* renewable additions set records. Global GW and local electrons are different constraints.
+
+## Historical context and what would change the story
+
+Renewable capacity growth at **15.1%** in 2024 is not a gentle continuation of the 2010s. Solar’s cost collapse and China’s manufacturing scale turned capacity addition into a volume industry. The renewable share of *all* expansion climbing into the low-90s means the remaining non-renewable additions are a thin residual — interesting for peaking and backup debates, less interesting as the growth engine.
+
+Several developments would rewrite the interpretation. A **collapse in Chinese additions** without offsetting US/India/EU growth would puncture both the record and the tripling path. A **sustained African GW ramp** into double-digit global shares would change the equity reading without necessarily changing the China stock lead. A **wind rebound** that rebalances the 96.6% solar–wind solar monopoly would reopen the “balanced portfolio” narrative. Faster **storage and transmission** deployment would convert capacity GW into firmer energy services — IRENA’s capacity meter deliberately does not measure that conversion. And if 2025–26 additions *accelerate* above 15.1%, the 10.4 TW path arithmetic moves; if they decelerate, the shortfall compounds.
+
+## Caveats and methodology
+
+- **Capacity ≠ generation.** IRENA reports installed power capacity (GW), not energy produced (TWh). Capacity factors differ enormously across solar, wind, and hydro; our [generation mix](/blog/global-electricity-generation-mix-2024) post is the complementary ledger.
+- **Hydropower definition.** Stock figures exclude pure pumped storage (**142 GW** additional in IRENA’s note). Including pumped storage changes the hydro stock without changing the solar-addition story.
+- **Estimated path anchors.** 2018–22 renewable shares of total expansion in the dashboard are trend anchors around disclosed 2023–24 endpoints, not a full year-by-year IRENA reconstructiontreat pre-2023 path points as estimated.
+- **Net additions.** Figures are net capacity changes; retirements and repowering affect interpretation at the margin.
+- **COP28 path is arithmetic, not a forecast model.** IRENA’s “if 2024 growth persists” line is compounding math on the published stock, not a probabilistic scenario with policy shocks.
+
+## The shareable takeaway
+
+2024 was a record renewable year — **585 GW** added, stock **4,448 GW**, renewables **92.5%** of all power-capacity expansion — and still a China story (**64%** of additions) with Africa nearly absent (**0.7%**). Solar ate **77%** of renewable additions. Even repeating that record pace leaves IRENA’s COP28 tripling path short by about **0.8 TW** by 2030. The world is installing green GW faster than ever, in fewer places than the speeches imply, and still not quite fast enough on the path it published.
+
+Related reading: [how major economies generate power today](/blog/global-electricity-generation-mix-2024) and [who is building nuclear reactors now](/blog/nuclear-under-construction-china-share-2026).`,
+    category: "Energy",
+    themeId: "energy-systems",
+    imageUrl: "/images/energy-irena-renewable-capacity-record-2024-hero.png",
+    imageAlt: "Dark navy visualization of record renewable capacity additions",
+    publishedAt: "2026-07-31T17:00:00Z",
+    featured: true,
+    visualization: "irena-renewable-capacity",
+    layout: "default",
+  },
+  {
+    id: "oecd-dac-oda",
+    slug: "oecd-dac-oda-first-drop-2024",
+    title: "Charted: Rich-Country Aid Fell 7.1% in 2024 — Only 4 Donors Hit the 0.7% Target",
+    excerpt: "OECD DAC members provided $212.1B in official development assistance in 2024 — the first real drop in six years. The US still supplies 30% of the pile at 0.22% of GNI; Norway, Luxembourg, Sweden, and Denmark alone clear 0.7%.",
+    content: `Foreign-aid debates usually start with moral language or with a single country's budget cut. The OECD's preliminary 2024 numbers force a different framing: **rich-country official development assistance (ODA) fell 7.1% in real terms** to **$212.1 billion** — the first decline after five consecutive years of growth — and still only **four** Development Assistance Committee (DAC) members cleared the long-standing UN target of **0.7% of GNI**.
+
+Unlike our [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024) map — which asks who shelters displaced people — this post asks who *funds* development and humanitarian systems on the donor ledger, and how volume rankings diverge from effort-as-a-share-of-income. Unlike our [SIPRI military expenditure](/blog/sipri-world-military-expenditure-2024) chart, the unit here is grant-equivalent ODA, not defense outlays.
+
+## The headline: $212B and the first drop in six years
+
+| Metric (2024, preliminary) | Value |
+| --- | --- |
+| DAC total ODA (grant-equivalent) | $212.1B |
+| DAC ODA / combined GNI | 0.33% |
+| Real change vs 2023 | −7.1% |
+| Still above 2019 | +23% |
+| Countries hitting 0.7% of GNI | 4 |
+| US share of DAC ODA | 30% |
+| Top-5 donor share | 69% |
+| G7 share | 75% |
+
+The drop is not a return to pre-pandemic scarcity. OECD notes that even after the decline, 2024 ODA remained **23% above 2019**. The 2019–23 expansion (+33% in real terms) was crisis mathematics: COVID response, then Ukraine. 2024 is the first year the crisis premium partially unwound — multilateral contributions fell **10.9%**, bilateral ODA fell **5.8%**, and several of the valves that inflated totals (in-donor refugee costs, Ukraine bilateral, humanitarian) moved lower together.
+
+## Volume kings vs intensity kings
+
+The United States remains the largest DAC donor by dollars at **$63.3 billion** — **30%** of the total — yet posts just **0.22% of GNI**. Germany is second at **$32.4B** and **0.67% of GNI**, a hair under the UN line after a **−17.2%** real drop. The United Kingdom (**$18.0B**, **0.50%**), Japan (**$16.8B**, **0.39%**), and France (**$15.4B**, **0.48%**) complete a top five that supplies **69%** of DAC ODA.
+
+Flip the axis to ODA/GNI and the leaderboard rearranges. **Norway (1.02%)**, **Luxembourg (1.00%)**, **Sweden (0.79%)**, and **Denmark (0.71%)** are the only countries above **0.7%**. None of them cracks the top five by volume. Norway's **$5.2B** is less than one-twelfth of US ODA; Luxembourg's **$0.6B** is a rounding error on the US ledger and still a full percentage point of Luxembourgish GNI.
+
+That dual ranking is the shareable insight. Volume concentration is a G7 story (**75%** of DAC ODA). Intensity compliance is a Nordic-plus-Luxembourg story (**four countries**). Debates that treat "largest donor" as synonymous with "most generous" are mixing two different units.
+
+## What fell inside the total
+
+Three pressure lines explain much of the 2024 air coming out of the balloon:
+
+- **In-donor refugee costs** fell **17.3%** to **$27.8B**still **13.1%** of DAC ODA, down from **14.6%** in 2023. For five countries, those costs still exceeded a quarter of their ODA.
+- **Humanitarian aid** fell **9.6%** to **$24.2B**.
+- **Net bilateral ODA to Ukraine** fell **16.7%** to **$15.5B** (**7.4%** of total net ODA).
+
+Program-and-project bilateral ODA excluding refugees and humanitarian aid also edged down (**−1.2%**). Contributions to international organisations' core budgets fell sharply on a net-flow basis (**−19.1%**), after a 2023 bulge tied partly to IDA and IMF trust funding. The composition of the remaining pile is still grant-heavy: bilateral grants about **$144B**, multilateral channels about **$51B**, loan grant-equivalents about **$13B**, and private-sector instruments about **$4B**.
+
+Japan's profile remains distinctive inside that mix: more than half of its bilateral ODA is still loan grant-equivalents in the OECD note's country detail — a reminder that the headline "ODA dollar" is not always a pure grant. France and Canada also lean more on loan grant-equivalents than the Nordic peers, which tilts their grant-equivalent totals relative to a pure cash-flow reading.
+
+## Who wins, who is exposed
+
+**Relative winners of the dual ledger:** Nordic donors and Luxembourg, whose intensity still clears the UN line even as some volumes dipped; Korea (**+24.8%** real), one of the few large risers; Italy and Spain among G7/EU peers that grew. **Exposed:** any narrative that treats 2022–23 ODA peaks as a permanent floor; least-developed-country programs if bilateral LDC flows keep softening (**−3%** real to **$35B** net bilateral to LDCs); humanitarian agencies staring at a smaller envelope into 2025; and middle-power donors whose totals were inflated by in-donor refugee accounting that is now normalizing downward (Poland **−26.8%**, Czechia **−29.1%**).
+
+G7 countries still dominate dollars at **$160B** (**0.32%** of their combined GNI). DAC-EU countries supply **$88.7B** at a higher **0.47%** of GNI — more intense as a bloc than the G7 average, still below 0.7%. EU Institutions add another **$27.7B** on the memo line (not double-counted into the DAC country total).
+
+## Historical context: crisis ODA, then the unwind
+
+From 2019 to 2023, DAC ODA rose every year in real terms (**+4.0%, +8.3%, +16.8%, +1.2%**). That path was not a sudden conversion to the 0.7% norm — it was stacked crisis response. The 2024 **−7.1%** is the first break in that streak, and OECD survey-based simulations already point to a further **9–17%** drop from 2024 to 2025 depending on announced budget cuts. If those scenarios land near the high end, the post-2019 gain could compress quickly.
+
+Average country effort across DAC members (the unweighted mean of national ODA/GNI ratios) was **0.40%** in 2024 — higher than the GNI-weighted DAC total of **0.33%**, because smaller high-intensity donors pull the average up while the US volume weight pulls the combined ratio down. That gap between average effort and aggregate effort is another way of saying concentration: a few large, low-ratio donors dominate the dollars.
+
+Read this next to [NATO's 2% of GDP defense guideline](/blog/nato-defense-spending-gdp-2-percent-2024): alliance military targets have been *gaining* compliance, while the ODA 0.7% target still has almost no volume-weighted compliance. The same capitals can clear a defense-share line and miss a development-share line in the same fiscal year.
+
+## What would change the story
+
+A **US ODA collapse** beyond the preliminary **−4.4%** would move the global total mechanically — 30% concentration cuts both ways. A **German return above 0.7%** would add a volume-scale country to the intensity club. A **renewed Ukraine or climate-finance surge** booked as ODA could reverse the 2024 dip without raising the number of 0.7% hitters. A **redefinition fight** over in-donor refugee costs could shrink reported ODA without changing transfers to developing countries. Final December 2025 OECD detail could revise preliminary country rows — treat April 2025 figures as the best current public ledger, not scripture.
+
+## Caveats and methodology
+
+- **Preliminary data (April 2025).** Final activity-level ODA for 2024 was scheduled for December 2025; country totals can revise.
+- **Grant-equivalent headline.** Since 2018, ODA performance is measured on grant-equivalents of loans, not cash-basis net flows. Cash-basis DAC ODA was **$209.8B** (**−9.3%** real)a parallel series, not the headline.
+- **In-donor refugee costs** are ODA-eligible under DAC rules but are spent inside donor countries; stripping them changes both levels and rankings.
+- **DAC path years 2019–23** in the dashboard are estimated from OECD-published real growth rates anchored on the disclosed 2024 total; they are not a substitute for each year's published grant-equivalent table.
+- **EU Institutions** appear as a memo item and are not added on top of DAC country totals when citing the **$212.1B** headline.
+
+## The shareable takeaway
+
+Rich-country aid fell **7.1%** in 2024 to **$212.1B** — still above 2019, but no longer on an unbroken up-ramp. The United States still supplies **30%** of DAC ODA at **0.22% of GNI**. Only **Norway, Luxembourg, Sweden, and Denmark** clear **0.7%**. Volume is a G7 story. Intensity is a four-country story. Conflating the two is how aid debates talk past the data.
+
+Related reading: [Who hosts the world's refugees](/blog/global-refugee-hosting-burden-2024) and [SIPRI world military expenditure](/blog/sipri-world-military-expenditure-2024).`,
+    category: "Politics",
+    themeId: "geopolitics-institutions",
+    imageUrl: "/images/politics-oecd-dac-oda-2024-hero.png",
+    imageAlt: "Dark navy chart of OECD DAC aid volumes and ODA/GNI intensity",
+    publishedAt: "2026-07-31T16:30:00Z",
+    featured: true,
+    visualization: "oecd-dac-oda",
+    layout: "default",
+  },
+  {
+    id: "money-market-funds-deposits",
+    slug: "money-market-funds-vs-deposits-2026",
+    title: "Charted: $7.85T Sits in Money Market Funds — Still 3.3 pp Above Bank Savings Yields",
+    excerpt: "ICI puts US money market fund assets at $7.85 trillion as of late July 2026. Government funds are 82% of the pile, and YE 2025 taxable MMF yields still beat money-market deposit accounts by about 3.3 percentage points.",
+    content: `Bank deposit rates get the headlines when the Federal Reserve cuts. The quieter cash story is where households and institutions actually parked money during — and after — the hiking cycle. As of the week ended **29 July 2026**, the Investment Company Institute puts US money market fund (MMF) assets at **$7.85 trillion**. That is more than double the **$3.63 trillion** year-end 2019 stock. Government funds alone are **$6.47 trillion** — **82.4%** of the total.
+
+Unlike our [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) piece — which tracks the *flow* of saving out of disposable income — this post maps the *stock* of cash that left (or never entered) bank checking and savings books and instead sat in money market share classes. The Fed’s own November 2025 FEDS Note on deposit–MMF substitution is the bridge: when policy rates rose, deposits excl. large time deposits stalled near **$15 trillion** while MMF AUM kept climbing, and the MMF share of the combined cash pile jumped from the low-20s into the low-30s.
+
+## The headline pile: $7.85T and still growing
+
+| Slice (29 Jul 2026) | Assets | Share |
+| --- | --- | --- |
+| Government MMFs | $6.47T | 82.4% |
+| Prime MMFs | $1.23T | 15.7% |
+| Tax-exempt MMFs | $0.15T | 1.9% |
+| Total | $7.85T | 100% |
+| Retail share classes | $3.08T | 39.2% |
+| Institutional share classes | $4.78T | 60.8% |
+
+The composition is the first non-obvious fact. Retail brokerage UIs make prime and “cash” sweep products feel ubiquitous, but the dollar majority of US MMFs is **government** — funds that hold Treasuries, agency paper, and repo against government collateral. That matters for stress narratives: the 2026 cash pile is not a return of 2008-style prime commercial-paper risk at the same scale. It is a government-dominated parking lot that grew because yields cleared bank deposit pricing.
+
+Institutional share classes still outweigh retail (**$4.78T vs $3.08T**). Both nearly doubled since 2019 YE (**retail $1.37T → $3.08T**; **institutional $2.26T → $4.78T**). The retail boom is real — app-based brokerage cash and high-yield savings alternatives pulled household dollars — but the institutional channel remains the larger ledger.
+
+## Two cash piles: MMFs rose while deposits stalled
+
+The Fed FEDS Note (Im, Li, and Wang, November 2025) frames the substitution cleanly. Domestically chartered bank deposits *excluding large time deposits* sat near **$15 trillion** as of May 2025, while MMFs were about **$7 trillion**. In our dual-path series, MMF AUM rises from **$3.63T** (2019 YE) to **$7.85T** (Jul 2026) while the deposit pile — after the COVID stimulus peak — flattens in the mid-teens. The MMF share of the combined pile moves from roughly **23%** pre-hike into the **low-30s**, hitting about **34%** by mid-2026 on our estimated deposit path.
+
+That share shift is the monetary-policy transmission story banks underplay. When the Fed hiked, wholesale funding costs rose immediately; many banks lagged on retail deposit betas. Money market funds, by design, pass through higher short-rate income quickly. Households and corporates that could move cash did. The FEDS Note estimates a substitution elasticity around **−0.21** on weekly growth — not one-for-one, but large enough that deposit franchise value and MMF AUM became two sides of the same rate-cycle coin.
+
+Pair this with our [credit-card APR](/blog/us-credit-card-apr-vs-fed-funds-2026) chart: cards stuck near **21%** while policy rates fell. Banks can be slow to cut lending rates *and* slow to raise deposit rates. The MMF industry is the residual claimant on that stickiness — it harvests the yield gap households notice when they open a brokerage cash screen.
+
+## The yield gap that pulled the cash
+
+Year-end 2025 ICI Fact Book commentary puts the average taxable MMF yield near **3.9%** versus about **0.6%** on money-market deposit accounts — a **3.3 percentage-point** gap. Earlier in the hiking cycle the gap was wider still; our estimated path peaks near **4.6 pp** around 2023 as policy rates crested and deposit betas lagged. Even after the first cuts, the gap did not collapse to zero. That is why AUM kept rising into 2026 instead of reversing the moment the Fed pivoted.
+
+The gap is not a mystery of “financial literacy.” It is industrial organization. MMFs compete on yield and same-day liquidity within a regulated wrapper. Banks compete on branch networks, payment rails, FDIC insurance framing, and relationship pricing that often underpays the marginal cash saver. As long as the overnight complex clears above what banks choose to pay on MMDAs and savings, the cash will keep a toehold in fund share classes — even if some dollars eventually rotate into T-bills or short bond ETFs.
+
+Government-fund dominance reinforces the point. Investors did not need to take prime credit risk to earn a competitive cash yield. They could buy government MMFs and still beat the bank quote by hundreds of basis points at the cycle peak.
+
+## Who wins and who is exposed
+
+**Winners:** MMF complexes and the brokerages that distribute them; Treasury and agency markets that absorb government-fund demand; households and CFOs who moved cash and captured the gap. **Exposed:** regional and community banks whose deposit betas stayed low and whose funding mix leaned on non-maturity deposits that proved rate-sensitive once alternatives were one click away; any soft-landing narrative that treats “deposits stable” as proof households are flush when a large cash stock simply relocated.
+
+The exposure is asymmetric. A $15T deposit pile that is flat is still enormous. But *marginal* funding — the next dollar of loan growth — got more expensive when the alternative yield was visible. That is how a 3.3 pp MMDA-vs-MMF gap shows up in loan officer surveys and in net interest margin compression even when headline deposit levels look calm.
+
+Institutional cash managers matter for market plumbing. When institutional MMF assets grow by trillions, overnight repo and Treasury bill markets deepen as absorption valves. When they shrink, the reverse can tighten funding. The 2026 stock is large enough that any future rapid reverse — a sudden deposit-rate war or a flight into duration — would move short-rate markets, not just fund marketing decks.
+
+## Historical context: from COVID cash to hike-era parking
+
+2019 YE MMFs at **$3.63T** were already a mature industry. COVID fiscal and monetary stimulus then flooded bank deposits; MMF totals rose more modestly into 2021 as yields collapsed toward zero and the opportunity cost of leaving cash in a checking account vanished. The regime change was 2022–23: policy rates ripped higher, MMF yields followed within weeks, and bank deposit pricing followed slowly. That is when AUM accelerated — **$4.79T** (2022) → **$5.92T** (2023) → **$6.85T** (2024) → **$7.75T** (2025 YE) → **$7.85T** (Jul 2026 weekly).
+
+The composition shift toward government funds is itself a post-2010 regulatory legacy. Reform after the financial crisis made prime funds less convenient for many investors; government funds became the default institutional cash sleeve. The hike cycle poured gasoline on that already-preferred wrapper. So the 2026 chart is not “speculation returned to prime” — it is “safe cash got paid.”
+
+## What would change the story
+
+A **sustained bank deposit-rate war** that closes the MMDA–MMF gap under 1 pp would slow inflows and could reverse some retail AUM. A **sharp Fed easing cycle** that drives taxable MMF yields toward 1% would shrink the opportunity cost of inertia — cash might stay put in funds out of habit, or rotate into short-duration bond products. A **regulatory shock** to MMF liquidity fees or gates could temporarily push cash back to insured deposits. A **Treasury bill shortage** that compresses government-fund yields relative to bank specials would flip relative pricing. None of those are in the Jul 2026 weekly snapshot — the snapshot still shows a wide gap and a rising stock.
+
+## Caveats and methodology
+
+- **Deposit path points outside May 2025 are estimated** from the FEDS Note narrative and H.8 trends; only the May 2025 ~$15T deposits excl. large time deposits figure is treated as disclosed in that note. MMF totals from ICI weekly and Fact Book year-ends are disclosed.
+- **Yield gap history before YE 2025** uses estimated anchors; the **3.9% vs 0.6%** YE 2025 comparison follows ICI Fact Book commentary and should not be read as a daily mark-to-market series.
+- **MMF share of the combined pile** depends on the deposit definition (excl. large time). Including large time deposits would shrink the MMF share; the FEDS Note’s definition is the relevant one for substitution analysis.
+- **2026 composition** is a mid-year weekly snapshot, not a year-end Fact Book totallevels can move week to week with bill supply and rate expectations.
+- **Retail vs institutional** is share-class reporting, not a perfect household-vs-corporate split; some household cash sits in institutional channels via advisers.
+
+## The shareable takeaway
+
+US money market funds hold **$7.85 trillion** — with **government funds at 82%** — and YE 2025 taxable yields still cleared bank money-market deposit accounts by about **3.3 percentage points**. Deposits excl. large time deposits stalled near **$15 trillion** while the MMF share of the combined cash pile climbed into the **low-30s**. The hiking cycle did not just raise loan rates; it relocated a multi-trillion-dollar cash stock into a yield-sensitive wrapper banks were slow to match.
+
+Related reading: [US personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) and [credit card APRs vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026).`,
+    category: "Consumer Finance",
+    themeId: "consumer-finance-markets",
+    imageUrl: "/images/consumer-finance-money-market-funds-vs-deposits-2026-hero.png",
+    imageAlt: "Dark navy chart of money market fund assets versus bank deposits",
+    publishedAt: "2026-07-31T16:00:00Z",
+    featured: true,
+    visualization: "money-market-funds-deposits",
+    layout: "canvas",
+  },
+  {
+    id: "commercial-aircraft-assembly",
+    slug: "commercial-aircraft-final-assembly-2025",
+    title: "Charted: Airbus Runs 12 Final-Assembly Lines Across Continents — Boeing’s Stay in the US",
+    excerpt: "In 2025 Airbus delivered 793 jets to Boeing’s 600. The industrial map underneath is starker: Airbus spreads 12 FALs across Europe, China, and Alabama — Boeing still finishes commercial jets only in America.",
+    content: `Airline headlines obsess over orders, MAX grounding lore, and whether COMAC will “break the duopoly.” The quieter industrial fact is *where the last bolt turns*. Airbus discloses **12 final assembly lines (FALs) at five locations** spanning France, Germany, China, and the United States. Boeing’s commercial FALs — Renton, Everett, Charleston — remain **entirely inside the United States**. In calendar **2025**, that geographic split sat under a delivery scoreboard of **793 Airbus jets versus 600 Boeing**, with COMAC’s C919 still a rounding error at **15** handovers.
+
+Unlike our [global shipbuilding concentration](/blog/global-shipbuilding-concentration-2023) chart — which maps *gross tonnage* delivered by East Asian yards — this post maps *large commercial jet* final assembly: fewer sites, higher value per unit, and a duopoly that still finishes most of the world’s airliners even as Airbus deliberately diversifies the map.
+
+## Deliveries first: the 2025 scoreboard
+
+| Manufacturer | 2025 deliveries | Share of trio |
+| --- | --- | --- |
+| Airbus | 793 | 56.4% |
+| Boeing | 600 | 42.6% |
+| COMAC (C919) | 15 | 1.1% |
+
+FlightGlobal’s year wrap puts Airbus’s book at **1,000 gross orders** and Boeing’s at **1,175** — so Boeing won the *order* year while Airbus won the *delivery* year. That split matters for backlog math and cash conversion; it does not erase the industrial geography beneath both ledgers. Airbus’s mix was dominated by the **A320neo family (607)** — **64% of those were A321neos** — plus **93 A220s**, **57 A350s**, and **36 A330neos**. Boeing’s handovers were **447 737 MAX**, **88 787s**, **35 777Fs**, and **30 767s**, with **777X still at zero** deliveries.
+
+COMAC’s **15** C919s are strategically loud and numerically quiet. They prove a Chinese single-aisle can leave a Shanghai hangar; they do not yet rewrite who finishes the world’s jets.
+
+## The Airbus map: the sun never sets on FALs
+
+Airbus’s own production narrative is blunt: **“the sun never sets on Airbus’ aircraft assembly sites.”** The disclosed footprint is **12 FALs** across:
+
+- **Toulouse, France**A320 family (including the Lagardère hall converted from the A380 line), plus A330 and A350 widebody lines
+- **Hamburg, Germany****four** A320 Family FALs, the densest single-aisle campus on Earth
+- **Tianjin, China**A320 Family, with a **second FAL inaugurated October 2025**
+- **Mobile, Alabama, USA**A320 Family and A220, with a **second A320 FAL also inaugurated October 2025**
+
+That is not tourism. It is industrial statecraft. European political economy still hosts the majority of Airbus FAL *lines* (Toulouse + Hamburg = **8 of 12**). But **one-third of Airbus FAL lines** now sit outside Europe — **two in Tianjin, two in Mobile** — aimed at the two largest airline markets of the 2030s. Airbus says more than **20 manufacturing sites** feed those FALs, and suppliers build roughly **80%** of the aircraft before final assembly. Final assembly is the *visible* chokepoint; the supplier web is the *invisible* one.
+
+The rate target makes the geography urgent: Airbus is driving toward **75 A320 Family jets per month in 2027**. Second lines in Mobile and Tianjin are not branding exercises — they are capacity math for a single-aisle program that already accounts for most of Airbus’s deliveries.
+
+## The Boeing map: three US campuses, zero overseas FALs
+
+Boeing’s commercial geography is the mirror image. **Renton** finishes the 737 MAX. **Everett** remains the widebody / 777 campus and is adding 737 capacity as production recovers. **Charleston** consolidated **787** final assembly after Everett’s Dreamliner line closed. Industry tallies put Boeing near **six FALs** soon expanding further — still **all inside the United States**.
+
+That concentration is a feature and a risk. Feature: one regulatory jurisdiction, one labor-relations theater, shorter political exposure to foreign industrial policy. Risk: every quality escape, strike, or supplier meltdown hits the *only* geography that can finish the jet. When Airbus opens a second line in Tianjin, it is buying political access *and* operational redundancy. When Boeing adds a line in Everett, it is buying rate — still on American soil.
+
+The contrast with [shipbuilding](/blog/global-shipbuilding-concentration-2023) is instructive. Ships concentrated in China/Korea/Japan because labor cost and steel throughput dominated. Jets concentrate where certification regimes, skilled assembly labor, and political trust in airworthiness authorities dominate. Boeing’s US-only FAL map is a bet that those advantages still outweigh geographic diversification. Airbus’s multi-continent map is a bet that market access and rate require planting hangars where the airlines are.
+
+## Family mix: single-aisle is the industrial center of gravity
+
+Widebody stories sell magazines. Single-aisle lines pay the bills. In 2025, **607 of Airbus’s 793 deliveries** were A320neo-family jets; **447 of Boeing’s 600** were 737 MAX. That is **~76%** and **~75%** single-aisle, respectively. The A321neo’s share inside Airbus’s narrowbody mix (**64%**) is itself a geographic story: longer-range single-aisles cannibalize some thin widebody routes and force every FAL to handle a physically longer aircraft — which is why Airbus adapted **all** its A320 FALs for A321neo production.
+
+Boeing’s **787** deliveries (**88**) and freighter-heavy **777F/767** mix show a different recovery shape: widebody and freighter cash while the MAX rate climbs from the post-grounding valley. **777X at zero** deliveries in 2025 is the hole in that story — a certified-but-not-yet-flowing flagship that keeps Everett’s narrative unfinished.
+
+## Who wins, who is exposed
+
+**Winners of multi-continent FALs:** Airbus’s market access in China and North America; local supplier ecosystems in Alabama and Tianjin; airlines that can take delivery closer to home bases. **Winners of US concentration:** Boeing’s simpler political map; US labor and aerospace-industrial constituencies that keep final assembly domestic. **Exposed:** any OEM whose *rate* aspirations outrun *supplier* readiness — both duopolists still fight engines, interiors, and fuselage quality; COMAC, whose delivery count is still a rounding error against a **1,393-jet** Airbus–Boeing year; and analysts who treat “China builds jets” as equivalent to “China finishes the world’s jets.”
+
+Embraer’s São José dos Campos E-Jet campus reminds us the regional-jet tier has its own geography — important for route structure, not yet a threat to A320/737 FAL economics.
+
+## What would change the story
+
+A **Boeing FAL outside the United States** would be a regime change in industrial strategy, not a footnote. An **Airbus miss on rate-75** would turn the new Mobile and Tianjin halls into underutilized political assets. A **COMAC jump from 15 toward 100+ annual C919s** would still be small versus the duopoly but would start to matter for Chinese domestic replacement of A320/737 slots. A **sustained Boeing delivery lead** without geographic diversification would validate the US-only bet. A **European political shock** that constrained Toulouse/Hamburg output would suddenly make Airbus’s non-European third look like insurance rather than expansion.
+
+## Caveats and methodology
+
+- **FAL counts ≠ deliveries.** A campus can host multiple lines; annual output depends on rate, not just line count.
+- **Manufacturer disclosures differ in granularity.** Airbus publishes a clean “12 FALs / five locations” framing; Boeing site descriptions are program-centricour Boeing line tallies are campus-level approximations consistent with public reporting of ~six commercial FALs.
+- **2025 delivery figures** follow FlightGlobal’s commercial wrap and may include military/VIP conversion footnotes in source tableswe use the published program totals as stated.
+- **A320 monthly rate path** before the **2027 target of 75** uses approximate ramp waypoints; only the target is a hard Airbus disclosure in this module.
+- **Embraer** appears on the site map for geographic completeness; we do not rank an Embraer delivery total in the OEM bars without a matching FlightGlobal wrap line.
+
+## The shareable takeaway
+
+Airbus finishes jets on a **four-country, 12-line** map that now puts **one-third of its FAL lines** in China and the US. Boeing still finishes commercial jets **only in America** — and in 2025 still delivered **600** of them against Airbus’s **793**. The duopoly remains intact on volumes. On *industrial geography*, it has already split in two.
+
+Related reading: [Global shipbuilding concentration](/blog/global-shipbuilding-concentration-2023) and [China’s share of industrial robot installations](/blog/china-industrial-robot-installations-share-2023).`,
+    category: "Industry",
+    themeId: "heavy-industrial-capacity",
+    imageUrl: "/images/industry-commercial-aircraft-final-assembly-2025-hero.png",
+    imageAlt: "Dark navy map of Airbus and Boeing final-assembly line geography",
+    publishedAt: "2026-07-31T15:30:00Z",
+    featured: true,
+    visualization: "commercial-aircraft-assembly",
+    layout: "default",
+  },
+  {
     id: "ai-capex-intensity-research-2026",
     slug: "ai-capex-intensity-research-2026",
     title: "Charted: Meta Reinvests 35% of Revenue — Is Hyperscaler Capex Intensity Sustainable?",

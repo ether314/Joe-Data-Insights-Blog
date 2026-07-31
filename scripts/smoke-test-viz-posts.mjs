@@ -111,6 +111,36 @@ const POSTS = [
     marker: "Adaptation economics",
     forbidden: "Loading interactive charts",
   },
+  {
+    slug: "natural-graphite-mine-concentration-2024",
+    marker: "natural graphite",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "bank-loan-chargeoffs-2026",
+    marker: "Charge-off",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "irena-renewable-capacity-record-2024",
+    marker: "renewable",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "oecd-dac-oda-first-drop-2024",
+    marker: "OECD DAC ODA",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "money-market-funds-vs-deposits-2026",
+    marker: "money market",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "commercial-aircraft-final-assembly-2025",
+    marker: "Final-assembly",
+    forbidden: "Loading interactive charts",
+  },
 ];
 
 async function smokePost(page, { slug, marker, forbidden }) {

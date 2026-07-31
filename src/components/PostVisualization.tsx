@@ -287,6 +287,96 @@ const BillionDollarDisastersDashboard = dynamic(
     ),
   },
 );
+const NaturalGraphiteMineConcentrationDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/NaturalGraphiteMineConcentrationDashboard").then(
+      (m) => m.NaturalGraphiteMineConcentrationDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const BankLoanChargeoffsDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/BankLoanChargeoffsDashboard").then(
+      (m) => m.BankLoanChargeoffsDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const IrenaRenewableCapacityDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/IrenaRenewableCapacityDashboard").then(
+      (m) => m.IrenaRenewableCapacityDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const OecdDacOdaDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/OecdDacOdaDashboard").then(
+      (m) => m.OecdDacOdaDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const MoneyMarketFundsDepositsDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/MoneyMarketFundsDepositsDashboard").then(
+      (m) => m.MoneyMarketFundsDepositsDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const CommercialAircraftAssemblyDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/CommercialAircraftAssemblyDashboard").then(
+      (m) => m.CommercialAircraftAssemblyDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -350,6 +440,30 @@ export function PostVisualization({
   }
   if (type === "billion-dollar-disasters") {
     return <BillionDollarDisastersDashboard />;
+  }
+
+  if (type === "natural-graphite-mine-concentration") {
+    return <NaturalGraphiteMineConcentrationDashboard />;
+  }
+
+  if (type === "bank-loan-chargeoffs") {
+    return <BankLoanChargeoffsDashboard />;
+  }
+
+  if (type === "irena-renewable-capacity") {
+    return <IrenaRenewableCapacityDashboard />;
+  }
+
+  if (type === "oecd-dac-oda") {
+    return <OecdDacOdaDashboard />;
+  }
+
+  if (type === "money-market-funds-deposits") {
+    return <MoneyMarketFundsDepositsDashboard />;
+  }
+
+  if (type === "commercial-aircraft-assembly") {
+    return <CommercialAircraftAssemblyDashboard />;
   }
 
   return null;
