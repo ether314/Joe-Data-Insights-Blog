@@ -82,8 +82,8 @@ const POSTS = [
     forbidden: "Loading interactive charts",
   },
   {
-    slug: "us-billion-dollar-weather-disasters-2026",
-    marker: "Adaptation economics — CPI-adjusted disaster ledger",
+    slug: "us-social-security-trust-fund-depletion-path-2026",
+    marker: "Trust fund reserves path 2025–2034",
     forbidden: "Loading interactive charts",
   },
 ];

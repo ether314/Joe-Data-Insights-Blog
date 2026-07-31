@@ -2,109 +2,134 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
-    id: "billion-dollar-disasters",
-    slug: "us-billion-dollar-weather-disasters-2026",
-    title: "Charted: US Billion-Dollar Disasters Now Cost $149B a Year — and the Increments Keep Growing",
+    id: "social-security-trust-fund",
+    slug: "us-social-security-trust-fund-depletion-path-2026",
+    title: "Charted: Social Security Reserves Hit Zero in 2034 — One Year Sooner",
     excerpt:
-      "NOAA’s CPI-adjusted ledger shows annual US billion-dollar disaster costs averaging $149.3B in 2020–24 — 6.8× the 1980s — while decade-to-decade cost increments keep widening.",
-    content: `## The inflation-adjusted total is the right headline
+      "SSA’s 2025 Trustees Report projects combined OASDI reserves deplete in 2034 with only 81% of scheduled benefits payable — OASI alone runs dry in 2033 at 77%.",
+    content: `## The clock moved up again
 
-Everyone remembers the year a hurricane breaks the damage record. Fewer people ask whether **normalized** disaster cost is still accelerating after you strip out general inflation — and after you scale by the size of the economy.
+The Social Security Board of Trustees released its **2025 annual report** on June 18. The headline number for policymakers and retirees alike is unchanged in shape but worse in timing: the **combined Old-Age, Survivors, and Disability Insurance (OASDI) trust funds** are projected to become **depleted in 2034** — **one year earlier** than in the 2024 report.
 
-NOAA NCEI’s Billion-Dollar Weather and Climate Disasters series answers the first half cleanly. All costs are **CPI-adjusted to 2024 dollars**. On that yardstick, the **2020–2024** average is **$149.3 billion per year** in direct damages from events that individually clear **$1 billion**. In the **1980s** the average was **$22.0 billion**. That is a **6.8×** jump in the annual CPI total — not a media-cycle illusion.
+At depletion, continuing dedicated tax revenue would cover only **81%** of scheduled benefits. That is not a forecast of a total program shutdown. Payroll taxes, taxation of benefits, and other statutory income keep flowing. What stops is the ability to redeem the **$2.72 trillion** in accumulated reserves — special-issue Treasury securities built up over decades — to fill the gap between income and cost.
 
-Event frequency moved in parallel: **23.0** billion-dollar disasters per year in 2020–24 versus **3.3** in the 1980s (**~7×**). Over the full **1980–2024** window NOAA counts **403** such events and **$2.915 trillion** in cumulative CPI-adjusted cost.
+## Two funds, one combined story
 
-**Unlike our [electricity generation mix](/blog/global-electricity-generation-mix-2024) map, this post is not about how grids are fueled — it is about the rising damage ledger those grids, coasts, and floodplains keep paying.**
+Social Security is legally **two separate trust funds**:
 
-## Acceleration means first differences, not just levels
+| Fund | Role | Reserves end-2024 | Depletion (intermediate) | Payable at depletion |
+|------|------|-------------------|--------------------------|----------------------|
+| **OASI** | Retirement & survivors | $2,538B | **2033** (Q1) | **77%** |
+| **DI** | Disability | $183B | Not in 75-year window | 100% |
+| **OASDI** (hypothetical combined) | Illustrative total | $2,722B | **2034** (Q3) | **81%** |
 
-A level can be high without still accelerating. The sharper test is whether the **decade-to-decade increment** in annual cost keeps getting larger.
+The combined OASDI figures are **hypothetical** — Congress has never merged the funds — but they are the standard way to summarize program-wide solvency. The split matters politically: **retirement benefits face the earlier cliff**; **disability financing looks stable** under current law and disability-incidence trends.
 
-| Step | Change in cost / year (2024$) |
-|------|-------------------------------|
-| 1980s → 1990s | **+$11.5B** |
-| 1990s → 2000s | **+$28.7B** |
-| 2000s → 2010s | **+$37.3B** |
-| 2010s → 2020–24 | **+$49.8B** |
+## From $2.72 trillion to $214 billion in nine years
 
-Each step’s increment is larger than the last. That is the acceleration signal in the official ledger: not merely “costs are high,” but “the climb itself is steepening.” The **2010s** already averaged **$99.5B/year**; the partial **2020–24** decade is running **$149.3B/year** — and the **2022–24** three-year average is even hotter at **$153.9B/year**.
+Trustees publish reserves at the **beginning of each calendar year**. Under intermediate assumptions:
 
-Frequency tells the same story at the count level. The US has now posted **14 consecutive years** (2011–2024) with **10 or more** billion-dollar events. Over the last ten years (**2015–2024**), NOAA’s Climate.gov wrap counts **190** separate billion-dollar disasters and roughly **$1.4 trillion** in damage.
+- **Start of 2025:** **$2,721 billion** (169% of annual cost — the “trust fund ratio”)
+- **Start of 2034:** **$214 billion** (9% of annual cost)
+- **Third quarter 2034:** combined reserves reach **zero**
 
-## 2024: second-most events, fourth-costliest year
+The drawdown is not linear. Annual deficits widen as the baby-boom cohort ages and as the ratio of workers to beneficiaries falls. Net reserve reductions accelerate from **$181 billion** in 2025 to more than **$400 billion** by 2033.
 
-**2024** logged **27** billion-dollar disasters and **$182.7 billion** in CPI-adjusted damage — second only to **2023’s record 28 events**, and fourth on the cost ranking behind **2017** ($395.9B), **2005** ($268.5B), and **2022** ($183.6B). Fatalities tied to these events reached **568**, among the higher years in the 45-year record.
+In 2024, combined reserves **fell $67 billion** — income including interest was **$1,418 billion** against cost of **$1,485 billion**. Cost has exceeded **non-interest income every year since 2010**; total income fell below cost starting in **2021** once interest could no longer fully bridge the gap.
 
-Severe storms dominated the **count** (17 of 27 when tornado outbreaks and hail/wind events are grouped with the broader severe-weather category in Climate.gov’s narrative). Hurricanes dominated the **bill**: Helene (~$78.7B) and Milton ($34.3B) alone topped **$100B** across the Southeast in roughly two weeks. Beryl added another **$7.2B**; a May tornado outbreak added **$6.6B**.
+## Trust fund ratio: the “months of runway” metric
 
-That split matters for adaptation economics. A year can look “busy” on the event counter because localized severe storms keep clearing the $1B threshold, while the fiscal and insurance shock still concentrates in a handful of tropical cyclones.
+Actuaries track the **trust fund ratio** — reserves at January 1 divided by that year’s projected cost. **100%** means one full year of benefits could be paid from the trust fund alone.
 
-## Count vs dollars: two different hazard regimes
+The combined ratio slides from **169%** in 2025 to **95%** by 2029 (already below the short-range adequacy threshold), then **26%** at the start of 2033, and **9%** at the start of 2034. **OASI** hits **89%** in 2029 and **3%** at the start of 2033 — functionally empty a year before the combined funds.
 
-Over **1980–2024**, **severe storms** lead event counts (**203**) but average only about **$2.5B** each. **Tropical cyclones** are rarer (**67**) yet average about **$23B** and account for roughly **$1.54 trillion** of cumulative cost — more than triple severe-storm dollar totals. Drought (~$368B cumulative), inland flooding (~$203B), wildfire (~$148B), and winter storms (~$104B) fill out the ledger.
+**DI** moves the opposite direction: from **106%** in 2025 to **116%** by 2034, with the ratio projected to reach **777%** by 2099 under intermediate assumptions — a post-reform recovery that contrasts sharply with the retirement fund’s path.
 
-So “is disaster risk rising?” depends on which series you watch:
+## What “81% payable” actually means
 
-- **Frequency:** severe storms are the volume engine pushing more years over the artificial $1B line.
-- **Severity of the bill:** hurricanes still write the largest checks.
-- **Human cost:** tropical cyclones also lead cumulative deaths in the NOAA table, with drought/heat close behind.
+After depletion, Social Security does **not** stop mailing checks. Benefits are limited to **amounts that incoming revenue can support on a pay-as-you-go basis**. The Trustees estimate **81%** of scheduled benefits for the combined funds at the 2034 depletion point, drifting to **72%** by 2099 unless law changes.
 
-For insurers, municipalities, and federal disaster budgets, the practical implication is portfolio-shaped: many mid-size convective losses plus fat-tailed hurricane years — not a single smooth trend line.
+For **OASI** at its **2033** depletion, the figure is **77%**. The gap between 77% and 81% reflects DI’s continuing surplus temporarily subsidizing the combined picture — another reason separate-fund accounting matters.
 
-## GDP normalization softens the story — it does not erase it
+Scheduled benefits include **cost-of-living adjustments (COLAs)** and benefit formulas written into current law. Payable benefits would be whatever tax inflows allow under those formulas — a mechanical cut, not a negotiated political choice, unless Congress intervenes.
 
-CPI adjustment removes general inflation. It does **not** remove the fact that the US economy and capital stock are much larger than in 1980. Dividing decade average disaster cost by a BEA nominal-GDP midpoint is a rough second normalization:
+## Why the date moved up one year
 
-| Period | Cost / year (2024$) | ≈ GDP midpoint | Cost share of GDP |
-|--------|---------------------|----------------|-------------------|
-| 1980s | $22.0B | ~$4.3T | **0.51%** |
-| 1990s | $33.5B | ~$7.6T | **0.44%** |
-| 2000s | $62.2B | ~$13.1T | **0.48%** |
-| 2010s | $99.5B | ~$18.2T | **0.55%** |
-| 2020–24 | $149.3B | ~$25.7T | **0.58%** |
+The **2024 report** pointed to **2035** for combined depletion. The **2025 report** pulls that to **2034**. The **OASI** depletion year is **unchanged at 2033**.
 
-On this yardstick the rise is real but slower than the raw CPI multiple: from about **half a percent of GDP** in the 1980s to a bit under **0.6%** in 2020–24. Spike years still puncture the average — **2017** alone was on the order of **2% of that year’s GDP** when Harvey, Irma, and Maria stacked.
+Drivers in the Trustees’ reconciliation include:
 
-Climate.gov’s per-capita framing is harsher than the GDP share: five-year-average disaster cost per US resident rose from roughly **$150** in the early 2000s to above **$400** by the late 2010s and has stayed elevated. Population growth alone does not absorb the CPI-adjusted climb.
+- **Slightly weaker near-term economic assumptions** — including a lower assumed labor share of GDP (61.2% vs 62.8% in the prior report’s long-run path)
+- **Updated starting values** from 2024 operations
+- A **75-year valuation window** extended through **2099**, which mechanically worsens the long-range actuarial deficit to **3.82%** of taxable payroll (from 3.50%)
 
-Readers tracking fiscal pressure from another angle may want our [US industrial subsidies vs tariffs](/blog/us-industrial-subsidies-vs-tariffs-30-years) piece — adaptation and disaster outlays compete in the same long-run budget with industrial policy, interest, and tax expenditures.
+The **open-group unfunded obligation** — the present value of scheduled costs minus income over 75 years — is **$25.1 trillion** as of January 1, 2025, or **3.64%** of taxable payroll over the period.
 
-## Who is exposed — and what would change the story
+## Scenario spread: 2032 to 2051
 
-Exposure concentrates where people and property keep filling hazard zones: Gulf and Atlantic hurricane coasts (Florida’s cumulative cost leads the state map at roughly **$450B** since 1980; Texas is close behind on both cost and event count), inland floodplains, and the Western wildland–urban interface. NOAA is explicit that rising losses mix **exposure** (more assets in harm’s way), **vulnerability** (how we build and insure), and **climate-driven extremes**. This post does **not** attribute shares among those drivers; attribution science and building-code studies sit outside the NCEI ledger.
+Trustees publish **low-cost** and **high-cost** alternatives, not probabilities. For combined OASDI depletion:
 
-The interactive dashboard above is built to stress-test the acceleration claim: toggle the rolling average between **CPI dollars**, **event counts**, and **GDP share**, and switch the window between **5** and **10** years. CPI dollars and counts rise steeply; GDP share rises more slowly — which is exactly why “normalized” needs a definition before the headline.
+| Scenario | Combined OASDI | OASI | DI |
+|----------|----------------|------|-----|
+| High-cost | 2032 | 2031 | 2044 |
+| Intermediate | **2034** | **2033** | Not depleted |
+| Low-cost | 2051 | 2036 | Not depleted |
 
-What would change the story:
+Stochastic simulations in the report suggest a **95% confidence band** for combined depletion between **2032 and 2039** — tighter on the late side than last year’s band (2032–2043). The central message: depletion before mid-century is **very likely** without legislative changes to revenue or benefits.
 
-- A sustained multi-year stretch back toward the long-run **9.0 events / $64.8B** averages without a compensating mega-hurricane year.
-- Material downward revisions to 2020–24 costs as claims settle the other way (historically revisions more often rise).
-- A GDP boom that outruns CPI-adjusted losses enough to push the cost/GDP share back toward 1990s levels even if dollar losses stay high.
+## Who is exposed — and what Congress could change
 
-None of those is visible in the January 2025 Climate.gov update. The working conclusion: **yes — inflation-adjusted annual totals are still accelerating on a decade-difference basis**, while GDP-normalized shares are elevated and slowly rising rather than exploding.
+Roughly **67.6 million** people received Social Security benefits at the end of 2024. **60.1 million** were OASI beneficiaries; **8.3 million** received DI. Benefits are **progressive** by design — lower earners receive higher replacement rates — so a uniform across-the-board reduction to 77–81% would hit **middle-income retirees** who depend on Social Security for most of their cash income.
 
-## Caveats and methodology
+Policy levers are well mapped: raise the payroll tax rate (currently **12.4%** split between worker and employer), increase or eliminate the **taxable maximum** ($176,100 in 2025), raise the **full retirement age** further, change **COLA** indexing, or tax a larger share of benefits. Each option has distributional winners and losers — the Trustees do not recommend a package.
 
-- **Threshold artifact:** Events just under $1B (2024$) are excluded; 57 older events crossed the line only after CPI adjustment.
-- **Partial decade:** 2020–24 is five years, not ten — comparisons use per-year averages.
-- **Cost revisions:** 2024 totals (analysis through early January 2025) can still rise as claims data settle.
-- **GDP shares are estimated:** NOAA costs are disclosed; dividing by BEA nominal GDP midpoints is our normalization, not an NCEI field.
-- **No driver split:** The series does not isolate climate change vs exposure vs vulnerability.
-- **Direct damages only:** Broader macroeconomic and health costs are out of scope.
+Unlike discretionary federal spending, Social Security operates as **mandatory spending** financed by dedicated taxes. Depletion is a **cash-flow constraint inside a trust-fund accounting framework**, not a federal debt default. Treasury would still honor the special-issue securities until reserves are gone — then benefit payments shrink to incoming receipts.
 
-**Primary sources:** [NOAA NCEI Billion-Dollar Disasters](https://www.ncei.noaa.gov/access/billions/) and [Climate.gov’s 2024 wrap-up](https://www.climate.gov/news-features/blogs/beyond-data/2024-active-year-us-billion-dollar-weather-and-climate-disasters); GDP context from [BEA](https://www.bea.gov/data/gdp/gross-domestic-product).
+## Links to the wider fiscal picture
 
-**Unlike our [Goldman Sachs AI capex](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) scenario stack, this post tracks realized weather losses — not forward infrastructure spend.**`,
-    category: "Energy",
-    themeId: "adaptation-economics",
-    imageUrl: "/images/energy-us-billion-dollar-weather-disasters-2026-hero.png",
+This is domestic **fiscal plumbing** — how a dedicated revenue stream meets a mandated spending line. For a different lens on government cash flows, see our [China fiscal revenue breakdown](/blog/china-fiscal-revenue-all-budgets-2024), which maps how another major economy’s budget lines shifted in 2024.
+
+Industrial and trade policy also compete for the same federal balance sheet. Pair this trust-fund path with our long-run chart of [US industrial subsidies versus tariffs](/blog/us-industrial-subsidies-vs-tariffs-30-years) — on-budget market support and customs duties are the cousin of dedicated payroll taxes: different statutes, same question of whether current law matches current obligations.
+
+For another structural pressure on public finances, see [global electricity generation mix](/blog/global-electricity-generation-mix-2024) — energy transition capital needs sit outside Social Security’s trust funds but still shape the broader fiscal environment in which Congress will eventually rewrite payroll-tax and benefit formulas.
+
+## Historical context: from surplus to structural deficit
+
+The trust funds accumulated large surpluses from the **1983 reforms** through the mid-2010s as the baby-boom generation paid in more than the system paid out. Those surpluses were invested in Treasury securities — the “lockbox” debate of the 1990s and 2000s asked whether that accounting truly prefunded future benefits or simply reduced measured federal deficits.
+
+By **2010**, **non-interest income** no longer covered annual cost. By **2021**, even **total income including interest** fell short. The system is now in **drawdown mode** — selling securities back to Treasury to pay beneficiaries. That worked while reserves were large; it stops when reserves hit zero.
+
+The **1983 bipartisan fix** combined tax increases, benefit adjustments, and a gradual rise in the full retirement age. The magnitude of today’s **3.82% of payroll actuarial deficit** is in the same ballpark as the gap that reform closed — but the political coalition for a similar bargain is harder to assemble in a polarized Congress.
+
+## What would change the story
+
+Several developments could push the depletion date **later** without legislation: stronger-than-assumed **productivity and wage growth**, higher **fertility**, lower **disability incidence**, or more **immigration** of working-age contributors. Conversely, **recession**, **higher inflation** without matching wage growth, or **rising longevity** could pull depletion **earlier**.
+
+Legislative action remains the only lever that directly resets payable benefits. Past Congresses have acted **close to deadlines** — the 1983 reforms passed with the trust fund weeks from inability to pay full benefits. Whether that pattern repeats before **2033–2034** is a political forecast, not an actuarial one.
+
+## Caveats
+
+- **Intermediate assumptions are one scenario** — low-cost and high-cost bounds differ by nearly two decades on combined depletion
+- **OASDI combined figures are hypothetical** — OASI and DI are separate legal entities; only Congress can reallocate or merge them
+- **Payable-benefit percentages apply at depletion** — they drift lower over the 75-year window (81% → 72% for OASDI by 2099)
+- **Trust fund “reserves” are Treasury securities** — redemption affects federal unified budget accounting but is not the same as an external sovereign default
+- **Projections incorporate current law** — no assumed future reforms unless explicitly modeled in alternative scenarios
+- **Economic and demographic sensitivity is large** — the stochastic depletion band spans 2032–2039 for combined funds
+
+## Methodology
+
+All reserve levels, trust fund ratios, depletion years, and payable percentages are from the **Social Security Administration, 2025 Annual Trustees Report** (released June 18, 2025), intermediate assumptions. Annual reserve paths from Tables IV.A2 (OASI), IV.A4 (DI), and IV.A3 (combined OASDI). Prior-year comparison uses the 2024 Trustees Report combined depletion year of 2035.
+
+**Unlike our China fiscal revenue piece, this post tracks US Social Security trust-fund depletion timing and payable-benefit mechanics — not general-government revenue composition.**`,
+    category: "Global Systems",
+    themeId: "fiscal-plumbing",
+    imageUrl: "/images/global-systems-us-social-security-trust-fund-depletion-path-2026-hero.png",
     imageAlt:
-      "Dark navy data visualization of rising US billion-dollar weather disaster bars morphing into storm systems with $149B/yr callout",
-    publishedAt: "2026-07-31T11:20:00.000Z",
+      "Dark navy visualization of declining Social Security trust fund reserves toward a 2034 depletion cliff with benefit percentage gauge",
+    publishedAt: "2026-07-31T10:00:00Z",
     featured: true,
-    visualization: "billion-dollar-disasters",
-    layout: "fullscreen",
+    visualization: "social-security-trust-fund",
+    layout: "default",
   },
   {
     id: "goldman-sachs-ai-capex",

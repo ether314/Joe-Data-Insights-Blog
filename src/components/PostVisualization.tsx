@@ -197,10 +197,10 @@ const GoldmanSachsAiCapexDashboard = dynamic(
   },
 );
 
-const BillionDollarDisastersDashboard = dynamic(
+const SocialSecurityTrustFundDashboard = dynamic(
   () =>
-    import("@/components/visualizations/BillionDollarDisastersDashboard").then(
-      (m) => m.BillionDollarDisastersDashboard,
+    import("@/components/visualizations/SocialSecurityTrustFundDashboard").then(
+      (m) => m.SocialSecurityTrustFundDashboard,
     ),
   {
     ssr: false,
@@ -216,7 +216,7 @@ export function PostVisualization({
   type,
   embedded = false,
 }: {
-  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "billion-dollar-disasters";
+  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "social-security-trust-fund";
   embedded?: boolean;
 }) {
   if (type === "gdp-analysis") {
@@ -258,8 +258,8 @@ export function PostVisualization({
   if (type === "goldman-sachs-ai-capex") {
     return <GoldmanSachsAiCapexDashboard />;
   }
-  if (type === "billion-dollar-disasters") {
-    return <BillionDollarDisastersDashboard />;
+  if (type === "social-security-trust-fund") {
+    return <SocialSecurityTrustFundDashboard />;
   }
   return null;
 }
