@@ -92,7 +92,32 @@ async function smokePost(page, { slug, marker, forbidden }) {
   const path = live ? `/blog/${slug}` : `/blog/${slug}.html`;
   const url = `${baseUrl}${path}`;
   const consoleErrors = [];
-  const pageErrors = [];
+  const pageErrors = [  {
+    slug: "ai-capex-intensity-research-2026",
+    marker: "Capex intensity trajectory",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "ai-capex-spend-research-2026",
+    marker: "Big-5 hyperscaler capex stack",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "global-remittance-corridors-2026",
+    marker: "Estimated bilateral corridors",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "phosphate-fertilizer-export-dependence-2026",
+    marker: "Top-3 exporter share",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "us-billion-dollar-weather-disasters-2026",
+    marker: "Adaptation economics — CPI-adjusted disaster ledger",
+    forbidden: "Loading interactive charts",
+  },
+];
 
   page.removeAllListeners("console");
   page.removeAllListeners("pageerror");

@@ -23,7 +23,26 @@ export interface Post {
   publishedAt: string;
   featured?: boolean;
   /** Renders an interactive visualization instead of static images */
-  visualization?: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "social-security-trust-fund";
+  visualization?:
+    | "gdp-analysis"
+    | "subsidies-tariffs"
+    | "brokerage-bonuses"
+    | "ai-data-centers"
+    | "ccp-nomenklatura"
+    | "china-fiscal-revenue"
+    | "electricity-generation-mix"
+    | "refugee-hosting-burden"
+    | "ai-packaging-bottleneck"
+    | "ai-token-consumption"
+    | "deflationary-growth-2025"
+    | "last-mile-delivery-robotics"
+    | "goldman-sachs-ai-capex"
+    | "social-security-trust-fund"
+    | "ai-capex-intensity-research-2026"
+    | "ai-capex-spend-research-2026"
+    | "global-remittance-corridors"
+    | "phosphate-fertilizer-export"
+    | "billion-dollar-disasters";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

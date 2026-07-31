@@ -2,6 +2,482 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-intensity-research-2026",
+    slug: "ai-capex-intensity-research-2026",
+    title: "Charted: Meta Reinvests 35% of Revenue — Is Hyperscaler Capex Intensity Sustainable?",
+    excerpt:
+      "Five hyperscalers now push 18–37% of revenue into capex. Map the ratios against free-cash-flow coverage, telecom history, and foundry extremes — and ask what fraction of sales can stay in the build-out.",
+    content: `## The question that dollar totals skip
+
+Headline AI infrastructure numbers — Goldman’s [Tracking Trillions](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) scenarios, campus megawatts, GPU backlogs — answer *how much* capital is flowing. They do not answer the sharper capital-markets question: **what fraction of each dollar of revenue is being plowed back into property, plant, and equipment**, and can that reinvestment rate persist without crushing free cash flow?
+
+Capex intensity — gross purchases of PP&E divided by total revenue — is the cleanest public proxy. It is unitless, comparable across fiscal calendars, and brutal when it spikes. The interactive dashboard above tracks five public builders (Microsoft, Amazon, Alphabet, Meta, Oracle) from FY20 through FY25, overlays free-cash-flow margins, and places the ratios against wireline telecom, energy, SaaS, and leading-edge foundry benchmarks.
+
+## What the FY25 ratios actually say
+
+| Company | FY25 capex / revenue | Capex ($B) | Revenue ($B) | FCF margin |
+|---------|---------------------:|-----------:|-------------:|-----------:|
+| Oracle | **37.0%** | 21.2 | 57.4 | 8.9% |
+| Meta | **34.7%** | 69.7 | 201.0 | 18.2% |
+| Microsoft | **22.9%** | 64.6 | 281.7 | 25.4% |
+| Alphabet | **22.7%** | 91.4 | 403.0 | 14.8% |
+| Amazon | **18.4%** | 131.8 | 716.9 | 3.1% |
+
+Oracle and Meta sit inside the **dot-com telecom peak band** (~30–40%) that carriers briefly sustained around 2000. Microsoft and Alphabet have roughly **doubled** their mid-decade teens intensities. Amazon’s percentage looks “moderate” only because retail revenue is enormous — absolute FY25 capex still leads the set at **$132B**.
+
+Revenue-weighted across the big four (ex-Oracle), intensity lands near **22%** — roughly double the pre-AI hyperscale cloud norm (~11%) and aligned with the long-run **wireline telecom** capital intensity that FCC ARMIS large-ILEC data put around **20%** before the late-1990s surge.
+
+## Intensity is not the same as dollars
+
+Dollar capex and intensity can diverge. Amazon’s FY23 intensity **fell** to 9.2% even while absolute spending stayed above $50B, because revenue growth outran the build. Meta’s FY22 spike to **27.9%** came with a compressed FCF margin; the FY23–24 “Year of Efficiency” pulled intensity back before the FY25 AI surge pushed it to a new high.
+
+Toggle companies in the chart to see the stack of absolute dollars: the same fiscal years that look like a smooth intensity climb for Microsoft become a **step-change** in cash leaving the firm once Amazon and Alphabet accelerate. For site-level context on where those dollars land physically, see the [global AI data center build tracker](/blog/global-ai-data-center-build-tracker).
+
+## Free cash flow is the sustainability hinge
+
+A firm can run high intensity indefinitely if operating cash flow still covers capex with room for buybacks, dividends, and debt service. The scatter panel pairs **intensity (x)** with **FCF margin (y)** for the selected fiscal year.
+
+- **Microsoft** remains the textbook “high intensity, still cash-rich” case: FY25 intensity 22.9% with FCF margin still above **25%**.
+- **Meta** funds a 35% intensity ratio while keeping FCF near **18%** — uncomfortable versus its own history, survivable versus most industrials.
+- **Alphabet**’s FCF margin compressed from the mid-20s toward **~15%** as intensity crossed 20%.
+- **Amazon** is the fragile edge: intensity 18% with FCF margin only **~3%**, leaving little buffer if AWS monetization lags GPU depreciation.
+- **Oracle**’s estimated FY25 jump to 37% coincides with FCF margin falling into single digits — the classic “build now, harvest later” posture of a capacity land-grab.
+
+Sustainability, then, is not a single threshold. It is whether **cash conversion survives the reinvestment rate** long enough for utilization and pricing to catch the depreciation wave.
+
+## Historical bands that still matter
+
+Three reference bands help investors read the time series without treating every spike as a bubble:
+
+1. **Historical cloud range (0–15%)** — the 2015–19 hyperscale pattern when capacity followed contracted cloud demand.
+2. **Elevated reinvestment (15–25%)** — where Microsoft, Alphabet, and Amazon now cluster; comparable to integrated energy peers (~16%) and below classic telecom norms.
+3. **Telecom / foundry territory (25%+)** — Meta and Oracle today; overlapping the 1999–2000 carrier peak mid (~35%) and approaching leading-edge foundry cycles (~45%) that TSMC-class manufacturers run when node transitions dominate.
+
+The ranked bar chart marks the **20% telecom norm** and the **35% dot-com mid**. Crossing into the third band does not prove a bubble — foundries live there for years — but it does mean the equity story must look more like **industrial capacity** than **asset-light software**.
+
+## Why the comparison to 2000 is imperfect — and still useful
+
+Dot-com carriers levered balance sheets to lay dark fiber ahead of demand that never arrived on schedule. Today’s hyperscalers fund most AI capex from **operating cash flow**, not speculative project finance, and they sit on demand queues for compute that carriers never enjoyed. That is the bull case for sustainability.
+
+The bear case is timing: GPU useful lives are short, power and packaging bottlenecks (see [AI GPU packaging and memory constraints](/blog/ai-gpu-packaging-memory-bottleneck-2025)) can idle expensive halls, and advertising or cloud pricing may not rise fast enough to amortize the wave. Intensity can stay “affordable” on an FCF basis for two years and still destroy equity value if returns on invested capital disappoint. Equity analysts who stop at “they can afford it” miss the harder test: whether incremental ROIC on AI PP&E clears the cost of capital after utilization, power, and model-price compression.
+
+Use the sector benchmark panel to keep perspective: mature SaaS at ~4% intensity is not the peer set anymore. The relevant comps are **telecom infrastructure, energy upstream, and foundries** — businesses judged on utilization, not ARR multiples alone.
+
+## Caveats and methodology
+
+1. **Gross PP&E purchases ≠ AI-only spend.** Filings do not cleanly split AI accelerators from warehouses, offices, or network gear. Amazon’s ratio mixes retail fulfillment with AWS; treat company-level intensity as an upper-bound proxy for “AI intensity.”
+2. **Fiscal calendars differ.** Microsoft ends in June, Oracle in May, the others in December. “FY25” is not a single calendar window — trajectory charts align labels, not months.
+3. **Lease accounting and cloud capacity purchases** can shift economics off the PP&E line. Some GPU capacity is rented; some is on partner balance sheets. Intensity understates total compute committed where operating leases dominate.
+4. **Oracle FY25** includes estimated elements where trailing guidance and partial-year disclosures were spliced; flag confidence in the data module.
+5. **FCF margin** here is (operating cash flow − capex) ÷ revenue. Definitions that add back stock-based compensation or exclude working-capital swings will differ.
+
+Primary sources: company Form 10-K / 10-Q cash-flow statements (purchases of property and equipment; cash from operations), FCC ARMIS / TIA historical telecom capital-intensity aggregates, and industry peer medians for energy and foundry benchmarks as labeled in the dashboard.
+
+## What to watch next
+
+Watch three coincident signals, not intensity alone: (1) **FCF margin** by company — especially Amazon and Oracle; (2) **revenue growth in AI-exposed segments** (Azure, AWS, Google Cloud, Meta ads + AI products) relative to depreciation step-ups; (3) **guidance language** that converts “multi-year build” into explicit intensity ceilings. If weighted intensity holds above 20% while FCF margins stabilize, the market will treat the AI build as a new steady state — a capital-markets regime shift from software to infrastructure. If intensity stays high and FCF keeps compressing, the sustainability debate stops being academic. Either path, the ratio — not the headline dollar — is the signal that forces the re-rating.`,
+    category: "Finance",
+    imageUrl: "/images/finance-ai-capex-intensity-research-2026-hero.png",
+    imageAlt:
+      "Hyperscaler capex intensity research 2026 — dark navy chart of Meta and peers reinvesting rising shares of revenue into AI infrastructure",
+    publishedAt: "2026-07-31T11:00:00Z",
+    featured: true,
+    visualization: "ai-capex-intensity-research-2026",
+    layout: "default",
+  },
+  {
+    id: "ai-capex-spend-research-2026",
+    slug: "ai-capex-spend-research-2026",
+    title: "Charted: AI Capex Hits $760B in 2026 Guidance — and $1.4T in the Bull Case",
+    excerpt:
+      "Big-5 midpoints sum to ~$760B for 2026. Goldman’s Investment Research base puts 2027 hyperscaler spend at $1.14T (bull $1.4T), while its Global Institute all-in AI path and McKinsey’s $5.2T cumulative framework answer a different question.",
+    content: `## The number everyone quotes is not one number
+
+Ask how large AI infrastructure spending is and you will hear **$725 billion**, **$750 billion**, **$765 billion**, **$1.14 trillion**, **$1.4 trillion**, **$5.2 trillion**, and **$7.6 trillion** — often in the same briefing deck. Those figures are not disagreements about arithmetic. They are answers to **different questions**: which companies, which year, which layers of the stack, and whether the total is an **annual run-rate** or a **multi-year cumulative**.
+
+The interactive dashboard above is a spend map across those scopes. Toggle **2026 / 2027 / 2028**, switch between **gross** hyperscaler capex and an **AI-attributed (~75%)** slice, and compare research-house fans against McKinsey’s cumulative scenarios. The point is not to pick a single “true” total. It is to keep the scopes honest so markets can debate substance instead of mixing labels.
+
+## What company guidance actually says for 2026
+
+After Q1 2026 earnings, the five largest cloud / AI infrastructure spenders disclosed or reaffirmed calendar-ish guidance that midpoints near:
+
+| Company | 2026 guidance (mid / point) | Notes |
+|---------|----------------------------|--------|
+| **Amazon** | **$200B** | Reaffirmed; largest single program |
+| **Microsoft** | **~$190B** CY | Raised; component pricing called out |
+| **Alphabet** | **$185B** midpoint | Raised to $180–190B range |
+| **Meta** | **$135B** midpoint | Raised to $125–145B; memory inflation cited |
+| **Oracle** | **~$50B** | OCI / Stargate-linked build |
+
+Sum those midpoints and you land near **$760B** of **gross company capital expenditure** for 2026 — not a pure “AI-only” ledger. CreditSights’ post-earnings aggregate (~**$750B**) sits in the same neighborhood. Apply the commonly used **~75% AI-attributed** factor and the AI-specific slice of that stack is roughly **$545–570B**.
+
+That company stack is the cleanest near-term **observed** number markets have: it is grounded in guidance, not in a top-down silicon model. It is also incomplete. It excludes non-hyperscaler buyers, sovereign AI programs, much of the colocation / power ecosystem, and the full global compute + facility + generation stack that Goldman Sachs Global Institute models separately.
+
+## Annual scenarios diverge hard by 2027
+
+Where guidance ends, research scenarios take over — and the spread widens.
+
+**Goldman Sachs Investment Research** (hyperscaler gross scope) has circulated a **2027 base near $1.14T** against **Street consensus near $920B**, with a **bull path around $1.4T** if cloud backlogs and token demand keep supply short into the second half of 2027. That is the origin of many “trillion-dollar AI capex” headlines. It is still a **hyperscaler** frame: five (or so) balance sheets, gross PP&E, not every watt and every accelerator worldwide.
+
+**Goldman Sachs Global Institute**’s *Tracking Trillions* baseline — covered in depth in our [chips-and-data-centers breakdown](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) — is a **different object**. It is an **all-in AI infrastructure** scenario (compute + data centers + power) of **$765B in 2026**, **$1.01T in 2027**, and **$1.22T in 2028**, compounding toward roughly **$7.6T cumulative from 2026–2031**. GS is explicit that the Global Institute product is a **sensitivity framework**, not a house forecast from Investment Research.
+
+Put the two Goldman families side by side and the 2027 comparison looks paradoxical until you read the scopes: IR’s **hyperscaler base ($1.14T)** can sit **above** GI’s **all-in AI total ($1.01T)** because IR is counting **entire company capex programs**, while GI is counting **AI infrastructure layers** with a different perimeter and methodology. Mixing them produces fake contradictions.
+
+Street and CreditSights prints for 2026 cluster with company guidance. Into 2027–2028, consensus paths that apply Dell’Oro-style growth rates on top of today’s run-rate typically land **below** Goldman’s IR base — which is exactly why IR argues consensus is too conservative.
+
+## Cumulative frameworks answer a longer question
+
+McKinsey’s *Cost of Compute* work (April 2025) does not try to pin a single calendar-year hyperscaler total. It frames **global data-center capital intensity through 2030** under constrained, base, and accelerated demand:
+
+- **Constrained:** ~**78 GW** incremental capacity · **~$3.7T** AI-specific · ~**$5.2T** total DC
+- **Base:** ~**125 GW** · **~$5.2T** AI-specific · **~$6.7T** total
+- **Accelerated:** ~**205 GW** · **~$7.9T** AI-specific · **~$9.4T** total
+
+These are **multi-year cumulative** dollars. Annualizing the base AI figure naively (~$5.2T / 6 years ≈ **$870B/year**) produces a useful order-of-magnitude check against 2026–2027 run-rates — but it is not a substitute for company guidance or for Goldman’s year-by-year GI path. The dashboard’s McKinsey panel is there so readers can see **scenario width** without pretending the units match an Amazon 10-K line item.
+
+GS Global Institute’s **~$7.6T (2026–2031)** cumulative sits in a similar “era-scale” conversation as McKinsey’s base/accelerated band, again with different layer definitions. The right use of both is **direction and sensitivity**, not false precision to the nearest $10B.
+
+## Intensity and financing sit next to the totals
+
+Dollar totals alone do not tell you whether the cycle is sustainable. Capex **as a share of revenue** for the same companies has moved into ranges last associated with telecom build-outs. Meta’s FY25 intensity near **35%** of revenue is the vivid example; Microsoft and Alphabet have also stepped well above their early-2020s norms. On the physical side, our [global AI data-center build tracker](/blog/global-ai-data-center-build-tracker) shows how announced megawatts and live campuses still diverge — spend authorized is not the same as capacity energized.
+
+Funding is shifting with the scale. Public reporting around Goldman’s financing work has pointed to investment-grade hyperscaler issuance rising toward roughly **a third of capex** by 2026–2027 as free cash flow cannot stretch as fast as the build plan. That does not invalidate the demand signal — signed cloud backlogs and multi-year GPU / power commitments are real — but it does mean **credit markets** now co-price the cycle alongside equity narratives.
+
+Physical constraints bind the other side. US data-center capacity shortfalls measured in **tens of gigawatts** by late-decade (Goldman / Morgan Stanley prints in market commentary), CoWoS and HBM bottlenecks on the silicon side, and skilled-labor shortages on the construction side all argue that **dollars authorized ≠ megawatts energized on the same schedule**. Spend totals can keep rising even while delivered capacity lags the press-release curve.
+
+## How to read the dashboard without mixing scopes
+
+Use this checklist when a headline throws a big AI spend number:
+
+1. **Company or system?** Big-5 guidance / CreditSights / GS IR ≈ hyperscaler gross. GS GI ≈ global AI infra layers. McKinsey ≈ cumulative global DC.
+2. **Year or era?** $760B is a **2026** run-rate family. $5.2T / $7.6T are **cumulative** decade-edge figures.
+3. **Gross or AI-attributed?** A 75% haircut is a research convention, not a line item in the 10-K.
+4. **Base or bull?** GS IR’s **$1.14T vs $1.4T** 2027 pair is a scenario fan, not a point forecast with error bars.
+5. **Sensitivity levers?** In the GI framework, **$/MW data-center cost** and silicon useful life dominate; training-vs-inference mix matters more for returns than for aggregate capital required.
+
+If two numbers fail any of those checks, they are not in conflict — they are simply not comparable.
+
+## Caveats and methodology
+
+- **2026 company figures** are guidance midpoints and post-earnings aggregates, not final audited totals. Ranges (especially Meta and Alphabet) mean the true year-end print can miss the midpoint.
+- **2027–2028 company paths** in the stacked area are **directional consensus / projected** values for visualization continuity; treat them as softer than 2026 guidance.
+- **AI-attributed (~75%)** is a CreditSights-style factor applied uniformly here for interaction — actual AI shares differ by company and year.
+- **GS Global Institute** figures are a **scenario framework**, not Goldman Sachs Global Investment Research forecasts. **GS IR** hyperscaler figures come from public secondary reporting of research notes.
+- **McKinsey** scenarios are cumulative through ~2030 and include traditional IT as well as AI loads in the “total DC” series.
+- Totals may not sum across houses because **perimeters differ** (leases, power, non-hyperscaler buyers, geographic coverage).
+- This post is explanatory data journalism, **not investment advice**.
+
+**Primary synthesis sources:** company Q1 2026 earnings guidance; CreditSights aggregate commentary; Goldman Sachs Global Institute [*Tracking Trillions*](https://www.goldmansachs.com/insights/articles/tracking-trillions-the-assumptions-shaping-scale-of-the-ai-build-out) (April 2026); Goldman Sachs Investment Research hyperscaler scenario figures via public reporting (June 2026); McKinsey & Company, *The Cost of Compute* (April 2025).`,
+    category: "Finance",
+    imageUrl: "/images/finance-ai-capex-spend-research-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero of rising AI infrastructure capex bars and scenario layers from hundreds of billions toward trillions",
+    publishedAt: "2026-07-31T12:00:00Z",
+    featured: true,
+    visualization: "ai-capex-spend-research-2026",
+  },
+  {
+    id: "global-remittance-corridors",
+    slug: "global-remittance-corridors-2026",
+    title:
+      "Charted: US→Mexico Moves $52B — the World's Largest Remittance Corridor",
+    excerpt:
+      "KNOMAD's bilateral matrix puts US→Mexico at ~$52B, ahead of UAE→India ($20B). Country totals tell another story: India takes $129B of $685B LMIC remittances in 2024.",
+    content: `## The corridor answer first
+
+Ask which **country pair** moves the most remittance dollars and the World Bank / KNOMAD bilateral remittance matrix gives a clear answer: **United States → Mexico at about $52 billion** (2021 model estimate). That single pipe is larger than the next Gulf corridor into India (**UAE → India ~$20 billion**) and larger than **Saudi Arabia → India (~$13 billion)** or **US → Philippines (~$15 billion)**.
+
+Those corridor estimates allocate each recipient's recorded inflows across source countries using migrant stocks and PPP-adjusted incomes — the Ratha–Shaw methodology — not SWIFT wire counts. Treat them as **disclosed model estimates**, not transaction ledgers. Still, the ranking is stable enough to answer the core question: the densest dollar corridor on the planet runs from the US labor market into Mexico.
+
+Country **totals** tell a different story. Officially recorded remittances to low- and middle-income countries (LMICs) are expected to reach **$685 billion** in **2024**, per the World Bank's Migration and Development Brief 41. India has been the **largest recipient since 2008** and is projected at **$129 billion** — roughly **19%** of all LMIC inflows — more than Mexico (**$68 billion**) and the Philippines (**$40 billion**) combined.
+
+## India's $129 billion country anchor
+
+Growth reaccelerated to **5.8%** after a sluggish **1.2%** in 2023. That rebound matters because remittances to LMICs now exceed **FDI (~$470 billion)** and more than triple **ODA (~$210 billion)** in the same Brief 41 comparisons. Diaspora cash is not a side story in global macro; it is one of the largest cross-border capital flows on Earth.
+
+China (**$48 billion**) and Pakistan (**$33 billion**) round out the top five recipients. Dollar volume is Gulf-and-US-skewed: skilled and semi-skilled migration into OECD labor markets plus long-standing South Asian diasporas in the Middle East. For a parallel view of how India's scale shows up in aggregate growth — not just remittance receipts — see our [China–US–India GDP comparison](/blog/china-us-india-gdp-30-years).
+
+## Two leaderboards: dollars vs dependence
+
+The top-recipient chart is not the vulnerability chart. World Bank figure 2 in Brief 41 ranks countries where remittances dominate national output:
+
+| Country | 2024 inflow (est.) | Share of LMIC total | Remittances / GDP |
+|---------|-------------------|---------------------|-------------------|
+| India | $129B | 18.8% | modest (large economy) |
+| Mexico | $68B | 9.9% | ~4% |
+| China | $48B | 7.0% | low |
+| Philippines | $40B | 5.8% | ~8% |
+| Pakistan | $33B | 4.8% | ~6% |
+| Tajikistan | small | — | **45%** |
+| Tonga | tiny | — | **38%** |
+| Nicaragua | small | — | **27%** |
+
+**Tajikistan** tops the dependence list at **45% of GDP** — remittances effectively fund the current account and buffer fiscal gaps. **Tonga** (**38%**) and **Nicaragua** (**27%**) follow. Lebanon also hits **27%**, overlapping humanitarian stress with remittance reliance. A shock to Gulf payrolls or a US downturn hits Tajikistan and Tonga differently than it hits India: the dollar loss is smaller, but the macro share is existential.
+
+The scatter panel in the dashboard makes the split visual: India and Mexico sit far right on dollar volume with modest GDP shares; Tajikistan and Tonga sit high on the dependence axis with tiny absolute inflows.
+
+## Bilateral corridors — where money actually moves
+
+Aggregate country totals hide the pipes. Filter the corridor chart by **US only** or **Gulf only** and the structure jumps out:
+
+- **US → Mexico ~$52B** — largest bilateral corridor globally in the 2021 KNOMAD matrix
+- **UAE → India ~$20B** — GCC corridor; dirham–rupee interlinks later boosted formalization
+- **US → Philippines ~$14.8B** — roughly 40% of Philippines receipts in earlier Brief commentary
+- **Saudi Arabia → India ~$13B** — second Gulf pipe into South Asia
+- **US → India ~$6B** (KNOMAD 2021) — **understates** recent RBI source-mix data where the US share of India's inflows rose sharply
+
+Corridor analysis matters for policy: payment-system interlinks, migration enforcement at the US southern border (which also affects transit-country flows through Mexico and Guatemala), and Gulf visa rules all move bilateral splits faster than headline recipient totals. Remittance Prices Worldwide still shows average sending costs above the SDG **3%** target — high bank fees push informal channels, which Brief 41 reminds us means **true flows exceed official $685 billion**.
+
+## Regional growth in 2024
+
+Brief 41 regional growth rates show **South Asia leading at 11.8%** — driven by India, Pakistan, and Bangladesh — after **5.2%** growth in 2023. **Middle East and Africa** combined rebounded an estimated **5.4%** after Egypt's 2023 slump. Latin America benefits from a strong US job market for migrant workers but slowed from **7.5%** to roughly **4.8%**. Europe and Central Asia post moderate gains as Ukrainian displacement and Russian corridor flows evolve.
+
+Stacked regional history clarifies the base: South Asia climbed from **$115 billion** in 2019 to an estimated **$199 billion** in 2024. Latin America and the Caribbean rose from **$96 billion** to **~$152 billion** — US labor demand shows up here. East Asia and Pacific totals look flatter in dollar terms because China's large inflow share has stagnated or fallen in some years while the Philippines grows steadily.
+
+That regional resilience sits beside a different macro story in our [deflationary-growth economies](/blog/deflationary-growth-economies-2025) piece: remittance-heavy LMICs can keep consuming even when local price signals and investment cycles weaken.
+
+## Remittances vs FDI and aid — the scale comparison
+
+LMIC remittances at **$685 billion** exceed **FDI (~$470 billion)** and **ODA (~$210 billion)** in 2024 World Bank comparisons. That ordering is not new, but the 2024 rebound underscores resilience: remittances are often counter-cyclical for families (workers send more when home-country conditions worsen) while FDI retreats when risk premia rise.
+
+For fiscal planners, the implication is blunt: diaspora transfers finance consumption, housing, and local investment in ways aid cannot match at scale — but they are **private, volatile, and poorly captured** in quarterly GDP nowcasts. They do not appear on a single government's balance sheet the way aid does.
+
+## Who wins, who is exposed, and what could change the story
+
+**Winners in 2024:** India's formal-channel share rises with payment digitization and Gulf interlinks; Mexico and Central America capture US labor-market strength; Philippines OFW remittances hold despite tourism recovery competing for foreign exchange.
+
+**Exposed:** High GDP-share economies (Tajikistan, Tonga, Nicaragua, Lebanon, Samoa) face asymmetric risk — a 10% drop in inflows can mean a 4–5 point GDP hit. Pakistan and Egypt sit between scale and stress: large recipient totals with recurring current-account pressure.
+
+**Migration politics:** US border policy affects not only US-bound flows but **transit remittances** through Mexico and Guatemala (Brief 41 notes migrant passage from Cuba, Haiti, Venezuela, and others). EU and UK corridors into India gained share in RBI data even as Gulf shares moderated — a diversification trend worth watching.
+
+Remittances sit beside our [refugee hosting burden](/blog/global-refugee-hosting-burden-2024) map — who physically hosts displaced populations. Refugees and labor migrants are different legal categories, but both reshape cross-border money flows. Hosting burden is a stock of people; remittance corridors are a flow of dollars that follow diaspora networks, sometimes years after the initial move.
+
+## Caveats
+
+- **Official vs true flows:** Brief 41 states informal channels mean actual remittances exceed recorded **$685 billion** — magnitude unknown
+- **Bilateral corridors are modeled:** KNOMAD 2021 splits use migrant-stock allocation; they are **not** SWIFT-level bilateral reporting and can understate fast-shifting US→India shares
+- **2024 figures are estimates (e):** December 2024 Brief projections may revise when balance-of-payments data settle
+- **Regional 2024 splits:** Sub-regional totals in our dashboard are scaled from 2023 disclosed bases using published growth rates — not separately disclosed line items
+- **GDP-share and inflow leaders use different country sets:** Tajikistan's 45% is not comparable to India's $129B without per-capita context
+- **China inclusion:** China is an upper-middle-income economy in World Bank groupings; LMIC totals exclude high-income recipients by definition
+
+## Methodology
+
+Primary source: World Bank Migration and Development Brief 41 (December 2024) blog and tables — LMIC total, top-five recipients, GDP-share leaders, regional growth rates. Historical regional totals through 2023 from Brief 40. Bilateral corridors from KNOMAD bilateral remittance matrix (2021), World Bank People Move blog (December 2022). FDI/ODA comparison figures from Brief 41 narrative.
+
+**Unlike our electricity generation mix map, this post tracks people-linked money flows — not physical power systems.**`,
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl: "/images/global-systems-global-remittance-corridors-2026-hero.png",
+    imageAlt:
+      "Dark navy visualization of global remittance corridors highlighting the US→Mexico $52B top corridor and India as the $129B largest recipient",
+    publishedAt: "2026-07-31T10:00:00Z",
+    featured: true,
+    visualization: "global-remittance-corridors",
+    layout: "default",
+  },
+  {
+    id: "phosphate-fertilizer-export",
+    slug: "phosphate-fertilizer-export-dependence-2026",
+    title:
+      "Charted: Morocco, China, and Saudi Arabia Control 67% of Phosphate Fertilizer Exports",
+    excerpt:
+      "Processed phosphate fertilizers — not just rock — are a seaborne chokepoint. TFI puts Morocco, China, and Saudi Arabia at 67% of MAP/DAP/TSP exports; add Russia and the top four clear ~82%. India's, Kenya's, and Brazil's DAP origins show which food systems sit downstream.",
+    content: `## The nutrient that has to arrive on a ship
+
+Phosphorus has no agricultural substitute. Farmers can stretch nitrogen with better timing and they can recycle some organic matter, but commercial grain systems still depend on **processed phosphate fertilizers** — chiefly **monoammonium phosphate (MAP)**, **diammonium phosphate (DAP)**, and **triple superphosphate (TSP)** — to replace what each harvest removes from soil. More than half of those finished products enter international trade. That is the chokepoint this post maps: **who exports the bags**, not who digs the rock.
+
+Our companion [phosphate rock supply concentration](/blog/phosphate-rock-supply-concentration-2024) piece used USGS mine and reserve tables: Morocco owns the geologic inventory; China digs the most rock. This dashboard answers a different question — **which food systems depend on a short list of phosphate fertilizer exporters** — with shares from The Fertilizer Institute (TFI), corridor evidence from IFPRI, and trade-context from FAO and UN Comtrade patterns.
+
+## Top-3 exporter share: 67%
+
+TFI's 2025 phosphorus brief ranks **22 exporting countries** for processed phosphates and finds a brutal concentration at the top:
+
+| Rank | Exporter | Export share | Production share |
+|---|---|---:|---:|
+| 1 | Morocco | **30%** | 14% |
+| 2 | China | **21%** | 44% |
+| 3 | Saudi Arabia | **16%** | 9% |
+| 4 | Russia | 15% | 9% |
+| 5 | United States | 4% | 8% |
+| — | Other | 14% | 16% |
+
+**Morocco + China + Saudi Arabia = 67% of world exports.** Add Russia and the **top four reach about 82%** — the same ballpark IFPRI cites when it says China, Morocco, Russia, and Saudi Arabia constitute roughly **80% of global DAP and MAP exports**. Production is also tight: TFI puts the **top five producers above 80%** of MAP/DAP/TSP output among roughly **30 producing countries**, with **China alone at 44%**.
+
+The scatter and gap charts above make the asymmetry visible. **China produces far more than it exports** — a food-security state that keeps nutrient tons at home when domestic rice and maize affordability stays tight. **Morocco and Saudi Arabia export well above their production shares** — they are the seaborne swing suppliers when Chinese licensing bites.
+
+## China closed the tap; the rest did not refill it
+
+IFPRI's March 2025 review is blunt about the 2021–2024 shock path. China exported an average of about **9 million metric tons** of ammoniated phosphates in 2019–2020, hit a record **10 Mt in 2021**, then used export restrictions and licensing to prioritize the domestic market. By **2024**, Chinese exports were only **6.6 Mt** — roughly a **one-third cut** from the peak.
+
+Russia and Saudi Arabia were already near capacity; IFPRI expects little volume relief until new plants arrive around **2027–2028**. Morocco raised exports after 2022, but gradually, and diverted more of its processed mix into **TSP**, which many DAP/MAP-habituated farmers treat as a second-best product. The stacked area in the dashboard shows the shape of that story: China's band shrinks after 2021; peers inch up without restoring the old seaborne surplus.
+
+FAO's fertilizer focus note puts global phosphate trade near **30.4 Mt in 2023** — a rebound of about 1 Mt year-over-year, yet still **more than 4 Mt below 2021**. TFI adds that **2024 processed-phosphate exports were about 7% below 2021** even though **global production exceeded 2021 by roughly 4%**. Tons were made. They were not all allowed onto the water.
+
+## Which food systems sit downstream
+
+Export concentration becomes a food-system risk only when importers cannot diversify origins. IFPRI's corridor work shows how thin that diversification often is:
+
+- **India (2023 DAP):** China about **39%**, Saudi Arabia ~18%, Morocco ~13%, Russia ~10%. China's share of Indian DAP swung from **19% in 2022 to 39% in 2023** as licensing eased — proof that New Delhi's planting calendar still tracks Beijing's permit desk.
+- **Brazil (2023 DAP):** a more plural mix, but still dominated by Morocco, Russia, and China (China alone ~**20%**, down from 27% in 2021 and up from 14% in 2022). Stocks looked healthier than in South Asia, yet much of the inventory was high-priced material that deterred farmer purchases.
+- **Kenya (2023 DAP):** a **two-origin market** — Saudi Arabia **83%**, Morocco **17%**. Russia held an 11% share in 2021 and then disappeared. That is not a contestable commodity market; it is a bilateral logistics relationship.
+- **European Union:** Morocco remains the primary origin, with Russia still material because fertilizers were exempted from EU sanctions — a political carve-out that keeps European phosphorus exposed to a sanctioned-state exporter.
+
+Toggle the **Food-system importers** lens above to see origin donuts and single-origin dominance bars. The pattern repeats: large agrarian importers do not face "the world phosphate market." They face **two to four state-linked supply systems**.
+
+## Rock chokepoint vs fertilizer chokepoint
+
+Readers who know the USGS rock table sometimes assume fertilizer trade mirrors mine ranks. It does not. China's **44% production / 21% export** split is the clearest proof: the largest processor can starve the seaborne market while still running plants. Morocco's **14% production / 30% export** split is the mirror: OCP's integrated system is built to ship. Saudi Arabia punches similarly above its production weight.
+
+That is why pairing this post with the [phosphate rock](/blog/phosphate-rock-supply-concentration-2024) dashboard matters. Rock reserves answer "who owns the century." Fertilizer exports answer "who can cancel next season's application rates in India, Kenya, or Bangladesh." The same molecule; different binding constraint.
+
+For another physical chokepoint with a dig-versus-process split, see [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-concentration-2024). For a one-country mine monopoly in battery anodes, see [natural graphite](/blog/natural-graphite-mine-concentration-2024). Phosphate fertilizer is closer to copper's midstream logic than to graphite's mine monopoly — except the "midstream" here is acidulation and ammoniation of rock into MAP/DAP, and the customers are food systems rather than cable mills.
+
+## Prices, affordability, and the slow yield risk
+
+All fertilizer prices fell from 2022 peaks, but IFPRI notes phosphate remains roughly **double** early-2020 levels while urea is closer to **1.5×**. Affordability — phosphate cost relative to crop prices — deteriorated because crop prices retreated faster than phosphate. IFA's November 2024 update revised phosphate demand growth down for 2024–2025 versus earlier forecasts.
+
+The failure mode is slow. Skipping nitrogen shows up in the next harvest. Skipping phosphate can look fine for a season or two because soils buffer phosphorus — until they do not. IFPRI flags historical-low stocks in major markets by end-2024 and DAP scarcity protests during Indian sowing windows. Sub-Saharan application rates start low; Kenya still saw phosphate use contract about **42%** over 2020–2022. The global calorie system can absorb a one-year skim. A multi-year skim is how you bake lower yields into food prices.
+
+## Who is exposed, who benefits, what would change the story
+
+**Exposed:** South Asian and East African DAP buyers with two-to-four origin lists; any importer that treated 2019–2020 Chinese export volumes as a permanent feature of the market; US growers facing AD/CVD duties on Moroccan and Russian phosphates since 2019 that shifted imports toward costlier origins while domestic Florida plants took hurricane hits.
+
+**Relative beneficiaries under current geography:** Morocco/OCP as the scalable seaborne alternative; Saudi and Russian exporters running near capacity into a short market; traders who can arbitrate TSP versus DAP acceptance.
+
+**What would change the story:** Chinese licensing that returns exports toward the **9–10 Mt** band; greenfield capacity in Saudi Arabia, Morocco, and elsewhere that IFPRI dates to **2027–2028**; a lasting shift in farmer acceptance of TSP/NPKs; or phosphorus recycling at a scale that actually dents primary MAP/DAP demand — still small relative to tens of millions of nutrient tons.
+
+## Caveats
+
+- **Export and production shares are TFI aggregates for MAP/DAP/TSP**, not USGS phosphate-rock mine shares; do not mix the two tables.
+- **China export Mt figures are IFPRI-reported ammoniated phosphate exports**; product definitions can differ slightly from TFI share denominators.
+- **Importer corridor percentages** are IFPRI DAP-origin shares for cited years; Bangladesh is an illustrative South Asian pattern, not a primary IFPRI table reprint.
+- **Stacked volume history** anchors IFPRI's China 10→6.6 Mt path and interpolates peer volumes for visualization — treat peer Mt as approximate, not customs microdata.
+- **UN Comtrade HS codes** for phosphatic fertilizers fragment across DAP, MAP, and other headings; we use secondary research syntheses rather than a raw Comtrade scrape for headline shares.
+- **Western Sahara / Morocco** reporting conventions in rock statistics can differ from fertilizer-brand export statistics; TFI exporter shares follow commercial trade practice.
+
+## Methodology
+
+Headline top-3 and top-4 export shares and production shares: TFI Phosphorus/phosphate one-pager (2025). China export volumes 2019–2024 and qualitative capacity notes: IFPRI (March 2025). Importer DAP origin shares for India, Brazil, Kenya, and EU context: IFPRI fertilizer-trade analyses (2021–2023 updates). Global phosphate trade tonnage: FAO Focus on Fertilizers. Dashboard gaps and scatter positions are derived from the disclosed TFI share pairs. This post is about **processed fertilizer trade dependence**; rock geology remains covered in the linked USGS-based companion.
+
+**Unlike our [helium supply concentration](/blog/global-helium-supply-concentration-2024) map — a two-country industrial-gas bottleneck — phosphate fertilizer exports are a four-country food-system bottleneck whose binding constraint is often an export license, not a depleted mine.**`,
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-phosphate-fertilizer-export-dependence-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero of phosphate fertilizer export routes dominated by Morocco, China, and Saudi Arabia with a 67% top-3 callout",
+    publishedAt: "2026-07-31T10:00:00Z",
+    featured: true,
+    visualization: "phosphate-fertilizer-export",
+    layout: "default",
+  },
+  {
+    id: "billion-dollar-disasters",
+    slug: "us-billion-dollar-weather-disasters-2026",
+    title: "Charted: US Billion-Dollar Disasters Now Cost $149B a Year — and the Increments Keep Growing",
+    excerpt:
+      "NOAA’s CPI-adjusted ledger shows annual US billion-dollar disaster costs averaging $149.3B in 2020–24 — 6.8× the 1980s — while decade-to-decade cost increments keep widening.",
+    content: `## The inflation-adjusted total is the right headline
+
+Everyone remembers the year a hurricane breaks the damage record. Fewer people ask whether **normalized** disaster cost is still accelerating after you strip out general inflation — and after you scale by the size of the economy.
+
+NOAA NCEI’s Billion-Dollar Weather and Climate Disasters series answers the first half cleanly. All costs are **CPI-adjusted to 2024 dollars**. On that yardstick, the **2020–2024** average is **$149.3 billion per year** in direct damages from events that individually clear **$1 billion**. In the **1980s** the average was **$22.0 billion**. That is a **6.8×** jump in the annual CPI total — not a media-cycle illusion.
+
+Event frequency moved in parallel: **23.0** billion-dollar disasters per year in 2020–24 versus **3.3** in the 1980s (**~7×**). Over the full **1980–2024** window NOAA counts **403** such events and **$2.915 trillion** in cumulative CPI-adjusted cost.
+
+**Unlike our [electricity generation mix](/blog/global-electricity-generation-mix-2024) map, this post is not about how grids are fueled — it is about the rising damage ledger those grids, coasts, and floodplains keep paying.**
+
+## Acceleration means first differences, not just levels
+
+A level can be high without still accelerating. The sharper test is whether the **decade-to-decade increment** in annual cost keeps getting larger.
+
+| Step | Change in cost / year (2024$) |
+|------|-------------------------------|
+| 1980s → 1990s | **+$11.5B** |
+| 1990s → 2000s | **+$28.7B** |
+| 2000s → 2010s | **+$37.3B** |
+| 2010s → 2020–24 | **+$49.8B** |
+
+Each step’s increment is larger than the last. That is the acceleration signal in the official ledger: not merely “costs are high,” but “the climb itself is steepening.” The **2010s** already averaged **$99.5B/year**; the partial **2020–24** decade is running **$149.3B/year** — and the **2022–24** three-year average is even hotter at **$153.9B/year**.
+
+Frequency tells the same story at the count level. The US has now posted **14 consecutive years** (2011–2024) with **10 or more** billion-dollar events. Over the last ten years (**2015–2024**), NOAA’s Climate.gov wrap counts **190** separate billion-dollar disasters and roughly **$1.4 trillion** in damage.
+
+## 2024: second-most events, fourth-costliest year
+
+**2024** logged **27** billion-dollar disasters and **$182.7 billion** in CPI-adjusted damage — second only to **2023’s record 28 events**, and fourth on the cost ranking behind **2017** ($395.9B), **2005** ($268.5B), and **2022** ($183.6B). Fatalities tied to these events reached **568**, among the higher years in the 45-year record.
+
+Severe storms dominated the **count** (17 of 27 when tornado outbreaks and hail/wind events are grouped with the broader severe-weather category in Climate.gov’s narrative). Hurricanes dominated the **bill**: Helene (~$78.7B) and Milton ($34.3B) alone topped **$100B** across the Southeast in roughly two weeks. Beryl added another **$7.2B**; a May tornado outbreak added **$6.6B**.
+
+That split matters for adaptation economics. A year can look “busy” on the event counter because localized severe storms keep clearing the $1B threshold, while the fiscal and insurance shock still concentrates in a handful of tropical cyclones.
+
+## Count vs dollars: two different hazard regimes
+
+Over **1980–2024**, **severe storms** lead event counts (**203**) but average only about **$2.5B** each. **Tropical cyclones** are rarer (**67**) yet average about **$23B** and account for roughly **$1.54 trillion** of cumulative cost — more than triple severe-storm dollar totals. Drought (~$368B cumulative), inland flooding (~$203B), wildfire (~$148B), and winter storms (~$104B) fill out the ledger.
+
+So “is disaster risk rising?” depends on which series you watch:
+
+- **Frequency:** severe storms are the volume engine pushing more years over the artificial $1B line.
+- **Severity of the bill:** hurricanes still write the largest checks.
+- **Human cost:** tropical cyclones also lead cumulative deaths in the NOAA table, with drought/heat close behind.
+
+For insurers, municipalities, and federal disaster budgets, the practical implication is portfolio-shaped: many mid-size convective losses plus fat-tailed hurricane years — not a single smooth trend line.
+
+## GDP normalization softens the story — it does not erase it
+
+CPI adjustment removes general inflation. It does **not** remove the fact that the US economy and capital stock are much larger than in 1980. Dividing decade average disaster cost by a BEA nominal-GDP midpoint is a rough second normalization:
+
+| Period | Cost / year (2024$) | ≈ GDP midpoint | Cost share of GDP |
+|--------|---------------------|----------------|-------------------|
+| 1980s | $22.0B | ~$4.3T | **0.51%** |
+| 1990s | $33.5B | ~$7.6T | **0.44%** |
+| 2000s | $62.2B | ~$13.1T | **0.48%** |
+| 2010s | $99.5B | ~$18.2T | **0.55%** |
+| 2020–24 | $149.3B | ~$25.7T | **0.58%** |
+
+On this yardstick the rise is real but slower than the raw CPI multiple: from about **half a percent of GDP** in the 1980s to a bit under **0.6%** in 2020–24. Spike years still puncture the average — **2017** alone was on the order of **2% of that year’s GDP** when Harvey, Irma, and Maria stacked.
+
+Climate.gov’s per-capita framing is harsher than the GDP share: five-year-average disaster cost per US resident rose from roughly **$150** in the early 2000s to above **$400** by the late 2010s and has stayed elevated. Population growth alone does not absorb the CPI-adjusted climb.
+
+Readers tracking fiscal pressure from another angle may want our [US industrial subsidies vs tariffs](/blog/us-industrial-subsidies-vs-tariffs-30-years) piece — adaptation and disaster outlays compete in the same long-run budget with industrial policy, interest, and tax expenditures.
+
+## Who is exposed — and what would change the story
+
+Exposure concentrates where people and property keep filling hazard zones: Gulf and Atlantic hurricane coasts (Florida’s cumulative cost leads the state map at roughly **$450B** since 1980; Texas is close behind on both cost and event count), inland floodplains, and the Western wildland–urban interface. NOAA is explicit that rising losses mix **exposure** (more assets in harm’s way), **vulnerability** (how we build and insure), and **climate-driven extremes**. This post does **not** attribute shares among those drivers; attribution science and building-code studies sit outside the NCEI ledger.
+
+The interactive dashboard above is built to stress-test the acceleration claim: toggle the rolling average between **CPI dollars**, **event counts**, and **GDP share**, and switch the window between **5** and **10** years. CPI dollars and counts rise steeply; GDP share rises more slowly — which is exactly why “normalized” needs a definition before the headline.
+
+What would change the story:
+
+- A sustained multi-year stretch back toward the long-run **9.0 events / $64.8B** averages without a compensating mega-hurricane year.
+- Material downward revisions to 2020–24 costs as claims settle the other way (historically revisions more often rise).
+- A GDP boom that outruns CPI-adjusted losses enough to push the cost/GDP share back toward 1990s levels even if dollar losses stay high.
+
+None of those is visible in the January 2025 Climate.gov update. The working conclusion: **yes — inflation-adjusted annual totals are still accelerating on a decade-difference basis**, while GDP-normalized shares are elevated and slowly rising rather than exploding.
+
+## Caveats and methodology
+
+- **Threshold artifact:** Events just under $1B (2024$) are excluded; 57 older events crossed the line only after CPI adjustment.
+- **Partial decade:** 2020–24 is five years, not ten — comparisons use per-year averages.
+- **Cost revisions:** 2024 totals (analysis through early January 2025) can still rise as claims data settle.
+- **GDP shares are estimated:** NOAA costs are disclosed; dividing by BEA nominal GDP midpoints is our normalization, not an NCEI field.
+- **No driver split:** The series does not isolate climate change vs exposure vs vulnerability.
+- **Direct damages only:** Broader macroeconomic and health costs are out of scope.
+
+**Primary sources:** [NOAA NCEI Billion-Dollar Disasters](https://www.ncei.noaa.gov/access/billions/) and [Climate.gov’s 2024 wrap-up](https://www.climate.gov/news-features/blogs/beyond-data/2024-active-year-us-billion-dollar-weather-and-climate-disasters); GDP context from [BEA](https://www.bea.gov/data/gdp/gross-domestic-product).
+
+**Unlike our [Goldman Sachs AI capex](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) scenario stack, this post tracks realized weather losses — not forward infrastructure spend.**`,
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl: "/images/energy-us-billion-dollar-weather-disasters-2026-hero.png",
+    imageAlt:
+      "Dark navy data visualization of rising US billion-dollar weather disaster bars morphing into storm systems with $149B/yr callout",
+    publishedAt: "2026-07-31T11:20:00.000Z",
+    featured: true,
+    visualization: "billion-dollar-disasters",
+    layout: "fullscreen",
+  },
+  {
     id: "social-security-trust-fund",
     slug: "us-social-security-trust-fund-depletion-path-2026",
     title: "Charted: Social Security Reserves Hit Zero in 2034 — One Year Sooner",

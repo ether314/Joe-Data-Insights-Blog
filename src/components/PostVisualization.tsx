@@ -212,11 +212,86 @@ const SocialSecurityTrustFundDashboard = dynamic(
   },
 );
 
+
+const AiCapexIntensityResearchDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiCapexIntensityResearchDashboard").then(
+      (m) => m.AiCapexIntensityResearchDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const AiCapexSpendResearchDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiCapexSpendResearchDashboard").then(
+      (m) => m.AiCapexSpendResearchDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const GlobalRemittanceCorridorsDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/GlobalRemittanceCorridorsDashboard").then(
+      (m) => m.GlobalRemittanceCorridorsDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const PhosphateFertilizerExportDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/PhosphateFertilizerExportDashboard").then(
+      (m) => m.PhosphateFertilizerExportDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const BillionDollarDisastersDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/BillionDollarDisastersDashboard").then(
+      (m) => m.BillionDollarDisastersDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
 export function PostVisualization({
   type,
   embedded = false,
 }: {
-  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "social-security-trust-fund";
+  type: NonNullable<import("@/types/post").Post["visualization"]>;
   embedded?: boolean;
 }) {
   if (type === "gdp-analysis") {
@@ -261,5 +336,21 @@ export function PostVisualization({
   if (type === "social-security-trust-fund") {
     return <SocialSecurityTrustFundDashboard />;
   }
+  if (type === "ai-capex-intensity-research-2026") {
+    return <AiCapexIntensityResearchDashboard />;
+  }
+  if (type === "ai-capex-spend-research-2026") {
+    return <AiCapexSpendResearchDashboard />;
+  }
+  if (type === "global-remittance-corridors") {
+    return <GlobalRemittanceCorridorsDashboard />;
+  }
+  if (type === "phosphate-fertilizer-export") {
+    return <PhosphateFertilizerExportDashboard />;
+  }
+  if (type === "billion-dollar-disasters") {
+    return <BillionDollarDisastersDashboard />;
+  }
+
   return null;
 }
