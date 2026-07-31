@@ -81,6 +81,11 @@ const POSTS = [
     marker: "Baseline AI capex by layer",
     forbidden: "Loading interactive charts",
   },
+  {
+    slug: "ai-capex-intensity-research-2026",
+    marker: "Capex intensity trajectory",
+    forbidden: "Loading interactive charts",
+  },
 ];
 
 async function smokePost(page, { slug, marker, forbidden }) {

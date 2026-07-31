@@ -2,6 +2,90 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-intensity-research-2026",
+    slug: "ai-capex-intensity-research-2026",
+    title: "Charted: Meta Reinvests 35% of Revenue — Is Hyperscaler Capex Intensity Sustainable?",
+    excerpt:
+      "Five hyperscalers now push 18–37% of revenue into capex. Map the ratios against free-cash-flow coverage, telecom history, and foundry extremes — and ask what fraction of sales can stay in the build-out.",
+    content: `## The question that dollar totals skip
+
+Headline AI infrastructure numbers — Goldman’s [Tracking Trillions](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) scenarios, campus megawatts, GPU backlogs — answer *how much* capital is flowing. They do not answer the sharper capital-markets question: **what fraction of each dollar of revenue is being plowed back into property, plant, and equipment**, and can that reinvestment rate persist without crushing free cash flow?
+
+Capex intensity — gross purchases of PP&E divided by total revenue — is the cleanest public proxy. It is unitless, comparable across fiscal calendars, and brutal when it spikes. The interactive dashboard above tracks five public builders (Microsoft, Amazon, Alphabet, Meta, Oracle) from FY20 through FY25, overlays free-cash-flow margins, and places the ratios against wireline telecom, energy, SaaS, and leading-edge foundry benchmarks.
+
+## What the FY25 ratios actually say
+
+| Company | FY25 capex / revenue | Capex ($B) | Revenue ($B) | FCF margin |
+|---------|---------------------:|-----------:|-------------:|-----------:|
+| Oracle | **37.0%** | 21.2 | 57.4 | 8.9% |
+| Meta | **34.7%** | 69.7 | 201.0 | 18.2% |
+| Microsoft | **22.9%** | 64.6 | 281.7 | 25.4% |
+| Alphabet | **22.7%** | 91.4 | 403.0 | 14.8% |
+| Amazon | **18.4%** | 131.8 | 716.9 | 3.1% |
+
+Oracle and Meta sit inside the **dot-com telecom peak band** (~30–40%) that carriers briefly sustained around 2000. Microsoft and Alphabet have roughly **doubled** their mid-decade teens intensities. Amazon’s percentage looks “moderate” only because retail revenue is enormous — absolute FY25 capex still leads the set at **$132B**.
+
+Revenue-weighted across the big four (ex-Oracle), intensity lands near **22%** — roughly double the pre-AI hyperscale cloud norm (~11%) and aligned with the long-run **wireline telecom** capital intensity that FCC ARMIS large-ILEC data put around **20%** before the late-1990s surge.
+
+## Intensity is not the same as dollars
+
+Dollar capex and intensity can diverge. Amazon’s FY23 intensity **fell** to 9.2% even while absolute spending stayed above $50B, because revenue growth outran the build. Meta’s FY22 spike to **27.9%** came with a compressed FCF margin; the FY23–24 “Year of Efficiency” pulled intensity back before the FY25 AI surge pushed it to a new high.
+
+Toggle companies in the chart to see the stack of absolute dollars: the same fiscal years that look like a smooth intensity climb for Microsoft become a **step-change** in cash leaving the firm once Amazon and Alphabet accelerate. For site-level context on where those dollars land physically, see the [global AI data center build tracker](/blog/global-ai-data-center-build-tracker).
+
+## Free cash flow is the sustainability hinge
+
+A firm can run high intensity indefinitely if operating cash flow still covers capex with room for buybacks, dividends, and debt service. The scatter panel pairs **intensity (x)** with **FCF margin (y)** for the selected fiscal year.
+
+- **Microsoft** remains the textbook “high intensity, still cash-rich” case: FY25 intensity 22.9% with FCF margin still above **25%**.
+- **Meta** funds a 35% intensity ratio while keeping FCF near **18%** — uncomfortable versus its own history, survivable versus most industrials.
+- **Alphabet**’s FCF margin compressed from the mid-20s toward **~15%** as intensity crossed 20%.
+- **Amazon** is the fragile edge: intensity 18% with FCF margin only **~3%**, leaving little buffer if AWS monetization lags GPU depreciation.
+- **Oracle**’s estimated FY25 jump to 37% coincides with FCF margin falling into single digits — the classic “build now, harvest later” posture of a capacity land-grab.
+
+Sustainability, then, is not a single threshold. It is whether **cash conversion survives the reinvestment rate** long enough for utilization and pricing to catch the depreciation wave.
+
+## Historical bands that still matter
+
+Three reference bands help investors read the time series without treating every spike as a bubble:
+
+1. **Historical cloud range (0–15%)** — the 2015–19 hyperscale pattern when capacity followed contracted cloud demand.
+2. **Elevated reinvestment (15–25%)** — where Microsoft, Alphabet, and Amazon now cluster; comparable to integrated energy peers (~16%) and below classic telecom norms.
+3. **Telecom / foundry territory (25%+)** — Meta and Oracle today; overlapping the 1999–2000 carrier peak mid (~35%) and approaching leading-edge foundry cycles (~45%) that TSMC-class manufacturers run when node transitions dominate.
+
+The ranked bar chart marks the **20% telecom norm** and the **35% dot-com mid**. Crossing into the third band does not prove a bubble — foundries live there for years — but it does mean the equity story must look more like **industrial capacity** than **asset-light software**.
+
+## Why the comparison to 2000 is imperfect — and still useful
+
+Dot-com carriers levered balance sheets to lay dark fiber ahead of demand that never arrived on schedule. Today’s hyperscalers fund most AI capex from **operating cash flow**, not speculative project finance, and they sit on demand queues for compute that carriers never enjoyed. That is the bull case for sustainability.
+
+The bear case is timing: GPU useful lives are short, power and packaging bottlenecks (see [AI GPU packaging and memory constraints](/blog/ai-gpu-packaging-memory-bottleneck-2025)) can idle expensive halls, and advertising or cloud pricing may not rise fast enough to amortize the wave. Intensity can stay “affordable” on an FCF basis for two years and still destroy equity value if returns on invested capital disappoint. Equity analysts who stop at “they can afford it” miss the harder test: whether incremental ROIC on AI PP&E clears the cost of capital after utilization, power, and model-price compression.
+
+Use the sector benchmark panel to keep perspective: mature SaaS at ~4% intensity is not the peer set anymore. The relevant comps are **telecom infrastructure, energy upstream, and foundries** — businesses judged on utilization, not ARR multiples alone.
+
+## Caveats and methodology
+
+1. **Gross PP&E purchases ≠ AI-only spend.** Filings do not cleanly split AI accelerators from warehouses, offices, or network gear. Amazon’s ratio mixes retail fulfillment with AWS; treat company-level intensity as an upper-bound proxy for “AI intensity.”
+2. **Fiscal calendars differ.** Microsoft ends in June, Oracle in May, the others in December. “FY25” is not a single calendar window — trajectory charts align labels, not months.
+3. **Lease accounting and cloud capacity purchases** can shift economics off the PP&E line. Some GPU capacity is rented; some is on partner balance sheets. Intensity understates total compute committed where operating leases dominate.
+4. **Oracle FY25** includes estimated elements where trailing guidance and partial-year disclosures were spliced; flag confidence in the data module.
+5. **FCF margin** here is (operating cash flow − capex) ÷ revenue. Definitions that add back stock-based compensation or exclude working-capital swings will differ.
+
+Primary sources: company Form 10-K / 10-Q cash-flow statements (purchases of property and equipment; cash from operations), FCC ARMIS / TIA historical telecom capital-intensity aggregates, and industry peer medians for energy and foundry benchmarks as labeled in the dashboard.
+
+## What to watch next
+
+Watch three coincident signals, not intensity alone: (1) **FCF margin** by company — especially Amazon and Oracle; (2) **revenue growth in AI-exposed segments** (Azure, AWS, Google Cloud, Meta ads + AI products) relative to depreciation step-ups; (3) **guidance language** that converts “multi-year build” into explicit intensity ceilings. If weighted intensity holds above 20% while FCF margins stabilize, the market will treat the AI build as a new steady state — a capital-markets regime shift from software to infrastructure. If intensity stays high and FCF keeps compressing, the sustainability debate stops being academic. Either path, the ratio — not the headline dollar — is the signal that forces the re-rating.`,
+    category: "Finance",
+    imageUrl: "/images/finance-ai-capex-intensity-research-2026-hero.png",
+    imageAlt:
+      "Hyperscaler capex intensity research 2026 — dark navy chart of Meta and peers reinvesting rising shares of revenue into AI infrastructure",
+    publishedAt: "2026-07-31T11:00:00Z",
+    featured: true,
+    visualization: "ai-capex-intensity-research-2026",
+    layout: "default",
+  },
+  {
     id: "goldman-sachs-ai-capex",
     slug: "goldman-sachs-ai-capex-chips-data-centers-2027-2028",
     title: "Charted: Goldman Sachs Puts 2027 AI Capex at $961B — Chips and Data Centers",

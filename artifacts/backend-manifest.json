@@ -1,26 +1,27 @@
 {
-  "handoffId": "9ec0ff80-f166-4159-82e4-cd5a11530be7",
-  "topic": "goldman-sachs-ai-capex",
-  "slug": "goldman-sachs-ai-capex-chips-data-centers-2027-2028",
-  "visualizationKey": "goldman-sachs-ai-capex",
-  "dataFile": "src/data/goldman-sachs-ai-capex-data.ts",
-  "source": "Goldman Sachs Global Institute — Tracking Trillions (April 2026)",
-  "sourceUrl": "https://www.goldmansachs.com/insights/articles/tracking-trillions-the-assumptions-shaping-scale-of-the-ai-build-out",
+  "handoffId": "job-ms8tuy44-68pjm",
+  "topic": "ai-capex-intensity",
+  "slug": "ai-capex-intensity-research-2026",
+  "visualizationKey": "ai-capex-intensity-research-2026",
+  "dataFile": "src/data/ai-capex-intensity-research-2026-data.ts",
+  "source": "SEC 10-K / 10-Q PP&E purchases ÷ revenue; FCC ARMIS telecom intensity; sector peer medians",
+  "sourceUrl": "https://www.sec.gov/",
   "postsEntry": {
     "file": "src/data/posts.ts",
-    "id": "goldman-sachs-ai-capex"
+    "id": "ai-capex-intensity-research-2026"
   },
   "typesEntry": {
     "file": "src/types/post.ts",
-    "visualizationKey": "goldman-sachs-ai-capex"
+    "visualizationKey": "ai-capex-intensity-research-2026"
   },
-  "heroImage": "technology-goldman-sachs-ai-capex-hero.png",
-  "heroImageUrl": "/images/technology-goldman-sachs-ai-capex-hero.png",
+  "heroImage": "finance-ai-capex-intensity-research-2026-hero.png",
+  "heroImageUrl": "/images/finance-ai-capex-intensity-research-2026-hero.png",
+  "themeId": "ai-capex-intensity",
   "validation": {
-    "nodeCheck": "node --check src/data/goldman-sachs-ai-capex-data.ts"
+    "qa": "node scripts/qa-ai-capex-intensity-research-2026.mjs"
   },
   "followUp": {
-    "qa": "Smoke test entry added; run npm run deploy",
-    "devops": "Deploy to Firebase Hosting"
+    "qa": "Smoke test entry added; run npm run deploy (local)",
+    "devops": "Worker marks ready; orchestrator merges — no Firebase from worker"
   }
 }
