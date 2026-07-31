@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Post-build smoke test: every visualization post must render (not stuck on loading).
  * Usage:
  *   node scripts/smoke-test-viz-posts.mjs           # test local `out/` via in-process static server
@@ -83,16 +83,10 @@ const POSTS = [
   },
   {
     slug: "us-social-security-trust-fund-depletion-path-2026",
-    marker: "Trust fund reserves path 2025–2034",
+    marker: "Trust fund reserves path 2025",
     forbidden: "Loading interactive charts",
   },
-];
-
-async function smokePost(page, { slug, marker, forbidden }) {
-  const path = live ? `/blog/${slug}` : `/blog/${slug}.html`;
-  const url = `${baseUrl}${path}`;
-  const consoleErrors = [];
-  const pageErrors = [  {
+  {
     slug: "ai-capex-intensity-research-2026",
     marker: "Capex intensity trajectory",
     forbidden: "Loading interactive charts",
@@ -114,10 +108,16 @@ async function smokePost(page, { slug, marker, forbidden }) {
   },
   {
     slug: "us-billion-dollar-weather-disasters-2026",
-    marker: "Adaptation economics — CPI-adjusted disaster ledger",
+    marker: "Adaptation economics",
     forbidden: "Loading interactive charts",
   },
 ];
+
+async function smokePost(page, { slug, marker, forbidden }) {
+  const path = live ? `/blog/${slug}` : `/blog/${slug}.html`;
+  const url = `${baseUrl}${path}`;
+  const consoleErrors = [];
+  const pageErrors = [];
 
   page.removeAllListeners("console");
   page.removeAllListeners("pageerror");
@@ -146,7 +146,7 @@ async function main() {
   if (!live) {
     const outDir = path.join(root, "out");
     if (!fs.existsSync(outDir)) {
-      console.error("✗ Missing out/ — run npm run build first");
+      console.error("Γ£ù Missing out/ ΓÇö run npm run build first");
       process.exit(1);
     }
   }
@@ -167,7 +167,7 @@ async function main() {
       const ok =
         !result.stuck && result.pageErrors.length === 0 && result.consoleErrors.length === 0;
 
-      console.log(ok ? "✓" : "✗", post.slug);
+      console.log(ok ? "Γ£ô" : "Γ£ù", post.slug);
       if (result.stuck) {
         console.log("  Dashboard stuck on loading spinner");
         failed++;
@@ -199,7 +199,7 @@ main().catch((err) => {
   if (String(err).includes("Executable doesn't exist")) {
     console.error("Playwright browsers missing. Run: npx playwright install chromium");
   } else if (err.name === "TimeoutError") {
-    console.error("Smoke test timed out — dashboard likely stuck on loading or JS error.");
+    console.error("Smoke test timed out ΓÇö dashboard likely stuck on loading or JS error.");
     console.error("Debug: npx tsx scripts/test-all-costs.ts && node scripts/debug-smoke.mjs");
     console.error(err.message);
   } else {
