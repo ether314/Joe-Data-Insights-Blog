@@ -197,10 +197,10 @@ const GoldmanSachsAiCapexDashboard = dynamic(
   },
 );
 
-const AiCapexIntensityResearchDashboard = dynamic(
+const AiCapexSpendResearchDashboard = dynamic(
   () =>
-    import("@/components/visualizations/AiCapexIntensityResearchDashboard").then(
-      (m) => m.AiCapexIntensityResearchDashboard,
+    import("@/components/visualizations/AiCapexSpendResearchDashboard").then(
+      (m) => m.AiCapexSpendResearchDashboard,
     ),
   {
     ssr: false,
@@ -216,7 +216,7 @@ export function PostVisualization({
   type,
   embedded = false,
 }: {
-  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "ai-capex-intensity-research-2026";
+  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "ai-capex-spend-research";
   embedded?: boolean;
 }) {
   if (type === "gdp-analysis") {
@@ -258,8 +258,8 @@ export function PostVisualization({
   if (type === "goldman-sachs-ai-capex") {
     return <GoldmanSachsAiCapexDashboard />;
   }
-  if (type === "ai-capex-intensity-research-2026") {
-    return <AiCapexIntensityResearchDashboard />;
+  if (type === "ai-capex-spend-research") {
+    return <AiCapexSpendResearchDashboard />;
   }
   return null;
 }

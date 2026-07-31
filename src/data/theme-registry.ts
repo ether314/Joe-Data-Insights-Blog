@@ -3,17 +3,7 @@
  * Agents may append new themes here when creation criteria are met.
  */
 
-/** Theme-facing category labels (may be finer than Post.Category). */
-export type ThemeCategory =
-  | "Economics"
-  | "Politics"
-  | "Finance"
-  | "Technology"
-  | "Capital Markets"
-  | "Global Systems"
-  | "Industry"
-  | "Energy"
-  | "Consumer Finance";
+import type { Category } from "@/types/post";
 
 export type ThemeLane =
   | "ai-infrastructure"
@@ -22,6 +12,15 @@ export type ThemeLane =
   | "geopolitics-governance"
   | "markets-finance"
   | "industrial-adoption";
+
+/** Theme-level category labels (broader than Post.Category routing buckets). */
+export type ThemeCategory =
+  | Category
+  | "Capital Markets"
+  | "Global Systems"
+  | "Industry"
+  | "Energy"
+  | "Consumer Finance";
 
 export type PipelineCandidate = {
   title: string;
@@ -438,8 +437,8 @@ export const SLUG_THEME_IDS: Record<string, string> = {
   "global-helium-supply-concentration-2024": "chokepoint-commodities",
   "us-billion-dollar-weather-disasters-1980-2024": "adaptation-economics",
   "goldman-sachs-ai-capex-chips-data-centers-2027-2028": "ai-capex-spend",
+  "ai-capex-spend-research-2026": "ai-capex-spend",
   "hyperscaler-capex-intensity-vs-dotcom-telecom-2025": "ai-capex-intensity",
-  "ai-capex-intensity-research-2026": "ai-capex-intensity",
   "hyperscaler-ai-corporate-bond-issuance-2025": "ai-financing",
   "ai-etf-flows-qqq-vs-thematic-2025": "ai-financing",
   "semiconductor-equipment-spending-cycle-2025": "ai-supply-chain",
@@ -634,7 +633,7 @@ export type NewThemeProposal = {
   id: string;
   label: string;
   lane: ThemeLane;
-  category: ThemeCategory;
+  category: Category;
   metaQuestion: string;
   visualLane: string;
   targetSharePct: number;

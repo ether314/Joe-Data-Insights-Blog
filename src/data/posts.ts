@@ -2,88 +2,95 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
-    id: "ai-capex-intensity-research-2026",
-    slug: "ai-capex-intensity-research-2026",
-    title: "Charted: Meta Reinvests 35% of Revenue — Is Hyperscaler Capex Intensity Sustainable?",
+    id: "ai-capex-spend-research-2026",
+    slug: "ai-capex-spend-research-2026",
+    title: "Charted: AI Capex Hits $760B in 2026 Guidance — and $1.4T in the Bull Case",
     excerpt:
-      "Five hyperscalers now push 18–37% of revenue into capex. Map the ratios against free-cash-flow coverage, telecom history, and foundry extremes — and ask what fraction of sales can stay in the build-out.",
-    content: `## The question that dollar totals skip
+      "Big-5 midpoints sum to ~$760B for 2026. Goldman’s Investment Research base puts 2027 hyperscaler spend at $1.14T (bull $1.4T), while its Global Institute all-in AI path and McKinsey’s $5.2T cumulative framework answer a different question.",
+    content: `## The number everyone quotes is not one number
 
-Headline AI infrastructure numbers — Goldman’s [Tracking Trillions](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) scenarios, campus megawatts, GPU backlogs — answer *how much* capital is flowing. They do not answer the sharper capital-markets question: **what fraction of each dollar of revenue is being plowed back into property, plant, and equipment**, and can that reinvestment rate persist without crushing free cash flow?
+Ask how large AI infrastructure spending is and you will hear **$725 billion**, **$750 billion**, **$765 billion**, **$1.14 trillion**, **$1.4 trillion**, **$5.2 trillion**, and **$7.6 trillion** — often in the same briefing deck. Those figures are not disagreements about arithmetic. They are answers to **different questions**: which companies, which year, which layers of the stack, and whether the total is an **annual run-rate** or a **multi-year cumulative**.
 
-Capex intensity — gross purchases of PP&E divided by total revenue — is the cleanest public proxy. It is unitless, comparable across fiscal calendars, and brutal when it spikes. The interactive dashboard above tracks five public builders (Microsoft, Amazon, Alphabet, Meta, Oracle) from FY20 through FY25, overlays free-cash-flow margins, and places the ratios against wireline telecom, energy, SaaS, and leading-edge foundry benchmarks.
+The interactive dashboard above is a spend map across those scopes. Toggle **2026 / 2027 / 2028**, switch between **gross** hyperscaler capex and an **AI-attributed (~75%)** slice, and compare research-house fans against McKinsey’s cumulative scenarios. The point is not to pick a single “true” total. It is to keep the scopes honest so markets can debate substance instead of mixing labels.
 
-## What the FY25 ratios actually say
+## What company guidance actually says for 2026
 
-| Company | FY25 capex / revenue | Capex ($B) | Revenue ($B) | FCF margin |
-|---------|---------------------:|-----------:|-------------:|-----------:|
-| Oracle | **37.0%** | 21.2 | 57.4 | 8.9% |
-| Meta | **34.7%** | 69.7 | 201.0 | 18.2% |
-| Microsoft | **22.9%** | 64.6 | 281.7 | 25.4% |
-| Alphabet | **22.7%** | 91.4 | 403.0 | 14.8% |
-| Amazon | **18.4%** | 131.8 | 716.9 | 3.1% |
+After Q1 2026 earnings, the five largest cloud / AI infrastructure spenders disclosed or reaffirmed calendar-ish guidance that midpoints near:
 
-Oracle and Meta sit inside the **dot-com telecom peak band** (~30–40%) that carriers briefly sustained around 2000. Microsoft and Alphabet have roughly **doubled** their mid-decade teens intensities. Amazon’s percentage looks “moderate” only because retail revenue is enormous — absolute FY25 capex still leads the set at **$132B**.
+| Company | 2026 guidance (mid / point) | Notes |
+|---------|----------------------------|--------|
+| **Amazon** | **$200B** | Reaffirmed; largest single program |
+| **Microsoft** | **~$190B** CY | Raised; component pricing called out |
+| **Alphabet** | **$185B** midpoint | Raised to $180–190B range |
+| **Meta** | **$135B** midpoint | Raised to $125–145B; memory inflation cited |
+| **Oracle** | **~$50B** | OCI / Stargate-linked build |
 
-Revenue-weighted across the big four (ex-Oracle), intensity lands near **22%** — roughly double the pre-AI hyperscale cloud norm (~11%) and aligned with the long-run **wireline telecom** capital intensity that FCC ARMIS large-ILEC data put around **20%** before the late-1990s surge.
+Sum those midpoints and you land near **$760B** of **gross company capital expenditure** for 2026 — not a pure “AI-only” ledger. CreditSights’ post-earnings aggregate (~**$750B**) sits in the same neighborhood. Apply the commonly used **~75% AI-attributed** factor and the AI-specific slice of that stack is roughly **$545–570B**.
 
-## Intensity is not the same as dollars
+That company stack is the cleanest near-term **observed** number markets have: it is grounded in guidance, not in a top-down silicon model. It is also incomplete. It excludes non-hyperscaler buyers, sovereign AI programs, much of the colocation / power ecosystem, and the full global compute + facility + generation stack that Goldman Sachs Global Institute models separately.
 
-Dollar capex and intensity can diverge. Amazon’s FY23 intensity **fell** to 9.2% even while absolute spending stayed above $50B, because revenue growth outran the build. Meta’s FY22 spike to **27.9%** came with a compressed FCF margin; the FY23–24 “Year of Efficiency” pulled intensity back before the FY25 AI surge pushed it to a new high.
+## Annual scenarios diverge hard by 2027
 
-Toggle companies in the chart to see the stack of absolute dollars: the same fiscal years that look like a smooth intensity climb for Microsoft become a **step-change** in cash leaving the firm once Amazon and Alphabet accelerate. For site-level context on where those dollars land physically, see the [global AI data center build tracker](/blog/global-ai-data-center-build-tracker).
+Where guidance ends, research scenarios take over — and the spread widens.
 
-## Free cash flow is the sustainability hinge
+**Goldman Sachs Investment Research** (hyperscaler gross scope) has circulated a **2027 base near $1.14T** against **Street consensus near $920B**, with a **bull path around $1.4T** if cloud backlogs and token demand keep supply short into the second half of 2027. That is the origin of many “trillion-dollar AI capex” headlines. It is still a **hyperscaler** frame: five (or so) balance sheets, gross PP&E, not every watt and every accelerator worldwide.
 
-A firm can run high intensity indefinitely if operating cash flow still covers capex with room for buybacks, dividends, and debt service. The scatter panel pairs **intensity (x)** with **FCF margin (y)** for the selected fiscal year.
+**Goldman Sachs Global Institute**’s *Tracking Trillions* baseline — covered in depth in our [chips-and-data-centers breakdown](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) — is a **different object**. It is an **all-in AI infrastructure** scenario (compute + data centers + power) of **$765B in 2026**, **$1.01T in 2027**, and **$1.22T in 2028**, compounding toward roughly **$7.6T cumulative from 2026–2031**. GS is explicit that the Global Institute product is a **sensitivity framework**, not a house forecast from Investment Research.
 
-- **Microsoft** remains the textbook “high intensity, still cash-rich” case: FY25 intensity 22.9% with FCF margin still above **25%**.
-- **Meta** funds a 35% intensity ratio while keeping FCF near **18%** — uncomfortable versus its own history, survivable versus most industrials.
-- **Alphabet**’s FCF margin compressed from the mid-20s toward **~15%** as intensity crossed 20%.
-- **Amazon** is the fragile edge: intensity 18% with FCF margin only **~3%**, leaving little buffer if AWS monetization lags GPU depreciation.
-- **Oracle**’s estimated FY25 jump to 37% coincides with FCF margin falling into single digits — the classic “build now, harvest later” posture of a capacity land-grab.
+Put the two Goldman families side by side and the 2027 comparison looks paradoxical until you read the scopes: IR’s **hyperscaler base ($1.14T)** can sit **above** GI’s **all-in AI total ($1.01T)** because IR is counting **entire company capex programs**, while GI is counting **AI infrastructure layers** with a different perimeter and methodology. Mixing them produces fake contradictions.
 
-Sustainability, then, is not a single threshold. It is whether **cash conversion survives the reinvestment rate** long enough for utilization and pricing to catch the depreciation wave.
+Street and CreditSights prints for 2026 cluster with company guidance. Into 2027–2028, consensus paths that apply Dell’Oro-style growth rates on top of today’s run-rate typically land **below** Goldman’s IR base — which is exactly why IR argues consensus is too conservative.
 
-## Historical bands that still matter
+## Cumulative frameworks answer a longer question
 
-Three reference bands help investors read the time series without treating every spike as a bubble:
+McKinsey’s *Cost of Compute* work (April 2025) does not try to pin a single calendar-year hyperscaler total. It frames **global data-center capital intensity through 2030** under constrained, base, and accelerated demand:
 
-1. **Historical cloud range (0–15%)** — the 2015–19 hyperscale pattern when capacity followed contracted cloud demand.
-2. **Elevated reinvestment (15–25%)** — where Microsoft, Alphabet, and Amazon now cluster; comparable to integrated energy peers (~16%) and below classic telecom norms.
-3. **Telecom / foundry territory (25%+)** — Meta and Oracle today; overlapping the 1999–2000 carrier peak mid (~35%) and approaching leading-edge foundry cycles (~45%) that TSMC-class manufacturers run when node transitions dominate.
+- **Constrained:** ~**78 GW** incremental capacity · **~$3.7T** AI-specific · ~**$5.2T** total DC
+- **Base:** ~**125 GW** · **~$5.2T** AI-specific · **~$6.7T** total
+- **Accelerated:** ~**205 GW** · **~$7.9T** AI-specific · **~$9.4T** total
 
-The ranked bar chart marks the **20% telecom norm** and the **35% dot-com mid**. Crossing into the third band does not prove a bubble — foundries live there for years — but it does mean the equity story must look more like **industrial capacity** than **asset-light software**.
+These are **multi-year cumulative** dollars. Annualizing the base AI figure naively (~$5.2T / 6 years ≈ **$870B/year**) produces a useful order-of-magnitude check against 2026–2027 run-rates — but it is not a substitute for company guidance or for Goldman’s year-by-year GI path. The dashboard’s McKinsey panel is there so readers can see **scenario width** without pretending the units match an Amazon 10-K line item.
 
-## Why the comparison to 2000 is imperfect — and still useful
+GS Global Institute’s **~$7.6T (2026–2031)** cumulative sits in a similar “era-scale” conversation as McKinsey’s base/accelerated band, again with different layer definitions. The right use of both is **direction and sensitivity**, not false precision to the nearest $10B.
 
-Dot-com carriers levered balance sheets to lay dark fiber ahead of demand that never arrived on schedule. Today’s hyperscalers fund most AI capex from **operating cash flow**, not speculative project finance, and they sit on demand queues for compute that carriers never enjoyed. That is the bull case for sustainability.
+## Intensity and financing sit next to the totals
 
-The bear case is timing: GPU useful lives are short, power and packaging bottlenecks (see [AI GPU packaging and memory constraints](/blog/ai-gpu-packaging-memory-bottleneck-2025)) can idle expensive halls, and advertising or cloud pricing may not rise fast enough to amortize the wave. Intensity can stay “affordable” on an FCF basis for two years and still destroy equity value if returns on invested capital disappoint. Equity analysts who stop at “they can afford it” miss the harder test: whether incremental ROIC on AI PP&E clears the cost of capital after utilization, power, and model-price compression.
+Dollar totals alone do not tell you whether the cycle is sustainable. Capex **as a share of revenue** for the same companies has moved into ranges last associated with telecom build-outs. Meta’s FY25 intensity near **35%** of revenue is the vivid example; Microsoft and Alphabet have also stepped well above their early-2020s norms. On the physical side, our [global AI data-center build tracker](/blog/global-ai-data-center-build-tracker) shows how announced megawatts and live campuses still diverge — spend authorized is not the same as capacity energized.
 
-Use the sector benchmark panel to keep perspective: mature SaaS at ~4% intensity is not the peer set anymore. The relevant comps are **telecom infrastructure, energy upstream, and foundries** — businesses judged on utilization, not ARR multiples alone.
+Funding is shifting with the scale. Public reporting around Goldman’s financing work has pointed to investment-grade hyperscaler issuance rising toward roughly **a third of capex** by 2026–2027 as free cash flow cannot stretch as fast as the build plan. That does not invalidate the demand signal — signed cloud backlogs and multi-year GPU / power commitments are real — but it does mean **credit markets** now co-price the cycle alongside equity narratives.
+
+Physical constraints bind the other side. US data-center capacity shortfalls measured in **tens of gigawatts** by late-decade (Goldman / Morgan Stanley prints in market commentary), CoWoS and HBM bottlenecks on the silicon side, and skilled-labor shortages on the construction side all argue that **dollars authorized ≠ megawatts energized on the same schedule**. Spend totals can keep rising even while delivered capacity lags the press-release curve.
+
+## How to read the dashboard without mixing scopes
+
+Use this checklist when a headline throws a big AI spend number:
+
+1. **Company or system?** Big-5 guidance / CreditSights / GS IR ≈ hyperscaler gross. GS GI ≈ global AI infra layers. McKinsey ≈ cumulative global DC.
+2. **Year or era?** $760B is a **2026** run-rate family. $5.2T / $7.6T are **cumulative** decade-edge figures.
+3. **Gross or AI-attributed?** A 75% haircut is a research convention, not a line item in the 10-K.
+4. **Base or bull?** GS IR’s **$1.14T vs $1.4T** 2027 pair is a scenario fan, not a point forecast with error bars.
+5. **Sensitivity levers?** In the GI framework, **$/MW data-center cost** and silicon useful life dominate; training-vs-inference mix matters more for returns than for aggregate capital required.
+
+If two numbers fail any of those checks, they are not in conflict — they are simply not comparable.
 
 ## Caveats and methodology
 
-1. **Gross PP&E purchases ≠ AI-only spend.** Filings do not cleanly split AI accelerators from warehouses, offices, or network gear. Amazon’s ratio mixes retail fulfillment with AWS; treat company-level intensity as an upper-bound proxy for “AI intensity.”
-2. **Fiscal calendars differ.** Microsoft ends in June, Oracle in May, the others in December. “FY25” is not a single calendar window — trajectory charts align labels, not months.
-3. **Lease accounting and cloud capacity purchases** can shift economics off the PP&E line. Some GPU capacity is rented; some is on partner balance sheets. Intensity understates total compute committed where operating leases dominate.
-4. **Oracle FY25** includes estimated elements where trailing guidance and partial-year disclosures were spliced; flag confidence in the data module.
-5. **FCF margin** here is (operating cash flow − capex) ÷ revenue. Definitions that add back stock-based compensation or exclude working-capital swings will differ.
+- **2026 company figures** are guidance midpoints and post-earnings aggregates, not final audited totals. Ranges (especially Meta and Alphabet) mean the true year-end print can miss the midpoint.
+- **2027–2028 company paths** in the stacked area are **directional consensus / projected** values for visualization continuity; treat them as softer than 2026 guidance.
+- **AI-attributed (~75%)** is a CreditSights-style factor applied uniformly here for interaction — actual AI shares differ by company and year.
+- **GS Global Institute** figures are a **scenario framework**, not Goldman Sachs Global Investment Research forecasts. **GS IR** hyperscaler figures come from public secondary reporting of research notes.
+- **McKinsey** scenarios are cumulative through ~2030 and include traditional IT as well as AI loads in the “total DC” series.
+- Totals may not sum across houses because **perimeters differ** (leases, power, non-hyperscaler buyers, geographic coverage).
+- This post is explanatory data journalism, **not investment advice**.
 
-Primary sources: company Form 10-K / 10-Q cash-flow statements (purchases of property and equipment; cash from operations), FCC ARMIS / TIA historical telecom capital-intensity aggregates, and industry peer medians for energy and foundry benchmarks as labeled in the dashboard.
-
-## What to watch next
-
-Watch three coincident signals, not intensity alone: (1) **FCF margin** by company — especially Amazon and Oracle; (2) **revenue growth in AI-exposed segments** (Azure, AWS, Google Cloud, Meta ads + AI products) relative to depreciation step-ups; (3) **guidance language** that converts “multi-year build” into explicit intensity ceilings. If weighted intensity holds above 20% while FCF margins stabilize, the market will treat the AI build as a new steady state — a capital-markets regime shift from software to infrastructure. If intensity stays high and FCF keeps compressing, the sustainability debate stops being academic. Either path, the ratio — not the headline dollar — is the signal that forces the re-rating.`,
+**Primary synthesis sources:** company Q1 2026 earnings guidance; CreditSights aggregate commentary; Goldman Sachs Global Institute [*Tracking Trillions*](https://www.goldmansachs.com/insights/articles/tracking-trillions-the-assumptions-shaping-scale-of-the-ai-build-out) (April 2026); Goldman Sachs Investment Research hyperscaler scenario figures via public reporting (June 2026); McKinsey & Company, *The Cost of Compute* (April 2025).`,
     category: "Finance",
-    imageUrl: "/images/finance-ai-capex-intensity-research-2026-hero.png",
+    imageUrl: "/images/finance-ai-capex-spend-research-2026-hero.png",
     imageAlt:
-      "Hyperscaler capex intensity research 2026 — dark navy chart of Meta and peers reinvesting rising shares of revenue into AI infrastructure",
-    publishedAt: "2026-07-31T11:00:00Z",
+      "Dark navy data-viz hero of rising AI infrastructure capex bars and scenario layers from hundreds of billions toward trillions",
+    publishedAt: "2026-07-31T12:00:00Z",
     featured: true,
-    visualization: "ai-capex-intensity-research-2026",
-    layout: "default",
+    visualization: "ai-capex-spend-research",
   },
   {
     id: "goldman-sachs-ai-capex",

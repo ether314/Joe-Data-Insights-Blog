@@ -82,8 +82,8 @@ const POSTS = [
     forbidden: "Loading interactive charts",
   },
   {
-    slug: "ai-capex-intensity-research-2026",
-    marker: "Capex intensity trajectory",
+    slug: "ai-capex-spend-research-2026",
+    marker: "Big-5 hyperscaler capex stack",
     forbidden: "Loading interactive charts",
   },
 ];
