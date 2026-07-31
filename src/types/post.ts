@@ -48,7 +48,8 @@ export interface Post {
     | "oecd-dac-oda"
     | "irena-renewable-capacity"
     | "bank-loan-chargeoffs"
-    | "natural-graphite-mine-concentration";
+    | "natural-graphite-mine-concentration"
+    | "macro-growth-trade-research-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

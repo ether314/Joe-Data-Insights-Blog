@@ -141,6 +141,11 @@ const POSTS = [
     marker: "Final-assembly",
     forbidden: "Loading interactive charts",
   },
+  {
+    slug: "macro-growth-trade-research-2026",
+    marker: "Growth, trade & prices",
+    forbidden: "Loading interactive charts",
+  },
 ];
 
 async function smokePost(page, { slug, marker, forbidden }) {

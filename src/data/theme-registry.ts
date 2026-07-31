@@ -447,6 +447,7 @@ export const SLUG_THEME_IDS: Record<string, string> = {
   "global-shipbuilding-concentration-2023": "heavy-industrial-capacity",
   "china-us-india-gdp-30-years": "macro-growth-trade",
   "deflationary-growth-economies-2025": "macro-growth-trade",
+  "macro-growth-trade-research-2026": "macro-growth-trade",
   "global-electricity-generation-mix-2024": "energy-systems",
   "china-fiscal-revenue-all-budgets-2024": "geopolitics-institutions",
   "ccp-nomenklatura-hierarchy-2026": "geopolitics-institutions",

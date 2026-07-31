@@ -2,6 +2,119 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-research-2026",
+    slug: "macro-growth-trade-research-2026",
+    title: "Charted: Trade Outgrew GDP in 2025 — Then Both Slow Into a War Shadow",
+    excerpt:
+      "WTO: merchandise trade volume +4.6% in 2025, Asia contributing 71% of the lift. IMF: world GDP 3.4% → 3.1% in 2026 while CPI ticks up to 4.4%. The soft-landing triangle of growth, trade, and prices is tilting.",
+    content: `Most macro narratives pick one meter — growth, inflation, or trade — and declare a cycle. The 2025–26 data refuse that shortcut. **World merchandise trade volume rose 4.6% in 2025** per the WTO’s March 2026 Global Trade Outlook, while **PPP-weighted world GDP grew about 3.4%** in the IMF’s April 2026 World Economic Outlook. Trade outran output. Asia alone contributed **3.2 percentage points** of that 4.6% merchandise lift — **71%** of the entire increase — even as US tariffs, front-loading, and supply-chain rewiring scrambled bilateral maps.
+
+Into **2026**, both institutions slow the tape. WTO merchandise volume cools to **1.9%** (baseline). IMF goods-and-services trade volume falls from **5.1%** to **2.8%**. World GDP (PPP) eases to **3.1%**. And global headline CPI, after falling more than two points over two years, is projected to **rise to 4.4%** — an upward revision tied to the Middle East conflict’s commodity channel. Growth, trade, and prices are no longer co-moving on the soft-landing script that markets priced through early 2025.
+
+This post maps that triangle with IMF and WTO source tables — not with a single-country GDP race (see our [China–US–India GDP comparison](/blog/china-us-india-gdp-30-years)) and not with the special case of economies that grew while CPI went negative (see [deflationary-growth economies in 2025](/blog/deflationary-growth-economies-2025)). The question here is global: **how are economies growing, trading, and experiencing price dynamics at the same time?**
+
+## The 2025 surprise: trade beat GDP
+
+| Meter (2025) | Print | Source |
+| --- | ---: | --- |
+| World GDP (PPP) | +3.4% | IMF WEO Apr 2026 |
+| World GDP (market FX) | +2.9% | IMF / WTO |
+| Merchandise trade volume | +4.6% | WTO GTOS Mar 2026 |
+| Goods + services trade volume | +5.1% | IMF WEO |
+| Commercial services volume | +5.3% | WTO |
+| World headline CPI | +4.1% | IMF WEO |
+| Merchandise trade value | $26.26T (+7%) | WTO |
+| Services trade value | $9.56T (+8%) | WTO |
+
+Volume and value diverge for a reason. China’s **export volume** rose about **9.2%** while export *prices* fell — so China contributed roughly **1.3 percentage points** to global export growth (~30% of the total) even as the US-bound China export *value* dropped about **20%**. That is the opposite of a simple “tariffs killed trade” story. Tariffs and uncertainty reshaped *routes* and *timing*; AI-related goods and redirected Chinese shipments to ASEAN, Africa, Europe, and Latin America kept *volumes* expanding.
+
+North America’s import spike was concentrated in **2025 Q1** — gold, pharmaceuticals, and front-loading ahead of anticipated reciprocal tariffs — then cooled after mid-year without collapsing, partly because AI-enabling imports kept arriving. Europe contributed positively to world trade growth after two years of contraction. The dashboard’s regional panel ranks those contributions: Asia’s **3.2 pp** bar dominates; Europe, North America, and the rest of the world fill the residual.
+
+## The 2026 reference path: slower trade, firmer prices
+
+The IMF no longer labels its central case a traditional “baseline.” April 2026 publishes a **reference forecast** that assumes the Middle East conflict has limited duration and intensity, fading by mid-2026 in line with commodity futures as of March 10. Under that path:
+
+- **World GDP (PPP):** 3.1% in 2026, 3.2% in 2027 — down from ~3.4% in 2024–25 and below the 2000–19 average of 3.7%.
+- **World trade volume (goods + services):** 2.8% in 2026, then 3.8% in 2027.
+- **World CPI:** 4.4% in 2026, 3.7% in 2027 — **upward** revisions versus January.
+- **Oil assumption:** about **$82** per barrel in 2026 (from $68 in 2025), then ~$76 in 2027.
+
+WTO’s merchandise path is sharper on the goods side: **1.9%** in 2026 and **2.6%** in 2027. An oil-price shock scenario shaves that to **1.4%**; an AI-goods upside scenario lifts it toward **2.4%**. Services volume stays firmer (**4.8%** / **5.1%**) — the mode split panel in the dashboard shows services continuing to outpace merchandise even as both cool from 2025.
+
+The non-obvious reading: **2026 is not a trade collapse**. It is a normalization from a tariff-front-loaded, AI-goods-boosted 2025, *plus* a conflict-driven inflation uptick that interrupts the disinflation narrative. Combined goods-and-services volume (~2.7% on WTO arithmetic) and market-rate GDP (~2.8%) nearly converge — trade stops outgrowing output.
+
+## Country trajectories: who still grows, who still overheats
+
+IMF Table 1.1’s major-economy GDP path is uneven:
+
+- **United States:** 2.1% (2025) → **2.3%** (2026) → 2.1% (2027). Fiscal support and lagging rate cuts offset tariff drag; US CPI assumptions stay **above target** at **3.2%** in 2026 before **2.1%** in 2027.
+- **Euro area:** 1.4% → **1.1%** → 1.2%, with assumed CPI **2.6%** / **2.2%**.
+- **China:** 5.0% → **4.4%** → 4.0%. Exports still carry activity while domestic demand — especially housing — lags.
+- **India:** **7.6%** → 6.5% → 6.5% (fiscal-year basis).
+- **Japan:** 1.2% → **0.7%** → 0.6%, with CPI assumed near **2.2–2.3%**.
+- **Saudi Arabia:** 4.5% → **3.1%** (−1.4 pp vs January Update) → 4.5% — the conflict channel bites energy exporters’ growth prints even when prices rise.
+- **Middle East and North Africa** aggregate growth drops to **1.1%** in 2026 from 3.2% in 2025 — the sharpest regional soft patch in the reference table.
+
+The growth×CPI scatter makes the geometry visible. Toggle 2025 vs 2026f: China stays in the low-inflation / mid-growth quadrant; India anchors the high-growth edge; the US remains the large advanced economy still fighting above-target prices. That scatter is the opposite of 2022’s synchronized overheating — and different from the [18 deflationary-growth cases](/blog/deflationary-growth-economies-2025) where CPI printed negative while GDP expanded.
+
+## Asia’s 71% of the trade lift — and China’s diversion math
+
+WTO staff estimate Asian economies contributed **71%** of 2025 merchandise trade volume growth. China’s volume surge and AI-related value chains were central. Destination math matters as much as the headline:
+
+- China merchandise **exports** rose **5.5%** in *value* to **$3.77T**, but **9.2%** in *volume*.
+- Exports to the **United States fell ~20%** (~$105B).
+- Exports to **other destinations rose ~$301B** — nearly **3×** the US decline — led by ASEAN (+13.4%), Africa (+25.8%), the EU (+8.4%), and South America (+11.8%).
+
+That pattern is **trade diversion plus excess capacity**, not a one-for-one swap. Flat Chinese imports (−0.01% in value) alongside booming exports also widen China’s surplus and export disinflation into partner CPIs — one mechanism behind the low-inflation growth cases we charted elsewhere, and a reason global goods prices can cool even when US core PCE remains sticky.
+
+US effective statutory tariffs in the IMF’s projection set sit near **13.5%** (down from the October 2025 assumption of 18.7%), with rest-of-world tariffs on US goods around **3.5%**. Policy is still restrictive relative to the 2010s, but the *realized* 2025 trade volume outcome was far stronger than October’s **2.4%** WTO merchandise forecast — AI goods and front-loading closed the gap.
+
+## Prices: disinflation interrupted
+
+WTO notes that global headline inflation fell **more than two percentage points in two years**, supporting real incomes and trade demand in 2025. The IMF’s 2026 reference path **reopens** that channel: world CPI **4.4%**, advanced-economy CPI **2.8%**, emerging-market CPI **5.5%**. Oil futures jump; nonfuel commodities also rise sharply in the 2026 row.
+
+Country inflation is not synchronized. US core PCE was still near **3.1%** YoY in January 2026; Japan briefly printed below 2% after a gasoline-tax abolition; China remains the low-inflation large economy. The dashboard’s dual-axis triad chart puts world CPI on the right axis against GDP and merchandise volume on the left — 2022’s CPI spike, 2023–25’s retreat, and 2026’s projected bounce are visible in one panel.
+
+Absent the war, IMF staff say 2026 growth would have been revised *up* slightly. The reference forecast’s modest growth downgrade (−0.2 pp vs January) therefore understates how much conflict risk is already in the inflation and commodity lines. Adverse and severe scenarios in the WEO cut emerging-market growth much harder than advanced-economy growth — a reminder that “global” averages hide who absorbs the oil shock.
+
+## What would rewrite the story
+
+Several observables would force a rewrite of this triangle:
+
+1. **AI-related goods trade** stays at 2025 intensity through 2026 — WTO flags that AI-enabling products contributed almost **half** of merchandise volume growth last year. Sustained strength is the main upside to the 1.9% goods path.
+2. **Conflict duration** exceeds the mid-2026 fade assumption — oil stays elevated, services (transport/travel) take a larger hit than goods, and the CPI uptick persists into 2027.
+3. **US tariff legal instruments** change the effective rate materially above or below the 13.5% IMF assumption after Section 122 / USMCA review deadlines.
+4. **China’s domestic demand** finally matches export strength — which would lift Chinese imports and shrink the diversion/excess-capacity impulse into partner markets.
+5. **Services decoupling** continues: if commercial services hold near 5% volume growth while merchandise stalls below 2%, the “trade” aggregate becomes a services story with a goods drag.
+
+Until those resolve, the shareable framing is narrow: **2025 was a trade-outperformance year powered by Asia and AI goods; 2026 is a slower, slightly re-inflationary reference path under a war shadow — not a depression in either GDP or trade.**
+
+## Caveats and methodology
+
+- **Reference ≠ certainty.** The IMF’s April 2026 central case is explicitly a *reference* forecast conditioned on a limited conflict; adverse/severe scenarios are worse on growth and inflation.
+- **PPP vs market GDP.** Trade elasticities look different against 3.4% PPP growth than against 2.9% market-rate growth; we show both where sources publish them.
+- **Merchandise (WTO) vs goods+services (IMF).** These are related but not identical meters — do not treat 4.6% and 5.1% as interchangeable.
+- **Country CPI rows** for several emerging markets in the scatter are **estimated** from WEO narrative alignment; US, euro area, and Japan 2026–27 CPI assumptions are **disclosed** in Table 1.1 footnote 7.
+- **Regional contribution residuals** for Europe / North America / ROW beyond Asia’s disclosed 3.2 pp are allocated from WTO qualitative shares and may revise with final WTO statistical appendices.
+- **India** is on a fiscal-year basis per WEO notes; calendar-year comparisons to China/US are approximate.
+- **2022–24 global path points** in the triad chart for some series are historical estimates bridging published WTO/IMF prints; 2025–27 headline cells are disclosed reference figures.
+
+## The shareable takeaway
+
+In **2025**, world merchandise trade volume rose **4.6%** — with **Asia contributing 71%** of the increase — while PPP GDP grew **3.4%** and CPI cooled to **4.1%**. In the **2026** IMF/WTO reference path, trade slows toward **~2–3%**, GDP eases to **3.1%**, and CPI **rises to 4.4%** as conflict risk re-enters commodity prices. The soft landing is not canceled. It is no longer a three-meter glide path.
+
+Related reading: [China–US–India GDP over 30 years](/blog/china-us-india-gdp-30-years) and [18 economies that grew while prices fell in 2025](/blog/deflationary-growth-economies-2025).`,
+    category: "Economics",
+    themeId: "macro-growth-trade",
+    imageUrl: "/images/economics-macro-growth-trade-research-2026-hero.png",
+    imageAlt:
+      "Dark navy data visualization of global growth, trade volume, and inflation trajectories",
+    publishedAt: "2026-07-31T20:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-research-2026",
+    layout: "default",
+  },
+  {
     id: "natural-graphite-mine-concentration",
     slug: "natural-graphite-mine-concentration-2024",
     title: "Charted: China Mined 79% of the World’s Natural Graphite in 2024",
