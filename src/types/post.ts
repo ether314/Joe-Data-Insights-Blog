@@ -43,6 +43,7 @@ export interface Post {
     | "global-remittance-corridors"
     | "phosphate-fertilizer-export"
     | "billion-dollar-disasters"
+    | "us-billion-dollar-weather-disasters-ms94skof"
     | "commercial-aircraft-assembly"
     | "money-market-funds-deposits"
     | "oecd-dac-oda"

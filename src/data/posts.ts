@@ -2,6 +2,119 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-billion-dollar-weather-disasters-ms94skof",
+    slug: "us-billion-dollar-weather-disasters-ms94skof",
+    title:
+      "Charted: US Billion-Dollar Disasters Average $149B a Year — and Decade Increments Keep Widening",
+    excerpt:
+      "NOAA’s CPI-adjusted ledger shows 2020–24 averaging $149.3B per year in billion-dollar weather disasters — 6.8× the 1980s — while each decade’s added cost/year is larger than the last.",
+    content: `## Start with the inflation-adjusted annual total
+
+The right headline for US extreme-weather economics is not last year’s viral storm. It is the **CPI-adjusted annual total** on NOAA NCEI’s Billion-Dollar Weather and Climate Disasters ledger.
+
+In **2020–2024**, events that individually clear **$1 billion** (2024 dollars) averaged **$149.3 billion per year**. In the **1980s** the same yardstick averaged **$22.0 billion**. That is a **6.8×** rise in the inflation-adjusted annual bill — before any argument about attribution, insurance, or federal outlays.
+
+Frequency moved with cost: **23.0** billion-dollar events per year in 2020–24 versus **3.3** in the 1980s (**~7×**). Across **1980–2024**, NOAA counts **403** such disasters and roughly **$2.915 trillion** in cumulative CPI-adjusted damage.
+
+**Unlike our [global electricity generation mix](/blog/global-electricity-generation-mix-2024) post, this is not a fuel-share snapshot — it is the rising damage ledger coasts, floodplains, and grids keep paying.**
+
+## Acceleration is about first differences
+
+A high level is not the same as accelerating. The sharper test is whether **decade-to-decade increments** in annual cost keep getting larger.
+
+| Step | Change in cost / year (2024$) |
+|------|-------------------------------|
+| 1980s → 1990s | **+$11.5B** |
+| 1990s → 2000s | **+$28.7B** |
+| 2000s → 2010s | **+$37.3B** |
+| 2010s → 2020–24 | **+$49.8B** |
+
+Every step’s increment exceeds the prior one. That is the acceleration signal in the official series: not only “costs are elevated,” but “the climb itself is steepening.” The **2010s** already averaged **$99.5B/year**; the partial **2020–24** window runs **$149.3B/year**. The **2022–24** three-year average is hotter still at **$153.9B/year**.
+
+The dashboard’s waterfall panel encodes those first differences as amber rises stacked on an invisible pedestal — a visual that levels charts alone cannot give you.
+
+## CPI dollars and GDP shares tell different stories
+
+CPI adjustment strips general inflation. It does **not** strip the fact that the US capital stock and economy are far larger than in 1980. Dividing decade average disaster cost by a BEA nominal-GDP midpoint is a second, rougher normalization:
+
+| Period | Cost / year (2024$) | ≈ GDP midpoint | Cost share of GDP |
+|--------|---------------------|----------------|-------------------|
+| 1980s | $22.0B | ~$4.3T | **0.51%** |
+| 1990s | $33.5B | ~$7.6T | **0.44%** |
+| 2000s | $62.2B | ~$13.1T | **0.48%** |
+| 2010s | $99.5B | ~$18.2T | **0.55%** |
+| 2020–24 | $149.3B | ~$25.7T | **0.58%** |
+
+On CPI dollars the 2020–24 average indexes to about **679** if the 1980s equal **100**. On GDP share the rise is real but slower — from roughly half a percent of GDP to a bit under **0.6%**. Spike years still puncture the average: **2017** alone approached **~2% of that year’s GDP** when Harvey, Irma, and Maria stacked.
+
+Toggle the dashboard’s **Normalize** control between CPI dollars, index (1980s=100), and % of GDP. The dual-line panel is built for that comparison: same decades, two meters.
+
+Climate.gov’s per-capita framing is harsher than GDP share. Five-year-average disaster cost per US resident rose from about **$150** in the early 2000s to above **$400** by the late 2010s and has stayed elevated. Population growth alone does not absorb the CPI climb.
+
+## 2024: busy on counts, concentrated on dollars
+
+**2024** logged **27** billion-dollar disasters and **$182.7 billion** in CPI-adjusted damage — second only to **2023’s record 28 events**, and fourth on the cost ranking behind **2017** ($395.9B), **2005** ($268.5B), and **2022** ($183.6B). Fatalities tied to these events reached **568**.
+
+Severe storms dominate the **count** (17 of 27 in the Climate.gov grouping). Hurricanes dominate the **bill**: Helene (~$78.7B) and Milton ($34.3B) alone topped **$100B** across the Southeast in roughly two weeks. Beryl added another **$7.2B**; a May tornado outbreak added **$6.6B**.
+
+That split is the adaptation-economics problem in miniature. A year can look “busy” because localized convective storms keep clearing the $1B threshold, while the fiscal and insurance shock concentrates in a handful of tropical cyclones.
+
+The US has now posted **14 consecutive years** (2011–2024) with **10 or more** billion-dollar events. Over **2015–2024**, Climate.gov counts **190** separate billion-dollar disasters and about **$1.4 trillion** in damage.
+
+## Hazard mix: frequency engine vs severity engine
+
+Over **1980–2024**, **severe storms** lead event counts (**203**) but average only about **$2.5B** each. **Tropical cyclones** are rarer (**67**) yet average about **$23B** and account for roughly **$1.54 trillion** — more than half of cumulative cost. Drought (~$368B), inland flooding (~$203B), wildfire (~$148B), and winter storms (~$104B) fill out the ledger.
+
+So “is disaster risk rising?” depends on which series you watch:
+
+- **Frequency:** severe storms are the volume engine that pushes more years over the artificial $1B line.
+- **Severity of the bill:** hurricanes still write the largest checks.
+- **Human cost:** tropical cyclones also lead cumulative deaths in the NOAA table, with drought/heat close behind.
+
+For insurers and federal disaster budgets, the portfolio is many mid-size convective losses plus fat-tailed hurricane years — not a single smooth trend.
+
+## Where the exposure sits
+
+Climate.gov’s state narrative concentrates cumulative cost in the Gulf and Atlantic hurricane corridor: **Florida** leads at roughly **$450B** since 1980; **Texas** is close behind (~$436B) with the highest event count; **Louisiana** is third (~$314B). Inland floodplains and the Western wildland–urban interface fill the rest of the map.
+
+NOAA is explicit that rising losses mix **exposure** (more assets in harm’s way), **vulnerability** (how we build and insure), and **climate-driven extremes**. This post does **not** attribute shares among those drivers; attribution science and building-code studies sit outside the NCEI ledger.
+
+Readers tracking fiscal pressure from another angle may want our [US industrial subsidies vs tariffs](/blog/us-industrial-subsidies-vs-tariffs-30-years) piece — adaptation and disaster outlays compete in the same long-run budget with industrial policy, interest, and tax expenditures. For a power-system contrast rather than a damage ledger, see [IRENA renewable capacity](/blog/irena-renewable-capacity-record-2024).
+
+## What would change the story
+
+The interactive dashboard is built to stress-test the acceleration claim: waterfall first differences, dual-line CPI vs GDP normalization, and an annual band against the **$64.8B** 45-year average and the **$149.3B** five-year average.
+
+What would reverse the working conclusion:
+
+- A sustained multi-year stretch back toward the long-run **9.0 events / $64.8B** averages without a compensating mega-hurricane year.
+- Material downward revisions to 2020–24 costs as claims settle the other way (historically revisions more often rise).
+- A GDP boom that outruns CPI-adjusted losses enough to push cost/GDP share back toward 1990s levels even if dollar losses stay high.
+
+None of those appears in the January 2025 Climate.gov / NCEI update. The working answer to the core question — **is normalized disaster cost accelerating?** — is **yes on CPI-adjusted annual totals and decade increments**, while GDP-normalized shares are elevated and slowly rising rather than exploding.
+
+## Caveats and methodology
+
+- **Threshold artifact:** Events just under $1B (2024$) are excluded; 57 older events crossed the line only after CPI adjustment.
+- **Partial decade:** 2020–24 is five years, not ten — comparisons use per-year averages.
+- **Cost revisions:** 2024 totals (analysis through early January 2025) can still rise as claims data settle.
+- **GDP shares are estimated:** NOAA costs are disclosed; dividing by BEA nominal GDP midpoints is our normalization, not an NCEI field.
+- **No driver split:** The series does not isolate climate change vs exposure vs vulnerability.
+- **Direct damages only:** Broader macroeconomic and health costs are out of scope.
+- **State figures are approximate:** Climate.gov narrative roundings (~$450B / ~$436B / ~$314B), not a full NCEI state download.
+
+**Primary sources:** [NOAA NCEI Billion-Dollar Disasters](https://www.ncei.noaa.gov/access/billions/) and [Climate.gov’s 2024 wrap-up](https://www.climate.gov/news-features/blogs/beyond-data/2024-active-year-us-billion-dollar-weather-and-climate-disasters); GDP context from [BEA](https://www.bea.gov/data/gdp/gross-domestic-product).`,
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl: "/images/energy-us-billion-dollar-weather-disasters-ms94skof-hero.png",
+    imageAlt:
+      "Dark navy data visualization of rising US billion-dollar weather disaster costs with $149B/yr callout and storm motifs",
+    publishedAt: "2026-07-31T16:10:00.000Z",
+    featured: true,
+    visualization: "us-billion-dollar-weather-disasters-ms94skof",
+    layout: "fullscreen",
+  },
+  {
     id: "macro-growth-trade-research-2026",
     slug: "macro-growth-trade-research-2026",
     title: "Charted: Trade Outgrew GDP in 2025 — Then Both Slow Into a War Shadow",

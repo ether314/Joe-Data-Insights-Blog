@@ -112,6 +112,11 @@ const POSTS = [
     forbidden: "Loading interactive charts",
   },
   {
+    slug: "us-billion-dollar-weather-disasters-ms94skof",
+    marker: "Adaptation economics — inflation-adjusted annual total",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "natural-graphite-mine-concentration-2024",
     marker: "natural graphite",
     forbidden: "Loading interactive charts",

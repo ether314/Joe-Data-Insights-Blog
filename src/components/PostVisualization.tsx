@@ -287,6 +287,21 @@ const BillionDollarDisastersDashboard = dynamic(
     ),
   },
 );
+
+const UsBillionDollarWeatherDisastersMs94skofDashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UsBillionDollarWeatherDisastersMs94skofDashboard"
+    ).then((m) => m.UsBillionDollarWeatherDisastersMs94skofDashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
 const NaturalGraphiteMineConcentrationDashboard = dynamic(
   () =>
     import("@/components/visualizations/NaturalGraphiteMineConcentrationDashboard").then(
@@ -455,6 +470,10 @@ export function PostVisualization({
   }
   if (type === "billion-dollar-disasters") {
     return <BillionDollarDisastersDashboard />;
+  }
+
+  if (type === "us-billion-dollar-weather-disasters-ms94skof") {
+    return <UsBillionDollarWeatherDisastersMs94skofDashboard />;
   }
 
   if (type === "natural-graphite-mine-concentration") {
