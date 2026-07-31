@@ -13,15 +13,6 @@ export type ThemeLane =
   | "markets-finance"
   | "industrial-adoption";
 
-/** Theme-level category labels (broader than Post.Category routing buckets). */
-export type ThemeCategory =
-  | Category
-  | "Capital Markets"
-  | "Global Systems"
-  | "Industry"
-  | "Energy"
-  | "Consumer Finance";
-
 export type PipelineCandidate = {
   title: string;
   coreQuestion: string;
@@ -35,7 +26,7 @@ export type ThemeDefinition = {
   id: string;
   label: string;
   lane: ThemeLane;
-  category: ThemeCategory;
+  category: Category;
   metaQuestion: string;
   visualLane: string;
   /** Target % of rolling window (all active themes should sum ~100) */
@@ -71,7 +62,7 @@ export const LANE_LABELS: Record<ThemeLane, string> = {
 };
 
 /** Default category per lane (override per theme if needed) */
-export const LANE_DEFAULT_CATEGORY: Record<ThemeLane, ThemeCategory> = {
+export const LANE_DEFAULT_CATEGORY: Record<ThemeLane, Category> = {
   "ai-infrastructure": "Technology",
   "global-systems": "Global Systems",
   "macro-economics": "Economics",
@@ -430,6 +421,7 @@ export const SLUG_THEME_IDS: Record<string, string> = {
   "nih-disease-funding-alzheimers-vs-heart-2016-2024": "measurement-science",
   "lng-export-capacity-us-australia-qatar-2024": "energy-systems",
   "global-remittance-corridors-2024": "demographic-cash-flows",
+  "global-remittance-corridors-2026": "demographic-cash-flows",
   "us-social-security-trust-fund-depletion-2034": "fiscal-plumbing",
   "us-net-interest-vs-defense-2025": "fiscal-plumbing",
   "us-personal-saving-rate-post-excess-2026": "consumer-finance-markets",
@@ -437,7 +429,6 @@ export const SLUG_THEME_IDS: Record<string, string> = {
   "global-helium-supply-concentration-2024": "chokepoint-commodities",
   "us-billion-dollar-weather-disasters-1980-2024": "adaptation-economics",
   "goldman-sachs-ai-capex-chips-data-centers-2027-2028": "ai-capex-spend",
-  "ai-capex-spend-research-2026": "ai-capex-spend",
   "hyperscaler-capex-intensity-vs-dotcom-telecom-2025": "ai-capex-intensity",
   "hyperscaler-ai-corporate-bond-issuance-2025": "ai-financing",
   "ai-etf-flows-qqq-vs-thematic-2025": "ai-financing",

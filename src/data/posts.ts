@@ -2,95 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
-    id: "ai-capex-spend-research-2026",
-    slug: "ai-capex-spend-research-2026",
-    title: "Charted: AI Capex Hits $760B in 2026 Guidance — and $1.4T in the Bull Case",
+    id: "global-remittance-corridors",
+    slug: "global-remittance-corridors-2026",
+    title:
+      "Charted: US→Mexico Moves $52B — the World's Largest Remittance Corridor",
     excerpt:
-      "Big-5 midpoints sum to ~$760B for 2026. Goldman’s Investment Research base puts 2027 hyperscaler spend at $1.14T (bull $1.4T), while its Global Institute all-in AI path and McKinsey’s $5.2T cumulative framework answer a different question.",
-    content: `## The number everyone quotes is not one number
+      "KNOMAD's bilateral matrix puts US→Mexico at ~$52B, ahead of UAE→India ($20B). Country totals tell another story: India takes $129B of $685B LMIC remittances in 2024.",
+    content: `## The corridor answer first
 
-Ask how large AI infrastructure spending is and you will hear **$725 billion**, **$750 billion**, **$765 billion**, **$1.14 trillion**, **$1.4 trillion**, **$5.2 trillion**, and **$7.6 trillion** — often in the same briefing deck. Those figures are not disagreements about arithmetic. They are answers to **different questions**: which companies, which year, which layers of the stack, and whether the total is an **annual run-rate** or a **multi-year cumulative**.
+Ask which **country pair** moves the most remittance dollars and the World Bank / KNOMAD bilateral remittance matrix gives a clear answer: **United States → Mexico at about $52 billion** (2021 model estimate). That single pipe is larger than the next Gulf corridor into India (**UAE → India ~$20 billion**) and larger than **Saudi Arabia → India (~$13 billion)** or **US → Philippines (~$15 billion)**.
 
-The interactive dashboard above is a spend map across those scopes. Toggle **2026 / 2027 / 2028**, switch between **gross** hyperscaler capex and an **AI-attributed (~75%)** slice, and compare research-house fans against McKinsey’s cumulative scenarios. The point is not to pick a single “true” total. It is to keep the scopes honest so markets can debate substance instead of mixing labels.
+Those corridor estimates allocate each recipient's recorded inflows across source countries using migrant stocks and PPP-adjusted incomes — the Ratha–Shaw methodology — not SWIFT wire counts. Treat them as **disclosed model estimates**, not transaction ledgers. Still, the ranking is stable enough to answer the core question: the densest dollar corridor on the planet runs from the US labor market into Mexico.
 
-## What company guidance actually says for 2026
+Country **totals** tell a different story. Officially recorded remittances to low- and middle-income countries (LMICs) are expected to reach **$685 billion** in **2024**, per the World Bank's Migration and Development Brief 41. India has been the **largest recipient since 2008** and is projected at **$129 billion** — roughly **19%** of all LMIC inflows — more than Mexico (**$68 billion**) and the Philippines (**$40 billion**) combined.
 
-After Q1 2026 earnings, the five largest cloud / AI infrastructure spenders disclosed or reaffirmed calendar-ish guidance that midpoints near:
+## India's $129 billion country anchor
 
-| Company | 2026 guidance (mid / point) | Notes |
-|---------|----------------------------|--------|
-| **Amazon** | **$200B** | Reaffirmed; largest single program |
-| **Microsoft** | **~$190B** CY | Raised; component pricing called out |
-| **Alphabet** | **$185B** midpoint | Raised to $180–190B range |
-| **Meta** | **$135B** midpoint | Raised to $125–145B; memory inflation cited |
-| **Oracle** | **~$50B** | OCI / Stargate-linked build |
+Growth reaccelerated to **5.8%** after a sluggish **1.2%** in 2023. That rebound matters because remittances to LMICs now exceed **FDI (~$470 billion)** and more than triple **ODA (~$210 billion)** in the same Brief 41 comparisons. Diaspora cash is not a side story in global macro; it is one of the largest cross-border capital flows on Earth.
 
-Sum those midpoints and you land near **$760B** of **gross company capital expenditure** for 2026 — not a pure “AI-only” ledger. CreditSights’ post-earnings aggregate (~**$750B**) sits in the same neighborhood. Apply the commonly used **~75% AI-attributed** factor and the AI-specific slice of that stack is roughly **$545–570B**.
+China (**$48 billion**) and Pakistan (**$33 billion**) round out the top five recipients. Dollar volume is Gulf-and-US-skewed: skilled and semi-skilled migration into OECD labor markets plus long-standing South Asian diasporas in the Middle East. For a parallel view of how India's scale shows up in aggregate growth — not just remittance receipts — see our [China–US–India GDP comparison](/blog/china-us-india-gdp-30-years).
 
-That company stack is the cleanest near-term **observed** number markets have: it is grounded in guidance, not in a top-down silicon model. It is also incomplete. It excludes non-hyperscaler buyers, sovereign AI programs, much of the colocation / power ecosystem, and the full global compute + facility + generation stack that Goldman Sachs Global Institute models separately.
+## Two leaderboards: dollars vs dependence
 
-## Annual scenarios diverge hard by 2027
+The top-recipient chart is not the vulnerability chart. World Bank figure 2 in Brief 41 ranks countries where remittances dominate national output:
 
-Where guidance ends, research scenarios take over — and the spread widens.
+| Country | 2024 inflow (est.) | Share of LMIC total | Remittances / GDP |
+|---------|-------------------|---------------------|-------------------|
+| India | $129B | 18.8% | modest (large economy) |
+| Mexico | $68B | 9.9% | ~4% |
+| China | $48B | 7.0% | low |
+| Philippines | $40B | 5.8% | ~8% |
+| Pakistan | $33B | 4.8% | ~6% |
+| Tajikistan | small | — | **45%** |
+| Tonga | tiny | — | **38%** |
+| Nicaragua | small | — | **27%** |
 
-**Goldman Sachs Investment Research** (hyperscaler gross scope) has circulated a **2027 base near $1.14T** against **Street consensus near $920B**, with a **bull path around $1.4T** if cloud backlogs and token demand keep supply short into the second half of 2027. That is the origin of many “trillion-dollar AI capex” headlines. It is still a **hyperscaler** frame: five (or so) balance sheets, gross PP&E, not every watt and every accelerator worldwide.
+**Tajikistan** tops the dependence list at **45% of GDP** — remittances effectively fund the current account and buffer fiscal gaps. **Tonga** (**38%**) and **Nicaragua** (**27%**) follow. Lebanon also hits **27%**, overlapping humanitarian stress with remittance reliance. A shock to Gulf payrolls or a US downturn hits Tajikistan and Tonga differently than it hits India: the dollar loss is smaller, but the macro share is existential.
 
-**Goldman Sachs Global Institute**’s *Tracking Trillions* baseline — covered in depth in our [chips-and-data-centers breakdown](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) — is a **different object**. It is an **all-in AI infrastructure** scenario (compute + data centers + power) of **$765B in 2026**, **$1.01T in 2027**, and **$1.22T in 2028**, compounding toward roughly **$7.6T cumulative from 2026–2031**. GS is explicit that the Global Institute product is a **sensitivity framework**, not a house forecast from Investment Research.
+The scatter panel in the dashboard makes the split visual: India and Mexico sit far right on dollar volume with modest GDP shares; Tajikistan and Tonga sit high on the dependence axis with tiny absolute inflows.
 
-Put the two Goldman families side by side and the 2027 comparison looks paradoxical until you read the scopes: IR’s **hyperscaler base ($1.14T)** can sit **above** GI’s **all-in AI total ($1.01T)** because IR is counting **entire company capex programs**, while GI is counting **AI infrastructure layers** with a different perimeter and methodology. Mixing them produces fake contradictions.
+## Bilateral corridors — where money actually moves
 
-Street and CreditSights prints for 2026 cluster with company guidance. Into 2027–2028, consensus paths that apply Dell’Oro-style growth rates on top of today’s run-rate typically land **below** Goldman’s IR base — which is exactly why IR argues consensus is too conservative.
+Aggregate country totals hide the pipes. Filter the corridor chart by **US only** or **Gulf only** and the structure jumps out:
 
-## Cumulative frameworks answer a longer question
+- **US → Mexico ~$52B** — largest bilateral corridor globally in the 2021 KNOMAD matrix
+- **UAE → India ~$20B** — GCC corridor; dirham–rupee interlinks later boosted formalization
+- **US → Philippines ~$14.8B** — roughly 40% of Philippines receipts in earlier Brief commentary
+- **Saudi Arabia → India ~$13B** — second Gulf pipe into South Asia
+- **US → India ~$6B** (KNOMAD 2021) — **understates** recent RBI source-mix data where the US share of India's inflows rose sharply
 
-McKinsey’s *Cost of Compute* work (April 2025) does not try to pin a single calendar-year hyperscaler total. It frames **global data-center capital intensity through 2030** under constrained, base, and accelerated demand:
+Corridor analysis matters for policy: payment-system interlinks, migration enforcement at the US southern border (which also affects transit-country flows through Mexico and Guatemala), and Gulf visa rules all move bilateral splits faster than headline recipient totals. Remittance Prices Worldwide still shows average sending costs above the SDG **3%** target — high bank fees push informal channels, which Brief 41 reminds us means **true flows exceed official $685 billion**.
 
-- **Constrained:** ~**78 GW** incremental capacity · **~$3.7T** AI-specific · ~**$5.2T** total DC
-- **Base:** ~**125 GW** · **~$5.2T** AI-specific · **~$6.7T** total
-- **Accelerated:** ~**205 GW** · **~$7.9T** AI-specific · **~$9.4T** total
+## Regional growth in 2024
 
-These are **multi-year cumulative** dollars. Annualizing the base AI figure naively (~$5.2T / 6 years ≈ **$870B/year**) produces a useful order-of-magnitude check against 2026–2027 run-rates — but it is not a substitute for company guidance or for Goldman’s year-by-year GI path. The dashboard’s McKinsey panel is there so readers can see **scenario width** without pretending the units match an Amazon 10-K line item.
+Brief 41 regional growth rates show **South Asia leading at 11.8%** — driven by India, Pakistan, and Bangladesh — after **5.2%** growth in 2023. **Middle East and Africa** combined rebounded an estimated **5.4%** after Egypt's 2023 slump. Latin America benefits from a strong US job market for migrant workers but slowed from **7.5%** to roughly **4.8%**. Europe and Central Asia post moderate gains as Ukrainian displacement and Russian corridor flows evolve.
 
-GS Global Institute’s **~$7.6T (2026–2031)** cumulative sits in a similar “era-scale” conversation as McKinsey’s base/accelerated band, again with different layer definitions. The right use of both is **direction and sensitivity**, not false precision to the nearest $10B.
+Stacked regional history clarifies the base: South Asia climbed from **$115 billion** in 2019 to an estimated **$199 billion** in 2024. Latin America and the Caribbean rose from **$96 billion** to **~$152 billion** — US labor demand shows up here. East Asia and Pacific totals look flatter in dollar terms because China's large inflow share has stagnated or fallen in some years while the Philippines grows steadily.
 
-## Intensity and financing sit next to the totals
+That regional resilience sits beside a different macro story in our [deflationary-growth economies](/blog/deflationary-growth-economies-2025) piece: remittance-heavy LMICs can keep consuming even when local price signals and investment cycles weaken.
 
-Dollar totals alone do not tell you whether the cycle is sustainable. Capex **as a share of revenue** for the same companies has moved into ranges last associated with telecom build-outs. Meta’s FY25 intensity near **35%** of revenue is the vivid example; Microsoft and Alphabet have also stepped well above their early-2020s norms. On the physical side, our [global AI data-center build tracker](/blog/global-ai-data-center-build-tracker) shows how announced megawatts and live campuses still diverge — spend authorized is not the same as capacity energized.
+## Remittances vs FDI and aid — the scale comparison
 
-Funding is shifting with the scale. Public reporting around Goldman’s financing work has pointed to investment-grade hyperscaler issuance rising toward roughly **a third of capex** by 2026–2027 as free cash flow cannot stretch as fast as the build plan. That does not invalidate the demand signal — signed cloud backlogs and multi-year GPU / power commitments are real — but it does mean **credit markets** now co-price the cycle alongside equity narratives.
+LMIC remittances at **$685 billion** exceed **FDI (~$470 billion)** and **ODA (~$210 billion)** in 2024 World Bank comparisons. That ordering is not new, but the 2024 rebound underscores resilience: remittances are often counter-cyclical for families (workers send more when home-country conditions worsen) while FDI retreats when risk premia rise.
 
-Physical constraints bind the other side. US data-center capacity shortfalls measured in **tens of gigawatts** by late-decade (Goldman / Morgan Stanley prints in market commentary), CoWoS and HBM bottlenecks on the silicon side, and skilled-labor shortages on the construction side all argue that **dollars authorized ≠ megawatts energized on the same schedule**. Spend totals can keep rising even while delivered capacity lags the press-release curve.
+For fiscal planners, the implication is blunt: diaspora transfers finance consumption, housing, and local investment in ways aid cannot match at scale — but they are **private, volatile, and poorly captured** in quarterly GDP nowcasts. They do not appear on a single government's balance sheet the way aid does.
 
-## How to read the dashboard without mixing scopes
+## Who wins, who is exposed, and what could change the story
 
-Use this checklist when a headline throws a big AI spend number:
+**Winners in 2024:** India's formal-channel share rises with payment digitization and Gulf interlinks; Mexico and Central America capture US labor-market strength; Philippines OFW remittances hold despite tourism recovery competing for foreign exchange.
 
-1. **Company or system?** Big-5 guidance / CreditSights / GS IR ≈ hyperscaler gross. GS GI ≈ global AI infra layers. McKinsey ≈ cumulative global DC.
-2. **Year or era?** $760B is a **2026** run-rate family. $5.2T / $7.6T are **cumulative** decade-edge figures.
-3. **Gross or AI-attributed?** A 75% haircut is a research convention, not a line item in the 10-K.
-4. **Base or bull?** GS IR’s **$1.14T vs $1.4T** 2027 pair is a scenario fan, not a point forecast with error bars.
-5. **Sensitivity levers?** In the GI framework, **$/MW data-center cost** and silicon useful life dominate; training-vs-inference mix matters more for returns than for aggregate capital required.
+**Exposed:** High GDP-share economies (Tajikistan, Tonga, Nicaragua, Lebanon, Samoa) face asymmetric risk — a 10% drop in inflows can mean a 4–5 point GDP hit. Pakistan and Egypt sit between scale and stress: large recipient totals with recurring current-account pressure.
 
-If two numbers fail any of those checks, they are not in conflict — they are simply not comparable.
+**Migration politics:** US border policy affects not only US-bound flows but **transit remittances** through Mexico and Guatemala (Brief 41 notes migrant passage from Cuba, Haiti, Venezuela, and others). EU and UK corridors into India gained share in RBI data even as Gulf shares moderated — a diversification trend worth watching.
 
-## Caveats and methodology
+Remittances sit beside our [refugee hosting burden](/blog/global-refugee-hosting-burden-2024) map — who physically hosts displaced populations. Refugees and labor migrants are different legal categories, but both reshape cross-border money flows. Hosting burden is a stock of people; remittance corridors are a flow of dollars that follow diaspora networks, sometimes years after the initial move.
 
-- **2026 company figures** are guidance midpoints and post-earnings aggregates, not final audited totals. Ranges (especially Meta and Alphabet) mean the true year-end print can miss the midpoint.
-- **2027–2028 company paths** in the stacked area are **directional consensus / projected** values for visualization continuity; treat them as softer than 2026 guidance.
-- **AI-attributed (~75%)** is a CreditSights-style factor applied uniformly here for interaction — actual AI shares differ by company and year.
-- **GS Global Institute** figures are a **scenario framework**, not Goldman Sachs Global Investment Research forecasts. **GS IR** hyperscaler figures come from public secondary reporting of research notes.
-- **McKinsey** scenarios are cumulative through ~2030 and include traditional IT as well as AI loads in the “total DC” series.
-- Totals may not sum across houses because **perimeters differ** (leases, power, non-hyperscaler buyers, geographic coverage).
-- This post is explanatory data journalism, **not investment advice**.
+## Caveats
 
-**Primary synthesis sources:** company Q1 2026 earnings guidance; CreditSights aggregate commentary; Goldman Sachs Global Institute [*Tracking Trillions*](https://www.goldmansachs.com/insights/articles/tracking-trillions-the-assumptions-shaping-scale-of-the-ai-build-out) (April 2026); Goldman Sachs Investment Research hyperscaler scenario figures via public reporting (June 2026); McKinsey & Company, *The Cost of Compute* (April 2025).`,
-    category: "Finance",
-    imageUrl: "/images/finance-ai-capex-spend-research-2026-hero.png",
+- **Official vs true flows:** Brief 41 states informal channels mean actual remittances exceed recorded **$685 billion** — magnitude unknown
+- **Bilateral corridors are modeled:** KNOMAD 2021 splits use migrant-stock allocation; they are **not** SWIFT-level bilateral reporting and can understate fast-shifting US→India shares
+- **2024 figures are estimates (e):** December 2024 Brief projections may revise when balance-of-payments data settle
+- **Regional 2024 splits:** Sub-regional totals in our dashboard are scaled from 2023 disclosed bases using published growth rates — not separately disclosed line items
+- **GDP-share and inflow leaders use different country sets:** Tajikistan's 45% is not comparable to India's $129B without per-capita context
+- **China inclusion:** China is an upper-middle-income economy in World Bank groupings; LMIC totals exclude high-income recipients by definition
+
+## Methodology
+
+Primary source: World Bank Migration and Development Brief 41 (December 2024) blog and tables — LMIC total, top-five recipients, GDP-share leaders, regional growth rates. Historical regional totals through 2023 from Brief 40. Bilateral corridors from KNOMAD bilateral remittance matrix (2021), World Bank People Move blog (December 2022). FDI/ODA comparison figures from Brief 41 narrative.
+
+**Unlike our electricity generation mix map, this post tracks people-linked money flows — not physical power systems.**`,
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl: "/images/global-systems-global-remittance-corridors-2026-hero.png",
     imageAlt:
-      "Dark navy data-viz hero of rising AI infrastructure capex bars and scenario layers from hundreds of billions toward trillions",
-    publishedAt: "2026-07-31T12:00:00Z",
+      "Dark navy visualization of global remittance corridors highlighting the US→Mexico $52B top corridor and India as the $129B largest recipient",
+    publishedAt: "2026-07-31T10:00:00Z",
     featured: true,
-    visualization: "ai-capex-spend-research",
+    visualization: "global-remittance-corridors",
+    layout: "default",
   },
   {
     id: "goldman-sachs-ai-capex",

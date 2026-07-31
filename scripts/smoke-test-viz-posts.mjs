@@ -82,8 +82,8 @@ const POSTS = [
     forbidden: "Loading interactive charts",
   },
   {
-    slug: "ai-capex-spend-research-2026",
-    marker: "Big-5 hyperscaler capex stack",
+    slug: "global-remittance-corridors-2026",
+    marker: "Estimated bilateral corridors",
     forbidden: "Loading interactive charts",
   },
 ];
