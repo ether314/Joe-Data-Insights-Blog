@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "phosphate-fertilizer-export-dependence-2026",
+    marker: "Top-3 exporter share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "china-fiscal-revenue-all-budgets-2024",
     marker: "Granular Revenue by Line Item",
     forbidden: "Loading interactive charts",
@@ -79,11 +84,6 @@ const POSTS = [
   {
     slug: "goldman-sachs-ai-capex-chips-data-centers-2027-2028",
     marker: "Baseline AI capex by layer",
-    forbidden: "Loading interactive charts",
-  },
-  {
-    slug: "global-remittance-corridors-2026",
-    marker: "Estimated bilateral corridors",
     forbidden: "Loading interactive charts",
   },
 ];

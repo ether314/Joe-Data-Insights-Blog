@@ -197,10 +197,10 @@ const GoldmanSachsAiCapexDashboard = dynamic(
   },
 );
 
-const GlobalRemittanceCorridorsDashboard = dynamic(
+const PhosphateFertilizerExportDashboard = dynamic(
   () =>
-    import("@/components/visualizations/GlobalRemittanceCorridorsDashboard").then(
-      (m) => m.GlobalRemittanceCorridorsDashboard,
+    import("@/components/visualizations/PhosphateFertilizerExportDashboard").then(
+      (m) => m.PhosphateFertilizerExportDashboard,
     ),
   {
     ssr: false,
@@ -216,7 +216,7 @@ export function PostVisualization({
   type,
   embedded = false,
 }: {
-  type: "gdp-analysis" | "subsidies-tariffs" | "brokerage-bonuses" | "ai-data-centers" | "ccp-nomenklatura" | "china-fiscal-revenue" | "electricity-generation-mix" | "refugee-hosting-burden" | "ai-packaging-bottleneck" | "ai-token-consumption" | "deflationary-growth-2025" | "last-mile-delivery-robotics" | "goldman-sachs-ai-capex" | "global-remittance-corridors";
+  type: NonNullable<import("@/types/post").Post["visualization"]>;
   embedded?: boolean;
 }) {
   if (type === "gdp-analysis") {
@@ -258,8 +258,8 @@ export function PostVisualization({
   if (type === "goldman-sachs-ai-capex") {
     return <GoldmanSachsAiCapexDashboard />;
   }
-  if (type === "global-remittance-corridors") {
-    return <GlobalRemittanceCorridorsDashboard />;
+  if (type === "phosphate-fertilizer-export") {
+    return <PhosphateFertilizerExportDashboard />;
   }
   return null;
 }

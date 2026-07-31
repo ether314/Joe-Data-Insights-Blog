@@ -2,103 +2,99 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
-    id: "global-remittance-corridors",
-    slug: "global-remittance-corridors-2026",
+    id: "phosphate-fertilizer-export",
+    slug: "phosphate-fertilizer-export-dependence-2026",
     title:
-      "Charted: US→Mexico Moves $52B — the World's Largest Remittance Corridor",
+      "Charted: Morocco, China, and Saudi Arabia Control 67% of Phosphate Fertilizer Exports",
     excerpt:
-      "KNOMAD's bilateral matrix puts US→Mexico at ~$52B, ahead of UAE→India ($20B). Country totals tell another story: India takes $129B of $685B LMIC remittances in 2024.",
-    content: `## The corridor answer first
+      "Processed phosphate fertilizers — not just rock — are a seaborne chokepoint. TFI puts Morocco, China, and Saudi Arabia at 67% of MAP/DAP/TSP exports; add Russia and the top four clear ~82%. India's, Kenya's, and Brazil's DAP origins show which food systems sit downstream.",
+    content: `## The nutrient that has to arrive on a ship
 
-Ask which **country pair** moves the most remittance dollars and the World Bank / KNOMAD bilateral remittance matrix gives a clear answer: **United States → Mexico at about $52 billion** (2021 model estimate). That single pipe is larger than the next Gulf corridor into India (**UAE → India ~$20 billion**) and larger than **Saudi Arabia → India (~$13 billion)** or **US → Philippines (~$15 billion)**.
+Phosphorus has no agricultural substitute. Farmers can stretch nitrogen with better timing and they can recycle some organic matter, but commercial grain systems still depend on **processed phosphate fertilizers** — chiefly **monoammonium phosphate (MAP)**, **diammonium phosphate (DAP)**, and **triple superphosphate (TSP)** — to replace what each harvest removes from soil. More than half of those finished products enter international trade. That is the chokepoint this post maps: **who exports the bags**, not who digs the rock.
 
-Those corridor estimates allocate each recipient's recorded inflows across source countries using migrant stocks and PPP-adjusted incomes — the Ratha–Shaw methodology — not SWIFT wire counts. Treat them as **disclosed model estimates**, not transaction ledgers. Still, the ranking is stable enough to answer the core question: the densest dollar corridor on the planet runs from the US labor market into Mexico.
+Our companion [phosphate rock supply concentration](/blog/phosphate-rock-supply-concentration-2024) piece used USGS mine and reserve tables: Morocco owns the geologic inventory; China digs the most rock. This dashboard answers a different question — **which food systems depend on a short list of phosphate fertilizer exporters** — with shares from The Fertilizer Institute (TFI), corridor evidence from IFPRI, and trade-context from FAO and UN Comtrade patterns.
 
-Country **totals** tell a different story. Officially recorded remittances to low- and middle-income countries (LMICs) are expected to reach **$685 billion** in **2024**, per the World Bank's Migration and Development Brief 41. India has been the **largest recipient since 2008** and is projected at **$129 billion** — roughly **19%** of all LMIC inflows — more than Mexico (**$68 billion**) and the Philippines (**$40 billion**) combined.
+## Top-3 exporter share: 67%
 
-## India's $129 billion country anchor
+TFI's 2025 phosphorus brief ranks **22 exporting countries** for processed phosphates and finds a brutal concentration at the top:
 
-Growth reaccelerated to **5.8%** after a sluggish **1.2%** in 2023. That rebound matters because remittances to LMICs now exceed **FDI (~$470 billion)** and more than triple **ODA (~$210 billion)** in the same Brief 41 comparisons. Diaspora cash is not a side story in global macro; it is one of the largest cross-border capital flows on Earth.
+| Rank | Exporter | Export share | Production share |
+|---|---|---:|---:|
+| 1 | Morocco | **30%** | 14% |
+| 2 | China | **21%** | 44% |
+| 3 | Saudi Arabia | **16%** | 9% |
+| 4 | Russia | 15% | 9% |
+| 5 | United States | 4% | 8% |
+| — | Other | 14% | 16% |
 
-China (**$48 billion**) and Pakistan (**$33 billion**) round out the top five recipients. Dollar volume is Gulf-and-US-skewed: skilled and semi-skilled migration into OECD labor markets plus long-standing South Asian diasporas in the Middle East. For a parallel view of how India's scale shows up in aggregate growth — not just remittance receipts — see our [China–US–India GDP comparison](/blog/china-us-india-gdp-30-years).
+**Morocco + China + Saudi Arabia = 67% of world exports.** Add Russia and the **top four reach about 82%** — the same ballpark IFPRI cites when it says China, Morocco, Russia, and Saudi Arabia constitute roughly **80% of global DAP and MAP exports**. Production is also tight: TFI puts the **top five producers above 80%** of MAP/DAP/TSP output among roughly **30 producing countries**, with **China alone at 44%**.
 
-## Two leaderboards: dollars vs dependence
+The scatter and gap charts above make the asymmetry visible. **China produces far more than it exports** — a food-security state that keeps nutrient tons at home when domestic rice and maize affordability stays tight. **Morocco and Saudi Arabia export well above their production shares** — they are the seaborne swing suppliers when Chinese licensing bites.
 
-The top-recipient chart is not the vulnerability chart. World Bank figure 2 in Brief 41 ranks countries where remittances dominate national output:
+## China closed the tap; the rest did not refill it
 
-| Country | 2024 inflow (est.) | Share of LMIC total | Remittances / GDP |
-|---------|-------------------|---------------------|-------------------|
-| India | $129B | 18.8% | modest (large economy) |
-| Mexico | $68B | 9.9% | ~4% |
-| China | $48B | 7.0% | low |
-| Philippines | $40B | 5.8% | ~8% |
-| Pakistan | $33B | 4.8% | ~6% |
-| Tajikistan | small | — | **45%** |
-| Tonga | tiny | — | **38%** |
-| Nicaragua | small | — | **27%** |
+IFPRI's March 2025 review is blunt about the 2021–2024 shock path. China exported an average of about **9 million metric tons** of ammoniated phosphates in 2019–2020, hit a record **10 Mt in 2021**, then used export restrictions and licensing to prioritize the domestic market. By **2024**, Chinese exports were only **6.6 Mt** — roughly a **one-third cut** from the peak.
 
-**Tajikistan** tops the dependence list at **45% of GDP** — remittances effectively fund the current account and buffer fiscal gaps. **Tonga** (**38%**) and **Nicaragua** (**27%**) follow. Lebanon also hits **27%**, overlapping humanitarian stress with remittance reliance. A shock to Gulf payrolls or a US downturn hits Tajikistan and Tonga differently than it hits India: the dollar loss is smaller, but the macro share is existential.
+Russia and Saudi Arabia were already near capacity; IFPRI expects little volume relief until new plants arrive around **2027–2028**. Morocco raised exports after 2022, but gradually, and diverted more of its processed mix into **TSP**, which many DAP/MAP-habituated farmers treat as a second-best product. The stacked area in the dashboard shows the shape of that story: China's band shrinks after 2021; peers inch up without restoring the old seaborne surplus.
 
-The scatter panel in the dashboard makes the split visual: India and Mexico sit far right on dollar volume with modest GDP shares; Tajikistan and Tonga sit high on the dependence axis with tiny absolute inflows.
+FAO's fertilizer focus note puts global phosphate trade near **30.4 Mt in 2023** — a rebound of about 1 Mt year-over-year, yet still **more than 4 Mt below 2021**. TFI adds that **2024 processed-phosphate exports were about 7% below 2021** even though **global production exceeded 2021 by roughly 4%**. Tons were made. They were not all allowed onto the water.
 
-## Bilateral corridors — where money actually moves
+## Which food systems sit downstream
 
-Aggregate country totals hide the pipes. Filter the corridor chart by **US only** or **Gulf only** and the structure jumps out:
+Export concentration becomes a food-system risk only when importers cannot diversify origins. IFPRI's corridor work shows how thin that diversification often is:
 
-- **US → Mexico ~$52B** — largest bilateral corridor globally in the 2021 KNOMAD matrix
-- **UAE → India ~$20B** — GCC corridor; dirham–rupee interlinks later boosted formalization
-- **US → Philippines ~$14.8B** — roughly 40% of Philippines receipts in earlier Brief commentary
-- **Saudi Arabia → India ~$13B** — second Gulf pipe into South Asia
-- **US → India ~$6B** (KNOMAD 2021) — **understates** recent RBI source-mix data where the US share of India's inflows rose sharply
+- **India (2023 DAP):** China about **39%**, Saudi Arabia ~18%, Morocco ~13%, Russia ~10%. China's share of Indian DAP swung from **19% in 2022 to 39% in 2023** as licensing eased — proof that New Delhi's planting calendar still tracks Beijing's permit desk.
+- **Brazil (2023 DAP):** a more plural mix, but still dominated by Morocco, Russia, and China (China alone ~**20%**, down from 27% in 2021 and up from 14% in 2022). Stocks looked healthier than in South Asia, yet much of the inventory was high-priced material that deterred farmer purchases.
+- **Kenya (2023 DAP):** a **two-origin market** — Saudi Arabia **83%**, Morocco **17%**. Russia held an 11% share in 2021 and then disappeared. That is not a contestable commodity market; it is a bilateral logistics relationship.
+- **European Union:** Morocco remains the primary origin, with Russia still material because fertilizers were exempted from EU sanctions — a political carve-out that keeps European phosphorus exposed to a sanctioned-state exporter.
 
-Corridor analysis matters for policy: payment-system interlinks, migration enforcement at the US southern border (which also affects transit-country flows through Mexico and Guatemala), and Gulf visa rules all move bilateral splits faster than headline recipient totals. Remittance Prices Worldwide still shows average sending costs above the SDG **3%** target — high bank fees push informal channels, which Brief 41 reminds us means **true flows exceed official $685 billion**.
+Toggle the **Food-system importers** lens above to see origin donuts and single-origin dominance bars. The pattern repeats: large agrarian importers do not face "the world phosphate market." They face **two to four state-linked supply systems**.
 
-## Regional growth in 2024
+## Rock chokepoint vs fertilizer chokepoint
 
-Brief 41 regional growth rates show **South Asia leading at 11.8%** — driven by India, Pakistan, and Bangladesh — after **5.2%** growth in 2023. **Middle East and Africa** combined rebounded an estimated **5.4%** after Egypt's 2023 slump. Latin America benefits from a strong US job market for migrant workers but slowed from **7.5%** to roughly **4.8%**. Europe and Central Asia post moderate gains as Ukrainian displacement and Russian corridor flows evolve.
+Readers who know the USGS rock table sometimes assume fertilizer trade mirrors mine ranks. It does not. China's **44% production / 21% export** split is the clearest proof: the largest processor can starve the seaborne market while still running plants. Morocco's **14% production / 30% export** split is the mirror: OCP's integrated system is built to ship. Saudi Arabia punches similarly above its production weight.
 
-Stacked regional history clarifies the base: South Asia climbed from **$115 billion** in 2019 to an estimated **$199 billion** in 2024. Latin America and the Caribbean rose from **$96 billion** to **~$152 billion** — US labor demand shows up here. East Asia and Pacific totals look flatter in dollar terms because China's large inflow share has stagnated or fallen in some years while the Philippines grows steadily.
+That is why pairing this post with the [phosphate rock](/blog/phosphate-rock-supply-concentration-2024) dashboard matters. Rock reserves answer "who owns the century." Fertilizer exports answer "who can cancel next season's application rates in India, Kenya, or Bangladesh." The same molecule; different binding constraint.
 
-That regional resilience sits beside a different macro story in our [deflationary-growth economies](/blog/deflationary-growth-economies-2025) piece: remittance-heavy LMICs can keep consuming even when local price signals and investment cycles weaken.
+For another physical chokepoint with a dig-versus-process split, see [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-concentration-2024). For a one-country mine monopoly in battery anodes, see [natural graphite](/blog/natural-graphite-mine-concentration-2024). Phosphate fertilizer is closer to copper's midstream logic than to graphite's mine monopoly — except the "midstream" here is acidulation and ammoniation of rock into MAP/DAP, and the customers are food systems rather than cable mills.
 
-## Remittances vs FDI and aid — the scale comparison
+## Prices, affordability, and the slow yield risk
 
-LMIC remittances at **$685 billion** exceed **FDI (~$470 billion)** and **ODA (~$210 billion)** in 2024 World Bank comparisons. That ordering is not new, but the 2024 rebound underscores resilience: remittances are often counter-cyclical for families (workers send more when home-country conditions worsen) while FDI retreats when risk premia rise.
+All fertilizer prices fell from 2022 peaks, but IFPRI notes phosphate remains roughly **double** early-2020 levels while urea is closer to **1.5×**. Affordability — phosphate cost relative to crop prices — deteriorated because crop prices retreated faster than phosphate. IFA's November 2024 update revised phosphate demand growth down for 2024–2025 versus earlier forecasts.
 
-For fiscal planners, the implication is blunt: diaspora transfers finance consumption, housing, and local investment in ways aid cannot match at scale — but they are **private, volatile, and poorly captured** in quarterly GDP nowcasts. They do not appear on a single government's balance sheet the way aid does.
+The failure mode is slow. Skipping nitrogen shows up in the next harvest. Skipping phosphate can look fine for a season or two because soils buffer phosphorus — until they do not. IFPRI flags historical-low stocks in major markets by end-2024 and DAP scarcity protests during Indian sowing windows. Sub-Saharan application rates start low; Kenya still saw phosphate use contract about **42%** over 2020–2022. The global calorie system can absorb a one-year skim. A multi-year skim is how you bake lower yields into food prices.
 
-## Who wins, who is exposed, and what could change the story
+## Who is exposed, who benefits, what would change the story
 
-**Winners in 2024:** India's formal-channel share rises with payment digitization and Gulf interlinks; Mexico and Central America capture US labor-market strength; Philippines OFW remittances hold despite tourism recovery competing for foreign exchange.
+**Exposed:** South Asian and East African DAP buyers with two-to-four origin lists; any importer that treated 2019–2020 Chinese export volumes as a permanent feature of the market; US growers facing AD/CVD duties on Moroccan and Russian phosphates since 2019 that shifted imports toward costlier origins while domestic Florida plants took hurricane hits.
 
-**Exposed:** High GDP-share economies (Tajikistan, Tonga, Nicaragua, Lebanon, Samoa) face asymmetric risk — a 10% drop in inflows can mean a 4–5 point GDP hit. Pakistan and Egypt sit between scale and stress: large recipient totals with recurring current-account pressure.
+**Relative beneficiaries under current geography:** Morocco/OCP as the scalable seaborne alternative; Saudi and Russian exporters running near capacity into a short market; traders who can arbitrate TSP versus DAP acceptance.
 
-**Migration politics:** US border policy affects not only US-bound flows but **transit remittances** through Mexico and Guatemala (Brief 41 notes migrant passage from Cuba, Haiti, Venezuela, and others). EU and UK corridors into India gained share in RBI data even as Gulf shares moderated — a diversification trend worth watching.
-
-Remittances sit beside our [refugee hosting burden](/blog/global-refugee-hosting-burden-2024) map — who physically hosts displaced populations. Refugees and labor migrants are different legal categories, but both reshape cross-border money flows. Hosting burden is a stock of people; remittance corridors are a flow of dollars that follow diaspora networks, sometimes years after the initial move.
+**What would change the story:** Chinese licensing that returns exports toward the **9–10 Mt** band; greenfield capacity in Saudi Arabia, Morocco, and elsewhere that IFPRI dates to **2027–2028**; a lasting shift in farmer acceptance of TSP/NPKs; or phosphorus recycling at a scale that actually dents primary MAP/DAP demand — still small relative to tens of millions of nutrient tons.
 
 ## Caveats
 
-- **Official vs true flows:** Brief 41 states informal channels mean actual remittances exceed recorded **$685 billion** — magnitude unknown
-- **Bilateral corridors are modeled:** KNOMAD 2021 splits use migrant-stock allocation; they are **not** SWIFT-level bilateral reporting and can understate fast-shifting US→India shares
-- **2024 figures are estimates (e):** December 2024 Brief projections may revise when balance-of-payments data settle
-- **Regional 2024 splits:** Sub-regional totals in our dashboard are scaled from 2023 disclosed bases using published growth rates — not separately disclosed line items
-- **GDP-share and inflow leaders use different country sets:** Tajikistan's 45% is not comparable to India's $129B without per-capita context
-- **China inclusion:** China is an upper-middle-income economy in World Bank groupings; LMIC totals exclude high-income recipients by definition
+- **Export and production shares are TFI aggregates for MAP/DAP/TSP**, not USGS phosphate-rock mine shares; do not mix the two tables.
+- **China export Mt figures are IFPRI-reported ammoniated phosphate exports**; product definitions can differ slightly from TFI share denominators.
+- **Importer corridor percentages** are IFPRI DAP-origin shares for cited years; Bangladesh is an illustrative South Asian pattern, not a primary IFPRI table reprint.
+- **Stacked volume history** anchors IFPRI's China 10→6.6 Mt path and interpolates peer volumes for visualization — treat peer Mt as approximate, not customs microdata.
+- **UN Comtrade HS codes** for phosphatic fertilizers fragment across DAP, MAP, and other headings; we use secondary research syntheses rather than a raw Comtrade scrape for headline shares.
+- **Western Sahara / Morocco** reporting conventions in rock statistics can differ from fertilizer-brand export statistics; TFI exporter shares follow commercial trade practice.
 
 ## Methodology
 
-Primary source: World Bank Migration and Development Brief 41 (December 2024) blog and tables — LMIC total, top-five recipients, GDP-share leaders, regional growth rates. Historical regional totals through 2023 from Brief 40. Bilateral corridors from KNOMAD bilateral remittance matrix (2021), World Bank People Move blog (December 2022). FDI/ODA comparison figures from Brief 41 narrative.
+Headline top-3 and top-4 export shares and production shares: TFI Phosphorus/phosphate one-pager (2025). China export volumes 2019–2024 and qualitative capacity notes: IFPRI (March 2025). Importer DAP origin shares for India, Brazil, Kenya, and EU context: IFPRI fertilizer-trade analyses (2021–2023 updates). Global phosphate trade tonnage: FAO Focus on Fertilizers. Dashboard gaps and scatter positions are derived from the disclosed TFI share pairs. This post is about **processed fertilizer trade dependence**; rock geology remains covered in the linked USGS-based companion.
 
-**Unlike our electricity generation mix map, this post tracks people-linked money flows — not physical power systems.**`,
+**Unlike our [helium supply concentration](/blog/global-helium-supply-concentration-2024) map — a two-country industrial-gas bottleneck — phosphate fertilizer exports are a four-country food-system bottleneck whose binding constraint is often an export license, not a depleted mine.**`,
     category: "Global Systems",
-    themeId: "demographic-cash-flows",
-    imageUrl: "/images/global-systems-global-remittance-corridors-2026-hero.png",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-phosphate-fertilizer-export-dependence-2026-hero.png",
     imageAlt:
-      "Dark navy visualization of global remittance corridors highlighting the US→Mexico $52B top corridor and India as the $129B largest recipient",
+      "Dark navy data-viz hero of phosphate fertilizer export routes dominated by Morocco, China, and Saudi Arabia with a 67% top-3 callout",
     publishedAt: "2026-07-31T10:00:00Z",
     featured: true,
-    visualization: "global-remittance-corridors",
+    visualization: "phosphate-fertilizer-export",
     layout: "default",
   },
   {

@@ -1,29 +1,29 @@
 {
-  "handoffId": "job-ms8rck58-a19qi",
-  "topic": "global-remittance-corridors",
-  "slug": "global-remittance-corridors-2026",
-  "visualizationKey": "global-remittance-corridors",
-  "dataFile": "src/data/global-remittance-corridors-data.ts",
-  "source": "World Bank Migration and Development Brief 41 (Dec 2024); KNOMAD bilateral remittance matrix (2021)",
-  "sourceUrl": "https://blogs.worldbank.org/en/peoplemove/in-2024--remittance-flows-to-low--and-middle-income-countries-ar",
-  "themeId": "demographic-cash-flows",
+  "handoffId": "phosphate-fertilizer-export-dependence-2026",
+  "topic": "phosphate-fertilizer-export",
+  "slug": "phosphate-fertilizer-export-dependence-2026",
+  "themeId": "chokepoint-commodities",
+  "visualizationKey": "phosphate-fertilizer-export",
+  "dataFile": "src/data/phosphate-fertilizer-export-data.ts",
+  "source": "TFI phosphorus brief 2025; IFPRI phosphate prices & fertilizer trade 2021–2025; FAO Focus on Fertilizers",
+  "sourceUrl": "https://www.ifpri.org/blog/high-global-phosphate-prices-pose-potential-food-security-risks/",
   "postsEntry": {
     "file": "src/data/posts.ts",
-    "id": "global-remittance-corridors"
+    "id": "phosphate-fertilizer-export"
   },
   "typesEntry": {
     "file": "src/types/post.ts",
-    "visualizationKey": "global-remittance-corridors"
+    "visualizationKey": "phosphate-fertilizer-export"
   },
-  "heroImage": "global-systems-global-remittance-corridors-2026-hero.png",
-  "heroImageUrl": "/images/global-systems-global-remittance-corridors-2026-hero.png",
-  "headlineStat": "US→Mexico $52B top corridor",
+  "heroImage": "global-systems-phosphate-fertilizer-export-dependence-2026-hero.png",
+  "heroImageUrl": "/images/global-systems-phosphate-fertilizer-export-dependence-2026-hero.png",
+  "headlineStat": "67% top-3 exporter share (Morocco + China + Saudi Arabia)",
   "validation": {
-    "nodeCheck": "node --check src/data/global-remittance-corridors-data.ts",
-    "qa": "node scripts/qa-global-remittance-corridors-2026.mjs"
+    "qa": "scripts/qa-phosphate-fertilizer-export-dependence-2026.mjs",
+    "smokeMarker": "Top-3 exporter share"
   },
   "followUp": {
-    "qa": "Smoke test entry added; run npm run deploy with SMOKE_PORT=4181",
-    "devops": "Local ship only — Firebase Hosting out of production chain"
+    "qa": "Smoke test entry added; run npm run deploy with SMOKE_PORT=4180",
+    "devops": "Worker does not Firebase-deploy; orchestrator merges"
   }
 }
