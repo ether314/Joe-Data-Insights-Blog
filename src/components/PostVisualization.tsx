@@ -392,6 +392,21 @@ const CommercialAircraftAssemblyDashboard = dynamic(
   },
 );
 
+const AiSupplyChainResearchDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiSupplyChainResearchDashboard").then(
+      (m) => m.AiSupplyChainResearchDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 const MacroGrowthTradeResearchDashboard = dynamic(
   () =>
     import("@/components/visualizations/MacroGrowthTradeResearchDashboard").then(
@@ -502,6 +517,10 @@ export function PostVisualization({
 
   if (type === "macro-growth-trade-research-2026") {
     return <MacroGrowthTradeResearchDashboard />;
+  }
+
+  if (type === "ai-supply-chain-research-2026") {
+    return <AiSupplyChainResearchDashboard />;
   }
 
   return null;

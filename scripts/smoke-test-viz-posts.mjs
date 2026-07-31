@@ -151,6 +151,11 @@ const POSTS = [
     marker: "Growth, trade & prices",
     forbidden: "Loading interactive charts",
   },
+  {
+    slug: "ai-supply-chain-research-2026",
+    marker: "Semiconductor supply chain — equipment cycle & bottlenecks",
+    forbidden: "Loading interactive charts",
+  },
 ];
 
 async function smokePost(page, { slug, marker, forbidden }) {

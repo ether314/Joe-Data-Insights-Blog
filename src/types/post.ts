@@ -50,7 +50,8 @@ export interface Post {
     | "irena-renewable-capacity"
     | "bank-loan-chargeoffs"
     | "natural-graphite-mine-concentration"
-    | "macro-growth-trade-research-2026";
+    | "macro-growth-trade-research-2026"
+    | "ai-supply-chain-research-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

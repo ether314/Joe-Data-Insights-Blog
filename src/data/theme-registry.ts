@@ -414,6 +414,7 @@ export const SLUG_THEME_IDS: Record<string, string> = {
   "global-remittance-corridors-2026": "demographic-cash-flows",
   "ai-capex-spend-research-2026": "ai-capex-spend",
   "ai-capex-intensity-research-2026": "ai-capex-intensity",
+  "ai-supply-chain-research-2026": "ai-supply-chain",
   "central-bank-gold-purchases-2025": "geopolitics-institutions",
   "rare-earth-mine-concentration-2024": "chokepoint-commodities",
   "jolts-openings-unemployed-ratio-2026": "macro-growth-trade",

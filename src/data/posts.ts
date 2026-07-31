@@ -2,6 +2,102 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-supply-chain-research-2026",
+    slug: "ai-supply-chain-research-2026",
+    title:
+      "Charted: Semiconductor Equipment Hits $166B in 2026 — While CoWoS Still Gates AI GPUs",
+    excerpt:
+      "SEMI puts total equipment at $165.9B in 2026 (+23%) after Taiwan’s +90% 2025 surge. DRAM tools jump 39%, but the binding AI constraint remains packaging and HBM — not another front-end wafer line.",
+    themeId: "ai-supply-chain",
+    content: `## The chip stack has two clocks
+
+Semiconductor **equipment dollars** and **AI GPU shipments** are both booming — but they are not the same clock. SEMI’s Mid-Year OEM Forecast (July 2026) puts **total manufacturing equipment sales at $165.9 billion in 2026**, up **23.2%** from the record **$135.1 billion** billed in 2025. Wafer fab equipment (WFE) alone is projected at **$143.9 billion**. By **2028**, SEMI sees the total equipment market near **$229.5 billion**.
+
+That is the **upstream investment** clock: etch, deposition, lithography, test, and assembly tools ordered years before wafers leave the fab. The **downstream shipping** clock is still paced by **HBM allocations** and **CoWoS** slots. Our earlier [HBM & CoWoS bottleneck map](/blog/ai-gpu-packaging-memory-bottleneck-2025) showed packaging sold out into 2026; this research post zooms out to the **full equipment cycle and regional concentration** that fund — and still fail to fully relieve — those bottlenecks.
+
+The dashboard above toggles five panels: the equipment cycle, regional billings, segment growth, a multi-layer bottleneck scatter, and CoWoS capacity vs demand.
+
+## $135B became $166B — five years of growth, not a one-year spike
+
+SEMI’s April 2026 billings print confirmed **$135.1 billion** of global equipment sales in **2025**, up **15%** from **$117.1 billion** in 2024. That was already a record. The July mid-year forecast then lifted the **2026** outlook to **$165.9 billion** — a further **+23.2%** — and extended the runway through **2028 at $229.5 billion**, implying **five consecutive growth years** as AI demand reshapes capital plans.
+
+| Year | Total equipment (SEMI) | WFE | Status |
+|------|------------------------|-----|--------|
+| **2024** | **$117.1B** | ~$95B (est.) | Actual |
+| **2025** | **$135.1B** | **$116.9B** | Actual |
+| **2026** | **$165.9B** | **$143.9B** | Forecast |
+| **2027** | ~$197B | ~$175B | Forecast path |
+| **2028** | **$229.5B** | **~$200B** | Forecast |
+
+WFE growth is not evenly distributed across process modules. SEMI explicitly ties the upward revision to **advanced memory — especially HBM-related DRAM** — and **leading-edge logic**. DRAM equipment sales are projected to rise **39% to $38.8 billion in 2026**, then keep climbing toward **$56.9 billion by 2028**. NAND tools grow **30.7% to $13.9 billion** in 2026 on 3D layer migration. Front-end tools fund the wafers; they do not automatically create CoWoS interposers or HBM stacks.
+
+## Taiwan’s +90% is the AI signature in the regional ledger
+
+The 2025 regional billings table is the cleanest public fingerprint of where AI capacity is being installed:
+
+| Region | 2025 billings | YoY |
+|--------|---------------|-----|
+| **China** | **$49.3B** | **−0.5%** |
+| **Taiwan** | **$31.5B** | **+90%** |
+| **Korea** | **$25.8B** | **+26%** |
+| **N. America** | **$10.9B** | **−20%** |
+| **Japan** | **$9.5B** | **+22%** |
+| **Europe** | **$2.9B** | **−41%** |
+| **Rest of World** | **$5.2B** | **+25%** |
+
+**China remains the largest single market** near its prior record, but growth has stalled. **Taiwan nearly doubled** as TSMC ramped **2nm** and **CoWoS**. **Korea** advanced on **HBM/DRAM** programs at Samsung and SK hynix. North America and Europe cooled after earlier CHIPS-era and automotive cycles. East Asia (China + Taiwan + Korea + Japan) still accounts for roughly **four-fifths** of 2025 equipment dollars — the geographic concentration that makes export controls, earthquake risk, and single-island packaging capacity macro variables rather than supply-chain footnotes.
+
+Toggle the dashboard’s **Regions** panel between 2024, 2025, and a directional 2026 share view scaled to SEMI’s **$165.9B** total. Treat 2026 regional bars as **illustrative**, not an official SEMI regional release.
+
+## Back-end intensity: test +55%, assembly +21%
+
+SEMI’s 2025 billings detail matters for the AI thesis. **Test equipment surged 55%** as AI devices and HBM raised performance and burn-in intensity. **Assembly and packaging equipment rose 21%** as advanced packaging adoption accelerated. Those are the tool categories closest to the shipping constraint: more EUV scanners help logic density; more handlers, probe cards, and bonding tools help when every Blackwell-class accelerator needs a package that actually exists.
+
+This is why equipment-cycle bullishness and packaging tightness can coexist. Tool billings are **orders and installations**. GPU revenue is **finished modules**. Between them sit substrates, HBM stacks, CoWoS interposers, and final test capacity — layers that are smaller in dollar terms than WFE but higher in **tightness**.
+
+## Where the stack still binds
+
+The bottleneck panel scores seven layers on **tightness (1–10)**, **lead time (weeks)**, and **supplier concentration**:
+
+1. **CoWoS packaging** — tightness 10; ~52-week lead times; TSMC still the production-proven gate for most AI GPUs.
+2. **HBM / advanced DRAM** — tightness 9; SK hynix near **52%** share; sold-out narratives into 2026.
+3. **EUV lithography** — tightness 8; ASML remains the sole HVM EUV supplier as High-NA ramps.
+4. **Final test / burn-in** — tightness 8; consistent with SEMI’s **+55%** test billings print.
+5. **OSAT advanced package** and **ABF/substrates** — tightness ~7; overflow and materials buffers, not full substitutes for CoWoS.
+6. **Leading-edge logic fab** — tightness ~6; still concentrated, but less binding than packaging for 2025–26 AI shipments.
+
+CoWoS capacity trackers (aligned with our packaging research) show roughly **37.5k → 75k → 125k wafers per month** from end-2024 through the 2026 target, while annualized demand estimates still run ahead of installed capacity. Dollars authorized for front-end tools do not erase that gap on the same schedule — a theme that also shows up when hyperscaler [AI capex guidance](/blog/ai-capex-spend-research-2026) races ahead of energized megawatts.
+
+## How to read equipment headlines without mixing scopes
+
+Use this checklist when a slide claims “the chip shortage is over” or “semicap is the AI trade”:
+
+1. **Equipment vs accelerators.** $166B is OEM tool sales — not NVIDIA revenue, not CoWoS slots.
+2. **WFE vs back-end.** WFE is ~87% of the 2026 total in SEMI’s split; the binding AI constraint often sits in the other ~13% plus memory specialty tools.
+3. **Region vs company.** Taiwan’s +90% is a TSMC-centric AI build signature; China’s flat $49B is a different industrial policy story.
+4. **Forecast vs billings.** 2025 figures are WWSEMS billings; 2026–28 are OEM forecast perspectives and can revise.
+5. **Tightness vs spend.** Rising DRAM equipment (+39%) is the industry’s attempt to relieve HBM; it is not proof the bottleneck has cleared.
+
+## Caveats and methodology
+
+- **SEMI totals** are OEM semiconductor manufacturing equipment sales (billings / forecasts). They exclude used tools and many materials.
+- **2024 WFE (~$95B)** in the cycle chart is an estimate consistent with the 2025 WFE print; treat it as softer than SEMI’s disclosed 2025–28 WFE path.
+- **2026 regional bars** are editorial shares scaled to the $165.9B total for interaction — not a SEMI regional forecast table.
+- **Test / assembly index series** use SEMI’s 2025 growth rates as anchors; forward years are illustrative continuations for the dashboard.
+- **Bottleneck scores** are editorial composites for visualization, informed by public lead-time and concentration reporting — not SEMI statistics.
+- CoWoS capacity/demand figures are industry-tracker midpoints (TrendForce / TSMC disclosure synthesis) and may revise.
+- This post is explanatory data journalism, **not investment advice**.
+
+**Primary sources:** SEMI, [Mid-Year Total Semiconductor Equipment Forecast – OEM Perspective](https://www.semi.org/en/semi-press-release/global-semiconductor-equipment-sales-forecast-to-reach-a-record-229-billion-dollars-in-2028-semi-reports) (July 14, 2026); SEMI, [2025 Equipment Billings $135.1B](https://www.semi.org/en/SEMI-Reports-Global-Semiconductor-Equipment-Billings-Reached-135-Billion-in-2025) (April 7, 2026); TrendForce / TSMC packaging disclosures for CoWoS & HBM context.`,
+    category: "Industry",
+    imageUrl: "/images/industry-ai-supply-chain-research-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero of a layered semiconductor stack with amber packaging bottleneck glow and rising equipment-spend bars",
+    publishedAt: "2026-07-31T18:00:00Z",
+    featured: true,
+    visualization: "ai-supply-chain-research-2026",
+  },
+  {
     id: "us-billion-dollar-weather-disasters-ms94skof",
     slug: "us-billion-dollar-weather-disasters-ms94skof",
     title:
