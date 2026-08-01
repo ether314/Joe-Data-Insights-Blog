@@ -56,7 +56,8 @@ export interface Post {
     | "fiscal-industrial-policy-research-2026"
     | "migration-humanitarian-research-2026"
     | "us-tax-expenditure-catalog-2026"
-    | "measurement-science-research-2026";
+    | "measurement-science-research-2026"
+    | "demographic-cash-flows-research-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

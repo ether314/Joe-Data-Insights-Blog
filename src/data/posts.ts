@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-research-2026",
+    slug: "demographic-cash-flows-research-2026",
+    title:
+      "Charted: Aging Hosts Run 16% of GDP on Pensions While Remittances Hit $685B",
+    excerpt:
+      "Italy’s public pensions exceed 16% of GDP; Tajikistan’s remittances equal 45% of GDP. Working-age migrants sit between those ledgers — funding host social insurance while sending $685B to younger origin economies.",
+    content: `Age structure is usually treated as a soft background variable — something demographers chart and finance ministries footnote. The money says otherwise. In **2024**, officially recorded remittances to low- and middle-income countries (LMICs) reached about **$685 billion**, up **5.8%** after a sluggish **1.2%** in 2023, per the World Bank’s Migration and Development Brief 41. Those dollars are overwhelmingly earned by **working-age migrants** in labor markets that are themselves aging. On the other side of the ledger, public cash pensions already absorb **more than 16% of GDP** in Italy and Greece and about **8.1%** on average across the OECD — while Japan’s old-age dependency ratio (people **65+** per **100** aged **15–64**) sits near **54**, versus roughly **6** in Nigeria.
+
+This post asks a single systems question: **how do age and migration show up in money flows?** The interactive dashboard above maps the answer across five panels — a dependency×remittance scatter, aging cohort paths, ranked dependence metrics, bilateral corridors, and the labor-market engines that push remittance totals. It is deliberately *not* a remake of our [global remittance corridors](/blog/global-remittance-corridors-2026) piece, which ranks country-pair pipes. Here the unit of analysis is the **demographic wedge**: aging hosts with heavy pension bills, younger origins with remittance-heavy current accounts, and the working-age people who move between them.
+
+## The two-ledger problem
+
+Put the cross-section on one screen and the map splits cleanly:
+
+| Economy | Old-age dependency (~2024) | Remittances / GDP | Public pensions / GDP |
+| --- | ---: | ---: | ---: |
+| Japan | 54 | ~0.1% | 9.3% |
+| Italy | 40 | ~0.5% | 16.3% |
+| Germany | 37 | ~0.5% | 10.4% |
+| United States | 29 | ~0.03% | 7.1% |
+| Mexico | 13 | 3.7% | 3.1% |
+| India | 11 | 3.4% | — |
+| Philippines | 9 | 8.5% | — |
+| Tajikistan | 7 | **45%** | — |
+| Nigeria | 6 | ~4% | — |
+
+Aging hosts run large **public** intergenerational transfers (pensions). Remittance origins run large **private** cross-border transfers (diaspora cash). A migrant of working age in the United States, Gulf, or EU can contribute payroll taxes or consumption taxes in the host economy **and** send remittances that finance consumption, housing, and education in the origin household. Those are not the same fiscal instrument — remittances are private — but they are the same demographic fact: **prime-age labor is scarce where populations are old and abundant where populations are young**, and money follows that scarcity.
+
+For the US side of the pension ledger, our [Social Security trust-fund depletion path](/blog/us-social-security-trust-fund-depletion-path-2026) puts a clock on the on-budget story: combined OASDI reserves deplete in **2034** under intermediate assumptions, with about **81%** of scheduled benefits payable thereafter. Immigration assumptions are already baked into the Trustees’ demography; the remittance map is the *origin-country* twin of that same working-age mobility.
+
+## Remittances are the largest private external flow
+
+Brief 41’s scale comparison still startles people who think of remittances as a niche development topic. At **$685 billion**, LMIC remittances exceed **FDI (~$470 billion)** and more than triple **ODA (~$210 billion)** in the same narrative comparison. Over the past decade remittances rose roughly **57%** while FDI to LMICs fell about **41%**. That ordering matters for macro stability: remittances are often **counter-cyclical for families** (workers send more when home conditions worsen) while FDI retreats when risk premia rise.
+
+Recipient concentration and dependence tell different stories:
+
+- **Dollar volume:** India (**$129B**), Mexico (**$68B**), China (**$48B**), Philippines (**$40B**), Pakistan (**$33B**)
+- **GDP share:** Tajikistan (**45%**), Tonga (**38%**), Nicaragua and Lebanon (**27%** each)
+
+India can absorb a Gulf oil shock better than Tajikistan can absorb a Russian labor-market shock — even if India’s absolute inflow is twenty times larger. The dashboard’s “Dependence ranks” panel lets you toggle **remit/GDP**, **inflow $**, and **pension/GDP** so those three rankings never get conflated.
+
+## Corridors are the plumbing; age is the pressure
+
+Bilateral corridors from the KNOMAD matrix still matter as the physical pipes. **United States → Mexico (~$52B)** remains the world’s largest country-pair flow, ahead of **UAE → India (~$20B)** and **US → Philippines (~$15B)**. Corridor analysis is how you see border enforcement, Gulf visa rules, and payment-rail costs move dollars faster than headline recipient totals.
+
+But corridors alone under-explain *why* the flows persist. UN World Population Prospects paths show Japan, Italy, and Germany climbing toward old-age dependency ratios of **55–75** by **2050**, while Mexico, India, and Nigeria remain far flatter. Host labor markets pull working-age migrants to fill care, construction, logistics, and services gaps; origin households receive the wage surplus. The World Bank’s People Move analysis of US employment after COVID makes the engine visible: **foreign-born employment** recovered to about **11% above** its February 2020 level while **native-born employment** merely returned to flat — a labor-composition shift that supported remittance strength into Latin America and the Caribbean.
+
+## Pensions are the host-side cash flow
+
+OECD Pensions at a Glance puts public cash old-age and survivors’ benefits at an average **8.1% of GDP** in the latest print, up from **6.7%** in 2000. Italy and Greece exceed **16%**. Japan prints about **9.3%** despite (or because of) the world’s most advanced aging profile. Mexico sits near **3%** — a youngish age structure *and* a thinner public pension promise.
+
+Read those percentages beside remittance dependence and the asymmetry sharpens. An Italian or Japanese finance ministry worries about **replacement rates, retirement ages, and contribution bases**. A Tajik or Salvadoran finance ministry worries about **exchange rates, Gulf/US payrolls, and remittance fee corridors**. Both are demographic cash-flow problems. Only one usually appears in G7 communiqués as “aging”; the other appears as “migration and development.”
+
+US politics often splits the same coin into hostile narratives — “immigrants strain entitlements” versus “immigrants save Social Security” — without looking at the joint map. Payroll contributions from working-age immigrants can widen the contribution base even as remittance outflows leave the US current account. Those effects are not contradictory; they are **two simultaneous cash flows from one cohort**.
+
+## What the scatter plot is really saying
+
+The age×remittance scatter is the post’s thesis in one frame. Aging hosts cluster toward **high old-age dependency** and **near-zero remittance/GDP**. Remittance-dependent origins cluster toward **low old-age dependency** and **high remittance/GDP**. Bridge economies (US, China, UAE) sit in between — large absolute remittance *outflows* or mixed inflows, intermediate age structures, and (for the US) material public pension spending.
+
+Three policy mistakes follow from ignoring that geometry:
+
+1. **Treating remittances as aid substitutes.** They are private household transfers. They can finance schooling and buffer shocks, but they do not replace public health systems or pension promises — a point that also sits beside our [OECD DAC aid drop](/blog/oecd-dac-oda-first-drop-2024) and [migration–humanitarian funding gap](/blog/migration-humanitarian-research-2026) posts.
+2. **Treating migration as only a border stock.** Hosting refugees and employing labor migrants are different legal categories with different cash signatures. Forced-displacement funding is collapsing while remittance pipes remain resilient — opposite stress tests on the global system.
+3. **Treating pensions as closed national accounts.** In open labor markets, contribution bases and remittance outflows co-move with immigration policy. Closing a border changes both ledgers, not one.
+
+## Caveats
+
+- **Remittance totals are official-channel lower bounds.** Brief 41 is explicit that informal flows mean true remittances exceed the recorded **$685B**.
+- **Bilateral corridor dollars** (KNOMAD 2021 matrix) are model estimates and are not perfectly contemporaneous with 2024 recipient totals — use them for *ranking pipes*, not for precise YoY corridor growth.
+- **Old-age dependency paths** use UN WPP 2024 anchors; intermediate and projection years in the dashboard are interpolated/illustrative for trend shape.
+- **Public pension % GDP** comes from OECD latest-available prints (country years differ: often 2019–2023). Cross-country levels are comparable in spirit, not in identical fiscal years.
+- **Remittance/GDP ratios** for large economies (India, Mexico) look “small” even when absolute dollars are huge — dependence and volume must stay separate.
+- **UAE and other Gulf hosts** have extremely low measured old-age dependency partly because of temporary working-age migrant stocks — demography here is a labor-import statistic as much as a fertility statistic.
+- **US employment indices** follow the World Bank narrative (foreign-born ~11% above Feb 2020); treat the annual path as illustrative around that disclosed endpoint.
+
+## Methodology
+
+Country profiles combine UN WPP 2024 old-age dependency and median age with World Bank / Brief 41 remittance inflows and GDP shares, plus OECD Pensions at a Glance public pension expenditure where available. LMIC remittance totals and the FDI/ODA comparison follow Brief 41. Corridor rankings follow the KNOMAD bilateral remittance matrix as cited in World Bank People Move explainers. US OASDI depletion year (**2034**) is from the SSA 2025 Trustees Report intermediate assumptions. Role labels (aging-host / remittance-origin / bridge) are editorial for visualization, not official World Bank categories.
+
+## Bottom line
+
+Demographic cash flows are not a metaphor. They are the joint pattern of **pension shares of GDP in old countries** and **remittance shares of GDP in young ones**, linked by working-age migrants who earn in one place and send to another. **$685 billion** in LMIC remittances, a **US→Mexico $52B** top corridor, Italy’s **~16% of GDP** public pensions, and Japan’s **~54** old-age dependency ratio belong on the same dashboard. Until age structure and migration money are read together, policy will keep debating borders and entitlements as if they were separate planets.
+
+Related reading: [Global remittance corridors](/blog/global-remittance-corridors-2026) and [US Social Security trust-fund depletion](/blog/us-social-security-trust-fund-depletion-path-2026).`,
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl: "/images/global-systems-demographic-cash-flows-research-2026-hero.png",
+    imageAlt:
+      "Dark navy data visualization of remittance arcs from aging host economies to younger origin countries with age-structure motifs",
+    publishedAt: "2026-08-01T10:00:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-research-2026",
+    layout: "default",
+  },
+  {
     id: "measurement-science-research-2026",
     slug: "measurement-science-research-2026",
     title:

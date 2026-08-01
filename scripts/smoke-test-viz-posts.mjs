@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "demographic-cash-flows-research-2026",
+    marker: "Demographic cash flows — age, migration, and money",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "measurement-science-research-2026",
     marker: "Where progress is funded and published",
     forbidden: "Loading interactive charts",
