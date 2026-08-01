@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "copper-mine-vs-refinery-geography-2026",
+    slug: "copper-mine-vs-refinery-geography-2026",
+    title:
+      "Charted: China Refines 44% of World Copper — and Mines Only 8%",
+    excerpt:
+      "USGS MCS 2025: China refined ~12 Mt of copper in 2024 (~44% of world) while mining only ~1.8 Mt (~8%). Chile digs 23% of mine tons but refines 7%. The chokepoint is midstream, not the pit.",
+    content: `Copper headlines usually start with **Chile**, the **DRC**, or a COMEX spike. Those are mine and price stories. The U.S. Geological Survey’s Mineral Commodity Summaries 2025 tells a different geography story once you put **mine production** next to **refinery production**. In **2024**, the world mined about **23 million metric tons** of copper (copper content) and refined about **27 million tons**. **China** accounted for roughly **1.8 Mt** of mine output — about **8%** of the dug total — and **12 Mt** of refined metal — about **44%** of the refined total. China’s refine share is roughly **5.7×** its mine share.
+
+That gap is the core answer to the question this post asks: **who digs copper versus who refines it?** The interactive dashboard above maps dumbbells of mine vs refine shares, percentage-point gaps, a scatter of the two axes, and US refined-import sources. Pair it with our [natural graphite mine concentration](/blog/natural-graphite-mine-concentration-2024) piece — a one-country *mine* monopoly — and with [phosphate fertilizer export dependence](/blog/phosphate-fertilizer-export-dependence-2026), where the binding constraint is often processed product trade rather than rock alone. Copper’s chokepoint sits in the **smelter–refinery layer**.
+
+## The dig-versus-refine split, in one table
+
+| Country (2024e, USGS) | Mine (kt) | Mine share | Refine (kt) | Refine share | Gap (pp) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| China | 1,800 | ~7.8% | 12,000 | ~44.4% | **+36.6** |
+| Chile | 5,300 | ~23.0% | 1,900 | ~7.0% | −16.0 |
+| Congo (Kinshasa) | 3,300 | ~14.3% | 2,500 | ~9.3% | −5.1 |
+| Peru | 2,600 | ~11.3% | 390 | ~1.4% | −9.9 |
+| Japan | 0 | 0% | 1,600 | ~5.9% | +5.9 |
+| United States | 1,100 | ~4.8% | 890 | ~3.3% | −1.5 |
+| World (rounded) | 23,000 | 100% | 27,000 | 100% | — |
+
+Shares use USGS rounded world totals. The refinery world total exceeds the mine total because USGS refinery figures include **secondary** (scrap) refining. That does not erase the China story: even allowing for scrap, no other country comes close to a **12 Mt** refine print while sitting under **2 Mt** of mine output.
+
+## Why mine maps alone mislead
+
+If you ranked countries by mine tons alone, the podium is **Chile → DRC → Peru**. Those three together mined about **11.2 Mt** in 2024 — roughly **49%** of world mine output. That is concentrated, but it is a *plural* concentration across two continents, not a single-jurisdiction monopoly like [natural graphite](/blog/natural-graphite-mine-concentration-2024)’s ~79% Chinese mine share.
+
+Refine the same metal and the podium flips. **China alone** prints **~44%** of world refined copper. Add the DRC and Chile and the top three refine share rises toward **~61%**. Japan, South Korea, and Germany appear on the refine list with **zero** domestic mine tons in the USGS table — pure concentrate (and scrap) import hubs. Peru’s asymmetry is almost as stark as China’s, mirrored: **~11%** of mines, **~1.4%** of refining. The metal leaves the Andes as concentrate; cathode and rod stories happen elsewhere.
+
+Policy debates that cite “critical copper” while pointing only at Chilean pits or Congolese expansions are therefore incomplete. **Concentrate trade and Asian smelting capacity** are the valves that convert dug copper into usable metal for wire rod, brass mills, and EV windings.
+
+## What moved from 2023 to 2024
+
+World mine output edged up from about **22.6 Mt** to **23.0 Mt**. The interesting motion is country-level:
+
+- **DRC** jumped from **2.93 Mt** to **3.30 Mt** (+370 kt) — the largest absolute mine gain among large producers.
+- **Indonesia** rose from **0.91 Mt** to **1.10 Mt**, with refine output also climbing (**225 → 350 kt**), consistent with a policy push to keep more metal onshore.
+- **Chile** held the mine lead (**5.25 → 5.30 Mt**) while refine output slipped (**2.08 → 1.90 Mt**).
+- **China’s** mine estimate was roughly flat (**1.82 → 1.80 Mt**); refine held at **12.0 Mt**.
+- **Mexico’s** refine print fell sharply (**509 → 350 kt**) against stable mine tons — a reminder that midstream capacity can move faster than pits.
+
+The dashboard’s gap view sorts countries by refine-share minus mine-share. China’s **+37 pp** lead is not a rounding artifact. Chile’s **−16 pp** and Peru’s **−10 pp** are the mine-heavy mirrors. Those gaps are the shareable geometry: **same metal, two maps**.
+
+## Reserves are not the chokepoint
+
+USGS world copper reserves total about **980 Mt**. Chile holds roughly **190 Mt** (~19%), Peru and Australia about **100 Mt** each, the DRC and Russia about **80 Mt** each. China holds about **41 Mt** — under **5%** of reserves — while refining **~44%** of annual metal. Reserve geography and refine geography barely rhyme.
+
+That mismatch matters for threat models. If your worry is “the world is running out of copper in the ground,” the reserve table says otherwise relative to annual mine rates. If your worry is “usable cathode depends on a narrow set of smelting and refining jurisdictions — especially China — plus seaborne concentrate logistics,” the production table agrees. Reserves are options. **Operating smelters and refineries are capacity.**
+
+## Who is exposed: the United States
+
+The United States mined about **1.1 Mt** and refined about **0.89 Mt** in 2024. Apparent consumption of primary refined copper plus old scrap was about **1.8 Mt**. USGS puts **net import reliance at 45%** of apparent consumption — up from the low-40s in 2022–23. Refined copper import sources (2020–23 average) were **Chile 65%**, **Canada 17%**, **Mexico 9%**, **Peru 6%**, and other **3%**.
+
+Two implications follow. First, US refined imports are **Andean-heavy**, not China-heavy — a different exposure profile than battery graphite. Second, the US still sits inside a global market where **Chinese refining sets marginal midstream capacity**. A shock to Chinese smelter utilization, concentrate import demand, or scrap flows still moves LME/COMEX prices that US consumers pay, even when the shipping documents say Chile.
+
+USGS notes that US mine output slipped in 2024 on lower grades and geotechnical constraints at several operations, while the Kennecott smelter–refinery complex returned toward normal after 2023 rebuilds. Domestic midstream can move — but it does not rewrite the global **44% vs 8%** China split.
+
+## Who wins, who loses, and what would change the map
+
+**Exposed:** fabricators and OEMs that treat refined copper as a globally fungible commodity without modeling smelter bottlenecks; Andes-focused miners whose offtake depends on Asian custom smelting terms; any “friendshoring” plan that funds mines but not refining. **Relative winners under current geography:** Chinese smelters and refiners running imported concentrate and scrap; Japan/Korea/Germany custom-smelting hubs; DRC projects that can place both mine and refine tons on the table.
+
+**What would change the story:** sustained multi-megaton refine capacity outside China that shows up in USGS tables; Indonesian and other producer-country refine ramps that close their own gaps; scrap-collection and secondary-refine growth that reduces primary concentrate dependence; or a demand shock (construction, grid, EVs) that shrinks the call on refined metal. Announced projects matter only when they print as **kt in the MCS table**.
+
+## Caveats and methodology
+
+- **2024 figures are USGS estimates (e).** Minerals Yearbook revisions can move country tons and world totals; shares will shift slightly.
+- **Refinery ≠ mine.** World refine (27 Mt) exceeds world mine (23 Mt) because secondary refining is included. Do not interpret the gap as “missing mine tons.”
+- **Copper content basis.** Figures are copper content, not ore tonnage. Concentrate trade is invisible in the country mine/refine rows except through the dig–refine mismatch.
+- **World totals are rounded.** Country shares are computed against USGS rounded worlds and may not sum to 100% if every row is re-added.
+- **US import-source shares are 2020–23 averages** for refined copper — structural dependence, not a 2024 snapshot.
+- **Smelting vs electrolytic refining** are collapsed into USGS “refinery production.” Process-route detail is outside this dashboard.
+
+## The shareable takeaway
+
+In **2024**, China refined about **44%** of the world’s copper metal while mining only about **8%** of the dug tons — a **~37 percentage-point** midstream surplus. Chile still leads the mine map at **~23%** but refines only **~7%**. Copper’s chokepoint is not only who owns the pit. It is **who turns concentrate into cathode**.
+
+Related reading: [natural graphite mine concentration](/blog/natural-graphite-mine-concentration-2024) and [phosphate fertilizer export dependence](/blog/phosphate-fertilizer-export-dependence-2026).`,
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-copper-mine-vs-refinery-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz of copper flowing from orange mine geography to teal refining hubs",
+    publishedAt: "2026-08-01T06:00:00Z",
+    featured: true,
+    visualization: "copper-mine-vs-refinery-geography-2026",
+    layout: "default",
+  },
+  {
     id: "demographic-cash-flows-research-2026",
     slug: "demographic-cash-flows-research-2026",
     title:

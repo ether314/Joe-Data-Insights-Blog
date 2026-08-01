@@ -512,6 +512,21 @@ const DemographicCashFlowsResearchDashboard = dynamic(
   },
 );
 
+const CopperMineVsRefineryGeographyDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/CopperMineVsRefineryGeographyDashboard").then(
+      (m) => m.CopperMineVsRefineryGeographyDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -635,6 +650,10 @@ export function PostVisualization({
 
   if (type === "demographic-cash-flows-research-2026") {
     return <DemographicCashFlowsResearchDashboard />;
+  }
+
+  if (type === "copper-mine-vs-refinery-geography-2026") {
+    return <CopperMineVsRefineryGeographyDashboard />;
   }
 
   return null;

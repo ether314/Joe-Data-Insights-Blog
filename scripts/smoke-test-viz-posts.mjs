@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "copper-mine-vs-refinery-geography-2026",
+    marker: "Copper mine vs refinery geography",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "demographic-cash-flows-research-2026",
     marker: "Demographic cash flows — age, migration, and money",
     forbidden: "Loading interactive charts",
