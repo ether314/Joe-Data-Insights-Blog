@@ -2,6 +2,108 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "migration-humanitarian-research-2026",
+    slug: "migration-humanitarian-research-2026",
+    title:
+      "Charted: 123M Displaced While Humanitarian Appeals Are Only 23% Funded",
+    excerpt:
+      "Forced displacement hit 123.2 million at end-2024. Low- and middle-income countries still host 73% of refugees — yet OCHA GHO appeals were 23% funded by Oct 2025 and UNHCR covered just 37% of needs. Hosts carry people; cash evaporated.",
+    content: `Border politics and asylum headlines dominate migration debates in rich democracies. The ledger that actually describes the system looks different. At the end of **2024**, **123.2 million** people were forcibly displaced worldwide — a record in UNHCR's Global Trends series — and **73%** of refugees and other people needing international protection lived in **low- and middle-income countries**. Internally displaced people, not cross-border asylum seekers, made up the majority of that stock. Meanwhile the money meant to cushion those hosts collapsed: UNHCR's needs were only **48%** funded in 2024 and **37%** in 2025; OCHA's Global Humanitarian Overview appeals were **23.4%** funded by end-October 2025.
+
+This post is not a remake of our [refugee hosting map](/blog/global-refugee-hosting-burden-2024), which ranks *who shelters people*. It asks the twin question: **who bears the cost when displacement rises and humanitarian cash falls** — and how that diverges from the narratives that treat migration as a rich-country border emergency. Donor ledgers (see also [OECD DAC aid in 2024](/blog/oecd-dac-oda-first-drop-2024)) and host stocks tell opposite stories unless you put them on the same screen.
+
+## The headline mismatch
+
+| Meter | Print | Source |
+| --- | ---: | --- |
+| Forcibly displaced (end-2024) | 123.2M | UNHCR Global Trends 2024 |
+| Conflict IDPs (IDMC) | 73.5M | IDMC / Global Trends |
+| Refugees + others needing protection | 42.7M | UNHCR / UNRWA |
+| Asylum-seeker stock | 8.4M (record) | UNHCR |
+| LMIC share of refugee hosting | 73% | UNHCR |
+| LDC share of refugee hosting | 23% | UNHCR |
+| UNHCR budget vs available (2024) | $10.8B / $5.2B (48% funded) | Global Report 2024 |
+| UNHCR budget vs available (2025) | $10.6B / $3.9B (37% funded) | Global Report 2025 |
+| GHO requirements vs funding (Oct 2025) | $45.4B / $10.6B (23.4%) | OCHA GHO Oct update |
+| Total humanitarian funding YoY (Oct) | −26% ($18.6B vs $25.3B) | OCHA / FTS |
+
+Read the table as one sentence: **people stocks are near highs; coverage rates are near lows.** Sudan alone accounts for **14.3 million** forcibly displaced people — the world's largest displacement situation — while its 2025 HNRP sat near **27%** funded at end-September and the regional Sudan refugee response plan nearer **15%**.
+
+## IDPs are the majority — and the invisible majority
+
+Cross-border refugees and asylum seekers dominate Western politics. The composition donut in the dashboard is the corrective. Of the end-2024 forced-displacement stock, **conflict IDPs (~73.5M)** outnumber refugees-and-others (~42.7M) and asylum-seekers (~8.4M) combined. People displaced *inside* Sudan, Myanmar, Ukraine, DRC, and Haiti never appear in EU Mediterranean landing stats or US immigration-court dockets — yet they drive food, shelter, and protection caseloads that UN appeals try (and increasingly fail) to fund.
+
+That invisibility matters for cost-sharing arguments. When high-income electorates debate "migration costs," they usually mean arrivals on *their* territory. The global cost base is mostly **neighbours hosting refugees** plus **home-country IDP crises** that never become asylum claims abroad. Our [US immigration court backlog](/blog/us-immigration-court-backlog-2025) post measures one rich-country processing bottleneck; it is not a proxy for global displacement burden.
+
+## Funding fell while needs did not
+
+UNHCR's Global Report series makes the scissors visible. Funds available covered roughly **59%** of needs in 2020 and **48%** in 2024 — the first year below half. In **2025**, available resources dropped another **$1.25 billion** to **$3.93B** against a **$10.6B** budget (**37%** funded). Expenditure fell to **$3.83B**. UNHCR assisted fewer people with resources last seen when the forcibly displaced and stateless population was less than half today's size.
+
+OCHA's system-wide picture is worse on coverage, if broader in scope. By **31 October 2025**, GHO consolidated requirements were **$45.37B** to assist **181M** of **300M** people in need across 73 countries. Reported appeal funding: **$10.61B** — **23.4%**. Total humanitarian funding tracked by FTS was **$18.64B**, down **26%** from the same point in 2024. Eastern Europe (Ukraine) still cleared about **45%** coverage; Latin America & Caribbean and regional refugee response plans languished near **14–16%**.
+
+The dashboard's dual-axis panel pairs displacement stocks with UNHCR funded share. The lines diverge after 2021: people up, coverage down. That is the operational definition of a humanitarian system at breaking point — not a metaphor.
+
+## Appeals: Sudan underfunded, Syria regional near collapse
+
+Crisis-level FTS coverage (end-September 2025, via OCHA's October GHO update) shows how "underfunded" is not uniform:
+
+- **Ukraine HNRP — 45%** funded (best among large plans in the sample)
+- **Afghanistan / OPT — ~35%**
+- **Sudan HNRP — 27%** against **30.4M** people in need
+- **Syria flash appeal — 20%**; **DRC — 17%**; **Myanmar HNRP — 14%**
+- **Regional RRPs** for Syria, Ukraine, and Afghanistan: roughly **9–10%** — the neglected outer ring of neighbouring-host support
+
+Filter the horizontal bars by region or sort by worst-funded, largest dollar need, or most people. The pattern is stubborn: **the crises that generate the most neighbours-as-hosts also sit among the worst-funded regional plans.** Cash follows attention and geopolitics; hosting follows geography.
+
+## Who hosts vs who pays UNHCR
+
+UNHCR's 2024 government/EU donor table is a concentration story. The **United States** contributed about **$2.06B** — on the order of **40%** of funds available that year — followed by **Germany ($333M)**, the **EU ($271M)**, and a Nordic/G7 tier in the **$110–170M** range. Japan, a high-income country that hosts almost no refugees under mandate, still outranks many European hosts as a cash donor.
+
+Put that beside hosting stocks and the scatter splits into quadrants:
+
+- **Host-only / host-heavy:** Iran (**3.5M**), Türkiye (**2.9M**), Colombia (**2.8M**), Uganda (**1.8M**), Pakistan, Chad, Bangladesh — large people burdens, little or no UNHCR donor rank.
+- **Donor-heavy:** United States (~**435k** hosted under the mandate series used here), Japan, Nordics, UK — large cheques, small stocks relative to LMIC hosts.
+- **Both:** Germany is the rare large host (**2.7M**) that also sits in the UNHCR top-three cash donors.
+
+High-income countries hold roughly **64%** of world GDP and hosted about **27%** of refugees and others needing protection at end-2024. Least Developed Countries — **1.4%** of global GDP — hosted **23%**. Neighbouring countries hosted **67%**. Those three UNHCR facts are the rebuttal to any framing that treats forced displacement as primarily a Northern arrival problem.
+
+OECD DAC accounting adds a further twist: **in-donor refugee costs** were about **$27.8B** in 2024 preliminary ODA (**13.1%** of DAC ODA). Rich countries can count domestic asylum spending as "aid" while underfunding the appeals that support LMIC hosts next door to conflict. Volume on the donor ledger is not the same as burden on the host ledger — a point our [DAC ODA post](/blog/oecd-dac-oda-first-drop-2024) develops on the intensity-vs-volume frontier.
+
+## Narratives vs the cost map
+
+Three narrative failures follow from the data:
+
+1. **"The West is overwhelmed by global refugees."** Absolute arrivals are politically real, and Germany's hosting is large. But LMIC hosts still carry **nearly three-quarters** of the refugee stock, and IDPs — the majority of forced displacement — never become Western asylum cases.
+2. **"Aid will scale with need."** UNHCR and GHO coverage rates moved the other way as displacement hit records. 2025 is not a modest dip; it is a step-change down in available dollars.
+3. **"Funding equals hosting."** The US is the indispensable UNHCR donor and a modest host on UNHCR stocks; Iran, Uganda, and Chad are the reverse. Conflating the two roles is how policy debates talk past the evidence.
+
+Returns rose in 2024 — including large Syrian movements after Assad's fall — but UNHCR is explicit that fragile returns without reconstruction funding can reverse. Underfunded neighbouring hosts are not a stable equilibrium; they are a transmission channel for secondary movement, informal economies, and political backlash in the places that already absorb the most people.
+
+## Caveats
+
+- **Displacement stocks mix legal categories.** Refugees under UNHCR mandate, Palestine refugees under UNRWA, "other people in need of international protection" (e.g. many Venezuelans), asylum-seekers, and IDPs are not interchangeable. The composition chart keeps them separate; totals can double-count edge cases if naively summed across sources.
+- **2020–2023 displacement levels in the dual-axis chart are approximate** decade-path estimates anchored to disclosed 2024–25 points. Treat the *direction* (up) as robust; treat intermediate year levels as illustrative.
+- **FTS funding is reported funding**, often lagging commitments and missing some bilateral/in-kind flows. Coverage percentages are lower bounds that can revise upward — but the YoY collapse in reported totals is too large to explain as reporting noise alone.
+- **Host figures for high-income states** in the scatter sometimes use mandate-only series where Global Trends does not publish a standalone OPNIIP total; they are flagged in the dataset and should not be naively stacked with OPNIIP hosts.
+- **UNHCR donor totals are government/EU contributions** for 2024; private fundraising and pooled funds are excluded from the ranked bar unless noted.
+- **GHO people-in-need (300M)** is broader than forced displacement alone — it includes food insecurity, disaster, and other humanitarian caseloads. Use it for funding-system stress, not as a synonym for "refugees."
+
+## Bottom line
+
+Forced displacement set a **123.2 million** record while the agencies and appeals that support hosts covered **less than half** of UNHCR needs and barely **a quarter** of GHO requirements. Low- and middle-income neighbours still host **73%** of refugees. Cash concentrates in a handful of Northern donors; people concentrate next to conflict. Until those two maps are read together, migration politics will keep arguing about the border while the bill — unpaid — sits somewhere else.
+
+Related reading: [Who hosts the world's refugees](/blog/global-refugee-hosting-burden-2024) and [OECD DAC aid's first drop in six years](/blog/oecd-dac-oda-first-drop-2024).`,
+    category: "Politics",
+    themeId: "migration-humanitarian",
+    imageUrl: "/images/politics-migration-humanitarian-research-2026-hero.png",
+    imageAlt:
+      "Dark navy data visualization of global forced displacement rising while humanitarian appeal funding coverage collapses",
+    publishedAt: "2026-07-31T18:00:00Z",
+    featured: true,
+    visualization: "migration-humanitarian-research-2026",
+    layout: "default",
+  },
+  {
     id: "fiscal-industrial-policy-research-2026",
     slug: "fiscal-industrial-policy-research-2026",
     title: "Charted: Subsidy Jurisdictions Nearly Doubled as Industrial Policy Went Global",

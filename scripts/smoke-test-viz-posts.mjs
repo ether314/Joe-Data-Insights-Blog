@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "migration-humanitarian-research-2026",
+    marker: "Record displacement, collapsing coverage",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-industrial-policy-research-2026",
     marker: "Jurisdiction coverage: who is intervening?",
     forbidden: "Loading interactive charts",
