@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-power-grid-research-2026",
+    marker: "AI power & grid — IEA global frame",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-financing-research-2026",
     marker: "Hyperscaler IG bond issuance vs debt share of capex",
     forbidden: "Loading interactive charts",

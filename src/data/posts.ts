@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-power-grid-research-2026",
+    slug: "ai-power-grid-research-2026",
+    title:
+      "Charted: Data Centres Hit 415 TWh in 2024 — Can the Grid Keep Pace to 945 TWh?",
+    excerpt:
+      "IEA Energy and AI: global data-centre electricity doubles to ~945 TWh by 2030 in the Base Case. Renewables meet ~half the incremental load; ~20% of planned projects sit at grid-delay risk. The constraint is local queues and clusters, not global averages.",
+    content: `The AI buildout is often framed as a race for chips. It is equally a race for **electrons that arrive on time**. The International Energy Agency’s *Energy and AI* assessment puts a hard global meter on the load: data centres consumed about **415 TWh** in **2024** — roughly **1.5%** of world electricity — and the Base Case roughly **doubles** that to about **945 TWh** by **2030** (just under **3%** of global demand). An IEA follow-up (*Key Questions on Energy and AI*) already sees **485 TWh** in **2025**, with AI-focused sites growing faster than the sector average.
+
+That is the wrong number to panic over if you stop at the global share. Three percent of world electricity is still smaller than the stories about “AI eating the grid” imply. The right number is **where** those terawatt-hours land, **how fast** generation and wires can follow, and **which fuels** fill the gap while transmission queues crawl. This post is the global IEA frame for that question. For the US-only LBNL demand path versus transmission miles, see our companion [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) piece. For who is installing renewable gigawatts while local grids choke, pair this with [IRENA’s 2024 renewable capacity record](/blog/irena-renewable-capacity-record-2024).
+
+## The headline ledger
+
+| Metric | Value | Source framing |
+| --- | --- | --- |
+| Global DC electricity, 2024 | 415 TWh (~1.5% of world) | IEA Energy and AI |
+| Global DC electricity, 2025 | 485 TWh (+17% y/y) | IEA Key Questions update |
+| Base Case, 2030 | ~945 TWh (~3%) | IEA Base Case |
+| Base Case, 2035 | ~1,200 TWh | IEA Base Case |
+| Scenario fan, 2035 | ~700–1,700 TWh | Headwinds → Lift-Off |
+| US / China / Europe share, 2024 | 45% / 25% / 15% | IEA regional split |
+| US + China share of growth to 2030 | ~80% | IEA regional outlook |
+| Renewables’ share of incremental supply | ~50% to 2030 | IEA supply chapter |
+| Fossil share of incremental supply | >40% (gas + coal) | IEA supply chapter |
+| Planned DC projects at delay risk | ~20% | IEA grid risk estimate |
+| US capacity in five clusters | ~half | IEA concentration note |
+| US active generation in queues (end-2025) | 1,312 GW | LBNL Queued Up 2026 |
+| Median US IR → COD (2025 builds) | >5 years | LBNL Queued Up 2026 |
+
+The non-obvious cut is not “data centres use electricity.” It is **pace mismatch**: a sector that can stand up a campus in two to three years colliding with interconnection and transmission clocks measured in half-decades — while the fuel mix that actually serves those sites still leans on coal and gas for a large slice of both the stock and the growth.
+
+## Global demand doubles; local markets absorb the spike
+
+From 2017 through the early 2020s, data-centre electricity grew about **12% per year** — more than four times the growth rate of total electricity demand. The Base Case keeps the sector running hot at roughly **15% per year** from 2024 to 2030. Inside that aggregate, **accelerated servers** (the AI stack) grow about **30% per year**, while conventional servers grow closer to **9%**. Accelerated servers account for nearly half of the *net increase* in global data-centre electricity; cooling and site infrastructure take roughly another fifth; conventional servers another fifth; other IT the remainder.
+
+Regionally, the United States already held about **45%** of 2024 data-centre electricity, China **25%**, and Europe **15%**. Absolute growth to 2030 is similarly concentrated: the US adds about **240 TWh** (+130% from 2024), China about **175 TWh** (+170%), Europe more than **45 TWh** (+70%). Together the US and China deliver nearly **80%** of global growth. Japan’s absolute add is smaller (~**15 TWh**) but still an **80%** lift from a smaller base. Southeast Asia is flagged as a doubling market by 2030 around hubs such as Singapore and southern Malaysia.
+
+Per-capita intensity makes the geography visceral. The IEA puts US data-centre electricity near **540 kWh per person** in 2024, rising above **1,200 kWh** by 2030 — on the order of **10%** of an American household’s annual electricity use, and an order of magnitude above other regions. Africa sits below **1 kWh** per capita today. Global averages flatten a story that is really a handful of metro clusters.
+
+## Supply can grow — but fossils still cover the near-term surge
+
+Generation dedicated to serving data centres rises from about **460 TWh** in 2024 to **over 1,000 TWh** by 2030 in the Base Case (and toward **1,300 TWh** by 2035). That is the supply twin of the demand doubling. The **physical** mix serving those loads today — not the contractual PPA mix operators advertise — still has **coal near 30%**, **renewables near 27%**, **natural gas near 26%**, and **nuclear near 15%**.
+
+On the *incremental* path to 2030, renewables are the fastest-growing slice, expanding about **22% per year** in generation tied to data centres and meeting nearly **half** of additional demand. Natural gas and coal together still cover **over 40%** of the added megawatt-hours. After 2030, small modular reactors enter the narrative: hyperscalers have publicly backed plans north of **20 GW** of SMRs, but that is a 2030s baseload story, not a 2026 interconnection cure.
+
+National colour matters. In the United States, gas is already the largest source for data-centre electricity (**over 40%**), with renewables about **24%** and nuclear and coal near **20%** and **15%**. Through 2030, gas adds over **130 TWh** of annual generation for US data centres; renewables add about **110 TWh**. In China, coal still dominates the stock (**near 70%**), and coal and renewables each add nearly **90 TWh** of annual generation for data centres by 2030. Europe is the cleaner incremental path: renewables plus nuclear are set to supply most of the additional electricity, with a combined share rising toward **85%** by 2030.
+
+CO₂ from electricity generation for data centres peaks around **320 Mt** by 2030 in the Base Case before a shallow decline toward **300 Mt** by 2035. Even after the doubling, data centres remain a small slice of global power-system emissions — the stress is operational and local, not a climate pie-chart takeover.
+
+## Grid queues and clusters are the binding constraint
+
+A data centre can be useless without a firm interconnection. The IEA estimates that unless grid risks are addressed, around **20%** of planned data-centre projects could face delays. Building new transmission in advanced economies can take **four to eight years**. Wait times for transformers and cables have **doubled** in three years. Nearly **half** of US data-centre capacity sits in **five regional clusters**, and about **50%** of US data centres under development remain inside those pre-existing large clusters — exactly where local congestion risk compounds.
+
+LBNL’s *Queued Up* 2026 edition (data through end-2025) shows the supply-side mirror: roughly **8,200** active projects seeking interconnection, representing about **1,312 GW** of generation and **749 GW** of storage. Median time from interconnection request to commercial operation exceeded **five years** for projects built in 2025. Only **13%** of capacity that entered queues from 2000–2020 had reached commercial operation by end-2025; most of the rest withdrew. That is the clock hyperscalers are racing against when they announce multi-gigawatt campuses on two-to-three-year construction schedules.
+
+Flexibility is theoretically available — spare server capacity, backup generation, non-firm connections, siting away from saturated hubs — but an AI-focused campus is capital-intensive enough that voluntary curtailment is expensive. The IEA’s own warning is that these tools remain underexplored relative to the urgency of the queues.
+
+## Scenario fan: 700 to 1,700 TWh by 2035
+
+Uncertainty after 2030 is large enough that a single line chart is propaganda. The IEA’s sensitivity cases sketch the fan:
+
+- **Base Case** — ~945 TWh in 2030, ~1,200 TWh in 2035.
+- **Lift-Off** — stronger AI uptake and fewer bottlenecks; 2035 demand around **45%** above Base, exceeding **1,700 TWh** (~**4.4%** of global electricity). Fossil generation for data centres rises faster; long connection queues push more of the upside onto gas and coal.
+- **High Efficiency** — same digital services with sharper hardware/software/infrastructure efficiency; more than **15%** energy savings versus Base by 2035 (~**970 TWh**).
+- **Headwinds** — slower AI uptake and tighter bottlenecks; demand plateaus near **700 TWh**, keeping the sector under **2%** of global electricity by 2035.
+
+The practical reading for grid planners is not to pick a favourite scenario. It is to notice that **even the Headwinds case** keeps absolute demand well above 2024, while **Lift-Off** turns interconnection reform and gas/coal build decisions into first-order energy-security questions in the US and China.
+
+## Historical context and what would change the story
+
+The last decade taught a false comfort: workloads rose while power flatlined thanks to efficiency. That era is over for AI-dense sites. Power density per rack, accelerated-server shipments, and geographic clustering flipped the relationship. The 2010s efficiency dividend still exists at the margin — it is the High Efficiency case — but it is no longer the base assumption.
+
+Several developments would rewrite the interpretation. A sustained **collapse in AI model training and inference intensity** (algorithmic efficiency beating parameter scale) would drag outcomes toward Headwinds without any grid reform. A **wave of successful SMR and firm clean power** online before 2032 would change the post-2030 fuel mix faster than the Base Case. Aggressive **siting outside saturated clusters**, plus faster transformer manufacturing and interconnection process reform, would cut the 20% delay-risk estimate. Conversely, if speculative queue filings continue to swamp study processes, published gigawatt pipelines will keep overstating deliverable capacity. And if US or Chinese peak-load forecasts keep revising upward the way regional planners have already done, the “3% of global electricity” comfort statistic will coexist with local brownout politics.
+
+## Caveats and methodology
+
+- **Global share ≠ local stress.** A 3% world share can still dominate Northern Virginia, Dublin, or Frankfurt substations. Cluster concentration is the analytically relevant unit.
+- **Physical mix ≠ contractual mix.** Supply shares here follow the IEA’s physical generation serving data centres (grid fuel mix plus onsite), not corporate PPA claims.
+- **Scenario intermediates are estimated.** Disclosed anchors include 2024 (415 TWh), 2025 update (485 TWh), 2030 Base (~945 TWh), and 2035 case endpoints. Mid-path points in the dashboard are linear interpolations for visualization, not IEA year-by-year publications.
+- **Regional residuals are estimated.** Japan and “rest of world” levels are reconciled to IEA growth deltas and 2024 share residuals; treat them as order-of-magnitude, not census counts.
+- **Queue GW ≠ built GW.** LBNL active queue volumes include projects that will withdraw. Completion rates historically are low; use queues as a congestion signal, not a capacity forecast.
+- **Generation vs consumption.** IEA reports both demand (~415 TWh in 2024) and generation serving data centres (~460 TWh); the gap reflects losses and accounting boundaries — do not force them to match digit-for-digit.
+
+## The shareable takeaway
+
+Data centres used **415 TWh** in 2024 and are on track, in the IEA Base Case, for about **945 TWh** by 2030 — a doubling that still leaves them near **3%** of global electricity. The binding constraint is not that global percentage. It is that **US and China drive ~80% of the growth**, **~half of US capacity sits in five clusters**, **renewables cover only about half of incremental supply** while gas and coal cover most of the rest, and **~20% of planned projects** sit at grid-delay risk while US interconnection medians stretch past **five years**. Electricity *can* be built for AI. The open question is whether wires, transformers, and interconnection processes will let it show up where the GPUs actually plug in.
+
+Related reading: [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) and [record renewable capacity additions in 2024](/blog/irena-renewable-capacity-record-2024).`,
+    category: "Energy",
+    themeId: "ai-power-grid",
+    imageUrl: "/images/energy-ai-power-grid-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic visualization of AI data-center load racing ahead of transmission grid build-out",
+    publishedAt: "2026-07-31T18:00:00Z",
+    featured: true,
+    visualization: "ai-power-grid-research-2026",
+    layout: "default",
+  },
+  {
     id: "ai-financing-research-2026",
     slug: "ai-financing-research-2026",
     title: "Charted: Hyperscalers Will Fund a Third of AI Capex With Debt by 2026",
