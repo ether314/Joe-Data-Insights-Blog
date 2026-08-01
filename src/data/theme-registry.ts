@@ -454,6 +454,7 @@ export const SLUG_THEME_IDS: Record<string, string> = {
   "global-last-mile-delivery-robotics-2026": "industrial-robotics",
   "china-industrial-robot-installations-share-2023": "industrial-robotics",
   "global-shipbuilding-concentration-2023": "heavy-industrial-capacity",
+  "global-shipbuilding-gt-delivery-concentration-2026": "heavy-industrial-capacity",
   "china-us-india-gdp-30-years": "macro-growth-trade",
   "deflationary-growth-economies-2025": "macro-growth-trade",
   "macro-growth-trade-research-2026": "macro-growth-trade",

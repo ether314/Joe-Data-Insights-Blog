@@ -2,6 +2,114 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "global-shipbuilding-gt-delivery",
+    slug: "global-shipbuilding-gt-delivery-concentration-2026",
+    title:
+      "Charted: China Delivers 54.6% of World Ship GT — Greece Still Owns More Fleet",
+    excerpt:
+      "UNCTAD’s 2024 delivery ledger puts China at 54.6% of merchant-ship gross tonnage, with Korea and Japan bringing East Asia to 95%. Greece still tops beneficial ownership at 16.4% of dwt — proof that building steel and owning capacity are different maps.",
+    content: `The world’s merchant fleet is financed in Athens, Geneva, and Singapore — and welded in Shanghai, Busan, and Imabari. That split is the industrial story UNCTAD’s *Review of Maritime Transport* keeps reprinting, and 2024 made it sharper: **Chinese yards delivered 54.6% of global gross tonnage (GT)**, the Republic of Korea **28%**, and Japan **12.6%**. Together the East Asian trio shipped **95.2%** of new merchant-ship capacity. Everyone else — Europe’s cruise specialists, Viet Nam, the Philippines, India, the United States — shared the remaining rounding error.
+
+This post asks a two-part question: **who delivers the world’s new merchant-ship capacity, and who owns versus builds?** GT measures the physical size of vessels leaving yards. Deadweight tons (dwt) measure carrying capacity on the water. Beneficial ownership asks which country’s companies control that capacity — regardless of flag. The interactive dashboard above stacks those ledgers so the build map and the own map cannot be confused.
+
+For a parallel in aerospace — high-value assembly with a very different geography — see our [commercial aircraft final-assembly map](/blog/commercial-aircraft-final-assembly-2025). For an earlier cut of the same maritime concentration theme, see [global shipbuilding concentration 2023](/blog/global-shipbuilding-concentration-2023).
+
+## The 2024 delivery scoreboard
+
+UNCTAD’s Table II.6 (Clarksons Research underlying) records **71.7 million GT** of propelled seagoing merchant vessels (≥100 GT) delivered in 2024 — roughly **10%** more tonnage than 2023 and **8.8%** more vessels. Country shares:
+
+| Builder | 2024 GT delivered | Share of world |
+| --- | ---: | ---: |
+| China | 39.1M GT | **54.6%** |
+| Republic of Korea | 20.1M GT | **28.0%** |
+| Japan | 9.0M GT | **12.6%** |
+| Viet Nam | 0.72M GT | 1.0% |
+| Philippines | 0.67M GT | 0.9% |
+| Europe (aggregate) | 0.62M GT | 0.9% |
+| Rest of world | 1.5M GT | 2.0% |
+| **World** | **71.7M GT** | **100%** |
+
+China alone out-delivered Korea and Japan *combined*. That is not a soft majority: it is a structural lead. In 2023 China crossed **50%** of world GT for the first time on UNCTAD’s series; 2024 pushed the print to the mid-fifties. Korea held roughly steady near **28%**. Japan slipped from **14.9%** to **12.6%**. The long arc — Japan’s ~50% era in the 1970s–80s, Korea’s mid-2010s peak near **35%**, China’s post-2010 surge — is the industrial succession story of heavy manufacturing.
+
+Minor builders matter as footnotes and as policy aspirations. UNCTAD’s overview table puts the **United States at 0.04%** of 2024 commercial GT output, India at **0.06%**, Italy at **0.64%** (cruise and passenger niches), and Germany at **0.26%**. Naval shipbuilding is a different industry; commercial GT is the ledger that renews the global trading fleet.
+
+## Segment leadership: China everywhere except gas
+
+Gross tonnage is not one market. Containers and bulk carriers dominated 2024 deliveries — **41.3%** and **26.6%** of world GT respectively — with gas carriers at **12.2%** and oil tankers a thin **5.1%**. Inside that mix, leadership flips by segment:
+
+- **Containers:** China led with ~16.6M GT versus Korea’s ~11.3M and Japan’s ~1.7M. China’s container surge also showed up in 2023, when UNCTAD noted China overtaking Korea in the container segment.
+- **Bulk carriers:** China ~12.5M GT; Japan a strong second at ~5.7M; Korea’s print is negligible in the published table. Japan’s remaining franchise is still heavily bulker-tilted.
+- **Gas carriers:** Korea remains the specialist — ~6.8M GT against China’s ~1.7M and Japan’s ~0.2M. UNCTAD’s contracting narrative for 2024 still flags gas as the segment where China does *not* hold first place.
+- **Oil tankers:** A closer China–Korea race (~1.5M vs ~1.3M GT), with Japan a distant third.
+
+The strategic read is simple. China’s lead is broadest in the volume segments that move dry cargo and boxes. Korea’s remaining moat is high-value gas and a deep book in complex hulls. Japan is defending a bulker franchise while losing share overall. Europe’s yards still matter for cruise ships and niche passenger tonnage — visible in vessel counts and value, not in GT share.
+
+## Build versus own: Greece’s ledger is not China’s yard
+
+If you stop at deliveries, you miss the ownership map. As of **1 January 2025**, UNCTAD’s beneficial-ownership ranking (vessels ≥1,000 GT) still puts **Greece first at 16.4% of world dwt** (~398 million dwt), ahead of **China at 14.4%** (~347 million dwt) and **Japan at 9.9%** (~241 million dwt). Singapore, Hong Kong (China), and Korea follow. European owners as a group still control about a third of carrying capacity; Asian owners about half.
+
+That is the core paradox of maritime industrial power:
+
+- **China builds ~55% of new GT and owns ~14% of the fleet.**
+- **Korea builds ~28% and owns ~4%.**
+- **Japan builds ~13% and owns ~10%** — the closest build/own alignment among the big three.
+- **Greece builds essentially nothing commercial at world scale and owns ~16%.**
+
+Ownership is a capital-markets and chartering story. Building is a steel-throughput, labor, and industrial-policy story. Greek owners order in Asia; Chinese state and private owners order preferentially at home; Korean yards sell complex tonnage to global buyers. Flags complicate the picture further: Liberia, Panama, and the Marshall Islands still hold the top three *registers*, with open registries accounting for the majority of world capacity — so “where the ship is flagged” is rarely “where the owner sits” or “where the hull was welded.”
+
+## Orderbook lock-in: deliveries understate the pipeline
+
+Deliveries lag contracts by years. UNCTAD, citing Clarksons, reports that China took **74.4% of contracted GT in 2024** and held **63.7% of the global orderbook by GT at the start of 2025**. Active Chinese yards (~120) hold roughly **45% of global yard capacity** but about **60% of the orderbook** — a mismatch that means Chinese slots are fuller relative to physical capacity than competitors’. The global orderbook stood near **15%** of the active fleet early in 2025 — moderate versus the 2009 bubble (~52%), but concentrated.
+
+Yard consolidation is the other half of concentration. About **348** yards secured contracts or completed deliveries in 2024 — roughly half the **2007** peak near **739**. Fewer yards, more GT in China, and elevated newbuilding prices together raise switching costs for owners who might wish to diversify builders for geopolitical reasons. UNCTAD’s 2025 chapter is explicit: a rapid short-term switch away from Chinese capacity is difficult.
+
+Policy is noticing. The United States has floated port fees aimed at Chinese-linked operators and Chinese-built vessels; India announced a multi-billion-dollar maritime development fund; Korea is relaxing immigration rules and outsourcing some production; Russia is planning a large domestic newbuild program. None of those moves rewrite 2024’s GT shares overnight. They do change the *risk premium* attached to Chinese-built tonnage calling at certain ports — a financial and routing variable, not an instant relocation of dry docks.
+
+## Who wins, who is exposed
+
+**Winners of the current map:** Chinese yards and their domestic supply chains; Korean yards in gas and complex tonnage; Greek and other European owners who can still shop Asia for cheap, fast slots; charterers who benefit from abundant new container and bulker supply.
+
+**Exposed:** owners concentrated in Chinese-built fleets if destination-port fees or insurance differentials widen; Korean and Japanese yards fighting labor and cost inflation while China expands capacity toward ~1,700 ships/year of global nameplate (BRS via UNCTAD); US and Indian commercial ambitions starting from sub-0.1% GT shares; any analyst who treats “China owns shipping” as synonymous with “China builds ships.”
+
+The contrast with [industrial robot installation geography](/blog/industrial-robotics-research-2026) is useful: robots concentrate where factories automate; ships concentrate where steel and wet docks scale. Both are heavy-industrial capacity stories. Only one still has Greece at the top of the ownership table.
+
+## What would change the story
+
+Several observables would force a rewrite:
+
+1. **China’s delivery share falling back below 45%** for two consecutive years — evidence that Korea/Japan (or newcomers) are reclaiming volume, not just niches.
+2. **Korea losing gas-carrier leadership in contracting** — the last major segment China does not already lead.
+3. **US or Indian commercial GT share rising above 1%** — a real industrial foothold, not a press release.
+4. **Greece’s ownership share falling below China’s** while Chinese build share stays above 50% — ownership catching up to yards.
+5. **Sustained orderbook diversification** — China’s orderbook share dropping toward its yard-capacity share (~45%) rather than sitting near two-thirds.
+
+Until one of those prints, the default forecast is more of the same: East Asia welds almost everything; Greece and a handful of Asian owners finance and control a surprising share of what floats; open registries fly the flags.
+
+## Caveats and methodology
+
+- **GT ≠ dwt ≠ value.** Gross tonnage measures enclosed volume (useful for shipbuilding output). Deadweight measures cargo capacity (useful for ownership and trade). Fleet *value* rankings can reorder countries — China leads ownership by value in some UNCTAD tables even when Greece leads by dwt.
+- **Coverage thresholds differ.** Delivery tables cover merchant vessels ≥100 GT; beneficial-ownership tables typically start at ≥1,000 GT.
+- **2023 China “>50%”** is UNCTAD’s milestone language; we chart it as 50.0% for the 2023 milestone point. The precise 2023 decimal is less important than the crossing.
+- **Share milestones** (1980 Japan era, 2016 Korea peak) are narrative benchmarks from UNCTAD/BRS citations, not a reconstructed annual series — the dashboard labels them as such.
+- **Europe** in the 2024 delivery strip is UNCTAD’s aggregate column, not a single national yard system; Italy and Germany appear separately in the minor-builder overview.
+- **Korea bulk-carrier “NA”** in Table II.6 is treated as zero in segment stacks; do not over-read a blank cell as a disclosure of zero capability in other years.
+- Clarksons Research underlies UNCTAD’s calculations; revisions in later Clarksons pulls can shift decimals without changing the concentration story.
+
+## The shareable takeaway
+
+In 2024 China delivered **54.6%** of the world’s new merchant-ship GT — more than Korea and Japan combined — while the East Asian trio shipped **95%**. Greece still owns more fleet carrying capacity than China. Building steel and owning ships remain different maps, and the orderbook says China’s build lead is still widening.`,
+    category: "Industry",
+    themeId: "heavy-industrial-capacity",
+    imageUrl:
+      "/images/industry-global-shipbuilding-gt-delivery-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy shipyard scene with a cargo hull under construction and a dominant red concentration bar exceeding half of global GT deliveries",
+    publishedAt: "2026-08-01T06:30:00Z",
+    featured: true,
+    visualization: "global-shipbuilding-gt-delivery-concentration-2026",
+    layout: "default",
+  },
+  {
     id: "copper-mine-vs-refinery-geography-2026",
     slug: "copper-mine-vs-refinery-geography-2026",
     title:

@@ -58,7 +58,8 @@ export interface Post {
     | "us-tax-expenditure-catalog-2026"
     | "measurement-science-research-2026"
     | "demographic-cash-flows-research-2026"
-    | "copper-mine-vs-refinery-geography-2026";
+    | "copper-mine-vs-refinery-geography-2026"
+    | "global-shipbuilding-gt-delivery-concentration-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

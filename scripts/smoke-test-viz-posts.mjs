@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "global-shipbuilding-gt-delivery-concentration-2026",
+    marker: "Global shipbuilding · GT deliveries",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "copper-mine-vs-refinery-geography-2026",
     marker: "Copper mine vs refinery geography",
     forbidden: "Loading interactive charts",
