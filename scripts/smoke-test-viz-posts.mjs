@@ -147,8 +147,8 @@ const POSTS = [
     forbidden: "Loading interactive charts",
   },
   {
-    slug: "industrial-robotics-research-2026",
-    marker: "Industrial robot installations — IFR World Robotics 2025",
+    slug: "ai-compute-demand-research-2026",
+    marker: "Who owns AI compute",
     forbidden: "Loading interactive charts",
   },
 ];

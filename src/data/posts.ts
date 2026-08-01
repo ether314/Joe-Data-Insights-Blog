@@ -2,6 +2,107 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-compute-demand-research-2026",
+    slug: "ai-compute-demand-research-2026",
+    title: "Charted: Five Hyperscalers Own 71% of the World’s AI Compute",
+    excerpt:
+      "Epoch AI: Amazon, Google, Meta, Microsoft, and Oracle hold ~71% of global AI compute (H100e) as of Q4 2025 — Google alone ~25%. The US hosts ~45% of AI data-center capacity by power; Gartner puts world DC capacity at 132 GW in 2026.",
+    content: `Token charts answer *who serves how many prompts*. Capex decks answer *who spends*. The question that still gets blurred is physical and proprietary at once: **who owns the chips that do the work, and where do those watts sit?** Epoch AI’s Chip Owners hub puts a hard ownership number on the first half. As of **Q4 2025**, five US hyperscalers — **Amazon, Google, Meta, Microsoft, and Oracle** — collectively hold an estimated **71%** of the world’s dedicated AI compute, measured in Nvidia **H100-equivalents**. That is up from **63%** in **Q1 2024**. Google alone is about **one quarter** of the global stock — roughly **5 million H100e**, most of it from custom **TPUs**, not rented Nvidia clusters.
+
+The geography half is a different meter. Industry trackers citing Gartner, IDC, and grid filings put the **United States at roughly 45%** of global **AI data-center capacity by power draw**. Gartner’s 1Q26 capacity forecast has world data-center **power demand at 104 GW in 2025 and 132 GW in 2026** (+27%), on a path toward **~290 GW by 2030**, with **AI-optimised servers** already **31%** of data-center power consumption in 2026. Ownership concentration and site concentration reinforce each other: the firms that own the chips also dominate the campuses where those chips plug in.
+
+This post is deliberately *not* a retread of our [global AI data-center build tracker](/blog/global-ai-data-center-build-tracker) (site-by-site MW and status) or our [major AI brands token-consumption series](/blog/major-ai-brands-token-consumption-2022-2026) (routed tokens by brand). Tokens can surge in China while chip *ownership* stays US-heavy. Announced campuses can inflate MW maps while energised IT load lags. Here the meters are **H100e ownership**, **regional AI capacity share**, and **Gartner power capacity** — with an explicit split between **owning** compute and **using** it.
+
+## The 71% number, not the “AI arms race” slogan
+
+| Owner / group (Q4 2025) | Share of world AI compute | H100e (millions) | Confidence |
+| --- | ---: | ---: | --- |
+| Google | ~25% | ~5.0 | Epoch disclosed |
+| Microsoft | ~15% | ~3.0 | Estimated residual |
+| Amazon | ~14% | ~2.8 | Estimated residual |
+| Meta | ~10% | ~2.0 | Epoch narrative |
+| Oracle | ~7% | ~1.4 | Estimated residual |
+| **Big-5 hyperscalers** | **~71%** | **~14.2** | **Epoch disclosed** |
+| China (all owners) | ~5% | ~1.0 | Epoch narrative |
+| Other clouds / neoclouds | ~14% | ~2.8 | Estimated |
+| Rest of world owners | ~10% | ~2.0 | Estimated |
+
+The Big-5 aggregate (**71%**) and Google’s (**~25%**) figures are the Epoch anchors. The Microsoft / Amazon / Oracle / Meta split of the residual **46 percentage points** is a staff-aligned estimate that sums exactly to that aggregate — useful for ranking, not for litigation-grade precision. Meta’s **~10%** ownership is separately consistent with Epoch’s narrative that Meta owned on the order of **~2 million H100e** at end-2025 before newer cloud deals fully ramp.
+
+What the table forces into view: **China’s entire ownership stack (~5%) is smaller than Google alone.** That does not mean Chinese *models* or *token volume* are small — our token post documents the opposite on API routing. It means the silicon *balance sheet* is still overwhelmingly held by US hyperscalers and their custom-chip programs. Huawei can lead China’s domestic FLOP/s mix after H20 export controls and still leave China far behind on the global ownership pie.
+
+## Ownership is not usage — frontier labs rent the stack
+
+Epoch’s follow-on analysis of frontier labs is the corrective to “OpenAI has the most GPUs” folklore. **OpenAI** disclosed enough data-center **electric power capacity** for Epoch to convert access to roughly **1.7 million H100e** — large, but still a fraction of Google’s owned stock, and mostly **rented** from Microsoft, Oracle, and CoreWeave. **Anthropic** likely clears **more than 1 million H100e**, again mostly via **Google and Amazon**. **xAI** is the odd case that owns a large share of what it uses (Colossus Memphis / Southaven). Inside Google and Meta, frontier labs compete with Search ranking, ads, Reels, and cloud customers for the same parent pools — Epoch’s first-pass guess is that DeepMind / Meta Superintelligence each use on the order of **half** of their parent’s owned compute, not all of it.
+
+Put differently: the companies that *train and serve* frontier models are not always the companies that *own* the accelerators. The dashboard’s **Own vs use** scatter separates access (horizontal) from an ownership proxy (vertical). OpenAI and Anthropic sit far right on access but low on ownership; Google DeepMind sits high on both because the parent owns the TPU fleet.
+
+That split matters for industrial policy and for markets. Export controls bite **owners and fabs**. Cloud contracts and offtake agreements move **users**. Capex intensity charts (see our [hyperscaler capex intensity](/blog/ai-capex-intensity-research-2026) and [spend map](/blog/ai-capex-spend-research-2026) posts) track the dollar flow that *creates* ownership — but dollars authorized are still one step upstream of H100e installed and one step further upstream of tokens served.
+
+## Where the watts sit: US ~45%, hubs that strain grids
+
+Ownership answers *who*. Power-draw geography answers *where*. Trackers synthesising Gartner/IDC/LBNL put the **United States near 45%** of global **AI data-center capacity** by power. China, Europe, the Middle East, and the rest of Asia-Pacific fill the remainder in our residual regional panel — those non-US shares are **order-of-magnitude estimates**, not a second Epoch disclosure.
+
+Inside the US, the map is no longer “Northern Virginia plus leftovers.” Traditional cloud metros still host enormous live load, but the **AI-relevant build wave** is Midwest and Sun Belt heavy: Microsoft **Fairwater** (Wisconsin), AWS **Project Rainier** (Indiana / Mississippi), Meta **Hyperion** (Louisiana) and **Prometheus** (Ohio), OpenAI/Oracle **Stargate** campuses in Texas and beyond, xAI **Colossus** in Tennessee/Mississippi. Announced Middle Eastern programs (UAE Stargate with G42, Saudi Humain, NEOM DataVolt) can look enormous on paper — **announced MW ≠ energised MW** — which is why the hub panel tags status as live-heavy, building, or announced.
+
+Europe’s story is denser and more constrained: Ireland, the Nordics, the UK, and new French/Portuguese campuses face permitting, power-price, and political pushback even when national grids look fine on average. Singapore and similar city-states show the same pattern at smaller scale — **local interconnection**, not national generation, is the binding constraint. Our separate [US data-center power vs grid](/blog/us-data-center-power-vs-grid-capacity-2025) piece zooms into the American transmission gap; this post keeps the global ownership + location frame.
+
+## Power capacity: 104 → 132 GW, AI servers at 31%
+
+Gartner’s worldwide forecast is the cleanest public capacity series for this theme:
+
+- **2025:** ~**104 GW** data-center power demand; **447 TWh** electricity.
+- **2026:** ~**132 GW** (+**27%**); **565 TWh** (+**26%**).
+- **2030:** ~**290 GW** capacity; electricity on a path past **1,200 TWh** in some Gartner extensions.
+- **AI-optimised servers:** **31%** of data-center power consumption in **2026**, on track to **surpass conventional servers in 2027**.
+
+Capacity (GW) is the grid’s peak obligation; terawatt-hours are the energy bill. Both are rising, but **capacity is what decides whether a campus gets an interconnection agreement**. The dashboard’s power panel plots GW bars against the AI server-share line so the composition shift is visible: the sector is not merely growing — the **AI slice inside it** is growing faster (industry trackers cite AI-focused electricity growing nearly **3×** overall data-center electricity in 2025).
+
+Do not confuse this with LBNL’s US-only data-center TWh path or with Goldman’s hyperscaler **dollar** capex. Gartner’s perimeter is **global data-center power**; Epoch’s perimeter is **AI chip ownership**. They answer adjacent questions and should not be averaged into a fake “AI share of GDP” mashup.
+
+## Training vs inference: the demand that relocates
+
+Volume mix inside the AI slice is shifting. Industry syntheses put **training** as the majority of AI compute in **2023**, roughly **parity by 2025**, and **inference near two-thirds by 2026** as chat, API, and agentic workloads compound. Training clusters want contiguous, high-bandwidth fabrics — the multi-gigawatt campus. Inference wants **latency, price, and power availability**, which pulls capacity toward secondary metros, renewable-adjacent sites, and eventually more distributed formats.
+
+That is why “who processes how much” diverges by workload. A training run for a frontier model still concentrates on a handful of owner campuses. A global inference fleet can be routed across many regions — and across rented neocloud capacity that never shows up as “OpenAI-owned” in Epoch’s ownership table. Token-leaderboards can therefore flip geography (China vs US API routing) without flipping the silicon ownership pie.
+
+## What would rewrite the map
+
+Several observables would force an update to this ownership-and-location story:
+
+1. **Epoch Q1/Q2 2026 Chip Owners revisions** show Big-5 share rolling over below 70% — neoclouds and sovereign buyers catching up faster than hyperscaler installs.
+2. **Google TPU vs Nvidia mix** shifts so Google’s H100e lead narrows even if its dollar capex stays high (conversion assumptions matter).
+3. **China ownership** climbs materially above ~5% if domestic advanced-node supply and Huawei Ascend deployments compound faster than US export-control scenarios assume.
+4. **Energised vs announced MW** in the Middle East and India: if UAE/Saudi/India programs connect multi-GW IT loads on schedule, the US 45% capacity share compresses; if they slip, the US share sticks.
+5. **Inference relocation**: sustained agentic demand that cannot clear US interconnection queues would show up first in European Nordics, Canadian hydro corridors, and Middle Eastern gas-adjacent campuses — not in ownership tables.
+
+Until those print, the shareable frame stays narrow: **five US hyperscalers own about seven-tenths of the world’s AI compute; Google alone owns about a quarter; the United States hosts close to half of AI data-center capacity by power; and global DC capacity is racing from ~104 GW to ~132 GW in a single year while AI servers take nearly a third of the power.**
+
+## Caveats and methodology
+
+- **H100-equivalent ≠ identical utility.** Epoch converts chips on peak 8-bit FLOP/s. Memory bandwidth, software stack, and networking can make a TPU H100e more or less useful than a B300 H100e depending on the workload. Training comparisons are more reliable than inference.
+- **Ownership coverage is incomplete.** Epoch tracks Nvidia, AMD, Google TPU, Amazon Trainium/Inferentia, and Huawei. Meta and Microsoft custom chips are largely omitted and believed small relative to Google/Amazon customs.
+- **Big-5 71% and Google 25% are disclosed anchors; intra-Big-5 splits except Meta’s ~10% narrative are estimated** so the leaderboard sums cleanly.
+- **China ~5%** is an Epoch ownership narrative, not a claim about Chinese *model quality* or *token volume*.
+- **Regional capacity shares** outside the US ~45% headline are residual estimates; hub MW mixes live, building, and announced IT loads and will disagree with any single utility filing.
+- **Gartner GW/TWh figures** are forecasts (1Q26 vintage via public reporting); they are not LBNL US historicals and not Goldman capex dollars.
+- **Workload train/infer splits** are industry synthesis, not a single regulator series.
+- **Frontier lab access figures** (OpenAI ~1.7M H100e, etc.) come from Epoch’s lab analysis and inherit its conversion assumptions.
+
+## The shareable takeaway
+
+**As of Q4 2025, five US hyperscalers own ~71% of global AI compute (H100e), with Google alone near 25% — mostly TPUs.** China as a whole owns about **5%**. The **United States** hosts roughly **45%** of AI data-center capacity by power draw, while Gartner’s global DC capacity jumps from **104 GW (2025) to 132 GW (2026)** and AI-optimised servers take **31%** of DC power. Frontier labs like OpenAI and Anthropic *use* vast rented pools; they do not top the ownership table. For site lists see the [build tracker](/blog/global-ai-data-center-build-tracker); for who burns tokens see the [token series](/blog/major-ai-brands-token-consumption-2022-2026).`,
+    category: "Technology",
+    themeId: "ai-compute-demand",
+    imageUrl: "/images/technology-ai-compute-demand-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic map of global AI compute ownership with glowing US-concentrated data-center nodes and hyperscaler capacity stacks",
+    publishedAt: "2026-07-31T21:00:00Z",
+    featured: true,
+    visualization: "ai-compute-demand-research-2026",
+    layout: "default",
+  },
+  {
     id: "industrial-robotics-research-2026",
     slug: "industrial-robotics-research-2026",
     title:

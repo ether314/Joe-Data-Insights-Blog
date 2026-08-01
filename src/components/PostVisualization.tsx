@@ -392,10 +392,10 @@ const MacroGrowthTradeResearchDashboard = dynamic(
   },
 );
 
-const IndustrialRoboticsResearchDashboard = dynamic(
+const AiComputeDemandResearchDashboard = dynamic(
   () =>
-    import("@/components/visualizations/IndustrialRoboticsResearchDashboard").then(
-      (m) => m.IndustrialRoboticsResearchDashboard,
+    import("@/components/visualizations/AiComputeDemandResearchDashboard").then(
+      (m) => m.AiComputeDemandResearchDashboard,
     ),
   {
     ssr: false,
@@ -500,8 +500,8 @@ export function PostVisualization({
     return <MacroGrowthTradeResearchDashboard />;
   }
 
-  if (type === "industrial-robotics-research-2026") {
-    return <IndustrialRoboticsResearchDashboard />;
+  if (type === "ai-compute-demand-research-2026") {
+    return <AiComputeDemandResearchDashboard />;
   }
 
   return null;
