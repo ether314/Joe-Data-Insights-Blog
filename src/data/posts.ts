@@ -2,6 +2,132 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-tax-expenditure-catalog-2026",
+    slug: "us-tax-expenditure-catalog-2026",
+    title:
+      "Charted: US Tax Expenditures Hit 7.6% of GDP — Hidden Spending via Credits",
+    excerpt:
+      "JCT projects $2.3 trillion in federal tax expenditures for FY2026 — about 7.6% of GDP. Credits in the top-10 catalog alone (CTC, ACA, EITC) total $300B. The off-budget ledger is larger than Social Security.",
+    content: `Congress argues endlessly about discretionary appropriations and the debt ceiling. A parallel ledger rarely gets a floor vote: **tax expenditures** — revenue the federal government deliberately does not collect because the tax code carves out exclusions, deductions, preferential rates, deferrals, and credits. The Joint Committee on Taxation (JCT) projects those provisions will cost about **$2.3 trillion in FY2026**, up from **$2.2 trillion in FY2025**, or **$11.7 trillion over 2025–2029**. Against a roughly **$30.1 trillion** GDP yardstick, that is about **7.6% of GDP**.
+
+That share is the core answer to the question this post asks: **how large is hidden spending via the tax code — especially credits?** The interactive catalog above maps the JCT top-10 ranking, Treasury’s published FY2026 headline items, an Urban Institute–anchored path of tax expenditures as a percent of GDP, and a radar that puts the tax-code ledger next to Social Security, discretionary spending, and corporate tax receipts.
+
+This is **fiscal plumbing**, not a partisan scorecard. Pair it with our [Social Security trust-fund depletion path](/blog/us-social-security-trust-fund-depletion-path-2026) — on-budget mandatory outlays with a depletion clock — and with [US industrial subsidies versus tariffs](/blog/us-industrial-subsidies-vs-tariffs-30-years), which tracks the industrial slice of Treasury tax expenditures against customs duties. Same balance sheet, different valves.
+
+## What “tax expenditure” actually means
+
+A tax expenditure is a deviation from a baseline income-tax system that reduces someone’s liability — or, for refundable credits, can produce a cash payment that shows up as an outlay. Treasury’s Office of Tax Analysis defines them as special exclusions, exemptions, deductions, credits, preferential rates, or deferrals. JCT publishes a parallel catalog for Congress. The two offices **do not package provisions identically**, which is why the dashboard lets you toggle JCT’s top-10 catalog against Treasury’s published FY2026 largest items.
+
+Three measurement rules matter before any chart:
+
+1. **Do not sum line items as a repeal score.** Provisions interact. Repealing two overlapping preferences does not recover the sum of their standalone estimates.
+2. **Income-tax estimates often omit payroll-tax effects.** The employer-sponsored health exclusion looks smaller on an income-tax-only basis than when Social Security and Medicare payroll taxes are included.
+3. **Agencies refuse a single official “grand total” in their PDFs** for interaction reasons — yet CRFB and others report JCT’s aggregate ($2.3T in FY2026) because budget debates need a scale anchor. We use that aggregate with the interaction caveat in the source note.
+
+## The headline table: catalog vs GDP
+
+| Meter | FY2026 print | Source |
+| --- | ---: | --- |
+| JCT tax expenditures (aggregate) | **$2.3T** | JCT via CRFB |
+| Share of GDP (yardstick) | **~7.6%** | $2.3T / ~$30.1T |
+| JCT FY2025 aggregate | $2.2T (~7.6% of GDP) | JCT via CRFB |
+| Five-year total (2025–2029) | $11.7T | JCT via CRFB |
+| Top-10 items combined | >$1.4T (~⅔ of total) | JCT via CRFB |
+| CTC + ACA + EITC (credits in top-10) | **$300B** | JCT top-10 |
+| Treasury ESI exclusion | $296B | Treasury OTA FAQ |
+| Urban peak share of GDP (2017) | ~8.5% | Urban Institute |
+| Urban trough (2024–25 framing) | ~6% | Urban Institute |
+| Urban rebound (2029 framing) | ~7.6% | Urban Institute |
+
+Read the table as one sentence: **the off-budget tax ledger is a mid-single-digit share of the entire economy**, dominated by a handful of exclusions and preferential rates, with **credits now large enough to rival major spending programs** even before you leave the top-10 list.
+
+## Tax expenditures % GDP: the path, not just the snapshot
+
+Dollar totals rise with the economy and with legislative expansions. **Percent of GDP** strips out scale and shows whether the tax code is becoming a larger or smaller shadow budget.
+
+Urban Institute’s update on tax-expenditure trends puts the sum of estimated costs near **8.5% of GDP in FY2017**, down toward about **6% in FY2024–2025** as Tax Cuts and Jobs Act (TCJA) design compressed several itemized-deduction and rate-related preferences, then **rebounding toward ~7.6% by 2029** under the then-current-law framing in which many individual TCJA provisions expire. Our dashboard stitches those Urban anchors to **JCT’s disclosed dollar aggregates for 2025–26**, converted with round CBO/BEA GDP yardsticks. Mid-path years between anchors are labeled **estimated** — useful for shape, not for basis points of precision.
+
+The 2025–26 JCT prints sit near **7.6% of GDP** even while Urban’s trough language still described the mid-2020s near 6%. That gap is mostly **methodology and packaging** (which provisions are in the sum, how interactions are handled, which GDP denominator), not a claim that one office “got the arithmetic wrong.” Always read share-of-GDP charts as **order-of-magnitude fiscal weight**, not as a CBO baseline line item.
+
+## The catalog: ten provisions that dominate
+
+JCT’s largest FY2026 items are not obscure energy riders. They are the architecture of the middle-class and capital-income tax base:
+
+1. **Retirement / pension exclusions — $355B.** Employer contributions and earnings inside qualified plans are the single largest preference.
+2. **Preferential rates on dividends and long-term capital gains — $252B.** A rate structure, not a credit — but economically a spending-like preference for capital income.
+3. **Employer-sponsored health insurance exclusion — $240B (JCT) / $296B (Treasury).** Packaging differs; both offices put ESI at the top of the health stack.
+4. **Child Tax Credit and other dependent credit — $128B.** The largest pure **credit** in the top-10.
+5. **ACA health insurance subsidies — $105B.** Mostly delivered through the tax system; partly outlay-like when refundable.
+6. **Charitable deduction — $78B.**
+7. **Pass-through deduction (§199A) — $76B.**
+8. **Stepped-up basis at death — $73B.** A deferral / basis rule with estate-planning bite.
+9. **Earned Income Tax Credit — $67B.** Classic refundable wage subsidy administered by the IRS.
+10. **SALT deduction — $60B.** Cap-sensitive and geographically skewed.
+
+The top ten alone exceed **$1.4 trillion** — nearly **two-thirds** of JCT’s aggregate. Concentration is the point: reforming “tax expenditures” is not a thousand equal nibbles; it is a negotiation over pensions, health exclusions, capital gains, and family credits.
+
+Treasury’s FAQ list for FY2026 largest items highlights **employer medical exclusions ($296B)**, **imputed rental income ($157B)**, **defined-contribution employer plans ($156B)**, and **narrow capital gains ($135B)**. Imputed rent appears in Treasury’s framing and not in JCT’s top-10 table above — another reminder that **catalog scope is a choice**, not a natural fact.
+
+## Hidden spending via credits
+
+Exclusions and preferential rates are large, but **credits are the clearest “spending through the IRS” channel** because many are refundable: filers with little or no income-tax liability still receive cash. In the JCT top-10 alone, **CTC ($128B) + ACA subsidies ($105B) + EITC ($67B) = $300B**. That is roughly one-third of annual defense outlays and larger than many Cabinet departments’ discretionary budgets.
+
+Credits also change the **instrument mix** over time. COVID-era expansions temporarily lifted the credit share of the catalog; IRA clean-energy credits and ongoing ACA premium tax credits keep credits from collapsing back to a rounding error. The dashboard’s line panel shows an **estimated** rise in the credit slice of the summed catalog from the late 2010s into 2026, while exclusions remain the plurality. Treat the mix percentages as **editorial packaging of families**, not an official JCT pie chart — the official reports warn against naive addition.
+
+Refundability matters for deficit arithmetic. A nonrefundable credit that only offsets positive liability is pure revenue loss. A refundable credit’s excess over liability is scored as an **outlay**. The political branding stays “tax cut”; the budget tables partly call it spending. That dual identity is why credits are the sharpest answer to “how large is hidden spending via credits?”
+
+## If the catalog were on the budget radar
+
+CRFB’s framing of the JCT aggregate is blunt: at **$2.3T**, tax expenditures in FY2026 are larger than **all discretionary spending**, larger than **Medicare and Medicaid combined** in rough terms, and larger than **Social Security**. They dwarf **corporate income-tax receipts**. The radar panel normalizes those yardsticks so the tax-code spoke sits at the outer edge.
+
+That comparison is intentionally provocative and intentionally imperfect. Tax expenditures are not a single appropriated account; many preferences are popular across parties; and some “expenditures” (imputed rent, for example) are conceptual baseline debates as much as cash programs. Still, if the question is **scale**, the radar is the honest answer: **the shadow budget is first-tier fiscal size**.
+
+For another country’s on-budget revenue composition — a useful contrast to US off-budget preferences — see our [China fiscal revenue breakdown](/blog/china-fiscal-revenue-all-budgets-2024).
+
+## Why JCT and Treasury disagree on packaging
+
+Switch the dashboard scope from JCT to Treasury and the ranking reshuffles. Employer health is larger under Treasury’s FY2026 FAQ print. Capital gains looks smaller when Treasury shows a **narrow** CG line while JCT combines **preferential rates on CG and dividends**. Retirement preferences are split across defined-contribution and related lines rather than a single “pensions” bucket.
+
+None of that is a scandal. It is **two professional scorekeepers with different baseline traditions and table designs**. Analysts who cite only one office can cherry-pick. The catalog view is meant to make the packaging choice visible.
+
+## Policy levers without the sermon
+
+If Congress wanted a smaller tax-expenditure share of GDP, the levers are concentrated:
+
+- **Narrow or cap the ESI exclusion** — the largest health preference, with payroll-tax spillovers outside these income-tax tables.
+- **Raise capital-gains and dividend rates toward ordinary income** — or broaden the base with fewer preferential-rate cliffs.
+- **Revisit §199A and SALT** — deduction design that is geographically and organizationally skewed.
+- **Retarget refundable credits** — CTC, EITC, and ACA subsidies are the credit core; changing them is explicit distributional policy, not a technical cleanup.
+- **Clean-energy and industrial credits** — smaller than the top-10 giants today in many prints, but the fastest-growing industrial-policy channel on the tax side (see our subsidies/tariffs industrial series).
+
+Every lever has incidence stories — workers vs firms, homeowners vs renters, parents vs non-parents, pass-through owners vs wage earners. The catalog does not resolve those fights; it sizes them.
+
+## Caveats
+
+- **Do not sum tax-expenditure line items** as the revenue from simultaneous repeal — interactions and behavioral responses matter
+- **JCT and Treasury package provisions differently** — rankings are not interchangeable
+- **Share-of-GDP series mixes Urban disclosed anchors with JCT $/GDP conversions** — mid years are estimated
+- **Payroll-tax effects on ESI are excluded** from the income-tax estimates shown here
+- **Budget yardsticks (SS, discretionary, defense) are approximate** round numbers for scale, not CBO score sheets
+- **Instrument-mix percentages are editorial** — useful for composition viz, not an official JCT table
+- **Refundable credits blur revenue loss and outlays** — deficit impact is real either way
+
+## Methodology
+
+**JCT aggregates and top-10 FY2026 ranking** follow the Committee for a Responsible Federal Budget summary of JCT estimates (February 2026): $2.2T in FY2025, $2.3T in FY2026, $11.7T over 2025–2029, with the ten largest items as listed in the catalog data file. **Treasury largest items** are from the Office of Tax Analysis Tax Expenditures FAQ using FY2026 estimates (employer medical exclusion, imputed rent, DC plans, capital gains). **Percent-of-GDP path** uses Urban Institute disclosed anchors for 2017 (~8.5%), mid-2020s trough (~6%), and 2029 rebound (~7.6%), with 2025–26 shares computed as JCT aggregates divided by round GDP yardsticks (~$29.0T / ~$30.1T). Instrument-mix and radar panels are derived visualizations for exploration.
+
+**Unlike our Social Security trust-fund post, this piece measures off-budget revenue preferences and credit-delivered spending — not OASDI reserve depletion.**`,
+    category: "Global Systems",
+    themeId: "fiscal-plumbing",
+    imageUrl: "/images/global-systems-us-tax-expenditure-catalog-2026-hero.png",
+    imageAlt:
+      "Dark navy data visualization of US tax expenditures as hidden budget spending with 7.6% of GDP callout",
+    publishedAt: "2026-08-01T08:00:00Z",
+    featured: true,
+    visualization: "us-tax-expenditure-catalog-2026",
+    layout: "default",
+  },
+  {
     id: "migration-humanitarian-research-2026",
     slug: "migration-humanitarian-research-2026",
     title:
