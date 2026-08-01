@@ -287,21 +287,6 @@ const BillionDollarDisastersDashboard = dynamic(
     ),
   },
 );
-
-const UsBillionDollarWeatherDisastersMs94skofDashboard = dynamic(
-  () =>
-    import(
-      "@/components/visualizations/UsBillionDollarWeatherDisastersMs94skofDashboard"
-    ).then((m) => m.UsBillionDollarWeatherDisastersMs94skofDashboard),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
-        <p className="text-sm text-slate-500">Loading interactive charts…</p>
-      </div>
-    ),
-  },
-);
 const NaturalGraphiteMineConcentrationDashboard = dynamic(
   () =>
     import("@/components/visualizations/NaturalGraphiteMineConcentrationDashboard").then(
@@ -392,10 +377,10 @@ const CommercialAircraftAssemblyDashboard = dynamic(
   },
 );
 
-const AiSupplyChainResearchDashboard = dynamic(
+const MacroGrowthTradeResearchDashboard = dynamic(
   () =>
-    import("@/components/visualizations/AiSupplyChainResearchDashboard").then(
-      (m) => m.AiSupplyChainResearchDashboard,
+    import("@/components/visualizations/MacroGrowthTradeResearchDashboard").then(
+      (m) => m.MacroGrowthTradeResearchDashboard,
     ),
   {
     ssr: false,
@@ -407,10 +392,10 @@ const AiSupplyChainResearchDashboard = dynamic(
   },
 );
 
-const MacroGrowthTradeResearchDashboard = dynamic(
+const IndustrialRoboticsResearchDashboard = dynamic(
   () =>
-    import("@/components/visualizations/MacroGrowthTradeResearchDashboard").then(
-      (m) => m.MacroGrowthTradeResearchDashboard,
+    import("@/components/visualizations/IndustrialRoboticsResearchDashboard").then(
+      (m) => m.IndustrialRoboticsResearchDashboard,
     ),
   {
     ssr: false,
@@ -487,10 +472,6 @@ export function PostVisualization({
     return <BillionDollarDisastersDashboard />;
   }
 
-  if (type === "us-billion-dollar-weather-disasters-ms94skof") {
-    return <UsBillionDollarWeatherDisastersMs94skofDashboard />;
-  }
-
   if (type === "natural-graphite-mine-concentration") {
     return <NaturalGraphiteMineConcentrationDashboard />;
   }
@@ -519,8 +500,8 @@ export function PostVisualization({
     return <MacroGrowthTradeResearchDashboard />;
   }
 
-  if (type === "ai-supply-chain-research-2026") {
-    return <AiSupplyChainResearchDashboard />;
+  if (type === "industrial-robotics-research-2026") {
+    return <IndustrialRoboticsResearchDashboard />;
   }
 
   return null;

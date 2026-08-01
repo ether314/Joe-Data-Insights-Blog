@@ -409,12 +409,10 @@ export const THEME_REGISTRY: ThemeDefinition[] = [
 /** Map existing slugs → theme id (backfill before themeId on Post) */
 export const SLUG_THEME_IDS: Record<string, string> = {
   "us-billion-dollar-weather-disasters-2026": "adaptation-economics",
-  "us-billion-dollar-weather-disasters-ms94skof": "adaptation-economics",
   "phosphate-fertilizer-export-dependence-2026": "chokepoint-commodities",
   "global-remittance-corridors-2026": "demographic-cash-flows",
   "ai-capex-spend-research-2026": "ai-capex-spend",
   "ai-capex-intensity-research-2026": "ai-capex-intensity",
-  "ai-supply-chain-research-2026": "ai-supply-chain",
   "central-bank-gold-purchases-2025": "geopolitics-institutions",
   "rare-earth-mine-concentration-2024": "chokepoint-commodities",
   "jolts-openings-unemployed-ratio-2026": "macro-growth-trade",
@@ -446,6 +444,7 @@ export const SLUG_THEME_IDS: Record<string, string> = {
   "major-ai-brands-token-consumption-2022-2026": "ai-compute-demand",
   "global-last-mile-delivery-robotics-2026": "industrial-robotics",
   "china-industrial-robot-installations-share-2023": "industrial-robotics",
+  "industrial-robotics-research-2026": "industrial-robotics",
   "global-shipbuilding-concentration-2023": "heavy-industrial-capacity",
   "china-us-india-gdp-30-years": "macro-growth-trade",
   "deflationary-growth-economies-2025": "macro-growth-trade",

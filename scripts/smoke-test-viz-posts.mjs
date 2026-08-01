@@ -112,11 +112,6 @@ const POSTS = [
     forbidden: "Loading interactive charts",
   },
   {
-    slug: "us-billion-dollar-weather-disasters-ms94skof",
-    marker: "Adaptation economics — inflation-adjusted annual total",
-    forbidden: "Loading interactive charts",
-  },
-  {
     slug: "natural-graphite-mine-concentration-2024",
     marker: "natural graphite",
     forbidden: "Loading interactive charts",
@@ -152,8 +147,8 @@ const POSTS = [
     forbidden: "Loading interactive charts",
   },
   {
-    slug: "ai-supply-chain-research-2026",
-    marker: "Semiconductor supply chain — equipment cycle & bottlenecks",
+    slug: "industrial-robotics-research-2026",
+    marker: "Industrial robot installations — IFR World Robotics 2025",
     forbidden: "Loading interactive charts",
   },
 ];

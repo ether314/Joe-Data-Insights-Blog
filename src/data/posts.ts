@@ -2,6 +2,120 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "industrial-robotics-research-2026",
+    slug: "industrial-robotics-research-2026",
+    title:
+      "Charted: Asia Installs 74% of Factory Robots — Electronics Reclaims #1 at 542,000 Units",
+    excerpt:
+      "IFR World Robotics 2025: global installations held at 542,076 in 2024 while Asia took three-quarters of new deployments. China alone is 54% of demand; electronics edged past auto; the path points to 575k in 2025 and 700k+ by 2028.",
+    content: `Factory automation headlines bounce between “robot apocalypse” labor stories and shiny cobot demos. The IFR’s **World Robotics 2025** ledger is quieter and sharper: **where new industrial robots actually land**, which customer industries pull them, and whether the post-2021 plateau is a pause or a peak.
+
+In **2024**, factories installed **542,076** industrial robots — virtually flat versus 2023’s 541,302 and only **2%** below the 2022 record of 552,946. That is the **fourth consecutive year above 500,000** units, and more than **double** the mid-2010s pace. The interactive dashboard above maps the **flow** (annual installations), the **regional stack**, the **industry duel** between electronics and automotive, and the **flow × stock** scatter that shows why China is not just another large market.
+
+This is not a density ranking (robots per 10,000 manufacturing workers) and not a sidewalk-delivery fleet race. Those stories live elsewhere — including our [last-mile delivery robotics](/blog/global-last-mile-delivery-robotics-2026) chart and the heavy-industry geography of [commercial aircraft final assembly](/blog/commercial-aircraft-final-assembly-2025). Here the question is industrial: **where is physical factory automation still scaling?**
+
+## The plateau is real — and still historically high
+
+| Year | Global installations | Note |
+| --- | ---: | --- |
+| 2018 | 422,271 | First year above 400k |
+| 2020 | 383,545 | Pandemic trough (still strong vs 2010s) |
+| 2021 | 517,385 | +31% rebound |
+| 2022 | 552,946 | All-time high |
+| 2023 | 541,302 | −2% |
+| 2024 | 542,076 | Sideways; 2nd-highest year |
+| 2025f | 575,000 | IFR +6% outlook |
+| 2028f | ~710,000 | Path past 700k (IFR narrative) |
+
+The narrative trap is to read “flat” as “done.” Relative to the decade, the industry is operating on a **new floor**. Annual installations doubled over ten years. Operational stock reached **4.66 million** units worldwide in 2024 (+9%). China alone crossed **2.03 million** robots in factories — roughly **43.5%** of world stock — after doubling its stock in about three years from the 2021 million-unit milestone.
+
+What flattened in 2023–24 was **Western and Japanese automotive capex cadence**, not the long automation curve. Electronics demand ticked up just enough to offset auto’s decline. Metal and machinery raised its share to **16%**. IFR’s forward path still climbs: **575,000** in 2025, then a trajectory that **surpasses 700,000 by 2028** if the ~10% average growth narrative holds.
+
+## Asia’s 74% — concentration, not “globalization”
+
+Regional shares for **2024** installations:
+
+- **Asia: 401,665 units (74%)**
+- **Europe: 85,006 (−8%)**
+- **Americas: 50,077 (−10%)**
+
+Europe’s print is still the **second-best** European year on record even after the drop — a reminder that absolute levels and growth rates tell different stories. The Americas stayed above **50,000** for a fourth straight year while contracting from the 2023 peak. North America, in IFR’s near-term color, looks **broadly stable** into 2025 even as tariff politics may reshuffle *which* North American plants pull robots.
+
+The five-country club — **China, Japan, United States, Korea, Germany** — absorbed **80%** of world installations (**431,240** units). That concentration has *risen* versus the late 2010s, when the same five were closer to the mid-70s. Automation scaling is not evenly sprinkled across the manufacturing world; it is a **narrow set of industrial systems** absorbing the fleet.
+
+## China is the demand center — and now the supplier story
+
+China installed a record **295,000** robots in 2024 (**+7%**), **54%** of global demand. That is not a one-year spike: China has been the largest market since 2013, and the stock milestone (2M+) locks in a multi-year replacement-and-expansion cycle.
+
+The supplier twist matters for strategy decks. For the first time, **Chinese manufacturers sold more than foreign brands inside China** — domestic share **57%**, up from roughly **28%** a decade earlier and **47%** in 2023. Foreign OEMs still matter enormously in automotive and high-end applications, but the home market is no longer a default export destination for Japanese and European makers.
+
+China’s industry mix inside that 295k:
+
+- **Electronics: 83,000 (+7%)** — about **64%** of *global* electronics robot installations
+- **Automotive: 57,200 (−12%)** — still ~**45%** of global auto robot installs
+- **Metal products:** ~**40,000** at a record level
+
+So China’s slowdown in auto robotics is a *global* auto story as much as a China story. Its electronics pull is the stabilizer for world totals.
+
+## Electronics reclaims #1 from automotive
+
+Globally in 2024:
+
+| Customer industry | Installations | Share | YoY |
+| --- | ---: | ---: | ---: |
+| Electrical / electronics | 128,899 | 24% | +2.5% |
+| Automotive | 126,088 | 23% | −6.9% |
+| Metal & machinery | ~87,000 | 16% | — |
+| Plastic & chemicals | ~27,000 | 5% | — |
+| Food & beverage | ~22,000 | 4% | — |
+| Unspecified / other | ~76,000 | 14% | — |
+
+Automotive no longer sets the global investment metronome the way it did for decades. In China, Japan, and Korea, **electronics is often already the largest customer**. Globally the two sectors have swapped leadership several times since 2020; 2024’s print puts electronics back on top by a thin **2,800-unit** margin.
+
+That thinness is the caveat: a single strong EV platform year in Europe or a semiconductor capex pause in East Asia can flip the ranking again. The durable point is **bimodality** — two giant customer industries, each ~¼ of the market, with metal/machinery as the rising third rail of “general industry” automation.
+
+## Flow versus stock: why density charts alone mislead
+
+Annual installations are **flow**. Operational stock is **fleet**. Korea can lead the world in **robot density** (1,220 robots per 10,000 manufacturing employees) while installing “only” **~30,600** units in 2024 — a sideways market near 31k since 2019. Japan installs **~44,500** into a **450k** stock. The United States installs **~34,200 (−9%)** into a stock near **390k**, importing most robots from Japan and Europe while relying on domestic **integrators**.
+
+China is the outlier on both axes: **largest flow and largest stock**, with density figures that depend on which labor denominator you trust (IFR manufacturing-based density around **567** in one WR 2025 framing; NBS-based updates can push China much further down international density rankings even as absolute fleets soar). Policy debates that cite density without flow miss the investment impulse; debates that cite flow without stock miss the installed base that still needs maintenance, software, and replacement cycles.
+
+India’s **9,100** installations (**+7%**, sixth worldwide, auto ~45% of its mix) is the clearest “next large market” signal in the IFR tables — still an order of magnitude below China, but compounding from a low base while Europe’s large markets cool.
+
+## What would rewrite the 2025–28 path
+
+IFR’s central optimism — **575k in 2025**, **700k+ by 2028** — is not a guarantee. Observables that would force a rewrite:
+
+1. **European auto restructuring** deepens beyond 2024’s −8% regional print, cutting metal and plastic follow-through.
+2. **US general-industry weakness** persists (IFR flagged soft non-auto demand behind the −9% US print) even if reshoring rhetoric stays loud.
+3. **China’s electronics cycle** rolls over — given China’s 64% share of global electronics robot installs, a China electronics pause *is* a global pause.
+4. **Trade and tariff regimes** scramble North American deployment timing without raising the aggregate Americas total.
+5. **Service robots / AMRs** cannibalize some “industrial” budgets in warehouses — a related but distinct IFR ledger that should not be double-counted into factory articulated-arm totals.
+
+Until those break, the shareable framing is narrow: **factory robot demand has plateaued at a historically elevated level, Asia absorbs three-quarters of new units, China is both the demand sink and an ascending supplier base, and electronics has retaken a slim lead over automotive while the IFR still sees a climb toward 700k annual installations by 2028.**
+
+## Caveats and methodology
+
+- **Industrial robots only.** IFR’s industrial series excludes most professional service robots and consumer robots; warehouse AMR growth can be large without appearing fully in these factory counts.
+- **Unspecified industries (~14%).** Customer-industry shares understate true sector totals where reporters cannot classify the end user.
+- **Forecast cells after 2025** in the dashboard interpolate IFR’s published 2025 outlook and the “surpass 700k by 2028” narrative; they are **not** official year-by-year IFR point forecasts for 2026–27.
+- **Mexico 2024 units** are marked **estimated** from regional residual math; top-five and named IFR country prints are **disclosed**.
+- **Density** uses IFR manufacturing employment denominators where cited; alternative labor-force bases (e.g., broader Chinese NBS employment) change ranks without changing absolute stocks.
+- **Domestic supplier share** for China counts Chinese manufacturers’ share of installations *in China*; foreign brands produced in China typically remain classified as foreign supply in IFR’s framing.
+- Year-to-year revisions happen when national associations restatement; always prefer the latest WR edition over secondary roundings.
+
+Sources: [IFR World Robotics 2025 global release](https://ifr.org/ifr-press-releases/news/global-robot-demand-in-factories-doubles-over-10-years), [WR 2025 Executive Summary](https://ifr.org/img/worldrobotics/Executive_Summary_WR_2025_Industrial_Robots.pdf), [IFR China release](https://ifr.org/downloads/press_docs/2025-09-25-IFR_press_release_China_in_English.pdf).`,
+    category: "Industry",
+    themeId: "industrial-robotics",
+    imageUrl: "/images/industry-industrial-robotics-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic visualization of factory robot arms and Asia-weighted installation bars for industrial automation scaling",
+    publishedAt: "2026-07-31T21:00:00Z",
+    featured: true,
+    visualization: "industrial-robotics-research-2026",
+    layout: "default",
+  },
+  {
     id: "ai-supply-chain-research-2026",
     slug: "ai-supply-chain-research-2026",
     title:

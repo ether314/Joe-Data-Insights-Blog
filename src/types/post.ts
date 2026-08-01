@@ -43,7 +43,6 @@ export interface Post {
     | "global-remittance-corridors"
     | "phosphate-fertilizer-export"
     | "billion-dollar-disasters"
-    | "us-billion-dollar-weather-disasters-ms94skof"
     | "commercial-aircraft-assembly"
     | "money-market-funds-deposits"
     | "oecd-dac-oda"
@@ -51,7 +50,7 @@ export interface Post {
     | "bank-loan-chargeoffs"
     | "natural-graphite-mine-concentration"
     | "macro-growth-trade-research-2026"
-    | "ai-supply-chain-research-2026";
+    | "industrial-robotics-research-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
