@@ -2,6 +2,87 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-financing-research-2026",
+    slug: "ai-financing-research-2026",
+    title: "Charted: Hyperscalers Will Fund a Third of AI Capex With Debt by 2026",
+    excerpt:
+      "Goldman sees ~$250B of hyperscaler IG bonds in 2026 (33% of capex) and ~$400B in 2027. Map the credit wave, widening spreads, equity raises, and ETF flows that now co-price the AI build-out.",
+    content: `## The build-out now has a balance-sheet story
+
+For three years the AI infrastructure debate lived almost entirely in **equity and product narratives**: GPU shortages, campus megawatts, token demand, and ever-larger [capex dollar totals](/blog/ai-capex-spend-research-2026). That framing is incomplete. Once hyperscaler capital expenditure climbs toward **$750 billion in 2026** against operating cash flow that only barely clears the same neighborhood — and after buybacks and dividends are paid — the residual must be financed. Credit markets, primary equity, leases, and structured vehicles are no longer footnotes. They are co-pricing the cycle.
+
+Goldman Sachs credit strategists led by Amanda Lynam put a clean number on the shift: investment-grade bond issuance from the five large hyperscalers (Amazon, Alphabet, Meta, Microsoft, Oracle) totaled about **$108 billion in 2025** — roughly **26% of capex**. Through early July 2026, four of those names alone had already printed about **$194 billion**, and Goldman’s full-year path points to roughly **$250 billion** of IG issuance (**~33% of capex**), rising toward **$400 billion** and a **~35% debt-funded share** in 2027. FactSet’s July 2026 note rhymes with the same geometry: incremental annual debt jumped from about **9% of capex in FY24** to roughly **32%** on a trailing twelve-month basis by mid-2026.
+
+The interactive dashboard above is a financing map — not another spend total. Toggle **2025 / 2026 / 2027**, switch the **IG credit / funding mix / equity-ETF** lens, and read issuance, debt share, deal sizes, new-issue spreads, and public-market flows side by side.
+
+## What the 2025–27 path actually says
+
+| Year | IG bond issuance | Hyperscaler capex | Debt share of capex | Confidence |
+|------|-----------------:|------------------:|--------------------:|------------|
+| 2024 | ~$45B | ~$280B | **~9%** | Estimated (FactSet incremental debt) |
+| 2025 | **$108B** | **$405B** | **~26%** | Disclosed / GS tally |
+| 2026 | **~$250B** | **~$750B** | **~33%** | GS forecast (YTD ~$194B by early Jul) |
+| 2027 | **~$400B** | **~$1.14T** | **~35%** | GS base path |
+
+Two readings matter. First, **absolute supply** into IG credit is exploding: a single mid-year 2026 print already exceeds the entire 2025 calendar total for the Amazon–Alphabet–Meta–Oracle subset. Second, the **share** of capex funded with debt is climbing into the low-to-mid thirties — still not a leveraged-buyout story, but a regime change from the cash-funded cloud decade. Pair that with our [capex intensity research](/blog/ai-capex-intensity-research-2026): Meta and Oracle already reinvest mid-thirties percentages of revenue into PP&E. Debt does not lower intensity; it **defers the cash-flow reckoning**.
+
+Goldman also notes that 2026 operating cash flow for the cohort (~**$778B**) can still sit near or slightly above aggregate capex (~**$750B**) — until shareholder returns, working capital, and cash M&A eat the buffer. That is why “they generate enough OCF” and “they need to borrow a third of the build” are both true at once.
+
+## Deal flow: who printed, and how big
+
+The 2025 second-half wave rewrote US investment-grade league tables. Meta’s **$30 billion** October 2025 financing was among the year’s largest corporate bond deals anywhere. Oracle, Alphabet, and Amazon followed with multi-ten-billion packages; MUFG’s year-end note observed that **four of the five biggest US IG financings in 2H 2025** were hyperscalers. Public tech IG issuance as a broader set surpassed **$200 billion** in 2025 in some dealer tallies, with hyperscalers supplying a large share of the late-year surge.
+
+2026 opened even louder. Amazon’s March package alone combined roughly **$37 billion** of USD bonds with a **€16.8 billion** euro tranche. Subsequent Amazon prints (including a later **~$25 billion** deal that was still oversubscribed, but at a lower cover ratio than March) showed the market’s appetite cooling from “infinite bid” to “selective.” Alphabet’s **~$84.75 billion** June 2026 **equity** raise — not a bond — is the complementary signal: when primary credit books thicken and rating headroom tightens, issuers reopen the equity channel.
+
+Oracle is the credit-market stress case inside the cohort. S&P’s July 2026 cut to **BBB-** (still investment grade) after surging capex, negative free cash flow, and customer concentration is exactly the differentiation FactSet flagged: the five names no longer trade as a homogeneous “cash-rich tech” bloc.
+
+## Spreads, concessions, and index weight
+
+Supply is not free. Reuters’ LSEG-based analysis (via CNA, late July 2026) shows median new-issue spreads for Amazon, Alphabet, Meta, and Oracle widening across the curve: **2–4 year** tenors from about **30 to 40 basis points**, **5–7 year** from **50 to 60**, and **20-year-plus** from roughly **108.5 to 118**. Secondary performance worsened too — **78 of 91** comparable 2026 hyperscaler bonds were trading wider than at issuance by late July, with a median increase near **22 bp**. Deal-level concessions rose as cover ratios fell. Investors are still buying; they are demanding more compensation to absorb the calendar.
+
+On the index side, tech’s weight in broad US corporate IG benchmarks has drifted toward roughly **10%** in dealer commentary (up from the high single digits), while the hyperscaler subset’s weight inside Bloomberg US Corporate IG roughly **doubled** over the year to April 2026 in Breckinridge’s reading (about **2.2% to 4.1%** for Meta, Alphabet, Amazon, and Oracle collectively). Concentration risk is no longer a boutique credit-committee talking point. It is a benchmark construction problem: passive IG portfolios are mechanically more exposed to a handful of AI builders.
+
+## Funding mix: bonds are not the only residual
+
+The dashboard’s **funding mix** lens keeps IG bonds in context. Even in 2026–27 research paths, **operating cash flow** remains the largest single channel — often modeled near half of the stack. The residual splits among:
+
+1. **Investment-grade corporate bonds** — the transparent, index-eligible wave Goldman sizes at roughly a third of capex.
+2. **Primary equity** — back in the mix after years of buybacks-only capital returns (Alphabet’s June raise; Oracle’s planned debt-plus-equity FY27 package).
+3. **Leases, ABS/CMBS, project finance, joint ventures, and private credit** — the off-index valves Goldman and Breckinridge both flag as likely to grow if traditional IG books saturate.
+
+That third bucket is easy to undercount in bond-only dashboards. GPU capacity purchased under operating leases, campus-level project vehicles, and power-side financing can move economics off the hyperscaler’s PP&E and debt lines without shrinking the physical build. Treat the IG share as a **lower bound** on external financing intensity, not a complete map of every dollar of AI infrastructure capital.
+
+## The equity-market side: ETFs still fund the *narrative*
+
+Issuers raise capital in primary markets. Public investors express the AI trade in secondary markets — and there the story is paradoxically **concentrated in broad proxies**. FactSet’s 2025 US ETF summary put **~$43.5 billion** of net inflows into thematic ETFs after **outflows** the prior year, with robotics/AI among the leaders. Yet Invesco QQQ alone took in about **$21.7 billion**, and wealth-management commentary still treats the Nasdaq-100 — with Mag 7 near **40%** weight — as the default AI vehicle. Dedicated robotics/AI funds remain a satellite sleeve.
+
+That matters for financing because equity **valuation support** and **primary equity capacity** are linked. A market that funds the AI story through QQQ and SOXX can still choke on simultaneous mega-IPO supply (OpenAI / Anthropic expectations) and mega-issuer secondary raises. Hyperscalers that raise equity early, as FactSet argued, are partly booking capacity before that collision.
+
+## Caveats and methodology
+
+1. **Cohort and scope differ by source.** Goldman’s IG issuance path is global IG-rated bonds for the five hyperscalers. BofA’s five-company US series and Reuters’ four-name YTD tally will not match dollar-for-dollar. We label the Goldman path as the spine and annotate deal-level Reuters/LSEG prints separately.
+2. **Capex ≠ AI-only spend.** Company gross PP&E mixes warehouses, offices, network, and accelerators. Debt-funded *share of capex* is not identical to debt-funded *share of AI infrastructure*. See the [spend-scope map](/blog/ai-capex-spend-research-2026) and [Goldman Tracking Trillions breakdown](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028) for perimeter discipline.
+3. **Funding-mix pie is research synthesis**, not a single audited ledger. Channel shares are constructed to be consistent with Goldman’s debt-share path and disclosed equity raises; structured/lease slices are directional.
+4. **2026 YTD is not a run-rate.** Front-loaded issuance can overstate full-year annualization if books pause after rating actions or spread spikes.
+5. **ETF flows fund secondary ownership, not issuer capex directly.** They appear here as the public-markets *sentiment and capacity* channel alongside primary equity — not as a substitute for bond proceeds.
+6. **Ratings and CDS** (especially Oracle) can gap faster than cash-bond indices; spread charts based on new-issue medians understate idiosyncratic stress.
+
+Primary sources: Goldman Sachs credit strategy as reported in financial press (mid-2026), FactSet hyperscaler external-financing analysis (July 2026), Reuters/LSEG deal and spread tallies via CNA, MUFG “Financing the AI supercycle” (December 2025), Breckinridge balance-sheet commentary, and FactSet / ETF.com 2025 flow summaries.
+
+## What to watch next
+
+Three coincident signals will tell you whether the financing regime stabilizes or tightens further: (1) **full-year 2026 IG issuance** versus Goldman’s **~$250B** path — and whether Microsoft remains a light issuer relative to peers; (2) **new-issue concessions and cover ratios** on the next mega deal after Oracle’s downgrade; (3) **equity vs debt mix** — another Alphabet-scale primary raise would confirm that credit saturation is binding. If debt share settles near a third while spreads stop widening, markets will treat leveraged AI infrastructure as a new steady state. If issuance keeps climbing toward the **$400B / 35%** 2027 sketch while secondary bonds gap wider, the constraint stops being GPU supply and starts being **credit market plumbing**. Either way, the question is no longer only how large the build is — it is **who funds it, at what price, and on whose balance sheet**.`,
+    category: "Capital Markets",
+    themeId: "ai-financing",
+    imageUrl: "/images/capital-markets-ai-financing-research-2026-hero.png",
+    imageAlt:
+      "Dark navy capital-markets chart of rising hyperscaler bond issuance and debt share of AI capex toward one-third by 2026",
+    publishedAt: "2026-07-31T14:00:00Z",
+    featured: true,
+    visualization: "ai-financing-research-2026",
+    layout: "default",
+  },
+  {
     id: "ai-compute-demand-research-2026",
     slug: "ai-compute-demand-research-2026",
     title: "Charted: Five Hyperscalers Own 71% of the World’s AI Compute",

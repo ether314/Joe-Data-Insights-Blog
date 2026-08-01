@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-financing-research-2026",
+    marker: "Hyperscaler IG bond issuance vs debt share of capex",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "china-fiscal-revenue-all-budgets-2024",
     marker: "Granular Revenue by Line Item",
     forbidden: "Loading interactive charts",
