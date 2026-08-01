@@ -2,6 +2,114 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "measurement-science-research-2026",
+    slug: "measurement-science-research-2026",
+    title:
+      "Charted: US + China Fund 57% of Global R&D — Science Concentrates",
+    excerpt:
+      "Global GERD reached about $3.1T PPP in 2022. The US (30%) and China (27%) together hold 57%; the top eight economies hold 82%. Six countries produce more than half of S&E publications — China leads volume since 2016.",
+    content: `Science is often narrated as a borderless commons — open journals, shared methods, collaborative labs. The **funding and publication ledgers** tell a tighter story. In 2022, gross domestic expenditure on R&D (GERD) across the OECD-coverage world totaled about **$3.1 trillion** in purchasing-power-parity dollars. The United States performed **30%** of that stack and China **27%**. Together, the two largest systems fund **57%** of measured global research. The top eight individual performers — adding Japan, Germany, South Korea, the UK, France, and Taiwan — account for **82%**.
+
+That is the core answer to this post's question: **where is progress funded and published, and is it concentrating?** Funding is concentrating into a **US–China duopoly sitting on a thin high-income tier**. Publication volume has concentrated even faster toward Asia: China alone produced **27%** of peer-reviewed science and engineering articles in 2022, versus **14%** for the United States, after overtaking US article counts around **2016**. Citation *impact*, however, still favors established producers — volume leadership is not the same as influence leadership.
+
+The interactive dashboard above is the map: a **GERD share streamgraph**, a **publication-rank bump chart**, 2022 dollar volumes, an **impact-versus-volume scatter**, and R&D intensity bars. Pair the global research ledger with our [OECD DAC aid drop](/blog/oecd-dac-oda-first-drop-2024) — another concentration story about who pays for public goods — and with [who owns AI compute](/blog/ai-compute-demand-research-2026), where capital concentration in a different stack (chips and data centers) is even sharper.
+
+## What GERD actually measures
+
+GERD is the Frascati-manual total of R&D performed inside an economy in a year — business, government, higher education, and private nonprofits — converted for cross-country comparison with PPP. NSF's Science & Engineering Indicators, drawing on OECD Main Science and Technology Indicators, is the framing used here. A few measurement rules matter before any chart:
+
+1. **PPP dollars are not market-exchange dollars.** China's GERD looks closer to the US in PPP than it does at market rates; both comparisons are used in the literature, and they answer different questions.
+2. **The "world" total is OECD-coverage, not every UN member.** NSF's 2022 global figure (~$3.1T) covers OECD members plus a set of non-member reporters including China and Taiwan. Missing economies bias the denominator slightly.
+3. **US GERD in OECD tables is adjusted for international comparability** (capital treatment, depreciation, some foreign-funding adjustments) and can differ from domestic NCSES totals printed elsewhere in the same reports.
+4. **Mid-path share years between disclosed anchors (2000, 2010, 2022) are estimated** for shape. Treat the streamgraph as a concentration narrative, not a basis-point time series.
+
+WIPO's end-of-year R&D blog puts 2023 spending near **$3 trillion** in current dollars, with the US near **$784B** and China near **$723B**. Those are useful current-dollar cross-checks; they are **not** mixed into the PPP share charts here.
+
+## The concentration table
+
+| Meter | Value | Source framing |
+| --- | ---: | --- |
+| Global GERD (2022, PPP) | **~$3.1T** | NSF / OECD coverage |
+| US GERD share (2022) | **30%** | NSF Discovery |
+| China GERD share (2022) | **27%** | NSF Discovery |
+| US + China | **57%** | Sum of shares |
+| Top-8 individual performers | **82%** | NSF Discovery |
+| EU-27 as a bloc | **18%** | NSF Discovery |
+| US share (2000 → 2022) | **39% → 30%** | NSF Discovery |
+| China share (2000 → 2022) | **~5% → 27%** | NSF / WIPO framing |
+| China S&E pubs share (2022) | **27%** | NSF publications |
+| US S&E pubs share (2022) | **14%** | NSF publications |
+| Top-6 publication producers | **>50%** | NSF State of S&E 2024 |
+| Publication volume lead flip | **~2016** | NSF |
+
+Read the table as one sentence: **research funding is a duopoly-plus-tier story; publication volume is an Asia-shift story; citation impact is still a quality-weighted story.**
+
+## The funding stream: from US plurality to US–China parity
+
+In 2000 the United States performed roughly **two-fifths** of measured global R&D. China's share was a mid-single-digit footnote. By 2010 the US share had already fallen to about **31%** as China's climb and Korea's intensity pushed the Asian share up. By 2022 the US is still first at **30%**, but China is a near peer at **27%**. The EU-27 as a bloc is **18%** — larger than Japan (**~$201B**, roughly **6–7%**) but no longer a rival to either superpower on dollars alone.
+
+Absolute volumes make the duopoly visceral. NSF/OECD 2022 GERD prints put the United States at about **$923 billion** PPP and China at about **$812 billion**. Japan (**$201B**), Germany (**$175B**), and South Korea (**$139B**) are the next tier — each less than a quarter of China's stack. The UK, France, and Taiwan round out the top eight. Toggle the dashboard's **US–China duopoly** view: the two leaders' combined share rises from the mid-40s in 2000 toward the high-50s by 2022, while the "rest of world" ribbon compresses.
+
+Concentration here is **not** "everyone stopped researching." Global GERD grew. What concentrated is **share**: a larger fraction of a larger pie sits in two systems. That matters for standards-setting, talent magnets, dual-use technology races, and the bargaining power of research universities and corporate labs inside those systems.
+
+For a parallel look at how **growth and trade** redistribute economic weight — the demand side that funds much business R&D — see our [macro growth, trade & prices research](/blog/macro-growth-trade-research-2026).
+
+## Publication volume: China leads; the pack reshuffles
+
+Peer-reviewed article counts are an early output meter of the research system. NSF's publications framing (Scopus-based fractional counts) shows China at **27%** of world S&E articles in 2022 and the United States at **14%**. India is third at about **6%**. Germany, the UK, and Japan each sit near **3%**. Six countries combined clear **half** of global output.
+
+The **bump chart** is the cleanest visual of the flip. The United States led volume until roughly **2016**, after which China took first place and never looked back. Japan fell from a top-two producer in the early 2000s toward sixth by 2020 as its article counts stagnated while China's rose roughly **tenfold** from 2003–2022 and India's about **eightfold**. US output grew only about **a third** over the same window — respectable in absolute papers, catastrophic as a share.
+
+Field mix matters. In 2022, health sciences dominated US, UK, German, and Japanese portfolios; engineering dominated China's; computer and information sciences dominated India's. Counting "papers" without field weights is like counting ships without distinguishing freighters from destroyers — useful for scale, incomplete for capability.
+
+## Impact is not volume: the HCA caveat
+
+Citation impact still separates the story. NSF's highly cited article (HCA) index sets the world baseline at **1.0**. Around 2020 the United Kingdom printed the highest large-producer HCA near **2.2**; the United States and Germany were near **1.7**. China's index has been climbing toward and around baseline as volume exploded — progress, but not yet US-style citation leverage per paper. India's fast volume growth still sits below baseline on impact in the same framing.
+
+The dashboard's **impact-versus-volume scatter** puts that tension on one plane: China far right on share, mid-pack on HCA; the UK and US higher on HCA with smaller (UK) or mid (US) volume shares. **Caveat:** HCA is field- and database-sensitive; open-access shifts and language coverage change who looks "highly cited." Treat the scatter as a directional warning against equating article counts with scientific influence — not as a precise league table of national genius.
+
+## Intensity: small systems punch above their weight
+
+Dollar shares reward large economies. **GERD as a percent of GDP** rewards commitment. In 2022 Israel led at about **6.0%** of GDP and South Korea at **5.2%**. Taiwan printed near **4.0%**. The United States sat near **3.6%**, Japan **3.4%**, Germany **3.1%**, China **2.6%**, and the EU-27 about **2.1%**.
+
+China's intensity is still below the US even while its PPP dollar total rivals the US. That is the arithmetic of a still-poorer-per-capita but enormous economy running a sustained industrial-science strategy. Korea and Israel show the other extreme: mid-sized economies that treat R&D intensity as a national survival parameter. Intensity leaders are often the same places that show up in advanced manufacturing, semiconductors, and defense-tech ecosystems — see also our [IRENA renewable capacity record](/blog/irena-renewable-capacity-record-2024) for how capital-intensive technology buildouts concentrate geographically once learning curves and industrial policy lock in.
+
+## Who funds inside the big systems
+
+Across the top performers, **business** is the largest performer and usually the largest funder of R&D. NSF notes that for five of the top eight, businesses perform more than three-fourths of R&D. Government funding shares in the high teens to low twenties of GERD appear in Korea, the UK, the US, and China. Higher education's performing share is double-digit mainly in China, Germany, and France among the largest systems with OECD detail.
+
+Industry focus diverges. US business R&D leans hard into information and communication services and pharmaceuticals; Germany and Japan put large slices into motor vehicles; the UK and France put more into scientific R&D services; aerospace shares are notable in France and the US. Those sectoral fingerprints explain why "national R&D" debates so often collapse into chip fabs, auto platforms, or drug pipelines — the ledger is already specialized.
+
+## Is it concentrating — and what that means
+
+**Yes on funding share and publication volume; partially on impact; no on the idea that only two countries do science.** The rest of the world still performs hundreds of billions of dollars of research and millions of papers. What changed is the **center of gravity**: a late-20th-century US-and-allies plurality has become a **US–China bipolar funding core**, with Europe and Japan as large but relatively shrinking share holders, Korea and Taiwan as intensity specialists, and India as the fastest-rising publication volume story after China.
+
+Policy implications follow without a sermon:
+
+- **Talent and immigration policy** in the US and Europe is a research-capacity lever, not only a labor-market lever.
+- **Research security and collaboration rules** now operate inside a bipolar funding map; decoupling cuts collaboration bandwidth where the papers and labs actually are.
+- **Quality metrics** (citations, reproducibility, standards) matter more as volume floods; raw article counts are a poor scoreboard for national strategy.
+- **Allied intensity** (Korea, Israel, Taiwan, parts of Europe) is a force multiplier for open scientific ecosystems even when absolute GERD is smaller.
+
+## Caveats and what we are not claiming
+
+We are **not** claiming Chinese science is "better" or US science is "done." We are claiming the **budget and bibliography** have concentrated. We are not equating GERD with innovation outcomes (startups, patents, productization). We are not treating PPP and market-exchange rankings as interchangeable. Mid-path streamgraph and bump years are **estimated** between disclosed anchors. Publication databases undercount some languages and overcount some conference-heavy fields. HCA indices move with database vintages.
+
+The honest headline remains quantitative and narrow: **in 2022, two countries funded 57% of measured global R&D, eight countries funded 82%, and six countries wrote more than half the papers — with China leading volume since 2016 while citation impact still favors older scientific powers.**
+
+## Sources and further reading
+
+Primary framing: NSF NCSES / National Science Board Science & Engineering Indicators (Discovery R&D chapter; State of US S&E 2024 publications section; Publications Output reports). Cross-checks: OECD MSTI GERD tables; WIPO Global Innovation Index R&D blog for 2023 current-dollar levels. Method notes are in the dashboard source line and in the measurement section above.`,
+    category: "Global Systems",
+    themeId: "measurement-science",
+    imageUrl: "/images/global-systems-measurement-science-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic streamgraph of global R&D funding concentration with bump-chart ranking paths",
+    publishedAt: "2026-08-01",
+    featured: true,
+    visualization: "measurement-science-research-2026",
+  },
+  {
     id: "us-tax-expenditure-catalog-2026",
     slug: "us-tax-expenditure-catalog-2026",
     title:

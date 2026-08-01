@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "measurement-science-research-2026",
+    marker: "Where progress is funded and published",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-tax-expenditure-catalog-2026",
     marker: "Tax expenditures as % of GDP",
     forbidden: "Loading interactive charts",
