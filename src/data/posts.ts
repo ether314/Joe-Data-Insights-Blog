@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-industrial-policy-research-2026",
+    slug: "fiscal-industrial-policy-research-2026",
+    title: "Charted: Subsidy Jurisdictions Nearly Doubled as Industrial Policy Went Global",
+    excerpt:
+      "IMF–Global Trade Alert NIPO data: jurisdictions using trade-distorting subsidies rose from 36% in 2009 to 59% in 2023. Over 2,500 measures in 2023 alone — and the toolkit is tilting from grants toward coercive trade tools.",
+    content: `Industrial policy never left. What changed is **who** uses it, **how often**, and **which instruments** do the work. The IMF’s collaboration with the Global Trade Alert — the New Industrial Policy Observatory (NIPO) and its Historical extension (H-NIPO) — turns that anecdote into a countable ledger: **34,248** distinct interventions from **2009 through 2023**, of which **85%** were trade-distorting. China, the European Union, and the United States alone account for roughly **53%** of the historical stock.
+
+The interactive dashboard above is built for the question this theme asks: **how do subsidies, tariffs, and industrial policy reshape economies?** The short answer in the data is that subsidies remain the workhorse, tariff-style trade tools are rising inside advanced-economy toolkits, and since **2020** the motives have shifted toward **supply-chain resilience, national security, and geopolitics** — a shift Global Trade Alert’s late-2025 briefing describes as a turn toward more coercive, externally oriented industrial policy.
+
+Unlike our [US industrial subsidies vs tariffs](/blog/us-industrial-subsidies-vs-tariffs-30-years) post — which tracks *dollar* outlays and customs revenue on the US federal ledger — this piece tracks *policy activity* worldwide: how many jurisdictions intervene, with which instruments, and under which stated motives. Dollar packages still matter; they appear in the fiscal-war-chest panel. Counts matter more for tit-for-tat dynamics.
+
+## The extensive margin: more countries subsidize
+
+| Indicator (NIPO / H-NIPO) | 2009 | 2023 | Peak |
+| --- | ---: | ---: | ---: |
+| Jurisdictions with any trade-distorting IP | 56% | 63% | 75% (2020, 2022) |
+| Jurisdictions using distorting subsidies | 36% | 59% | ~COVID-era highs |
+| Jurisdictions using localization rules | 6% | 12% | Rising trend |
+| Import/export measures (share of jurisdictions) | ~26–32% | ~26–32% | ~70%+ in 2020 |
+
+The headline is not that every capital suddenly discovered industrial policy. It is that **subsidy use nearly doubled at the extensive margin**: from a little over one-third of monitored jurisdictions in 2009 to nearly three-fifths in 2023. Localization policies doubled from **6% to 12%**. Trade barriers as a *jurisdiction share* look flat across endpoints — until you look at **2020**, when pandemic emergency measures pushed import/export tool use into the majority of both advanced and emerging economies.
+
+Toggle the coverage metric in the dashboard. Subsidies tell a structural story. “Any distorting IP” tells a crisis-and-persistence story: the share hit **75%** in **2020** and again in **2022**, then eased to **63%** in 2023 — still above the 2009 baseline. The post-pandemic world did not revert to the 2010s.
+
+## Inside the toolkit: AE–EMDE convergence on subsidies
+
+Instrument *shares within* industrial-policy measures tell a different story from jurisdiction coverage. Advanced economies entered the sample already subsidy-heavy: **84%** of AE industrial-policy measures in 2009 were subsidies, falling to **75%** by 2023 as **trade measures rose from 3% to 8%** and localization edged up. Emerging and developing economies moved the other way: subsidies rose from **56% to 71%** of their IP measures, while trade measures fell from **27% to 18%**.
+
+That is convergence toward a **subsidy-led global norm**, not a return to 1970s-style tariff walls as the primary tool — even as tariffs re-enter Western politics. The GTA’s 2025 “Security First” briefing warns that early-2025 data show Western interventions tilting *back* toward coercive trade tools relative to domestic financial support. The H-NIPO 2009–2023 ledger captures the long climb of subsidies; the 2025 briefing captures the next turn of the screw.
+
+For US readers who only watch CHIPS and IRA press releases, the AE trade-share rise from **3% to 8%** looks small. It is not small in political economy terms: it is the thin edge of export controls, local-content rules, and trade-defence actions sitting *inside* the same industrial-policy category as grants.
+
+## The 2023 wave: 2,580 measures, 71% distorting
+
+The original NIPO snapshot for calendar **2023** recorded **2,580** interventions: **98** plans and strategies (**3.8%**), **1,451** policies and regulations (**56%**), and **1,031** firm-specific awards (**40%**). Roughly **71%** were trade-distorting. China, the EU, and the US again dominated — about **48%** of that year’s measures.
+
+Two implications follow. First, industrial policy is mostly **implementation**, not communiqués: firm awards and regulations outnumber strategy documents roughly **twenty-five to one**. Second, a subset of **882** import-restrictive measures with identifiable trade coverage touched at least **22%** of global trade. That is not a niche steel case; it is a measurable wedge through the trading system.
+
+Pair this count-based view with our [China fiscal revenue breakdown](/blog/china-fiscal-revenue-all-budgets-2024) when you care about how another major industrial-policy actor actually books revenue on the fiscal ledger. NIPO counts selective interventions; budget breakdowns show the cash room that makes subsidy races feasible.
+
+## Motives: from climate and competitiveness to security
+
+Before 2020, competitiveness and climate dominated stated motives in the H-NIPO narrative. After 2020, **supply-chain resilience, national security, and geopolitics** move to the foreground. Inside the national-security / geopolitics motive class, the instrument mix itself mutated:
+
+- **Export barriers** rose from **7% to 22%** of those measures.
+- **Import barriers** fell from **28% to 11%**.
+- **Localization / procurement** fell from **30% to 9%**.
+- **FDI measures** fell from **24% to 11%**.
+- **Other / unconventional** instruments jumped from **5% to 37%**.
+
+Read that carefully. Security-motivated industrial policy did not simply “add tariffs.” It **reweighted toward export controls and unconventional tools** — technology denial, outbound investment screens, entity lists — while classic localisation and import-barrier shares *within that motive* declined. GTA’s 2025 briefing adds that more than half of recent US industrial-policy measures explicitly cite national security or geopolitics, with security-of-supply motives pushing Western interventions toward a security-centred regime that is harder to reverse once framed that way.
+
+## Fiscal packages: the war chests behind the counts
+
+Counts do not show fiscal scale. The dashboard’s package panel puts statutory and mobilisation headlines side by side:
+
+- **US CHIPS Act** semiconductor appropriations: **$52.7B** (including **$39B** for manufacturing incentives).
+- **CHIPS advanced manufacturing ITC**: often scored near **$24B**, with upside scenarios far higher.
+- **European Chips Act**: roughly **€43B (~$47B)** mobilised public-and-private investment target — not a single EU cheque.
+- **EU IPCEIs** for microelectronics, batteries, and hydrogen: on the order of **€37B+ (~$40B)** approved state aid.
+- **IRA** clean-energy tax expenditures: original headline near **$370B**, with independent uptake estimates often much larger.
+- **China’s Big Fund III**, **Japan**, and **Korea** semiconductor packages: tens of billions each on reported envelopes.
+
+These figures are **not comparable outlays**. Appropriations, tax-credit scores, state-aid approvals, and equity-fund raises answer different budget questions. They *are* comparable as political commitments: every major manufacturing power is putting nine- and ten-figure claims on semiconductor and clean-tech geography. Our [commercial aircraft final-assembly](/blog/commercial-aircraft-final-assembly-2025) map shows what decades of subsidy competition look like in a mature dual-use industry; chips and batteries are earlier innings of the same game.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** export-oriented manufacturers in jurisdictions that cannot match subsidy intensity or that sit downstream of new export controls; WTO dispute settlement, which was not designed for simultaneous security-framed industrial policies across dozens of capitals; climate coalitions that assumed green industrial policy would stay cooperative rather than become a subsidy race with local-content tripwires; EMDE governments that converge on subsidy tools without AE-scale fiscal space.
+
+**Relative winners under current rules of the game:** firms that can collect overlapping grants, credits, and procurement preferences across CHIPS/IRA/IPCEI-style regimes; capitals that combine fiscal capacity with export-control leverage; sectors already inside strategic product lists (semiconductors, critical minerals, dual-use, low-carbon tech).
+
+**What would change the story:** a sustained drop in new NIPO interventions back toward pre-2019 rates; a negotiated subsidy code that bites on security-framed measures; or a fiscal crunch that forces AE governments to choose between industrial credits and other mandatory spending. None of those appear in the 2023–2025 ledgers.
+
+## Caveats and methodology
+
+- **Counts ≠ dollars.** One firm-specific award and one multi-year strategy both count as interventions; fiscal impact differs by orders of magnitude.
+- **Trade coverage is a lower bound.** The **22%** of global trade figure applies only to the **882** import measures with identifiable coverage — not the full distorting set.
+- **Intermediate coverage years are interpolated** between disclosed endpoints and peak years; confidence flags in the data file mark disclosed vs estimated points.
+- **Package USD figures mix metrics** (appropriations, mobilisation targets, state-aid totals, tax-credit scores) and FX conversions; treat them as order-of-magnitude war chests.
+- **EU is often coded as a single actor** in NIPO summaries even though member-state aid drives much of the fiscal reality.
+- **2025 instrument-mix claims** from GTA’s Security First briefing are directional early-year evidence, not a full-year census matching the 2023 NIPO table.
+- **H-NIPO uses LLM-assisted motive tagging** for 2009–2022; misclassification risk is real even when aggregates are robust.
+
+## The shareable takeaway
+
+From **2009 to 2023**, the share of jurisdictions using trade-distorting **subsidies** rose from **36% to 59%**, while **34,248** industrial-policy interventions accumulated — **85%** of them distorting, and more than half from China, the EU, and the US. The **2023** wave alone logged **2,580** measures, and security-framed policy increasingly reaches for **export barriers** and unconventional tools. Subsidies still dominate the toolkit; tariffs and controls are how the same agenda becomes coercive.
+
+Related reading: [US industrial subsidies vs tariffs (30 years)](/blog/us-industrial-subsidies-vs-tariffs-30-years) and [China fiscal revenue breakdown](/blog/china-fiscal-revenue-all-budgets-2024).`,
+    category: "Politics",
+    themeId: "fiscal-industrial-policy",
+    imageUrl: "/images/politics-fiscal-industrial-policy-research-2026-hero.png",
+    imageAlt:
+      "Dark navy data-visualization hero of global subsidy flows and tariff barriers reshaping industrial policy",
+    publishedAt: "2026-07-31T19:00:00Z",
+    featured: true,
+    visualization: "fiscal-industrial-policy-research-2026",
+    layout: "default",
+  },
+  {
     id: "ai-power-grid-research-2026",
     slug: "ai-power-grid-research-2026",
     title:

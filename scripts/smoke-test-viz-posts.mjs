@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "fiscal-industrial-policy-research-2026",
+    marker: "Jurisdiction coverage: who is intervening?",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-power-grid-research-2026",
     marker: "AI power & grid — IEA global frame",
     forbidden: "Loading interactive charts",

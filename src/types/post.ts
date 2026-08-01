@@ -52,7 +52,8 @@ export interface Post {
     | "macro-growth-trade-research-2026"
     | "ai-compute-demand-research-2026"
     | "ai-financing-research-2026"
-    | "ai-power-grid-research-2026";
+    | "ai-power-grid-research-2026"
+    | "fiscal-industrial-policy-research-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
