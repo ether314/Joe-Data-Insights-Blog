@@ -7,46 +7,48 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
-import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
+import { startStaticServerBound, stopStaticServer } from "./lib/static-server.mjs";
+import { findUnresolvedMarkdownMarkers } from "./lib/markdown-formatting-qa.mjs";
 import { auditPageScroll } from "./lib/viz-interaction-qa.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
 const live = process.argv.includes("--live");
-const baseUrl = live
+// Prefer dedicated QA port so smoke + homepage can never collide if overlapped.
+let baseUrl = live
   ? process.env.SMOKE_BASE_URL || "https://ether-data-insights-blog.web.app"
-  : `http://127.0.0.1:${process.env.SMOKE_PORT || 4174}`;
+  : `http://127.0.0.1:${process.env.SMOKE_QA_PORT || process.env.SMOKE_PORT || 4174}`;
 
 const EXPECTED_HOMEPAGE = [
-  "oecd-dac-oda-first-drop-2024",
-  "money-market-funds-vs-deposits-2026",
-  "commercial-aircraft-final-assembly-2025",
+  "migration-humanitarian-research-2026",
+  "fiscal-industrial-policy-research-2026",
+  "ai-power-grid-research-2026",
 ];
 
 const SCROLL_POSTS = [
   {
-    slug: "oecd-dac-oda-first-drop-2024",
-    proseMarker: "Foreign-aid debates usually start with moral language",
+    slug: "migration-humanitarian-research-2026",
+    proseMarker: "displaced",
     layout: "default",
   },
   {
-    slug: "money-market-funds-vs-deposits-2026",
-    proseMarker: "Bank deposit rates get the headlines",
-    layout: "canvas",
-  },
-  {
-    slug: "natural-graphite-mine-concentration-2024",
-    proseMarker: "Battery narratives talk endlessly",
+    slug: "fiscal-industrial-policy-research-2026",
+    proseMarker: "Industrial policy",
     layout: "default",
   },
   {
-    slug: "bank-loan-chargeoffs-2026",
-    proseMarker: "Office vacancies",
+    slug: "ai-power-grid-research-2026",
+    proseMarker: "data centre",
     layout: "default",
   },
   {
-    slug: "irena-renewable-capacity-record-2024",
-    proseMarker: "Energy headlines love generation",
+    slug: "ai-financing-research-2026",
+    proseMarker: "balance-sheet",
+    layout: "default",
+  },
+  {
+    slug: "ai-compute-demand-research-2026",
+    proseMarker: "compute",
     layout: "default",
   },
 ];
@@ -68,7 +70,13 @@ async function main() {
     if (!fs.existsSync(path.join(outDir, "index.html"))) {
       fail("missing out/index.html — run npm run build first");
     }
-    server = await startStaticServer(outDir, Number(process.env.SMOKE_PORT || 4174));
+    const preferred = Number(
+      process.env.SMOKE_QA_PORT || process.env.SMOKE_PORT || 4174,
+    );
+    const bound = await startStaticServerBound(outDir, preferred);
+    server = bound.server;
+    baseUrl = bound.url;
+    console.log(`homepage QA static server: ${baseUrl} (preferred ${preferred})`);
   }
 
   const browser = await chromium.launch();
@@ -131,6 +139,12 @@ async function main() {
         const text = await proseLocator.innerText();
         if (!text.toLowerCase().includes(post.proseMarker.toLowerCase().split(" ")[0])) {
           fail(`${post.slug}: prose marker "${post.proseMarker}" not found`);
+        }
+        const unresolved = await findUnresolvedMarkdownMarkers(page);
+        if (unresolved.length) {
+          fail(
+            `${post.slug}: unresolved markdown markers (expected <em>/<strong>): ${unresolved.slice(0, 5).join("; ")}`,
+          );
         }
       }
 

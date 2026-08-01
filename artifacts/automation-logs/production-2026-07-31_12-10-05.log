@@ -1,0 +1,52 @@
+[2026-07-31 12:10:07] Starting orchestrator (orch-20260731-121005)
+[2026-07-31 12:10:07] Bootstrapping worktrees...
+[2026-07-31 12:10:10] Recovering any orphaned merge state...
+[2026-07-31 12:10:10] merge recover: {
+  "recover": true,
+  "recovered": false,
+  "reason": "no stash state"
+}
+[2026-07-31 12:17:43] Assigning job job-ms95bvdz-9i16r -> worker 1
+[2026-07-31 12:21:11] Merging ready job job-ms94skof-woo7k (us-billion-dollar-weather-disasters-ms94skof) from post/us-billion-dollar-weather-disasters-ms94skof-w3
+[2026-07-31 12:21:12] Defer merge of us-billion-dollar-weather-disasters-ms94skof - worker 3 still finishing this job
+[2026-07-31 12:21:47] Assigning job job-ms95h2me-nnvtq -> worker 3
+[2026-07-31 12:21:52] Merging ready job job-ms94skof-woo7k (us-billion-dollar-weather-disasters-ms94skof) from post/us-billion-dollar-weather-disasters-ms94skof-w3
+[2026-07-31 12:21:56] merge-ready-job exit=2
+[2026-07-31 12:21:56] merge-ready-job out: {
+  "ok": false,
+  "error": "branch_empty",
+  "detail": "Branch post/us-billion-dollar-weather-disasters-ms94skof-w3 has no post-file changes vs main",
+  "log": [
+    "merge start slug=us-billion-dollar-weather-disasters-ms94skof branch=post/us-billion-dollar-weather-disasters-ms94skof-w3",
+    "branch commits ahead of HEAD: 1",
+    "worktree: using existing branch tip",
+    "post allowlist on branch: 13 files",
+    "post files differing from HEAD: 0"
+  ]
+}
+[2026-07-31 12:21:57] Stopping worker 3 process(es) (fail job-ms94skof-woo7k: branch_empty)
+[2026-07-31 12:22:21] Worker 3 marked busy but process gone - clearing slot (job=job-ms95h2me-nnvtq)
+[2026-07-31 12:22:31] Assigning job job-ms95i0vj-v9vgb -> worker 3
+[2026-07-31 12:22:36] Assigning job job-ms95i0vj-vabgu -> worker 4
+[2026-07-31 12:25:22] Assigning job job-ms95lpmb-qdcw1 -> worker 1
+[2026-07-31 12:25:27] Assigning job job-ms95lpmb-41dmm -> worker 2
+[2026-07-31 12:25:53] Assigning job job-ms95mc0c-xw7nh -> worker 2
+[2026-07-31 12:26:13] Merging ready job job-ms94skof-woo7k (us-billion-dollar-weather-disasters-ms94skof) from post/us-billion-dollar-weather-disasters-ms94skof-w3
+[2026-07-31 12:26:18] merge-ready-job exit=0
+[2026-07-31 12:26:18] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "log": [
+    "merge start slug=us-billion-dollar-weather-disasters-ms94skof branch=post/us-billion-dollar-weather-disasters-ms94skof-w3",
+    "branch commits ahead of HEAD: 1",
+    "worktree: using existing branch tip",
+    "post allowlist on branch: 17 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (10 files): artifacts/backend-manifest.json, public/images/energy-us-billion-dollar-weather-disasters-ms94skof-hero.png, scripts/qa-us-billion-dollar-weather-disasters-ms94skof.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/UsBillionDollarWeatherDisastersMs94skofDashboard.tsx, src/data/posts.ts, src/data/theme-registry.ts"
+  ]
+}
+[2026-07-31 12:26:18] Shipped: us-billion-dollar-weather-disasters-ms94skof | duration_sec=1394
+[2026-07-31 12:29:41] Assigning job job-ms95r9et-w818d -> worker 1
+[2026-07-31 12:29:46] Assigning job job-ms95r9et-v9bcn -> worker 4
+[2026-07-31 12:32:18] Assigning job job-ms95um0d-cyo8z -> worker 3

@@ -2,7 +2,57 @@ import type { ReactNode } from "react";
 
 const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/;
 
-/** Renders `**bold**` and `[label](url)` inline markdown. */
+type DelimMatch = { start: number; end: number; inner: string };
+
+/**
+ * Find paired single-character emphasis delimiters (`*` or `_`),
+ * skipping `**` bold markers and rejecting empty / whitespace-padded spans.
+ */
+function findSingleDelim(text: string, delim: "*" | "_"): DelimMatch | null {
+  let i = 0;
+  while (i < text.length) {
+    if (delim === "*" && text.startsWith("**", i)) {
+      i += 2;
+      continue;
+    }
+    if (text[i] !== delim) {
+      i += 1;
+      continue;
+    }
+    if (delim === "*" && text[i + 1] === "*") {
+      i += 2;
+      continue;
+    }
+
+    let j = i + 1;
+    while (j < text.length) {
+      if (delim === "*" && text.startsWith("**", j)) {
+        j += 2;
+        continue;
+      }
+      if (text[j] === delim && !(delim === "*" && text[j + 1] === "*")) {
+        const inner = text.slice(i + 1, j);
+        if (inner.length > 0 && !inner.includes("\n") && !/^\s|\s$/.test(inner)) {
+          if (delim === "_") {
+            const before = i > 0 ? text[i - 1]! : "";
+            const after = j + 1 < text.length ? text[j + 1]! : "";
+            if (/[A-Za-z0-9]/.test(before) || /[A-Za-z0-9]/.test(after)) {
+              j += 1;
+              continue;
+            }
+          }
+          return { start: i, end: j, inner };
+        }
+        break;
+      }
+      j += 1;
+    }
+    i += 1;
+  }
+  return null;
+}
+
+/** Renders `**bold**`, `*italic*` / `_italic_`, and `[label](url)` inline markdown. */
 export function renderInlineMarkdown(text: string): ReactNode {
   const nodes: ReactNode[] = [];
   let remaining = text;
@@ -12,20 +62,25 @@ export function renderInlineMarkdown(text: string): ReactNode {
     const boldStart = remaining.indexOf("**");
     const linkMatch = remaining.match(LINK_PATTERN);
     const linkStart = linkMatch?.index ?? -1;
+    const italicStar = findSingleDelim(remaining, "*");
+    const italicUnder = findSingleDelim(remaining, "_");
 
     const nextBold = boldStart === -1 ? Number.POSITIVE_INFINITY : boldStart;
     const nextLink = linkStart === -1 ? Number.POSITIVE_INFINITY : linkStart;
+    const nextItalicStar = italicStar?.start ?? Number.POSITIVE_INFINITY;
+    const nextItalicUnder = italicUnder?.start ?? Number.POSITIVE_INFINITY;
+    const next = Math.min(nextBold, nextLink, nextItalicStar, nextItalicUnder);
 
-    if (!Number.isFinite(nextBold) && !Number.isFinite(nextLink)) {
+    if (!Number.isFinite(next)) {
       nodes.push(remaining);
       break;
     }
 
-    if (nextBold <= nextLink) {
-      if (boldStart > 0) {
-        nodes.push(remaining.slice(0, boldStart));
-      }
+    if (next > 0) {
+      nodes.push(remaining.slice(0, next));
+    }
 
+    if (next === nextBold) {
       const end = remaining.indexOf("**", boldStart + 2);
       if (end === -1) {
         nodes.push(remaining.slice(boldStart));
@@ -41,23 +96,41 @@ export function renderInlineMarkdown(text: string): ReactNode {
       continue;
     }
 
-    if (linkStart > 0) {
-      nodes.push(remaining.slice(0, linkStart));
+    if (next === nextLink) {
+      const [, label, href] = linkMatch!;
+      nodes.push(
+        <a
+          key={key++}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-semibold text-cyan-700 underline decoration-cyan-700/40 underline-offset-2 hover:text-cyan-900"
+        >
+          {renderInlineMarkdown(label)}
+        </a>,
+      );
+      remaining = remaining.slice(linkStart + linkMatch![0].length);
+      continue;
     }
 
-    const [, label, href] = linkMatch!;
-    nodes.push(
-      <a
-        key={key++}
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-semibold text-cyan-700 underline decoration-cyan-700/40 underline-offset-2 hover:text-cyan-900"
-      >
-        {renderInlineMarkdown(label)}
-      </a>,
-    );
-    remaining = remaining.slice(linkStart + linkMatch![0].length);
+    if (next === nextItalicStar && italicStar) {
+      nodes.push(
+        <em key={key++}>{renderInlineMarkdown(italicStar.inner)}</em>,
+      );
+      remaining = remaining.slice(italicStar.end + 1);
+      continue;
+    }
+
+    if (next === nextItalicUnder && italicUnder) {
+      nodes.push(
+        <em key={key++}>{renderInlineMarkdown(italicUnder.inner)}</em>,
+      );
+      remaining = remaining.slice(italicUnder.end + 1);
+      continue;
+    }
+
+    nodes.push(remaining);
+    break;
   }
 
   return nodes.length === 1 ? nodes[0] : nodes;
@@ -67,6 +140,25 @@ export function renderInlineMarkdown(text: string): ReactNode {
 function renderListItemContent(text: string): ReactNode {
   const dashIndex = text.indexOf(" — ");
   if (dashIndex === -1) {
+    return renderInlineMarkdown(text);
+  }
+
+  // Do not split when the dash sits inside unclosed **bold** or *italic*
+  // (e.g. **Title — 45%**). Splitting would leave literal markers in the DOM.
+  const before = text.slice(0, dashIndex);
+  const boldMarkersBefore = before.match(/\*\*/g)?.length ?? 0;
+  if (boldMarkersBefore % 2 === 1) {
+    return renderInlineMarkdown(text);
+  }
+  let singleStars = 0;
+  for (let i = 0; i < before.length; i++) {
+    if (before.startsWith("**", i)) {
+      i += 1;
+      continue;
+    }
+    if (before[i] === "*") singleStars += 1;
+  }
+  if (singleStars % 2 === 1) {
     return renderInlineMarkdown(text);
   }
 

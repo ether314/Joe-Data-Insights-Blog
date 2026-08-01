@@ -1,0 +1,43 @@
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:638 char:127
++ ... ers.Count + $recNote + " | " + (($active | ForEach-Object { "$($_.slu ...
++                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Expressions are only allowed as the first element of a pipeline.
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:638 char:161
++ ... s.Count + $recNote + " | " + (($active | ForEach-Object { "$($_.slug) ...
++                                                                ~~
+Unexpected token '$(' in expression or statement.
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:638 char:171
++ ... ($active | ForEach-Object { "$($_.slug):$($_.status)" }) -join ", "))
++                                            ~~~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token ':$($_.status)" }) -join "' in expression or statement.
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:638 char:196
++ ... ($active | ForEach-Object { "$($_.slug):$($_.status)" }) -join ", "))
++                                                                     ~
+Missing argument in parameter list.
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:651 char:36
++     Write-Log "Orchestrator stopped"
++                                    ~
+The string is missing the terminator: ".
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:610 char:48
++             if ($recJob -and $recJob.workerId) {
++                                                ~
+Missing closing '}' in statement block or type definition.
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:595 char:23
++         if ($recFree) {
++                       ~
+Missing closing '}' in statement block or type definition.
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:547 char:13
++         try {
++             ~
+Missing closing '}' in statement block or type definition.
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:655 char:1
++ 
+The Try statement is missing its Catch or Finally block.
+At E:\AI Projects\data-insights-blog\scripts\run-blog-orchestrator.ps1:546 char:19
++     while ($true) {
++                   ~
+Missing closing '}' in statement block or type definition.
+Not all parse errors were reported.  Correct the reported errors and try again.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpressionsMustBeFirstInPipeline
+ 

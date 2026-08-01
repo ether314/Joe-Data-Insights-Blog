@@ -25,6 +25,8 @@
     "blog:local": "node scripts/local-blog-server.mjs",
     "merge:ready": "node scripts/merge-ready-job.mjs",
     "merge:self-test": "node scripts/merge-ready-job.mjs --self-test",
+    "branches:prune": "node scripts/prune-post-branches.mjs --dry-run",
+    "branches:prune:apply": "node scripts/prune-post-branches.mjs --apply",
     "qa:gdp": "npm run build && node scripts/qa-gdp-post.mjs",
     "qa:ai-data-centers": "npm run build && node scripts/qa-ai-data-centers-post.mjs",
     "postinstall": "npx playwright install chromium || true"

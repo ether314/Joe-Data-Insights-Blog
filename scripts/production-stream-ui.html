@@ -1,0 +1,2849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Production — Live CLI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070d18;
+      --bg-elevated: #0c1424;
+      --panel: #101b2e;
+      --panel-2: #152238;
+      --border: #243552;
+      --border-soft: #1a2840;
+      --text: #e8f0ff;
+      --text-soft: #b8c9e8;
+      --muted: #6d84a8;
+      --green: #34d399;
+      --green-dim: rgba(52, 211, 153, 0.12);
+      --amber: #fbbf24;
+      --amber-dim: rgba(251, 191, 36, 0.12);
+      --red: #f87171;
+      --red-dim: rgba(248, 113, 113, 0.12);
+      --cyan: #38bdf8;
+      --cyan-dim: rgba(56, 189, 248, 0.12);
+      --violet: #a78bfa;
+      --violet-dim: rgba(167, 139, 250, 0.12);
+      --mono: "IBM Plex Mono", "Cascadia Code", Consolas, monospace;
+      --sans: "IBM Plex Sans", system-ui, sans-serif;
+      --row-pad: 10px 14px;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background:
+        radial-gradient(900px 500px at 0% -20%, rgba(56, 189, 248, 0.08), transparent 60%),
+        radial-gradient(700px 400px at 100% 0%, rgba(167, 139, 250, 0.06), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-soft);
+      background: rgba(12, 20, 36, 0.88);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, #1e3a5f, #0f1c33);
+      border: 1px solid var(--border);
+      color: var(--cyan);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .subtitle {
+      margin: 2px 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .live-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--green-dim);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      opacity: 0;
+      transform: translateY(2px);
+      transition: opacity 0.25s, transform 0.25s;
+    }
+
+    .live-pill.on {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
+      70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+      max-width: 720px;
+    }
+
+    .badge {
+      font-size: 0.72rem;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .badge.ok { color: var(--green); border-color: rgba(52, 211, 153, 0.35); background: var(--green-dim); }
+    .badge.warn { color: var(--amber); border-color: rgba(251, 191, 36, 0.35); background: var(--amber-dim); }
+    .badge.err { color: var(--red); border-color: rgba(248, 113, 113, 0.35); background: var(--red-dim); }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 24px;
+      border-bottom: 1px solid var(--border-soft);
+      background: var(--panel);
+    }
+
+    .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .cot-bar {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 0 24px 10px;
+      margin-top: -4px;
+    }
+
+    body.cot-mode .cot-bar { display: flex; }
+
+    /* CoT tab: hide CLI terminal + status tables; show dedicated CoT table only */
+    body.cot-mode .alert-banner,
+    body.cot-mode .agents-panel,
+    body.cot-mode .ships-panel,
+    body.cot-mode #terminal,
+    body.cot-mode #meta {
+      display: none !important;
+    }
+
+    body.cot-mode .cot-panel {
+      display: block;
+    }
+
+    .cot-panel {
+      display: none;
+      margin: 0 24px 20px;
+    }
+
+    .cot-panel-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .cot-panel-head h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ede9fe;
+    }
+
+    .cot-panel-head p {
+      margin: 4px 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .cot-summary {
+      font-size: 0.78rem;
+      color: var(--violet);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .cot-table-wrap {
+      border: 1px solid rgba(167, 139, 250, 0.35);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #0c1020 0%, #080c16 100%);
+      max-height: calc(100vh - 210px);
+      overflow: auto;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .cot-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--mono);
+      font-size: 12.5px;
+    }
+
+    .cot-table th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      text-align: left;
+      padding: 10px 12px;
+      background: #12182a;
+      color: #c4b5fd;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(167, 139, 250, 0.3);
+    }
+
+    .cot-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: top;
+      color: var(--text-soft);
+    }
+
+    .cot-table tr:hover td {
+      background: rgba(167, 139, 250, 0.06);
+    }
+
+    .cot-table tr.live td {
+      background: rgba(52, 211, 153, 0.08);
+    }
+
+    .cot-table tr.dim {
+      opacity: 0.28;
+    }
+
+    .cot-table tr.match td {
+      background: rgba(56, 189, 248, 0.08);
+    }
+
+    .cot-table .cot-time {
+      white-space: nowrap;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+      width: 72px;
+    }
+
+    .cot-table .cot-worker {
+      width: 56px;
+    }
+
+    .cot-table .cot-kind {
+      width: 84px;
+    }
+
+    .cot-table .cot-msg {
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.4;
+    }
+
+    .cot-table .cot-empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 48px 16px;
+      font-family: var(--sans);
+    }
+
+    .cot-table tr.kind-thought .cot-msg { color: #ede9fe; }
+    .cot-table tr.kind-tool .cot-msg { color: #bae6fd; }
+    .cot-table tr.kind-user .cot-msg { color: #fde68a; }
+    .cot-table tr.kind-system .cot-msg { color: #a7f3d0; }
+
+    .cot-table .kind-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+    }
+    .cot-table .kind-pill.thought { color: #e9d5ff; background: rgba(167, 139, 250, 0.14); border-color: rgba(167, 139, 250, 0.35); }
+    .cot-table .kind-pill.tool { color: #7dd3fc; background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.3); }
+    .cot-table .kind-pill.user { color: #fde68a; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.3); }
+    .cot-table .kind-pill.system { color: #86efac; background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.25); }
+
+    .cot-table .src-pill {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
+
+    .cot-bar .cot-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--violet);
+      margin-right: 4px;
+    }
+
+    button.cot-chip {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text-soft);
+      border-radius: 999px;
+      padding: 5px 11px;
+      font: 500 0.75rem var(--sans);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      max-width: 280px;
+    }
+
+    button.cot-chip:hover {
+      border-color: rgba(167, 139, 250, 0.45);
+      color: var(--text);
+    }
+
+    button.cot-chip.active {
+      background: var(--violet-dim);
+      border-color: rgba(167, 139, 250, 0.55);
+      color: #ede9fe;
+    }
+
+    button.cot-chip .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--muted);
+      flex-shrink: 0;
+    }
+
+    button.cot-chip.live .dot {
+      background: var(--green);
+      box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.18);
+    }
+
+    button.cot-chip .chip-slug {
+      color: var(--muted);
+      font-weight: 400;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 160px;
+    }
+
+    .cot-bar .cot-kind-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: 10px;
+      padding-left: 12px;
+      border-left: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    button.cot-kind-chip {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text-soft);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font: 500 0.72rem var(--sans);
+      cursor: pointer;
+      text-transform: lowercase;
+    }
+
+    button.cot-kind-chip:hover {
+      border-color: rgba(167, 139, 250, 0.45);
+      color: var(--text);
+    }
+
+    button.cot-kind-chip.active {
+      background: var(--violet-dim);
+      border-color: rgba(167, 139, 250, 0.55);
+      color: #ede9fe;
+    }
+
+    button.cot-kind-chip[data-kind="thought"].active {
+      background: rgba(167, 139, 250, 0.18);
+      border-color: rgba(167, 139, 250, 0.5);
+      color: #e9d5ff;
+    }
+
+    button.cot-kind-chip[data-kind="tool"].active {
+      background: rgba(56, 189, 248, 0.14);
+      border-color: rgba(56, 189, 248, 0.45);
+      color: #bae6fd;
+    }
+
+    button.cot-kind-chip[data-kind="system"].active {
+      background: rgba(52, 211, 153, 0.12);
+      border-color: rgba(52, 211, 153, 0.4);
+      color: #a7f3d0;
+    }
+
+    button.cot-kind-chip[data-kind="user"].active {
+      background: rgba(251, 191, 36, 0.12);
+      border-color: rgba(251, 191, 36, 0.4);
+      color: #fde68a;
+    }
+
+    .cot-table tr.kind-filtered-out {
+      display: none;
+    }
+
+    button.tab {
+      border: 1px solid var(--border);
+      background: var(--bg-elevated);
+      color: var(--muted);
+      padding: 7px 13px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-family: var(--sans);
+      font-weight: 500;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+
+    button.tab:hover {
+      color: var(--text-soft);
+      border-color: #35507a;
+    }
+
+    button.tab.active {
+      color: var(--cyan);
+      border-color: rgba(56, 189, 248, 0.45);
+      background: var(--cyan-dim);
+    }
+
+    .search-wrap {
+      position: relative;
+      flex: 1 1 220px;
+      max-width: 360px;
+    }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 12px 8px 34px;
+      font-size: 0.82rem;
+      font-family: var(--sans);
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    input[type="search"]:focus {
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+      flex-wrap: wrap;
+    }
+
+    label.chk {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      user-select: none;
+    }
+
+    .size-toggle {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .size-toggle button {
+      border: 0;
+      background: var(--bg-elevated);
+      color: var(--muted);
+      padding: 7px 10px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-family: var(--sans);
+    }
+
+    .size-toggle button.active {
+      background: var(--panel-2);
+      color: var(--cyan);
+    }
+
+    main {
+      padding: 16px 24px 24px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .ships-panel {
+      margin-bottom: 16px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .ships-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-soft);
+      background: linear-gradient(180deg, rgba(56, 189, 248, 0.06), transparent);
+    }
+
+    .ships-head h2 {
+      margin: 0;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .ships-head p {
+      margin: 2px 0 0;
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+
+    .ships-summary {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .ships-wrap {
+      overflow: auto;
+      max-height: 280px;
+    }
+
+    .ships-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+
+    .ships-table th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      text-align: left;
+      padding: 9px 14px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: #0d1526;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ships-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(36, 53, 82, 0.55);
+      vertical-align: top;
+      color: var(--text-soft);
+    }
+
+    .ships-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .ships-table tr.new-row td {
+      background: var(--green-dim);
+      animation: fadeNew 2.5s ease-out;
+    }
+
+    @keyframes fadeNew {
+      from { background: rgba(52, 211, 153, 0.22); }
+      to { background: var(--green-dim); }
+    }
+
+    .ship-slug a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+    }
+
+    .ship-slug a:hover { text-decoration: underline; }
+
+    .ship-title {
+      display: block;
+      margin-top: 3px;
+      font-size: 0.74rem;
+      color: var(--muted);
+      line-height: 1.35;
+      max-width: 420px;
+    }
+
+    .dur {
+      font-family: var(--mono);
+      font-variant-numeric: tabular-nums;
+      color: #fde68a;
+      white-space: nowrap;
+    }
+
+    .dur.missing { color: var(--muted); }
+
+    .signal-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(109, 132, 168, 0.08);
+      white-space: nowrap;
+    }
+
+    .signal-pill .sig-icon {
+      font-size: 0.95em;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .signal-pill.shipped,
+    .signal-pill.posts-ts {
+      color: #ecfdf5;
+      border-color: rgba(16, 185, 129, 0.65);
+      background: linear-gradient(135deg, #059669 0%, #10b981 55%, #34d399 100%);
+      box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25), 0 4px 14px rgba(16, 185, 129, 0.28);
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .signal-pill.posts-ts .sig-icon {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.22);
+      border-radius: 50%;
+      width: 1.15em;
+      height: 1.15em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85em;
+    }
+
+    .signal-pill.deploy { color: var(--cyan); border-color: rgba(56, 189, 248, 0.3); background: var(--cyan-dim); }
+    .signal-pill.lock { color: var(--amber); border-color: rgba(251, 191, 36, 0.3); background: var(--amber-dim); }
+
+    .ships-empty {
+      padding: 28px 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .agents-panel {
+      margin-bottom: 16px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .agents-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-soft);
+      background: linear-gradient(180deg, rgba(167, 139, 250, 0.07), transparent);
+    }
+
+    .agents-head h2 {
+      margin: 0;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .agents-head p {
+      margin: 2px 0 0;
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+
+    .agents-summary {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    .agents-wrap {
+      overflow: auto;
+      max-height: 480px;
+      padding: 12px 14px 16px;
+    }
+
+    .hierarchy {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .orch-card,
+    .worker-card,
+    .infra-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel-2);
+      padding: 12px 14px;
+    }
+
+    .orch-card {
+      border-color: rgba(167, 139, 250, 0.35);
+      background: linear-gradient(135deg, rgba(167, 139, 250, 0.1), rgba(13, 21, 38, 0.9));
+    }
+
+    .orch-card .role-line,
+    .worker-card .role-line,
+    .infra-card .role-line {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 12px;
+      margin-bottom: 8px;
+    }
+
+    .role-name {
+      font-weight: 650;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .role-meta {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+
+    .now-line {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: #a5f3fc;
+      line-height: 1.4;
+      word-break: break-word;
+    }
+
+    .now-line.pulse {
+      animation: activityPulse 1.2s ease-in-out;
+    }
+
+    .now-label {
+      color: var(--muted);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+    }
+
+    .worker-tree {
+      margin: 0 0 0 18px;
+      padding: 8px 0 0 16px;
+      border-left: 2px solid rgba(167, 139, 250, 0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .worker-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px 14px;
+      align-items: center;
+    }
+
+    .worker-card::before {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 50%;
+      width: 14px;
+      height: 2px;
+      background: rgba(167, 139, 250, 0.35);
+    }
+
+    .worker-card.is-idle {
+      opacity: 0.92;
+      padding: 12px 14px;
+    }
+
+    .worker-card .card-main {
+      min-width: 0;
+    }
+
+    .time-bubble {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 5.5rem;
+      min-height: 5.5rem;
+      padding: 10px 12px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.15;
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.06),
+        0 8px 24px rgba(0, 0, 0, 0.35);
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    .time-bubble .time-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 4px;
+    }
+
+    .time-bubble .time-value {
+      font-family: var(--mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
+    }
+
+    /* Idle: vivid amber/orange bubble */
+    .time-bubble.is-idle {
+      color: #1a0f00;
+      background: radial-gradient(circle at 35% 30%, #fde68a, #f59e0b 55%, #d97706);
+      border: 2px solid #fbbf24;
+    }
+
+    .time-bubble.is-idle.is-long {
+      color: #fff5f5;
+      background: radial-gradient(circle at 35% 30%, #fda4af, #f43f5e 55%, #be123c);
+      border-color: #fb7185;
+    }
+
+    /* Active/busy: cyan-teal bubble */
+    .time-bubble.is-active {
+      color: #042f2e;
+      background: radial-gradient(circle at 35% 30%, #99f6e4, #14b8a6 55%, #0d9488);
+      border: 2px solid #2dd4bf;
+    }
+
+    .time-bubble.is-busy {
+      color: #1e1b4b;
+      background: radial-gradient(circle at 35% 30%, #c4b5fd, #8b5cf6 55%, #6d28d9);
+      border: 2px solid #a78bfa;
+    }
+
+    .worker-card .slug-chip {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--cyan);
+      background: var(--cyan-dim);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 6px;
+      padding: 1px 7px;
+    }
+
+    .infra-row {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px;
+    }
+
+    .infra-card {
+      padding: 10px 12px;
+      background: rgba(13, 21, 38, 0.65);
+    }
+
+    .infra-card .role-name {
+      font-size: 0.8rem;
+    }
+
+    .agents-empty-box {
+      padding: 28px 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .agents-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+    }
+
+    .agents-table th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      text-align: left;
+      padding: 9px 14px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: #0d1526;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .agents-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(36, 53, 82, 0.55);
+      vertical-align: top;
+      color: var(--text-soft);
+    }
+
+    .agents-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .state-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .state-pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .state-pill.active { color: var(--green); background: var(--green-dim); border-color: rgba(52, 211, 153, 0.3); }
+    .state-pill.busy { color: var(--cyan); background: var(--cyan-dim); border-color: rgba(56, 189, 248, 0.3); }
+    .state-pill.reconnecting { color: var(--amber); background: var(--amber-dim); border-color: rgba(251, 191, 36, 0.3); }
+    .state-pill.paused,
+    .state-pill.idle { color: var(--muted); background: rgba(109, 132, 168, 0.12); border-color: rgba(109, 132, 168, 0.25); }
+    .state-pill.down { color: var(--red); background: var(--red-dim); border-color: rgba(248, 113, 113, 0.3); }
+
+    .agents-table .cmd {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+      max-width: 380px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .agents-table .attempts,
+    .agents-table .runtime {
+      font-family: var(--mono);
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      font-size: 0.78rem;
+    }
+
+    .agents-table .attempts {
+      color: #c4b5fd;
+    }
+
+    .agents-table .runtime {
+      color: #fde68a;
+    }
+
+    .agents-table .activity {
+      font-family: var(--mono);
+      font-size: 0.74rem;
+      color: #a5f3fc;
+      max-width: 420px;
+      line-height: 1.35;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .agents-table .activity.pulse {
+      animation: activityPulse 1.2s ease-in-out;
+    }
+
+    .alert-banner {
+      margin: 0 24px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border-soft);
+      background: var(--panel);
+      overflow: hidden;
+    }
+    .alert-banner[data-sev="critical"] {
+      border-color: color-mix(in srgb, var(--red) 55%, var(--border-soft));
+    }
+    .alert-banner[data-sev="warn"] {
+      border-color: color-mix(in srgb, #e6a23c 50%, var(--border-soft));
+    }
+    .alert-banner[data-sev="ok"] {
+      border-color: color-mix(in srgb, #3ecf8e 40%, var(--border-soft));
+    }
+    .alert-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-soft);
+      font-family: var(--sans);
+    }
+    .alert-head h2 {
+      margin: 0;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .alert-head p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+    .alert-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-height: 180px;
+      overflow: auto;
+    }
+    .alert-list li {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 10px;
+      padding: 8px 14px;
+      border-bottom: 1px solid var(--border-soft);
+      font-size: 0.8rem;
+      font-family: var(--sans);
+    }
+    .alert-list li:last-child { border-bottom: 0; }
+    .sev-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 22px;
+      padding: 0 8px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .sev-pill.critical { background: color-mix(in srgb, var(--red) 22%, transparent); color: #ff8e8e; }
+    .sev-pill.warn { background: color-mix(in srgb, #e6a23c 22%, transparent); color: #f0c674; }
+    .sev-pill.info { background: color-mix(in srgb, #6aa6ff 18%, transparent); color: #9ec1ff; }
+    .sev-pill.manual { background: color-mix(in srgb, var(--violet) 22%, transparent); color: #ddd6fe; }
+
+    .manual-review-subhead h3 { color: #ddd6fe; }
+    .manual-review-table { border-color: rgba(167, 139, 250, 0.35); }
+
+    .failures-subhead {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin: 18px 4px 8px;
+    }
+    .failures-subhead h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+    }
+    .failures-subhead p {
+      margin: 2px 0 0;
+      font-size: 12px;
+      opacity: 0.65;
+    }
+    .failures-wrap {
+      max-height: 280px;
+    }
+    .failures-table .phase-pill,
+    .failures-table .error-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+    }
+    .failures-table .error-code {
+      color: #f0a0a0;
+      font-weight: 600;
+    }
+    .failures-table .phase-pill {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+    }
+
+    @keyframes activityPulse {
+      from { color: #ecfeff; }
+      to { color: #a5f3fc; }
+    }
+
+    .agents-empty {
+      padding: 28px 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .meta-bar strong { color: var(--text-soft); font-weight: 500; }
+
+    #terminal {
+      font-family: var(--mono);
+      background: linear-gradient(180deg, #060b14 0%, #050912 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      min-height: 68vh;
+      max-height: calc(100vh - 210px);
+      overflow: auto;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03),
+        0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    #terminal.size-s { font-size: 11.5px; }
+    #terminal.size-m { font-size: 12.75px; }
+    #terminal.size-l { font-size: 14px; }
+
+    .row {
+      display: grid;
+      grid-template-columns: 64px 48px minmax(0, 1fr);
+      gap: 8px;
+      align-items: center;
+      padding: 3px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      line-height: 1.35;
+      min-height: 0;
+    }
+
+    .row:hover { background: rgba(255, 255, 255, 0.02); }
+    .row:nth-child(even) { background: rgba(255, 255, 255, 0.015); }
+    .row:nth-child(even):hover { background: rgba(255, 255, 255, 0.03); }
+
+    .row.system {
+      grid-template-columns: 1fr;
+      color: var(--muted);
+      font-style: italic;
+      padding: 8px 12px;
+    }
+
+    .row.live {
+      animation: fadeNew 2.5s ease-out;
+      background: rgba(52, 211, 153, 0.08);
+    }
+
+    .row.dim { opacity: 0.38; }
+    .row.match { background: rgba(56, 189, 248, 0.08) !important; }
+
+    .time {
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 0.92em;
+    }
+
+    .src-pill {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 1px 6px;
+      border-radius: 999px;
+      font-size: 0.72em;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      border: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .src-pill.production { color: var(--cyan); background: var(--cyan-dim); border-color: rgba(56, 189, 248, 0.2); }
+    .src-pill.watchdog { color: var(--amber); background: var(--amber-dim); border-color: rgba(251, 191, 36, 0.2); }
+    .src-pill.loop { color: var(--violet); background: var(--violet-dim); border-color: rgba(167, 139, 250, 0.2); }
+    .src-pill.startup { color: var(--green); background: var(--green-dim); border-color: rgba(52, 211, 153, 0.2); }
+    .src-pill.worker { color: #fda4af; background: rgba(251, 113, 133, 0.12); border-color: rgba(251, 113, 133, 0.25); }
+    .src-pill.other { color: var(--muted); background: rgba(109, 132, 168, 0.1); border-color: var(--border); }
+
+    .msg {
+      color: var(--text-soft);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
+    }
+
+    .msg .kw-error { color: var(--red); font-weight: 500; }
+    .msg .kw-warn { color: var(--amber); font-weight: 500; }
+    .msg .kw-ok { color: var(--green); font-weight: 500; }
+    .msg .kw-info { color: var(--cyan); font-weight: 500; }
+    .msg .kw-ship { color: #86efac; font-weight: 600; }
+    .msg .kw-path { color: #93c5fd; }
+    .msg .kw-num { color: #fcd34d; font-variant-numeric: tabular-nums; }
+
+    body.cot-mode #terminal .row {
+      grid-template-columns: 64px 48px 72px minmax(0, 1fr);
+      align-items: start;
+      padding: 5px 12px;
+    }
+
+    body.cot-mode #terminal .msg {
+      white-space: pre-wrap;
+      overflow: visible;
+      text-overflow: unset;
+      word-break: break-word;
+    }
+
+    .kind-pill {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 6px;
+      font-size: 0.68em;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(109, 132, 168, 0.1);
+      white-space: nowrap;
+    }
+
+    .kind-pill.thought { color: #e9d5ff; background: rgba(167, 139, 250, 0.14); border-color: rgba(167, 139, 250, 0.35); }
+    .kind-pill.tool { color: #7dd3fc; background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.3); }
+    .kind-pill.harness { color: var(--muted); background: rgba(109, 132, 168, 0.1); }
+    .kind-pill.git { color: #86efac; background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.25); }
+    .kind-pill.transport { color: var(--amber); background: var(--amber-dim); border-color: rgba(251, 191, 36, 0.3); }
+    .kind-pill.agent { color: #fda4af; background: rgba(251, 113, 133, 0.12); border-color: rgba(251, 113, 133, 0.25); }
+
+    .row.cot-thought .msg { color: #ede9fe; }
+    .row.cot-tool .msg { color: #bae6fd; }
+    .row.cot-transport .msg { color: #fde68a; }
+    .row.cot-git .msg { color: #a7f3d0; }
+    .row.cot-harness .msg { color: var(--muted); }
+
+    .src-pill.w1 { color: #fda4af; background: rgba(251, 113, 133, 0.12); border-color: rgba(251, 113, 133, 0.3); }
+    .src-pill.w2 { color: #fcd34d; background: rgba(251, 191, 36, 0.12); border-color: rgba(251, 191, 36, 0.3); }
+    .src-pill.w3 { color: #6ee7b7; background: rgba(52, 211, 153, 0.12); border-color: rgba(52, 211, 153, 0.3); }
+    .src-pill.w4 { color: #7dd3fc; background: rgba(56, 189, 248, 0.12); border-color: rgba(56, 189, 248, 0.3); }
+    .src-pill.w5 { color: #c4b5fd; background: rgba(167, 139, 250, 0.14); border-color: rgba(167, 139, 250, 0.35); }
+
+    .empty-hint {
+      padding: 48px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 12px 24px 22px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      text-align: center;
+    }
+
+    footer code {
+      color: var(--text-soft);
+      background: var(--panel);
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid var(--border-soft);
+    }
+
+    @media (max-width: 760px) {
+      /* Keep time | src | msg on one row even on narrow screens */
+      .row {
+        grid-template-columns: 56px 40px minmax(0, 1fr);
+        gap: 6px;
+        padding: 2px 8px;
+      }
+      body.cot-mode #terminal .row {
+        grid-template-columns: 52px 36px 58px minmax(0, 1fr);
+      }
+      header { grid-template-columns: 1fr; }
+      .badges { justify-content: flex-start; }
+      .toolbar-actions { margin-left: 0; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">▣</div>
+      <div>
+        <h1>Production stream</h1>
+        <p class="subtitle">Live CLI logs · newest first · full history</p>
+        <span class="live-pill" id="livePill"><span class="live-dot"></span> Live</span>
+      </div>
+    </div>
+    <div class="badges" id="badges"></div>
+  </header>
+
+  <section class="alert-banner" id="alertBanner" data-sev="ok" aria-label="System alerts">
+    <div class="alert-head">
+      <div>
+        <h2>System alerts</h2>
+        <p id="alertSummary">Checking health…</p>
+      </div>
+      <div class="agents-summary" id="alertCount">—</div>
+    </div>
+    <ul class="alert-list" id="alertList">
+      <li><span class="sev-pill info">info</span><span>Waiting for /api/health…</span></li>
+    </ul>
+  </section>
+
+  <div class="toolbar">
+    <div class="tabs" id="tabs"></div>
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path>
+      </svg>
+      <input type="search" id="filter" placeholder="Filter text… (use Kind chips for thought/tool)" />
+    </div>
+    <div class="toolbar-actions">
+      <div class="size-toggle" id="sizeToggle" title="Text size">
+        <button type="button" data-size="s">S</button>
+        <button type="button" data-size="m" class="active">M</button>
+        <button type="button" data-size="l">L</button>
+      </div>
+      <label class="chk"><input type="checkbox" id="autoscroll" checked /> Pin newest</label>
+      <button class="tab" id="clear" type="button">Clear view</button>
+    </div>
+  </div>
+  <div class="cot-bar" id="cotBar" aria-label="Agent chain-of-thought filters">
+    <span class="cot-label">Agent</span>
+    <div class="tabs" id="cotChips"></div>
+    <div class="cot-kind-wrap" id="cotKindWrap" aria-label="Filter by kind">
+      <span class="cot-label">Kind</span>
+      <div class="tabs" id="cotKindChips"></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="cot-panel" id="cotPanel" aria-label="Chain of Thought table">
+      <div class="cot-panel-head">
+        <div>
+          <h2>Chain of Thought</h2>
+          <p>Separate stream — agent thoughts &amp; tool calls only (no git, harness, or transport)</p>
+        </div>
+        <div class="cot-summary" id="cotSummary">—</div>
+      </div>
+      <div class="cot-table-wrap">
+        <table class="cot-table">
+          <thead>
+            <tr>
+              <th>When</th>
+              <th>Worker</th>
+              <th>Kind</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody id="cotBody">
+            <tr><td colspan="4" class="cot-empty">Select Chain of Thought to load agent reasoning…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="agents-panel" aria-label="Agent hierarchy">
+      <div class="agents-head">
+        <div>
+          <h2>Agent hierarchy</h2>
+          <p>Orchestrator · Workers 1–4 · Recovery · live activity from job queue</p>
+        </div>
+        <div class="agents-summary" id="agentsSummary">Loading…</div>
+      </div>
+      <div class="agents-wrap" id="agentsHierarchy">
+        <div class="agents-empty-box">Loading agent hierarchy…</div>
+      </div>
+    </section>
+
+    <section class="ships-panel agents-panel" aria-label="Job queue" style="margin-bottom:16px">
+      <div class="agents-head ships-head">
+        <div>
+          <h2>Job queue</h2>
+          <p>Claimed / building / ready / shipped</p>
+        </div>
+        <div class="agents-summary" id="jobsSummary">Loading…</div>
+      </div>
+      <div class="agents-wrap ships-wrap">
+        <table class="agents-table ships-table">
+          <thead>
+            <tr>
+              <th>Slug</th>
+              <th>Theme</th>
+              <th>Status</th>
+              <th>Worker</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody id="jobsBody">
+            <tr><td colspan="5" class="agents-empty">No jobs yet</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="failures-subhead">
+        <div>
+          <h3>Open issues</h3>
+          <p>Content failures — recovery worker may retry these</p>
+        </div>
+        <div class="agents-summary" id="failuresSummary">—</div>
+      </div>
+      <div class="agents-wrap ships-wrap failures-wrap">
+        <table class="agents-table ships-table failures-table">
+          <thead>
+            <tr>
+              <th>When</th>
+              <th>Slug</th>
+              <th>Sev</th>
+              <th>Phase</th>
+              <th>Error</th>
+              <th>Last activity</th>
+            </tr>
+          </thead>
+          <tbody id="failuresBody">
+            <tr><td colspan="6" class="agents-empty">No open issues</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="failures-subhead manual-review-subhead">
+        <div>
+          <h3>Manual review</h3>
+          <p>Process failed once — special flag, auto-rerun refused; human decides</p>
+        </div>
+        <div class="agents-summary" id="manualReviewSummary">—</div>
+      </div>
+      <div class="agents-wrap ships-wrap failures-wrap">
+        <table class="agents-table ships-table failures-table manual-review-table">
+          <thead>
+            <tr>
+              <th>When</th>
+              <th>Slug</th>
+              <th>Flag</th>
+              <th>Phase</th>
+              <th>Error</th>
+              <th>Last activity</th>
+            </tr>
+          </thead>
+          <tbody id="manualReviewBody">
+            <tr><td colspan="6" class="agents-empty">No manual review items</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="ships-panel" aria-label="Post production history">
+      <div class="ships-head">
+        <div>
+          <h2>Posts shipped</h2>
+          <p>Parsed from production logs · newest first</p>
+        </div>
+        <div class="ships-summary" id="shipsSummary">Loading…</div>
+      </div>
+      <div class="ships-wrap">
+        <table class="ships-table">
+          <thead>
+            <tr>
+              <th>Post</th>
+              <th>Shipped</th>
+              <th>Generation time</th>
+              <th>Run</th>
+              <th>Signal</th>
+            </tr>
+          </thead>
+          <tbody id="shipsBody">
+            <tr><td colspan="5" class="ships-empty">Waiting for ship events…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="meta-bar" id="meta">Connecting…</div>
+    <div id="terminal" class="size-m" aria-live="polite">
+      <div class="empty-hint">Waiting for log stream…</div>
+    </div>
+  </main>
+
+  <footer>
+    Local dashboard — run <code>npm run stream</code> · logs in <code>artifacts/automation-logs/</code>
+  </footer>
+
+  <script>
+    const STREAMS = [
+      { id: "all", label: "All" },
+      { id: "cot", label: "Chain of Thought", cot: true },
+      { id: "production", label: "Production" },
+      { id: "watchdog", label: "Watchdog" },
+      { id: "loop", label: "Loop" },
+      { id: "startup", label: "Startup" },
+    ];
+
+    const COT_CHIPS = [
+      { id: "cot", label: "All agents" },
+      { id: "worker-1", label: "W1" },
+      { id: "worker-2", label: "W2" },
+      { id: "worker-3", label: "W3" },
+      { id: "worker-4", label: "W4" },
+      { id: "worker-5", label: "W5 Recovery" },
+    ];
+
+    const COT_KIND_CHIPS = [
+      { id: "all", label: "all" },
+      { id: "thought", label: "thought" },
+      { id: "tool", label: "tool" },
+      { id: "system", label: "system" },
+      { id: "user", label: "user" },
+    ];
+
+    const terminal = document.getElementById("terminal");
+    const meta = document.getElementById("meta");
+    const badges = document.getElementById("badges");
+    const tabsEl = document.getElementById("tabs");
+    const cotChipsEl = document.getElementById("cotChips");
+    const cotKindChipsEl = document.getElementById("cotKindChips");
+    const cotBody = document.getElementById("cotBody");
+    const cotSummary = document.getElementById("cotSummary");
+    const cotTableWrap = document.querySelector(".cot-table-wrap");
+    const filterEl = document.getElementById("filter");
+    const autoscrollEl = document.getElementById("autoscroll");
+    const livePill = document.getElementById("livePill");
+    const sizeToggle = document.getElementById("sizeToggle");
+    const shipsBody = document.getElementById("shipsBody");
+    const shipsSummary = document.getElementById("shipsSummary");
+    const agentsHierarchy = document.getElementById("agentsHierarchy");
+    const agentsSummary = document.getElementById("agentsSummary");
+    const jobsBody = document.getElementById("jobsBody");
+    const jobsSummary = document.getElementById("jobsSummary");
+    const failuresBody = document.getElementById("failuresBody");
+    const failuresSummary = document.getElementById("failuresSummary");
+    const manualReviewBody = document.getElementById("manualReviewBody");
+    const manualReviewSummary = document.getElementById("manualReviewSummary");
+    const alertBanner = document.getElementById("alertBanner");
+    const alertList = document.getElementById("alertList");
+    const alertSummary = document.getElementById("alertSummary");
+    const alertCount = document.getElementById("alertCount");
+
+    let activeStream = "all";
+    let source = null;
+    let lineCount = 0;
+    let cotRowCount = 0;
+    let cotKindCounts = { thought: 0, tool: 0, user: 0, system: 0 };
+    let cotKindFilter = "all";
+    let loadingHistory = false;
+    let liveTimeout = null;
+    let lastShipSlugs = new Set();
+    let cotRoster = [];
+    const MAX_LINES = 50_000;
+    const MAX_COT_ROWS = 20_000;
+    const seenLive = new Set();
+
+    function isCotStream(id) {
+      return id === "cot" || /^worker-[1-5]$/.test(id || "");
+    }
+
+    function isPureCotText(text) {
+      return /\[cot:(thought|tool|user|system)\]/i.test(String(text || ""));
+    }
+
+    function kindMatchesFilter(kind) {
+      return cotKindFilter === "all" || String(kind || "") === cotKindFilter;
+    }
+
+    function applyCotRowVisibility(tr) {
+      if (!tr || tr.querySelector(".cot-empty")) return;
+      const kind = tr.dataset.kind || "";
+      const text = tr.dataset.text || tr.textContent.toLowerCase();
+      const filter = filterEl.value.trim().toLowerCase();
+      const textHit = !filter || text.includes(filter);
+      const kindHit = kindMatchesFilter(kind);
+      tr.classList.toggle("kind-filtered-out", !kindHit);
+      tr.classList.toggle("dim", kindHit && !textHit);
+      tr.classList.toggle("match", kindHit && !!filter && textHit);
+    }
+
+    function applyAllCotFilters() {
+      if (!cotBody) return;
+      cotBody.querySelectorAll("tr").forEach(applyCotRowVisibility);
+      updateCotSummary();
+    }
+
+    function syncCotKindChips() {
+      if (!cotKindChipsEl) return;
+      cotKindChipsEl.querySelectorAll("button.cot-kind-chip").forEach((b) => {
+        b.classList.toggle("active", b.dataset.kind === cotKindFilter);
+      });
+    }
+
+    function renderCotKindChips() {
+      if (!cotKindChipsEl) return;
+      cotKindChipsEl.innerHTML = "";
+      for (const chip of COT_KIND_CHIPS) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "cot-kind-chip";
+        btn.dataset.kind = chip.id;
+        btn.textContent = chip.label;
+        btn.title =
+          chip.id === "all"
+            ? "Show all CoT kinds"
+            : `Show only ${chip.id} rows`;
+        btn.onclick = () => {
+          cotKindFilter = chip.id;
+          try {
+            sessionStorage.setItem("cotKindFilter", cotKindFilter);
+          } catch {
+            /* ignore */
+          }
+          syncCotKindChips();
+          applyAllCotFilters();
+        };
+        cotKindChipsEl.appendChild(btn);
+      }
+      syncCotKindChips();
+    }
+
+    function esc(s) {
+      return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    function badge(label, state, detail) {
+      const cls = state === "ok" ? "ok" : state === "warn" ? "warn" : state === "err" ? "err" : "";
+      return `<span class="badge ${cls}" title="${esc(detail || "")}">${esc(label)}</span>`;
+    }
+
+    function renderStatus(status, extra = {}) {
+      if (!status) return;
+      const lock = status.lock || {};
+      const p = status.pids || {};
+      const lockState = lock.status === "running" ? "ok" : "warn";
+      const prodState = p.productionAlive ? "ok" : "err";
+      const loopState = p.watchdogLoopAlive ? "ok" : "warn";
+      const hb = status.heartbeatAgeMin != null ? `${status.heartbeatAgeMin}m ago` : "none";
+
+      const health = status.health || {};
+      const healthState = health.criticalCount > 0 ? "err" : health.warnCount > 0 ? "warn" : "ok";
+      const healthLabel = health.criticalCount || health.warnCount
+        ? `Alerts · ${health.criticalCount || 0}c/${health.warnCount || 0}w`
+        : "Alerts · ok";
+
+      badges.innerHTML = [
+        badge(`Lock · ${lock.status || "unknown"}`, lockState, lock.notes || ""),
+        badge(`Agent ${p.productionAlive ? "up" : "down"}`, prodState),
+        badge(`Watchdog ${p.watchdogLoopAlive ? "up" : "down"}`, loopState),
+        badge(`Heartbeat ${hb}`, status.heartbeatAgeMin != null && status.heartbeatAgeMin < 15 ? "ok" : "warn"),
+        badge(healthLabel, healthState, health.summary || ""),
+        badge(lock.lastSlug ? `Last · ${lock.lastSlug}` : "No ship yet", lock.lastSlug ? "ok" : ""),
+        badge(`${status.logs?.totalFiles ?? 0} files`, "ok"),
+      ].join("");
+
+      meta.innerHTML = [
+        `<span><strong>Stream</strong> ${esc(activeStream)}</span>`,
+        extra.fileCount != null ? `<span><strong>Files</strong> ${extra.fileCount}</span>` : "",
+        `<span><strong>Lines</strong> ${(extra.lineCount ?? lineCount).toLocaleString()}</span>`,
+        lock.runId ? `<span><strong>Run</strong> ${esc(lock.runId)}</span>` : "",
+        `<span><strong>Updated</strong> ${new Date(status.at).toLocaleTimeString()}</span>`,
+      ].filter(Boolean).join("");
+    }
+
+    function flashLive() {
+      livePill.classList.add("on");
+      clearTimeout(liveTimeout);
+      liveTimeout = setTimeout(() => livePill.classList.remove("on"), 4000);
+    }
+
+    function lineMatchesFilter(text) {
+      const filter = filterEl.value.trim().toLowerCase();
+      return !filter || text.toLowerCase().includes(filter);
+    }
+
+    function parseLogLine(text) {
+      const bracket = text.match(/^\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]\s*(.*)$/s);
+      if (bracket) {
+        const time = bracket[1].slice(11);
+        return { time, message: bracket[2], full: text };
+      }
+      return { time: "—", message: text, full: text };
+    }
+
+    function sourceClass(source) {
+      if (!source) return "other";
+      if (source.startsWith("production-")) return "production";
+      const worker = source.match(/^worker-([1-5])/);
+      if (worker) return `w${worker[1]}`;
+      if (source.startsWith("worker-")) return "worker";
+      if (source.startsWith("agent-transcript")) return "worker";
+      if (source === "watchdog.log") return "watchdog";
+      if (source.includes("watchdog-loop")) return "loop";
+      if (source.includes("startup")) return "startup";
+      return "other";
+    }
+
+    function shortenSource(source) {
+      if (!source) return "log";
+      const worker = source.match(/^worker-(\d+)/);
+      if (worker) return `w${worker[1]}`;
+      if (source.startsWith("agent-transcript")) return "tx";
+      return source
+        .replace(/^production-/, "prod·")
+        .replace(/\.log$/, "")
+        .replace(/cursor-watchdog-loop/, "loop")
+        .replace(/automation-startup/, "startup");
+    }
+
+    /** Collapse verbose CLI reconnect noise into a single short phrase. */
+    function compressMessage(message) {
+      let m = String(message || "").trim();
+      let blip = m.match(
+        /transport blip cliAttempt=(\d+)\s*\(raw=(\d+)\)\s*elapsed=(\d+)s/i,
+      );
+      if (blip) return `transport #${blip[1]} (cli=${blip[2]}) ${blip[3]}s`;
+      let lost = m.match(/Connection lost.*?attempt\s+(\d+)/i);
+      if (lost) return `reconnect #${lost[1]}`;
+      let retry = m.match(/^Retry attempt\s+(\d+)/i);
+      if (retry) return `retry #${retry[1]}`;
+      m = m.replace(/^WARN:\s*/i, "").replace(/^ERROR:\s*/i, "ERR: ");
+      m = m.replace(/https?:\/\/\S+/g, "").replace(/\s{2,}/g, " ").trim();
+      return m;
+    }
+
+    function isTransportNoise(message) {
+      return /transport blip|Connection lost|Retry attempt/i.test(String(message || ""));
+    }
+
+    /** Parse pure [cot:kind] lines for the dedicated CoT table (never git/harness). */
+    function parsePureCot(text) {
+      const parsed = parseLogLine(text);
+      const m = String(parsed.message || "").match(
+        /^\[cot:(thought|tool|user|system)\]\s*(.*)$/i,
+      );
+      if (!m) return null;
+      return {
+        time: parsed.time,
+        kind: m[1].toLowerCase(),
+        message: m[2] || "",
+        full: parsed.full,
+      };
+    }
+
+    function workerLabelFromSource(source) {
+      const s = String(source || "");
+      const m = s.match(/worker-([1-5])/i) || s.match(/\bW([1-5])\b/i);
+      if (m) return `W${m[1]}`;
+      if (/cot-demo/i.test(s)) return "demo";
+      return shortenSource(source) || "—";
+    }
+
+    function updateCotSummary() {
+      if (!cotSummary) return;
+      if (!cotRowCount) {
+        cotSummary.textContent = "No thoughts yet";
+        return;
+      }
+      const parts = [];
+      if (cotKindCounts.thought) parts.push(`${cotKindCounts.thought} thought`);
+      if (cotKindCounts.tool) parts.push(`${cotKindCounts.tool} tool`);
+      if (cotKindCounts.user) parts.push(`${cotKindCounts.user} user`);
+      if (cotKindCounts.system) parts.push(`${cotKindCounts.system} system`);
+      let visible = cotRowCount;
+      if (cotBody && (cotKindFilter !== "all" || filterEl.value.trim())) {
+        visible = [...cotBody.querySelectorAll("tr")].filter(
+          (tr) =>
+            !tr.querySelector(".cot-empty") &&
+            !tr.classList.contains("kind-filtered-out") &&
+            !tr.classList.contains("dim"),
+        ).length;
+      }
+      const filterNote =
+        cotKindFilter !== "all" ? ` · showing ${visible} ${cotKindFilter}` : "";
+      cotSummary.textContent = `${cotRowCount.toLocaleString()} · ${parts.join(" · ")}${filterNote}`;
+    }
+
+    function clearCotEmpty() {
+      if (!cotBody) return;
+      const empty = cotBody.querySelector(".cot-empty");
+      if (empty) empty.closest("tr")?.remove();
+    }
+
+    function resetCotTable(hint) {
+      cotRowCount = 0;
+      cotKindCounts = { thought: 0, tool: 0, user: 0, system: 0 };
+      if (cotBody) {
+        cotBody.innerHTML = `<tr><td colspan="4" class="cot-empty">${esc(hint || "Waiting for agent thoughts…")}</td></tr>`;
+      }
+      updateCotSummary();
+    }
+
+    function joinThoughtFragments(a, b) {
+      const left = String(a || "").trimEnd();
+      const right = String(b || "").trim();
+      if (!left) return right;
+      if (!right) return left;
+      const needSpace = !/\s$/.test(left) && !/^[.,;:!?'")]/.test(right);
+      return needSpace ? `${left} ${right}` : `${left}${right}`;
+    }
+
+    function refreshCotRowMessage(tr, message, time) {
+      const tdMsg = tr.querySelector(".cot-msg");
+      const tdTime = tr.querySelector(".cot-time");
+      if (tdMsg) {
+        tdMsg.title = message;
+        tdMsg.innerHTML = highlightMessage(message);
+      }
+      if (tdTime && time) tdTime.textContent = time;
+      const worker = tr.querySelector(".cot-worker .src-pill")?.textContent || "";
+      tr.dataset.text = `${worker} thought ${message}`.toLowerCase();
+      applyCotRowVisibility(tr);
+    }
+
+    /** Merge consecutive same-worker thought fragments into one table row. */
+    function tryMergeThoughtInto(tr, source, cot) {
+      if (!tr || cot.kind !== "thought" || tr.dataset.kind !== "thought") return false;
+      const worker = workerLabelFromSource(source);
+      const existingWorker = tr.querySelector(".cot-worker .src-pill")?.textContent || "";
+      if (worker !== existingWorker) return false;
+      const tdMsg = tr.querySelector(".cot-msg");
+      if (!tdMsg) return false;
+      const prev = tdMsg.title || tdMsg.textContent || "";
+      // Cap merged cell so one rant doesn't become a novel
+      if (prev.length > 2400) return false;
+      refreshCotRowMessage(tr, joinThoughtFragments(prev, cot.message), cot.time);
+      return true;
+    }
+
+    function buildCotRow(text, source, live = false) {
+      const cot = parsePureCot(text);
+      if (!cot) return null;
+      const match = lineMatchesFilter(`${source || ""} ${cot.kind} ${cot.message}`);
+      const tr = document.createElement("tr");
+      tr.className = `kind-${cot.kind}${live ? " live" : ""}${match ? "" : " dim"}${match && filterEl.value.trim() ? " match" : ""}`;
+      tr.dataset.text = `${source || ""} ${cot.kind} ${cot.message}`.toLowerCase();
+      tr.dataset.kind = cot.kind;
+      tr.dataset.worker = workerLabelFromSource(source);
+
+      const tdTime = document.createElement("td");
+      tdTime.className = "cot-time";
+      tdTime.textContent = cot.time || "—";
+
+      const tdWorker = document.createElement("td");
+      tdWorker.className = "cot-worker";
+      const pill = document.createElement("span");
+      pill.className = `src-pill ${sourceClass(source)}`;
+      pill.title = source || "";
+      pill.textContent = workerLabelFromSource(source);
+      tdWorker.appendChild(pill);
+
+      const tdKind = document.createElement("td");
+      tdKind.className = "cot-kind";
+      const kindPill = document.createElement("span");
+      kindPill.className = `kind-pill ${cot.kind}`;
+      kindPill.textContent = cot.kind;
+      tdKind.appendChild(kindPill);
+
+      const tdMsg = document.createElement("td");
+      tdMsg.className = "cot-msg";
+      tdMsg.title = cot.message;
+      tdMsg.innerHTML = highlightMessage(cot.message);
+
+      tr.append(tdTime, tdWorker, tdKind, tdMsg);
+      applyCotRowVisibility(tr);
+      return { tr, kind: cot.kind, cot, source };
+    }
+
+    function trimCotRows() {
+      while (cotRowCount > MAX_COT_ROWS && cotBody?.lastElementChild) {
+        const last = cotBody.lastElementChild;
+        const kind = last.dataset.kind;
+        if (kind && cotKindCounts[kind] > 0) cotKindCounts[kind]--;
+        cotBody.removeChild(last);
+        cotRowCount--;
+      }
+    }
+
+    function prependCotRow(text, source = null, live = false) {
+      if (!cotBody || !isPureCotText(text)) return false;
+      const built = buildCotRow(text, source, live);
+      if (!built) return false;
+      clearCotEmpty();
+      // Newest-first: continuations arrive after the prior fragment already on top —
+      // append into that row so "instrument mixes." + "regional scatter…" become one cell.
+      const top = cotBody.firstElementChild;
+      if (top && !top.classList.contains("cot-empty") && tryMergeThoughtInto(top, source, built.cot)) {
+        if (live) {
+          top.classList.add("live");
+          flashLive();
+        }
+        updateCotSummary();
+        if (autoscrollEl.checked && cotTableWrap) cotTableWrap.scrollTop = 0;
+        return true;
+      }
+      cotBody.insertBefore(built.tr, cotBody.firstChild);
+      cotRowCount++;
+      if (cotKindCounts[built.kind] != null) cotKindCounts[built.kind]++;
+      trimCotRows();
+      updateCotSummary();
+      if (live) flashLive();
+      if (autoscrollEl.checked && cotTableWrap) cotTableWrap.scrollTop = 0;
+      return true;
+    }
+
+    function appendCotBatch(lines) {
+      if (!cotBody || !lines.length) return;
+      const frag = document.createDocumentFragment();
+      let added = 0;
+      let lastThoughtTr = null;
+      for (const row of lines) {
+        const text = row.text || "";
+        if (!isPureCotText(text)) continue;
+        const built = buildCotRow(text, row.source || "", false);
+        if (!built) continue;
+        if (
+          built.kind === "thought" &&
+          lastThoughtTr &&
+          tryMergeThoughtInto(lastThoughtTr, row.source || "", built.cot)
+        ) {
+          continue;
+        }
+        frag.appendChild(built.tr);
+        if (cotKindCounts[built.kind] != null) cotKindCounts[built.kind]++;
+        added++;
+        lastThoughtTr = built.kind === "thought" ? built.tr : null;
+      }
+      if (!added) return;
+      clearCotEmpty();
+      cotBody.appendChild(frag);
+      cotRowCount += added;
+      trimCotRows();
+      updateCotSummary();
+    }
+
+    function highlightMessage(message) {
+      let html = esc(message);
+      // Paths first (on escaped text only) — never match inside HTML tags like </span>
+      html = html.replace(/(E:\\[^\s<>"]+)/g, (m) => `<span class="kw-path">${m}</span>`);
+      html = html.replace(/(\/(?:[\w.-]+\/)+[\w.-]+)/g, (m) => `<span class="kw-path">${m}</span>`);
+      const rules = [
+        [/\b(ERROR|ERR|FAILED|FAIL|Exception)\b/gi, "kw-error"],
+        [/\b(WARN|WARNING|stale|disconnected|transport|reconnect|retry)\b/gi, "kw-warn"],
+        [/\b(Shipped|deploy|release complete|confirmed running)\b/gi, "kw-ship"],
+        [/\b(Starting|Spawned|Invoking|Loaded|Attached|active|running|idle)\b/gi, "kw-info"],
+        [/\b(ok|success|passed|alive)\b/gi, "kw-ok"],
+        [/\b(\d+(?:\.\d+)?(?:ms|s|m|min|%|MB|GB|B))\b/gi, "kw-num"],
+      ];
+      for (const [re, cls] of rules) {
+        html = html.replace(re, (m) => `<span class="${cls}">${m}</span>`);
+      }
+      return html;
+    }
+
+    function buildLineElement(text, kind = "line", source = null, live = false) {
+      const parsed = parseLogLine(text);
+      const compressed = kind === "system" ? parsed.message : compressMessage(parsed.message);
+      const match = lineMatchesFilter(`${source || ""} ${parsed.full}`);
+      const row = document.createElement("div");
+      row.className = `row ${kind}${match ? " match" : ""}${live ? " live" : ""}`;
+      if (!match) row.classList.add("dim");
+      row.dataset.text = `${source || ""} ${parsed.full}`.toLowerCase();
+      row.dataset.source = source || "";
+      row.dataset.transport = isTransportNoise(parsed.message) ? "1" : "";
+
+      if (kind === "system") {
+        row.textContent = text;
+        return row;
+      }
+
+      const timeEl = document.createElement("div");
+      timeEl.className = "time";
+      timeEl.textContent = parsed.time;
+
+      const srcEl = document.createElement("div");
+      const pill = document.createElement("span");
+      pill.className = `src-pill ${sourceClass(source)}`;
+      pill.title = source || "";
+      pill.textContent = shortenSource(source);
+      srcEl.appendChild(pill);
+
+      const msgEl = document.createElement("div");
+      msgEl.className = "msg";
+      msgEl.title = compressed;
+      msgEl.innerHTML = highlightMessage(compressed);
+
+      row.append(timeEl, srcEl, msgEl);
+      return row;
+    }
+
+    /** Merge Connection lost / Retry into the open transport blip row for same worker. */
+    function tryMergeTransportRow(text, source) {
+      if (!isTransportNoise(text)) return false;
+      const parsed = parseLogLine(text);
+      const bit = compressMessage(parsed.message);
+      const first = terminal.firstElementChild;
+      if (!first || first.classList.contains("system")) return false;
+      if ((first.dataset.source || "") !== (source || "")) return false;
+      if (first.dataset.transport !== "1") return false;
+      const msgEl = first.querySelector(".msg");
+      const timeEl = first.querySelector(".time");
+      if (!msgEl) return false;
+      const prev = (msgEl.textContent || "").trim();
+      // Avoid duplicating the same compressed token
+      if (prev.includes(bit)) return true;
+      const merged = `${prev} · ${bit}`;
+      msgEl.title = `${msgEl.title || ""}\n${parsed.message}`.trim();
+      msgEl.innerHTML = highlightMessage(merged);
+      if (timeEl && parsed.time && parsed.time !== "—") timeEl.textContent = parsed.time;
+      first.classList.add("live");
+      return true;
+    }
+
+    function clearEmptyHint() {
+      const hint = terminal.querySelector(".empty-hint");
+      if (hint) hint.remove();
+    }
+
+    function trimOldLines() {
+      while (lineCount > MAX_LINES) {
+        const last = terminal.lastElementChild;
+        if (!last) break;
+        terminal.removeChild(last);
+        lineCount--;
+      }
+    }
+
+    function prependLine(text, kind = "line", source = null, live = false) {
+      if (isCotStream(activeStream)) {
+        if (kind === "system") return; // CoT table has its own empty/status copy
+        prependCotRow(text, source, live);
+        return;
+      }
+      clearEmptyHint();
+      if (kind !== "system" && tryMergeTransportRow(text, source)) {
+        if (live) flashLive();
+        if (autoscrollEl.checked) terminal.scrollTop = 0;
+        return;
+      }
+      const row = buildLineElement(text, kind, source, live);
+      terminal.insertBefore(row, terminal.firstChild);
+      lineCount++;
+      trimOldLines();
+      if (live) flashLive();
+      if (autoscrollEl.checked) terminal.scrollTop = 0;
+    }
+
+    function formatShipTime(iso) {
+      if (!iso) return "—";
+      const d = new Date(iso);
+      return d.toLocaleString(undefined, {
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    }
+
+    function signalClass(signal) {
+      if (!signal) return "";
+      const s = String(signal);
+      if (/posts\.ts/i.test(s)) return "posts-ts";
+      if (s.includes("Shipped") || s.includes("SHIP")) return "shipped";
+      if (s.includes("deploy") || s.includes("verify")) return "deploy";
+      if (s.includes("lastSlug") || s.includes("heartbeat") || s.includes("lock")) return "lock";
+      return "";
+    }
+
+    function signalLabel(signal, source) {
+      const raw = String(signal || source || "log");
+      if (/posts\.ts/i.test(raw)) {
+        return `<span class="sig-icon" aria-hidden="true">✓</span><span>posts.ts</span>`;
+      }
+      if (/Shipped|SHIP/i.test(raw)) {
+        return `<span class="sig-icon" aria-hidden="true">✓</span><span>${esc(raw)}</span>`;
+      }
+      return esc(raw);
+    }
+
+    function renderShips(ships) {
+      if (!ships?.length) {
+        shipsBody.innerHTML = '<tr><td colspan="5" class="ships-empty">No shipped posts detected in logs yet.</td></tr>';
+        shipsSummary.textContent = "0 posts";
+        return;
+      }
+
+      const withDuration = ships.filter((s) => s.durationSec != null && s.durationSec > 0);
+      const avgSec = withDuration.length
+        ? Math.round(withDuration.reduce((sum, s) => sum + s.durationSec, 0) / withDuration.length)
+        : null;
+      shipsSummary.textContent = [
+        `${ships.length} post${ships.length === 1 ? "" : "s"}`,
+        avgSec != null ? `avg ${Math.floor(avgSec / 60)}m ${avgSec % 60}s` : null,
+      ].filter(Boolean).join(" · ");
+
+      shipsBody.innerHTML = ships
+        .map((ship) => {
+          const isNew = !lastShipSlugs.has(ship.slug);
+          const durClass = ship.durationLabel && ship.durationLabel !== "—" ? "dur" : "dur missing";
+          const sig = ship.signal || ship.source || "log";
+          return `<tr class="${isNew && lastShipSlugs.size > 0 ? "new-row" : ""}">
+            <td class="ship-slug">
+              <a href="${esc(ship.blogUrl)}" target="_blank" rel="noopener">${esc(ship.slug)}</a>
+              <span class="ship-title">${esc(ship.title || "")}</span>
+            </td>
+            <td>${esc(formatShipTime(ship.shippedAt))}</td>
+            <td class="${durClass}">${esc(ship.durationLabel || "—")}</td>
+            <td><code>${esc(ship.runId || "—")}</code></td>
+            <td><span class="signal-pill ${signalClass(sig)}" title="Confirmed in src/data/posts.ts">${signalLabel(sig)}</span></td>
+          </tr>`;
+        })
+        .join("");
+
+      lastShipSlugs = new Set(ships.map((s) => s.slug));
+    }
+
+    let lastActivityById = new Map();
+
+    function agentCard(a, { child = false } = {}) {
+      const activity = a.activity || a.statusLabel || "—";
+      const key = a.id || a.role;
+      const prev = lastActivityById.get(key);
+      const pulsed = prev != null && prev !== activity;
+      lastActivityById.set(key, activity);
+      const state = a.state || "idle";
+      const runtime = a.runningForLabel || "—";
+      const attempts = a.attemptsLabel || "—";
+      const pid = a.pid != null ? `pid ${a.pid}` : "no pid";
+      const slug = a.slug
+        ? `<span class="slug-chip" title="Assigned slug">${esc(a.slug)}</span>`
+        : "";
+      const theme = a.themeId
+        ? `<span class="role-meta">${esc(a.themeId)}</span>`
+        : "";
+
+      let timeBubble = "";
+      if (child) {
+        const idleMs = a.idleForMs;
+        const idleLabel = a.idleForLabel;
+        const runLabel = a.runningForLabel && a.runningForLabel !== "—" ? a.runningForLabel : null;
+        if (state === "idle" && idleLabel) {
+          const long = idleMs >= 120000;
+          timeBubble = `<div class="time-bubble is-idle${long ? " is-long" : ""}" title="Idle since ${esc(a.idleSince || "")}"><span class="time-label">Idle</span><span class="time-value">${esc(idleLabel)}</span></div>`;
+        } else if (state === "busy") {
+          timeBubble = `<div class="time-bubble is-busy" title="Time on current job"><span class="time-label">Busy</span><span class="time-value">${esc(runLabel || "…")}</span></div>`;
+        } else if (state === "active") {
+          timeBubble = `<div class="time-bubble is-active" title="Time on current job"><span class="time-label">Active</span><span class="time-value">${esc(runLabel || "…")}</span></div>`;
+        } else {
+          timeBubble = `<div class="time-bubble is-idle" title="No timing yet"><span class="time-label">Time</span><span class="time-value">—</span></div>`;
+        }
+      }
+
+      const cls = child
+        ? `worker-card${state === "idle" ? " is-idle" : ""}`
+        : a.kind === "orchestrator"
+          ? "orch-card"
+          : "infra-card";
+      const body = `<div class="${child ? "card-main" : ""}">
+        <div class="role-line">
+          <span class="role-name">${esc(a.role)}</span>
+          <span class="state-pill ${esc(state)}">${esc(state)}</span>
+          ${slug}
+          ${theme}
+          <span class="role-meta">${esc(pid)} · ${esc(attempts)}${child ? "" : ` · ${esc(runtime)}`}</span>
+        </div>
+        <div class="now-label">Now</div>
+        <div class="now-line${pulsed ? " pulse" : ""}" title="${esc(activity)}">${esc(activity)}</div>
+      </div>`;
+      return `<div class="${cls}">${body}${timeBubble}</div>`;
+    }
+
+    function renderAgents(agents, jobs) {
+      if (!agentsHierarchy) return;
+
+      const orch = agents.find((a) => a.kind === "orchestrator" || a.id === "orchestrator");
+      const workers = agents
+        .filter((a) => a.kind === "worker-slot" || a.kind === "recovery-slot" || /^worker-\d+$/.test(a.id || ""))
+        .sort((a, b) => String(a.id).localeCompare(String(b.id), undefined, { numeric: true }));
+      const infra = agents.filter(
+        (a) =>
+          a.kind === "stream" ||
+          a.kind === "watchdog" ||
+          a.kind === "deploy" ||
+          a.kind === "worker",
+      );
+
+      // Always show 5 slots (1-4 producers + 5 recovery) from jobs.workers if agents missing some
+      let workerCards = workers;
+      if (jobs?.workers && workerCards.length < 5) {
+        const byId = new Map(workerCards.map((w) => [String(w.id).replace(/^worker-/, ""), w]));
+        workerCards = [1, 2, 3, 4, 5].map((n) => {
+          const existing = byId.get(String(n)) || agents.find((a) => a.id === `worker-${n}`);
+          if (existing) return existing;
+          const slot = jobs.workers[String(n)] || {};
+          const job = slot.jobId && Array.isArray(jobs.jobs)
+            ? jobs.jobs.find((j) => j.id === slot.jobId)
+            : null;
+          const isRecovery = n === 5;
+          const isIdle = !job;
+          const idleSince = isIdle ? slot.idleSince || slot.heartbeat || null : null;
+          const idleMs = idleSince ? Math.max(0, Date.now() - Date.parse(idleSince)) : null;
+          const idleForLabel = (() => {
+            if (idleMs == null) return null;
+            const sec = Math.floor(idleMs / 1000);
+            if (sec < 60) return `${sec}s`;
+            const min = Math.floor(sec / 60);
+            if (min < 60) return `${min}m ${sec % 60}s`;
+            return `${Math.floor(min / 60)}h ${min % 60}m`;
+          })();
+          return {
+            id: `worker-${n}`,
+            role: isRecovery ? "Recovery" : `Worker ${n}`,
+            kind: isRecovery ? "recovery-slot" : "worker-slot",
+            state: job ? "active" : "idle",
+            pid: slot.pid || null,
+            activity: job?.activity || (isRecovery ? "Idle - waiting for failed pre-merge jobs" : "Idle - waiting for job"),
+            attemptsLabel: job ? (job.recovery ? `R${job.recoveryAttempts || 1}` : `${job.attempts || 1}x`) : "—",
+            runningForLabel: "—",
+            slug: job?.slug || null,
+            themeId: job?.themeId || null,
+            idleSince,
+            idleForMs: idleMs,
+            idleForLabel,
+            recovery: isRecovery,
+          };
+        });
+      }
+
+      // Busy first so idle slots don't dominate the tree
+      workerCards = [...workerCards].sort((a, b) => {
+        const ai = a.state === "idle" ? 1 : 0;
+        const bi = b.state === "idle" ? 1 : 0;
+        if (ai !== bi) return ai - bi;
+        return String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
+      });
+
+      if (!orch && !workerCards.length && !infra.length) {
+        agentsHierarchy.innerHTML = '<div class="agents-empty-box">No agents in queue yet. Start orchestrator to populate hierarchy.</div>';
+        agentsSummary.textContent = "0 agents";
+        return;
+      }
+
+      const busyWorkers = workerCards.filter((w) => w.state === "active" || w.state === "busy").length;
+      const idleWorkers = workerCards.filter((w) => w.state === "idle");
+      const longestIdle = idleWorkers.reduce((best, w) => {
+        if (w.idleForMs == null) return best;
+        if (!best || w.idleForMs > best.idleForMs) return w;
+        return best;
+      }, null);
+      const runHint = orch?.runId || jobs?.runId || agents.find((a) => a.runId)?.runId;
+      agentsSummary.textContent = [
+        orch ? `orch ${orch.state || "idle"}` : "no orch",
+        `${busyWorkers}/4 busy`,
+        idleWorkers.length ? `${idleWorkers.length} idle` : null,
+        longestIdle?.idleForLabel ? `longest idle ${longestIdle.idleForLabel}` : null,
+        runHint ? `run ${runHint}` : null,
+      ]
+        .filter(Boolean)
+        .join(" · ");
+
+      const orchHtml = orch
+        ? agentCard(orch)
+        : `<div class="orch-card"><div class="role-line"><span class="role-name">Orchestrator</span><span class="state-pill idle">offline</span></div><div class="now-label">Now</div><div class="now-line">Not running - resume automation to start</div></div>`;
+
+      const workersHtml = workerCards.length
+        ? `<div class="worker-tree">${workerCards.map((w) => agentCard(w, { child: true })).join("")}</div>`
+        : "";
+
+      const infraHtml = infra.length
+        ? `<div class="infra-row">${infra.map((a) => agentCard(a)).join("")}</div>`
+        : "";
+
+      agentsHierarchy.innerHTML = `<div class="hierarchy">${orchHtml}${workersHtml}${infraHtml}</div>`;
+    }
+
+    async function pollAgents() {
+      try {
+        const res = await fetch("/api/agents");
+        const data = await res.json();
+        renderAgents(data.agents || [], data.jobs || null);
+        renderJobs(data.jobs || null);
+        renderAlerts(data.health || data.jobs?.health || null);
+        renderFailures(data.jobs || null, data.health || data.jobs?.health || null);
+      } catch {
+        agentsSummary.textContent = "Agent scan unavailable";
+        if (agentsHierarchy) {
+          agentsHierarchy.innerHTML = '<div class="agents-empty-box">Could not reach /api/agents</div>';
+        }
+      }
+    }
+
+    function renderAlerts(health) {
+      if (!alertBanner || !alertList) return;
+      if (!health) {
+        alertBanner.dataset.sev = "warn";
+        if (alertSummary) alertSummary.textContent = "Health payload missing";
+        if (alertCount) alertCount.textContent = "—";
+        alertList.innerHTML = `<li><span class="sev-pill warn">warn</span><span>No /api/health data yet</span></li>`;
+        return;
+      }
+      const alerts = Array.isArray(health.alerts) ? health.alerts : [];
+      const sev = health.criticalCount > 0 ? "critical" : health.warnCount > 0 ? "warn" : "ok";
+      alertBanner.dataset.sev = sev;
+      if (alertSummary) alertSummary.textContent = health.summary || "—";
+      if (alertCount) {
+        alertCount.textContent = alerts.length
+          ? `${health.criticalCount || 0} crit · ${health.warnCount || 0} warn`
+          : "healthy";
+      }
+      if (!alerts.length) {
+        alertList.innerHTML = `<li><span class="sev-pill info">ok</span><span>No active system alerts</span></li>`;
+        return;
+      }
+      alertList.innerHTML = alerts
+        .slice(0, 12)
+        .map(
+          (a) =>
+            `<li><span class="sev-pill ${esc(a.severity || "info")}">${esc(a.severity || "info")}</span><span><code>${esc(a.code || "")}</code> — ${esc(a.message || "")}</span></li>`,
+        )
+        .join("");
+    }
+
+    function renderJobs(jobs) {
+      if (!jobsBody) return;
+      const all = Array.isArray(jobs?.jobs) ? jobs.jobs : [];
+      const active = all.filter((j) => !["shipped", "failed"].includes(j.status));
+      // Open issues only (unresolved) — resolved / abandoned failures stay out
+      const openFailed = all.filter(
+        (j) =>
+          j.status === "failed" &&
+          !j.resolution &&
+          !j.manualReview &&
+          !/^Resolved:/i.test(String(j.activity || "")),
+      );
+      const manualN =
+        jobs?.health?.counts?.manualReview ??
+        all.filter((j) => j.status === "failed" && j.manualReview && !j.resolution).length;
+      const list = [...active, ...openFailed].slice(0, 24);
+      const blockedThemes = jobs?.flags?.blockedThemes?.length || 0;
+      const blockedStems = jobs?.flags?.blockedStems?.length || 0;
+      const openN = jobs?.health?.counts?.openIssues ?? openFailed.length;
+      if (jobsSummary) {
+        jobsSummary.textContent = jobs?.runId
+          ? `${active.length} active · ${openN} open · ${manualN} manual review · block ${blockedStems} stems/${blockedThemes} themes · run ${jobs.runId}`
+          : `${active.length} active · ${openN} open · ${manualN} manual review · block ${blockedStems} stems/${blockedThemes} themes`;
+      }
+      if (!list.length) {
+        jobsBody.innerHTML = '<tr><td colspan="5" class="agents-empty">No jobs yet</td></tr>';
+        return;
+      }
+      jobsBody.innerHTML = list
+        .map((j) => {
+          const statusLabel = j.status === "failed"
+            ? (j.manualReview ? "manual review" : j.flagged ? "flagged" : "failed")
+            : (j.status || "—");
+          const pill = j.status === "ready"
+            ? "active"
+            : j.status === "failed"
+              ? "down"
+              : j.status === "qa" || j.status === "building" || j.status === "researching"
+                ? "busy"
+                : "idle";
+          const activity = j.status === "failed"
+            ? (j.activity || j.lastError || "Failed")
+            : (j.activity || "—");
+          return `<tr>
+          <td><code>${esc(j.slug || j.id)}</code></td>
+          <td>${esc(j.themeId || "—")}</td>
+          <td><span class="state-pill ${esc(pill)}">${esc(statusLabel)}</span></td>
+          <td>${esc(j.workerId != null ? String(j.workerId) : "—")}</td>
+          <td class="activity">${esc(activity)}</td>
+        </tr>`;
+        })
+        .join("");
+    }
+
+    function fmtFailWhen(iso) {
+      if (!iso) return "—";
+      const ms = Date.parse(iso);
+      if (!Number.isFinite(ms)) return esc(String(iso));
+      const d = new Date(ms);
+      const pad = (n) => String(n).padStart(2, "0");
+      return `${pad(d.getMonth() + 1)}/${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+    }
+
+    function renderFailures(jobs, health) {
+      if (!failuresBody) return;
+      // Prefer health.openIssues. Only fall back when health payload is missing entirely —
+      // an empty openIssues array means "all clear", not "derive from jobs/failure log".
+      let rows = [];
+      if (health && Array.isArray(health.openIssues)) {
+        rows = health.openIssues.slice(0, 40);
+      } else if (Array.isArray(jobs?.openIssues)) {
+        rows = jobs.openIssues.slice(0, 40);
+      } else if (Array.isArray(jobs?.jobs)) {
+        rows = jobs.jobs
+          .filter(
+            (j) =>
+              j.status === "failed" &&
+              !j.resolution &&
+              !j.manualReview &&
+              !/^Resolved:/i.test(String(j.activity || "")),
+          )
+          .slice(0, 40)
+          .map((j) => ({
+            at: j.flaggedAt || j.updatedAt || j.heartbeat,
+            slug: j.slug,
+            workerId: j.workerId,
+            severity: /transport|worktree|process_gone|silence|stale/i.test(
+              String(j.lastError || ""),
+            )
+              ? "warn"
+              : "critical",
+            phase: j.failedAtPhase || "unknown",
+            error: j.lastError || j.flagReason || "failed",
+            activity: j.activity,
+          }));
+      }
+      // Never render historical flags.failures — those are an audit log, not open issues.
+      const crit = rows.filter((r) => r.severity === "critical").length;
+      const warn = rows.filter((r) => r.severity !== "critical").length;
+      if (failuresSummary) {
+        failuresSummary.textContent = rows.length
+          ? `${rows.length} open · ${crit} content · ${warn} other`
+          : "No open issues";
+      }
+      if (!rows.length) {
+        failuresBody.innerHTML = '<tr><td colspan="6" class="agents-empty">No open issues</td></tr>';
+      } else {
+        failuresBody.innerHTML = rows
+          .map((r) => {
+            const phase = r.phase || "unknown";
+            const err = r.error || "failed";
+            const sev = r.severity || "warn";
+            return `<tr>
+              <td>${fmtFailWhen(r.at)}</td>
+              <td><code>${esc(r.slug || r.jobId || "—")}</code></td>
+              <td><span class="sev-pill ${esc(sev)}">${esc(sev)}</span></td>
+              <td><span class="phase-pill">${esc(phase)}</span></td>
+              <td><span class="error-code">${esc(err)}</span></td>
+              <td class="activity" title="${esc(r.activity || "")}">${esc(r.activity || "—")}</td>
+            </tr>`;
+          })
+          .join("");
+      }
+
+      // Manual review bucket (fail once — auto-rerun refused)
+      if (!manualReviewBody) return;
+      let manualRows = [];
+      if (health && Array.isArray(health.manualReview)) {
+        manualRows = health.manualReview.slice(0, 40);
+      } else if (Array.isArray(jobs?.manualReview)) {
+        manualRows = jobs.manualReview.slice(0, 40);
+      } else if (Array.isArray(jobs?.jobs)) {
+        manualRows = jobs.jobs
+          .filter((j) => j.status === "failed" && j.manualReview && !j.resolution)
+          .slice(0, 40)
+          .map((j) => ({
+            at: j.manualReviewAt || j.flaggedAt || j.updatedAt,
+            slug: j.slug,
+            flag: "manual_review",
+            phase: j.failedAtPhase || "unknown",
+            error: j.manualReviewReason || j.lastError || "failed",
+            activity: j.activity,
+          }));
+      }
+      if (manualReviewSummary) {
+        manualReviewSummary.textContent = manualRows.length
+          ? `${manualRows.length} awaiting human review`
+          : "No manual review items";
+      }
+      if (!manualRows.length) {
+        manualReviewBody.innerHTML =
+          '<tr><td colspan="6" class="agents-empty">No manual review items</td></tr>';
+        return;
+      }
+      manualReviewBody.innerHTML = manualRows
+        .map((r) => {
+          const phase = r.phase || "unknown";
+          const err = r.error || "failed";
+          return `<tr>
+            <td>${fmtFailWhen(r.at)}</td>
+            <td><code>${esc(r.slug || r.jobId || "—")}</code></td>
+            <td><span class="sev-pill manual">manual_review</span></td>
+            <td><span class="phase-pill">${esc(phase)}</span></td>
+            <td><span class="error-code">${esc(err)}</span></td>
+            <td class="activity" title="${esc(r.activity || "")}">${esc(r.activity || "—")}</td>
+          </tr>`;
+        })
+        .join("");
+    }
+
+    async function pollShips() {
+      try {
+        const res = await fetch("/api/ships");
+        const data = await res.json();
+        renderShips(data.ships || []);
+      } catch {
+        shipsSummary.textContent = "Ship table unavailable";
+      }
+    }
+
+    function appendLinesBatch(lines) {
+      if (!lines.length) return;
+      if (isCotStream(activeStream)) {
+        appendCotBatch(lines);
+        return;
+      }
+      clearEmptyHint();
+      // Coalesce consecutive transport noise from the same worker into one row
+      const compacted = [];
+      for (const row of lines) {
+        const text = row.text || "";
+        const src = row.source || "";
+        if (isTransportNoise(text) && compacted.length) {
+          const prev = compacted[compacted.length - 1];
+          if (prev.source === src && isTransportNoise(prev.text)) {
+            const bit = compressMessage(parseLogLine(text).message);
+            const prevBit = compressMessage(parseLogLine(prev.text).message);
+            if (!prevBit.includes(bit) && !String(prev.text).includes(bit)) {
+              prev.text = `${prev.text} · ${bit}`;
+            }
+            continue;
+          }
+        }
+        compacted.push({ text, source: src });
+      }
+      const frag = document.createDocumentFragment();
+      for (const row of compacted) {
+        frag.appendChild(buildLineElement(row.text, "line", row.source, false));
+      }
+      terminal.appendChild(frag);
+      lineCount += compacted.length;
+      trimOldLines();
+    }
+
+    function setCotMode(on) {
+      document.body.classList.toggle("cot-mode", !!on);
+      const subtitle = document.querySelector(".subtitle");
+      if (subtitle) {
+        subtitle.textContent = on
+          ? "Agent chain of thought · separate table · no git/harness mix"
+          : "Live CLI logs · newest first · full history";
+      }
+      syncCotChipActive();
+    }
+
+    function syncCotChipActive() {
+      if (!cotChipsEl) return;
+      cotChipsEl.querySelectorAll("button.cot-chip").forEach((b) => {
+        b.classList.toggle("active", b.dataset.stream === activeStream);
+      });
+      // Main CoT tab stays highlighted for any worker-* stream
+      document.querySelectorAll("button.tab[data-stream]").forEach((b) => {
+        const id = b.dataset.stream;
+        const active =
+          id === activeStream || (id === "cot" && isCotStream(activeStream));
+        b.classList.toggle("active", active);
+      });
+    }
+
+    function renderCotChips() {
+      if (!cotChipsEl) return;
+      const byId = new Map((cotRoster || []).map((w) => [w.stream || `worker-${w.id}`, w]));
+      cotChipsEl.innerHTML = "";
+      for (const chip of COT_CHIPS) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "cot-chip";
+        btn.dataset.stream = chip.id;
+        const meta = chip.id === "cot" ? null : byId.get(chip.id);
+        if (meta?.live) btn.classList.add("live");
+        const dot = document.createElement("span");
+        dot.className = "dot";
+        const label = document.createElement("span");
+        label.textContent = chip.label;
+        btn.append(dot, label);
+        if (meta?.slug) {
+          const slug = document.createElement("span");
+          slug.className = "chip-slug";
+          slug.textContent = meta.slug;
+          slug.title = meta.activity || meta.slug;
+          btn.appendChild(slug);
+        }
+        btn.onclick = () => connect(chip.id);
+        cotChipsEl.appendChild(btn);
+      }
+      syncCotChipActive();
+    }
+
+    async function pollCotRoster() {
+      try {
+        const res = await fetch("/api/cot");
+        const data = await res.json();
+        cotRoster = data.workers || [];
+        if (isCotStream(activeStream)) renderCotChips();
+      } catch {
+        /* ignore */
+      }
+    }
+
+    function connect(streamId) {
+      if (source) source.close();
+      activeStream = streamId;
+      seenLive.clear();
+      const cot = isCotStream(streamId);
+      setCotMode(cot);
+      if (cot) {
+        renderCotChips();
+        resetCotTable("Connecting to agent chain of thought…");
+      } else {
+        terminal.innerHTML = '<div class="empty-hint">Connecting…</div>';
+      }
+      syncCotChipActive();
+      lineCount = 0;
+      loadingHistory = true;
+
+      source = new EventSource(`/api/stream/${streamId}`);
+
+      source.addEventListener("history-start", (e) => {
+        const payload = JSON.parse(e.data);
+        loadingHistory = true;
+        if (isCotStream(activeStream)) {
+          resetCotTable(`Loading ${payload.total.toLocaleString()} CoT events…`);
+        } else {
+          terminal.innerHTML = "";
+          lineCount = 0;
+          prependLine(`Loading ${payload.total.toLocaleString()} historical lines…`, "system");
+        }
+      });
+
+      source.addEventListener("history", (e) => {
+        const payload = JSON.parse(e.data);
+        appendLinesBatch(payload.lines);
+      });
+
+      source.addEventListener("history-end", (e) => {
+        const payload = JSON.parse(e.data);
+        loadingHistory = false;
+        if (isCotStream(activeStream)) {
+          if (!cotRowCount) {
+            resetCotTable("No agent thoughts yet — workers write a separate .cot.log (respawn if still empty).");
+          } else {
+            updateCotSummary();
+          }
+        } else {
+          prependLine(`History ready — ${payload.total.toLocaleString()} lines, newest at top.`, "system");
+        }
+      });
+
+      source.addEventListener("line", (e) => {
+        const payload = JSON.parse(e.data);
+        if (payload.live) {
+          const key = `${payload.source}|${payload.text}|${payload.at}`;
+          if (seenLive.has(key)) return;
+          seenLive.add(key);
+        }
+        if (loadingHistory && !payload.live) return;
+        prependLine(payload.text, "line", payload.source, payload.live);
+      });
+
+      source.addEventListener("system", (e) => {
+        if (isCotStream(activeStream)) return;
+        const payload = JSON.parse(e.data);
+        prependLine(payload.text, "system");
+      });
+
+      source.addEventListener("meta", (e) => {
+        const payload = JSON.parse(e.data);
+        renderStatus(payload.status, {
+          fileCount: payload.fileCount,
+          lineCount: isCotStream(activeStream) ? cotRowCount : lineCount,
+        });
+      });
+
+      source.onerror = () => {
+        // EventSource fires onerror repeatedly while down — debounce the banner.
+        const now = Date.now();
+        if (!source._lastDisconnectMsg || now - source._lastDisconnectMsg > 5000) {
+          source._lastDisconnectMsg = now;
+          if (!isCotStream(activeStream)) {
+            prependLine("Stream disconnected — dashboard process may be down; retrying…", "system");
+          }
+        }
+      };
+    }
+
+    STREAMS.forEach((s) => {
+      const btn = document.createElement("button");
+      btn.className = "tab" + (s.id === activeStream ? " active" : "");
+      btn.type = "button";
+      btn.dataset.stream = s.id;
+      btn.textContent = s.label;
+      btn.onclick = () => connect(s.id);
+      tabsEl.appendChild(btn);
+    });
+    try {
+      const savedKind = sessionStorage.getItem("cotKindFilter");
+      if (savedKind && COT_KIND_CHIPS.some((c) => c.id === savedKind)) {
+        cotKindFilter = savedKind;
+      }
+    } catch {
+      /* ignore */
+    }
+    renderCotChips();
+    renderCotKindChips();
+
+    document.getElementById("clear").onclick = () => {
+      seenLive.clear();
+      if (isCotStream(activeStream)) {
+        resetCotTable("View cleared — live CoT stream continues.");
+      } else {
+        terminal.innerHTML = '<div class="empty-hint">View cleared — live stream continues.</div>';
+        lineCount = 0;
+      }
+    };
+
+    filterEl.oninput = () => {
+      if (isCotStream(activeStream) && cotBody) {
+        applyAllCotFilters();
+        return;
+      }
+      const filter = filterEl.value.trim().toLowerCase();
+      terminal.querySelectorAll(".row").forEach((el) => {
+        const text = el.dataset.text || el.textContent.toLowerCase();
+        const hit = !filter || text.includes(filter);
+        el.classList.toggle("dim", !hit);
+        el.classList.toggle("match", !!filter && hit);
+      });
+    };
+
+    sizeToggle.querySelectorAll("button").forEach((btn) => {
+      btn.onclick = () => {
+        sizeToggle.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        terminal.className = `size-${btn.dataset.size}`;
+      };
+    });
+
+    async function pollStatus() {
+      try {
+        const res = await fetch("/api/status");
+        const data = await res.json();
+        renderStatus(data, { lineCount });
+        if (Array.isArray(data.agents)) renderAgents(data.agents, data.jobs || null);
+        if (data.health) {
+          renderAlerts(data.health);
+          renderFailures(data.jobs || null, data.health);
+        }
+      } catch {}
+    }
+
+    connect("all");
+    setInterval(pollStatus, 5000);
+    setInterval(pollShips, 5000);
+    setInterval(pollAgents, 2000);
+    setInterval(pollCotRoster, 2500);
+    pollStatus();
+    pollShips();
+    pollAgents();
+    pollCotRoster();
+  </script>
+</body>
+</html>

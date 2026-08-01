@@ -6,9 +6,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Deploy policy
 
-**Always deploy to Firebase after making changes.** Run `npm run deploy` before finishing any task. Live site: https://ether-data-insights-blog.web.app
+**Interactive main-repo edits:** publish with `npm run deploy:firebase` (local build + smoke + Firebase Hosting + live re-smoke). Live site: https://ether-data-insights-blog.web.app
 
-**Always smoke-test before and after deploy.** `npm run deploy` runs Playwright against the local static build, deploys, then re-tests production. Do not skip this — a passing `npm run build` is not enough; client-side viz bundles can fail at runtime (e.g. TDZ / init order bugs) while the build still succeeds.
+**Parallel worktree conveyor (orchestrator + workers):** workers run local `npm run deploy` only — never Firebase / `deploy:hosting` / `deploy:firebase`. Orchestrator merges `ready` jobs; hosting publish stays operator-gated unless re-enabled.
+
+**Always smoke-test.** `npm run deploy` is local build + Playwright smoke. A passing `npm run build` alone is not enough; client-side viz bundles can fail at runtime (e.g. TDZ / init order bugs) while the build still succeeds.
 
 ## Blog post hero / thumbnail images
 

@@ -47,33 +47,90 @@ function resolveStaticFile(rootDir, urlPath) {
   return null;
 }
 
+function createStaticServer(rootDir) {
+  const root = path.resolve(rootDir);
+  return http.createServer((req, res) => {
+    const file = resolveStaticFile(root, req.url);
+    if (!file) {
+      res.statusCode = 404;
+      res.end("Not found");
+      return;
+    }
+    res.setHeader("Content-Type", MIME[path.extname(file).toLowerCase()] ?? "application/octet-stream");
+    const stream = fs.createReadStream(file);
+    stream.on("error", () => {
+      if (!res.headersSent) res.statusCode = 500;
+      res.end();
+    });
+    stream.pipe(res);
+  });
+}
+
+/**
+ * Bind a static server, retrying nearby ports on EADDRINUSE so parallel workers
+ * never share one Node listen port.
+ *
+ * @param {string} rootDir absolute or relative path to static export (e.g. out/)
+ * @param {number} [preferredPort]
+ * @param {string} [host]
+ * @returns {Promise<{ server: import("node:http").Server, port: number, url: string }>}
+ */
+export async function startStaticServerBound(rootDir, preferredPort = 4173, host = "127.0.0.1") {
+  const preferred = Number(preferredPort);
+  const base = Number.isFinite(preferred) && preferred > 0 ? preferred : 4173;
+  const candidates = [base];
+  for (let i = 1; i <= 40; i++) candidates.push(base + i);
+  // Last resort: ephemeral port
+  candidates.push(0);
+
+  let lastErr = null;
+  for (const port of candidates) {
+    const server = createStaticServer(rootDir);
+    try {
+      const bound = await new Promise((resolve, reject) => {
+        const onError = (err) => {
+          server.off("listening", onListening);
+          reject(err);
+        };
+        const onListening = () => {
+          server.off("error", onError);
+          const addr = server.address();
+          const actual = typeof addr === "object" && addr ? addr.port : port;
+          resolve({ server, port: actual, url: `http://${host}:${actual}` });
+        };
+        server.once("error", onError);
+        server.once("listening", onListening);
+        server.listen(port, host);
+      });
+      if (bound.port !== base) {
+        console.error(
+          `static-server: preferred port ${base} busy; bound ${bound.port} instead`,
+        );
+      }
+      return bound;
+    } catch (err) {
+      lastErr = err;
+      try {
+        server.close();
+      } catch {
+        /* ignore */
+      }
+      if (err && err.code === "EADDRINUSE") continue;
+      throw err;
+    }
+  }
+  throw lastErr || new Error(`Unable to bind static server near port ${base}`);
+}
+
 /**
  * @param {string} rootDir absolute or relative path to static export (e.g. out/)
  * @param {number} [port]
  * @param {string} [host]
  * @returns {Promise<import("node:http").Server>}
  */
-export function startStaticServer(rootDir, port = 4173, host = "127.0.0.1") {
-  const root = path.resolve(rootDir);
-  return new Promise((resolve, reject) => {
-    const server = http.createServer((req, res) => {
-      const file = resolveStaticFile(root, req.url);
-      if (!file) {
-        res.statusCode = 404;
-        res.end("Not found");
-        return;
-      }
-      res.setHeader("Content-Type", MIME[path.extname(file).toLowerCase()] ?? "application/octet-stream");
-      const stream = fs.createReadStream(file);
-      stream.on("error", () => {
-        if (!res.headersSent) res.statusCode = 500;
-        res.end();
-      });
-      stream.pipe(res);
-    });
-    server.on("error", reject);
-    server.listen(port, host, () => resolve(server));
-  });
+export async function startStaticServer(rootDir, port = 4173, host = "127.0.0.1") {
+  const bound = await startStaticServerBound(rootDir, port, host);
+  return bound.server;
 }
 
 /** @param {import("node:http").Server | null | undefined} server */

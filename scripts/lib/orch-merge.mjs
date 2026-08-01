@@ -274,8 +274,10 @@ function clearUnmergedToHead(repoRoot) {
 }
 
 /**
- * Stash only paths that would block merge. Falls back to full `stash -u` if needed.
- * Uses --pathspec-from-file to avoid Windows CreateProcess command-line limits.
+ * Stash only paths that would block merge.
+ * When onlyPaths is set (path-selective ship), NEVER escalate to full `stash -u`
+ * — that wiped untracked automation scripts (claim-next-topics, orchestrator, etc.)
+ * when stash failed mid-flight on locked log files.
  */
 export function stashBlockingPaths(repoRoot, branch, label, { onlyPaths = null } = {}) {
   const message = `${STASH_PREFIX}${label}`;
@@ -285,6 +287,7 @@ export function stashBlockingPaths(repoRoot, branch, label, { onlyPaths = null }
       : Array.isArray(onlyPaths)
         ? new Set(onlyPaths)
         : null;
+  const selective = Boolean(allow);
   let blocking = allow
     ? dirtyPaths(repoRoot).filter((p) => allow.has(p))
     : blockingPaths(repoRoot, branch);
@@ -300,6 +303,10 @@ export function stashBlockingPaths(repoRoot, branch, label, { onlyPaths = null }
     if (!porcelain.stdout.trim()) {
       return { didStash: false, message, blocking: [], mode: "clean" };
     }
+    if (selective) {
+      // Path-selective: dirty non-allowlist files are fine; do not full-stash.
+      return { didStash: false, message, blocking: [], mode: "dirty-nonblocking" };
+    }
     const dry = canMergeWithoutStash(repoRoot, branch);
     if (dry.ok) {
       return { didStash: false, message, blocking: [], mode: "dirty-nonblocking" };
@@ -309,6 +316,16 @@ export function stashBlockingPaths(repoRoot, branch, label, { onlyPaths = null }
 
   return withPathspecFile(repoRoot, blocking, (pathFile) => {
     if (!pathFile) {
+      if (selective) {
+        return {
+          didStash: false,
+          message,
+          blocking,
+          mode: "full-fallback",
+          code: 1,
+          output: "empty pathspec for selective stash",
+        };
+      }
       return stashFull(repoRoot, message, branch, "full-fallback", { blocking });
     }
     const partial = git(repoRoot, [
@@ -325,11 +342,22 @@ export function stashBlockingPaths(repoRoot, branch, label, { onlyPaths = null }
     const mode = "partial";
     const output = partial.output;
 
-    // Verify no blockers remain; if any, escalate to full stash
+    // Verify no blockers remain; if any, escalate to full stash ONLY for classic merge
     const still = allow
       ? dirtyPaths(repoRoot).filter((p) => allow.has(p))
       : blockingPaths(repoRoot, branch);
     if (did && still.length > 0) {
+      if (selective) {
+        return {
+          didStash: true,
+          message,
+          blocking,
+          mode: "partial-incomplete",
+          code: 1,
+          output: `allowlist blockers remain: ${still.slice(0, 12).join(", ")}`,
+          still,
+        };
+      }
       return {
         ...stashFull(repoRoot, `${message}:full`, branch, "full-after-partial"),
         blocking,
@@ -339,6 +367,17 @@ export function stashBlockingPaths(repoRoot, branch, label, { onlyPaths = null }
     }
 
     if (!did) {
+      if (selective) {
+        return {
+          didStash: false,
+          message,
+          blocking,
+          mode: "full-fallback",
+          code: partial.code || 1,
+          output,
+          prior: output,
+        };
+      }
       return stashFull(repoRoot, message, branch, "full-fallback", {
         blocking,
         prior: output,
@@ -784,6 +823,134 @@ export function unionSlugIntoPostsTs(repoRoot, branch, slug) {
   return { ok: true, inserted: true };
 }
 
+/**
+ * Add slug wiring to shared registries without replacing whole files.
+ * Pulls dynamic-import / if-branch / smoke-marker / theme map from the worker branch.
+ */
+export function ensureSharedRegistryWiring(repoRoot, branch, slug) {
+  const touched = [];
+
+  // --- types/post.ts VisualizationType union ---
+  const typesPath = path.join(repoRoot, "src/types/post.ts");
+  if (fs.existsSync(typesPath)) {
+    let types = fs.readFileSync(typesPath, "utf8");
+    if (!types.includes(`"${slug}"`) && !types.includes(`'${slug}'`)) {
+      const needle = /\| "us-billion-dollar-weather-disasters-ms94skof";/;
+      if (needle.test(types)) {
+        types = types.replace(
+          needle,
+          `| "us-billion-dollar-weather-disasters-ms94skof"\n    | "${slug}";`,
+        );
+      } else {
+        // Insert before the closing of the VisualizationType union (last `| "..." ;`)
+        types = types.replace(
+          /(\| "[^"]+")(\s*;\s*\n\s*\/\*\* Canvas-style)/,
+          `$1\n    | "${slug}"$2`,
+        );
+      }
+      fs.writeFileSync(typesPath, types, "utf8");
+      touched.push("src/types/post.ts");
+    }
+  }
+
+  // --- PostVisualization.tsx ---
+  const vizPath = path.join(repoRoot, "src/components/PostVisualization.tsx");
+  if (fs.existsSync(vizPath)) {
+    let viz = fs.readFileSync(vizPath, "utf8");
+    if (!viz.includes(`"${slug}"`) && !viz.includes(`'${slug}'`)) {
+      const shown = gitShowRaw(repoRoot, branch, "src/components/PostVisualization.tsx");
+      if (shown.code !== 0) {
+        return { ok: false, error: `cannot read branch PostVisualization: ${shown.error}` };
+      }
+      const branchViz = shown.text;
+      // Extract dynamic const block that references this slug's dashboard import or type check
+      const ifRe = new RegExp(
+        `if \\(type === ["']${slug}["']\\) \\{[\\s\\S]*?return <([A-Za-z0-9_]+) />;[\\s\\S]*?\\}`,
+      );
+      const ifMatch = branchViz.match(ifRe);
+      if (!ifMatch) {
+        return { ok: false, error: `no if(type) block for ${slug} on branch` };
+      }
+      const component = ifMatch[1];
+      const dynRe = new RegExp(
+        `const ${component} = dynamic\\([\\s\\S]*?\\n\\);`,
+      );
+      const dynMatch = branchViz.match(dynRe);
+      if (!dynMatch) {
+        return { ok: false, error: `no dynamic() for ${component} on branch` };
+      }
+      if (!viz.includes(`const ${component} = dynamic`)) {
+        // Insert before export default function / function PostVisualization
+        const insertAt = viz.search(
+          /\n(export default function|function PostVisualization|export function PostVisualization)/,
+        );
+        if (insertAt < 0) {
+          return { ok: false, error: "PostVisualization insert point missing" };
+        }
+        viz = viz.slice(0, insertAt) + `\n${dynMatch[0]}\n` + viz.slice(insertAt);
+      }
+      if (!viz.includes(`type === "${slug}"`) && !viz.includes(`type === '${slug}'`)) {
+        viz = viz.replace(
+          /(\n\s*return null;\s*\n\s*\})/,
+          `\n\n  if (type === "${slug}") {\n    return <${component} />;\n  }$1`,
+        );
+      }
+      fs.writeFileSync(vizPath, viz, "utf8");
+      touched.push("src/components/PostVisualization.tsx");
+    }
+  }
+
+  // --- theme-registry SLUG_THEME_IDS ---
+  const themePath = path.join(repoRoot, "src/data/theme-registry.ts");
+  if (fs.existsSync(themePath)) {
+    let theme = fs.readFileSync(themePath, "utf8");
+    if (!theme.includes(`"${slug}"`)) {
+      const shown = gitShowRaw(repoRoot, branch, "src/data/theme-registry.ts");
+      if (shown.code === 0) {
+        const m = shown.text.match(
+          new RegExp(`"${slug}"\\s*:\\s*"[^"]+"`),
+        );
+        if (m) {
+          theme = theme.replace(
+            /(export const SLUG_THEME_IDS[^=]*=\s*\{)/,
+            `$1\n  ${m[0]},`,
+          );
+          fs.writeFileSync(themePath, theme, "utf8");
+          touched.push("src/data/theme-registry.ts");
+        }
+      }
+    }
+  }
+
+  // --- smoke-test marker entry ---
+  const smokePath = path.join(repoRoot, "scripts/smoke-test-viz-posts.mjs");
+  if (fs.existsSync(smokePath)) {
+    let smoke = fs.readFileSync(smokePath, "utf8");
+    if (!smoke.includes(`slug: "${slug}"`) && !smoke.includes(`slug: '${slug}'`)) {
+      const shown = gitShowRaw(repoRoot, branch, "scripts/smoke-test-viz-posts.mjs");
+      if (shown.code === 0) {
+        const entryRe = new RegExp(
+          `\\{[\\s\\n]*slug:\\s*["']${slug}["'][\\s\\S]*?\\},`,
+        );
+        const entry = shown.text.match(entryRe);
+        if (entry) {
+          smoke = smoke.replace(
+            /(const POSTS\s*=\s*\[)/,
+            `$1\n  ${entry[0]}`,
+          );
+          fs.writeFileSync(smokePath, smoke, "utf8");
+          touched.push("scripts/smoke-test-viz-posts.mjs");
+        }
+      }
+    }
+  }
+
+  if (touched.length) {
+    git(repoRoot, ["add", "--", ...touched]);
+  }
+  return { ok: true, touched };
+}
+
 export function selectiveCheckoutPostCommit(repoRoot, branch, slug, workerId) {
   const files = filesOnBranchForPost(repoRoot, branch, slug);
   if (!files.length) {
@@ -822,27 +989,16 @@ export function selectiveCheckoutPostCommit(repoRoot, branch, slug, workerId) {
     }
   }
 
-  // 3) For remaining shared registries, checkout from branch only if HEAD lacks the slug/viz
-  //    tokens — still imperfect for PostVisualization, but posts.ts is the critical one.
-  const otherShared = shared.filter((f) => f !== "src/data/posts.ts");
-  if (otherShared.length) {
-    const checkoutShared = withPathspecFile(repoRoot, otherShared, (pathFile) => {
-      if (!pathFile) return { code: 0, output: "" };
-      return git(repoRoot, [
-        "checkout",
-        branch,
-        "--pathspec-from-file",
-        pathFile,
-      ]);
-    });
-    if (checkoutShared.code !== 0) {
-      return {
-        ok: false,
-        error: "shared_checkout_failed",
-        detail: checkoutShared.output,
-        files: otherShared,
-      };
-    }
+  // 3) Patch shared registries in place — never checkout whole files from older branches
+  //    (that would wipe newer posts already on main).
+  const wiring = ensureSharedRegistryWiring(repoRoot, branch, slug);
+  if (!wiring.ok) {
+    return {
+      ok: false,
+      error: "shared_wiring_failed",
+      detail: wiring.error,
+      files,
+    };
   }
 
   const staged = listLines(
@@ -888,15 +1044,33 @@ export function selectiveCheckoutPostCommit(repoRoot, branch, slug, workerId) {
 
 /**
  * Commit only post-related dirty files in the worker worktree.
+ * Never `checkout -B`: that resets the branch tip to the worktree HEAD and can
+ * wipe a finished post commit when the worker already moved to another job.
  */
 export function commitWorktreePostFiles(worktree, slug, branch) {
   if (!worktree || !fs.existsSync(worktree)) {
     return { ok: true, skipped: true, reason: "no worktree" };
   }
 
-  const co = git(worktree, ["checkout", "-B", branch]);
-  if (co.code !== 0) {
-    return { ok: false, error: `checkout failed: ${co.output}` };
+  const headRef = git(worktree, ["rev-parse", "--abbrev-ref", "HEAD"]);
+  const onBranch = headRef.stdout.trim() === branch;
+  const branchExists =
+    git(worktree, ["rev-parse", "--verify", branch]).code === 0;
+
+  if (!onBranch) {
+    if (branchExists) {
+      return {
+        ok: true,
+        committed: false,
+        skipped: true,
+        reason: "worktree on other branch; keep existing tip",
+        files: [],
+      };
+    }
+    const co = git(worktree, ["checkout", "-b", branch]);
+    if (co.code !== 0) {
+      return { ok: false, error: `checkout failed: ${co.output}` };
+    }
   }
 
   const specs = postPathspecs(slug);
@@ -926,6 +1100,71 @@ export function commitWorktreePostFiles(worktree, slug, branch) {
  * Full merge pipeline for one ready job.
  * @returns {{ ok: boolean, shipped?: boolean, error?: string, detail?: string, log: string[] }}
  */
+/**
+ * Delete a post/* worker branch after ship.
+ * Detaches any worktree still on that branch, then force-deletes the ref.
+ * Also sweeps stale sibling tips for the same slug (e.g. old *-w5-recovery aliases).
+ */
+export function deletePostBranchIfSafe(repoRoot, branch, { alsoSiblings = true } = {}) {
+  if (!branch || !String(branch).startsWith("post/")) {
+    return { deleted: false, skipped: "not_a_post_branch", deletedList: [] };
+  }
+
+  const targets = new Set([branch]);
+  if (alsoSiblings) {
+    const slugMatch = String(branch).match(/^post\/(.+?)(?:-w\d+(?:-recovery)?)?$/);
+    const stem = slugMatch?.[1];
+    if (stem) {
+      const listed = git(repoRoot, [
+        "for-each-ref",
+        "--format=%(refname:short)",
+        "refs/heads/post",
+      ]);
+      for (const ref of listLines(listed.stdout)) {
+        // Same slug with any -wN / -w5-recovery suffix, or exact post/{slug}
+        if (ref === `post/${stem}` || ref.startsWith(`post/${stem}-w`)) {
+          targets.add(ref);
+        }
+      }
+    }
+  }
+
+  const deletedList = [];
+  const skipped = [];
+  const mainSha =
+    git(repoRoot, ["rev-parse", "master"]).stdout.trim() ||
+    git(repoRoot, ["rev-parse", "HEAD"]).stdout.trim();
+
+  for (const ref of targets) {
+    const verify = git(repoRoot, ["rev-parse", "--verify", ref]);
+    if (verify.code !== 0) {
+      skipped.push(`${ref}:missing`);
+      continue;
+    }
+
+    // Detach every worktree currently on this branch
+    const wt = git(repoRoot, ["worktree", "list", "--porcelain"]);
+    let cur = null;
+    for (const line of listLines(wt.stdout)) {
+      if (line.startsWith("worktree ")) cur = line.slice(9);
+      if (line === `branch refs/heads/${ref}` && cur) {
+        git(cur, ["checkout", "--detach", mainSha || "HEAD"]);
+        // If checkout blocked by local dirt, still try delete from main repo
+      }
+    }
+
+    const del = git(repoRoot, ["branch", "-D", ref]);
+    if (del.code === 0) deletedList.push(ref);
+    else skipped.push(`${ref}:${del.output || "delete_failed"}`);
+  }
+
+  return {
+    deleted: deletedList.length > 0,
+    deletedList,
+    skipped: skipped.length ? skipped.join("; ") : undefined,
+  };
+}
+
 export function mergeReadyJob({
   slug,
   branch,
@@ -1152,7 +1391,31 @@ export function mergeReadyJob({
       note(`restored ${parkedBack.restored} parked assets`);
     }
 
-    return { ok: true, shipped: true, log };
+    // Drop the worker branch after a successful path-selective ship so it cannot
+    // linger as divergent "ahead" litter or get mistaken for fresh WIP.
+    let branchCleanup = null;
+    if (branch) {
+      try {
+        branchCleanup = deletePostBranchIfSafe(repoRoot, branch);
+        if (branchCleanup.deleted) {
+          note(
+            `closed shipped branch(es): ${branchCleanup.deletedList.join(", ")}`,
+          );
+        } else if (branchCleanup.skipped) {
+          note(`branch cleanup skipped: ${branchCleanup.skipped}`);
+        }
+      } catch (e) {
+        note(`WARN branch cleanup: ${e?.message || e}`);
+      }
+    }
+
+    return {
+      ok: true,
+      shipped: true,
+      branchDeleted: !!branchCleanup?.deleted,
+      deletedBranches: branchCleanup?.deletedList || [],
+      log,
+    };
   } catch (err) {
     abortLeftoverMerge(repoRoot);
     try {

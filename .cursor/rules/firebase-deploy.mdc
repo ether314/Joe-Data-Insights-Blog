@@ -1,22 +1,32 @@
 ---
-description: Always deploy site changes to Firebase Hosting after edits
+description: Deploy policy for interactive edits vs parallel worktree conveyor
 alwaysApply: true
 ---
 
-# Firebase deploy on every change
+# Deploy policy
 
 This project is live at **https://ether-data-insights-blog.web.app** (Firebase project: `ether-data-insights-blog`).
 
-After **any** code, content, or asset change in this repo:
+## Interactive sessions (editing main checkout)
 
-1. Run `npm run deploy` from the project root (builds static export + deploys hosting).
+After code, content, or asset changes you author directly in the main repo:
+
+1. Run `npm run deploy:firebase` (local build + smoke + Firebase Hosting + live re-smoke).
 2. Confirm deploy succeeded before finishing the task.
-3. Do **not** leave changes local-only unless deploy fails — fix and retry.
-
-Deploy command:
+3. Do **not** leave shippable site changes local-only unless deploy fails — fix and retry.
 
 ```bash
-npm run deploy
+npm run deploy:firebase
 ```
 
-Only skip deploy if the user explicitly says not to deploy for that specific change.
+`npm run deploy` alone is **local-only** (build + smoke). Use it for QA; use `deploy:firebase` to publish.
+
+Only skip Firebase if the user explicitly says not to deploy for that specific change.
+
+## Parallel worktree conveyor (orchestrator + workers)
+
+Workers and the orchestrator **must not** run Firebase / `deploy:hosting` / `deploy:firebase`.
+
+- Workers: `npm run deploy` (local build + smoke) inside their worktree, then mark job `ready`.
+- Orchestrator: merge `ready` branches into main; optional main-tree local verify.
+- Hosting publish stays operator-gated (`deploy:firebase` from main) unless re-enabled explicitly.
