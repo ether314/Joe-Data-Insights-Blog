@@ -1,17 +1,18 @@
 import { Hero } from "@/components/Hero";
 import { ExploreCategoriesSection } from "@/components/ExploreCategoriesSection";
+import { LatestPostsSection } from "@/components/LatestPostsSection";
 import { PostCard } from "@/components/PostCard";
 import {
+  getAllPosts,
   getFeaturedPosts,
   getPostsGroupedByCategory,
-  getRecentPosts,
 } from "@/lib/posts";
 import { CATEGORIES } from "@/types/post";
 
 export default async function HomePage() {
-  const [featured, recent, grouped] = await Promise.all([
+  const [featured, allPosts, grouped] = await Promise.all([
     getFeaturedPosts(3),
-    getRecentPosts(6),
+    getAllPosts(),
     getPostsGroupedByCategory(),
   ]);
 
@@ -40,24 +41,7 @@ export default async function HomePage() {
 
       <ExploreCategoriesSection counts={categoryCounts} />
 
-      <section id="latest" className="py-12">
-        <div className="site-container">
-          <div className="mb-8 flex items-end justify-between border-b border-slate-200 pb-4">
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900">Latest</h2>
-              <p className="mt-1 text-sm text-slate-500">
-                Most recent data stories and visualizations
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {recent.map((post) => (
-              <PostCard key={post.id} post={post} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <LatestPostsSection posts={allPosts} />
     </>
   );
 }
