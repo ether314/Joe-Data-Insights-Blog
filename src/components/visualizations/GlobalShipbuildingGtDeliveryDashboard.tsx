@@ -453,7 +453,12 @@ export function GlobalShipbuildingGtDeliveryDashboard() {
                       dataKey="China"
                       stackId="a"
                       fill="#ef4444"
-                      onMouseEnter={(d) => setHoverSeg(d.full as string)}
+                      onMouseEnter={(d) => {
+                        const payload = (
+                          d as { payload?: { full?: string } }
+                        ).payload;
+                        setHoverSeg(payload?.full ?? null);
+                      }}
                       onMouseLeave={() => setHoverSeg(null)}
                     />
                     <Bar dataKey="Korea" stackId="a" fill="#3b82f6" />

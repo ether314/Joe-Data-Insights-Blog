@@ -59,7 +59,10 @@ export interface Post {
     | "measurement-science-research-2026"
     | "demographic-cash-flows-research-2026"
     | "copper-mine-vs-refinery-geography-2026"
-    | "global-shipbuilding-gt-delivery-concentration-2026";
+    | "global-shipbuilding-gt-delivery-concentration-2026"
+    | "industrial-robotics-research-2026"
+    | "ai-supply-chain-research-2026"
+    | "us-billion-dollar-weather-disasters-ms94skof";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

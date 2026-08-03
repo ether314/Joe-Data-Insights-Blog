@@ -12,6 +12,20 @@ A Visual Capitalist–inspired data analytics blog built with Next.js and Fireba
 
 ## Quick Start
 
+### Docker (recommended)
+
+```bash
+# Production static build served by nginx on http://localhost:3000
+docker compose up --build -d
+
+# Hot-reload Next.js dev server instead
+docker compose --profile dev up dev
+```
+
+Open [http://localhost:3000](http://localhost:3000). Copy `.env.example` to `.env` if you need Firebase/analytics build-time vars or a different host port (`BLOG_PORT`).
+
+### Local (without Docker)
+
 ```bash
 npm install
 npm run dev

@@ -2,14 +2,14 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { PostCard } from "@/components/PostCard";
 import { getPostsByCategory } from "@/lib/posts";
-import { CATEGORIES, slugToCategory } from "@/types/post";
+import { CATEGORIES, categorySlug, slugToCategory } from "@/types/post";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return CATEGORIES.map((cat) => ({ slug: cat.toLowerCase() }));
+  return CATEGORIES.map((cat) => ({ slug: categorySlug(cat) }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

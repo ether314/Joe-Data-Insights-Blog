@@ -671,10 +671,7 @@ export function PostVisualization({
     return <CopperMineVsRefineryGeographyDashboard />;
   }
 
-  if (
-    type === "global-shipbuilding-gt-delivery-concentration-2026" ||
-    type === "global-shipbuilding-gt-delivery"
-  ) {
+  if (type === "global-shipbuilding-gt-delivery-concentration-2026") {
     return <GlobalShipbuildingGtDeliveryDashboard />;
   }
 

@@ -12,7 +12,7 @@ export const samplePosts: Post[] = [
 
 This post asks a two-part question: **who delivers the world’s new merchant-ship capacity, and who owns versus builds?** GT measures the physical size of vessels leaving yards. Deadweight tons (dwt) measure carrying capacity on the water. Beneficial ownership asks which country’s companies control that capacity — regardless of flag. The interactive dashboard above stacks those ledgers so the build map and the own map cannot be confused.
 
-For a parallel in aerospace — high-value assembly with a very different geography — see our [commercial aircraft final-assembly map](/blog/commercial-aircraft-final-assembly-2025). For an earlier cut of the same maritime concentration theme, see [global shipbuilding concentration 2023](/blog/global-shipbuilding-concentration-2023).
+For a parallel in aerospace — high-value assembly with a very different geography — see our [commercial aircraft final-assembly map](/blog/commercial-aircraft-final-assembly-2025). For an earlier cut of the same maritime concentration theme, see [global shipbuilding concentration](/blog/global-shipbuilding-gt-delivery-concentration-2026).
 
 ## The 2024 delivery scoreboard
 
@@ -1877,7 +1877,7 @@ Related reading: [US personal saving rate](/blog/us-personal-saving-rate-post-ex
     excerpt: "In 2025 Airbus delivered 793 jets to Boeing’s 600. The industrial map underneath is starker: Airbus spreads 12 FALs across Europe, China, and Alabama — Boeing still finishes commercial jets only in America.",
     content: `Airline headlines obsess over orders, MAX grounding lore, and whether COMAC will “break the duopoly.” The quieter industrial fact is *where the last bolt turns*. Airbus discloses **12 final assembly lines (FALs) at five locations** spanning France, Germany, China, and the United States. Boeing’s commercial FALs — Renton, Everett, Charleston — remain **entirely inside the United States**. In calendar **2025**, that geographic split sat under a delivery scoreboard of **793 Airbus jets versus 600 Boeing**, with COMAC’s C919 still a rounding error at **15** handovers.
 
-Unlike our [global shipbuilding concentration](/blog/global-shipbuilding-concentration-2023) chart — which maps *gross tonnage* delivered by East Asian yards — this post maps *large commercial jet* final assembly: fewer sites, higher value per unit, and a duopoly that still finishes most of the world’s airliners even as Airbus deliberately diversifies the map.
+Unlike our [global shipbuilding concentration](/blog/global-shipbuilding-gt-delivery-concentration-2026) chart — which maps *gross tonnage* delivered by East Asian yards — this post maps *large commercial jet* final assembly: fewer sites, higher value per unit, and a duopoly that still finishes most of the world’s airliners even as Airbus deliberately diversifies the map.
 
 ## Deliveries first: the 2025 scoreboard
 
@@ -1910,7 +1910,7 @@ Boeing’s commercial geography is the mirror image. **Renton** finishes the 737
 
 That concentration is a feature and a risk. Feature: one regulatory jurisdiction, one labor-relations theater, shorter political exposure to foreign industrial policy. Risk: every quality escape, strike, or supplier meltdown hits the *only* geography that can finish the jet. When Airbus opens a second line in Tianjin, it is buying political access *and* operational redundancy. When Boeing adds a line in Everett, it is buying rate — still on American soil.
 
-The contrast with [shipbuilding](/blog/global-shipbuilding-concentration-2023) is instructive. Ships concentrated in China/Korea/Japan because labor cost and steel throughput dominated. Jets concentrate where certification regimes, skilled assembly labor, and political trust in airworthiness authorities dominate. Boeing’s US-only FAL map is a bet that those advantages still outweigh geographic diversification. Airbus’s multi-continent map is a bet that market access and rate require planting hangars where the airlines are.
+The contrast with [shipbuilding](/blog/global-shipbuilding-gt-delivery-concentration-2026) is instructive. Ships concentrated in China/Korea/Japan because labor cost and steel throughput dominated. Jets concentrate where certification regimes, skilled assembly labor, and political trust in airworthiness authorities dominate. Boeing’s US-only FAL map is a bet that those advantages still outweigh geographic diversification. Airbus’s multi-continent map is a bet that market access and rate require planting hangars where the airlines are.
 
 ## Family mix: single-aisle is the industrial center of gravity
 
@@ -1940,11 +1940,12 @@ A **Boeing FAL outside the United States** would be a regime change in industria
 
 Airbus finishes jets on a **four-country, 12-line** map that now puts **one-third of its FAL lines** in China and the US. Boeing still finishes commercial jets **only in America** — and in 2025 still delivered **600** of them against Airbus’s **793**. The duopoly remains intact on volumes. On *industrial geography*, it has already split in two.
 
-Related reading: [Global shipbuilding concentration](/blog/global-shipbuilding-concentration-2023) and [China’s share of industrial robot installations](/blog/china-industrial-robot-installations-share-2023).`,
+Related reading: [Global shipbuilding concentration](/blog/global-shipbuilding-gt-delivery-concentration-2026) and [China’s industrial robot installations](/blog/industrial-robotics-research-2026).`,
     category: "Industry",
     themeId: "heavy-industrial-capacity",
     imageUrl: "/images/industry-commercial-aircraft-final-assembly-2025-hero.png",
-    imageAlt: "Dark navy map of Airbus and Boeing final-assembly line geography",
+    imageAlt:
+      "Dark navy cinematic map of Airbus and Boeing commercial aircraft final-assembly sites worldwide",
     publishedAt: "2026-07-31T15:30:00Z",
     featured: true,
     visualization: "commercial-aircraft-assembly",

@@ -101,10 +101,38 @@ function ToggleGroup<T extends string>({
 }
 
 function project(lon: number, lat: number) {
-  const x = ((lon + 180) / 360) * 100;
-  const y = ((90 - lat) / 180) * 100;
+  // Equirectangular into a padded viewBox (0–100 × 0–56)
+  const x = 4 + ((lon + 180) / 360) * 92;
+  const y = 4 + ((90 - lat) / 180) * 48;
   return { x, y };
 }
+
+/** Lightweight land silhouettes for FAL geography (not political boundaries). */
+const LAND_PATHS = [
+  // North America
+  "M12 16c2-3 6-5 11-5 4 0 8 1 11 4 2 2 3 5 2 8-1 3-3 5-6 7-3 2-7 3-11 2-4-1-7-3-9-7-1-2-1-5 2-9z",
+  // Central America bridge
+  "M22 30c2 1 3 3 3 5 0 1-1 2-2 2s-2-1-2-2c0-2 0-4 1-5z",
+  // South America
+  "M24 34c3-1 6 0 8 3 2 3 2 7 1 11-1 3-3 6-6 7-3 1-5-1-6-4-1-4 0-8 1-12 0-2 1-4 2-5z",
+  // Europe
+  "M48 14c3-1 6 0 8 2 2 2 2 5 1 7-1 2-3 3-5 3-3 0-5-1-6-4-1-2 0-5 2-8z",
+  // Africa
+  "M48 26c3-1 7 0 10 3 2 3 3 7 2 11-1 4-4 7-8 8-3 0-5-2-6-5-1-4 0-8 1-12 0-2 1-4 1-5z",
+  // Northern Asia / Russia belt
+  "M56 12c6-2 14-2 22 0 5 1 9 3 10 6 0 2-2 3-5 3-6 0-12-1-18-1-5 0-9-1-10-3 0-2 0-4 1-5z",
+  // East / SE Asia
+  "M72 20c4-1 8 0 11 3 2 2 3 5 2 8-1 2-3 4-6 4-3 0-5-1-7-3-2-3-2-6-1-9 0-1 1-2 1-3z",
+  // Australia
+  "M78 38c3-1 7 0 9 2 2 2 2 5 0 7-2 2-5 2-8 1-2-1-3-3-3-5 0-2 1-4 2-5z",
+] as const;
+
+const OEM_LEGEND: { id: OemId; label: string }[] = [
+  { id: "airbus", label: "Airbus" },
+  { id: "boeing", label: "Boeing" },
+  { id: "comac", label: "COMAC" },
+  { id: "embraer", label: "Embraer" },
+];
 
 export function CommercialAircraftAssemblyDashboard() {
   const [tab, setTab] = useState<Tab>("map");
@@ -207,37 +235,60 @@ export function CommercialAircraftAssemblyDashboard() {
               title="Final-assembly sites"
               subtitle="Dot size ∝ FAL lines at campus — hover for programs"
             >
-            <div className="relative h-80 min-h-[280px] w-full overflow-hidden rounded-lg bg-slate-900">
+            <div className="relative h-80 min-h-[280px] w-full overflow-hidden rounded-lg bg-slate-950">
               <svg
                 viewBox="0 0 100 56"
                 className="h-full w-full"
                 role="img"
                 aria-label="World map of commercial aircraft final assembly sites"
               >
-                <rect width="100" height="56" fill="#0f172a" />
-                <path
-                  d="M8 18h12l3 4h8l2-3h10l4 6h6l-2 4h-8l-4 8H20l-4-6H8z"
-                  fill="#1e293b"
-                  opacity="0.9"
-                />
-                <path
-                  d="M48 14h8l3 5h6l2 8h-6l-4 6h-8l-2-7z"
-                  fill="#1e293b"
-                  opacity="0.9"
-                />
-                <path
-                  d="M68 20h14l4 6h8l-2 8H78l-6 4h-8l-2-8z"
-                  fill="#1e293b"
-                  opacity="0.85"
-                />
-                <path
-                  d="M22 36h10l4 8H18z"
-                  fill="#1e293b"
-                  opacity="0.8"
-                />
+                <defs>
+                  <radialGradient id="fal-ocean" cx="50%" cy="40%" r="70%">
+                    <stop offset="0%" stopColor="#1e293b" />
+                    <stop offset="100%" stopColor="#020617" />
+                  </radialGradient>
+                </defs>
+                <rect width="100" height="56" fill="url(#fal-ocean)" />
+                {/* Latitude / longitude guides */}
+                {[14, 28, 42].map((y) => (
+                  <line
+                    key={`lat-${y}`}
+                    x1="4"
+                    x2="96"
+                    y1={y}
+                    y2={y}
+                    stroke="#334155"
+                    strokeWidth="0.15"
+                    strokeDasharray="0.8 0.8"
+                    opacity="0.55"
+                  />
+                ))}
+                {[20, 40, 60, 80].map((x) => (
+                  <line
+                    key={`lon-${x}`}
+                    y1="4"
+                    y2="52"
+                    x1={x}
+                    x2={x}
+                    stroke="#334155"
+                    strokeWidth="0.15"
+                    strokeDasharray="0.8 0.8"
+                    opacity="0.4"
+                  />
+                ))}
+                {LAND_PATHS.map((d, i) => (
+                  <path
+                    key={i}
+                    d={d}
+                    fill="#334155"
+                    stroke="#475569"
+                    strokeWidth="0.25"
+                    opacity="0.95"
+                  />
+                ))}
                 {sites.map((s) => {
                   const { x, y } = project(s.lon, s.lat);
-                  const r = 1.2 + s.falLines * 0.55;
+                  const r = 1.4 + s.falLines * 0.45;
                   const active = hoverId === s.id;
                   return (
                     <g
@@ -247,22 +298,63 @@ export function CommercialAircraftAssemblyDashboard() {
                       className="cursor-pointer"
                     >
                       <circle
-                        cx={x * 0.92 + 4}
-                        cy={y * 0.5 + 4}
+                        cx={x}
+                        cy={y}
+                        r={r + 1.2}
+                        fill={OEM_COLOR[s.oem]}
+                        opacity={active ? 0.35 : 0.18}
+                      />
+                      <circle
+                        cx={x}
+                        cy={y}
                         r={r}
                         fill={OEM_COLOR[s.oem]}
-                        opacity={active ? 1 : 0.85}
+                        opacity={active ? 1 : 0.92}
                         stroke="#fff"
-                        strokeWidth={active ? 0.4 : 0.2}
+                        strokeWidth={active ? 0.45 : 0.25}
                       />
+                      {(active || s.falLines >= 4) && (
+                        <text
+                          x={x}
+                          y={y - r - 1.2}
+                          textAnchor="middle"
+                          fill="#e2e8f0"
+                          fontSize="2.2"
+                          fontWeight="600"
+                          className="pointer-events-none"
+                        >
+                          {s.city}
+                        </text>
+                      )}
                     </g>
                   );
                 })}
               </svg>
+              <div className="pointer-events-none absolute left-3 top-3 flex flex-wrap gap-2">
+                {OEM_LEGEND.map((o) => (
+                  <span
+                    key={o.id}
+                    className="inline-flex items-center gap-1.5 rounded-full bg-slate-950/80 px-2 py-0.5 text-[10px] font-semibold text-slate-200 ring-1 ring-white/10"
+                  >
+                    <span
+                      className="h-2 w-2 rounded-full"
+                      style={{ backgroundColor: OEM_COLOR[o.id] }}
+                    />
+                    {o.label}
+                  </span>
+                ))}
+              </div>
               {hoverSite && (
                 <div className="pointer-events-none absolute bottom-3 left-3 right-3 rounded-md border border-slate-600 bg-slate-950/95 px-3 py-2 text-xs text-slate-100">
                   <div className="font-semibold">
+                    <span
+                      className="mr-1.5 inline-block h-2 w-2 rounded-full"
+                      style={{ backgroundColor: OEM_COLOR[hoverSite.oem] }}
+                    />
                     {hoverSite.city}, {hoverSite.country}
+                    <span className="ml-2 font-normal uppercase tracking-wide text-slate-400">
+                      {hoverSite.oem}
+                    </span>
                   </div>
                   <div>
                     {hoverSite.falLines} FAL line
@@ -304,7 +396,9 @@ export function CommercialAircraftAssemblyDashboard() {
                               ? "#f59e0b"
                               : c.country === "China"
                                 ? "#f43f5e"
-                                : "#0ea5e9"
+                                : c.country === "Brazil"
+                                  ? "#a78bfa"
+                                  : "#0ea5e9"
                           }
                         />
                       ))}

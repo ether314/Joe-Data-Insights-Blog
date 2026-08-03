@@ -17,7 +17,7 @@ import {
   YAxis,
   ZAxis,
 } from "recharts";
-import { Tooltip, sortTooltipPayload } from "@/components/charts/SortedTooltip";
+import { Tooltip } from "@/components/charts/SortedTooltip";
 import {
   CONCENTRATION_METERS,
   ECONOMY_META,
@@ -217,7 +217,6 @@ export function MeasurementScienceResearchDashboard() {
                       ECONOMY_META[name as EconomyId]?.short ?? String(name),
                     ]}
                     labelFormatter={(l) => `Year ${l}`}
-                    itemSorter={sortTooltipPayload}
                   />
                   {STREAM_KEYS.map((k) => (
                     <Area
@@ -248,7 +247,6 @@ export function MeasurementScienceResearchDashboard() {
                       name === "usChina" ? "US+China" : name === "rest" ? "Rest of world" : String(name),
                     ]}
                     labelFormatter={(l) => `Year ${l}`}
-                    itemSorter={sortTooltipPayload}
                   />
                   <Area
                     type="monotone"
@@ -335,7 +333,6 @@ export function MeasurementScienceResearchDashboard() {
                       ECONOMY_META[name as EconomyId]?.short ?? String(name),
                     ]}
                     labelFormatter={(l) => `Year ${l}`}
-                    itemSorter={sortTooltipPayload}
                   />
                   {PUB_KEYS.map((k) => (
                     <Line
@@ -365,7 +362,6 @@ export function MeasurementScienceResearchDashboard() {
                       ECONOMY_META[name as EconomyId]?.short ?? String(name),
                     ]}
                     labelFormatter={(l) => `Year ${l}`}
-                    itemSorter={sortTooltipPayload}
                   />
                   {PUB_KEYS.map((k) => (
                     <Line
@@ -421,7 +417,6 @@ export function MeasurementScienceResearchDashboard() {
                     if (name === "sharePct") return [fmtPct(Number(value)), "World share"];
                     return [String(value), String(name)];
                   }}
-                  itemSorter={sortTooltipPayload}
                 />
                 <Bar dataKey="gerdBn" name="gerdBn" radius={[0, 6, 6, 0]}>
                   {volumes.map((r) => (
@@ -515,7 +510,6 @@ export function MeasurementScienceResearchDashboard() {
                 />
                 <Tooltip
                   formatter={(value) => [`${Number(value).toFixed(1)}%`, "GERD / GDP"]}
-                  itemSorter={sortTooltipPayload}
                 />
                 <Bar dataKey="intensityPct" radius={[6, 6, 0, 0]}>
                   {[...INTENSITY_LEADERS]
