@@ -74,7 +74,8 @@ export interface Post {
     | "bank-commercial-credit-research-2026"
     | "macro-growth-trade-update-2026"
     | "ai-compute-demand-update-2026"
-    | "ai-capex-spend-update-2026";
+    | "ai-capex-spend-update-2026"
+    | "ai-financing-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

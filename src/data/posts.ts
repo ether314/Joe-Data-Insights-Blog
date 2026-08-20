@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-financing-update-2026",
+    slug: "ai-financing-update-2026",
+    title:
+      "Update: AI Debt Hits $489B Mid-Year — Hyperscalers Are Only 40% of the Credit Wave",
+    excerpt:
+      "Versus our July hyperscaler IG research, Goldman’s Aug vintage puts AI-related debt near $489B YTD. The five names still print ~$194B, but they are now just ~40% of the stack — and AI’s share of US IG supply jumps 7% → ~18%.",
+    content: `## What changed since the July research vintage
+
+In late July we published the theme’s baseline: [hyperscalers funding roughly a third of AI capex with IG bonds](/blog/ai-financing-research-2026), with Goldman’s path pointing to **~$250B** of five-name issuance in 2026 (**~33% of capex**) and **~$400B / ~35%** in 2027. That post answered the issuer question — *how do Amazon, Alphabet, Meta, Microsoft, and Oracle fund the build?* This update answers the market question credit desks actually trade on next: **what moved in the newest official vintage**, and how large is the *theme* once you leave the five-name perimeter?
+
+One Goldman Sachs credit refresh forces the rewrite. On the Exchanges desk conversation recorded in early August 2026, Amanda Lynam and Zach Ablon put a new perimeter around the story: **nearly $500 billion** of **AI-related debt issuance** year-to-date — reported in market coverage as about **$489 billion** by mid-year — of which the hyperscalers are only about **40%**. The July YTD print of **~$194B** for the five names still stands. What changed is the frame. The binding constraint is no longer “can five cash-rich tech issuers clear the IG calendar?” It is “can the **entire AI credit complex** — utilities, industrials, data-center JVs, high-yield wrappers, and project finance — clear without saturating indexes and concentration limits?”
+
+The dashboard above is built as a vintage delta: debt-stack pie, supply-share path, spread dumbbells, duration ranks, and overflow capacity when US IG saturates.
+
+## The headline table: Jul research vs Aug 2026 update
+
+| Metric | Jul research vintage | Aug 2026 update | Δ |
+|--------|---------------------:|----------------:|--:|
+| Hyperscaler IG YTD | **~$194B** | **~$194B** | Unchanged |
+| Hyperscaler FY26 IG path | **~$250B** | **~$250B** | Path held |
+| Debt share of HS capex (2026) | **~33%** | **~33%** | Path held |
+| **AI-related debt YTD** | *Not scoped* | **~$489B** | **New perimeter** |
+| Hyperscaler share of AI debt | Implied ~100% of lens | **~40%** | Rest = ecosystem |
+| AI share of US IG supply | **~7%** (2025) | **~18%** (2026 YTD) | **+11 pp** |
+| Non-USD share of HS supply | **~14%** (2025) | **~33%** (2026 YTD) | **+19 pp** |
+| Long-end (≥15y) AI share | Not highlighted | **~40%** of 15y+ IG | Concentration |
+
+Two readings matter. First, the July hyperscaler spine **did not break** — YTD and full-year paths are intact. Second, the **scope expansion** is the real vintage delta: roughly **$295B** of AI-tied debt sits *outside* the five names, and the theme’s weight inside US IG gross supply has more than doubled versus the 2025 calendar share.
+
+## The $489B stack: hyperscalers are a slice, not the wall
+
+Toggle the dashboard’s **Debt stack** lens. The donut is the point of the update. Goldman’s mid-2026 tally puts AI-related debt near **$489B**, with hyperscalers contributing about **$194B** (~**40%**). The residual ~**$295B** is the broader ecosystem — power utilities funding AI load, industrials and equipment names, data-center joint ventures, high-yield and leveraged-loan prints, and other credit wrappers that sit next to — but not inside — the Amazon–Alphabet–Meta–Microsoft–Oracle IG calendar.
+
+That is why July’s “hyperscaler debt binge” headlines understate what passive IG and HY portfolios actually absorb. Concentration risk is thematic, not just name-specific. Desk commentary puts AI-related issuance at about **18% of US IG year-to-date supply**, up from roughly **7% in 2025** and about **1% in 2024**. High yield shows a similar ~18% theme share. Investors who thought they were “underweight Big Tech bonds” can still be overweight the **AI financing theme** through utilities, JVs, and project vehicles.
+
+## Spreads and duration: indigestion is now measurable
+
+The July post documented median new-issue spread widening for Amazon, Alphabet, Meta, and Oracle across the curve — **2–4y** from ~**30 to 40 bp**, **5–7y** from ~**50 to 60**, **20y+** from ~**108.5 to 118**. That still holds. The August desk vintage adds the portfolio-level meter: Goldman’s **AI leader basket** moved from tights near **74 bp** to nearly **twice that** (~**148 bp**) over twelve months. Insurance and real-money order books that once put fifteen **$50M+** tickets into the 30-year part of large AI financings in Q1 were roughly **half as large** by late Q2.
+
+Duration concentration is the second stress vector. Amazon’s duration weight in the US IG index jumped from roughly **#20 last year to #1**; Alphabet moved from about **#86 to #18**. Roughly **40% of 15-year-plus IG issuance** this year is AI companies or AI-funding names. Long-end paper that looked like a gift to liability-driven buyers in early 2025 is now a **concentration and curve-shape problem**. New-issue concessions that used to clear at **2–3 bp** have printed as wide as **~20 bp** on mega hyperscaler deals.
+
+Pair that with the [capex intensity update](/blog/ai-capex-intensity-update-2026): every major builder’s free-cash-flow cushion is thinner as intensity rises. Credit is not pricing a sudden default wave. It is pricing **multi-year releveraging without a clean end date**.
+
+## FX mix: the IG book is already globalizing
+
+A quieter vintage delta sits in currency mix. Non-dollar bonds accounted for about **33% of hyperscaler supply in 2026 YTD**, up from roughly **14% in 2025**. CAD, sterling, Swiss franc (including Alphabet’s record CHF print), euro, Aussie dollar, and yen packages are no longer exotic diversions — they are **overflow valves** when US dollar books thicken. TwentyFour and other credit houses flagged the same pattern: Amazon’s later **~$25B** multi-tranche deal cleared at ~**1.6×** cover versus ~**$119B** books / much higher cover in March, with concessions of **12–22 bp**. Issuers remain opportunistic; investors are selective.
+
+European AI-related supply remains **under-contributing** relative to US IG in Goldman’s reading — which means EUR credit is still an open channel, not a saturated one. The waterfall Amanda Lynam describes is literal: exhaust depth in one market, open the next.
+
+## Overflow: private markets, project finance, and bank-comparable capacity
+
+When the dashboard switches to **Overflow channels**, the scale changes. Goldman’s case study: if hyperscalers approached the index weights of the largest US bank issuers, incremental **US IG capacity** alone is on the order of **~$510B** — meaningful runway, but not infinite once duration skew and equity-side AI exposure are netted by real-money committees. Against that, **private markets dry powder** across private credit, infrastructure, real estate, and private equity is framed near **$4.5 trillion**. Project and data-center finance is sketched at roughly **$300B in 2027** *above and beyond* direct hyperscaler IG. ABS and structured credit enter once campuses are completed and cash flows stabilize.
+
+Access to capital for the AI theme is **not** the binding constraint in this vintage. **Where** and **at what price** are. That is the same conclusion as July — restated with a larger perimeter and harder concentration math.
+
+## Equity and ETF capacity still fund the narrative, not the PP&E
+
+The equity channel from the July post still matters as **secondary capacity and primary-raise context**. FactSet’s 2025 US thematic ETF inflows near **$43.5B**, with QQQ alone at about **$21.7B**, remain the public-markets sentiment sleeve. Alphabet’s **~$85B** June 2026 equity raise sits beside the bond calendar as proof that issuers will reopen equity when credit books thicken. ETF flows do not fund data-center concrete directly — they price the willingness of public capital to underwrite the theme while primary debt does the heavy lifting.
+
+## Caveats and methodology
+
+1. **Perimeter differs by source.** July’s post used Goldman’s five-hyperscaler global IG path plus Reuters/LSEG deal tallies. August’s **~$489B** is Goldman’s broader **AI-related debt** estimate (hyperscalers ~40%). Do not subtract or annualize across perimeters without labels.
+2. **YTD is not a run-rate.** Mid-year AI debt near $489B does not imply ~$978B for the calendar; front-loading and summer quiet periods matter. Hyperscaler FY path remains **~$250B**, not a restatement.
+3. **Debt share of capex (~33%)** is still a hyperscaler research ratio (issuance ÷ cohort capex), not the share of the $489B stack.
+4. **Supply-share percentages (~18% of US IG)** are desk estimates of theme-tagged issuance, not a single official SEC series. High-yield theme share is described as similar, not identical.
+5. **Spread basket vs new-issue medians** measure different things. The AI leader basket is a traded portfolio construct; tenor medians are deal-print statistics from the July Reuters/LSEG read.
+6. **Overflow capacities** ($510B bank-comparable room; $4.5T private powder; $300B project finance) are research case studies and aggregates — directional funding maps, not committed pipelines.
+7. **ETF flows** remain secondary-market ownership metrics, carried for narrative capacity — not issuer proceeds.
+
+Primary sources: Goldman Sachs Exchanges — *How AI Debt Is Reshaping Credit Markets* (recorded Aug 3, published Aug 5, 2026); The Global Treasurer synthesis of the **$489B** mid-year tally (Aug 18, 2026); CNA/Reuters–LSEG hyperscaler YTD and spread context (late July 2026); prior theme baseline in [AI financing research](/blog/ai-financing-research-2026). Capex intensity context from the [August intensity update](/blog/ai-capex-intensity-update-2026).
+
+## What to watch into year-end 2026
+
+Three coincident signals will tell you whether the expanded vintage stabilizes or tightens further: (1) **full-year hyperscaler IG** versus the **~$250B** path — and whether Microsoft stays light relative to peers; (2) **AI’s share of US IG / HY supply** — if the theme stays near high teens into Q4 while concessions refuse to shrink, saturation is binding even with private-market overflow; (3) **project-finance and JV secondary performance** — desk notes that **17 of 23** data-center JV deals were already trading wide to issue yields as indigestion spilled from IG into leveraged structures. Until those three clear, the live number is not July’s five-name story alone. It is **~$489B of AI-related debt** — with hyperscalers as the **visible 40%**, and the other 60% reshaping credit benchmarks whether or not the next mega tech print makes the front page.`,
+    category: "Capital Markets",
+    themeId: "ai-financing",
+    imageUrl: "/images/capital-markets-ai-financing-update-2026-hero.png",
+    imageAlt:
+      "Dark navy capital-markets chart of a rising AI-related debt wall with hyperscalers as a minority slice of the credit stack",
+    publishedAt: "2026-08-20T20:00:00Z",
+    featured: true,
+    visualization: "ai-financing-update-2026",
+    layout: "default",
+  },
+  {
     id: "ai-capex-spend-update-2026",
     slug: "ai-capex-spend-update-2026",
     title:
