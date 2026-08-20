@@ -887,6 +887,21 @@ const ChokepointCommoditiesUpdateDashboard = dynamic(
   },
 );
 
+const ConsumerFinanceMarketsUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/ConsumerFinanceMarketsUpdateDashboard").then(
+      (m) => m.ConsumerFinanceMarketsUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1110,6 +1125,10 @@ export function PostVisualization({
 
   if (type === "chokepoint-commodities-update-2026") {
     return <ChokepointCommoditiesUpdateDashboard />;
+  }
+
+  if (type === "consumer-finance-markets-update-2026") {
+    return <ConsumerFinanceMarketsUpdateDashboard />;
   }
 
   return null;

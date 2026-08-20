@@ -2,6 +2,113 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "consumer-finance-markets-update-2026",
+    slug: "consumer-finance-markets-update-2026",
+    title:
+      "Update: Household Saving Rate Falls to 2.8% — Debt Prints $18.8T as Student 90+ Hits 10.3%",
+    excerpt:
+      "Versus our research print (~3.9% saving, $18.42T debt), BEA Q2 2026 saving drops to 2.8% (−1.1 pp) and NY Fed 2026Q1 debt prints $18.79T. Student-loan 90+ stock rises to 10.3% (+0.7 pp); MMFs edge up to $7.93T.",
+    content: `## What changed since the research vintage
+
+In mid-August we rolled up the household balance sheet in [consumer finance markets research](/blog/consumer-finance-markets-research-2026): **~$18.42 trillion** in NY Fed–style debt, a personal saving rate near **3.9%**, credit-card stress elevated against calm mortgages, card APRs still ~**17 pp** over funds, and liquid cash split between ~**$15T** deposits and **$7.85T** money market funds. That post answered the *structure* question — how households save, borrow, and park retail money after the pandemic cash flood and hiking cycle.
+
+This update answers the *vintage* question: **what moved in the newest official prints**, and does the three-ledger story still hold? Three information events force a refresh. The **New York Fed’s 2026Q1 Household Debt and Credit report** (May 2026) prints total balances at **$18.794 trillion** — up **$18 billion** QoQ and about **$374 billion** above our research stock. **BEA’s personal saving rate** for **2026Q2** prints **2.8%**, a **−1.1 percentage-point** collapse from the research ~**3.9%** anchor (Q1 was still **3.9%**; June’s monthly rate sat near **2.7%**). **ICI’s weekly MMF tally** for the week ended **August 19, 2026** puts fund assets at **$7.93 trillion**, **+$80 billion** versus the research **$7.85T**.
+
+The dashboard above is built as a vintage delta: signed meter bars, the saving-rate path into Q2, product prior→new balances, a stress multi-line into 2026Q1, liquid-cash sleeve deltas, and the sticky APR−funds gap.
+
+## The headline table: research print vs newest official vintage
+
+| Metric | Prior (research) | New print | Δ |
+| --- | ---: | ---: | --- |
+| Personal saving rate | **~3.9%** | **2.8%** (2026Q2) | **−1.1 pp** |
+| Total household debt | **$18.42T** | **$18.794T** (2026Q1) | **+$0.37T** |
+| Mortgage balances | **$12.86T** | **$13.191T** | **+$331B** |
+| Credit-card balances | **$1.21T** | **$1.252T** | **+$42B** |
+| Student loan 90+ share | **9.6%** (2025Q4) | **10.3%** (2026Q1) | **+0.7 pp** |
+| Mortgage 90+ transition | **1.4%** (2025Q4) | **1.5%** | **+0.1 pp** |
+| Card early (30+) transition | **8.7%** | **8.6%** | **−0.1 pp** |
+| Aggregate any-stage delinq. | **~4.8%** | **4.8%** | Flat |
+| Money market fund AUM | **$7.85T** | **$7.93T** | **+$80B** |
+| Card APR − fed funds | **~17.2 pp** | **~17.2 pp** | Sticky |
+
+Treat the debt **+$0.37T** carefully. Part of it is simply that the research print used a late-2025 estimated stock; NY Fed’s closed **2026Q1** table is the disclosed vintage. The QoQ move itself was tiny (**+$18B / +0.1%**). The saving-rate move is the opposite: a true period delta that rearranges the *flow* ledger without rewriting the *stock* wealth story.
+
+## The saving rate is the loudest vintage delta
+
+BEA’s personal saving rate is a **flow**: saving as a share of disposable personal income. The research post sat near **3.9%** — already a thin post-stimulus norm versus the **26%** spike of 2021 Q2. **2026Q1** held at **3.9%**. **2026Q2** printed **2.8%**. That is a **−1.1 pp** quarter-to-quarter drop into territory that looks less like “pre-pandemic normal” and more like an active drawdown of the marginal dollar.
+
+A low saving rate still does **not** mean households are broke in the Z.1 sense. Aggregate net worth remains enormous; equities and housing still dominate assets. It *does* mean buffers rebuild slowly while revolving borrowers who already show stress in credit-bureau data have less new income left after consumption. Pair this flow meter with our dedicated [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) deep dive — the update’s job is narrower: the research ~**4%** floor just cracked lower in the newest quarterly vintage.
+
+Monthly color reinforces the quarterly print. June 2026’s personal saving rate near **2.7%** (BEA Personal Income and Outlays) sits under the Q2 average, so the soft patch is not a single noisy month averaged away. For consumer-finance desks, the practical read is simple: **income is being spent**, not warehoused into deposits or MMFs at the margin — even while the *stock* of MMFs keeps grinding higher on yield.
+
+## Debt: flat QoQ, higher vs the research stock
+
+NY Fed’s May release is almost boring on the quarter: total household debt **+$18 billion** to **$18.8 trillion**. Mortgages rose **$21 billion** to **$13.19 trillion**. HELOCs extended a sixteen-quarter climb (**+$12B** to **$446B**). Non-housing balances actually **fell $15 billion**, led by a seasonal **$25 billion** drop in credit cards to **$1.25 trillion**. Auto loans rose **$18 billion** to **$1.69 trillion**; student loans were roughly flat at **$1.66 trillion**.
+
+Versus the research dashboard’s **$18.42T / $1.21T cards**, the disclosed Q1 stock is higher on both totals and revolving balances even after the seasonal card dip. Mortgages still dominate — about **70%** of balances. The shareable framing is not “households levered up another half-trillion in one quarter.” It is “the research estimate was light versus the closed NY Fed table, and the product mix still says housing stock / revolving stress.”
+
+Origination color stayed steady: about **$530 billion** in new mortgages and **$182 billion** in new auto loans appearing on credit reports in 2026Q1. Card limits rose another **~$60 billion**. Capacity to borrow is still expanding even as early card delinquency transitions tick down a tenth of a point.
+
+## Stress: student 90+ worsened; cards paused; mortgages nudged
+
+Aggregate delinquency was flat: **4.8%** of outstanding debt in some stage of delinquency, matching 2025Q4 and tied for the highest share since 2017 on the report’s framing. Inside the product cut, the research post’s **7.2% vs 1.1%** social card (card vs mortgage) remains directionally right but needs measurement hygiene on this update:
+
+- **Student loans:** the share of balances **90+ days delinquent** rose to **10.3%** from **9.6%** in 2025Q4 — the cleanest stress delta in the new PDF.
+- **Mortgages:** transition into **serious (90+) delinquency** edged up **1.4% → 1.5%** annuallyized. Absolute levels remain low; the direction is no longer pure calm.
+- **Credit cards:** transition into **early (30+) delinquency** ticked down **8.7% → 8.6%**. Serious transitions were “mostly unchanged.” Do not read a tenth of a point as a cycle turn — but the research narrative of *monotone* card deterioration paused for a quarter.
+- **Auto:** early transitions held steady on the Fed’s summary.
+
+For product-level color on the revolving-vs-housing split, keep the [household debt delinquency](/blog/us-household-debt-delinquency-split-2026) post beside this update. Bank income-statement twins still live in [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026). The vintage message is narrower: **student reporting/repayment stress accelerated; mortgage serious flow nudged; card early flow cooled one tick.**
+
+## Liquid cash: MMFs still absorbing the yield sleeve
+
+ICI’s August 19 week put money market fund assets at **$7.93 trillion**, up **$80 billion** from the research **$7.85T** anchor. Retail MMFs alone sit near **$3.11 trillion**. Indicative taxable MMF yields still clear money-market deposit accounts by roughly **three percentage points**, so the dual-pile map from the research post — sticky bank deposits beside yield-sensitive fund shares — has not inverted.
+
+Deposits ex-large time remain enormous (we hold a **~$15T** estimate pending a cleaner H.8 restatement in this update). The point for allocation desks is unchanged in geometry and slightly richer in dollars: **cash did not leave the household sector; it keeps preferring the wrapper that pays.** See [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) for the deep dive; this dashboard’s cash panel is the vintage check that the sleeve grew, not shrunk, into mid-August.
+
+## The APR gap barely moved — and that is the point
+
+Commercial-bank card APRs still hover in the low **21%** area while effective fed funds eased toward roughly **4.1%** on our mid-2026 estimated path. The **APR − funds** gap remains near **17.2 pp** — essentially unchanged from the research **~17.15 pp**. Funds moved more than lending rates. Sticky card pricing plus lagged deposit betas remain the same industrial-organization story from opposite sides of the bank book.
+
+That wedge matters more when the saving rate is **2.8%**. Households that revolvingly finance consumption at **~21%** while earning sub-**1%** on many deposit products — and only mid-**3s** in MMFs — are paying for rate stickiness with both cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when the saving flow cracked lower.
+
+## What would rewrite this update
+
+1. **BEA 2026Q3 saving** snapping back above **3.5%** would mark Q2 as a soft patch rather than a new floor.
+2. **NY Fed 2026Q2** showing card serious transitions rising again — or student 90+ stabilizing — would re-rank the stress panel.
+3. **A deposit-rate war** that closes the MMDA–MMF gap would pull cash back onto bank books without fixing card APRs.
+4. **Faster funds easing** that finally compresses card APRs would shrink the borrowing wedge; if deposit betas still lag, MMFs may keep the cash anyway.
+5. **Unemployment jump** would hit auto and card delinquency harder than mortgages first — the same sequencing the research post flagged.
+
+Until those print, the live frame versus the research post is narrow: **saving flow broke lower (2.8%); debt stock printed higher ($18.8T); student 90+ worsened to 10.3%; MMFs edged up to $7.93T; the APR gap stayed wide.**
+
+## Caveats and methodology
+
+1. **Research print ≠ a single NY Fed PDF cell.** The prior post mixed disclosed anchors with estimated late-2025 points. Debt **+$0.37T** is versus that print, not only versus 2025Q4’s QoQ **+$18B**.
+2. **Delinquency concepts differ.** This update prefers disclosed 2026Q1 language (early vs serious transitions; student **stock** 90+ shares). Do not splice the research **7.2%** card figure into the new early-transition series without a footnote.
+3. **Saving rate** uses BEA quarterly SAAR (FRED A072RC1Q156SBEA). Monthly June **2.7%** is color, not a substitute for the quarterly print.
+4. **MMF AUM** is ICI weekly (week ended Aug 19, 2026). Weekly prints revise; treat **$7.93T** as the latest disclosed weekly, not a quarter-end Financial Accounts total.
+5. **Deposit levels** in the cash panel remain an estimated hold from the research framing where a fresher H.8 cut is not restated here.
+6. **Card APR / funds** mid-2026 anchors are estimated from Board G.19 / effective funds paths — the gap is arithmetic, not a risk-adjusted credit spread.
+7. **Student-loan series** still carry repayment-reporting normalization noise; cross-product comparisons remain imperfect.
+
+Primary sources: NY Fed *Quarterly Report on Household Debt and Credit*, 2026Q1 (May 2026); BEA / FRED personal saving rate through 2026Q2; ICI Money Market Fund Assets (Aug 20, 2026 release); Board G.19 consumer credit / APR context; prior theme baseline in [consumer finance markets research](/blog/consumer-finance-markets-research-2026).
+
+## The shareable takeaway
+
+**Versus the research print, the household saving rate fell to 2.8% in 2026Q2 (−1.1 pp), while NY Fed debt printed $18.8T and student-loan 90+ delinquency rose to 10.3%.** Money market funds edged up to **$7.93T**; the card APR−funds gap stayed near **17 pp**. The three-ledger household — thin saving flow, mortgage-heavy debt stock, yield-sensitive cash — still disagrees until you read the ledgers together. For the structural essay see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+    category: "Consumer Finance",
+    themeId: "consumer-finance-markets",
+    imageUrl:
+      "/images/consumer-finance-consumer-finance-markets-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of a falling personal saving rate beside rising household debt columns and a student-loan stress spark",
+    publishedAt: "2026-08-20T23:05:00Z",
+    featured: true,
+    visualization: "consumer-finance-markets-update-2026",
+    layout: "default",
+  },
+  {
     id: "chokepoint-commodities-update-2026",
     slug: "chokepoint-commodities-update-2026",
     title:

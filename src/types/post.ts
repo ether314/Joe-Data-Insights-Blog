@@ -85,7 +85,8 @@ export interface Post {
     | "adaptation-economics-update-2026"
     | "industrial-robotics-update-2026"
     | "energy-systems-update-2026"
-    | "chokepoint-commodities-update-2026";
+    | "chokepoint-commodities-update-2026"
+    | "consumer-finance-markets-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
