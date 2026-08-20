@@ -93,7 +93,8 @@ export interface Post {
     | "ai-capex-spend-update-2026q3"
     | "ai-power-grid-update-2026"
     | "ai-financing-update-2026q3"
-    | "industrial-robotics-update-2026q3";
+    | "industrial-robotics-update-2026q3"
+    | "consumer-finance-markets-update-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

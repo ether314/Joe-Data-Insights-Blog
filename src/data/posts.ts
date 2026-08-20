@@ -2,6 +2,113 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "consumer-finance-markets-update-2026q3",
+    slug: "consumer-finance-markets-update-2026q3",
+    title:
+      "Update: Household Saving Rebounds to 3.1% — Debt Prints $18.93T as Student 90+ Hits 10.6%",
+    excerpt:
+      "Versus our Aug update (2.8% Q2 saving, $18.79T debt), July PSAVERT rebounds to 3.1% (+0.3 pp) and NY Fed 2026Q2 debt prints $18.93T (+$132B). Student-loan 90+ rises to 10.6%; MMFs revise up to $8.02T.",
+    category: "Consumer Finance",
+    themeId: "consumer-finance-markets",
+    imageUrl:
+      "/images/consumer-finance-consumer-finance-markets-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of a rebounding personal saving rate beside rising household debt columns and a student-loan stress spark",
+    publishedAt: "2026-08-20T23:40:00Z",
+    featured: true,
+    visualization: "consumer-finance-markets-update-2026q3",
+    layout: "default",
+    content: `## What changed since the August update vintage
+
+Our [August consumer-finance update](/blog/consumer-finance-markets-update-2026) closed on three prints: **BEA’s 2026Q2 personal saving rate at 2.8%** (−1.1 pp versus the research ~3.9%), **NY Fed 2026Q1 household debt at $18.794 trillion**, and **ICI money-market fund assets at $7.93 trillion**. Student-loan **90+ day** delinquency stock had climbed to **10.3%**; the card APR−funds gap sat near **17.2 pp**. That post answered the *first vintage* question after the research roll-up — what moved when the official tables closed.
+
+This Q3 refresh answers the *next* vintage question: **what changed in the newest official prints versus that August dashboard?** Three information events force the rewrite. The **New York Fed’s 2026Q2 Household Debt and Credit report** (August 2026) prints total balances at **$18.926 trillion** — up **$132 billion** QoQ (+0.7%). **BEA’s July personal saving rate** (PSAVERT) prints **3.1%**, a **+0.3 percentage-point** rebound from the June **2.7%** trough and from the Q2 quarterly **2.8%** floor the August post highlighted. **ICI’s weekly MMF tally** for the week ended **August 19, 2026**, after weekly revision, puts fund assets at **$8.02 trillion** — **+$90 billion** versus the August-update **$7.93T** anchor.
+
+The dashboard above is built as a vintage delta: signed meter bars, the saving path into July, product dumbbells and Δ bars for 2026Q1→Q2, a stress multi-line plus mix radar, liquid-cash sleeve deltas, and the still-sticky APR−funds gap.
+
+## The headline table: Aug update print vs newest official vintage
+
+| Metric | Prior (Aug update) | New print | Δ |
+| --- | ---: | ---: | --- |
+| Personal saving rate | **2.8%** (2026Q2 SAAR) | **3.1%** (July monthly) | **+0.3 pp** |
+| Total household debt | **$18.794T** (2026Q1) | **$18.926T** (2026Q2) | **+$132B** |
+| Mortgage balances | **$13.191T** | **$13.268T** | **+$77B** |
+| Credit-card balances | **$1.252T** | **$1.281T** | **+$29B** |
+| Student loan 90+ share | **10.3%** (2026Q1) | **10.6%** (2026Q2) | **+0.3 pp** |
+| Mortgage 90+ transition | **1.5%** | **1.6%** | **+0.1 pp** |
+| Card early (30+) transition | **8.6%** | **8.4%** | **−0.2 pp** |
+| Aggregate any-stage delinq. | **4.8%** | **4.9%** | **+0.1 pp** |
+| Money market fund AUM | **$7.93T** | **$8.02T** | **+$90B** |
+| Card APR − fed funds | **~17.2 pp** | **~17.2 pp** | Sticky |
+
+Read the saving row carefully. The August post’s **2.8%** was a **quarterly SAAR**. July’s **3.1%** is a **monthly** PSAVERT print — not a restated Q3 quarterly yet. The direction still matters: the soft patch that cracked the research ~4% floor in Q2 did **not** deepen into July. Debt **+$132B** is a true QoQ NY Fed move, not a restatement versus an estimated research stock.
+
+## The saving rate soft-patched, then July rebounded
+
+BEA’s personal saving rate remains a **flow** meter: saving as a share of disposable personal income. The August update made the loud call — Q2 **2.8%**, June monthly near **2.7%**. July’s **3.1%** is a **+0.4 pp** bounce from June and **+0.3 pp** versus the Q2 quarterly floor. That is not a return to the research ~**3.9%** or the mid-2025 **~5%** band. It *is* evidence that Q2’s collapse was not immediately followed by another leg lower.
+
+A 3.1% monthly rate still leaves households thin on the flow ledger while Z.1 net worth stays enormous. Equities and housing still dominate assets; revolving borrowers who already show stress in bureau data still have less new income left after consumption than in the excess-savings years. Pair this update with our dedicated [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) deep dive — the Q3 job is narrower: **the August soft-patch call needs a July rebound footnote**, not a full narrative rewrite.
+
+For consumer-finance desks, the practical read is two-sided. Income is still being spent at a historically thin saving rate, but the marginal dollar in July did **not** keep drawing down the way June implied. Watch the next BEA Personal Income and Outlays release: another sub-**3%** month would re-open the soft-patch story; a print back above **3.5%** would mark Q2–June as the trough.
+
+## Debt: cards rebound, mortgages still do the dollars
+
+NY Fed’s August 2026Q2 release is more active than the sleepy Q1 QoQ print. Total household debt rose **$132 billion** to **$18.93 trillion**. Mortgages added **$77 billion** to **$13.27 trillion**. Credit cards rebounded **$29 billion** to **$1.28 trillion** after the seasonal Q1 dip the August post flagged. Auto loans rose **$17 billion** to **$1.70 trillion**. HELOCs extended their multi-year climb (**+$12B** to **$458B**). Student loans were roughly flat at **$1.66 trillion**. Other consumer balances edged down **$6 billion**.
+
+Versus the August dashboard’s **$18.794T / $1.252T cards**, the disclosed Q2 stock is higher on both totals and revolving balances — and this time the card move is a seasonal rebound inside a still-elevated YoY stock, not a restatement gap. Mortgages still dominate — about **70%** of balances. The shareable framing is not “households levered another half-trillion overnight.” It is “Q2 closed with a real QoQ debt print, revolving balances came back after the tax-refund season, and housing still owns the stock.”
+
+Origination color stayed constructive: new mortgage and auto originations appearing on credit reports remained in the same broad band as Q1, and card limits kept expanding. Capacity to borrow is still growing even as early card delinquency transitions cool another two-tenths of a point.
+
+## Stress: student 90+ keeps climbing; cards cool; mortgages nudge
+
+Aggregate delinquency ticked up: **4.9%** of outstanding debt in some stage of delinquency, from **4.8%** in 2026Q1 — still near the highest share since 2017 on the report’s framing. Inside the product cut, the August story needs three footnotes:
+
+- **Student loans:** the share of balances **90+ days delinquent** rose to **10.6%** from **10.3%** — another clean stress delta, continuing the post-reporting-normalization climb.
+- **Mortgages:** transition into **serious (90+) delinquency** edged up **1.5% → 1.6%** annuallyized. Absolute levels remain low; the direction remains no longer pure calm.
+- **Credit cards:** transition into **early (30+) delinquency** cooled **8.6% → 8.4%**. Two consecutive soft ticks after the research-era deterioration narrative — still not a cycle turn, but the pause from Q1 held.
+- **Auto:** early transitions held roughly steady on the Fed’s summary language.
+
+For product-level color on the revolving-vs-housing split, keep the [household debt delinquency](/blog/us-household-debt-delinquency-split-2026) post beside this update. Bank income-statement twins still live in [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026). The Q3 vintage message is narrow: **student reporting/repayment stress extended; mortgage serious flow nudged again; card early flow cooled another tick; aggregate any-stage delinquency finally moved up a tenth.**
+
+## Liquid cash: MMFs cross $8T; deposits edge softer
+
+ICI’s revised August 19 week put money market fund assets at **$8.02 trillion**, up **$90 billion** from the August-update **$7.93T** anchor and across the round **$8T** mark. Retail MMFs remain the household-facing sleeve inside that total. Indicative taxable MMF yields still clear money-market deposit accounts by roughly **three percentage points**, so the dual-pile map — sticky bank deposits beside yield-sensitive fund shares — has not inverted.
+
+Deposits ex-large time edged softer in our H.8-style estimate (**~$14.95T** from **~$15.0T**). Treat that as estimated pending a cleaner cut; the allocation point does not need decimal precision. Cash is still preferring the wrapper that pays. See [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) for the deep dive; this dashboard’s cash panel is the Q3 check that the MMF sleeve grew again while the deposit estimate softened a hair.
+
+## The APR gap still refuses to close
+
+Commercial-bank card APRs still hover near **21.2%** while effective fed funds eased toward roughly **4.0%** on our late-August estimated path. The **APR − funds** gap remains near **17.2 pp** — unchanged from the August update’s **~17.2 pp**. Funds moved another tenth; lending rates barely blinked. Sticky card pricing plus lagged deposit betas remain the same industrial-organization story from opposite sides of the bank book.
+
+That wedge still matters more when the saving flow is only **3.1%**. Households that revolvingly finance consumption at **~21%** while earning sub-**1%** on many deposit products — and only mid-**3s** in MMFs — are paying for rate stickiness with both cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when July saving rebounded or when Q2 debt printed higher.
+
+## What would rewrite this update
+
+1. **BEA August / Q3 saving** falling back under **2.8%** would re-open the soft-patch story and demote July’s bounce to noise.
+2. **NY Fed 2026Q3** showing card serious transitions rising again — or student 90+ stabilizing — would re-rank the stress panel.
+3. **A deposit-rate war** that closes the MMDA–MMF gap would pull cash back onto bank books without fixing card APRs.
+4. **Faster funds easing** that finally compresses card APRs would shrink the borrowing wedge; if deposit betas still lag, MMFs may keep the cash anyway.
+5. **Unemployment jump** would hit auto and card delinquency harder than mortgages first — the same sequencing the research post flagged.
+
+Until those print, the live frame versus the August update is narrow: **July saving rebounded to 3.1%; debt stock printed $18.93T; student 90+ worsened to 10.6%; MMFs revised up to $8.02T; the APR gap stayed wide.**
+
+## Caveats and methodology
+
+1. **Aug update print ≠ a single NY Fed PDF cell for every meter.** Saving compares a quarterly SAAR (2.8%) to a monthly PSAVERT (3.1%). Do not treat **+0.3 pp** as a pure QoQ quarterly move.
+2. **Delinquency concepts differ across products.** This update prefers disclosed 2026Q2 language (early vs serious transitions; student **stock** 90+ shares). Do not splice older research card figures into the new early-transition series without a footnote.
+3. **Debt Δ** here is true QoQ (**+$132B**) versus the closed 2026Q1 table the August post already used — cleaner than the research→Q1 restatement gap.
+4. **MMF AUM** is ICI weekly (week ended Aug 19, 2026, revised). Weekly prints revise; treat **$8.02T** as the latest disclosed weekly, not a quarter-end Financial Accounts total.
+5. **Deposit levels** in the cash panel remain an estimated H.8-style hold where a fresher cut is not restated as disclosed.
+6. **Card APR / funds** late-August anchors are estimated from Board G.19 / effective funds paths — the gap is arithmetic, not a risk-adjusted credit spread.
+7. **Student-loan series** still carry repayment-reporting normalization noise; cross-product comparisons remain imperfect.
+
+Primary sources: NY Fed *Quarterly Report on Household Debt and Credit*, 2026Q2 (August 2026); BEA / FRED personal saving rate through July 2026; ICI Money Market Fund Assets (Aug 20, 2026 release / weekly revision); Board G.19 consumer credit / APR context; prior theme baseline in [consumer finance markets update](/blog/consumer-finance-markets-update-2026) and the [research roll-up](/blog/consumer-finance-markets-research-2026).
+
+## The shareable takeaway
+
+**Versus the August update, July’s personal saving rate rebounded to 3.1% (+0.3 pp from the Q2 2.8% floor), while NY Fed 2026Q2 debt printed $18.93T (+$132B) and student-loan 90+ delinquency rose to 10.6%.** Money market funds revised up to **$8.02T**; the card APR−funds gap stayed near **17 pp**. The three-ledger household — thin-but-rebouncing saving flow, mortgage-heavy debt stock, yield-sensitive cash — still disagrees until you read the ledgers together. For the prior vintage see the [August update](/blog/consumer-finance-markets-update-2026); for structure see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+  },
+  {
     id: "industrial-robotics-update-2026q3",
     slug: "industrial-robotics-update-2026q3",
     title:
