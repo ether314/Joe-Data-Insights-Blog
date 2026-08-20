@@ -752,6 +752,21 @@ const FiscalIndustrialPolicyUpdateDashboard = dynamic(
   },
 );
 
+const CommercialAircraftFinalAssemblyGeography2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/CommercialAircraftFinalAssemblyGeography2026Dashboard"
+    ).then((m) => m.CommercialAircraftFinalAssemblyGeography2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -939,6 +954,10 @@ export function PostVisualization({
 
   if (type === "fiscal-industrial-policy-update-2026") {
     return <FiscalIndustrialPolicyUpdateDashboard />;
+  }
+
+  if (type === "commercial-aircraft-final-assembly-geography-2026") {
+    return <CommercialAircraftFinalAssemblyGeography2026Dashboard />;
   }
 
   return null;

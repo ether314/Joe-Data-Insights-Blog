@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "commercial-aircraft-final-assembly-geography-2026",
+    slug: "commercial-aircraft-final-assembly-geography-2026",
+    title:
+      "Charted: Renton Alone Assembles 31.7% of Large-Jet Deliveries — Top 3 Sites Hold 66%",
+    excerpt:
+      "Ignore the Boeing/Airbus scoreboard for a moment. Attributed across eight final-assembly campuses, 2025’s 1,408 large-jet handovers concentrate hard: Renton 31.7%, top three sites 66%, US FALs 54.5%. COMAC’s Shanghai line is still ~1%.",
+    themeId: "heavy-industrial-capacity",
+    content: `Airline press releases frame commercial aviation as a **two-OEM duel**. Delivery wraps say Airbus **793**, Boeing **600**, COMAC **15**. That scoreboard is real — and incomplete. The industrial question underneath is *which campuses actually turn the last bolt*. Attribute calendar-**2025** large-jet handovers to final-assembly (FAL) sites and the map tightens: **Renton alone is 31.7%** of the **1,408**-aircraft large-jet pool; the **top three sites hold 66%**; **US campuses still clear 54.5%** even though Airbus spreads lines across Europe, China, and Alabama.
+
+This post is the **site lens** companion to our earlier [commercial aircraft final-assembly 2025](/blog/commercial-aircraft-final-assembly-2025) map, which counted disclosed FAL *lines* and OEM totals. Here the unit is **assembly-line share by site** — estimated where OEMs do not publish per-gate tallies — using FlightGlobal / Cirium delivery wraps plus OEM line disclosures. Embraer’s São José dos Campos E-Jet print (~140) appears in the dashboard as a regional comparator; it is **excluded** from the large-jet concentration core.
+
+## The site scoreboard that OEM headlines hide
+
+| Rank | Final-assembly site | OEM | 2025 del. (attrib.) | Share of large-jet pool | Confidence |
+| --- | --- | ---: | ---: | ---: | --- |
+| 1 | Renton, WA | Boeing | 447 | **31.7%** | Program-tied (737 MAX) |
+| 2 | Hamburg | Airbus | 268 | 19.0% | Line-estimated (A320) |
+| 3 | Toulouse | Airbus | 214 | 15.2% | Line-estimated + program (A330/A350) |
+| 4 | Mobile, AL | Airbus | 168 | 11.9% | Line-estimated (A320 + A220) |
+| 5 | Tianjin | Airbus | 143 | 10.2% | Line-estimated (A320) |
+| 6 | Charleston, SC | Boeing | 88 | 6.3% | Program-tied (787) |
+| 7 | Everett, WA | Boeing | 65 | 4.6% | Program-tied (777F/767) |
+| 8 | Shanghai | COMAC | 15 | 1.1% | Disclosed-site (C919) |
+
+**Top three campuses = 929 aircraft = 66.0%.** Site HHI on this eight-campus set is about **1,908** (10,000 would be a pure monopoly). That is not “one factory runs the world,” but it is far from a flat network of interchangeable FALs. Toggle the dashboard to **Site share** and switch units between aircraft and percent: Renton’s amber bar dominates because the 737 MAX is still the densest single-program handover machine in commercial aviation.
+
+## Duopoly framing vs site framing
+
+The dashboard’s **OEM vs site framing** panel puts the same pool on two axes. Airbus’s OEM share is roughly **56%** of large-jet deliveries; Boeing’s is about **43%**; COMAC is **~1%**. Those are the numbers cable news repeats. Site framing answers a different question: **one US narrowbody campus (Renton) out-delivers any single Airbus city**, and the **top three sites** jointly clear what a casual reader might assume requires an entire OEM.
+
+That matters for industrial policy and risk. A MAX-rate cut in Renton is not “Boeing had a soft quarter” in geographic terms — it is a **one-zip-code shock** to nearly a third of global large-jet handovers. An A320 supply snag that hits Hamburg harder than Mobile redistributes Airbus volume across continents without changing the OEM headline. Our [global shipbuilding GT delivery concentration](/blog/global-shipbuilding-gt-delivery-concentration-2026) piece makes the same methodological point in steel: **builder share and site/geography share are not the same story**.
+
+## Narrowbodies are the concentration engine
+
+Filter **Class → Narrowbody**. The large-jet pool is mostly single-aisle metal: A320 family, 737 MAX, A220, and a thin C919 print. Widebody campuses — Charleston (787) and Everett (777F/767) — matter strategically and for long-haul fleets, but they do not drive the concentration ladder. Renton’s **447** MAX deliveries alone exceed the **combined** widebody print from Charleston and Everett (**153**).
+
+Airbus’s A320 family (~**607** deliveries) is the geographic counterweight. Unlike Boeing’s US-only commercial FAL map, Airbus splits that family across **Hamburg, Toulouse, Tianjin, and Mobile**, with Mobile also absorbing the **A220** (~**93**). The dashboard’s line-estimated split is not an audited gate tally — it weights disclosed FAL counts and public ramp notes — but the qualitative fact survives any reasonable reallocation: **Airbus’s narrowbody volume is multi-continental; Boeing’s is Pacific Northwest–centric for the volume king**.
+
+## Geography: US campuses still clear a majority
+
+Open the **Geography** tab. Region rollups on the large-jet pool land near **North America 54.5%**, **Europe 34.2%**, **Asia 11.2%**. The US share is not “Boeing only.” Mobile’s Airbus lines and Boeing’s three commercial campuses together keep American soil on the majority side of final assembly even as Airbus’s Tianjin second FAL and Mobile second A320 line push capacity outward.
+
+Asia’s **11%** is mostly **Airbus Tianjin**, not COMAC. Shanghai’s C919 **15** handovers are industrially important as a third OEM foothold and a Chinese state industrial project — they are not yet a concentration story. Anyone selling a “duopoly is over” narrative from 2025 deliveries is arguing from **capability and backlog optionality**, not from this year’s site shares.
+
+The bubble map makes the asymmetry visual: one large amber circle over Puget Sound, a sky-blue cluster over northwest Europe, cyan on the US Gulf, rose on the Bohai rim. South America appears only when you include Embraer’s regional comparator — a reminder that **regional-jet geography is a different industry**, even when the metal looks similar from the terminal window.
+
+## Throughput: lines are not destiny
+
+Switch to **Throughput**. Scatter deliveries against disclosed FAL line counts. Hamburg’s **four** A320 lines and Toulouse’s multi-program campus do not automatically out-deliver Renton’s **two**-line 737 complex — program mix and rate matter more than line count as a vanity metric. Charleston’s dual 787 lines at **88** deliveries illustrate the opposite: high-value widebody throughput with lower annual counts.
+
+The A320 **rate path** panel on the Concentration tab is the forward tell. Airbus’s disclosed **75/month** 2027 target is a **network** rate across FALs, not a single-hangar ambition. If that ramp lands, site shares inside Airbus will shift again — Mobile and Tianjin’s second lines exist precisely to pull volume off European bottlenecks — but the **global** concentration ladder will still be dominated by whichever campuses run the densest narrowbody schedules.
+
+## Who is exposed under a site lens
+
+**Exposed:** lessors and airlines whose delivery slots cluster on one FAL campus during a quality escape, labor action, or supplier break; US Pacific Northwest communities tied to MAX cadence; any industrial-policy narrative that treats “Airbus vs Boeing” as geographically diversified when **one site is a third of world large-jet handovers**.
+
+**Relative winners under current geography:** Airbus’s multi-continent FAL network as a hedge against single-jurisdiction disruption; Mobile and Tianjin as political and logistics hedges inside the A320 system; Charleston as the consolidated 787 industrial base after Everett’s widebody mix thinned.
+
+**What would change the story:** a sustained COMAC ramp that moves Shanghai out of the 1% rounding error; a Boeing geographic diversification of 737 final assembly beyond Renton/Everett expansion narratives; an Airbus rate shortfall that reconcentrates A320 volume onto Hamburg/Toulouse; or a widebody boom large enough to lift Charleston and Everett shares without shrinking narrowbody dominance.
+
+## Caveats and methodology
+
+- **Site shares for multi-FAL A320 volume are line-estimated**, not audited per-gate deliveries. Reasonable reallocations among Hamburg / Toulouse / Tianjin / Mobile change ranks 2–5 more than they change Renton’s lead.
+- **Program-tied Boeing sites** (Renton MAX, Charleston 787, Everett 777F/767) track OEM family deliveries more closely; Everett’s mix excludes a meaningful 777X delivery print in 2025.
+- **Large-jet core excludes Embraer** regional E-Jets; including them would dilute US/Europe shares and add a South America node without changing the Renton headline much.
+- **COMAC C919 = 15** follows 2025 wrap / briefing prints; certification and airline acceptance rates can diverge from production capability.
+- **FAL line counts** are manufacturer-disclosed facility tallies; a “line” is not a standardized throughput unit across OEMs.
+- **Delivery year ≠ production year** for every airframe; calendar handovers are the public comparable used in FlightGlobal / Cirium wraps.
+- **HHI and top-N shares** are sensitive to whether A220 is booked to Mobile (as here) and whether Toulouse’s widebodies are co-mingled with its A320 estimate.
+
+## The shareable takeaway
+
+Outside the Boeing/Airbus duel framing, **2025 large-jet assembly is a site-concentration story**: **Renton 31.7%**, **top three campuses 66%**, **US FALs 54.5%**, **COMAC Shanghai ~1%**, site HHI ~**1,900**. Airbus’s multi-continent FAL network diversifies *OEM* risk without erasing a world where a handful of hangars still finish most of the metal. Watch **rates and site shares**, not just order races, to see where heavy industrial capacity actually sits.
+
+Related reading: [Commercial aircraft final-assembly 2025 (FAL map)](/blog/commercial-aircraft-final-assembly-2025) and [Global shipbuilding GT delivery concentration](/blog/global-shipbuilding-gt-delivery-concentration-2026).`,
+    category: "Industry",
+    imageUrl:
+      "/images/industry-commercial-aircraft-final-assembly-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy world map with glowing commercial-aircraft final-assembly site bubbles — Renton dominant in amber, European Airbus hubs in sky blue, China and Mobile marked",
+    publishedAt: "2026-08-20T22:00:00Z",
+    featured: true,
+    visualization: "commercial-aircraft-final-assembly-geography-2026",
+    layout: "default",
+  },
+  {
     id: "fiscal-industrial-policy-update-2026",
     slug: "fiscal-industrial-policy-update-2026",
     title:
