@@ -79,7 +79,8 @@ export interface Post {
     | "fiscal-industrial-policy-update-2026"
     | "commercial-aircraft-final-assembly-geography-2026"
     | "fiscal-plumbing-research-2026"
-    | "geopolitics-institutions-update-2026";
+    | "geopolitics-institutions-update-2026"
+    | "measurement-science-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

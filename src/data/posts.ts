@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "measurement-science-update-2026",
+    slug: "measurement-science-update-2026",
+    title:
+      "Update: China Takes 30% of Global R&D — Overtakes the US on PPP Share",
+    excerpt:
+      "Versus our 2022 GERD research print, NSF/NSB State of S&E 2026 puts China at 30% of worldwide R&D and the US at 29%. Combined share rises 57%→59%; China–US–India publications alone are half of world output.",
+    themeId: "measurement-science",
+    content: `## What changed since the 2022 research vintage
+
+In early August we mapped the [global R&D and publication ledger](/blog/measurement-science-research-2026) from NSF Discovery / Indicators framing for **2022**: worldwide GERD near **$3.1 trillion** PPP, the United States at **30%** and China at **27%** (combined **57%**), top-eight performers at **82%**, and China already leading S&E article volume since roughly **2016**. That post answered the stock question — *where is progress funded and published, and is it concentrating?* This update answers the flow question the newest official vintage forces: **what moved between the 2022 print and the 2024 State of U.S. Science & Engineering numbers**, and did the US–China duopoly tighten or loosen?
+
+One official suite drives the refresh. NSF/NSB’s **State of U.S. Science and Engineering 2026** — summarizing Indicators 2026 Discovery — prints worldwide R&D at **$3.48 trillion** in **2024**, with China at **$1.028 trillion (30%)** and the United States at **$1.009 trillion (29%)**. That is the first China-led PPP GERD ranking in this Indicators framing. Combined US+China share rises from **57% to 59%**. On the bibliography side, China–US–India alone account for **half** of 2024 world S&E articles. The dashboard above is built as a vintage delta: share-change bars, prior→new volume bridges, the extended share path, publication paired bars, an HCA-versus-volume scatter, and intensity pairs.
+
+## The headline table: 2022 research print → 2024 State of S&E
+
+| Meter | 2022 (prior post) | 2024 (new vintage) | Δ |
+| --- | ---: | ---: | ---: |
+| Global GERD (PPP) | ~**$3.1T** | **$3.48T** | **+$0.38T** |
+| China GERD share | **27%** | **30%** | **+3 pp** |
+| US GERD share | **30%** | **29%** | **−1 pp** |
+| US + China share | **57%** | **59%** | **+2 pp** |
+| EU-27 GERD share | **18%** | **18%** | flat |
+| China S&E pubs share | **27%** | **31%** | **+4 pp** |
+| US S&E pubs share | **14%** | **12%** | **−2 pp** |
+| Top publication concentration | Top-6 **>50%** | Top-3 **=50%** | tighter |
+| US R&D intensity | **3.6%** | **3.4%** | **−0.2 pp** |
+| China R&D intensity | **2.6%** | **2.7%** | **+0.1 pp** |
+
+The shareable sentence: **China overtook the United States on PPP GERD share, the duopoly tightened by two points, and publication volume concentrated further into three countries.**
+
+## Funding: the first China-led PPP ranking
+
+Toggle the dashboard’s **Share Δ** panel. China gains **three percentage points**; the US loses **one**. Absolute stacks both rose — China from about **$812B to $1,028B**, the US from about **$923B to $1,009B** — but China’s faster climb flips the order. Japan (**$234B**), Germany (**$193B**), and South Korea (**$162B**) remain the next disclosed individual performers. The EU-27 as a bloc sits at **$612B** and **18%** — still third behind the two giants, share unchanged from 2022.
+
+Switch to **Volume bridge** and toggle PPP dollars versus share. The dumbbells make the arithmetic visceral: China adds roughly **$216B** (+27%) while the US adds about **$86B** (+9%). Korea and Japan also post solid absolute gains; Germany rises more modestly. Concentration here is **not** “everyone stopped researching.” The pie grew from **$3.1T to $3.48T**. What concentrated is **share ownership of that larger pie**.
+
+The **Share path** panel extends the long arc we already knew: US plurality in 2000 (**39%**), China climbing from a mid-single-digit footnote, EU-27 and Japan shedding share. The 2024 endpoint is the new fact — China’s line crosses above the US for the first time in this series. Toggle **US–China** view: the combined ribbon moves from the mid-40s in 2000 toward the high-50s by 2022 and into **59%** by 2024. That is the clean answer to “is funding concentrating?” — **yes, into a tighter bipolar core**.
+
+## Publications: three countries, half the world’s papers
+
+The prior post’s publication story was already Asia-heavy: China **27%**, US **14%**, India **6%**, with six countries clearing half of output. The 2024 vintage tightens that further. Worldwide S&E publication output reached about **3.5 million** articles. China prints **31%**, the United States **12%**, India **7%** — **three countries = 50%**. China’s share rose **four points**; the US fell **two**; India added **one**. NSF notes that authors in China and India drove most of the growth since 2014, while many advanced economies grew only modestly (Germany, UK) or declined (Japan). US article counts grew modestly since 2014 but fell from a **2021** peak.
+
+Field mix still matters. Health sciences dominate US, Japanese, and EU-27 portfolios; engineering dominates China’s; computer and information sciences dominate India’s. Counting papers without field weights remains a scale meter, not a capability meter — the same caveat as the research post, now with a sharper concentration denominator.
+
+## Impact is still not volume
+
+State of S&E 2026 reframes impact as the share of articles in the **top 1% most-cited** (HCA share) rather than only the relative HCA *index* we used before. For **2022** articles, the US HCA share is **1.7%** — well above the 1% world baseline implied by the definition. China’s HCA share reached **1.3%**, rising each year since 2006. The EU-27 collectively matches China at **1.3%**; India and Japan sit at **1.1%**.
+
+The dashboard’s **HCA vs volume** scatter puts the tension on one plane: China far right on 2024 publication share (**31%**) with mid-pack HCA; the US mid-left on volume (**12%**) but higher on HCA (**1.7%**). **Caveat:** HCA shares are field- and database-sensitive; paper mills and AI-generated content are explicitly flagged in the Indicators narrative as risks to raw counts. Treat the scatter as a directional warning against equating article floods with scientific influence — not as a league table of national genius.
+
+## Intensity: commitment leaders hold; US eases slightly
+
+Dollar shares reward large economies. **GERD as a percent of GDP** rewards commitment. In the 2024 print, South Korea leads disclosed large performers at **5.1%** (was **5.2%**), Taiwan at **4.1%** (was **4.0%**), Japan at **3.6%** (up from **3.4%**), the United States at **3.4%** (down from **3.6%**), Germany flat at **3.1%**, China at **2.7%** (up from **2.6%**), and the EU-27 flat at **2.1%**. Israel’s prior **6.0%** leadership was not restated in the State of S&E 2026 summary we use here — do not treat its absence as a decline.
+
+China’s intensity is still below the US even while its PPP dollar total now leads. That remains the arithmetic of a still-poorer-per-capita but enormous economy running a sustained industrial-science strategy. Korea and Taiwan remain the intensity specialists — the same places that show up in advanced manufacturing and semiconductor ecosystems. For a parallel concentration story on the **demand side that funds much business R&D**, see our [macro growth, trade & prices update](/blog/macro-growth-trade-update-2026).
+
+## Who funds inside the big systems — and what the flip means
+
+Across the largest performers, **business** remains the dominant performer and funder. The State of S&E 2026 US domestic ledger (distinct from OECD-comparable GERD) puts business at **77%** of performance and **75%** of funding in 2024, with the federal government funding **19%** while performing **8%**. IT-related industries still dominate business R&D shares in Taiwan, Korea, and the US; motor vehicles still dominate in Germany and Japan; pharmaceuticals remain a US specialty. China’s absolute business R&D in computer/electronic/optical products manufacturing leads the world even when industry-mix tables for China omit some service categories.
+
+Policy implications of the vintage flip, without a sermon:
+
+- **Research security and collaboration rules** now operate inside a funding map where China is first on PPP dollars, not second — decoupling cuts bandwidth where the largest stack sits.
+- **Talent and immigration policy** in the US and Europe remain research-capacity levers; publication volume is already Asia-led, and funding share is now China-led on PPP.
+- **Quality metrics** matter more as volume floods; raw article counts and even GERD dollars are incomplete scoreboards without HCA, reproducibility, and standards.
+- **Allied intensity** (Korea, Taiwan, Japan’s intensity rebound) is a force multiplier even when absolute GERD is a fraction of the duopoly.
+
+## Caveats and what we are not claiming
+
+- **Vintages differ.** The prior post’s core tables are **2022** GERD and pubs. This update’s core tables are **2024** GERD and pubs from State of S&E 2026 / OECD MSTI March–April 2026. Mid-path years between older anchors remain estimated for shape.
+- **PPP ≠ market exchange.** China’s lead is a PPP-dollar lead. Market-rate rankings can reorder the stack; we do not mix the two.
+- **OECD-coverage world, not every UN member.** Missing reporters bias the denominator slightly.
+- **Domestic US R&D ≠ OECD GERD.** NCSES domestic totals (~$937B in 2023, ~$993B estimated 2024) differ from the internationally comparable **$1.009T** GERD print — capital treatment and foreign-funding adjustments.
+- **UK, France, and Taiwan 2024 dollar volumes** are not restated in the State of S&E summary used here; they appear in the prior top-eight list but are omitted from this update’s volume bridge rather than fabricated.
+- **HCA framing changed.** Prior post used relative HCA *index* (~world = 1.0). This update uses HCA *share of publications* (top 1% cited). Do not compare 1.7 index to 1.7% share as the same meter.
+- **We are not claiming** Chinese science is “better” or US science is “done.” We are claiming the **budget and bibliography** shifted another notch toward China and a tighter top tier.
+
+## The shareable takeaway
+
+Versus our [2022 GERD research print](/blog/measurement-science-research-2026), the newest NSF/NSB State of S&E vintage shows **China overtaking the United States on PPP R&D share (30% vs 29%)**, the US–China combined share rising **57% → 59%**, worldwide GERD climbing to **$3.48T**, and publication volume concentrating further so that **China, the US, and India alone produce half the world’s S&E articles**. Citation impact still favors the US on HCA share. Funding and papers are concentrating; influence is not fully following volume — yet.
+
+Related reading: [Measurement & science research (2022 vintage)](/blog/measurement-science-research-2026) and [Macro growth, trade & prices update](/blog/macro-growth-trade-update-2026).`,
+    category: "Global Systems",
+    imageUrl: "/images/global-systems-measurement-science-update-2026-hero.png",
+    imageAlt:
+      "Dark navy abstract ribbons of global R&D funding with a rising crimson stream overtaking a sky-blue stream",
+    publishedAt: "2026-08-20T22:00:00Z",
+    featured: true,
+    visualization: "measurement-science-update-2026",
+    layout: "default",
+  },
+  {
     id: "geopolitics-institutions-update-2026",
     slug: "geopolitics-institutions-update-2026",
     title:
