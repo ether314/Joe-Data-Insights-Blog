@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "fiscal-plumbing-research-2026",
+    marker: "Fiscal plumbing — trust funds",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "commercial-aircraft-final-assembly-geography-2026",
     marker: "Assembly-line share by final-assembly site",
     forbidden: "Loading interactive charts",

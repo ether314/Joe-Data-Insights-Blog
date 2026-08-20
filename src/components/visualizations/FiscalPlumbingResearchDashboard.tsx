@@ -8,19 +8,30 @@ import {
   BarChart,
   CartesianGrid,
   Cell,
+  Line,
+  LineChart,
+  Pie,
+  PieChart,
   ResponsiveContainer,
+  Scatter,
+  ScatterChart,
   XAxis,
   YAxis,
+  ZAxis,
 } from "recharts";
 import { Tooltip, sortTooltipPayload } from "@/components/charts/SortedTooltip";
 import {
-  BUDGET_YARDSTICKS,
+  DEPLETION_PATH,
   FAMILY_COLORS,
   HEADLINE,
   JCT_AGGREGATE,
+  LAYER_COLORS,
+  OFF_BALANCE,
+  PLUMBING_LAYERS,
   SCOPE_SLOPE,
   SOURCE_NOTE,
   SOURCES,
+  TRUST_FUNDS,
   familyShares,
   fmtBn,
   fmtTn,
@@ -29,9 +40,9 @@ import {
   type ScopeId,
 } from "@/data/fiscal-plumbing-research-2026-data";
 
-// viz-types: ranked lollipop bars, family bars, treasury↔JCT grouped bars, budget yardstick bars | layout: canvas
+// viz-types: plumbing pie, trust depletion dual-line, off-balance scatter, ranked lollipop, family bars, cumulative area | layout: canvas
 
-type Panel = "rank" | "families" | "slope" | "yardsticks" | "cumulative";
+type Panel = "map" | "trusts" | "offBalance" | "rank" | "families" | "cumulative";
 
 function ChartCard({
   title,
@@ -109,9 +120,34 @@ function BnTooltip({
   );
 }
 
+function TnTooltip({
+  active,
+  payload,
+  label,
+}: {
+  active?: boolean;
+  payload?: { name?: string; value?: number; color?: string }[];
+  label?: string;
+}) {
+  if (!active || !payload?.length) return null;
+  const sorted = sortTooltipPayload(payload);
+  return (
+    <div className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs shadow-lg">
+      {label && <p className="mb-1 font-semibold text-slate-800">{label}</p>}
+      {sorted.map((p, i) => (
+        <p key={i} className="text-slate-600">
+          {p.name}: {fmtTn(Number(p.value) || 0)}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 export function FiscalPlumbingResearchDashboard() {
-  const [panel, setPanel] = useState<Panel>("rank");
+  const [panel, setPanel] = useState<Panel>("map");
   const [scope, setScope] = useState<ScopeId>("jct");
+  const [trustView, setTrustView] = useState<"path" | "table">("path");
+  const [leverFilter, setLeverFilter] = useState<"all" | "housing-credit" | "other">("all");
 
   const ranked = useMemo(
     () => (scope === "jct" ? rankedJctTop10() : rankedTreasuryHeadlines()),
@@ -130,24 +166,61 @@ export function FiscalPlumbingResearchDashboard() {
 
   const families = useMemo(() => familyShares(scope), [scope]);
 
-  const yardsticks = useMemo(
-    () => [...BUDGET_YARDSTICKS].sort((a, b) => b.bn - a.bn),
+  const pieData = useMemo(
+    () =>
+      PLUMBING_LAYERS.map((l) => ({
+        name: l.label,
+        value: l.bn,
+        fill: LAYER_COLORS[l.id] || "#64748b",
+      })),
+    [],
+  );
+
+  const scatterData = useMemo(() => {
+    const rows = OFF_BALANCE.filter((r) => {
+      if (leverFilter === "all") return true;
+      if (leverFilter === "housing-credit") return r.lever === "housing-credit";
+      return r.lever !== "housing-credit";
+    });
+    return rows.map((r) => ({
+      ...r,
+      x: r.budgetVisibility,
+      y: r.policyLeverage,
+      z: r.stockTn * 40,
+    }));
+  }, [leverFilter]);
+
+  const cumulative = useMemo(
+    () =>
+      rankedJctTop10().reduce<{ n: number; label: string; cumulativeBn: number }[]>(
+        (acc, row, i) => {
+          const prev = acc[i - 1]?.cumulativeBn || 0;
+          acc.push({
+            n: i + 1,
+            label: `Top ${i + 1}`,
+            cumulativeBn: prev + row.fy2026Bn,
+          });
+          return acc;
+        },
+        [],
+      ),
     [],
   );
 
   return (
-    <div className="space-y-6" data-viz="fiscal-plumbing-research-2026">
+    <div className="space-y-6" data-viz="fiscal-plumbing-research-2026" data-viz-dashboard>
       <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-5 py-6 text-white shadow-sm">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">
-          Fiscal plumbing — tax expenditures as off-budget spend
+          Fiscal plumbing — trust funds · tax code · off-balance credit
         </p>
         <p className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
-          JCT: {fmtTn(HEADLINE.jctFy2026Tn)} in FY2026 tax expenditures — larger than Social Security
+          {fmtTn(HEADLINE.jctFy2026Tn)} tax expenditures · OASDI empties ~{HEADLINE.oasdiDepletionYear} ·{" "}
+          {fmtTn(HEADLINE.gseStockTn)} GSE MBS
         </p>
         <p className="mt-2 max-w-3xl text-sm text-slate-300">
-          Top-10 JCT lines alone are ~{fmtBn(HEADLINE.jctTop10Bn)}. Treasury’s ESI exclusion is{" "}
-          {fmtBn(HEADLINE.treasuryEsiBn)} vs JCT’s {fmtBn(HEADLINE.jctEsiBn)} — a{" "}
-          {fmtBn(HEADLINE.scopeGapEsiBn)} packaging gap on the same economic idea.
+          The discretionary fight is ~{fmtBn(1700)}. The levers that actually move housing credit, retirement
+          income, and health financing sit in trust funds, the tax code, and guarantee books — with{" "}
+          {fmtTn(HEADLINE.offBalanceStockTn)}+ of off-balance stock in this map alone.
         </p>
         <p className="mt-3 text-xs text-slate-400">{SOURCE_NOTE}</p>
       </div>
@@ -158,14 +231,15 @@ export function FiscalPlumbingResearchDashboard() {
           value={panel}
           onChange={setPanel}
           options={[
-            { id: "rank", label: "Ranked cost" },
-            { id: "cumulative", label: "Top-N build-up" },
+            { id: "map", label: "Plumbing map" },
+            { id: "trusts", label: "Trust funds" },
+            { id: "offBalance", label: "Off-balance" },
+            { id: "rank", label: "Tax-exp rank" },
             { id: "families", label: "By family" },
-            { id: "slope", label: "Treasury ↔ JCT" },
-            { id: "yardsticks", label: "Budget scale" },
+            { id: "cumulative", label: "Top-N build-up" },
           ]}
         />
-        {(panel === "rank" || panel === "families" || panel === "cumulative") && (
+        {(panel === "rank" || panel === "families") && (
           <ToggleGroup
             label="Scope"
             value={scope}
@@ -176,44 +250,218 @@ export function FiscalPlumbingResearchDashboard() {
             ]}
           />
         )}
+        {panel === "trusts" && (
+          <ToggleGroup
+            label="View"
+            value={trustView}
+            onChange={setTrustView}
+            options={[
+              { id: "path", label: "Depletion path" },
+              { id: "table", label: "Fund cards" },
+            ]}
+          />
+        )}
+        {panel === "offBalance" && (
+          <ToggleGroup
+            label="Lever"
+            value={leverFilter}
+            onChange={setLeverFilter}
+            options={[
+              { id: "all", label: "All vehicles" },
+              { id: "housing-credit", label: "Housing credit" },
+              { id: "other", label: "Non-housing" },
+            ]}
+          />
+        )}
       </div>
 
-      {panel === "cumulative" && (
+      {panel === "map" && (
+        <div className="grid gap-6 lg:grid-cols-2">
+          <ChartCard
+            title="Where the real annual levers sit"
+            subtitle="Editorial pie of FY-scale blocks — not a unified CBO score sheet. Tax code ≈ Social Security."
+          >
+            <div className="h-80 min-h-[280px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    dataKey="value"
+                    nameKey="name"
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={58}
+                    outerRadius={100}
+                    paddingAngle={2}
+                  >
+                    {pieData.map((d) => (
+                      <Cell key={d.name} fill={d.fill} />
+                    ))}
+                  </Pie>
+                  <Tooltip content={<BnTooltip />} />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+            <ul className="mt-2 grid gap-1 text-xs text-slate-600 sm:grid-cols-2">
+              {PLUMBING_LAYERS.map((l) => (
+                <li key={l.id} className="flex items-start gap-2">
+                  <span
+                    className="mt-1 inline-block h-2 w-2 shrink-0 rounded-full"
+                    style={{ background: LAYER_COLORS[l.id] }}
+                  />
+                  <span>
+                    <span className="font-semibold text-slate-800">{l.label}</span> — {fmtBn(l.bn)}.{" "}
+                    {l.shareHint}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </ChartCard>
+          <ChartCard
+            title="Treasury ↔ JCT packaging gaps"
+            subtitle="Same economic ideas, different table designs — why rankings disagree."
+          >
+            <div className="h-80 min-h-[280px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  data={SCOPE_SLOPE.map((r) => ({
+                    name: r.concept.length > 28 ? `${r.concept.slice(0, 26)}…` : r.concept,
+                    Treasury: r.treasuryBn,
+                    JCT: r.jctBn,
+                  }))}
+                  margin={{ left: 8, right: 16, top: 8, bottom: 8 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                  <XAxis dataKey="name" stroke="#94a3b8" fontSize={10} interval={0} />
+                  <YAxis tickFormatter={(v) => `$${v}B`} stroke="#94a3b8" fontSize={11} />
+                  <Tooltip content={<BnTooltip />} />
+                  <Bar dataKey="Treasury" fill="#0ea5e9" radius={[4, 4, 0, 0]} />
+                  <Bar dataKey="JCT" fill="#f59e0b" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </ChartCard>
+        </div>
+      )}
+
+      {panel === "trusts" && trustView === "path" && (
         <ChartCard
-          title="How fast the top-N stack reaches ~⅔ of JCT cost"
-          subtitle="Running sum of JCT top 10 (still not a joint repeal score). Area = cumulative $."
+          title="Trust-fund reserve runoff (illustrative)"
+          subtitle={`OASDI combined depletes ~${HEADLINE.oasdiDepletionYear}; Medicare HI ~${HEADLINE.hiDepletionYear}. Path is rounded Trustees framing, not a live score.`}
         >
           <div className="h-80 min-h-[280px] w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart
-                data={rankedJctTop10().reduce<
-                  { n: number; label: string; cumulativeBn: number }[]
-                >((acc, row, i) => {
-                  const prev = acc[i - 1]?.cumulativeBn || 0;
-                  acc.push({
-                    n: i + 1,
-                    label: `Top ${i + 1}`,
-                    cumulativeBn: prev + row.fy2026Bn,
-                  });
-                  return acc;
-                }, [])}
-                margin={{ left: 8, right: 16, top: 8, bottom: 8 }}
-              >
+              <LineChart data={DEPLETION_PATH} margin={{ left: 8, right: 16, top: 8, bottom: 8 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                <XAxis dataKey="label" stroke="#94a3b8" fontSize={11} />
-                <YAxis tickFormatter={(v) => `$${v}B`} stroke="#94a3b8" fontSize={11} />
-                <Tooltip content={<BnTooltip />} />
-                <Area
+                <XAxis dataKey="year" stroke="#94a3b8" fontSize={11} />
+                <YAxis tickFormatter={(v) => `$${v}T`} stroke="#94a3b8" fontSize={11} />
+                <Tooltip content={<TnTooltip />} />
+                <Line
                   type="monotone"
-                  dataKey="cumulativeBn"
-                  name="Cumulative top-N"
-                  stroke="#f59e0b"
-                  fill="#fbbf24"
-                  fillOpacity={0.35}
+                  dataKey="oasdiReservesTn"
+                  name="OASDI reserves"
+                  stroke="#0ea5e9"
+                  strokeWidth={2.5}
+                  dot={{ r: 3 }}
                 />
-              </AreaChart>
+                <Line
+                  type="monotone"
+                  dataKey="hiReservesTn"
+                  name="HI reserves"
+                  stroke="#ef4444"
+                  strokeWidth={2.5}
+                  dot={{ r: 3 }}
+                />
+              </LineChart>
             </ResponsiveContainer>
           </div>
+        </ChartCard>
+      )}
+
+      {panel === "trusts" && trustView === "table" && (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {TRUST_FUNDS.filter((t) => t.id !== "oasdi").map((t) => (
+            <div
+              key={t.id}
+              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                {t.shortLabel}
+              </p>
+              <p className="mt-1 text-lg font-bold text-slate-900">{t.label}</p>
+              <p className="mt-3 text-sm text-slate-600">
+                Reserves ~{fmtTn(t.reservesTn)} · Cost ~{fmtBn(t.annualCostBn)}/yr
+              </p>
+              <p className="mt-2 text-sm font-semibold text-slate-800">
+                {t.depletionYear
+                  ? `Depletion ~${t.depletionYear}`
+                  : "Adequately financed (premiums + general revenue)"}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {panel === "offBalance" && (
+        <ChartCard
+          title="Off-balance vehicles: visibility vs leverage"
+          subtitle="X = budget-visibility score (editorial 0–100). Y = policy leverage. Bubble = stock size ($T)."
+        >
+          <div className="h-96 min-h-[320px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <ScatterChart margin={{ left: 8, right: 16, top: 16, bottom: 8 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <XAxis
+                  type="number"
+                  dataKey="x"
+                  name="Budget visibility"
+                  domain={[0, 100]}
+                  stroke="#94a3b8"
+                  fontSize={11}
+                  label={{ value: "Budget visibility →", position: "insideBottom", offset: -2, fontSize: 11 }}
+                />
+                <YAxis
+                  type="number"
+                  dataKey="y"
+                  name="Policy leverage"
+                  domain={[40, 100]}
+                  stroke="#94a3b8"
+                  fontSize={11}
+                  label={{ value: "Leverage", angle: -90, position: "insideLeft", fontSize: 11 }}
+                />
+                <ZAxis type="number" dataKey="z" range={[80, 400]} />
+                <Tooltip
+                  cursor={{ strokeDasharray: "3 3" }}
+                  content={({ active, payload }) => {
+                    if (!active || !payload?.length) return null;
+                    const d = payload[0]?.payload as (typeof scatterData)[0];
+                    if (!d) return null;
+                    return (
+                      <div className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs shadow-lg">
+                        <p className="font-semibold text-slate-800">{d.label}</p>
+                        <p className="text-slate-600">Stock ~{fmtTn(d.stockTn)}</p>
+                        <p className="text-slate-600">
+                          Visibility {d.budgetVisibility} · Leverage {d.policyLeverage}
+                        </p>
+                      </div>
+                    );
+                  }}
+                />
+                <Scatter name="Vehicles" data={scatterData} fill="#0ea5e9">
+                  {scatterData.map((d) => (
+                    <Cell
+                      key={d.id}
+                      fill={d.lever === "housing-credit" ? "#f59e0b" : "#0ea5e9"}
+                    />
+                  ))}
+                </Scatter>
+              </ScatterChart>
+            </ResponsiveContainer>
+          </div>
+          <p className="mt-2 text-xs text-slate-500">
+            High-leverage / low-visibility quadrant is the plumbing thesis: GSEs and deposit insurance steer
+            more credit than annual appropriation debates admit.
+          </p>
         </ChartCard>
       )}
 
@@ -253,7 +501,7 @@ export function FiscalPlumbingResearchDashboard() {
 
       {panel === "families" && (
         <ChartCard
-          title="Composition by policy family"
+          title="Tax-expenditure composition by policy family"
           subtitle={`${scope === "jct" ? "JCT top 10" : "Treasury headlines"} rolled into families (share of this list, not of all tax law).`}
         >
           <div className="h-80 min-h-[280px] w-full">
@@ -281,77 +529,33 @@ export function FiscalPlumbingResearchDashboard() {
         </ChartCard>
       )}
 
-      {panel === "slope" && (
-        <div className="grid gap-6 lg:grid-cols-2">
-          <ChartCard
-            title="Same idea, different packaging"
-            subtitle="Grouped bars: Treasury FY2026 estimate vs JCT FY2026 for related concepts."
-          >
-            <div className="h-80 min-h-[280px] w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart
-                  data={SCOPE_SLOPE.map((r) => ({
-                    name: r.concept.length > 28 ? `${r.concept.slice(0, 26)}…` : r.concept,
-                    Treasury: r.treasuryBn,
-                    JCT: r.jctBn,
-                  }))}
-                  margin={{ left: 8, right: 16, top: 8, bottom: 8 }}
-                >
-                  <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-                  <XAxis dataKey="name" stroke="#94a3b8" fontSize={10} interval={0} />
-                  <YAxis tickFormatter={(v) => `$${v}B`} stroke="#94a3b8" fontSize={11} />
-                  <Tooltip content={<BnTooltip />} />
-                  <Bar dataKey="Treasury" fill="#0ea5e9" radius={[4, 4, 0, 0]} />
-                  <Bar dataKey="JCT" fill="#f59e0b" radius={[4, 4, 0, 0]} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </ChartCard>
-          <ChartCard title="Why the ESI gap exists" subtitle="Methodology, not a spreadsheet error.">
-            <ul className="space-y-3 text-sm text-slate-700">
-              {SCOPE_SLOPE.map((row) => (
-                <li key={row.concept} className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3">
-                  <p className="font-semibold text-slate-900">{row.concept}</p>
-                  <p className="mt-1 text-slate-600">
-                    Treasury {fmtBn(row.treasuryBn)} → JCT {fmtBn(row.jctBn)}. {row.note}.
-                  </p>
-                </li>
-              ))}
-              <li className="text-xs text-slate-500">
-                Treasury FAQ also lists imputed rent and DC plans that JCT folds into broader retirement /
-                housing concepts — another reason rankings disagree even when both are “official.”
-              </li>
-            </ul>
-          </ChartCard>
-        </div>
-      )}
-
-      {panel === "yardsticks" && (
+      {panel === "cumulative" && (
         <ChartCard
-          title="If tax expenditures were a budget line"
-          subtitle="JCT FY2026 aggregate vs approximate major outlay blocks (scale comparison, not identical accounting)."
+          title="How fast the top-N stack reaches ~⅔ of JCT cost"
+          subtitle="Running sum of JCT top 10 (still not a joint repeal score). Area = cumulative $."
         >
           <div className="h-80 min-h-[280px] w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={yardsticks} layout="vertical" margin={{ left: 8, right: 24, top: 8, bottom: 8 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" horizontal={false} />
-                <XAxis type="number" tickFormatter={(v) => `$${v / 1000}T`} stroke="#94a3b8" fontSize={11} />
-                <YAxis type="category" dataKey="label" width={200} stroke="#94a3b8" fontSize={11} />
+              <AreaChart data={cumulative} margin={{ left: 8, right: 16, top: 8, bottom: 8 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <XAxis dataKey="label" stroke="#94a3b8" fontSize={11} />
+                <YAxis tickFormatter={(v) => `$${v}B`} stroke="#94a3b8" fontSize={11} />
                 <Tooltip content={<BnTooltip />} />
-                <Bar dataKey="bn" name="Approx FY$" radius={[0, 4, 4, 0]}>
-                  {yardsticks.map((y) => (
-                    <Cell key={y.id} fill={y.kind === "tax-code" ? "#f59e0b" : "#64748b"} />
-                  ))}
-                </Bar>
-              </BarChart>
+                <Area
+                  type="monotone"
+                  dataKey="cumulativeBn"
+                  name="Cumulative top-N"
+                  stroke="#f59e0b"
+                  fill="#fbbf24"
+                  fillOpacity={0.35}
+                />
+              </AreaChart>
             </ResponsiveContainer>
           </div>
         </ChartCard>
       )}
 
-      <p className="text-xs text-slate-500">
-        Sources: {SOURCES.join(" · ")}
-      </p>
+      <p className="text-xs text-slate-500">Sources: {SOURCES.join(" · ")}</p>
     </div>
   );
 }

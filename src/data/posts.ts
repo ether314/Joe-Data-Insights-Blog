@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-plumbing-research-2026",
+    slug: "fiscal-plumbing-research-2026",
+    title:
+      "Charted: $2.3T Tax Expenditures, OASDI Empty by 2034, and $7.8T of GSE Credit",
+    excerpt:
+      "The real fiscal levers sit outside the discretionary fight: JCT tax expenditures hit $2.3T in FY2026, OASDI reserves deplete ~2034, and Fannie/Freddie MBS still steers ~$7.8T of housing credit off-budget.",
+    themeId: "fiscal-plumbing",
+    content: `Congress argues about appropriation titles. Markets and households live inside a different ledger. The interactive map above answers the theme’s core question — **which budget lines, trust funds, and off-balance vehicles move real levers?** — by putting three plumbing layers on one screen: the **tax-code shadow budget**, the **trust-fund entitlement spine**, and the **guarantee books** that steer housing, education, and deposit risk without annual floor fights.
+
+The shareable frame is narrow. **JCT projects about $2.3 trillion** of tax expenditures in FY2026 — larger than Social Security outlays on a like-for-like scale comparison. **Combined OASDI reserves** are on a mid-2020s Trustees path toward **depletion around 2034**. **Fannie Mae and Freddie Mac** still back roughly **$7.8 trillion** of mortgage-backed securities. Those three facts are not the same accounting identity. They are the same *political* identity: the fights that actually reprice retirement, health, and housing credit rarely show up as a single “nondefense discretionary” amendment.
+
+## The discretionary mirage
+
+| Lever class | Rough FY scale | Budget visibility | What it actually steers |
+| --- | ---: | --- | --- |
+| All discretionary (approx) | ~$1.7T | High — annual bills | Defense + agency ops |
+| JCT tax expenditures (FY2026) | **$2.3T** | Medium — tax score, not outlay | ESI, pensions, CG rates, credits |
+| SS + Medicare outlays (approx) | ~$2.2T | High on outlay side; trust-fund rules | Payroll taxes, COLAs, HI/SMI design |
+| Net interest (approx) | ~$0.97T | High, hard to cut | Debt service / first claim |
+| GSE MBS outstanding | **~$7.8T stock** | Low — guarantee, not appropriation | Mortgage rates & credit availability |
+| Federal Direct Student Loans | ~$1.6T stock | Medium — credit reform scoring | Tuition finance & borrower relief |
+
+Read the table as a hierarchy of *leverage density*, not a sum. Discretionary is loud because it is annual. Tax expenditures and trust funds are quieter because they are permanent law. Off-balance credit is quietest of all: the stock can dwarf a year’s outlays while the appropriation line stays a footnote.
+
+Pair this map with our [tax-expenditure catalog](/blog/us-tax-expenditure-catalog-2026) for the line-item ranking, and with the [Social Security depletion path](/blog/us-social-security-trust-fund-depletion-path-2026) for the reserve clock. This research post is the *system diagram* those two pieces sit inside.
+
+## Tax expenditures are the shadow budget
+
+JCT’s FY2026 aggregate — **$2.3T**, after **$2.2T** in FY2025 and **$11.7T** over 2025–2029 in the CRFB summary — is the cleanest public meter of “spending through the Code.” The top ten lines alone are about **$1.43T**: pensions and retirement exclusions (**$355B**), preferential capital-gains and dividend rates (**$252B**), the employer-sponsored health exclusion (**$240B**), child/dependent credits (**$128B**), ACA subsidies (**$105B**), then charity, §199A, step-up at death, EITC, and SALT.
+
+Toggle the dashboard’s **Tax-exp rank** and **By family** panels between JCT and Treasury. The ranking is not interchangeable. Treasury’s published FY2026 headlines put the employer medical exclusion at **$296B** — a **$56B packaging gap** versus JCT’s **$240B** ESI line — and surface **imputed rent ($157B)** and **DC employer plans ($156B)** that JCT folds into broader concepts. That is methodology, not a spreadsheet error. Analysts who cite only one office can cherry-pick a preferred giant.
+
+Two caveats travel with every tax-expenditure chart. **Do not sum line items** as the revenue from simultaneous repeal — interactions and behavior matter. And refundable credits blur revenue loss and outlays; the deficit impact is real either way. For industrial-policy credit growth on the tax side, see our [subsidies and industrial-policy series](/blog/fiscal-industrial-policy-research-2026).
+
+## Trust funds are the entitlement spine
+
+Social Security and Medicare are not “discretionary plus a trust-fund sticker.” They are dedicated-revenue machines with legal claim on special-issue Treasuries until reserves hit zero. In the mid-2020s Trustees framing used here (rounded for the map):
+
+- **OASI** — retirement and survivors — depletes around **2033**
+- **OASDI combined** — the headline meter markets quote — around **2034**
+- **Medicare HI (Part A)** — around **2036**
+- **SMI (Parts B+D)** — adequately financed via premiums and general revenue, not a classic exhaustion clock
+- **DI** alone remains solvent far longer; the political clock is OASI/OASDI
+
+The dashboard’s **Trust funds** panel shows an illustrative reserve runoff: OASDI and HI balances declining toward those depletion years. At OASDI exhaustion, continuing payroll taxes still cover a large share of scheduled benefits — historically scored near **four-fifths** in recent Trustees prints — but the ability to redeem accumulated reserves ends. That is a *benefit cut by formula*, not a shutdown metaphor, unless Congress changes law.
+
+The plumbing point is sharper than the scare headline. **Payroll-tax rates, taxable-maximum design, COLA formulas, and HI financing** move more retirement and hospital cash than most appropriation riders. If you only watch the 302(b) allocations, you are watching the wrong valve.
+
+## Off-balance vehicles steer credit without floor fights
+
+Guarantees and federal credit programs are where fiscal capacity becomes *private balance-sheet capacity*. The dashboard’s **Off-balance** scatter plots editorial scores for budget visibility against policy leverage, with bubble size equal to stock:
+
+- **GSE MBS (~$7.8T)** — high leverage, low visibility; mortgage credit availability is a federal guarantee story dressed as a secondary-market utility
+- **FDIC-insured deposits (~$10.5T)** — the systemic backstop stock; almost never debated as “spending,” always present when banks wobble
+- **FHA/VA insurance (~$2.1T)** — housing credit for specific borrower channels
+- **Direct Student Loans (~$1.6T)** — more visible because credit-reform scoring and forgiveness fights put it on front pages
+- **PBGC** — smaller stock, real pension-guarantee optionality when plans fail
+
+Filter to housing credit and the thesis concentrates: **mortgage rates and underwriting standards** are fiscal-plumbing outcomes even when the unified deficit print barely moves. Student-loan forgiveness debates are the rare moment an off-balance stock becomes a partisan appropriation-style fight — which is why they look anomalous next to the quiet GSE book.
+
+## What moves when Congress actually turns a valve
+
+If the question is “what changes household cash and credit next year,” the ranked levers look nothing like a CBO discretionary baseline:
+
+1. **ESI exclusion and ACA subsidy design** — health compensation and Marketplace enrollment
+2. **Retirement exclusions and required distribution rules** — private retirement saving volume
+3. **Capital-gains / dividend rate structure and step-up** — realization timing and estate planning
+4. **OASDI payroll tax / benefit formula** — near-retiree cash flows after depletion risk becomes political
+5. **GSE guarantee fees and FHFA capital rules** — mortgage spreads without a new housing bill
+6. **Net interest path** — the rising first claim that crowds the rest of the unified budget
+
+Every item above can move **hundreds of billions** over a decade without a single popular “spending cut” headline — or can explode into one when the trust-fund date or a forgiveness score hits the news.
+
+## Caveats
+
+- **Tax-expenditure line items must not be summed** as a joint repeal score; packaging differs between JCT and Treasury
+- **Trust-fund depletion years and reserve paths are rounded mid-2020s Trustees framing** for the map — not a live SSA score sheet; see the dedicated SS post for report-vintage detail
+- **Plumbing-layer pie and visibility/leverage scores are editorial composition tools**, useful for exploration, not official CBO tables
+- **Off-balance stocks are public outstanding/exposure round numbers** (GSE MBS, Direct Loans, insured deposits, FHA/VA, PBGC) — definitions differ across FHFA, ED, FDIC, and PBGC releases
+- **Budget yardsticks (SS, Medicaid, discretionary, net interest)** are approximate FY-scale comparisons, not identical accounting concepts
+- **Payroll-tax effects on ESI** are excluded from the income-tax expenditure estimates shown in the rank panel
+
+## Methodology
+
+**JCT aggregates and top-10 FY2026 ranking** follow the Committee for a Responsible Federal Budget summary of JCT estimates (February 2026). **Treasury largest items** are from the Office of Tax Analysis Tax Expenditures FAQ (FY2026 estimates). **Trust-fund depletion years and reserves** are rounded from recent SSA / Medicare Trustees intermediate assumptions for dashboard scale. **Off-balance stocks** use public FHFA / Education Department / FDIC / related release round numbers for outstanding guarantees and loan books. The pie of plumbing layers is an editorial map that juxtaposes annual flows with guarantee stocks — deliberately *not* a single official identity.
+
+**Unlike the tax-expenditure catalog alone, this piece is the system diagram:** tax code + trust funds + off-balance credit as one fiscal-plumbing stack. **Unlike the Social Security depletion post alone, it asks which other valves sit beside OASDI** when households and markets actually reprice.
+
+Related reading: [US tax expenditure catalog 2026](/blog/us-tax-expenditure-catalog-2026) and [Social Security trust-fund depletion path](/blog/us-social-security-trust-fund-depletion-path-2026).`,
+    category: "Global Systems",
+    imageUrl: "/images/global-systems-fiscal-plumbing-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic visualization of fiscal plumbing pipes feeding tax-code channels, trust-fund reservoirs, and off-balance credit valves",
+    publishedAt: "2026-08-20T22:00:00Z",
+    featured: true,
+    visualization: "fiscal-plumbing-research-2026",
+    layout: "default",
+  },
+  {
     id: "commercial-aircraft-final-assembly-geography-2026",
     slug: "commercial-aircraft-final-assembly-geography-2026",
     title:

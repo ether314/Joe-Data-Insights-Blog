@@ -1,6 +1,6 @@
 /**
  * QA: fiscal-plumbing-research-2026
- * // viz-types: ranked lollipop bars, cumulative area, family bars, treasury↔JCT grouped bars, budget yardstick bars | layout: canvas
+ * // viz-types: plumbing pie, trust depletion dual-line, off-balance scatter, ranked lollipop, family bars, cumulative area | layout: canvas
  */
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -11,15 +11,20 @@ import { auditVizInteractions } from "./lib/viz-interaction-qa.mjs";
 import {
   HEADLINE,
   JCT_TOP10,
+  OFF_BALANCE,
   TREASURY_HEADLINES,
+  TRUST_FUNDS,
   rankedJctTop10,
 } from "../src/data/fiscal-plumbing-research-2026-data.ts";
 
 assert.equal(HEADLINE.jctFy2026Tn, 2.3);
 assert.equal(HEADLINE.treasuryEsiBn, 296);
 assert.equal(HEADLINE.jctEsiBn, 240);
+assert.equal(HEADLINE.oasdiDepletionYear, 2034);
 assert.equal(JCT_TOP10.length, 10);
 assert.equal(TREASURY_HEADLINES.length, 4);
+assert.ok(TRUST_FUNDS.length >= 4);
+assert.ok(OFF_BALANCE.length >= 4);
 const ranked = rankedJctTop10();
 assert.equal(ranked[0].shortLabel, "Pensions / retirement");
 assert.ok(ranked[0].fy2026Bn >= ranked[1].fy2026Bn);
@@ -27,8 +32,8 @@ assert.ok(ranked[0].fy2026Bn >= ranked[1].fy2026Bn);
 const root = process.cwd();
 const slug = "fiscal-plumbing-research-2026";
 const markers = [
-  "Fiscal plumbing — tax expenditures as off-budget spend",
-  "JCT largest tax expenditures",
+  "Fiscal plumbing — trust funds · tax code · off-balance credit",
+  "Where the real annual levers sit",
 ];
 
 async function main() {
@@ -37,7 +42,7 @@ async function main() {
     console.error("✗ Missing out/ — run npm run build first");
     process.exit(1);
   }
-  const port = Number(process.env.SMOKE_PORT || 4191);
+  const port = Number(process.env.SMOKE_PORT || 4188);
   const server = await startStaticServer(outDir, port);
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -50,14 +55,21 @@ async function main() {
       await page.getByText(m, { exact: false }).first().waitFor({ timeout: 20000 });
       console.log(`✓ ${m}`);
     }
-    for (const label of ["Top-N build-up", "By family", "Treasury ↔ JCT", "Budget scale", "Ranked cost"]) {
+    for (const label of [
+      "Trust funds",
+      "Off-balance",
+      "Tax-exp rank",
+      "By family",
+      "Top-N build-up",
+      "Plumbing map",
+    ]) {
       const btn = page.getByRole("button", { name: label });
       if (await btn.count()) {
         await btn.first().click();
         await page.waitForTimeout(400);
       }
     }
-    await page.getByRole("button", { name: "Ranked cost" }).first().click();
+    await page.getByRole("button", { name: "Tax-exp rank" }).first().click();
     await page.getByRole("button", { name: "Treasury headlines" }).first().click();
     await page.getByText("Treasury published FY2026 headline items", { exact: false }).first().waitFor({
       timeout: 10000,
