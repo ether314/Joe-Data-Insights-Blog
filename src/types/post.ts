@@ -67,7 +67,8 @@ export interface Post {
     | "chokepoint-commodities-research-2026"
     | "adaptation-economics-research-2026"
     | "energy-systems-research-2026"
-    | "consumer-finance-markets-research-2026";
+    | "consumer-finance-markets-research-2026"
+    | "ai-capex-intensity-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

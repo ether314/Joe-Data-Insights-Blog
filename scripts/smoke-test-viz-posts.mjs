@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-capex-intensity-update-2026",
+    marker: "Vintage delta — Jul research",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "consumer-finance-markets-research-2026",
     marker: "Consumer finance & household balance sheets — BEA · NY Fed · Z.1",
     forbidden: "Loading interactive charts",

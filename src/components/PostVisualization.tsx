@@ -617,6 +617,21 @@ const ConsumerFinanceMarketsResearchDashboard = dynamic(
   },
 );
 
+const AiCapexIntensityUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiCapexIntensityUpdateDashboard").then(
+      (m) => m.AiCapexIntensityUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -768,6 +783,10 @@ export function PostVisualization({
 
   if (type === "consumer-finance-markets-research-2026") {
     return <ConsumerFinanceMarketsResearchDashboard />;
+  }
+
+  if (type === "ai-capex-intensity-update-2026") {
+    return <AiCapexIntensityUpdateDashboard />;
   }
 
   return null;

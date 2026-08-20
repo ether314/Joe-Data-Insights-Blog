@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-intensity-update-2026",
+    slug: "ai-capex-intensity-update-2026",
+    title:
+      "Update: Hyperscaler Capex Intensity Jumps Another +2.3 pp — Big-4 Now at 24%",
+    excerpt:
+      "Versus our July research print, Microsoft FY26 hits 26.8% of revenue into capex, Meta H1 annualized prints 36.5%, and Oracle’s FY25 restates to 39.4%. Weighted intensity rises +2.3 percentage points while Amazon’s FCF cushion thins to 2.4%.",
+    content: `## What changed since the July research vintage
+
+In late July we published the theme’s baseline: [five hyperscalers pushing 18–37% of revenue into capex](/blog/ai-capex-intensity-research-2026), with Meta and Oracle already inside the dot-com telecom peak band. That post answered the stock question — *what fraction of sales is being reinvested?* This update answers the flow question capital markets actually trade on: **what moved in the newest official vintage**, and does the free-cash-flow cushion still cover the step-up?
+
+Three filing events force a refresh. **Microsoft** closed FY26 (June year-end), so the prior FY25 print of 22.9% is no longer the live full-year ratio. **Amazon, Alphabet, and Meta** reported H1 2026, which we annualize for a run-rate comparison against FY25. **Oracle** restated FY25 from the estimated 37.0% we carried in July to a disclosed **39.4%**. The dashboard above is built as a vintage delta — prior bars, new bars, percentage-point changes, and an intensity×FCF scatter that overlays both vintages.
+
+## The headline table: prior print vs Aug 2026 update
+
+| Company | Prior vintage | New vintage | Intensity Δ | New FCF margin | FCF Δ |
+|---------|--------------:|------------:|------------:|---------------:|------:|
+| Microsoft | FY25 **22.9%** | FY26 **26.8%** | **+3.9 pp** | 22.1% | −3.3 pp |
+| Amazon | FY25 **18.4%** | H1’26 ann. **21.2%** | **+2.8 pp** | 2.4% | −0.7 pp |
+| Alphabet | FY25 **22.7%** | H1’26 ann. **25.4%** | **+2.7 pp** | 12.6% | −2.2 pp |
+| Meta | FY25 **34.7%** | H1’26 ann. **36.5%** | **+1.8 pp** | 16.1% | −2.1 pp |
+| Oracle | FY25 est. **37.0%** | FY25 restated **39.4%** | **+2.4 pp** | 7.2% | −1.7 pp |
+
+Revenue-weighted across the big four (ex-Oracle), intensity moves from **21.8% → 24.1%** — a **+2.3 percentage-point** vintage delta. That is not a rounding error. It is another full step from the pre-AI cloud norm (~11%) deeper into the historical **wireline telecom** band (~20%) and toward the stretched industrial range where foundries and peak-cycle carriers live.
+
+## Microsoft’s FY26 is the cleanest delta in the set
+
+Calendar-year names still require annualization. Microsoft does not. FY26 capex of **$88.4B** on **$329.8B** of revenue prints **26.8%** intensity — **+3.9 pp** versus FY25 and the largest single-name step-up in the update. Free-cash-flow margin compresses from 25.4% to **22.1%**, still the healthiest cushion among the five, but the direction is unambiguous: Azure and AI capacity are taking a larger bite of each revenue dollar even as the cash engine remains intact.
+
+For equity and credit desks that treat Microsoft as the “affordable” AI builder, the update reframes the debate. Affordability is no longer “low teens intensity with mid-20s FCF.” It is **high-20s intensity with low-20s FCF** — still survivable, no longer the old software multiple story. Pair the ratio with the absolute stack in the [AI capex spend map](/blog/ai-capex-spend-research-2026): the same firm that looks resilient on intensity still contributes a rising share of the industry dollar total.
+
+## H1 annualization: Amazon, Alphabet, Meta keep climbing
+
+Amazon’s H1×2 run-rate intensity of **21.2%** (+2.8 pp vs FY25) coincides with an FCF margin of only **2.4%**. That is the fragile edge of the cohort. Retail revenue still dilutes the percentage, so the ratio understates how AI-heavy AWS’s own P&L has become — but it also means there is almost no group-level cash buffer if utilization or pricing slips. Absolute annualized capex near **$162B** keeps Amazon the largest cash absorber in the set.
+
+Alphabet’s annualized **25.4%** (+2.7 pp) pushes the search-and-cloud complex firmly into elevated-reinvestment territory, with FCF margin sliding to **12.6%**. Meta’s **36.5%** (+1.8 pp) remains the advertising-funded extreme: still inside the 30–40% telecom-peak band, still printing mid-teens FCF, still asking equity holders to underwrite a foundry-like reinvestment rate on a consumer-platform revenue base.
+
+Toggle the dashboard’s metric control from intensity Δ to FCF margin Δ and the pattern is uniform: **every name’s cushion thins** as intensity rises. The scatter panel (both vintages) shows the cohort drifting right and down — more reinvestment, less residual cash per dollar of sales.
+
+## Oracle’s restatement matters more than the guide
+
+July’s research post flagged Oracle FY25 as **estimated**. The restated 10-K intensity of **39.4%** (+2.4 pp versus that estimate) is a methodology correction, not a new build wave — but it relocates Oracle from “high-30s estimated” to “high-30s disclosed,” with FCF margin at **7.2%**. Early FY26 guide language implies intensity can print near **~41%** on the path panel’s H1’26* marker. At that level Oracle is no longer a software peer with a temporary spike; it is a capacity land-grab priced like industrial infrastructure, funded increasingly through the credit channel documented in our [AI financing](/blog/ai-financing-research-2026) research.
+
+Restatements also discipline the vintage narrative. When the prior post’s estimate was low, every subsequent “surge” headline risks double-counting. We separate **restatement deltas** (Oracle) from **true period deltas** (Microsoft FY26; H1 annualizations) so markets can tell measurement from momentum.
+
+## Sustainability: the hinge is still FCF, not the ratio alone
+
+A firm can run 25%+ intensity for years if operating cash flow covers capex, buybacks, dividends, and debt service. The update’s scatter is the sustainability dashboard: prior points sit semi-transparent; new points sit opaque. The message is directional, not apocalyptic:
+
+1. **Microsoft** remains the textbook high-intensity, still-cash-rich case — but the gap between intensity and FCF has narrowed.
+2. **Meta** funds mid-30s intensity with mid-teens FCF — uncomfortable versus its own history, survivable versus most industrials.
+3. **Alphabet** is compressing toward the mid-teens FCF / mid-20s intensity quadrant where utilization and cloud pricing have to do more work.
+4. **Amazon** is the stress case: intensity into the low-20s with FCF near **2%**.
+5. **Oracle** pairs nearly 40% intensity with single-digit FCF — classic build-now, harvest-later posture.
+
+Sustainability is therefore not a single threshold. It is whether **cash conversion survives the reinvestment rate** long enough for utilization, power delivery, and model pricing to amortize the PP&E wave. Intensity can stay “affordable” for two years and still destroy equity value if incremental ROIC disappoints.
+
+## Why another +2 pp still matters for capital markets
+
+Percentage points feel small next to trillion-dollar spend headlines. They are not small on multiples. Moving the big-four weighted intensity from ~22% to ~24% is the difference between “elevated cloud” and “telecom-steady-state” in many sell-side frameworks. Credit desks funding a rising share of the build (see the financing post) care because leverage capacity is a function of FCF, and FCF is intensity’s residual. Equity desks care because software multiples do not survive industrial capital intensity without industrial utilization stories.
+
+The path chart — FY24 → FY25 → H1’26* — shows the climb is **not mean-reverting yet**. Every active name is higher than FY24. The pre-AI cloud reference line at 11% is historical color, not a forecast anchor. The telecom ~20% line is now a **floor** for the weighted cohort, not a ceiling.
+
+## Caveats and methodology
+
+1. **Gross PP&E ≠ AI-only spend.** Filings do not cleanly split accelerators from warehouses, offices, or network gear. Amazon’s ratio mixes retail fulfillment with AWS; treat company-level intensity as an upper-bound proxy for “AI intensity.”
+2. **H1×2 annualization is not a forecast.** Front-loaded GPU deliveries or seasonal cloud revenue can bias the run-rate. We label Amazon/Alphabet/Meta new vintages as **annualized**, not disclosed full-year.
+3. **Fiscal calendars differ.** Microsoft’s FY26 ends June 2026; Oracle’s FY25 ends May 2025; calendar names use December fiscal years. Trajectory labels align periods, not months.
+4. **Oracle’s +2.4 pp** versus the July post is partly a **restatement of the prior estimate**, not solely new spending. True period momentum for Oracle is better read from the FY26 guide marker (~41%) than from the FY25 restatement alone.
+5. **Lease accounting and partner capacity** can move compute off the PP&E line. Intensity understates committed compute where operating leases dominate.
+6. **FCF margin** here is (operating cash flow − capex) ÷ revenue. Definitions that add back SBC or exclude working-capital swings will differ.
+
+Primary sources: Microsoft FY26 Form 10-K; Amazon, Alphabet, and Meta H1 2026 Forms 10-Q; Oracle FY25 Form 10-K (restated figures); prior theme baseline in [capex intensity research](/blog/ai-capex-intensity-research-2026). Sector reference bands (telecom ~20%, pre-AI cloud ~11%) carry forward from FCC ARMIS / TIA historical aggregates used in that post.
+
+## What to watch into year-end 2026
+
+Three coincident signals will tell you whether the vintage delta stabilizes or accelerates: (1) **full-year 2026 intensity** for Amazon, Alphabet, and Meta versus these H1 annualizations — a print below the run-rate would be the first mean-reversion signal; (2) **FCF margins**, especially Amazon and Oracle — if intensity holds above 20% while FCF stops compressing, markets will treat industrial-level reinvestment as a new steady state; (3) **guidance language** that converts “multi-year build” into explicit intensity ceilings. Until then, the live number is not July’s 21.8% weighted print. It is **24.1%** — and the slope is still up.`,
+    category: "Capital Markets",
+    themeId: "ai-capex-intensity",
+    imageUrl: "/images/capital-markets-ai-capex-intensity-update-2026-hero.png",
+    imageAlt:
+      "Dark navy capital-markets chart of rising hyperscaler capex-to-revenue intensity ratios with vintage-delta arrows",
+    publishedAt: "2026-08-20T18:00:00Z",
+    featured: true,
+    visualization: "ai-capex-intensity-update-2026",
+    layout: "default",
+  },
+  {
     id: "consumer-finance-markets-research-2026",
     slug: "consumer-finance-markets-research-2026",
     title:
