@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "heavy-industrial-capacity-research-2026",
+    slug: "heavy-industrial-capacity-research-2026",
+    title:
+      "Charted: China Builds 55% of Merchant Ships — but Only 6 Shops Forge Nuclear-Class Heavy Metal",
+    excerpt:
+      "Who still has the yards, dry docks, and ultra-heavy forges to build physical capital stock? China delivers 54.6% of merchant GT and ~62% of tracked VLCC docks; Renton alone finishes 31.7% of large jets; RPV-class forging sits in a six-shop club with zero US members.",
+    themeId: "heavy-industrial-capacity",
+    content: `Software scales on racks. Physical capital stock still scales on **yards, dry docks, final-assembly lines, and ultra-heavy forges**. The core industrial question for 2026 is not “who announced a factory,” but **who can still cut, weld, float, and forge the things that take decades to replace**: merchant hulls, large jets, reactor-class pressure vessels, and the dock capacity that keeps those fleets alive.
+
+This research cross-walks five builder bases that rarely share a slide: **merchant shipbuilding GT deliveries**, **VLCC-capable dry docks**, **large-jet final-assembly sites**, **ultra-heavy nuclear-class forges**, and **crude steel**. Companion deep-dives already map the ship and aircraft slices in detail — [global shipbuilding GT delivery concentration](/blog/global-shipbuilding-gt-delivery-concentration-2026) and [commercial aircraft final-assembly geography](/blog/commercial-aircraft-final-assembly-geography-2026). Here the point is the **cross-sector pattern**: East Asia dominates floatable steel; North America still dominates large-jet handovers; ultra-heavy forging is a six-shop oligopoly; and **owning demand is not the same as owning the builder base**.
+
+## The cross-sector scoreboard
+
+| Builder base | Primary metric | Leader | Leader share | Binding geography |
+| --- | --- | --- | ---: | --- |
+| Merchant shipbuilding | 2024 GT deliveries (UNCTAD) | China | **54.6%** | China + Korea + Japan = **95.2%** |
+| VLCC-capable dry docks | Tracked large-dock inventory | China | **~62%** | Korea ~18%, Japan ~8% |
+| Large-jet FALs | 2025 attributed handovers | Renton (Boeing) | **31.7%** | Top 3 sites **66%**; US campuses **54.5%** |
+| Ultra-heavy forges | RPV-class shop count | Japan / China (tied on shops) | **2 of 6 each** | Only **6** tracked shops worldwide |
+| Crude steel | 2024 production (World Steel) | China | **53.8%** | Broad regional tail after China |
+
+Toggle the dashboard’s **Sector shares** panel across those five lenses. The leader **changes**. That is the whole thesis: “industrial capacity” is not one HHI. A country can own steel and shipyards and still lack an RPV-class forge — or host half of jet handovers while building almost no merchant GT.
+
+## Shipyards: the Asia trio is the world
+
+UNCTAD’s Review of Maritime Transport 2025 puts China at **54.6%** of 2024 merchant GT deliveries, Korea at **28.0%**, Japan at **12.6%**. The Asia trio clears **95.2%**. Europe’s aggregate merchant print is under **1%**; the United States is a rounding error at **~0.04%**. That is not a cyclical soft patch. It is a multi-decade migration of the yard map, shown in the dashboard’s **Ship share path** from Japan’s 1980s peak-era dominance through Korea’s ascent to China’s >50% milestone in 2023–24.
+
+Dry docks tell the same story in concrete. On a tracked inventory of **VLCC-capable** docks, China holds roughly **three-fifths**, Korea nearly a fifth, Japan high single digits. Repair and naval-specialist yards in Europe and the US still matter for cruise ships, carriers, and submarines — Newport News, Fincantieri, Meyer — but they are **not** the merchant float machine. Sort the **Yard / dock map** by large dry docks and the merchant complexes in China and Korea sit at the top of the relative capacity index.
+
+## Aircraft FALs: a different continent wins
+
+Open **Aircraft FALs**. The same physical-capital question applied to large jets flips the map. Attributed 2025 handovers concentrate on a handful of campuses: **Renton 31.7%**, Hamburg 19.0%, Toulouse 15.2%. The **top three sites hold 66%**; **US final-assembly campuses still clear 54.5%** of the large-jet pool even though Airbus spreads A320 family volume across Europe, China, and Alabama.
+
+That is why industrial-policy talk that treats “shipyards and jet factories” as interchangeable East Asian stories is wrong. Merchant GT is an East Asian production network. Large-jet handovers remain a **US + Northwest Europe** hangar story, with Tianjin and Shanghai as growing but still minority nodes. Our geography companion post walks the site ladder in more depth; the research takeaway here is simpler: **builder power in aviation is site-concentrated and Atlantic-heavy**, not a mirror of UNCTAD’s ship table.
+
+## Build vs own: Greece floats fleets China welds
+
+Switch to **Build vs own**. Beneficial ownership of the merchant fleet and the geography of deliveries diverge sharply. Greece owns on the order of **16%** of world tonnage while building almost none of it. China builds **~55%** of new GT while owning closer to **14%**. Korea builds far more than it owns. The United States owns a modest fleet share and builds essentially none of the commercial merchant pipeline.
+
+Aviation and steel land closer to the 1:1 line — US FALs and US airline demand are not as mismatched as US shipyards and US cargo ownership — but the shipping scatter is the cleanest illustration of the theme’s meta-question. **Capital stock can be owned in Piraeus and fabricated in Jiangsu.** Policy that only tracks fleet flags or airline registries will misread where the scarce welding capacity sits.
+
+## Ultra-heavy forges: six shops, zero US RPV-class members
+
+The **Heavy forges** panel is the scarcest layer. Reactor-pressure-vessel-class and comparable ultra-heavy components still depend on a tiny set of shops: Japan Steel Works (Muroran), Doosan Enerbility (Changwon), China First Heavy Industries, Shanghai Electric’s heavy forge complex, Framatome / Le Creusot, and Sheffield Forgemasters as a heavy-vessel peer. Equal-weight across that tracked six-shop set, Japan and China each take about a third of shop count; Korea and Europe split the rest. **North America has no shop in this RPV-class inventory.**
+
+That matters for nuclear new-build timelines, naval propulsion, and any industrial strategy that assumes “steel capacity” implies “forging capacity.” Crude steel at **53.8%** Chinese production share is abundant relative to ultra-heavy forging. The bottleneck is **ingot size, heat-treatment bays, and certified nuclear-quality process control**, not blast furnaces.
+
+## What the sector toggles reveal about risk
+
+Put the five sector bars side by side in your head:
+
+1. **Ship / dock shock** hits East Asia first — a Chinese yard slowdown or Korean LNG-carrier slot squeeze moves global floatable capital stock immediately.
+2. **Jet shock** hits Renton, Hamburg, and Toulouse — one campus can be a third of world large-jet handovers.
+3. **Forge shock** hits a six-address phone book — lead times measured in years, not quarters.
+4. **Steel shock** is broader but still China-weighted; the rest-of-Asia and Europe/NA tails are thicker than in shipbuilding.
+5. **Own-vs-build mismatch** means financial claims on fleets and aircraft can be geographically far from the welders and riveters that replace them.
+
+Fiscal and industrial-policy packages that subsidize “manufacturing” without distinguishing these layers will buy the wrong bottleneck. Pair this map with [fiscal-industrial policy](/blog/fiscal-industrial-policy-update-2026q3) when the question is which incentives actually touch yards and FALs rather than generic plant investment.
+
+## Who is exposed — and who still has optionality
+
+**Exposed:** shippers and energy traders who assume dry-dock and newbuild slots are fungible outside China/Korea; airlines and lessors whose delivery slots cluster on one FAL campus; nuclear and naval programs that treat RPV-class forging as a competitive market; US merchant-marine ambitions that confront a **0.04%** commercial GT delivery share.
+
+**Relative optionality:** Airbus’s multi-continent FAL network as a hedge inside aviation; Korea’s high-value LNG and complex hull niches inside a China-led GT world; Europe’s cruise/naval specialists and Le Creusot forge as narrow but real capability islands; Japan’s remaining yard and JSW forge footprint as a quality-and-certification hedge even as GT share fades.
+
+**What would rewrite the map:** a sustained US or European merchant newbuild renaissance large enough to move GT shares out of the noise; a COMAC ramp that lifts Shanghai well above ~1% of large-jet handovers; a new Western RPV-class forge or certified expansion that breaks the six-shop club; or a Chinese dock/yard consolidation shock that forces orderbooks toward Korea and Japan at scale.
+
+## Caveats and methodology
+
+- **Sectors are not additive.** Do not average ship GT share with FAL share into a fake “overall industrial capacity” index.
+- **Dry-dock and forge counts are tracked inventories**, not a complete global registry. Coverage favors large, disclosed complexes.
+- **Yard capacity index is relative** within the dashboard’s sample — not absolute GT or compensated CGT.
+- **Aircraft site shares for multi-FAL A320 volume are line-estimated** in the companion geography post; Renton’s lead is more robust than ranks 2–5.
+- **Aviation “own” shares** on the scatter are demand/fleet proxies, not UNCTAD-style beneficial-ownership statistics.
+- **Ultra-heavy forge list is capability-class**, not revenue-weighted; equal-weight shop shares overstate tiny peers and understate JSW/Doosan throughput.
+- **Steel production ≠ heavy fabrication.** Plate, sections, and forgings are different industrial systems.
+- **Naval and cruise yards** are strategically important but deliberately separated from the merchant GT leaderboard.
+
+## The shareable takeaway
+
+Physical capital stock is still built where the **yards, docks, hangars, and forges** are — and those maps disagree. **China delivers 54.6% of merchant GT** and anchors ~**62%** of tracked VLCC-capable docks; the Asia ship trio clears **95%**. **Renton alone finishes 31.7%** of large-jet handovers; US FALs still hold a majority. **Only six shops** sit in the tracked nuclear-class forge set, **none in the United States**. Owning fleets or airlines does not own the welder. Watch **sector-specific builder shares**, not a single “manufacturing” headline, to see who can still expand the physical capital stock.
+`,
+    category: "Industry",
+    imageUrl: "/images/industry-heavy-industrial-capacity-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic shipyard dry dock with gantry cranes and glowing concentration bars — heavy industrial capacity builder base",
+    publishedAt: "2026-08-20T23:45:00Z",
+    featured: true,
+    visualization: "heavy-industrial-capacity-research-2026",
+    layout: "default",
+  },
+  {
     id: "demographic-cash-flows-update-2026q3",
     slug: "demographic-cash-flows-update-2026q3",
     title:

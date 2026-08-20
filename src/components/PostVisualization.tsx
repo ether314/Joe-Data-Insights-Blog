@@ -1052,6 +1052,21 @@ const DemographicCashFlowsUpdate2026q3Dashboard = dynamic(
   },
 );
 
+const HeavyIndustrialCapacityResearch2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/HeavyIndustrialCapacityResearch2026Dashboard"
+    ).then((m) => m.HeavyIndustrialCapacityResearch2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1319,6 +1334,10 @@ export function PostVisualization({
 
   if (type === "demographic-cash-flows-update-2026q3") {
     return <DemographicCashFlowsUpdate2026q3Dashboard />;
+  }
+
+  if (type === "heavy-industrial-capacity-research-2026") {
+    return <HeavyIndustrialCapacityResearch2026Dashboard />;
   }
 
   return null;

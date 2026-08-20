@@ -96,7 +96,8 @@ export interface Post {
     | "industrial-robotics-update-2026q3"
     | "consumer-finance-markets-update-2026q3"
     | "chokepoint-commodities-update-2026q3"
-    | "demographic-cash-flows-update-2026q3";
+    | "demographic-cash-flows-update-2026q3"
+    | "heavy-industrial-capacity-research-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

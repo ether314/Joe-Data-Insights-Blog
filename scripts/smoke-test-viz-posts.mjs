@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "heavy-industrial-capacity-research-2026",
+    marker: "Yards, dry docks, and the forge base",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "demographic-cash-flows-update-2026q3",
     marker: "Q3 vintage delta — Aug Banxico 2025 update → Banxico June 2026",
     forbidden: "Loading interactive charts",
