@@ -70,7 +70,8 @@ export interface Post {
     | "consumer-finance-markets-research-2026"
     | "ai-capex-intensity-update-2026"
     | "ai-supply-chain-update-2026"
-    | "ai-power-grid-concentration-2026";
+    | "ai-power-grid-concentration-2026"
+    | "bank-commercial-credit-research-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

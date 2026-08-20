@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "bank-commercial-credit-research-2026",
+    slug: "bank-commercial-credit-research-2026",
+    title:
+      "Charted: CRE Delinquency at 1.56% — But Charge-Offs Only 0.17%; CMBS Office Hits 11.3%",
+    excerpt:
+      "Fed SA data put CRE past-dues near 1.56% against 0.17% charge-offs (~9× stock vs loss). Cards still own realized losses at 3.84%. FDIC mid-size banks sit at ~289% CRE/capital; CMBS office delinquencies print 11.3%.",
+    content: `Bank credit stress is not one number. It is a **map**: where loans are past due, where they are written off, which bank cohorts hold the densest CRE books, and how securitized property markets diverge from Call Report averages. As of **2026 Q1**, Federal Reserve seasonally adjusted series put **commercial real estate delinquency at 1.56%** while **CRE net charge-offs are only 0.17%** — roughly a **9×** gap between past-due stock and realized annualized losses. **Credit-card charge-offs** still dominate the loss ledger at **3.84%**. Outside the bank book, **CMBS office delinquencies** sit near **11.3%** (December 2025), with multifamily up sharply year over year. Mid-size banks hold the densest CRE concentration — about **289%** of tier-1 capital plus allowances in the $10–100B band — even as **median CRE PDNA** remains highest at banks above **$100B**.
+
+This is the theme roll-up for bank and commercial credit. It sits above our product-level charts on [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026) (realized losses by category) and [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026) (the top-100 vs smaller-bank past-due split). Those posts zoom; this one answers the portfolio question markets actually ask: **where is stress showing up?**
+
+## The stress scoreboard
+
+| Signal | Latest | What it tells you |
+| --- | ---: | --- |
+| CRE delinquency (Fed SA) | **1.56%** | Past-due stock elevated vs pre-hike |
+| CRE net charge-off | **0.17%** | Realized CRE losses still small |
+| CRE delinq / charge-off multiple | **~9.2×** | Stress mostly on the PDNA line |
+| Credit-card charge-off | **3.84%** | Consumer still owns the loss ledger |
+| C&I charge-off | **0.59%** | Business credit mid-cycle, not crisis |
+| Total loan charge-off | **0.56%** | Industry losses above pre-COVID, not GFC |
+| FDIC CRE PDNA (industry, YE25) | **~1.45%** | Call Report–style past-due + nonaccrual |
+| >$100B bank median CRE PDNA | **~1.67%** | Large banks still the hot cohort |
+| $10–100B CRE / capital median | **~289%** | Dense books, calmer PDNA than megas |
+| CMBS office delinquency | **11.31%** | Securitized office remains the outlier |
+| CMBS multifamily delinquency | **6.64%** | Fastest major YoY climb |
+| CRE loan growth (2025) | **+3.1%** | Books still growing, ADC shrinking |
+| ADC loans YoY (2025) | **−5.8%** | Construction exposure de-risking |
+
+Read the table top-to-bottom and the contradiction appears: **CRE looks stressed on delinquency and CMBS**, **calm on bank charge-offs**, and **uneven by bank size and property type**. Cards look stressed on **both** delinquency and charge-offs. That is the 2026 regime.
+
+## Past-due stock vs realized losses
+
+The dashboard’s **Stress map** panel plots every major loan category on two axes: **delinquency** (horizontal) and **net charge-off** (vertical). Cards sit in the upper-right: high past-dues **and** high write-offs. CRE sits mid-right and low: meaningful past-dues with tiny realized losses. Residential real estate is the extreme lag case — near **1.9%** delinquent with **~0%** charge-offs — because home equity and forbearance mechanics keep losses off the income statement even when some loans are late.
+
+The companion **multiple** chart divides delinquency by charge-off. CRE’s ~**9×** reading means the industry is carrying roughly nine dollars of past-due CRE for every dollar of annualized net charge-off. Cards print below **1×** because charge-offs are large relative to the delinquent stock — revolving credit turns past-due into loss quickly. Markets that watch only CRE headlines miss the income-statement color: **consumer credit is still where banks realize the losses**.
+
+For the category-level loss path, see the dedicated [charge-offs dashboard](/blog/bank-loan-chargeoffs-2026). The point here is comparative geography, not a second copy of the loss ledger.
+
+## CRE’s double life: bank books vs CMBS
+
+Bank Call Report CRE is a blended bag — construction and land development (ADC), multifamily, and nonfarm nonresidential (which includes a large office share but also industrial, retail, and owner-occupied). That blend **dilutes** office stress relative to pure office CMBS. FDIC’s 2026 Risk Review notes that after ten quarters of rising CRE PDNA, the industry ratio eased mid-2025 before ticking up to about **1.45%** by year-end — still low in absolute terms, higher than the soft 2021 trough.
+
+CMBS tells a louder property-type story. **Office** delinquencies near **11.3%** remain above the prior-cycle peak. **Multifamily** jumped from roughly **4.6%** to **6.6%** in a year — the sharpest major-type climb. Overall CMBS delinquency near **7.3%** sits well above the bank CRE PDNA print. That gap is not a data error. It is selection and structure: CMBS pools concentrate leveraged, non-recourse, often metro CBD collateral; bank books mix owner-occupied and relationship lending; and **loan modifications** — $11.6 billion of modified CRE in 2025 per FDIC framing, mostly performing — pull stress off the PDNA line at the largest banks.
+
+Toggle the dashboard to **CMBS** to see office as the persistent outlier and multifamily as the 2025 acceleration. Toggle to **CRE path** to see bank CRE delinquency roughly double from the 2021 trough while CRE charge-offs never leave the low teens of a percent.
+
+## Size split: who holds the stress, who holds the density
+
+The **Bank size** panel restates a finding that still surprises retail narratives: **median CRE PDNA is highest at banks above $100B**, not at community banks. The large-bank median peaked near **1.92%** in 2024 and eased to about **1.67%** in 2025 — still well above the $1–10B and sub-$1B cohorts. Nonfarm nonresidential and multifamily drove that large-bank print.
+
+Concentration is the other axis. Industry median CRE loans as a share of tier-1 capital plus the allowance sit near **200%**. Banks with **$1–10B** and **$10–100B** assets print denser books — roughly **311%** and **289%** respectively. The megabanks hold more of the **dollar** past-dues; the mid-size cohort holds more CRE **per dollar of capital**. That is why a single “regional bank CRE crisis” slogan fails: it collapses two different risk geometries into one headline.
+
+Our earlier [CRE size-split](/blog/cre-bank-delinquency-size-split-2026) post documents the top-100 versus smaller-bank delinquency gap in Fed charge-off release detail. This roll-up adds FDIC concentration and CMBS property-type color so the size story is not read in isolation.
+
+## Supply still tight even as losses stay small
+
+The **SLOOS** panel tracks the net percentage of banks reporting tighter standards for C&I and CRE. Peak hiking-cycle tightening has faded from 2023 highs, but CRE still shows net tightening near the low teens of percentage points into early 2026, running firmer than C&I. Credit supply remains **selective**: banks grew CRE books **3.1%** in 2025 while **ADC** balances fell **5.8%** — de-risking the historically lossy construction sleeve even as income-producing CRE expanded.
+
+That combination — rising or sticky past-dues, low charge-offs, still-tight standards, shrinking ADC — is a **managed stress** regime, not a 2009-style CRE wipeout. It can persist for years if office values stabilize slowly and modifications keep working. It can break if refinance walls meet another rate spike or if CMBS liquidations force mark-to-market comps that reprice bank collateral.
+
+## What “stress” means for markets in 2026
+
+Three practical readings follow from the map:
+
+1. **Income-statement stress** is still **consumer-led**. Card charge-offs near **3.8%** dwarf CRE’s **0.17%**. Provision expense and CET1 debates that ignore consumer credit are looking at the wrong fire.
+2. **Balance-sheet CRE stress** is **real but localized**: large-bank PDNA, office CMBS, and mid-bank concentration. Aggregate CRE charge-offs understate the office problem and overstate the industrial/owner-occupied calm.
+3. **Forward credit supply** is still defensive. SLOOS tightening has eased from the peak but has not flipped to broad easing on CRE. Loan growth without ADC growth is not a green light for speculative development.
+
+Pair this map with household-side color in our [consumer finance markets](/blog/consumer-finance-markets-research-2026) roll-up — card 90+ day transitions near **7.2%** versus mortgage calm near **1.1%** — and the two-speed credit economy is visible from both the bank and the borrower ledger.
+
+## Caveats and methodology
+
+1. **Fed SA series vs FDIC PDNA.** The Fed charge-off/delinquency release (all banks, seasonally adjusted) is not identical to FDIC past-due-and-nonaccrual ratios from Call Reports. Levels can differ; direction usually rhymes. We label both and do not force them onto one axis.
+2. **CRE is a blend.** Construction, multifamily, and nonfarm nonresidential move differently. Aggregate CRE delinquency **understates** office stress and **overstates** healthier industrial and many owner-occupied books.
+3. **CMBS ≠ bank CRE.** Securitized pools are a stressed subsample. Bank exposure to CMBS is limited and often agency/GSE-heavy; do not scale CMBS office delinquency onto the entire bank CRE book.
+4. **Modifications hide PDNA.** Performing modified loans can improve reported past-due ratios without extinguishing economic risk. FDIC flagged $11.6B of modified CRE in 2025 with most still performing.
+5. **SLOOS and size-cohort CMBS paths** include estimated mid-points between disclosed anchors; treat early-2026 SLOOS prints as directional, not official point estimates where the survey vintage is still settling.
+6. **Charge-offs are net of recoveries and annualized.** Negative prints in soft periods reflect recoveries exceeding new charge-offs — not “negative delinquency.”
+
+Primary sources: Federal Reserve Charge-Off and Delinquency Rates (update through 2026 Q1); Federal Reserve Senior Loan Officer Opinion Survey; FDIC 2026 Risk Review (CRE performance, concentration, CMBS property-type delinquencies). Related reading: [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026), and [household debt’s two-speed delinquency](/blog/us-household-debt-delinquency-split-2026).
+
+## What to watch next
+
+Three coincident signals will tell you whether this remains managed stress or becomes a loss cycle: (1) **CRE charge-offs** — a sustained move above ~0.40% would mean past-dues are converting; (2) **large-bank CRE PDNA** — whether the 2025 ease from 1.92% continues or reverses; (3) **CMBS multifamily** — if the 2024–25 climb keeps accelerating, bank multifamily books will face harder comps at refinance. Until those break, the live map is clear: **cards own the losses, office owns the securitized headlines, mid-size banks own the concentration, and megabanks own the CRE past-due stock.**`,
+    category: "Finance",
+    themeId: "bank-commercial-credit",
+    imageUrl: "/images/finance-bank-commercial-credit-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of CRE delinquency rising against low charge-offs with amber card-loss bars and office stress accents",
+    publishedAt: "2026-08-20T22:00:00Z",
+    featured: true,
+    visualization: "bank-commercial-credit-research-2026",
+    layout: "canvas",
+  },
+  {
     id: "ai-power-grid-concentration-2026",
     slug: "ai-power-grid-concentration-2026",
     title:

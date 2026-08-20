@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "bank-commercial-credit-research-2026",
+    marker: "Bank & commercial credit — Fed · FDIC · CMBS",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-power-grid-concentration-2026",
     marker: "AI power & grid — concentration lens",
     forbidden: "Loading interactive charts",
