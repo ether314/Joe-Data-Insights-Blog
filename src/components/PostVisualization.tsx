@@ -737,6 +737,21 @@ const AiFinancingUpdateDashboard = dynamic(
   },
 );
 
+const FiscalIndustrialPolicyUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/FiscalIndustrialPolicyUpdateDashboard").then(
+      (m) => m.FiscalIndustrialPolicyUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -920,6 +935,10 @@ export function PostVisualization({
 
   if (type === "ai-financing-update-2026") {
     return <AiFinancingUpdateDashboard />;
+  }
+
+  if (type === "fiscal-industrial-policy-update-2026") {
+    return <FiscalIndustrialPolicyUpdateDashboard />;
   }
 
   return null;

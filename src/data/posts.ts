@@ -2,6 +2,95 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-industrial-policy-update-2026",
+    slug: "fiscal-industrial-policy-update-2026",
+    title:
+      "Update: Western Security Motives Hit 63% as Green Import Barriers Jump to 48%",
+    excerpt:
+      "Versus our July H-NIPO/2023 research print, GTA’s 2025 NIPO briefings show G7+KR+AU security justifications leaping 26%→63% while climate falls to 12%. Inside green measures, import barriers surge from under 4% to 48%.",
+    themeId: "fiscal-industrial-policy",
+    content: `## What changed since the July research vintage
+
+In late July we mapped the long climb of industrial policy with [IMF–Global Trade Alert NIPO and H-NIPO data](/blog/fiscal-industrial-policy-research-2026): jurisdictions using trade-distorting **subsidies** rose from **36% in 2009 to 59% in 2023**, the historical ledger held **34,248** interventions (**85%** distorting), and the **2023** census alone logged **2,580** measures. That post answered the stock question — *how did subsidies, tariffs, and industrial policy go global after the GFC?* This update answers the flow question the 2025 briefings force: **what shifted in the newest official NIPO vintage**, and did the toolkit stay subsidy-led or turn coercive?
+
+Three Global Trade Alert Zeitgeist briefings — **#67** (June), **#70** (July), and **#79** (December 2025) — supply the refresh. They are not a full-year re-census matching the 2023 NIPO table. They *are* the newest disclosed windows on motives, green-instrument mix, and H1 activity. The dashboard above is built as a vintage delta: diverging change bars, prior→2025 motive dumbbells, green subsidy-vs-barrier stacks, EU-vs-West subsidy divergence, H1 total-vs-green lines, and an activity scatter.
+
+## The headline table: prior window vs 2025 print
+
+| Metric | Prior window | 2025 print | Δ |
+| --- | ---: | ---: | ---: |
+| G7+KR+AU security / geopolitics motive | **26%** (2023–24) | **63%** | **+37 pp** |
+| G7+KR+AU climate motive | **29%** | **12%** | **−17 pp** |
+| West green IP — subsidy share | **68%** | **32%** | **−36 pp** |
+| West green IP — import barriers | **<4%** | **48%** | **+44 pp** |
+| H1 green-focused measures | **62** (H1’24) | **34** (H1’25) | **−45%** |
+| H1 total IP measures | **802** | **763** | **−5%** |
+| EU green IP still subsidy-based | **80%** | **64%** | **−16 pp** (still >> West avg) |
+| US measures citing security / geopolitics | Rising post-2022 | **>50%** (2024–25) | Majority security-framed |
+
+The story is not “industrial policy paused.” H1 **total** interventions barely moved (**802 → 763**). What moved is **composition**: security language crowded out climate, and inside the remaining green toolkit **import barriers displaced subsidies**.
+
+## Motives flipped: security over climate in one vintage
+
+Toggle the dashboard’s **Motive geography** control to **G7+KR+AU**. Security and geopolitics jump from **26% to 63%** of industrial-policy actions between the **2023–24** window and **2025**. Climate falls from **29% to 12%**. That is a **+37 percentage-point** security swing and a **−17 pp** climate retreat — the cleanest single-number update to the July research narrative that post-2020 motives were *tilting* toward security. The 2025 print says the tilt became a majority.
+
+The Western H1 snapshot (ZG #67) tells the same story with a different denominator: geopolitical or national-security motivations hit **54%** of Western measures in **January–June 2025**, up from **22%** in **2023–24**. Climate sits at **15%**, behind even competitiveness (**20%**). GTA ZG #79 adds that by **2024–25 more than half** of *US* industrial-policy measures explicitly cite national security or geopolitics, and that security-of-supply combined with those motives accounts for roughly **half** of all Western interventions.
+
+Read that against the July research carefully. The H-NIPO **2009–2023** ledger showed security instruments *inside* the national-security motive class reweighting toward export barriers. The 2025 briefings show security becoming the **stated motive of the Western IP agenda itself** — not just a sub-mix inside an already-labelled security bucket.
+
+## Green toolkit: subsidies halved, import barriers to 48%
+
+Filter **Delta group → Instruments**. Among Western *green* industrial measures (EVs, hydrogen, solar, wind), subsidy share collapses from **68% in 2023–24 to 32% in 2025**. Import barriers surge from **under 4% to 48%** — a **+44 pp** coercive swing inside the climate-branded subset of industrial policy.
+
+That is the vintage punchline for the theme question. Subsidies still dominate the *long* H-NIPO stock. In the *newest* green flow, Western governments are increasingly choosing **tariff-like and trade-defence tools** over domestic financial support. ZG #79 frames the same turn more broadly: early-2025 interventions rely more on trade-restrictive and externally oriented instruments, with the United States moving from subsidy-heavy packages toward tariffs, stricter local-content rules, and security-justified trade defence.
+
+For readers who only watch IRA and CHIPS press releases, this is the update that matters: the statutes were subsidy-heavy; the **2025 implementation and companion measures** are increasingly coercive. Pair the count-based view with our [US industrial subsidies vs tariffs over 30 years](/blog/us-industrial-subsidies-vs-tariffs-30-years) when you need the federal *dollar* ledger rather than NIPO intervention shares.
+
+## Europe is the holdout — not the trendsetter
+
+Switch motive geography to **EU**. Security motives rise from **17% to 34%** — a real jump, but still far below the **63%** G7+KR+AU print. Climate remains more central than in peer capitals, falling from **42% to 25%** rather than collapsing into the low teens. On instruments, **64%** of EU green policy actions in **2025** were still subsidy-based, down from **80%** but roughly **double** the Western green average (**32%**).
+
+ZG #70 asks whether Europe will stay on a Green Deal / Net-Zero Industry Act subsidy path or converge on the geopolitically driven model. The 2025 data say Europe has **moved**, but has **not converged**. The dashboard’s EU-vs-West subsidy panel is the visual: both series fall, yet the EU line stays high. That divergence is itself a fact about Atlantic industrial policy: allies can share security language while disagreeing on whether the primary tool is a credit or a barrier.
+
+## Activity holds; green counts collapse
+
+The H1 panels separate **level** from **composition**. Total industrial-policy measures in January–June slipped only **5%** (**802 → 763**). Green-focused measures nearly halved (**62 → 34**, about **−45%**). Green’s share of the H1 stack falls from roughly **7.7% to 4.5%**. ZG #67 notes the downturn is Western-led; non-Western economies raised green-motive shares from **13% to 20%** over the same comparison — an asymmetry the July research stock view could not yet show for 2025.
+
+So the update is not “industrial policy faded.” It is “industrial policy stayed busy while **relabeling and retooling**.” Climate-branded counts fell; security-branded and trade-restrictive shares rose; overall intervention machinery kept running.
+
+## Who is exposed under the new vintage
+
+**Exposed:** exporters into markets where green industrial policy now arrives as **import barriers** rather than production subsidies; climate coalitions that assumed Western green IP would stay cooperative and subsidy-led; EU firms counting on Atlantic policy congruence while US measures majority-cite security; WTO processes that struggle when the same sector is framed as climate in Brussels and national security in Washington.
+
+**Relative winners under current rules:** capitals that can stack fiscal credits *and* coercive trade tools; firms already inside strategic product lists that benefit from both subsidy races and tariff walls; non-Western producers still treating green industrial policy as a competitiveness opportunity while Western peers pivot.
+
+**What would change the story:** a full-year 2025 NIPO census that shows early-year security shares reversing; an EU turn toward US-style barrier intensity; or a fiscal crunch that forces Western governments to choose between security-framed trade tools and other mandatory spending. None of those reverse signals appear in the June–December 2025 briefings.
+
+## Caveats and methodology
+
+- **Windows differ.** The July research print is an H-NIPO **2009–2023** stock plus a **2023** NIPO census. This update uses GTA **2023–24 vs 2025** motive/instrument shares and **H1’24 vs H1’25** activity counts — not a restated 2009–2023 ledger.
+- **Shares ≠ dollars.** A tariff notice and a multi-year grant both count as interventions; fiscal impact differs by orders of magnitude.
+- **Early-2025 / H1 windows** are subject to reporting lags; ZG #79 notes adjusted full-year 2025 activity may still peak.
+- **Geography labels differ across briefings** (G7+KR+AU, Western, EU, non-Western). Do not treat every series as the same country set.
+- **“Under 4%” import-barrier prior** is coded as **4%** in charts for readability; the disclosed phrase is a ceiling, not a point estimate.
+- **Residual “other” instrument shares** in the green mix are estimated so panels sum near 100%; GTA discloses the subsidy and import-barrier legs.
+- **Security framing is sticky.** Once measures are justified as national security, political durability rises — a qualitative claim in ZG #79, not a NIPO field.
+
+## The shareable takeaway
+
+Versus our July research vintage, the newest GTA NIPO print shows Western industrial policy **reorienting, not retreating**: G7+KR+AU **security motives jump 26% → 63%**, climate falls to **12%**, and inside green measures **import barriers leap from under 4% to 48%** while subsidy share halves. H1 **total** interventions barely move; **green counts nearly halve**. Europe still subsidises; the broader West is learning to coerce. Subsidies built the 2009–2023 stock; **security-framed trade tools are how the 2025 flow arrives**.
+
+Related reading: [Fiscal & industrial policy research (H-NIPO/2023)](/blog/fiscal-industrial-policy-research-2026) and [US industrial subsidies vs tariffs (30 years)](/blog/us-industrial-subsidies-vs-tariffs-30-years).`,
+    category: "Politics",
+    imageUrl: "/images/politics-fiscal-industrial-policy-update-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero of red tariff barrier planes intersecting teal subsidy flows across a ghost world map",
+    publishedAt: "2026-08-20T20:00:00Z",
+    featured: true,
+    visualization: "fiscal-industrial-policy-update-2026",
+    layout: "default",
+  },
+  {
     id: "ai-financing-update-2026",
     slug: "ai-financing-update-2026",
     title:
