@@ -2,6 +2,102 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "adaptation-economics-update-2026",
+    slug: "adaptation-economics-update-2026",
+    title:
+      "Update: Adaptation Flows Fall to $26B as Needs Re-Anchor at $310–365B",
+    excerpt:
+      "UNEP’s AGR 2025 prints international public adaptation finance at $26B in 2023 (−$2B YoY) while developing-country needs re-anchor at $310–365B/year by 2035. The gap is now $284–339B — 12–14× current flows — and Glasgow’s doubling path is on track to miss.",
+    content: `## What changed since the research vintage
+
+In August we published the theme’s stock ledger: [adaptation needs of $215–387B/year against $28B in international public flows](/blog/adaptation-economics-research-2026), a gap of **$187–359 billion**, and a global climate-finance stack that could print **~$2 trillion** while tracked adaptation stuck near **$64 billion**. That post answered the structural question — **who pays for climate damage and adaptation before policy catches up?** — with UNEP AGR 2024, CPI’s landscape, and Swiss Re’s nat-cat protection gap.
+
+This update answers the *vintage* question: **what moved in the newest official print?** UNEP’s **Adaptation Gap Report 2025: Running on Empty** (29 October 2025) re-anchors developing-country adaptation finance needs at **$310–365 billion per year by 2035** (2023 prices) and tracks international public adaptation flows at only **$26 billion in 2023** — a **−$2 billion (−7%)** drop from the **$28 billion** 2022 peak our research post used. The implied gap is now **$284–339 billion per year**, or **12–14 times** current flows. On present trajectories, UNEP says the Glasgow Climate Pact’s call to roughly **double** 2019 adaptation finance to about **$40 billion by 2025** will be missed.
+
+The dashboard above is built as a vintage delta: prior vs newest needs/flows/gap bars, the 2016–2023 public-flow path with a Glasgow reference line, closing-the-gap levers, residual “who pays” shares after the flow stall, and NCQG arithmetic that shows why a dual-purpose **$300 billion** goal does not close an adaptation-only bill.
+
+## The headline table: AGR 2024 research vs AGR 2025
+
+| Metric | Research / AGR 2024 | AGR 2025 print | Δ |
+| --- | ---: | ---: | --- |
+| Needs band | **$215–387B / yr** (this decade) | **$310–365B / yr** (by 2035) | Horizon re-anchored; mid ↑ |
+| Intl public flows | **$28B** (2022) | **$26B** (2023) | **−$2B (−7%)** |
+| Finance gap | **$187–359B / yr** | **$284–339B / yr** | **12–14×** flows |
+| Glasgow 2× path | ~**5%** of gap if hit | On-trend **miss** by 2025 | Credibility floor fails |
+| Private adaptation | Under-measured in gap frame | **~$5B** now; **~$50B** potential | 10× upside if de-risked |
+| Nat-cat protection gap | **$424B** (Swiss Re 2025) | **$424B** (unchanged) | Secondary ledger flat |
+
+Read the needs row carefully. AGR 2025 is not a simple restatement of the decade band; it **reanalyses costs and NAP/NDC-derived needs out to 2035** so the gap aligns with the NCQG horizon. The midpoint moves from roughly **$301B** to about **$338B**, and the high end of the old decade band (**$387B**) sits above the new high (**$365B**) — so this is a **horizon and methodology shift**, not a claim that every coastal kilometer got cheaper. The clean period delta is the **flow** line: **$28B → $26B**.
+
+## Public flows fell — the first drop since 2020
+
+The research post celebrated 2022 as the largest year-on-year rise in international public adaptation finance since Paris. AGR 2025 ends that run. Flows to developing countries printed **$26 billion in 2023** (constant 2023 prices), down from **$28 billion**. UNEP attributes the decline primarily to a **drop in multilateral development bank** adaptation funding. Combine that with announced **ODA cuts** in several provider countries and the compound growth rate from 2019–2023 (~**7%**) sits well below the ~**12%** path required to hit Glasgow’s ~**$40 billion** by 2025.
+
+That arithmetic matters more than the absolute **$2 billion**. At **$26B**, mid-band needs (~**$338B**) are covered at under **8%**. Glasgow’s target — even if hit — would still leave a **$270B+** hole against the low needs print. The research post already warned that Glasgow closed only ~**5%** of the prior gap; the update’s sharper line is that **even that floor is slipping**.
+
+Two caveats travel with the flow series. First, UNEP’s numerator remains **international public** adaptation finance tagged to developing countries — domestic public spend and private adaptation are still under-captured, so true financed resilience is higher than **$26B**, while true needs may still exceed disclosed NAP/NDC asks. Second, **instrument quality** deteriorated even where volume held: debt instruments averaged **58%** of international public adaptation finance in 2022–2023, and non-concessional loans increasingly dominate middle-income receipts. Concessional share was still about **70%** overall — but the rising non-concessional slice is exactly how an “adaptation investment trap” forms: disasters raise debt service, which crowds out the next round of resilience spend.
+
+## Needs re-anchored to 2035 — and still dwarf every supply lever
+
+AGR 2025’s central needs range of **$310–365 billion per year by 2035** combines updated modelling with NAP/NDC finance needs extrapolated across developing countries. Against **$26B** flows, that is a **12–14×** multiple — the report’s headline equity frame. Prior AGR language put the gap near **$194–366 billion** toward 2030; the new **$284–339 billion** gap to 2035 is a tighter, still enormous band once the flow stall is baked in.
+
+Toggle the dashboard’s needs scenario and the closing-the-gap lever panel. **Current flows ($26B)**, **Glasgow ($40B)**, **MDB adaptation delivery paths (~$49B by 2030 in the ES framing)**, and **realistic private potential (~$50B)** all sit in the same order of magnitude — and all sit an order of magnitude below needs. Stack every optimistic supply lever and you still do not clear the low needs print without a step-change in public grant finance, debt treatment, and domestic mobilization.
+
+For the US event-cost lens that sits beside this global residual stack, keep [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026) open: localized convective storms and tropical cyclones clear billion-dollar thresholds inside one rich country while the international public pipe for developing-country adaptation shrinks.
+
+## Private capital’s $50B ceiling is real — and still not enough
+
+The research post argued that mitigation got the commercial pipeline because solar, batteries, and EVs produce bankable revenues while seawalls produce avoided losses. AGR 2025 quantifies the private upside inside **national public adaptation priorities**: roughly **15–20%** of the **$310–365B** needs band could realistically be private — about **$50 billion per year** — versus tracked private flows near **$5 billion** today. Reaching that potential requires blended finance and concessional public capital to de-risk projects; leverage ratios for adaptation remain lower than for mitigation.
+
+Even a perfect private surge to **$50B** leaves **$260–315B** of public-side need. Separate from the AGR needs band, climate-proofing private assets (the report’s “column C”) could add **>$250 billion per year** in private costs that parties do **not** request as international support — meaning the full economy-wide adaptation bill for developing countries sits well above **$500 billion** once residual damages are acknowledged. Innovative accelerators and incubators, UNEP finds, still concentrate in agriculture and middle-income markets, and many “innovative” instruments merely **shift who finances** without shrinking **who ultimately pays**.
+
+## NCQG arithmetic does not rescue the gap
+
+COP29’s New Collective Quantified Goal asks developed countries to lead in mobilizing at least **$300 billion per year by 2035** for climate action in developing countries — mitigation **and** adaptation. At first glance that dwarfs the old **$100 billion** goal. AGR 2025’s rebuttal is twofold. First, **$300B in 2035 nominal dollars** is not comparable to **$310–365B in 2023 prices**; at a decade-average ~**3%** inflation path, adaptation needs alone inflate to roughly **$440–520 billion** by 2035. Second, the NCQG is **dual-purpose**, so adaptation’s share is necessarily smaller than the headline.
+
+The dashboard’s NCQG panel puts the dual-purpose goal beside adaptation-only needs in constant and inflated dollars. The political talking point (“we raised the goal threefold”) and the adaptation ledger (“needs still exceed the entire dual-purpose envelope once inflation and share are applied”) can both be true. The Baku to Belém Roadmap’s **$1.3 trillion** aspiration matters only if grants, concessional, and non-debt-creating instruments dominate — otherwise the Roadmap becomes another debt channel into the same trap.
+
+## Who pays when the public pipe stalls
+
+Residual risk does not wait for COP communiqués. When international public adaptation finance falls **$2 billion**, the default assignment tightens:
+
+1. **Uninsured households and SMEs** absorb more out-of-pocket rebuilds and informal coping — the largest editorial residual share in the update panel.
+2. **Sovereign and local budgets** take emergency and reconstruction hits, often financed with the same debt instruments that already dominate tagged adaptation flows.
+3. **Insurers** still cover only about **27%** of global nat-cat exposure on Swiss Re’s resilience index; the **$424 billion** protection gap is unchanged as a secondary ledger in this vintage.
+4. **International public finance and tracked private adaptation** remain single-digit shares of the residual stack even after a decade of Glasgow rhetoric.
+
+That is the same regressive stack the research post described — now with a **falling** public numerator. Loss-and-damage windows and MDB adaptation targets matter because the alternative is **balance-sheet accident**: the people and governments least responsible for cumulative emissions hold the least insurance and the least fiscal space. Pair this with the aid-budget squeeze in [OECD DAC’s first ODA drop](/blog/oecd-dac-oda-first-drop-2024) — the same provider budgets that tag adaptation ODA are the ones announcing cuts.
+
+## Caveats
+
+- **Needs bands** are order-of-magnitude policy anchors from modelling plus NAP/NDC asks; they are not engineering budgets for every kilometer of coastline. AGR 2024 and AGR 2025 use **different horizons** (decade vs 2035) — compare midpoints directionally, not as a pure restatement.
+- **International public adaptation flows** depend on Rio markers and provider reporting; multi-purpose projects can be over- or under-attributed. The **$26B** print is in **constant 2023 prices**.
+- **Domestic public and private adaptation** remain under-captured in the UNEP gap frame — read the gap as *international public shortfall vs estimated needs*.
+- **Private potential (~$50B)** is UNEP’s realistic share of *national public priorities*, not a forecast of actual mobilization.
+- **Residual-bearer pie shares** are editorial synthesis for the update viz — incidence illustration, not national accounts.
+- **Swiss Re protection-gap ($424B)** is carried as an unchanged secondary ledger; it is not an AGR 2025 revision.
+- **MDB / Glasgow lever bars** follow AGR executive-summary delivery framing for comparison, not a full project-level commitment tracker.
+
+## Methodology
+
+Headline vintage delta follows UNEP Adaptation Gap Report 2025 (Running on Empty): needs **$310–365B/year by 2035**, international public flows **$26B in 2023**, gap **$284–339B**, Glasgow on-trend miss, private potential **~$50B** vs **~$5B** tracked, debt-instrument share **~58%**, concessional share **~70%**, and NCQG insufficiency with inflation illustration to **$440–520B**. Prior vintage anchors (needs **$215–387B**, flows **$28B** in 2022, gap **$187–359B**) follow our [adaptation economics research](/blog/adaptation-economics-research-2026) post / AGR 2024. Flow path 2016–2022 reuses the research series; 2023 is the AGR 2025 print. Swiss Re nat-cat protection gap **$424B** / resilience **~27%** are unchanged secondary references. Residual shares and lever panels are constructed for interaction and labeled as such in the viz.
+
+## Bottom line
+
+The newest official vintage did not close the adaptation gap — it **widened the credibility problem**. International public adaptation finance fell to **$26 billion** while needs re-anchored at **$310–365 billion** by 2035. The gap is **$284–339 billion** — **12–14×** flows — and Glasgow’s doubling path is on track to miss. Private capital might realistically add **~$50 billion** under ideal de-risking; NCQG’s **$300 billion** dual-purpose goal does not clear an inflation-adjusted adaptation bill. Until public grant finance, debt treatment, and bankable resilience pipelines scale, **households, thin sovereign budgets, and informal coping** still pay first — now against a **shrinking** international public numerator.
+
+Related reading: [adaptation economics research](/blog/adaptation-economics-research-2026), [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026), and [OECD DAC ODA drop](/blog/oecd-dac-oda-first-drop-2024).`,
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl: "/images/energy-adaptation-economics-update-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero showing adaptation flows falling to $26B beside a $310–365B needs tower and an uninsured climate-damage gap wedge",
+    publishedAt: "2026-08-20T18:00:00Z",
+    featured: true,
+    visualization: "adaptation-economics-update-2026",
+    layout: "default",
+  },
+  {
     id: "demographic-cash-flows-update-2026",
     slug: "demographic-cash-flows-update-2026",
     title:

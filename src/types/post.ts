@@ -81,7 +81,8 @@ export interface Post {
     | "fiscal-plumbing-research-2026"
     | "geopolitics-institutions-update-2026"
     | "measurement-science-update-2026"
-    | "demographic-cash-flows-update-2026";
+    | "demographic-cash-flows-update-2026"
+    | "adaptation-economics-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

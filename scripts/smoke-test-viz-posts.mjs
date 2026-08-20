@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "adaptation-economics-update-2026",
+    marker: "Vintage delta — AGR 2024 research → AGR 2025",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "demographic-cash-flows-update-2026",
     marker: "Vintage delta — Brief 41 → Banxico 2025",
     forbidden: "Loading interactive charts",
