@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-financing-update-2026q3",
+    slug: "ai-financing-update-2026q3",
+    title:
+      "Update: AI’s Share of USD IG Supply Jumps 18% → 23% as Private DC Deals Hit $200B",
+    excerpt:
+      "Versus our August mid-year print ($489B AI debt; hyperscalers ~40%), the Q3 credit refresh lifts the theme’s USD IG supply share from ~18% to ~23% and HY to ~20%. Private data-centre transactions since early 2025 now print ~$200B — and Meta/Amazon long paper prices below official AA.",
+    themeId: "ai-financing",
+    content: `## What changed since the August mid-year vintage
+
+In August we expanded the theme perimeter beyond five names: [AI-related debt near $489B mid-year](/blog/ai-financing-update-2026), with hyperscalers only ~**40%** of the stack, AI’s share of US IG supply at ~**18%**, and non-USD hyperscaler mix at ~**33%**. That update answered the *scope* question — *how large is the theme once you leave Amazon–Alphabet–Meta–Microsoft–Oracle?* This Q3 vintage answers the *absorption* question credit desks trade next: **what moved in the newest official / desk refresh**, and is theme weight inside USD credit supply still climbing even while the dollar perimeter holds?
+
+Three layers force the rewrite. First, market synthesis of the Goldman credit frame now puts **AI-related debt at roughly 23% of USD investment-grade issuance** and about **20% of US high-yield supply** — up from the August mid-year ~**18% / ~18%** pair. Second, **nearly $200 billion** of private data-centre transactions since early 2025 turns the overflow story from dry-powder abstract into a measured channel. Third, long-dated **Meta** and **Amazon** paper are pricing **below official AA** (BBB-equivalent and single-A-equivalent respectively) — supply technicals, not a sudden default narrative.
+
+The dashboard above is built as a vintage delta: dual IG/HY supply-share path, Aug→Q3 diverging bars, new Q3 disclosures, rating-vs-market scatter, funding-channel bars, and capacity×horizon overflow.
+
+## The headline table: Aug mid-year vs Q3 2026 update
+
+| Metric | Aug mid-year vintage | Q3 2026 update | Δ |
+|--------|---------------------:|---------------:|--:|
+| AI-related debt YTD | **~$489B** | **~$489B** | Perimeter held |
+| Hyperscaler share of AI debt | **~40%** | **~40%** | Carried |
+| Hyperscaler IG YTD / FY path | **~$194B / ~$250B** | **~$194B / ~$250B** | Spine held |
+| **AI share of USD IG supply** | **~18%** | **~23%** | **+5 pp** |
+| **AI share of US HY supply** | **~18%** | **~20%** | **+2 pp** |
+| Private DC transactions (since early ’25) | *Not scoped* | **~$200B** | **New channel** |
+| AI-tagged share of US IG *stock* | Flow lens only | **~15%** | Stock lens added |
+| Big-5 path in major IG index | Not highlighted | **>5% by YE2026** | Concentration path |
+| Meta / Amazon long paper | Spreads grinding | **AA → BBB / A equiv.** | Rating–market gap |
+
+Two readings matter. First, the August **dollar perimeter did not break** — ~$489B YTD and the hyperscaler spine are carried. Second, the **theme’s weight inside credit supply** is the real vintage delta: five more percentage points of USD IG, two more of HY, plus a quantified private DC sleeve.
+
+## Theme weight: 18% → 23% of USD IG is the live number
+
+Toggle the dashboard’s **Supply shares** lens. The dual-line path is the point of the update. Desk estimates moved from roughly **1% of US IG in 2024** to **~7% in 2025** to **~18% at the August mid-year print**. The Q3 refresh prints closer to **~23% of USD IG** and **~20% of US HY**. That is not a restatement of the $489B stack; it is a statement that AI-tagged borrowers are claiming a larger slice of whatever the primary calendar is clearing.
+
+High yield’s **~20%** print matters for portfolios that thought they had escaped Big Tech by sitting lower in the capital structure. Theme risk is still thematic. Utilities, data-centre JVs, equipment names, and leveraged wrappers sit beside — and increasingly *inside* — the same absorption math as the hyperscaler IG calendar.
+
+Goldman’s August desk preference still colours the trade: heavy supply produces modest spread widening, with a relative preference for **BBB over AA** where mega-cap tech supply is denser relative to market size. Q3 does not reverse that — it hardens it. When AA paper is the overweight supply bucket, the market charges AA borrowers as if they were lower-rated names.
+
+## Rating vs market: AA labels, BBB/A prices
+
+Switch to **Rating vs market**. Meta’s **2036** bonds still carry an official **double-A** rating; they price like **triple-B**. Amazon’s long-dated paper, also officially **AA**, prices closer to **single-A**. The gap is the bond market’s way of saying volume — not imminent default — is the governing variable.
+
+That matters for anyone holding “high-grade” passively. AI-tagged bonds already represent about **15% of the US investment-grade market** on a stock basis in the August–Q3 synthesis, and the Big Five alone are on a path that could **exceed 5% of major IG indices by end-2026**. You do not need to buy a mega tech deal to own the theme; index weights and AI-tagged peers deliver it.
+
+Oracle’s July move to **BBB-minus** remains the live fundamental case study — S&P citing mid-fifties-billion fiscal capex, negative free cash flow, and leverage heading toward the mid-4x range — but the Meta/Amazon pricing gap shows technicals can reprice AA names *without* a downgrade. Pair that with the [capex intensity update](/blog/ai-capex-intensity-update-2026): thinner free-cash-flow cushions make multi-year releveraging the base case, not a temporary funding bridge.
+
+## Private data centres: $200B turns overflow into a flow
+
+When the dashboard switches to **Funding overflow**, the August story gains a concrete leg. Private markets dry powder near **$4.5T** and project-finance sketches near **~$300B in 2027** are still the capacity map. What is new is the **realized** private data-centre channel: roughly **$200B** of transactions since early 2025. That is not committed dry powder; it is deals that cleared outside the public IG calendar.
+
+J.P. Morgan’s absorption framing — about **$300B** of high-grade capacity for AI and data-centre bonds over the next year against roughly **$1.5T** of funding needs over five years — sits beside Goldman’s earlier **~$510B** bank-comparable IG room case study. Access to capital is still not the binding constraint. **Where**, **at what tenor**, and **at what concession** are. Private DC deals are how the stack clears when US dollar books thicken and concessions refuse to shrink.
+
+Non-dollar markets remain open overflow valves. August’s **~33%** non-USD share of hyperscaler supply is carried — CAD, sterling, Swiss franc, euro, Aussie, and yen packages are still the waterfall Amanda Lynam described, not a closed channel. EUR credit remains relatively under-contributing versus US IG in that reading, which means European books are still an option when New York saturates.
+
+## Equity and ETFs still price the narrative, not the PP&E
+
+The equity sleeve from the July research and August update still matters as **sentiment capacity**. FactSet’s 2025 US thematic ETF inflows near **$43.5B**, with QQQ alone around **$21.7B**, remain the public-markets willingness meter. Alphabet’s mid-2026 equity raise sits beside the bond calendar as proof issuers will reopen equity when credit books thicken. ETF flows do not pour concrete; primary debt and private DC capital do. The dashboard’s equity panel is carried deliberately — so readers do not confuse secondary ownership with issuer proceeds.
+
+## Who is exposed under the Q3 vintage
+
+**Exposed:** real-money and insurance books that assumed “underweight Big Tech bonds” meant underweight the AI financing theme; passive IG holders who inherit ~**15%** AI-tagged stock and a Big-5 path toward **>5%** index weight; AA-rated hyperscaler longs priced as if they were A or BBB; HY and JV buyers who thought leaving the five-name IG calendar exited the theme.
+
+**Relative winners under current rules:** desks that can rotate into BBB where AA supply is densest; private credit and infra vehicles clearing the ~**$200B** DC channel; issuers with multi-currency programs that can open EUR/GBP/CHF/JPY when USD cover ratios compress; investors who mark *theme share of supply* rather than name count.
+
+**What would change the story:** a Q4 print that pulls AI’s USD IG share back toward the mid-teens while concessions compress; a restated AI-debt perimeter well above or below **$489B** that forces a full-year rethink; or a broad rating migration that turns today’s technical AA–BBB gap into fundamental downgrades across the cohort. None of those reverse signals are in the Q3 desk refresh.
+
+## Caveats and methodology
+
+1. **Perimeter vs share.** The ~**$489B** AI-related debt YTD figure is carried from Goldman’s August mid-year estimate (hyperscalers ~40%). The Q3 **23% / 20%** prints are *theme shares of USD IG / US HY gross supply* from market synthesis of that frame — not a new dollar tally. Do not annualize $489B into a full-year run-rate.
+2. **Desk estimates, not a single SEC series.** Supply-share percentages and private DC ~**$200B** are research / market tallies with theme-tagging judgment. Labels differ across houses.
+3. **Rating-vs-market scores** on the dashboard are ordinal viz aids (AA≈5, A≈4, BBB≈3). They illustrate the Meta/Amazon pricing gap; they are not agency ratings or option-adjusted spread z-scores.
+4. **Stock vs flow.** ~**15%** AI-tagged share of the US IG *market* is an outstanding / stock lens. ~**23%** is a *flow* share of issuance. Do not add them.
+5. **Overflow capacities** (JPM ~$300B / ~$1.5T; GS ~$510B bank-comparable; ~$300B project finance 2027; $4.5T private powder) are case studies and aggregates — directional maps, not committed pipelines.
+6. **Hyperscaler FY path (~$250B; ~33% of capex)** remains the July–August research ratio for the five-name IG spine, not the share of the $489B stack.
+7. **ETF flows** remain secondary-market ownership metrics.
+
+Primary sources: Goldman Sachs Exchanges — *How AI Debt Is Reshaping Credit Markets* (Aug 2026); Dark Side of the Boom synthesis of the IG/HY share and private DC channel (Jul 22, 2026 frame, Q3 desk read); ACF/StockWireX rating-gap and IG stock-share context (Aug 11, 2026); prior theme posts [AI financing mid-year update](/blog/ai-financing-update-2026) and [AI financing research](/blog/ai-financing-research-2026). Capex intensity context from the [August intensity update](/blog/ai-capex-intensity-update-2026).
+
+## What to watch into year-end 2026
+
+Three coincident signals will tell you whether the Q3 share print stabilizes or climbs further: (1) **AI’s share of USD IG / HY supply** — if the theme stays in the low-to-mid twenties into Q4 while concessions refuse to shrink, saturation is binding even with private DC overflow; (2) **whether Meta/Amazon long paper keeps pricing below AA** — a closing gap means technical indigestion easing; a widening gap means supply still dominates ratings; (3) **private DC and project-finance secondary performance** — if the ~**$200B** private channel and JV prints keep trading wide to issue, indigestion has already spilled past the IG calendar. Until those three clear, the live number is not August’s **$489B** perimeter alone. It is **~23% of USD IG supply** — with hyperscalers still the visible **40%** of the dollar stack, and theme weight inside credit benchmarks still rising.`,
+    category: "Capital Markets",
+    imageUrl: "/images/capital-markets-ai-financing-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy capital-markets chart of a rising AI credit wall with violet IG supply-share climb and amber private data-centre overflow",
+    publishedAt: "2026-08-20T23:30:00Z",
+    featured: true,
+    visualization: "ai-financing-update-2026q3",
+    layout: "default",
+  },
+  {
     id: "ai-power-grid-update-2026",
     slug: "ai-power-grid-update-2026",
     title:
