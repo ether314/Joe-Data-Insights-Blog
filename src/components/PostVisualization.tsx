@@ -542,6 +542,21 @@ const GlobalShipbuildingGtDeliveryDashboard = dynamic(
   },
 );
 
+const GeopoliticsInstitutionsResearchDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/GeopoliticsInstitutionsResearchDashboard").then(
+      (m) => m.GeopoliticsInstitutionsResearchDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -673,6 +688,10 @@ export function PostVisualization({
 
   if (type === "global-shipbuilding-gt-delivery-concentration-2026") {
     return <GlobalShipbuildingGtDeliveryDashboard />;
+  }
+
+  if (type === "geopolitics-institutions-research-2026") {
+    return <GeopoliticsInstitutionsResearchDashboard />;
   }
 
   return null;

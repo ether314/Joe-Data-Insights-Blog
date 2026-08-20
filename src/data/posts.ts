@@ -2,6 +2,100 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "geopolitics-institutions-research-2026",
+    slug: "geopolitics-institutions-research-2026",
+    title:
+      "Charted: US Holds 16.5% of IMF Votes — Enough to Block Alone; China Still Undercounted",
+    excerpt:
+      "IMF special majorities need 85%. The United States alone holds ~16.5% of votes. China’s PPP GDP share (~19%) still dwarfs its ~6% IMF vote weight. Authority is allocated by charter rules — not by today’s economy.",
+    content: `Formal power in the international system is easy to moralize and hard to measure. Treaties speak of sovereign equality; balance sheets and voting tables do not. At the IMF, major decisions require an **85% special majority**. The United States holds about **16.5%** of voting power — enough, by itself, to form a blocking minority. China, now the world’s largest economy on a purchasing-power-parity (PPP) basis at roughly **18.7%** of global GDP, holds about **6.1%** of IMF votes — nearly tied with Japan, whose PPP weight is closer to **4%**. That is not a rounding error. It is the design of an institution that still prices 1944 bargaining power, with only partial updates.
+
+This post asks one institutional question: **how do power structures and institutions allocate authority?** The dashboard above stacks five ledgers that are usually kept in separate silos — IMF and IBRD vote shares versus GDP, formal authority layers (UNSC vetoes through UNGA equality), the IMF quota-reform path, board-chair compression, and the Security Council veto record. Pair it with our [CCP nomenklatura hierarchy](/blog/ccp-nomenklatura-hierarchy-2026) for a domestic organogram of authority, and with [China’s all-budget fiscal revenue](/blog/china-fiscal-revenue-all-budgets-2024) for how another major state actually books the cash that underwrites influence.
+
+## Votes are not GDP — and that is the point
+
+Weighted voting was never meant to be a census of economic size. IMF quotas combine formulas (GDP, openness, variability, reserves) with politics; the result is a **stock of rights** that moves slowly. After the **14th General Review** (agreed 2010, in force 2016), China rose into the top tier. After the **16th General Review** (2023), total quotas rose by **50%** while **relative shares stayed essentially frozen**. More money, same hierarchy.
+
+| Member | IMF vote share | IBRD vote share | PPP GDP share | Vote−GDP gap (IMF) |
+| --- | ---: | ---: | ---: | ---: |
+| United States | 16.5% | 15.8% | 15.5% | **+1.0 pp** |
+| China | 6.1% | 5.9% | 18.7% | **−12.6 pp** |
+| Japan | 6.1% | 6.8% | 3.7% | +2.4 pp |
+| Germany | 5.3% | 4.0% | 3.4% | +1.9 pp |
+| India | 2.6% | 3.0% | 7.9% | **−5.3 pp** |
+| France | 4.0% | 3.8% | 2.4% | +1.6 pp |
+| United Kingdom | 4.0% | 3.8% | 2.3% | +1.7 pp |
+| Brazil | 2.2% | 2.1% | 2.4% | −0.2 pp |
+| Indonesia | 1.0% | 1.0% | 2.6% | −1.6 pp |
+
+The scatter panel makes the geometry obvious: points above the diagonal are over-represented relative to PPP weight; points below are under-represented. China and India sit deep below the line. Japan, Germany, and several smaller European creditors sit above it. The United States sits near the diagonal on GDP — and **above the 15% blocking threshold** that turns a single shareholder into a structural veto on 85% decisions.
+
+Switch the dashboard control from IMF to IBRD and the map rhymes rather than repeats. The World Bank’s capital-subscription politics are cousins of Fund quotas, not clones: the US remains the largest single shareholder (~**15.8%**), Japan is relatively stronger than at the Fund, and China’s gap versus PPP GDP remains large. Authority is **path-dependent** across sister institutions built in the same postwar bargain.
+
+## Negative power versus positive power
+
+Voting shares measure the ability to pass or block *inside* a weighted chamber. The UN Security Council encodes a different technology of power: **absolute negative authority**. Five permanent members can veto substantive resolutions regardless of how many elected members assemble a majority. The elected ten matter for the **9/15 affirmative** threshold — they are necessary for action — but they cannot override a permanent-member veto. France and the United Kingdom have gone years without casting a veto; Russia and, to a lesser extent, China and the United States have used the tool as a routine instrument of coalition politics since the mid-2010s.
+
+That distinction matters for reading “influence.” A country can be under-weight at the IMF and still hold a UNSC veto (China, Russia). A country can be over-weight on quotas and lack a Security Council seat (Japan, Germany). A country can be large on population and GDP and hold neither a veto nor a top-five Fund share (India, Indonesia). Institutions do not allocate a single scalar called power; they allocate **different keys to different doors**.
+
+The authority-layers panel is deliberately hierarchical: P5 veto weight at the top, IMF special-majority veto tier next, compressed executive boards in the middle, and UNGA one-country-one-vote near the bottom for enforcement. UNGA equality is real on paper and weak when the question is sanctions, financing, or use of force. Confusing UNGA vote totals with IMF vote shares is a category error that flatters narratives of sovereign equality while ignoring where money and coercion are actually authorized.
+
+## Board compression: 190 members, 24 chairs
+
+Even inside the Fund, members do not sit as 190 separate principals. Roughly **24 Executive Directors** speak for the membership. A handful of large shareholders enjoy **single-country chairs**. Everyone else is pooled into multi-country constituencies — European clusters, emerging-Asia chairs, African chairs, Latin American chairs. The donut panel approximates how vote share concentrates in those clusters: single-country chairs still command on the order of **two-fifths** of voting power, while Africa’s chairs cover dozens of members with a single-digit vote bloc.
+
+Compression is a governance technology. It makes a board quorate and conversant. It also means that for most members, “voice” is mediated — a chair bargains across a constituency whose interests are not identical. When commentators say “the IMF decided,” they usually mean a **weighted, compressed board** decided, under shadow of an American blocking minority on the issues that require special majorities.
+
+## Reform theater and frozen shares
+
+The quota-reform path chart is the slow-motion version of the same story. Voice reforms in the late 2000s and the 14th Review shifted several percentage points toward emerging markets and made China a top-three shareholder. Then the machine stalled. The 16th Review’s **equiproportional** increase expanded resources without reallocating relative power — politically easier than telling over-represented shareholders to accept a smaller percentage. Talk of a further realignment continues; the dashboard’s 2023–2025 flatline is the empirical reminder that **announcements are not share shifts**.
+
+Compare that institutional stickiness with fiscal and industrial activism elsewhere. Our [fiscal and industrial policy research](/blog/fiscal-industrial-policy-research-2026) shows jurisdictions racing into subsidies and trade tools on a timeline of years, not decades. Money for industrial policy can be appropriated in a single Congress or Commission cycle. IMF vote shares cannot. That asymmetry is itself a fact about modern political economy: **states can spend faster than clubs can reweight**.
+
+Aid architecture tells a related story of who sets agendas when cash is scarce. The [OECD DAC’s first ODA drop in six years](/blog/oecd-dac-oda-first-drop-2024) is not a voting-share chart, but it is an authority chart: donor clubs define what counts as official development assistance, including large in-donor refugee costs. Institutional power is the ability to write the ledger rules, not only to cast a weighted ballot.
+
+## What would change the story
+
+Several observables would force a rewrite of this post’s core claim — that formal multilateral authority remains systematically misaligned with today’s economic map:
+
+1. **A real IMF quota realignment** that lifts China’s vote share by several percentage points toward its PPP or market-GDP weight — not another equiproportional volume increase.
+2. **India crossing into the clear top five** on IMF votes with a gap to GDP that narrows rather than widens.
+3. **UNSC reform that adds permanent or semi-permanent seats** for under-represented regions without a veto (or with a constrained veto) — changing the negative-power map.
+4. **Routine use of 85% majorities without US assent** via coalition arithmetic that somehow exceeds the blocking threshold — which, given current shares, requires the US share itself to fall.
+5. **IBRD capital increases that reorder the top three** so that PPP giants are no longer deep below the diagonal on the scatter.
+
+Until one of those prints, the default forecast is institutional inertia: more debates about legitimacy, more parallel clubs (NDB, AIIB, ad hoc creditor committees), and the same keys in the same locks at the Fund, Bank, and Security Council.
+
+## Caveats and methodology
+
+- **Vote shares are rounded** to one decimal from official IMF/IBRD tables and can shift slightly with membership changes and basic-vote arithmetic; treat them as structural magnitudes, not tick-level precision.
+- **PPP GDP shares** are WEO-style anchors for *representation gap* charts — useful for “economic weight,” not identical to the IMF’s blended quota formula (which also weights openness, variability, and reserves, and uses a mix of market and PPP GDP).
+- **Population shares** size the scatter bubbles only; population is not an IMF quota driver.
+- **EMDE bloc vote totals** on the reform path are editorial aggregates for trend shape, not an official Fund constituency total.
+- **UNSC veto counts** follow public Security Council documentation aggregates; joint vetoes are attributed to each casting member in annual tallies as reported.
+- **Chair-cluster vote shares** on the donut are stylized groupings of the 24-chair board for visualization — constituency borders change with elections and chair rotations.
+- **“Blocking minority”** language refers to the arithmetic of an 85% special majority (a >15% coalition can block). It does not mean the US vetoes every ordinary majority decision — most day-to-day Board decisions use lower thresholds.
+- This post measures **formal institutional authority**, not soft power, military capacity, or sanctions reach. Those are related markets for influence with different scoreboards.
+
+## Bottom line
+
+Authority in the postwar institutional stack is allocated by **charter rules, compressed boards, and veto technologies** — not by a live feed of GDP. The United States remains the only single shareholder that can unilaterally threaten the IMF’s 85% door. China remains the clearest illustration of **economic weight without matching Fund weight**. Japan and parts of Europe remain the clearest illustrations of the reverse. The Security Council adds a parallel hierarchy where five states hold absolute negative power that no weighted-vote reform at the Fund can touch.
+
+Until quotas realign or the Charter’s veto club expands, arguments about the “rules-based order” will keep talking past the voting tables. The rules are doing exactly what they were written to do: **allocate authority slowly, protect blocking minorities, and treat equality as a General Assembly virtue rather than a Fund or Council operating principle**.
+
+Related reading: [CCP nomenklatura hierarchy](/blog/ccp-nomenklatura-hierarchy-2026), [China fiscal revenue across all budgets](/blog/china-fiscal-revenue-all-budgets-2024), and [fiscal & industrial policy interventions](/blog/fiscal-industrial-policy-research-2026).`,
+    category: "Politics",
+    themeId: "geopolitics-institutions",
+    imageUrl:
+      "/images/politics-geopolitics-institutions-research-2026-hero.png",
+    imageAlt:
+      "Dark navy institutional hierarchy visualization with unequal teal vote-weight bars radiating from a Security Council–style chamber and key motif",
+    publishedAt: "2026-08-20T12:00:00Z",
+    featured: true,
+    visualization: "geopolitics-institutions-research-2026",
+    layout: "default",
+  },
+  {
     id: "global-shipbuilding-gt-delivery",
     slug: "global-shipbuilding-gt-delivery-concentration-2026",
     title:

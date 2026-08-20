@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "geopolitics-institutions-research-2026",
+    marker: "Who holds the keys: voting power vs economic weight",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "global-shipbuilding-gt-delivery-concentration-2026",
     marker: "Global shipbuilding · GT deliveries",
     forbidden: "Loading interactive charts",
