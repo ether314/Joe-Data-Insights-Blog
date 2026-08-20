@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "chokepoint-commodities-update-2026q3",
+    marker: "Vintage delta — MCS 2026 update / secondary midstream → IEA GCMO 2026",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "consumer-finance-markets-update-2026q3",
     marker: "Q3 vintage update · vs Aug update print",
     forbidden: "Loading interactive charts",

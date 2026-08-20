@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-update-2026q3",
+    slug: "chokepoint-commodities-update-2026q3",
+    title:
+      "Q3 Update: Avg Top Refine Share Hits 72% (+2 pp); REE Refine Eases to 85%; Cu Smelt ~50%",
+    excerpt:
+      "Versus our MCS 2026 update, IEA Global Critical Minerals Outlook 2026 tightens average refining concentration (ex-REE 70%→72%), cuts REE top-supplier refine to 85%, and frames China copper smelting capacity near 50% with $0/t TC/RCs.",
+    themeId: "chokepoint-commodities",
+    content: `## What changed since the MCS update vintage
+
+In our [MCS 2026 chokepoint commodities update](/blog/chokepoint-commodities-update-2026) we treated USGS Mineral Commodity Summaries 2026 version 1.3 as the newest official mine-and-refine print: China refined-copper share climbing to about **48%**, US copper net-import reliance jumping to **57%**, gallium stuck near **99%**, and several mine monopolies easing slightly on paper as world output grew. That post answered the *flow* question for the MCS year. This Q3 note answers the next official print the midstream story forces: **what moved when the IEA Global Critical Minerals Outlook 2026 restated refining concentration, copper-smelter stress, investment, and export-control risk — against the secondary midstream carries our MCS update still had to borrow?**
+
+USGS Mineral Industry Surveys remain paused during a ScienceBase migration, so there is no fresher monthly mine vintage to overwrite MCS 2026 country tables. The binding Q3 delta is therefore midstream and market-structure: average top refining-country share (excluding rare earths) rising to **72%** in 2025 from **70%** in 2023; rare-earth refining falling from **>90%** to **85%** as the diversification exception; China copper *smelting capacity* near **50%** of the world after capturing over **90%** of capacity growth since 2005; and treatment-and-refining charges collapsing to a **$0/t** 2026 annual settle. The dashboard above is a vintage delta — toggle **Midstream Δ**, **Prior → new**, **Smelter stress**, **Capex YoY**, **Risk $**, and **Price multiples**, then filter by stage, direction, and sector.
+
+## The headline table: MCS update carries → IEA GCMO 2026
+
+| Meter | Prior print / carry | IEA GCMO 2026 | Δ |
+| --- | ---: | ---: | ---: |
+| Avg top refine share (ex-REE) | **70%** (2023) | **72%** (2025) | **+2 pp** |
+| REE refining / separation (top supplier) | **~90%** secondary | **85%** | **−5 pp** |
+| China copper refining | MCS **~48.3%** | IEA **~just under 50%** | **~+1.7 pp** |
+| China copper smelting capacity | **~15%** (2005 path) | **~50%** (2025) | **+35 pp path** |
+| Lithium chemicals / refining | **~65%** secondary | **~70%** | **+5 pp** |
+| Cobalt refining | **~76%** MCS carry | **~75%** | **~−1 pp (flat)** |
+| Battery-grade graphite anode | **≥90%** | **≥90%** | **0** (growth still captured) |
+| Battery material-recovery capacity | prior secondary | China **~90%** | tightening |
+| Copper 2035 project-pipeline deficit | **~30%** (prior Outlook) | **~25%** | **−5 pp** (still a gap) |
+
+Read the table as **stages and instruments**, not as a second mine encyclopedia. Graphite and cobalt *mine* shares stay on the MCS 2026 anchors from the [prior update](/blog/chokepoint-commodities-update-2026) because MIS posting is paused. What moved is the midstream scoreboard the MCS update had to label **secondary**: lithium chemicals tighten on the IEA narrative, rare-earth refining finally prints a durable ease, and copper’s quiet assumption — that custom smelters outside China stay economically viable — cracked when fees hit zero.
+
+## Midstream concentration kept rising — except rare earths
+
+Open **Midstream Δ** and **Prior → new**. The IEA’s cross-mineral punchline is blunt: over the past two years, top refiners — **Indonesia for nickel** and **China for other key energy minerals** — accounted for **more than three-quarters** of total growth in refined supply. In manganese, nickel, and graphite, virtually all recent supply growth came from the dominant supplier. Excluding rare earths, the average share of the top refining country rose to **72%** in 2025 from **70%** in 2023.
+
+Rare earths are the deliberate exception that proves the policy point. New projects in the United States and production increases in Malaysia reduced the top supplier’s refining share from **over 90%** in 2023 to **85%** in 2025. If announced projects deliver on schedule, the IEA path points toward roughly **70%** by 2035 — still concentrated, but no longer a flat **90%** secondary carry from our research-era labels. Pair that with the [rare earth mine concentration](/blog/rare-earth-mine-concentration-2024) deep dive: mine pluralism without separation capacity was always the incomplete story; Q3 is the first vintage where the refine side prints measurable relief.
+
+Everything else in the midstream filter still points the other way. Lithium chemical refining moves from a **~65%** secondary carry toward about **~70%** China in the IEA processing narrative. Cobalt refine share is roughly flat near **75%**, but the *outlook* is revised: DRC export quotas create a new projected cobalt supply gap even while the stage flip (African pit, Asian chemistry) is unchanged. Battery recycling — often sold as the diversification escape hatch — is itself concentrated: China holds over **three-quarters** of pre-treatment capacity and about **90%** of material-recovery capacity.
+
+## Copper smelters are the new midstream stress test
+
+Switch to **Smelter stress**. Our MCS update already showed China refine share climbing toward half of world cathode. IEA GCMO 2026 reframes that as a **twenty-year smelting-capacity land grab**: China accounted for over **90%** of growth in global copper smelting since 2005, lifting its capacity share from around **15%** to about **50%** by 2025. Utilisation rates diverged after 2020 — falling below roughly **70%** outside China by 2025 while remaining around **85%** inside China.
+
+The price of that imbalance showed up in fees. Benchmark copper smelter treatment charges settled at **$0 per tonne** in 2026 annual negotiations — the lowest level ever agreed — after spot charges had already gone negative. When TC/RCs disappear, custom smelters lean harder on by-product sales (the strategic minor minerals recovered from copper, zinc, and lead circuits). That is not a footnote for gallium, germanium, or tellurium buyers: **base-metal smelters are the recovery hubs** for many of the thin markets this theme tracks. See also [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-geography-2026) — the pit map stays plural; the gate that delivers cathode and by-products does not.
+
+Copper’s decade deficit narrative eased at the margin — the projected 2035 supply gap narrowed from about **30%** in last year’s Outlook to about **25%** as DRC and Zambia projects advance — but a narrower deficit is still a deficit, and it does not repair smelter margins outside China.
+
+## Investment fell where concentration hurts most
+
+Open **Capex YoY**. Critical-mineral investment declined about **9%** in 2025, ending several years of growth. Battery metals saw the sharpest pullback (more than **20%**), with lithium companies cutting investment around **40%**. Copper-focused spending rose about **8%** — the rare class still adding capital — while exploration spending fell more than **10%** (lithium and nickel exploration roughly **−45%**, with Asia-Pacific a **+20%** exception).
+
+Public finance is trying to fill the gap: commitments in advanced economies reached around **$65 billion** in 2025, over **four times** 2023 levels. The IEA’s structural warning still bites: project pipelines outside the dominant supplier remain skewed to **mines**, while refining and downstream capacity lag. In rare-earth chains, planned refining capacity reaches only about two-thirds of expected mine output by 2035, and planned magnet production about one-third. Battery materials show a similar cathode-versus-lithium-mine imbalance. Diversification that stops at the pit is not diversification for the economy’s “always available” assumption.
+
+## Export controls turned concentration into priced risk
+
+The **Risk $** and **Price multiples** panels translate share tables into economic exposure. The number of mineral tariff codes under Chinese export controls has **tripled** since 2023; DRC cobalt quotas, Zimbabwe lithium restrictions, and Mozambique graphite measures add producer-side controls elsewhere. April 2025 heavy-rare-earth controls forced some automakers to cut utilisation or halt lines. October 2025 expansions — including proposed restrictions on products made with Chinese rare earths or technologies — were suspended for a year through November 2026, but the IEA still estimates about **$6.5 trillion per year** of downstream production outside China would be at risk if fully implemented. A full disruption of battery-grade graphite trade alone puts over **$300 billion per year** of non-China downstream production at risk.
+
+Price divergence is the market’s early warning. In Europe, gallium and heavy rare earths (dysprosium, terbium) trade around **five times** Chinese domestic prices; germanium is almost **three times** higher. Tungsten prices surged about **sixfold** from trough as strategic minors rallied through 2025 and early 2026. That is the same gallium chemistry our MCS update left at **~99%** primary production share — now with an explicit cross-border price multiple attached.
+
+Against that, the IEA’s stockpile arithmetic is almost disarmingly small: net annual cost of stockpiling for eleven high-risk materials outside the dominant supplier is estimated under **$900 million** — insurance-scale relative to the trillion-dollar cascade scenarios.
+
+## Who is more exposed under the Q3 print
+
+**More exposed:** custom copper smelters and wire-rod chains that assumed TC/RCs would mean-revert while China kept adding capacity; lithium chemical buyers who treated the MCS update’s **~65%** secondary carry as stable; graphite anode lines that celebrated MCS mine-share dilution while IEA says virtually all recent graphite supply growth still came from the dominant supplier; battery recyclers pitching “circular” security without acknowledging **~90%** China material-recovery capacity; and any OEM that treated the one-year REE-control suspension as a structural fix rather than a calendar pause.
+
+**Relatively less pressured on the refine map alone:** rare-earth separation buyers who can qualify US and Malaysian output as the top-supplier share prints **85%** instead of **>90%**; copper mine developers in the DRC/Zambia corridor benefiting from a narrower (still real) 2035 deficit path; and public-finance programs that can now point to a **$65B** commitment stock — provided disbursements catch commitments.
+
+**What would change the next update:** average top refine share (ex-REE) rolling back under **70%** for two IEA vintages; REE top refine under **80%** with magnet capacity catching refine announcements; copper TC/RCs sustainably positive outside China and utilisation converging; lithium chemical top-1 under **60%**; graphite anode processing shares printing a durable decline; and USGS MIS (or MCS 2027) confirming whether MCS 2026 mine easings for graphite and tungsten survived a full year of revisions.
+
+## Caveats and methodology
+
+- **Agency definitions differ.** USGS MCS country/world mine and refine totals are not identical to IEA refining-capacity and growth-capture metrics. Cross-agency Δ is directional.
+- **No fresher USGS MIS mine vintage.** Public MIS posting is paused during ScienceBase migration; mine rows for graphite, cobalt, and copper hold MCS 2026 anchors from the prior update.
+- **Secondary → disclosed upgrades.** Lithium chemicals, graphite anode, and REE separation were labeled secondary in the MCS update; IEA GCMO 2026 is the Q3 print that re-scores them.
+- **Path metrics ≠ single-year shocks.** China copper smelting **15%→50%** is a 2005–2025 capacity path, not a one-year jump.
+- **Risk dollars are scenario estimates**, not observed GDP losses; the REE **$6.5T** figure assumes full implementation of expanded controls.
+- **Price multiples** compare regional quotes to Chinese domestic or trough levels; they mix control, logistics, and liquidity premia.
+- This post is a **Q3 vintage delta**. For the MCS mine scoreboard use the [prior update](/blog/chokepoint-commodities-update-2026); for the full twenty-stage research ledger use the [research post](/blog/chokepoint-commodities-research-2026).
+
+## The shareable takeaway
+
+Versus our MCS 2026 update print, the newest official midstream vintage — IEA Global Critical Minerals Outlook 2026 — says the economy’s quiet assumption that specialty and bulk physical inputs keep flowing through a few jurisdictions **tightened on average refining** (**70%→72%** ex-REE) even as **rare-earth refining eased to 85%**. China copper smelting capacity sits near **half** the world with **$0/t** treatment charges; lithium chemicals tighten toward **~70%**; graphite anode stays a **≥90%** gate with hundreds of billions in downstream value at risk. Mine maps from MCS 2026 did not get a fresher USGS reprint this quarter — the binding Q3 move is midstream economics, investment pullback, and priced export-control risk.`,
+    category: "Global Systems",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz hero with glowing commodity trade arcs bottlenecking into midstream refining nodes, amber delta bars, and a teal rare-earth diversification line",
+    publishedAt: "2026-08-20T23:45:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-update-2026q3",
+    layout: "default",
+  },
+  {
     id: "consumer-finance-markets-update-2026q3",
     slug: "consumer-finance-markets-update-2026q3",
     title:
