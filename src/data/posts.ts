@@ -2,6 +2,108 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "consumer-finance-markets-research-2026",
+    slug: "consumer-finance-markets-research-2026",
+    title:
+      "Charted: $18.4T Household Debt — Cards Delinquent at 7.2% While Mortgages Hold Near 1.1%",
+    excerpt:
+      "NY Fed–style household debt sits near $18.4 trillion; credit-card 90+ day delinquency runs about 7.2% against ~1.1% for mortgages. The personal saving rate is back near 3.9%, card APRs still clear fed funds by ~17 pp, and liquid cash splits between ~$15T deposits and $7.85T MMFs.",
+    content: `Household finance headlines usually pick one ledger: **saving**, **borrowing**, or **where the cash parked**. The balance sheet only makes sense when you put all three on the same screen. As of **Q4 2025 / early 2026**, US household debt sits near **$18.42 trillion** on a New York Fed–style aggregate. Mortgages still dominate — roughly **70%** of balances — but the stress signal is not in first-lien housing. **Credit-card 90+ day delinquency transition rates** run about **7.2%**, while **mortgage** transitions sit near **1.1%**. Auto loans are in between near **5.3%**. The personal saving rate has settled near **3.9%**, a world away from the **26.2%** stimulus spike of 2021 Q2. Card APRs hover near **21.4%** against fed funds around **4.25%** — a **~17 percentage-point** wedge. And the liquid-cash map still shows **~$15 trillion** in bank deposits beside **$7.85 trillion** in money market funds.
+
+This post is the theme roll-up for consumer finance markets: how households **save**, **borrow**, and **allocate retail money** after the pandemic cash flood, the hiking cycle, and the first cuts. It deliberately sits above our product-level charts on the [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026), [household debt delinquency split](/blog/us-household-debt-delinquency-split-2026), [credit-card APRs vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026), and [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) — those pieces zoom; this one stitches the household balance sheet.
+
+## The three-ledger scoreboard
+
+| Ledger | Latest snapshot | Why it matters |
+| --- | ---: | --- |
+| Total household debt | **$18.42T** | Aggregate leverage stock |
+| Mortgage share of debt | **~69.8%** | Still the dominant product |
+| Credit-card balances | **$1.21T** | Small stock, loud stress |
+| Card 90+ delinq. transition | **~7.2%** | Revolving stress elevated |
+| Mortgage 90+ delinq. transition | **~1.1%** | Housing credit still calm |
+| Personal saving rate | **~3.9%** | Flow of new saving thin |
+| Card APR − fed funds | **~17.2 pp** | Borrowing cost sticky |
+| Household net worth (Z.1 era) | **~$169T** | Asset boom still dominates |
+| Equities / funds share of assets | **~34%** | Market beta in wealth |
+| Housing share of assets | **~28%** | Home equity as ballast |
+| Bank deposits (ex-large time) | **~$15T** | Sticky cash at banks |
+| Money market fund AUM | **$7.85T** | Yield-sensitive cash sleeve |
+
+Read the table left-to-right and the contradiction appears: **wealth is high**, **new saving is low**, **mortgage credit is calm**, and **revolving credit is not**. That is the 2026 household regime in one paragraph.
+
+## Debt grew — but stress concentrated in revolving credit
+
+From year-end **2019** to **2025**, total household debt climbed from about **$14.2T** to **$18.4T**. Mortgages did most of the dollar work (**$9.6T → $12.9T**). Credit cards rose from **$0.93T** to **$1.21T** after a brief pandemic dip. Student loans remain a large installment stock near **$1.6T**; auto loans sit near **$1.6T**.
+
+Dollar growth alone is a weak stress meter. The delinquency panel is the better one. Card and auto **90+ day transition rates** fell hard in 2020–21 under forbearance, stimulus, and tight labor markets, then climbed through 2023–25. Mortgages barely moved — locked-in low coupons, strong home equity, and underwriting that never fully reverted to pre-GFC looseness kept first-lien performance dull in the best sense. Student-loan delinquency collapsed during the payment pause and re-emerged as reporting normalized — a series break, not a clean cycle comparison.
+
+The shareable contrast for social cards is intentional: **7.2% vs 1.1%**. Revolving credit is where rate stickiness, spent pandemic buffers, and softer subprime cohorts show up first. Housing is where the equity cushion still absorbs shocks. For bank income-statement color on how that maps into charge-offs, see our [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026) dashboard.
+
+## The saving rate collapsed from a stimulus peak into a thin flow
+
+BEA’s personal saving rate is a **flow**: saving as a share of disposable personal income. It spiked to **26.2%** in **2021 Q2** when transfers flooded incomes while services spending was still constrained. Annual averages then crashed into the low single digits — about **3.3%** in 2022, **4.5%** in 2023, **4.1%** in 2024, and roughly **3.9–4.0%** into early 2026 on our estimated path.
+
+A low saving rate does **not** mean households are “broke.” Z.1 net worth near **$169 trillion** says otherwise. It means the *marginal* dollar of income is mostly consumed, so buffers are rebuilt slowly even while asset prices and home equity keep aggregate wealth elevated. That split — rich stock, thin flow — is why delinquency can rise in revolving products while headline wealth charts still look serene.
+
+Our dedicated [saving-rate post](/blog/us-personal-saving-rate-post-excess-2026) walks the excess-saving unwind in more detail. Here the point is simpler: after the transfer cliff, US households did not re-establish a mid-teens saving norm. They re-established a **pre-pandemic-like** low-single-digit flow on top of a **much larger** balance sheet.
+
+## Wealth allocation: equities and housing still dwarf deposits
+
+Fed Z.1 household (plus nonprofit) accounts put the asset mix in a different light than bank marketing. In our snapshot, **corporate equities and mutual funds** are about **34%** of assets (~**$58T**), **owner-occupied real estate** about **28%** (~**$48T**), and **pension entitlements** about **17%**. **Deposits and currency** are “only” ~**9%** (~**$15T**) — enormous in dollars, modest as a share of total wealth. Money market funds add another ~**4.6%** (~**$7.85T**).
+
+Two implications follow. First, household “cash” debates that ignore equities and housing miss most of the balance sheet. Second, market and home-price drawdowns hit net worth far harder than deposit-rate tweaks. The hiking cycle’s real consumer-finance story was never only about savings yields; it was about **whether asset wealth and locked-in mortgages** would offset higher revolving costs. So far, for the median mortgage holder with equity, they largely did. For revolving borrowers without that cushion, they did not.
+
+## Liquid cash still lives in two piles — and MMFs still pay more
+
+Deposits excl. large time deposits remain near **$15 trillion**. Money market funds sit at **$7.85 trillion** as of late July 2026 on the ICI weekly. Indicative taxable MMF yields near **3.9%** still clear money-market deposit accounts near **0.6%** by about **3.3 percentage points**. Direct short Treasuries / T-bills (estimated) add another yield-sensitive sleeve.
+
+That dual-pile map is why “households are flush with cash” and “banks are fighting for deposits” can both be true. Cash relocated into yield wrappers without disappearing from the household sector. Our [MMF vs deposits](/blog/money-market-funds-vs-deposits-2026) piece is the deep dive; this dashboard’s liquid-cash panel is the balance-sheet reminder that retail money allocation is a **rate-beta** decision sitting beside mortgage lock-in and card APR stickiness.
+
+## The APR gap: borrowing costs stayed high after funds peaked
+
+Commercial-bank credit-card APRs rose from the mid-teens into the **low-20s** as the Fed hiked, then barely retreated even as effective fed funds eased from the **5%+** peak toward roughly **4.25%**. The **APR − funds** gap widened into the **mid-to-high teens** and sits near **17 pp** in our 2026 snapshot.
+
+Sticky lending rates plus lagged deposit betas are the same industrial-organization story from opposite sides of the bank book. Cards remain expensive relative to policy rates; cash alternatives remain attractive relative to MMDAs. Households that revolvingly finance consumption at **21%** while parking emergency cash at **sub-1%** deposit yields are paying a brutal wedge — one reason delinquency stress shows up in cards first. Pair with the dedicated [APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) chart for the rate path alone.
+
+## What would change the household regime
+
+Several regimes could rewrite the scoreboard:
+
+- **A deposit-rate war** that closes the MMDA–MMF gap would pull some cash back onto bank books and ease funding pressure — without fixing card APRs.
+- **A sharp unemployment rise** would hit auto and card delinquency harder than mortgages at first, then test housing if equity cushions erode.
+- **Faster Fed easing** that finally forces card APR compression would shrink the borrowing wedge; if deposit betas still lag, the cash pile may stay in MMFs anyway.
+- **Home-price softness** concentrated among recent cohort buyers would raise mortgage stress from today’s calm baseline — still a different product cycle than revolving credit.
+- **Student-loan reporting and repayment normalization** will continue to distort cross-product delinquency comparisons until the series re-stabilizes.
+
+None of those are required to explain 2026’s snapshot. The snapshot already says: **leverage stock high, housing calm, revolving stressed, saving thin, wealth equity-heavy, cash yield-sensitive.**
+
+## Caveats and methodology
+
+- **Debt and delinquency figures** follow NY Fed Quarterly Report on Household Debt and Credit anchors; mid-path or latest-year points may be labeled **estimated** when linearly interpolated between disclosed quarters.
+- **Personal saving rate** follows BEA NIPA Table 2.1; 2025–2026Q1 values in the dashboard path include estimated anchors.
+- **Wealth shares and net worth** are Z.1-style household + NPISH compositions rounded for visualization — not a substitute for the full Financial Accounts release tables.
+- **Deposit and MMF levels** cross-check Fed H.8 / FEDS Note framing and ICI weekly; deposit definitions (ex-large time) matter for shares.
+- **Card APR and fed funds** use Board G.19 / commercial bank rate series and effective funds; the gap is arithmetic, not a risk-adjusted credit spread model.
+- **Delinquency is not charge-off**; transition rates into 90+ days are early stress, not ultimate loss given default.
+- This post **aggregates** theme posts; product-level posts remain authoritative for their single-series deep dives.
+
+## Bottom line
+
+US households enter the mid-2020s with an **$18.4 trillion** debt stock that is still **mortgage-dominated**, a **saving rate near 4%**, **card delinquency near 7%** against **mortgage delinquency near 1%**, **card APRs still ~17 pp over funds**, and liquid cash split between **~$15T deposits** and **$7.85T MMFs** under a **~$169T** net-worth umbrella heavy on equities and housing. The household is not “one story.” It is three ledgers that disagree until you read them together.
+
+Related reading: [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026), [credit-card APR gap](/blog/us-credit-card-apr-vs-fed-funds-2026), and [household debt delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+    category: "Consumer Finance",
+    themeId: "consumer-finance-markets",
+    imageUrl:
+      "/images/consumer-finance-consumer-finance-markets-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of household debt stacks, card delinquency line, and liquid cash allocation",
+    publishedAt: "2026-08-20T18:00:00Z",
+    featured: true,
+    visualization: "consumer-finance-markets-research-2026",
+    layout: "canvas",
+  },
+  {
     id: "energy-systems-research-2026",
     slug: "energy-systems-research-2026",
     title:

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "consumer-finance-markets-research-2026",
+    marker: "Consumer finance & household balance sheets — BEA · NY Fed · Z.1",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "energy-systems-research-2026",
     marker: "How countries source, mix, and trade energy",
     forbidden: "Loading interactive charts",
