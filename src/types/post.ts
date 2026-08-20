@@ -90,7 +90,8 @@ export interface Post {
     | "geopolitics-institutions-update-2026q3"
     | "ai-compute-demand-update-2026q3"
     | "fiscal-industrial-policy-update-2026q3"
-    | "ai-capex-spend-update-2026q3";
+    | "ai-capex-spend-update-2026q3"
+    | "ai-power-grid-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

@@ -962,6 +962,21 @@ const AiCapexSpendUpdate2026q3Dashboard = dynamic(
   },
 );
 
+const AiPowerGridUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiPowerGridUpdateDashboard").then(
+      (m) => m.AiPowerGridUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1205,6 +1220,10 @@ export function PostVisualization({
 
   if (type === "ai-capex-spend-update-2026q3") {
     return <AiCapexSpendUpdate2026q3Dashboard />;
+  }
+
+  if (type === "ai-power-grid-update-2026") {
+    return <AiPowerGridUpdateDashboard />;
   }
 
   return null;

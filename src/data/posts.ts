@@ -2,6 +2,122 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-power-grid-update-2026",
+    slug: "ai-power-grid-update-2026",
+    title:
+      "Update: AI Data Centres Hit 485 TWh (+17%) — Central Path Only +5 TWh to 950, but Onsite Gas Enters at 15–27 GW",
+    excerpt:
+      "Versus our IEA Energy and AI research print (~945 TWh Base 2030), Key Questions lifts the central path to ~950 TWh. The real vintage delta is composition: AI-focused load +50% in 2025 and triples to 2030; near-term aggressive upside downshifts; onsite gas 15–27 GW and DC batteries 20–25 GW arrive as grid-response meters.",
+    content: `## What changed since the research vintage
+
+In late July we published the theme’s global frame: [data centres at 415 TWh in 2024 on track for ~945 TWh by 2030](/blog/ai-power-grid-research-2026) in the IEA Base Case, with renewables meeting about half of incremental supply, fossils covering most of the rest, and roughly **20%** of planned projects sitting at grid-delay risk. That post answered the *level* question — can the world’s electrons keep pace with AI load if you start from the IEA’s *Energy and AI* ledger?
+
+This update answers the *vintage* question the newest official print forces: **what moved when IEA Key Questions on Energy and AI (April 2026) restated the outlook**, and does the grid still lose the race once composition, bottlenecks, and workarounds are refreshed?
+
+Three information events rewrite the dashboard. **Key Questions** confirms **485 TWh** of data-centre electricity in **2025** (+**17%** year-over-year) and puts **AI-focused** sites at **+50%** in the same year. The **central path** to 2030 moves only from **~945 → ~950 TWh** — a **+5 TWh** restatement that markets will screenshot as “unchanged” if they stop there. The binding news is elsewhere: **near-term aggressive scenarios become less likely** because bottlenecks tightened across grids, turbines, transformers, and high-bandwidth memory, while the **post-2030 upside case is raised** if those bottlenecks clear and agentic / video / reasoning workloads keep scaling. New meters arrive that the research post could only narrate: **15–27 GW** of onsite natural gas for data centres by 2030 (mostly United States), **20–25 GW** of batteries inside data centres, a **70%** surge in gas-turbine orders in 2025, and AI-server power density running **11×** from 2020 to 2025 with another **~4×** by 2027.
+
+The dashboard above is built as a vintage delta — YoY growth bars, prior→new demand dumbbells, bottleneck Δ meters, density and emissions paths, a pace-mismatch scatter, and a Gartner companion GW/TWh path. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) for the LBNL demand-versus-miles frame.
+
+## The headline table: Energy and AI research vs Key Questions
+
+| Metric | Prior (research) | New print | Δ |
+| --- | ---: | ---: | --- |
+| Global DC electricity, 2024 | **415 TWh** | **415 TWh** | Flat anchor |
+| Global DC electricity, 2025 | **485 TWh** (update note) | **485 TWh** confirmed | **+17% y/y** locked |
+| AI-focused DC growth, 2025 | Fastest driver (narrative) | **+50% y/y** | New disclosed meter |
+| Central / Base path, 2030 | **~945 TWh** | **~950 TWh** | **+5 TWh** |
+| AI-focused path to 2030 | Accelerated servers ~30% CAGR | **Triples** 2025→2030 | Composition hinge |
+| Near-term aggressive upside | Lift-Off still in play | **Less likely** (bottlenecks) | Stance downshift |
+| Post-2030 upside | Fan 700–1,700 TWh | **Higher upside raised** | Stance upshift |
+| Projects at delay risk | **~20%** | **~20%** (still binding) | Flat constraint |
+| Onsite gas for DCs by 2030 | Local workaround narrative | **15–27 GW** (mostly US) | New GW meter |
+| Batteries inside DCs by 2030 | Flexibility underexplored | **20–25 GW** | New GW meter |
+| Gas turbine orders, 2025 | Supply-chain tight | **+70%** | Chokepoint signal |
+| DC generation CO₂ | Peak ~**320 Mt** (~2030) | ~**350 Mt** by 2035 | **+30 Mt** endpoint |
+| Large-tech DC/AI capex | Context | **>$400B** in 2025; **+75%** expected 2026 | Financing pace |
+
+The non-obvious cut is not “demand doubled again.” It is that the **central TWh path barely moved** while the **shape of risk** flipped: near-term delivery gets harder, AI inside the sector gets hungrier, and operators answer slow wires with **onsite gas and batteries** that the July research post did not yet quantify.
+
+## YoY 2025: the sector grew 17%; AI-focused grew 50%
+
+Key Questions locks the 2025 print the research post already previewed: data-centre electricity rose about **17%** to **485 TWh**, in line with prior IEA projections. That is the calm number. The loud number is **AI-focused** data-centre electricity growing about **50%** in the same year — roughly three times the sector average. Major model providers reported roughly a **threefold** rise in active users and a **fivefold** rise in revenue over the past year, which is the demand-side twin of the power meter.
+
+Composition matters more than the aggregate CAGR. A world in which conventional IT load crawls while accelerated racks sprint will stress **transformers, power electronics, and cooling** differently from a world of uniform server growth. The research post already flagged accelerated servers near **30%** annual growth versus conventional near **9%**. The new vintage says the AI slice is not only the growth engine — it is already rewriting year-one prints, not just 2030 scenarios.
+
+Efficiency per *simple* query is collapsing — Key Questions notes order-of-magnitude annual drops for basic text tasks, and a counterfactual where every conventional search becomes a simple AI query would still use under **4 TWh** worldwide. That fact does **not** cap sector demand. Video generation, reasoning, and agentic workloads can consume hundreds or thousands of times more energy per task. The outlook is the product of three moving parts: efficiency gains, uptake, and shifting model capabilities. Only the third term is allowed to dominate headlines; the vintage says all three are live.
+
+## The central path barely moved — the scenario stance did
+
+From **485 TWh** in 2025 to about **950 TWh** in 2030, the central projection remains close to the April 2025 Base Case (**~945 TWh**). A **+5 TWh** restatement is noise at global scale. Treat anyone selling “IEA doubled the forecast again” as misreading the table.
+
+What *did* change is the probability mass around that central line. **Bottlenecks across the value chain** — interconnection queues, turbine and transformer lead times, high-bandwidth memory shortages expected through at least end-2027, stretched permitting, and rising social pushback — are **reducing the likelihood of more aggressive near-term scenarios** even as investment and project pipelines boom. Simultaneously, investments that relieve those bottlenecks, plus rapid uptake of energy-intensive AI use cases, raise the prospect of an **even higher upside after 2030**. The research post’s 2035 fan (**~700–1,700 TWh**) is not replaced digit-for-digit here; the qualitative reweighting is the news: **near-term Lift-Off gets harder; longer-term Lift-Off gets more imaginable if the physical bottlenecks clear**.
+
+That is the planner’s paradox in one sentence. Announced gigawatts look unstoppable in press releases. Deliverable near-term TWh are being **clipped by physics and queues**. Option value after 2030 is rising, not falling.
+
+## Onsite gas and batteries enter as quantified workarounds
+
+The July research post treated onsite generation and flexibility as underexplored tools. Key Questions puts numbers on the workaround stack.
+
+**Onsite natural gas:** constrained by slow grid connections, US developers are pushing projects with onsite gas-fired generation. Satellite tracking suggests about **one-fifth** of those projects have started land clearing or construction. IEA analysis finds reliable onsite gas for critical, variable AI loads requires **overbuilding generation 30–70%** relative to demand. Even so, the agency puts roughly **15–27 GW** of onsite gas powering data centres by 2030 — mostly in the United States — while stressing that most operators still *prefer* a grid connection. Onsite gas is a bridge, not a substitute for interconnection reform. In a turbine supply crunch, it is also not automatically the faster route to market.
+
+**Batteries inside data centres:** AI training and inference induce load swings of more than **50%** of rated capacity within a second. By 2030, about **20–25 GW** of battery storage could sit inside data centres globally — potentially turning campuses into grid assets if incentives line up. A recent operator agreement for the largest-ever battery project by energy capacity (about **4×** the prior record) is commercialising long-duration storage on the back of AI load shape, not only renewable firming.
+
+**Turbine orders:** a **70%** surge in gas-turbine orders in 2025 is the equipment chokepoint rhyme of the interconnection story. The same physical scarcity that slows firm power for AI also slows the onsite workaround meant to bypass the queue.
+
+Pair these meters with the unchanged **~20%** delay-risk estimate and LBNL’s **1,312 GW** of active US generation in queues with median IR→COD still past **five years**. The campus can still stand up in two to three years. The wire — or the turbine — often cannot.
+
+## Power density: a refrigerator rack aimed at 65 households
+
+Between **2020 and 2025**, AI-server power density rose about **11×**. By **2027**, Key Questions sees a further roughly **fourfold** increase — concentrating peak demand equivalent to about **65 households** in a server rack the size of a large refrigerator, with heat rejection on the order of **30** natural-gas boilers per rack and mass comparable to a pickup truck. That density path is why transformers, power electronics, and liquid cooling are no longer “facilities footnotes.” They are the binding midstream of the AI power stack, and several of those supply chains concentrate in a small number of producers (notably China).
+
+Density also explains why **Gartner’s capacity path** remains a useful companion meter even though it is not the IEA TWh ledger. Worldwide data-centre capacity still races **104 GW (2025) → 132 GW (2026) → ~165 GW (2027 est.) → ~290 GW (2030)**; electricity **565 TWh (2026) → 702 TWh (2027)**; AI-optimised servers already take about **31%** of data-centre power in 2026 and are on track to **surpass conventional servers** in **2027**. Capacity (GW) is the interconnection constraint; TWh is the energy bill. Do not average Gartner with IEA into a fake consensus forecast — use both as separate clocks.
+
+## Emissions and money: the quiet restatements
+
+The research post put CO₂ from electricity generation for data centres peaking near **320 Mt** around 2030 before a shallow decline. Key Questions says emissions associated with data centres **double** on its projections, reaching around **350 Mt** in **2035**, still about **2%** of global electricity-sector emissions. The climate pie chart still does not show AI “eating” world power emissions. The local air-quality and gas-turbine politics in US clusters might.
+
+On the money side, capital expenditure at the largest technology companies exceeded **USD 400 billion** in 2025 and is expected to jump about another **75%** in 2026 — with capex at just five technology companies now larger than global investment in oil and natural gas *production*. IEA satellite tracking finds “AI factories” — cutting-edge AI-specific data centres — have more than **tripled** in capacity in the past **18 months**. Financing sensitivity rises with that scale: data-centre growth is no longer only a balance-sheet story; it is a capital-markets and return-expectation story. That links this energy theme to the [hyperscaler capex intensity](/blog/ai-capex-intensity-update-2026) and [AI financing](/blog/ai-financing-update-2026) updates without collapsing watts into dollars.
+
+## What would rewrite the next vintage
+
+1. **A Key Questions / WEO restatement** that moves the 2030 central path by more than ~50 TWh — a true demand shock, not a +5 TWh rounding.
+2. **Energisation prints** showing US onsite gas connecting at the high end of **15–27 GW** *and* cutting measured interconnection wait times — or stalling in the turbine queue, which would falsify the workaround.
+3. **Battery-as-grid-resource tariffs** that convert the **20–25 GW** DC storage stock into measurable demand response rather than private ride-through.
+4. **HBM / advanced packaging relief** before end-2027 that re-opens near-term aggressive AI deployment scenarios the new vintage just downweighted.
+5. **Cluster-level brownout or price spikes** in Northern Virginia, Texas, Dublin, or Frankfurt that make the flat global **~3%** share politically irrelevant.
+6. **Gartner 2H26 / 2027 vintage** that breaks the 702 TWh / AI-surpasses-conventional hinge.
+
+Until those print, the live frame versus July is narrow: **central 2030 demand is ~950 TWh (+5 vs Base); AI-focused load is the composition hinge (+50% in 2025, triple by 2030); near-term aggressive upside downshifts while post-2030 upside rises; onsite gas and DC batteries are now quantified bridges; delay risk and US queue clocks are still the binding constraint.**
+
+## Caveats and methodology
+
+1. **This is a vintage delta**, not a second encyclopedia. For the full scenario fan, regional shares, and physical fuel mix, use the [research post](/blog/ai-power-grid-research-2026) and the [concentration companion](/blog/ai-power-grid-concentration-2026).
+2. **IEA TWh ≠ Gartner GW/TWh.** Different scopes and methods; chart them separately.
+3. **Physical generation mix ≠ contractual PPAs.** Carry that research caveat forward — Key Questions does not license greenwashing the fuel stack.
+4. **2035 “new central” in the dashboard** is an *estimated* uplift reflecting upside language, not a restated IEA Base Case endpoint. Disclosed anchors remain 2024 (415), 2025 (485), and ~950 in 2030.
+5. **Onsite gas 15–27 GW** and **batteries 20–25 GW** are IEA ranges with high uncertainty; midpoints in charts are for visualization.
+6. **Delay risk ~20%** and LBNL queue volumes are carried from the research vintage where Key Questions did not restate them; treat as still-binding context, not a new survey.
+7. **Capex >$400B / +75%** describes large technology-company investment pace, not utility T&D budgets.
+8. **Per-query efficiency gains** do not imply falling sector demand while workload mix shifts toward agentic and multimodal tasks.
+
+Primary sources: IEA *Key Questions on Energy and AI* (Apr 2026); IEA *Energy and AI* (Apr 2025); LBNL *Queued Up* 2026 (end-2025 queues, carried); Gartner Forecast: Data Center Power Capacity and Consumption, Worldwide, 2024–2030 (1Q26 public figures as used in theme companions); prior baseline in [AI power-grid research](/blog/ai-power-grid-research-2026).
+
+## The shareable takeaway
+
+**Versus our July research print, the newest IEA vintage barely moves the 2030 central path — 945 → 950 TWh — while rewriting the risk shape.** Data centres hit **485 TWh** in 2025 (**+17%**); AI-focused sites grew **+50%** and are on track to **triple** by 2030. Near-term aggressive scenarios lose probability to bottlenecks; post-2030 upside rises if those bottlenecks clear. Operators answer slow wires with **15–27 GW** of onsite gas and **20–25 GW** of campus batteries, against an unchanged **~20%** delay-risk clock and US interconnection medians past **five years**. Electricity *can* still be built for AI. The open question is whether grids, turbines, and queues — or the workarounds — arrive where the GPUs actually plug in.
+
+Related reading: [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+    category: "Energy",
+    themeId: "ai-power-grid",
+    imageUrl: "/images/energy-ai-power-grid-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of AI data-center electricity demand racing ahead of slower amber transmission grid build-out",
+    publishedAt: "2026-08-20T23:30:00Z",
+    featured: true,
+    visualization: "ai-power-grid-update-2026",
+    layout: "default",
+  },
+  {
     id: "ai-capex-spend-update-2026q3",
     slug: "ai-capex-spend-update-2026q3",
     title:
