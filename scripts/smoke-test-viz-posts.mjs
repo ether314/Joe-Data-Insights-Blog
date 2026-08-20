@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "measurement-science-update-2026q3",
+    marker: "PPP overtake gap narrows to 0.3 pp",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "heavy-industrial-capacity-research-2026",
     marker: "Yards, dry docks, and the forge base",
     forbidden: "Loading interactive charts",

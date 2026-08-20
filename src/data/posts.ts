@@ -2,6 +2,106 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "measurement-science-update-2026q3",
+    slug: "measurement-science-update-2026q3",
+    title:
+      "Update: China’s PPP R&D Lead Shrinks to 0.3 pp — Business Gap +$100B, EXR Still ~50%",
+    excerpt:
+      "Versus our NSF State of S&E print (CN 30% / US 29%), OECD/AAAS Q3 finer shares print 29.4% vs 29.1%. The overtake vanishes under EXR (~50%) and alt-PPP (90–95%); China’s business BERD leads by ~$100B.",
+    category: "Global Systems",
+    themeId: "measurement-science",
+    imageUrl:
+      "/images/global-systems-measurement-science-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero of near-parity China and US R&D ledgers with a measurement-frame dial for PPP versus exchange-rate converters",
+    publishedAt: "2026-08-20T23:50:00Z",
+    featured: true,
+    visualization: "measurement-science-update-2026q3",
+    layout: "default",
+    content: `## What changed since the NSF State of S&E vintage
+
+Our [August measurement-science update](/blog/measurement-science-update-2026) closed on a clean NSF/NSB State of U.S. Science & Engineering 2026 headline: worldwide GERD at **$3.48 trillion** in **2024**, China at **$1.028 trillion (30%)**, the United States at **$1.009 trillion (29%)**, and US+China combined at **59%**. Publication volume concentrated further so China–US–India alone printed half of world S&E articles. That post answered the *first* flow question after the [2022 research ledger](/blog/measurement-science-research-2026) — did the newest Indicators vintage show the duopoly tightening? Yes.
+
+This Q3 refresh answers the *next* vintage question the theme brief forces: **what changed once OECD Main Science and Technology Indicators (March/April 2026) and the AAAS Global R&D Update (9 June 2026) re-stated the same 2024 year with finer shares, sector splits, and converter sensitivity?** Three information events rewrite the frame without overturning the direction of travel. **AAAS on OECD** prints China at **29.4%** of global R&D and the US at **29.1%** — an overtake that still holds, but by **0.3 pp** instead of the rounded **1 pp** gap. **OECD’s statistical release** warns that GDP PPPs are not R&D PPPs: under alternate converter assumptions China sits at roughly **90–95%** of US GERD, and under market exchange rates at about **50%**. **Sector tables** show the private ledger is doing the work — China’s business BERD outspent the US by about **$100 billion** (constant 2020 PPP) while the US still leads government-sector R&D by about **$19 billion**.
+
+The dashboard above is built as a measurement delta: share restatement dumbbells, a four-frame China/US ladder, sector-gap bars, OECD growth and EU/US paths, a funding-mix donut, and an AAAS scoreboard for dollars, people, papers, and patents.
+
+## The headline table: NSF prior print → OECD/AAAS Q3
+
+| Meter | Prior (NSF State of S&E) | Newest (OECD/AAAS) | Δ |
+| --- | ---: | ---: | ---: |
+| China world GERD share | **30%** | **29.4%** | **−0.6 pp** restatement |
+| US world GERD share | **29%** | **29.1%** | **+0.1 pp** restatement |
+| China−US share gap | **+1.0 pp** | **+0.3 pp** | **−0.7 pp** |
+| US + China share | **59%** | **58.5%** | **−0.5 pp** |
+| China / US (current PPP) | **~102%** | **~102%** | overtake holds |
+| China / US (alt PPP sensitivity) | not shown | **90–95%** | overtake disappears |
+| China / US (EXR) | not shown | **~50%** | US still ahead |
+| Business BERD gap (CN−US) | not broken out | **+$100B** | new |
+| Gov R&D gap (US−CN) | not broken out | **+$19B US** | new |
+| China share of non-OECD R&D | not shown | **92.3%** | new concentration |
+
+Treat the **−0.6 / +0.1 pp** share moves carefully. They are mostly **measurement restatements** of the same 2024 year — finer AAAS/OECD percentages versus NSF’s rounded Discovery summary — not a fresh 2025 GERD year. The economically important news is the **frame panel** and the **sector panel**: whether China “leads” depends on which converter you trust, and *where* the dollars sit (business vs government) is more informative than the 0.3 pp headline gap.
+
+## The overtake survived — barely — on finer shares
+
+Rounded tables are policy-friendly and journalistically sticky. NSF’s **30% vs 29%** print made the China overtake impossible to miss. AAAS’s **29.4% vs 29.1%** print keeps the ranking but removes the rhetorical cushion. A **0.3 pp** gap is inside the noise band of PPP revisions, coverage differences across non-OECD reporters, and rounding conventions. The duopoly share eases only slightly (**59% → 58.5%**). Concentration did not unwind; the story got *more precise* and therefore *more fragile*.
+
+That is the right reading for the theme’s core question — *where is progress funded and published, and is it concentrating?* Funding is still concentrating in two economies that together clear roughly three-fifths of the OECD-coverage world. The newest vintage does not restore a clear US lead on current PPP. It does say the lead change is a knife-edge once you stop rounding.
+
+## Measurement frames: PPP overtake, EXR near-half, sensitivity in between
+
+OECD’s March 2026 release is unusually explicit about converter risk. Current PPP puts both China and the United States across the **$1 trillion** mark in 2024 prices, with China slightly ahead. The same release notes that available PPPs are designed for GDP, not R&D, and may be revised in future benchmarking. Illustrative sensitivity in the OECD note — treating four yuan as purchasing the same R&D inputs as one US dollar rather than the latest PPP ratio near 3.5 — places China at about **90–95%** of US GERD rather than **~102%**. On market exchange rates, China’s R&D is about **50%** of the US level in 2024, up from **44%** in 2014 and **8%** in 2004 — a long catch-up that still leaves the US clearly ahead when bills are paid in dollars.
+
+The frame ladder in the dashboard is therefore not a gotcha chart. It is the honest multi-meter view the prior NSF-only post could not show. Analysts who only quote PPP will keep saying China leads. Analysts who only quote EXR will keep saying the US leads by roughly 2×. Both sentences can be true in the same year. The Q3 contribution is forcing that coexistence into one panel.
+
+EU comparisons reinforce the same lesson. Versus the United States, EU R&D fell from about **70% to 60%** on PPP between 2014 and 2024, and from **57% to 43%** on exchange rates. The US–China drama is not the only concentration story; the transatlantic gap widened on both converters while East Asia’s intensity leaders (Korea, Taiwan, Japan) keep punching above volume share.
+
+## Business dollars flipped the total; government did not
+
+AAAS’s sector cut is the cleanest “where is progress funded” answer in this vintage. Most of China’s rise versus the US is inside the **private / business** sector, where China outspent the United States by roughly **$100 billion** in constant 2020 PPP dollars. In the **government** sector, the United States still outspent China by about **$19 billion**. Add those signed gaps and you recover the knife-edge total overtake — private strength more than offsets a still-US-led public ledger.
+
+OECD-area funding mix remains business-dominated: about **64%** of OECD R&D financing from business (**>$1.45 trillion** in the AAAS 2023 cut), roughly **23%** from government, and the residual from higher education, nonprofits, and other sources. Long-run index growth since 1992 shows the same asymmetry — business financing up about **303%**, higher-ed/nonprofit up about **332%**, government only about **65%**. The newest OECD prose adds a composition twist inside the government slice: budgets are declining in several members while remaining appropriations **reorient toward defence**. That is a different concentration axis than country shares — mission mix inside the public meter — and it was absent from the August NSF share update.
+
+## Growth is uneven: US +3.4%, EU flat, Germany slightly down
+
+Inside the OECD area, 2024 real GERD growth was not a synchronized boom. The United States printed about **+3.4%**, the European Union about **+0.4%**, and Germany a slight **−0.4%** decline. OECD commentary groups Japan, Korea, and Türkiye among economies growing more than **5%**. OECD-area R&D intensity remains stuck near **2.7%** of GDP from 2020 through 2024 — a plateau that means headline dollar growth is mostly scale and composition, not a broad intensity lift across the club.
+
+The non-OECD ledger is the starkest concentration meter added this quarter: China accounts for **92.3%** of non-OECD R&D spending in the AAAS reading of 2024. “The rest of the world outside the OECD” is, operationally, a China story with a thin fringe. Pair that with the prior post’s publication concentration (China–US–India at half of world articles) and the theme’s answer hardens: progress is funded and published in a narrowing set of poles, even when converter debates blur who sits in first place on dollars.
+
+## Scoreboard: dollars, people, papers, patents
+
+AAAS’s blunt bottom line — the United States has lost first place across dollars, people, papers, and patents — extends the August pubs-and-GERD story into workforce and IP meters the prior update treated lightly. China continues to widen researcher FTE leadership. PCT patent filings remain China-led since roughly **2012**, with ICT patenting especially concentrated (AAAS notes China filing on the order of three times the second-largest ICT filer in 2024). The prior post’s citation-impact caveat still matters: volume and patent counts are not the same as highly cited article share, where the US retained an edge in the State of S&E framing. Q3 does not erase that influence gap; it says the *input and output volume* scoreboard is now China-first on more columns than the August GERD post alone conveyed.
+
+For fiscal-industrial context on how governments try to bend these curves with place-based and mission budgets, see the [fiscal industrial policy Q3 update](/blog/fiscal-industrial-policy-update-2026q3). For the theme baseline before either update, keep the [2022 research print](/blog/measurement-science-research-2026) beside the [August NSF vintage](/blog/measurement-science-update-2026).
+
+## What would rewrite this update
+
+1. **A new GERD year (2025)** in NSF Indicators or OECD MSTI that moves China/US shares by more than a rounding restatement.
+2. **PPP benchmarking revisions** that lock the alternate sensitivity (90–95%) into the headline converter — flipping the overtake off on official PPP.
+3. **Sector tables** showing the business BERD gap compressing below ~$50B or the US losing the government-sector lead.
+4. **Non-OECD diversification** that pulls China’s share of non-OECD R&D materially below ~90%.
+5. **GBARD detail** quantifying how large the defence reorientation is in US, EU, and East Asian government budgets for 2025–26.
+
+Until those print, the live frame versus the August NSF post is narrow but consequential: **the PPP overtake still holds on finer shares (29.4% vs 29.1%), but the gap is only 0.3 pp; EXR and alt-PPP frames reject the overtake; China’s business sector is ~$100B ahead while US government R&D remains ahead by ~$19B; non-OECD R&D is 92.3% China.**
+
+## Caveats and methodology
+
+1. **Same reference year, new converters.** Most Q3 deltas restate **2024** GERD, not a 2025 flow year. Do not read −0.6 pp China share as a period decline.
+2. **NSF rounded shares ≠ AAAS finer shares.** Both use OECD-comparable GERD; presentation precision differs. We treat AAAS 29.4 / 29.1 as the newest disclosed fine print.
+3. **GDP PPPs ≠ R&D PPPs.** OECD’s own release flags this; the 90–95% band is sensitivity, labeled estimated in the data module.
+4. **Constant 2020 PPP sector gaps** (business +$100B, government −$19B) follow AAAS’s OECD synthesis; they are not identical to NSF’s current-dollar country totals.
+5. **Japan/Korea >5% growth** is grouped in OECD prose; chart points are estimated midpoints of that “over 5%” statement.
+6. **Publication and HCA meters** from the August post are not fully re-estimated here; the scoreboard cites AAAS directionally for patents and FTEs.
+7. **Domestic NCSES US R&D totals** still must not be mixed into OECD-comparable world shares.
+
+Primary sources: OECD Main Science and Technology Indicators March/April 2026 statistical release; AAAS *Global R&D Update 2026* (9 June 2026); NSF/NSB *State of U.S. Science and Engineering 2026*; prior theme posts [measurement-science-update-2026](/blog/measurement-science-update-2026) and [measurement-science-research-2026](/blog/measurement-science-research-2026).
+
+## The shareable takeaway
+
+**Versus the NSF State of S&E print, China’s PPP world share restates to 29.4% against the US at 29.1% — an overtake that survives by only 0.3 pp.** Under market exchange rates China is still about **half** US GERD; under OECD PPP sensitivity it is **90–95%**. The private sector explains the knife-edge: China leads business BERD by roughly **$100B** while the US leads government R&D by about **$19B**. Non-OECD R&D is **92.3%** China. Funding and publication progress are still concentrating — the newest vintage mainly teaches that *how you convert* decides whether the dollar race looks already lost, nearly tied, or still America’s to call.`,
+  },
+  {
     id: "heavy-industrial-capacity-research-2026",
     slug: "heavy-industrial-capacity-research-2026",
     title:
