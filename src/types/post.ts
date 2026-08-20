@@ -95,7 +95,8 @@ export interface Post {
     | "ai-financing-update-2026q3"
     | "industrial-robotics-update-2026q3"
     | "consumer-finance-markets-update-2026q3"
-    | "chokepoint-commodities-update-2026q3";
+    | "chokepoint-commodities-update-2026q3"
+    | "demographic-cash-flows-update-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

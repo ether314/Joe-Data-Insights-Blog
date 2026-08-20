@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-update-2026q3",
+    slug: "demographic-cash-flows-update-2026q3",
+    title:
+      "Update: Mexico Remittances Rebound +3.1% in H1 2026 to $30.8B After 2025 Drop",
+    excerpt:
+      "Versus our Aug Banxico-2025 update (−4.6% / $61.8B), Banxico’s June 2026 bulletin prints H1 remittances at $30.76B (+3.1% YoY). Larger tickets (+5% to $405) offset fewer wires (−1.8%); OECD pension path to 10% of GDP by 2050 is unchanged.",
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl:
+      "/images/global-systems-demographic-cash-flows-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of remittance pipes rebounding from the US toward Mexico beside a cool teal aging-host pension ledger",
+    publishedAt: "2026-08-20T23:50:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-update-2026q3",
+    layout: "default",
+    content: `## What changed since the August Banxico vintage
+
+In August we closed the theme’s first official update on a clean break: [Mexico remittances fell 4.6% to $61.8B in 2025](/blog/demographic-cash-flows-update-2026) — the first annual decline in eleven years — after Banxico also restated 2024 to **$64.7B** versus Brief 41’s **$68B** estimate. LAC peers excluding Mexico still grew more than **16%** on average, and OECD-32 public pensions stayed on a path from **8.8% to 10.0% of GDP by 2050**. That post answered the *streak-break* question. This Q3 refresh answers the *next* vintage question markets and finance ministries actually trade on: **did the private US→Mexico pipe stabilize after the decline, and does the two-ledger story (fast remittance pulse vs grinding host pensions) still hold?**
+
+One information event forces the rewrite. **Banxico’s June 2026 remittance bulletin** (published early August) prints family remittance incomes for January–June at **$30.759 billion**, up **3.1%** from **$29.842 billion** in H1 2025 — a **+$917 million** absolute gain and the second-highest first-half total on record behind only H1 2024’s **$31.34 billion**. June alone printed **$5.472 billion** (**+4.2% YoY**), the second consecutive month above **$5 billion**. The average remittance rose **5%** to **$405**, while the number of transactions fell **1.8%** to **75.97 million**. Electronic transfers remain **99.2%** of the pipe.
+
+The dashboard above is built as a vintage delta: H1 rebound with YoY overlay, monthly 2025-vs-2026 path, ticket-versus-volume decomposition, Aug→Q3 growth swing, an age×remittance scatter with Mexico’s mild GDP-share nudge, and the unchanged OECD host-pension path.
+
+## The headline table: Aug update vs Banxico June 2026
+
+| Metric | Prior (Aug update) | New print | Δ |
+| --- | ---: | ---: | --- |
+| Mexico remittance growth | **−4.6%** FY 2025 | **+3.1%** H1 2026 | **+7.7 pp** swing |
+| Mexico remittances H1 | **$29.84B** (H1 2025) | **$30.76B** (H1 2026) | **+$0.92B / +3.1%** |
+| Mexico remittances June | FY path cooling | **$5.47B (+4.2% YoY)** | 2nd straight >$5B month |
+| Average remittance (H1) | **$386** | **$405** | **+5.0%** |
+| Remittance transactions (H1) | Volume soft in 2025 | **75.97M (−1.8%)** | Fewer wires, larger tickets |
+| Mexico remit / GDP (est.) | **~3.4%** (FY 2025) | **~3.5%** (H1 run-rate) | Mild rebound |
+| OECD-32 public pensions / GDP | **8.8% → 10.0%** by 2050 | Unchanged (PaG 2025) | Host ledger still +1.2 pp |
+| LMIC remittances (aggregate) | **$685B** (Brief 41 2024e) | No newer Brief restatement | Hold prior anchor |
+
+Treat the growth swing carefully. The **−4.6%** and **+3.1%** prints are both Banxico-booked period deltas — not measurement residuals — but they cover different horizons (full year vs first half). Annualizing H1 into a 2026 full-year call would be editorial overreach; the clean claim is that **the decline did not deepen into H1**, and the composition of the rebound is a **ticket-size story** more than a remitter-count recovery.
+
+## The private pipe rebounded — tickets up, wires down
+
+For eleven years Mexico’s family remittances expanded; 2025 broke the streak. H1 2026 does not restore the streak in annual terms, but it does flip the sign on the flow meter that desks watch mid-year. **$30.76 billion** is still about **$0.58 billion** short of the H1 2024 peak, so this is a **partial recovery**, not a new high-water mark. More than **99%** of inflows still arrive as electronic transfers — the same plumbing the August post emphasized.
+
+The decomposition panel is the analytical core of this vintage. Average remittance **$405** (**+5%** from **$386**) is the highest H1 average in at least a decade on Banxico’s framing. Transaction count **−1.8%** means fewer individual wires. Dollars still rose because **ticket inflation outran volume decline**. That is the opposite of a pure “more remitters returned” narrative and closer to a “households that still send are sending more” narrative — consistent with a US labor market that remains tight enough for wage-supported transfers even under heightened immigration enforcement.
+
+Seasonally adjusted, Banxico reported June incomes down **2.4%** month-on-month after May’s strength, so the rebound is not a straight monthly climb. The H1 YoY print still clears the bar the August update set: **the private corridor can reverse inside two half-years**.
+
+## Age and migration still show up as two clocks
+
+The research baseline and the August update both insisted that demographic cash flows are a **dual ledger**. Aging hosts (Italy, Japan, much of Western Europe) run **public pension** shares of GDP that grind higher over decades. Younger, remittance-origin economies (Mexico, Guatemala, India, Tajikistan) run **private cross-border** pipes that can swing several percentage points in a single year. Q3 does not rewrite that architecture — it refreshes the *speed* of the private clock.
+
+Toggle the dashboard’s age×remittance scatter. Mexico’s estimated remittance/GDP share nudges from roughly **3.4%** (FY 2025 narrative) toward **~3.5%** on an H1 run-rate — a small rightward hop, not a regime change. Aging hosts stay parked on the high-dependency, low-remittance ledge. The US remains the bridge: low remittance *receipt* share of GDP, high remittance *origin* role for Mexico, and a Social Security / Medicare fiscal path that belongs on the host ledger even when Banxico’s monthly print dominates the news cycle.
+
+For corridor plumbing detail — fee levels, bilateral pipes, and concentration — keep [global remittance corridors](/blog/global-remittance-corridors-2026) open beside this update. The Q3 job is narrower: **vintage delta on the Mexico pulse and confirmation that the host pension path has not been restated.**
+
+## Host pensions still grind toward 10% of GDP
+
+OECD Pensions at a Glance 2025 remains the newest host-side vintage between August and Q3. The OECD-32 average still runs from **8.8% of GDP in 2023–24 to 10.0% by 2050** (**+1.2 pp**). Italy stays near **16%**. Japan’s path climbs through the low teens on a slower slope than Southern Europe’s peak levels. The United States sits lower on cash-pension shares but carries an old-age dependency ratio near **29** and a trust-fund politics cycle that is its own fiscal story.
+
+Nothing in Banxico’s June bulletin changes those host projections. That is the editorial point. Remittance desks can celebrate a **+3.1%** H1 rebound in the same week pension offices are still marking a multi-decade climb. Age shows up in money flows as **slow public commitments**; migration shows up as **fast private transfers**. Confusing the two clocks is how analysts overfit a six-month remittance bounce into a claim that demographic fiscal pressure eased.
+
+## Forward risks: compliance rules and a still-soft volume count
+
+Two caveats sit on top of the rebound. First, reporting around US regulations that would require **legal-status verification for money transfers starting September 2026** is a **forward operational risk** to the formal electronic pipe — not a factor already baked into H1. If compliance friction raises costs or pushes flows informal, Banxico’s next bulletins could show volume softness even if migrant wages hold. Second, transaction count is still falling (**−1.8%**). A rebound built only on ticket size is more fragile than one built on remitter counts, especially if real peso purchasing power of dollar transfers keeps eroding — a theme Mexican research desks have flagged across thirteen consecutive months of real-terms softness in some readings.
+
+Outgoing remittances from Mexico remain tiny relative to inflows (hundreds of millions versus tens of billions) and do not change the net-surplus story. The surplus of the remittance account in H1 2026 was about **$30.1 billion**, still the macro-relevant external buffer.
+
+## Caveats
+
+- **H1 vs full-year**: **+3.1%** is a first-half YoY print; it does not imply full-year 2026 will finish positive until Banxico closes December.
+- **Monthly path**: only **June 2026** is a disclosed monthly level in this dashboard; other H1 months are **constructed** to match Banxico’s H1 totals and should not be cited as official month prints.
+- **GDP shares** for Mexico (**~3.4% / ~3.5%**) are **estimated** narrative anchors from Banxico/BASE framing, not a new SNA restatement.
+- **OECD pension path** is carried unchanged from PaG 2025; absence of a newer OECD vintage is itself the host-ledger update.
+- **Brief 41 LMIC $685B** remains the aggregate anchor where no newer World Bank Migration & Development Brief has restated 2024e/2025e.
+- **Scatter coordinates** for non-Mexico economies reuse theme dependency and remit/GDP levels from the research/update chain — directionally labeled, not a fresh UN/World Bank microdata pull this quarter.
+- **US compliance rules** are a forward risk narrative from secondary reporting; they are not Banxico H1 accounting items.
+
+## Methodology
+
+Headline vintage delta follows Banxico *Ingresos y Egresos por Remesas, junio de 2026*: H1 incomes **$30.759B (+3.1%)**, June **$5.472B (+4.2%)**, electronic share **99.2%**, H1 average remittance **$405 (+5%)**, H1 transactions **75.97M (−1.8%)**. Prior vintage anchors (**−4.6% / $61.791B** FY 2025, **$64.746B** FY 2024, H1 2024 **$31.34B**, OECD-32 **8.8%→10.0%**) follow our [August demographic cash flows update](/blog/demographic-cash-flows-update-2026) and OECD Pensions at a Glance 2025. Growth-swing arithmetic (**+7.7 pp**) is the simple difference between FY 2025 YoY and H1 2026 YoY. Dual-ledger and scatter panels reuse the theme’s age×remittance framing from the [research baseline](/blog/demographic-cash-flows-research-2026).
+
+## Bottom line
+
+The newest official vintage did not erase 2025’s streak break — it **flipped the mid-year sign**. Mexico’s remittances rebounded **+3.1%** in H1 2026 to **$30.76B**, powered by **larger tickets** even as **transaction counts fell**. June cleared **$5.47B**. Host-side public pensions still grind toward **10% of OECD-32 GDP by 2050**. Age and migration still show up as two ledgers: a private origin pipe that can reverse inside two half-years, and a public host commitment that moves over decades. For corridor detail see [global remittance corridors](/blog/global-remittance-corridors-2026); for the streak-break vintage see the [August update](/blog/demographic-cash-flows-update-2026); for the stock essay see the [research post](/blog/demographic-cash-flows-research-2026).`,
+  },
+  {
     id: "chokepoint-commodities-update-2026q3",
     slug: "chokepoint-commodities-update-2026q3",
     title:

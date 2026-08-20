@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "demographic-cash-flows-update-2026q3",
+    marker: "Q3 vintage delta — Aug Banxico 2025 update → Banxico June 2026",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "chokepoint-commodities-update-2026q3",
     marker: "Vintage delta — MCS 2026 update / secondary midstream → IEA GCMO 2026",
     forbidden: "Loading interactive charts",
