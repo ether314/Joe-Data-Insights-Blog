@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "geopolitics-institutions-update-2026",
+    slug: "geopolitics-institutions-update-2026",
+    title:
+      "Update: IMF Quota Consents Stuck at 72.8% — Still −12.2 pp Short of 85%; US Not Filed",
+    excerpt:
+      "Versus our institutions research print, IMF PP 2025/040 shows 16th GRQ consents at 72.78% (need 85%) and NAB rollback at 83.9% (need 90%). The World Bank’s 2025 shareholding review finds 45 under-represented countries — and no SCI.",
+    themeId: "geopolitics-institutions",
+    content: `## What changed since the research vintage
+
+In our [institutions & governance research ledger](/blog/geopolitics-institutions-research-2026) we mapped the **stock** of formal authority: the United States alone holds about **16.5%** of IMF votes — enough to block **85%** special majorities — China’s PPP GDP share (~**18.7%**) still dwarfs its ~**6.1%** Fund vote weight, and the **16th General Review of Quotas** raised total quotas by **50%** while leaving **relative shares frozen**. That post answered the design question — *how do power structures allocate authority?* This update answers the effectiveness question the newest official prints force: **what moved in the consent and shareholding vintages**, and did any lever actually reallocate votes?
+
+Two documents rewrite the timeline without rewriting the hierarchy. The IMF Finance Department’s **Policy Paper 2025/040** (published November 2025) discloses that as of **29 October 2025**, only **132** members representing **72.78%** of quotas had consented to their 16th GRQ increases — **12.22 percentage points** short of the **85%** effectiveness threshold — and that the Executive Board extended the consent window to **15 May 2026**. The World Bank’s **DC2026-0003** report to Governors (10 April 2026) closes the **2025 Shareholding Review**: **45** of **189** IBRD members (holding **47.5%** of shareholding) are under-represented under the Dynamic Formula, yet there is **not sufficient support** for a Selective Capital Increase (**75%** needed) or a Basic Votes increase (**85%** Articles threshold). The dashboard above is built as a vintage delta: consent shortfalls, the path to the May 2026 deadline, IBRD misalignment, frozen vote−GDP gaps, and which reform levers moved versus stuck.
+
+## The headline table: research stock → newest print
+
+| Metric | Research vintage | Newest official print | Δ |
+| --- | ---: | ---: | ---: |
+| 16th GRQ relative vote shares | Frozen after +50% | Still frozen | **0** |
+| Quota consents toward effectiveness | Not yet scored | **72.78%** (need 85%) | **−12.22 pp** short |
+| Members consented / pending | — | **132** / **59** | New ledger |
+| NAB rollback consents | Paired with 16th GRQ | **83.90%** (need 90%) | **−6.10 pp** short |
+| Consent deadline | Rolling extensions | **15 May 2026** | +6 months |
+| US quota / NAB consent | Assumed pivotal | **Not on Oct 2025 list** | Binding gap |
+| China IMF vote − PPP GDP gap | **−12.6 pp** | **−12.6 pp** | **0** (shares unchanged) |
+| IBRD under-represented members | Review underway | **45** countries / **47.5%** of shares | Census printed |
+| IBRD SCI / Basic Votes | Possible tools | **Insufficient support** | Both stuck |
+| Client-voice package (non-share) | Not in research ledger | **Advancing** | Soft reform only |
+
+Read the table as a **freeze with a clock**, not a quiet period. Money was supposed to arrive (equiproportional quota increase). Authority was not supposed to move. The update says even the money has not cleared the consent gate — and the Bank’s five-year realignment ritual ended without issuing shares.
+
+## The binding shortfall is consent, not formula math
+
+Toggle the dashboard’s **Consent track** control. The quota bar sits at **72.78%** against an **85%** line; the NAB bar at **83.90%** against **90%**. Those are not forecasting confidence intervals. They are **hard institutional rules** in Resolution 79-1 and the companion NAB decision: no member’s increase becomes effective until the Board determines that the thresholds are met.
+
+The arithmetic of the remaining gap is stark. Annex I of PP 2025/040 states that consents representing a further **12.22%** of total quotas are still required. The United States is **absent** from the consented list. In our research print the US alone sits near **16.5%** of votes and roughly **17%** of quotas — larger than the entire remaining shortfall. China (**6.40%** quota share), Japan (**6.47%**), Germany (**5.59%**), France and the United Kingdom (**4.23%** each), India (**2.75%**), and Brazil (**2.32%**) **have** consented. The coalition that can finish the review on paper already includes most of the top tier — except the shareholder whose vote share is the structural veto on **85%** decisions in the first place.
+
+That is the vintage punchline for the theme question. Authority is allocated not only by **charter formulas** but by **who must say yes before formulas become cash**. An equiproportional increase that preserves US blocking power still cannot take effect without US (and other pending) consent. The research post showed why relative shares did not move; the update shows why the **increase itself** remains contingent.
+
+## World Bank review: misalignment measured, realignment refused
+
+Switch to the **IBRD misalignment** donut. Under the Dynamic Formula (80% GDP blend, 20% IDA contributions, with compression), **45** countries accounting for **47.5%** of shareholding are under-represented; **144** countries with **52.5%** of shareholding are over-represented. Low-income countries hold about **2%** of IBRD voting power. The Review’s own language is blunt: after simulations of Selective Capital Increases, Basic Votes hikes, and targeted unallocated-share options, **there is not sufficient support** for an SCI (Governors’ resolution needing **75%**) or for raising Basic Votes (Articles amendment needing **85%**).
+
+Compare that to the 2020 review, which also produced **no** shareholding adjustment. The 2025 vintage is not a surprise failure; it is a **confirmed pattern**. The formula can print misalignment every five years. The majorities required to fix it sit inside the same weighted-voting structure that the misalignment describes. Pair this Bank ledger with our [NATO defense-spending vs GDP](/blog/nato-defense-spending-gdp-2-percent-2024) and [SIPRI world military expenditure](/blog/sipri-world-military-expenditure-2024) posts when you need the *security-budget* side of institutional power — here the binding constraint is shareholding arithmetic, not tanks.
+
+What *did* move is the **Voice track**: an expanding Voice Secondment Program, Research Analyst posts for the largest multi-country chairs, a LIC Board working group, formalized President-selection process tweaks, stronger client access at Spring/Annual Meetings, and Global South think-tank partnerships. Those are real procedural gains. They are also explicitly **budget-neutral** and **non-share**. The dashboard’s voice-package split makes the hierarchy visible: soft voice advances; hard vote realignment defers.
+
+## Gaps did not budge — consent status is the only new color
+
+Filter **Region** on the scatter. Every major’s IMF **vote − PPP GDP** gap is identical to the research print: China still **−12.6 pp**, India **−5.3 pp**, Indonesia **−1.6 pp**, Japan and Germany still over-weighted. The Δ column is a row of zeros because relative shares never moved — and because the 16th GRQ was designed not to move them. What the scatter adds is **consent coloring**: dark markers for non-consenters, teal/region hues for those already on the October list. The geometry of under-representation is unchanged; the **path-dependence of effectiveness** is newly measurable.
+
+That matters for readers who treat “the 16th Review happened in 2023” as settled. Governors **approved** the Resolution. Effectiveness is a second gate. Until **85%** of quotas consent **and** **90%** of NAB credit arrangements consent to the rollback, the Fund’s permanent resource mix stays on the old rails even though the political bargain was struck. Deadline extensions — including the latest jump to **15 May 2026** — are how the institution buys time without admitting the bargain is incomplete.
+
+## Who is exposed under the new vintage
+
+**Exposed:** emerging-market coalitions that treated the 16th GRQ’s **+50%** headline as money in the bank; reformers who assumed the Bank’s 2025 review would deliver even a modest SCI after the 2020 no-op; program countries whose access narratives embed larger Fund quota resources that have not yet become effective; and anyone modeling “quota share = current voting power dynamics” without a consent overlay.
+
+**Relative winners under current rules:** shareholders who already sit above special-majority blocking thresholds and can treat consent timing as leverage; chairs that extract **voice** concessions (secondments, analysts, LIC working groups) while voting weights stay put; and bilateral or plurilateral safety-net arrangements that do not wait on Fund effectiveness conditions.
+
+**What would change the story:** US (and remaining) quota consents that clear the **12.22 pp** gap before the May 2026 deadline; NAB participants covering the last **6.10 pp** to **90%**; a surprise SCI coalition at the Bank clearing **75%**; or a 17th GRQ that finally abandons equiproportional freezes. None of those print in PP 2025/040 or DC2026-0003.
+
+## Caveats and methodology
+
+- **Consent ≠ ratification politics alone.** Some members cannot consent for domestic or recognition reasons (PP 2025/040 notes Afghanistan, Myanmar, and Venezuela as unable to consent at this stage). The US absence is still the largest single disclosed gap relative to the shortfall size.
+- **Quota share ≠ vote share.** Consent thresholds use **quota** denominators as of **7 November 2023**; voting power includes basic votes. We flag US quota % as estimated where the annex lists consented members only.
+- **NAB participant list ≠ IMF membership.** Rollback consents are among NAB creditors; Japan’s ~**18.4%** NAB share dwarfs most peers. US NAB non-consent is coded from absence on the disclosed consented table.
+- **IBRD misalignment** follows the Bank’s Dynamic Formula with 2022–2024 GDP and IDA through IDA22 — not identical to our research post’s PPP-GDP gap lens.
+- **“Moved” voice reforms** are Board-recommended packages, not yet fully implemented outcomes; treat them as process wins, not completed institutional redesign.
+- **Vote−GDP gaps** are carried from the research vintage because relative shares are unchanged; they are not a new WEO re-estimation.
+- This update is a **vintage delta**. For the full authority-layer organogram (UNSC, chairs, veto series), use the [research post](/blog/geopolitics-institutions-research-2026).
+
+## The shareable takeaway
+
+Versus our institutions research vintage, the newest official prints say **authority still has not been reallocated — and the agreed quota enlargement is itself unfinished**. IMF quota consents sit at **72.78%**, **−12.22 pp** short of **85%**; NAB rollback consents at **83.90%**, **−6.10 pp** short of **90%**; the United States is **not** on the October 2025 consent list; China’s **−12.6 pp** IMF vote−GDP gap is unchanged; and the World Bank’s 2025 review counts **45** under-represented members holding **47.5%** of shares while refusing both SCI and Basic Votes. Soft voice measures advance. Hard voting weights stay frozen. In this system, **power is allocated twice** — once in the charter, and again in who must consent before the charter’s resource deal becomes real.
+
+Related reading: [Institutions & governance research](/blog/geopolitics-institutions-research-2026) and [China all-budget fiscal revenue](/blog/china-fiscal-revenue-all-budgets-2024).`,
+    category: "Politics",
+    imageUrl: "/images/politics-geopolitics-institutions-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero of incomplete teal institutional authority rings around a glowing governance node with crimson shortfall arcs",
+    publishedAt: "2026-08-20T23:30:00Z",
+    featured: true,
+    visualization: "geopolitics-institutions-update-2026",
+    layout: "default",
+  },
+  {
     id: "fiscal-plumbing-research-2026",
     slug: "fiscal-plumbing-research-2026",
     title:

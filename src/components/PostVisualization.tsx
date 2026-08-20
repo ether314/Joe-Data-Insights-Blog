@@ -782,6 +782,21 @@ const FiscalPlumbingResearchDashboard = dynamic(
   },
 );
 
+const GeopoliticsInstitutionsUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/GeopoliticsInstitutionsUpdateDashboard").then(
+      (m) => m.GeopoliticsInstitutionsUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -977,6 +992,10 @@ export function PostVisualization({
 
   if (type === "fiscal-plumbing-research-2026") {
     return <FiscalPlumbingResearchDashboard />;
+  }
+
+  if (type === "geopolitics-institutions-update-2026") {
+    return <GeopoliticsInstitutionsUpdateDashboard />;
   }
 
   return null;

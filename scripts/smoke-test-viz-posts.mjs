@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "geopolitics-institutions-update-2026",
+    marker: "Vintage delta — research stock",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-plumbing-research-2026",
     marker: "Fiscal plumbing — trust funds",
     forbidden: "Loading interactive charts",
