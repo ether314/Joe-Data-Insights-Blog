@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-spend-update-2026",
+    slug: "ai-capex-spend-update-2026",
+    title:
+      "Update: Big-5 AI Capex Guidance Hits $803B — Up $43B From the July Vintage",
+    excerpt:
+      "After Q2’26 earnings, Big-5 midpoints revise from ~$760B to ~$803B. Amazon leads at ~$220B; Microsoft’s headline slips to ~$175B on lease reclass, not a build cut. Street and CreditSights climb with the raises while GS GI’s all-in path holds.",
+    content: `## What changed since the July spend map
+
+In late July we published a [scope map of AI infrastructure dollar totals](/blog/ai-capex-spend-research-2026): Big-5 guidance midpoints near **$760B** for 2026, CreditSights around **$750B**, Goldman Sachs Global Institute all-in AI infra at **$765B**, and Investment Research’s 2027 hyperscaler base/bull pair at **$1.14T / $1.4T**. That post answered *how large is the stack, and which stack?* This update answers the capital-markets question that moves after every earnings week: **what moved in the newest official vintage**, and how large is the YoY / vintage delta in dollars?
+
+Three things force a refresh. **Amazon, Alphabet, Meta, and Microsoft** all reset calendar-2026 capex language in late July. **Oracle**’s cash outlay guidance is now commonly cited near **~$70B net of customer prepayments** (gross still ~$90–95B). And the **Q2’26 cash print** — Big-4 capex absorbing **~99%** of operating cash flow — turns the annual guidance story into a financing story. The dashboard above is built as a vintage delta: company raises and the one headline “cut,” dual 2026 bars on the stacked path, research-house fans, and a Q2 absorption scatter.
+
+## The headline table: prior print vs Aug 2026 update
+
+| Company | Prior (Jul research) | New (post-Q2’26) | Δ ($B) | What moved |
+|---------|---------------------:|-----------------:|-------:|------------|
+| **Amazon** | ~**$200B** | ~**$220B** | **+$20** | Cash capex raised on the Jul 30 call |
+| **Microsoft** | ~**$190B** CY | ~**$175B** CY | **−$15** | Lease reclassification — spending did not fall with the headline |
+| **Alphabet** | **$185B** mid | **$200B** mid ($195–205) | **+$15** | Second consecutive raise |
+| **Meta** | **$135B** mid | **$137.5B** mid ($130–145) | **+$2.5** | Floor raised; finance-lease principal included |
+| **Oracle** | ~**$50B** | ~**$70B** net | **+$20** | Net of prepayments; gross ~$90–95B |
+| **Big-5 sum** | **$760B** | **~$803B** | **+$43** | **+5.6%** vintage revision |
+
+That **+$43B / +5.6%** revision is the clean vintage delta versus our July research print. Strip Microsoft’s accounting move and the **economic** stack is closer to **~$818B** — a **+$58B** raise against the same prior baseline. Either framing beats the Street’s pre-Q2 neighborhood (~$725–750B) and keeps 2026 hyperscaler gross spend in the high-seven-hundreds to low-eight-hundreds billion band.
+
+Apply the CreditSights-style **~75% AI-attributed** haircut and the AI-specific slice of the Big-5 stack moves from roughly **$570B → $602B**. That is still a convention, not a 10-K line item — toggle it in the dashboard so you can see both perimeters without mixing them in a single headline.
+
+## Amazon and Alphabet did the heavy lifting
+
+Amazon’s jump from ~$200B to ~**$220B** is the largest absolute company raise in the vintage. It also keeps Amazon the single largest program in the stack — larger, on a standalone basis, than many entire industry capex cohorts. The Q2 cash print reinforces the annual guide: Amazon alone spent **~$53B** in the quarter against **~$45B** of operating cash flow (absorption >100%).
+
+Alphabet’s second raise — midpoint from **$185B** to **$200B** — is the cleanest “guidance only goes one direction” story in the set. The company has now stepped the calendar-year bar twice since February. Combined with Amazon, those two names contribute **+$35B** of the **+$43B** Big-5 delta even before Oracle’s net-cash step-up.
+
+Meta’s move looks small in dollars (**+$2.5B** at the midpoint) but matters in structure: the floor rose from $125B to $130B while the ceiling held at $145B, and the disclosed total continues to fold in finance-lease principal. For desks that compare Meta to cash-only peers, that definitional gap still bites — another reason the dashboard keeps company toggles and source notes adjacent to every panel.
+
+## Microsoft’s −$15B is not a build cut
+
+Coverage that treated Microsoft’s calendar-2026 print as a **spending slowdown** got the economics backwards. The Jul 29 language put CY2026 capex near **~$175B**, down from the ~$190B figure markets had been carrying after Q1 — but the company has been shifting more data-center capacity toward **operating** rather than **finance** leases. That moves dollars **off** the capex line without canceling servers, power, or campus construction.
+
+For vintage analysis that means two parallel numbers:
+
+1. **Accounting vintage:** Big-5 midpoints **$760B → $803B** (+$43B).
+2. **Economic vintage:** hold Microsoft near the prior ~$190B run-rate → stack nearer **$818B** (+$58B).
+
+Credit and equity desks that underwrite *physical* build should prefer the economic frame. Desks that underwrite *reported* free cash flow and PP&E growth should keep the accounting frame — and then add lease commitments back in the footnotes. Our companion [capex intensity update](/blog/ai-capex-intensity-update-2026) shows the same firm’s FY26 intensity still climbing even as the calendar headline softens: the build is not pausing.
+
+## Oracle’s net vs gross split still confuses totals
+
+Oracle’s ~**$70B** figure circulating after the summer print is **net of customer prepayments**. Gross guidance in the **$90–95B** range remains the better comparator to peers who do not net the same way. We carry **$70B** in the Big-5 midpoint sum for cash-comparability with the Axis / Motley Fool synthesis many desks now quote — and we flag the gross stack in the table and caveats so readers do not undercount OCI / Stargate-linked build by **$20B+**.
+
+That definitional gap is exactly why our July research post refused a single “true” AI spend number. The update does not invent one. It shows **which perimeter moved** and by how much.
+
+## Research houses: Street climbs; GS GI holds the layer path
+
+Company guidance is the observed near-term object. Research scenarios remain the forward object — and they do not all re-cut on the same week.
+
+- **Street consensus** for 2026 hyperscaler gross has climbed from the mid-**$720Bs** toward roughly **~$790B**, tracking the Q2 raises (Reuters-compiled paths and sell-side blends sit in the same neighborhood).
+- **CreditSights-style aggregates** that sat near **$750B** after Q1 now print closer to **~$800B**.
+- **Goldman Sachs Global Institute**’s *Tracking Trillions* all-in AI infra baseline (**$765B** in 2026, **$1.01T** in 2027, compounding toward ~**$7.6T** cumulative 2026–2031) is a **layer framework**, not a company-guidance rollup — it did not need to jump just because Amazon raised $20B. The dashboard’s GI panel keeps that path visible so readers do not force a fake contradiction.
+- **Goldman Sachs Investment Research**’s hyperscaler **2027 base (~$1.14T)** and **bull (~$1.4T)** remain the trillion-dollar headline pair. Public secondary reporting has edged the 2026 IR path up with guidance; the 2027 fan is still the scenario that matters for “does consensus stay too low?” debates.
+
+Toggle the scenario year control between **2026** and **2027**. On 2026 you see prior-vs-new bars. On 2027 you see the longer fan where IR’s hyperscaler base can still sit *above* GI’s all-in total because the perimeters differ — the same paradox we documented in the [July spend map](/blog/ai-capex-spend-research-2026) and the [chips-and-data-centers breakdown](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028).
+
+## Q2 cash absorption turns guidance into a financing story
+
+Annual guidance answers “how many dollars will be authorized.” The Q2 print answers “who funds them this quarter.” Across Alphabet, Amazon, Meta, and Microsoft, combined capex of about **$170B** ran against about **$172B** of operating cash flow — a cohort absorption ratio near **99%**. Alphabet and Amazon both printed **>100%** absorption in the quarter; Meta was close to flat; Microsoft retained the widest OCF cushion.
+
+That is the hinge for capital markets. When absorption hugs 100%, incremental servers compete with buybacks, dividends, and balance-sheet capacity. The same week’s financing lines — equity raises, senior notes, paused buybacks — are not side stories; they are the residual of the spend map. Pair this update with the [AI financing research](/blog/ai-financing-research-2026) for the credit-channel view, and with the intensity update for the revenue-share view. Dollars, intensity, and funding are three faces of one cycle.
+
+YoY context still dwarfs the vintage delta. Against our research post’s **2025** Big-5 stack (~**$344B**), the new **~$803B** 2026 guide is roughly a **+133%** step-up. The **+$43B** August revision is large in absolute dollars and small next to that year-over-year cliff — which is why markets can treat a mid-single-digit vintage raise as “more of the same” even while credit spreads and FCF prints scream that the same is no longer self-funding.
+
+## Caveats and methodology
+
+1. **Guidance ≠ audited spend.** Midpoints and call language can miss by tens of billions by year-end; Meta and Alphabet still publish ranges.
+2. **Definitions differ.** Meta and Microsoft fold finance leases differently than Amazon/Alphabet cash PP&E. Oracle’s net-of-prepay figure is not peer-comparable to gross guides without adjustment.
+3. **Microsoft’s −$15B** is treated as an **accounting vintage move**. Economic build is closer to unchanged-to-higher; do not narrate it as a demand rollover without lease footnotes.
+4. **AI-attributed (~75%)** is a research convention applied uniformly for interaction — actual AI shares differ by company and year.
+5. **GS Global Institute** figures are a sensitivity framework, not Goldman Sachs Investment Research point forecasts. **GS IR** 2027 figures come from public secondary reporting of research notes.
+6. **Q2 absorption** uses each company’s own cash-flow definitions (Axis cohort method); it is a quarterly snapshot, not a full-year FCF forecast.
+7. Totals may not sum across houses because **perimeters differ** (leases, power, non-hyperscaler buyers, geography).
+8. This post is explanatory data journalism, **not investment advice**.
+
+**Primary synthesis:** company Q2 2026 earnings releases and calls (late Jul 2026); Axis Intelligence Research AI Capex Tracker (Aug 2026 synthesis of primary filings); prior theme baseline in [AI capex spend research](/blog/ai-capex-spend-research-2026); Goldman Sachs Global Institute [*Tracking Trillions*](https://www.goldmansachs.com/insights/articles/tracking-trillions-the-assumptions-shaping-scale-of-the-ai-build-out); Street / CreditSights aggregate commentary via public reporting.
+
+## What to watch into year-end 2026
+
+Three coincident signals will tell you whether the vintage delta stabilizes or accelerates again: (1) **full-year prints vs these midpoints** — especially whether Amazon’s ~$220B and Alphabet’s $195–205B hold after GPU delivery timing; (2) **Microsoft lease mix** — if operating-lease migration continues, reported CY capex can keep undershooting economic build; (3) **absorption and issuance** — if the Big-4 cohort stays near 100% of OCF while absolute guides rise, the cycle’s marginal dollar is a credit-market dollar. Until the next official vintage, the live Big-5 midpoint sum is not July’s **$760B**. It is **~$803B** — and on an economic lease-adjusted read, closer to **~$818B**.`,
+    category: "Capital Markets",
+    themeId: "ai-capex-spend",
+    imageUrl: "/images/capital-markets-ai-capex-spend-update-2026-hero.png",
+    imageAlt:
+      "Dark navy capital-markets chart of rising AI infrastructure capex bars with vintage-delta arrows revising totals toward $800B+",
+    publishedAt: "2026-08-20T19:00:00Z",
+    featured: true,
+    visualization: "ai-capex-spend-update-2026",
+    layout: "default",
+  },
+  {
     id: "ai-compute-demand-update-2026",
     slug: "ai-compute-demand-update-2026",
     title:
