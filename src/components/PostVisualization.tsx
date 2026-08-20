@@ -857,6 +857,21 @@ const IndustrialRoboticsUpdateDashboard = dynamic(
   },
 );
 
+const EnergySystemsUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/EnergySystemsUpdateDashboard").then(
+      (m) => m.EnergySystemsUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1072,6 +1087,10 @@ export function PostVisualization({
 
   if (type === "industrial-robotics-update-2026") {
     return <IndustrialRoboticsUpdateDashboard />;
+  }
+
+  if (type === "energy-systems-update-2026") {
+    return <EnergySystemsUpdateDashboard />;
   }
 
   return null;

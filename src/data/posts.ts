@@ -2,6 +2,109 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "energy-systems-update-2026",
+    slug: "energy-systems-update-2026",
+    title:
+      "Update: Renewables Lead Energy Growth (+3.3 EJ) — Fossils Still 86.2% of TES",
+    excerpt:
+      "Versus our EI 2025 / 2024 research vintage, the 2026 Statistical Review prints TES above 600 EJ (+1.7%). Renewables are the largest growth source outside a recession; solar overtakes wind in power (8.7% vs 8.4%); US LNG exports jump 27%.",
+    content: `## What changed since the research vintage
+
+In early August we mapped the theme’s baseline: [how countries source, mix, and trade energy](/blog/energy-systems-research-2026). That post answered the *stock* question — primary mixes versus electricity stacks, Eurostat-style import dependence (EU ~**58%**, Japan ~**88%**), and LNG export concentration (top-three ~**61%**). This update answers the *flow* question the newest official print forces: **what moved in the Energy Institute Statistical Review of World Energy 2026**, covering calendar **2025**, and does the three-ledger story still hold once renewables lead growth while fossils barely budge as a share?
+
+One document rewrites the growth narrative without rewriting the stock hierarchy. The **75th** Statistical Review (produced with KPMG, Kearney, and Ember) shows **total energy supply (TES)** climbing about **10 EJ (+1.7%)** past **600 EJ** for the first time. **Renewables (ex-hydro)** added **3.3 EJ** — the largest contribution to TES growth **outside a recession** — with solar alone about **71%** of that renewables increment. Oil still added **2.5 EJ**, gas **2.4 EJ**, and coal **1.1 EJ**. Fossils retained roughly **86.2%** of TES, a record-low *share* that still rose in absolute joules. On the power ledger, solar generation grew **~30%** and reached **8.7%** of world electricity — **overtaking wind (8.4%)** and nearly matching nuclear (**8.8%**). The dashboard above is built as a vintage delta: TES growth bars, primary-mix share changes, power-share pairs, trade-exposure filters, a TES×fossil path, and CO₂/storage companions.
+
+## Vintage scoreboard
+
+| Meter | 2024 (prior post / EI path) | 2025 (EI 2026) | Δ |
+| --- | ---: | ---: | ---: |
+| World TES | ~592 EJ | ~602 EJ | **+1.7% / ~+10 EJ** |
+| Fossil share of TES | ~86.5% | **86.2%** | **−0.3 pp** |
+| Renewables (ex-hydro) share | ~5.4% | **5.9%** | **+0.5 pp** |
+| Largest TES growth source | Fossils led adds | **Renewables +3.3 EJ** | First non-recession lead |
+| Solar share of electricity | Below wind (~6.9%e) | **8.7%** | Overtakes wind (**8.4%**) |
+| Oil demand | ~101.7 mb/d | **103 mb/d** | **+1.3%** (vs +1.1% in 2024) |
+| US LNG export volumes | Net-exporter stock | Flow **+27% YoY** | Confirms research stance |
+| Energy-sector CO₂ | ~35.4 Gt | **35.8 Gt** | **+1.1%** |
+| Battery storage capacity | ~182 GW | **302 GW** | **+66%** |
+
+Read left-to-right and the punchline is arithmetic, not slogans: **clean energy can lead the *increment* while fossils still own the *stock***. That is the same three-ledger tension from the research post, refreshed with a 2025 flow vintage.
+
+## Renewables led growth — fossils still paid the bill
+
+The growth panel is the headline the Review wants you to remember. For the first time outside a recession year, **renewables contributed more new TES than any other source**. Solar’s **~30%** generation surge is doing most of that work inside the renewables bucket. That is genuinely new versus the 2024 vintage, when absolute fossil adds still dominated the narrative even as renewable *capacity* records piled up in [IRENA’s 2024 capacity print](/blog/irena-renewable-capacity-record-2024).
+
+It is also incomplete if you stop there. Oil, gas, and coal **together** still added more joules than renewables alone (**2.5 + 2.4 + 1.1 = 6.0 EJ** versus **3.3 EJ**). Nuclear and hydro were small positives. Every major fuel set a demand record in absolute terms for a second consecutive year. The transition, in EI’s own framing, remains **disorderly**: renewables scale fastest on the margin; the installed fossil machine keeps running and growing.
+
+Share math makes the same point quieter. Fossils ease from about **86.5%** to **86.2%** of TES — a record-low share that Carbon Brief and EI both flag — while absolute fossil supply still rises because the denominator grew **~10 EJ**. A falling share with a rising level is not a paradox; it is what “addition, not substitution” looks like in a growing energy system.
+
+## Solar overtakes wind in the power mix
+
+Electricity demand again outpaced TES, rising about **3%**. Inside that stack, the vintage flip markets will screenshot is solar versus wind. Solar’s share of world generation reaches **8.7%**, wind **8.4%**, nuclear **8.8%**. Solar is no longer the junior variable renewable in the global mix; it is the peer that nearly tags nuclear’s share after a single high-growth year.
+
+That does **not** mean the primary-energy ledger suddenly looks like a solar brochure. Primary energy still counts fossil and nuclear fuels on an input basis while renewables often enter as electricity output — the familiar primary-energy accounting asymmetry the research post warned about. Use the power panel for TWh politics; use the mix-Δ panel for TES politics; do not average them.
+
+Clean sources (renewables plus nuclear, in EI/Carbon Brief framing) met **all** of 2025’s electricity *growth* even while coal and gas generation shuffled regionally. That is the power-sector version of “increment vs stock”: the *new* TWh can be clean while the *existing* TWh remain fossil-heavy in Asia and, in 2025, partly re-coalified in the United States.
+
+## Trade exposures hardened — Hormuz made the import share real
+
+The research post’s import map was a stock ledger: EU energy import dependence ~**58%**, Japan ~**88%**, US net exporter. The 2026 Review adds fuel-specific **2025 trade-year** shares that matter after the late-February **2026** Strait of Hormuz closure stressed oil security narratives. India imported **86%** of the oil it consumed; China **73%**; Europe **75%**. On gas, India and Europe each relied on imports for roughly **half** of supply; China for **over a third**.
+
+Those are not Eurostat “energy import dependence” clones — they are commodity-specific consumption shares — but they rhyme with the research post’s trade-stance story. Large demand centers remain structurally short oil and, in Europe and India, structurally short gas. The United States, meanwhile, reinforced its exporter identity: **LNG export volumes grew 27%** in 2025, extending the net-exporter stance the baseline post treated as a defining US feature.
+
+Coal’s regional split is the other trade-adjacent shock. **China’s coal demand was flat** as solar surged and coking-coal needs softened. **US coal demand rose ~10%** after a **~50%** jump in US gas prices flipped power-plant dispatch toward coal. The same year can print “China pauses coal growth” and “US re-burns coal” without contradiction — that is regional price and policy divergence, not a single global coal cycle.
+
+## Batteries and CO₂: the companions the Review will not let you ignore
+
+Battery storage is the physical handshake between solar’s generation boom and grid operability. Installed capacity jumped **66%** to **302 GW**, with China alone near **144 GW** — just under half the world total. That is a flow story layered on the research post’s mix story: variable renewables only displace firm capacity at scale when storage and grids keep up.
+
+Emissions refuse the victory lap. Energy-sector CO₂ rose **1.1%** to about **35.8 Gt**, and the United States accounted for **more than a third** of the absolute increase. North America posted the largest regional tonnage rise even while Europe’s energy CO₂ edged up only **0.5%**. Renewables can lead TES *growth* and still lose the emissions race in a year when oil demand re-accelerates to **103 mb/d** and US coal generation rebounds.
+
+## Who is exposed under the new vintage
+
+- **India and Europe** remain the loudest oil- and gas-import stories in the Review’s highlight reel — **86%** / **~50%** style dependence meters that politics feel immediately when chokepoints wobble.
+- **China** still runs a coal-heavy primary system (research post ~**55%** coal share) while importing most of its oil and a rising slice of gas; flat coal demand in 2025 is a pause, not a completed exit.
+- **The United States** is the vintage’s double agent: LNG export champion (**+27%**) and unexpected coal-demand rebound (**+10%**) in the same year.
+- **Solar-heavy grids** win the generation-share race only if batteries (**302 GW**) and transmission keep compounding; otherwise curtailment and gas peakers remain the silent partners.
+- **Anyone still reading only primary fossil *share*** will miss absolute fossil growth; anyone reading only renewable *capacity* records will miss oil’s return to **103 mb/d**.
+
+## What would rewrite the next vintage
+
+Several regimes could flip the 2026 Review’s punchlines in the 2027 print:
+
+- **A true fossil *substitution* year** — renewables growth larger than the sum of oil+gas+coal adds — would break the “addition not substitution” pattern.
+- **Sustained Hormuz or other chokepoint disruption** would reprice the India/China/Europe oil-import shares into inventory and demand-destruction stories.
+- **US gas-price normalization** would likely unwind the 2025 coal rebound in power dispatch.
+- **Slower electricity demand** (or faster nuclear) could stop solar’s share chase toward nuclear’s **8.8%**.
+- **Battery and grid bottlenecks** could cap how much of solar’s TWh growth actually displaces fossil generation at the margin.
+
+None of those are required to interpret 2025. The vintage already says: **renewables lead the increment; fossils still own the stock; solar leads variable renewables in power; trade dependence remains the political soft underbelly.**
+
+## Caveats and methodology
+
+- **TES and fuel growth contributions** follow Energy Institute Statistical Review of World Energy **2026** (2025 calendar year). Rounded EJ levels (~602) are visualization anchors consistent with “more than 600 EJ” and +1.7% growth.
+- **Fossil / renewables / nuclear / hydro shares** use the Review’s TES framing; they are **not** interchangeable with Ember electricity shares or with the research post’s country-level primary rows (different denominator conventions).
+- **2024 path points** for mix shares are prior-vintage anchors for delta charts; mid-path years before 2024 in the TES path panel are **estimated** for context only.
+- **Oil/gas import shares** (India/China/Europe) are EI 2026 trade-year highlights — not a full replacement of Eurostat energy-import-dependence for the EU aggregate (**~58%** in the research post).
+- **US LNG +27%** is a volume growth rate, not a rewrite of the research post’s top-three LNG exporter concentration (~**61%**).
+- **Primary vs electricity** remain different ledgers; solar’s **8.7%** power share is not an **8.7%** primary-energy share (solar is ~**1.7%** of TES).
+- This update is a **vintage delta**. For the full 15-country systems ledger, use the [energy systems research post](/blog/energy-systems-research-2026).
+
+## Bottom line
+
+Versus our [2024 EI research print](/blog/energy-systems-research-2026), the newest Statistical Review shows **renewables leading TES growth outside a recession (+3.3 EJ)**, world supply crossing **600 EJ (+1.7%)**, fossils still at **86.2%** of primary energy, **solar overtaking wind** in the power mix (**8.7% vs 8.4%**), **US LNG exports +27%**, batteries at **302 GW (+66%)**, and energy CO₂ still rising **1.1%**. The theme question — how countries source, mix, and trade energy — now has a sharper flow answer: the mix is greening at the margin; the stock and the trade map are not.
+
+Related reading: [Energy systems research (2024 vintage)](/blog/energy-systems-research-2026) and [Global electricity generation mix](/blog/global-electricity-generation-mix-2024).`,
+    category: "Energy",
+    themeId: "energy-systems",
+    imageUrl: "/images/energy-energy-systems-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic energy-systems viz with amber fossil stacks, teal trade arcs, and a lime renewables growth spike across a world silhouette",
+    publishedAt: "2026-08-20T19:00:00Z",
+    featured: true,
+    visualization: "energy-systems-update-2026",
+  },
+  {
     id: "industrial-robotics-update-2026",
     slug: "industrial-robotics-update-2026",
     title:

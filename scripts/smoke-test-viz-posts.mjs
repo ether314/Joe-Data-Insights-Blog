@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "energy-systems-update-2026",
+    marker: "Renewables lead TES growth outside a recession",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "industrial-robotics-update-2026",
     marker: "Industrial robot installations — IFR World Robotics 2025 update",
     forbidden: "Loading interactive charts",
