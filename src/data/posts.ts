@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "industrial-robotics-update-2026q3",
+    slug: "industrial-robotics-update-2026q3",
+    title:
+      "Update: Factory Robots Hit Record 621k (+15%) — Beating the 575k Forecast; US Rebounds +11%",
+    excerpt:
+      "Versus our WR 2025 YoY update (flat 542k, West −8/−10%), IFR’s April 2026 prelim prints a record 621k installations. Asia share jumps to 79% (+5 pp); the US flips from −9% to +11% at 38k units.",
+    themeId: "industrial-robotics",
+    content: `## What changed since the WR 2025 YoY update
+
+Our [prior industrial robotics update](/blog/industrial-robotics-update-2026) answered the *delta* question on IFR World Robotics 2025: world installations stayed flat at **542,076** (+0.1%), Asia grew **+5%** while Europe fell **−8%** and the Americas **−10%**, China printed a record **295k**, and cobots rose **+12%**. That print also carried IFR’s September 2025 outlook — **575,000** units in 2025 (**+6%**), climbing past **700k** by 2028.
+
+This Q3 vintage replaces that soft-landing forecast with IFR’s **preliminary 2025 results** (data as of **April 2026**, briefed at Automate / the IFR Executive Roundtable on **24 June 2026**). The new number is not a rounding error on 575k. Global installations jumped to a record **621,000** — **+15%** year-on-year — beating the prior forecast by roughly **46,000** units and **+9 percentage points** of growth. Asia’s share of the annual flow rose from **74% to 79%**. The United States flipped from **−9%** in 2024 to **+11%** in 2025 at **38,000** units. Final World Robotics 2026 figures land on **24 September 2026**; treat everything here as a disclosed prelim subject to revision.
+
+The dashboard above is built as a vintage delta: forecast-versus-prelim path, diverging change bars, stacked regional share shift, industry YoY panels, region and market flips, and a density×rank scatter. Use the **region**, **Δ group**, and **industry scope** controls to isolate Asia’s share grab, the US rebound, or electronics-led growth.
+
+## The headline table: prior update vs newest prelim
+
+| Metric | Prior update (WR 2025 / 2024) | Newest print (2025 prelim) | Δ |
+| --- | ---: | ---: | --- |
+| World installations | **542,076** (+0.1%) | **621,000** (+15%) | **+~79k / +14.9 pp YoY** |
+| 2025 outlook | **575,000** (+6% forecast) | **621,000** printed | **+46k vs forecast** |
+| Asia install share | **74%** | **79%** | **+5 pp** |
+| Europe install share | **16%** | **13%** | **−3 pp** |
+| Americas install share | **9%** | **9%** | Flat share |
+| US installations | **34,204** (−9%) | **38,000** (+11%) | **+~3.8k / +20 pp YoY** |
+| Global electronics YoY | Soft offset narrative | **+25%** | Electronics leads |
+| Global automotive YoY | Share loss / contraction | **+10%** | Rebound |
+| US robot density | Context from prior print | **307** (#8, +2 ranks) | Intensity up |
+| China density (revised) | **567** (prior intensity lens) | **166** (rank #22) | Methodology shock |
+
+The shareable frame is narrow: **physical factory automation did not stay flat — it re-accelerated, Asia took more of the flow, and the US stopped contracting.** For the 2024 *level* geography that this update sits on top of, keep the [research vintage](/blog/industrial-robotics-research-2026) open; for robots-per-worker intensity mechanics see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024).
+
+## The forecast miss is the structural headline
+
+Toggle the dashboard’s forecast path. IFR’s September 2025 executive summary was cautiously constructive: order books looked better in Asia and North America in early 2025, but geopolitics and trade frictions made the mid-year path hard to call, so the house outlook stayed at **+6% to 575k**. April’s prelim says the industry cleared that bar by a wide margin. A **+15%** year after four consecutive years above **500k** units is a regime statement, not a bounce off a trough.
+
+Two readings matter for capital allocation. First, **the 500k floor was never the ceiling** — 2022’s **552,946** record was broken, not merely recovered. Second, **forecast humility cuts both ways**: the same institution that printed a soft 2025 path is already flagging that final WR 2026 numbers “most likely are subject to changes.” Use **621k** as the live working total, not as an audited country ledger.
+
+## Asia’s share grab: the regional divide widened
+
+Filter **Region → Asia** and read the share-shift panel. Asia moved from **74% to 79%** of annual installations — a **+5 percentage-point** absorption of world flow in a single vintage. Europe’s share compressed from **16% to 13%**. The Americas held **9%** even while their *absolute* path likely flipped positive (share × 621k implies roughly **56k** Americas units versus **50k** in 2024 — an estimated **~+12%** after **−10%** in the prior print).
+
+Share-implied region totals are marked **estimated** in the data module because IFR disclosed shares and the global headline, not a full regional unit table in the Automate briefing. The directional story does not depend on the last thousand units: **Asia is taking a larger slice of a larger pie**, which is the opposite of the “West pauses while China consolidates at constant share” soft-landing story some desks inferred from flat 2024.
+
+China’s **2025 country total is not yet published**. IFR’s June US release estimates Chinese installations at about **ten times** the US — roughly **~380k** if the multiple holds against **38k** US units. That would be another step up from the **295,045** 2024 record (**54%** of world demand). Until WR 2026 prints the China line, treat the multiple as an official estimate, not a disclosed census cell.
+
+## The US rebound: auto holds, food and non-manufacturing surge
+
+The cleanest disclosed country flip is the United States. After two down years, installations rose **+11% to 38,000** — the third-strongest US year on IFR’s framing after **2018** and **2022**. Automotive remains the pillar at **13,500** units (**−1%**), still more than a third of the market and the third-best auto result in seven years. The growth engine sits elsewhere: food adoption **+30%** to about **3,000** units; metal and machinery **−15%** to a similar **~3,000**; electrical/electronics roughly flat near **3,000**; and a large **non-manufacturing / unspecified** bucket **+41%** that IFR flags for future breakout.
+
+Canada printed **+6%**, helped by food and electronics. Mexico fell **−8%** — a third straight contraction year that IFR and trade desks both tie to investment hesitation under tariff and nearshoring uncertainty. The Americas share can stay flat at **9%** while the *internal* map diverges: US/Canada recovering, Mexico still cutting.
+
+For operators, the US mix shift matters as much as the headline **+11%**. Materials handling, warehousing, and flexible cells sitting in the unspecified non-manufacturing sleeve are pulling demand that traditional auto-body shops no longer monopolise. A3’s Automate color — robotics-as-a-service converting capex into operating cost, and material-handling robots at **~60%** of North American orders in **Q1 2026** — is consistent with that sleeve, even though it is not an IFR installation census field.
+
+## Industry mix: electronics leads the global rebound
+
+Switch **Industry scope → Global**. The Executive Roundtable’s industry panel puts electrical/electronics at **+25%**, metal and machinery at **+11%**, and automotive at **+10%**. That is a qualitative break from the prior update’s story, where electronics’ share edged up to **24%** while automotive’s share fell to **23%** and absolute auto demand contracted. In 2025 prelim terms, **both pillars grew**, and electronics grew fastest — IFR President Jane Heffner tied the surge to data-center buildout and renewable-energy equipment demand at Automate.
+
+The US industry cut is not a miniature of the global cut. Global metal/machinery **+11%** coexists with US metal **−15%**. Global auto **+10%** coexists with US auto **−1%**. Reading only the US food **+30%** headline without the global electronics **+25%** panel would miss where the *world* flow actually scaled.
+
+## Density: US climbs; China’s rank collapses on methodology
+
+The density scatter is the caveat panel, not a victory lap. IFR still ranks South Korea first at **1,220** robots per 10,000 manufacturing employees, with Germany **449** and Japan **446** close behind. The US sits at **307**, **eighth** worldwide and **up two ranks**. The world average is **132**.
+
+China’s intensity story is the methodology shock. Our prior update used the WR 2025 intensity lens that put China near **567** — among the densest large markets. In the June 2026 briefing, IFR applies what it describes as a more reliable employee base and prints China at **166**, rank **#22**. That is not a claim that Chinese factories removed hundreds of thousands of robots; it is a reminder that **density is a ratio**, and changing the denominator rewrites league tables overnight. Flow leadership (China still ~10× US on IFR’s estimate) and intensity ranking are different questions. Do not splice the prior **567** into the new rank table without a footnote.
+
+## Who is exposed under the Q3 vintage
+
+**Exposed:** European integrators and OEMs who underwrote a multi-year soft patch from the **−8%** 2024 print and now face a widening share gap versus Asia; Mexican auto suppliers waiting out trade policy while US and Canadian peers re-accelerate; metal/machinery shops in the US that cut robot demand **−15%** while global peers expanded; forecasters who treated **575k** as a base case rather than a floor.
+
+**Relative winners under current rules:** electronics and data-center supply chains pulling robot cells into PCB, battery, and power-equipment lines; US food and logistics operators adopting flexible automation; Asian suppliers capturing **79%** of a larger world flow; US vendors selling into a market that finally printed double-digit growth again.
+
+**What would rewrite this update:** a WR 2026 final that revises world installs back toward the **575k** path; a China country print far below the **~10× US** estimate; Europe reclaiming share above **15%**; or a 2026 H2 order-book freeze that turns the Automate optimism (strong NA/Asia Q1 turnover, Europe still hard) into a one-year spike. None of those reverse signals are in the April prelim.
+
+## Caveats and methodology
+
+1. **Preliminary ≠ final.** Numbers are IFR’s April 2026 prelim, presented June 2026. World Robotics 2026 (due **24 Sep 2026**) can revise country and industry detail.
+2. **Region unit totals for 2025** are **estimated** as disclosed shares × **621,000** where IFR did not publish exact regional unit tables in the Automate deck.
+3. **China 2025** country installations are **not published**; the **~10× US** figure is IFR’s stated estimate, coded ~**380k** in our charts for readability.
+4. **Industry YoY** global figures (**+25% / +10% / +11%**) come from the Executive Roundtable panel labels; US industry cuts come from the June 18 IFR US press release.
+5. **Density ranks** mix a stable Korea/Germany/Japan ladder with a **revised China denominator** — prior-post **567** and new **166** are not a YoY intensity collapse.
+6. **Cobot series** from the prior update are not restated here; this vintage’s disclosed lens is installations, shares, US mix, and density methodology.
+7. **Non-manufacturing / unspecified** US growth (**+41%**) is disclosed as a bucket IFR expects to break out later — do not over-interpret the label.
+
+Primary sources: [IFR US double-digit growth release (18 Jun 2026)](https://ifr.org/ifr-press-releases/news/us-robot-industry-returns-to-double-digit-growth); [IFR Executive Roundtable market presentation (24 Jun 2026)](https://ifr.org/downloads/press_docs/2026_06_24_IFR_Executive_Roundtable_market_presentation.pdf); prior theme baseline in [industrial robotics update 2026](/blog/industrial-robotics-update-2026); geography levels in [industrial robotics research 2026](/blog/industrial-robotics-research-2026).
+
+## The shareable takeaway
+
+**Versus our WR 2025 YoY update, IFR’s April 2026 prelim says factory robot installations re-accelerated to a record 621,000 (+15%) — 46k above the 575k forecast — while Asia’s share rose to 79% and the US flipped from −9% to +11% at 38,000 units.** Electronics led globally at **+25%**; Europe’s share compressed to **13%**; Mexico kept contracting. Physical automation is scaling again, and it is scaling unevenly. For density intensity see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024); for the prior flat-year delta map see the [2026 YoY update](/blog/industrial-robotics-update-2026).`,
+    category: "Industry",
+    imageUrl: "/images/industry-industrial-robotics-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic factory robot arm with teal circuit traces and a bold crimson +15% / 621k installation rebound spike",
+    publishedAt: "2026-08-21T01:00:00Z",
+    featured: true,
+    visualization: "industrial-robotics-update-2026q3",
+    layout: "default",
+  },
+  {
     id: "ai-financing-update-2026q3",
     slug: "ai-financing-update-2026q3",
     title:
