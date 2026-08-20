@@ -812,6 +812,21 @@ const MeasurementScienceUpdateDashboard = dynamic(
   },
 );
 
+const DemographicCashFlowsUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/DemographicCashFlowsUpdateDashboard").then(
+      (m) => m.DemographicCashFlowsUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1015,6 +1030,10 @@ export function PostVisualization({
 
   if (type === "measurement-science-update-2026") {
     return <MeasurementScienceUpdateDashboard />;
+  }
+
+  if (type === "demographic-cash-flows-update-2026") {
+    return <DemographicCashFlowsUpdateDashboard />;
   }
 
   return null;

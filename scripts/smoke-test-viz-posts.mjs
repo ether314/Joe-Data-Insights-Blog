@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "demographic-cash-flows-update-2026",
+    marker: "Vintage delta — Brief 41 → Banxico 2025",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "measurement-science-update-2026",
     marker: "China overtakes the US on PPP R&D share",
     forbidden: "Loading interactive charts",

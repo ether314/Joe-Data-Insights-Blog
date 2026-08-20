@@ -2,6 +2,100 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-update-2026",
+    slug: "demographic-cash-flows-update-2026",
+    title:
+      "Update: Mexico Remittances Fall 4.6% to $61.8B — First Drop in 11 Years",
+    excerpt:
+      "Versus our Brief 41 research print ($68B Mexico 2024e), Banxico restates 2024 to $64.7B and prints 2025 at $61.8B (−4.6%). LAC ex-Mexico still grows >16% on average; OECD-32 public pensions path to 10% of GDP by 2050.",
+    content: `## What changed since the research vintage
+
+In early August we mapped the theme’s baseline: [aging hosts run heavy public pensions while remittances hit $685B](/blog/demographic-cash-flows-research-2026). That post answered the *stock* question — how age and migration show up in money flows across a dependency×remittance scatter, corridor pipes, and OECD pension shares. This update answers the *flow* question markets and finance ministries actually trade on: **what moved in the newest official vintage**, and does the two-ledger story still hold once Mexico’s remittance streak breaks?
+
+Three information events force a refresh. **Banxico’s December 2025 remittance bulletin** (published early February 2026) prints full-year family remittances at **$61.791 billion**, a **−4.6%** decline from **$64.746 billion** in 2024 — the first annual drop in **11 years** and the largest since 2009. That Banxico 2024 actual also **restates** our research post’s Brief 41 Mexico estimate (**$68B**) down by about **$3.3 billion**. **BBVA’s Migration Observatory** shows the rest of Latin America and the Caribbean still racing: remittances to Honduras (**+25.3%**), Guatemala (**+18.7%**), El Salvador (**+17.8%**), Colombia (**+10.6%**), and the Dominican Republic (**+10.3%**) imply an ex-Mexico LAC average above **16%**. **OECD Pensions at a Glance 2025** (November) keeps Italy near **16% of GDP** on public cash pensions and projects the OECD-32 average from **8.8% (2023–24) to 10.0% by 2050** — a **+1.2 pp** host-side path while the US→Mexico private pipe cools.
+
+The dashboard above is built as a vintage delta: Mexico’s annual series with YoY overlay, LAC growth divergence bars, prior→new dollar dumbbells, an age×remittance scatter with Mexico’s 3.7%→3.4% GDP-share shift, and the new OECD pension path.
+
+## The headline table: Brief 41 / research vs newest prints
+
+| Metric | Prior (research / Brief 41) | New print | Δ |
+| --- | ---: | ---: | --- |
+| Mexico remittances 2024 | **$68B** (Brief 41 e) | **$64.7B** (Banxico) | **−$3.3B** restatement |
+| Mexico remittances 2025 | $64.7B (2024 actual) | **$61.8B** | **−4.6% YoY** |
+| Mexico remittances / GDP | **3.7%** | **~3.4%** | **−0.3 pp** |
+| LAC remittance growth | LAC **+5.5%** (Brief 41 2024e) | LAC ex-MX **>+16%** (2025) | MX diverges from peers |
+| OECD-32 public pensions / GDP | **8.1%** latest level | **8.8% → 10.0%** by 2050 | **+1.2 pp** path |
+| Italy public pensions / GDP | **16.3%** | **~16%** | Still #2 OECD |
+| LMIC remittances (aggregate) | **$685B** / **+5.8%** (2024e) | No newer Brief restatement | Hold Brief 41 anchor |
+
+Treat the Mexico **−4.6%** carefully. It is a **true period delta** on Banxico’s books — not a measurement residual like some ownership restatements elsewhere on this site. The Brief 41 **$68B → $64.7B** move *is* a restatement: the research post used the World Bank’s 2024 estimate; Banxico’s closed year is lower. Stack them and the cumulative gap versus the research narrative is roughly **$6B** of Mexico dollars that are no longer on the prior path.
+
+## Mexico’s streak break is the cleanest remittance delta
+
+For eleven consecutive years, Mexico’s family remittances expanded — nearly tripling across the streak, per BBVA’s reading of Banxico history. **2025** ends that run. December alone printed **$5.32 billion** (**+1.9% YoY**), breaking an eight-month decline streak inside the year, but the annual total still fell to **$61.8 billion**. Electronic transfers remain ~**99%** of the flow; the average December transfer rose slightly (about **$408** vs **$375** a year earlier), so the decline is primarily a *volume of remitters / transfers* story, not a collapse in ticket size.
+
+That matters for the theme’s core question. In the research post, Mexico sat as the **bridge remittance origin**: youngish age structure (old-age dependency ~**13**), material remittance/GDP (**3.7%**), thin public pensions (~**3%**), and the world’s largest bilateral corridor from the United States. A **−4.6%** print does not flip Mexico into an aging-host ledger. It *does* pull remittance dependence left on the scatter — to about **3.4% of GDP** — and it stresses the US labor-market / immigration-enforcement engine that Brief 41 credited for LAC strength. Banxico and market analysts point to a softer US labor market, stricter enforcement, and a strong peso as the proximate drivers. Inter-American Dialogue work estimating remitter and migrant-flow losses puts the missing dollars in the low **billions** — the same order of magnitude as Banxico’s annual gap.
+
+## LAC peers refuse to copy Mexico’s print
+
+The vintage is not “remittances are rolling over everywhere.” BBVA’s Observatory estimate that **ex-Mexico LAC grew more than 16% on average** in 2025 is the divergence panel’s thesis. Honduras (**+25.3%**), Guatemala (**+18.7%**), and El Salvador (**+17.8%**) are still compounding from US payrolls and newer migrant cohorts. Guatemala’s approximate level move (~**$21.5B → ~$25.5B**) alone offsets a large slice of Mexico’s dollar decline in regional accounting even if it cannot replace Mexico’s absolute size.
+
+Read that beside the [global remittance corridors](/blog/global-remittance-corridors-2026) post: country-pair plumbing can keep expanding in Central America while the **largest** pair (US→Mexico) cools. Concentration risk and dependence risk are different meters — the same lesson India vs Tajikistan taught on the research scatter. Mexico can shed **$3 billion** and remain the Western Hemisphere’s remittance giant; Honduras can grow **25%** and still be a fraction of Mexico’s stock.
+
+## Host-side pensions: PaG 2025 adds the path, not just the level
+
+The research post’s host ledger leaned on OECD **levels**: Italy and Greece above **16% of GDP**, OECD average **8.1%**, Japan ~**9.3%**, US ~**7.1%**. Pensions at a Glance **2025** largely **confirms** those levels — Italy’s country note still puts public pension expenditure at about **16% of GDP**, second only to Greece — and adds the **projection** the prior post treated as background. Across OECD-32 countries with full paths, public pension spending rises from **8.8% of GDP in 2023–24 to 10.0% by 2050** (**+1.2 pp**). Italy’s long-run path actually bends down later in the century as NDC rules mature; the near-term message is still high expenditure plus a shrinking working-age base (Italy’s 15–64 population projected to fall by more than a third by 2060).
+
+That is the demographic cash-flow asymmetry in one sentence: **origin-country private pipes can reverse in a single Banxico year; host-country public pension shares move on multi-decade actuarial rails.** Policy that watches only remittance headlines will miss the host fiscal path; policy that watches only pension commissions will miss the US→Mexico enforcement shock.
+
+For the US on-budget twin of that working-age mobility, the [Social Security trust-fund depletion path](/blog/us-social-security-trust-fund-depletion-path-2026) still clocks combined OASDI reserves under intermediate assumptions. Immigration assumptions are already inside the Trustees’ demography; Banxico’s 2025 print is the *origin* twin of how those labor flows are performing in the newest year.
+
+## What the scatter shift is really saying
+
+The age×remittance scatter does not need a new geometry. Aging hosts still cluster at high old-age dependency and near-zero remittance/GDP. Remittance origins still cluster young and remit-heavy. What changed is Mexico’s **horizontal** position on remittance intensity: **3.7% → 3.4%**, with absolute dollars down. Tajikistan’s **45% of GDP** dependence (Brief 41) remains the extreme; India’s absolute **$129B** inflow remains the volume champion. The update’s job is not to redraw the map — it is to show that the **largest North American pipe** can bend without breaking the global remittance > FDI narrative that Brief 41 established at **$685B**.
+
+Three mistakes still follow from ignoring the joint ledger:
+
+1. **Reading Mexico’s −4.6% as an LMIC remittance recession.** LAC peers are accelerating; Brief 41’s LMIC aggregate has not been restated downward in a newer World Bank brief we can cite here.
+2. **Reading OECD pension stability as “no news.”** The **+1.2 pp** path to 2050 is the news — a slow host-side cash claim that remittance YoY prints cannot cancel.
+3. **Treating remittances as public finance.** They remain private household transfers. A Banxico decline hurts origin consumption and FX buffers; it does not automatically repair US OASDI math or Italian NDC transition costs.
+
+## What would rewrite this update
+
+1. **A World Bank Migration & Development Brief 42/43** that restates 2024 LMIC totals away from **$685B** or prints a 2025 LMIC growth rate that incorporates Mexico’s Banxico miss.
+2. **Banxico 2026 H1** showing either a sharp rebound (guest-worker / H-2 expansion thesis) or a second annual decline that turns −4.6% into a trend.
+3. **OECD PaG revisions** moving Italy materially off ~**16%** or the OECD-32 2050 anchor off **10.0%**.
+4. **US employment composition** prints that reverse the foreign-born vs native-born recovery gap Brief 41 used as the LAC engine.
+5. **Corridor matrix refresh** showing US→Mexico bilateral dollars falling in line with Banxico’s national total (KNOMAD ranks in the research post remain 2021-vintage pipes).
+
+Until those print, the live frame versus the research post is narrow: **Mexico’s remittance streak is over (−4.6% to $61.8B); Brief 41’s $68B Mexico estimate was high versus Banxico; LAC ex-Mexico is still hot; OECD host pensions are on a path to 10% of GDP by 2050; the age×migration money map still holds.**
+
+## Caveats and methodology
+
+1. **Banxico ≠ World Bank Brief 41.** National family-remittance concepts and World Bank/IMF BOP remittance aggregates differ. We use Banxico for Mexico YoY and restatement; we retain Brief 41 for the LMIC **$685B** anchor until a newer brief restates it.
+2. **BBVA LAC growth rates** are Observatory estimates based on national sources; treat peer **+16% / +25%** figures as disclosed secondary synthesis, not a World Bank regional table.
+3. **Mexico remittance/GDP ~3.4%** for 2025 follows market analysis around Banxico’s print; it is not a Brief 41 cell.
+4. **OECD pension paths** mix disclosed anchors (2023–24 / 2050 OECD-32) with illustrative country interpolations for chart continuity; Italy’s ~16% level is from PaG 2025 notes.
+5. **Old-age dependency** ratios remain UN WPP 2024 anchors from the research post — this update does not invent a new demographic vintage.
+6. **Corridor dollar ranks** (US→Mexico ~$52B in the research post) are not re-estimated here; Banxico’s national total is the YoY meter.
+7. **Informal remittances** still mean true flows exceed recorded totals in both vintages.
+
+Primary sources: Banxico *Ingresos y Egresos por Remesas* (December 2025 / full-year 2025); BBVA Research Migration and Remittances Observatory (3 Feb 2026); OECD *Pensions at a Glance 2025* public expenditure and long-term projection chapters; World Bank People Move / Migration & Development Brief 41 (prior vintage); prior theme baseline in [demographic cash flows research](/blog/demographic-cash-flows-research-2026).
+
+## The shareable takeaway
+
+**Versus the research print, Mexico’s remittances fall 4.6% to $61.8B — ending an 11-year growth streak — after Banxico also restates 2024 to $64.7B versus Brief 41’s $68B estimate.** LAC peers excluding Mexico still grow more than **16%** on average. OECD-32 public pensions are projected to rise from **8.8% to 10.0% of GDP by 2050**, with Italy still near **16%**. Age and migration still show up as two ledgers — private origin pipes that can reverse in a year, and public host pensions that grind higher for decades. For corridor plumbing see [global remittance corridors](/blog/global-remittance-corridors-2026); for the baseline essay see the [research post](/blog/demographic-cash-flows-research-2026).`,
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl: "/images/global-systems-demographic-cash-flows-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic map of remittance arcs from aging host labor markets into Mexico with a downward vintage-delta marker",
+    publishedAt: "2026-08-20T22:45:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-update-2026",
+    layout: "default",
+  },
+  {
     id: "measurement-science-update-2026",
     slug: "measurement-science-update-2026",
     title:
