@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-update-2026",
+    slug: "macro-growth-trade-update-2026",
+    title:
+      "Update: World Trade 2026 Revised +0.7 pp to 3.5% — GDP Slips to 3.0%, CPI to 4.7%",
+    excerpt:
+      "IMF July Update vs our April WEO research print: goods+services trade volume jumps from 2.8% to 3.5% for 2026, world GDP ticks down −0.1 pp to 3.0%, and headline CPI rises +0.3 pp to 4.7% as oil hits $89/bbl.",
+    themeId: "macro-growth-trade",
+    content: `## What changed since the April research vintage
+
+In late July we charted the [growth–trade–prices triangle](/blog/macro-growth-trade-research-2026) from the IMF’s April 2026 World Economic Outlook reference forecast and the WTO’s March Global Trade Outlook: merchandise volume **+4.6%** in 2025, world GDP (PPP) easing from **3.4%** toward **3.1%** in 2026, and CPI reopening to **4.4%** under a limited-conflict oil assumption near **$82**/bbl. That post answered the stock question — *how are economies growing, trading, and experiencing prices at the same time?* This update answers the flow question markets and ministries trade on next: **what moved in the newest official vintage**, and did the triangle tilt toward growth, trade, or inflation?
+
+One official print forces the refresh. The IMF’s **World Economic Outlook Update, July 2026** — *Global Economy in Crosscurrents of War and Technology* — replaces April’s multi-scenario reference with a conventional baseline. Cumulative 2026–27 world growth is “broadly unchanged,” but the **composition** is not. World trade volume (goods and services) for **2026 is revised up 0.7 percentage points to 3.5%**. World GDP slips **0.1 pp to 3.0%**. World headline CPI rises **0.3 pp to 4.7%**. Oil’s assumed average petroleum spot climbs to about **$89**/bbl. The dashboard above is built as a vintage delta — country GDP revisions, prior→new meter dumbbells, dual-vintage paths, war-versus-tech exposure bars, and a disclosed-CPI scatter.
+
+## The headline table: April reference → July baseline
+
+| Meter (2026f) | April WEO | July Update | Δ (pp) |
+| --- | ---: | ---: | ---: |
+| World GDP (PPP) | 3.1% | **3.0%** | **−0.1** |
+| World GDP (market FX) | ~2.6% | **2.4%** | **−0.2** |
+| World trade volume (G+S) | 2.8% | **3.5%** | **+0.7** |
+| World headline CPI | 4.4% | **4.7%** | **+0.3** |
+| Advanced-economy CPI | ~2.8% | **3.0%** | **+0.2** |
+| EMDE CPI | ~5.5% | **5.8%** | **+0.3** |
+| Oil assumption ($/bbl) | ~82 | **89** | **+~9%** |
+| World GDP 2027f | 3.2% | **3.4%** | **+0.2** |
+| World trade 2027f | 3.8% | **4.3%** | **+0.5** |
+
+Read the table as a **wedge**, not a single scare print. Growth is fractionally softer in 2026 and fractionally stronger in 2027. Trade is **materially firmer** in both forecast years. Prices are **firmer still**. That is the opposite of a synchronized soft-landing glide — and different from the April story where trade slowed harder than GDP.
+
+## Trade is the surprise upgrade
+
+April’s reference path had goods-and-services trade volume collapsing from **5.1%** in 2025 to **2.8%** in 2026 — a sharp normalization after tariff front-loading and AI-goods strength. July keeps the 2025 outturn near **5.0%** but lifts 2026 to **3.5%** and 2027 to **4.3%**. Staff cite earlier front-loading, tariff drag, trade diversion/rerouting, **and** brisk technology-related trade flows — the same AI-hardware channel that powered Korea’s Q1 surprise and upgraded Vietnam, Thailand, and Malaysia.
+
+The non-obvious reading: **2026 is no longer a near-stagnation year for world trade**. Relative to April, the Fund is saying volumes hold up better even as oil and conflict assumptions harden. Combined with market-rate GDP at **2.4%**, trade still outgrows output — just less dramatically than 2025’s WTO merchandise **4.6%** versus PPP GDP **~3.4–3.5%**. Pair this vintage with our [China–US–India GDP comparison](/blog/china-us-india-gdp-30-years) for the longer weight shift, and with [deflationary-growth economies in 2025](/blog/deflationary-growth-economies-2025) for the low-inflation growth cases that China’s export diversion still feeds.
+
+## Prices: disinflation stalls harder
+
+July’s world CPI path — **4.1% → 4.7% → 3.9%** across 2025–27 — revises April’s already-interrupted disinflation **further up**. The 2026 print is **+0.3 pp**; 2027 is **+0.2 pp**. Advanced-economy CPI sits at **3.0%** in 2026; emerging-market CPI at **5.8%**. Assumed US CPI for 2026 rises from **3.2%** to **3.6%**; euro-area from **2.6%** to **2.9%**; Japan from **2.2%** to **2.3%**. Core is still expected to return to target only gradually — mid-2027 in the UK, end-2027 in Japan and the US, **2028** in the euro area.
+
+Commodity assumptions drive the wedge. July’s oil path is **$89.27**/bbl for 2026 and **$78.70** for 2027 (futures as of June 10), versus April’s reference near **$82**. Natural gas, fertilizers (**+26%**), and food (**+8%**) also firm. Energy prices remain roughly **25%** above prewar levels even after ceasefire/MOU cooling from April peaks. Sequential headline inflation jumped nearly **4 pp** (SAAR) between February and April; May YoY headline rose for a third straight month — breaking the downward trend in place since early 2024.
+
+## Country trajectories: AI upgrades, MENA freefall
+
+Cross-country revisions are wider than the global average. Toggle the dashboard’s 2026/2027 and region filters:
+
+- **United States:** 2026 GDP unchanged at **2.3%**; 2027 nudged to **2.2%** (+0.1). Tech investment and fiscal support offset war exposure; the US remains a net energy exporter.
+- **Euro area:** cut to **0.9%** (−0.2) on Ireland-heavy Q1 carryover, soft confidence, and energy drag.
+- **China:** raised to **4.6%** (+0.2) as high-tech manufacturing and exports offset oil and property headwinds.
+- **India:** **6.4%** (−0.1) for 2026, with 2027 lifted to **6.7%**.
+- **Korea:** **2.6%** (+0.7) — the flagship AI-hardware upgrade; top-four AI exporters averaged a **+4.4 pp** Q1 growth surprise versus −0.3 pp for the rest of the world.
+- **Brazil:** **2.4%** (+0.5) — largest major LatAm upgrade.
+- **Mexico:** **1.2%** (−0.4) as trade uncertainty bites.
+- **Saudi Arabia:** **1.7%** (−1.4) with a **5.5%** 2027 rebound (+1.0) under a longer Hormuz closure assumption.
+- **Middle East and North Africa:** **−0.5%** in 2026 (−1.6 pp) then **7.3%** in 2027 — the war’s mirror image.
+
+Exposure-group bars in the dashboard summarize the geometry: AI-hardware exporters and energy exporters outside the conflict zone are upgraded; energy-importing advanced and emerging economies are downgraded; MENA absorbs the deepest cumulative hit.
+
+## The war–technology crosscurrent
+
+July’s framing is explicit: a **negative supply shock** from the Middle East war versus a **positive technology shock** from the AI investment cycle. Global Q1 2026 growth printed **3.0%** QoQ annualized — above April’s **2.7%** forecast — but the surprise was concentrated in tech-integrated economies (China SA staff estimate **8.1%**, Korea **7.5%**, Germany **1.4%**) while the US undershot at **2.1%** versus **2.5%** projected. Inventories and renewables buffered oil shortfalls; supply-chain pressure and manufacturing PMIs still point softer ahead.
+
+Risks are “more balanced than in April but still tilted to the downside.” Renewed conflict, inventory stress, trade fragmentation, and an AI-expectation correction sit on the left tail; smoother Hormuz reopening, stronger AI deployment, and cooperation that lowers barriers sit on the right. Policy rates are assumed less supportive than in April because inflation is more visible.
+
+## What would rewrite this vintage
+
+1. **Hormuz reopening** faster or slower than mid-2027 normalization — oil and MENA growth flip first.
+2. **AI-related goods trade** sustains or fades relative to 2025’s near-half contribution to merchandise volume growth (WTO March print).
+3. **US effective tariffs** move materially from the ~13.5% assumption carried from April.
+4. **China domestic demand** finally matches export strength — lifting imports and shrinking diversion into partner CPIs.
+5. **Inventory exhaustion** forces nonlinear oil spikes if commercial/strategic stocks hit multiyear lows.
+
+Until those resolve, the shareable framing is narrow: **versus April, July trades a tenth of a point of 2026 GDP for seven tenths of a point of trade growth — and pays for both with three tenths of a point more inflation.**
+
+## Caveats and methodology
+
+- **Baseline ≠ certainty.** July drops April’s multi-scenario fan and publishes one baseline conditioned on Strait reopening from mid-July and prewar conditions by March 2027.
+- **Merchandise (WTO Mar) vs goods+services (IMF).** This update’s trade deltas are IMF G+S volume; WTO has not issued a post-March GTOS vintage in this window — do not treat 3.5% and 4.6% as interchangeable meters.
+- **PPP vs market GDP.** Trade elasticities look different against 3.0% PPP growth than against 2.4% market-rate growth.
+- **Country CPI** for several EM rows in the prior research scatter remain estimated; US/EA/Japan assumptions here are **disclosed** in July Table 1 footnotes.
+- **India** is fiscal-year basis; calendar-year comparisons to China/US are approximate.
+- **Exposure-group revision bars** are staff-aligned illustrations of July Figure 4 qualitative ranking (AI HW / energy exporters / energy importers / MENA), not a full reproduction of unpublished microdata.
+- **April 2025 world GDP** in our research print used **3.4%**; July Table 1 shows **3.5%** for 2025 — a small outturn/restatement gap carried in the dual-path chart.
+
+## The shareable takeaway
+
+In the **July 2026** IMF Update, world trade volume for 2026 is revised **+0.7 pp to 3.5%**, world GDP slips **−0.1 pp to 3.0%**, and world CPI rises **+0.3 pp to 4.7%** with oil near **$89**/bbl. Tech-integrated exporters (Korea, China, ASEAN hardware hubs) absorb upgrades; MENA and energy importers absorb the war drag. The soft landing is still not canceled — but the three meters no longer co-move, and the vintage delta is **trade up, growth flat-to-down, prices up**.
+
+Related reading: [April research triangle on growth, trade & prices](/blog/macro-growth-trade-research-2026) and [China–US–India GDP over 30 years](/blog/china-us-india-gdp-30-years).`,
+    category: "Economics",
+    imageUrl: "/images/economics-macro-growth-trade-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of diverging global trade, GDP, and inflation revision arrows",
+    publishedAt: "2026-08-20T22:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-update-2026",
+    layout: "default",
+  },
+  {
     id: "bank-commercial-credit-research-2026",
     slug: "bank-commercial-credit-research-2026",
     title:

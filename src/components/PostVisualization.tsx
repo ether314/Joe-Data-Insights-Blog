@@ -677,6 +677,21 @@ const BankCommercialCreditResearchDashboard = dynamic(
   },
 );
 
+const MacroGrowthTradeUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/MacroGrowthTradeUpdateDashboard").then(
+      (m) => m.MacroGrowthTradeUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -844,6 +859,10 @@ export function PostVisualization({
 
   if (type === "bank-commercial-credit-research-2026") {
     return <BankCommercialCreditResearchDashboard />;
+  }
+
+  if (type === "macro-growth-trade-update-2026") {
+    return <MacroGrowthTradeUpdateDashboard />;
   }
 
   return null;

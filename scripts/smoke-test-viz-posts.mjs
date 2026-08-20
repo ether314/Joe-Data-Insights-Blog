@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "macro-growth-trade-update-2026",
+    marker: "Vintage delta — Apr 2026 WEO",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "bank-commercial-credit-research-2026",
     marker: "Bank & commercial credit — Fed · FDIC · CMBS",
     forbidden: "Loading interactive charts",
