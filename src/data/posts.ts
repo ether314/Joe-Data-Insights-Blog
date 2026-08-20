@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "adaptation-economics-update-2026q3",
+    slug: "adaptation-economics-update-2026q3",
+    title:
+      "Update: OECD Adaptation Finance Rises to $34.7B — Still ~9–10× Below Needs",
+    excerpt:
+      "Versus our AGR 2025 update ($26B UNEP intl public in 2023), OECD’s May 2026 print puts adaptation provided/mobilised at $34.7B in 2024 (+$1.1B YoY). Glasgow still needs +$5.8B public in 2025; FRLD has delivered only ~$0.45B.",
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl: "/images/energy-adaptation-economics-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero showing OECD adaptation finance rising modestly to $34.7B beside a $310–365B needs tower and a thin Glasgow target line",
+    publishedAt: "2026-08-20T23:50:00Z",
+    featured: true,
+    visualization: "adaptation-economics-update-2026q3",
+    layout: "default",
+    content: `## What changed since the AGR 2025 update
+
+In August we published the theme’s first official vintage delta: [UNEP’s Adaptation Gap Report 2025 re-anchored needs at $310–365B/year by 2035 while international public adaptation flows fell to $26B in 2023](/blog/adaptation-economics-update-2026) — a **−$2B (−7%)** drop from the **$28B** 2022 peak and a gap of **$284–339B**. That post answered the *AGR* vintage question against our [research stock ledger](/blog/adaptation-economics-research-2026).
+
+This Q3 refresh answers the *next* vintage question: **what moved in the newest official prints after AGR 2025?** Four information events force the rewrite. The **OECD’s May 2026** assessment of climate finance provided and mobilised in **2013–2024** prints adaptation at **$34.7 billion in 2024**, up **+$1.1B (+3.3%)** from **$33.6B in 2023**. **CPI’s Global Landscape of Climate Finance 2025** tracks **global** adaptation at only **$65B in 2023** — a **−16%** drop year-on-year even as total climate finance hit **$1.9 trillion**. **Swiss Re’s sigma 1/2026** shows **2025 insured nat-cat losses at $107B**, below the **$140B** trend, while the modelled **protection gap stays $424B**. And the **Fund for Responding to Loss and Damage (FRLD)** has delivered only about **$449 million** of **$822 million** pledged — a sub-billion residual window against a multi-hundred-billion needs band.
+
+The dashboard above is built as a Q3 vintage delta: UNEP→OECD flow meters, the OECD adaptation path against Glasgow’s doubling line, a multi-ledger panel (needs / OECD / UNEP / CPI / FRLD / Swiss Re), closing-the-gap levers, residual who-pays shares, and instrument mix after the 2024 loan-heavy public stack.
+
+## The headline table: AGR 2025 post vs newest official vintage
+
+| Metric | Prior update (AGR 2025) | Q3 newest print | Δ |
+| --- | ---: | ---: | --- |
+| Adaptation flows (headline) | **UNEP intl public $26B** (2023) | **OECD provided/mobilised $34.7B** (2024) | Broader ledger; **+$1.1B** OECD YoY |
+| OECD adaptation path | **$33.6B** (2023) | **$34.7B** (2024) | **+$1.1B (+3.3%)** |
+| Needs band | **$310–365B / yr** by 2035 | **$310–365B** (unchanged) | No new UNEP needs print |
+| Gap vs flows | **$284–339B** (vs UNEP $26B) | **~$275–330B** (vs OECD $34.7B) | Still **~9–10.5×** flows |
+| Glasgow 2× (OECD public) | On-trend **miss** | Need **+$5.8B** public in 2025 | Credibility floor still fails |
+| CPI tracked adaptation | Research-era ~**$64B** stack | **$65B** in 2023 (**−16%** YoY) | DFI drop; green bonds **+$7.9B** |
+| FRLD capitalization | Not in prior ledger | **~$449M** delivered / **$822M** pledged | Dry-up risk by **2027** |
+| Nat-cat protection gap | **$424B** / resilience **~27%** | **$424B**; insured 2025 = **$107B** | Below-trend year ≠ closed gap |
+
+Read the first row carefully. **OECD and UNEP are not interchangeable numerators.** UNEP’s AGR tracks **international public** adaptation finance from developed to developing countries; OECD’s $100B-goal series counts **provided and mobilised** adaptation finance (public plus private mobilised by public interventions) under a different attribution frame. The clean *period* delta inside the OECD series is modest: **$33.6B → $34.7B**. The clean *theme* delta versus our prior post is that the **newest official adaptation flow print is larger than UNEP’s $26B** — and **still an order of magnitude below needs**.
+
+## OECD’s $1.1B bounce does not clear Glasgow
+
+Total climate finance provided and mobilised by developed countries reached **$132.8B in 2023** and **$136.7B in 2024**, exceeding the old **$100B** goal for a third straight year. Adaptation’s *share* of that stack stayed stuck near **one quarter** in both years — down from a **34%** peak in 2020. Inside adaptation, public finance still supplies over **90%** of the OECD total (**$31.7B** public in 2024; about **$3B** private mobilised).
+
+Glasgow’s doubling call used an OECD **2019 public** baseline of **$18.8B**. Doubling that implies roughly **$37.6B** by 2025. Against **$31.7B** public adaptation in 2024, OECD says providers still need about **+$5.8B (+18%)** in 2025 to hit the floor. That is the Q3 headline that matters more than the absolute **$1.1B** bounce: **the recovery is real, and it is still too slow**.
+
+Multilateral composition tells the same story the AGR flagged. OECD notes **MDB adaptation finance fell ~16%** over the recent window even as **multilateral climate funds more than doubled** — a composition shift, not a step-change in volume. Bilateral public flows rose steadily; private mobilisation for adaptation remains a **~$3B** rounding error against a **$310–365B** needs band.
+
+## CPI’s global track fell 16% while the mitigation stack printed $1.9T
+
+CPI’s landscape is the other official-adjacent ledger that updated after our research post and sits beside AGR. Tracked **global** adaptation finance printed **$65B in 2023**, a **16%** decline from 2022, even as mitigation hit **$1.78T** and total climate finance **$1.9T** (with early 2024 data already above **$2T**). CPI attributes much of the adaptation drop to a roughly **$20B** decline from the **China Development Bank** and other national DFI prints — partly methodological, partly real — only partly offset by **adaptation-tagged green bonds rising $7.9B to $18B**.
+
+Dual-benefit finance (adaptation *and* mitigation) reached **$58B** in 2023, triple 2018 levels. CPI’s EMDE adaptation investment need sits near **$222B/year by 2030** — a lower bound than UNEP’s 2035 developing-country band, and still **~3.4×** OECD’s 2024 adaptation print. The theme implication is unchanged: **mitigation got the commercial pipeline; adaptation got the tracking noise and the residual bill**.
+
+## Loss-and-damage capitalization is still a footnote
+
+The FRLD was supposed to be the political answer to residual climate damage that adaptation finance never covers. As of the **April 2026** board cycle, pledges total about **$822 million** and paid-in capital about **$449 million**. Project requests already approach **$166 million**, and the secretariat has warned of **liquidity risk by end-2027** if replenishment stalls. Campaign asks for **$50B/year from 2027** rising toward **$400B by 2035** underscore the scale mismatch: even a perfect FRLD would be a **damage window**, not a substitute for the **$275–330B** adaptation gap against OECD flows.
+
+That is the Q3 addition to the who-pays stack. When international public adaptation crawls up **$1.1B** and loss-and-damage arrives with **less than half a billion** delivered, **households, thin sovereign budgets, and informal coping** remain the residual insurers of last resort — the same regressive assignment the research and AGR posts described.
+
+## Swiss Re’s quiet 2025 does not shrink the $424B protection gap
+
+Swiss Re Institute’s **sigma 1/2026** prints **$107B** in insured natural-catastrophe losses for 2025 — below the **~$140B** level implied by the long-term growth trend, largely because no major US hurricane landfall arrived. Secondary perils (severe convective storms, wildfire, flood) still dominated. The modelled **protection gap remains $424B** and the resilience index about **27%**; in emerging economies **80–90%** of catastrophe losses stay uninsured. If the trend resumes, Swiss Re’s path implies roughly **$148B** insured losses in a normal 2026 — or about **$320B** in a peak-year scenario.
+
+A below-trend insured year is **favourable volatility**, not evidence that adaptation finance closed the gap. Pair this global residual with the US event-cost lens in [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026): one rich country’s billion-dollar threshold events can clear tens of billions while the international adaptation pipe for developing countries inches up by about **one billion**.
+
+## Who pays when the public pipe only crawls
+
+Toggle the dashboard’s who-pays and multi-ledger panels. After the OECD bounce, the residual assignment is still regressive:
+
+1. **Uninsured households and SMEs** absorb out-of-pocket rebuilds — still the largest editorial residual share, especially where Swiss Re’s emerging-market uninsured rates sit at **80–90%**.
+2. **Sovereign and local budgets** take emergency and reconstruction hits, often financed with the same **loan-heavy** instruments that still make up about **67%** of OECD public climate finance in 2024 (grants rose to **29%**, but loans remain the default).
+3. **Insurers** cover the thin slice that clears underwriting — **$107B** insured in 2025 against a **$424B** modelled protection need.
+4. **OECD-tracked adaptation finance** and **FRLD / private mobilisation** remain single-digit shares of the residual stack even after Glasgow rhetoric and a third year above the **$100B** climate-finance goal.
+
+Instrument quality still matters as much as volume. A rising adaptation numerator financed with non-concessional debt is how an “adaptation investment trap” forms: disasters raise debt service, which crowds out the next round of resilience spend. Pair that with the provider-budget squeeze in [OECD DAC’s first ODA drop](/blog/oecd-dac-oda-first-drop-2024) — the same capitals that tag adaptation ODA are the ones announcing cuts.
+
+## Caveats
+
+- **OECD vs UNEP numerators differ.** Do not read **$34.7B** as a restatement of UNEP’s **$26B** intl public print; treat them as **parallel ledgers**.
+- **Needs bands** remain AGR 2025 stock (**$310–365B** by 2035 in 2023 prices). There is **no new UNEP needs vintage** in this Q3 window — compare flow deltas, not a re-estimated cost curve.
+- **OECD adaptation** includes public finance and private finance *mobilised by* public interventions; domestic public spend and much private adaptation remain under-captured.
+- **CPI’s −16%** adaptation print is sensitive to large DFI reporters and methodology; green-bond growth partially offsets but does not erase the drop.
+- **FRLD figures** (**$822M** pledged / **~$449M** delivered) follow 2026 board-cycle reporting and may revise with replenishment rounds.
+- **Residual-bearer pie shares** are editorial synthesis for the update viz — incidence illustration, not national accounts.
+- **Swiss Re protection-gap ($424B)** is a modelled premium-equivalent ledger; it is not identical to annual economic loss totals in sigma event accounting.
+- **Glasgow shortfall (+$5.8B)** uses OECD’s public 2019 baseline framing; UNFCCC SCF baseline debates can shift the exact target arithmetic.
+
+## Methodology
+
+Headline Q3 vintage delta follows **OECD Climate Finance Provided and Mobilised by Developed Countries in 2013–2024** (released **21 May 2026**): adaptation **$33.6B (2023) → $34.7B (2024)**; public adaptation **$30.6B → $31.7B**; private mobilised for adaptation ~**$3B**; total climate finance **$132.8B → $136.7B**; adaptation share ~**25%**; Glasgow public shortfall ~**$5.8B** against a **$18.8B** 2019 baseline. Prior-post anchors follow our [AGR 2025 update](/blog/adaptation-economics-update-2026) / UNEP Running on Empty (**$26B** intl public in 2023; needs **$310–365B**; gap **$284–339B**). CPI GLCF 2025 supplies the **$65B / −16%** global adaptation track, **$58B** dual-benefit, and **$222B** EMDE needs bound. Swiss Re sigma 1/2026 supplies **$107B** insured 2025 losses, trend/peak paths, and the unchanged **$424B / ~27%** protection-gap ledger. FRLD capitalization follows April 2026 board-cycle reporting. Residual shares and lever panels are constructed for interaction and labeled as such in the viz.
+
+## Bottom line
+
+The newest official vintage did not close the adaptation gap — it **documented a crawl**. OECD adaptation finance rose to **$34.7B in 2024** (**+$1.1B** YoY), a broader ledger than UNEP’s **$26B** intl public print, and still only about **one-tenth** of AGR mid-band needs. Glasgow’s doubling path still needs roughly **+$5.8B** public in 2025. CPI’s global adaptation track **fell 16%** to **$65B** while mitigation printed trillions. FRLD has delivered **~$0.45B**. Swiss Re’s quiet insured year left the **$424B** protection gap intact. Until grant finance, debt treatment, and bankable resilience pipelines scale, **households, thin sovereign budgets, and informal coping** still pay first — now against a **slowly rising** international numerator that remains an order of magnitude too small.
+
+Related reading: [adaptation economics AGR 2025 update](/blog/adaptation-economics-update-2026), [adaptation economics research](/blog/adaptation-economics-research-2026), [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026), and [OECD DAC ODA drop](/blog/oecd-dac-oda-first-drop-2024).`,
+  },
+  {
     id: "measurement-science-update-2026q3",
     slug: "measurement-science-update-2026q3",
     title:

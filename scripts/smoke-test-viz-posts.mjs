@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "adaptation-economics-update-2026q3",
+    marker: "Vintage delta — AGR 2025 / UNEP $26B → OECD May 2026 $34.7B",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "measurement-science-update-2026q3",
     marker: "PPP overtake gap narrows to 0.3 pp",
     forbidden: "Loading interactive charts",
