@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "energy-systems-research-2026",
+    marker: "How countries source, mix, and trade energy",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "adaptation-economics-research-2026",
     marker: "Adaptation economics — who pays before policy catches up",
     forbidden: "Loading interactive charts",

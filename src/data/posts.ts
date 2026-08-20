@@ -2,6 +2,124 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "energy-systems-research-2026",
+    slug: "energy-systems-research-2026",
+    title:
+      "Charted: EU Imports 58% of Its Energy — Japan 88% — While the US Exports",
+    excerpt:
+      "Fifteen major systems show how countries source primary energy, how that mix diverges from electricity, and who depends on traded oil, LNG, and coal. EU import dependence ~58%; Japan ~88%; LNG top-3 exporters ~61% of volumes.",
+    content: `Energy debates collapse three different maps into one slogan. **How a country burns fuel at home** is not the same as **how it generates electricity**, and neither is the same as **who sells the molecules that cross borders**. The European Union imports about **58%** of the energy it uses. Japan’s dependence sits near **88%**. The United States is a **net energy exporter**. China still runs a **coal-majority primary system** (~55%) while importing a rising share of oil and gas. Those facts live in separate PDFs — Energy Institute balances, Eurostat dependency tables, Ember electricity shares, GIIGNL LNG ledgers — so markets and politics often argue past each other.
+
+This post asks the theme question directly: **how do countries source, mix, and trade energy?** The dashboard above is a systems ledger for **15 large economies** (plus a world row in the data module). It stacks primary-energy mixes, the gap between primary and power-sector fossil shares, net import dependence, and the export concentration of LNG, crude, coal, and pipeline gas. Pair it with our [global electricity generation mix](/blog/global-electricity-generation-mix-2024) for the TWh detail, and with [IRENA’s 2024 renewable capacity record](/blog/irena-renewable-capacity-record-2024) for the GW buildout that is reshaping *future* mixes — capacity additions and today’s primary balance are related, not identical.
+
+## Three ledgers, one system
+
+Treat energy as three ledgers that only sometimes move together:
+
+1. **Primary energy mix** — oil, gas, coal, nuclear, hydro, and other renewables as shares of total primary energy supply (TPES). This is the “what the economy digests” meter.
+2. **Electricity mix** — how generators produce TWh. Nuclear and hydro can clean the *power* stack while transport and industry still burn oil and gas in the *primary* stack.
+3. **Trade stance** — net energy import dependence (imports as a share of gross available energy) and the identity of fuel exporters. A country can be coal-heavy at home and still import oil; another can export LNG while burning coal for power.
+
+The dashboard’s **Primary mix** panel is the first ledger. **Primary ↔ power** is the second. **Import map** and **Dependence rank** are the third. **Fuel trade** shows who sits on the other side of the import bill.
+
+## A cross-system scoreboard
+
+Selected 2024e figures (primary shares approximate Energy Institute Statistical Review 2025; electricity fossil shares Ember/OWID-aligned; EU import dependence Eurostat 2023):
+
+| System | Fossil share of primary | Electricity fossil | Net import dependence | Trade stance |
+| --- | ---: | ---: | ---: | --- |
+| Japan | ~86% | ~68% | **~88%** | Net importer |
+| South Korea | ~84% | ~62% | **~82%** | Net importer |
+| Germany | ~77% | ~42% | **~65%** | Net importer |
+| EU-27 | ~69% | ~32% | **~58%** | Net importer |
+| India | ~89% | ~75% | ~38% | Net importer |
+| China | ~82% | ~63% | ~22% | Net importer |
+| United Kingdom | ~74% | ~38% | ~40% | Net importer |
+| France | ~48% | **~8%** | ~45% | Net importer |
+| United States | ~80% | ~58% | **~−8%** | Net exporter |
+| Brazil | ~53% | **~12%** | ~8% | Balanced |
+| Russia | ~88% | ~60% | Large surplus | Net exporter |
+| Australia | ~88% | ~62% | Large surplus | Net exporter |
+| Saudi Arabia | ~98% | ~99% | Large surplus | Net exporter |
+
+Read the table as **geometry**, not morality. Japan and Korea are rich, efficient, and structurally import-dependent because they lack domestic hydrocarbons at scale. The US looks “fossil heavy” on primary shares and still **exports** because the surplus is oil and gas production relative to domestic demand. France imports oil and gas like other Europeans, yet its **electricity** fossil share collapses because nuclear covers roughly **two-thirds** of generation — a gap the slope panel is built to show.
+
+## Primary mix is still a fossil story
+
+Filter the dashboard to Asia-Pacific and the stacked bars tell a blunt industrial story. **China and India** remain **coal-majority** primary systems (~55% coal each in this ledger). The **United States** is an **oil-and-gas** system (~70% combined) with coal as a residual. **Saudi Arabia** is oil-and-gas almost by definition. **Brazil** is the structural outlier among large economies: hydro and biofuels keep fossil primary near half, and electricity is already mostly renewable.
+
+The world aggregate still sits near **~80% fossil** in primary energy. That is why renewable *capacity* records and fossil *primary* persistence can both be true in the same year. IRENA’s [585 GW renewable additions in 2024](/blog/irena-renewable-capacity-record-2024) change the *flow* of power capacity; they have not yet rewritten the *stock* of oil in transport, gas in heat, and coal in Asian industry. Primary energy is a slow-moving balance sheet.
+
+## Why electricity can look cleaner than the economy
+
+The **Primary ↔ power** panel plots fossil share of primary energy as bars and fossil share of electricity as a line. Three patterns matter:
+
+- **France:** primary fossil near **~48%**, electricity fossil near **~8%**, nuclear ~**64%** of power. The economy still needs diesel and jet fuel; the grid does not.
+- **Brazil:** primary fossil ~**53%**, electricity fossil ~**12%**, thanks to hydro dominance. Transport oil keeps the primary stack dirtier than the socket.
+- **Japan / Korea / Australia:** electricity fossil shares remain high even where renewables grow, because gas and coal still firm large shares of generation while oil dominates transport.
+
+This is the trap in “grid decarbonization = energy transition.” Cleaning TWh is necessary and measurable — see our [generation-mix map](/blog/global-electricity-generation-mix-2024) — but it understates oil’s grip on primary energy until vehicles, aviation, and feedstocks move. It also overstates progress in countries that export coal or LNG while greening domestic power: Australia’s electricity renewables share can rise while the country remains a **hard-coal export giant**.
+
+## Import dependence is the political meter
+
+Eurostat’s EU energy import dependency — about **58%** in the latest full release used here — is the number European politics actually feels when gas prices spike. Japan (~**88%**) and Korea (~**82%**) sit higher still. Germany (~**65%**) is more exposed than France (~**45%**) even though both are EU members, because nuclear cuts France’s need for imported fossil *electricity* fuels even as oil imports remain.
+
+Flip the sign and the map rearranges. The **United States** posts a modest **net export** position (about **−8%** in this rounded ledger) after the shale decade turned the country from oil importer to oil-and-gas exporter. **Canada**, **Russia**, **Australia**, and **Saudi Arabia** show large negative dependence — export surpluses relative to domestic TPES. That does not make their *domestic* mixes clean; it makes their *trade* stance the opposite of Japan’s.
+
+The **Import map** scatter puts dependence on the x-axis and fossil primary share on the y-axis. Upper-right is the uncomfortable quadrant: high fossil intensity *and* high import bills (Japan, Korea, Germany). Upper-left is fossil-heavy but export-rich (Saudi, Russia, Australia). Lower-right is rarer: import-dependent systems that have already cut primary fossil intensity — France leans that way relative to peers because nuclear substitutes in the power sector even while oil imports persist.
+
+## Who sells the fuels that cross borders
+
+Domestic mix charts hide the counterparties. The **Fuel trade** panel summarizes export concentration:
+
+| Market | Top-1 | Top-1 share | Top-3 | Top-3 share |
+| --- | --- | ---: | --- | ---: |
+| LNG exports | United States | **~22%** | US + Australia + Qatar | **~61%** |
+| Crude oil exports | Saudi Arabia | ~15% | Saudi + Russia + Iraq | ~38% |
+| Hard coal exports | Indonesia | **~35%** | Indonesia + Australia + Russia | **~72%** |
+| Pipeline gas exports | Russia | ~18% | Russia + Norway + Canada | ~48% |
+
+LNG is a **triopoly story**: the United States, Australia, and Qatar together clear about **three-fifths** of export volumes. That is why our earlier LNG capacity framing still matters for European and Asian importers even after US cargoes rewired Atlantic trade. Coal trade is **more concentrated** than crude: Indonesia alone is about a third of seaborne export tons in this ledger, and the top three clear roughly **three-quarters**. Crude is plural relative to coal — no single exporter matches Indonesia’s coal grip — yet Middle East and Russian barrels still set the geopolitical weather.
+
+Pipeline gas remains a **route-and-contract** market more than a spot market. Russia’s share of inter-regional pipeline trade fell from its pre-2022 European peak, but the panel still flags Russia–Norway–Canada as the volume core. Europe’s post-2022 lesson was not “gas disappeared”; it was that **pipeline dependence** and **LNG flexibility** are different risk instruments.
+
+## What would change the story
+
+Several observables would force a rewrite of this systems ledger:
+
+1. **EU import dependence falling under 45%** for two consecutive Eurostat years without a recession-driven demand crash — evidence that efficiency, domestic renewables, and diversified supply permanently cut the bill.
+2. **Japan or Korea electricity fossil share under 40%** while primary oil share also declines — proof the socket cleanup is reaching transport and industry, not only displacing coal/gas in power.
+3. **China coal share of primary under 45%** with oil import dependence not exploding — a true primary transition, not a power-only story.
+4. **LNG top-3 export share under 50%** as new Atlantic and Middle East trains diversify beyond the US–Australia–Qatar triangle.
+5. **US returning to sustained net energy importer** status — a shale or demand regime change that would rewrite Atlantic LNG and oil politics overnight.
+6. **Nuclear and hydro additions** large enough to open France/Brazil-style primary-vs-power gaps in more of Asia — see also [who is pouring reactors now](/blog/nuclear-under-construction-china-share-2026).
+
+Until several of those print together, the default forecast is not “fossil disappears.” It is **regional specialization**: coal-heavy industrializers, oil-and-gas exporters, nuclear/hydro clean-power islands, and import-dependent manufacturing powers buying molecules from a short list of sellers.
+
+## Caveats and methodology
+
+- **Primary ≠ electricity ≠ final energy.** TPES shares include transformation losses; electricity shares are generation only. Do not average them.
+- **Import dependence definitions differ.** EU figures follow Eurostat energy-dependency methodology (2023 full release). Non-EU figures are rounded national-balance approximations aligned to IEA/EI concepts; treat them as ranks and magnitudes, not audit-grade percentages.
+- **Negative dependence** means net export surplus relative to domestic supply — extreme values (Australia, Saudi Arabia) reflect large export industries, not “negative consumption.”
+- **2024 primary shares** are approximate EI Statistical Review 2025 country aggregates rounded for dashboard use; country statistical offices can differ on bioenergy and non-hydro renewables classification.
+- **LNG / coal / crude trade shares** are secondary volume estimates for 2024 trade years; contract vs spot and re-exports can move annual ranks.
+- **World row** is excluded from filtered panels by default because global trade nets near zero by construction.
+- This post is a **synthesis**. For power-only detail use the [generation mix](/blog/global-electricity-generation-mix-2024) post; for renewable *capacity* additions use [IRENA 2024](/blog/irena-renewable-capacity-record-2024); for demand spikes on local grids see [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).
+
+## The shareable takeaway
+
+Countries do not have one energy map — they have **three**. Primary mixes are still mostly fossil. Electricity can diverge sharply where nuclear or hydro dominate (France, Brazil). Trade stance separates **Japan’s 88% import dependence** and the **EU’s ~58%** from **US net exports** and coal/LNG surplus nations. And the fuels that move across oceans are sold by short lists: **LNG top-3 ~61%**, **coal top-3 ~72%**. Source, mix, and trade are one system — read them together or misread the transition.`,
+    category: "Energy",
+    themeId: "energy-systems",
+    imageUrl: "/images/energy-energy-systems-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic energy-systems map with amber oil routes, teal gas arcs, and stacked generation-mix bars across continents",
+    publishedAt: "2026-08-20T18:00:00Z",
+    featured: true,
+    visualization: "energy-systems-research-2026",
+    layout: "default",
+  },
+  {
     id: "adaptation-economics-research-2026",
     slug: "adaptation-economics-research-2026",
     title:
