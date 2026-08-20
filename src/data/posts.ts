@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-compute-demand-update-2026",
+    slug: "ai-compute-demand-update-2026",
+    title:
+      "Update: Microsoft +2.3 pp of World AI Compute — Big-5 Still ~71%, US Pipeline Hits 45 GW",
+    excerpt:
+      "Versus our July research print, Epoch’s Chip Owners Explorer restates Microsoft to ~3.45M H100e (+2.3 pp share). Amazon and Oracle revise down; Meta ticks up. Synergy’s July site ledger adds ~45 GW of US IT pipeline and a +20 pp inland (TX+Midwest) pipeline jump.",
+    content: `## What changed since the July research vintage
+
+In late July we published the theme’s baseline: [five hyperscalers own ~71% of global AI compute](/blog/ai-compute-demand-research-2026), with Google alone near **25%**, China as a whole near **5%**, and the United States hosting roughly **45%** of AI data-center capacity by power draw. That post answered the stock question — *who owns the chips, and where do the watts sit?* This update answers the flow question markets and planners actually trade on: **what moved in the newest official vintage**, and does the ownership–location story still hold once individual H100e levels and the site pipeline are restated?
+
+Three information events force a refresh. **Epoch’s Chip Owners Explorer** published individual Big-5 H100-equivalent levels that replace several of July’s *estimated* residual splits (Google and the Big-5 aggregate remain the disclosed anchors). **Synergy Research (23 Jul 2026)** printed a US data-center capacity update with an explicit **~45 GW** IT pipeline and an inland investment shift that revises our hub panel. **Token meters through June 2026** (same theme’s [brand token series](/blog/major-ai-brands-token-consumption-2022-2026)) keep widening the gap between *who owns silicon* and *who burns tokens*. The dashboard above is built as a vintage delta — prior bars, new bars, hub MW revisions, geography concentration deltas, and a tokens-versus-ownership scatter.
+
+## The headline table: Jul research vs Aug explorer restatement
+
+| Owner | Prior share / H100e | New share / H100e | Δ share | Δ H100e | Confidence shift |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Google | **25%** / 5.0M | **25.0%** / 5.0M | 0.0 pp | 0.00M | Disclosed → disclosed |
+| Microsoft | **15%** / 3.0M | **17.3%** / 3.45M | **+2.3 pp** | **+0.45M** | Estimated → restated |
+| Amazon | **14%** / 2.8M | **12.5%** / 2.5M | **−1.5 pp** | **−0.30M** | Estimated → restated |
+| Meta | **10%** / 2.0M | **11.3%** / 2.25M | **+1.3 pp** | **+0.25M** | Narrative → restated |
+| Oracle | **7%** / 1.4M | **5.3%** / 1.05M | **−1.7 pp** | **−0.35M** | Estimated → restated |
+| **Big-5 total** | **~71%** / ~14.2M | **~71.4%** / ~14.25M | **+0.4 pp** | **~flat** | Aggregate still Epoch-anchored |
+
+The concentration slogan did **not** break. Five US hyperscalers still own about **seven-tenths** of world AI compute on the same ~**20 million H100e** world stock implied by Google’s quarter-share. What changed is the *internal ranking*: Microsoft’s explorer level (~**3.45M H100e**, “just under 3.5M”) is the cleanest upward restatement in the set, while Amazon and Oracle’s July residual estimates were **too high**. Meta’s move from a round **~10% / 2.0M** narrative to **~2.25M** is a smaller upward tick, not a regime change.
+
+Treat the Microsoft **+2.3 pp** carefully. It is mostly a **measurement correction** against July’s staff residual, not a claim that Microsoft alone installed 450k H100e between the two posts. True period momentum still lives in Epoch’s next *finalized* quarterly share print (Q1/Q2 2026 were explicitly excluded from the 71% chart when that analysis froze). Until that quarter closes, the shareable frame is: **Big-5 concentration stable; intra-Big-5 ranking restated toward Microsoft and Meta, away from Amazon and Oracle.**
+
+## Microsoft’s restatement is the cleanest ownership delta
+
+July forced a residual math problem. Epoch disclosed Google (~**25%**) and the Big-5 aggregate (~**71%**); Meta’s ~**10%** was a narrative anchor. The leftover **~46 percentage points** had to be split across Microsoft, Amazon, and Oracle. We put Microsoft at **15% / 3.0M**. The explorer coverage that landed in the spring — and that we are promoting into this update — puts Redmond closer to **3.5M H100e**, almost entirely Nvidia with a thin AMD slice. On a 20M world stock that is **~17.3%**, a **+2.3 pp** vintage delta versus the prior print.
+
+That restatement matters for two adjacent stories. First, **ownership versus rental**: OpenAI’s access still rides Microsoft, Oracle, and CoreWeave campuses; a higher Microsoft *owned* stock raises the ceiling on how much of that rented pool is parent-owned silicon rather than neocloud offtake. Second, **capex intensity**: the same firm that just printed [FY26 intensity at 26.8%](/blog/ai-capex-intensity-update-2026) is also the firm whose H100e stock was understated in our July residual. Absolute spend and absolute ownership are converging on the same name.
+
+Amazon’s explorer level (~**2.5M**) revises the July **2.8M** estimate down. That does not mean AWS stopped building — Trainium and Nvidia continue to ship — it means the July residual over-allocated the Big-5 leftover. Oracle’s drop from **1.4M** estimated to just over **1.0M** restated is the largest *downward* confidence correction; Stargate headlines still inflate announced MW faster than Epoch’s ownership meter. Meta’s **+0.25M** is consistent with continued GPU/AMD installs plus cloud deals that rent *additional* capacity without always showing up as Meta-owned H100e.
+
+## Synergy’s site ledger: 45 GW US pipeline, inland +20 pp
+
+Ownership answers *who*. The July post’s geography half leaned on an industry-tracker **~45% US share of AI data-center capacity by power**. That AI-specific share is **unchanged** in this update — we do not invent a new AI-only percentage without a new tracker vintage. What *did* print in July 2026 is Synergy’s broader capacity ledger, and it is loud enough to revise the **site** side of the theme.
+
+Synergy’s 23 July release puts the known pipeline of future large data centers near **1,500** worldwide, with almost **half** in the United States. That US half represents about **45 GW** of IT capacity across **74** companies — **seven** hyperscalers driving AI campuses plus **67** other large builders. Hyperscaler-*owned* US capacity is expected to **double in about two years**; total US data-center capacity to **double in about three**. Over the next five years the US is expected to remain **well over half** of the world’s *operational* data-center capacity. Separately, Synergy’s end-2025 hyperscale footprint shows the US at **55%** of worldwide hyperscale operational capacity (up from **52%** three years earlier), with hyperscale operators already **48%** of *all* world data-center capacity (on a path toward **67% by 2031**).
+
+The inland shift is the geographic punchline. At end-2025, **Texas and the Midwest** accounted for **33%** of operational US hyperscale capacity — but **53%** of Synergy’s pipeline of new US hyperscale capacity. That is a **+20 percentage-point** gap between where the live load sits and where the next gigawatts want to land. Northern Virginia remains the densest *live* cluster; Texas is the single most prominent state in the *pipeline*. Wisconsin, Indiana, Michigan, and Missouri all gain importance as Amazon, Google, Meta, Microsoft, OpenAI, and CoreWeave chase power availability inland. Our hub panel therefore revises Midwest IT MW from **~9.8 GW → ~12.5 GW** (+2.7 GW) and Texas from **~4.2 → ~5.8 GW** (+1.6 GW), while Middle East *announced* MW is held flat — energisation, not press releases, is still the open question. For campus-by-campus status, the [global AI data-center build tracker](/blog/global-ai-data-center-build-tracker) remains the site list; this update is the vintage delta on concentration and pipeline.
+
+## Tokens still refuse to copy the ownership pie
+
+Chip ownership and token throughput are different meters. June 2026 brand disclosures in our [token-consumption series](/blog/major-ai-brands-token-consumption-2022-2026) keep showing **usage geography** that ownership tables cannot reproduce. Google sits near the diagonal — large owner, large token surface. OpenAI and ByteDance sit far to the right on tokens with little or no *owned* H100e on Epoch’s pie. Microsoft and Amazon sit above the diagonal: they own more of the world’s AI compute than their first-party token meters imply, because they rent the rest to frontier labs and enterprise tenants.
+
+China’s ownership share remains about **5%** of world AI compute — smaller than Google alone — even as Chinese apps and open-weight routing can dominate neutral token meters such as OpenRouter. That divergence is not a data error. Export controls, custom-silicon programs, and cloud contracts split *balance-sheet ownership* from *routed inference*. Policy that targets owners and fabs will miss a large slice of token demand; policy that targets apps will miss who actually holds the accelerators. The dashboard scatter is the reminder: **do not average ownership shares with token shares into a fake “AI power” index.**
+
+## Power capacity: Gartner path intact, 2027 is the composition hinge
+
+Gartner’s 1Q26 worldwide forecast is unchanged as a *capacity* vintage — we are not restating 132 GW / 565 TWh — but this update features the **2027** step that July treated as background. Electricity rises from **565 TWh (2026) to 702 TWh (2027)**; AI-optimised servers are on track to **surpass conventional servers** on power consumption in **2027**, after already taking **31%** of data-center power in 2026. Capacity still races from **104 GW (2025) → 132 GW (2026) → ~165 GW (2027 est.) → ~290 GW (2030)**. Capacity (GW) remains the interconnection constraint; TWh remains the energy bill. Pair the global path with the [AI power-grid concentration](/blog/ai-power-grid-concentration-2026) cut for *where* those watts concentrate, and with [hyperscaler capex intensity](/blog/ai-capex-intensity-update-2026) for the dollar flow that funds the next GW.
+
+## What would rewrite this update
+
+1. **Epoch Q1/Q2 2026 Chip Owners finalization** moves the Big-5 aggregate materially below ~70% or above ~73% — a true period delta, not a residual restatement.
+2. **Google’s TPU H100e conversion** revises the 5.0M / 25% anchor; every other share moves with the world stock.
+3. **Synergy / utility energisation prints** show Middle East or India multi-GW IT loads connecting on schedule — compressing US operational share — or slipping again, which sticks the US >50% ops story.
+4. **Token–ownership convergence**: if OpenAI or Anthropic begin owning a material H100e stock on Epoch’s table, the scatter’s “renter” cluster collapses.
+5. **Gartner 2H26 / 2027 vintage** revises the 702 TWh / AI-surpasses-conventional hinge.
+
+Until those print, the live frame versus July is narrow: **Big-5 ownership concentration is stable near 71%; Microsoft’s explorer restatement is +2.3 pp; Amazon and Oracle’s July residuals were high; the US site pipeline is ~45 GW with TX+Midwest taking 53% of new hyperscale capacity; and token demand still refuses to copy the silicon balance sheet.**
+
+## Caveats and methodology
+
+1. **Explorer restatements ≠ quarterly installs.** Microsoft’s +2.3 pp is primarily a correction to July’s estimated residual, aligned to Epoch Chip Owners Explorer coverage (via Epoch / Network World Apr 2026 reporting). It is not a measured Q1→Q2 2026 shipment delta.
+2. **H100-equivalent ≠ identical utility.** Epoch converts on peak 8-bit FLOP/s. Memory bandwidth, networking, and software stacks differ across TPU, Blackwell, Trainium, and Ascend.
+3. **World stock ~20M H100e** is implied by Google ≈ 25% / 5.0M; if that anchor moves, every share moves.
+4. **Synergy meters are not Epoch meters.** “US ~45% of AI DC capacity by power” (prior theme) is not identical to “US well over half of world operational DC capacity” or “US 55% of hyperscale capacity.” We keep them separate in the geography panel.
+5. **Hub MW figures** mix live, building, and announced IT loads and are order-of-magnitude revisions, not utility interconnection queues.
+6. **Token shares** in the scatter are illustrative slices of the tracked brand cohort in the token post (Jun 2026), not a regulator census; ByteDance’s meter includes surfaces that inflate token counts relative to chat-only Western APIs.
+7. **China ~5% ownership** remains an Epoch ownership narrative, not a claim about Chinese model quality or token volume.
+8. **Gartner GW/TWh** figures are the June 2026 public release of the 1Q26 forecast; they are not LBNL US historicals and not Goldman capex dollars.
+
+Primary sources: Epoch AI Chip Owners / hyperscaler share chart (Q4 2025 anchors); Epoch Chip Owners Explorer individual levels as reported in Network World (Apr 2026); Synergy Research US capacity update (23 Jul 2026) and inland hyperscale investment analysis; Gartner Forecast: Data Center Power Capacity and Consumption, Worldwide, 2024–2030 (1Q26); prior theme baseline in [compute demand research](/blog/ai-compute-demand-research-2026).
+
+## The shareable takeaway
+
+**Versus July, the Big-5 still own ~71% of world AI compute — but Microsoft’s explorer restatement lifts it to ~17.3% (+2.3 pp), while Amazon and Oracle revise down.** Google remains ~25%. Synergy’s July site ledger adds a **~45 GW** US IT pipeline and a **+20 pp** inland jump (Texas + Midwest from 33% of ops to 53% of pipeline). Token demand still diverges from ownership. For the baseline ownership essay see the [July research post](/blog/ai-compute-demand-research-2026); for sites see the [build tracker](/blog/global-ai-data-center-build-tracker); for tokens see the [brand series](/blog/major-ai-brands-token-consumption-2022-2026).`,
+    category: "Technology",
+    themeId: "ai-compute-demand",
+    imageUrl: "/images/technology-ai-compute-demand-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic map of AI compute ownership with glowing US inland data-center nodes and vintage-delta capacity stacks",
+    publishedAt: "2026-08-20T22:00:00Z",
+    featured: true,
+    visualization: "ai-compute-demand-update-2026",
+    layout: "default",
+  },
+  {
     id: "macro-growth-trade-update-2026",
     slug: "macro-growth-trade-update-2026",
     title:

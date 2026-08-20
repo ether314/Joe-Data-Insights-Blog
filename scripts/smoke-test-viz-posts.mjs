@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-compute-demand-update-2026",
+    marker: "Vintage delta — Jul research",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "macro-growth-trade-update-2026",
     marker: "Vintage delta — Apr 2026 WEO",
     forbidden: "Loading interactive charts",

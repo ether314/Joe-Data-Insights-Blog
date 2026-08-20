@@ -72,7 +72,8 @@ export interface Post {
     | "ai-supply-chain-update-2026"
     | "ai-power-grid-concentration-2026"
     | "bank-commercial-credit-research-2026"
-    | "macro-growth-trade-update-2026";
+    | "macro-growth-trade-update-2026"
+    | "ai-compute-demand-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
