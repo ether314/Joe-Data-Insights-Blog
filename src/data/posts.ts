@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-compute-demand-update-2026q3",
+    slug: "ai-compute-demand-update-2026q3",
+    title:
+      "Update: US Takes 437 of 803 Hyperscale Pipeline Sites — Top-3 Cloud = 58%, Ownership Flat",
+    excerpt:
+      "Versus our Aug explorer/45 GW update, Synergy’s hyperscale site ledger is the new vintage: 437 US of 803 world pipeline sites, Top-3 cloud at 58% of hyperscale capacity, new campuses ≈2× ops average. Big-5 ownership shares carried — Epoch Q1/Q2 period print still open.",
+    content: `## What changed since the August update
+
+In mid-August we published a [vintage delta on Epoch’s Chip Owners Explorer](/blog/ai-compute-demand-update-2026): Microsoft restated to ~**17.3%** of world AI compute (+**2.3 pp** versus the July residual), Amazon and Oracle revised down, and Synergy’s July capacity note put **~45 GW** of US IT load in the large-data-center pipeline with Texas + Midwest jumping from **33%** of operational US hyperscale capacity to **53%** of the pipeline. That post answered *what moved in the ownership restatement and the GW pipeline*. This Q3 refresh answers a sharper site question: **once Synergy’s hyperscale *site-count* ledger and Top-3 concentration print are promoted, and Gartner’s US electricity composition is layered on, does the “who processes / where located” story change — or does ownership stay frozen while geography gets louder?**
+
+Three information layers force the refresh. **Synergy’s inland hyperscale footprint** (end-2025 ops / multi-year pipeline) prints hard site counts — **1,360** operational hyperscale data centers worldwide (**580** in the US) and **803** pipeline sites (**437** in the US) — plus a concentration punchline the August GW note did not feature: **Amazon + Microsoft + Google already hold 58% of all hyperscale capacity**. **Named inland markets** (Abilene, Mount Pleasant, South Bend, El Paso, Boone County, Kansas City) and Amazon’s reported **~$15B / ~2.4 GW** Northern Indiana add revise the hub panel upward again. **Gartner’s June public release** of the 1Q26 forecast supplies a US electricity composition the theme had not yet used as a headline meter: the US draws about **204 TWh** of the world’s **565 TWh** data-center electricity in 2026 (**36%**), and dedicated AI data centers consume about **68 TWh** inside the US — roughly **one-third** of US data-center power. Ownership Big-5 shares are **carried** from August; Epoch still has not finalized a Q1/Q2 2026 *period* Chip Owners print that would rewrite the 71% aggregate.
+
+## The headline table: Aug update vs Q3 site & power print
+
+| Meter | Aug 2026 update | Q3 2026 print | Δ / note |
+| --- | ---: | ---: | --- |
+| Big-5 share of world AI compute | **~71.4%** | **~71.4%** (carried) | **0 pp** — no new Epoch period vintage |
+| Google / Microsoft ownership | **25% / 17.3%** | **25% / 17.3%** | Flat carry from explorer restatement |
+| US large-DC IT pipeline | **~45 GW** | **~45 GW** (carried) | GW print unchanged; site count is new |
+| US hyperscale pipeline sites | *(not featured)* | **437 of 803** (**54.4%**) | Synergy hyperscale-only ledger |
+| US hyperscale ops sites | *(not featured)* | **580 of 1,360** (**42.6%**) | Site share ≠ capacity share |
+| Top-3 cloud hyperscale capacity | *(not featured)* | **58%** | AWS + Azure + Google |
+| New campus size vs ops average | *(not featured)* | **≈2×** | Synergy next-3y average |
+| TX + Midwest pipeline share | **53%** | **53%** (carried) | Inland corridor headline intact |
+| US share of world DC electricity | *(not featured)* | **~36%** (204/565 TWh) | Gartner 2026 composition |
+| Dedicated AI share of US DC power | *(not featured)* | **~33%** (~68/204 TWh) | Gartner US AI slice |
+
+The ownership slogan did **not** move. Five US hyperscalers still own about **seven-tenths** of world AI compute on the same ~**20 million H100e** world stock. What *did* print is a second geography meter: **sites**, not just gigawatts. Almost **half** of Synergy’s hyperscale *pipeline sites* sit in the United States (**437 / 803**), even while the US’s share of *operational site counts* (**580 / 1,360 ≈ 43%**) undershoots its share of *operational capacity* (still **well over half** in Synergy’s capacity framing). That is not a contradiction — it is the size effect: new campuses are nearly **twice** the average IT capacity of currently operational hyperscale sites, so fewer US pipeline *sites* can still dominate world *watts*.
+
+## Ownership is carried — the open Epoch quarter is the rewrite risk
+
+August’s Microsoft **+2.3 pp** was a **measurement correction** against July’s staff residual, aligned to Epoch Chip Owners Explorer coverage. It was never sold as a Q1→Q2 2026 shipment delta. Epoch’s own hyperscaler-share chart still freezes on **Q4 2025** anchors and explicitly excluded unfinished **Q1 2026** data when that analysis printed. Until a finalized quarterly ownership vintage lands, this Q3 post **refuses to invent** a fake period move in Google’s **25%**, Microsoft’s **17.3%**, Amazon’s **12.5%**, Meta’s **11.3%**, or Oracle’s **5.3%**. The dashboard’s ownership panel is labeled a **carry** for that reason.
+
+That honesty matters for readers who want a YoY ownership delta. The shareable YoY *capacity* story remains Gartner’s path — data-center electricity **+26%** to **565 TWh** in 2026, capacity **+27%** to **132 GW** — not a fabricated Epoch quarter. The shareable *concentration* story that *is* new this vintage sits one layer down: inside hyperscale capacity, the **Top-3 cloud providers alone are 58%**. Big-5 chip ownership (~71%) and Top-3 site/capacity concentration (~58%) are different meters on related balance sheets; do not average them into a single “AI monopoly index.”
+
+## Synergy’s site ledger: 437 US pipeline sites, Top-3 at 58%
+
+August emphasized Synergy’s **~45 GW** US IT pipeline and the inland **+20 pp** corridor jump. Those numbers remain the capacity anchors. Q3 promotes the **site-count** companion that was sitting in Synergy’s inland footprint note all along: **1,360** operational hyperscale facilities worldwide at end-2025 (**580** US), and a known pipeline of **803** future hyperscale sites (**437** US). The US therefore accounts for about **54%** of pipeline *sites* and about **43%** of ops *sites* — while still holding **well over half** of world *operational* data-center capacity and **55%** of hyperscale capacity in Synergy’s capacity tables.
+
+Two implications follow. First, **pipeline geography is more US-heavy on sites than live geography is on site counts**, which is consistent with the inland power chase: new gigawatt campuses prefer Texas and the Midwest even when Northern Virginia remains the densest *live* cluster. Second, **Top-3 concentration at 58%** of hyperscale capacity means the ownership story and the landlord story are converging on the same three names — Amazon, Microsoft, and Google — even before Meta and Oracle’s chip stocks are added. Meta, Alibaba, Tencent, Oracle, Apple, and ByteDance fill the rest of Synergy’s ranked footprint; the long tail of neoclouds and colo-backed AI campuses shows up more in the **74-company / 45 GW** large-DC pipeline than in the hyperscale-only site ledger.
+
+Treat the August “~1,500 large-DC pipeline sites” and the Q3 “**803** hyperscale pipeline sites” as **different universes**. The July 23 capacity release counted a broader large-data-center pipeline (~1,500 worldwide, ~half US). The inland hyperscale note counts **hyperscale operators only** (803 pipeline / 1,360 ops). Mixing them produces fake deltas. The dashboard stacks US versus rest-of-world on the hyperscale-only ledger and carries the **45 GW** figure beside it so readers can see both meters without collapsing them.
+
+## Inland hubs revise again: Midwest +2.7 GW, Texas +1.4 GW
+
+The August hub panel already lifted the Midwest to **~12.5 GW** and Texas to **~5.8 GW** on the inland pipeline intensity. Q3 leans on Synergy’s named non-traditional markets — Abilene, Mount Pleasant, South Bend, El Paso, Boone County, Kansas City — plus the widely reported Amazon **Northern Indiana** commitment on the order of **~$15 billion** and about **2.4 GW** of data-center capacity. Our Midwest IT-MW revision therefore moves **~12.5 → ~15.2 GW** (+**2.7 GW**), and Texas **~5.8 → ~7.2 GW** (+**1.4 GW**). Northern Virginia is essentially flat (+**50 MW**); it remains the densest live hub and is no longer the expansion center of gravity. Middle East *announced* MW stays flat at **~5.5 GW** — energisation, not press releases, is still the open question. Eastern China ticks up modestly on domestic cluster build while Epoch’s **~5%** China ownership share remains the chip-stock ceiling.
+
+For campus-by-campus status, the [global AI data-center build tracker](/blog/global-ai-data-center-build-tracker) remains the site list. This update is the vintage delta on **concentration, site counts, and hub MW**, not a replacement facility census.
+
+## Tokens still refuse the ownership pie — Q3 cohort nudge
+
+Chip ownership and token throughput remain different meters. The Q3 brand cohort in the dashboard scatter still shows **usage geography** that ownership tables cannot reproduce. Google sits near the diagonal. OpenAI’s token share ticks to about **15%** with still **~0%** owned H100e on Epoch’s pie. ByteDance remains far to the right on tokens inside China’s **~5%** ownership envelope. Microsoft and Amazon sit above the diagonal: they own more of the world’s AI compute than their first-party token meters imply, because they rent the rest to frontier labs and enterprise tenants.
+
+That divergence is the policy trap. Export controls and fab rules target *owners*; app-store and model-routing rules target *token surfaces*. Neither alone maps the system the [brand token series](/blog/major-ai-brands-token-consumption-2022-2026) and the Epoch ownership pie jointly describe. Do not average ownership shares with token shares into a fake “AI power” index — the scatter exists to stop that habit.
+
+## Power composition: AI crosses conventional in 2027; US is 36% of DC TWh
+
+Gartner’s capacity path is unchanged as a *world* vintage — **132 GW / 565 TWh** in 2026, **~165 GW / 702 TWh** in 2027, **~290 GW** by 2030 — but this Q3 post features the **composition** hinge and the **US electricity slice**. AI-optimised servers rise from **95 TWh (2025) → 175 TWh (2026) → 258 TWh (2027)** while conventional servers stay nearly flat (**193 → 195 → 200 TWh**). **2027** is the year AI-optimised server electricity is forecast to **surpass** conventional servers. Cooling and other infrastructure climb with denser racks (**159 → 195 → 243 TWh**).
+
+Inside that world total, the United States accounts for about **204 TWh** in 2026 — **36%** of global data-center electricity — and dedicated AI data centers consume about **68 TWh** of that US total (~**one-third**). That is a different claim from the theme’s older **~45% US share of AI data-center capacity by power**: one is a Gartner electricity composition for all data centers; the other is an AI-specific capacity share. Keep them separate. Pair the global path with the [AI power-grid concentration](/blog/ai-power-grid-concentration-2026) cut for *where* interconnection binds, and with [hyperscaler capex intensity](/blog/ai-capex-intensity-update-2026) for the dollar flow that funds the next GW.
+
+## What would rewrite this update
+
+1. **Epoch Q1/Q2 2026 Chip Owners finalization** moves the Big-5 aggregate materially below ~70% or above ~73% — the first true *period* ownership delta since the Q4 2025 freeze.
+2. **Google’s TPU H100e conversion** revises the 5.0M / 25% anchor; every other share moves with the world stock.
+3. **Synergy / utility energisation prints** show Middle East or India multi-GW IT loads connecting on schedule — compressing US operational capacity share — or slipping again, which sticks the US >50% ops-capacity story.
+4. **Top-3 hyperscale share** prints below ~55% or above ~62% on a new Synergy vintage — rewriting the landlord concentration punchline.
+5. **Token–ownership convergence**: if OpenAI or Anthropic begin owning a material H100e stock on Epoch’s table, the scatter’s “renter” cluster collapses.
+6. **Gartner 2H26 vintage** revises the 2027 AI-surpasses-conventional hinge or the US 204 TWh slice.
+
+Until those print, the live frame versus August is narrow: **ownership Big-5 shares are carried near 71%; the new vintage is Synergy’s hyperscale site ledger (437 US of 803 pipeline sites) and Top-3 cloud at 58% of hyperscale capacity; inland hubs revise up again on named Midwest/Texas markets; and Gartner’s US electricity composition puts the US at ~36% of world DC TWh with dedicated AI already ~1/3 of US DC power.**
+
+## Caveats and methodology
+
+1. **Ownership carry ≠ stagnation claim.** Flat Big-5 shares mean *no new Epoch period print*, not proof that installs stopped. Treat August’s Microsoft +2.3 pp as a restatement, not Q3 momentum.
+2. **Hyperscale site counts ≠ large-DC pipeline counts.** Synergy’s 803 / 1,360 hyperscale ledger is not the July ~1,500 large-DC pipeline universe. Deltas across those frames are invalid.
+3. **Site share ≠ capacity share.** US ops *sites* at ~43% can coexist with US ops *capacity* well over 50% because new campuses are larger (~2× average IT capacity).
+4. **Hub MW figures** mix live, building, and announced IT loads and are order-of-magnitude revisions, not utility interconnection queues. The Indiana ~2.4 GW figure is reported investment capacity, not a Synergy census cell.
+5. **H100-equivalent ≠ identical utility.** Epoch converts on peak 8-bit FLOP/s. Memory bandwidth, networking, and software stacks differ across TPU, Blackwell, Trainium, and Ascend.
+6. **World stock ~20M H100e** is implied by Google ≈ 25% / 5.0M; if that anchor moves, every share moves.
+7. **Gartner US TWh** (204 / 565; AI ~68 TWh inside the US) is a public composition slice from the June 2026 release — not LBNL US historicals and not identical to the theme’s ~45% AI-capacity share.
+8. **Token shares** in the scatter are illustrative slices of the tracked brand cohort, not a regulator census.
+
+Primary sources: Synergy Research inland hyperscale investment analysis (ops/pipeline site counts; Top-3 58%); Synergy US capacity update (23 Jul 2026, ~45 GW pipeline carried); Epoch AI Chip Owners / hyperscaler share chart (Q4 2025 anchors, carried); Gartner Forecast: Data Center Power Capacity and Consumption, Worldwide, 2024–2030 (1Q26 / Jun 2026 public release); prior theme posts [Aug compute update](/blog/ai-compute-demand-update-2026) and [July research baseline](/blog/ai-compute-demand-research-2026).
+
+## The shareable takeaway
+
+**Versus August, Big-5 ownership is unchanged near 71% — the Q3 vintage is sites and power composition.** Synergy’s hyperscale ledger puts **437 of 803** pipeline sites in the US, Top-3 cloud at **58%** of hyperscale capacity, and new campuses at roughly **2×** current average size. Inland hubs revise up again (Midwest +**2.7 GW**, Texas +**1.4 GW**). Gartner’s US slice is **~36%** of world data-center electricity, with dedicated AI already about **one-third** of US data-center power. For the explorer ownership restatement see the [August update](/blog/ai-compute-demand-update-2026); for the baseline essay see [July research](/blog/ai-compute-demand-research-2026); for campuses see the [build tracker](/blog/global-ai-data-center-build-tracker); for tokens see the [brand series](/blog/major-ai-brands-token-consumption-2022-2026).`,
+    category: "Technology",
+    themeId: "ai-compute-demand",
+    imageUrl: "/images/technology-ai-compute-demand-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data visualization of US inland hyperscale data-center sites with cyan capacity stacks and amber Midwest-Texas campus nodes",
+    publishedAt: "2026-08-20T23:30:00Z",
+    featured: true,
+    visualization: "ai-compute-demand-update-2026q3",
+    layout: "default",
+  },
+  {
     id: "geopolitics-institutions-update-2026q3",
     slug: "geopolitics-institutions-update-2026q3",
     title:

@@ -917,6 +917,21 @@ const GeopoliticsInstitutionsUpdate2026q3Dashboard = dynamic(
   },
 );
 
+const AiComputeDemandUpdate2026q3Dashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiComputeDemandUpdate2026q3Dashboard").then(
+      (m) => m.AiComputeDemandUpdate2026q3Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1148,6 +1163,10 @@ export function PostVisualization({
 
   if (type === "geopolitics-institutions-update-2026q3") {
     return <GeopoliticsInstitutionsUpdate2026q3Dashboard />;
+  }
+
+  if (type === "ai-compute-demand-update-2026q3") {
+    return <AiComputeDemandUpdate2026q3Dashboard />;
   }
 
   return null;

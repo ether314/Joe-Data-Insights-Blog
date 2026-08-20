@@ -87,7 +87,8 @@ export interface Post {
     | "energy-systems-update-2026"
     | "chokepoint-commodities-update-2026"
     | "consumer-finance-markets-update-2026"
-    | "geopolitics-institutions-update-2026q3";
+    | "geopolitics-institutions-update-2026q3"
+    | "ai-compute-demand-update-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
