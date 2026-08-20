@@ -872,6 +872,21 @@ const EnergySystemsUpdateDashboard = dynamic(
   },
 );
 
+const ChokepointCommoditiesUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/ChokepointCommoditiesUpdateDashboard").then(
+      (m) => m.ChokepointCommoditiesUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1091,6 +1106,10 @@ export function PostVisualization({
 
   if (type === "energy-systems-update-2026") {
     return <EnergySystemsUpdateDashboard />;
+  }
+
+  if (type === "chokepoint-commodities-update-2026") {
+    return <ChokepointCommoditiesUpdateDashboard />;
   }
 
   return null;

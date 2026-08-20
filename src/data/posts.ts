@@ -2,6 +2,89 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-update-2026",
+    slug: "chokepoint-commodities-update-2026",
+    title:
+      "Update: China Copper Refining Share Climbs to ~48% (+4.3 pp); US Cu Import Reliance Hits 57%",
+    excerpt:
+      "Versus our MCS 2025 research ledger, USGS MCS 2026 (2025e) tightens copper midstream (+4.3 pp) and US copper net-import reliance (+12 pp to 57%). Gallium stays ~99%; graphite mine eases slightly; tungsten dilutes on Kazakhstan.",
+    themeId: "chokepoint-commodities",
+    content: `## What changed since the research vintage
+
+In our [chokepoint commodities research ledger](/blog/chokepoint-commodities-research-2026) we treated USGS Mineral Commodity Summaries 2025 as a **cross-mineral scoreboard**: twenty mine, midstream, and export stages, China leading twelve, eight stages above **70%** top-1 share, and gallium refining near **98%**. That post answered the *stock* question — **what physical inputs does the economy assume will always be available, and where is supply thin?** This update answers the *flow* question the newest official vintage forces: **what moved when MCS 2026 (version 1.3, May 2026) replaced 2024e estimates with 2025e?**
+
+The dashboard above is built as a vintage delta, not a second encyclopedia. Toggle **Top-1 Δ**, **Prior → new**, **US reliance**, **Mine → mid**, and **Direction map**. Filter by stage, direction, and sector. The punchline is not “everything got worse.” It is more precise: **copper midstream tightened**, **US copper import exposure jumped**, **gallium stayed extreme**, several mine monopolies **eased slightly on paper** as world output grew, and antimony’s China share was **revised down** even as US reliance rose after export bans.
+
+## The headline table: MCS 2025 research → MCS 2026 print
+
+| Stage | Research top-1 | MCS 2026 top-1 | Δ (pp) | US reliance (prior → new) |
+| --- | ---: | ---: | ---: | ---: |
+| Copper (refined) | China **~44%** | China **~48.3%** | **+4.3** | **45% → 57%** |
+| Gallium (primary) | China **~98%** | China **~99%** | **+1.0** | 100% → 100% |
+| Cobalt (mine) | DRC **~74%** | DRC **~74.2%** | **+0.2** | ~76% → ~76% |
+| Rare earths (mine) | China **~69%** | China **~69.2%** | **+0.2** | ~80% → ~80% |
+| Copper (mine) | Chile **~23%** | Chile **~23%** | **0** | **45% → 57%** |
+| Natural graphite (mine) | China **~79.4%** | China **~77.8%** | **−1.6** | 100% → 100% |
+| Tungsten (mine) | China **~83%** | China **~78.8%** | **−4.2** | >50% → >50% |
+| Lithium (mine) | Australia **~37%** | Australia **~31.7%** | **−5.3** | ~25% → **>50%** |
+| Antimony (mine) | China **~48%** | China **~36.4%** | **−11.6** (revision) | **86% → 91%** |
+
+Read the table as **stages**, not minerals. Copper mine share is flat while copper refine share climbs. Lithium pits pluralize while US lithium import reliance doubles into the **>50%** MCS band. Graphite China’s **absolute** tons rose (**1.27 → 1.40 Mt**) even as its **share** eased because Tanzania and Mozambique lifted world totals. Antimony’s large negative delta is partly a **world-total revision**, not a sudden Chinese exit — which is why the dashboard tags it **revised** rather than celebrating diversification.
+
+## Copper midstream is the vintage tightening
+
+Open the **Mine → mid** panel. Copper is the family where the dumbbell widens against the economy’s “always available” assumption. Chile still digs about **23%** of world mine copper — a plural pit map next to gallium or graphite. China refining moves from roughly **44%** to **~48%** of world refined output as Chinese refinery production prints **12.4 → 14.0 Mt** while world refined copper rises only **27.6 → 29.0 Mt**. Pair that with our [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-geography-2026) deep dive: the research post already showed China mining ~8% while refining near half; MCS 2026 says the midstream weight **increased**, not mean-reverted.
+
+For the United States the same vintage is louder. MCS salient statistics put copper **net import reliance** at **57%** of apparent consumption in 2025e, up from **45%** in the research baseline year. That is a **+12 percentage-point** exposure move — larger than any top-1 concentration delta in the table — driven by refined import volumes and weaker domestic primary refining during smelter maintenance years. Markets that treat copper as a “diversified industrial metal” are not wrong about the mine map. They are underweighting the **chemical and electrolytic gate** that actually delivers cathode.
+
+Copper also entered the **Final 2025 List of Critical Minerals** in November 2025. The designation does not create tons. It does reclassify the midstream story as a policy object rather than a background assumption.
+
+## Gallium and graphite: extreme, with opposite share math
+
+Gallium remains the ledger’s hard ceiling. MCS 2026 states China accounted for about **99%** of worldwide primary low-purity gallium production; Japan and Russia fill the rounding error. US net import reliance stays **100%**. China lifted its US-directed gallium export ban for one year in November 2025 — a **license and politics** event, not a production-share event. The concentration map did not liberalize; the bilateral trade rule temporarily did.
+
+Graphite is subtler. Switch to **Top-1 Δ** and sort by absolute move. China’s mine share eases about **1.6 pp** to **~77.8%** on our computed MCS country/world totals, even though USGS narrative language still frames China near the low-80s of world supply. The important vintage fact is dual: **China produced more** (**+130 kt**), and **Africa produced much more** (Tanzania roughly doubling to **75 kt**; Mozambique recovering toward **60 kt**). Share dilution from non-China growth is real. It is not yet a midstream story. Graphite **anode processing** remains a secondary IEA/research label near **~90%** China — MCS does not restate that processing share — so the binding battery chokepoint is still chemistry, not only flake tons. See also [natural graphite mine concentration](/blog/natural-graphite-mine-concentration-2024).
+
+## Cobalt, tungsten, lithium: flat pits, diluted pits, pluralizing pits
+
+**Cobalt mine** concentration is effectively flat: Congo (Kinshasa) at **~74%** of world mine cobalt (**230 of 310 kt**). Indonesia’s rise to **44 kt (~14%)** tightens the **top-3** even while the top-1 barely moves. MCS narrative still names China the leading **refined** cobalt producer after DRC export-quota turbulence in 2025 — the classic **stage flip** (African pit, Asian chemistry) is unchanged.
+
+**Tungsten** is the cleanest “easier on paper” mine story. China holds **67 kt** in both 2024 and 2025e while world output rises to **~85 kt** after Kazakhstan’s Boguty deposit starts (**~2.4 kt**). Top-1 share falls about **4 pp** to **~79%**. That is diversification at the margin, not a regime change — and APT/concentrate prices still spiked after China’s February 2025 export controls and US tariff moves.
+
+**Lithium mine** share for Australia falls from ~**37%** to ~**32%** as world ex-US output jumps **222 → 290 kt (+31%)**. China mine output rises to **62 kt (~21%)**. The pit map is more plural. US net import reliance prints in the **>50%** band (from a lower research-era reading) — another reminder that **mine pluralism ≠ US exposure relief** when domestic chemical conversion and brine/clay projects are still scaling.
+
+## Who is more exposed under the new vintage
+
+**More exposed:** cathode and wire-rod supply chains that assume copper refine capacity outside China scales with Chilean and Congolese mine growth; US buyers of refined copper watching reliance at **57%**; compound-semiconductor and defense programs still **100%** import-reliant on gallium chemistry; battery anode lines that confuse graphite **mine** dilution with **spherical purified graphite** independence; and antimony consumers facing **91%** US reliance after China’s 2024–25 export restrictions even when China’s mine *share* revises lower in the world table.
+
+**Relatively less pressured on the mine map alone:** tungsten consumers who can qualify Kazakh concentrate; lithium cell makers who can dual-source Australian spodumene and rising Argentine/Brazilian output; graphite flake buyers who can contract Tanzanian and Mozambican material — provided anode plants elsewhere actually qualify.
+
+**What would change the next update:** China copper refine share falling back toward **40%**; US copper reliance retreating under **50%** for two MCS years; primary gallium capacity outside China clearing into merchant markets at double-digit world share; graphite anode processing shares (IEA-class) printing a durable decline; DRC cobalt mine share under **50%** *and* refined cobalt outside China rising together.
+
+## Caveats and methodology
+
+- **Stages ≠ minerals.** Counting “copper” once hides the refine tightening; counting every chemical form can double-count narratives. We publish mine and midstream rows where MCS supports both.
+- **Computed shares from rounded totals.** Country and world figures are USGS-rounded; a **0.2 pp** move is noise, a **4 pp** move is signal.
+- **Secondary processing rows** (graphite anode, lithium chemicals, rare-earth separation) are **carry-forwards** from the research/IEA labels — MCS 2026 does not republish those capacity shares.
+- **Antimony’s −11.6 pp** mixes genuine Russia/world revisions with China share math; treat direction as **revised**, not as proof of rapid Western substitution.
+- **US net import reliance** follows MCS definitions; a rising reliance number can coincide with a flat global top-1 share (copper mine).
+- **Critical-minerals list changes** (copper added in 2025) are policy metadata, not production data.
+- This post is a **vintage delta**. For the full twenty-stage scoreboard and sector filters, use the [research ledger](/blog/chokepoint-commodities-research-2026).
+
+## The shareable takeaway
+
+Versus our MCS 2025 research print, the newest USGS MCS 2026 vintage says the economy’s quiet assumption — that specialty and bulk physical inputs keep flowing through a few jurisdictions — **tightened where tonnage is largest**: China refined-copper share **~44% → ~48%**, and US copper net-import reliance **45% → 57%**. Gallium stays near **99%**. Graphite and tungsten mine shares ease at the margin as non-China supply grows. Lithium pits pluralize while US lithium reliance worsens. Midstream chemistry and licenses remain the binding gates — and copper just moved further through them.`,
+    category: "Global Systems",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz hero with glowing commodity trade arcs bottlenecking into concentrated nodes and rising copper-refine delta bars",
+    publishedAt: "2026-08-20T18:00:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-update-2026",
+    layout: "default",
+  },
+  {
     id: "energy-systems-update-2026",
     slug: "energy-systems-update-2026",
     title:

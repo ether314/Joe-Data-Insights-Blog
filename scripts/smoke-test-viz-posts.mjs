@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "chokepoint-commodities-update-2026",
+    marker: "Vintage delta — MCS 2025 / 2024e → MCS 2026 / 2025e",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "energy-systems-update-2026",
     marker: "Renewables lead TES growth outside a recession",
     forbidden: "Loading interactive charts",
