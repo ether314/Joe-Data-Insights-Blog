@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "geopolitics-institutions-update-2026q3",
+    slug: "geopolitics-institutions-update-2026q3",
+    title:
+      "Update: IMF Quota Consents Rise +3.9 pp to 76.7% — Still −8.3 pp Short of 85%; Deadline → Nov 15",
+    excerpt:
+      "Versus our prior institutions update (PP 2025/040), IMF PP 2026/017 shows 16th GRQ consents at 76.66% (+3.88 pp; 149 members) while NAB rollback stays stuck at 83.9%. The Board pushed the consent clock to 15 Nov 2026; the US is still not on the list.",
+    themeId: "geopolitics-institutions",
+    content: `## What changed since the last institutions update
+
+Our [prior institutions vintage](/blog/geopolitics-institutions-update-2026) closed on **IMF Policy Paper 2025/040**: as of **29 October 2025**, **132** members representing **72.78%** of quotas had consented to the **16th General Review of Quotas**, **12.22 percentage points** short of the **85%** effectiveness threshold, with the consent window then running to **15 May 2026**. NAB rollback consents sat at **83.90%** against a **90%** safeguard. Relative vote shares remained frozen; the United States was absent from the consented list.
+
+The newest official print — **Policy Paper 2026/017** (staff cut-off **29 April 2026**; Executive Board approval **8 May 2026**) — answers the theme’s recurring question with a sharper clock: **what moved in the consent vintage, and did authority actually reallocate?** Quota consents climbed to **149** members and **76.66%** of quotas — a **+3.88 pp** gain and **+17** members versus the October ledger — but the remaining shortfall is still **8.34 pp**. NAB rollback consents did **not** move: still **38** participants and **83.90%**. The Board extended the consent period again, to **15 November 2026**. The dashboard above is built as a **YoY / vintage delta**: prior vs latest grouped bars, the path to November, the stacked shortfall that closed versus what remains, the BBA funding bridge that *did* advance, frozen vote−GDP gaps, and which reform levers moved.
+
+## The headline table: prior update → Q3 print
+
+| Metric | Prior update (Oct 29 2025) | Newest print (Apr 29 2026) | Δ |
+| --- | ---: | ---: | ---: |
+| Quota consents (% of Nov 7 2023 quotas) | **72.78%** | **76.66%** | **+3.88 pp** |
+| Members consented / pending | **132** / **59** | **149** / **42** | **+17** / **−17** |
+| Shortfall vs 85% threshold | **−12.22 pp** | **−8.34 pp** | Gap narrowed **3.88 pp** |
+| NAB rollback consents | **83.90%** (38 participants) | **83.90%** (38) | **0** |
+| NAB shortfall vs 90% | **−6.10 pp** | **−6.10 pp** | **0** |
+| Consent deadline | **15 May 2026** | **15 Nov 2026** | **+6 months** |
+| US quota / NAB consent | Not on Oct list | **Still not on Apr list** | Binding gap intact |
+| Relative IMF vote shares | Frozen | Frozen | **0** |
+| China IMF vote − PPP GDP gap | **−12.6 pp** | **−12.6 pp** | **0** |
+| 2020 BBA extensions effective | Not scored | **39** creditors / **95.92%** | New bridge ledger |
+| IBRD SCI / Basic Votes | Insufficient support | No new Governors reversal | Still stuck |
+
+Read the table as **partial progress without reallocation**. More members said yes to an equiproportional increase that was never designed to move relative weights. The hard dual gate — **85%** of quotas **and** **90%** of NAB credit arrangements — is still open. The institution bought another half-year on the calendar while the veto arithmetic stayed familiar.
+
+## Quota consents moved; the binding shareholder did not
+
+Toggle **Consent track → Quota** on the grouped bars. The teal “Apr 2026” column clears the grey “Oct 2025” column by **3.88 pp**, yet both sit under the crimson threshold shade at **85%**. Annex I of PP 2026/017 is explicit: consents from members representing a further **8.34%** of total quotas are still required, and **42** members remain pending.
+
+The United States is again **absent** from the consented roster. In our [research ledger](/blog/geopolitics-institutions-research-2026) and the prior update, US quota weight near **17%** and vote weight near **16.5%** already exceed the remaining shortfall. China (**6.40%**), Japan (**6.47%**), Germany (**5.59%**), France and the United Kingdom (**4.23%** each), India (**2.75%**), Brazil (**2.32%**), and the rest of the disclosed top tier on the April list **have** consented. The coalition that can finish the review on paper still includes almost every large shareholder **except** the one whose vote share is the structural veto on **85%** Fund decisions.
+
+That is the Q3 punchline for institutional power. Authority is allocated twice: once in charter formulas, and again in **who must consent before formulas become cash**. An equiproportional **+50%** that preserves US blocking power still cannot take effect without US (and other pending) consent. The prior post showed the October shortfall; this vintage shows the shortfall **narrowed** without the veto node flipping.
+
+## NAB rollback: zero delta — the second gate is frozen
+
+Switch the track control to **NAB**. Prior and latest bars are identical at **83.90%** against **90%**. PP 2026/017 reports the same **38** consented participants and the same **6.10 pp** shortfall as PP 2025/040. Two NAB participants representing **16.10%** of credit arrangements remain outstanding. Japan’s ~**18.4%** NAB share still dwarfs most peers among those already consented; the US remains off the rollback consent table.
+
+Effectiveness is a **joint** condition. Even if quota consents somehow cleared **85%** tomorrow, Resolution 79-1 and the companion NAB decision still require the Board to determine that rollback consents covering **90%** of NAB credit arrangements are in hand. A vintage that moves only one track is not an effectiveness vintage. The path chart’s November marker is therefore a **dual** clock, not a quota-only deadline.
+
+## The BBA bridge advanced while hard shares stayed put
+
+Open the **BBA donut**. Annex II of the new paper scores a transitional ledger our prior update did not: as of **29 April 2026**, **39** creditors representing **95.92%** of 2020 Bilateral Borrowing Agreement commitments had completed extension procedures; **3** creditors (**4.08%**) had not, with a temporary lending-capacity drop of about **0.67%**. Most extended terms run until 16th GRQ quota effectiveness **or** end-**2027**, whichever comes first.
+
+That is soft institutional adaptation. The Fund says it is **adequately resourced** at the current juncture precisely because bilateral bridges and prior NAB capacity can carry the book while the permanent quota enlargement waits. Pair this with our [NATO defense-spending vs GDP](/blog/nato-defense-spending-gdp-2-percent-2024) posts when you need the *security-budget* side of state capacity — here the binding constraint is shareholder consent arithmetic, not tanks. The BBA panel answers a different slice of the theme question: **when hard vote realignment stalls, which parallel instruments keep authority operable?**
+
+## Gaps did not budge — only the consent clock and member count did
+
+Filter **Region** on the scatter. Every major’s IMF **vote − PPP GDP** gap matches the research and prior-update prints: China still **−12.6 pp**, India **−5.3 pp**, Indonesia **−1.6 pp**, Japan and Germany still over-weighted. The Δ on relative shares is a row of zeros because the 16th GRQ was designed not to move them — and because effectiveness itself has not arrived. What changed is the **consent coloring density** and the **path**: October’s **72.78%** marker now sits below April’s **76.66%**, with the crimson **85%** line still above both and the deadline flag slid from May to November.
+
+Deadline extensions are how the institution buys time without rewriting the hierarchy. From the original November 2024 target through successive six-month rolls, the Board has repeatedly exercised paragraph 4 of Resolution 79-1. The May 2026 decision is consistent with that practice. It is also an admission that the political bargain of December 2023 remains **incomplete on the effectiveness gate**.
+
+## Who is exposed under the Q3 vintage
+
+**Exposed:** emerging-market coalitions that treated the 16th GRQ’s **+50%** headline as money already in the bank; program countries whose access narratives embed larger Fund quota resources that are still contingent; modelers who read “149 members consented” as “the review is done”; and anyone who assumed the May 2026 deadline was a hard stop rather than another extendable procedural date.
+
+**Relative winners under current rules:** the shareholder whose ~**17%** quota weight can treat consent timing as leverage while remaining larger than the **8.34 pp** residual gap; chairs that continue to extract **voice** and **BBA** bridges while voting weights stay frozen; and bilateral or plurilateral safety nets that do not wait on Fund effectiveness conditions.
+
+**What would change the story:** US (and remaining) quota consents that clear the **8.34 pp** gap before **15 November 2026**; NAB participants covering the last **6.10 pp** to **90%**; a surprise SCI coalition at the Bank reversing DC2026-0003; or a 17th GRQ that abandons equiproportional freezes. None of those print in PP 2026/017.
+
+## Caveats and methodology
+
+- **Consent ≠ domestic ratification alone.** PP 2026/017 again notes Afghanistan and Myanmar as unable to consent at this stage; other pending cases mix politics, process, and capacity. The US absence remains the largest single disclosed gap relative to shortfall size.
+- **Quota share ≠ vote share.** Consent thresholds use **quota** denominators as of **7 November 2023**; voting power includes basic votes. US quota % is estimated where annexes list consented members only.
+- **NAB participant list ≠ IMF membership.** Rollback consents are among NAB creditors; zero delta on NAB is a disclosed fact, not a modeling assumption.
+- **BBA extensions** are transitional lending-capacity measures, not quota realignment. Treat the **95.92%** figure as a bridge score, not a vote reallocation.
+- **Vote−GDP gaps** are carried from the research vintage because relative shares are unchanged; they are not a new WEO re-estimation.
+- **IBRD SCI / Basic Votes** status is carried from the Spring 2026 Development Committee print (DC2026-0003) — no contradictory Governors document appeared in this Q3 IMF window.
+- This is a **vintage delta** versus our [prior update](/blog/geopolitics-institutions-update-2026). For the full authority-layer organogram, use the [research post](/blog/geopolitics-institutions-research-2026).
+
+## The shareable takeaway
+
+Versus the prior institutions update, the newest official print says **quota consents advanced +3.88 pp to 76.66% — and authority still has not been reallocated**. The shortfall to **85%** narrowed from **12.22 pp** to **8.34 pp**; **17** more members consented; NAB rollback consents stayed frozen at **83.90%**; the consent deadline slid to **15 November 2026**; the United States is **still** not on the list; China’s **−12.6 pp** IMF vote−GDP gap is unchanged; and bilateral borrowing extensions now cover **95.92%** of 2020 BBA commitments as a soft bridge. In this system, **power is allocated twice** — once in the charter, and again in who must consent before the charter’s resource deal becomes real.
+
+Related reading: [Prior institutions update](/blog/geopolitics-institutions-update-2026) and [Institutions & governance research](/blog/geopolitics-institutions-research-2026).`,
+    category: "Politics",
+    imageUrl: "/images/politics-geopolitics-institutions-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero of incomplete teal institutional authority rings around a glowing governance node with a crimson shortfall arc toward an 85 percent threshold",
+    publishedAt: "2026-08-21T00:15:00Z",
+    featured: true,
+    visualization: "geopolitics-institutions-update-2026q3",
+    layout: "default",
+  },
+  {
     id: "consumer-finance-markets-update-2026",
     slug: "consumer-finance-markets-update-2026",
     title:
