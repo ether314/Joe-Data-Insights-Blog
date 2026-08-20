@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-capex-spend-update-2026q3",
+    marker: "Q3 vintage delta — Aug post-Q2",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-industrial-policy-update-2026q3",
     marker: "Vintage change (percentage points / counts)",
     forbidden: "Loading interactive charts",

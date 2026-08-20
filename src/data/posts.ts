@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-spend-update-2026q3",
+    slug: "ai-capex-spend-update-2026q3",
+    title:
+      "Update: Big-5 AI Capex Midpoints Hit $835B — Up $33B From the August Vintage",
+    excerpt:
+      "Versus our Aug post-Q2 print (~$803B), the mid-Q3 desk vintage revises Big-5 midpoints to ~$835B (+$32.5B / +4.0%). Amazon ~$230B and Alphabet ~$210B lead; Microsoft’s ~$175B CY print holds on lease reclass. Street ~$820B; CreditSights ~$830B; cumulative Jul→Q3 raise now ~$75B.",
+    content: `## What changed since the August spend update
+
+In mid-August we published the [post-Q2 vintage](/blog/ai-capex-spend-update-2026): Big-5 guidance midpoints near **$803B**, up **+$43B** from the [July research print](/blog/ai-capex-spend-research-2026) of ~**$760B**. That update answered what moved after earnings week. This Q3 refresh answers the next capital-markets question: **what moved again in the newest mid-quarter desk vintage**, and how large is the incremental YoY / vintage delta once Street and credit desks finish catching the raises?
+
+Three forces push the stack higher between early August and late August. **Amazon and Alphabet** midpoints climb again on early-Q3 infra commentary and sell-side range resets. **Meta** steps both the floor and the ceiling of its disclosed band. **Oracle’s** net-of-prepayment cash figure edges from ~**$70B** toward ~**$75B** while gross remains nearer **$95–100B**. Microsoft’s **~$175B** calendar print is unchanged — still an accounting hold from lease reclassification, not a build pause. The dashboard above is built as an Aug→Q3 vintage delta: waterfall contributions, slope levels, a triple-2026 stacked path, a Jul/Aug/Q3 revision multi-line, composition share, and research-house fans.
+
+## The headline table: Aug print vs mid-Q3 desk
+
+| Company | Prior (Aug post-Q2) | New (mid-Q3 desk) | Δ ($B) | What moved |
+|---------|--------------------:|------------------:|-------:|------------|
+| **Amazon** | ~**$220B** | ~**$230B** | **+$10** | Largest absolute raise again; AWS / infra commentary |
+| **Microsoft** | ~**$175B** CY | ~**$175B** CY | **$0** | Lease reclass still in force — economic build higher |
+| **Alphabet** | **$200B** mid | **$210B** mid ($205–215) | **+$10** | Third raise of the calendar year |
+| **Meta** | **$137.5B** mid | **$145B** mid ($140–150) | **+$7.5** | Floor and ceiling both stepped |
+| **Oracle** | ~**$70B** net | ~**$75B** net | **+$5** | Net of prepayments; gross ~$95–100B |
+| **Big-5 sum** | **~$803B** | **~$835B** | **+$33** | **+4.0%** vintage revision |
+
+That **+$32.5B / +4.0%** revision is the clean vintage delta versus our August update. Cumulative versus July’s **$760B** research print, the Big-5 midpoint sum is now up **+$75B / +9.9%** across two refreshes. Strip Microsoft’s accounting hold and hold the economic CY nearer **~$190B**, and the mid-Q3 stack sits closer to **~$850B** — a **+$47.5B** economic raise against the August accounting baseline.
+
+Apply the CreditSights-style **~75% AI-attributed** haircut and the AI-specific slice of the Big-5 stack moves from roughly **$602B → $626B**. That remains a convention, not a 10-K line — toggle it in the dashboard so both perimeters stay visible without mixing them in a single headline.
+
+## Amazon and Alphabet still do the heavy lifting
+
+Amazon’s step from ~**$220B** to ~**$230B** is again the largest absolute company raise in the vintage. It keeps Amazon the single largest program in the stack and extends the pattern we flagged in August: the company that already absorbed more than 100% of operating cash flow in Q2 is still authorizing more dollars into the calendar year. Early-Q3 AWS and campus commentary, plus Street midpoint catch-up, explain most of the **+$10B** — not a brand-new earnings release.
+
+Alphabet’s third raise of the year — midpoint from **$200B** to **$210B** on a **$205–215B** band — is the cleanest “guidance only goes one direction” story in the set. Combined with Amazon, those two names contribute **+$20B** of the **+$32.5B** Big-5 delta before Meta and Oracle’s smaller steps. For desks that still carry February midpoints in models, the cumulative Alphabet path from the low-**$180Bs** to **$210B** is now a **~$25B+** annual rewrite in under seven months.
+
+## Microsoft’s flat print is still not a build cut
+
+The mid-Q3 desk vintage leaves Microsoft’s calendar-2026 headline at **~$175B** — unchanged from the August post-Q2 language. Coverage that treats a flat print as a pause still has the economics backwards. The firm continues to shift more data-center capacity toward **operating** rather than **finance** leases, which moves dollars **off** the capex line without canceling servers, power, or campus construction.
+
+For vintage analysis that means two parallel numbers again:
+
+1. **Accounting vintage:** Big-5 midpoints **$803B → $835B** (+$33B).
+2. **Economic vintage:** hold Microsoft near the prior ~$190B run-rate → stack nearer **$850B** (+$48B vs Aug accounting).
+
+Credit and equity desks that underwrite *physical* build should prefer the economic frame. Desks that underwrite *reported* free cash flow and PP&E growth should keep the accounting frame — and then add lease commitments back in the footnotes. Our companion [capex intensity update](/blog/ai-capex-intensity-update-2026) still shows the same firm’s intensity climbing even as the calendar headline softens: the build is not pausing.
+
+## Meta’s band and Oracle’s net/gross split keep moving
+
+Meta’s move looks moderate in dollars (**+$7.5B** at the midpoint) but matters in structure: both the floor and the ceiling stepped (toward **$140–150B**), and the disclosed total continues to fold in finance-lease principal. For desks that compare Meta to cash-only peers, that definitional gap still bites — another reason the dashboard keeps company toggles adjacent to every panel.
+
+Oracle’s ~**$75B** figure circulating in the mid-Q3 desk synthesis remains **net of customer prepayments**. Gross guidance in the **$95–100B** neighborhood is the better comparator to peers who do not net the same way. We carry **$75B** in the Big-5 midpoint sum for cash-comparability with the Axis-style synthesis many desks quote — and we flag the gross stack in the table and caveats so readers do not undercount OCI / Stargate-linked build by **$20B+**.
+
+That definitional gap is exactly why the July research post refused a single “true” AI spend number. The Q3 update does not invent one. It shows **which perimeter moved** and by how much since August.
+
+## Research houses: Street and credit climb; GS GI holds the layer path
+
+Company midpoints are the observed near-term object. Research scenarios remain the forward object — and they still do not all re-cut on the same week.
+
+- **Street consensus** for 2026 hyperscaler gross has climbed from roughly **~$790B** after Q2 toward **~$820B**, still trailing the company midpoint sum as catch-up continues.
+- **CreditSights-style aggregates** that sat near **~$800B** in the August print now sit closer to **~$830B**.
+- **Goldman Sachs Global Institute**’s *Tracking Trillions* all-in AI infra baseline (**$765B** in 2026, **$1.01T** in 2027) remains a **layer framework**, not a company-guidance rollup — it did not need to jump just because Amazon and Alphabet each raised another **$10B**. The dashboard’s GI panel keeps that path visible so readers do not force a fake contradiction.
+- **Goldman Sachs Investment Research**’s hyperscaler **2026 path** edges from ~**$780B** toward ~**$800B** in secondary reporting, while the **2027 base (~$1.14T)** and **bull (~$1.4T)** remain the trillion-dollar headline pair.
+
+Toggle the scenario year control between **2026** and **2027**. On 2026 you see Aug-vs-Q3 bars. On 2027 you see the longer fan where IR’s hyperscaler base can still sit *above* GI’s all-in total because the perimeters differ — the same paradox documented in the [July spend map](/blog/ai-capex-spend-research-2026) and the [chips-and-data-centers breakdown](/blog/goldman-sachs-ai-capex-chips-data-centers-2027-2028).
+
+## The cumulative path now matters more than any single week
+
+YoY context still dwarfs either vintage delta. Against the research post’s **2025** Big-5 stack (~**$344B**), the mid-Q3 **~$835B** 2026 guide is roughly a **+143%** step-up. The **+$33B** August-to-Q3 revision is large in absolute dollars and small next to that year-over-year cliff — which is why markets can treat a mid-single-digit vintage raise as “more of the same” even while financing residuals scream that the same is no longer self-funding.
+
+What *is* new is the **cumulative** revision path. From July’s **$760B** to August’s **~$803B** to mid-Q3’s **~$835B**, company midpoints have rewritten the year by **+$75B** without a single full-year print yet. Street, CreditSights, and GS IR paths all slope upward across the same three vintages in the dashboard’s revision panel — a visual that matters more for model hygiene than any one week’s headline.
+
+Pair this update with the [AI financing research](/blog/ai-financing-research-2026) for the credit-channel view and with the intensity update for the revenue-share view. Dollars, intensity, and funding remain three faces of one cycle. When absolute guides keep rising while absorption stays near full OCF — as Q2’s ~**99%** Big-4 print showed — the marginal dollar is still a capital-markets dollar.
+
+## Caveats and methodology
+
+1. **Desk vintage ≠ audited guidance.** Mid-Q3 figures blend company midpoints, call language still in force, and sell-side / Axis-style synthesis; they can miss by tens of billions by year-end.
+2. **Definitions differ.** Meta and Microsoft fold finance leases differently than Amazon/Alphabet cash PP&E. Oracle’s net-of-prepay figure is not peer-comparable to gross guides without adjustment.
+3. **Microsoft’s flat $175B** is treated as an **accounting hold**. Economic build is closer to unchanged-to-higher; do not narrate it as a demand rollover without lease footnotes.
+4. **AI-attributed (~75%)** is a research convention applied uniformly for interaction — actual AI shares differ by company and year.
+5. **GS Global Institute** figures are a sensitivity framework, not Goldman Sachs Investment Research point forecasts. **GS IR** figures come from public secondary reporting of research notes.
+6. **Street and CreditSights** levels are neighborhood aggregates from public commentary, not a single broker model.
+7. Totals may not sum across houses because **perimeters differ** (leases, power, non-hyperscaler buyers, geography).
+8. This post is explanatory data journalism, **not investment advice**.
+
+**Primary synthesis:** Axis Intelligence Research AI Capex Tracker (late-Aug / mid-Q3 2026 refresh of primary filings and desk midpoints); prior theme vintages in [AI capex spend update (Aug)](/blog/ai-capex-spend-update-2026) and [AI capex spend research](/blog/ai-capex-spend-research-2026); Goldman Sachs Global Institute [*Tracking Trillions*](https://www.goldmansachs.com/insights/articles/tracking-trillions-the-assumptions-shaping-scale-of-the-ai-build-out); Street / CreditSights aggregate commentary via public reporting.
+
+## What to watch into Q3 earnings and year-end
+
+Three coincident signals will tell you whether the vintage delta stabilizes or accelerates again: (1) **Q3 earnings language vs these midpoints** — especially whether Amazon’s ~$230B and Alphabet’s $205–215B hold after GPU delivery timing; (2) **Microsoft lease mix** — if operating-lease migration continues, reported CY capex can keep undershooting economic build; (3) **absorption and issuance** — if the Big-4 cohort stays near 100% of OCF while absolute guides rise, the cycle’s marginal dollar remains a credit-market dollar. Until the next official earnings vintage, the live Big-5 midpoint sum is not August’s **~$803B**. It is **~$835B** — and on an economic lease-adjusted read, closer to **~$850B**.`,
+    category: "Capital Markets",
+    themeId: "ai-capex-spend",
+    imageUrl: "/images/capital-markets-ai-capex-spend-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy capital-markets chart of rising AI infrastructure capex bars with vintage-delta arrows revising totals toward $835B",
+    publishedAt: "2026-08-20T23:30:00Z",
+    featured: true,
+    visualization: "ai-capex-spend-update-2026q3",
+    layout: "default",
+  },
+  {
     id: "fiscal-industrial-policy-update-2026q3",
     slug: "fiscal-industrial-policy-update-2026q3",
     title:
