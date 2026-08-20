@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-industrial-policy-update-2026q3",
+    slug: "fiscal-industrial-policy-update-2026q3",
+    title:
+      "Update: US Strategic Subsidy Targeting Hits 76% as Big Three Converge on Chokepoints",
+    excerpt:
+      "Versus our August motive/instrument print, GTA’s ZG #88 and Big Three panel show US dual-use subsidy shares leaping 33%→76%. China is already at 98%; EU reaches 70%. Same-product subsidy races now sit in the 60–80% follow band.",
+    themeId: "fiscal-industrial-policy",
+    content: `## What changed since the August update vintage
+
+In August we refreshed this theme with [GTA’s 2025 NIPO briefings on motives and green instruments](/blog/fiscal-industrial-policy-update-2026): Western security justifications jumped **26% → 63%**, climate fell to **12%**, and inside green measures import barriers surged from under **4% to 48%**. That update answered the *framing and toolkit* question — *are governments justifying industrial policy as security, and are they coercing more than they subsidise?* This Q3 vintage answers the *targeting* question the newest official print forces: **where do the subsidies actually land**, and have China, the EU, and the United States converged on the same chokepoints?
+
+Two Global Trade Alert releases supply the refresh. **Zeitgeist #88** (April 2026), *Subsidising the Chokepoint*, tracks the share of subsidy-based industrial actions covering dual-use or advanced-technology products through **2025–26**. The companion long panel, *Industrial Policy as Market-Shaping Competition*, extends a consistent China–EU–US NIPO ledger through **December 2024** and documents ten stylised facts on activity levels, green catch-up, subsidy races, and instrument persistence. Neither replaces the August motive table; together they show what the prior print could only imply — that security language and coercive tools are concentrating on the same narrow product space.
+
+The dashboard above is built as a vintage delta: diverging change bars, a three-bloc strategic path, prior→new dumbbells, green catch-up bars, a subsidy-follow band, selective-activity levels, persistence comparisons, and a strategic-versus-green scatter. Use the **bloc** and **delta group** controls to isolate China, the EU, or the United States.
+
+## The headline table: prior window vs newest print
+
+| Metric | Prior window | Newest print | Δ |
+| --- | ---: | ---: | ---: |
+| US strategic / dual-use subsidy share | **33%** (2009–16) | **76%** (2025–26) | **+43 pp** |
+| EU strategic / dual-use subsidy share | **50%** | **70%** | **+20 pp** |
+| China strategic / dual-use subsidy share | **85%** | **98%** | **+13 pp** |
+| Annual selective industrial actions | **~1,100** (2009–19 mean) | **~1,900** (2022–24) | **+~800 / yr** |
+| EU/US green share of subsidy IP | **≤20%** (2009–19) | **>50%** (2023–24) | **+30 pp band** |
+| Same-HS6 subsidy follow within 12 months | **33–66%** (2009–16) | **60–80%** (2020–24) | Race intensifies |
+| Export-restriction 12-month retention | **~50%** (2009–19) | **80–90%+** (2023–24) | Structural lock-in |
+| Prior print — West security motives (context) | **63%** (Aug 2026 update) | Still elevated | Motive shift stands |
+
+The story is not “industrial policy paused after the August security spike.” Selective action counts plateau near **1,900** a year — roughly **800** above the pre-2019 mean — while subsidy dollars and notices concentrate on semiconductors, critical minerals, batteries, and advanced electronics. The August print said governments *talk* security; this print says they *spend and restrict* on the same chokepoints.
+
+## Strategic targeting: the US catch-up is the headline delta
+
+Toggle **Delta group → Strategic**. The United States is the largest vintage move on the board: strategic-sector coverage of subsidy-based industrial actions rises from **33% in 2009–16 to 76% in 2025–26** — a **+43 percentage-point** swing. ZG #88 notes the path was already near **76% by 2020–22**, coinciding with Section 301 escalation, Entity List designations, CHIPS, and the IRA, then stabilising through the newest window.
+
+China started where others are trying to arrive. Strategic sectors absorbed **85%** of Chinese subsidy actions in **2009–16** and **never fell below 90%** thereafter, reaching **98% in 2025–26**. The EU is the compressed catch-up story: **50% → 70%** over the same long windows, with a **~75%** peak in **2023–24** after the European Chips Act, Critical Raw Materials Act, Net-Zero Industry Act, and multiple IPCEIs, before settling at **70%** in **2025–26**.
+
+Read that against the August update carefully. Security motives at **63%** among G7+KR+AU peers told you the *justification*. Strategic shares at **70–98%** among the Big Three tell you the *product map*. Convergence is real, but the *paths* are not: China built a decade-plus architecture; the US pivoted sharply after 2017; the EU compressed the same turn into a few post-2020 statute cycles.
+
+## Activity stays high: a regime, not a spike
+
+Filter **Delta group → Activity**. The Market-Shaping panel’s selective industrial-action series averages about **1,100** measures a year from **2009–19**, jumps to roughly **1,800** in **2020–21**, and plateaus near **1,900** in **2022–24**. That is the stock-context partner to our [H-NIPO research ledger](/blog/fiscal-industrial-policy-research-2026), which already showed **34,248** historical interventions and a **2023** census of **2,580** measures: the flow did not unwind when pandemic emergency frameworks expired.
+
+Instrument mix still diverges even as sectoral targeting converges. In China and the EU, domestic subsidies and export incentives remain **roughly 85–97%** of recorded industrial actions across sub-periods. The United States keeps a more trade-exposed toolkit — subsidies paired with import barriers, localisation rules, and eligibility conditions — which is consistent with the August finding that Western *green* measures shifted toward import barriers even while the long H-NIPO stock stayed subsidy-heavy.
+
+## Green catch-up blurs into chokepoint policy
+
+Switch **Delta group → Green**. China already directed about **40%** of subsidy-based industrial actions to low-carbon technologies in **2009–16** and kept that share high. The EU and United States sat near or below **one-fifth** through **2009–19**, then surged past **50% by 2023–24**. Batteries, power electronics, grid components, and critical-mineral inputs sit in both the “green” and “dual-use / advanced” buckets, so the green catch-up is not a separate climate silo — it is how Western capitals entered the same chokepoint race China had already been running.
+
+That reframes the August green-instrument story. Import barriers rising to **48%** of Western green measures looked like climate policy turning coercive. In the Q3 print, the same products are also the strategic-subsidy core. Coercion and credits are increasingly aimed at overlapping HS codes, which is why a firm can face a production credit in one jurisdiction and a barrier in another for the same battery chemistry or wafer node.
+
+## Subsidy races and export lock-in
+
+Filter **Delta group → Interaction**. Same-product (HS6) subsidy follow within twelve months already ran **one-third to two-thirds** of Big Three subsidy actions in **2009–16**. After **2020**, following rates frequently sit in the **60–80%** band, especially when China or the United States leads. The dashboard’s midpoint series (**50% → 70%**) is a readable summary of that disclosed range — not a claim that every pair hits exactly seventy.
+
+Persistence completes the vintage. Export restrictions that once retained about **half** of measures after twelve months now show **80–90%+** retention in recent China and US cohorts, with the EU approaching full persistence. Import barriers remain more contingent; subsidies remain near-permanently on the books by design. Pair that with the August security-motive spike: security framing plus durable export controls is a qualitatively stickier regime than climate-framed production subsidies that finance ministries can sunset.
+
+For the dollar ledger rather than intervention shares, keep our [US industrial subsidies vs tariffs over 30 years](/blog/us-industrial-subsidies-vs-tariffs-30-years) open beside this post. NIPO counts a tariff notice and a multi-year grant as comparable *actions*; fiscal exposure is a different question.
+
+## Who is exposed under the Q3 vintage
+
+**Exposed:** mid-sized economies that cannot match Big Three subsidy follow speed on the same HS6 products; exporters into markets where strategic subsidies arrive bundled with rival-directed import barriers; green-tech investors who underwrote Western catch-up as cooperative climate policy and now face chokepoint logic; fabs and battery projects that win announcement subsidies but still lack supplier depth — ZG #88 flags cancelled or delayed flagship semiconductor projects even after large state-aid pledges.
+
+**Relative winners under current rules:** firms already inside dual-use and advanced-technology product lists in all three blocs; capitals that can stack multi-year subsidy commitments *and* persistent export controls; upstream critical-mineral and equipment suppliers that sit at the intersection of green and security targeting.
+
+**What would change the story:** a 2026–27 NIPO window where strategic subsidy shares diverge again (EU retreat from 70%, US fall from 76%); a fiscal brake that actually cuts follow-on subsidies below the 60% band; or successful ecosystem builds that make chokepoint subsidies look less like announcement theatre. None of those reverse signals appear in the April 2026 chokepoint briefing or the 2009–2024 panel.
+
+## Caveats and methodology
+
+- **Windows differ.** The August update used GTA **2023–24 vs 2025** motive/instrument shares and **H1’24 vs H1’25** activity. This Q3 print emphasises ZG #88 **2009–16 vs 2025–26** strategic subsidy shares and the Big Three panel through **Dec 2024**.
+- **Shares ≠ dollars.** Intervention counts treat a licensing rule and a multi-billion grant as comparable observations.
+- **Path points between disclosed endpoints** (2017–19, 2020–22, 2023–24 on the strategic line chart) are **estimated** from narrative waypoints in ZG #88 and Market-Shaping Fact 5; endpoints **33/50/85 → 76/70/98** are disclosed.
+- **Subsidy-follow and export-persistence midpoints** summarise disclosed ranges (**60–80%**, **80–90%+**); charts show bands where the source gives them.
+- **Green late shares for EU/US** are coded near **52%** to represent the disclosed “exceeding 50%” band — not a false precision point estimate.
+- **Geography is Big Three–centric** here; August’s G7+KR+AU and non-Western series remain valid for motive comparisons but are not restated in ZG #88’s subsidy-targeting figure.
+- **Cancelled megaprojects** in ZG #88 are qualitative caveats about capability, not NIPO field revisions.
+
+## The shareable takeaway
+
+Versus our August motive-and-instrument vintage, the newest GTA print shows Big Three industrial policy **converging on chokepoints, not cooling off**: US strategic subsidy targeting jumps **33% → 76%**, the EU reaches **70%**, and China sits at **98%**. Selective actions hold near **1,900** a year, Western green subsidy shares cross **50%**, same-product subsidy races crowd into a **60–80%** follow band, and export controls lock in at **80–90%+** twelve-month retention. Security motives told you the story in August; **dual-use product maps tell you where the money and barriers now land**.
+
+Related reading: [August fiscal & industrial policy update](/blog/fiscal-industrial-policy-update-2026) and [Fiscal & industrial policy research (H-NIPO/2023)](/blog/fiscal-industrial-policy-research-2026).`,
+    category: "Politics",
+    imageUrl: "/images/politics-fiscal-industrial-policy-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of semiconductor, mineral, and battery chokepoint nodes linked by teal and crimson subsidy arcs across three blocs",
+    publishedAt: "2026-08-20T23:00:00Z",
+    featured: true,
+    visualization: "fiscal-industrial-policy-update-2026q3",
+    layout: "default",
+  },
+  {
     id: "ai-compute-demand-update-2026q3",
     slug: "ai-compute-demand-update-2026q3",
     title:
