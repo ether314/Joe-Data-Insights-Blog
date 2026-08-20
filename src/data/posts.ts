@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-supply-chain-update-2026",
+    slug: "ai-supply-chain-update-2026",
+    title:
+      "Update: Chip Equipment Hits $36.6B in Q1 — Taiwan +24% YoY as CoWoS Gap Narrows to ~10%",
+    excerpt:
+      "Versus our July Mid-Year research print, the newest WWSEMS vintage shows Q1 2026 billings at $36.55B (+14% YoY). Taiwan and Korea still lead the AI install signature, while tracker revisions cut the CoWoS supply-demand gap from ~20% to ~10%.",
+    themeId: "ai-supply-chain",
+    content: `## What changed since the July research vintage
+
+In late July we mapped the [full semiconductor equipment cycle and stack bottlenecks](/blog/ai-supply-chain-research-2026): SEMI’s Mid-Year OEM Forecast put **2026 total equipment at $165.9 billion** (+23%), Taiwan’s **2025 billings nearly doubled**, and editorial tightness still peaked at **CoWoS (10)** and **HBM (9)**. That post answered the stock question — *where does the stack bind when tool dollars boom?* This update answers the flow question the market trades on next: **what moved in the newest official billings vintage**, and did packaging ease or merely reprice?
+
+One official print forces the refresh. SEMI’s Worldwide Semiconductor Equipment Market Statistics (WWSEMS) for **Q1 2026** — released June 4–5 with the SEAJ regional table — puts global billings at a record **$36.55 billion**, up **14% year-over-year** and **1% quarter-over-quarter**. That is not a revision of the July Mid-Year **$165.9B** full-year forecast. It is the first hard 2026 billings stamp against that path. Mid-2026 packaging trackers also revise the CoWoS story: the supply-demand **gap narrows from roughly 20% to about 10%** as capacity prints ahead of the July research target. The dashboard above is built as a vintage delta — regional YoY/QoQ, Q1 dumbbells, bottleneck score changes, a dual-vintage tightness scatter, and the CoWoS capacity path.
+
+## The headline table: Q1 2026 vs Q1 2025
+
+| Region | Q1 2025 | Q1 2026 | YoY | QoQ (vs Q4’25) |
+|--------|--------:|--------:|----:|---------------:|
+| **China** | $10.26B | **$10.99B** | **+7%** | **−16%** |
+| **Korea** | $7.69B | **$8.93B** | **+16%** | **+26%** |
+| **Taiwan** | $7.09B | **$8.77B** | **+24%** | **+18%** |
+| **N. America** | $2.93B | **$3.28B** | **+12%** | **+6%** |
+| **Japan** | $2.18B | **$2.16B** | **−1%** | **−24%** |
+| **Europe** | $0.87B | **$0.95B** | **+9%** | **+28%** |
+| **Rest of World** | $1.03B | **$1.48B** | **+43%** | **−25%** |
+| **Total** | **$32.05B** | **$36.55B** | **+14%** | **+1%** |
+
+China remains the **largest single market for a 12th consecutive quarter**, but the sequential drop is the news: after a hot Q4, mainland tool spend cooled while Korea and Taiwan accelerated. That is the opposite regional signature from “China dominates every print” headlines — and it matches the AI thesis in our July research: **East Asia still concentrates the dollars**, but the **growth vector** is Taiwan logic/packaging and Korea memory, not another China volume spike.
+
+Toggle the dashboard’s **Regions** panel between YoY and QoQ. Taiwan’s **+24%** YoY is the cleanest single-number update to the July story that Taiwan’s **+90% annual surge in 2025** was not a one-year anomaly.
+
+## Pace check: $36.6B is 22% of the $165.9B Mid-Year path
+
+Simple arithmetic says Q1 is **22.0%** of SEMI’s July full-year **$165.9B** forecast. A naive ×4 annualization of Q1 lands near **$146B** — about **$20B** short of the Mid-Year path. Do **not** treat that gap as a downgrade. Equipment billings are seasonal, AI tool intensity typically rises through the year, and the Mid-Year forecast already embeds stronger H2 memory and leading-edge logic. The right read is: **Q1 cleared a record print without breaking the July runway**, while leaving room for the forecast to need either H2 acceleration or a later revision.
+
+Use the **FY pace** panel for the visual: the equipment-cycle area still follows the July research path through 2028; the amber reference line is the illustrative Q1×4, not a SEMI forecast.
+
+## Taiwan +24% and Korea +16% keep the AI fingerprint
+
+July’s research post treated Taiwan’s **+90% 2025 annual** print as the AI signature in the regional ledger. Q1 2026 extends that fingerprint into the new year: Taiwan billings jump from **$7.09B to $8.77B** (+24% YoY, +18% QoQ) as 2nm and CoWoS-related installs continue. Korea moves from **$7.69B to $8.93B** (+16% YoY, +26% QoQ) on HBM/DRAM tool intensity — consistent with SEMI’s Mid-Year call that **DRAM equipment** would surge toward **$38.8B** for full-year 2026.
+
+North America returns to growth (**+12% YoY**) after the soft 2025 annual print in our prior post. Japan is roughly flat YoY and down sharply QoQ — a reminder that not every East Asian market is on the same AI clock. Rest of World’s **+43% YoY** is a small base effect from regionalization projects; it does not relocate the binding AI layers.
+
+## CoWoS: capacity ahead of the July target, gap still not zero
+
+The packaging update is the other half of the vintage. Our July research carried a **~125k wafers/month 2026 CoWoS target** against demand that still ran ahead — editorial tightness **10/10**, ~52-week leads. Mid-2026 tracker revisions put TSMC-class CoWoS capacity near **~130k wpm** (with some prints toward **120–140k**), and industry commentary sees the supply-demand **gap compressing from ~20% to ~10%** by end-2026, with OSAT partners adding **~50–60k** of CoWoS-compatible overflow.
+
+That is real relief on the capacity axis — and still not clearance on the shipping axis. Lead times remain measured in **~52 weeks**, allocation is still hyperscaler-heavy, and HBM stacks remain co-gated. We lower editorial CoWoS tightness from **10 → 9** and OSAT from **7 → 6**; HBM stays at **9**. Easing is not equilibrium. Pair this with the earlier [HBM & CoWoS bottleneck map](/blog/ai-gpu-packaging-memory-bottleneck-2025): dollars and wafers can both rise while finished GPU modules stay scarce.
+
+The **CoWoS path** panel charts capacity vs demand and the gap % across the July research markers and the August update points.
+
+## Where the stack still binds — scorecard vs July
+
+| Layer | Jul tightness | Aug tightness | Δ | Still binding? |
+|-------|--------------:|--------------:|--:|:---------------|
+| CoWoS packaging | 10 | **9** | −1 | Yes — gap ~10%, not 0 |
+| HBM / advanced DRAM | 9 | **9** | 0 | Yes — allocation-gated |
+| EUV lithography | 8 | **8** | 0 | Structural monopoly |
+| Final test / burn-in | 8 | **7** | −1 | Easing with tool installs |
+| OSAT advanced package | 7 | **6** | −1 | Overflow capacity helping |
+| ABF / substrates | 7 | **7** | 0 | No structural relief |
+| Leading-edge logic fab | 6 | **5** | −1 | Least binding of the set |
+
+Two layers remain in the top tier: **CoWoS** and **HBM**. Front-end logic fab tightness eases as Taiwan tool spend keeps printing. That is the same structural conclusion as July — with a narrower packaging deficit — and it still separates **equipment-cycle bullishness** from **GPU shipping reality**. Hyperscaler [capex intensity](/blog/ai-capex-intensity-update-2026) can climb another notch while these two layers decide how many accelerators actually leave the dock.
+
+## How to read this update without mixing scopes
+
+1. **Billings vs forecast.** $36.55B is a WWSEMS quarterly print. $165.9B is still the July Mid-Year OEM full-year forecast — not restated by Q1.
+2. **YoY vs QoQ.** Taiwan/Korea YoY confirms AI; China’s −16% QoQ is a sequential cool-down, not a collapse of its #1 rank.
+3. **Capacity vs tightness.** CoWoS capacity above the July 125k marker can coexist with 9/10 tightness if demand and allocation still bite.
+4. **Tools vs modules.** Rising Korea DRAM tools are the industry’s attempt to relieve HBM — not proof HBM cleared.
+5. **Update vs research.** This post is a vintage delta. The July research remains the cycle and regional annual baseline.
+
+## Caveats and methodology
+
+- **Q1 2026 regional figures** are from the SEMI/SEAJ WWSEMS table (June 2026). Totals may not sum perfectly due to rounding.
+- **Full-year 2026 ($165.9B)** and the 2027–28 path are unchanged from SEMI’s July Mid-Year OEM Forecast — this update does not invent a new annual forecast.
+- **Q1×4 annualization ($146B)** is an illustrative pace check only; equipment seasons and AI tool timing make H2 non-linear.
+- **CoWoS capacity, demand, and gap %** are industry-tracker midpoints (TrendForce / EDN synthesis as of mid-2026) and may revise; they are not SEMI statistics.
+- **Bottleneck tightness scores** are editorial composites for visualization, updated against the July research print — not official SEMI metrics.
+- OSAT overflow capacity (~50–60k wpm) is a tracker estimate of CoWoS-*compatible* advanced packaging, not identical to TSMC CoWoS process of record.
+- This post is explanatory data journalism, **not investment advice**.
+
+**Primary sources:** SEMI, [Q1 2026 Equipment Billings $36.55B](https://www.semi.org/en/semi-press-release/semi-reports-global-semiconductor-equipment-billings-increased-14-percent-year-over-year-in-q1-2026) (June 4, 2026); SEAJ, [Q1 2026 regional billings table](https://www.seaj.or.jp/english/statistics/8287498067106.pdf); SEMI, [Mid-Year Total Semiconductor Equipment Forecast – OEM Perspective](https://www.semi.org/en/semi-press-release/global-semiconductor-equipment-sales-forecast-to-reach-a-record-229-billion-dollars-in-2028-semi-reports) (July 14, 2026); mid-2026 CoWoS tracker synthesis (TrendForce / EDN) for capacity and gap context.`,
+    category: "Industry",
+    imageUrl: "/images/industry-ai-supply-chain-update-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero of a layered chip stack with amber CoWoS bottleneck glow and rising Q1 equipment billings bars",
+    publishedAt: "2026-08-20T18:00:00Z",
+    featured: true,
+    visualization: "ai-supply-chain-update-2026",
+  },
+  {
     id: "ai-capex-intensity-update-2026",
     slug: "ai-capex-intensity-update-2026",
     title:

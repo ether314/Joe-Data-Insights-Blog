@@ -632,6 +632,21 @@ const AiCapexIntensityUpdateDashboard = dynamic(
   },
 );
 
+const AiSupplyChainUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AiSupplyChainUpdateDashboard").then(
+      (m) => m.AiSupplyChainUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -787,6 +802,10 @@ export function PostVisualization({
 
   if (type === "ai-capex-intensity-update-2026") {
     return <AiCapexIntensityUpdateDashboard />;
+  }
+
+  if (type === "ai-supply-chain-update-2026") {
+    return <AiSupplyChainUpdateDashboard />;
   }
 
   return null;
