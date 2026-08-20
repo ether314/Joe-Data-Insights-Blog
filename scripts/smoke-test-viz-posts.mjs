@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-power-grid-concentration-2026",
+    marker: "AI power & grid — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-supply-chain-update-2026",
     marker: "Vintage delta — Jul research",
     forbidden: "Loading interactive charts",

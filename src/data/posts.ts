@@ -2,6 +2,108 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-power-grid-concentration-2026",
+    slug: "ai-power-grid-concentration-2026",
+    title:
+      "Charted: Top-1 Holds 45% of AI Power Demand — Top-3 Holds 85%",
+    excerpt:
+      "IEA concentration lens: the US alone is 45% of global data-centre electricity; US+China+Europe hold 85%. Virginia grids see ~25% DC load, Ireland ~20%, while ~20% of planned projects sit at interconnection delay risk.",
+    content: `Global averages hide the real story of AI power. Data centres used about **415 TWh** in **2024** — only **~1.5%** of world electricity — and the IEA Base Case still has them near **~3%** by **2030**. Those percentages are true, and they are also the wrong unit for planning. What matters for grids is **concentration**: how much of the load sits in the top of the distribution, which clusters absorb the next gigawatts, and whether wires can keep pace where the GPUs actually plug in.
+
+The interactive dashboard above answers that distribution question directly. **Top-1 country share is 45%** (United States). **Top-3 regional share is 85%** (US + China + Europe). **US + China capture roughly 80% of growth to 2030.** Pair this concentration cut with our [global IEA scenario frame](/blog/ai-power-grid-research-2026) for the 415→945 TWh path, and with the US-only [data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) post for LBNL demand versus transmission miles.
+
+## The concentration scoreboard
+
+| Metric | Value | Why it matters |
+| --- | ---: | --- |
+| Top-1 share of global DC electricity (2024) | **45%** | US alone is nearly half the sector |
+| Top-3 regional share | **85%** | US + China + Europe |
+| Approximate regional HHI (five buckets) | **~3,004** | High concentration on a 0–10,000 scale |
+| US + China share of 2024→2030 growth | **~80%** | Incremental TWh are even more skewed |
+| US capacity in five clusters | **~50%** | National totals hide local bottlenecks |
+| US pipeline still in existing large clusters | **~50%** | Congestion compounds where load already sits |
+| Northern Virginia share of global capacity | **~13%** | One metro ~4.9 GW operating IT load |
+| Virginia DC share of state electricity | **~25%** | vs 1.5% global average |
+| Ireland DC share of metered supply | **~20%** | National-scale intensity |
+| Planned DC projects at grid-delay risk | **~20%** | IEA — unless grid risks addressed |
+
+Read the table as a **ladder**, not a single scare statistic. Global share stays modest. Country share is already oligopolistic. Cluster and state shares are where brownout politics live.
+
+## Top-1 and top-3: the regional ladder
+
+In 2024 the United States accounted for **45%** of global data-centre electricity consumption, China **25%**, and Europe **15%**. Add those three and you have **85%** of the world’s data-centre load in a handful of jurisdictions. Japan is a distant single-digit slice; the rest of the world shares the remainder.
+
+That is not how most electricity sectors look. Aluminium, steel, and cement are geographically wide even when capital is concentrated. AI-era data centres behave more like specialised industrial clusters: a few markets with deep fibre, latent interconnects, tax regimes, and hyperscaler campus footprints. The dashboard’s cumulative curve makes the inequality visual — the top bucket alone is nearly half the pie; the equal-split diagonal is nowhere near the actual path.
+
+Absolute levels reinforce the share story. The US consumed about **187 TWh** of data-centre electricity in 2024; China about **104 TWh**; Europe about **62 TWh**. By 2030 in the Base Case those become roughly **427 / 279 / 107 TWh**. The United States adds about **240 TWh** (+130%); China about **175 TWh** (+170%); Europe more than **45 TWh** (+70%). Roughly **four-fifths** of incremental demand lands in two countries.
+
+## Growth is more concentrated than the stock
+
+Stock concentration (who holds today’s TWh) and growth concentration (who captures the next TWh) are related but not identical. The US already dominates the stock; China is catching up faster on a percentage basis; Europe grows from a smaller base. Together, US + China still dominate the *delta*.
+
+That matters for equipment supply chains and for fuel. Transformers, high-voltage cable, gas turbines, and interconnection study bandwidth are finite. When **~80%** of sector growth bids into the same two systems, lead times stretch everywhere those buyers touch — even markets that are not building AI campuses feel the queue. Our companion [IEA global frame](/blog/ai-power-grid-research-2026) shows renewables meeting about half of incremental supply to 2030 while gas and coal still cover more than **40%**; concentration decides *which* local grids absorb that fossil bridge.
+
+## Clusters: half of US capacity in five hubs
+
+Country totals still average away the problem. The IEA is explicit that AI-focused data centres can draw as much power as aluminium smelters **but are much more geographically concentrated**. Nearly **half** of US data-centre capacity sits in **five regional clusters**. About **50%** of US capacity under development remains inside those pre-existing large hubs.
+
+Named clusters in the IEA’s global map — Northern Virginia, Beijing, Shanghai, Dallas, Pearl River Delta, Singapore, Chicago, Dublin, London, Omaha — are the practical map of AI power risk. Northern Virginia alone is the world’s largest market: roughly **4.9 GW** of operating IT load and about **13%** of reported global operational capacity in public market tallies cited by Virginia’s JLARC. It is more than double Beijing, the next-largest global market in those same tallies.
+
+The dashboard’s cluster scatter puts operating load against estimated pipeline intensity. Markets that are already large *and* still filling pipelines are the ones where local congestion, capacity-market prices, and siting politics collide. Dallas-area large-load forecasts and Northern Virginia’s multi-gigawatt pipeline are not abstract “US demand” — they are specific substations and transmission corridors.
+
+## Local intensity: Virginia 25%, Ireland 20%
+
+Zoom one more step and the global 1.5% statistic collapses. In **Ireland**, data centres consume around **20%** of metered electricity supply. In the United States, **six states** already see data centres above **10%** of electricity supply, with **Virginia leading at about 25%**. That is an order of magnitude above the world average — and it is the everyday reality for the grids hosting the densest AI and cloud capacity.
+
+Local intensity is why interconnection reform and transformer manufacturing matter more than another global percentage-point debate. A country can have ample national generation and still fail a hyperscale campus if the cluster’s local network is saturated. Conversely, siting outside saturated hubs can unlock power that national models already count as available.
+
+Emerging and developing economies outside China illustrate the mirror image: they hold roughly **half** of the world’s internet users but **under 10%** of global data-centre capacity. Concentration is not only too much load in a few places — it is also computing power locked away from places that might want to host it if power quality and interconnection were investable.
+
+## Can electricity and grid build-out keep pace?
+
+The core question of this theme is whether power and wires can keep up with AI load. Concentration changes the answer from “maybe globally” to “not yet where it counts.”
+
+On the demand side, a hyperscale campus can stand up in roughly **two to three years** once power is secured, and accelerator refreshes cycle even faster. On the grid side, building new transmission in advanced economies often takes **four to eight years**. US median time from interconnection request to commercial operation exceeded **five years** for projects that reached operation in 2025 (LBNL *Queued Up* 2026). Wait times for transformers and cables have roughly **doubled** in three years. The IEA estimates that unless grid risks are addressed, around **20%** of planned data-centre projects could face delays.
+
+Pace mismatch is lethal precisely because load is clustered. If demand were sprinkled evenly across every balancing authority, five-year queues would still be painful but diffuse. When half of US capacity — and half the pipeline — packs into five clusters, every delayed transformer and every restudy hits the same corridors. Firm generation announcements do not clear that bottleneck by themselves; **deliverability** does.
+
+## What would change the concentration story
+
+Several shifts would rewrite this scoreboard:
+
+1. **Siting outside saturated US clusters** at scale — so the “50% of pipeline in existing hubs” figure falls for several consecutive years.
+2. **Faster interconnection and transmission** that compress median IR→COD below the campus construction clock in PJM, ERCOT, and other stressed regions.
+3. **Meaningful non-US/China growth** that drops the US+China share of incremental TWh well below ~80% without simply shifting the same congestion to Dublin, Singapore, or the Pearl River Delta.
+4. **Virginia and Ireland intensity peaking** — local DC shares of electricity stabilising or falling as efficiency, flexibility, and geographic diversification bite.
+5. **EMDE capacity share rising** toward internet-user share, which would both diversify global concentration and test power-quality readiness in new host markets.
+
+None of those are guaranteed by another round of campus announcements. They are grid, siting, and industrial-policy outcomes.
+
+## Caveats and reading notes
+
+- **Regional shares are IEA disclosed**; Japan and rest-of-world splits in our five-bucket ladder include estimated residuals that reconcile to 415 TWh.
+- **Cluster IT-load gigawatts** beyond Northern Virginia are ranked estimates consistent with public “NoVa more than double Beijing” market tallies and the IEA named-cluster list — treat them as order-of-magnitude, not meter reads.
+- **Pipeline intensity** by cluster is estimated from announced-development narratives; the IEA chart of installed vs under-development capacity is the qualitative source, not a full disclosed table in our module.
+- **HHI** is an approximate index from five regional buckets, useful for ranking concentration across posts, not a full reconstructed global plant-level distribution.
+- **AI vs non-AI workloads** inside data centres remain hard to separate; accelerated-server growth is the best available proxy in the IEA frame.
+- Figures can revise as OMDIA, utility IRP filings, and IEA updates refresh — directionally the concentration ladder has been stable even when point estimates move.
+
+## Bottom line
+
+The AI power problem is a **concentration problem**. Top-1 holds **45%**, top-3 holds **85%**, and US + China take about **80%** of the growth to 2030. Nearly half of US capacity sits in five clusters; Virginia and Ireland already run data-centre shares of electricity an order of magnitude above the global average; and roughly **one in five** planned projects sits at grid-delay risk while interconnection medians stretch past five years. Electricity *can* be built for AI. The open question is whether it can be built **where the distribution is thickest**, on a clock that matches campus construction rather than transmission planning.
+
+Related reading: [IEA global data-centre scenarios](/blog/ai-power-grid-research-2026) and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+    category: "Energy",
+    themeId: "ai-power-grid",
+    imageUrl: "/images/energy-ai-power-grid-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of AI power demand concentrating into a few glowing grid hubs with a dominant top-share bar",
+    publishedAt: "2026-08-20T18:00:00Z",
+    featured: true,
+    visualization: "ai-power-grid-concentration-2026",
+    layout: "default",
+  },
+  {
     id: "ai-supply-chain-update-2026",
     slug: "ai-supply-chain-update-2026",
     title:
