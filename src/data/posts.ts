@@ -2,6 +2,109 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "adaptation-economics-research-2026",
+    slug: "adaptation-economics-research-2026",
+    title:
+      "Charted: $187–359B Adaptation Gap vs $28B in Public Flows",
+    excerpt:
+      "UNEP puts developing-country adaptation needs at $215–387B/year; international public flows hit only $28B in 2022. CPI tracks ~$2T in climate finance while adaptation plateaus near $64B — and Swiss Re’s nat-cat protection gap reaches $424B.",
+    content: `Climate policy still debates **mitigation pathways** as if the bill for living with warming were a footnote. The ledgers say otherwise. UNEP’s Adaptation Gap Report 2024 puts developing-country **adaptation finance needs at $215–387 billion per year** this decade. International public adaptation finance to those countries reached only **$28 billion in 2022** — up from **$22 billion** in 2021 and **$19 billion** in the 2019 Glasgow baseline year. The implied **adaptation finance gap is $187–359 billion annually**. Even hitting the Glasgow Climate Pact’s call to **double** 2019 adaptation finance by 2025 would close only about **5%** of that gap.
+
+Meanwhile Climate Policy Initiative’s Global Landscape of Climate Finance 2026 tracks roughly **$2 trillion** in total climate finance for 2024 — and finds tracked **adaptation investment plateauing near $64 billion**. Swiss Re Institute estimates the global natural-catastrophe **protection gap at $424 billion in 2025**, with insurance covering only about **27%** of exposure. Put those three ledgers on one screen and the core question of adaptation economics becomes concrete: **who pays for climate damage and resilience before policy, markets, and treaties catch up?**
+
+This post is deliberately *not* a remake of our [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026) piece, which ranks NOAA event costs inside one rich country. Here the unit of analysis is the **global residual-risk stack**: needs vs public flows, mitigation-heavy climate finance, and the uninsured share of catastrophe losses.
+
+## The gap is the product
+
+| Ledger | Figure | Source frame |
+| --- | ---: | --- |
+| Adaptation needs (developing countries) | **$215–387B / year** | UNEP AGR |
+| Intl public adaptation finance (2022) | **$28B** | UNEP AGR |
+| Adaptation finance gap | **$187–359B / year** | UNEP AGR |
+| Glasgow 2× target (from 2019) | **~$38B** | 2 × $19B |
+| Gap closed if Glasgow hits | **~5%** | UNEP AGR |
+| Tracked global climate finance (2024) | **~$2T** | CPI GLCF |
+| Tracked adaptation (2024) | **~$64B** | CPI GLCF |
+| Nat-cat protection gap (2025) | **$424B** | Swiss Re |
+| Global insurance resilience index | **~27%** | Swiss Re |
+
+Needs minus flows is not an accounting curiosity. It is a statement about **who must absorb residual risk** when adaptation capital does not arrive: households without insurance, local and national budgets after disasters, and — only partially — insurers and concessional lenders.
+
+## Public flows rose — and still miss by an order of magnitude
+
+The UNEP series shows real progress on the flow side. International public adaptation finance climbed from roughly **$10–13 billion** in the mid-2010s to **$19 billion** in 2019, dipped in 2020, then jumped to **$22 billion** (2021) and **$28 billion** (2022) — the largest year-on-year rise since Paris. That is genuine movement toward the Glasgow doubling pledge.
+
+It is also still a rounding error beside needs. At the **midpoint** of UNEP’s needs band (~$301B), 2022 flows cover under **10%**. At the high end ($387B), coverage is about **7%**. Glasgow’s **~$38 billion** target looks ambitious relative to 2019 and trivial relative to the needs band. The dashboard’s “Needs vs flows” panel lets you toggle low / mid / high scenarios so that political talking points cannot hide behind a single midpoint.
+
+Two caveats matter immediately. First, UNEP’s **gap** compares needs against **international public** adaptation finance — domestic public spend and private adaptation are under-measured, so the true *financed* share is higher than the $28B numerator alone implies, while true *needs* may also exceed disclosed NDCs. Second, **debt service** in many developing countries (excluding China) now exceeds estimated adaptation needs in UNEP’s framing — meaning fiscal space, not only donor generosity, constrains the response.
+
+## Mitigation got the commercial pipeline; adaptation did not
+
+CPI’s landscape is the other half of the story. Total tracked climate finance scaled into the **trillion-dollar** range — about **$1.46T** in 2022 prints and roughly **$2T** by 2024 — driven overwhelmingly by **mitigation** in energy systems, transport, and buildings. Adaptation stayed near **$63–64 billion**, flattening even as mitigation kept compounding.
+
+That composition is not a moral failure of spreadsheet authors. It is a **cash-flow geometry**: solar farms, batteries, and EVs produce bankable revenues; seawalls, heat-health systems, and mangrove restoration mostly produce **avoided losses**. Private capital follows the former unless public balance sheets, regulation, or blended finance create a revenue or risk-transfer story for the latter. Households already put hundreds of billions into low-carbon solutions in advanced markets; the equivalent private wave for adaptation in vulnerable economies has not arrived.
+
+Readers tracking the energy-side boom can cross-check our [IRENA renewable capacity](/blog/irena-renewable-capacity-record-2024) post — capacity records and adaptation gaps can rise in the same decade because they are funded by different instruments.
+
+## Damage arrives faster than adaptation capital
+
+Swiss Re’s nat-cat lens translates the finance gap into **who writes the check after the storm**. Global economic losses from natural catastrophes routinely run into the **hundreds of billions**; insured losses cover only a fraction. The Institute’s **protection gap** — economic loss (or exposure need) not covered by insurance — reached about **$395 billion in 2024** and **$424 billion in 2025**. The resilience index improved only modestly over a decade, from roughly **25%** in 2015 to about **27%** in 2025. Almost **three-quarters** of global nat-cat exposure remains uninsured.
+
+Regional ranks make the equity point brutal. Advanced North America and Western Europe clear roughly **~40%** insurance resilience in our dashboard snapshot; Sub-Saharan Africa and South Asia sit in the **single digits**. The same flood or cyclone that is an insurance event in Florida can be a **sovereign-debt and humanitarian** event in a low-income coastal state. That is why adaptation economics cannot be reduced to “buy more reinsurance” — reinsurance follows premium pools, and premium pools follow income.
+
+## Who pays when policy is late
+
+Before treaties, NDCs, and national adaptation plans fully fund resilience, residual damage is already allocated — just not by climate diplomats. The dashboard’s “Who pays” panel uses an editorial residual split to make the default assignment visible:
+
+1. **Uninsured households and SMEs** absorb the largest informal share through out-of-pocket rebuilds, lost wages, and distress sales.
+2. **Sovereign and local budgets** take the next hit via emergency appropriations, reconstruction, and contingent liabilities.
+3. **Insurers and reinsurers** pay the covered slice — real, growing, and still a minority of global exposure.
+4. **International public adaptation finance and MDB/climate-fund windows** remain small relative to needs, even after the 2021–2022 jump.
+
+Loss-and-damage funds and new collective quantified goals matter precisely because the **default residual stack** is regressive: the people and governments least responsible for cumulative emissions hold the least insurance and the least fiscal space. Until adaptation capital scales, “who pays” is answered by **balance-sheet accident**, not by Paris Article language.
+
+For the US fiscal angle on weather costs already clearing billion-dollar thresholds, stay with [billion-dollar disasters](/blog/us-billion-dollar-weather-disasters-2026). For the aid-budget squeeze that competes with adaptation ODA tags, see [OECD DAC’s first ODA drop](/blog/oecd-dac-oda-first-drop-2024).
+
+## What would close the gap — and what would not
+
+Three popular answers fail the arithmetic:
+
+- **“Hit Glasgow doubling.”** Necessary as a credibility floor; insufficient as a gap closer (~5%).
+- **“Wait for private markets.”** Private capital scaled mitigation where returns cleared hurdles; adaptation still needs public risk-bearing, regulation, and project pipelines.
+- **“Expand insurance alone.”** Insurance resilience rose only ~2 percentage points in a decade while the **absolute** protection gap grew with exposed asset values. Insurance without adaptation can also become unwriteable — a retreat, not a solution.
+
+What *does* move the needle in the UNEP/CPI framing is a shift from reactive project finance toward **anticipatory, programmatic, and transformational** adaptation — paired with debt treatment that frees fiscal space, domestic revenue mobilization, and public capital used to **crowd in** private resilience investment where models exist. Benefit-cost ratios on many adaptation proposals (Swiss Re cites a median near **1.9**) are not the bottleneck; **bankability and political time horizons** are.
+
+## Caveats
+
+- **Needs ranges** ($215–387B) combine modeled and NDC-derived estimates; they are order-of-magnitude policy anchors, not engineering budgets for every coastal kilometer.
+- **International public adaptation flows** depend on Rio markers and provider reporting; tagging quality varies, and multi-purpose projects can be over- or under-attributed to adaptation.
+- **Domestic public and private adaptation** are under-captured in the UNEP gap numerator/denominator framing — the gap is best read as *international public shortfall vs estimated needs*, not as “zero other money exists.”
+- **CPI mitigation / adaptation / dual** composition uses landscape snapshots; dual-benefit tagging and methodology revisions mean year-to-year levels are directional.
+- **Swiss Re protection-gap and resilience-index** figures are global aggregates; regional dashboard ranks are a simplified snapshot for comparison, not a full Swiss Re country table.
+- **Residual-bearer pie shares** are editorial synthesis for visualization — they illustrate incidence, not a formal national-accounts allocation.
+- **Nat-cat annual loss paths** are rounded for charting from published Swiss Re-style narratives; use them for insured-vs-economic shape, not for precise year-level forensics.
+
+## Methodology
+
+Headline needs, 2022 international public adaptation finance ($28B), 2019 baseline ($19B), gap band ($187–359B), and Glasgow ~5% close share follow UNEP Adaptation Gap Report 2024 (building on AGR 2023 needs). Total climate finance (~$2T in 2024) and adaptation plateau (~$64B) follow CPI Global Landscape of Climate Finance 2026; earlier CPI prints inform 2019–2022 composition shape in the stacked panel. Protection gap ($424B in 2025), prior-year gap, and ~27% resilience index follow Swiss Re Institute nat-cat publications. Flow time series (2016–2022) follows the UNEP public-adaptation narrative path used in AGR materials. Regional resilience and residual-bearer panels are constructed for interaction — labeled as such in the viz footer.
+
+## Bottom line
+
+Adaptation economics is the study of a **pre-allocated residual**. Developing-country needs sit at **$215–387B/year**; international public adaptation finance sits at **$28B**; the gap is **$187–359B**. Global climate finance can print **~$2T** while adaptation sticks near **$64B**. Nat-cat insurance still covers only about **27%** of exposure, leaving a **$424B** protection gap. Until policy and capital markets fund resilience at needs scale, **households, thin sovereign budgets, and informal coping** pay first — and they are already paying.
+
+Related reading: [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026) and [OECD DAC ODA drop](/blog/oecd-dac-oda-first-drop-2024).`,
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl: "/images/energy-adaptation-economics-research-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero showing adaptation finance needs bars dwarfing public flows beside an uninsured climate-damage gap wedge",
+    publishedAt: "2026-08-01T12:00:00Z",
+    featured: true,
+    visualization: "adaptation-economics-research-2026",
+    layout: "default",
+  },
+  {
     id: "chokepoint-commodities-research-2026",
     slug: "chokepoint-commodities-research-2026",
     title:

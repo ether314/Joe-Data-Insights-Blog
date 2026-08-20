@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "adaptation-economics-research-2026",
+    marker: "Adaptation economics — who pays before policy catches up",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "chokepoint-commodities-research-2026",
     marker: "Where supply is thin",
     forbidden: "Loading interactive charts",
