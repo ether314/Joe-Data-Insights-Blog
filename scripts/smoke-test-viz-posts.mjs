@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "industrial-robotics-update-2026",
+    marker: "Industrial robot installations — IFR World Robotics 2025 update",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "adaptation-economics-update-2026",
     marker: "Vintage delta — AGR 2024 research → AGR 2025",
     forbidden: "Loading interactive charts",

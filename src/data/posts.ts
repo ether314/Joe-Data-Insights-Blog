@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "industrial-robotics-update-2026",
+    slug: "industrial-robotics-update-2026",
+    title:
+      "Update: West Installations Fall 8–10% While China Hits Record 295k — Cobots +12%",
+    excerpt:
+      "Versus our IFR WR 2025 research print, the YoY lens shows Asia +5% installations while Europe −8% and the Americas −10%. World flow stayed flat at 542k, but operational stock rose 9% and cobots climbed 12% to 64,500 units.",
+    themeId: "industrial-robotics",
+    content: `## What changed since the research vintage
+
+Our [IFR World Robotics 2025 research post](/blog/industrial-robotics-research-2026) mapped **where** factory robots land: **542,076** global installations in **2024**, Asia’s **74%** share, China’s **54%** of demand, and electronics edging automotive. That print answered the *level* question. This update answers the *delta* question the same vintage forces once you stop ranking markets and start ranking **changes**: **who is still scaling physical automation, and who is cycling down?**
+
+The dashboard above is built as a vintage delta — diverging YoY bars, decade industry dumbbells, flow-vs-stock dual axis, cobot path, density leaders, and an installations×YoY scatter — with **Market region** and **Delta group** controls. The shareable frame is narrow: **world flow held sideways** while **operational stock rose 9% to 4.66 million**, **Asia installations rose 5%**, **Europe fell 8%**, and the **Americas fell 10%**. Collaborative robots grew **12%** to **64,500** units — about **12%** of all industrial installs.
+
+## The headline table: levels vs YoY
+
+| Metric | 2024 level | YoY / vintage Δ | Note |
+| --- | ---: | ---: | --- |
+| World installations | **542,076** | **~0%** (vs 541,302) | 2nd-highest year; 4th year above 500k |
+| World operational stock | **4.66M** | **+9%** | Compounding while flow plateaus |
+| Asia installations | **401,665** (74%) | **+5%** | Still the growth engine |
+| Europe installations | **85,006** (16%) | **−8%** | Off 2023 record; still 2nd-best Europe year |
+| Americas installations | **50,077** (9%) | **−10%** | 4th year above 50k, but contracting |
+| China installations | **295,045** (54%) | **+7%** | Record annual total |
+| US installations | **34,204** | **−9%** | Largest Americas market |
+| Cobot installations | **64,500** | **+12%** | ~12% of all industrial installs |
+| China domestic supplier share | **57%** | **+29 pp vs 2014** | First majority for local makers |
+| World robot density | **177 / 10k** | Asia **204** · EU **148** · Am **131** | Density CAGR fastest in Asia |
+
+Read the table against the research post carefully. The research print was *not wrong* that Asia dominates levels. The update adds that **Asia is also the only major region still growing installations**, while Western markets are cutting units even as their density leaders remain among the world’s densest factories.
+
+## YoY divergence: China and India up; West and Japan down
+
+Toggle **Market region → All** on the left panel. The diverging bars separate growers from cutters without drowning in absolute scale. **China (+7%)** and **India (+7%)** sit alone among large markets on the positive side. **Japan (−4%)**, **Korea (−3%)**, and **Germany (−5%)** are mild contractions from high bases. **United States (−9%)**, **Italy (−16%)**, **France (−24%)**, **Canada (−12%)**, and the **UK (−35%)** are sharper — the UK’s plunge is the hangover from a **2023** tax-credit spike, not a structural exit from automation.
+
+Filter to **Europe** and the regional story collapses into one sentence: **nearshoring talk did not prevent an 8% installation drop** from Europe’s 2023 all-time high of ~92k units. Filter to **Americas** and the same pattern appears at **−10%**, with the US accounting for about **68%** of regional installs and still declining. Asia’s **+5%** is enough to keep the global total flat because Asia is three-quarters of the flow.
+
+That is the first update punchline versus the research vintage: **concentration is not only a stock fact — it is a growth fact**. When three-quarters of new robots land in Asia and Asia is the only region expanding, “global factory automation” increasingly means **Asian factory automation** with Western cyclical noise around it.
+
+## Stock +9% while flow is flat — the compounding story
+
+The research post noted the plateau. The update’s dual-axis panel makes the *implication* visible: **installations can sit sideways while the operational fleet keeps growing**. World stock rose from roughly **4.28M to 4.66M** (+9%). China’s stock alone crossed **2.03 million** — about **43%** of world stock — after years of 20%+ average growth.
+
+Why the asymmetry? Robots stay on the floor for years. A flat *flow* still adds hundreds of thousands of units to *stock* each year, and retirements do not cancel the entire cohort. For planners, that means **labor displacement and maintenance markets track stock**, while **OEM order books track flow**. Reading only the 542k annual number understates how much automation is already embedded — and overstates how “done” Western factories are when their *density* remains high even as their *new orders* fall.
+
+## Cobots +12%: the slice still accelerating
+
+Collaborative robots are the structural exception inside a flat aggregate. IFR’s WR 2025 collaborative chapter / press series put **2024 cobot installations at 64,500**, up **12%**, restoring double-digit growth and lifting cobots to roughly **12%** of all industrial robot installations. Over five years, cobot installs more than doubled from the ~30k class of **2020**.
+
+That does not mean cobots are replacing high-payload welding arms on auto body lines. It means **lighter, safer, easier-to-integrate systems** are finding SKUs in packaging, electronics handling, and mixed-product lines where traditional fencing was the barrier. When the dashboard’s **Delta group → Structure** filter lights up cobot YoY next to stock YoY and China domestic share, you see three *accelerating* stories inside a *flat* headline: **stock compounding, cobot mix, and Chinese supplier localization**.
+
+## Decade mix: general industry 36% → 53%; auto 43% → 23%
+
+The research post’s electronics-vs-auto duel for **2024** (24% vs 23%) was a one-year photo finish. The update’s decade dumbbell is the longer movie. **Automotive’s share of installations fell from 43% in 2014 to 23% in 2024**. **General industries (ex-auto) rose from 36% to 53%**. Electronics edged from **21% to 24%**. Installations in general industries more than *tripled* over the decade; auto rose only about a third.
+
+So the plateau is not “automation paused.” It is **customer industry reweighting**. Auto capex cycles in Europe, Japan, and North America pulled Western installs down in 2023–24. Electronics and metal/machinery (16% share, +2 pp) offset enough of that decline to keep the world total flat. Anyone still narrating industrial robotics as an auto story is a decade late.
+
+## Density: Korea 1,220 vs world 177 — intensity ≠ flow
+
+Pair this update with our [manufacturing robot density chart](/blog/manufacturing-robot-density-ifr-2024). WR 2025 puts **world average density at 177 robots per 10,000 manufacturing employees** in 2019–24’s endpoint year. **Asia averages 204** (12% CAGR since 2019), **Europe 148** (7% CAGR), **Americas 131** (6% CAGR). Country leaders remain **South Korea (1,220)**, **Singapore (818)**, then **China (567)** — density that now sits *above* Germany (**449**) and Japan (**446**).
+
+The update’s density panel is the corrective to “US is falling behind because installs fell 9%.” The US can cut *new* units while still running a large *stock*; Korea can install only ~31k units a year and still lead the world on *intensity*. Flow answers **who is buying this year**. Density answers **how automated the floor already is**. Both matter; they are not substitutes.
+
+## China suppliers: 28% → 57% home-market majority
+
+The research print flagged China’s domestic supplier share at **57%**. The update treats the **+29 percentage-point** decade climb from ~**28% in 2014** as its own structural delta. For the first time, Chinese manufacturers sold more robots in China than foreign suppliers. That reshapes who captures margin when Asia supplies three-quarters of new units — and who is exposed if Chinese OEMs begin exporting more aggressively into Asia’s second tier (India, Southeast Asia).
+
+IFR still expects China demand to support roughly **10%** average annual growth potential into **2028**, with Asia installations near **435,000** in the **2025** outlook year. Global path: **575,000** in 2025 (+6%), then a trajectory past **700,000 by 2028**. Those forecasts assume the Asian engine keeps running; they do not require Western installs to recover immediately.
+
+## Who is exposed under the new vintage
+
+**Exposed:** Western robot OEMs and integrators keyed to auto-capex cycles in the US, Germany, Italy, and France; narratives that treat “global robotics growth” as synonymous with Western factory employment stories; policymakers who read a flat 542k year as proof automation stalled rather than **relocated and reweighted**.
+
+**Relative winners under current rules:** Chinese domestic robot makers with home-market majority; Asia-based electronics and general-industry integrators; cobot vendors still on a double-digit unit path; maintenance/service businesses tied to **stock** rather than **flow**.
+
+**What would rewrite the story:** a 2025–26 Western auto reinvestment wave that restores Europe/Americas positive YoY; a China growth miss below the ~10% narrative; or cobot share stalling as safety/throughput limits bite. IFR’s own forward path still points up — but the *geography of the upcycle* remains Asian until Western YoY signs flip.
+
+## Caveats and methodology
+
+- **Same IFR WR 2025 vintage as the research post** — this is a *lens update* (YoY, density, cobots, decade mix), not a newer statistical year. Full 2025 installation counts await WR 2026.
+- **YoY % for some mid-tier markets** back out from disclosed 2024 units and YoY; those 2023 levels are marked estimated in the data module.
+- **Cobot series before 2024** interpolates IFR’s “more than doubled in five years” narrative around the disclosed 64,500 / +12% / ~12% share endpoints.
+- **Density** uses manufacturing employment denominators that IFR revises with lag; country ranks can shuffle on employment revisions without install changes.
+- **Spain YoY** is coded ~0 where IFR disclosed units without a clear YoY; treat as placeholder.
+- **General industry** is IFR’s ex-automotive manufacturing bucket — not identical to “all non-auto customers” in every national account.
+- **Forecast years (2025–2028)** are IFR outlook paths, not observed installs.
+
+## The shareable takeaway
+
+Versus our research print’s *level* map, the YoY update says physical factory automation is **still scaling in Asia while Western installs contract**: Asia **+5%**, Europe **−8%**, Americas **−10%**, China record **295k (+7%)**, world flow flat at **542k**, stock **+9% to 4.66M**, cobots **+12% to 64.5k**. Automotive’s decade share collapse (**43% → 23%**) and China’s domestic supplier majority (**57%**) are the structural footnotes. For density intensity see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024); for the geography levels see the [research vintage](/blog/industrial-robotics-research-2026).`,
+    category: "Industry",
+    imageUrl: "/images/industry-industrial-robotics-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of industrial robot arm with amber Asia growth bars rising and cool blue Western bars falling",
+    publishedAt: "2026-08-20T18:00:00Z",
+    featured: true,
+    visualization: "industrial-robotics-update-2026",
+    layout: "default",
+  },
+  {
     id: "adaptation-economics-update-2026",
     slug: "adaptation-economics-update-2026",
     title:
