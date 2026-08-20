@@ -63,7 +63,8 @@ export interface Post {
     | "industrial-robotics-research-2026"
     | "ai-supply-chain-research-2026"
     | "us-billion-dollar-weather-disasters-ms94skof"
-    | "geopolitics-institutions-research-2026";
+    | "geopolitics-institutions-research-2026"
+    | "chokepoint-commodities-research-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

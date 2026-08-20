@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "chokepoint-commodities-research-2026",
+    marker: "Where supply is thin",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "geopolitics-institutions-research-2026",
     marker: "Who holds the keys: voting power vs economic weight",
     forbidden: "Loading interactive charts",

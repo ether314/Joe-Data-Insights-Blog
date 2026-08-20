@@ -2,6 +2,123 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-research-2026",
+    slug: "chokepoint-commodities-research-2026",
+    title:
+      "Charted: The Physical Inputs the Economy Assumes Will Always Be There",
+    excerpt:
+      "Across 20 mine, midstream, and export stages — from gallium (China ~98%) to graphite (China ~79%) to copper refining (China ~44%) — a handful of countries hold the thin edges of supply. The dashboard ranks concentration, US import reliance, and mine-to-midstream flips.",
+    content: `Modern economies price energy, labor, and interest rates obsessively. They treat a quieter class of inputs as background: refined gallium for compound semiconductors, natural graphite for battery anodes, separated rare earths for magnets, cobalt chemicals for cathodes, helium for fab purge and MRI magnets, phosphate fertilizers for caloric yield. The U.S. Geological Survey’s Mineral Commodity Summaries 2025 — read as a **cross-mineral ledger** rather than twenty separate PDFs — answers a blunt question: **what physical inputs does the economy assume will always be available, and where is supply thin?**
+
+The interactive dashboard above tracks **20 stages** (mine, midstream processing, or export). **China leads 12 of them.** **Eight stages** have a single country above **70%** of world output. Gallium refining sits near **98%** China. Natural graphite mining sits near **79%** China. Copper’s midstream story — China refining **~44%** while mining **~8%** — still looks mild next to gallium, yet it is the everyday metal that wires grids and EVs. Pair this synthesis with our [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-geography-2026) deep dive and our [natural graphite mine concentration](/blog/natural-graphite-mine-concentration-2024) map: those posts zoom one mineral; this one ranks the thin edges together.
+
+## The silent assumptions
+
+Markets and models usually assume:
+
+1. **Continuity of mine output** in a handful of jurisdictions (Chilean copper, Congolese cobalt, Australian lithium, Moroccan phosphate rock, South African platinum).
+2. **Continuity of midstream chemistry** — smelting, refining, separation, anode coating, chemical conversion — often in a *different* country than the pit.
+3. **Continuity of export licenses** for processed fertilizers and strategic metals, even when mine reserves look abundant.
+4. **Substitutability on policy timescales** — that gallium, helium, or separated NdPr can be replaced or ramped elsewhere inside an election cycle.
+
+Those assumptions are usually fine until they are not. Export controls, mine disruptions, processing bottlenecks, and shipping chokepoints do not show up as “commodity scarcity” in the same way a wheat drought does; they show up as **lead-time spikes**, **qualification delays**, and **single-vendor dependencies** inside already complex supply chains. The dashboard’s scatter panel puts **top-1 country share** against **US net import reliance**: the upper-right quadrant is where concentration and US exposure compound.
+
+## A cross-mineral scoreboard
+
+Selected 2024e stages from the ledger (USGS MCS 2025 primary; IEA processing shares labeled secondary in the data module):
+
+| Stage | Leader | Top-1 share | Top-3 share | US net import reliance |
+| --- | --- | ---: | ---: | ---: |
+| Gallium (refined) | China | **~98%** | ~99% | 100% |
+| Graphite anode processing (IEA) | China | **~90%** | ~95% | 100% |
+| Rare-earth separation | China | **~90%** | ~98% | ~80% |
+| Tungsten (mine) | China | **~83%** | ~92% | ~50% |
+| Natural graphite (mine) | China | **~79%** | ~90% | 100% |
+| Cobalt (refined) | China | **~76%** | ~90% | ~76% |
+| Cobalt (mine) | Congo (Kinshasa) | **~74%** | ~85% | ~76% |
+| Platinum (mine) | South Africa | **~71%** | ~92% | ~79% |
+| Rare earths (mine) | China | **~69%** | ~88% | ~80% |
+| Lithium chemicals (IEA) | China | **~65%** | ~85% | ~25% |
+| Germanium (refined) | China | **~60%** | ~85% | ~50% |
+| Nickel (mine) | Indonesia | **~50%** | ~70% | ~48% |
+| Antimony (mine) | China | **~48%** | ~78% | ~85% |
+| Copper (refined) | China | **~44%** | ~60% | ~45% |
+| Phosphate rock (mine) | China | **~41%** | ~68% | ~9% |
+| Helium (production) | United States | **~40%** | ~85% | ~0% |
+| Lithium (mine) | Australia | **~37%** | ~78% | ~25% |
+| Phosphate fertilizer exports | Morocco | **~28%** | **~67%** | ~9% |
+| Copper (mine) | Chile | **~23%** | ~48% | ~45% |
+
+Read the table as **stages**, not as “minerals.” Graphite mine concentration and graphite anode processing are different chokepoints. Cobalt mine (DRC) and cobalt refine (China) are different chokepoints. Copper dig (Chile) and copper refine (China) are different chokepoints. Policy that only counts pits will mis-target.
+
+## Mine monopolies versus midstream monopolies
+
+The dashboard’s **Mine → midstream** panel isolates five families where both ends of the chain are measured:
+
+- **Graphite and rare earths:** China already leads the mine *and* the midstream. Diversifying pits without diversifying separation or anode plants leaves the binding constraint untouched.
+- **Cobalt:** Congo (Kinshasa) dominates dug tons; China dominates refined metal. That is a classic **stage flip** — African mine risk plus Asian processing risk.
+- **Lithium:** Australia leads the mine map (~37%); China leads chemicals (~65%). The public narrative often stops at spodumene prices; the industrial narrative is conversion capacity.
+- **Copper:** Chile leads mine tons (~23%); China leads refining (~44%) while mining only ~8%. Our dedicated [copper geography post](/blog/copper-mine-vs-refinery-geography-2026) unpacks the dumbbells; here the point is comparative: copper midstream concentration is *moderate* next to gallium or graphite anode, yet copper tonnage is enormous, so absolute midstream throughput at risk is still vast.
+
+**Midstream is where assumptions hide.** Mines are visible on satellite imagery and in USGS tables. Separation plants, anode coaters, and specialty refiners are fewer, harder to permit, and slower to qualify for aerospace, auto, and fab customers. A country can “onshore mining” and still import the chemical form that actually enters a cathode or wafer line.
+
+## Batteries, chips, and food are not the same map
+
+Filter the dashboard by sector and the geography rearranges:
+
+- **Batteries & EVs:** Graphite mine (~79% China), graphite anode (~90% China), cobalt mine (DRC), cobalt refine (China), nickel (Indonesia), lithium mine (Australia) vs lithium chemicals (China). The anode and chemical layers are often tighter than the lithium pit layer.
+- **Semiconductors:** Gallium and germanium refining, helium, tungsten, antimony — a stack of specialty inputs with extreme or high concentration and high US import reliance on several lines.
+- **Permanent magnets:** Rare-earth mine plus separation — China-heavy at both stages.
+- **Fertilizers / food:** Phosphate rock looks plural enough at first glance; [phosphate fertilizer export dependence](/blog/phosphate-fertilizer-export-dependence-2026) shows the binding constraint is often **processed product trade** (Morocco + China + Saudi Arabia near **two-thirds** of exports), not rock reserves alone.
+- **Industrial gases:** Helium is a **US–Qatar–Algeria** production story — different from China-centric battery metals, but still a thin market with limited substitutes for cryogenic and fab uses. See also [global helium supply concentration](/blog/global-helium-supply-concentration-2024).
+
+Sector filters matter because **“critical minerals” as a single phrase conceals incompatible risk maps**. A battery OEM, a foundry, and a fertilizer importer do not share the same chokepoint country — but they *do* share the structural feature that **top-1 shares above ~50%** are common, not rare, once you include midstream.
+
+## Who holds the most top-1 stages
+
+The **Who leads** panel counts how many tracked stages each country tops. China sits alone at the top of the scoreboard — not because every mineral is Chinese at the pit, but because midstream chemistry and several mine monopolies overlap. Congo (Kinshasa), Indonesia, Chile, Australia, Morocco, South Africa, Russia, and the United States each lead at least one stage. That plurality is real. It does not cancel China’s midstream gravity.
+
+For the United States specifically, USGS net import reliance is **100%** on several lines in this ledger (gallium, natural graphite) and high on cobalt, platinum, antimony, and rare earths. Helium is the exception where the US is a top producer — and even there, global supply is a few-country market. Import reliance is not destiny, but it is the correct denominator for “how fast can domestic policy change the exposure?”
+
+## What would change the story
+
+Observables that would force a rewrite of this ledger:
+
+1. **Gallium or graphite anode top-1 share falling below 70%** for two consecutive MCS years — evidence that non-China refining/processing is scaling, not just announcing.
+2. **Rare-earth separation capacity outside China** reaching a durable double-digit world share with auto- and defense-qualified product — not only oxide mining.
+3. **DRC cobalt mine share falling under 50%** *and* refined cobalt outside China rising — both ends of the stage flip moving, not one.
+4. **Copper refine share for China falling toward its mine share** — midstream rebalancing, not just new South American pits.
+5. **Phosphate fertilizer export top-3 share falling under 50%** without a parallel spike in export controls — a more plural food-input trade map.
+6. **Sustained helium capacity additions** outside the US–Qatar corridor that actually clear into merchant liquid markets.
+
+Until several of those print together, the default forecast is not “running out of rocks.” It is **running industrial systems through narrow chemical and jurisdictional gates**.
+
+## Caveats and methodology
+
+- **Stages ≠ minerals.** Counting “lithium” once understates midstream concentration; counting every chemical form can double-count narratives. We publish both mine and midstream rows where the data justify it.
+- **USGS rounded totals.** Country and world figures are rounded; shares are approximate. 2024 values are USGS estimates (e).
+- **IEA processing shares** (graphite anode, lithium chemicals, some rare-earth separation narrative) are **secondary** and labeled as such — not interchangeable with USGS mine tables.
+- **HHI values are approximate**, constructed from leading-country shares for ranking, not a full reconstructed global distribution for every mineral.
+- **Substitution difficulty** is a 1–5 editorial score for near-term industrial substitutability, not a lab property.
+- **US net import reliance** follows USGS MCS definitions; a low reliance number can coexist with concentrated *global* supply (helium, phosphate rock).
+- **Export-stage phosphate** uses fertilizer-trade sources distinct from phosphate-rock mine tables — see the linked fertilizer post for corridor detail.
+- This post is a **synthesis**. For mineral-specific dumbbells and import pies, use the copper, graphite, helium, and phosphate pieces linked above.
+
+## The shareable takeaway
+
+The economy’s quiet assumption is that specialty and bulk physical inputs keep flowing through a few jurisdictions. On a 20-stage USGS/IEA ledger, **China leads twelve**, **eight stages clear 70% top-1 share**, and midstream chemistry is often tighter than the mine map. Gallium near **98%**, graphite mine near **79%**, copper refine near **44%** against an **8%** mine share — different minerals, same structural lesson: **availability is a geography of processing and licenses, not just reserves.**`,
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-research-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic map with glowing trade arcs bottlenecking into concentrated commodity nodes and uneven concentration bars",
+    publishedAt: "2026-08-20T12:00:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-research-2026",
+    layout: "default",
+  },
+  {
     id: "geopolitics-institutions-research-2026",
     slug: "geopolitics-institutions-research-2026",
     title:
