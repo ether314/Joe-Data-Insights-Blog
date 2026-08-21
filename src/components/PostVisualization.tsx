@@ -1562,6 +1562,21 @@ const AiCapexIntensityUpdate202608Dashboard = dynamic(
   },
 );
 
+const ConsumerFinanceMarketsConcentrationDashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ConsumerFinanceMarketsConcentrationDashboard"
+    ).then((m) => m.ConsumerFinanceMarketsConcentrationDashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1965,6 +1980,10 @@ export function PostVisualization({
 
   if (type === "ai-capex-intensity-update-202608") {
     return <AiCapexIntensityUpdate202608Dashboard />;
+  }
+
+  if (type === "consumer-finance-markets-concentration-2026") {
+    return <ConsumerFinanceMarketsConcentrationDashboard />;
   }
 
   return null;

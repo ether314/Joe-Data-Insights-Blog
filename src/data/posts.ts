@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "consumer-finance-markets-concentration-2026",
+    slug: "consumer-finance-markets-concentration-2026",
+    title:
+      "Charted: Top 1% Holds 30.5% of Household Wealth — Equities Hit 54%, Cards Invert the Skew",
+    excerpt:
+      "Concentration lens on consumer finance: Fed DFA-style top 1% / top 10% own ~30.5% / ~67.5% of net worth, equities concentrate harder (~54% / ~87%), while revolving balances sit with the middle and bottom — and top-3 card issuers clear ~52% of purchase volume.",
+    category: "Consumer Finance",
+    themeId: "consumer-finance-markets",
+    imageUrl:
+      "/images/consumer-finance-consumer-finance-markets-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a glowing household wealth concentration ladder rising to a luminous top-1% peak beside equity and credit-card motifs",
+    publishedAt: "2026-08-21T09:00:00Z",
+    featured: true,
+    visualization: "consumer-finance-markets-concentration-2026",
+    layout: "default",
+    content: `Our [consumer finance markets research](/blog/consumer-finance-markets-research-2026) answered the *structure* question: how households save, borrow, and park retail money after the pandemic cash flood and hiking cycle — ~**$169 trillion** in Z.1-style net worth, NY Fed debt near **$18–19 trillion**, a thin personal saving rate, and liquid cash split between deposits and money market funds. The [August 202608 vintage](/blog/consumer-finance-markets-update-202608) then answered the *tape* question: official ICI MMF at **$7.93T**, G.19 revolving at **$1.351T**, and disclosed PSAVERT still waiting on July. This post answers a different distribution question desks actually trade when they hear “households are fine”: **how concentrated is the system at the top of the distribution?**
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Wealth ladder**, **Asset lenses**, **Save vs borrow**, and **Card issuers**. The punchline is deliberately two-sided. On **net worth**, the top is thick but familiar — top 1% near **30.5%**, top 10% near **67.5%**, bottom 50% near **2.5%**. On **corporate equities**, concentration is extreme: the top 1% alone holds about **54%**, and the top 10% clears roughly **87%**. On **revolving balances**, the skew *inverts* — the bottom half holds about **30%** of card debt while the top 1% holds only about **5%**. Issuer purchase volume sits in between: top-1 near **22%**, top-3 near **52%**, top-5 near **71%**.
+
+## The headline ladder: top-1 and thick-top across ledgers
+
+| Lens | Top-1 | Thick top | What it measures |
+| --- | ---: | ---: | --- |
+| Net worth (DFA) | **30.5%** | **67.5%** (top 10%) | Household wealth stock |
+| Corporate equities & funds | **54%** | **87%** (top 10%) | Most top-heavy major asset |
+| Deposits & cash-like | **17%** | **50%** (top 10%) | Transaction / savings parking |
+| Real estate (primary + other) | **13%** | **45%** (top 10%) | Least top-heavy major asset |
+| Revolving / card balances | **~5%** (est.) | **~24%** (top 10%, est.) | Borrowing side — inverted |
+| Card issuers (purchase $) | **~22%** (Chase) | **~52%** (top 3) | Firm-side market share |
+
+Read the table as a **family of market shares**, not one number. Wealth concentration tells you who owns the balance sheet. Equity concentration tells you who captures market beta. Deposit concentration tells you who parks cash after the hiking cycle. Revolving concentration tells you who is leveraged on the *consumer* product that still shows stress in bureau data. Issuer concentration tells you which brands intermediate the spend. Analysts who quote only aggregate net worth understate how thin the bottom half is; analysts who quote only card delinquency understate how little of *equity* wealth sits with the same households.
+
+## Wealth concentration: thick top, living middle, thin bottom
+
+Filter the dashboard to **Wealth ladder**. The cumulative curve rises to about **30.5%** at the top 1%, **67.5%** at the top 10%, and **97.5%** once the upper half is included — leaving the bottom 50% with roughly **2.5%** of net worth, or about **$4T** against a **~$169T** aggregate. That is the DFA-style map behind every serene Z.1 chart: the stock can look enormous while half of households hold almost none of it.
+
+The ranked bars make the same point in dollars. The top 1% holds on the order of **$52T**; the 90th–99th another **~$63T**; the 50th–90th about **$51T**; the bottom half a thin residual. Housing equity and retirement accounts thicken the middle band; private business and publicly traded equities thicken the tip. Pair this with our [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) deep dive: a **2.7–3.9%** flow rate does not rebuild the bottom half’s stock on any policy-relevant clock when assets are already this skewed.
+
+## Asset lenses: equities concentrate; housing and cash dilute
+
+Switch to **Asset lenses**. Sorting by top-1 share puts **corporate equities** first (~**54%**), then net worth (~**30.5%**), deposits (~**17%**), real estate (~**13%**), and revolving (~**5%**). Sorting by bottom-50 share flips the order: revolving and real estate look “democratic”; equities do not.
+
+That cross-section is the analytical heart of the post. Household “wealth” is a mixture of ledgers with different Lorenz curves. When equity markets rally, *aggregate* net worth rises — and the top 1%’s share of *equities* (~**54%**) means the same rally is also a concentration event. When house prices rise, the middle of the distribution participates more, because primary residence is the least top-heavy major asset in the panel. When deposit rates stay elevated and money market funds hold ~**$7.9T**, cash parking still skews to the top 10% (~**50%** of deposits) — but far less than stocks. Our [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) piece tracked the *product* split; this lens tracks the *who owns it* split.
+
+The scatter panel plots each lens’s top-1 share against its thick top (top 10% for wealth ledgers; top 3 for issuers). Equities sit in the upper-right: high top-1 *and* high thick-top. Revolving sits in the lower-left of the wealth cloud: low top-1, modest top-10. Issuers form their own firm-side cluster near **22% / 52%**.
+
+## Save vs borrow: the inverted credit skew
+
+Open **Save vs borrow**. Grouped bars put equity and deposit ownership beside estimated revolving-balance shares by the same percentile cuts. The visual is almost a mirror. Top 1%: **54%** of equities, **17%** of deposits, **~5%** of revolving. Bottom 50%: **~1%** of equities, **~8%** of deposits, **~30%** of revolving. The 50th–90th band — the broad upper-middle — holds about **46%** of estimated card balances while owning only about **12%** of equities.
+
+This is why aggregate debt prints and aggregate wealth prints can both be “true” and still describe different Americas. NY Fed **2026Q2** household debt at **$18.926T** is mortgage-heavy; G.19 June revolving at **$1.351T** is the stress-sensitive sleeve. Card **90+** transitions remain elevated versus mortgages in our [delinquency split](/blog/us-household-debt-delinquency-split-2026) — and the concentration lens says that stress loads onto percentiles that do **not** own the equity boom. The APR−funds gap near **17 pp** in the [card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) post is therefore not a uniform tax on “households”; it is a tax concentrated where revolving shares are thickest.
+
+Treat the revolving percentile shares as **estimated**. They are constructed to sum to the disclosed aggregate revolving stock and to match the qualitative SCF/DFA pattern that consumer revolving is middle- and bottom-heavier than assets. They are not a Fed supervisory microdata extract.
+
+## Card issuers: firm concentration on the rails
+
+Toggle **Card issuers**. On a Nilson-style general-purpose purchase-volume framing, **Chase** leads near **22%**, **Amex** and **Citi** bring the top three to about **52%**, and the top five clear roughly **71%** — leaving **~29%** for the long tail of other banks and co-brands. That is concentrated relative to an equal six-way split; it is **not** a single-rail monopoly. The consumer-finance system can be extremely concentrated in *household equity ownership* while remaining only moderately concentrated in *who processes the spend*.
+
+Issuer concentration matters for competition, rewards economics, and funding. It does **not** automatically map onto delinquency geography. A top-3 purchase-volume share of **~52%** can coexist with revolving stress that is distributed across the bottom half of the wealth distribution. The dashboard’s job is to keep those layers separate: **people concentration** (DFA percentiles) versus **firm concentration** (issuer ranks).
+
+## Who is exposed — and what would change the story
+
+**Exposed:** households in the bottom half and lower middle whose balance sheets are revolving-heavy and equity-light when APRs stay wide of funds; regional banks and fintechs competing for purchase volume against a top-5 that already clears ~**71%**; desks that underwrite “households are fine” from Z.1 net worth alone while ignoring that the bottom 50% holds ~**2.5%** of that stock; policymakers who treat a rising equity market as broadly shared prosperity when top-1 equity ownership sits near **54%**.
+
+**Relative winners under current rules:** top-percentile owners of corporate equities and private business; deposit-rich households capturing elevated cash yields without carrying revolving stress; large card issuers with scale in purchase volume and rewards ecosystems; mortgage holders with locked-in rates whose primary residence still participates in the less-skewed housing ledger.
+
+**What would change the story:** a sustained multi-year rise in bottom-50 wealth share above the low-single-digit band; equity ownership diffusion that breaks the ~**54%** top-1 / ~**87%** top-10 prints; or a collapse of revolving balances in the middle and bottom that would also show up as healing in card **90+** transitions. None of those dominate the 2025–2026 DFA-style map summarised here.
+
+## Caveats and methodology
+
+- **DFA percentiles are wealth ranks, not income ranks.** A high-income renter can sit below a lower-income homeowner on net worth.
+- **Asset-class shares are DFA-consistent rounds** for visualization — not a substitute for the full interactive release tables.
+- **Revolving percentile shares are estimated** to sum to G.19 / NY Fed aggregate revolving and to reflect the qualitative SCF pattern; treat them as order-of-magnitude, not census cells.
+- **Issuer purchase-volume ranks** follow public Nilson-style tallies and can shift with co-brand mix, network definition, and year; the **22% / 52% / 71%** prints are concentration inside this constructed universe.
+- **Money market funds** are mostly institutional at the fund level; the deposit / cash-like lens here is the household DFA concept, not a direct ICI retail/institutional split.
+- **Aggregate net worth (~$169T) and debt (~$18.9T)** are carried theme context — the concentration story is about *shares*, not a new Z.1 reprint.
+
+## The shareable takeaway
+
+Consumer finance is **concentrated at the top — but which top depends on the ledger**. On **net worth**, top 1% holds about **30.5%** and top 10% about **67.5%**, while the bottom half holds roughly **2.5%**. On **equities**, top 1% holds about **54%** and top 10% about **87%**. On **revolving debt**, the skew inverts: the bottom half holds about **30%** of balances. On **card issuers**, top-1 / top-3 purchase volume sits near **22% / 52%**. Households are not one balance sheet. They are a stack of distributions — and stress, savings, and market beta live in different parts of that stack.
+
+Related reading: [Consumer finance markets research](/blog/consumer-finance-markets-research-2026), [August 202608 vintage update](/blog/consumer-finance-markets-update-202608), and [household delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+  },
+  {
     id: "ai-capex-intensity-update-202608",
     slug: "ai-capex-intensity-update-202608",
     title:
