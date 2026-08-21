@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-compute-demand-update-202608",
+    slug: "ai-compute-demand-update-202608",
+    title:
+      "Update: Hyperscale Pipeline Hits 915 Sites — Texas Ops +71% YoY, Top-3 Cloud Slips to 57%",
+    excerpt:
+      "Versus our Q3 site-ledger print (803 pipeline / Top-3 58%), Synergy’s Aug 19 location rankings raise the known hyperscale pipeline to 915 (+112), put top-20 markets at 60% of capacity, and show Texas ops growing +71% YoY vs +36% world. Big-5 ownership shares still carried.",
+    category: "Technology",
+    themeId: "ai-compute-demand",
+    imageUrl: "/images/technology-ai-compute-demand-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic map of glowing US hyperscale hubs with amber Texas growth arcs and a secondary Beijing node cluster against rising pipeline bars",
+    publishedAt: "2026-08-21T02:00:00Z",
+    featured: true,
+    visualization: "ai-compute-demand-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 site & power print
+
+In the [Q3 compute update](/blog/ai-compute-demand-update-2026q3) we promoted Synergy’s hyperscale *site-count* ledger and Gartner’s US electricity composition: **437 of 803** pipeline sites in the US, Top-3 cloud at **58%** of hyperscale capacity, and dedicated AI already about **one-third** of US data-center power. That post answered whether geography got louder while Big-5 ownership stayed frozen. This August refresh answers the next official vintage the calendar forced: **what moved once Synergy restated the world’s leading hyperscale *locations* on 19 August 2026 — pipeline count, market concentration, and named-market growth?**
+
+Three meters rewrite the scoreboard. **Known hyperscale pipeline facilities rise from 803 to 915 (+112).** **Top-3 cloud share of hyperscale capacity slips 58% → 57% (−1 pp).** And the location map gets a hard concentration print: **just twenty state or metro markets hold 60%** of world hyperscale capacity, with **Northern Virginia and Greater Beijing alone at 17%**, while **Texas operational hyperscale capacity grew +71% YoY** against a **+36%** worldwide average. Ownership Big-5 shares remain carried near **71%** — Epoch’s Q1/Q2 2026 period print is still open — so the vintage delta is *where* capacity sits and *how fast* named markets grow, not a new chip-owner pie.
+
+The dashboard above is built as a Q3→Aug 19 vintage delta: top-20 seat stack, pipeline bars, named-market capacity hints, Texas-vs-world growth, geography concentration deltas, entered/exited rank churn, ownership carry, and tokens-versus-ownership scatter. Use the **owner**, **region**, and **churn** controls to isolate who still owns the silicon versus which markets entered or left the global top-20.
+
+## The headline table: Q3 site ledger → Aug 19 location rankings
+
+| Metric | Prior (Q3 2026 update) | New (Synergy 19 Aug 2026) | Δ |
+|--------|-----------------------:|--------------------------:|---|
+| World hyperscale pipeline sites | **803** | **915** | **+112** |
+| Top-3 cloud share of hyperscale | **58%** | **57%** | **−1 pp** |
+| Top-20 markets capacity share | *site counts emphasized* | **60%** | New concentration print |
+| N. Virginia + Greater Beijing | — | **17%** | Two metros dominate stock |
+| Next-20 markets capacity share | — | **19%** | Top-40 ≈ **79%** combined |
+| US seats in global top-20 | *implied rising* | **15 of 20** | Non-US seats **5** (was 6 YoY) |
+| Texas ops hyperscale growth | Inland corridor narrative | **+71% YoY** | World avg **+36%** |
+| Big-5 AI chip ownership | **~71.4%** carried | **~71.4%** carried | **0 pp** (Epoch open) |
+| US large-DC IT pipeline (GW) | **~45 GW** carried | **~45 GW** carried | Unchanged Jul print |
+
+That **+112 site / −1 pp Top-3 / +71% Texas YoY** triad is the clean vintage delta versus our Q3 update. The ownership column is intentionally flat: this release is a *location rankings* vintage, not an Epoch Chip Owners restatement. For the explorer ownership path see the [August update](/blog/ai-compute-demand-update-2026); for the baseline ownership essay see [July research](/blog/ai-compute-demand-research-2026).
+
+## Pipeline 803 → 915: the site meter keeps climbing
+
+Synergy’s known pipeline of future hyperscale data centers now stands at **915** facilities at various stages of planning, development, or fit-out — up **+112** from the **803** hyperscale-only pipeline we carried in the Q3 post. Forecasts lean on that tracked pipeline, so the jump is not a cosmetic revision: it is additional capacity already inside the firm’s visibility cone.
+
+Two definitional reminders still apply. First, the July **~1,500 large-DC** worldwide pipeline (almost half in the US, ~**45 GW** US IT load) is a *broader* perimeter than Synergy’s hyperscale-operator ledger — do not narrate 915 as a collapse from 1,500. Second, site count is not capacity: new campuses remain larger than the operational average, so each incremental pipeline site can punch above a 2024-era facility. The dashboard’s pipeline panel keeps Q3 and Aug 19 side-by-side so the **+112** delta is the object, not a re-baselined stock.
+
+## Top-20 markets = 60%: concentration gets a hard print
+
+The Aug 19 release’s sharpest new meter is market concentration. **Twenty state or metro markets account for 60%** of current world hyperscale capacity. **Northern Virginia and Greater Beijing alone make up 17%.** The next twenty markets add another **19%**, so the top forty already cover roughly **four-fifths** of the stock. That is the geographic twin of the ownership story we have told all year: a thin set of places and a thin set of firms process most of the world’s AI-ready watts.
+
+Composition of the top-20 seats tilted further toward the United States. **Fifteen of the twenty largest markets are now US**, with **four in APAC** and **just one in Europe (Dublin)**. Non-US seats in the top-20 fell to **five**, from **six a year ago** and **seven two years ago**. Tokyo, Sydney, and South Carolina dropped out; Indiana, Tennessee, and Guangdong entered. Power availability and local opposition — the same frictions Synergy flagged when Dublin, Amsterdam, and Singapore ranked down — are rewriting who can still host the next 100 MW campus.
+
+## Texas +71% YoY: the growth premium is inland and US-heavy
+
+Texas is Synergy’s loudest named growth print: **operational hyperscale capacity in the state grew +71% over the last year**, against a **+36%** worldwide average — a **+35 pp** premium. Other high-growth markets named in the release include Indiana, Tennessee, and South Virginia in the US, plus Shanghai, Johor (Malaysia), and Jakarta. Northern Virginia remains the densest live hub with Beijing, but Synergy notes it is **no longer featuring as highly in new plans** as it once did — the same inland shift we tracked when Texas + Midwest jumped from **33%** of operational US hyperscale capacity to **53%** of the pipeline in the July/August vintage.
+
+That growth map matters for the “who processes / where located” question. Chip ownership is still a Big-5 US story (~**71%**). Location of *new* capacity is increasingly a US inland + selective APAC tier-two story. Europe’s sole remaining top-20 seat (Dublin) is a warning light, not a counterweight. Pair the location panels with our [global AI data-center build tracker](/blog/global-ai-data-center-build-tracker) for campus-level context and with the [brand token series](/blog/major-ai-brands-token-consumption-2022-2026) for the usage side that still does not match ownership.
+
+## Top-3 cloud slips to 57% — mild deconcentration, not a regime change
+
+Amazon, Microsoft, and Google still have the broadest footprints and now account for **57%** of all hyperscale data-center capacity — **one percentage point below** the **58%** we carried in the Q3 post. They are followed by Meta, Alibaba, Tencent, Oracle, Apple, ByteDance, CoreWeave, and smaller hyperscale operators. Synergy also notes that **62% of hyperscale operators are headquartered in the US**, including the four biggest, and that the US accounts for almost half of cloud revenues in several key segments — structural reasons the top-20 seat map keeps US-heavy even when individual metros churn.
+
+A −1 pp Top-3 move is not a breakup of concentration. It is consistent with neoclouds and second-tier hyperscalers adding sites inside a still-tight market. Toggle owners in the dashboard: the Epoch-carried Big-5 *chip* shares stay flat while Synergy’s *facility* Top-3 eases a hair — two related but non-identical concentration meters.
+
+## Ownership and tokens: still carried, still misaligned
+
+Epoch’s finalized aggregate still anchors on **Q4 2025**: five hyperscalers own ~**71%** of global AI compute in H100-equivalents, Google alone near **25%**, China as a whole near **5%**. We carry those shares again because the Aug 19 Synergy print does not restate chip ownership. The tokens-versus-ownership scatter remains the reminder that **usage ≠ silicon**: OpenAI and ByteDance can clear large token shares with little or no Big-5-style chip ownership, while Microsoft and Amazon own more than they first-party.
+
+Until Epoch closes a Q1/Q2 2026 period print, treating ownership as the moving vintage would invent a delta. Location rankings *did* move — pipeline, top-20 composition, Texas growth, rank churn — so that is what this post prices.
+
+## Caveats and methodology
+
+1. **Perimeter mismatch.** Synergy’s **915** hyperscale pipeline ≠ the July **~1,500 large-DC** worldwide pipeline (colo + enterprise + hyperscale). Compare like with like.
+2. **Site count ≠ MW.** New campuses skew larger; a +112 site jump can imply more than +14% capacity if average IT load per site rises.
+3. **Named-market capacity hints** in the dashboard are illustrative placements inside disclosed concentration bands (top-2 / top-6 / top-20 / high-growth). Synergy’s public release does not publish a full market-by-market MW table.
+4. **Ownership shares are carried** from the Aug explorer / Q3 post. Epoch Q1/Q2 2026 aggregates were not finalized as a period delta at analysis time.
+5. **Top-3 57%** is hyperscale *facility capacity* share (Synergy), not Epoch H100e chip ownership. Do not conflate the two pies.
+6. **Texas +71%** is operational hyperscale capacity growth for the *state*, not a single metro’s IT-MW disclosure.
+7. **Gartner US electricity composition** (US ~**204** of **565** TWh; ~**68** TWh dedicated AI) is carried from the Q3 post — no new Gartner vintage in this refresh.
+8. Rank churn (Indiana / Tennessee / Guangdong in; Tokyo / Sydney / South Carolina out) is as disclosed for the top-20 set; deeper rank movements below the top-20 are out of sample.
+
+Primary sources: Synergy Research hyperscale location rankings (19 Aug 2026); Synergy inland hyperscale investment analysis and Jul 2026 US capacity update (~45 GW carried); Epoch AI Chip Owners / hyperscaler share chart (Q4 2025 anchors, carried); Gartner Forecast: Data Center Power Capacity and Consumption, Worldwide, 2024–2030 (1Q26 / Jun 2026 public release, carried); prior theme posts [Q3 site update](/blog/ai-compute-demand-update-2026q3) and [Aug explorer update](/blog/ai-compute-demand-update-2026).
+
+## The shareable takeaway
+
+**Versus Q3, Big-5 chip ownership is unchanged near 71% — the Aug 19 vintage is location rankings and growth.** Synergy’s known hyperscale pipeline rises **803 → 915 (+112)**, Top-3 cloud slips **58 → 57%**, top-20 markets lock in **60%** of capacity (N. Virginia + Beijing **17%**), and Texas ops grow **+71% YoY** against a **+36%** world average while US seats fill **15 of 20** largest markets. For the Q3 site-count and power-composition print see the [Q3 update](/blog/ai-compute-demand-update-2026q3); for ownership restatement see the [August explorer update](/blog/ai-compute-demand-update-2026); for the baseline essay see [July research](/blog/ai-compute-demand-research-2026); for campuses see the [build tracker](/blog/global-ai-data-center-build-tracker); for tokens see the [brand series](/blog/major-ai-brands-token-consumption-2022-2026).`,
+  },
+  {
     id: "ai-capex-intensity-update-2026q3",
     slug: "ai-capex-intensity-update-2026q3",
     title:
