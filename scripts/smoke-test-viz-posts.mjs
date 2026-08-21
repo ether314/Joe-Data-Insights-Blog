@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "adaptation-economics-concentration-2026",
+    marker: "Adaptation economics — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "heavy-industrial-capacity-update-2026q3",
     marker: "China H1 steel share 53.7%",
     forbidden: "Loading interactive charts",

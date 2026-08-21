@@ -1847,6 +1847,21 @@ const HeavyIndustrialCapacityUpdate2026q3Dashboard = dynamic(
   },
 );
 
+const AdaptationEconomicsConcentrationDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AdaptationEconomicsConcentrationDashboard").then(
+      (m) => m.AdaptationEconomicsConcentrationDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2326,6 +2341,10 @@ export function PostVisualization({
 
   if (type === "heavy-industrial-capacity-update-2026q3") {
     return <HeavyIndustrialCapacityUpdate2026q3Dashboard />;
+  }
+
+  if (type === "adaptation-economics-concentration-2026") {
+    return <AdaptationEconomicsConcentrationDashboard />;
   }
 
   return null;

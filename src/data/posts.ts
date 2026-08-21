@@ -2,6 +2,89 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "adaptation-economics-concentration-2026",
+    slug: "adaptation-economics-concentration-2026",
+    title:
+      "Concentration: Residual Top-1 Hits 40% — Households Absorb Climate Damage Before Finance Catches Up",
+    excerpt:
+      "Adaptation-economics concentration lens: residual Top-1 (uninsured households & SMEs) ~40% and Top-3 ~87%; protection-gap Top-3 regions hold ~53% of the $424B stock; OECD adaptation donors Top-3 ~46% of a $34.7B tip while needs still run ~9.6× MDB LMIC flows.",
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl:
+      "/images/energy-adaptation-economics-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside teal coastal hazard zones and a thin lime adaptation-finance stream into a charcoal residual basin",
+    publishedAt: "2026-08-21T12:00:00Z",
+    featured: true,
+    visualization: "adaptation-economics-concentration-2026",
+    layout: "default",
+    content: `Our theme already maps the *levels*: the [research stock ledger](/blog/adaptation-economics-research-2026) put developing-country adaptation needs in the hundreds of billions while international public flows stayed in the low tens; the [AGR 2025 update](/blog/adaptation-economics-update-2026) re-anchored needs at **$310–365B/year by 2035** against UNEP intl public **$26B (2023)**; the [Q3 OECD vintage](/blog/adaptation-economics-update-2026q3) printed provided/mobilised adaptation at **$34.7B in 2024**; and the [August MDB + H1 refresh](/blog/adaptation-economics-update-202608) lifted the institutional tip to MDB LMIC adaptation **$35B in 2025 (+31% YoY)** while a benign H1 insured print of **$42B** did nothing to close the **$424B** protection-gap stock. This post asks the distribution question desks actually trade: **how concentrated is residual climate-damage burden — and the thin finance tip meant to shrink it — at the top of the ladder?**
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Residual ladder**, **Protection gaps**, **Donors & instruments**, and **Scarcity stack**. The punchline is deliberately three-sided. On **residual incidence**, Top-1 (uninsured households & SMEs) holds about **40%** and Top-3 (households + sovereign budgets + insurance) clears about **87%**, for an analytical HHI near **2,826**. On **protection-gap geography**, North America alone is about **22%** of the **$424B** stock and the Top-3 regions (N. America + South Asia + LAC) clear about **53%**. On **OECD adaptation donors**, Top-1 Germany is about **18%** and Top-3 (Germany + Japan + France) about **46%** of a **$34.7B** tip — concentrated relative to an equal split, but *mild* next to the residual burden tip. Scarcity still dominates: AGR needs mid (**~$338B**) sits roughly **9.6×** MDB LMIC adaptation **$35B**.
+
+## The concentration scoreboard
+
+| Lens | Top-1 | Top-3 | HHI |
+| --- | ---: | ---: | ---: |
+| Residual damage bearers | **40%** (households & SMEs) | **87%** | **~2,826** |
+| Protection-gap geography | **22.4%** (N. America) | **52.6%** | **~1,518** |
+| OECD adaptation donors | **18%** (Germany) | **46%** | **~1,124** |
+| Public adaptation instruments | **67%** (loans) | **100%** (3 buckets) | **~5,346** |
+
+Read the table as a **family of market shares**, not one number. Residual HHI tells you who still pays when insurance and public finance miss. Gap-geography HHI tells you where uninsured exposure dollars sit — including rich-country catastrophe corridors that dominate *insured* prints while developing regions dominate *resilience failure*. Donor HHI tells you how thin the OECD tip is even before you compare it to needs. Instrument concentration tells you that the public adaptation tip is mostly **debt-like** (**67%** loans), not grant-heavy. Analysts who quote only “adaptation finance rose” miss that the residual tip barely moved.
+
+## Residual ladder: households are the Top-1
+
+Filter the dashboard to **Residual ladder**. The Lorenz-style curve for residual incidence rises to **40%** at the first bearer, **67%** once sovereign budgets are included, and **87%** once insurance’s covered share is stacked — leaving MDB adaptation and bilateral public finance as a thin institutional residual (**~13%** combined in this constructed panel). Toggle **Share %** versus **Cumulative %** and the same tip story holds: the equal-split diagonal (five equal chairs) is nowhere near the actual curve.
+
+That geometry is the adaptation-economics point. A half-year where rich-country storms dominate the *insured* ledger — Swiss Re H1 2026 insured nat-cat **$42B**, insurance ratio ~**42%** — can print a *higher* coverage ratio while households and SMEs still absorb the bulk of *uninsured* economic loss and while the modelled protection gap stays at **$424B** with resilience near **~27%**. Insurance is the third rung of the residual ladder, not the top. When policy debates treat “insured losses” as the damage meter, they are sampling the covered sleeve, not the concentration of who pays.
+
+The ranked residual bars make the incidence claim explicit. Households & SMEs at **40%**, sovereign budgets **27%**, insurance **20%**, MDB adaptation **9%**, bilateral/other public **4%**. Pair that with the [August update](/blog/adaptation-economics-update-202608): MDB LMIC adaptation bouncing to **$35B** is real institutional progress — and still a single-digit share of residual incidence in this panel. Flows can rise without dethroning the household tip.
+
+## Protection gaps: dollars vs resilience disagree
+
+Switch to **Protection gaps**. On the Swiss Re-style **$424B** gap stock used across this theme, North America leads in *dollars* (~**$95B**, ~**22%**), then South Asia (~**$66B**), LAC (~**$62B**), Sub-Saharan Africa (~**$58B**), Western Europe (~**$55B**), advanced Asia-Pacific (~**$48B**), and MENA (~**$40B**). Top-3 regions clear about **53%** of the gap stock. Toggle the metric to **Gap share %** for the same ranking in percentage terms, or to **Resilience %** to invert the story: SSA (~**6%**) and South Asia (~**8%**) sit at the bottom of the resilience ladder even when they are not always Top-1 in absolute gap dollars.
+
+The scatter panel puts the same regions on two axes desks actually need: **resilience %** versus **gap $B**, with bubble size proportional to gap share. Advanced North America and Western Europe sit higher on resilience and still carry large absolute gaps because exposure and reconstruction costs are enormous. South Asia and SSA sit low-resilience / large-gap — the stress quadrant. Filter by **Income** (advanced / emerging / developing) to see that “where the money is missing” and “where the insurance system fails” are related but not identical maps. Our [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026) piece tracks the rich-country insured catastrophe tape; this lens shows why that tape alone mis-ranks global residual risk.
+
+## Donors and instruments: a thin tip, mostly loans
+
+Open **Donors & instruments**. On the OECD provided/mobilised adaptation tip of **$34.7B (2024)**, the estimated bilateral concentration ladder puts Germany near **18%**, Japan **16%**, France **12%**, the United States **11%**, the UK **8%**, the Netherlands **6%**, and other developed providers **29%**. Top-3 clears about **46%**; donor HHI near **1,124** is the mildest concentration meter in this post. That is intentional. Adaptation finance is not “owned” by one sovereign the way some commodity midstreams are — it is a thin, multi-donor tip that still fails the needs test by nearly an order of magnitude.
+
+The instrument donut is the sharper concentration inside that tip. OECD public adaptation in 2024 is roughly **67%** loans / debt-like, **29%** grants, and a small residual equity/other sleeve. Loan-heavy public adaptation means the “who pays” question does not end when a project reaches financial close: sovereign borrowers in LMICs still carry debt service while households remain the residual bearer when storms hit before seawalls and early-warning systems are built. Toggle nothing here — the donut is the control-free complement to the donor bars — then jump to **Scarcity stack** for the denominator problem.
+
+## Scarcity stack: needs still dwarf every flow ledger
+
+Toggle **Scarcity stack**. Filter **All / Needs / Flows / Gaps**. The mid needs anchor (~**$338B**) and the implied gap versus MDB LMIC **$35B** (~**$302B**) dwarf every flow print in the panel: OECD **$34.7B**, UNEP intl public **$26B**, CPI tracked global adaptation **$65B**, and even the Swiss Re protection-gap stock of **$424B** as a *damage* ledger rather than a *finance* ledger. Do **not** sum across these bars. OECD, UNEP, MDB, and CPI numerators are different universes — provided/mobilised, intl public to developing countries, MDB own-account, and tracked global climate-finance tags.
+
+The concentration lesson is about *scarcity geometry*, not arithmetic addition. When needs sit ~**9–10×** the largest single institutional adaptation engine (MDB LMIC **$35B**), even a perfectly diversified donor tip cannot close the residual household burden on any policy-relevant clock. Glasgow-style doubling targets and NCQG architecture debates matter; they still sit under a needs ceiling this post keeps visible so Top-1 / Top-3 finance shares are not mistaken for adequacy.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** uninsured households and SMEs in low-resilience corridors (SSA, South Asia, parts of LAC) whose out-of-pocket rebuild sits at the Top-1 of residual incidence; LMIC sovereigns borrowing into a **67%** loan-heavy public adaptation tip while contingent disaster debt still lands on budgets; insurers and reinsurers whose ~**27%** global resilience print leaves most economic loss outside the covered sleeve; desks that underwrite “adaptation is funded” from an MDB YoY bounce or a benign H1 insured total without reading the residual ladder.
+
+**Relative winners under current rules:** advanced-economy households and firms inside higher-resilience insurance systems (even when absolute gap dollars are large); MDB windows that expanded LMIC adaptation to **$35B** and remain the largest institutional engine beside bilateral OECD flows; grant-heavy niches inside the **29%** public-adaptation grant sleeve; investors and cities that can price residual incidence by *bearer* rather than by headline insured loss.
+
+**What would change the story:** a sustained multi-year rise in grant share that breaks the **~67%** loan tip; donor diffusion that matters *and* a flows path that lifts UNEP/OECD/MDB numerators toward the **$310–365B** needs band rather than rearranging a **$35B**-class tip; insurance penetration that lifts the global resilience index well above **~27%** in developing regions; or a residual incidence panel where households fall below sovereigns and insurers as Top-1. None of those dominate the 2024–2025 official vintages summarised here.
+
+## Caveats and methodology
+
+- **Residual bearer shares are a constructed incidence panel** for visualization, consistent with the theme’s August update framing — not a single audited global ledger of who paid last year’s losses.
+- **Regional protection-gap dollars are estimated allocations** of the Swiss Re-style **$424B** stock used across theme posts; they illustrate geography of uninsured exposure, not a country-by-country Swiss Re extract.
+- **Donor country shares of OECD adaptation are estimated** from published bilateral patterns and labeled as such — not an official OECD country-table reprint for 2024 adaptation alone.
+- **OECD, UNEP, MDB, and CPI figures must not be summed**; each answers a different accounting question (provided/mobilised, intl public, MDB own-account, tracked global tags).
+- **HHI values are analytical indexes on stated bucket shares** (0–10,000), comparable within this dashboard, not antitrust screens.
+- **H1 2026 insured nat-cat $42B** is a half-year damage print; it does not revise the full-year 2025 insured **$107B** path or the **$424B** protection-gap stock.
+- **Needs band $310–365B/yr by 2035** is UNEP AGR 2025 (2023 prices) — a developing-country adaptation *needs* frame, not a global all-economy spending ceiling.
+- **Instrument mix (67% loans / 29% grants)** follows the OECD public adaptation 2024 split used in the Q3 update; equity/other is the residual sleeve.
+
+## The shareable takeaway
+
+Adaptation economics is **concentrated at the top — but which top depends on the meter**. On **residual damage**, households & SMEs are Top-1 at about **40%**, and Top-3 clears about **87%** (HHI ~**2,826**). On **protection-gap geography**, Top-3 regions hold about **53%** of the **$424B** stock while low-resilience developing corridors sit in the stress quadrant of the scatter. On **OECD adaptation finance**, Top-3 donors clear about **46%** of a **$34.7B** tip that is still mostly **loans (67%)**. On **scarcity**, AGR needs mid still runs roughly **9.6×** MDB LMIC adaptation **$35B**. Who pays for climate damage before policy catches up is not a mystery of missing headlines — it is a distribution: the residual tip is thick, the finance tip is thin, and the needs ceiling still sits an order of magnitude above both.
+
+Related reading: [August MDB + H1 update](/blog/adaptation-economics-update-202608), [Q3 OECD adaptation update](/blog/adaptation-economics-update-2026q3), [AGR 2025 update](/blog/adaptation-economics-update-2026), [adaptation economics research](/blog/adaptation-economics-research-2026), and [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026).`,
+  },
+  {
     id: "heavy-industrial-capacity-update-2026q3",
     slug: "heavy-industrial-capacity-update-2026q3",
     title:
