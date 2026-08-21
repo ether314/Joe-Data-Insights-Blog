@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-supply-chain-geography-2026",
+    marker: "Where tool dollars, wafer seats, and design HQs land on the map",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-financing-geography-2026",
     marker: "AI financing — geography lens",
     forbidden: "Loading interactive charts",

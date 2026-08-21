@@ -2,6 +2,89 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-supply-chain-geography-2026",
+    slug: "ai-supply-chain-geography-2026",
+    title:
+      "Charted: China + Taiwan + Korea Clear 79% of Chip-Tool Billings — Taiwan Gates the AI Stack",
+    excerpt:
+      "Geography lens on the AI chip stack: China leads equipment installs (~36.5%), the East Asia trio clears ~79% of tool dollars, Taiwan dual-gates leading-edge foundry (~90%) and CoWoS (~78%), Korea owns the HBM tip, and US design HQ still clears ~88% of AI GPU revenue — four maps that disagree.",
+    category: "Industry",
+    themeId: "ai-supply-chain",
+    imageUrl:
+      "/images/industry-ai-supply-chain-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic East Asia semiconductor map with cyan Taiwan foundry/CoWoS gate, purple Korea HBM node, amber China equipment-install weight, green US GPU design HQ, and crimson Netherlands EUV accent linked by network arcs",
+    publishedAt: "2026-08-22T06:00:00Z",
+    featured: true,
+    visualization: "ai-supply-chain-geography-2026",
+    layout: "default",
+    content: `Our [July research map](/blog/ai-supply-chain-research-2026) answered where the equipment cycle and stack bottlenecks bind when tool dollars boom. The [concentration lens](/blog/ai-supply-chain-concentration-2026) then measured how thick the *vendor* tip is at each layer — EUV at **100%**, leading-edge foundry near **90%**, CoWoS near **78%**, median top-1 around **72%**. The [Q3 CoWoS tracker](/blog/ai-supply-chain-update-2026q3) and [August Mid-Year back-end cut](/blog/ai-supply-chain-update-202608) moved the *vintage*: capacity toward **~140k wpm**, a gap that still reprints near **20%**, and assembly & packaging tools growing only **+9.6%** while test equipment prints **+31%**. This post asks the desk question those vintages imply but do not draw as a map: **where does activity, risk, and capacity sit geographically — and do tool-install geography, wafer-seat geography, and design-HQ geography agree?**
+
+The interactive dashboard above is built as a **geography lens**. Toggle **Equipment**, **Stack geo**, **Stages**, and **Meters**. On equipment flip share versus billings dollars; on stack geo filter by stage and tip (≥70%). The punchline is deliberately multi-map. On **equipment billings**, China leads at about **36.5%** of SEMI’s 2025 WWSEMS print, and **China + Taiwan + Korea** clear ~**79%**. On **leading-edge foundry**, Taiwan alone is ~**90%**. On **CoWoS-class packaging**, Taiwan is still ~**78%**. On **HBM**, Korea’s two memory majors clear ~**88%**. On **AI GPU design / revenue HQ**, the United States is ~**88%**. Tool dollars, wafer seats, packaging gates, and design HQs are **four different maps**.
+
+## The headline ladder: regional and country shares that disagree
+
+| Lens | Top-1 / tip | Share | What it answers |
+| --- | --- | ---: | --- |
+| Equipment billings (2025) | China | **~36.5%** | Where tool dollars install |
+| Equip top-3 | China + Taiwan + Korea | **~78.9%** | Regional install concentration |
+| Leading-edge foundry | Taiwan | **~90%** | Where advanced wafers are cut |
+| CoWoS-class packaging | Taiwan | **~78%** | Where AI packages bind |
+| HBM capacity | Korea | **~88%** | Where high-bandwidth memory sits |
+| AI GPU design HQ | United States | **~88%** | Who designs / books the accelerators |
+| EUV scanners | Netherlands | **100%** | Where the exclusive lithography OEM sits |
+
+Read the table as a **family of maps**, not one slogan. Equipment geography tells you which *regions absorb tool dollars*. Foundry and CoWoS geography tell you which *island* gates the AI wafer and package. HBM geography tells you which *memory corridor* binds GPU ship schedules. Design-HQ geography tells you which *corporate domicile* books the accelerator revenue. Averaging these rows into “the chip stack is Chinese” or “the chip stack is Taiwanese” or “the chip stack is American” is a category error — all three can be true on different ledgers.
+
+## Equipment: China leads dollars; Taiwan prints the AI-install signature
+
+Open **Equipment**. Against a **$135.1B** 2025 WWSEMS perimeter, China rolls to about **$49.3B** (**~36.5%**), Taiwan **$31.5B** (**~23.3%**), Korea **$25.8B** (**~19.1%**), N. America **$10.9B** (**~8.1%**), Japan **$9.5B** (**~7.0%**), Europe only **$2.9B** (**~2.1%**), and RoW the residual. Flip the metric to **Billings $B** and the same ladder appears in absolute dollars — useful when desks need a spend envelope rather than a share slide.
+
+The equipment pie is therefore **China-weighted without being a monopoly**. A system where one country holds a little over a third of global tool billings still leaves Taiwan + Korea with a combined tip larger than China alone on AI-relevant advanced installs. That is the geographic twin of the [concentration scoreboard](/blog/ai-supply-chain-concentration-2026): ASML remains the sole *EUV vendor*; rolling China, Taiwan, and Korea onto the same *install* sheet makes East Asia the thickest *region* without claiming that “most leading-edge wafers are Chinese.”
+
+The stacked path from 2022→2025 is an editorial East Asia trio share track, not a new SEMI microdata extract. China’s share drifts from the high-20s toward **~36.5%** as Taiwan and Korea hold the low-20s / high-teens. Treat the path as a **shape check** against the live 2025 snapshot — useful for seeing that China’s install lead thickened without flipping Taiwan’s AI-gate role.
+
+Q1 2026 billings at **$36.55B (+14%)** remain the pace check against SEMI’s Mid-Year **$165.9B** path. Taiwan’s **+24%** and Korea’s **+16%** in that quarterly print are the AI-install signature the [research map](/blog/ai-supply-chain-research-2026) already flagged — geography of *growth*, not just geography of *level*.
+
+## Stack geo: Taiwan dual-gates the midstream; Korea owns HBM
+
+Switch to **Stack geo**. Eight layers mapped to *country* tips rather than vendor names alone. EUV is **Netherlands 100%** (ASML). Leading-edge foundry is **Taiwan ~90%** (TSMC) with Korea ~**8%** and the US a thin residual. CoWoS-class AI packaging is **Taiwan ~78%**, with US OSAT / Amkor geography and Korea filling the next seats. HBM rolls to **Korea ~88%** (SK Hynix + Samsung) versus Micron’s US ~**12%**. AI GPU design HQ is **United States ~88%**. EDA is US-heavy (~**72%** for the Synopsys–Cadence tip). 300 mm wafers tip toward **Japan ~56%**. WFE OEM HQs split across US / NL / Japan — a reminder that *who builds tools* is not *where tools install*.
+
+Toggle **Stage** to **Midstream** and the geographic choke sharpens: foundry LE, CoWoS, and HBM are almost entirely an East Asia story. Toggle **Top-1 ≥70%** to hide the softer tips and keep only the extreme gates — EUV, foundry LE, CoWoS, GPU HQ, and the Korea HBM roll-up. The share × risk scatter puts those same layers in the upper-right: high country tip, high editorial risk score. That is the geography version of the vendor concentration ladder — same bottlenecks, different axis.
+
+For the packaging gate that sits beside HBM, keep the theme’s [GPU packaging & memory bottleneck](/blog/ai-gpu-packaging-memory-bottleneck-2025) frame and the [Q3 CoWoS tracker](/blog/ai-supply-chain-update-2026q3) open: capacity can rise toward **~140k wpm** while the supply-demand gap reprints near **20%** when demand re-accelerates and NVIDIA reservations lock **more than half** of the pool — a *buyer* concentration sitting on top of a *Taiwan* capacity geography.
+
+## Stages: midstream East Asia ~92%; upstream and downstream disagree
+
+Open **Stages**. The stage flip is the post’s operational summary. **Upstream** (tools, materials, EDA) still has heavy OEM / IP weight in the United States, Netherlands, and Japan — East Asia’s *stage* share is only mid-20s even though East Asia absorbs most *installs*. **Midstream** (foundry, HBM, CoWoS) is the geographic choke: East Asia clears roughly **~92%** of the composite tip, with Taiwan dual-gating foundry LE and CoWoS while Korea owns HBM. **Downstream** (AI GPU design / revenue) flips again: United States ~**88%**, East Asia a thin residual.
+
+That midstream concentration is why “friend-shoring the stack” and “diversifying tool installs” are not the same policy sentence. CHIPS-era dollars can thicken N. America equipment share (still only ~**8%** of 2025 billings) without moving Taiwan’s leading-edge or CoWoS tip in a single vintage. The [August Mid-Year update](/blog/ai-supply-chain-update-202608) already showed assembly & packaging tools growing only **+9.6%** — slow packaging-tool growth helps explain why the CoWoS *geography* stays sticky even when total equipment rides a **$165.9B** path.
+
+Country risk seats make the same point as a scoreboard. Taiwan gates **two** critical layers at extreme tips. Netherlands gates EUV at **100%** while Europe’s *install* share is only ~**2%** — IP geography ≠ fab geography. Korea gates HBM. The United States gates GPU design and most commercial EDA, with thin advanced-wafer seats. China leads *equipment dollars* without leading the EUV / foundry LE / CoWoS / HBM tips that bind AI ship schedules.
+
+## Meters: five geography prints, one category error to avoid
+
+Toggle **Meters**. Six geography meters sit side by side: China equipment tip **~36.5%**, East Asia trio **~78.9%**, Taiwan foundry LE **~90%**, Taiwan CoWoS **~78%**, Korea HBM **~88%**, US GPU HQ **~88%**. Desks that average these into a single “semiconductor geography is concentrated in X” sentence will mis-price export-control exposure, earthquake / strait risk, memory-cycle shocks, and design-margin competition in the same week.
+
+The [August 608 concentration cut](/blog/ai-supply-chain-concentration-202608) and [Q3 concentration refresh](/blog/ai-supply-chain-concentration-2026q3) already asked how thick the *vendor* tip is. Geography does not replace those vintages; it asks which *map* a desk is actually using when it says “the supply chain is concentrated.” Vendor concentration and geographic concentration often rhyme — TSMC *is* Taiwan for leading-edge; ASML *is* the Netherlands for EUV — but they diverge on China (install leader, not LE gate) and on GPU design (US HQ, Asia wafers).
+
+## Caveats and methodology
+
+- **Equipment region shares** are SEMI 2025 WWSEMS billings — disclosed regional totals. Q1 2026 billings are a pace check, not a rewrite of the 2025 level map.
+- **Stack-layer country seats** are editorial geography carries from theme concentration bands (foundry LE, CoWoS, HBM, EUV, GPU HQ). They are not a single SEMI census table; confidence is flagged per layer in the data module.
+- **HBM “Korea ~88%”** rolls SK Hynix + Samsung as a *country* tip; vendor concentration still shows SK Hynix alone near the low-50s in recent theme prints.
+- **Risk scores (1–10)** are desk composites of single-country tip × replaceability — not insurance ratings or official stress tests.
+- **Stage East Asia shares** average the midstream layers’ geographic tips; they are composites for visualization, not audited regional GDP of chips.
+- **2022–2025 equipment path** is an editorial shape check, not a new panel dataset. Do not splice it into WWSEMS point-in-time rankings as if they shared a methodology.
+- **Design HQ ≠ wafer location.** US GPU revenue geography does not mean US wafer capacity; Taiwan foundry geography does not mean Taiwan books the accelerator ASP.
+
+## What to watch next
+
+Watch three geography meters, not one. First, whether CHIPS-era and Japan/Europe fab programs move N. America / Europe *equipment* share without denting Taiwan’s foundry LE and CoWoS tips — install diversification versus gate diversification. Second, whether Korea’s HBM tip softens as Micron ramps, or whether the *country* tip stays near **~80%+** even if vendor shares reshuffle. Third, whether Mid-Year packaging-tool growth stays in the high single digits while CoWoS demand reprints a **~20%** gap — the flow story that keeps Taiwan’s packaging geography binding. For vendor top-1 / HHI keep the [concentration series](/blog/ai-supply-chain-concentration-2026) open; for capacity versus demand keep the [Q3 CoWoS tracker](/blog/ai-supply-chain-update-2026q3) open; for the equipment-cycle map keep [research](/blog/ai-supply-chain-research-2026) open.
+
+**Primary sources:** SEMI Mid-Year OEM Forecast (July 2026) and WWSEMS 2025 billings; TrendForce / company disclosures for HBM and CoWoS location bands; theme posts [research](/blog/ai-supply-chain-research-2026), [concentration](/blog/ai-supply-chain-concentration-2026), [Q3 concentration](/blog/ai-supply-chain-concentration-2026q3), [August 608 concentration](/blog/ai-supply-chain-concentration-202608), [Q3 CoWoS tracker](/blog/ai-supply-chain-update-2026q3), [August Mid-Year update](/blog/ai-supply-chain-update-202608), and [packaging & memory](/blog/ai-gpu-packaging-memory-bottleneck-2025).`,
+  },
+  {
     id: "ai-financing-geography-2026",
     slug: "ai-financing-geography-2026",
     title:

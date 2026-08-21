@@ -193,7 +193,8 @@ export interface Post {
     | "bank-commercial-credit-concentration-2026q3"
     | "fiscal-industrial-policy-geography-202608"
     | "ai-capex-intensity-concentration-202608"
-    | "ai-financing-geography-2026";
+    | "ai-financing-geography-2026"
+    | "ai-supply-chain-geography-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
