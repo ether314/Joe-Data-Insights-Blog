@@ -2087,6 +2087,21 @@ const MigrationHumanitarianUpdate202608Dashboard = dynamic(
   },
 );
 
+const AiCapexSpendConcentration202608Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AiCapexSpendConcentration202608Dashboard"
+    ).then((m) => m.AiCapexSpendConcentration202608Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2630,6 +2645,10 @@ export function PostVisualization({
 
   if (type === "migration-humanitarian-update-202608") {
     return <MigrationHumanitarianUpdate202608Dashboard />;
+  }
+
+  if (type === "ai-capex-spend-concentration-202608") {
+    return <AiCapexSpendConcentration202608Dashboard />;
   }
 
   return null;

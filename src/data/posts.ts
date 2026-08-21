@@ -2,6 +2,137 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-spend-concentration-202608",
+    slug: "ai-capex-spend-concentration-202608",
+    title:
+      "202608 Concentration: Top-1 Holds 28% of Big-5 AI Capex — Top-3 Holds 74%",
+    excerpt:
+      "Late-Aug 202608 concentration lens on the Big-5 stack (~$858B): Amazon alone is 28%; Amazon+Alphabet+Microsoft hold 73.8%. HHI ≈ 2,227. Q3→202608 raises are even more skewed — Amazon+Alphabet capture ~78% of positive dollar raises.",
+    category: "Capital Markets",
+    themeId: "ai-capex-spend",
+    imageUrl:
+      "/images/capital-markets-ai-capex-spend-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of AI infrastructure capex concentrating into a dominant amber top-share bar above secondary teal concentration bars",
+    publishedAt: "2026-08-21T18:00:00Z",
+    featured: true,
+    visualization: "ai-capex-spend-concentration-202608",
+    layout: "default",
+    content: `Absolute AI infrastructure dollar totals answer *how large is the stack*. They do not answer *how concentrated is the system at the top of the distribution*. That is the capital-markets question this late-Aug 202608 concentration lens is built for.
+
+Our theme already maps the vintage path: the [July research spend map](/blog/ai-capex-spend-research-2026) put Big-5 midpoints near **$760B**; the [Aug post-Q2 update](/blog/ai-capex-spend-update-2026) revised to about **$802.5B**; the [mid-Q3 spend update](/blog/ai-capex-spend-update-2026q3) printed roughly **$835B**; and the [late-Aug 202608 spend update](/blog/ai-capex-spend-update-202608) now sits near **$858B**. The [Q3 concentration companion](/blog/ai-capex-spend-concentration-2026q3) answered the distribution question on the mid-Q3 tape. This post re-asks the same core question on the **late-Aug 202608 desk vintage** — so shares and levels stay on one tape with the newest absolute-dollar print.
+
+The interactive dashboard above is a concentration lens, not another KPI strip. **Top-1 share is 28.0%** (Amazon, ~$240B). **Top-3 share is 73.8%** (Amazon + Alphabet + Microsoft, ~$633B of ~$858B). Approximate Big-5 **HHI is ~2,227** — elevated versus a five-way equal split (~2,000). Pair this distribution cut with the [intensity / cash-flow frame](/blog/ai-capex-intensity-update-202608) for affordability, and with the absolute-dollar updates for the vintage path.
+
+## The 202608 concentration scoreboard
+
+| Metric | Value | Why it matters |
+| --- | ---: | --- |
+| Big-5 late-Aug 202608 midpoint sum | **~$858B** | Concentration perimeter for this post |
+| Top-1 share (Amazon) | **28.0%** | Single-name program risk in the stack |
+| Top-1 dollars | **~$240B** | Larger than many entire industry cohorts |
+| Top-3 share (AMZN+GOOG+MSFT) | **73.8%** | Three firms hold roughly three-quarters |
+| Top-3 dollars | **~$633B** | Rest of Big-5 is a minority slice |
+| Approximate Big-5 HHI | **~2,227** | Above equal-split HHI of 2,000 |
+| Mid-Q3 → 202608 raise | **+$23B** | How the stack moved from $835B |
+| Amazon+Alphabet share of positive raises | **~78%** | Growth concentration exceeds stock concentration |
+| AI-attributed slice (~75% convention) | **~$644B** | Scope toggle — not a 10-K line |
+
+Read the table as a **ladder**. Absolute dollars rose nearly fourfold from 2024 (~$231B) to late-Aug 2026 (~$858B). Concentration did *not* equalise. Top-1 share drifted from the low thirties toward the mid-twenties in July research, then **re-concentrated** as Amazon’s late-Aug raise reclaimed share. Top-3 stayed in a tight band around the mid-to-high seventies — a larger oligopoly, not a broad industrial base.
+
+## Top-1 and top-3: the late-Aug company ladder
+
+On the late-Aug 202608 vintage the ranked Big-5 ladder is:
+
+1. **Amazon — $240B (28.0%)**
+2. **Alphabet — $218B (25.4%)**
+3. **Microsoft — $175B accounting CY (20.4%)**
+4. **Meta — $150B (17.5%)**
+5. **Oracle — $75B net of prepayments (8.7%)**
+
+Cumulative share hits **53%** after two names and **74%** after three. That is the visual the Lorenz panel is built to show: the equal-split diagonal is a straight 20/40/60/80/100 path; the actual path bends hard toward the top-left.
+
+Two definition notes matter immediately. Microsoft’s **$175B** is the *accounting* calendar print after lease reclassification — economic campus spend is still commonly modeled nearer **~$190B**. Toggle the Microsoft control in the dashboard: under the economic frame, top-1 eases slightly to **~27.5%**, top-3 edges to **~74.2%**, and the Big-5 sum moves to **~$873B**. Oracle’s **$75B** is *net of customer prepayments*; gross cash outlays remain nearer **$95–100B**. Neither caveat erases the concentration story. Both change the second decimal, not the shape of the ladder.
+
+Alphabet’s second-place share is itself a concentration signal. Four guidance raises in a calendar year — from the low-**$180Bs** toward a **$210–225B** band with midpoint **$218B** — mean the number-two program is not a static runner-up. It is a rising second pole. Amazon and Alphabet together hold **~53%** of the late-Aug stack before Microsoft is even counted.
+
+Compared with the [mid-Q3 concentration companion](/blog/ai-capex-spend-concentration-2026q3), Amazon’s share stepped from **27.5% to 28.0%** and HHI from roughly **2,211 to 2,227** on a hotter stack. The direction is re-tightening at the top, not equalisation.
+
+## Growth is more concentrated than the stock
+
+Stock concentration (who holds today’s dollars) and raise concentration (who captured the Q3→202608 path) are related but not identical. From the mid-Q3 print (~$835B) to late-Aug (~$858B), the Big-5 midpoint sum rose about **+$23B / +2.8%**.
+
+Decompose the *positive* company raises and the picture skews further:
+
+- Amazon **+$10B**
+- Alphabet **+$8B**
+- Meta **+$5B**
+- Oracle **$0** (net-of-prepay flat)
+- Microsoft **$0** (accounting print flat — lease reclass still the economic story)
+
+Amazon + Alphabet alone account for roughly **78%** of positive dollar raises. The donut panel makes that explicit: incremental authorizations on this step are *more* oligopolistic than the already-concentrated stock. For equity and credit desks that treat “the AI capex cycle” as a diversified industry factor, that raise skew is the practical rebuttal. Factor exposure is not five equal names — it is two programs doing most of the upward rewriting on the latest vintage step, with Microsoft and Oracle flat on the accounting / net prints while Amazon reclaims share.
+
+Compared with the Aug→Q3 step — where Amazon+Alphabet captured about **three-fifths** of a larger positive raise pool — the Q3→202608 step is smaller in dollars but **more top-heavy**. Meta absorbs a real minority of the positive delta; Microsoft and Oracle contribute none on this step’s headline prints. That is why raise concentration can exceed stock concentration even when the absolute vintage delta looks modest.
+
+## Multi-year path: dollars up, equalisation incomplete
+
+Track top-1 and top-3 across vintages:
+
+| Vintage | Big-5 total | Top-1 share | Top-3 share | HHI (approx.) |
+| --- | ---: | ---: | ---: | ---: |
+| 2024 actual | ~$231B | **~32.5%** | **~79%** | Elevated |
+| 2025 actual | ~$344B | **~30%** | **~77%** | Elevated |
+| 2026 Jul research | ~$760B | **~26%** | **~76%** | Softened |
+| 2026 Aug post-Q2 | ~$802.5B | **~27.4%** | **~74%** | Re-tightened |
+| 2026 mid-Q3 | ~$835B | **~27.5%** | **~74%** | Still elevated |
+| 2026 late-Aug 202608 | ~$858B | **~28.0%** | **~74%** | Re-tightened again |
+
+Two readings sit in that table. First, as more names authorized mega-programs (Oracle’s step-up; Meta’s band; Alphabet’s serial raises), top-1 *share* briefly eased even as top-1 *dollars* exploded — Amazon went from **$75B** (2024) to **$240B** (late-Aug) while its percentage of a much larger pie fell then recovered. Second, top-3 never left the mid-to-high seventies. The system did not become a broad industrial spend base; it became a larger oligopoly.
+
+HHI on five Big-5 buckets stays above the equal-split benchmark of **2,000**. That is a useful cross-post ranking tool, not a reconstructed global IT-capex census. The dual-axis panel — stack size rising while top-1 share stays sticky — is the capital-markets takeaway: **scale and concentration can rise together**.
+
+From Jul research (~$760B) through late-Aug 202608 (~$858B), the cumulative raise is about **+$98B / +12.9%**. Shares moved less than levels on the long path, then *re-concentrated* on the latest step. That is the 202608 punchline in one sentence: *the pie grew another $23B; Amazon and Alphabet wrote most of the rewrite.*
+
+## Perimeters: when shares do not travel
+
+Company shares only travel inside a declared perimeter. The dashboard’s perimeter bars put late-Aug Big-5 (~$858B) next to Street (~$845B), CreditSights (~$850B), GS Global Institute all-in AI infra (~$765B), and GS Investment Research hyperscaler (~$815B). Those houses are answering related but non-identical questions.
+
+- **Big-5 / Street / Credit** are roughly company-gross hyperscaler worlds — share math is meaningful.
+- **GS GI** is an *all-in AI infrastructure* construct (compute + data center + power). You cannot allocate that total into Amazon/Alphabet/Microsoft shares without inventing a mapping the institute did not publish.
+- **GS IR** is a hyperscaler research path that can sit above or beside GI depending on year and bull/base — another reminder that “AI capex” is a family of stacks, not one ticker.
+
+Apply the CreditSights-style **~75% AI-attributed** haircut and the AI-specific slice of the late-Aug Big-5 stack is about **$644B**. Toggle it in the ladder view so both perimeters stay visible. Treat the haircut as a convention for comparing AI-heavy programs, not as a disclosed segment line.
+
+Street still trails the desk midpoint stack on this vintage (~$845B vs ~$858B). That gap is a timing artifact as much as a disagreement: consensus catches official raises with a lag. Concentration shares computed on the desk ladder can look slightly different from shares implied by a lagging Street sum — another reason to declare the perimeter before quoting top-1 / top-3.
+
+## What would change the concentration story
+
+Several shifts would rewrite this scoreboard:
+
+1. **A sustained non-Amazon top-1** — Alphabet or Microsoft clearing Amazon on a like-for-like gross (or economic) basis for consecutive vintages.
+2. **Top-3 share falling through the low-sixties** while the Big-5 total still grows — evidence that Meta and Oracle (or a sixth hyperscaler-scale program) are absorbing incremental dollars faster than the top three.
+3. **HHI drifting toward ~2,000** and staying there as the stack scales — equalisation, not just temporary raise noise.
+4. **Raise concentration cooling** so Amazon+Alphabet no longer capture roughly four-fifths of positive vintage deltas on a late-step refresh.
+5. **Meaningful spend outside the Big-5 perimeter** that makes “Big-5 share of AI infra” itself a falling metric — sovereign, neocloud, and enterprise build-outs large enough to move the industry distribution, not just the footnotes.
+
+None of those are guaranteed by another earnings-week raise. They are competitive and financing outcomes. Until they arrive, desks should price AI infrastructure risk as **concentrated program risk** first and diversified sector beta second.
+
+## Caveats and reading notes
+
+- **Perimeter is Big-5 hyperscaler gross midpoints** (with Oracle net-of-prepay as disclosed). This is not a full global AI-infrastructure census and excludes large non-hyperscaler and sovereign programs.
+- **Microsoft lease reclassification** moves dollars off the capex line without canceling servers or campuses — use the accounting/economic toggle rather than treating a flat headline as a build pause.
+- **Oracle net vs gross** and **Meta finance-lease principal** affect levels; they do not invert the top-1 / top-3 ranking on current vintages.
+- **HHI** is computed on five company buckets inside the Big-5 set — useful for ranking concentration across theme posts, not a plant-level market definition.
+- **AI-attributed ~75%** is a CreditSights-style convention applied uniformly; company-level AI mixes differ and are not fully disclosed.
+- **Vintage midpoints** revise after every call and Street catch-up — directionally the concentration ladder has been stable even when point estimates move **$5–15B** per name on a late-Aug step.
+- The mid-Q3 desk stack (~$835B) and this late-Aug 202608 stack (~$858B) are related but not identical vintages — do not splice top-1 shares across those posts without noting the perimeter.
+- Figures are USD billions; roundings apply. Do not mix GS GI all-in totals with company share percentages in the same sentence.
+
+## Bottom line
+
+The AI capex system remains a **concentration system** on the late-Aug 202608 tape. On the Big-5 stack of ~**$858B**, top-1 holds **28%**, top-3 holds **74%**, and HHI sits near **2,227**. The Q3→202608 raise path is even more skewed than the stock: Amazon and Alphabet captured about **four-fifths** of positive dollar raises while Microsoft and Oracle stayed flat on headline prints. Absolute dollars answered how large the cycle is. Shares answer who is writing it — and for now, that answer remains a short list.`,
+  },
+  {
     id: "migration-humanitarian-update-202608",
     slug: "migration-humanitarian-update-202608",
     title:

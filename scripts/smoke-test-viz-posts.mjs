@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-capex-spend-concentration-202608",
+    marker: "AI capex & spend — 202608 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "migration-humanitarian-update-202608",
     marker: "FTS Top-1 is 23% — hosts still hold 68%",
     forbidden: "Loading interactive charts",
