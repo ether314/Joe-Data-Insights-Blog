@@ -168,7 +168,8 @@ export interface Post {
     | "migration-humanitarian-update-202608"
     | "ai-capex-spend-concentration-202608"
     | "ai-compute-demand-concentration-202608"
-    | "adaptation-economics-concentration-2026q3";
+    | "adaptation-economics-concentration-2026q3"
+    | "industrial-robotics-concentration-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

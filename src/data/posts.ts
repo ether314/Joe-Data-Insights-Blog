@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "industrial-robotics-concentration-202608",
+    slug: "industrial-robotics-concentration-202608",
+    title:
+      "Aug Concentration: Install Top-1 Still ~61% — NA Orders Flip Non-Auto to 56%",
+    excerpt:
+      "August 202608 dual-ledger concentration: IFR world installs hold Top-1 China ~61% / Top-3 ~74% / HHI ~4,161, while A3's Aug NA order book prints non-auto at 56% of Q2 units — broadening bookings against a still-concentrated install tip.",
+    category: "Industry",
+    themeId: "industrial-robotics",
+    imageUrl:
+      "/images/industry-industrial-robotics-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic factory scene with a towering rose China Top-1 concentration bar beside smaller Japan and US robot-arm columns and a teal North American order-book ribbon",
+    publishedAt: "2026-08-21T16:00:00Z",
+    featured: true,
+    visualization: "industrial-robotics-concentration-202608",
+    layout: "default",
+    content: `Absolute robot install totals answer *how large the factory automation wave is*. They do not answer *how concentrated the system is at the top of the distribution*. That is the concentration question this August 202608 lens is built for.
+
+Our theme already carries two clocks. The [Q3 concentration companion](/blog/industrial-robotics-concentration-2026q3) restated the IFR 2025 prelim install ladder: Top-1 China **~61%**, Top-3 **~74%**, Asia **79%**, constructed market HHI **~4,161**. The [August A3 update](/blog/industrial-robotics-update-202608) then printed a different ledger entirely — North American *orders* (not installs) with Q2 units **+4.3%**, value **+21%**, and non-automotive at **56%** of the Q2 book. This post asks the desk follow-up those vintages imply: **did the Aug order-book broadening loosen the global tip, or are we watching two concentration stories on two clocks?**
+
+The interactive dashboard above is that **dual-ledger concentration lens**. Toggle **Install ladder**, **Dual ledger**, **Share path**, and **NA order book**. Vintage and metric controls flip 2024 WR versus 2025 prelim on the Lorenz curve and ranked bars; the NA lens swaps auto/non-auto blocs, industry YoY, and cobot share. The punchline is geometric and deliberately uncomfortable: the *install* tip is still extreme, while the *order* tip looks mid and broadening.
+
+## The Aug dual-ledger scoreboard
+
+| Ledger | Top meter | Twin meter | Extra |
+| --- | ---: | ---: | --- |
+| IFR world installs (2025p) | **~61%** Top-1 (China) | **~74%** Top-3 (CN+JP+US) | HHI **~4,161** · Asia **79%** |
+| IFR installs (2024 WR) | **54%** Top-1 | **69%** Top-3 | HHI **~3,120** · Asia **74%** |
+| A3 NA orders (Q2 2026) | **56%** non-auto | **44%** auto bloc | Units **+4.3%** · value **+21%** |
+| A3 cobot form-factor | **12.7%** Q2 unit share | **19.6%** FY25 unit share | Value share cooler than units |
+
+Read the table as a **family of share meters**, not one slogan. Install Top-1 is sovereign demand gravity. Install Top-3 tells you how thin the rest of the geographic ladder is once China is removed. NA non-auto share is an *industry mix* meter on a regional order book — useful for Americas integrators, not a rewrite of the world install tip. Cobot unit share is a form-factor concentration story inside the same NA book. Analysts who quote only world **+15%** installs or only NA **+4.3%** orders understate that *composition* is doing more work than the headline growth print.
+
+## Install ladder: the tip did not loosen after A3
+
+Open **Install ladder** and leave the vintage on **2025 prelim**. The Lorenz panel is the visual punchline: cumulative share clears **~61%** at rank 1 and **~74%** by rank 3, while an equal-split diagonal across eight tracked markets would still be near **37%** at the midpoint. Toggle **2024 WR → 2025 prelim** and watch Top-1 climb **+7 pp** and Top-3 **+5 pp** as Asia's regional share moves **74% → 79%**. Physical factory automation is not "globalizing evenly" in the rebound year — and the August A3 print does not reverse that geometry, because A3 does not restate the IFR country table.
+
+| Cut | 2024 WR | 2025 prelim | Δ |
+| --- | ---: | ---: | ---: |
+| **Top-1** (China) | **54%** | **~61%** | **+7pp** |
+| **Top-3** (CN+JP+US) | **69%** | **~74%** | **+5pp** |
+| **Top-5** (+KR+DE) | **80%** | **~83%** | **+3pp** |
+| Asia region | **74%** | **79%** | **+5pp** |
+| Market HHI (top-5 + residual) | **~3,120** | **~4,161** | **+1,041** |
+| World installs | **542,076** | **621,000** | **+78,924** |
+
+China's estimated **+85k** units remains **~108%** of the world net add on the Q3 concentration spine — meaning the rest of the tracked ladder, in aggregate, *shed* units even as the global print hit a record. The US return to **+11%** installs (disclosed in IFR's June 2026 US release) is real for the Americas *growth* story; it is still a rounding error next to China's volume claim on the world delta. For density intensity (robots per 10,000 workers) keep [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024) in a second tab — Korea and Singapore still win intensity; China still wins *volume concentration*.
+
+## Dual ledger: same automation system, different clocks
+
+Switch to **Dual ledger**. The tip comparison chart puts IFR Top-1 / Top-3 beside A3's disclosed auto / non-auto Q2 shares. Binding meters compress each ledger into an analytical score: install tip **~82.6** versus NA order tip **~44**. Those scores are *not* a regulator filing — they are a desk device so you do not average a China install share with a Detroit order mix and call the average "global concentration."
+
+This is the August vintage's real contribution. The [A3 update](/blog/industrial-robotics-update-202608) showed bookings broadening across semi/electronics (**+38%** Q2 YoY), life sciences, food, and metals, while automotive OEM H1 sat **−25%**. That is a *customer-mix* loosening inside North America. It does not move China's share of world *installations*. Orders become installs with a lag measured in quarters; member-vendor bookings are not the IFR universe; and NA is roughly **9%** of world installs even on the Americas regional band. Treat the two clocks as complements, not substitutes.
+
+## Share path: tip held; NA non-auto appears as an overlay
+
+Open **Share path**. Top-1, Top-3, and Asia traces carry the multi-year install story through **2025p**. The **2026Q2** point holds the install tip flat (final WR 2026 country table still pending **24 Sep 2026**) and drops a teal **NA non-auto 56%** overlay — a different series on the same canvas so desks see the contrast without inventing a fake "global non-auto share." The regional donut still prints Asia **79%** / Europe **13%** / Americas **9%** on the 2025 prelim vintage.
+
+If you need the prior-year disclosed ladder without the prelim estimates, the [2024 concentration companion](/blog/industrial-robotics-concentration-2026) remains the clean WR 2025 (2024 installs) reference: Top-1 **54%**, Top-3 **69%**, Top-5 **80%**, China domestic suppliers already majority inside the China market.
+
+## NA order book: industry tip mid, form-factor tip cooling
+
+Toggle **NA order book**. **Auto vs non-auto** is the disclosed bloc donut — **56% / 44%** on Q2 units. That is the opposite of "auto still owns the Americas robot cycle" storytelling; the supply base and general industry are carrying the book while OEM assemblers pause. **Industry YoY** shows the growth skew: semi/electronics **+38%** Q2 / **+35%** H1; auto components **+20%** / **+24%**; auto OEM H1 **−25%** (Q2 OEM not separately disclosed). **Cobot share** cools from FY25 **19.6%** unit share to Q2 **12.7%**, with value share consistently below unit share — collaborative robots are a meaningful sleeve, not the concentration center of the NA book.
+
+Pair the NA panels with the IFR share×growth scatter on the same view: China remains the volume outlier (high share, high YoY), while several mature markets sit at mid/low share with flat or negative growth. That scatter is the install-side twin of the NA industry bars — one shows *where volume lives*, the other shows *where NA bookings are accelerating*.
+
+## Who is exposed — and what would rewrite both tips
+
+**Exposed on the install clock:** Western robot OEMs still keyed to auto-capex cycles in Germany, Italy, France, and the US; integrators whose "global growth" models assume Europe/Americas shares stay near mid-2010s norms; policymakers who treat factory automation as evenly distributed across OECD manufacturing bases.
+
+**Exposed on the order clock:** NA vendors overweight to automotive OEM timing; desks that read Q2 unit **+4.3%** as soft demand without noticing value **+21%** and ASP lift; anyone averaging cobot unit share with traditional industrial ASP.
+
+**Relative winners under current rules:** Chinese domestic robot makers with home-market majority; Asia-based electronics and general-industry integrators; NA vendors winning semi, life sciences, food, and auto-component sleeves; service/maintenance businesses tied to China's **2M+** operational stock.
+
+**What would rewrite the story:** a multi-year Western auto/electronics reinvestment wave that lifts Europe and Americas *install* shares back toward 20%+ each; a China install miss that breaks the ~10%-through-2028 narrative; durable India/ASEAN volume that shows up in Top-5 ranks, not just growth percentages on a small base; or a WR 2026 final table (due **24 Sep 2026**) that revises China's estimated ~380k print enough to move Top-1 by more than a rounding error.
+
+## Caveats and methodology
+
+1. **Primary install vintage is IFR World Robotics 2025 (2024 installs) plus the June 2026 prelim for 2025.** Top-1 **~61%** and Top-3 **~74%** on the 2025 prelim blend disclosed US units with estimated China/Japan/Korea/Germany levels from the IFR narrative (~10× US for China). Final country table awaits WR 2026 (**24 Sep 2026**).
+2. **A3 North American orders are member-vendor bookings**, not IFR installations. Booking-to-bolt lag is typically quarters. US/Canada/Mexico perimeter ≠ world.
+3. **HHI (~4,161)** is an approximate index from top-market shares plus a residual bucket — useful for comparing vintages, not a regulator filing.
+4. **Binding tip scores** (install ~82.6 / NA ~44) are analytical desk meters, not disclosed indices.
+5. **Industry "other"** and unspecified IFR buckets absorb smaller sectors; do not over-read residuals as a single customer class.
+6. **Cobot shares** are A3 NA form-factor slices; they are not global cobot market shares.
+7. **Density ≠ volume.** Korea's robots-per-worker intensity still dwarfs China's on the density post even while China dominates install volume.
+8. **Vendor shares outside China** are not invented here. Domestic/foreign split remains a China-market story on the prior concentration companion.
+
+## Bottom line
+
+August does not dilute the install concentration story — it **clarifies the dual clock**. Top-1 China remains an estimated **~61%**; Top-3 **~74%**; Asia **79%**; constructed market HHI **~4,161**. The same week's A3 print shows NA orders *broadening* to **56%** non-auto with semi/electronics leading YoY — a real Americas mix shift that does not rewrite the world tip. For install levels see the [Q3 update](/blog/industrial-robotics-update-2026q3); for the Aug order book see the [A3 update](/blog/industrial-robotics-update-202608); for the 2024 ladder see the [prior concentration post](/blog/industrial-robotics-concentration-2026); for stock/levels baseline see [industrial robotics research](/blog/industrial-robotics-research-2026).`,
+  },
+  {
     id: "adaptation-economics-concentration-2026q3",
     slug: "adaptation-economics-concentration-2026q3",
     title:
