@@ -2,6 +2,100 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-supply-chain-update-202608",
+    slug: "ai-supply-chain-update-202608",
+    title:
+      "Update: Test Tools +31% vs Packaging +9.6% — Mid-Year Cut Explains CoWoS Rationing",
+    excerpt:
+      "Versus our Q3 CoWoS tracker (gap ~20%, NVIDIA >50%), SEMI’s Mid-Year back-end cut shows test equipment at $15.3B (+31% YoY) while assembly & packaging tools only rise 9.6% to $6.7B. Total path stays $165.9B; Q1 billings $36.55B remain the pace check.",
+    category: "Industry",
+    themeId: "ai-supply-chain",
+    imageUrl: "/images/industry-ai-supply-chain-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic chip-stack hero with amber CoWoS bottleneck glow, cyan WFE bars, and orange test bars rising above muted gold packaging-tool bars",
+    publishedAt: "2026-08-21T06:00:00Z",
+    featured: true,
+    visualization: "ai-supply-chain-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 CoWoS tracker
+
+In our [Q3 CoWoS vintage](/blog/ai-supply-chain-update-2026q3) we treated early-August packaging trackers as the market’s binding print: year-end CoWoS capacity toward **~140,000 wpm**, a supply-demand **gap reprinted near 20%**, and NVIDIA reservations of **800–850k** wafers locking **more than half** of 2026 CoWoS. That post answered the *capacity vs demand* question — *did packaging ease when capacity rose, or did demand re-accelerate faster?* Equipment dollars were carried as background: SEMI Mid-Year still at **$165.9B** (+23%), DRAM tools **+39%**, Q1 billings **$36.55B** as the pace check.
+
+This August cut flips the lens. The **newest official OEM stack** markets still under-read against that rationing story is SEMI’s Mid-Year Total Equipment Forecast — specifically the **back-end asymmetry**. Semiconductor **test equipment** is projected at **$15.3 billion** in 2026 (**+31.0%** YoY), a strong upward revision from the prior year-end path. **Assembly and packaging equipment** rises only **9.6%** to **$6.7 billion** — broadly in line with the prior forecast, and the slowest major segment YoY in the Mid-Year cut. That **~21-point** growth gap between test tools and packaging tools sits underneath a CoWoS shortage that the Q3 trackers still print near **20%**.
+
+The dashboard is built as that vintage delta: back-end tool dollars versus the CoWoS gap path, Mid-Year segment levels and YoY ranking, bottleneck tightness Δ from Q3 → this Mid-Year reading, plus a Q1→FY pace ladder with the Taiwan/Korea AI-install signature. For the July equipment-cycle map see [research](/blog/ai-supply-chain-research-2026); for the earlier HBM/CoWoS frame see [AI GPU packaging & memory](/blog/ai-gpu-packaging-memory-bottleneck-2025); for the Q1 billings stamp see the [August WWSEMS update](/blog/ai-supply-chain-update-2026).
+
+## The headline table: Q3 tracker → Aug Mid-Year back-end cut
+
+| Meter | Prior (Q3 CoWoS tracker) | Aug Mid-Year reading | Δ |
+| --- | ---: | ---: | --- |
+| Test equipment 2026f | Carried in total path | **$15.3B** (**+31%** YoY) | New lead meter |
+| Assembly & packaging 2026f | Carried in total path | **$6.7B** (**+9.6%** YoY) | Slowest major YoY |
+| Back-end YoY asymmetry | Not the lead frame | Test − packaging ≈ **+21 pp** | Explains tool lag |
+| CoWoS YE capacity / gap | **~140k** wpm / **~20%** gap | **Carried** | Still binding |
+| NVIDIA 2026 CoWoS lock | **800–850k**; **>50%** | **Carried** | Concentration held |
+| Total equipment 2026f | **$165.9B** (+23.2%) | **Carried** | Official path held |
+| WFE 2026f | **$143.9B** (+23.1%) | **Carried** | Front-end boom held |
+| DRAM equipment 2026f | **$38.8B** (+39%) | **Carried** | Memory signature held |
+| Test / packaging 2028f | Not charted | **$20.8B** / **$8.6B** | Multi-year back-end path |
+| Q1 2026 billings | **$36.55B** (+14% YoY) | **Carried** as pace check | Still ~22% of FY |
+| Taiwan / Korea Q1 YoY | **+24% / +16%** | **Carried** | AI install signature held |
+| Binding stack layers | CoWoS + HBM | **CoWoS still 10**; test eases; pkg-tools tighten | Editorial re-score |
+
+The non-obvious cut is not “equipment stopped arriving.” Front-end and DRAM tool dollars still boom. The August news is that **official packaging-tool growth is muted relative to test and to the shortage the capacity trackers describe** — so a $165.9B equipment year can coexist with CoWoS rationing for another year.
+
+## The back-end paradox: test surges, packaging tools lag
+
+SEMI’s Mid-Year OEM perspective (July 14, 2026) is explicit on the split. After surging **55.3%** in 2025, **test equipment** is projected to rise another **31%** to **$15.3B** in 2026 — SEMI’s own language flags a strong upward revision from the 2025 year-end forecast, driven by device complexity and AI/HBM burn-in intensity. **Assembly and packaging equipment**, after **+20.8%** in 2025, is only expected to rise **9.6%** to **$6.7B**, “broadly in line with the prior forecast.” By 2028 the path still extends to **$20.8B** test and **$8.6B** packaging — growth continues, but packaging tools remain a thin slice of the total **$229.5B** equipment market.
+
+That is the paradox the dashboard’s composed panel is built to show. **Test dollars (area) sit high; packaging dollars (bars) sit low; the CoWoS gap line still prints near 20%** across research → mid-print → Q3 → this Mid-Year reading. Markets that only watch WFE headlines will read a broad tool boom. Markets that watch **which tool dollars grow** will see why advanced packaging capacity can remain rationed even while global billings set records: the segment that buys CoWoS-class tools is not growing at the same rate as the segments that buy front-end and test tools.
+
+Yield and OSAT outsourcing from the Q3 notes still matter on the capacity side — they change effective output per installed tool. They do not rewrite the OEM dollar path. If packaging *tool* spend only grows ~10% while GPU demand and NVIDIA lock-in keep the gap near 20%, scarcity is a feature of the capital plan, not a temporary miss.
+
+## Upstream dollars still boom — DRAM +39%, WFE +23%
+
+None of the back-end asymmetry revises the headline Mid-Year totals. **Total semiconductor manufacturing equipment** is still **$165.9B** in 2026 (**+23.2%** from **$135.1B** in 2025), with **wafer fab equipment at $143.9B** (**+23.1%**). Inside that path, **DRAM equipment jumps 39% to $38.8B** — still the clearest AI-memory signature in the official OEM print. Toggle the equipment panel: 2025→2026 grouped bars show the level jump; the YoY ranking panel puts **DRAM first, test second, total/WFE next, and packaging last** among the charted segments.
+
+Q1’s **$36.55B** global billings (**+14%** YoY) remain the only hard 2026 quarterly stamp against that path — about **22%** of the full-year Mid-Year total. A simple **2×Q1** H1 run-rate of **~$73.1B** is **~44%** of the FY path — an editorial pace check, **not** an official Q2 WWSEMS print (still the rewrite the series is waiting on). Taiwan (**$8.77B**, **+24%** YoY) and Korea (**$8.93B**, **+16%**) still carry the AI install signature; China stays the largest absolute market at **$10.99B** but cooled **16%** QoQ. Treat ×2 and ×4 annualizations as geometry, not forecasts — H2 AI tool intensity is typically stronger than H1.
+
+## Bottlenecks: CoWoS stays maxed; test eases; packaging-tools tighten
+
+Editorial tightness scores (1–10 composites, **not** SEMI metrics) move for the layers the Mid-Year back-end cut actually informs:
+
+- **CoWoS packaging:** **10 → 10**. Gap and NVIDIA concentration dominate; packaging-tool lag reinforces.
+- **Packaging equipment $:** **7 → 8**. Official +9.6% is the slowest major YoY — scarcity of *tools that buy capacity* rises as a distinct layer.
+- **Final test / burn-in:** **7 → 6**. Official test path +31% to $15.3B eases tool scarcity even if burn-in intensity stays high.
+- **HBM / advanced DRAM:** **9 → 9**. Korea’s tool dollars help; HBM remains allocation-gated.
+- **EUV, OSAT, leading-edge logic:** broadly unchanged from the Q3 reading.
+
+The dual-vintage scatter plots tightness against lead weeks with bubble size for supplier concentration. CoWoS still sits in the upper-right. The new geometry is the **packaging-tools** point drifting tighter while **test** drifts easier — the Mid-Year dollar split made visible.
+
+## What would rewrite this vintage
+
+1. **WWSEMS Q2 2026 billings** confirm or break the Mid-Year $165.9B path after Q1’s $36.55B stamp — especially whether packaging/test mix inside billings matches the OEM forecast asymmetry.
+2. **SEMI’s next OEM forecast** (year-end cycle) lifts assembly & packaging growth materially above ~10%, or cuts the test revision.
+3. **CoWoS demand trackers** revise NVIDIA / ASIC reservations below the 800–850k band — collapsing the ~20% gap even if packaging tools stay slow.
+4. **HBM supply** from Korea eases allocation faster than packaging, flipping which layer binds first.
+5. **OSAT process qualification** fails to absorb outsourced CoWoS front-end steps — tightening TSMC-only scarcity again.
+
+Until those resolve, the shareable framing is narrow: **official test tools boom (+31%) while packaging tools crawl (+9.6%), and the CoWoS gap still prints ~20%.**
+
+## Caveats and methodology
+
+- **Official vs tracker.** Equipment dollars are SEMI Mid-Year OEM forecast (July 14, 2026) and WWSEMS Q1 billings. CoWoS capacity, gap, and NVIDIA reservation figures are **carried from the Q3 tracker synthesis** (TrendForce / institutional / TSMC packaging notes) and may revise.
+- **Segment baselines.** 2025 test (~$11.7B) and packaging (~$6.1B) levels are implied from Mid-Year 2026 levels and stated YoY rates; treat as rounded OEM-path geometry.
+- **H1 run-rate.** 2×Q1 is editorial, not an official Q2 WWSEMS release.
+- **Bottleneck scores** are editorial composites for visualization — directional, not survey microdata.
+- **Packaging tools ≠ CoWoS POR.** Assembly & packaging equipment is a broad SEMI segment; it is not identical to TSMC CoWoS tool bills alone.
+- This post is explanatory data journalism, **not investment advice**.
+
+**Primary sources:** SEMI, [Mid-Year Total Semiconductor Equipment Forecast – OEM Perspective](https://www.semi.org/en/semi-press-release/global-semiconductor-equipment-sales-forecast-to-reach-a-record-229-billion-dollars-in-2028-semi-reports) (July 14, 2026); SEMI, [Q1 2026 Equipment Billings $36.55B](https://www.semi.org/en/semi-press-release/semi-reports-global-semiconductor-equipment-billings-increased-14-percent-year-over-year-in-q1-2026) (June 4, 2026); prior theme posts [Q3 CoWoS tracker](/blog/ai-supply-chain-update-2026q3) and [August WWSEMS Q1 update](/blog/ai-supply-chain-update-2026).
+
+## The shareable takeaway
+
+Versus the [Q3 CoWoS tracker](/blog/ai-supply-chain-update-2026q3), the August Mid-Year back-end cut shows **test equipment at $15.3B (+31%)** while **assembly & packaging tools only rise 9.6% to $6.7B** — a ~21-point YoY asymmetry under a CoWoS gap that still prints **~20%** with NVIDIA locking **>50%**. SEMI’s total path stays **$165.9B** with DRAM tools **+39%**; Q1’s **$36.55B** remains the pace check. Upstream dollars fund the stack; **slow packaging-tool growth helps explain why CoWoS still gates the ship.**`,
+  },
+  {
     id: "macro-growth-trade-update-202608",
     slug: "macro-growth-trade-update-202608",
     title:
