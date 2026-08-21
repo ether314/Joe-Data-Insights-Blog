@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "energy-systems-concentration-202608",
+    slug: "energy-systems-concentration-202608",
+    title:
+      "Aug Concentration: Power Top-1 Still 33.2% / Top-3 56.5% — Coal Rebound Tip ~48% China",
+    excerpt:
+      "Late-Aug energy-systems concentration after IEA Mid-Year Update: Ember electricity Top-1/Top-3 carried flat at 33.2%/56.5%; path meters add China ~42% of TWh growth, ~48% of the +1.4% coal rebound, and ~50% of ~610 TWh solar add — while EU/Japan wholesale >+30% prices the unchanged US LNG tip.",
+    category: "Energy",
+    themeId: "energy-systems",
+    imageUrl:
+      "/images/energy-energy-systems-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic energy-systems viz with amber Top-1/Top-3 concentration bars, teal renewable arcs over charcoal coal stacks, and glowing cyan LNG trade routes",
+    publishedAt: "2026-08-21T23:30:00Z",
+    featured: true,
+    visualization: "energy-systems-concentration-202608",
+    layout: "default",
+    content: `Our [Q3 concentration lens](/blog/energy-systems-concentration-2026q3) re-scored Top-1 / Top-3 / HHI after Ember’s Global Electricity Review 2026 and IEA World Energy Investment 2026: electricity Top-1 China **33.2%**, Top-3 **56.5%**, US LNG Top-1 **24%**, clean investment Top-1 China **~34%** of **$2.2T**, solar modules still **80%** China. The [August Mid-Year update](/blog/energy-systems-update-202608) then answered the *level and mix* question — demand **3.6% / 3.8%**, renewables widening toward **37%**, coal generation rebounding **+1.4%**, EU/Japan wholesale **>+30%**. This late-Aug concentration cut asks the distribution follow-up Mid-Year forces: **did the security shock thicken the top of the share ladder, or only re-price a tip that was already thick?**
+
+The dashboard above is that **202608 concentration lens**. Toggle **Scoreboard**, **Stock vs growth**, **Aug path meters**, **Trade & shock**, and **Capex & vintage**. Metric controls flip Top-1 / Top-3 / HHI / Δ vs Q3; lens filters isolate demand, path, export, manufacturing, and investment. The punchline is deliberately two-sided: **Ember stock tips are carried flat** (no newer period census), while Mid-Year **path meters** show who owns the next TWh add, who owns the coal rebound, and who owns the solar generation increase — and the wholesale scatter shows which import-dependent systems pay for the unchanged LNG export tip.
+
+## The Aug scoreboard: carried stock, new path tips
+
+| Lens | Q3 concentration | Aug 202608 | Δ |
+| --- | ---: | ---: | ---: |
+| Electricity generation Top-1 | **33.2%** (China) | **33.2%** | **0 pp** (carried) |
+| Electricity Top-3 | **56.5%** (CN+US+IN) | **56.5%** | **0 pp** |
+| TPES demand Top-1 | **27.6%** | **27.6%** | **0 pp** |
+| Demand-growth add Top-1 | **~42%** (China) | **~42%** | **0 pp** (restated path) |
+| Coal generation add Top-1 | — | **~48%** (China) | **NEW path tip** |
+| Solar generation add Top-1 | — | **~50%** (China) | **NEW path tip** |
+| LNG exports Top-1 | **24%** (US) | **24%** | **0 pp** (priced, not rewritten) |
+| Hard coal exports Top-3 | **~73%** | **~73%** | **0 pp** |
+| Clean investment Top-1 | **~34%** | **~34%** | **0 pp** (WEI carried) |
+| Solar PV modules Top-1 | **80%** | **80%** | **0 pp** |
+| EU/Japan wholesale YoY | **>+30%** | **>+30%** | Shock meter (disclosed) |
+
+Read the table as a **stability-plus-path scoreboard**. Mid-Year did not publish a new Ember country census or a new Energy Institute primary-share tape. What it rewrote is the *trajectory*: demand accelerates, coal generation rebounds once, renewables widen their mix lead, and wholesale prices split by LNG exposure. Desks that treat “renewables to 37%” as “concentration eased” are reading the mix column and ignoring the geography columns.
+
+## Scoreboard: what moved is the path tip, not the Ember tip
+
+Open **Scoreboard**. The vintage-delta bars are mostly zeros on electricity Top-1/Top-3, LNG Top-1, solar manufacturing, and growth-add Top-1 — those are **carried** from the [Q3 concentration companion](/blog/energy-systems-concentration-2026q3). The bars that jump are **coal-add Top-1** and **solar-add Top-1**: Mid-Year’s new objects, estimated as shares of the global coal TWh *add* and of the ~**610 TWh** solar generation *increase*.
+
+Toggle **Δ vs Q3** on the ladder and the same geometry appears in market space. Path lenses print large positive deltas because they did not exist as concentration meters on the Q3 board; stock lenses print flat. That is the methodological hinge for this vintage: **a Mid-Year Update can thicken the distribution of *flows* without rewriting the distribution of *stocks*.**
+
+## Stock vs growth: same China tip, different denominators
+
+Switch to **Stock vs growth**. Leave the curve on **Stock (Ember TWh)**. The Lorenz panel still clears **33.2%** at rank 1 and **56.5%** by rank 3 — identical to Q3 because the Ember GER 2026 census has not been superseded. Flip to **Growth add** and the tip steepens: China alone is about **42%** of the world TWh *add* on IEA’s **3.6% (2026) / 3.8% (2027)** path, with China + India + US near **68%**.
+
+India still prints the fastest major-system growth rate (~**7%**) on a smaller base; China still wins *volume concentration* of the add. That distinction is why the [August update](/blog/energy-systems-update-202608) showed regional *rates* and this post converts them into *share of the add*. Averaging a 7% India print with a 1.8% US print and calling the average “global demand” is how desks understate Asia’s tip.
+
+## Aug path meters: coal rebound and solar add geography
+
+Open **Aug path meters**. On **Demand path**, bars and the TWh line climb from **28,600 TWh** (2025) toward **30,700 TWh** (2027e). The growth-add pie repeats the **42% / 68%** tip. Switch to **Coal rebound** — the uncomfortable Mid-Year companion. Global coal-fired generation is expected to rise **1.4%** in 2026 after the Q3 Ember year that celebrated fossil generation **−0.2%**. Estimated add shares put China near **48%**, India near **22%**, and the EU’s slowed decline as a residual — Top-3 of the *add* near **78%**.
+
+That is not a share reclaim of the global generation mix. Renewables still take the #1 slot and widen toward **37%** by 2027 with VRE at **21%**. It *is* a concentration statement about who owns the one-year dispatch rebound the Hormuz / LNG shock reopened. Analysts who treated Ember’s 2025 fossil halt as a permanent trajectory without a geographic add lens will mis-rank 2026.
+
+Toggle **Solar add**. IEA’s ~**610 TWh** solar generation increase (+**23%**) is a near-record repeat of Ember’s **+636 TWh** 2025 print. China still supplies about **half** of the increase; India and other Asian economies rise toward ~**17%** of that add. Greening the *mix* and concentrating the *build* are compatible — and the manufacturing tip at **80%** China for modules remains the supply-chain twin of that generation tip.
+
+## Trade & shock: LNG tip unchanged, wholesale prices the tip
+
+Switch to **Trade & shock**. Fuel-export stacked bars keep coal (Indonesia Top-1 **~36%**, Top-3 **~73%**), LNG (US **24%**, Top-3 **~63%**), pipe gas, and crude on the carried tape. Mid-Year does not rewrite those seaborne shares in a single print. What it does is **price** the LNG tip: the temporary loss of nearly **20%** of global LNG supply pushed Asian and European gas prices to their highest levels since **2022–23**, and Q2 2026 wholesale electricity averages rose **>+30%** YoY in the EU and Japan, stayed roughly flat in the US, rose less than **10%** in India, and fell about **45%** in Australia.
+
+The import-dependence × wholesale scatter makes the exposure geometry concrete. Japan (**~88%** import dependent) and the EU (**~58%**) sit with the shock prints. The US (net energy exporter on this meter) is flat. Australia, deep export surplus with renewables and batteries cutting peak gas reliance, prints **−45%**. Concentration of *export supply* and concentration of *import exposure* remain two sides of one trade map — Mid-Year simply lights up the price channel the [research ledger](/blog/energy-systems-research-2026) already mapped in stock terms.
+
+## Capex & vintage: capital tip carried, slope confirms the freeze
+
+Open **Capex & vintage**. Clean investment geography is still the IEA WEI 2026e tape: China **~34%** of **$2.2T**, Top-3 (China + US + EU) **~58%**, fossils **$1.2T**. No newer World Energy Investment period print arrives in the Mid-Year electricity update, so the capital tip is **carried** — another reminder that greening the *numerator* of investment does not automatically diversify the *geography* of who builds modules and cells.
+
+The vintage slope (Research → Conc 2026 → Q3 → Aug) shows electricity Top-1 climbing **31.5% → 32% → 33.2% → 33.2%**, LNG Top-1 **21% → 22% → 24% → 24%**, and solar manufacturing frozen at **80%** across the entire theme arc. Aug’s novelty is the coal-add and solar-add path tips sitting beside that frozen stock slope — not a restatement of Ember ranks.
+
+## Who is exposed — and what would rewrite the tips
+
+**Exposed on the stock clock:** desks that treat “renewables → 37%” as proof of geographic diversification; Western OEMs and utilities whose growth models still assume OECD TWh shares hold mid-2010s norms; coal-exposed systems that ignore China’s dual role as renewables builder and coal-add Top-1 (~**48%**).
+
+**Exposed on the path clock:** LNG importers in Europe and Northeast Asia priced into **>+30%** wholesale YoY; buyers without destination-flexible contracts when the US–Australia–Qatar tip still clears **~63%**; analysts who read US LNG growth as pure security without noticing Top-1 concentration remains elevated even when the share print is unchanged.
+
+**What would rewrite the next concentration cut:** a new Ember country census that moves electricity Top-1 off **33.2%**; an EI Statistical Review that moves TPES China off **~27.6%**; Hormuz shipping fully normalised with gas prices collapsing coal’s relative merit order early (shrinking the coal-add tip); or a WEI refresh that diversifies clean-capital geography away from China’s **~34%**.
+
+## Caveats and methodology
+
+1. **Carried ≠ confirmed unchanged forever.** Flat Δ vs Q3 means *no newer census*, not a guarantee the next Ember print will hold the tip.
+2. **Primary ≠ electricity.** TPES and TWh share tips live on different denominators — do not average them into one “energy concentration” slogan.
+3. **Coal +1.4%** is global generation *growth*, not a mix reclaim. Renewables still lead and widen toward **37%**.
+4. **Coal-add and solar-add shares** are estimated from Mid-Year regional narratives (China largest share of coal increase; China ~half of solar increase) — treat as directional path meters, not disclosed national add tables.
+5. **Growth-add Top-1 ~42%** converts regional growth rates into share of world TWh add; it is sensitive to the path assumption (**3.6% / 3.8%**).
+6. **Wholesale YoY** figures are Q2 2026 spot averages as summarised by IEA — not full-year realised retail bills.
+7. **Clean investment $2.2T** and manufacturing **80% / 75%** tips are carried from WEI / IEA supply-chain secondary prints.
+8. **HHI** values are constructed from rounded country shares for board comparison — not antitrust filings.
+9. **Import-dependence** meters mix Eurostat-style energy dependence with research-ledger framing; Australia’s deep negative dependence is an export-surplus visual, not a literal “−140% import” identity.
+10. **This post is a concentration companion.** For Mid-Year levels and mixes use the [August update](/blog/energy-systems-update-202608); for Ember/WEI Q3 levels use the [Q3 update](/blog/energy-systems-update-2026q3); for the prior Top-k tape use the [Q3 concentration print](/blog/energy-systems-concentration-2026q3) and the [2026 concentration print](/blog/energy-systems-concentration-2026); for country mix ledgers use the [research post](/blog/energy-systems-research-2026).
+
+## Bottom line
+
+Late-Aug does not dissolve energy-system concentration — it **separates stock tips from path tips**. Electricity Top-1 China remains **33.2%**; Top-3 **56.5%**. US LNG Top-1 stays **~24%** with Top-3 **~63%**, now *priced* into EU/Japan wholesale **>+30%**. Clean investment Top-1 stays China at **~34%** of **$2.2T**. Solar modules remain **80%** China. What Mid-Year adds to the distribution question is the flow tip: China ~**42%** of the demand add, ~**48%** of the coal rebound add, and ~**50%** of the solar generation increase — while renewables widen the *mix* lead toward **37%**. Composition can green while geography stays top-heavy.
+
+Related reading: [Q3 concentration lens](/blog/energy-systems-concentration-2026q3), [August Mid-Year update](/blog/energy-systems-update-202608), [Q3 Ember/WEI update](/blog/energy-systems-update-2026q3), [2026 concentration print](/blog/energy-systems-concentration-2026), [Energy systems research](/blog/energy-systems-research-2026), and [Chokepoint commodities Q3 concentration](/blog/chokepoint-commodities-concentration-2026q3).`,
+  },
+  {
     id: "ai-supply-chain-geography-2026",
     slug: "ai-supply-chain-geography-2026",
     title:

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "energy-systems-concentration-202608",
+    marker: "Top-1 still 33.2%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-supply-chain-geography-2026",
     marker: "Where tool dollars, wafer seats, and design HQs land on the map",
     forbidden: "Loading interactive charts",

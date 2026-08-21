@@ -194,7 +194,8 @@ export interface Post {
     | "fiscal-industrial-policy-geography-202608"
     | "ai-capex-intensity-concentration-202608"
     | "ai-financing-geography-2026"
-    | "ai-supply-chain-geography-2026";
+    | "ai-supply-chain-geography-2026"
+    | "energy-systems-concentration-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
