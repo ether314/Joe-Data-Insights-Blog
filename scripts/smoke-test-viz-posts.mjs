@@ -17,6 +17,12 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "bank-commercial-credit-update-202608",
+    marker:
+      "Aug vintage · CMBS delinq up / special servicing down · hard maturities",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "geopolitics-institutions-concentration-2026q3",
     marker: "Institutions & governance — Q3 2026 concentration lens",
     forbidden: "Loading interactive charts",

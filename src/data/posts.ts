@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "bank-commercial-credit-update-202608",
+    slug: "bank-commercial-credit-update-202608",
+    title:
+      "Update: CMBS Delinquency +51 bp to 7.86% While Special Servicing Falls — August Maturities Hit $5.49B",
+    excerpt:
+      "Latest vintage vs our Q3 bank-credit update: Trepp CMBS delinquency jumped +51 bp to 7.86% even as special servicing eased −11 bp to 11.09%. August hard maturities roughly doubled to $5.49B, with $3.04B below an 8% debt yield.",
+    category: "Finance",
+    themeId: "bank-commercial-credit",
+    imageUrl: "/images/finance-bank-commercial-credit-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of rising rose CMBS delinquency spikes, falling teal special-servicing arrows, and amber debt-yield risk rings over an office skyline silhouette",
+    publishedAt: "2026-08-21T22:00:00Z",
+    featured: true,
+    visualization: "bank-commercial-credit-update-202608",
+    layout: "canvas",
+    content: `Our [Q3 bank & commercial credit update](/blog/bank-commercial-credit-update-2026q3) answered the supply-versus-securitized-stress question: July SLOOS flipped CRE standards toward net easing (NFNR **−11.3**), while Trepp CMBS office delinquency rose to **11.91%** and multifamily to **7.69%**. Fed SA loss rates stayed on the **2026Q1** print. This August vintage asks what moved **since that post** — and again the answer is not a new Fed charge-off table. The Board’s SA release still closes on **2026Q1** (last update **May 19, 2026**). July SLOOS is unchanged. What is new is the **Trepp July special-servicing** print, the **CREFC July loan-performance** framing of that same month, and Trepp’s **August 2026 hard-maturity** cohort.
+
+The headline contradiction flipped axes. In the Q3 essay, **bank CRE standards eased while CMBS delinquency rose**. Now **CMBS delinquency rose again (+51 bp to 7.86%) while special servicing fell (−11 bp to 11.09%)** — and the August maturity wall roughly **doubled** to **$5.49B**, with **$3.04B** carrying a debt yield below **8%**. Stress is entering the **headline delinquency rate through matured balloons**, even as **workouts cut the special-servicing stock**. Office still owns the non-performing maturity pieces; retail owns the new special-servicing transfers via regional-mall balloons.
+
+## The August vintage scoreboard
+
+| Signal | Prior Q3 post / Jun | Aug vintage | Δ / read | Lens |
+| --- | --- | ---: | --- | --- |
+| CMBS overall delinquency | 7.35% (Jun) | **7.86%** | **+51 bp MoM** | Trepp July delinq |
+| CMBS special servicing | 11.20% (Jun) | **11.09%** | **−11 bp MoM** | Trepp July SS |
+| Office special servicing | 17.11% | **16.58%** | **−53 bp MoM** | Trepp July SS |
+| Retail special servicing | 12.95% | **13.28%** | **+33 bp MoM** | Mall maturity SS |
+| Hard-maturity cohort | $2.55B (Jul) | **$5.49B** | **~2.2×** | Trepp Aug maturities |
+| Debt yield <8% in cohort | — | **$3.04B** | ~55% of Aug $ | Refinance friction |
+| Debt yield <6% still current | — | **$962M** | Forward delinq risk | Trepp Aug |
+| Cohort non-performing | $34.9M | **$136.6M** | All office | Jul → Aug |
+| Performing matured balloon | ~9.53% | **9.62%** | +9 bp (gap compressed) | CREFC / Trepp |
+| Card CO / CRE delinq (Fed SA) | 3.84% / 1.56% | **3.84% / 1.56%** | Same vintage | Carried 2026Q1 |
+| SLOOS NFNR net % | −11.3 | **−11.3** | Same July survey | Carried from Q3 |
+
+Read the table as three clocks. The **delinquency clock** jumped. The **special-servicing clock** eased. The **maturity clock** roughly doubled. The **bank loss clock** (Fed SA) and the **supply clock** (SLOOS) are frozen on the prints the Q3 post already used. That is the August regime in one frame.
+
+## Delinquency up, special servicing down
+
+The dashboard’s **Delinq × SS** panel plots property-type month-over-month basis-point moves. Overall CMBS delinquency rose **51 bp** to **7.86%** — the highest reading since November 2020 on the Trepp / CREFC framing — while overall special servicing fell **11 bp** to **11.09%**. Office is the cleanest split-ledger name: delinquency **+34 bp** to **11.91%**, special servicing **−53 bp** to **16.58%**. Lodging rhymes (delinq **+13 bp**, SS **−26 bp**). Multifamily rose on both meters. Retail is the opposite of office on the servicing axis: special servicing **+33 bp** to **13.28%** as regional-mall loans transferred for maturity default.
+
+CREFC’s July note names the mechanism. Newly delinquent loans totaled roughly **$6.0B**, with non-performing matured balloons the largest cited category (~**66%**). Including performing matured balloons, the effective rate was **9.62%**, up only **9 bp** — so the **gap between headline delinquency and the matured-balloon-inclusive rate compressed**. Loans already past maturity moved from performing to non-performing matured balloon status. That is why delinquency can spike while special servicing still eases: **maturity distress is showing up in the delinquency rate**, and **office/lodging workouts are still resolving stock in special servicing** faster than new transfers refill it — even though July still saw ~**$1.69B** of new SS transfers across **41** loans (including heavy retail).
+
+Markets that treat “CMBS stress” as a single dial miss this phase shift. Rising delinquency with falling special servicing is not healing. It is **a different stage of the cycle**: resolution progress on legacy SS books coinciding with **maturity-driven headline delinquency**.
+
+## August hard maturities: $5.49B and a debt-yield wall
+
+Trepp’s August 2026 private-label hard-maturity cohort totals **$5.49B** across **130** loan pieces (**119** whole loans) — roughly **double** July’s **$2.55B**. Of that, **$5.36B (97.51%)** is still performing; five loan pieces (**$136.6M, 2.49%**) are non-performing — **all office**. Non-performing balance rose from one July loan piece (**$34.9M**) to five in August; cohort special-servicing balance more than doubled, from **$636.4M** to **$1.38B**.
+
+Property mix is office (**$1.81B, 32.86%**), retail (**$1.77B, 32.19%**), and mixed-use (**$1.38B, 25.09%**), with mixed-use dominated by a single large Los Angeles studio-and-office portfolio. Concentration rose: the five largest maturities account for **$2.89B**, or **52.65%** of the balance, up from **48.37%** in July. Outcomes are increasingly tied to a handful of very large loans.
+
+Debt yield is the binding refinance test. **$3.04B** of the cohort carries a current debt yield below **8.0%**. Inside that, **$996M** sits below **6.0%** — and about **$962M** of that severely impaired band is **still current**. Trepp’s forward signal is blunt: that current-but-impaired pool is the most probable source of **additional delinquency** as hard maturity dates hit. Of the **$136.6M** already non-performing, about **$56.6M** reflects cash-flow impairment below the **8%** debt-yield line; the remaining **$80.0M** is a single maturity-driven default despite a debt yield above **8%**.
+
+The **Maturities** panel’s mix bars and debt-yield pie put the wall in one view. This is the conversion channel the Q3 essay flagged when it said maturity walls and refinancing friction remain how securitized stress becomes realized delinquency — now with a **doubled August cohort** and a quantified **$962M** still-current severe band.
+
+## Bank book and SLOOS: still the Q3 carried prints
+
+Nothing in this August update invents a 2026Q2 Fed SA charge-off print that does not exist yet. Card charge-offs remain **3.84%**, CRE delinquency **1.56%**, CRE charge-offs **0.17%**, C&I charge-offs **0.59%**. July SLOOS NFNR remains **−11.3** net easing — the same disclosed survey the Q3 post introduced. The **Fed SA** panel replays the carried path so readers do not confuse a CMBS maturity wall with a bank Call Report loss vintage.
+
+What the theme still holds until the next Board SA release: **consumer losses own the income statement and are cooling on the last print**; **CRE stress owns the past-due stock on the bank book**; **CMBS owns the securitized headline**. The August add-on is that **securitized stress is now splitting into rising delinquency and falling special servicing**, with **August maturities and debt-yield friction** as the near-term delinquency factory.
+
+For category-level loss geography without the vintage framing, the [charge-offs dashboard](/blog/bank-loan-chargeoffs-2026) and the [research roll-up](/blog/bank-commercial-credit-research-2026) still hold. For the supply flip that preceded this print, keep the [Q3 update](/blog/bank-commercial-credit-update-2026q3) open. This piece’s job is the delta versus that Q3 post.
+
+## Two ledgers, one maturity question
+
+The **stress map** panel still plots bank SA delinquency × charge-off beside CMBS delinquency points. Cards sit high on realized loss. Bank CRE sits mid-delinquency / low-loss. CMBS office and overall sit far to the right on delinquency. The new August question is not whether CMBS is “worse than banks” — that gap was already priced in the Q3 essay — but whether **maturity + debt-yield impairment** converts the still-current **$962M** severe band into the next delinquency print while office/lodging **special-servicing resolutions** keep cutting the SS rate.
+
+Retail deserves a separate watch. Special servicing rose on mall maturity transfers even as office SS improved. CREFC flags **2015–2016 vintage mall loans** reaching balloon dates as the most likely source of further upward pressure on the servicing and delinquency mix. Office owns today’s non-performing maturity pieces; retail may own tomorrow’s transfer wave.
+
+## How to read the August vintage for markets
+
+1. **Do not read falling special servicing as CMBS healing.** Overall SS **−11 bp** to **11.09%** coincided with delinquency **+51 bp** to **7.86%**. Maturity distress is in the headline rate.
+2. **Size the August maturity wall.** **$5.49B** hard maturities (~**2.2×** July), **$3.04B** below **8%** debt yield, **$962M** of the **<6%** band still current.
+3. **Keep the bank loss ledger on 2026Q1 until the Board reprints.** Cards **3.84%**, CRE delinq **1.56%**, CRE charge-offs **0.17%** are carried facts.
+4. **Keep SLOOS on the July easing print until October.** NFNR **−11.3** is unchanged from the Q3 post — not a new supply vintage.
+5. **Watch office NP vs retail SS.** All August cohort NP is office; retail SS **+33 bp** on mall balloons is the competing stress channel.
+
+## Caveats and methodology
+
+1. **Different vintages, different questions.** Fed SA charge-off/delinquency is still **2026Q1**. SLOOS July covers **2026Q2** standards. Trepp delinquency and special servicing are **July 2026** monthly prints. Hard maturities are an **August 2026** cohort. Do not splice them into one fake quarterly.
+2. **CMBS ≠ bank CRE.** Securitized office, multifamily, and retail are stressed subsamples. Moves in Trepp rates do not scale one-for-one onto Call Report CRE PDNA.
+3. **Special servicing ≠ delinquency.** Loans can be delinquent without being in SS, and in SS without being 30+ days past due on the headline definition. The July divergence is the point.
+4. **Hard-maturity cohorts exclude some legacy distress** by design (Trepp isolates near-term refinance risk, excluding loans already beyond maturity or in foreclosure/REO).
+5. **Debt-yield band shares for ≥8% and 6–8%** are estimated residual arithmetic from disclosed **$3.04B** below 8% and **$996M** below 6% inside the **$5.49B** cohort.
+6. **Retail delinquency MoM** in the divergence scatter is estimated where Trepp’s public excerpt emphasized office, multifamily, lodging, and overall; retail SS is disclosed.
+7. **July loan-piece count (~60)** on the cohort compare panel is estimated from the disclosed August **130** pieces and the ~2× balance multiple — treat as order-of-magnitude, not a prospectus count.
+8. **Charge-offs remain net of recoveries and annualized** when the next Fed SA arrives.
+
+Primary sources: Trepp August 2026 CMBS Hard Maturities; Trepp July 2026 CMBS Special Servicing Report; Trepp July 2026 CMBS Delinquency Report; CREFC July 2026 Monthly CMBS Loan Performance Report; Federal Reserve Charge-Off and Delinquency Rates (SA; May 19, 2026 through 2026Q1, carried). Related reading: [Q3 bank & commercial credit update](/blog/bank-commercial-credit-update-2026q3), [August Fed SA update](/blog/bank-commercial-credit-update-2026), [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026).
+
+## What to watch next
+
+Three coincident signals will tell you whether maturity-driven delinquency and easing special servicing remain a split-ledger regime: (1) **the next Trepp delinquency print** — does overall stay above **7.8%** as the **$962M** severe debt-yield band hits hard dates?; (2) **retail vs office** — whether mall balloon transfers overtake office as the dominant SS and delinquency driver; (3) **the next Fed SA quarter** — whether bank CRE charge-offs stay near **0.17%** while CMBS keeps marking maturity stress. Until those break, the live August answer is clear: **CMBS delinquency rose as special servicing fell, August hard maturities doubled with a thick debt-yield wall, and the bank loss ledger is still waiting on the next Fed SA print.**`,
+  },
+  {
     id: "geopolitics-institutions-concentration-2026q3",
     slug: "geopolitics-institutions-concentration-2026q3",
     title:

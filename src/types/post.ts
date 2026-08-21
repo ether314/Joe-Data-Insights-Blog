@@ -153,7 +153,8 @@ export interface Post {
     | "adaptation-economics-concentration-2026"
     | "ai-financing-concentration-2026q3"
     | "industrial-robotics-concentration-2026q3"
-    | "geopolitics-institutions-concentration-2026q3";
+    | "geopolitics-institutions-concentration-2026q3"
+    | "bank-commercial-credit-update-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
