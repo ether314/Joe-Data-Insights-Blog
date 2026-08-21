@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-plumbing-update-202608",
+    slug: "fiscal-plumbing-update-202608",
+    title:
+      "Update: Net Interest $1.12T→$1.18T, JCT Shadow Budget $2.51T→$2.57T, GSE MBS +$0.20T",
+    excerpt:
+      "Versus our Q3 fiscal-plumbing refresh, the late-Aug 202608 vintage adds $60B of net interest, lifts JCT tax expenditures +2.4% to $2.57T, and grows the GSE MBS book to $8.55T — while OASDI/HI clocks stay carried at 2033/2035.",
+    category: "Global Systems",
+    themeId: "fiscal-plumbing",
+    imageUrl: "/images/global-systems-fiscal-plumbing-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic fiscal plumbing diagram with amber tax-code pipes, violet net-interest gauges rising toward $1.18T, frozen trust-fund clocks, and purple off-balance housing-credit valves",
+    publishedAt: "2026-08-21T12:00:00Z",
+    featured: true,
+    visualization: "fiscal-plumbing-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 refresh
+
+Our [Q3 fiscal-plumbing update](/blog/fiscal-plumbing-update-2026q3) closed the Aug→fall gap after the late-summer CBO and CRFB/JCT prints: **JCT tax expenditures at about $2.51T**, **OASDI depleting around 2033**, **HI around 2035**, and **GSE guaranteed MBS near $8.35T**, with net interest framed around **$1.12T**. That post answered what moved versus the [August update](/blog/fiscal-plumbing-update-2026) and the [research map](/blog/fiscal-plumbing-research-2026). This **late-August 202608** refresh asks the next vintage question: **what changed once the mid-cycle official restatements landed?**
+
+Three information events rewrite the scoreboard without inventing a new Trustees clock. The **CBO/Treasury late-August baseline framing** lifts net interest from about **$1.12T to $1.18T** (**+$60B**). The **CRFB/JCT late-summer tax-expenditure path** restates the aggregate from **$2.51T to about $2.57T** (**+$0.06T**, **+2.4%**). And the late-Aug **FHFA** stock round puts **guaranteed GSE MBS near $8.55T**, up **+$0.20T** from the Q3 print. Federal Direct Student Loans tick **$1.70T → $1.74T**. Discretionary barely moves (**~$1.735T → ~$1.745T**). The OASDI and HI **depletion years stay carried** at **2033** and **2035** — there is still no mid-year Trustees restatement.
+
+The dashboard above is built as a Q3→late-Aug vintage delta: diverging change bars, JCT prior/new composites, an interest-versus-discretionary race, a dollar-delta share pie, a JCT aggregate waterfall, dual-vintage trust reserve paths with carried clocks, plumbing-layer bars, an off-balance leverage scatter, and the Treasury-vs-JCT ESI packaging gap. Use the **View**, **layer filter**, and **JCT family** controls to isolate interest, tax-code, trust-fund, or guarantee-book moves.
+
+## The headline table: Q3 → late-Aug 202608 vintage
+
+| Metric | Prior (Q3) | Newest late-Aug | Δ |
+| --- | ---: | ---: | ---: |
+| Net interest (approx) | **~$1.12T** | **~$1.18T** | **+$60B** |
+| JCT tax expenditures (aggregate) | **$2.51T** | **$2.57T** | **+$0.06T (+2.4%)** |
+| JCT top-10 sum (approx) | **$1.59T** | **$1.63T** | **+$48B** |
+| Employer health exclusion (JCT) | **$268B** | **$276B** | **+$8B** |
+| Pensions / retirement exclusion | **$396B** | **$408B** | **+$12B** |
+| OASDI combined depletion year | **2033** | **2033** | **unchanged (carried)** |
+| Medicare HI depletion year | **2035** | **2035** | **unchanged (carried)** |
+| GSE guaranteed MBS outstanding | **~$8.35T** | **~$8.55T** | **+$0.20T (+2.4%)** |
+| Federal Direct Student Loans | **~$1.70T** | **~$1.74T** | **+$0.04T** |
+| All discretionary (approx) | **~$1.735T** | **~$1.745T** | **+$10B** |
+
+The story is not “another Trustees scare.” The clocks did not move. The levers that moved are the ones the Q3 piece already flagged as high-leverage on a mid-cycle cadence: the **interest first claim**, the **tax-code shadow budget**, and the **housing-credit guarantee book**.
+
+## Net interest: the first claim keeps closing on appropriations theater
+
+Toggle **View → Vintage deltas** and filter **Layer filter → Net interest**, or stay on the interest-race panel. Net interest in the late-August framing steps from about **$1.12T to $1.18T**. That **+$60B** is six times the discretionary delta in the table above. The interest-to-discretionary ratio on our editorial path rises from roughly **0.65 to 0.68** — interest is still not the larger line, but the gap keeps shrinking while Congress still treats discretionary titles as “the budget.”
+
+Interest is not a program anyone votes to expand. It is the arithmetic of the debt stock rolling at higher coupons, plus the path assumptions embedded in the baseline. Pair this late-Aug restatement with the Q3 interest-versus-discretionary irony and our [net interest vs defense](/blog/us-net-interest-vs-defense-2025) framing: the first claim on revenue grows without a floor amendment while discretionary fights argue over tens of billions.
+
+## Tax expenditures: another $60B of Code pressure
+
+Filter **Layer filter → Tax code** or open **View → Code pressure**. The JCT aggregate remains the cleanest public meter of “spending through the Code.” Moving from the Q3 fall refresh (**$2.51T**) to the late-Aug path (**~$2.57T**) adds roughly **$60B** of annual shadow budget. The top-ten lines alone add about **$48B**, led by pensions/retirement (**+$12B**), preferential capital-gains and dividend rates (**+$9B**), and the employer-sponsored health exclusion (**+$8B**). SALT ticks slightly **up** in the rounded path we carry (**$65B → $66B**) after the Q3 dip.
+
+The waterfall panel rebuilds that **+$60B** as signed contributions rather than a single bar. The dollar-delta share pie puts interest and the Code on nearly equal footing among headline plumbing moves — a reminder that the mid-cycle vintage is not a one-lever story. Two caveats travel with every tax-expenditure chart. **Do not sum line items** as the revenue from simultaneous repeal — interactions and behavior matter. And refundable credits blur revenue loss and outlays; the deficit impact is real either way. For the line-item ranking deep dive, pair this update with our [tax-expenditure catalog](/blog/us-tax-expenditure-catalog-2026). For industrial-policy credits that live on the same Code, see the [fiscal and industrial policy series](/blog/fiscal-industrial-policy-research-2026).
+
+Filter **JCT family → health** and the ESI packaging story continues. Treasury’s published employer-medical headline still sits well above JCT’s ESI concept. The packaging gap narrows only slightly again — **$49B → $47B** — which means analysts who cite only one office can still cherry-pick a preferred giant. Methodology, not a spreadsheet error.
+
+## Trust funds: clocks carried, reserves still soften
+
+Toggle **View → Guarantee book** (trust panel) or stay on the dual-path chart. The Q3 piece carried the **2026 Trustees Reports**: **OASI ~2032**, **OASDI combined ~2033**, **Medicare HI ~2035**, with SMI remaining premium-and-general-revenue financed rather than a classic exhaustion clock. Late-Aug does **not** invent a new crisis architecture and does **not** get a mid-year Trustees restatement. The depletion years are **carried**. What still moves is the estimated reserve path: combined OASDI reserves from roughly **$2.48T → $2.42T** and HI from **~$0.19T → ~$0.18T** in the rounded path we carry — labeled estimated, not a live scoreboard tick.
+
+That carry is a feature of vintage hygiene. Markets already price the idea that payroll-tax and benefit-formula fights arrive before the 2030s are over. A flat clock with softer reserves is still a legislative-calendar story; it is not a new exhaustion year. Pair the dual-vintage reserve path with our [Social Security depletion path](/blog/us-social-security-trust-fund-depletion-path-2026) for household framing; this late-Aug piece is the mid-cycle restatement of the system clock those posts sit inside.
+
+## Off-balance credit: GSE MBS adds another quiet $0.20T
+
+Filter **Layer filter → Off-balance** or open **View → Guarantee book**. The research-map punchline still holds: the guarantee books that steer mortgage rates, underwriting standards, and deposit risk rarely show up as appropriation-title fights. What changed since Q3 is scale again. **GSE guaranteed MBS** rises from about **$8.35T to $8.55T**. Federal Direct Student Loans tick **$1.70T → $1.74T**. FDIC-insured deposit stock and FHA/VA exposure edge higher in the rounded late-Aug prints; PBGC risk stock ticks up modestly.
+
+The scatter panel puts the same vehicles on two axes the unified deficit does not: **budget visibility** versus **policy leverage**, with bubble size proportional to newest stock. GSE MBS remains the extreme: enormous stock, low appropriation visibility, very high leverage over housing credit. Student loans sit higher on visibility because credit-reform scoring and forgiveness debates force them onto the partisan stage. Deposit insurance is the systemic backstop: low day-to-day budget noise, near-maximal leverage when it matters.
+
+Read the off-balance deltas as stock, not flow. A **+$0.20T** GSE move is not a $200B appropriation. It is additional guaranteed credit that steers who gets a mortgage and at what rate while the discretionary fight argues over tens of billions.
+
+## What did not change — and why that matters
+
+Several Q3 conclusions survive the late-Aug vintage. **OASDI and HI depletion years are unchanged** on the 2026 Trustees print. **SMI is still not an exhaustion clock** in the OASI/HI sense. **DI remains long-dated** relative to OASI. **Tax expenditures still dwarf any single discretionary title** on a like-for-like annual scale. **Off-balance credit still steers housing and education** without looking like spending in the cable-news sense. The ESI packaging gap between Treasury and JCT **narrows slightly but does not close**.
+
+What changed is magnitude at the margin that markets and legislative calendars actually feel on a mid-cycle cadence: a larger Code, a higher interest bill, and a bigger GSE book — with the entitlement clocks still pointing at the same years. Those are the real levers. The appropriation titles remain the theater.
+
+## How to read the dashboard
+
+Start with **View → Vintage deltas** and **All layers** on the diverging bars to see which meters moved. Year shifts are flat when carried; hover for the true year delta. Switch to **Code pressure** for the JCT composite, the interest race, the dollar-delta share pie, and the waterfall that rebuilds the **+$60B** Code restatement. Open **Guarantee book** for dashed Q3 reserves against solid late-Aug paths with carried clocks, plus the off-balance leverage scatter. Finish on the ESI gap panel if the question is packaging rather than outlay headlines. Use **JCT family** to isolate retirement, capital, or health lines.
+
+## Caveats and source boundaries
+
+Trust-fund depletion years are **carried** from the 2026 Trustees Reports — not a mid-year actuarial restatement. Reserve paths are rounded and estimated. Off-balance figures are outstanding or exposure stocks for scale, not annual outlays. Tax-expenditure line items interact; do not treat the top-ten sum or the waterfall residual as a joint-repeal score. Layer composition bars, the interest-versus-discretionary race, and the dollar-delta share pie are editorial maps for orientation, not substitutes for the unified budget. Where we mark confidence as estimated or carried, the direction of the vintage delta (or the absence of a clock move) is the claim, not the last significant digit. Primary anchors: CRFB summaries of JCT Q3 and late-summer paths, 2026 SSA and Medicare Trustees Reports (carried clocks), FHFA GSE MBS outstanding (late-Aug), Education Direct Loan portfolio, and CBO/Treasury late-August net-interest baseline framing.
+
+**Unlike the Q3 refresh alone, this piece is the late-Aug delta tape:** what the newest official vintage moved on interest, the Code, and off-balance credit while the Trustees clocks stayed put. **Unlike a single trust-fund or tax-catalog post, it keeps the system diagram intact** so a $60B interest step and a $0.20T GSE move stay comparable on one screen.`,
+  },
+  {
     id: "demographic-cash-flows-concentration-2026q3",
     slug: "demographic-cash-flows-concentration-2026q3",
     title:
