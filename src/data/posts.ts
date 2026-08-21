@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-concentration-2026q3",
+    slug: "chokepoint-commodities-concentration-2026q3",
+    title:
+      "Q3 Concentration: Midstream Median Top-1 Hits 75% — Avg Refine 72%, Gallium 99%",
+    excerpt:
+      "Q3 concentration lens on chokepoint commodities after IEA GCMO 2026: median Top-1 73.1% across 16 stages, 10 stages ≥70% Top-1, midstream median 75%, avg refining (ex-REE) 72% (+2 pp), while rare-earth refining eases to 85% and copper smelting capacity sits near 50% China.",
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of glowing critical-mineral concentration bars rising to a sharp Top-1 tip beside a charcoal world map silhouette",
+    publishedAt: "2026-08-21T12:00:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-concentration-2026q3",
+    layout: "default",
+    content: `Our [2026 concentration print](/blog/chokepoint-commodities-concentration-2026) answered the first distribution question on USGS Mineral Commodity Summaries 2025 / secondary midstream carries: median Top-1 **65%** across twenty stages, **8** stages above **70%** Top-1, China in **12** Top-1 seats, gallium refined near **98%**. The [Q3 midstream update](/blog/chokepoint-commodities-update-2026q3) then restated the tip with IEA Global Critical Minerals Outlook 2026 — average top refining-country share (ex-REE) at **72%**, rare-earth refining eased to **85%**, lithium chemicals ~**70%**, China copper smelting capacity near **50%**, and the 2026 copper TC/RC settle at **$0/t**. This **Q3 concentration lens** asks the desk follow-up those vintages imply but do not score as a single distribution: **how concentrated is the system at the top now — Top-1, Top-3, and HHI — once the newest midstream print replaces the prior carry?**
+
+The interactive dashboard above is built as that lens. Toggle **Vintage delta**, **Ranked shares**, **Mine→plant**, and **Risk & HHI**. Filter by stage and Δ direction. The punchline is deliberately three-sided. On the **midstream tip**, median Top-1 across processing / smelter / recycle rows prints about **75%**, against a mine-stage median near **69%**. On the **IEA headline meter**, average top refining-country share (ex-REE) sits at **72%** — **+2 pp** versus the 2023 baseline the Outlook carries. On the **extreme**, gallium refined is still near **99%** China, while rare-earth refining is the rare durable ease (**90% → 85%**). China still holds **11 of 16** Top-1 seats in this Q3 table.
+
+## The Q3 concentration scoreboard
+
+| Lens | Top-1 | Thick top | What moved vs prior concentration |
+| --- | ---: | ---: | --- |
+| Median across 16 stages | **73.1%** | Top-3 median **88%** | Prior median Top-1 was **65%** on a 20-stage MCS/secondary ledger |
+| Stages with Top-1 ≥ 70% | **10 / 16** | — | Prior print: **8 / 20** |
+| Midstream+ median Top-1 | **75%** | Mine median **~69%** | Processing still hotter than the pit |
+| Avg refine (ex-REE, IEA) | **72%** | — | **+2 pp** vs 2023 IEA baseline |
+| REE refining / separation | **85%** | Top-3 ~**96%** | **−5 pp** vs prior ~90% carry |
+| Lithium chemicals | **70%** | Top-3 ~**88%** | **+5 pp** vs prior secondary ~65% |
+| Graphite anode | **90%** | Top-3 ~**95%** | Flat share; disruption risk ~**$300B**/yr |
+| Copper smelting capacity | **50%** | — | 2005→2025 path; TC/RC settle **$0/t** |
+| Gallium refined | **99%** | Top-3 ~**99.5%** | Still the monopoly extreme |
+| China Top-1 seats | **11 / 16** | **69%** of leaders | Prior: **12 / 20** |
+
+Read the table as a **family of market shares**, not one number. Median Top-1 tells you the typical stage tip. The ≥70% count tells you how often the tip is *extreme*. Midstream vs mine medians tell you whether the binding chokepoint is the pit or the plant. The IEA average-refine meter is a different object again — a cross-mineral refining average the Outlook publishes as a security headline. Analysts who quote only copper mine shares understate smelter capacity; analysts who quote only rare-earth ease understate graphite anode and battery-recovery monopolies that did not ease.
+
+## Vintage delta: what tightened, what eased
+
+Filter the dashboard to **Vintage delta**. The grouped bars rank the largest absolute percentage-point moves from the [prior concentration carry](/blog/chokepoint-commodities-concentration-2026) to this Q3 restatement. Copper smelting capacity’s **+35 pp** path (15% → 50% China, 2005→2025) dominates the chart because it is a *capacity geography* restatement the prior Midstream secondary table never fully owned. Nickel refined-supply *growth* capture (**+25 pp** to ~**75%**) and battery material-recovery capacity (**+20 pp** to ~**90%**) follow — both IEA prints that say secondary supply and incremental refine growth are concentrating even when some stock shares look flat.
+
+The easers matter because they are rare. Rare-earth refining / separation prints **85%** Top-1 (**−5 pp**), with a project path toward ~**70%** by 2035 *if* US and Malaysia capacity delivers. Natural graphite mine eases slightly on the MCS 2026 hold (**79.4% → 77.8%**). Cobalt refine is roughly flat near **75%** — and the [Q3 update](/blog/chokepoint-commodities-update-2026q3) is explicit that DRC export-quota risk is a *volume* story, not share relief. Graphite anode stays ≥**90%**: the share did not move; the downstream-risk framing did (~**$300B**/yr outside China on a full trade disruption path).
+
+Across the sixteen-row table, **7** stages tighten, **2** ease, and **7** stay flat. That mix is the Q3 contribution: the tip did not uniformly soften just because one magnet midstream meter improved.
+
+## Ranked shares: Top-1, Top-3, and HHI
+
+Switch to **Ranked shares**. Toggle **Top-1**, **Top-3**, or **HHI**, then filter stage and sector. On Top-1, the order is familiar but restated: gallium ~**99%**, graphite anode and battery recovery ~**90%**, REE refine **85%**, then the mid-70s cluster (graphite mine, cobalt mine/refine, nickel growth capture, average refine). Lithium chemicals now clear the **70%** line. Copper refine and smelt sit near **50%** — not a monopoly, but a decisive midstream tip next to Chile’s ~**23%** mine lead.
+
+Top-3 bars make the “thin remainder” visible. Eleven of sixteen stages clear **≥85%** Top-3. Even where Top-1 is “only” the high sixties or seventies, three capitals often clear almost the entire world. Analytical country-share HHI (0–10,000) puts thirteen stages at or above **2,500**, with a median near **5,525** — a highly concentrated band on the conventional antitrust-style scale, even though these are *country* shares, not firm HHIs, and must be read as derived meters.
+
+The producer seat chart answers a different question: *who leads*. China still occupies **11** Top-1 seats (**69%** of leaders in this table). Indonesia leads the nickel growth-capture row; DRC leads cobalt mine; Australia leads lithium mine; Chile leads copper mine; Morocco leads phosphate fertilizer exports. Plural leaders at the pit do not imply plural midstream.
+
+## Mine → plant: where leaders flip
+
+Open **Mine→plant**. The slope panel is the geographic punchline copper and lithium desks already trade intuitively: Chile ~**23%** of mine copper versus China ~**50%** of smelting capacity / refine; Australia ~**37%** of lithium mine versus China ~**70%** of lithium chemicals; DRC ~**74%** of cobalt mine versus China ~**75%** of refine; China already leads graphite mine (~**78%**) and still tightens further into anode processing (~**90%**); rare earths stay China-led from mine (~**69%**) into separation (**85%**, eased but still extreme).
+
+Beside the slopes, the copper smelter stress meters bind capacity share to fees. China utilisation near **85%** versus ~**70%** outside China, and a **$0/t** 2026 TC/RC annual settle, answer why “custom smelters will always be there” is no longer a free assumption. Pair that with the [August Pink Sheet / spot TC follow-through](/blog/chokepoint-commodities-update-202608) if you need the price-tape vintage; this post keeps the *share* meter.
+
+For single-metal geography deep dives keep [copper mine vs refinery](/blog/copper-mine-vs-refinery-geography-2026) and [natural graphite mine concentration](/blog/natural-graphite-mine-concentration-2024) open beside this lens.
+
+## Risk, HHI bands, and the investment paradox
+
+**Risk & HHI** folds three objects desks often keep in separate tabs. The HHI donut shows how many filtered stages sit in extreme (≥5,000), high (2,500–4,999), moderate, and plural bands. The reliance × Top-1 scatter puts US net-import reliance on the x-axis and Top-1 share on the y-axis; bubble size tracks substitution difficulty. Gallium, graphite anode, and several battery midstream rows sit upper-right: high reliance *and* high Top-1. Lithium chemicals sits high on Top-1 with lower US reliance — a reminder that concentration and import dependence are related but not identical meters.
+
+Downstream disruption risk bars put IEA dollar framing next to Top-1: graphite anode disruption near **$300B**/yr outside China; rare-earth full-chain disruption framed near **$6.5T**. Those are scenario envelopes, not base-case losses — but they translate share monopolies into balance-sheet language.
+
+The investment panel is the paradox: critical-minerals investment **−9%** YoY, battery-metals capex **−20%**, lithium capex **−40%**, while copper capex lifts ~**+8%** and public-finance support prints near **$65B** (~4× vs 2023). Private capital is pulling back from some of the hottest midstream tips just as public money tries to seed alternatives — a timing mismatch that keeps concentration sticky even when policy headlines sound diversified.
+
+## Caveats and how to read the meters
+
+1. **This is a Q3 concentration vintage**, not a second twenty-stage encyclopedia. For the original MCS 2025 / secondary Midstream ladder use the [2026 concentration print](/blog/chokepoint-commodities-concentration-2026). For share *deltas* without the Top-k / HHI frame use the [Q3 update](/blog/chokepoint-commodities-update-2026q3). For the full research scoreboard use the [research ledger](/blog/chokepoint-commodities-research-2026).
+2. **IEA and USGS definitions differ.** Cross-agency Δ is directional. Lithium chemicals ~70% is an IEA processing narrative against a prior secondary carry; copper refine “just under 50%” sits beside MCS ~48% — treat them as consistent *direction*, not identical accounting.
+3. **Top-3 and HHI are derived.** Where agencies publish only Top-1 (or a short country list), Top-3 and HHI reuse prior theme ladders and rounded residuals. Do not quote HHI as a disclosed antitrust filing.
+4. **Mine holds are MCS 2026 anchors** where IEA did not restate pits (graphite, cobalt, copper, lithium mine). A flat mine share can still hide a tighter midstream or a revised volume-risk outlook (DRC cobalt quotas).
+5. **Country share ≠ firm share.** A 50% China smelting-capacity print can still be many plants; a 90% anode print can still be a short list of processors. Both are chokepoints; they are different legal and contractual objects.
+6. **Disruption dollars are envelopes.** The $300B graphite and $6.5T REE figures are IEA-style full-disruption framings, not expected annual losses.
+
+## What the tip implies for desks
+
+Physical-input assumptions in energy transition, semis, and fertilizer models often treat midstream capacity as elastic once the mine exists. The Q3 concentration print says the opposite for the binding stages: **median midstream Top-1 near 75%**, **10 of 16** stages above **70%** Top-1, average refining (ex-REE) at **72%** and rising, graphite anode still ≥**90%**, battery recovery now ~**90%**, and copper’s fee cover at **$0/t** while China capacity sits near half the world. Rare-earth refining’s ease to **85%** is real — and still leaves Top-3 near **96%**. Diversification announcements matter; they have not yet moved most of the tip.
+
+Related reading: [2026 concentration print](/blog/chokepoint-commodities-concentration-2026) · [Q3 midstream update](/blog/chokepoint-commodities-update-2026q3) · [MCS 2026 update](/blog/chokepoint-commodities-update-2026) · [August price/stress vintage](/blog/chokepoint-commodities-update-202608) · [research ledger](/blog/chokepoint-commodities-research-2026) · [copper geography](/blog/copper-mine-vs-refinery-geography-2026).`,
+  },
+  {
     id: "ai-compute-demand-concentration-2026q3",
     slug: "ai-compute-demand-concentration-2026q3",
     title:
