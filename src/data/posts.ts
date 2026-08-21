@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-update-2026q3",
+    slug: "macro-growth-trade-update-2026q3",
+    title:
+      "Update: CPB May Trade +1.0% MoM — US Q2 GDP Slows to 1.5% as PCE Hits 5.1%",
+    excerpt:
+      "First hard-data check of the July IMF vintage: CPB merchandise volumes rebound a second month after March’s −2.1% war shock, while BEA prints US Q2 growth at 1.5% SAAR and PCE at 5.1% — trade firmer, growth softer, prices hotter.",
+    category: "Economics",
+    themeId: "macro-growth-trade",
+    imageUrl: "/images/economics-macro-growth-trade-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of teal trade rebound, softening cyan GDP, and rising amber inflation trails",
+    publishedAt: "2026-08-21T02:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-update-2026q3",
+    layout: "default",
+    content: `## What changed since the July IMF vintage
+
+Our [July growth–trade–prices update](/blog/macro-growth-trade-update-2026) answered the *forecast revision* question: versus the April WEO research print, the IMF’s July Update lifted 2026 world trade volume (goods and services) **+0.7 pp to 3.5%**, slipped world GDP **−0.1 pp to 3.0%**, and raised world headline CPI **+0.3 pp to 4.7%** with oil near **$89**/bbl. That post was a vintage delta inside the Fund’s own tables. This Q3 note answers the next question markets actually trade on: **what did the first wave of official hard data say once that July baseline was on the street?**
+
+Three information events force the refresh. The **CPB World Trade Monitor for May 2026**, released **24 July**, printed world merchandise volume **+1.0% month-on-month** after April’s **+0.7%** rebound from March’s **−2.1%** Hormuz/Gulf shock. The **BEA advance estimate for Q2 2026**, released **30 July**, put US real GDP at **1.5% SAAR** (down from **2.1%** in Q1) while the PCE price index jumped to **5.1% SAAR** and the purchases deflator to **5.7%**. **Eurostat’s Q2 flash** (confirmed in the 14 August second estimate) showed the euro area expanding **0.4% QoQ** after a flat Q1, with **+1.0% YoY**. China’s NBS Q2 print slowed to **4.3% YoY** (from **5.0%** in Q1); Korea’s BOK advance held a still-hot **3.7% YoY** on **+0.6% QoQ** exports. The dashboard above is built as a hard-data check — CPB MoM path, triad tracking bars, US GDP×PCE dual path, forecast-vs-print gaps, Q1→Q2 slopes, and a disclosed growth×price scatter.
+
+## The headline table: July forecast path → Q3 hard prints
+
+| Meter | July IMF 2026 baseline | Newest hard print | Signal |
+| --- | ---: | ---: | --- |
+| World trade (IMF G+S, 2026f) | **3.5%** | — | Annual forecast (unchanged) |
+| World merchandise (CPB May) | — | **+1.0% MoM** | Second rebound month |
+| World merchandise (CPB Apr) | — | **+0.7% MoM** | Post-shock bounce |
+| World merchandise (CPB Mar) | — | **−2.1% MoM** | War / Hormuz shock |
+| US GDP (IMF 2026f) | **2.3%** | **1.5% SAAR (Q2)** | Softer than annual path |
+| US CPI assumption (IMF) | **3.6%** | **PCE 5.1% SAAR (Q2)** | Hotter impulse |
+| US core PCE (Q2) | — | **3.4% SAAR** | Cooler than headline |
+| Euro-area GDP (IMF 2026f) | **0.9%** | **+0.4% QoQ / +1.0% YoY** | Sequential rebound |
+| China GDP (IMF 2026f) | **4.6%** | **4.3% YoY (Q2)** | Softer YoY vs Q1 5.0% |
+| Korea GDP (IMF 2026f) | **2.6%** | **3.7% YoY / +0.6% QoQ** | Still above annual path |
+
+Read the table as a **split triad**, not a single scare print. Trade volumes in the CPB monitor have already staged a two-month recovery from the March cliff. US growth is running **below** the July annual number on a SAAR basis. US prices are running **above** the July CPI assumption on a PCE SAAR basis — even as core PCE cooled to **3.4%**. That is the opposite of a synchronized soft-landing confirmation, and it is a different story from July’s pure forecast revision where trade was the upgrade surprise inside the Fund’s own tables.
+
+## Trade: the CPB monitor says the March shock did not stick
+
+July’s IMF path still has world goods-and-services trade volume slowing from **5.0%** in 2025 to **3.5%** in 2026. That is an annual average, not a monthly run-rate. What CPB adds is the **intra-year shape**. Merchandise volume fell **2.1%** in March as Africa/Middle East trade collapsed and Chinese New Year timing amplified Asia’s export dip. April recovered **0.7%**; May added another **1.0%**. Staff commentary on the April print already pointed to inventory building and AI-related electronics as offsets to the Gulf shock. The May print extends that rebound for a second consecutive month.
+
+The non-obvious reading: **the war shock looks sharp but temporary in the merchandise monitor**, at least through May. A rough Mar–May chain leaves cumulative volume only about **−0.4%** below the February level — not a multi-month freefall. That is consistent with July’s narrative that inventories and rerouting buffered oil shortfalls, and it is friendlier to the Fund’s **+0.7 pp** trade upgrade than a prolonged Hormuz closure would be. Pair this vintage with our [China–US–India GDP comparison](/blog/china-us-india-gdp-30-years) for the longer weight shift that still sits under AI-goods trade, and with the [April research triangle](/blog/macro-growth-trade-research-2026) for the WTO March merchandise baseline (**+4.6%** in 2025; **1.9%** baseline for 2026) that has still not been superseded by a new GTOS vintage.
+
+## Growth: US softens; euro area rebounds; China cools on a YoY basis
+
+The US advance estimate is the cleanest single stress test of July’s country table. IMF staff left US 2026 GDP unchanged at **2.3%** in July. Q2 SAAR at **1.5%** is not a recession print — final sales to private domestic purchasers rose **3.9%** — but it is a clear deceleration from Q1’s **2.1%** and sits **0.8 pp** under the annual baseline if the second half does not re-accelerate. Contributors were consumer spending, investment, and exports, offset by government spending (including SPR sales accounting) and rising imports. That mix is “soft landing with a hotter price impulse,” not “AI boom alone carrying the print.”
+
+The euro area tells the other half of July’s war-vs-tech crosscurrent. July cut EA 2026 growth to **0.9%** on Ireland-heavy Q1 carryover and energy drag. Q2’s **0.4% QoQ** rebound (after **0.0%** in Q1) and **1.0% YoY** do not automatically restore the annual path, but they break the flat-line narrative. Spain led among large members; Germany, France, and Italy each posted about **0.2% QoQ**. Ireland’s **3.9% QoQ** again shows how multinational accounting can dominate the flash.
+
+China’s **4.3% YoY** in Q2 (H1 **4.7%**) is a step down from Q1’s **5.0%** and sits a tenth or so under July’s **4.6%** annual number if the second half does not firm. Sequential growth of **0.9% QoQ** is still positive. Korea remains the AI-hardware outlier in levels: **3.7% YoY** and **0.6% QoQ** keep the economy well above the IMF’s **2.6%** annual print even after July’s large upgrade. Toggle the dashboard’s region filter to see how Asia’s YoY prints sit proud of July while the US SAAR print sits soft.
+
+## Prices: disinflation is not the Q2 story in the United States
+
+July already said world CPI would rise to **4.7%** in 2026 before easing to **3.9%** in 2027, with US CPI assumptions at **3.6% / 2.4%**. Q2 US data do not contradict the “pause in disinflation” headline — they sharpen it. Headline PCE at **5.1% SAAR** (from **4.6%** in Q1) and the gross domestic purchases price index at **5.7%** (from **3.6%**) show the energy/conflict impulse still in the quarterly tape. Core PCE at **3.4% SAAR** (down from **4.4%**) is the partial offset: underlying demand-side pressure cooled even as headline stayed hot.
+
+That split matters for policy. July argued policy rates would be less supportive than in April because inflation was more visible. A quarter where headline PCE is **5.1%** and core is **3.4%** is exactly the configuration that keeps “look-through the supply shock” contested inside central banks. It is also why the dashboard’s price bridge puts the July **$89**/bbl oil assumption next to the US deflator impulse rather than pretending they share a unit.
+
+## Country trajectories: who is tracking July — and who is not
+
+Cross-country gaps in the dashboard use a deliberately rough comparator (SAAR or YoY versus annual, QoQ×4 for sequential economies). Treat the ranking as a **signal board**, not a forecast error decomposition:
+
+- **United States:** Q2 SAAR **1.5%** vs IMF **2.3%** — soft on growth, hot on PCE.
+- **Euro area:** sequential rebound **0.4% QoQ** after a flat Q1; annual path still requires H2 follow-through to hit **0.9%**.
+- **China:** Q2 YoY **4.3%** vs IMF **4.6%** — modest undershoot after a strong Q1.
+- **Korea:** YoY **3.7%** vs IMF **2.6%** — still the clearest upside AI-export tracker.
+- **India / Brazil / UK / Japan** rows in the gap panel include estimated sequential or YoY placeholders where full national accounts sets were not yet aligned for this desk; disclosed anchors remain US, EA, China, and Korea.
+
+Exposure geometry from July still helps interpret the tape: AI-hardware exporters and economies with strong electronics orders look firmer on activity; energy-importing advanced economies show the price impulse more clearly in US deflators than in EA sequential GDP so far.
+
+## What would rewrite this hard-data vintage
+
+1. **CPB June/July monitors** — if merchandise MoM turns negative again, the two-month rebound narrative fails.
+2. **BEA second estimate (26 Aug)** — a large GDP or PCE revision would move the US gap versus July’s **2.3% / 3.6%** assumptions.
+3. **Hormuz / Gulf logistics** — a renewed closure would hit CPB Middle East/Africa rows first and oil assumptions second.
+4. **AI-goods trade momentum** — a fade in semiconductor and server-related shipments would undercut both Korea’s YoY outperformance and July’s trade upgrade logic.
+5. **China domestic demand** — if H2 YoY stays near **4.3%** without import recovery, partner CPIs keep absorbing diversion effects.
+
+Until those resolve, the shareable framing is narrow: **versus the July IMF baseline, May–August hard data say merchandise trade bounced, US growth undershot on a SAAR basis, and US headline prices overshot — the triad is no longer co-moving inside the quarter.**
+
+## Caveats and methodology
+
+- **Hard data ≠ annual forecast.** CPB MoM merchandise volume is not interchangeable with IMF goods+services annual volume (**3.5%**). WTO still has not issued a post-March GTOS vintage in this window.
+- **SAAR / QoQ / YoY mismatch.** Country gap bars mix units; QoQ×4 is a crude annualiser, not an IMF staff projection.
+- **US advance estimate** will be revised on 26 August and again with the annual update path; treat **1.5% / 5.1%** as the 30 July vintage.
+- **Eurostat flash → second estimate** held at **0.4% QoQ**; third estimate is still ahead.
+- **Estimated rows** (Japan, UK, India, Brazil sequential/YoY placeholders) are marked in the data module — do not treat them as disclosed national accounts.
+- **Oil $89**/bbl is the July IMF assumption, not an August futures settle; the price bridge is directional.
+- **India** remains fiscal-year basis in IMF tables; calendar-quarter YoY comparisons are approximate.
+
+## The shareable takeaway
+
+In the **Q3 2026 hard-data window**, CPB merchandise trade printed **+1.0% MoM** in May after **+0.7%** in April and **−2.1%** in March; US Q2 GDP advanced at **1.5% SAAR** with PCE at **5.1%**; the euro area rebounded **0.4% QoQ**. Relative to the [July IMF update](/blog/macro-growth-trade-update-2026), the tape is **trade firmer into mid-year, US growth softer than the annual path, US prices hotter than the CPI assumption**. The soft landing is still not canceled — but the three meters are not confirming July in the same direction.
+
+Related reading: [July IMF vintage delta on growth, trade & prices](/blog/macro-growth-trade-update-2026) and [April research triangle](/blog/macro-growth-trade-research-2026).`,
+  },
+  {
     id: "ai-supply-chain-update-2026q3",
     slug: "ai-supply-chain-update-2026q3",
     title:

@@ -109,7 +109,8 @@ export interface Post {
     | "ai-power-grid-update-2026q3"
     | "adaptation-economics-update-202608"
     | "ai-financing-update-202608"
-    | "ai-supply-chain-update-2026q3";
+    | "ai-supply-chain-update-2026q3"
+    | "macro-growth-trade-update-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
