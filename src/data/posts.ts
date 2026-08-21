@@ -2,6 +2,95 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "geopolitics-institutions-geography-2026",
+    slug: "geopolitics-institutions-geography-2026",
+    title:
+      "Charted: Asia-Pac Holds 19% of IMF Votes on 36% of PPP GDP — Europe 23% on 13%",
+    excerpt:
+      "Geography lens on institutions & governance: Asia-Pacific majors sit ~19% of IMF votes on ~36% of PPP GDP (−17 pp); Europe holds ~23% on ~13% (+9 pp). Europe owns 3 of 5 UNSC permanent seats; Africa and the Middle East own zero. Russia accounts for ~61% of 2018–24 veto uses.",
+    category: "Politics",
+    themeId: "geopolitics-institutions",
+    imageUrl:
+      "/images/politics-geopolitics-institutions-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with amber Asia-Pacific under-weight glow, violet Europe over-weight glow, cyan Americas tip, and crimson UNSC veto seals — institutions geography data viz",
+    publishedAt: "2026-08-22T02:00:00Z",
+    featured: true,
+    visualization: "geopolitics-institutions-geography-2026",
+    layout: "default",
+    content: `Our [institutions research ledger](/blog/geopolitics-institutions-research-2026) answered the *member gap* question: China sits roughly **−12.6 pp** under its PPP GDP share on IMF votes; India is similarly under-weighted; several European creditors sit above the diagonal. Our [concentration companion](/blog/geopolitics-institutions-concentration-2026) then answered the *Top-k* question: US alone is **16.5%** of Fund votes (and the sole solo blocker of **85%** special majorities); Top-3 reach **28.7%**; UNSC veto authority is **100%** P5. This post asks the desk question that sits beside those prints: **where does formal authority sit on the map?**
+
+The interactive dashboard above is built as a **geography lens**. Toggle **Regional shares**, **Vote↔GDP gaps**, **Country scatter**, and **Council & HQs**. On regions flip IMF votes, IBRD votes, or PPP GDP; on gaps and scatter filter by region. The punchline is deliberately multi-map. On **regional IMF votes among majors**, Americas and Europe each clear the low-**20%s** while Asia-Pacific majors hold only ~**19%** despite ~**36%** of PPP GDP — a **−17 pp** under-weight. On **UNSC permanent seats**, Europe alone holds **3 of 5** (**60%**); Africa and the Middle East hold **zero**. On **veto practice**, Russia accounts for ~**61%** of the 2018–24 stack even though formal P5 equality says each seat is identical. Vote geography, seat geography, and practice geography are **three different maps**.
+
+## The headline ladder: regional shares that disagree
+
+| Lens | Tip / share | Meter | What it answers |
+| --- | ---: | --- | --- |
+| Asia-Pac IMF votes (majors) | **~18.9%** | Vote weight | Where Fund voice sits |
+| Asia-Pac PPP GDP (same tip) | **~35.8%** | Economic weight | Where output sits |
+| Asia-Pac gap (vote − GDP) | **−16.9 pp** | Mis-match | Under-representation |
+| Europe IMF votes (majors) | **~22.6%** | Vote weight | Creditor-bloc tip |
+| Europe PPP GDP (same tip) | **~13.4%** | Economic weight | Smaller GDP claim |
+| Europe gap | **+9.2 pp** | Mis-match | Over-representation |
+| Europe share of P5 seats | **60%** (3/5) | Veto geography | Where negative rights sit |
+| Russia share of 2018–24 vetoes | **~61%** | Practice | Who uses the veto |
+
+Read the table as a **family of maps**, not one slogan. Regional vote share tells you which *continent blocs* absorb Fund voice among tracked majors. The gap column tells you that Asia's under-weight and Europe's over-weight are the same coin. P5 seat share tells you that Security Council *negative authority* is still a European-majority geography. Veto practice tells you that formal equality inside the P5 coexists with highly unequal *use*. Averaging these rows into “the West runs the system” or “Asia is rising into parity” is a category error — both can be true on different ledgers, and neither is true on all of them.
+
+## Regional shares: Americas and Europe tip; Asia under-weights
+
+Open **Regional shares**. Flip **Metric → IMF votes**. Among the tracked majors tip plus residual, Americas (~**22.7%**) and Europe (~**22.6%**) sit nearly level on Fund voice, Asia-Pacific majors hold ~**18.9%**, the Middle East & Africa tip is a thin ~**3.5%**, and the multi-chair residual still clears ~**32%**. Flip to **PPP GDP** and the pie rewrites: Asia-Pacific majors jump to ~**36%**, Europe drops to ~**13%**, Americas stay near parity with their vote weight. That is the geography punchline in one toggle — **voice and output do not share a map**.
+
+Switch **IBRD votes** and the story softens only slightly: Asia-Pacific's Bank-side tip (~**20%**) is a little thicker than its Fund tip, but still nowhere near its GDP claim. Twin Bretton Woods hierarchies encode the same continental skew. Our [August update](/blog/geopolitics-institutions-update-202608) tracked the consent clock that freezes relative shares; this lens shows *where* those frozen shares sit when you bucket by region instead of ranking by Top-k.
+
+## Vote↔GDP gaps: the dumbbell is the story
+
+Toggle **Vote↔GDP gaps**. The dumbbell panel puts IMF vote share and PPP GDP share on one axis per region. Asia-Pacific's amber GDP dot sits far right of its violet vote dot (**−16.9 pp**). Europe flips the geometry: vote share ahead of GDP (**+9.2 pp**). Americas sit near balance (**+1.6 pp**) — but that “balance” is a United States story. Filter **Region → Americas** on the country bars and the US alone is **16.5%** of Fund votes inside a ~**22.7%** tip — roughly **73%** of the regional stack. Brazil is a rounding partner on this meter, not a co-equal.
+
+Filter **Asia-Pacific** and the under-weight sharpens into two named seats: China at **6.1%** of votes on **18.7%** of PPP GDP (**−12.6 pp**), India at **2.6%** on **7.9%** (**−5.3 pp**). Japan is the Asia exception that proves the rule — over-weighted on votes relative to its GDP share, a creditor-legacy geography inside an otherwise under-represented continent. The [research gap ledger](/blog/geopolitics-institutions-research-2026) already named those member gaps; here they aggregate into a continental mis-match large enough that no single 17th GRQ formula tweak closes it without US consent on effectiveness.
+
+## Country scatter: under-weight is a quadrant, not a slogan
+
+Open **Country scatter**. Points plot PPP GDP share on the X axis against IMF vote share on the Y. China sits far right and only mid-height; India sits right of the European mid-weights with a thinner vote claim; the United States sits near the diagonal at the top of the cloud. Europe's DE/FR/UK cluster sits left-of-China on GDP and competitive on votes. Color encodes region so the continental story stays visible without reducing the panel to a Top-10 bar chart.
+
+This is why “representation reform” desks should not quote a single Asia share. Asia-Pacific as a *region* is under-weighted; Japan as a *member* is not; China and India as *members* carry almost all of the regional gap. Geography without member resolution misleads; member gaps without regional aggregation understate the political coalition problem.
+
+## Council geography: seats, practice, and buildings
+
+Toggle **Council & HQs**. The permanent-seat bars are blunt: Europe **3**, Americas **1**, Asia-Pacific **1**, Africa **0**, Middle East **0**. Expanding elected seats without touching the veto leaves that P5 geography intact — the same concentration insight our [concentration post](/blog/geopolitics-institutions-concentration-2026) framed as Top-5 = **100%** of vetoes. Here the point is *where* those five seats sit, not only that they are five.
+
+The veto-practice pie concentrates further inside that map. Across the 2018–2024 illustrative stack, Russia accounts for ~**61%** of uses, China ~**21%**, the United States ~**18%**, and the United Kingdom and France **zero**. Formal P5 equality (“each has a veto”) coexists with a practice geography that is overwhelmingly a Russia story in this window. Charter reform that adds elected African seats without redistributing veto rights changes *presence*, not *negative authority*.
+
+The HQ strip is the soft geography that markets ignore: IMF and World Bank Group campuses in Washington, UN Headquarters in New York, Geneva as the European diplomatic/trade campus, Manila as the ADB Asia-Pac hub. Institutional *buildings* cluster in the Americas and Europe even when membership and GDP have shifted toward Asia. Voice reform and headquarters geography are not the same fight — but they rhyme.
+
+## Cross-meter ladder: do not average the maps
+
+The meter-compare panel ranks regional IMF tips, Europe's P5 seat share, Russia's veto-practice share, and the US tip inside Americas on one ladder. Europe can look “only” mid-20s on Fund votes and still own **60%** of permanent Council seats. Asia can look mid-teens on Fund votes and still dominate the *gap* column. The United States can look like “just” another Americas member until you notice it is ~**73%** of that tip and the sole solo **15%** special-majority blocker. Geography without meter discipline produces fake consensus.
+
+## Who is exposed under a geographic reading
+
+**Exposed:** coalitions that treat Asia's GDP rise as automatic Fund voice; models that equate UNSC elected-seat expansion with veto dilution; European creditors who read near-parity Americas/Europe vote tips as proof the map is already fair; and any forecast that assumes BRICS-style clusters can match US blocking power without additional mid-weight partners on the Fund side.
+
+**Relative winners under current maps:** the Americas tip anchored by a solo block-capable US share; European multi-country chairs that convert fragmented GDP into stacked vote weight; P5 members whose negative rights do not scale with regional GDP; and regional MDBs (ADB and peers) that offer Asia-weighted voice outside Bretton Woods headquarters geography.
+
+**What would change the story:** a 17th GRQ formula that actually moves relative shares toward Asia's GDP claim; US consent that clears residual quota/NAB gates; an IBRD SCI reopening that thickens Asia's Bank tip; or a UNSC reform that redistributes permanent/veto rights rather than only elected seats. None of those print as disclosed regional shares in the tables this dashboard reads.
+
+## Caveats and methodology
+
+- **Regional buckets** among tracked majors are analytical aggregations for the pie and dumbbell — not official IMF constituency totals. “Rest of membership” is a multi-chair residual, not a polity.
+- **Vote share ≠ quota share.** Consent thresholds for the 16th GRQ use quota denominators; voting power includes basic votes. Geography panels here are **voting power** shares unless labeled GDP.
+- **Gaps vs PPP GDP** use WEO-style anchors rounded to 0.1 pp — same convention as our research and concentration posts — and are not claims about every decimal in every annex PDF.
+- **UNSC veto counts** are annual aggregates from public Security Council documentation patterns; they measure *use*, not latent veto power. UK/FR zeros in this window are practice, not absence of rights.
+- **HQ geography** is institutional address, not voting power. Washington clustering does not mechanically determine chairs.
+- This is a **geography lens**. For Top-k concentration and blocking thresholds, use the [concentration post](/blog/geopolitics-institutions-concentration-2026). For member vote-vs-GDP stock detail, use the [research ledger](/blog/geopolitics-institutions-research-2026). For the consent clock, use the [August update](/blog/geopolitics-institutions-update-202608).
+
+## The shareable takeaway
+
+Institutions & governance allocate authority on maps that disagree. Asia-Pacific majors hold ~**19%** of IMF votes on ~**36%** of PPP GDP (**−17 pp**); Europe holds ~**23%** on ~**13%** (**+9 pp**); Americas look near parity only because the United States is ~**73%** of that tip and the sole solo special-majority blocker. On the Security Council, Europe owns **60%** of permanent seats while Africa and the Middle East own **zero**, and Russia accounts for ~**61%** of recent veto *uses* inside formal P5 equality. In this system, **where power sits** is not the same question as **how concentrated the top is** — and both meters still say the same soft truth: the map of GDP has moved faster than the map of votes, seats, and boardrooms.
+
+Related reading: [Institutions concentration](/blog/geopolitics-institutions-concentration-2026) and [Institutions research](/blog/geopolitics-institutions-research-2026).`,
+  },
+  {
     id: "adaptation-economics-concentration-202608",
     slug: "adaptation-economics-concentration-202608",
     title:

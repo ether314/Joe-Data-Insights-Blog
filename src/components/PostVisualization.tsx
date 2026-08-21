@@ -2417,6 +2417,21 @@ const AdaptationEconomicsConcentration202608Dashboard = dynamic(
   },
 );
 
+const GeopoliticsInstitutionsGeography2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/GeopoliticsInstitutionsGeography2026Dashboard"
+    ).then((m) => m.GeopoliticsInstitutionsGeography2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3048,6 +3063,10 @@ export function PostVisualization({
 
   if (type === "adaptation-economics-concentration-202608") {
     return <AdaptationEconomicsConcentration202608Dashboard />;
+  }
+
+  if (type === "geopolitics-institutions-geography-2026") {
+    return <GeopoliticsInstitutionsGeography2026Dashboard />;
   }
 
   return null;

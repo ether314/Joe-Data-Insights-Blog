@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "geopolitics-institutions-geography-2026",
+    marker: "Institutions & governance — geography lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "adaptation-economics-concentration-202608",
     marker: "Adaptation economics — Aug 608 concentration lock",
     forbidden: "Loading interactive charts",
