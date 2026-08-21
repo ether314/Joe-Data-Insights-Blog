@@ -2,6 +2,110 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "measurement-science-concentration-2026q3",
+    slug: "measurement-science-concentration-2026q3",
+    title:
+      "Q3 Concentration: GERD Top-1 Is 29.4% China — Gap Shrinks to 0.3 pp; Non-OECD Hits 92%",
+    excerpt:
+      "Q3 concentration lens on measurement & science: OECD/AAAS restatement keeps GERD Top-1 at 29.4% China and Top-3 at 65.2%, but the China–US gap collapses from 1.0 pp to 0.3 pp; business BERD (+$100B) funds the knife-edge while non-OECD R&D Top-1 hits 92.3% — and EXR / alt-PPP converters reverse the ranking.",
+    category: "Global Systems",
+    themeId: "measurement-science",
+    imageUrl:
+      "/images/global-systems-measurement-science-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of rose Top-1 concentration bars, teal Top-3 share ladders, and amber Lorenz curve over a faint globe grid",
+    publishedAt: "2026-08-21T22:00:00Z",
+    featured: true,
+    visualization: "measurement-science-concentration-2026q3",
+    layout: "default",
+    content: `Our [2026 concentration lens](/blog/measurement-science-concentration-2026) answered the distribution question on four perimeters: GERD Top-1 at **29.4%** China, publications Top-3 at **50%**, CET AI patents near **75%**, and KTI VA still US-led at **28%**. The [Q3 OECD/AAAS restatement](/blog/measurement-science-update-2026q3) then showed that finer shares shrink the China–US GERD gap from **1.0 pp to 0.3 pp** without breaking the duopoly. This post is the **concentration vintage of that restatement**: did converter noise change *who sits at the top*, or only how fragile the ranking looks?
+
+The interactive dashboard above is a Q3 concentration lens — not another KPI strip. Toggle **HHI / scoreboard**, **Ladder + Lorenz**, **Converter frames**, and **Vintage + impact**. The punchline is deliberately frame-dependent. On headline PPP, **Top-1 is still China at 29.4%** and **Top-3 clears 65.2%**. On the non-OECD ledger alone, **Top-1 hits 92.3%**. On alternate PPP or market exchange rates, **China falls back below the United States** and the world Top-1 label flips. Same 2024 expenditure year; three different concentration stories.
+
+## The Q3 concentration scoreboard
+
+| Perimeter | Top-1 | Top-3 | Extra meter |
+| --- | ---: | ---: | --- |
+| GERD funding (PPP, AAAS/OECD) | **29.4%** (China) | **65.2%** (CN·US·JP) | Gap **0.3 pp** (was 1.0) |
+| Non-OECD R&D ledger | **92.3%** (China) | **~97%** | Extreme sub-perimeter |
+| S&E publication volume | **31%** (China) | **50%** (CN·US·IN) | HCA rate US **1.7%** vs CN **1.3%** |
+| CET AI priority patents | **~75%** (China) | **~92%** | Semi China ~42% |
+| KTI value-added | **28%** (United States) | **71%** (US·CN·EU) | World KTI ~$11.7T |
+| Converter: China vs US GERD | PPP **102%** | Alt PPP **90–95%** | EXR **~50%** |
+
+Read the table as a **family of market shares under different meters**, not one number. The [prior concentration print](/blog/measurement-science-concentration-2026) already showed that funding, papers, patents, and output disagree on who is Top-1. Q3 adds a fifth disagreement: **whether China is Top-1 at all** depends on which converter you trust for the same GERD year.
+
+Analysts who quote only the NSF rounded **30% / 29%** overstate the lead. Analysts who quote only EXR understate how thick the PPP duopoly is. Analysts who ignore the non-OECD ledger miss where concentration is most extreme once OECD peers are stripped out.
+
+## Vintage slope: NSF rounded → AAAS finer shares
+
+Open **Vintage + impact**. The slope from the NSF State of S&E rounded print to the OECD/AAAS Q3 restatement is the first hinge of this post. China share moves **30% → 29.4%**; US share **29% → 29.1%**; the gap collapses **1.0 → 0.3 pp**; US+China eases **59% → 58.5%**; analytical GERD HHI eases **~1,920 → ~1,890**. Top-3 stays near **65%**.
+
+That is *not* diversification. Three names still clear about two-thirds of world PPP R&D. It is a restatement that makes the overtake **fragile without making the duopoly thin**. The concentration *shape* — steep Top-2, Japan as a distant third, RoW closing the ladder — barely moves. What moves is the political readability of a **0.3 pp** lead.
+
+Pair this panel with the [Q3 update](/blog/measurement-science-update-2026q3): the same vintage that narrowed the headline also documented China’s business BERD lead of about **+$100B** (constant 2020 PPP) and a US government-sector lead of about **+$19B**. Concentration of *funding effort* and concentration of *who wins the converter debate* are different questions.
+
+## Converter frames: when Top-1 disappears
+
+Toggle **Converter frames**. Three meters of the same China-vs-US GERD ratio:
+
+- **Headline PPP (OECD/AAAS):** China at about **102%** of US — world Top-1 stays China; US+China still **58.5%**.
+- **Alternate PPP sensitivity:** China at about **90–95%** of US — overtake vanishes; US remains ahead.
+- **Market exchange rates:** China near **~50%** of US — US clear Top-1; the “China overtook” headline never prints.
+
+This is the second hinge. A desk that only watches PPP world shares sees a knife-edge concentration story with China on top. A desk that only watches EXR sees a US-led funding system where China is large but not first. Both desks can be reading honest OECD/AAAS tables. The concentration answer is **frame-conditioned**.
+
+Treat converter frames as a **ranking stress test**, not a claim that PPP is wrong. The prior concentration post already warned that EXR paints a different China-vs-US picture; this Q3 lens makes the boolean explicit: **does world Top-1 stay China?** Only under headline PPP.
+
+## Sector split: business BERD funds the knife-edge
+
+Stay on **Converter frames** or return to **HHI / scoreboard** for the sector bars. China’s business BERD lead of about **+$100B** against the United States (constant 2020 PPP) is the micro-foundation of the 0.3 pp world-share edge. The US still leads government-sector R&D by about **+$19B**. OECD-area funding mix remains business-heavy (**~64%** business-funded vs **~23%** government-funded in the Q3 OECD framing).
+
+That is the third hinge. Concentration is not only *which country* sits at Top-1; it is *which sector inside those countries* is pulling the ladder. A government-budget desk that watches GBARD defence reorientation can miss that the world-share knife-edge is a **business BERD** story. A corporate-R&D desk that watches only BERD can miss that US government dollars still print a lead on the public ledger.
+
+The non-OECD panel sharpens the same point from another angle: once you leave the OECD perimeter, China alone is about **92.3%** of non-OECD R&D — an HHI near **8,500** on the disclosed-plus-residual basket. Mid-tier emerging innovators exist; they do not yet thicken the non-OECD ladder the way India thickens the publication Top-3.
+
+## Ladder + Lorenz: five perimeters, one shape family
+
+Switch to **Ladder + Lorenz**. Toggle GERD, publications, CET AI, KTI, and non-OECD. The Lorenz-style curves all sit above the equal-split line; how far above depends on the perimeter:
+
+- **GERD:** Top-1 **29.4%**, Top-2 **58.5%**, Top-3 **65.2%** — duopoly floor.
+- **Publications:** Top-1 **31%**, Top-3 **50%** (China–US–India) — steeper Top-1, half-world oligopoly at three.
+- **CET AI:** Top-1 **~75%**, Top-3 **~92%** — cliff, not knife-edge.
+- **KTI VA:** Top-1 **28%** (US), Top-3 **71%** — Top-1 label flips; concentration stays thick.
+- **Non-OECD:** Top-1 **92.3%** — the extreme Q3-specific perimeter.
+
+HHI by lens in the scoreboard view ranks the same way: non-OECD and CET AI dominate; GERD and KTI sit in a mid-band near **1,800–1,900**; publications are milder on HHI because the RoW residual is still large even after Top-3 clears half.
+
+Open **Vintage + impact** for the volume×HCA scatter. China sits far right on publication share and only mid-pack on highly-cited article *rate* (**~1.3%** of own articles in the world top 1% cited vs US **~1.7%**). Volume concentration and citation-intensity leadership still disagree — the same asymmetry the [2022 research ledger](/blog/measurement-science-research-2026) flagged and the [August 202608 CET update](/blog/measurement-science-update-202608) sharpened for patents.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** ministries that treat “China overtook on GERD” as a settled fact without stating the converter; multilaterals that model non-OECD R&D as a diversified emerging-market club when one country is **92%** of that ledger; industrial-policy desks that debate intensity gaps of a few tenths of a point while CET AI priority-family volume sits near **75%**; research strategists who equate publication Top-1 with HCA leadership; investors who price KTI services leadership without noticing that manufacturing VA on the same $11.7T ledger is China-led.
+
+**Relative winners under current meters:** China-scale business BERD platforms that funded the PPP knife-edge; US government and services franchises that still lead on public R&D dollars, HCA rates, and KTI services VA; labs and standards bodies that convert GERD into cited output rather than article counts alone; smaller high-intensity systems that punch above world-dollar share even when they are not Top-3.
+
+**What would change the story:** a clean US reclaim on headline PPP (or a sustained China gap beyond converter noise); alt-PPP and EXR converging toward the 102% PPP ratio so frame debates stop flipping Top-1; non-OECD Top-1 falling well below ~**70%** as India and others scale R&D dollars, not only papers; CET AI China share compressing toward the semiconductor ~**40%** band; KTI total VA Top-1 flipping to China. Q3 shows the gap *shrinking* and the ranking *remaining frame-fragile* — not a break in concentration shape.
+
+## Caveats and methodology
+
+- **GERD shares use OECD/AAAS March–June 2026 restatement of 2024 PPP** (China **29.4%** / US **29.1%**); NSF rounded prints (**30% / 29%**) are the prior vintage on the slope panel, not a second expenditure year.
+- **Converter ratios** (China vs US ≈102% PPP, 90–95% alt PPP, ~50% EXR) follow the Q3 theme update; alt-PPP midpoints are analytical.
+- **Business BERD +$100B and government +$19B** are constant-2020 PPP AAAS/OECD sector gaps — not nominal EXR gaps.
+- **Non-OECD China share 92.3%** is disclosed AAAS; India+ and residual rungs are estimated closures for the ladder.
+- **Do not splice China NBS yuan GERD (¥3.93T domestic in 2025)** into PPP world shares; the [August 202608 update](/blog/measurement-science-update-202608) tracks that flow separately.
+- **Publication and HCA figures** follow NSF Indicators framing; HCA is a rate, not a world HCA market share.
+- **CET AI ~75%** is an NSF Translation volume anchor; US/EU residual ladder shares are estimated.
+- **HHI values are analytical** on disclosed-plus-residual buckets (0–10,000), not official NSF or OECD statistics.
+- **KTI VA shares** follow NSF State of S&E 2026; Japan/RoW are estimated closures.
+
+## The shareable takeaway
+
+Measurement and science remain **concentrated at the top — and Q3 mostly changed how fragile the Top-1 label is, not the shape of the ladder**. On headline PPP GERD, Top-1 (China) is **29.4%**, Top-3 about **65%**, and the China–US gap is only **0.3 pp** (from **1.0 pp** on the NSF rounded print), with US+China still near **59%**. On the non-OECD ledger, Top-1 hits **92.3%**. On CET AI priority patents, Top-1 is about **75%**. On KTI value-added, Top-1 flips to the United States at **28%**. Business BERD (**+$100B**) funds the knife-edge; alternate PPP and EXR converters reverse the ranking. Progress is still funded and published through a system that looks contested in headlines and **top-heavy once you rank the distribution — and converter-conditioned once you stress-test the meter**.
+
+Related reading: [Concentration lens (2026)](/blog/measurement-science-concentration-2026) · [Q3 OECD/AAAS restatement](/blog/measurement-science-update-2026q3) · [August 202608 China flow + CET](/blog/measurement-science-update-202608) · [2022 research ledger](/blog/measurement-science-research-2026).`,
+  },
+  {
     id: "ai-supply-chain-concentration-2026q3",
     slug: "ai-supply-chain-concentration-2026q3",
     title:
