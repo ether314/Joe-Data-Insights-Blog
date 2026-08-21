@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "heavy-industrial-capacity-update-2026q3",
+    marker: "China H1 steel share 53.7%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "chokepoint-commodities-concentration-2026q3",
     marker: "Chokepoint commodities — Q3 2026 concentration lens",
     forbidden: "Loading interactive charts",

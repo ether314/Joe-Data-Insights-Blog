@@ -2,6 +2,112 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "heavy-industrial-capacity-update-2026q3",
+    slug: "heavy-industrial-capacity-update-2026q3",
+    title:
+      "Update: China H1 Steel Share 53.7% (−1.3 pp YoY); Newbuild Orders 66% China GT",
+    excerpt:
+      "Versus our Aug update (UNCTAD 91% Asia trio / World Steel FY2025 China 52% / Cirium H1 Airbus 54%), World Steel’s H1 2026 print cuts China’s pool share −1.3 pp YoY, JSEA 2025 orders put China at 66% of new GT, and OEM YTD July trims Airbus’s duo lead to 53.2%. Dry docks and the six-shop forge club stay held.",
+    category: "Industry",
+    themeId: "heavy-industrial-capacity",
+    imageUrl: "/images/industry-heavy-industrial-capacity-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic shipyard crane, molten steel pour, and jet fuselage with teal vintage-delta sparklines — heavy industrial capacity Q3 update",
+    publishedAt: "2026-08-21T12:00:00Z",
+    featured: true,
+    visualization: "heavy-industrial-capacity-update-2026q3",
+    layout: "default",
+    content: `## What changed since the August update
+
+Our [August heavy industrial capacity update](/blog/heavy-industrial-capacity-update-2026) reframed the builder-base map as a *vintage delta*: UNCTADstat’s June 2026 insight put **91%** of 2025 merchant GT completions in the China–Korea–Japan trio (**−4.2 pp** versus the research peak), World Steel’s **2025** annual totals eased China’s crude share to **52.0%**, and Cirium’s **H1 2026** wrap showed Airbus at **54%** of the Airbus–Boeing duo. Dry docks (~**62%** China) and the **six-shop** RPV-class forge club were held. That post answered “what moved in the newest official print.” This Q3 print answers the same question against *that* baseline.
+
+Three newer vintages force the rewrite. **World Steel’s June 2026 release** (23 July) prints **H1 2026** crude steel for the 70-country pool at **931.5 Mt** (**−0.7% YoY**), with China at **500.0 Mt** (**−3.0%**) and India at **87.0 Mt** (**+7.1%**). China’s share of that pool lands at **53.7%** — **−1.3 percentage points** versus a back-solved H1 2025 share of **~55.0%**. Separately, the **Japan Ship Exporters’ Association (JSEA)** 2025 status tables disclose country GT completions (**China 52.6%**, Korea **27.6%**, Japan **14.0%**) and, more importantly for forward yard load, **2025 new orders** that put China at **66.0%** of booked GT — **+13.4 pp** above same-year completions. On the hangar side, **OEM year-to-date July 2026** deliveries put Airbus at **418** and Boeing at **367** (**785** duo; Airbus **53.2%**), a mild **−0.8 pp** versus the Cirium H1 **54%** frame.
+
+What still did *not* move remains the industrial-capacity punchline. Tracked **VLCC-capable dry docks** and the **six-shop** ultra-heavy forge inventory stay **held** — there is still no audited global registry that adds a US RPV-class forge or rewrites the dock map. The dashboard above is built as a Q3 vintage delta: diverging pp bars, JSEA completions-versus-orders flow, World Steel H1 share/YoY/region toggles, Airbus–Boeing monthly composed delivery pace, a cross-sector capacity radar, and a held docks-and-forges panel.
+
+## The headline table: Aug update vs Q3 2026 print
+
+| Metric | Prior (Aug update) | Q3 print | Δ |
+| --- | ---: | ---: | --- |
+| China crude steel share (H1 YoY) | **~55.0%** H1’25 (derived) | **53.7%** H1’26 | **−1.3 pp** |
+| China H1 crude volume | — | **500.0 Mt** (**−3.0% YoY**) | volume down |
+| India H1 crude share | **~8.7%** | **9.3%** / **87.0 Mt** | **+0.6 pp** / **+7.1% YoY** |
+| World H1 crude (70 countries) | — | **931.5 Mt** (**−0.7% YoY**) | soft mid-year |
+| China merchant GT completions | **~52.2%** (UNCTAD-derived) | **52.6%** (JSEA) | **+0.4 pp** (scope) |
+| Asia ship trio completions | **91%** (UNCTAD) | **94.2%** (JSEA) | scope parallel — see caveats |
+| China share of 2025 newbuild GT orders | — | **66.0%** | **+13.4 pp** vs completions |
+| Airbus share of A+B duo | **54%** Cirium H1 | **53.2%** OEM YTD Jul | **−0.8 pp** |
+| Duo commercial deliveries | **649** H1 Cirium | **785** YTD Jul OEM | tempo up |
+| China VLCC dry docks (tracked) | ~62% | ~62% | **held** |
+| Ultra-heavy forge shops | 6 | 6 | **held** |
+
+Open **Vintage Δ** and toggle **Moved only** versus **Held / flat**. The thesis is not “China stopped building.” It is that the *newest mid-year steel and orderbook prints* show **movable feedstock and contracting layers** shifting while **scarce dock and forge capital** stay frozen — and that JSEA’s orderbook is *more* China-concentrated than same-year completions.
+
+## Steel H1 2026: China still half the pool — India’s YoY is the story
+
+World Steel’s June release is the hard Q3 vintage for feedstock geography. The 70-country pool printed **931.5 Mt** in January–June 2026 (**−0.7%** versus H1 2025). China produced **500.0 Mt** (**−3.0%**), India **87.0 Mt** (**+7.1%**), the United States **42.8 Mt** (**+6.3%**), Japan **40.4 Mt** (**−0.4%**), and Korea **31.7 Mt** (**+2.1%**). Viet Nam remains a small-base rocket: **15.2 Mt**, **+26.9% YoY**.
+
+Share math matters for the capacity question. China’s **53.7%** of the H1 pool is *higher* than the Aug update’s **FY2025** China share of **52.0%** — that is seasonality and vintage mix, not a rebound thesis. The clean YoY comparison is H1-to-H1: back-solving the disclosed −3.0% / −0.7% rates puts China’s H1 2025 share near **55.0%**, so the Q3 print is **−1.3 pp** on a like-for-like half-year. India rises from ~**8.7%** to **9.3%**. North America is the regional bright spot (**+5.7%** YoY on **56.5 Mt**); CIS+Ukraine remains the soft region (**−8.0%**).
+
+Toggle **Steel H1** across world share, YoY, million tonnes, and region YoY. Crude steel is still **not** ultra-heavy forging and **not** VLCC dock concrete. A one-point China share dip does not unlock reactor-pressure-vessel capacity in Ohio. It does mean the *plate and section feedstock geography* is slightly less China-weighted on a YoY H1 basis — with India and the US absorbing relative gain while Asia/Oceania as a bloc still printed **690.1 Mt** (**−0.9%**).
+
+## Yard flow: completions look oligopolistic; orders look more China-heavy
+
+The Aug update’s ship headline was UNCTAD’s **91%** Asia-trio completions print. That UNCTAD vintage has **not** been superseded by a newer UNCTADstat insight card — so the trio’s official UNCTAD number remains **held at 91%**. What *is* new for Q3 is JSEA’s disclosed **2025** country GT table: China **52.6%**, Korea **27.6%**, Japan **14.0%**, Europe **2.8%**, others ~**3%**. Summed, the Asia trio is **94.2%** under JSEA’s scope — a **parallel** measurement, not a clean replacement for UNCTAD’s 91%. Treat the **+0.4 pp** China move versus the Aug update’s derived **52.2%** as a refinement across sources, not a boom.
+
+The forward-looking signal is sharper. JSEA’s **2025 new orders** put China at **66.0%** of GT booked, Korea **19.6%**, Japan **9.0%**, Europe **3.2%**. China’s **orders-minus-completions gap** is **+13.4 pp**; Korea and Japan sit **negative** (they completed more share than they booked). That is the industrial-capacity tell for physical capital stock: *who is loading the berths for the next delivery wave*. Completions can ease at the margin while the orderbook re-concentrates.
+
+Open **Yard flow** and toggle completions, orders, and the order gap. Pair with the [shipbuilding GT concentration companion](/blog/global-shipbuilding-gt-delivery-concentration-2026) when you need the longer UNCTAD/RMT path; this update’s job is the Q3 *flow* delta, not a full historical rewrite.
+
+## Aircraft YTD July: Airbus still leads, duo tempo is the news
+
+The Aug update’s aircraft frame was Cirium H1 (**649** duo; Airbus **54%**). OEM prints through **July 2026** extend the recovery: Airbus **418**, Boeing **367**, combined **785**. Airbus’s duo share eases to **53.2%** (**−0.8 pp**). Both OEMs are ahead of the same point in 2025 (Airbus was **373**, Boeing **328** through July last year) — roughly a **~12%** combined YoY lift on the YTD stack.
+
+Monthly composition matters for FAL risk. June was the peak duo month (**153** handovers; Airbus **89** / Boeing **64**); July cooled to **120** (**67** / **53**) while Airbus’s monthly duo share stayed elevated at **55.8%**. The industrial fact from the research and Aug posts survives: **narrowbody campuses on both sides of the Atlantic still dominate throughput**, and a single-program bottleneck (MAX line, A320neo family) can still move the global delivery total. This Q3 print does not re-census FAL sites — for campus geography, the [commercial aircraft FAL companion](/blog/commercial-aircraft-final-assembly-geography-2026) still governs.
+
+Switch to **Aircraft YTD**. The composed chart stacks monthly OEM bars under a duo area and an Airbus share line so you can see tempo and mix in one pane — a different visual grammar than the Aug update’s H1 bar strip.
+
+## Capacity radar: movable shares vs immobile capital
+
+Cross-sector dashboards invite fake indices. The **Capacity radar** panel is deliberately a *shape* comparison, not a composite score: Asia ship trio GT, China steel H1 share, China newbuild orders, Airbus duo share, China VLCC docks, and forge shop count. Prior (Aug / H1 frames) versus Q3 print. The rose overlay fattens on **orders** and JSEA trio intensity; it shrinks on **China steel H1 share** and edges in on **Airbus duo**; docks and forges sit unchanged.
+
+That shape is the post’s argument in one glance. **Contracting and feedstock layers move every half-year.** **Dock concrete and certified ultra-heavy forges do not.** Anyone writing industrial policy that treats “steel capacity” as a synonym for “forging capacity,” or “ship GT share” as a synonym for “dry-dock slots,” is reading the wrong radar axis.
+
+## What stayed frozen: docks and the six-shop forge club
+
+Industrial-capacity commentary loves to extrapolate from steel or ship GT into “manufacturing power.” The held layers refuse that leap. Tracked **VLCC-capable dry docks** remain China-heavy at ~**62%**, with Korea ~**18%**, Japan ~**8%**, and the rest of world ~**12%**. The ultra-heavy forge strip is unchanged: Japan Steel Works, Doosan Enerbility, Shanghai Electric’s heavy complex, OMZ/AEM, Sheffield Forgemasters, and Framatome/Creusot. **North America still has no RPV-class member** in that inventory.
+
+Open **Docks & forges**. Equal-weight shop counts are not throughput weights — JSW and Doosan matter more than a strip implies — but the *phone book* did not get a seventh number in Q3. Nuclear new-build, naval propulsion, and any strategy that hoped a steel-share dip implied forge relief still face the same bottleneck the [research map](/blog/heavy-industrial-capacity-research-2026) flagged.
+
+## Who is exposed — and what the Q3 delta buys
+
+**Exposed to the wrong headline:** readers who treat “China steel share rose versus FY2025” as evidence of re-acceleration without checking the **H1-to-H1 −1.3 pp** YoY share move; readers who treat JSEA’s **94.2%** trio as overturning UNCTAD’s **91%** without reading the scope caveat; readers who see India’s **+7.1%** H1 steel and conclude Western merchant yards are back. US commercial GT remains noise (~**0.04%**).
+
+**Exposed to orderbook concentration:** shippers and financiers who underweight China’s **66%** of 2025 newbuild GT when planning 2027–29 delivery slots; Korea/Japan yards whose completion shares still outrun their fresh order shares; European specialty yards that punch above weight in GT but do not rewrite the VLCC dock map.
+
+**Exposed to frozen scarcity:** nuclear and naval programs that hoped feedstock YoY implied forge relief; airlines whose delivery risk still clusters on a handful of FAL campuses even as duo YTD totals rise ~**12%**.
+
+**What the delta buys:** a clearer Q3 separation between **movable shares** (H1 steel, OEM delivery mix, newbuild orders) and **immobile capital** (large docks, RPV forges, FAL campuses). China produces slightly less of the H1 steel pie than a year earlier, books a *larger* share of new merchant GT than it completed in 2025, and still anchors docks and the scarce forge club. India is again the steel YoY story. Airbus leads the YTD duo, but the gap narrowed versus Cirium H1 as Boeing’s recovery continued into July.
+
+## Caveats and methodology
+
+- **Sectors are not additive.** Do not average ship GT with steel share into a fake industrial-capacity index.
+- **UNCTAD’s 91% Asia-trio print is held** — no newer UNCTADstat completions insight superseded it. JSEA’s **94.2%** trio is a **parallel scope**, not a clean vintage replacement.
+- **JSEA China 52.6% completions** versus the Aug update’s derived **52.2%** is a cross-source refinement; confidence is disclosed for JSEA, derived for the prior.
+- **China H1 steel share prior (~55.0%) is derived** by back-solving World Steel’s disclosed −3.0% / −0.7% YoY rates on the H1 2026 levels.
+- **FY2025 China steel share (52.0%) is not directly comparable** to H1 2026 (53.7%) without a seasonality adjustment — use H1-to-H1 for YoY claims.
+- **Aircraft figures are duo-only** (Airbus+Boeing OEM). COMAC and other OEMs are outside the 785 YTD total.
+- **Monthly OEM bars are tuned to disclosed YTD July totals**; individual months may differ slightly from secondary trackers.
+- **Dry-dock and forge counts are held inventories**, not a 2026 re-census.
+- **GT ≠ dwt.** Orderbook and completions shares in GT will not match deadweight tables.
+- **Naval and cruise yards** remain strategically important and deliberately outside the merchant GT leaderboard.
+
+## The shareable takeaway
+
+The Q3 official vintage did not redraw who can build physical capital stock — it **moved the feedstock and contracting layers while the scarce capital stayed frozen**. **China’s H1 steel share is 53.7% (−1.3 pp YoY)** on a soft world pool; **India printed +7.1% YoY** to **9.3%** share; **JSEA 2025 new orders put China at 66% of GT booked**, **+13.4 pp** above same-year completions; **Airbus’s duo lead eased to 53.2% YTD July (−0.8 pp)** as both OEMs outran 2025. **Dry docks (~62% China) and the six-shop forge club did not move.** Watch **vintage deltas by layer** — steel, orders, deliveries, docks, forges — not a single “manufacturing” headline, to see who still has the yards, docks, hangars, and forges.
+`,
+  },
+  {
     id: "chokepoint-commodities-concentration-2026q3",
     slug: "chokepoint-commodities-concentration-2026q3",
     title:

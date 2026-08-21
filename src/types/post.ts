@@ -148,7 +148,8 @@ export interface Post {
     | "ai-power-grid-update-202608"
     | "consumer-finance-markets-concentration-2026q3"
     | "ai-compute-demand-concentration-2026q3"
-    | "chokepoint-commodities-concentration-2026q3";
+    | "chokepoint-commodities-concentration-2026q3"
+    | "heavy-industrial-capacity-update-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
