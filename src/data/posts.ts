@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-concentration-2026q3",
+    slug: "macro-growth-trade-concentration-2026q3",
+    title:
+      "Q3 Concentration: Growth Top-1 Still ~32% China — Q2 Sensitivity Only Clips It to ~29%",
+    excerpt:
+      "Q3 concentration vintage on growth, trade and prices: China remains ~32% of world PPP growth (top-3 ~55%); a Q2 hard-data sensitivity only eases top-1 to ~29%; Asia still owns 71% of merchandise trade-volume gains; PPP stock top-3 stays ~42% while Aug CPI shows the growth leader near zero inflation.",
+    category: "Economics",
+    themeId: "macro-growth-trade",
+    imageUrl:
+      "/images/economics-macro-growth-trade-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber concentration bars, teal trade arcs, and rose price rings illustrating top-of-distribution share for growth, trade and prices",
+    publishedAt: "2026-08-21T18:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-concentration-2026q3",
+    layout: "default",
+    content: `Our [prior concentration print](/blog/macro-growth-trade-concentration-2026) answered the distribution question with a multi-lens scoreboard: China ~**32%** of world PPP growth, Asia **71%** of merchandise trade-volume gains, PPP stock top-3 ~**42%**, and goods-export top-3 ~**29%**. The [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3) and [August CPI/PCE vintage](/blog/macro-growth-trade-update-202608) then showed that *flows* were moving — CPB May merchandise volume **+1.0% MoM**, US Q2 GDP **1.5% SAAR**, China Q2 **4.3% YoY**, US CPI **3.4% YoY**. This Q3 concentration lens asks the next desk question: **did those hard-data moves rewrite the top-of-distribution shares, or only stress them?**
+
+The interactive dashboard above is built as a **vintage concentration lens**. Toggle **Scoreboard**, **Growth ladder**, **Trade + CPB**, and **Prices**. Use the **Growth vintage** control to flip between the carried 2025 base ladder and an illustrative **Q2 sensitivity**. The punchline is sticky on purpose. Base top-1 growth contribution remains ~**32%** (China) and top-3 ~**55%**. The Q2 sensitivity only clips top-1 to ~**29%** and top-3 to ~**52%**. Asia’s trade-growth share stays **71%**. PPP stock and export-value ladders are **carried flat**. Aug price prints refresh levels without changing the geometry that China’s near-zero CPI sits beside the thickest growth contribution.
+
+## The headline ladder: prior print vs Q3 restatement
+
+| Lens | Prior concentration | Q3 print | Δ |
+| --- | ---: | ---: | ---: |
+| Growth contribution Top-1 (China) | **~32%** | **~32%** base | **0 pp** (carried) |
+| Growth Top-1 Q2 sensitivity | — | **~29%** | **−3 pp** (stress only) |
+| Growth Top-3 (CN·IN·US) | **~55%** | **~55%** / **~52%** sens. | **0 / −3 pp** |
+| PPP GDP stock Top-3 | **~42%** | **~42%** | **0 pp** |
+| Merch trade-volume growth Top-1 (Asia) | **71%** | **71%** | **0 pp** |
+| Goods export value Top-3 | **~29%** | **~29%** | **0 pp** |
+| Elevated-CPI GDP share | **~38%** | **~38%** | **0 pp** (levels refresh) |
+
+Read the table as a **stability scoreboard**, not a “nothing happened” verdict. Hard data moved. Concentration *architecture* did not. That is the Q3 contribution relative to the [prior concentration companion](/blog/macro-growth-trade-concentration-2026): the pie’s flow meters wiggled; the top-of-distribution shares mostly stayed put.
+
+## Scoreboard: four perimeters, one sticky architecture
+
+Open **Scoreboard**. The Prior → Q3 dumbbell panel shows most Top-1 meters carried flat — PPP stock, base growth contribution, trade-growth, export value, elevated-CPI GDP share. The only bar that moves is the **Q2 growth sensitivity**, which is deliberately labelled as a restatement stress, not a new WEO weight table.
+
+The Top-1 vs Top-3 scatter puts the family of lenses on one plane. Trade-growth (Asia **71%** / **97%**) sits in the extreme corner. Growth contribution (**32%** / **55%**) is steeper than PPP stock (**19%** / **42%**). Export value (**14%** / **29%**) looks mild again. Q2 sensitivity (**29%** / **52%**) shifts the growth point slightly left without changing the ranking order.
+
+That is the first hinge for Q3. **Vintage deltas and concentration shares are different objects.** CPB May **+1.0% MoM** after March’s **−2.1%** war shock is a large flow move. It does not automatically re-rank Asia’s **71%** of *2025* merchandise volume-growth contribution. US Q2 **1.5% SAAR** is softer than the Fund’s **2.3%** annual path. It does not by itself rewrite China’s ~**19%** PPP stock weight.
+
+## Growth contribution: base sticky, Q2 sensitivity only clips the tip
+
+Switch to **Growth ladder**. On the carried 2025 base, China is ~**31.8%** of world PPP growth, India ~**14.6%**, the United States ~**9.1%** — top-3 ~**55%**. Flip **Growth vintage** to **Q2 sensitivity**. China scales toward the **4.3% YoY** hard print (from a **5.0%** annual weight), the US toward **1.5% SAAR** (from **2.1%**), and the residual absorbs. Top-1 eases to ~**29%**; top-3 to ~**52%**. Korea’s disclosed Q2 **+3.7% YoY** enters the named ladder as a small disclosed rung.
+
+That is the second hinge. **Even a softer China Q2 does not democratise world growth.** A three-point clip on top-1 leaves China still roughly three times the US contribution and still ahead of India. Soft-landing narratives that treat “EM Asia” as a diversified residual still fail the same concentration test the prior print posed — with a slightly thinner tip.
+
+Pair the Lorenz toggle (**Growth** vs **Growth Q2**) with the [China–US–India thirty-year comparison](/blog/china-us-india-gdp-30-years). The long weight shift is the stock story. This Q3 panel asks whether the *increment* story cracked under the first hard-data wave after July’s WEO Update. It bent. It did not break.
+
+## Trade and CPB: Asia’s 71% holds while the flow meter rebounds
+
+Open **Trade + CPB**. The WTO March 2026 regional decomposition of 2025 merchandise volume growth still puts **Asia at 3.2 pp / 71%**, Europe ~**15%**, North America ~**11%**, and the rest of the world ~**4%**. Top-3 regional share remains ~**97%**. The donut is carried because there is no newer GTOS vintage that re-ranks 2025 contribution shares.
+
+The CPB line panel is the flow overlay: March **−2.1%**, April **+0.7%**, May **+1.0% MoM** — cumulative Mar–May still only about **−0.4%** below February. That rebound is friendly to July’s trade upgrade narrative and consistent with the [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3). It is *not* a new country or regional concentration census.
+
+Export-value shares stay at China ~**14%**, US ~**8%**, Germany ~**7%** — top-3 ~**29%** of ~**$26.3T** merchandise exports. Services (~**$9.6T**) remain a separate perimeter. The third hinge is unchanged: **value concentration is milder than volume-growth concentration**, and neither meter was rewritten by May’s MoM rebound.
+
+## Prices: Aug YoY cools, SAAR stays hot, geometry unchanged
+
+Toggle **Prices**. The CPI × growth scatter still puts China at ~**0.2%** CPI beside ~**5%** GDP growth and the thickest growth contribution. The United States prints **3.4%** July CPI YoY and **3.7%** June PCE YoY against a **5.1%** Q2 PCE SAAR — the same YoY-vs-SAAR split the [August vintage](/blog/macro-growth-trade-update-202608) already flagged. Euro-area HICP sits at **2.9%**. Roughly **38%** of world PPP GDP in this cross-section still sits in economies with CPI at or above ~**3.4%**.
+
+That is the fourth hinge for Q3. **Price *levels* refreshed; price *geometry* did not.** The economy contributing the most to world growth is still not the one contributing the most to world inflation. Policy debates that treat “global inflation” and “global growth” as the same country set still mis-rank the tape — now with a clearer hard-data receipt that US YoY cooled while US SAAR stayed hot.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that treat a CPB rebound as proof that trade concentration equalised; growth factor models that assumed China’s Q2 slowdown would cut its world-growth share below ~**20%**; inflation narratives that still imply the growth leader is the price leader; soft-landing calls that quote July’s annual paths without the Q2 hard-data split across trade (firmer), US growth (softer), and US prices (YoY cooler / SAAR hotter).
+
+**Relative winners under current rules:** Asian intermediate-goods and AI-goods corridors that still sit inside the **71%** regional volume-growth share; India’s second-place growth contribution even under the Q2 sensitivity; US demand weight that still anchors PPP stock (~**15%**) while contribution ranks third; exporters diversified across the residual half of the $26T goods perimeter.
+
+**What would change the story:** a sustained WEO restatement that puts China’s share of world PPP growth below ~**20%**; Asian merchandise volume-growth contribution falling below ~**50%** of a new GTOS vintage; export-value top-3 climbing above ~**40%**; China CPI re-accelerating toward the world average while keeping its growth weight; a multi-month CPB freefall that forces a regional re-decomposition of *who* drives volume. None of those clear this Q3 window. The architecture is sticky; the flow meters are not.
+
+## Caveats and methodology
+
+- **PPP stock and base growth-contribution shares are carried** from the prior concentration print (IMF WEO April 2026 PPP weights × country growth). No new period census.
+- **Q2 growth sensitivity is illustrative**, scaling China toward **4.3% YoY** and the US toward **1.5% SAAR**. It is not a reconstructed WEO weight table; residual closes the perimeter.
+- **Merchandise trade-growth shares follow WTO GTOS March 2026** (Asia **71% / 3.2 pp** disclosed). CPB MoM is a flow overlay only.
+- **Export value shares use ~$26.3T world merchandise exports (2025)**; re-export hubs inflate value versus domestic origin. Services (~**$9.6T**) excluded.
+- **Price ladder mixes disclosed BLS/Eurostat July prints with theme China CPI**; “elevated-CPI GDP share” (~**38%**) is a burden perimeter, not an additive market share.
+- **Euro-area growth contribution is an aggregate**, not a single sovereign.
+- **Hard-data vs July IMF path meters** mix annual forecasts with MoM/SAAR/YoY signals — directional context, not like-for-like gaps.
+- **Oil near ~$89/bbl** in the July Update remains the energy backdrop for elevated YoY components; it is not re-estimated here.
+
+## The shareable takeaway
+
+In the **Q3 2026 concentration vintage**, growth Top-1 is still ~**32%** China on the carried base — and only ~**29%** under a Q2 hard-data sensitivity. Asia still owns **71%** of merchandise trade-volume growth. PPP stock top-3 stays ~**42%**; goods-export top-3 stays ~**29%**. Aug CPI/PCE refreshed price *levels* without changing the geometry that the thickest growth contributor prints near-zero inflation. Hard data moved the flow meters. The top of the distribution held.
+
+Related reading: [Prior concentration print](/blog/macro-growth-trade-concentration-2026) · [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3) · [August CPI/PCE vintage](/blog/macro-growth-trade-update-202608) · [July IMF vintage delta](/blog/macro-growth-trade-update-2026) · [April research triangle](/blog/macro-growth-trade-research-2026) · [China–US–India GDP](/blog/china-us-india-gdp-30-years).`,
+  },
+  {
     id: "demographic-cash-flows-concentration-202608",
     slug: "demographic-cash-flows-concentration-202608",
     title:

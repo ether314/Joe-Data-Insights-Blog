@@ -1952,6 +1952,21 @@ const DemographicCashFlowsConcentration202608Dashboard = dynamic(
   },
 );
 
+const MacroGrowthTradeConcentration2026q3Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/MacroGrowthTradeConcentration2026q3Dashboard"
+    ).then((m) => m.MacroGrowthTradeConcentration2026q3Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2459,6 +2474,10 @@ export function PostVisualization({
 
   if (type === "demographic-cash-flows-concentration-202608") {
     return <DemographicCashFlowsConcentration202608Dashboard />;
+  }
+
+  if (type === "macro-growth-trade-concentration-2026q3") {
+    return <MacroGrowthTradeConcentration2026q3Dashboard />;
   }
 
   return null;
