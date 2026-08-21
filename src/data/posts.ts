@@ -2,6 +2,102 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "geopolitics-institutions-update-202608",
+    slug: "geopolitics-institutions-update-202608",
+    title:
+      "Update: 87 Days to IMF Consent Deadline — Quota Still 76.7% (−8.3 pp); Diriyah Principle 8 Open",
+    excerpt:
+      "Versus our Q3 institutions update (PP 2026/017), no superseding consent ledger printed by mid-August. The Nov 15 clock is down to 87 days with quota consents flat at 76.66% and NAB stuck at 83.9%. Diriyah Principle 8 — implement completed reforms — remains unmet.",
+    themeId: "geopolitics-institutions",
+    content: `## What changed since the Q3 institutions update
+
+Our [Q3 institutions vintage](/blog/geopolitics-institutions-update-2026q3) closed on **IMF Policy Paper 2026/017**: as of **29 April 2026**, **149** members representing **76.66%** of quotas had consented to the **16th General Review of Quotas**, **8.34 percentage points** short of the **85%** effectiveness threshold, with the consent window extended to **15 November 2026**. NAB rollback consents sat frozen at **83.90%**. Relative vote shares remained locked; the United States was absent from the consented list; bilateral borrowing extensions covered **95.92%** of 2020 BBA commitments as a soft bridge.
+
+The August print answers the theme's recurring question with a harsher calendar: **what moved in the newest official vintage, and did authority actually reallocate?** As of **20 August 2026**, no superseding IMF consent ledger has replaced PP 2026/017. Quota consents remain **76.66%** (**0 pp** vs April). NAB rollback consents remain **83.90%**. The binding delta is the **clock**: from the May 8 Board extension (~**191** days to November 15) down to **87** days — **54.5%** of the window elapsed with **no published consent advance**. The newest governance framework print that our Q3 dashboard under-weighted — **Diriyah Guiding Principles (PP 2026/013)** — puts that flatness in sharper relief: Principle **8** says commitments from completed reviews must be implemented in a timely manner. The 16th GRQ's **+50%** enlargement is still not effective. World Bank IBRD voting-power stock as of **30 June 2026** (WBG Finances refresh **18 August**) confirms the Bank-side twin: no Selective Capital Increase, Basic Votes still **5.55%**, top-share geometry unchanged.
+
+The dashboard above is built as a **mid-window vintage delta**: dual-axis days-remaining vs flat consent, prior→Aug grouped bars at identical heights, a Diriyah radar and scorecard, the shortfall stack with an August plateau, IMF↔IBRD gap scatter, IBRD concentration bars, and which authority levers moved versus stuck.
+
+## The headline table: Q3 print → August mid-window
+
+| Metric | Q3 update (Apr 29 2026) | August print (Aug 20 2026) | Δ |
+| --- | ---: | ---: | ---: |
+| Quota consents (% of Nov 7 2023 quotas) | **76.66%** | **76.66%** (no new PP) | **0 pp** |
+| Members consented / pending | **149** / **42** | **149** / **42** (carried) | **0** |
+| Shortfall vs 85% threshold | **−8.34 pp** | **−8.34 pp** | **0** |
+| NAB rollback consents | **83.90%** (38 participants) | **83.90%** | **0** |
+| NAB shortfall vs 90% | **−6.10 pp** | **−6.10 pp** | **0** |
+| Days to consent deadline | **~191** (from May 8) | **87** | **−104 days** |
+| Consent deadline | **15 Nov 2026** | **15 Nov 2026** | Unchanged |
+| US quota / NAB consent | Not on Apr list | Still not disclosed as consented | Binding gap intact |
+| Relative IMF vote shares | Frozen | Frozen | **0** |
+| Diriyah Principle 8 (implement reforms) | Not scored in Q3 viz | **Open** — 16th GRQ not effective | New framework panel |
+| IBRD SCI / Basic Votes | Insufficient support | Jun 30 vote stock unchanged | Still stuck |
+| China IMF vote − PPP GDP gap | **−12.6 pp** | **−12.6 pp** | **0** |
+
+Read the table as **calendar compression without reallocation**. The institution is deeper into the November window; the hard dual gate — **85%** of quotas **and** **90%** of NAB credit arrangements — has not moved a decimal since April. Soft bridges (BBA extensions) and principle papers do not substitute for effectiveness.
+
+## The consent clock moved; the consent ledger did not
+
+Toggle **Focus → Clock** and read the dual-axis panel. Teal consent % sits flat on **76.66%** from April through August; the indigo days-remaining area falls from ~**191** (May 8) to **87** (August 20). That is the August headline for institutional power: authority is allocated twice — once in charter formulas, and again in **who must consent before formulas become cash** — and the second allocation is now racing a thinner calendar without a new Annex I.
+
+Grouped bars under **Consent track** confirm the zero delta. Quota and NAB prior/latest columns are identical; crimson threshold shades at **85%** and **90%** still clear both. Annex arithmetic from PP 2026/017 still applies: consents covering a further **8.34%** of quotas and **6.10%** of NAB credit arrangements are required. The United States remains the largest disclosed gap relative to shortfall size — US quota weight near **17%** still exceeds the residual **8.34 pp**.
+
+Absence of a new Policy Paper is itself information. Successive six-month extensions under Resolution 79-1 have trained markets to expect another roll near November. Mid-window silence does not mean consents are secretly clearing; it means the official vintage the Board last published has not been updated. Treat **76.66% / 83.90%** as the last disclosed stock until a superseding annex prints.
+
+## Diriyah Principle 8 is the August framework punchline
+
+Switch **Focus → Diriyah**. The radar and horizontal scorecard score eight principles from **PP 2026/013** (Board consideration April 2026; published April 30). Principles on process, regional baseline, and quota-based design score in the teal/amber band. Principle **5** (formula-guided gap reduction) and Principle **8** (timely implementation of completed reforms) score lowest — because the 16th GRQ was designed as an **equiproportional** freeze and because that freeze has **not yet taken effect**.
+
+That juxtaposition is the governance story our [research ledger](/blog/geopolitics-institutions-research-2026) framed as stock and our Q3 update framed as consent flow. August adds the **normative** layer: the membership now has an agreed principle set for the **17th** GRQ that explicitly says completed reforms should be implemented. The incomplete 16th GRQ is therefore not only a resource arithmetic problem; it is a credibility problem against the Fund's own newest guiding text.
+
+Pair this with our [NATO defense-spending vs GDP](/blog/nato-defense-spending-gdp-2-percent-2024) posts when you need the *security-budget* side of state capacity — here the binding constraint remains shareholder consent arithmetic and principle–practice gaps, not tanks.
+
+## Bank vote stock confirms the twin freeze
+
+Open **Focus → IBRD**. The concentration bars use the World Bank's IBRD voting-power stock as of **30 June 2026** (dataset refresh noted **18 August 2026**). US ~**15.8%**, Japan ~**6.8%**, China ~**5.9%** — the same hierarchy the Spring 2026 Development Committee print (DC2026-0003) left intact when Governors found insufficient support for an SCI (**75%**) or Basic Votes amendment (**85%**). Basic Votes remain **5.55%** of the sum of basic and share votes. No August Governors reversal appeared.
+
+The IMF↔IBRD scatter shows why "voice reform" is a dual institution story. China sits deep underweight on **both** axes (**−12.6** IMF / **−12.8** IBRD pp vs PPP GDP). India is underweight on both. Japan and several European creditors remain over-weighted. Dark markers for non-consenting 16th GRQ shareholders (led by the US on the Fund side) remind that Fund effectiveness and Bank realignment are separate gates — and both are stuck.
+
+## Gaps did not budge — only the days remaining did
+
+Filter **Region** on the scatter and IBRD bars. Every major's IMF and IBRD vote−GDP gaps match the research and Q3 prints. The Δ on relative shares is a row of zeros because the 16th GRQ was designed not to move them — and because effectiveness itself has not arrived. What changed is the **clock coloring** and the **framework panel**: April's **76.66%** marker now shares the plateau with August, with the crimson **85%** line still above both and **87** days left on the November flag.
+
+Deadline extensions are how the institution buys time without rewriting the hierarchy. From the original November 2024 target through successive six-month rolls, the Board has repeatedly exercised paragraph 4 of Resolution 79-1. Mid-August with a flat ledger is consistent with that practice. It is also an admission that the political bargain of December 2023 remains **incomplete on the effectiveness gate** — now with less than half the post-May window left.
+
+## Who is exposed under the August vintage
+
+**Exposed:** emerging-market coalitions that treated the 16th GRQ's **+50%** headline as money already in the bank; program countries whose access narratives embed larger Fund quota resources that are still contingent; modelers who read "Diriyah principles agreed" as "17th GRQ realignment is underway"; anyone who assumed the May extension created automatic consent momentum; and forecasts that bake in November effectiveness without US (and remaining) filings.
+
+**Relative winners under current rules:** the shareholder whose ~**17%** quota weight can treat consent timing as leverage while remaining larger than the **8.34 pp** residual gap; chairs that continue to extract **voice** and **BBA** bridges while voting weights stay frozen; bilateral or plurilateral safety nets that do not wait on Fund effectiveness conditions; and Bank shareholders comfortable with the post-2018 IBRD hierarchy that SCI talks failed to reopen.
+
+**What would change the story:** a superseding IMF consent PP that clears the **8.34 pp** quota gap and the **6.10 pp** NAB gap before **15 November 2026**; US (and remaining) filings on both tracks; a surprise SCI coalition at the Bank; or a 17th GRQ package that turns Diriyah Principle 5 into a formula that actually moves shares. None of those print in the August mid-window sources.
+
+## Caveats and methodology
+
+- **No new consent Annex through Aug 20.** Quota and NAB levels are carried from PP 2026/017 (staff cut-off 29 Apr 2026). Domestic ratifications after that date may exist without a published Fund ledger — we score the last official vintage, not rumor.
+- **Days remaining** are calendar days from **20 Aug 2026** to **15 Nov 2026**; window elapsed uses **8 May 2026** Board decision as start. Clock metrics are disclosed dates, not staff estimates of ratification pipelines.
+- **Diriyah scores** in the dashboard are analytical mappings of principle text to observed 16th GRQ / shareholding outcomes — not IMF self-scores. Principle 8's "open" status follows directly from non-effectiveness of the completed 16th GRQ package.
+- **Quota share ≠ vote share.** Consent thresholds use **quota** denominators as of **7 November 2023**; voting power includes basic votes.
+- **NAB participant list ≠ IMF membership.** Rollback consents are among NAB creditors; zero delta on NAB is carried from the April disclosed fact.
+- **IBRD vote figures** are research/WBG hierarchy anchors consistent with the Jun 30 2026 stock and DC2026-0003 outcome; they are not a claim that every decimal reprinted identically in every PDF annex.
+- **BBA extensions** remain transitional lending-capacity measures from the Q3 annex (**95.92%**), not quota realignment.
+- This is a **vintage delta** versus our [Q3 update](/blog/geopolitics-institutions-update-2026q3). For the full authority-layer organogram, use the [research post](/blog/geopolitics-institutions-research-2026).
+
+## The shareable takeaway
+
+Versus the Q3 institutions update, the newest official mid-window print says **the consent ledger is flat at 76.66% — and the clock is down to 87 days**. The shortfall to **85%** is still **8.34 pp**; NAB rollback consents are still **83.90%**; the United States is **still** not disclosed as consented; China's **−12.6 pp** IMF vote−GDP gap is unchanged; IBRD vote concentration is unchanged; and Diriyah Principle **8** — implement completed reforms in a timely manner — remains **open** because the 16th GRQ's **+50%** has not taken effect. In this system, **power is allocated twice** — once in the charter, and again in who must consent before the charter's resource deal becomes real — and August's vintage moved only the second clock, not the first hierarchy.
+
+Related reading: [Q3 institutions update](/blog/geopolitics-institutions-update-2026q3) and [Institutions & governance research](/blog/geopolitics-institutions-research-2026).`,
+    category: "Politics",
+    imageUrl: "/images/politics-geopolitics-institutions-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero of teal institutional authority rings around a glowing governance node with a crimson shortfall arc and indigo countdown dial toward an 85 percent threshold",
+    publishedAt: "2026-08-20T23:55:00Z",
+    featured: true,
+    visualization: "geopolitics-institutions-update-202608",
+    layout: "default",
+  },
+  {
     id: "fiscal-industrial-policy-update-202608",
     slug: "fiscal-industrial-policy-update-202608",
     title:

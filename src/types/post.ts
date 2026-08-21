@@ -102,7 +102,8 @@ export interface Post {
     | "adaptation-economics-update-2026q3"
     | "industrial-robotics-update-202608"
     | "energy-systems-update-2026q3"
-    | "fiscal-industrial-policy-update-202608";
+    | "fiscal-industrial-policy-update-202608"
+    | "geopolitics-institutions-update-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

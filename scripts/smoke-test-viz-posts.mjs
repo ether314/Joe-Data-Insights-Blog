@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "geopolitics-institutions-update-202608",
+    marker: "87 Days to IMF Consent",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-industrial-policy-update-202608",
     marker: "Vintage change (counts / percentage points)",
     forbidden: "Loading interactive charts",

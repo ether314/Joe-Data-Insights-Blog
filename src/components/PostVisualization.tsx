@@ -1142,6 +1142,21 @@ const FiscalIndustrialPolicyUpdate202608Dashboard = dynamic(
   },
 );
 
+const GeopoliticsInstitutionsUpdate202608Dashboard = dynamic(
+  () =>
+    import("@/components/visualizations/GeopoliticsInstitutionsUpdate202608Dashboard").then(
+      (m) => m.GeopoliticsInstitutionsUpdate202608Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1433,6 +1448,10 @@ export function PostVisualization({
 
   if (type === "fiscal-industrial-policy-update-202608") {
     return <FiscalIndustrialPolicyUpdate202608Dashboard />;
+  }
+
+  if (type === "geopolitics-institutions-update-202608") {
+    return <GeopoliticsInstitutionsUpdate202608Dashboard />;
   }
 
   return null;
