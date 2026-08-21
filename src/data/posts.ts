@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-compute-demand-geography-2026",
+    slug: "ai-compute-demand-geography-2026",
+    title:
+      "Charted: US Holds 45% of AI DC Capacity — China Origin Clears 62% of Tokens",
+    excerpt:
+      "Geography lens on AI compute demand: the United States leads regional capacity (~45%) and pipeline sites (~54%), Northern Virginia + Greater Beijing alone are ~17% of live hyperscale, while China-origin brands clear ~61.8% of June 2026 token throughput — capacity, sites, tokens, and ownership are four maps that disagree.",
+    category: "Technology",
+    themeId: "ai-compute-demand",
+    imageUrl:
+      "/images/technology-ai-compute-demand-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with glowing cyan US compute hubs, amber China nodes, and network arcs linking Northern Virginia, Beijing, Texas, Dublin, and Gulf campuses",
+    publishedAt: "2026-08-22T04:00:00Z",
+    featured: true,
+    visualization: "ai-compute-demand-geography-2026",
+    layout: "default",
+    content: `Our [theme research](/blog/ai-compute-demand-research-2026) answered who *owns* AI compute — Big-5 hyperscalers near **71%** of world H100e stock, Google alone near **25%**. The [concentration lens](/blog/ai-compute-demand-concentration-2026) then measured how thick the tip is across ownership, cloud capacity, regional power draw, and token brands. The [August location update](/blog/ai-compute-demand-update-202608) printed Synergy’s live market rankings: top-20 markets **60%**, Northern Virginia + Greater Beijing **17%**, pipeline **915** sites. This post asks the desk question that sits beside those prints: **where does activity, risk, and capacity sit on the map — and do token geography and site geography agree?**
+
+The interactive dashboard above is built as a **geography lens**. Toggle **Regions**, **Metros**, **Tokens**, and **Pipeline**. On regions flip share versus GW draw; on metros flip capacity, YoY growth, or pipeline weight and filter the capacity×growth scatter; on tokens filter brand origin. The punchline is deliberately multi-map. On **AI DC capacity**, the United States leads at about **45%** of global power draw. On **pipeline sites**, the US is still heavier at ~**54%** of **915** known hyperscale facilities. On **live dual-hub capacity**, Northern Virginia + Greater Beijing alone clear ~**17%**. On **token origin**, China-origin brands clear ~**61.8%** of the June 2026 major-brands series — while US chip ownership HQ still owns ~**71%** of the H100e stock. Capacity, tokens, sites, and ownership are **four different maps**.
+
+## The headline ladder: regional and origin shares that disagree
+
+| Lens | Top-1 | Share | What it answers |
+| --- | --- | ---: | --- |
+| AI DC capacity (power draw) | United States | **~45%** | Where live AI-relevant MW sits |
+| Top-3 regions | US · China · Europe | **~77%** | Regional capacity tip |
+| Dual-hub metros | N.VA + Beijing | **~17%** | Live hyperscale densification |
+| Top-20 markets | Ranked metros | **~60%** | Market concentration |
+| Token origin | China | **~61.8%** | Who routes the tokens |
+| Pipeline sites | United States | **~54%** | Where the next MW is planned |
+| Chip ownership HQ | US Big-5 | **~71.4%** | Who owns the accelerators |
+
+Read the table as a **family of maps**, not one slogan. Capacity geography tells you which *regions* absorb AI-relevant power draw. Metro geography tells you which *campuses* densify live hyperscale. Token geography tells you which *brand origins* dominate routed inference and product surfaces. Pipeline geography tells you where the *next* sites are being planned. Ownership geography tells you which *corporate HQs* hold the chips. Averaging these rows into “AI compute is an American story” or “AI compute is a China story” is a category error — both can be true on different ledgers.
+
+## Regions: US capacity lead, Middle East announced-heavy
+
+Open **Regions**. Against a ~**41 GW** AI-relevant DC perimeter, the United States rolls to about **18.5 GW** (**~45%**), China about **7.4 GW** (**~18%**), Europe about **5.8 GW** (**~14%**), the Middle East about **4.1 GW** (**~10%**), rest-of-APAC about **3.7 GW** (**~9%**), and LatAm & other about **1.6 GW** (**~4%**). Flip the metric to **GW draw** and the same ladder appears in absolute power rather than share — useful when desks need MW for interconnect models rather than percent for narrative slides.
+
+The capacity pie is therefore **US-weighted without being a monopoly**. A system where one country holds a little under half of estimated AI DC capacity still leaves China + Europe + MEA + APAC with a material majority of *regions* and a large absolute MW tip. That is the geographic twin of the [concentration scoreboard](/blog/ai-compute-demand-concentration-2026): Google remains the largest single *owner*; rolling Google, Microsoft, Amazon, Meta, and Oracle onto the same ownership sheet makes the US the thickest *HQ region* without claiming that “most AI tokens are American.”
+
+The stacked path from 2022→2026 is an editorial regional share track, not a new microdata extract. The US share drifts from the high-40s toward **~45%** as Middle East announced campuses thicken and China holds the high-teens. Treat the path as a **shape check** against the live 2026 snapshot — useful for seeing that MEA’s rise is real on announcements, not proof that live FLOP/s already relocated.
+
+## Metros: dual-hub densification and inland growth premiums
+
+Switch to **Metros**. Synergy’s 19 August 2026 location rankings put Northern Virginia near **~9%** of hyperscale capacity and Greater Beijing near **~8%** — together the **17%** dual-hub print that also appears in the [August update](/blog/ai-compute-demand-update-202608). Oregon, Iowa, Ohio, and Dallas–Fort Worth fill the next band. Dublin remains the sole European seat in the top-20 — a reminder that “Europe” as a regional capacity story is not the same as “Europe” as a Synergy top-20 metro story.
+
+Toggle the metro metric to **YoY growth**. Texas ops aggregate prints about **+71%** versus a world ops average near **+36%**. Iowa and Ohio sit in the **+40%** band; Dublin is softer near **+18%**. The capacity×growth scatter makes the inland shift visual: NoVA and Beijing sit right on capacity with mid-20s/low-30s growth; Texas sits mid-capacity with extreme growth; Dublin sits left-and-low. Bubble size tracks pipeline weight — the desks that only watch live capacity underweight where the *next* interconnect queues are forming.
+
+Filter the scatter to **United States** and the inland corridor story sharpens further: Midwest and Texas nodes pull share from coastal densification without yet matching NoVA’s live tip. That is facility geography, not a full company segment breakout — and capacity hints inside disclosed Synergy bands should not be quoted as audited MW extracts.
+
+## Tokens: China-origin lead against US ownership HQ
+
+Open **Tokens**. The June 2026 major-brands series (~**18,503T** tokens/mo perimeter) rolls to China origin ~**61.8%**, United States ~**37.7%**, and a thin residual. ByteDance alone is ~**29.2%** of the brand ladder — Top-1 on tokens without Top-1 chip ownership. Google is ~**19%** of tokens while owning ~**25%** of chips. Alibaba (Qwen) ~**11.3%** and OpenAI ~**9.2%** complete the next tier.
+
+Filter brands to **China** or **US** to see the origin stacks without the residual. The ownership-by-HQ bar beside the token pie is the post’s central hinge: US Big-5 HQ geography still clears ~**71%** of world H100e stock, China aggregate owners ~**5%** — almost the *inverse* of token-origin leadership. The [token consumption series](/blog/major-ai-brands-token-consumption-2022-2026) already showed brand ladders; geography makes the *origin* disagreement operational for desks that confuse “who owns GPUs” with “whose products route the tokens.”
+
+Treat token origin as **brand HQ / product-surface geography**, not as a claim about where every inference FLOP physically runs. Cross-border routing, rented Azure/Oracle capacity, and open-weight dilution mean a China-origin brand can serve users worldwide — and a US owner can rent chips to a US brand that does not appear in the ownership ladder at all.
+
+## Pipeline: US overweight on sites versus already-live share
+
+Toggle **Pipeline**. Known hyperscale pipeline facilities print **915** sites (**+112** versus the Q3 ledger of **803**). Desk regional roll-ups put the United States near **~54%** of those sites versus ~**45%** of already-live AI DC capacity — a build overweight. China is closer to balanced (~**16%** sites vs ~**18%** live). Europe sits slightly underweight on sites versus live share. Middle East remains announced-heavy: high conversion risk relative to inland US corridors that already have interconnect and power programs in flight.
+
+The grouped bars (pipeline sites % vs live capacity %) are the operational view for power and permitting desks. A region that is *overweight on pipeline* relative to live capacity is where interconnect queues, water permits, and labour markets will feel the next shock first. Pair this with the [global AI data-center build tracker](/blog/global-ai-data-center-build-tracker) for campus-level colour; this geography lens keeps the *regional* mismatch readable in one chart.
+
+Growth callouts stay sticky from the August vintage: Texas ops **+71%** YoY, **15 of 20** Synergy top-20 seats in the United States, top-20 markets still **~60%** of hyperscale capacity, top-40 near **~79%**. Pipeline geography does not rewrite live dual-hub densification — it tells you whether the next MW reinforce the same tip or migrate inland.
+
+## Five meters, one category error to avoid
+
+Return to **Regions** and read the five geography meters together. AI DC capacity Top-1 is the **US at ~45%**. Dual-hub metros are **NoVA + Beijing at ~17%**. Token origin Top-1 is **China at ~61.8%**. Pipeline sites Top-1 is the **US at ~54%**. Chip ownership HQ Top-1 is **US Big-5 at ~71%**. Desks that average these into a single “AI geography is concentrated in X” sentence will mis-price power risk, export-control exposure, and product-surface competition in the same week.
+
+The [Q3 site-count update](/blog/ai-compute-demand-update-2026q3) and [August rankings](/blog/ai-compute-demand-update-202608) already moved the live market and pipeline clocks. Geography does not replace those vintages; it asks which *map* a desk is actually using when it says “compute is concentrated.”
+
+## Caveats and methodology
+
+- **Regional capacity shares** are industry-tracker power-draw synthesis carried from theme research — order-of-magnitude GW, not a utility census. Cross-check against company disclosures before treating any single region cell as audit-grade.
+- **Metro capacity hints** sit inside Synergy’s disclosed rank bands (dual-hub, top-6, top-20). Percent labels are illustrative within those bands, not audited market-share extracts.
+- **Token origin** rolls the June 2026 major-brands series by brand HQ / product origin. It is not a traceroute of every inference GPU, and open-weight routing can dilute brand credit.
+- **Pipeline regional shares** are desk roll-ups of the Synergy site ledger plus theme carry. Announced Middle East campuses carry higher conversion risk than inland US corridors with live interconnect programs.
+- **Ownership HQ shares** are Epoch Chip Owners carries (Q4 2025 anchors + August explorer restatement). Ownership geography ≠ deployment geography ≠ token geography.
+- **Editorial 2022–2026 regional paths** are shape checks, not a new panel dataset. Do not splice them into Synergy’s August point-in-time rankings as if they shared a methodology.
+
+## What to watch next
+
+Watch three geography meters, not one. First, whether inland US growth (Texas **+71%** ops YoY, Midwest pipeline weight) erodes NoVA’s live tip without flipping the US regional capacity lead. Second, whether China-origin token share stays above **~60%** even while US ownership HQ remains near **~71%** of H100e — the ownership≠usage hinge from concentration, now drawn as a map. Third, whether Middle East announced MW converts into live power-draw share or stays a pipeline story. For top-of-distribution HHI keep the [concentration series](/blog/ai-compute-demand-concentration-2026) open; for live rankings keep the [August update](/blog/ai-compute-demand-update-202608) open; for brand ladders keep the [token series](/blog/major-ai-brands-token-consumption-2022-2026) open.
+
+Related reading: [theme research](/blog/ai-compute-demand-research-2026) · [concentration lens](/blog/ai-compute-demand-concentration-2026) · [August location rankings](/blog/ai-compute-demand-update-202608) · [Q3 site ledger](/blog/ai-compute-demand-update-2026q3) · [build tracker](/blog/global-ai-data-center-build-tracker).`,
+  },
+  {
     id: "consumer-finance-markets-geography-2026",
     slug: "consumer-finance-markets-geography-2026",
     title:

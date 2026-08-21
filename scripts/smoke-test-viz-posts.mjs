@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-compute-demand-geography-2026",
+    marker: "Where tokens, sites, and capacity land on the map",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "consumer-finance-markets-geography-2026",
     marker: "Consumer finance — geography lens",
     forbidden: "Loading interactive charts",

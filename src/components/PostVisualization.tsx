@@ -2387,6 +2387,21 @@ const ConsumerFinanceMarketsGeography2026Dashboard = dynamic(
   },
 );
 
+const AiComputeDemandGeography2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AiComputeDemandGeography2026Dashboard"
+    ).then((m) => m.AiComputeDemandGeography2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3010,6 +3025,10 @@ export function PostVisualization({
 
   if (type === "consumer-finance-markets-geography-2026") {
     return <ConsumerFinanceMarketsGeography2026Dashboard />;
+  }
+
+  if (type === "ai-compute-demand-geography-2026") {
+    return <AiComputeDemandGeography2026Dashboard />;
   }
 
   return null;

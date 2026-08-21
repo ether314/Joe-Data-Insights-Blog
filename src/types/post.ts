@@ -185,7 +185,8 @@ export interface Post {
     | "ai-capex-spend-geography-2026"
     | "migration-humanitarian-concentration-2026"
     | "chokepoint-commodities-geography-2026"
-    | "consumer-finance-markets-geography-2026";
+    | "consumer-finance-markets-geography-2026"
+    | "ai-compute-demand-geography-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
