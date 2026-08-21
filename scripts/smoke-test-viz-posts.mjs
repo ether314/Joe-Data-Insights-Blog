@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "consumer-finance-markets-concentration-2026q3",
+    marker: "Consumer finance — Q3 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-power-grid-update-202608",
     marker: "Vintage delta — Q3 Gartner/Electricity → Mid-Year Update + LBNL Queued Up",
     forbidden: "Loading interactive charts",
