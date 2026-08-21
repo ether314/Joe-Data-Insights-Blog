@@ -2,6 +2,95 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "adaptation-economics-update-202608",
+    slug: "adaptation-economics-update-202608",
+    title:
+      "Update: MDB Adaptation Finance Jumps +31% to $35B — Still ~9–10× Below Needs",
+    excerpt:
+      "Versus our Q3 OECD vintage ($34.7B adaptation in 2024), the July 2026 MDB joint report prints LMIC adaptation at $35B in 2025 (+$8.3B YoY). Swiss Re’s Aug H1 print shows insured nat-cat at $42B — a benign half-year that does not close the $424B protection gap.",
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl: "/images/energy-adaptation-economics-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a teal adaptation-finance bar climbing toward $35B beside a much taller rose needs tower and amber insurance-gap arcs",
+    publishedAt: "2026-08-21T01:00:00Z",
+    featured: true,
+    visualization: "adaptation-economics-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 OECD vintage
+
+Our [Q3 adaptation economics update](/blog/adaptation-economics-update-2026q3) answered the *developed-country provided/mobilised* question with OECD’s May 2026 assessment: adaptation **$33.6B (2023) → $34.7B (2024)** (**+$1.1B / +3.3%**), public adaptation **$31.7B**, Glasgow still short by about **$5.8B**, and the AGR 2025 needs band held at **$310–365B/year by 2035**. That post sat on top of the [AGR 2025 Running on Empty update](/blog/adaptation-economics-update-2026) and the theme’s [research stock ledger](/blog/adaptation-economics-research-2026).
+
+This August refresh answers the *next* official vintage the calendar actually forced: **what moved once multilateral development banks published their 2025 joint climate-finance summary (13 July 2026) — and once Swiss Re Institute’s mid-year catastrophe print (11 August 2026) restated the damage half of the ledger?** Two information events rewrite the scoreboard. **MDB LMIC adaptation finance rose 31% to $35 billion in 2025** — a **+$8.3B** YoY jump from the implied **~$26.7B** 2024 level — while total MDB climate finance across all operations hit a record **$163B (+19%)** and LMIC climate finance reached **$103B (+21%)**. **Swiss Re’s H1 2026** then printed insured nat-cat losses at **$42B**, the lowest first half since 2020 and **−54%** versus the catastrophic **$91B** H1 2025 print — without touching the modelled **$424B** protection-gap stock.
+
+The dashboard above is built as an August vintage delta: OECD→MDB flow meters, the MDB adaptation path against the COP29 **$42B** 2030 LMIC goal, a Swiss Re H1 damage panel, multi-ledger bars, closing-the-gap levers, residual who-pays shares, and an LMIC mitigation/adaptation mix pie. Use the **needs scenario**, **lever scope**, and **ledger scope** controls to isolate supply, demand, or damage views.
+
+## The headline table: Q3 OECD → MDB Jul 2026 + Swiss Re H1
+
+| Metric | Prior update (Q3 / OECD May 2026) | Aug newest print | Δ |
+| --- | ---: | ---: | --- |
+| Adaptation flows (headline) | **OECD provided/mobilised $34.7B** (2024) | **MDB LMIC adaptation $35B** (2025) | Near parity; **+$8.3B** MDB YoY |
+| MDB LMIC adaptation path | *not in Q3 lens* | **~$26.7B → $35B** | **+31%** YoY |
+| MDB LMIC total climate | — | **$103B (+21%)** | Mitigation **$68B** + adapt **$35B** |
+| MDB all-operations climate | — | **$163B (+19%)** | Record print |
+| Needs band (AGR 2025) | **$310–365B** / yr by 2035 | **Unchanged** | No new UNEP needs vintage |
+| Finance gap vs flows | ~**$275–330B** (vs OECD $34.7B) | ~**$275–330B** (vs MDB $35B) | Still **~8.9–10.4×** |
+| MDB 2030 LMIC adapt goal | **$42B** (COP29 projection) | **$35B** delivered in 2025 | **$7B** remaining climb |
+| H1 insured nat-cat | Full-year 2025 **$107B** (sigma) | H1 2026 **$42B** vs H1 2025 **$91B** | **−$49B (−54%)** |
+| Protection gap | **$424B** / resilience **~27%** | **Hold $424B**; H1 ratio **42%** | Benign half ≠ closed gap |
+
+Read the first two rows carefully. OECD and MDB are **different ledgers** — developed-country climate finance provided and mobilised versus MDB own-account commitments in low- and middle-income economies. Near-parity at **~$35B** is a coincidence of timing, not a proof that the same dollars appear twice. What the August vintage *does* prove is that the adaptation supply story accelerated on the MDB books even while the needs tower and the protection-gap stock refused to move.
+
+## MDB adaptation finally prints a double-digit YoY
+
+Toggle **Panel → MDB path**. The July 2026 joint summary is the first post-Q3 official print that changes the *slope* of adaptation supply rather than the *methodology* of the numerator. LMIC adaptation climbed **+$8.3B (+31%)** to **$35B** in 2025. That is roughly **seven times** the absolute OECD YoY bounce the Q3 post celebrated (**+$1.1B**). Mitigation in the same LMIC book rose **+16% to $68B**, so adaptation is not cannibalising the climate stack — it is outgrowing mitigation on a percentage basis inside a climate book that itself expanded **+21% to $103B**.
+
+Private-sector mobilisation in LMICs also printed **$35B** — equal to the adaptation line and still far under the COP29 **$65B** 2030 mobilisation projection. High-income MDB adaptation sat at **$7B**, already matching the 2030 HIC adaptation projection five years early, while HIC mitigation dominated at **$53B**. All-economy MDB adaptation (LMIC + HIC) therefore lands at **$42B** — exactly the *LMIC* 2030 adaptation goal, but only if you illegally collapse income groups. Keep the LMIC **$35B** and the HIC **$7B** separate; the theme question is who pays in developing countries before policy catches up.
+
+## Near parity with OECD does not close the needs gap
+
+Switch **Panel → Vintage delta** and set **Needs scenario → Mid**. Against the AGR 2025 midpoint of **$337.5B**, the MDB LMIC print leaves a residual near **$302B** — still about **8.9–10.4×** current flows depending on the low/high needs band. That is almost the same multiple the Q3 post reported against OECD’s **$34.7B**. The August story is therefore not “gap closed.” It is “MDB supply finally moved in the right direction at a pace that matters year-on-year, while the needs tower stayed put.”
+
+Stack the MDB total climate book (**$163B**) against the NCQG’s **$300B** dual-purpose 2035 goal and the inflation-adjusted needs illustration of **$440–520B**: even a record MDB year is a *slice* of the architecture, not the architecture. For the UNEP international-public numerator that still anchors Glasgow accountability — **$26B in 2023**, down from **$28B** — keep the [AGR 2025 update](/blog/adaptation-economics-update-2026) open. MDBs are not a substitute for that bilateral/multilateral public series; they are the largest single institutional engine inside it and beside it.
+
+## A benign H1 is not a closed protection gap
+
+Open **Panel → H1 damage**. Swiss Re Institute’s 11 August 2026 mid-year note is the newest *damage* vintage, and it is deliberately easy to misread. Insured nat-cat losses fell to **$42B** in H1 2026 from **$91B** in H1 2025 — a **−54%** collapse and **−16%** versus the **$50B** ten-year first-half average. Economic nat-cat losses printed **$100B** versus **$152B** a year earlier. Severe convective storms remained the largest insured peril at **$28B**, below the **$36B** trend estimate. Insurance covered about **42%** of economic nat-cat losses, above the **33%** thirty-year average — because damage concentrated in the United States and other highly insured markets, not because emerging-market coverage healed.
+
+That location effect is the adaptation-economics point. A half-year where rich-country storms dominate the insured ledger can print a *higher* insurance ratio while the Swiss Re modelled protection gap stays at **$424B** and the resilience index near **~27%**. Structural loss drivers — exposure growth in hazard-prone areas, reconstruction-cost inflation, longer wildfire seasons — still point to long-run insured-loss growth of about **5–7% per year**. One quiet first half does not refinance seawalls, early-warning systems, or drought buffers in countries that never appeared in the H1 insured total.
+
+Put the scales next to each other: **one half-year of economic nat-cat damage (~$100B) is nearly three times the entire 2025 MDB LMIC adaptation book ($35B).** Damage still clears the adaptation ledger before the year is half over — even in a “benign” season.
+
+## Who still pays when MDBs accelerate and insurers catch a quiet half
+
+Switch **Panel → Who pays**. The residual incidence pie is **constructed for interaction**, not a disclosed Swiss Re or MDB allocation: uninsured households and SMEs (~**40%**), sovereign budgets (~**27%**), insurers on the covered slice (~**20%**), MDB adaptation flows (~**9%**), and the thin OECD/private residual (~**4%**). What changed versus Q3 is the *narrative around* those shares, not a magical transfer of incidence. MDB adaptation’s share ticks up because the official print finally moved **+31%**; households do not exit the residual because H1 losses happened to fall where insurance densifies.
+
+**More exposed under this vintage:** LMIC finance ministries that treat the MDB **$35B** print as proof the gap is closing without checking the **$310–365B** needs band; project sponsors who assume HIC-style insurance ratios will travel with them; and any desk that averages OECD **$34.7B** and MDB **$35B** into “**$70B** of adaptation finance” without a methodology footnote.
+
+**Relatively less pressured on this print alone:** MDB clients already inside the 2025 commitment surge; HIC adaptation programs that have already hit the **$7B** 2030 projection; and insurers whose H1 catastrophe budgets barely dented (Swiss Re’s own P&C cat budget commentary in secondary coverage showed low utilisation) — temporary relief that does not rewrite the **5–7%** structural trend.
+
+**What would change the next update:** a 2026 MDB joint report that pushes LMIC adaptation through the **$42B** 2030 goal early; a UNEP AGR 2026 that revises needs *down* rather than holding or inflating the band; an H2 2026 Swiss Re print that keeps insured losses below trend *and* lifts emerging-market insurance penetration; or an OECD 2025-finance vintage that shows developed-country adaptation provided/mobilised finally compounding at MDB-like double-digit rates.
+
+## Caveats and methodology
+
+- **Ledgers differ.** OECD counts climate finance provided and mobilised by developed countries; MDBs count their own commitments and mobilisation. Do not add **$34.7B** and **$35B**.
+- **2024 MDB adaptation (~$26.7B)** is **implied** from the disclosed **+31%** YoY on the **$35B** 2025 print — labeled estimated beside disclosed endpoints.
+- **Needs band unchanged.** No new UNEP Adaptation Gap Report printed in this window; **$310–365B** remains the AGR 2025 stock.
+- **H1 ≠ full year.** Swiss Re’s **$42B** insured print is a first-half estimate; full-year 2026 can re-open with a single peak peril.
+- **Insurance ratio 42%** is a *location* statistic for H1 2026, not evidence that the global protection gap narrowed from **$424B**.
+- **Residual who-pays shares** are constructed for the interactive panel and labeled as such — not official incidence accounting.
+- **Private mobilisation $35B** equals the adaptation print by coincidence of disclosed totals; it is not earmarked one-for-one as adaptation capital.
+- This post is an **August MDB + Swiss Re H1 vintage delta**. For the Q3 OECD path use the [Q3 update](/blog/adaptation-economics-update-2026q3); for UNEP needs and Glasgow miss use the [AGR 2025 update](/blog/adaptation-economics-update-2026); for the full research ledger use [adaptation economics research](/blog/adaptation-economics-research-2026).
+
+Primary sources: [MDB 2025 Joint Summary Report on Climate Finance (13 Jul 2026)](https://www.eib.org/en/publications/20260117-2025-joint-summary-report-on-mdbs-climate-finance); [EIB press — MDBs record $163B climate finance](https://www.eib.org/en/press/all/2026-249-multilateral-development-banks-increase-climate-finance-to-record-usd163-billion-in-2025-supporting-climate-resilient-and-sustainable-growth); [Swiss Re Institute — First-half 2026 insured catastrophe losses](https://www.swissre.com/institute/research/topics-and-risk-dialogues/climate-and-natural-catastrophe-risk/first-half-2026-insured-catastrophe-losses.html).
+
+## The shareable takeaway
+
+Versus our Q3 OECD vintage, the newest official prints say adaptation supply **finally accelerated on the MDB books while the damage half printed a misleading calm**: LMIC adaptation jumped **+$8.3B (+31%) to $35B** in 2025 — near OECD’s **$34.7B** 2024 provided/mobilised print on a different ledger — yet the AGR needs band still towers at **$310–365B**, the 2030 MDB goal still needs **$7B** more, and Swiss Re’s benign H1 insured nat-cat **$42B** (down from **$91B**) does not touch the **$424B** protection gap. **Who pays before policy catches up remains households, sovereigns, and the thin insured slice — not a closed gap.**
+
+Related reading: [Q3 OECD adaptation update](/blog/adaptation-economics-update-2026q3), [AGR 2025 update](/blog/adaptation-economics-update-2026), [adaptation economics research](/blog/adaptation-economics-research-2026), and [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026).`,
+  },
+  {
     id: "ai-power-grid-update-2026q3",
     slug: "ai-power-grid-update-2026q3",
     title:

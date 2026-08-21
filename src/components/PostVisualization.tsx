@@ -1202,6 +1202,21 @@ const AiPowerGridUpdate2026q3Dashboard = dynamic(
   },
 );
 
+const AdaptationEconomicsUpdate202608Dashboard = dynamic(
+  () =>
+    import("@/components/visualizations/AdaptationEconomicsUpdate202608Dashboard").then(
+      (m) => m.AdaptationEconomicsUpdate202608Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1509,6 +1524,10 @@ export function PostVisualization({
 
   if (type === "ai-power-grid-update-2026q3") {
     return <AiPowerGridUpdate2026q3Dashboard />;
+  }
+
+  if (type === "adaptation-economics-update-202608") {
+    return <AdaptationEconomicsUpdate202608Dashboard />;
   }
 
   return null;
