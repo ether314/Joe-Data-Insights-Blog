@@ -1502,6 +1502,21 @@ const AiFinancingConcentrationDashboard = dynamic(
   },
 );
 
+const EnergySystemsUpdate202608Dashboard = dynamic(
+  () =>
+    import("@/components/visualizations/EnergySystemsUpdate202608Dashboard").then(
+      (m) => m.EnergySystemsUpdate202608Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1889,6 +1904,10 @@ export function PostVisualization({
 
   if (type === "ai-financing-concentration-2026") {
     return <AiFinancingConcentrationDashboard />;
+  }
+
+  if (type === "energy-systems-update-202608") {
+    return <EnergySystemsUpdate202608Dashboard />;
   }
 
   return null;

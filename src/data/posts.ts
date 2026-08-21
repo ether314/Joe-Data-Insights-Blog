@@ -2,6 +2,100 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "energy-systems-update-202608",
+    slug: "energy-systems-update-202608",
+    title:
+      "Update: Power Demand +3.6% — Renewables Widen Lead, but Coal Rebounds +1.4%",
+    excerpt:
+      "Versus our Q3 Ember/IEA WEI vintage (RE 33.8% > coal 33.0%; fossils −0.2%), the IEA Electricity Mid-Year Update rewrites 2026: demand accelerates to 3.6%/3.8%, renewables rise toward 37% by 2027, while Hormuz-driven gas-to-coal switching lifts coal generation +1.4%.",
+    category: "Energy",
+    themeId: "energy-systems",
+    imageUrl: "/images/energy-energy-systems-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic energy-systems viz with teal renewable arcs overtaking charcoal coal stacks, amber LNG shock ripples, and a lime solar growth spike",
+    publishedAt: "2026-08-21T04:00:00Z",
+    featured: true,
+    visualization: "energy-systems-update-202608",
+    layout: "default",
+    content: `## What changed since the Ember / IEA WEI update
+
+Our [Q3 energy-systems update](/blog/energy-systems-update-2026q3) closed on two official prints: **Ember’s Global Electricity Review 2026**, which showed **all renewables at 33.8%** of world generation overtaking **coal at 33.0%**, with fossil generation falling **0.2%** and clean sources meeting **all** 2025 demand growth; and **IEA World Energy Investment 2026**, which put total energy capex at **$3.4T** with clean near **$2.2T** versus fossils **$1.2T**. That post answered the *census + capital* question after the [EI Statistical Review flow update](/blog/energy-systems-update-2026).
+
+This August refresh answers the *next* vintage the electricity market actually trades on mid-year: **what does the IEA Electricity Mid-Year Update 2026 rewrite once H1 actuals and a Strait of Hormuz / LNG shock enter the 2026–2027 forecast?** Three meters force the rewrite. Global electricity demand accelerates to **3.6% in 2026** and **3.8% in 2027** (from **3% in 2025**), lifting consumption from **28,600 TWh** toward **30,700 TWh**. Renewables are set to become the world’s largest generation source in **2026** and widen to **37%** of the mix by **2027**. And — the punchline that breaks the Q3 fossil-halt story — **coal-fired generation rises 1.4% in 2026** as high gas prices drive gas-to-coal switching, while gas-fired output stays **broadly flat** and power-sector CO₂ rises about **1%** before plateauing in 2027.
+
+The dashboard above is built as an August mid-year vintage delta: demand path, regional growth, fuel-outlook diverging bars, RE/VRE share areas, wholesale LNG-exposure split, and flexibility scatter. It is not a second Ember encyclopedia or a new Statistical Review of primary energy.
+
+## The headline table: Q3 Ember/WEI vs IEA Mid-Year Update
+
+| Meter | Prior update (Ember GER + IEA WEI) | August newest print (IEA MYU) | Δ |
+| --- | ---: | ---: | --- |
+| World elec demand growth | ~**2.8–3%** (2025 census year) | **3.6%** (2026e) · **3.8%** (2027e) | Acceleration |
+| World elec consumption | **28,600 TWh** (2025) | **30,700 TWh** (2027e) | **+2,100 TWh** |
+| Renewables vs coal (power) | Ember: **33.8% > 33.0%** | RE #1 in 2026; share **33%→37%** by 2027 | Lead widens |
+| VRE (solar+wind) share | Not a Q3 headline | **17%** (2025) → **21%** (2027e) | **+4 pp** |
+| Coal generation YoY | Ember 2025: **−0.6%** | IEA 2026e: **+1.4%** | Rebound |
+| Fossil generation story | Fossils **−0.2%**; clean met all growth | Coal up · gas flat · elec CO₂ **+1%** | Security rewrite |
+| Solar annual add | Ember 2025: **+636 TWh (+30%)** | IEA 2026e: **+610 TWh (+23%)** | Near-record repeat |
+| Gas-fired generation | Capex/orders story in WEI | **Flat** in 2026 (3rd flat year / 10) | Price-capped |
+| Wholesale power (Q2 2026) | Not in Q3 post | EU/Japan **>+30%** · US ~**0** · AU **−45%** | LNG split |
+| Primary fossils / clean inv | EI **86.2%** TES · clean **$2.2T** | Carried — no newer primary/WEI print | Stock unchanged |
+
+Read the coal row carefully. The Q3 post correctly celebrated Ember’s 2025 crossover and fossil generation halt. The Mid-Year Update does **not** reverse the renewables lead — it widens it — but it **does** reverse the one-year fossil-halt framing for 2026 once Hormuz-linked gas prices re-open coal’s dispatch stack. Averaging “renewables are winning” with “coal is declining forever” is how desks get lied to after a security shock.
+
+## Demand accelerates even under an energy-security tax
+
+Toggle **Panel → Demand path**. IEA’s mid-year print lifts the growth path from **3% in 2025** to **3.6% in 2026** and **3.8% in 2027**, taking world electricity consumption to **30,700 TWh**. Structural drivers — industry, appliances, EVs, heat pumps, air conditioning, and data centres — keep pushing through higher generation costs and emergency conservation in some LNG-importing emerging markets.
+
+The regional panel makes the geography concrete. **China** accelerates from **5.2% to 5.5%** (H1 already **+5.3%**), with lithium-battery output **+39%** and services electricity (including data centres and EV charging) **+8%** in H1. **India** rebounds from a monsoon-dampened **1.6% in 2025** to **7% in 2026** (about **6%** in 2027e); H1 ran near **6%**, and peak load hit **270.8 GW** on 21 May with solar covering **22%** of the daytime peak. The **United States** grows about **1.8%** in 2026 after **2.6%** in 2025, then **3%** in 2027 as data centres and industry rebuild the trajectory after a mild winter. The **European Union** strengthens to about **2%**, with H1 already above **2%** on heating, heatwaves, and EV sales **>+30%** in January–May.
+
+Price-sensitive LNG importers — Bangladesh and Pakistan get named in the IEA news framing — are the exception, not the rule: conservation curtails their consumption while the large economies keep electrifying. That is the theme answer on *sourcing demand*: the Age of Electricity is not paused by a Hormuz shock; it is **taxed unevenly**.
+
+## Renewables widen the lead — and coal still rebounds
+
+Switch to **Fuel outlook** and **RE / VRE shares**. After near parity with coal in 2025 (Ember’s refined **33.8% vs 33.0%**), IEA projects renewables generation growth of about **8% in 2026** and **9% in 2027**, lifting their share from **33% to 37%**. Variable renewables — solar PV plus wind — rise from **17% to 21%**. Solar alone adds roughly **610 TWh** in 2026 (**+23%**), matching Ember’s record 2025 add within rounding, and overtakes wind as the second-largest renewable source after hydropower. China still supplies about half of the global solar generation increase; India and other Asian economies rise from ~**10%** to ~**17%** of that add.
+
+The uncomfortable companion meter is coal. Global coal-fired generation is expected to rise **1.4% in 2026** after staying roughly flat in 2025. IEA attributes the rebound to higher gas prices amid the Middle East / Hormuz crisis (gas-to-coal switching), weather effects, and rising renewable curtailment in some regions that raised coal-plant utilisation. China accounts for the largest share of the increase after weak wind and higher curtailment in H1; India rebounds from its 2025 coal decline; the EU’s coal decline slows versus the February forecast because gas got expensive. Assuming weather normalises and shipping disruptions ease, IEA expects coal generation to fall slightly in **2027** (less than **1%**).
+
+Gas-fired generation stays **broadly flat** in 2026 — the third year in the past ten without significant annual growth — then rebounds in 2027 if geopolitics allow. Nuclear grows slowly in 2026 (delays and outages) before accelerating above **4%** in 2027 as reactors in China and India and delayed projects come online. Power-sector CO₂ rises about **1% in 2026** then **plateaus in 2027** as renewables, nuclear, and gas collectively displace coal again.
+
+## Wholesale prices reveal who still trades the gas stack
+
+Open **Wholesale**. The temporary loss of nearly **20%** of global LNG supply pushed Asian and European gas prices to their highest levels since the **2022–23** energy crisis. In **Q2 2026**, average spot wholesale electricity prices in the **EU and Japan** rose more than **30%** year-over-year. The **United States** was largely unchanged. **India** rose less than **10%** because LNG is a minor power fuel. **Australia** fell about **45%** as renewables and batteries cut peak gas reliance.
+
+That split is the trade-and-security companion to the theme question. Countries that still clear peak power through imported gas **import the Hormuz shock into the power bill**. Countries that can meet peaks with domestic renewables, nuclear, coal, or batteries **decouple**. The Q3 post’s LNG investment-doubling story from IEA WEI and the [research post’s import-dependence map](/blog/energy-systems-research-2026) still matter — India ~**86%** oil-import dependent, Europe ~**75%**, China ~**73%** — but the Mid-Year Update shows the *electricity-price channel* of that exposure in live Q2 prints.
+
+## Flexibility stress is the other side of the renewables win
+
+The **Flexibility** scatter pairs negative-price hours with wholesale context. South Australia and California spent about **20%** of H1 2026 wholesale hours at negative prices — similar to 2025. Spain rose to **17%** from **10%**. Sweden and Finland fell from ~**6%** to **2%** as flexibility measures improved. During June European heatwaves, midday-to-evening spreads reached about **$600/MWh** in several markets. Negative prices and extreme spreads are the same system saying two things at once: variable renewables are winning energy hours, and the value of storage, demand response, and flexible thermal is rising in the residual peak.
+
+That is why the Mid-Year Update keeps stressing grids, locational prices, and efficient use of existing networks alongside the renewables-over-coal headline. A **37%** renewables share with **21%** VRE is not a solved system — it is a flexibility procurement problem.
+
+## Who is exposed under the new vintage
+
+**More exposed:** LNG-linked power systems in Europe and Northeast Asia that just printed **>+30%** wholesale YoY; coal-fleet owners celebrating a one-year dispatch rebound that IEA already expects to fade in 2027; analysts who treated Ember’s 2025 fossil halt as a permanent trajectory; and price-sensitive emerging importers forced into conservation while China/India/US/EU keep growing load.
+
+**Relatively better positioned:** solar-plus-storage platforms in markets like Australia where wholesale prices fell **45%**; US power markets buffered from the LNG shock; nuclear programs timed to the **2027** acceleration; and grid/flexibility investors capturing **$600/MWh**-class spreads and negative-price hours.
+
+**What would rewrite the next update:** a new EI Statistical Review that moves primary fossil share; Ember monthly track showing 2026 coal growth undershooting IEA’s **+1.4%**; Hormuz shipping fully normalised with gas prices collapsing coal’s relative merit order early; or demand growth slipping back toward **2%** if geopolitics cut industrial/data-centre build.
+
+## Caveats and methodology
+
+- **Primary ≠ electricity.** EI TES fossils at **86.2%** remain the prior Statistical Review print — do not average them with IEA’s electricity shares.
+- **2026–2027 figures are forecasts** from IEA Electricity Mid-Year Update 2026; H1 2026 regional meters are disclosed mid-year prints.
+- **Ember’s 33.8% / 33.0%** is a refined 2025 census; IEA’s mid-year text often rounds the 2025 parity to **~33%**. Both describe the same crossover year.
+- **Coal +1.4%** is global generation growth, not a share reclaim — renewables still take the #1 slot and widen to **37%**.
+- **Gas “flat”** is a global aggregate; regional stories diverge (India gas −**15%** H1; EU gas **+7%** H1 before crisis month flips).
+- **Wholesale YoY** figures are Q2 2026 spot averages as summarised by IEA — not full-year realised retail bills.
+- **Clean investment $2.2T** and **TES 602 EJ** are carried from prior posts; this vintage does not replace WEI or the Statistical Review.
+- This post is a **vintage delta**. For the Ember/WEI Q3 stack use the [prior update](/blog/energy-systems-update-2026q3); for primary-energy flows use the [EI update](/blog/energy-systems-update-2026); for import-dependence stock use the [research ledger](/blog/energy-systems-research-2026).
+
+## The shareable takeaway
+
+Versus our [Q3 Ember + IEA WEI update](/blog/energy-systems-update-2026q3), the newest official electricity print says **demand and the renewables lead accelerated while the fossil halt did not survive a security shock**. World power demand grows **3.6%** then **3.8%**, renewables widen from **33% to 37%** by 2027 with VRE at **21%**, and solar repeats a near-record **~610 TWh** add — but coal generation rebounds **+1.4%** on gas-to-coal switching, gas stays flat, and power CO₂ ticks up **~1%** before flattening. Wholesale prices split by LNG exposure: EU/Japan **>+30%**, US flat, Australia **−45%**. Fossils remain **~86%** of primary TES. The theme answer is sharper: countries are **electrifying and greening the power mix** while still **trading gas-security risk into coal dispatch and power bills**.
+
+Related reading: [Energy systems Q3 update (Ember/WEI)](/blog/energy-systems-update-2026q3), [Energy systems EI update](/blog/energy-systems-update-2026), [Energy systems research](/blog/energy-systems-research-2026), and [Global electricity generation mix](/blog/global-electricity-generation-mix-2024).`,
+  },
+  {
     id: "ai-financing-concentration-2026",
     slug: "ai-financing-concentration-2026",
     title:

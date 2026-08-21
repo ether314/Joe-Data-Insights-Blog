@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "energy-systems-update-202608",
+    marker: "August 2026 vintage · IEA Electricity Mid-Year Update vs Ember/WEI lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-financing-concentration-2026",
     marker: "AI financing — concentration lens",
     forbidden: "Loading interactive charts",
