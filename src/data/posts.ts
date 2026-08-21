@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "bank-commercial-credit-update-2026q3",
+    slug: "bank-commercial-credit-update-2026q3",
+    title:
+      "Update: SLOOS CRE Standards Flip to Easing (NFNR −11.3) as CMBS Office Hits 11.91%",
+    excerpt:
+      "Q3 vintage vs our August bank-credit update: July SLOOS shows moderate NFNR easing (−11.3 net %) while Trepp CMBS office delinquency rises +60 bp to 11.91%. Fed SA loss rates remain the 2026Q1 print — cards 3.84%, CRE delinq 1.56%.",
+    category: "Finance",
+    themeId: "bank-commercial-credit",
+    imageUrl: "/images/finance-bank-commercial-credit-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of cooling amber card-loss bars, a sticky cyan CRE delinquency line, and a rising rose CMBS office spike with teal easing arrows",
+    publishedAt: "2026-08-21T20:00:00Z",
+    featured: true,
+    visualization: "bank-commercial-credit-update-2026q3",
+    layout: "canvas",
+    content: `Our [August bank & commercial credit update](/blog/bank-commercial-credit-update-2026) answered the Fed SA vintage question through **2026Q1**: card charge-offs cooled **0.62 pp YoY** to **3.84%**, CRE delinquency stuck near **1.56%**, and CRE charge-offs ticked **+3 bp QoQ** to **0.17%**. This Q3 print asks what moved **since that post** — and the answer is not another Fed charge-off table. The Board’s SA release still closes on **2026Q1** (last update **May 19, 2026**). What is new is the **July 2026 Senior Loan Officer Opinion Survey** (published **August 3**, covering **2026Q2**) and **Trepp’s July CMBS delinquency** report.
+
+The headline contradiction is sharper than the August essay: **bank CRE standards flipped toward net easing** even as **securitized CRE stress rose**. SLOOS net percentages for nonfarm nonresidential (**−11.3**) and multifamily (**−5.7**) are negative — net easing — versus the prior update’s estimated path that still painted CRE as a modest net-tightening story. Trepp office CMBS delinquency climbed to **11.91%** (**+0.60 pp** versus the prior post’s **11.31%** anchor), and multifamily CMBS jumped to **7.69%** (**+1.05 pp**). Bank-book Fed SA meters did not get a new quarter; the live story is **supply easing on the Call Report side of CRE while CMBS keeps marking stress**.
+
+## The Q3 vintage scoreboard
+
+| Signal | Prior post | Q3 vintage | Δ / read | Lens |
+| --- | --- | ---: | --- | --- |
+| SLOOS NFNR net % tighten | +12 (est.) | **−11.3** | Flip to moderate easing | July SLOOS |
+| SLOOS multifamily net % | +12 (est.) | **−5.7** | Modest easing | July SLOOS |
+| SLOOS CLD net % | Firm | **−3.7** | Basically unchanged | July SLOOS |
+| SLOOS C&I (large/med) | +8 (est.) | **0.0** | Unchanged | July SLOOS |
+| SLOOS credit cards | — | **+6.7** | Modest tighten | July SLOOS |
+| CMBS office delinq | 11.31% | **11.91%** | **+0.60 pp** | Trepp July |
+| CMBS multifamily delinq | 6.64% | **7.69%** | **+1.05 pp** | Trepp July |
+| CMBS overall delinq | ~7.35% | **7.86%** | **+51 bp MoM** | Trepp July |
+| Card charge-offs (Fed SA) | 3.84% | **3.84%** | Same vintage | Carried 2026Q1 |
+| CRE delinq / charge-off | 1.56% / 0.17% | **1.56% / 0.17%** | ~9.2× multiple | Carried 2026Q1 |
+
+Read the table as two clocks. The **supply clock** (SLOOS) jumped. The **securitized stress clock** (Trepp) jumped. The **bank loss clock** (Fed SA) is frozen on the May print. That is the Q3 regime in one frame.
+
+## SLOOS: CRE standards ease — led by large banks
+
+The dashboard’s **SLOOS path** panel uses Fed chart-data period labels through **2026:3** (the July survey). Net percentages are share tightening minus share easing, so **negative means net easing**. For nonfarm nonresidential, the July print is **−11.3** — a **moderate** net ease by the Board’s own bucket language. Multifamily prints **−5.7** (modest ease). Construction and land development prints **−3.7** — inside the “basically unchanged” band.
+
+That is a clean break from the prior update’s directional SLOOS path, which still carried early-2026 CRE net tightening near **+12**. Disclosed chart data show the turn started earlier than that estimate: NFNR was already **−3.6** in the April survey and **−3.3** in the prior quarter before the July acceleration to **−11.3**. The Q3 essay’s job is not to pretend the August post invented tightening out of thin air — it is to mark that **the newest official supply vintage is an easing print**, and that the **magnitude** of NFNR easing is now unmistakable.
+
+The **size split** panel matters as much as the headline net %. Large banks (≥ **$100B** domestic assets) reported easier standards for **all** CRE loan types. Other banks left multifamily and CLD **basically unchanged**. A moderate net share of **foreign** banks tightened CRE. Aggregate “banks eased CRE” is therefore a **large-bank story**, not a uniform panel thaw — the same size geometry the [CRE delinquency size-split](/blog/cre-bank-delinquency-size-split-2026) research map flagged on the past-due stock.
+
+C&I standards for large and middle-market firms sit at **0.0** net (unchanged), with stronger demand from those firms on net. Card standards print a **modest +6.7** net tighten even while Fed SA card charge-offs remain on their cooling 2026Q1 path. Supply and realized losses are not the same clock.
+
+## CMBS: office 11.91%, multifamily +105 bp, overall +51 bp MoM
+
+Trepp’s July CMBS delinquency rate rose **51 basis points** to **7.86%**, led by large loans moving into non-performing matured balloon or foreclosure. Office increased **34 bp** to **11.91%**. Multifamily posted the largest property-type jump in the excerpted print — **+46 bp** to **7.69%**. Versus our August update anchors (**11.31%** office, **6.64%** multifamily), that is **+60 bp** and **+105 bp** respectively.
+
+The **CMBS** panel’s prior→new bars make the gap with the bank book visceral. Bank CRE delinquency on Fed SA is still **1.56%**. CMBS office is nearly **eight times** that rate. That gap is selection and structure — securitized office is a stressed subsample — but the **direction** since the prior post is unambiguous: securitized stress **worsened** while bank SLOOS standards **eased**.
+
+August hard-maturity color from Trepp reinforces the office skew: the August 2026 private-label hard-maturity cohort is office-heavy on non-performing pieces even when most of the dollar balance is still performing. Maturity walls and refinancing friction remain the conversion channel the August essay watched on the bank charge-off line.
+
+## Fed SA bank book: still the May 19, 2026Q1 close
+
+Nothing in this Q3 update invents a 2026Q2 Fed SA charge-off print that does not exist yet. Card charge-offs remain **3.84%**, CRE delinquency **1.56%**, CRE charge-offs **0.17%**, C&I charge-offs **0.59%**, and the CRE delinquency-to-charge-off multiple still ~**9.2×**. The **Fed SA** panel replays that carried path so readers do not confuse a supply survey with a loss vintage.
+
+What the August update already established still stands until the next Board SA release: **consumer losses own the income statement and are cooling YoY**; **CRE stress owns the past-due stock**; **one QoQ CRE charge-off tick is a watch item, not a cycle**. The Q3 add-on is that **credit supply is no longer tightening into that sticky CRE PDNA line** at the large-bank margin — even as CMBS keeps printing higher delinquencies.
+
+For category-level loss geography without the vintage framing, the dedicated [charge-offs dashboard](/blog/bank-loan-chargeoffs-2026) and the [research roll-up](/blog/bank-commercial-credit-research-2026) still hold. This piece’s job is the delta versus the August update.
+
+## Two ledgers, one regime question
+
+The **stress map** panel plots bank SA delinquency × charge-off beside CMBS delinquency points. Cards still sit high on realized loss. Bank CRE sits mid-delinquency / low-loss. CMBS office and multifamily sit far to the right on delinquency with no bank-style charge-off axis. Markets that treat “CRE stress” as a single number are mixing ledgers.
+
+The regime question for the next Fed SA print is whether bank CRE charge-offs follow CMBS higher or stay suppressed while large banks ease NFNR/multifamily terms. SLOOS special questions still place CRE standards toward the **tighter end of post-2005 ranges** even after Q2 easing — so this is **marginal normalization**, not a return to 2021 underwriting. Levels remain tight; the **change** is easier.
+
+## How to read the Q3 vintage for markets
+
+1. **Do not wait for Fed SA to update your supply view.** July SLOOS already rewrote the CRE standards path: NFNR **−11.3**, multifamily **−5.7**, CLD unchanged, large banks leading.
+2. **Do not read bank CRE easing as CMBS healing.** Trepp office **11.91%** and multifamily **7.69%** moved the wrong way versus the August anchors.
+3. **Keep the bank loss ledger on 2026Q1 until the Board reprints.** Cards **3.84%**, CRE delinq **1.56%**, CRE charge-offs **0.17%** are carried facts, not new cooling or new conversion.
+4. **Watch the size split.** Aggregate easing that is large-bank only can coexist with mid-size concentration risk on CRE/capital — the research map’s density story is not retired by one SLOOS print.
+
+## Caveats and methodology
+
+1. **Different vintages, different questions.** Fed SA charge-off/delinquency is still **2026Q1**. SLOOS July covers **2026Q2** standards/demand. Trepp is a **July 2026** monthly CMBS print. Do not splice them into one fake quarterly.
+2. **Prior-post SLOOS anchors were partly estimated.** The August update’s early-2026 tightening path was directional. This Q3 piece replaces that path with **disclosed chart-data net percentages**.
+3. **CMBS ≠ bank CRE.** Securitized office and multifamily are stressed subsamples. A rise in Trepp delinquency does not scale one-for-one onto Call Report CRE PDNA.
+4. **Net % easing ≠ easy credit.** Special questions still show CRE standards on the tighter side of historical ranges; the July move is a change at the margin.
+5. **Size and foreign footnotes.** Large-bank easing plus other-bank flatness plus foreign tightening mean the panel average can mislead.
+6. **Overall CMBS prior (~7.35%)** is estimated from the July MoM **+51 bp** to **7.86%**; office and multifamily priors use the August post’s disclosed anchors.
+7. **Charge-offs remain net of recoveries and annualized** when the next Fed SA arrives; soft prints can reflect recoveries as well as lower gross losses.
+
+Primary sources: Federal Reserve July 2026 Senior Loan Officer Opinion Survey and chart data; Federal Reserve Charge-Off and Delinquency Rates (SA; May 19, 2026 through 2026Q1, carried); Trepp July 2026 CMBS Delinquency Report. Related reading: [August bank & commercial credit update](/blog/bank-commercial-credit-update-2026), [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026).
+
+## What to watch next
+
+Three coincident signals will tell you whether large-bank CRE easing and rising CMBS stress remain a split-ledger regime: (1) **the next Fed SA quarter** — does CRE charge-off stay near **0.17%** or climb toward **0.25%+**?; (2) **October SLOOS** — does NFNR easing persist or reverse once CMBS headlines filter into underwriting committees?; (3) **Trepp office/multifamily** — whether July’s jump is a maturity-wall spike or a new plateau above the August anchors. Until those break, the live Q3 answer is clear: **CRE supply eased on net at large banks, securitized CRE delinquency rose, and the bank loss ledger is still waiting on the next Fed SA print.**`,
+  },
+  {
     id: "consumer-finance-markets-concentration-2026",
     slug: "consumer-finance-markets-concentration-2026",
     title:

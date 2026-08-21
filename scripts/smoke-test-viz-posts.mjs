@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "bank-commercial-credit-update-2026q3",
+    marker: "Q3 vintage · July SLOOS + Trepp CMBS vs Aug update",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "consumer-finance-markets-concentration-2026",
     marker: "Consumer finance — concentration lens",
     forbidden: "Loading interactive charts",
