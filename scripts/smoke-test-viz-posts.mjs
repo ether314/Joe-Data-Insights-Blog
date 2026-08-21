@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-financing-update-202608",
+    marker: "Vintage delta — Q3 2026 flow print",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "adaptation-economics-update-202608",
     marker: "Vintage delta — OECD $34.7B (2024) → MDB LMIC $35B (2025, +31% YoY)",
     forbidden: "Loading interactive charts",

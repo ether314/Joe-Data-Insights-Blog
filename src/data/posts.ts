@@ -2,6 +2,113 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-financing-update-202608",
+    slug: "ai-financing-update-202608",
+    title:
+      "Update: AI Infra Credit Stock Hits ~$1.07T — Plus $675B in Uncommenced Leases",
+    excerpt:
+      "Versus our Q3 flow print ($489B AI debt YTD; ~23% of USD IG supply), Chicago Booth’s August stock map puts funded AI-infrastructure credit near $1.07T across five channels — and S&P’s ~$675B signed-but-not-commenced lease overhang sits on top. Stress credit loss band: $60–140B.",
+    themeId: "ai-financing",
+    category: "Capital Markets",
+    imageUrl: "/images/capital-markets-ai-financing-update-202608-hero.png",
+    imageAlt:
+      "Dark navy capital-markets chart of stacked violet AI credit walls with amber private-credit overflow and a cyan lease-overhang ribbon labeled near $1.07T stock",
+    publishedAt: "2026-08-21T00:30:00Z",
+    featured: true,
+    visualization: "ai-financing-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 flow vintage
+
+In our [Q3 financing update](/blog/ai-financing-update-2026q3) the live numbers were about **theme weight inside credit supply**: AI-related debt still near **$489B** year-to-date, hyperscalers still ~**40%** of that stack, and desk synthesis lifting the theme’s share of **USD investment-grade issuance from ~18% to ~23%** (HY to ~**20%**). Private data-centre transactions since early 2025 printed ~**$200B**, and Meta/Amazon long paper kept pricing below official AA. That post answered the absorption question — *is the theme still claiming more of the primary calendar?*
+
+This **August 202608** vintage answers a different question credit and risk desks trade next: **where does the financed stock actually sit once you leave the flow perimeter?** Stefan Hepp’s Chicago Booth Review synthesis (Aug 7, 2026), drawing on *The AI Infrastructure Debt Complex*, maps funded channels at roughly **$520B** hyperscaler senior unsecured, **$250B** project and data-centre finance, **$60B** infrastructure/ABS, **$200B** private credit (estimate), and **$35B** GPU-secured specialist debt — about **$1.07T** in total. On top of that funded map, S&P Global Ratings has identified about **$675B** of **signed but not-yet-commenced** hyperscaler lease obligations that never appear in the funded-debt totals.
+
+The dashboard above is built as a vintage delta: flow-vs-stock bars, channel stock map, hyperscaler issuance path, new Aug disclosures, equity→credit stress scatter, first-loss pie, named SPV/GPU structures, and carried ETF sentiment capacity.
+
+## The headline table: Q3 flow print vs Aug 202608 stock map
+
+| Metric | Q3 2026 update | Aug 202608 stock map | Δ |
+|--------|---------------:|---------------------:|--:|
+| AI-related debt YTD (flow) | **~$489B** | **~$489B** | Perimeter carried |
+| AI share of USD IG / HY supply | **~23% / ~20%** | **~23% / ~20%** | Share carried |
+| Private DC deals (since early ’25) | **~$200B** | **~$200B** | Carried as flow |
+| **HS senior unsecured stock** | *Flow lens only* | **~$520B** | **New stock** |
+| **Project / DC finance stock** | 2027 path ~$300B | **~$250B outstanding** | **Stock lens** |
+| **Infra / ABS stock** | Not scoped | **~$60B** | **New** |
+| **Private credit stock (est.)** | Deals ~$200B | **~$200B stock** | Stock restatement |
+| **GPU-secured specialist debt** | Not scoped | **~$35B** | **New** |
+| **Funded channel sum** | n/a | **~$1.07T** | **Headline stock** |
+| **Uncommenced leases (S&P)** | Not scoped | **~$675B** | **Overhang** |
+| Stress credit-loss band | Not published | **~$60–140B** | **New** |
+
+Two readings matter. First, the Q3 **dollar flow perimeter and IG share did not break** — we carry **$489B** and **~23%** deliberately so this update does not pretend Booth rewrote Goldman’s mid-year tally. Second, the **stock map is additive**: ~**$1.07T** funded channels plus ~**$675B** lease overhang is a different object from year-to-date issuance. Do not “correct” $489B upward to $1.07T; they measure different things.
+
+## Funded stock ≈ $1.07T — about 2.2× the Q3 flow perimeter
+
+Toggle the dashboard’s **Stock map** lens. The left panel puts three bars side by side: the Q3 **$489B** flow perimeter, the Aug **$1.07T** funded stock, and the **$675B** lease overhang. That visual is the point of the vintage. Flow tells you how much AI-tagged paper cleared the calendar this year. Stock tells you how much institutional capital already sits against AI infrastructure cash flows — including channels that never show up as hyperscaler IG bonds.
+
+The vertical channel panel decomposes the funded map. **~$520B** of senior unsecured hyperscaler bonds sit with bond funds, insurers, and pensions at the lowest-risk end of the spectrum. **~$250B** of project and data-centre finance is facility-tied, shorter-maturity, and dependent on contracted tenant cash flows. **~$60B** of infrastructure and ABS is the structured sleeve. Private credit’s **~$200B** is an author estimate — hard to observe, overlapping the Q3 private DC deal tally without being identical to it. GPU-secured specialist compute adds another **~$35B**, with chips themselves as collateral on a two-to-three-year technology cycle.
+
+Use **Focus → Funded only** to strip the lease bar, or **Lease overhang** to isolate the S&P commitment. **Junior / GPU** highlights the sleeves where residual-value and collateral risk concentrate — private credit and chip-secured lending.
+
+## The lease overhang is the silent vintage number
+
+Reported corporate debt is an incomplete measure of AI infrastructure commitments. Hepp cites S&P’s identification of about **$675B** of signed but not-yet-commenced lease obligations across the hyperscalers — excluded from the funded-debt totals in the stock map. That figure sits *beside* the ~**$1.07T** funded channels, not inside them.
+
+For capital-markets readers this is the hinge between the [capex spend update](/blog/ai-capex-spend-update-202608) and the financing theme. When Big-5 midpoints climb toward **~$858B**, the residual is not only senior notes and project loans; it is also multi-year lease capacity that will eventually print as PP&E, rent, or off-balance financing. An institution can underwrite “manageable hyperscaler leverage” on the bond stack and still inherit lease-linked exposure through infrastructure funds, real-estate debt, and ABS.
+
+The Q3 post’s private DC ~**$200B** channel was the overflow *flow*. The August lease print is the overflow *commitment*. Both matter; they are not substitutes.
+
+## Issuance path: H1’26 already above full-year 2025
+
+Booth’s frame on the hyperscaler bond calendar is blunt. The five names issued about **$120B** of corporate bonds in 2025 versus an average of roughly **$28B** annually between 2020 and 2024. Through the first half of 2026, issuance had **already exceeded** the full-year 2025 amount — consistent with the Goldman / LSEG spine we carried in Q3 (**~$194B** YTD toward a **~$250B** full-year path, ~**33%** of capex).
+
+The dashboard’s issuance line makes the slope visible without restating the IG supply-share story. Theme weight inside USD IG supply can sit at **~23%** *and* the absolute hyperscaler calendar can still be accelerating; those are compatible. Saturation shows up first as cover-ratio compression and spread concession, then as migration into project finance, private credit, multi-currency packages, and structured SPVs — exactly the channels the stock map is trying to count.
+
+## Stress: $10–14T equity shock maps to $60–140B credit loss
+
+Switch to **Stress & loss**. Hepp’s illustrative calibration is deliberately not a base-case forecast: a severe debt re-rating could cut AI-linked equity value by about **$10–14 trillion**, while realized credit losses in the accompanying band sit nearer **$60–140 billion**. Equity loss does not become credit loss one-for-one. Strong investment-grade names first reprice via wider spreads; project and asset-backed sleeves react through tenant credit, covenants, advance rates, and refinancing windows.
+
+The more important structural claim is distributional. Under the paper’s assumptions, **first-loss and junior positions sit mainly outside the regulated banking system** — with private-credit limited partners (pensions, endowments), private-equity-owned insurance platforms, and, to a lesser extent, BDC investors. Banks remain important providers of project and senior secured financing but tend to sit higher in the capital structure. That is why the dashboard’s loss-bearer pie is directional, not a regulatory capital model: it shows *who marks the junior risk*, not a prediction of bank failure.
+
+July’s market episode — a freely available Chinese model approaching leading US systems, plus regulatory proposals that could constrain the most powerful models — illustrated how quickly demand assumptions can wobble. The August stock map does not say a correction is inevitable. It says the **financing system** now has enough layered claims on AI cash flows that diversification-by-asset-class can still leave portfolios exposed to a common repayment story.
+
+## Structures: $35B Anthropic SPV and the GPU collateral problem
+
+Toggle **Structures / ETFs**. Named deals illustrate how debt leaves the hyperscaler balance sheet without leaving the AI cash-flow complex.
+
+In June 2026, Apollo and Blackstone helped raise about **$35B** of debt for Anthropic’s computing capacity through a special-purpose vehicle: the money bought chips and leased them back, keeping the debt off Anthropic’s books. Broadcom’s residual promise let senior lenders price closer to investment-grade — until the conditions that trigger the guarantee are exactly the conditions that weaken it. Senior notes become a claim on a manufacturer’s promise; junior notes become a claim on used chips whose secondary market has never been stress-tested at scale.
+
+That **$35B** SPV sits beside the broader **~$35B** GPU-secured specialist book in the Booth map. Chip collateral depreciates on a two-to-three-year cycle. Vendor financing — including Nvidia’s September 2025 agreement to take about **$6.3B** of CoreWeave unsold capacity through early 2032 — converts hardware residual value into bankable support that is hard to observe in public tallies. These structures are why a clean “hyperscaler IG only” screen understates theme risk.
+
+The equity/ETF panel is carried on purpose. FactSet’s 2025 US thematic ETF inflows near **$43.5B**, with QQQ alone around **$21.7B**, remain a **sentiment capacity** meter — secondary ownership, not issuer proceeds. Pair that sleeve with the [mid-year financing update](/blog/ai-financing-update-2026) if you need the $489B flow perimeter and hyperscaler **40%** share in one place.
+
+## Who is exposed under the August stock map
+
+**Exposed:** real-money books that assumed underweight Big Tech bonds meant underweight AI infrastructure credit; institutions holding “diversified” mixes of tech equity, data-centre funds, private credit, and ABS that share the same tenant or demand assumptions; LPs in junior AI-infra credit vehicles that sit first-loss under Booth’s stress band; portfolios that treat uncommenced leases as someone else’s problem until commencement hits the income statement.
+
+**Relative winners under current rules:** desks that can map claims by *cash-flow source* rather than legal label; senior holders higher in project and ABS stacks; multi-currency and private channels that clear when USD IG cover ratios compress; investors who keep the Q3 **~23%** supply-share print *and* the Aug stock map in the same risk packet.
+
+**What would change the story:** a restated Booth/S&P perimeter that collapses funded stock well below **$1T** or lease overhang well below **$500B**; a Q4 print that pulls AI’s USD IG share back into the mid-teens while concessions compress; or a broad rating migration that turns today’s technical AA–BBB gaps into cohort downgrades. None of those reverse signals are in the August stock map.
+
+## Caveats and methodology
+
+1. **Flow ≠ stock.** The ~**$489B** AI-related debt YTD figure is carried from Goldman’s August mid-year estimate (hyperscalers ~**40%**). The ~**$1.07T** funded sum is Hepp’s channel stock map. Do not add them or annualize either into the other.
+2. **Lease overhang is off-balance by design.** The ~**$675B** S&P signed-but-not-commenced figure is excluded from funded totals in the source analysis — and in our dashboard’s funded sum.
+3. **Private credit ~$200B is an estimate.** Hepp flags measurement difficulty. It overlaps conceptually with Q3’s private DC deal tally without a perfect identity.
+4. **Stress bands are illustrative.** The **$10–14T** equity and **$60–140B** credit-loss figures are stress calibrations, not forecasts of overvaluation or default probability.
+5. **Loss-bearer pie shares are directional viz aids** for first-loss geography under the paper’s assumptions — not audited capital allocations.
+6. **IG/HY supply shares (~23% / ~20%)** are carried from the Q3 desk refresh; this vintage does not re-estimate them.
+7. **ETF flows** remain secondary-market ownership metrics.
+8. **Named deals** (Anthropic SPV ~**$35B**, Nvidia–CoreWeave ~**$6.3B**) are structure illustrations, not a complete census of vendor or residual support.
+
+Primary sources: Chicago Booth Review — *How Worried Should We Be About AI Debt?* (Stefan Hepp, Aug 7, 2026); Hepp working paper *The AI Infrastructure Debt Complex* (Jul 2026); Goldman Sachs Exchanges — *How AI Debt Is Reshaping Credit Markets* (Aug 2026) for the carried flow spine; prior theme posts [Q3 financing update](/blog/ai-financing-update-2026q3) and [mid-year $489B update](/blog/ai-financing-update-2026). Capex context from the [late-Aug spend vintage](/blog/ai-capex-spend-update-202608).
+
+## What to watch into year-end 2026
+
+Three coincident signals will tell you whether the August stock map tightens or expands: (1) **whether funded-channel estimates keep climbing past ~$1.07T** as project finance, ABS, and private credit clear more of the residual — if stock rises while USD IG theme share stays in the low-to-mid twenties, saturation is migrating off the public calendar rather than disappearing; (2) **commencement of the ~$675B lease overhang** — conversion into funded debt, rent, or PP&E is the real-time meter of how incomplete the bond stack remains; (3) **junior and GPU-secured secondary performance** — if chip-collateral and SPV residuals trade wide to issue while senior HS paper only widens modestly, first-loss is already behaving like a separate asset class. Until those three clear, the live pair is not Q3’s **$489B / 23%** alone. It is **~$1.07T funded stock + ~$675B lease overhang** — with stress losses still concentrated outside the regulated banking core.`,
+  },
+  {
     id: "adaptation-economics-update-202608",
     slug: "adaptation-economics-update-202608",
     title:
