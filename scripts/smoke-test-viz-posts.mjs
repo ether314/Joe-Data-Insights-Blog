@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "geopolitics-institutions-concentration-202608",
+    marker: "August 202608 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "bank-commercial-credit-concentration-2026",
     marker: "Bank & commercial credit — concentration lens",
     forbidden: "Loading interactive charts",

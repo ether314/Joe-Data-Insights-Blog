@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "geopolitics-institutions-concentration-202608",
+    slug: "geopolitics-institutions-concentration-202608",
+    title:
+      "August Concentration: IMF Top-1 16.5% / Top-3 28.7% Frozen — Clock at 87 Days",
+    excerpt:
+      "August 202608 concentration lens: IMF Top-1 still 16.5% and Top-3 28.7% with tip Δ vs Q3 at 0 pp; quota consent flat at 76.66% (−8.34 pp to 85%) while the extension clock burns to 87 days — concentration without consent, under a compressing calendar.",
+    category: "Politics",
+    themeId: "geopolitics-institutions",
+    imageUrl:
+      "/images/politics-geopolitics-institutions-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside a purple compressing clock arc and five crimson veto seals, Visual Capitalist–style governance thumbnail",
+    publishedAt: "2026-08-21T15:00:00Z",
+    featured: true,
+    visualization: "geopolitics-institutions-concentration-202608",
+    layout: "default",
+    content: `Our [Q3 concentration print](/blog/geopolitics-institutions-concentration-2026q3) answered the mid-year distribution question: how thick is formal authority at the tip when the consent gate moves — IMF Top-1 **16.5%**, Top-3 **28.7%**, Top-5 **40%**, with quota consents climbing **+3.88 pp** to **76.66%**. Our [August mid-window update](/blog/geopolitics-institutions-update-202608) then answered the *vintage* question: what moved after that print — consent **flat**, Diriyah principles on the books, **87** days left to the November gate. This August concentration lens asks the sharper follow-up desks trade next: **how concentrated is the system when the tip is frozen, the consent meters stop, and the only mover is the calendar?**
+
+The interactive dashboard above is built as an **August 202608 concentration lens**. Toggle **Scoreboard**, **Vote ladder**, **Clock & consent**, and **Block & veto**. The punchline is deliberately three-sided. On **voting power**, the tip is *still stuck*: US **16.5%**, Top-3 **28.7%**, Top-5 **40%**, IBRD nearly identical (**15.8% / 28.5% / ~40%**) — Δ vs Q3 = **0 pp**. On **consent**, the gate is *flat*: quota still **76.66%**, residual to **85%** still **−8.34 pp**, NAB still **83.9%**. On **clock**, optionality *compresses*: **54.5%** of the Board-extended window is already spent; **87** days remain to **15 Nov 2026**. Concentration did not dilute. Consent did not advance. The calendar did the only work.
+
+## The August concentration scoreboard
+
+| Perimeter | Top-1 / thick top | Extra meter | Δ vs Q3 concentration |
+| --- | ---: | ---: | --- |
+| IMF voting power | **16.5%** (US) / Top-3 **28.7%** | Top-5 **40%** · HHI₁₀ ~**520** | **0 pp** — shares frozen |
+| IBRD voting power (30 Jun 2026) | **15.8%** (US) / Top-3 **28.5%** | Top-5 ~**40%** | **0 pp** — twin hierarchy held |
+| Quota consent gate | **76.66%** consented | Threshold **85%** · gap **−8.34 pp** | **0 pp** — no new ledger |
+| NAB rollback | **83.9%** | Threshold **90%** · gap **−6.1 pp** | **0 pp** — held flat |
+| Consent-window clock | **54.5%** elapsed | **87** days to Nov 15 | **−104** days vs May extension start |
+| Special-majority block | US alone **>15%** | JP+CN **12.2%** (short) | Still one sovereign solo blocker |
+| UNSC veto power | Any P5 **20%** equal | Top-5 **100%** | Charter concentration unchanged |
+| Diriyah reform path | 8 principles on books | Principle 5 conditional; 8 open | Tip **not** diluted by PP 2026/013 |
+
+Read the table as a **family of market shares plus a clock**, not one slogan. Vote Top-1 / Top-3 tell you who owns continuous weight. Consent percentages tell you whether that weight can *activate* a reform. The clock tells you how much calendar remains to close the residual without a superseding consent print. Blocking arithmetic tells you who can stop the hardest votes even when most members say yes. Diriyah tells you that a reform *language* exists — not that Top-1 moved. Analysts who quote only “Top-5 = 40%” miss the solo block; analysts who quote only “consent = 76.66%” miss that the residual gap is still sized like a Top-1 shareholder; analysts who ignore the **87**-day clock miss that flat consent is itself a concentration risk.
+
+## Frozen tip: Top-1 / Top-3 still 16.5% / 28.7%
+
+Toggle **Vote ladder**. The Fund and Bank have not published a relative-share rewrite between the Q3 concentration print and this August mid-window. The Lorenz panel among the top ten still rises past **one-sixth** at rank 1 and past **half** by rank 9–10, while an equal-split diagonal across ten chairs climbs linearly. Ranked bars still put the United States alone near **16.5%** IMF / **15.8%** IBRD, with Japan and China clustered near **6%** each — and China still sitting roughly **−12.6 pp** under its PPP GDP claim on the scatter.
+
+That freeze is the August contribution relative to a naive “update = new shares” instinct. Our [2026 concentration companion](/blog/geopolitics-institutions-concentration-2026) scored the tip; Q3 re-scored it against a *moving* consent gate; August re-scores it against a *stopped* consent gate and a *moving* clock. What August rewrites is not the tip — it is the *optionality around the tip*: how little calendar remains to make an equiproportional enlargement effective while the Top-1 shareholder still withholds consent.
+
+Open **Scoreboard → Cross-perimeter HHI**. Analytical HHI proxies still rank UNSC veto equality highest (~**2,000** on five equal rights), then seat-bloc geometry, then the IMF/IBRD top-ten ladders (~**520** / ~**490**). Continuous multilateral voting looks “mild” next to commodity chokepoints — until the **85%** rule turns **16.5%** into a structural veto on the hardest decisions. The August overlay does not change those HHI levels; it changes how expensive delay becomes when they sit next to a flat consent residual.
+
+## Flat consent: the gate stopped moving
+
+Toggle **Clock & consent**. In Q3, the story was *ascent*: quota consents climbed from **72.78%** (Oct 2025) to **76.66%** (Apr 2026), narrowing the gap to **85%** by almost **4 pp**. By **20 Aug 2026**, that ascent has stalled. No superseding IMF consent ledger has printed. Quota remains **76.66%**. NAB remains **83.9%**. Members consented on quotas still **149**; pending still **42**. The residual to effectiveness is still **−8.34 pp** on quotas and **−6.1 pp** on NAB — gaps that, in vote-weight terms, still look like a Top-1–scale holdout problem rather than a long tail of micro-states.
+
+The path chart now carries four vintages: Oct 2025 → Apr 2026 → **Aug mid** → Nov gate. Switch the track to **Days to gate** and the August point becomes the visual hinge: days remaining drop from **191** at the May Board extension to **87** at the mid-window clock, while the consent *level* line is flat. That geometry is the August punchline in one pane — **concentration without consent, under a compressing calendar**.
+
+China has consented; the United States has not. That is not a moral claim. It is arithmetic. The sole shareholder above the **15%** special-majority block line is also the pivotal weight needed to close most of the remaining quota gap. Our [institutions research ledger](/blog/geopolitics-institutions-research-2026) already mapped the vote-vs-GDP gaps that make Asia-Pacific under-weight on Fund chairs; August concentration simply notes that those gaps cannot clear a consent gate the Top-1 chair has not entered.
+
+## Clock compression is the August concentration story
+
+The Board extended the consent period to **15 Nov 2026**. From the May extension start to this mid-window print, **104** of **191** calendar days have elapsed — **54.5%** of the window. **87** days remain. Flat consent inside a burning window is not “no news.” It is a *regime*: the tip stays thick, the gate stays short, and the option set for a late rush shrinks every week.
+
+Scoreboard row **Consent-window clock** is therefore a first-class concentration perimeter in this vintage, not a decorative countdown. When vote Top-1 is frozen and consent Δ is zero, the only continuous series desks can update without a new Fund PP is the day count. Treat **87** as a risk meter on the same page as **16.5%** and **76.66%** — not as a separate ops calendar.
+
+What would change the story mid-window: a superseding consent PP that clears a material slice of the **8.34 pp** quota gap; a US filing; a surprise SCI coalition at the Bank that moves IBRD hierarchy talk; or a 17th GRQ package that turns Diriyah Principle 5 into a formula that actually moves shares. None of those print in the August sources. Until they do, the concentration answer stays: **tip frozen, gate flat, clock burning**.
+
+## Diriyah does not dilute the tip
+
+The [August update](/blog/geopolitics-institutions-update-202608) already logged the Diriyah Guiding Principles (PP **2026/013**): eight principles on quota and governance reform, with Principle 8 still open on voice and representation. This concentration lens asks the narrower question: **did Diriyah move Top-1 / Top-3?**
+
+No. Principle 1 (adequacy of quota resources) is about Fund *size*, not redistribution. Principle 5 (realignment toward economic weight) is *conditional* — it would need a 17th GRQ formula that actually relocates shares. Principle 8 remains *open*. The dashboard Diriyah table flags tip impact as none / conditional / open for that reason. Reform language without a share rewrite leaves the Lorenz curve where Q3 left it. Desks that treat Diriyah as a de-concentration event are reading a principles paper as a voting-power table.
+
+IBRD stock as of **30 Jun 2026** confirms the twin hierarchy: US still ~**15.8%**, Top-3 still ~**28.5%**, SCI still without US-scale support in the August vintage. Bank-side concentration and Fund-side concentration remain cousins — both tip-heavy, both consent-gated, both unmoved by mid-window calendar compression.
+
+## Block & veto: practice still concentrates inside formal equality
+
+Toggle **Block & veto**. Charter concentration already says five states own **100%** of vetoes. Practice concentrates further: recent annual stacks remain dominated by Russia, with the United States and China as secondary users, and the United Kingdom and France near zero in the 2018–2024 window. Formal P5 equality (“each has a veto”) coexists with highly unequal *use*. Expanding elected seats without touching the veto still leaves Top-5 veto share at **100%**.
+
+On the Fund side, blocking arithmetic is unchanged from Q3: US alone clears the **15%** line; Japan+China at **12.2%** remain short; an EU-5 cluster can clear it as a bloc; an EM-5 cluster sits just shy. Consent flags on those clusters still matter: the solo blocker has not consented; several under-weight Asia-Pacific chairs have. That is why concentration and consent stay coupled even when consent *levels* stop moving — the identity of the residual holdout is the concentration story.
+
+## Caveats and method notes
+
+- This is an **August concentration lens**. For the frozen tip without the mid-window clock overlay, use the [Q3 concentration print](/blog/geopolitics-institutions-concentration-2026q3). For consent clock mechanics and Diriyah narrative without Top-k re-scoring, use the [August update](/blog/geopolitics-institutions-update-202608). For vote-vs-GDP stock detail, use the [research ledger](/blog/geopolitics-institutions-research-2026).
+- Relative IMF/IBRD vote shares are **carried** pending 16th GRQ effectiveness. Do not invent a mid-window share rewrite.
+- Consent percentages are **carried from PP 2026/017** into the August clock; “flat” means no superseding ledger by **20 Aug 2026**, not a new Fund disclosure of zero change.
+- HHI and Lorenz among the top ten are **analytical derivatives**, not Fund-published indices. They are for cross-perimeter comparison, not regulatory citation.
+- UNSC veto-use counts are from public Security Council documentation and are **illustrative of practice concentration**, not a claim about legitimacy.
+- PPP GDP anchors are WEO-style gaps rounded to **0.1 pp**; they are gap meters, not exact quota formulas.
+- Diriyah tip-impact labels (none / conditional / open) are **editorial mappings** from principles language to concentration outcomes — not Fund staff classifications.
+
+## What would change the story
+
+Three coincident signals would force a rewrite of this August concentration print: (1) a **superseding consent PP** that moves quota share materially toward **85%** or NAB toward **90%**; (2) a **US 16th GRQ consent** (or a disclosed coalition that closes the residual without it); (3) a **17th GRQ / SCI package** that actually relocates Top-1 / Top-3 weights rather than restating principles. Until one of those prints, the live August answer is clear: **IMF Top-1 stays 16.5%, Top-3 stays 28.7%, consent stays 76.66% with an 8.34 pp gap, and the clock is down to 87 days.**
+
+Related reading: [Q3 concentration print](/blog/geopolitics-institutions-concentration-2026q3), [August institutions update](/blog/geopolitics-institutions-update-202608), [2026 concentration print](/blog/geopolitics-institutions-concentration-2026), and [institutions research ledger](/blog/geopolitics-institutions-research-2026).`,
+  },
+  {
     id: "bank-commercial-credit-concentration-2026",
     slug: "bank-commercial-credit-concentration-2026",
     title:
