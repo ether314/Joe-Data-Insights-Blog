@@ -121,7 +121,8 @@ export interface Post {
     | "heavy-industrial-capacity-update-2026"
     | "geopolitics-institutions-concentration-2026"
     | "migration-humanitarian-update-2026"
-    | "fiscal-industrial-policy-concentration-2026";
+    | "fiscal-industrial-policy-concentration-2026"
+    | "measurement-science-update-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

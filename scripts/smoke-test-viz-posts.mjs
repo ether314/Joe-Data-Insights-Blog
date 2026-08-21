@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "measurement-science-update-202608",
+    marker: "China domestic R&D +8.1%; intensity 2.80%; AI patents ~75%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-industrial-policy-concentration-2026",
     marker: "Fiscal & industrial policy — concentration lens",
     forbidden: "Loading interactive charts",

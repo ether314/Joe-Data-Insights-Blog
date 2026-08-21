@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "measurement-science-update-202608",
+    slug: "measurement-science-update-202608",
+    title:
+      "Update: China R&D +8.1% in 2025 — Intensity 2.80%, Basic Research Crosses 7%, AI Patents ~75%",
+    excerpt:
+      "Versus our Q3 OECD/AAAS knife-edge (CN 29.4% / US 29.1%), China’s 2025 NBS ledger prints ¥3.93T (+8.1%), intensity 2.80%, and basic research at 7.08%. NSF CET patents show AI priority families ~75% China.",
+    category: "Global Systems",
+    themeId: "measurement-science",
+    imageUrl:
+      "/images/global-systems-measurement-science-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz hero of converging China and US R&D intensity columns with a purple basic-research arc crossing 7% and AI patent nodes clustering",
+    publishedAt: "2026-08-21T05:00:00Z",
+    featured: true,
+    visualization: "measurement-science-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 OECD/AAAS restatement
+
+Our [Q3 measurement-science update](/blog/measurement-science-update-2026q3) closed on a converter story, not a new expenditure year. Versus the [August NSF State of S&E print](/blog/measurement-science-update-2026), OECD and AAAS restated **2024** GERD so China’s world share printed **29.4%** against the United States at **29.1%** — an overtake that survived by only **0.3 pp**. Business BERD explained the knife-edge (**+$100B** China vs US in constant 2020 PPP); market exchange rates still put China near **half** US GERD; alternate PPP sensitivity put it at **90–95%**. Non-OECD R&D was **92.3%** China. That post answered: *did finer shares and sector splits change the NSF headline?* Barely on ranking, a lot on how fragile the ranking is.
+
+This August 202608 vintage answers the rewrite condition Q3 itself listed first: **what does the next flow year show once China’s domestic 2025 R&D ledger prints, and what do NSF Indicators Translation meters add on critical-and-emerging-technology (CET) patents and knowledge- and technology-intensive (KTI) output?** Three information events matter. **China’s National Bureau of Statistics / MOST briefings** put 2025 domestic R&D at **¥39,262亿 (¥3.9262 trillion)**, up **8.1%**, with intensity at **2.80%** of GDP and basic research at **¥2,778亿 — 7.08%** of total R&D, the first disclosed year above the **7%** threshold. **NSF/NSB State of U.S. Science and Engineering 2026** and the Translation thematic report show inventors in China receiving the most international priority patent families in AI, quantum information science, biotechnology, semiconductors, and advanced nuclear — with **~75%** of AI priority patents alone. **KTI value-added** remains a near-duopoly: the United States **28%** and China **25%** of a **$11.7 trillion** world total, split so China leads manufacturing (**$2.4T**) while the US dominates services (**43%** of world KTI services).
+
+The dashboard above is built as a vintage delta: intensity race (levels vs gap-to-US), China 2025 flow dumbbells, composition stacked bars, CET patent concentration, KTI share pie plus manufacturing/services split, and a volume-versus-impact scoreboard.
+
+## The headline table: Q3 2024 restatement → August 2025 flow
+
+| Meter | Prior (Q3 OECD/AAAS) | Newest (Aug 202608) | Δ |
+| --- | ---: | ---: | ---: |
+| Reference year (China ledger) | **2024** OECD-comparable | **2025** NBS domestic | **new flow year** |
+| China−US PPP world-share gap | **+0.3 pp** (29.4–29.1) | no new OECD year | frame held |
+| China domestic R&D | not in Q3 | **¥3.9262T** | **+8.1% YoY** |
+| China R&D intensity | **~2.7%** (2024 OECD) | **2.80%** (2025 NBS) | **+0.1 pp** |
+| Basic research share (China) | not shown | **7.08%** | crosses **7%** |
+| Basic research YoY | n/a | **+11.1%** | outpaces total R&D |
+| AI priority patents (China share) | directional PCT lead | **~75%** (2024) | new CET meter |
+| World KTI VA (US / CN) | not shown | **28% / 25%** | near-duopoly |
+| 2026–30 R&D growth floor (China) | n/a | **≥7% avg / yr** | policy lock-in |
+
+Read the table as two columns of *different meters*, not a single converter. The **0.3 pp** PPP gap is still the live international ranking until OECD MSTI or NSF Discovery publish a 2025 GERD year. What August adds is the **domestic flow** that will eventually feed that international restatement — and the **patent / KTI** concentration panels Q3 treated only directionally.
+
+## The first post-2024 China flow year: +8.1%, intensity 2.80%
+
+Q3’s honest limitation was that almost every “delta” restated **2024**. China’s statistical communiqué for **2025** breaks that freeze. Domestic R&D expenditure rose **8.1%** to **¥3.9262 trillion**. Intensity — GERD as a share of GDP — printed **2.80%**, a tenth of a point above the **~2.7%** OECD-comparable China intensity that sat beside the US at **3.4%** and the OECD-area plateau at **2.7%** in the prior posts.
+
+That intensity move is the cleanest answer to the theme’s concentration question on the *funding effort* axis. China’s domestic intensity is now **above** the OECD-area plateau even while it remains **~0.6 pp** behind the United States’ 2024 international meter. The intensity-race panel in the dashboard shows the climb; the gap-to-US toggle stops at 2024 because a matched US 2025 international intensity is not in this vintage. The point is directional: the catch-up is continuing on the effort ratio, not only on PPP dollar levels that converter debates can erase.
+
+Do **not** convert ¥3.9262T at market FX into a new “China passed the US again” headline. At roughly **$550–570 billion** EXR (official English briefings used figures near **$569B**), the domestic print is still the yuan ledger — the same EXR frame that kept China near **half** US GERD in Q3. PPP conversion of 2025 will arrive with the next OECD/NSF international vintage. Until then, treat **+8.1%** and **2.80%** as disclosed domestic flow, not a restated world-share overtake.
+
+## Basic research crosses 7% — composition, not just scale
+
+The composition story is sharper than the headline growth rate. Basic research expenditure reached **¥2,778亿**, up **11.1%** — faster than total R&D — and accounted for **7.08%** of spending. Ministerial briefings framed that share as the first print above **7%**. In a system long criticized (fairly or not) for overweighting experimental development, the basic-research share is the policy-relevant composition meter: is the ledger only scaling applied and experimental work, or is the foundational slice rising with it?
+
+The stacked composition panel shows basic research as a thin but rising wedge. Applied and experimental shares in our module are **estimated residuals** around the disclosed basic share — labeled as such — because the communiqué’s headline cut emphasizes the basic threshold. Even with that caveat, the YoY gap between basic (**+11.1%**) and total R&D (**+8.1%**) is the disclosed signal: composition is shifting toward the research type that feeds long-horizon discovery, not only near-term productization.
+
+China’s 2026–2030 planning language locks in an average annual R&D spending increase of **at least 7%**. That is not a 2025 outcome meter; it is a forward concentration commitment. If delivered, the domestic flow that just printed **+8.1%** becomes the floor, not a peak.
+
+## CET patents: volume concentrates even when citations do not
+
+Q3’s AAAS scoreboard said China led PCT filings and ICT patenting. NSF’s Translation / State of S&E meters make the CET concentration explicit. Inventors in China were granted the most international priority patent families in **AI, QIST, biotechnology, semiconductors, and advanced nuclear** in **2024**. For AI alone, China received about **three-quarters** of all international priority patents. That is volume concentration at a level the theme’s publication story already previewed (China **31%**, US **12%**, India **7%** of world S&E articles — half the world from three countries).
+
+The same NSF prose keeps the influence caveat that our theme has carried since the research print: patents granted to US inventors in CET areas remain among the most highly cited globally, and US researchers still produce disproportionate shares of highly cited articles. The USPTO awarded **326,000** utility patents in 2024, **47%** to US applicants. Volume leadership and citation leadership are **not** the same column. The scoreboard scatter encodes that split: China volume / US impact is the modal stance across GERD-adjacent meters once you include patents and papers.
+
+For the core question — *where is progress funded and published, and is it concentrating?* — August’s answer is harsher on volume than Q3’s converter debate implied. Funding effort (China intensity **2.80%**) and CET patent families are concentrating; citation impact is not fully following. That is the same asymmetry the [2022 research ledger](/blog/measurement-science-research-2026) flagged for publications, now visible in critical-technology IP.
+
+## KTI output: near-duopoly with a manufacturing/services split
+
+NSF’s KTI meters add the *translation* layer Q3 lacked. World knowledge- and technology-intensive value added totaled **$11.7 trillion** in 2024. The United States (**28%**) and China (**25%**) together clear **53%**; the EU-27 follows at **18%**. Inside that duopoly, roles diverge: China leads KTI **manufacturing** at **$2.4 trillion** VA (and remains the largest KTI goods exporter), while the United States holds **43%** of world KTI **services** VA — larger than the EU-27 (**19%**) and China (**11%**) combined.
+
+That split matters for readers who collapse “R&D lead” into a single industrial-policy conclusion. A China lead on PPP GERD and CET patent *counts* can coexist with a US lead on KTI services and highly cited CET patents. Concentration is real; the *form* of concentration differs by meter. The dashboard’s KTI panel is deliberately two charts with different units so that manufacturing dollars and services shares are not forced onto one misleading axis.
+
+## What would rewrite this update
+
+1. **OECD MSTI or NSF Discovery 2025 GERD** that moves China/US PPP world shares by more than a rounding restatement — the true sequel to Q3’s 29.4 / 29.1 frame.
+2. **Matched US 2025 international intensity** that shows whether the **~0.6 pp** gap to China’s **2.80%** domestic print is closing or widening on a common converter.
+3. **CET citation tables** showing US highly cited patent shares recovering in AI / semiconductors after the 2010–2021 declines NSF flags.
+4. **Basic research share** in China stalling below **7%** on revision, or rising toward double digits with disclosed applied/experimental cuts.
+5. **KTI services** share erosion for the US below ~35%, or China manufacturing VA growth stalling while services catch up.
+
+Until those print, the live frame versus Q3 is: **the PPP overtake debate is unchanged; China’s 2025 domestic R&D rose 8.1% to ¥3.93T with intensity at 2.80% and basic research at 7.08%; AI priority patents are ~75% China; world KTI VA is a 28/25 US–China near-duopoly split by manufacturing vs services.**
+
+## Caveats and methodology
+
+1. **Domestic yuan ≠ OECD-comparable GERD shares.** Do not splice ¥3.9262T into the 29.4 / 29.1 world-share frame without official PPP conversion.
+2. **China 2025 intensity (2.80%) vs US 2024 intensity (3.4%)** are adjacent but not identical vintages; the gap is illustrative until a matched year prints.
+3. **Basic research 7.08%** is disclosed; applied/experimental stacked shares in the viz are estimated residuals and labeled accordingly.
+4. **AI ~75%** priority-patent share is disclosed in NSF prose; other CET China shares in the chart are estimated midpoints of “China leads volume” statements.
+5. **EXR dollar translations** of China R&D (~$550–570B in English briefings) are presentation aids, not OECD PPP GERD.
+6. **Publication HCA meters** are carried forward from prior theme posts; this vintage does not re-estimate Scopus-based HCA shares.
+7. **Planning floor (≥7% avg R&D growth)** is a forward target, not a realized 2025–30 CAGR.
+
+Primary sources: China NBS Statistical Communiqué 2025 (R&D section) and china.gov.cn / MOST briefings (5 Mar 2026); NSF/NSB *State of U.S. Science and Engineering 2026* and Indicators Translation thematic report; prior theme posts [measurement-science-update-2026q3](/blog/measurement-science-update-2026q3) and [measurement-science-update-2026](/blog/measurement-science-update-2026).
+
+## The shareable takeaway
+
+**Versus the Q3 OECD/AAAS knife-edge (China 29.4% vs US 29.1% on 2024 PPP), August adds the first post-2024 China flow year: domestic R&D +8.1% to ¥3.93T, intensity 2.80%, and basic research crossing 7% at 7.08%.** NSF CET meters show AI international priority patents ~**75%** China even while US inventors retain highly cited patent leadership. World KTI output is a **28% / 25%** US–China near-duopoly — manufacturing for China, services for the United States. Progress is still concentrating; the newest vintage says the concentration is now visible in **effort ratios, foundational composition, and critical-tech patent families**, not only in the converter fight over who edged whom in 2024 PPP dollars.`,
+  },
+  {
     id: "fiscal-industrial-policy-concentration-2026",
     slug: "fiscal-industrial-policy-concentration-2026",
     title:
