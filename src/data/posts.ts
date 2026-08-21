@@ -2,6 +2,111 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "industrial-robotics-concentration-2026",
+    slug: "industrial-robotics-concentration-2026",
+    title:
+      "Charted: Top-1 China Holds 54% of Factory Robot Installs — Top-5 Reach 80%",
+    excerpt:
+      "IFR World Robotics 2025 concentration lens: China alone is 54% of 2024 installations, Top-3 (CN+JP+US) 69%, Top-5 80%. Asia’s regional share rose to 79% in 2025 prelims; China domestic suppliers crossed 57%.",
+    category: "Industry",
+    themeId: "industrial-robotics",
+    imageUrl: "/images/industry-industrial-robotics-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic factory robotics scene with amber-rose concentration bars towering beside articulated robot arms, Visual Capitalist–style data-viz hero",
+    publishedAt: "2026-08-21T04:00:00Z",
+    featured: true,
+    visualization: "industrial-robotics-concentration-2026",
+    layout: "default",
+    content: `## The concentration question, not the count question
+
+Our [IFR research vintage](/blog/industrial-robotics-research-2026) answered *where robots land*: **542,076** world installations in **2024**, Asia at **74%**, China at **54%**. The [YoY update](/blog/industrial-robotics-update-2026) answered *who is still scaling*: Asia **+5%**, Europe **−8%**, Americas **−10%**. The [Q3 2026 prelim](/blog/industrial-robotics-update-2026q3) then re-accelerated the flow to a record **621,000** (+15%) with Asia’s share rising to **79%**.
+
+This companion answers a different meter: **how concentrated is the system at the top of the distribution?** Not density per worker, not North American order books — the Top-1 / Top-3 / Top-5 *install share* ladder, the regional gravity well, the China domestic-supplier majority, and whether customer industries are as skewed as geography.
+
+The dashboard above is built as a concentration lens: Lorenz-style cumulative curve versus equal split, ranked market bars, regional donut with a WR→prelim bridge, China domestic-vs-foreign stacked area, industry dual lens, and a share×growth scatter. Use the **View**, **Metric**, and **Lens** controls to move between geography, suppliers, and customer mix.
+
+## The headline ladder: Top-1 / Top-3 / Top-5
+
+| Cut | Markets | 2024 units | Share of world |
+| --- | --- | ---: | ---: |
+| **Top-1** | China | **295,000** | **54%** |
+| **Top-3** | China + Japan + United States | **373,653** | **69%** |
+| **Top-5** | + Korea + Germany | **431,240** | **80%** |
+| World | All markets | **542,076** | 100% |
+
+IFR’s own framing is blunt: **80% of global robot installations land in five countries**. That is not a soft oligopoly story about vendors — it is a *demand geography* story. One sovereign market (China) is larger than the rest of the Top-5 combined. Japan’s **44,453** and the US’s **34,200** are second- and third-place markets that would be headlines in any other capital-goods category; here they are footnotes under a **54%** Top-1 share.
+
+Open **Concentration ladder** and toggle **Share %** → **Units** → **Cumulative %**. The Lorenz panel is the visual punchline: cumulative share climbs past **half** at rank 1 and past **four-fifths** by rank 5, while the equal-split diagonal (ten equal markets) would still be near **50%** at the midpoint. Physical factory automation is not “globalizing evenly.” It is stacking into a thin set of manufacturing systems.
+
+## Asia’s 74% → 79%: the regional gravity well tightened
+
+| Region | 2024 installs | 2024 share | 2025 prelim share | YoY (WR 2025) |
+| --- | ---: | ---: | ---: | ---: |
+| Asia | **401,665** | **74%** | **79%** | **+5%** |
+| Europe | **85,006** | **16%** | **~13%** | **−8%** |
+| Americas | **50,077** | **9%** | **~8%** | **−10%** |
+
+Switch the dashboard to **Regions**. The donut is almost a single color: Asia takes three-quarters of the 2024 flow. The WR→prelim bridge then shows the concentration *tightening* — not relaxing — as the 2025 install rebound printed **621k** world units and Asia’s share stepped to **79%**. Europe and the Americas did not merely grow slower; their *relative claim* on the world’s new robot deployments compressed.
+
+That matters for anyone reading “global robotics” as a Western labor-displacement story. Most of the new arms are not landing on Detroit or Baden-Württemberg floors. They are landing where electronics, EV supply chains, and general-industry automation are still adding capacity at Asian scale. For the density intensity cut (robots per 10,000 workers) keep [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024) open — Korea and Singapore win intensity; China wins *volume concentration*.
+
+## China is the Top-1 *and* the stock gravity
+
+China’s **295,000** installations in 2024 were the highest annual total IFR has ever recorded for any country (+7%). The same vintage pushed China’s operational stock past **2.03 million** robots — about **43%** of the world’s **4.66 million** units in factories. Flow concentration and stock concentration reinforce each other: a market that already owns nearly half the installed base is still taking more than half of *new* deployments.
+
+The share×growth scatter in the Regions view makes the asymmetry visible. China sits alone in the high-share / positive-YoY quadrant. Japan, Korea, Germany, and the US (on the 2024 WR print) are mid-single-digit share markets with flat-to-negative YoY. India is small on share (**~1.7%**) but positive on growth — a diversification *candidate*, not yet a diversification *fact*. The [Q3 US flip](/blog/industrial-robotics-update-2026q3) to **+11%** at **38,000** units matters for the Americas *delta* story; it does not dent China’s Top-1 share math on the 2024 ledger this post is built from.
+
+## Domestic suppliers crossed 57%: ownership flipped inside the demand giant
+
+| Year | China domestic supplier share | Foreign share |
+| --- | ---: | ---: |
+| ~2014 | **~28%** | ~72% |
+| 2020 | **~35%** | ~65% |
+| 2023 | **47%** | 53% |
+| **2024** | **57%** | **43%** |
+
+Open **China suppliers**. For the first time, Chinese manufacturers sold more industrial robots at home than foreign brands. The domestic share climbed **47% → 57%** in a single year — a ten-point step that IFR flags as structural, not a one-off. That is a second concentration layer stacked on the first: the world’s largest demand market is increasingly served by *local* OEMs.
+
+Read the two layers carefully. **Demand concentration** (China = 54% of world installs) and **supplier concentration inside China** (domestic = 57%) are related but not identical. Foreign brands (Fanuc, Yaskawa, ABB, KUKA and peers) still sell into China — they just no longer hold the majority. Outside China, the traditional “big four” vendor oligopoly remains a separate meter this post does not invent share points for; IFR’s public WR 2025 materials emphasize the China domestic crossover more than a global vendor pie.
+
+For desks tracking North American *orders* rather than IFR installs, the [August A3 update](/blog/industrial-robotics-update-202608) is the right companion: bookings can broaden across industries while the global *install* concentration ladder stays Asia- and China-heavy.
+
+## Industry mix is flatter than geography — until you cut China inside the verticals
+
+| Industry | 2024 world share | China units (where disclosed) | China’s share of global vertical |
+| --- | ---: | ---: | ---: |
+| Electronics | **24%** | **83,000** | **~64%** |
+| Automotive | **23%** | **57,200** | **~45%** |
+| Metal & machinery | **16%** | **54,600** | (China-led growth) |
+| Top-2 industries | **47%** | — | — |
+
+Switch to **Industry mix**. Customer concentration is real but milder than market concentration: electronics plus automotive are **47%** of world installs — less than China’s solo geographic share. Metal & machinery, plastics, food, and the large “other/unspecified” bucket keep the industry HHI from matching the country HHI (our derived market HHI sits near **~3,120** on a 0–10,000 scale from the disclosed top-five plus residual).
+
+Toggle **Lens → China of global**. The picture snaps back to concentration: China accounts for roughly **64%** of global electronics robot installs and **45%** of automotive. So even where the *world* customer mix looks diversified, the *lead verticals* are still China-weighted. Electronics reclaiming the #1 industry slot in 2024 is not a story about Taiwan or Germany alone — it is largely a story about Chinese electronics demand plus Chinese suppliers winning that demand.
+
+## Who is exposed — and what would rewrite the ladder
+
+**Exposed:** Western robot OEMs still keyed to auto-capex cycles in Germany, Italy, France, and the US; integrators whose “global growth” models assume Europe/Americas shares stay near mid-2010s norms; policymakers who treat factory automation as evenly distributed across OECD manufacturing bases.
+
+**Relative winners under current rules:** Chinese domestic robot makers with home-market majority; Asia-based electronics and general-industry integrators; service/maintenance businesses tied to China’s **2M+** stock; any supplier that can win share *inside* China’s 54% demand pool.
+
+**What would rewrite the story:** a multi-year Western auto/electronics reinvestment wave that lifts Europe and Americas shares back toward 20%+ each; a China install miss that breaks the ~10%-through-2028 narrative; or a durable India/ASEAN surge that shows up in Top-5 ranks, not just growth percentages on a small base. IFR’s Q1 2025 order survey already pointed to strong Asian intake — concentration is the base case until the share table moves.
+
+## Caveats and methodology
+
+1. **Primary vintage is IFR World Robotics 2025 (2024 installs).** Top-1 / Top-3 / Top-5 shares and the China domestic **57%** figure are disclosed. Top-3 **69%** is derived from disclosed China + Japan + US units over world installs.
+2. **2025 prelim (621k, Asia 79%)** comes from IFR’s June 2026 briefing materials used in our Q3 update — final WR 2026 (full 2025 country table) was still pending at **24 September 2026** when this concentration companion shipped. Europe/Americas prelim shares are estimated residuals around the disclosed Asia share.
+3. **HHI (~3,120)** is an approximate index from top-market shares plus a residual bucket — useful for comparing geography vs industry skew, not a regulator filing.
+4. **Stock shares** for Korea and the US both sit near IFR’s disclosed ~392k operational stock band; treat mid-tier stock ranks as rounded.
+5. **Industry “other”** absorbs IFR’s unspecified and smaller sectors; do not over-read the residual as a single customer class.
+6. **Orders ≠ installs.** A3 North America bookings (see the August update) can rise while IFR’s global install concentration stays China-heavy — different ledgers, different questions.
+7. **Vendor shares outside China** are not invented here. The domestic/foreign split is China-market only.
+
+## The shareable takeaway
+
+**Industrial robot demand is a Top-1 / Top-5 story: China alone is 54% of 2024 installations, Top-3 reaches 69%, and five countries take 80% — while Asia’s regional share rose from 74% to 79% in 2025 prelims and China domestic suppliers crossed 57%.** Geography is more concentrated than customer industry; inside the lead verticals, China still dominates. For the level map see the [research vintage](/blog/industrial-robotics-research-2026); for the YoY delta see the [2026 update](/blog/industrial-robotics-update-2026); for density intensity see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024).`,
+  },
+  {
     id: "bank-commercial-credit-update-2026",
     slug: "bank-commercial-credit-update-2026",
     title:

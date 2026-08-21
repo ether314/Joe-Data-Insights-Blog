@@ -1337,6 +1337,21 @@ const BankCommercialCreditUpdateDashboard = dynamic(
   },
 );
 
+const IndustrialRoboticsConcentrationDashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/IndustrialRoboticsConcentrationDashboard"
+    ).then((m) => m.IndustrialRoboticsConcentrationDashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1680,6 +1695,10 @@ export function PostVisualization({
 
   if (type === "bank-commercial-credit-update-2026") {
     return <BankCommercialCreditUpdateDashboard />;
+  }
+
+  if (type === "industrial-robotics-concentration-2026") {
+    return <IndustrialRoboticsConcentrationDashboard />;
   }
 
   return null;
