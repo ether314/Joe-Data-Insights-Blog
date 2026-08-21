@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "industrial-robotics-update-202608",
+    slug: "industrial-robotics-update-202608",
+    title:
+      "Update: NA Robot Order Value +21% in Q2 — Units Only +4%; Auto OEM −25% While Semi Surges",
+    excerpt:
+      "Versus our Q3 IFR prelim (621k world / US installs +11%), A3’s Aug 2026 order book shows North America still buying — but value outruns volume and Auto OEM H1 orders fall 25% while semi/electronics jump +38% in Q2.",
+    category: "Industry",
+    themeId: "industrial-robotics",
+    imageUrl: "/images/industry-industrial-robotics-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic North American factory robot arms with teal and crimson charts showing order value outrunning unit volume",
+    publishedAt: "2026-08-20T23:55:00Z",
+    featured: true,
+    visualization: "industrial-robotics-update-202608",
+    layout: "default",
+    content: `## What changed since the IFR Q3 prelim
+
+Our [Q3 industrial robotics update](/blog/industrial-robotics-update-2026q3) answered the *install* vintage question: IFR’s April 2026 preliminary results (briefed 24 June) printed a record **621,000** global factory robot installations (**+15%**), beating the September 2025 **575k / +6%** forecast, with Asia’s share rising to **79%** and the United States flipping from **−9%** to **+11%** at **38,000** units. That post sits on an *installations* ledger. Final World Robotics 2026 still lands **24 September 2026**.
+
+This August refresh answers a different *delta* question with a newer official book: **what changed once A3’s Q2 / H1 2026 North American robot *order* data (released ~11 August 2026) replaces the install-rebound story as the live forward signal?** North American companies ordered **8,940** robots worth **$622 million** in Q2 — **+4.3%** units but **+21.3%** order value versus Q2 2025. First-half totals reached **17,995** units and **$1.166 billion** (**+2.0%** / **+6.6%**). Automotive OEM orders fell **25%** in H1 while semi & electronics / photonics jumped **+38%** in Q2. Physical automation is still scaling in North America — but the mix, not the headline unit count, is the news.
+
+The dashboard above is built as an order-book vintage delta: dual-axis units-versus-value path, diverging sector YoY bars, price/mix/bridge delta panels, cobot share fade, ASP×volume scatter, and Q2 customer mix. Use the **sector period**, **industry group**, **delta lens**, and **book metric** controls to isolate Auto OEM’s pause, the electronics surge, or the ASP step.
+
+## The headline table: IFR install rebound vs A3 order book
+
+| Metric | Prior theme print (Q3 / IFR) | Newest print (A3 Aug 2026) | Δ / read |
+| --- | ---: | ---: | --- |
+| World / US installs (2025) | **621k (+15%)** / **38k (+11%)** | *unchanged — still prelim* | Final WR 2026 due 24 Sep |
+| NA Q2 orders | *not in Q3 lens* | **8,940 units / $622M** | New forward book |
+| Q2 units YoY | — | **+4.3%** | Modest volume |
+| Q2 value YoY | — | **+21.3%** | Value ~5× units growth |
+| Implied Q2 ASP | — | **~$69,600** | ~**+16%** vs year-ago ~$60k |
+| H1 units / value | — | **17,995 / $1.166B** | **+2.0% / +6.6%** |
+| Auto OEM H1 YoY | US auto installs **−1%** (2025) | Orders **−25%** | Capex pause signal |
+| Auto component H1 | — | **+24%** | Supply base still buying |
+| Semi / electronics Q2 | Global electro installs **+25%** | Orders **+38%** | Breadth continues |
+| Cobot unit share | Prior theme cobot install **+12%** (2024) | Q2 share **12.7%** (from FY25 **19.6%**) | Low-cost tier losing mix |
+| Non-auto Q2 unit share | — | **56%** | Majority continues |
+
+Read the rows as a *lens change*, not a restatement. IFR counts robots bolted into factories; A3 counts bookings with member vendors. A strong 2025 install year can coexist with a 2026 order book that grows slowly in units and quickly in dollars. For the 2024 geography levels that still anchor Asia’s dominance, keep the [research vintage](/blog/industrial-robotics-research-2026) open; for the flat-year YoY map see the [2026 update](/blog/industrial-robotics-update-2026).
+
+## Value outrunning volume is the structural headline
+
+Toggle the dashboard’s book metric to **Value**, then **ASP**. Q2 order value rose **21.3%** while units rose **4.3%** — roughly a **five-to-one** growth multiple. Implied average selling price (order value ÷ units) lands near **$69,600**, versus about **$59,800** in Q2 2025 and about **$61,200** for full-year 2025. Subtract H1 from Q2 and Q1 2026 looks like ~**9,055** units and ~**$544M** — an ASP near **$60,100**, essentially flat against the FY 2025 average. The price-mix jump is a **Q2 event**, not a slow drift.
+
+That matters for operators more than the unit print. Capex cases built on 2025’s ~**$61k** average — or on older cobot-entry pricing — are already stale for integrator quotes. A machine that costs mid-teens percent more needs either more throughput per cell or a longer payback clock. A3 does not publish payload or sensing breakdowns, so any claim about *which* features drive the mix is inference. What the data supports is narrower and still material: **buyers are committing to materially more expensive equipment per unit.**
+
+## Detroit paused; the supply base and everyone else did not
+
+The demand-side split is where this release earns a dedicated H2. Automotive OEM orders fell **25%** in H1 2026 versus H1 2025 — disclosed as a half-year comparison only; do not quote it as a Q2-only figure. Against that, automotive *component* suppliers ordered **+24%** in H1 and **+20%** in Q2. The assemblers paused; the supply base kept buying. That inverts the 2025 pattern A3 described, when component orders lagged while OEM activity improved.
+
+Interpretation, not A3 text: the timing lines up with a documented EV / program pause wave in Detroit (canceled or delayed body-shop launches remove lumpy welding and material-handling orders without proving a structural exit from automation). The data alone cannot distinguish a **capex pause** from a **secular handoff**. What it *can* say is that North American robotics no longer needs Auto OEM growth to grow *revenue* in a single quarter — Q2 value rose **21%** while that historically largest customer cut H1 orders by a quarter.
+
+## Electronics, life sciences, and food absorbed the slack
+
+Sector breadth is the offset. In Q2, semi & electronics / photonics ordered **+38%** year-over-year; automotive components **+20%**; food & consumer goods and metals each **+18%**; life sciences / pharma / biomed **+9%**. On an H1 lens the same industries look even stronger in places: electronics **+35%**, life sciences **+32%**, food **+17%**, plastics **+6%**. One honest caveat: life sciences’ H1 **+32%** decelerated to Q2 **+9%** — “pharma is absorbing the slack” is an H1 statement, not a Q2 one.
+
+Non-automotive customers accounted for **56%** of Q2 units. That is a continuation of A3’s full-year 2025 general-industry majority, not a first crossing of a threshold. The genuinely new development inside automotive is the OEM-down / component-up reversal. Cross-check the global install industry rebound in the [Q3 IFR update](/blog/industrial-robotics-update-2026q3) — electronics led installations at **+25%** globally in 2025 prelims; the NA order book says that customer class is still accelerating into 2026.
+
+## Cobot share is fading while total value climbs
+
+Collaborative robots tell the mix story from the other side. Cobots were **19.6%** of FY 2025 units (**10.7%** of value), **15.4%** of H1 2026 units (**9.8%** of value), and **12.7%** of Q2 units (**7.1%** of value) — **1,137** cobots and **$44M** in the quarter. Unit share is trending down while total order value climbs. Strip cobots out of Q2 and the remaining **~7,800** units carry about **$578M** — roughly **$74k** per machine. Low-cost entry volume is losing mix share even as the two fastest-growing sectors remain cobot-heavy in A3’s commentary (life sciences and electronics), which concentrates competition for that specific supply.
+
+Do not read the fade as “cobots are dead.” Read it as **the order book’s center of gravity is migrating toward higher-ASP conventional cells** while cobots remain strategically important inside the growth verticals. For robots-per-worker intensity rather than order mix, keep [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024) beside this update.
+
+## Orders are not installations — and the IFR final is still ahead
+
+Two methodology walls separate this post from the Q3 theme print. First, **A3 orders ≠ IFR installations**. Booking-to-bolt lags typically run quarters; a strong order ASP in Q2 2026 will show up in install tallies later — if at all in the same geography cut. Second, IFR’s **621k / US 38k** figures remain **preliminary**; World Robotics 2026 on **24 September 2026** can revise country and industry ledgers. This update does not replace the Q3 install rebound story. It adds the live North American *forward book* that capital planners actually quote against while waiting for the final global install print.
+
+Pair the ledgers deliberately: IFR says 2025 was a record install year with a US rebound; A3 says early-2026 NA buyers are still ordering, but Auto OEM is cutting, electronics and components are carrying growth, and dollars are rising faster than arms. Both can be true.
+
+## What would rewrite this update
+
+1. **A3 Q3 2026** showing ASP reverting toward the ~**$60k** band would demote Q2’s price-mix jump to a one-quarter spike.
+2. **Auto OEM orders stabilizing** (or components rolling over) would rewrite the pause-versus-handoff debate.
+3. **IFR World Robotics 2026** revising the **621k** prelim materially — or printing a China 2025 country total far from the ~**10× US** estimate — would force a global install rewrite on top of this order-book note.
+4. **A sudden Auto OEM retooling wave** (new ICE / EV programs releasing body-shop capex) would refill the historical demand anchor without needing general industry to carry the book.
+5. **Cobot unit share re-expanding above ~18%** while ASP stays elevated would challenge the “higher-value conventional mix” read.
+
+Until those print, the live frame versus the Q3 IFR update is narrow: **NA order value is running ahead of units, Auto OEM is in a disclosed H1 drawdown, and electronics / components / food are the growth engines.**
+
+## Caveats and methodology
+
+1. **Orders ≠ installations.** A3 reports member-vendor bookings for the United States, Canada, and Mexico. IFR reports installations. Do not splice Q2 order YoY into the 2025 install series without a lens footnote.
+2. **Implied ASP is derived** (value ÷ units). A3 does not publish an official average selling price series; treat **~$69,600** as arithmetic from disclosed totals.
+3. **Q1 figures** used for the ASP path are **derived** as H1 − Q2 (~9,055 units / ~$544M). They are consistent with the release’s half and quarter but are not a separately published Q1 line in the August note.
+4. **Automotive OEM −25%** is **H1-over-H1 only**. A3 did not publish a separate Q2 OEM YoY in the cited release.
+5. **Missing industry cells** (metals H1, plastics/other Q2, Auto OEM Q2) are omitted from period toggles rather than invented.
+6. **Non-auto 56%** is a continuation of FY 2025’s general-industry majority, not proof of a brand-new structural regime change on that share alone.
+7. **Causal stories** about EV program cancellations are interpretation layered on timing; A3’s release does not attribute the OEM decline to specific OEMs or platforms.
+8. **Global IFR prelims** (621k, Asia 79%, US 38k) are carried from the prior theme update and remain subject to September revision.
+
+Primary sources: [A3 — Robot orders increase in Q2 as automation demand broadens (Aug 2026)](https://www.automate.org/robotics/news/robot-orders-increase-in-q2-as-automation-demand-broadens-across-industries); [IFR US double-digit growth (18 Jun 2026)](https://ifr.org/ifr-press-releases/news/us-robot-industry-returns-to-double-digit-growth); prior theme baselines in [industrial robotics update 2026q3](/blog/industrial-robotics-update-2026q3) and [industrial robotics update 2026](/blog/industrial-robotics-update-2026); geography levels in [industrial robotics research 2026](/blog/industrial-robotics-research-2026).
+
+## The shareable takeaway
+
+**Versus our Q3 IFR prelim, A3’s August order book says North American robotics is still scaling — but Q2 order value rose 21.3% while units rose only 4.3%, Auto OEM H1 orders fell 25%, and semi/electronics jumped 38% in the quarter.** Implied ASP stepped up to roughly **$70k**; cobot unit share faded from **19.6%** (FY 2025) to **12.7%** (Q2). Physical automation is broadening across industries and getting more expensive per machine, even as Detroit’s assemblers pause. For the install rebound that this order book follows, see the [Q3 IFR update](/blog/industrial-robotics-update-2026q3); for density intensity see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024).`,
+  },
+  {
     id: "adaptation-economics-update-2026q3",
     slug: "adaptation-economics-update-2026q3",
     title:

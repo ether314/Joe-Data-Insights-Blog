@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "industrial-robotics-update-202608",
+    marker: "August 2026 vintage · A3 North America orders vs IFR prelim lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "adaptation-economics-update-2026q3",
     marker: "Vintage delta — AGR 2025 / UNEP $26B → OECD May 2026 $34.7B",
     forbidden: "Loading interactive charts",

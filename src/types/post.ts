@@ -99,7 +99,8 @@ export interface Post {
     | "demographic-cash-flows-update-2026q3"
     | "heavy-industrial-capacity-research-2026"
     | "measurement-science-update-2026q3"
-    | "adaptation-economics-update-2026q3";
+    | "adaptation-economics-update-2026q3"
+    | "industrial-robotics-update-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
