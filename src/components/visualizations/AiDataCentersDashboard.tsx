@@ -20,7 +20,9 @@ import {
   REGION_ORDER,
   REGIONS,
   SITES,
+  STAGE_COLORS,
   STATUSES,
+  STATUS_COLORS,
   STATS,
   annualKwhBillion,
   compareSites,
@@ -32,6 +34,7 @@ import {
   fmtPower,
   buildPhaseFromStatus,
   regionTotals,
+  siteStage,
   type Region,
   type RegionFilter,
   type Site,
@@ -96,10 +99,24 @@ function StatusPill({ status }: { status: Site["status"] }) {
         ? "bg-sky-100 text-sky-800"
         : status === "Under Construction"
           ? "bg-amber-100 text-amber-800"
-          : "bg-slate-100 text-slate-600";
+          : status === "Stalled"
+            ? "bg-red-100 text-red-800"
+            : "bg-slate-100 text-slate-600";
   return (
     <span className={`inline-flex rounded px-1.5 py-0.5 text-[10px] font-semibold ${styles}`}>
       {status}
+    </span>
+  );
+}
+
+function StagePill({ site }: { site: Site }) {
+  const stage = siteStage(site);
+  return (
+    <span
+      className="inline-flex rounded px-1.5 py-0.5 text-[10px] font-semibold text-slate-800"
+      style={{ backgroundColor: `${STAGE_COLORS[stage]}22` }}
+    >
+      {stage}
     </span>
   );
 }
@@ -134,6 +151,7 @@ function CostCell({ cost }: { cost: string }) {
 export function AiDataCentersDashboard() {
   const [region, setRegion] = useState<RegionFilter>("All");
   const [status, setStatus] = useState<StatusFilter>("All");
+  const [federalOnly, setFederalOnly] = useState(false);
   const [sortKey, setSortKey] = useState<SortKey>("powerMw");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
 
@@ -150,9 +168,29 @@ export function AiDataCentersDashboard() {
     return SITES.filter((s) => {
       if (region !== "All" && s.region !== region) return false;
       if (status !== "All" && s.status !== status) return false;
+      if (federalOnly && !s.federalLand) return false;
       return true;
     });
-  }, [region, status]);
+  }, [region, status, federalOnly]);
+
+  const statusBars = useMemo(() => {
+    const order: Site["status"][] = [
+      "Operational",
+      "Partially Live",
+      "Under Construction",
+      "Planned",
+      "Stalled",
+    ];
+    return order.map((st) => {
+      const rows = SITES.filter((s) => s.status === st);
+      return {
+        name: st,
+        mw: rows.reduce((a, s) => a + (s.powerMw > 0 ? s.powerMw : 0), 0),
+        sites: rows.length,
+      };
+    });
+  }, []);
+
 
   const sorted = useMemo(() => {
     const sign = sortDir === "asc" ? 1 : -1;
@@ -169,7 +207,7 @@ export function AiDataCentersDashboard() {
   );
 
   const topByPower = useMemo(
-    () => [...SITES].sort((a, b) => b.powerMw - a.powerMw).slice(0, 10),
+    () => [...SITES].filter((s) => s.powerMw > 0).sort((a, b) => b.powerMw - a.powerMw).slice(0, 10),
     [],
   );
 
@@ -200,17 +238,18 @@ export function AiDataCentersDashboard() {
   return (
     <div className="site-content w-full min-w-0 space-y-6">
       <p className="text-sm text-slate-500">
-        {STATS.siteCount} publicly announced AI-focused sites · third pass June 2026 · BNEF tracks ~23
-        GW under construction globally (831 sites)
+        {STATS.siteCount} publicly announced AI-focused sites · {STATS.asOf} · {STATS.liveCount} live
+        or partially live · {STATS.federalCount} DOE/NNSA federal-land rows · peak IT load is
+        announced capacity, not energized MW
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         {[
-          { label: "Tracked sites", value: String(STATS.siteCount), sub: "Major new AI builds", color: CHART_COLORS.primary },
-          { label: "Build started", value: String(STATS.startedCount), sub: "UC / live / ops", color: CHART_COLORS.success },
-          { label: "Not started", value: String(STATS.notStartedCount), sub: "Planned only", color: CHART_COLORS.warning },
-          { label: "Combined IT load", value: STATS.totalPowerLabel, sub: "Planned peak MW/GW", color: CHART_COLORS.accent },
-          { label: "Est. annual energy", value: STATS.totalEnergyLabel, sub: "90% capacity factor", color: CHART_COLORS.danger },
+          { label: "Tracked sites", value: String(STATS.siteCount), sub: "Named megaprojects", color: CHART_COLORS.primary },
+          { label: "Live / partial", value: String(STATS.liveCount), sub: "Carrying real IT load", color: CHART_COLORS.success },
+          { label: "Not started", value: String(STATS.notStartedCount), sub: "Planned, proposed, stalled", color: CHART_COLORS.warning },
+          { label: "Announced IT load", value: STATS.totalPowerLabel, sub: "Peak MW · excludes undisclosed", color: CHART_COLORS.accent },
+          { label: "Est. annual energy", value: STATS.totalEnergyLabel, sub: "90% CF on announced MW", color: CHART_COLORS.danger },
         ].map((s) => (
           <div
             key={s.label}
@@ -259,6 +298,15 @@ export function AiDataCentersDashboard() {
             ))}
           </select>
         </div>
+        <label className="flex items-center gap-2 self-end pb-1 text-sm font-medium text-slate-700">
+          <input
+            type="checkbox"
+            checked={federalOnly}
+            onChange={(e) => setFederalOnly(e.target.checked)}
+            className="h-4 w-4 rounded border-slate-300 text-cyan-600 focus:ring-cyan-500"
+          />
+          DOE / federal land only
+        </label>
       </div>
 
       <p className="text-sm text-slate-500">
@@ -266,7 +314,7 @@ export function AiDataCentersDashboard() {
       </p>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <ChartCard title="Planned IT load by region" subtitle="MW · tracked sites · June 2026">
+        <ChartCard title="Announced IT load by region" subtitle="MW · tracked sites with disclosed load · Aug 2026">
           <ResponsiveContainer width="100%" height={280}>
             <PieChart>
               <Pie
@@ -294,7 +342,7 @@ export function AiDataCentersDashboard() {
           </ResponsiveContainer>
         </ChartCard>
 
-        <ChartCard title="Top 10 sites by planned IT load" subtitle="MW · June 2026">
+        <ChartCard title="Top 10 sites by announced IT load" subtitle="MW · includes proposed GW-scale campuses · Aug 2026">
           <ResponsiveContainer width="100%" height={280}>
             <BarChart
               data={topByPower.map((s) => ({
@@ -315,10 +363,44 @@ export function AiDataCentersDashboard() {
       </div>
 
       <ChartCard
-        title="Total cost estimate from tracked rows"
-        subtitle={`Known + researched: ${costRollup.known} (${costRollup.estimated} estimated) · Excluded (TBD / program rows): ${costRollup.unknown}`}
+        title="Announced IT load by construction status"
+        subtitle="Live vs building vs still on paper · MW of disclosed peak load · Aug 2026"
       >
-        <div className="grid gap-3 sm:grid-cols-3">
+        <ResponsiveContainer width="100%" height={260}>
+          <BarChart data={statusBars} margin={{ top: 8, right: 16, left: 8, bottom: 4 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+            <XAxis dataKey="name" tick={{ fontSize: 10 }} interval={0} />
+            <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => fmtPower(Number(v))} />
+            <Tooltip
+              formatter={(v, _n, item) => [
+                `${fmtPower(Number(v ?? 0))} · ${Number(item?.payload?.sites ?? 0)} sites`,
+                "Announced IT load",
+              ]}
+            />
+            <Bar dataKey="mw" radius={[4, 4, 0, 0]}>
+              {statusBars.map((row) => (
+                <Cell key={row.name} fill={STATUS_COLORS[row.name as Site["status"]]} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+        <p className="mt-2 text-xs text-slate-500">
+          Most tracked gigawatts are still Planned or Under Construction. Operational + Partially Live
+          is the energized slice; Planned includes DOE lease talks and RFI sites with no dirt moved.
+        </p>
+      </ChartCard>
+
+      <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+        <div className="border-b border-slate-100 bg-slate-50 px-5 py-4">
+          <h3 className="text-lg font-bold text-slate-900">Tracked sites, costs, and DOE land</h3>
+          <p className="mt-1 text-sm text-slate-500">
+            One register: commercial campuses plus the DOE/NNSA pipeline. Cost totals use parseable
+            per-site figures ({costRollup.known} known, {costRollup.estimated} estimated,{" "}
+            {costRollup.unknown} excluded). Toggle “DOE / federal land only” to isolate Paducah,
+            PORTS-Pike, Savannah River, INL, Oak Ridge, and the remaining RFI labs.
+          </p>
+        </div>
+        <div className="grid gap-3 border-b border-slate-100 p-4 sm:grid-cols-3">
           {[
             { label: "Low case", value: fmtBillionsUsd(costRollup.low), color: CHART_COLORS.primary },
             { label: "Base case", value: fmtBillionsUsd(costRollup.base), color: CHART_COLORS.warning },
@@ -334,50 +416,65 @@ export function AiDataCentersDashboard() {
             </div>
           ))}
         </div>
-        <p className="mt-3 text-xs text-slate-500">
-          Sum of per-site disclosed figures (low / midpoint / high where ranges exist). Rows marked
-          TBD or &ldquo;part of&rdquo; a larger program are excluded so national and umbrella budgets
-          are not double-counted. Formerly undisclosed sites now show online-sourced estimates (amber
-          notes = weak confidence). Not a market-wide total — many megaprojects lack public capex.
-        </p>
-      </ChartCard>
-
-      <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
         <div className="max-h-[70vh] overflow-auto">
-          <table className="w-full min-w-[1100px] table-fixed text-[11px]">
+          <table className="w-full min-w-[1180px] table-fixed text-[11px]">
             <thead className="sticky top-0 z-10 border-b border-slate-200 bg-slate-50">
               <tr>
                 {(
                   [
                     ["Site", "site"],
+                    ["Land", "site"],
                     ["Country", "country"],
                     ["Region", "region"],
                     ["Developer", "developer"],
                     ["Est. cost", "cost"],
                     ["IT load", "powerMw"],
                     ["Annual energy", "energy"],
-                    ["Completion", "completion"],
+                    ["Completion / what’s happening", "completion"],
+                    ["Stage", "stage"],
                     ["Build", "buildPhase"],
                     ["Status", "status"],
                   ] as const
                 ).map(([label, key]) => (
-                  <th key={key} className="px-2 py-2 align-top">
-                    <SortHeader
-                      label={label}
-                      sortKey={key}
-                      activeKey={sortKey}
-                      dir={sortDir}
-                      onSort={handleSort}
-                    />
+                  <th key={label} className="px-2 py-2 align-top">
+                    {label === "Land" ? (
+                      <span className="text-[10px] font-semibold leading-tight text-slate-500">
+                        Land
+                      </span>
+                    ) : (
+                      <SortHeader
+                        label={label}
+                        sortKey={key}
+                        activeKey={sortKey}
+                        dir={sortDir}
+                        onSort={handleSort}
+                      />
+                    )}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
               {sorted.map((s) => (
-                <tr key={s.site} className="odd:bg-white even:bg-slate-50/50 hover:bg-cyan-50/30">
+                <tr
+                  key={s.site}
+                  className={
+                    s.federalLand
+                      ? "bg-indigo-50/60 hover:bg-indigo-50"
+                      : "odd:bg-white even:bg-slate-50/50 hover:bg-cyan-50/30"
+                  }
+                >
                   <td className="whitespace-normal break-words px-2 py-2 font-semibold text-slate-900">
                     {s.site}
+                  </td>
+                  <td className="px-2 py-2">
+                    {s.federalLand ? (
+                      <span className="inline-flex rounded bg-indigo-100 px-1.5 py-0.5 text-[10px] font-semibold text-indigo-800">
+                        DOE / federal
+                      </span>
+                    ) : (
+                      <span className="text-slate-400">Commercial</span>
+                    )}
                   </td>
                   <td className="px-2 py-2 text-slate-700">{s.country}</td>
                   <td className="px-2 py-2 text-slate-700">{s.region}</td>
@@ -396,6 +493,9 @@ export function AiDataCentersDashboard() {
                   <td className="whitespace-normal break-words px-2 py-2 text-slate-600">
                     {s.completion}
                   </td>
+                  <td className="px-2 py-2">
+                    <StagePill site={s} />
+                  </td>
                   <td className="px-2 py-2 text-slate-600">{buildPhaseFromStatus(s.status)}</td>
                   <td className="px-2 py-2">
                     <StatusPill status={s.status} />
@@ -405,6 +505,14 @@ export function AiDataCentersDashboard() {
             </tbody>
           </table>
         </div>
+        <p className="border-t border-slate-100 px-5 py-3 text-xs leading-relaxed text-slate-500">
+          Cost totals sum per-site disclosed figures (low / midpoint / high). TBD and “part of”
+          program rows are excluded so umbrella budgets are not double-counted. Amber cost notes =
+          weak estimates. Indigo rows are the DOE/NNSA federal-land pipeline: RFI Apr 2025 (16
+          sites); four-site downselect Jul 2025; PORTS-Pike / OpenAI / NVIDIA Mar–Aug 2026; Paducah
+          Brookfield–NextEra Jul 29, 2026; NNSA–Amentum Savannah River Jul 20, 2026. A developer
+          selection is not a signed lease or a live hall.
+        </p>
       </div>
 
       <details className="rounded border border-sky-200 bg-sky-50 text-xs text-sky-900">
@@ -425,20 +533,30 @@ export function AiDataCentersDashboard() {
             labels (weak = MW proxy or pro-rata program split; treat as directional only).
           </p>
           <p>
-            <strong>Build phase:</strong> Not Started = announced or permitting only (Planned).
-            Started = ground broken, commissioning, partially live, or operational.
+            <strong>Build vs stage:</strong> Build phase is binary (Started vs Not Started). Stage is
+            the finer pipeline: Proposed (RFI only), Solicitation (RFP/RFA out), Lease negotiation
+            (developer named, contract not closed), Permitting, Early works, Vertical construction,
+            Commissioning, Phased live, Operational, or Stalled. A site can be “Under Construction”
+            while only moving dirt.
+          </p>
+          <p>
+            <strong>DOE federal land:</strong> The April 2025 RFI listed 16 DOE/NNSA sites. July 2025
+            downselected Idaho National Lab, Oak Ridge Reservation, Paducah, and Savannah River.
+            Portsmouth advanced separately as an American Energy Hub (PORTS-Pike). Filter the table
+            with “DOE / federal land only.” MW is omitted where DOE has not published a campus load.
           </p>
           <p>
             <strong>Industry scale:</strong> McKinsey/JLL estimate ~97–100 GW of new data center
             capacity by 2030 (~$7T spend). BNEF counted ~23.1 GW under construction across 831
-            sites as of Sep 2025. Grid interconnection queues are now the binding constraint —
-            driving behind-the-meter power and greenfield sites in Malaysia, India, and Poland.
+            sites as of Sep 2025. Announced GW ≠ energized GW — Stargate Abilene’s extra 600 MW was
+            cancelled in March 2026 even as halls 1–4 ramped.
           </p>
         </div>
       </details>
 
       <p className="text-center text-xs text-slate-400">
-        Public announcements &amp; press · June 2026 · Not exhaustive of every colocation facility
+        Public announcements, DOE/NNSA releases, and SEC/press · August 2026 · Not exhaustive of
+        every colocation facility
       </p>
     </div>
   );

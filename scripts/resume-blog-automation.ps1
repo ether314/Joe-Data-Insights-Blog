@@ -4,11 +4,11 @@ $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $LockFile = Join-Path $RepoRoot "artifacts\blog-production-lock.json"
 $WatchdogTask = "CursorBlogProductionWatchdog"
+. (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
 $StartScript = Join-Path $RepoRoot "scripts\start-blog-automation-in-app.ps1"
+$RegisterScript = Join-Path $RepoRoot "scripts\register-blog-production-watchdog.ps1"
 $BootstrapScript = Join-Path $RepoRoot "scripts\bootstrap-worktrees.ps1"
-$WorktreeRoot = if ($env:BLOG_WORKTREE_ROOT) { $env:BLOG_WORKTREE_ROOT } else {
-    Join-Path (Split-Path -Parent $RepoRoot) "data-insights-blog-worktrees"
-}
+$WorktreeRoot = Get-BlogWorkerRoot $RepoRoot
 
 $lastSlug = $null
 $productionRunning = $false
@@ -50,16 +50,24 @@ if (-not $productionRunning) {
         runId = $null
         trigger = "manual-resume"
         lastSlug = $lastSlug
-        notes = "Resumed via resume-blog-automation.ps1 (parallel orchestrator mode)."
-        mode = "parallel-worktrees"
+        notes = "Resumed via resume-blog-automation.ps1 (Docker-isolated workers)."
+        mode = "docker-isolated-workers"
     }
     $lock | ConvertTo-Json | Set-Content -Path $LockFile -Encoding UTF8
 } else {
     Write-Host "Production/orchestrator already running (PID $($productionProcs[0].ProcessId)); preserving lock file."
 }
 
-$task = schtasks /Query /TN $WatchdogTask 2>$null
-if ($LASTEXITCODE -eq 0) {
+# Missing scheduled task writes to stderr; with Stop that aborts before start.
+$prevEap = $ErrorActionPreference
+$ErrorActionPreference = "Continue"
+cmd /c "schtasks /Query /TN `"$WatchdogTask`" >nul 2>&1"
+$taskExists = ($LASTEXITCODE -eq 0)
+$ErrorActionPreference = $prevEap
+if (-not $taskExists) {
+    Write-Host "Scheduled task $WatchdogTask missing - registering OS watchdog..."
+    & powershell -NoProfile -ExecutionPolicy Bypass -File $RegisterScript
+} else {
     schtasks /Change /TN $WatchdogTask /ENABLE | Out-Null
     Write-Host "Enabled scheduled task: $WatchdogTask"
 }

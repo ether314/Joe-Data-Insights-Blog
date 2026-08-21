@@ -52,6 +52,7 @@ export function isTransientWorkerError(errorCode) {
     err === "transport_kill" ||
     err === "silence_kill" ||
     err === "worker_spawn_failed" ||
+    err === "cursor_cli_missing" ||
     err === "worker_process_gone" ||
     err === "worker_exit_0" ||
     err === "worker_exit_-1" ||

@@ -4,6 +4,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  defaultWorkerRoot,
+  workerClonePath,
+  workerContainerName,
+} from "./worker-layout.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const REPO_ROOT = path.resolve(
@@ -11,11 +16,13 @@ export const REPO_ROOT = path.resolve(
 );
 export const JOBS_FILE = path.join(REPO_ROOT, "artifacts", "agent-jobs.json");
 export const LOCKS_DIR = path.join(REPO_ROOT, "artifacts", "locks");
-export const WORKTREE_ROOT =
-  process.env.BLOG_WORKTREE_ROOT ||
-  path.resolve(REPO_ROOT, "..", "data-insights-blog-worktrees");
+export const WORKTREE_ROOT = defaultWorkerRoot();
 export const PRODUCTION_WORKER_COUNT = 4;
-/** Dedicated recovery agent slot (Worker 5) — retries Failed-before-merge jobs only. */
+/**
+ * Worker 5 is recovery-first (Failed-before-merge, not Manual Review).
+ * If no recovery candidate exists, the orchestrator assigns a producer topic
+ * so the slot never idles. W5 still never publishes to Firebase.
+ */
 export const RECOVERY_WORKER_ID = "5";
 export const WORKER_COUNT = 5;
 export const RECOVERY_MAX_ATTEMPTS = Number(process.env.BLOG_RECOVERY_MAX_ATTEMPTS || 2);
@@ -23,8 +30,17 @@ export const RECOVERY_MAX_ATTEMPTS = Number(process.env.BLOG_RECOVERY_MAX_ATTEMP
  * Producer auto-reruns after Cursor transport/silence kill.
  * Default 0: fail once → special `manualReview` flag, refuse further auto-rerun.
  * Set BLOG_TRANSPORT_REQUEUE_MAX>0 only if you want automatic retries again.
+ *
+ * Orchestrator never-idle path uses OPERATOR_REQUEUE_MAX instead (capped
+ * reopen of parked transport/exit jobs) — that is not this env var.
  */
 export const TRANSPORT_REQUEUE_MAX = Number(process.env.BLOG_TRANSPORT_REQUEUE_MAX || 0);
+/**
+ * Orchestrator-driven reopen of parked infra jobs (transport_kill, worker_exit_0, …).
+ * Fail-once still parks in Manual Review; claim-next-topics may reopen up to this
+ * many times so producers do not idle. Default 2 — not an infinite crash loop.
+ */
+export const OPERATOR_REQUEUE_MAX = Number(process.env.BLOG_OPERATOR_REQUEUE_MAX || 2);
 
 /**
  * Failures caused by agent/process/infra — not a bad topic.
@@ -42,6 +58,7 @@ export const INFRA_FAILURE_ERRORS = new Set([
   "merge_lock_busy",
   "worker_spawn_failed",
   "dispatch_failed",
+  "cursor_cli_missing",
 ]);
 
 /** Transient Cursor CLI / spawn kills that should soft-requeue producers instead of flagging. */
@@ -53,6 +70,7 @@ export const SOFT_REQUEUE_ERRORS = new Set([
   "worker_exit_0",
   "worker_exit_-1",
   "dispatch_failed",
+  "cursor_cli_missing",
 ]);
 
 export function isInfraFailure(errorCode) {
@@ -143,6 +161,7 @@ export const JOB_STATUSES = [
   "building",
   "qa",
   "ready",
+  "blessing",
   "merging",
   "shipped",
   "failed",
@@ -170,7 +189,8 @@ export function emptyQueue(runId = null) {
             pid: null,
             jobId: null,
             heartbeat: null,
-            worktreePath: path.join(WORKTREE_ROOT, `worker-${id}`),
+            worktreePath: workerClonePath(id, WORKTREE_ROOT),
+            containerName: workerContainerName(id),
             smokePort: 4180 + i,
             role: id === RECOVERY_WORKER_ID ? "recovery" : "producer",
           },
@@ -196,7 +216,10 @@ export function readJobs() {
       if (!data.workers[id]) data.workers[id] = { ...defaults[id] };
     }
     for (const w of Object.values(data.workers)) {
-      if (!w.worktreePath) w.worktreePath = path.join(WORKTREE_ROOT, `worker-${w.id}`);
+      const expected = workerClonePath(w.id, WORKTREE_ROOT);
+      if (fs.existsSync(expected)) w.worktreePath = expected;
+      else if (!w.worktreePath) w.worktreePath = expected;
+      w.containerName = workerContainerName(w.id);
       if (!w.smokePort) w.smokePort = 4180 + (Number(w.id) - 1);
       if (!w.role) w.role = String(w.id) === RECOVERY_WORKER_ID ? "recovery" : "producer";
     }
@@ -683,6 +706,93 @@ export function reopenJobForRecovery(data, jobId) {
   return job;
 }
 
+/** Infra errors the never-idle claim path may reopen (not content failures). */
+export const OPERATOR_RETRY_ERRORS = new Set([
+  "transport_kill",
+  "silence_kill",
+  "worker_exit_0",
+  "worker_exit_-1",
+  "worker_process_gone",
+  "worker_spawn_failed",
+  "dispatch_failed",
+  "cursor_cli_missing",
+]);
+
+export function isOperatorRetryError(errorCode) {
+  const err = String(errorCode || "");
+  if (OPERATOR_RETRY_ERRORS.has(err)) return true;
+  if (err.startsWith("stale_")) return true;
+  if (err.startsWith("stale_worker_")) return true;
+  if (err.startsWith("worker_stale_")) return true;
+  return false;
+}
+
+/**
+ * Parked Manual Review jobs that are safe to reopen for a producer slot.
+ * Does not include content-flagged failures or exhausted operator retries.
+ */
+export function listOperatorRetryJobs(data = readJobs()) {
+  const max = OPERATOR_REQUEUE_MAX;
+  if (max <= 0) return [];
+  return (data.jobs || [])
+    .filter((j) => j.status === "failed" && !j.resolution)
+    .filter((j) => !j.recoveryExhausted)
+    .filter((j) => (Number(j.operatorRequeues) || 0) < max)
+    .filter((j) =>
+      isOperatorRetryError(j.lastError || j.manualReviewReason || j.flagReason),
+    )
+    .sort(
+      (a, b) =>
+        (Number(a.operatorRequeues) || 0) - (Number(b.operatorRequeues) || 0) ||
+        String(a.updatedAt || "").localeCompare(String(b.updatedAt || "")),
+    );
+}
+
+/**
+ * Re-open a parked infra job for a producer (not Worker-5 recovery).
+ * Same slug / branch — does not mint a clone.
+ */
+export function reopenJobForOperatorRetry(data, jobId) {
+  const job = findJob(data, jobId);
+  if (!job || job.status !== "failed" || job.resolution) return null;
+  const used = Number(job.operatorRequeues) || 0;
+  if (used >= OPERATOR_REQUEUE_MAX) return null;
+  if (!isOperatorRetryError(job.lastError || job.manualReviewReason || job.flagReason)) {
+    return null;
+  }
+  const next = used + 1;
+  const now = new Date().toISOString();
+  const prevErr = job.lastError || job.manualReviewReason || job.flagReason || job.previousError;
+  Object.assign(job, {
+    status: "claimed",
+    workerId: null,
+    recovery: false,
+    flagged: false,
+    flagReason: null,
+    flaggedAt: null,
+    manualReview: false,
+    manualReviewAt: null,
+    manualReviewReason: null,
+    previousError: prevErr || null,
+    lastError: null,
+    operatorRequeues: next,
+    activity: `Operator retry ${next}/${OPERATOR_REQUEUE_MAX} after infra park — awaiting worker`,
+    heartbeat: now,
+    updatedAt: now,
+    startedAt: null,
+  });
+  return job;
+}
+
+/** Themes with unresolved Manual Review parks (retry pending or retry-exhausted). */
+export function unresolvedManualReviewThemes(data = readJobs()) {
+  return new Set(
+    (data.jobs || [])
+      .filter((j) => isManualReviewJob(j) && j.themeId)
+      .map((j) => j.themeId),
+  );
+}
+
 /** Claimed jobs not yet assigned to a worker (waiting for dispatch). */
 export function unassignedClaimedJobs(data = readJobs()) {
   return data.jobs.filter(
@@ -717,7 +827,9 @@ export function listDashboardAgents(data = readJobs()) {
   const orch = data.orchestrator || {};
   const jobs = Array.isArray(data.jobs) ? data.jobs : [];
   const pending = jobs.filter((j) =>
-    ["claimed", "researching", "building", "qa", "ready"].includes(j.status),
+    ["claimed", "researching", "building", "qa", "ready", "blessing", "merging"].includes(
+      j.status,
+    ),
   );
   const claimedWaiting = jobs.filter((j) => j.status === "claimed" && !j.workerId);
   const busyWorkers = Object.values(data.workers || {}).filter(
@@ -792,6 +904,7 @@ export function listDashboardAgents(data = readJobs()) {
       slug: job?.slug || null,
       themeId: job?.themeId || null,
       worktreePath: w.worktreePath,
+      containerName: w.containerName || workerContainerName(w.id),
       smokePort: w.smokePort,
       runId: data.runId || null,
       startedAt: job?.startedAt || null,
@@ -844,6 +957,8 @@ export function listManualReview(data = readJobs()) {
         workerId: j.workerId ?? null,
         phase: j.failedAtPhase || inferPhaseFromActivity(j.activity) || "unknown",
         error: err,
+        previousError: j.previousError || null,
+        operatorRequeues: Number(j.operatorRequeues) || 0,
         flag: "manual_review",
         infra: true,
         severity: "manual",

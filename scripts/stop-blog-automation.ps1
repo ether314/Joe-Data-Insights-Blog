@@ -53,6 +53,12 @@ Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" -ErrorAction Silen
         Write-Log "Stopped automation shell PID $($_.ProcessId)"
     }
 
+$WorkerContainers = Join-Path $RepoRoot "scripts\worker-containers.ps1"
+if (Test-Path $WorkerContainers) {
+    & powershell -NoProfile -ExecutionPolicy Bypass -File $WorkerContainers -Action stop
+    Write-Log "Stopped Docker worker containers (web/ollama left running)"
+}
+
 if (Test-Path $ProdPidFile) {
     $raw = Get-Content $ProdPidFile -ErrorAction SilentlyContinue | Select-Object -First 1
     if ($raw -match '^\d+$') {
@@ -94,11 +100,15 @@ if (Test-Path $StartingFile) {
     Remove-Item $StartingFile -Force -ErrorAction SilentlyContinue
 }
 
-$task = schtasks /Query /TN $WatchdogTask 2>$null
-if ($LASTEXITCODE -eq 0) {
+$prevEap = $ErrorActionPreference
+$ErrorActionPreference = "Continue"
+cmd /c "schtasks /Query /TN `"$WatchdogTask`" >nul 2>&1"
+$taskExists = ($LASTEXITCODE -eq 0)
+if ($taskExists) {
     schtasks /Change /TN $WatchdogTask /DISABLE | Out-Null
     Write-Log "Disabled scheduled task: $WatchdogTask"
 }
+$ErrorActionPreference = $prevEap
 
 $lock = @{
     status = "paused"

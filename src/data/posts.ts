@@ -2,6 +2,121 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-power-grid-update-202608",
+    slug: "ai-power-grid-update-202608",
+    title:
+      "Update: US Power +1.8%/+3% With DCs Still #1 — Queues 2,061 GW (−10%) but Gas +86%; US Prices Flat vs EU/JP +30%",
+    excerpt:
+      "Versus our Q3 Gartner/Electricity print (+26% to 565 TWh; dual-ledger ~950 vs >1,200), Mid-Year locks US demand at +1.8% (2026) / +3% (2027) with H1 services +3% on data centres. LBNL restates 2,061 GW active (−10%) while gas in queue jumps +86% to 253 GW; US wholesale flat amid Hormuz shock.",
+    category: "Energy",
+    themeId: "ai-power-grid",
+    imageUrl: "/images/energy-ai-power-grid-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of cyan AI electricity arcs racing amber transmission lines with a violet gas-bridge accent",
+    publishedAt: "2026-08-21T14:00:00Z",
+    featured: true,
+    visualization: "ai-power-grid-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 Gartner vintage
+
+In our [Q3 update](/blog/ai-power-grid-update-2026q3) we treated Gartner’s 10 June 2026 newsroom forecast as the near-term headline and IEA *Electricity 2026* as the grid-pace restatement: worldwide data-centre electricity at **565 TWh in 2026** (**+26.4%**), AI-optimised servers at **31%** of power and on track to surpass conventional in **2027**, a **~250 TWh** dual-ledger gap at 2030 (**IEA ~950** vs **Gartner >1,200**), US data centres at **~50%** of US demand growth through 2030, and **>2,500 GW** of projects stalled in connection queues worldwide. That post answered the *near-term TWh promotion* question.
+
+This August (202608) note answers the next official prints: **what moved when IEA *Electricity Mid-Year Update 2026* locked a live 2026–27 demand and wholesale-price path with H1 evidence**, and when **LBNL Queued Up 2026 Edition** restated the full US interconnection stock through end-2025?
+
+Three information events rewrite the dashboard. **Mid-Year** puts global electricity demand growth at **3.6% in 2026** and **3.8% in 2027** (from **3%** in 2025), with expanding data-centre capacity named among the structural drivers. For the United States — the market that decides most AI interconnection politics — Mid-Year locks **+2.6% in 2025**, a soft H1 2026 (**~+1%** total; services **+3%** on rising data-centre consumption; residential **−1.7%**), then full-year **+1.8% in 2026** and **+3% in 2027**, and repeats that **data centres remain the main driver** of US demand growth. The same report’s price chapter is the non-obvious geography cut: Q2 2026 wholesale prices rose **more than 30%** y/y in the **EU and Japan** after the Strait of Hormuz LNG shock, while the **United States was largely unchanged** — and H2 futures even point **~10% lower**. **LBNL Queued Up 2026** restates US active queues at **2,061 GW** (generation **1,312 GW** + storage **~749 GW**) — **down 10%** y/y as withdrawals outran new requests — while **natural gas** in the queue jumps **+86% to 253 GW**, and **549 GW** already holds a draft or executed interconnection agreement but is not yet online. Median IR→COD for projects built in 2025 remains **over five years**; only **13%** of 2000–2020 requests had reached COD by end-2025.
+
+The dashboard above is built as a vintage delta — Mid-Year demand-path bars, Hormuz price-shock dumbbells, US H1 sector cuts, LBNL tech stacks with YoY, queue Δ meters, negative-price flexibility hours, a carried dual-ledger path, and a pace-mismatch scatter that adds a price cluster. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) for the LBNL demand-versus-miles frame.
+
+## The headline table: Q3 → Mid-Year + LBNL
+
+| Metric | Prior (Q3 Gartner + Electricity 2026) | Aug 202608 newest print | Δ |
+| --- | ---: | ---: | --- |
+| Near-term DC electricity | Gartner **565 TWh** (**+26.4%**) | **Carried** | Mid-Year silent on DC TWh |
+| Dual-ledger 2030 | IEA **~950** vs Gartner **>1,200** | **Carried** | Gap held |
+| World electricity demand YoY | Not the lead meter | **3.6% (2026) / 3.8% (2027)** | New system pace |
+| US demand path | ~50% of growth is DC to 2030 | **+1.8% / +3%**; H1 services **+3%** | Live path locked |
+| US wholesale vs shock | Not featured | **Flat Q2**; EU/JP **+30%+** | Price geography |
+| US active queues | Gen **1,312 GW** featured | **2,061 GW** total (**−10%**) | Full LBNL stock |
+| Gas in US queues | Not lead | **253 GW (+86%)** | Bridge-fuel meter |
+| IA not yet COD | Not quantified | **549 GW** | Near-COD stock |
+| IR → COD median | >5 years (narrative) | **>5 years** restated | Still binding |
+| Neg. price hours | DC batteries carried | SA/CA **~20%**; Spain **17%** | Flex signal |
+| Global stalled / unlock | **>2,500** / **1.2–1.6 TW** | **Carried** | Mid-Year silent |
+| Onsite gas / delay risk | **15–27 GW** / **~20%** | **Carried** | Still the bridge |
+
+The non-obvious cut is not “Gartner revised 565 again.” The June TWh path and the dual-ledger gap are **unchanged**. The August news is that the **system around those campuses** printed new meters: a **live US demand slope**, a **Hormuz price asymmetry** that favors US AI power costs, and a **full LBNL queue restatement** where the stock falls **10%** even as **gas** — the bridge fuel for delayed wires — is the only major tech surging.
+
+## Mid-Year demand: global accelerates, US dips then rebounds
+
+Key Questions and Electricity 2026 made 2030 scenario fans and five-year US adds the lead frame. Mid-Year pulls the camera to **2026–27** with H1 evidence.
+
+Global electricity demand is forecast to grow **3.6% in 2026** and **3.8% in 2027**, up from **3% in 2025**, taking world consumption from about **28,600 TWh in 2025** to **30,700 TWh in 2027**. Expanding data-centre capacity sits in the structural-driver list beside industry, appliances, EVs, AC, and heat pumps. That does not restate Gartner’s **565 TWh** campus bill — it restates how loud the *system* load is while AI campuses bid into the same grids.
+
+The United States is the sharper AI meter. After **+2.6% in 2025**, a milder winter cut H1 2026 growth to about **+1%**: residential electricity fell **1.7%** as heating degree days dropped, while **services rose over 3%** on rising data-centre consumption and industry rose about **1%**. Mid-Year’s full-year path is **+1.8% in 2026** and **+3% in 2027**, and it repeats Electricity 2026’s qualitative hierarchy: **data centres continue to be the main driver** of US electricity demand growth. The Q3 **~50% of US demand growth through 2030** attribution is carried, not replaced — Mid-Year adds the *near-term slope* and H1 sector split that utilities actually budget against.
+
+China’s services sector (internet/digital services including data centres, plus EV charging) is up **8.0%** y/y in H1 2026 on the same Mid-Year chapter — useful context that the AI power race is not only a US interconnection story, even when US clusters dominate theme politics.
+
+## Price geography: Hormuz hits EU/Japan; US AI power stays cheap
+
+Q3 did not feature wholesale-price asymmetry. Mid-Year’s LNG/Hormuz chapter should change how planners read *where* AI campuses want electrons.
+
+In Q2 2026, average spot wholesale electricity prices in the **European Union and Japan** rose **more than 30%** year-over-year as Strait of Hormuz disruptions removed nearly **20%** of global LNG supply and spiked gas prices. The **United States was much less affected**, with Q2 average wholesale prices **largely unchanged** from a year earlier. **Australia** printed about **45% lower** on strong renewables and battery shifting; **India** rose less than **10%**. H2 2026 futures as of mid-July point to roughly **+25%** in the EU and nearly **+40%** in Japan, versus about **−10%** in the United States.
+
+That is an AI power-cost geography story, not a tourist footnote. Gartner’s US slice — **204 TWh**, **36%** of world data-centre electricity, **68 TWh** dedicated AI — already concentrated load where interconnection binds. Mid-Year adds that those same US nodes are comparatively **insulated from the LNG price shock** that is raising EU and Japanese power costs. Onsite gas and turbine-order scarcity (Key Questions’ **15–27 GW** bridge, carried) still matter for *connection* timing; Mid-Year’s fossil-spend aside — US spending on fossil-fired generation set to **outpace China in 2026 for the first time in decades** as the data-centre boom drives gas-turbine orders — rhymes with LBNL’s gas-queue surge below.
+
+## LBNL queues: stock −10%, gas +86%, 549 GW with IA not online
+
+Q3 widened the aperture from LBNL’s **1,312 GW** US generation queue to IEA’s **>2,500 GW** stalled worldwide. August features the full Queued Up 2026 Edition stock.
+
+As of end-2025, about **8,200** projects were actively seeking US grid interconnection, representing **1,312 GW** of generation and roughly **749 GW** of storage — **2,061 GW** total. High withdrawals (over **750 GW**) alongside fewer new requests produced a **10%** decrease in active queue volume versus 2024. That is reform-and-market hygiene, not “the bottleneck is gone.” Median duration from interconnection request to commercial operation for projects built in 2025 remains **over five years**. Historically, only **13%** of capacity that requested interconnection from **2000–2020** had reached COD by end-2025; **75%** had been withdrawn.
+
+Composition is the AI-relevant cut. **Natural gas** is the only major technology rising: **253 GW** active (**+86%** y/y). Solar (**773 GW**, **−19%**), storage (**749 GW**, **−16%**), and wind (**220 GW**, **−19%**) all fell. Roughly **549 GW** already has a draft or executed interconnection agreement but has not reached commercial operations — including **45 GW** of gas among the IA-backed stock. Withdrawal rates remain high even after signing an IA. Read that carefully: the queue is shrinking at the top line while the **bridge fuel for delayed wires** is the slice growing fastest — and a large IA-backed stock still has not energised.
+
+The worldwide **>2,500 GW** stalled stock and **1,200–1,600 GW** unlock range from Electricity 2026 are **carried**; Mid-Year did not restate them. Use LBNL for the US generator/storage book and IEA for the global congestion narrative — do not collapse them into one number.
+
+## Flexibility: negative prices and the battery case
+
+Key Questions’ **20–25 GW** of batteries inside data centres and AI load swings exceeding **50%** of rated capacity within a second remain carried. Mid-Year adds the *market* half of the flexibility case.
+
+Negative wholesale prices occurred during about **20%** of hours in South Australia and California in H1 2026 (similar to 2025). Spain’s share rose to **17%** from **10%**. Sweden and Finland fell from about **6%** to **2%** as flexibility measures improved. During European heatwaves in June, midday-to-evening price spreads reached **USD 600/MWh** in several markets. Those prints do not move the dual-ledger TWh path, but they raise the option value of campus batteries, demand response, and flexible non-firm connections — the same unlock toolkit Electricity 2026 quantified at **750–900 GW** (flexible connections) and **450–700 GW** (grid-enhancing technologies).
+
+## Dual ledger carried: 950 vs >1,200 is still the 2030 fork
+
+Mid-Year is silent on a restated data-centre TWh path. That is itself a vintage fact. We carry Gartner’s **447 → 565 → 702 → >1,200 TWh** electricity path and **104 → 132 → ~290 GW** capacity path, and Key Questions’ IEA central **~950 TWh** by 2030. The **~250 TWh** dual-ledger gap remains the honest 2030 fork. Do **not** average **447** with IEA’s **485**, and do not invent a Mid-Year “consensus” TWh for data centres that the report did not print.
+
+Capacity (**GW**) remains the interconnection constraint; electricity (**TWh**) remains the energy bill; Mid-Year’s **price** and LBNL’s **queue composition** are the new clocks on the same race.
+
+## What would rewrite the next vintage
+
+1. **An IEA or Gartner restatement** that moves the 2030 dual-ledger endpoints by more than ~50 TWh toward — or away from — each other.
+2. **US full-year 2026 demand** printing well above or below Mid-Year’s **+1.8%**, especially if services/DC growth diverges from the H1 **+3%** signal.
+3. **LBNL mid-year queue file** showing gas still surging — or reversing — after the **+86%** end-2025 print, or IA→COD conversion accelerating past the **549 GW** backlog.
+4. **Energisation prints** proving flexible connections and GETs cleared hundreds of GW from the **>2,500 GW** global stalled stock.
+5. **EU/Japan power prices** staying elevated long enough to redirect AI capacity announcements toward US (or other insulated) grids — or US prices finally catching the LNG shock.
+6. **Onsite gas connecting at the high end of 15–27 GW** *and* cutting measured wait times — or failing in the turbine queue Mid-Year says is already bidding US fossil spend past China.
+
+Until those print, the live frame versus the Q3 update is: **Mid-Year locks US +1.8%/+3% with DCs still #1 and H1 services +3%; US wholesale flat vs EU/Japan +30%+; LBNL restates 2,061 GW active (−10%) while gas jumps +86% to 253 GW and 549 GW sits IA-backed but not online; dual-ledger ~950 vs >1,200 and Gartner +26% to 565 TWh remain carried.**
+
+## Caveats and methodology
+
+1. **This is a vintage delta**, not a second encyclopedia. For the full IEA scenario fan, fuel mix, and regional concentration, use the [research post](/blog/ai-power-grid-research-2026), the [Key Questions update](/blog/ai-power-grid-update-2026), the [Q3 Gartner update](/blog/ai-power-grid-update-2026q3), and the [concentration companion](/blog/ai-power-grid-concentration-2026).
+2. **IEA TWh ≠ Gartner TWh/GW ≠ LBNL queue GW.** Different scopes; never average into a consensus forecast.
+3. **LBNL Queued Up covers generation and storage interconnection**, not large-load (data-centre demand) queues. Use it as the *supply-side* congestion book that AI load still depends on.
+4. **Gas queue prior for Δ charts** uses an implied ~136 GW baseline from the disclosed **+86%** to **253 GW** — treat the prior as estimated where LBNL’s slide deck emphasises the percentage move.
+5. **Mid-Year did not restate** Gartner’s DC TWh path, the dual-ledger gap, worldwide **>2,500 GW** stalled, or unlock ranges — those are carried from Q3 / Electricity 2026 / Key Questions.
+6. **Physical generation mix ≠ contractual PPAs.** Carry that research caveat forward.
+7. **Negative-price hours** measure flexibility scarcity in wholesale markets; they are not a direct campus PUE meter.
+8. **US 68 TWh dedicated AI** remains a Gartner composition slice from Q3, not a Mid-Year reprint.
+
+Primary sources: IEA *Electricity Mid-Year Update 2026*; LBNL *Queued Up: 2026 Edition* (end-2025 queues); Gartner newsroom 10 June 2026 and IEA *Key Questions on Energy and AI* (April 2026) as carried meters; prior baseline in [AI power-grid update 2026q3](/blog/ai-power-grid-update-2026q3).
+
+## The shareable takeaway
+
+**Versus our Q3 Gartner/Electricity print, the newest vintage does not move the 565 TWh or dual-ledger 2030 fork — it rewrites the system around them.** Mid-Year locks US electricity at **+1.8% in 2026** and **+3% in 2027**, with data centres still the main growth driver and H1 services at **+3%** even as a mild winter flattened the total. Wholesale prices stayed **flat in the US** while the EU and Japan printed **+30%+** after the Hormuz LNG shock — a power-cost geography that reinforces US cluster concentration. LBNL restates active queues at **2,061 GW (−10%)** while **gas jumps +86% to 253 GW** and **549 GW** sits with an IA but not yet at COD. Electricity *can* still be built for AI. The open question is whether wires, gas bridges, and flexibility tools clear where the GPUs plug in — on a clock that matches **+26%** campus years and **>5-year** interconnection medians, not only 2030 scenario slides.
+
+Related reading: [Q3 Gartner + Electricity update](/blog/ai-power-grid-update-2026q3), [Key Questions vintage update](/blog/ai-power-grid-update-2026), [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+  },
+  {
     id: "ai-supply-chain-concentration-2026",
     slug: "ai-supply-chain-concentration-2026",
     title:

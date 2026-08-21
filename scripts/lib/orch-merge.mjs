@@ -15,6 +15,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
 import { REPO_ROOT } from "./agent-jobs.mjs";
+import { isIndependentClone, gitSpawnEnv } from "./worker-layout.mjs";
 
 const LOCK_FILE = path.join(REPO_ROOT, "artifacts", "orch-merge.lock");
 const STASH_STATE_FILE = path.join(REPO_ROOT, "artifacts", "orch-merge-stash.json");
@@ -26,6 +27,7 @@ function git(cwd, args, opts = {}) {
     encoding: "utf8",
     maxBuffer: 32 * 1024 * 1024,
     windowsHide: true,
+    env: gitSpawnEnv(),
     ...opts,
   });
   const stdout = (res.stdout || "").trim();
@@ -1165,6 +1167,29 @@ export function deletePostBranchIfSafe(repoRoot, branch, { alsoSiblings = true }
   };
 }
 
+/**
+ * Copy a job branch from an independent worker clone into the main repo.
+ * Linked git worktrees already share refs, so this is a no-op there.
+ */
+export function fetchBranchFromWorkerClone(repoRoot, branch, worktreePath) {
+  if (!branch) return { ok: true, skipped: true, fetched: false, reason: "no branch" };
+  if (!worktreePath || !isIndependentClone(worktreePath)) {
+    return { ok: true, skipped: true, fetched: false, reason: "shared worktree or missing clone" };
+  }
+  const fetch = git(repoRoot, [
+    "fetch",
+    worktreePath,
+    `+refs/heads/${branch}:refs/heads/${branch}`,
+  ]);
+  return {
+    ok: fetch.code === 0,
+    fetched: fetch.code === 0,
+    skipped: false,
+    output: fetch.output,
+    error: fetch.code === 0 ? null : fetch.output,
+  };
+}
+
 export function mergeReadyJob({
   slug,
   branch,
@@ -1190,20 +1215,6 @@ export function mergeReadyJob({
   try {
     abortLeftoverMerge(repoRoot);
 
-    const verify = git(repoRoot, ["rev-parse", "--verify", branch]);
-    if (verify.code !== 0) {
-      return {
-        ok: false,
-        error: "branch_missing",
-        detail: verify.output,
-        log,
-      };
-    }
-
-    const ahead = git(repoRoot, ["rev-list", "--count", `HEAD..${branch}`]);
-    const aheadN = Number(ahead.stdout.trim() || "0");
-    note(`branch commits ahead of HEAD: ${aheadN}`);
-
     const wt = commitWorktreePostFiles(worktreePath, slug, branch);
     if (!wt.ok) {
       return { ok: false, error: "worktree_commit", detail: wt.error, log };
@@ -1215,6 +1226,27 @@ export function mergeReadyJob({
     } else {
       note("worktree: using existing branch tip");
     }
+
+    const fetched = fetchBranchFromWorkerClone(repoRoot, branch, worktreePath);
+    if (fetched.fetched) {
+      note(`fetched ${branch} from worker clone ${worktreePath}`);
+    } else if (!fetched.skipped) {
+      note(`clone fetch skipped/failed: ${fetched.error || fetched.reason || ""}`);
+    }
+
+    const verify = git(repoRoot, ["rev-parse", "--verify", branch]);
+    if (verify.code !== 0) {
+      return {
+        ok: false,
+        error: "branch_missing",
+        detail: verify.output || fetched.error,
+        log,
+      };
+    }
+
+    const ahead = git(repoRoot, ["rev-list", "--count", `HEAD..${branch}`]);
+    const aheadN = Number(ahead.stdout.trim() || "0");
+    note(`branch commits ahead of HEAD: ${aheadN}`);
 
     const postFiles = filesOnBranchForPost(repoRoot, branch, slug);
     note(`post allowlist on branch: ${postFiles.length} files`);

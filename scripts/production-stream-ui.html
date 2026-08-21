@@ -2545,7 +2545,7 @@
             slug: j.slug,
             flag: "manual_review",
             phase: j.failedAtPhase || "unknown",
-            error: j.manualReviewReason || j.lastError || "failed",
+            error: j.manualReviewReason || j.lastError || j.previousError || "failed",
             activity: j.activity,
           }));
       }

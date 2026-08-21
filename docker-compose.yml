@@ -1,3 +1,18 @@
+# Extension field holds the worker service template (Compose ignores x-* keys).
+x-worker: &worker
+  build:
+    context: .
+    dockerfile: docker/Dockerfile.worker
+  image: data-insights-blog-worker:local
+  profiles: ["workers"]
+  working_dir: /workspace
+  init: true
+  restart: unless-stopped
+  command: ["sleep", "infinity"]
+  environment:
+    NEXT_TELEMETRY_DISABLED: "1"
+    BLOG_IN_DOCKER: "1"
+
 services:
   web:
     build:
@@ -39,6 +54,77 @@ services:
       - NEXT_PUBLIC_FIREBASE_APP_ID=${NEXT_PUBLIC_FIREBASE_APP_ID:-}
       - NEXT_PUBLIC_GA_MEASUREMENT_ID=${NEXT_PUBLIC_GA_MEASUREMENT_ID:-}
     command: sh -c "npm ci --ignore-scripts && npm run dev -- --hostname 0.0.0.0 --port 3000"
+
+  # Isolated conveyor workers. Start with:
+  #   npm run automation:start
+  #   or: npm run workers:up
+  # Each service bind-mounts ONLY its own clone (BLOG_WORKER_HOST_ROOT/worker-N).
+  # Never mount the main checkout RW. Do not `docker compose down` (that would
+  # stop `web`); use `npm run workers:stop` / stop-blog-automation.ps1.
+  worker-1:
+    <<: *worker
+    container_name: blog-worker-1
+    hostname: blog-worker-1
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+      BLOG_IN_DOCKER: "1"
+      BLOG_WORKER_ID: "1"
+    volumes:
+      - type: bind
+        source: ${BLOG_WORKER_HOST_ROOT:?Set BLOG_WORKER_HOST_ROOT (npm run workers:up sets this)}/worker-1
+        target: /workspace
+
+  worker-2:
+    <<: *worker
+    container_name: blog-worker-2
+    hostname: blog-worker-2
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+      BLOG_IN_DOCKER: "1"
+      BLOG_WORKER_ID: "2"
+    volumes:
+      - type: bind
+        source: ${BLOG_WORKER_HOST_ROOT:?Set BLOG_WORKER_HOST_ROOT (npm run workers:up sets this)}/worker-2
+        target: /workspace
+
+  worker-3:
+    <<: *worker
+    container_name: blog-worker-3
+    hostname: blog-worker-3
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+      BLOG_IN_DOCKER: "1"
+      BLOG_WORKER_ID: "3"
+    volumes:
+      - type: bind
+        source: ${BLOG_WORKER_HOST_ROOT:?Set BLOG_WORKER_HOST_ROOT (npm run workers:up sets this)}/worker-3
+        target: /workspace
+
+  worker-4:
+    <<: *worker
+    container_name: blog-worker-4
+    hostname: blog-worker-4
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+      BLOG_IN_DOCKER: "1"
+      BLOG_WORKER_ID: "4"
+    volumes:
+      - type: bind
+        source: ${BLOG_WORKER_HOST_ROOT:?Set BLOG_WORKER_HOST_ROOT (npm run workers:up sets this)}/worker-4
+        target: /workspace
+
+  worker-5:
+    <<: *worker
+    container_name: blog-worker-5
+    hostname: blog-worker-5
+    environment:
+      NEXT_TELEMETRY_DISABLED: "1"
+      BLOG_IN_DOCKER: "1"
+      BLOG_WORKER_ID: "5"
+    volumes:
+      - type: bind
+        source: ${BLOG_WORKER_HOST_ROOT:?Set BLOG_WORKER_HOST_ROOT (npm run workers:up sets this)}/worker-5
+        target: /workspace
 
 volumes:
   blog_node_modules:

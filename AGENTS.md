@@ -8,7 +8,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 **Interactive main-repo edits:** publish with `npm run deploy:firebase` (local build + smoke + Firebase Hosting + live re-smoke). Live site: https://ether-data-insights-blog.web.app
 
-**Parallel worktree conveyor (orchestrator + workers):** workers run local `npm run deploy` only — never Firebase / `deploy:hosting` / `deploy:firebase`. Orchestrator merges `ready` jobs; hosting publish stays operator-gated unless re-enabled.
+**Parallel Docker-isolated conveyor (orchestrator + workers):** each worker edits its own git clone in `blog-worker-N` (never the main checkout, never `master`/`main`). Workers run local `npm run deploy` only — never Firebase / `deploy:hosting` / `deploy:firebase`. When a job is `ready`, the **orchestrator blesses** it: other workers pause, the job branch is merged into main, remaining clones sync (fetch/rebase), then workers resume. Hosting publish stays operator-gated unless re-enabled.
 
 **Always smoke-test.** `npm run deploy` is local build + Playwright smoke. A passing `npm run build` alone is not enough; client-side viz bundles can fail at runtime (e.g. TDZ / init order bugs) while the build still succeeds.
 

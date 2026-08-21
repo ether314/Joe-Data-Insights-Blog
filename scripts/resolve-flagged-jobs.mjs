@@ -17,6 +17,8 @@ import {
   topicStem,
   topicFamilyStem,
   isInfraFailure,
+  isOperatorRetryError,
+  OPERATOR_REQUEUE_MAX,
   rebuildFlagBlocks,
 } from "./lib/agent-jobs.mjs";
 
@@ -67,15 +69,15 @@ function runSelfTest() {
   console.log(famOk ? "PASS" : "FAIL", "copper geography/concentration family stem");
   if (!famOk) failed++;
 
-  // adaptation research is a new theme research slug — must NOT auto-cover via disasters post
-  const adaptation = stemCoveredByShipped("adaptation-economics-research-2026");
-  const adaptOk = !adaptation;
+  // Unshipped research slug must NOT be auto-covered by an unrelated post.
+  const unshipped = stemCoveredByShipped("zz-unshipped-theme-research-2099");
+  const unshippedOk = !unshipped;
   console.log(
-    adaptOk ? "PASS" : "FAIL",
-    "adaptation-economics-research-2026 not auto-covered",
-    adaptation || "(none)",
+    unshippedOk ? "PASS" : "FAIL",
+    "zz-unshipped-theme-research-2099 not auto-covered",
+    unshipped || "(none)",
   );
-  if (!adaptOk) failed++;
+  if (!unshippedOk) failed++;
   if (failed) {
     console.error(`self-test: ${failed} failure(s)`);
     process.exit(1);
@@ -107,6 +109,16 @@ function main() {
     } else if (/superseded_by_recovery_queue|deferred_for_recovery_queue/.test(err)) {
       resolution = "superseded";
       summary.superseded.push(job.slug);
+    } else if (
+      isInfraFailure(err) &&
+      (Number(job.attempts) || 0) === 0 &&
+      isOperatorRetryError(err) &&
+      (Number(job.operatorRequeues) || 0) >= OPERATOR_REQUEUE_MAX
+    ) {
+      // Never-started spawn/transport parks that already burned operator retries.
+      // Re-running them only remints siblings; leave content WIP (attempts>0) in MR.
+      resolution = "abandoned_infra";
+      summary.abandonedInfra.push(job.slug);
     } else if (isInfraFailure(err) && (job.recoveryExhausted || (job.recoveryAttempts || 0) >= 2)) {
       // Keep open if we might still merge WIP — caller can exclude by not marking
       // Empty exhausted infra without a live recovery path

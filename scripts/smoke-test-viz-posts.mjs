@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-power-grid-update-202608",
+    marker: "Vintage delta — Q3 Gartner/Electricity → Mid-Year Update + LBNL Queued Up",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-supply-chain-concentration-2026",
     marker: "Semiconductor supply chain — concentration lens",
     forbidden: "Loading interactive charts",

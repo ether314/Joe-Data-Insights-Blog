@@ -20,9 +20,14 @@ import {
   writeJobs,
   rebuildFlagBlocks,
   collapseDuplicateManualReview,
+  unresolvedManualReviewThemes,
   isStemBlocked,
   isThemeBlocked,
   topicStem,
+  OPERATOR_REQUEUE_MAX,
+  isOperatorRetryError,
+  listOperatorRetryJobs,
+  reopenJobForOperatorRetry,
 } from "./lib/agent-jobs.mjs";
 
 const migrate = process.argv.includes("--migrate");
@@ -148,6 +153,10 @@ const collapsed = collapseDuplicateManualReview(data);
 assert(collapsed === 1, `collapse supersedes 1 duplicate (got ${collapsed})`);
 assert(older.resolution === "superseded_duplicate", "older dup marked superseded_duplicate");
 assert(listManualReview(data).filter((i) => i.slug === themed.slug).length === 1, "one MR row per slug after collapse");
+assert(
+  unresolvedManualReviewThemes(data).has(themed.themeId),
+  "unresolved Manual Review theme is listed so claim will not mint siblings",
+);
 
 // Resolved abandoned_infra sibling must NOT wipe stem while unresolved MR remains
 const abandoned = {
@@ -164,6 +173,44 @@ assert(
   isStemBlocked(data, topicStem(themed.slug)),
   "resolved abandoned_infra does not clear stem while unresolved MR exists",
 );
+
+assert(OPERATOR_REQUEUE_MAX === 2, `OPERATOR_REQUEUE_MAX defaults to 2 (got ${OPERATOR_REQUEUE_MAX})`);
+assert(isOperatorRetryError("worker_exit_0"), "worker_exit_0 is operator-retryable");
+assert(isOperatorRetryError("transport_kill"), "transport_kill is operator-retryable");
+assert(isOperatorRetryError("worker_spawn_failed"), "worker_spawn_failed is operator-retryable");
+assert(isOperatorRetryError("cursor_cli_missing"), "cursor_cli_missing is operator-retryable");
+assert(!isOperatorRetryError("content_rejected"), "content failures are not operator-retryable");
+
+const retryQueue = emptyQueue("qa-op-retry");
+retryQueue.jobs = [
+  {
+    id: "job-qa-op-retry",
+    slug: "bank-commercial-credit-research-2026",
+    themeId: "bank-commercial-credit",
+    status: "failed",
+    manualReview: true,
+    lastError: "worker_exit_0",
+    manualReviewReason: "worker_exit_0",
+    operatorRequeues: 0,
+  },
+];
+const listed = listOperatorRetryJobs(retryQueue);
+assert(listed.length === 1, "parked worker_exit_0 is listed for operator retry");
+const reopened = reopenJobForOperatorRetry(retryQueue, "job-qa-op-retry");
+assert(reopened && reopened.status === "claimed", "operator retry reopens as claimed");
+assert(reopened.operatorRequeues === 1, "operator retry increments cap counter");
+assert(reopened.manualReview === false, "operator retry clears manualReview");
+assert(reopened.recovery === false, "operator retry is a producer job, not W5 recovery");
+assert(reopened.previousError === "worker_exit_0", "operator retry persists previousError for stream UI");
+reopened.status = "failed";
+reopened.lastError = "worker_exit_0";
+reopened.manualReviewReason = "worker_exit_0";
+reopenJobForOperatorRetry(retryQueue, "job-qa-op-retry");
+reopened.status = "failed";
+reopened.lastError = "worker_exit_0";
+reopened.manualReviewReason = "worker_exit_0";
+const third = reopenJobForOperatorRetry(retryQueue, "job-qa-op-retry");
+assert(third === null, "operator retry refuses after OPERATOR_REQUEUE_MAX");
 
 if (migrate) {
   const live = readJobs();

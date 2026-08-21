@@ -1,5 +1,5 @@
 ﻿# Watchdog: every run checks if blog production is active; starts it if not.
-# Schedule: scripts\register-blog-production-watchdog.ps1 (every 10 minutes)
+# Schedule: scripts\register-blog-production-watchdog.ps1 (logon + every 5 minutes)
 #
 # -DryRun reports the decision without killing or starting anything.
 # Thresholds can be overridden via WATCHDOG_STALE_MINUTES / WATCHDOG_CPU_DELTA_SECONDS (QA only).
@@ -27,10 +27,13 @@ $StreamPort = if ($env:STREAM_PORT) { [int]$env:STREAM_PORT } else { 4177 }
 # Local deploy (build + smoke) routinely takes 10-20+ minutes with few src edits.
 $StaleMinutes = if ($env:WATCHDOG_STALE_MINUTES) { [double]$env:WATCHDOG_STALE_MINUTES } else { 40 }
 $CpuDeltaSeconds = if ($env:WATCHDOG_CPU_DELTA_SECONDS) { [double]$env:WATCHDOG_CPU_DELTA_SECONDS } else { 0.5 }
+. (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
+[void](Ensure-BlogAutomationPath)
 $JobsFile = Join-Path $RepoRoot "artifacts\agent-jobs.json"
-$WorktreeRoot = if ($env:BLOG_WORKTREE_ROOT) { $env:BLOG_WORKTREE_ROOT } else {
-    Join-Path (Split-Path -Parent $RepoRoot) "data-insights-blog-worktrees"
-}
+$WorktreeRoot = Get-BlogWorkerRoot $RepoRoot
+$LoopPidFile = Join-Path $RepoRoot "artifacts\cursor-watchdog-loop.pid"
+$LoopScript = Join-Path $RepoRoot "scripts\cursor-watchdog-loop.ps1"
+$WorkerContainersScript = Join-Path $RepoRoot "scripts\worker-containers.ps1"
 
 # Paths the production agent touches while working - include build/deploy outputs so a
 # long `npm run deploy` is not mistaken for a hung authoring session.
@@ -382,6 +385,71 @@ function Test-StreamListening {
     }
 }
 
+function Test-WatchdogLoopAlive {
+    if (Test-Path $LoopPidFile) {
+        $raw = Get-Content $LoopPidFile -ErrorAction SilentlyContinue | Select-Object -First 1
+        if ($raw -match '^\d+$' -and (Test-ProcessAlive ([int]$raw))) {
+            return $true
+        }
+    }
+    $found = Get-CimInstance Win32_Process -Filter "Name='powershell.exe'" -ErrorAction SilentlyContinue |
+        Where-Object { $_.CommandLine -and $_.CommandLine -like "*cursor-watchdog-loop.ps1*" } |
+        Select-Object -First 1
+    return $null -ne $found
+}
+
+function Ensure-WatchdogLoop {
+    if ($DryRun) {
+        if (-not (Test-WatchdogLoopAlive)) {
+            Write-Log "would start watchdog loop"
+        }
+        return
+    }
+    if (Test-WatchdogLoopAlive) { return }
+    if (-not (Test-Path $LoopScript)) {
+        Write-Log "WARN: watchdog loop script missing at $LoopScript"
+        return
+    }
+    Write-Log "Watchdog loop not running - starting"
+    $argList = "-NoProfile -ExecutionPolicy Bypass -File `"$LoopScript`""
+    $proc = Start-Process -FilePath "powershell.exe" `
+        -ArgumentList $argList `
+        -WorkingDirectory $RepoRoot `
+        -WindowStyle Minimized `
+        -PassThru
+    Start-Sleep -Seconds 2
+    $alive = $false
+    if ($proc -and $proc.Id) {
+        $alive = $null -ne (Get-Process -Id $proc.Id -ErrorAction SilentlyContinue)
+    }
+    if ($alive) {
+        Write-Log "Watchdog loop started (PID $($proc.Id))"
+    } else {
+        Write-Log "WARN: watchdog loop failed to stay up"
+    }
+}
+
+function Ensure-WorkerContainers {
+    if ($DryRun) {
+        Write-Log "would ensure Docker worker containers (no compose down)"
+        return
+    }
+    if (-not (Test-Path $WorkerContainersScript)) { return }
+    if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
+        Write-Log "WARN: docker not on PATH; cannot ensure worker containers"
+        return
+    }
+    try {
+        Write-Log "Ensuring Docker worker containers (blog-worker-1..5; never compose down)"
+        & powershell -NoProfile -ExecutionPolicy Bypass -File $WorkerContainersScript -Action ensure
+        if ($LASTEXITCODE -ne 0) {
+            Write-Log "WARN: worker-containers ensure exited $LASTEXITCODE"
+        }
+    } catch {
+        Write-Log "WARN: worker-containers ensure failed: $_"
+    }
+}
+
 function Ensure-StreamDashboard {
     if ($DryRun) {
         if (-not (Test-StreamListening)) {
@@ -424,8 +492,11 @@ if ($lock -and $lock.status -eq "paused") {
     exit 0
 }
 
-# Keep the local log dashboard alive even when production is healthy.
+# Keep stream, in-session watchdog loop, and worker containers alive.
+# Scheduled task + this check restart them if Cursor/session/crash took them down.
 Ensure-StreamDashboard
+Ensure-WatchdogLoop
+Ensure-WorkerContainers
 
 if (Test-StartInProgress) {
     Write-Log "Production start already in progress (.starting file). No action."

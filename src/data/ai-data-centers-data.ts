@@ -1,7 +1,23 @@
 import { fmtBillionsUsd } from "@/lib/fmt-billions-usd";
 
-export type ProjectStatus = "Operational" | "Under Construction" | "Planned" | "Partially Live";
+export type ProjectStatus =
+  | "Operational"
+  | "Under Construction"
+  | "Planned"
+  | "Partially Live"
+  | "Stalled";
 export type BuildPhase = "Not Started" | "Started";
+export type ConstructionStage =
+  | "Proposed"
+  | "Solicitation"
+  | "Lease negotiation"
+  | "Permitting"
+  | "Early works"
+  | "Vertical construction"
+  | "Commissioning"
+  | "Phased live"
+  | "Operational"
+  | "Stalled";
 
 export { fmtBillionsUsd };
 
@@ -10,16 +26,21 @@ export type Site = {
   country: string;
   developer: string;
   costUsd: string;
+  /** Peak disclosed IT load in MW; 0 = not disclosed (excluded from MW totals). */
   powerMw: number;
   completion: string;
   status: ProjectStatus;
   region: string;
+  /** Finer construction/development stage. Defaults from `status` when omitted. */
+  stage?: ConstructionStage;
+  /** True for DOE/NNSA federal-land AI siting (RFI, lease, or American Energy Hub). */
+  federalLand?: boolean;
 };
 
 export const SITES: Site[] = [
 
   // ── US: Stargate ──
-  { site: "Stargate Abilene (flagship)", country: "USA", developer: "OpenAI / Oracle / SoftBank", costUsd: "~$400B program", powerMw: 1200, completion: "Mid-2026 (8 buildings)", status: "Partially Live", region: "North America" },
+  { site: "Stargate Abilene (flagship)", country: "USA", developer: "OpenAI / Oracle / SoftBank / Crusoe", costUsd: "~$400B program", powerMw: 1200, completion: "4 of 8 halls live (~0.3–0.6 GW); full 1.2 GW targeted Q4 2026. 600 MW expansion cancelled Mar 2026", status: "Partially Live", region: "North America", stage: "Phased live" },
   { site: "Stargate Shackelford / Vantage Frontier", country: "USA", developer: "Vantage / OpenAI / Oracle", costUsd: "$25B+", powerMw: 1400, completion: "Bldg 1: H2 2026; full build-out TBD", status: "Under Construction", region: "North America" },
   { site: "Stargate Michigan (Saline Township / The Barn)", country: "USA", developer: "OpenAI / Oracle / Related Digital", costUsd: "~$10B", powerMw: 1000, completion: "2026 (construction begun)", status: "Under Construction", region: "North America" },
   { site: "Vantage Lighthouse (Port Washington, WI)", country: "USA", developer: "Vantage / OpenAI / Oracle", costUsd: "Part of Stargate", powerMw: 1000, completion: "2028", status: "Under Construction", region: "North America" },
@@ -27,10 +48,10 @@ export const SITES: Site[] = [
   { site: "Stargate Albuquerque area", country: "USA", developer: "Oracle / Stargate", costUsd: "Part of Stargate", powerMw: 600, completion: "2027–2028", status: "Planned", region: "North America" },
   { site: "Stargate Milam County", country: "USA", developer: "SoftBank / OpenAI / SB Energy", costUsd: "Part of Stargate", powerMw: 1100, completion: "2027", status: "Under Construction", region: "North America" },
   { site: "Stargate Doña Ana County", country: "USA", developer: "Oracle / STACK / BorderPlex", costUsd: "Part of Stargate", powerMw: 600, completion: "Project Jupiter; active build 2026", status: "Under Construction", region: "North America" },
-  { site: "Stargate Lordstown", country: "USA", developer: "SoftBank / OpenAI", costUsd: "Part of Stargate", powerMw: 1000, completion: "2027", status: "Under Construction", region: "North America" },
+  { site: "Stargate Lordstown", country: "USA", developer: "SoftBank / OpenAI", costUsd: "Part of Stargate", powerMw: 1000, completion: "Ground broken; local ban on *future* DCs is a political risk. Target 2027", status: "Under Construction", region: "North America", stage: "Early works" },
 
   // ── US: Hyperscalers ──
-  { site: "Fairwater (Mount Pleasant, WI)", country: "USA", developer: "Microsoft", costUsd: "$7.3B", powerMw: 2000, completion: "Early 2026 (Bldg 1 live)", status: "Partially Live", region: "North America" },
+  { site: "Fairwater (Mount Pleasant, WI)", country: "USA", developer: "Microsoft", costUsd: "$7.3B", powerMw: 3300, completion: "Bldg 1 live (2026); ~3.3 GW / 4-building campus targeted late 2027; more halls approved", status: "Partially Live", region: "North America", stage: "Phased live" },
   { site: "Fairwater Atlanta (East US 3)", country: "USA", developer: "Microsoft", costUsd: "Part of AI superfactory", powerMw: 500, completion: "Oct 2025 live", status: "Operational", region: "North America" },
   { site: "Colossus 1 (Memphis, TN)", country: "USA", developer: "xAI", costUsd: "~$18B (full campus)", powerMw: 500, completion: "2025", status: "Operational", region: "North America" },
   { site: "Colossus 2 (Southaven, MS)", country: "USA", developer: "xAI", costUsd: "~$18B (full campus)", powerMw: 1000, completion: "2025", status: "Operational", region: "North America" },
@@ -49,7 +70,7 @@ export const SITES: Site[] = [
   { site: "Crusoe Abilene (Microsoft campus)", country: "USA", developer: "Crusoe / Microsoft", costUsd: "~$5–13B est. (analyst/blog incl. on-site gen; weak — no official capex)", powerMw: 900, completion: "First bldg: mid-2027", status: "Under Construction", region: "North America" },
   { site: "Fluidstack New Lebanon, IN", country: "USA", developer: "Fluidstack / Google-backed JV", costUsd: "$5.7B", powerMw: 430, completion: "300 MW: Dec 2026", status: "Under Construction", region: "North America" },
   { site: "Potentia Heartland Park (Sullivan County, IN)", country: "USA", developer: "Potentia", costUsd: "$65B (program)", powerMw: 2100, completion: "2028–2030", status: "Planned", region: "North America" },
-  { site: "Project Jade (Cheyenne, WY)", country: "USA", developer: "Tallgrass Energy", costUsd: "Up to $50B", powerMw: 2700, completion: "First bldg: end 2027", status: "Under Construction", region: "North America" },
+  { site: "Google Project Tembo (ex-Jade, Cheyenne, WY)", country: "USA", developer: "Google (Jupiter Star) / Tallgrass power", costUsd: "Up to $50B", powerMw: 2700, completion: "Crusoe withdrew mid-2026; Google resubmitted 4-hall plan. First utility service ~2028; campus 2031. 1.8 GW load / 2.7 GW campus / 10 GW ceiling", status: "Planned", region: "North America", stage: "Permitting" },
   { site: "Prometheus Hyperscale (Evanston, WY)", country: "USA", developer: "Prometheus Hyperscale", costUsd: "TBD", powerMw: 1250, completion: "48–60 mo from permit", status: "Planned", region: "North America" },
   { site: "Bell AI Fabric (Regina, SK)", country: "Canada", developer: "Bell / CoreWeave / Cerebras", costUsd: "CAD $1.7B (~$1.2B)", powerMw: 300, completion: "H1 2027 (staged)", status: "Under Construction", region: "North America" },
   { site: "Buzz HPC Toronto (GTA)", country: "Canada", developer: "Hive / Buzz HPC", costUsd: "$2.55B", powerMw: 320, completion: "H2 2027", status: "Planned", region: "North America" },
@@ -61,6 +82,14 @@ export const SITES: Site[] = [
   { site: "CoreWeave Muskogee (Core Scientific)", country: "USA", developer: "CoreWeave / Core Scientific", costUsd: "Part of $8.7B contract", powerMw: 70, completion: "Q2 2026", status: "Under Construction", region: "North America" },
   { site: "Core Scientific Pecos AI campus", country: "USA", developer: "Core Scientific", costUsd: "~$11B est. (CORZ ~$11M/MW build cost; ~1 GW leasable; medium confidence)", powerMw: 1500, completion: "First hall vertical; live early 2027", status: "Under Construction", region: "North America" },
   { site: "eStruxture CAL-3 Calgary", country: "Canada", developer: "eStruxture / CoreWeave", costUsd: "C$1B+ (Alberta program)", powerMw: 90, completion: "H2 2026", status: "Under Construction", region: "North America" },
+
+  // ── US: DOE / NNSA federal land (missing from June 2026 cut) ──
+  { site: "PORTS-Pike Technology Campus (Piketon, OH)", country: "USA", developer: "SB Energy / SoftBank / OpenAI / NVIDIA / DOE", costUsd: "$30B–$40B phase 1 (800 MW); 8 GW-IT OpenAI lease", powerMw: 8000, completion: "Early civil works begun; full construction from Oct 2026. First 800 MW 2028; phased through 2032", status: "Under Construction", region: "North America", stage: "Early works", federalLand: true },
+  { site: "Paducah American Energy Hub (KY)", country: "USA", developer: "Brookfield / NextEra / DOE", costUsd: "$100B (campus + 2 GW gas + 2.6 GW storage)", powerMw: 1800, completion: "Developer selected Jul 29, 2026. KY PSC power-agreement approval pending. Construction targeted complete 2031. ~1.2 GW compute / 1.8 GW campus capacity", status: "Planned", region: "North America", stage: "Lease negotiation", federalLand: true },
+  { site: "Savannah River Site AI campus (SC)", country: "USA", developer: "Amentum / NNSA", costUsd: "Undisclosed (phased lease)", powerMw: 1000, completion: "Selected for lease negotiations Jul 20, 2026 — not a final award. 1 GW DC + ~2 GW on-site gen (gas bridging to nuclear)", status: "Planned", region: "North America", stage: "Lease negotiation", federalLand: true },
+  { site: "Idaho National Laboratory AI solicitation", country: "USA", developer: "DOE (developer not selected)", costUsd: "TBD — applicant-funded lease", powerMw: 0, completion: "RFA issued Sep 2025; rolling applications. No public developer award as of Aug 2026. Qualifying load >100 MW", status: "Planned", region: "North America", stage: "Solicitation", federalLand: true },
+  { site: "Oak Ridge Reservation AI solicitation (TN)", country: "USA", developer: "DOE (developer not selected)", costUsd: "TBD — applicant-funded lease", powerMw: 0, completion: "RFP issued Sep 2025 (ETTP + ORNL-adjacent parcels). No public developer award as of Aug 2026. Qualifying load >100 MW", status: "Planned", region: "North America", stage: "Solicitation", federalLand: true },
+  { site: "DOE RFI remaining labs (11 sites)", country: "USA", developer: "DOE (RFI only — Apr 2025)", costUsd: "TBD", powerMw: 0, completion: "Still proposed: Argonne, Brookhaven, Fermilab, NETL, NREL, PNNL, PPPL, LANL, Sandia, Pantex, Kansas City. Not in the Jul 2025 four-site downselect", status: "Planned", region: "North America", stage: "Proposed", federalLand: true },
 
   // ── Latin America ──
   { site: "Ascenty Sumaré 3 (São Paulo, BR)", country: "Brazil", developer: "Ascenty / Brookfield", costUsd: "$720M", powerMw: 400, completion: "Q3 2027", status: "Under Construction", region: "Latin America" },
@@ -133,7 +162,7 @@ export const SITES: Site[] = [
   { site: "Nxtra Tatu City (Kenya)", country: "Kenya", developer: "Airtel Nxtra", costUsd: "$150M est. (Airtel / Construction Kenya; medium-high confidence)", powerMw: 44, completion: "2026–2027", status: "Under Construction", region: "Africa" },
   { site: "Teraco JB7 (Johannesburg)", country: "South Africa", developer: "Teraco / Digital Realty", costUsd: "~$440M est. (R8B syndicated loan; medium — loan also covers other projects)", powerMw: 40, completion: "2026–2027", status: "Under Construction", region: "Africa" },
   { site: "IXAfrica hyperscale (Kenya)", country: "Kenya", developer: "IXAfrica", costUsd: "~$250M est. (Helios $50M + RMB $200M campus; medium — 53 MW row vs 22.5 MW design)", powerMw: 53, completion: "2027–2028", status: "Planned", region: "Africa" },
-  { site: "Microsoft/G42 Kenya (stalled)", country: "Kenya", developer: "Microsoft / G42", costUsd: "$1B package", powerMw: 1000, completion: "Stalled — grid limits", status: "Planned", region: "Africa" },
+  { site: "Microsoft/G42 Kenya (stalled)", country: "Kenya", developer: "Microsoft / G42", costUsd: "$1B package", powerMw: 1000, completion: "Stalled — grid interconnection limits; not a live campus", status: "Stalled", region: "Africa", stage: "Stalled" },
 
   // ── China ──
   { site: "China NDRC national AI grid (program)", country: "China", developer: "NDRC / state SOEs", costUsd: "$295B (2026–2030)", powerMw: 15000, completion: "Hubs operational from 2027", status: "Planned", region: "China" },
@@ -154,8 +183,31 @@ export const REGION_ORDER = [
 
 export type Region = (typeof REGION_ORDER)[number];
 
-export const STATUSES = ["All", "Operational", "Partially Live", "Under Construction", "Planned"] as const;
+export const STATUSES = [
+  "All",
+  "Operational",
+  "Partially Live",
+  "Under Construction",
+  "Planned",
+  "Stalled",
+] as const;
 export type StatusFilter = (typeof STATUSES)[number];
+
+export const STAGE_ORDER: ConstructionStage[] = [
+  "Operational",
+  "Phased live",
+  "Commissioning",
+  "Vertical construction",
+  "Early works",
+  "Permitting",
+  "Lease negotiation",
+  "Solicitation",
+  "Proposed",
+  "Stalled",
+];
+
+export const STAGES = ["All", ...STAGE_ORDER] as const;
+export type StageFilter = (typeof STAGES)[number];
 
 export const REGIONS = ["All", ...REGION_ORDER] as const;
 export type RegionFilter = (typeof REGIONS)[number];
@@ -170,7 +222,8 @@ export type SortKey =
   | "completion"
   | "status"
   | "region"
-  | "buildPhase";
+  | "buildPhase"
+  | "stage";
 
 export type SortDir = "asc" | "desc";
 
@@ -180,17 +233,38 @@ export function annualKwhBillion(mw: number): number {
 }
 
 export function fmtKwh(b: number): string {
+  if (!b) return "—";
   if (b >= 1000) return `${(b / 1000).toFixed(1)} TWh/yr`;
   return `${b.toFixed(1)} B kWh/yr`;
 }
 
 export function fmtPower(mw: number): string {
+  if (!mw || mw <= 0) return "—";
   if (mw >= 1000) return `${(mw / 1000).toFixed(1)} GW`;
   return `${mw} MW`;
 }
 
 export function buildPhaseFromStatus(status: ProjectStatus): BuildPhase {
-  return status === "Planned" ? "Not Started" : "Started";
+  return status === "Planned" || status === "Stalled" ? "Not Started" : "Started";
+}
+
+export function defaultStage(status: ProjectStatus): ConstructionStage {
+  switch (status) {
+    case "Operational":
+      return "Operational";
+    case "Partially Live":
+      return "Phased live";
+    case "Under Construction":
+      return "Vertical construction";
+    case "Stalled":
+      return "Stalled";
+    default:
+      return "Proposed";
+  }
+}
+
+export function siteStage(s: Site): ConstructionStage {
+  return s.stage ?? defaultStage(s.status);
 }
 
 export function regionTotals(region: string) {
@@ -515,6 +589,8 @@ export function compareSites(a: Site, b: Site, key: SortKey): number {
       return a.region.localeCompare(b.region);
     case "buildPhase":
       return buildPhaseFromStatus(a.status).localeCompare(buildPhaseFromStatus(b.status));
+    case "stage":
+      return siteStage(a).localeCompare(siteStage(b));
     default:
       return 0;
   }
@@ -528,24 +604,54 @@ const TEXT_SORT_KEYS = new Set<SortKey>([
   "status",
   "region",
   "buildPhase",
+  "stage",
 ]);
 
 export function defaultSortDir(key: SortKey): SortDir {
   return TEXT_SORT_KEYS.has(key) ? "asc" : "desc";
 }
 
-const totalMw = SITES.reduce((a, s) => a + s.powerMw, 0);
-const totalKwh = SITES.reduce((a, s) => a + s.powerMw * 8760 * 0.9, 0) / 1_000_000;
+const poweredSites = SITES.filter((s) => s.powerMw > 0);
+const totalMw = poweredSites.reduce((a, s) => a + s.powerMw, 0);
+const totalKwh = poweredSites.reduce((a, s) => a + s.powerMw * 8760 * 0.9, 0) / 1_000_000;
 const startedCount = SITES.filter((s) => buildPhaseFromStatus(s.status) === "Started").length;
+const liveCount = SITES.filter(
+  (s) => s.status === "Operational" || s.status === "Partially Live",
+).length;
+const federalCount = SITES.filter((s) => s.federalLand).length;
 
 export const STATS = {
   siteCount: SITES.length,
   startedCount,
   notStartedCount: SITES.length - startedCount,
+  liveCount,
+  federalCount,
+  asOf: "August 2026",
   totalMw,
   totalKwh,
   totalPowerLabel: fmtPower(totalMw),
   totalEnergyLabel: fmtKwh(Math.round(totalKwh * 10) / 10),
+};
+
+export const STAGE_COLORS: Record<ConstructionStage, string> = {
+  Operational: "#22c55e",
+  "Phased live": "#0ea5e9",
+  Commissioning: "#38bdf8",
+  "Vertical construction": "#f59e0b",
+  "Early works": "#fb923c",
+  Permitting: "#a78bfa",
+  "Lease negotiation": "#818cf8",
+  Solicitation: "#94a3b8",
+  Proposed: "#64748b",
+  Stalled: "#ef4444",
+};
+
+export const STATUS_COLORS: Record<Exclude<ProjectStatus, never>, string> = {
+  Operational: "#22c55e",
+  "Partially Live": "#0ea5e9",
+  "Under Construction": "#f59e0b",
+  Planned: "#64748b",
+  Stalled: "#ef4444",
 };
 
 export const REGION_COLORS: Record<Region, string> = {

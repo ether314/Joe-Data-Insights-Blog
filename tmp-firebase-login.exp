@@ -1,0 +1,94 @@
+#!/usr/bin/expect -f
+set timeout 600
+log_user 1
+spawn firebase login --no-localhost
+
+# Answer optional prompts; wait for confirmation before continuing
+expect {
+  -re {Enable Gemini.*\(Y/n\)} {
+    send -- "n\r"
+    expect {
+      -re {Enable Gemini.*No|✔.*Gemini|No} {}
+      timeout {}
+    }
+    exp_continue
+  }
+  -re {Allow Firebase to collect.*\(Y/n\)} {
+    send -- "n\r"
+    expect {
+      -re {Allow Firebase.*No|✔.*usage|No} {}
+      timeout {}
+    }
+    exp_continue
+  }
+  -re {https://auth\.firebase\.tools/login[^\r\n ]+} {
+    puts "\nAUTH_URL=$expect_out(0,string)\n"
+    exp_continue
+  }
+  -re {(?i)Enter authorization code:} {
+    puts "\nNEED_CODE=1\n"
+  }
+  -re {(?i)paste or enter the authorization code|authorization code below} {
+    puts "\nNEED_CODE=1\n"
+  }
+  timeout {
+    puts "\nTIMEOUT_WAITING_FOR_PROMPT\n"
+    exit 1
+  }
+  eof {
+    puts "\nEOF_EARLY\n"
+    exit 1
+  }
+}
+
+# Wait for code file written by the host (must not exist until user provides code)
+set codefile "/code/auth.code"
+set waited 0
+while {![file exists $codefile]} {
+  sleep 2
+  incr waited 2
+  if {$waited >= 1800} {
+    puts "\nTIMEOUT_WAITING_FOR_CODE_FILE\n"
+    exit 1
+  }
+}
+
+# Brief settle so host write is complete
+sleep 1
+set fp [open $codefile r]
+set code [string trim [read $fp]]
+close $fp
+
+if {[string length $code] < 20} {
+  puts "\nCODE_TOO_SHORT len=[string length $code]\n"
+  exit 1
+}
+
+puts "\nSUBMITTING_CODE len=[string length $code]\n"
+# send -- prevents flag parsing; slow send helps inquirer
+send -- "$code"
+send -- "\r"
+
+expect {
+  -re {(?i)success|logged in as|already logged in} {
+    puts "\nLOGIN_SUCCESS\n"
+    exit 0
+  }
+  -re {(?i)Unable to authenticate|Authentication Error|credentials are no longer valid} {
+    puts "\nLOGIN_FAILED\n"
+    exit 1
+  }
+  -re {(?i)error|invalid|failed} {
+    puts "\nLOGIN_FAILED\n"
+    exit 1
+  }
+  timeout {
+    puts "\nTIMEOUT_AFTER_CODE\n"
+    exit 1
+  }
+  eof {
+    # firebase often exits after successful login with little output
+    puts "\nEOF_AFTER_CODE\n"
+    exit 0
+  }
+}

@@ -1,0 +1,265 @@
+[2026-08-20 08:39:24] Starting orchestrator (orch-20260820-083923)
+[2026-08-20 08:39:24] Transport mitigations: producers=4 spawnStagger=20s (env BLOG_PRODUCTION_WORKER_COUNT / BLOG_WORKER_SPAWN_STAGGER_SEC)
+[2026-08-20 08:39:24] Bootstrapping worker clones + Docker containers...
+[2026-08-20 08:39:25] WARN: bootstrap returned 1
+[2026-08-20 08:39:26] Seeding topic failure flags from history...
+[2026-08-20 08:39:26] flags seed: {"blockedStems":7,"blockedThemes":0,"failures":15}
+[2026-08-20 08:39:26] Recovering any orphaned merge state...
+[2026-08-20 08:39:26] merge recover: {
+  "recover": true,
+  "recovered": false,
+  "reason": "no stash state"
+}
+[2026-08-20 08:45:19] Assigning job job-msa1mpwx-oyqxs -> worker 1
+[2026-08-20 08:45:19] Spawned worker 1 shell pid=17612 for job-msa1mpwx-oyqxs (attempt 1)
+[2026-08-20 08:45:23] WARN: worker 1 pid=17612 exited immediately after spawn (attempt 1)
+[2026-08-20 08:45:26] Spawned worker 1 shell pid=1472 for job-msa1mpwx-oyqxs (attempt 2)
+[2026-08-20 08:45:30] WARN: worker 1 pid=1472 exited immediately after spawn (attempt 2)
+[2026-08-20 08:45:32] ERROR: worker 1 failed to stay up after spawn retries for job-msa1mpwx-oyqxs
+[2026-08-20 08:45:32] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 08:45:52] Assigning job job-msa1mcut-2lwgv -> worker 2
+[2026-08-20 08:45:52] Spawned worker 2 shell pid=23348 for job-msa1mcut-2lwgv (attempt 1)
+[2026-08-20 08:45:56] WARN: worker 2 pid=23348 exited immediately after spawn (attempt 1)
+[2026-08-20 08:45:59] Spawned worker 2 shell pid=3624 for job-msa1mcut-2lwgv (attempt 2)
+[2026-08-20 08:46:03] WARN: worker 2 pid=3624 exited immediately after spawn (attempt 2)
+[2026-08-20 08:46:05] ERROR: worker 2 failed to stay up after spawn retries for job-msa1mcut-2lwgv
+[2026-08-20 08:46:05] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 08:46:25] Assigning job job-msa1m4rp-a3bfe -> worker 3
+[2026-08-20 08:46:26] Spawned worker 3 shell pid=9404 for job-msa1m4rp-a3bfe (attempt 1)
+[2026-08-20 08:46:30] WARN: worker 3 pid=9404 exited immediately after spawn (attempt 1)
+[2026-08-20 08:46:32] Spawned worker 3 shell pid=21228 for job-msa1m4rp-a3bfe (attempt 2)
+[2026-08-20 08:46:36] WARN: worker 3 pid=21228 exited immediately after spawn (attempt 2)
+[2026-08-20 08:46:38] ERROR: worker 3 failed to stay up after spawn retries for job-msa1m4rp-a3bfe
+[2026-08-20 08:47:07] Assigning job job-msa1mpwx-oyqxs -> worker 1
+[2026-08-20 08:47:08] Spawned worker 1 shell pid=12200 for job-msa1mpwx-oyqxs (attempt 1)
+[2026-08-20 08:47:12] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 08:47:32] Assigning job job-msa1mcut-2lwgv -> worker 2
+[2026-08-20 08:47:33] Spawned worker 2 shell pid=18720 for job-msa1mcut-2lwgv (attempt 1)
+[2026-08-20 08:47:37] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 08:47:57] Assigning job job-msa1m4rp-a3bfe -> worker 3
+[2026-08-20 08:47:58] Spawned worker 3 shell pid=25464 for job-msa1m4rp-a3bfe (attempt 1)
+[2026-08-20 08:48:02] Assigning recovery job job-msa0sb5p-2dxnh (adaptation-economics-research-2026) -> worker 5
+[2026-08-20 08:48:02] Assigning job job-msa0sb5p-2dxnh -> worker 5
+[2026-08-20 08:48:03] Spawned worker 5 shell pid=14860 for job-msa0sb5p-2dxnh (attempt 1)
+[2026-08-20 08:49:22] Assigning job job-msa0sb5p-gq52g -> worker 4
+[2026-08-20 08:49:22] Spawned worker 4 shell pid=9492 for job-msa0sb5p-gq52g (attempt 1)
+[2026-08-20 08:49:35] Assigning job job-msa0sb5p-8jgdg -> worker 4
+[2026-08-20 08:49:36] Spawned worker 4 shell pid=8820 for job-msa0sb5p-8jgdg (attempt 1)
+[2026-08-20 08:49:48] Assigning job job-msa0sb5p-6scz1 -> worker 4
+[2026-08-20 08:49:49] Spawned worker 4 shell pid=4356 for job-msa0sb5p-6scz1 (attempt 1)
+[2026-08-20 08:50:26] Assigning job job-msa0sb5p-gq52g -> worker 4
+[2026-08-20 08:50:27] Spawned worker 4 shell pid=22048 for job-msa0sb5p-gq52g (attempt 1)
+[2026-08-20 09:16:53] Merging ready job job-msa0sb5p-gq52g (energy-systems-research-2026) from post/energy-systems-research-2026-w4
+[2026-08-20 09:16:53] Defer merge of energy-systems-research-2026 - worker 4 still finishing this job
+[2026-08-20 09:17:15] Assigning job job-msa0sb5p-8jgdg -> worker 4
+[2026-08-20 09:17:16] Spawned worker 4 shell pid=29404 for job-msa0sb5p-8jgdg (attempt 1)
+[2026-08-20 09:17:21] Merging ready job job-msa1m4rp-a3bfe (geopolitics-institutions-research-2026) from post/geopolitics-institutions-research-2026-w3
+[2026-08-20 09:17:21] Defer merge of geopolitics-institutions-research-2026 - worker 3 still finishing this job
+[2026-08-20 09:17:28] Assigning job job-msa0sb5p-6scz1 -> worker 3
+[2026-08-20 09:17:28] Spawned worker 3 shell pid=30588 for job-msa0sb5p-6scz1 (attempt 1)
+[2026-08-20 09:17:33] Merging ready job job-msa1m4rp-a3bfe (geopolitics-institutions-research-2026) from post/geopolitics-institutions-research-2026-w3
+[2026-08-20 09:17:33] Blessing geopolitics-institutions-research-2026 (post/geopolitics-institutions-research-2026-w3) - pausing other workers
+[2026-08-20 09:17:53] merge-ready-job exit=0
+[2026-08-20 09:17:53] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/geopolitics-institutions-research-2026-w3"
+  ],
+  "log": [
+    "merge start slug=geopolitics-institutions-research-2026 branch=post/geopolitics-institutions-research-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/geopolitics-institutions-research-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty GÇö path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/politics-geopolitics-institutions-research-2026-hero.png, scripts/qa-geopolitics-institutions-research-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/GeopoliticsInstitutionsResearchDashboard.tsx, src/data/geopolitics-institutions-research-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/geopolitics-institutions-research-2026-w3"
+  ]
+}
+[2026-08-20 09:17:53] Blessed merge ok - syncing worker clones from main
+[2026-08-20 09:17:59] sync-worker-clones exit=2 \AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/bank-commercial-credit-research-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging scripts/smoke-test-viz-posts.mjs\nCONFLICT (content): Merge conflict in scripts/smoke-test-viz-posts.mjs\nAuto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/posts.ts\nCONFLICT (content): Merge conflict in src/data/posts.ts\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/1)\rerror: could not apply 9022c30... feat(post): adaptation-economics-research-2026 (recovery)\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the"
+    }
+  ]
+}
+[2026-08-20 09:18:00] Shipped: geopolitics-institutions-research-2026 | duration_sec=1797
+[2026-08-20 09:18:00] Closed branch(es) after merge: post/geopolitics-institutions-research-2026-w3
+[2026-08-20 09:18:08] Merging ready job job-msa0sb5p-2dxnh (adaptation-economics-research-2026) from post/adaptation-economics-research-2026-w1
+[2026-08-20 09:18:08] Defer merge of adaptation-economics-research-2026 - worker 5 still finishing this job
+[2026-08-20 09:18:29] Merging ready job job-msa1mcut-2lwgv (chokepoint-commodities-research-2026) from post/chokepoint-commodities-research-2026-w2
+[2026-08-20 09:18:29] Defer merge of chokepoint-commodities-research-2026 - worker 2 still finishing this job
+[2026-08-20 09:18:51] Merging ready job job-msa1mcut-2lwgv (chokepoint-commodities-research-2026) from post/chokepoint-commodities-research-2026-w2
+[2026-08-20 09:18:51] Defer merge of chokepoint-commodities-research-2026 - worker 2 still finishing this job
+[2026-08-20 09:18:57] Merging ready job job-msa1mcut-2lwgv (chokepoint-commodities-research-2026) from post/chokepoint-commodities-research-2026-w2
+[2026-08-20 09:18:57] Defer merge of chokepoint-commodities-research-2026 - worker 2 still finishing this job
+[2026-08-20 09:19:03] Merging ready job job-msa1mcut-2lwgv (chokepoint-commodities-research-2026) from post/chokepoint-commodities-research-2026-w2
+[2026-08-20 09:19:03] Defer merge of chokepoint-commodities-research-2026 - worker 2 still finishing this job
+[2026-08-20 09:19:09] Merging ready job job-msa1mcut-2lwgv (chokepoint-commodities-research-2026) from post/chokepoint-commodities-research-2026-w2
+[2026-08-20 09:19:10] Blessing chokepoint-commodities-research-2026 (post/chokepoint-commodities-research-2026-w2) - pausing other workers
+[2026-08-20 09:19:24] merge-ready-job exit=0
+[2026-08-20 09:19:24] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/chokepoint-commodities-research-2026-w2"
+  ],
+  "log": [
+    "merge start slug=chokepoint-commodities-research-2026 branch=post/chokepoint-commodities-research-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/chokepoint-commodities-research-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty GÇö path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/global-systems-chokepoint-commodities-research-2026-hero.png, scripts/qa-chokepoint-commodities-research-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/ChokepointCommoditiesResearchDashboard.tsx, src/data/chokepoint-commodities-research-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/chokepoint-commodities-research-2026-w2"
+  ]
+}
+[2026-08-20 09:19:24] Blessed merge ok - syncing worker clones from main
+[2026-08-20 09:19:28] sync-worker-clones exit=0 ,
+  "mergedBranch": "post/chokepoint-commodities-research-2026-w2",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/consumer-finance-markets-research-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/bank-commercial-credit-research-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 09:19:29] Shipped: chokepoint-commodities-research-2026 | duration_sec=1911
+[2026-08-20 09:19:29] Closed branch(es) after merge: post/chokepoint-commodities-research-2026-w2
+[2026-08-20 09:19:35] Merging ready job job-msa0sb5p-2dxnh (adaptation-economics-research-2026) from post/adaptation-economics-research-2026-w1
+[2026-08-20 09:19:36] Blessing adaptation-economics-research-2026 (post/adaptation-economics-research-2026-w1) - pausing other workers
+[2026-08-20 09:19:49] merge-ready-job exit=0
+[2026-08-20 09:19:49] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/adaptation-economics-research-2026-w1",
+    "post/adaptation-economics-research-2026-w2"
+  ],
+  "log": [
+    "merge start slug=adaptation-economics-research-2026 branch=post/adaptation-economics-research-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/adaptation-economics-research-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 1",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty GÇö path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/energy-adaptation-economics-research-2026-hero.png, scripts/qa-adaptation-economics-research-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AdaptationEconomicsResearchDashboard.tsx, src/data/adaptation-economics-research-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/adaptation-economics-research-2026-w1, post/adaptation-economics-research-2026-w2"
+  ]
+}
+[2026-08-20 09:19:49] Blessed merge ok - syncing worker clones from main
+[2026-08-20 09:19:53] sync-worker-clones exit=0 5",
+  "mergedBranch": "post/adaptation-economics-research-2026-w1",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/consumer-finance-markets-research-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/bank-commercial-credit-research-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 09:19:53] Shipped: adaptation-economics-research-2026 | duration_sec=1903
+[2026-08-20 09:19:53] Closed branch(es) after merge: post/adaptation-economics-research-2026-w1, post/adaptation-economics-research-2026-w2
+[2026-08-20 09:20:00] Merging ready job job-msa1mpwx-oyqxs (fiscal-plumbing-research-2026) from post/fiscal-plumbing-research-2026-w1
+[2026-08-20 09:20:00] Defer merge of fiscal-plumbing-research-2026 - worker 1 still finishing this job
+[2026-08-20 09:20:06] Merging ready job job-msa1mpwx-oyqxs (fiscal-plumbing-research-2026) from post/fiscal-plumbing-research-2026-w1
+[2026-08-20 09:20:06] Defer merge of fiscal-plumbing-research-2026 - worker 1 still finishing this job
+[2026-08-20 09:20:12] Merging ready job job-msa1mpwx-oyqxs (fiscal-plumbing-research-2026) from post/fiscal-plumbing-research-2026-w1
+[2026-08-20 09:20:12] Defer merge of fiscal-plumbing-research-2026 - worker 1 still finishing this job
+[2026-08-20 09:20:12] WARN: orchestrator loop error (continuing): Invalid JSON primitive: ker 1 starting agent session",
+        "attempts": 1
+      }
+    ]
+  }
+}
+.
+[2026-08-20 09:20:33] Assigning job job-mt1jt2i5-l47cg -> worker 1
+[2026-08-20 09:20:33] Spawned worker 1 shell pid=30900 for job-mt1jt2i5-l47cg (attempt 1)
+[2026-08-20 09:20:37] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 09:20:57] Assigning job job-mt1jt2i5-60swf -> worker 2
+[2026-08-20 09:20:58] Spawned worker 2 shell pid=30480 for job-mt1jt2i5-60swf (attempt 1)
+[2026-08-20 09:21:08] Assigning job job-mt1jt2i5-z76wv -> worker 2
+[2026-08-20 09:21:08] Spawned worker 2 shell pid=4688 for job-mt1jt2i5-z76wv (attempt 1)

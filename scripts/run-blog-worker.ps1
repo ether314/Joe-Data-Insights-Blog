@@ -10,12 +10,13 @@ param(
 
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
+. (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
+[void](Ensure-BlogAutomationPath)
 $LogDir = Join-Path $RepoRoot "artifacts\automation-logs"
 $JobsFile = Join-Path $RepoRoot "artifacts\agent-jobs.json"
-$WorktreeRoot = if ($env:BLOG_WORKTREE_ROOT) { $env:BLOG_WORKTREE_ROOT } else {
-    Join-Path (Split-Path -Parent $RepoRoot) "data-insights-blog-worktrees"
-}
-$WorktreePath = Join-Path $WorktreeRoot "worker-$WorkerId"
+$WorktreeRoot = Get-BlogWorkerRoot $RepoRoot
+$WorktreePath = Get-BlogWorkerPath $RepoRoot $WorkerId
+$ContainerName = Get-BlogWorkerContainerName $WorkerId
 # Per-worker listen ports so parallel npm run deploy / Playwright never share one Node server.
 # W1: 4180/4181 ... W5: 4188/4189
 $SmokePort = 4180 + (($WorkerId - 1) * 2)
@@ -58,12 +59,45 @@ function Read-Jobs {
     throw "Read-Jobs failed after retries: $lastErr"
 }
 
+function Wait-ConveyorIdle {
+    $syncFile = Join-Path $RepoRoot "artifacts\conveyor-sync.json"
+    $deadline = (Get-Date).AddMinutes(20)
+    while ((Get-Date) -lt $deadline) {
+        if (-not (Test-Path $syncFile)) { return }
+        try {
+            $sync = (Get-Content $syncFile -Raw -ErrorAction Stop) -replace '^\uFEFF', '' | ConvertFrom-Json
+            $phase = [string]$sync.phase
+            if (-not $phase -or $phase -eq "idle") { return }
+            Write-Log "Conveyor $phase (bless/sync) - worker $WorkerId waiting (no writes)"
+            try {
+                & node (Join-Path $RepoRoot "scripts\lib\conveyor-sync.mjs") --ack "$WorkerId" 2>$null | Out-Null
+            } catch {}
+            Start-Sleep -Seconds 3
+        } catch {
+            return
+        }
+    }
+    Write-Log "WARN: conveyor still paused after 20m - continuing"
+}
+
 if (-not (Get-Command agent -ErrorAction SilentlyContinue)) {
     Write-Log "ERROR: Cursor agent CLI not found"
+    if ($JobId) {
+        try {
+            Invoke-JobUpdate @(
+                "--job", $JobId,
+                "--status", "failed",
+                "--error", "cursor_cli_missing",
+                "--activity", "Failed: Cursor agent CLI not on PATH"
+            )
+        } catch {
+            Write-Log "WARN: could not stamp cursor_cli_missing on $JobId : $_"
+        }
+    }
     exit 1
 }
 if (-not (Test-Path $WorktreePath)) {
-    Write-Log "ERROR: Worktree missing at $WorktreePath - run scripts/bootstrap-worktrees.ps1"
+    Write-Log "ERROR: Worker clone missing at $WorktreePath - run scripts/bootstrap-worktrees.ps1"
     exit 1
 }
 
@@ -86,7 +120,7 @@ if (-not $job) {
 }
 
 $slug = $job.slug
-$isRecovery = ($WorkerId -eq 5) -or ($job.recovery -eq $true)
+$isRecovery = ($job.recovery -eq $true)
 
 function Resolve-CanonicalPostBranch {
     param($JobObj, [int]$Wid, [bool]$Recovery)
@@ -105,14 +139,22 @@ function Resolve-CanonicalPostBranch {
         $bestAhead = -1
         for ($w = 1; $w -le 4; $w++) {
             $cand = "post/$($JobObj.slug)-w$w"
+            $lookDirs = @((Get-BlogWorkerPath $RepoRoot $w), $RepoRoot)
             $prev = $ErrorActionPreference
             $ErrorActionPreference = "Continue"
-            $null = & git -C $RepoRoot rev-parse --verify $cand 2>&1
-            $ok = ($LASTEXITCODE -eq 0)
+            $ok = $false
             $ahead = 0
-            if ($ok) {
-                $aheadRaw = & git -C $RepoRoot rev-list --count "master..$cand" 2>&1
+            foreach ($dir in $lookDirs) {
+                if (-not (Test-Path $dir)) { continue }
+                $null = & git -C $dir rev-parse --verify $cand 2>&1
+                if ($LASTEXITCODE -ne 0) { continue }
+                $ok = $true
+                $aheadRaw = & git -C $dir rev-list --count "origin/master..$cand" 2>&1
+                if ($LASTEXITCODE -ne 0) {
+                    $aheadRaw = & git -C $dir rev-list --count "master..$cand" 2>&1
+                }
                 if ($LASTEXITCODE -eq 0) { $ahead = [int]([string]$aheadRaw).Trim() }
+                break
             }
             $ErrorActionPreference = $prev
             if ($ok -and $ahead -gt $bestAhead) {
@@ -139,7 +181,9 @@ if ($isRecovery) {
 }
 
 $recoveryTag = if ($isRecovery) { " [RECOVERY]" } else { "" }
-Write-Log "Worker $WorkerId starting job $JobId ($slug) in $WorktreePath (branch $branch)$recoveryTag"
+Write-Log "Worker $WorkerId starting job $JobId ($slug) in $WorktreePath (branch $branch, container $ContainerName)$recoveryTag"
+
+Wait-ConveyorIdle
 
 # Persist canonical branch (non-fatal - never block startup logging / dispatch)
 try {
@@ -148,10 +192,9 @@ try {
     Write-Log "WARN: could not persist branch on job: $_"
 }
 
-# Ensure worktree has latest automation scripts / package deploy definition from main
-robocopy (Join-Path $RepoRoot "scripts") (Join-Path $WorktreePath "scripts") /E /XO /NFL /NDL /NJH /NJS /NP | Out-Null
-Copy-Item (Join-Path $RepoRoot "package.json") (Join-Path $WorktreePath "package.json") -Force -ErrorAction SilentlyContinue
+# Do not copy src/public from main into this clone (that is how workers overwrote each other).
 $env:BLOG_REPO_ROOT = $RepoRoot
+$env:BLOG_WORKTREE_ROOT = $WorktreeRoot
 
 function Invoke-GitQuiet {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$GitArgs)
@@ -170,55 +213,81 @@ function Invoke-GitQuiet {
     }
 }
 
-# Prepare worktree branch
+# Prepare isolated clone on the job branch (never commit to master/main).
 Push-Location $WorktreePath
 try {
-    $mainSha = (& git -C $RepoRoot rev-parse master).Trim()
-    if (-not $mainSha -or $mainSha.Length -lt 7) {
-        throw "Could not resolve master SHA (got '$mainSha')"
-    }
+    $independent = Test-IndependentGitClone $WorktreePath
+    $gitRoot = if ($independent) { $WorktreePath } else { $RepoRoot }
 
-    # If another worktree holds our canonical branch, detach it so we can reuse the tip.
-    $wtPorcelain = & git -C $RepoRoot worktree list --porcelain
-    $otherPath = $null
-    $curPath = $null
-    foreach ($line in ($wtPorcelain -split "`n")) {
-        if ($line -match '^worktree (.+)$') { $curPath = $Matches[1].Trim() }
-        if ($line -match '^branch refs/heads/(.+)$') {
-            $bname = $Matches[1].Trim()
-            if ($bname -eq $branch -and $curPath -and ($curPath -ne $WorktreePath)) {
-                $otherPath = $curPath
+    if ($independent) {
+        Write-Log "Fetching origin (main merge target) into isolated clone"
+        [void](Invoke-GitQuiet fetch origin)
+        $mainSha = $null
+        foreach ($ref in @("origin/master", "origin/main", "master", "main")) {
+            $prev = $ErrorActionPreference
+            $ErrorActionPreference = "Continue"
+            $sha = (& git -C $WorktreePath rev-parse $ref 2>$null | Select-Object -First 1)
+            $ErrorActionPreference = $prev
+            if ($sha) { $mainSha = ([string]$sha).Trim(); break }
+        }
+        # Recovery: import producer job branch from sibling clones if origin does not have it.
+        if ($isRecovery -and $branch) {
+            for ($w = 1; $w -le 5; $w++) {
+                if ($w -eq $WorkerId) { continue }
+                $sib = Get-BlogWorkerPath $RepoRoot $w
+                if (-not (Test-IndependentGitClone $sib)) { continue }
+                $prev = $ErrorActionPreference
+                $ErrorActionPreference = "Continue"
+                & git -C $WorktreePath fetch $sib "+refs/heads/${branch}:refs/heads/${branch}" 2>&1 | ForEach-Object { Write-Log "git: $_" }
+                $ErrorActionPreference = $prev
             }
         }
-    }
-    if ($otherPath) {
-        Write-Log "Releasing $branch from other worktree $otherPath (detach -> master)"
-        $prev = $ErrorActionPreference
-        $ErrorActionPreference = "Continue"
-        & git -C $otherPath checkout --detach $mainSha 2>&1 | ForEach-Object { Write-Log "git: $_" }
-        $ErrorActionPreference = $prev
+    } else {
+        $mainSha = (& git -C $RepoRoot rev-parse master).Trim()
+        # Legacy linked worktree: release branch from a sibling worktree only.
+        $wtPorcelain = & git -C $RepoRoot worktree list --porcelain
+        $otherPath = $null
+        $curPath = $null
+        foreach ($line in ($wtPorcelain -split "`n")) {
+            if ($line -match '^worktree (.+)$') { $curPath = $Matches[1].Trim() }
+            if ($line -match '^branch refs/heads/(.+)$') {
+                $bname = $Matches[1].Trim()
+                if ($bname -eq $branch -and $curPath -and ($curPath -ne $WorktreePath)) {
+                    $otherPath = $curPath
+                }
+            }
+        }
+        if ($otherPath) {
+            Write-Log "Releasing $branch from other worktree $otherPath (detach -> master)"
+            $prev = $ErrorActionPreference
+            $ErrorActionPreference = "Continue"
+            & git -C $otherPath checkout --detach $mainSha 2>&1 | ForEach-Object { Write-Log "git: $_" }
+            $ErrorActionPreference = $prev
+        }
     }
 
-    # Decide start tip: reuse existing branch tip when it has commits ahead of master (real WIP).
+    if (-not $mainSha -or $mainSha.Length -lt 7) {
+        throw "Could not resolve main SHA (got '$mainSha')"
+    }
+
+    # Reuse existing job-branch tip in THIS clone when it has commits ahead of main.
     $startTip = $mainSha
-    $branchExists = $false
     $aheadN = 0
     $prev = $ErrorActionPreference
     $ErrorActionPreference = "Continue"
-    $null = & git -C $RepoRoot rev-parse --verify $branch 2>&1
+    $null = & git -C $gitRoot rev-parse --verify $branch 2>&1
     if ($LASTEXITCODE -eq 0) {
-        $branchExists = $true
-        $aheadRaw = & git -C $RepoRoot rev-list --count "master..$branch" 2>&1
+        $aheadRaw = & git -C $gitRoot rev-list --count "$mainSha..$branch" 2>&1
         if ($LASTEXITCODE -eq 0) { $aheadN = [int]([string]$aheadRaw).Trim() }
         if ($aheadN -gt 0) {
-            $startTip = (& git -C $RepoRoot rev-parse $branch).Trim()
+            $startTip = (& git -C $gitRoot rev-parse $branch).Trim()
             Write-Log "Reusing existing WIP tip $branch @ $startTip (ahead=$aheadN)"
         } else {
-            Write-Log "Existing $branch is empty vs master - resetting from master $mainSha"
+            Write-Log "Existing $branch is empty vs main - resetting from $mainSha"
             $startTip = $mainSha
         }
     } else {
-        Write-Log "Creating $branch from master $mainSha"
+        Write-Log "Creating $branch from main $mainSha"
     }
     $ErrorActionPreference = $prev
 
@@ -226,10 +295,8 @@ try {
         throw "Refusing checkout -B without explicit start tip (got '$startTip')"
     }
 
-    Write-Log "Resetting worktree then checkout $branch at $startTip"
+    Write-Log "Resetting clone then checkout $branch at $startTip (never master)"
     [void](Invoke-GitQuiet reset --hard HEAD)
-    # Always clear untracked scripts/ that block checkout (robocopy leaves QA scripts that
-    # collide with branch switches). Keep untracked src/public post WIP on recovery.
     [void](Invoke-GitQuiet clean -fd -- scripts)
     if (-not $isRecovery) {
         [void](Invoke-GitQuiet clean -fd)
@@ -237,20 +304,17 @@ try {
         Write-Log "Recovery: cleaned scripts/; keeping other untracked WIP"
     }
     [void](Invoke-GitQuiet checkout --detach $mainSha)
-    # Always pass an explicit SHA - never `checkout -B $branch` alone (that aliases previous HEAD).
     $co = Invoke-GitQuiet checkout -B $branch $startTip
     if ($co -ne 0) {
-        Write-Log "WARN: checkout failed ($co); force-recreate $branch at $startTip"
-        # Delete branch from main repo (may be locked by this worktree)
+        Write-Log "WARN: checkout failed ($co); delete local job branch and retry"
         $prev = $ErrorActionPreference
         $ErrorActionPreference = "Continue"
-        & git -C $RepoRoot branch -D $branch 2>&1 | ForEach-Object { Write-Log "git: $_" }
+        & git -C $WorktreePath branch -D $branch 2>&1 | ForEach-Object { Write-Log "git: $_" }
         $ErrorActionPreference = $prev
         [void](Invoke-GitQuiet checkout --detach $mainSha)
         $co = Invoke-GitQuiet checkout -B $branch $startTip
     }
     if ($co -ne 0) {
-        # Last resort: move blocking untracked files aside then retry once
         Write-Log "WARN: checkout still failing - parking untracked blockers"
         $aside = Join-Path $WorktreePath "artifacts\worktree-aside-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
         New-Item -ItemType Directory -Path $aside -Force | Out-Null
@@ -269,15 +333,6 @@ try {
         $co = Invoke-GitQuiet checkout -B $branch $startTip
     }
     if ($co -ne 0) { throw "Failed to checkout branch $branch at $startTip (exit $co)" }
-    # Overlay current main scripts/src/public so tooling stays current (XO = older only)
-    robocopy (Join-Path $RepoRoot "scripts") (Join-Path $WorktreePath "scripts") /E /XO /NFL /NDL /NJH /NJS /NP | Out-Null
-    if (-not $isRecovery -or $aheadN -eq 0) {
-        # Fresh lane: sync src/public from main. Recovery with WIP keeps branch trees.
-        robocopy (Join-Path $RepoRoot "src") (Join-Path $WorktreePath "src") /E /XO /NFL /NDL /NJH /NJS /NP | Out-Null
-        robocopy (Join-Path $RepoRoot "public") (Join-Path $WorktreePath "public") /E /XO /NFL /NDL /NJH /NJS /NP | Out-Null
-    } else {
-        Copy-Item (Join-Path $RepoRoot "package.json") (Join-Path $WorktreePath "package.json") -Force -ErrorAction SilentlyContinue
-    }
 } catch {
     Write-Log "ERROR preparing worktree: $_"
     Invoke-JobUpdate @(
@@ -399,7 +454,7 @@ $script:LastAgentOutputAt = Get-Date
 $silenceWatchdog = $null
 
 try {
-    Write-Log "Invoking agent for worker $WorkerId (-p --force --trust --workspace worktree)"
+    Write-Log "Invoking agent for worker $WorkerId (-p --force --trust --workspace clone $WorktreePath / $ContainerName)"
     $silenceWatchdog = Start-Job -ScriptBlock {
         param($JobsFile, $JobId, $ParentPid, $SilenceMin, $LogFile)
         $idleSince = Get-Date
@@ -642,14 +697,19 @@ if ($job -and $job.status -eq "ready") {
     # If agent exited without ready, check for commit on branch
     Push-Location $WorktreePath
     $hasCommit = $false
+    $sawReady = $false
     try {
         $log = git log -1 --oneline 2>$null
         if ($log -match [regex]::Escape($slug)) { $hasCommit = $true }
         if (Test-Path "out\blog\$slug\index.html") { $hasCommit = $true }
+        if (Test-Path $LogFile) {
+            $sawReady = [bool](Select-String -Path $LogFile -Pattern "WorkerReady:" -Quiet -ErrorAction SilentlyContinue)
+        }
     } catch {}
     Pop-Location
-    if ($hasCommit -and $sessionExit -eq 0) {
-        Invoke-JobUpdate @("--job", $JobId, "--status", "ready", "--activity", "Agent exited 0 with post artifacts")
+    if (($hasCommit -or $sawReady) -and $sessionExit -eq 0) {
+        $why = if ($sawReady) { "WorkerReady in session log" } else { "post artifacts on branch" }
+        Invoke-JobUpdate @("--job", $JobId, "--status", "ready", "--activity", "Agent exited 0 with $why")
     } else {
         Invoke-JobUpdate @(
             "--job", $JobId,
@@ -662,30 +722,38 @@ if ($job -and $job.status -eq "ready") {
 
 Invoke-JobUpdate @("--worker", "$WorkerId", "--clear", "--pid", "$PID", "--job", $JobId)
 
-# Release the branch so recovery can reuse the same ref. Delete empty litter tips.
+# Park on detached main tip in THIS clone. Never delete branches on the main merge repo.
 try {
     $jobs2 = Read-Jobs
     $job2 = @($jobs2.jobs | Where-Object { $_.id -eq $JobId } | Select-Object -First 1)
     $status2 = if ($job2) { [string]$job2.status } else { "" }
     Push-Location $WorktreePath
     try {
-        $mainSha2 = (& git -C $RepoRoot rev-parse master).Trim()
+        $independent = Test-IndependentGitClone $WorktreePath
+        $mainSha2 = $null
+        if ($independent) {
+            [void](Invoke-GitQuiet fetch origin)
+            $mainSha2 = (& git -C $WorktreePath rev-parse origin/master 2>$null | Select-Object -First 1)
+            if (-not $mainSha2) { $mainSha2 = (& git -C $WorktreePath rev-parse origin/main 2>$null | Select-Object -First 1) }
+        }
+        if (-not $mainSha2) { $mainSha2 = (& git -C $RepoRoot rev-parse master).Trim() }
+        $mainSha2 = ([string]$mainSha2).Trim()
         [void](Invoke-GitQuiet checkout --detach $mainSha2)
         if ($status2 -in @("failed", "shipped") -or $status2 -eq "") {
             $prev = $ErrorActionPreference
             $ErrorActionPreference = "Continue"
-            $aheadRaw = & git -C $RepoRoot rev-list --count "master..$branch" 2>&1
+            $aheadRaw = & git -C $WorktreePath rev-list --count "$mainSha2..$branch" 2>&1
             $aheadN2 = 0
             if ($LASTEXITCODE -eq 0) { $aheadN2 = [int]([string]$aheadRaw).Trim() }
             $ErrorActionPreference = $prev
             if ($status2 -eq "shipped" -or $aheadN2 -eq 0) {
-                Write-Log "Deleting post branch $branch (status=$status2 ahead=$aheadN2)"
+                Write-Log "Deleting local clone branch $branch (status=$status2 ahead=$aheadN2)"
                 $prev = $ErrorActionPreference
                 $ErrorActionPreference = "Continue"
-                & git -C $RepoRoot branch -D $branch 2>&1 | ForEach-Object { Write-Log "git: $_" }
+                & git -C $WorktreePath branch -D $branch 2>&1 | ForEach-Object { Write-Log "git: $_" }
                 $ErrorActionPreference = $prev
             } elseif ($status2 -eq "failed") {
-                Write-Log "Keeping WIP branch $branch for recovery (ahead=$aheadN2)"
+                Write-Log "Keeping WIP branch $branch in clone for recovery (ahead=$aheadN2)"
             }
         }
     } finally {

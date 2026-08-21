@@ -5,6 +5,9 @@
 
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
+. (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
+. (Join-Path $RepoRoot "scripts\lib\worker-pause.ps1")
+[void](Ensure-BlogAutomationPath)
 $LogDir = Join-Path $RepoRoot "artifacts\automation-logs"
 $LockFile = Join-Path $RepoRoot "artifacts\blog-production-lock.json"
 $PidFile = Join-Path $RepoRoot "artifacts\blog-orchestrator.pid"
@@ -31,6 +34,7 @@ if ($SpawnStaggerSeconds -lt 0) { $SpawnStaggerSeconds = 0 }
 $StaleJobMinutes = if ($env:BLOG_ORCH_STALE_MIN) { [double]$env:BLOG_ORCH_STALE_MIN } else { 40 }
 # Worker slot busy with dead/hung process (no job heartbeat) - reclaim sooner.
 $StaleWorkerMinutes = if ($env:BLOG_ORCH_STALE_WORKER_MIN) { [double]$env:BLOG_ORCH_STALE_WORKER_MIN } else { 45 }
+$script:W5SpawnBackoffUntil = $null
 
 New-Item -ItemType Directory -Path $LogDir -Force | Out-Null
 New-Item -ItemType Directory -Path (Join-Path $RepoRoot "artifacts\locks") -Force | Out-Null
@@ -60,7 +64,7 @@ function Write-Lock($Status, $Notes) {
         trigger = "orchestrator"
         lastSlug = if ($script:LastSlug) { $script:LastSlug } else { $lastSlug }
         notes = $Notes
-        mode = "parallel-worktrees"
+        mode = "docker-isolated-workers"
     }
     $payload | ConvertTo-Json | Set-Content -Path $LockFile -Encoding UTF8
 }
@@ -183,6 +187,7 @@ function Start-WorkerJob([int]$WorkerId, [string]$JobId) {
         # Brief settle - if spawn args were still wrong the process exits instantly.
         Start-Sleep -Seconds 4
         if (Get-Process -Id $proc.Id -ErrorAction SilentlyContinue) {
+            if ($WorkerId -eq $RecoveryWorkerId) { $script:W5SpawnBackoffUntil = $null }
             return
         }
         Write-Log "WARN: worker $WorkerId pid=$($proc.Id) exited immediately after spawn (attempt $spawnAttempt)"
@@ -194,6 +199,10 @@ function Start-WorkerJob([int]$WorkerId, [string]$JobId) {
     if ($dead) {
         # update-agent-job soft-requeues worker_spawn_failed when budget remains
         Fail-Job $dead "worker_spawn_failed" "Failed: worker process exited immediately after spawn"
+    }
+    if ($WorkerId -eq $RecoveryWorkerId) {
+        $script:W5SpawnBackoffUntil = (Get-Date).AddMinutes(2)
+        Write-Log "W5 spawn backoff until $($script:W5SpawnBackoffUntil.ToUniversalTime().ToString('o')) (not a tight retry loop)"
     }
 }
 
@@ -273,6 +282,72 @@ function Invoke-HardenedMerge($Job) {
     }
 }
 
+function Set-ConveyorPhase {
+    param(
+        [string]$Phase,
+        [string]$JobId = "",
+        [string]$Slug = "",
+        [string]$Branch = "",
+        [string]$Exclude = ""
+    )
+    $argsList = @("--set-phase", $Phase)
+    if ($JobId) { $argsList += @("--job", $JobId) }
+    if ($Slug) { $argsList += @("--slug", $Slug) }
+    if ($Branch) { $argsList += @("--branch", $Branch) }
+    if ($Exclude) { $argsList += @("--exclude", $Exclude) }
+    Invoke-NodeTsx "scripts/lib/conveyor-sync.mjs" $argsList | Out-Null
+}
+
+function Read-ConveyorPhase {
+    $file = Join-Path $RepoRoot "artifacts\conveyor-sync.json"
+    if (-not (Test-Path $file)) { return "idle" }
+    try {
+        $cur = (Get-Content $file -Raw) -replace '^\uFEFF', '' | ConvertFrom-Json
+        if ($cur.phase) { return [string]$cur.phase }
+    } catch {}
+    return "idle"
+}
+
+function Invoke-BlessedMerge($Job) {
+    $slug = $Job.slug
+    $branch = if ($Job.branch) { $Job.branch } else { "post/$slug" }
+    $exclude = if ($Job.workerId) { [string]$Job.workerId } else { "0" }
+    Write-Log "Blessing $slug ($branch) - pausing other workers"
+
+    Set-ConveyorPhase -Phase "pausing" -JobId $Job.id -Slug $slug -Branch $branch -Exclude $exclude
+    try {
+        Pause-WorkerFleet -RepoRoot $RepoRoot -ExcludeId ([int]$exclude)
+    } catch {
+        Write-Log "WARN: pause fleet: $_"
+    }
+    Start-Sleep -Seconds 2
+
+    Set-ConveyorPhase -Phase "merging" -JobId $Job.id -Slug $slug -Branch $branch -Exclude $exclude
+    Invoke-NodeTsx "scripts/update-agent-job.mjs" @(
+        "--job", $Job.id, "--status", "merging", "--activity", "Orchestrator merging $branch (blessed)"
+    ) | Out-Null
+    $result = Invoke-HardenedMerge $Job
+
+    if ($result.Ok) {
+        Write-Log "Blessed merge ok - syncing worker clones from main"
+        Set-ConveyorPhase -Phase "syncing" -JobId $Job.id -Slug $slug -Branch $branch -Exclude $exclude
+        $syncScript = Join-Path $RepoRoot "scripts\sync-worker-clones.mjs"
+        $syncOut = & node $syncScript --exclude $exclude --merged-branch $branch 2>&1 | Out-String
+        $syncExit = $LASTEXITCODE
+        $trim = $syncOut.Trim()
+        if ($trim.Length -gt 1200) { $trim = $trim.Substring($trim.Length - 1200) }
+        Write-Log "sync-worker-clones exit=$syncExit $trim"
+    }
+
+    try {
+        Resume-WorkerFleet -RepoRoot $RepoRoot
+    } catch {
+        Write-Log "WARN: resume fleet: $_"
+    }
+    Set-ConveyorPhase -Phase "idle"
+    return $result
+}
+
 function Merge-ReadyJob($Job) {
     $slug = $Job.slug
     $branch = $Job.branch
@@ -298,10 +373,10 @@ function Merge-ReadyJob($Job) {
     }
 
     Invoke-NodeTsx "scripts/update-agent-job.mjs" @(
-        "--job", $Job.id, "--status", "merging", "--activity", "Orchestrator merging $branch"
+        "--job", $Job.id, "--status", "blessing", "--activity", "Orchestrator blessing $branch"
     ) | Out-Null
 
-    $result = Invoke-HardenedMerge $Job
+    $result = Invoke-BlessedMerge $Job
     if (-not $result.Ok) {
         $err = if ($result.Parsed -and $result.Parsed.error) { [string]$result.Parsed.error } else { "merge_failed" }
         $detail = if ($result.Parsed -and $result.Parsed.detail) { [string]$result.Parsed.detail } else { $result.Raw }
@@ -511,9 +586,19 @@ Write-Lock "running" "Orchestrator started"
 # Park heavy skills once for all workers
 $parkScript = Join-Path $RepoRoot "scripts\run-blog-production-local.ps1"
 # Reuse park via a tiny inline call - invoke bootstrap + skill park from production helpers
-Write-Log "Bootstrapping worktrees..."
+Write-Log "Bootstrapping worker clones + Docker containers..."
+$env:BLOG_WORKTREE_ROOT = Get-BlogWorkerRoot $RepoRoot
+Export-BlogWorkerComposeEnv $RepoRoot | Out-Null
 & powershell -NoProfile -ExecutionPolicy Bypass -File $BootstrapScript
 if ($LASTEXITCODE -ne 0) { Write-Log "WARN: bootstrap returned $LASTEXITCODE" }
+
+# Unpause any leftover bless (crash during previous merge)
+try {
+    Resume-WorkerFleet -RepoRoot $RepoRoot
+    Set-ConveyorPhase -Phase "idle"
+} catch {
+    Write-Log "WARN: conveyor unpause on start: $_"
+}
 
 # Park skills (same as production shell)
 $SkillsRoot = Join-Path $env:USERPROFILE ".cursor\skills"
@@ -575,14 +660,30 @@ try {
 
         Clear-StaleJobs (Read-Jobs)
 
-        # Fill idle production workers (1-4) FIRST
-        $claimExit = Invoke-NodeTsx "scripts/claim-next-topics.mjs" @("--run-id", $RunId, "--max", "$WorkerCount")
+        $jobsObj = Read-Jobs
+        $recBusy = Test-WorkerRunning $RecoveryWorkerId
+        $recSlot = $jobsObj.workers."$RecoveryWorkerId"
+        $recFree = (-not $recBusy) -and (-not ($recSlot -and $recSlot.jobId -and $recSlot.status -eq "busy"))
+        if ($recFree -and $script:W5SpawnBackoffUntil -and ((Get-Date) -lt $script:W5SpawnBackoffUntil)) {
+            Write-Log "Skip W5 extra claim - spawn backoff until $($script:W5SpawnBackoffUntil.ToString('HH:mm:ss'))"
+            $recFree = $false
+        }
+
+        # Fill idle producer slots. W5 is recovery-first; if it is free, claim an extra
+        # producer topic so the slot never idles when there is nothing to recover.
+        $claimMax = $WorkerCount
+        $claimArgs = @("--run-id", $RunId, "--max", "$claimMax")
+        if ($recFree) {
+            $claimMax = $TotalWorkerSlots
+            $claimArgs = @("--run-id", $RunId, "--include-recovery-idle", "--max", "$claimMax")
+        }
+        $claimExit = Invoke-NodeTsx "scripts/claim-next-topics.mjs" $claimArgs
         if ($claimExit -ne 0) {
             Write-Log "WARN: claim-next-topics exit=$claimExit"
         }
 
         $jobsObj = Read-Jobs
-        # Only assign non-recovery claimed jobs to workers 1-4
+        # Non-recovery claimed jobs go to workers 1-4 first; leftover may go to W5.
         $claimed = @($jobsObj.jobs | Where-Object {
             $_.status -eq "claimed" -and -not $_.workerId -and (-not $_.recovery)
         })
@@ -605,11 +706,14 @@ try {
             $jobsObj = Read-Jobs
         }
 
-        # Recovery worker (5): finish one Failed-before-merge job at a time
+        # Recovery worker (5): Failed-before-merge first; else a producer topic (never idle).
         $jobsObj = Read-Jobs
         $recBusy = Test-WorkerRunning $RecoveryWorkerId
         $recSlot = $jobsObj.workers."$RecoveryWorkerId"
         $recFree = (-not $recBusy) -and (-not ($recSlot -and $recSlot.jobId -and $recSlot.status -eq "busy"))
+        if ($recFree -and $script:W5SpawnBackoffUntil -and ((Get-Date) -lt $script:W5SpawnBackoffUntil)) {
+            $recFree = $false
+        }
         if ($recFree) {
             $recJob = @($jobsObj.jobs | Where-Object {
                 $_.status -eq "claimed" -and $_.recovery -and -not $_.workerId
@@ -624,7 +728,6 @@ try {
                     $_.status -eq "claimed" -and $_.recovery -and -not $_.workerId
                 } | Select-Object -First 1)
             }
-            # Bail if somehow already bound (race with prior dispatch)
             if ($recJob -and $recJob.workerId) {
                 Write-Log "Skip recovery assign $($recJob.id) - already bound to worker $($recJob.workerId)"
                 $recJob = $null
@@ -633,6 +736,19 @@ try {
                 Write-Log "Assigning recovery job $($recJob.id) ($($recJob.slug)) -> worker $RecoveryWorkerId"
                 Start-WorkerJob -WorkerId $RecoveryWorkerId -JobId $recJob.id
                 $assignedThisLoop++
+            } else {
+                $prodJob = @($jobsObj.jobs | Where-Object {
+                    $_.status -eq "claimed" -and -not $_.workerId -and (-not $_.recovery)
+                } | Select-Object -First 1)
+                if ($prodJob) {
+                    Write-Log "W5 idle (no recovery candidate) - assigning producer $($prodJob.id) ($($prodJob.slug))"
+                    if ($assignedThisLoop -gt 0 -and $SpawnStaggerSeconds -gt 0) {
+                        Write-Log "Staggering next agent spawn by ${SpawnStaggerSeconds}s (avoid concurrent Cursor connects)"
+                        Start-Sleep -Seconds $SpawnStaggerSeconds
+                    }
+                    Start-WorkerJob -WorkerId $RecoveryWorkerId -JobId $prodJob.id
+                    $assignedThisLoop++
+                }
             }
         }
 

@@ -34,6 +34,7 @@ function assert(cond, msg) {
 assert(isSoftRequeueError("transport_kill"), "transport_kill is classified infra/soft");
 assert(isSoftRequeueError("silence_kill"), "silence_kill is classified infra/soft");
 assert(isSoftRequeueError("worker_spawn_failed"), "worker_spawn_failed is classified infra/soft");
+assert(isSoftRequeueError("cursor_cli_missing"), "cursor_cli_missing is classified infra/soft");
 assert(
   !isSoftRequeueError("worker_exit_1"),
   "raw worker_exit_1 is NOT soft-requeueable (must remap first)",

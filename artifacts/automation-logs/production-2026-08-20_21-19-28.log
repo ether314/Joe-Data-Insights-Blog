@@ -1,0 +1,1096 @@
+[2026-08-20 21:19:29] Starting orchestrator (orch-20260820-211928)
+[2026-08-20 21:19:29] Transport mitigations: producers=4 spawnStagger=20s (env BLOG_PRODUCTION_WORKER_COUNT / BLOG_WORKER_SPAWN_STAGGER_SEC)
+[2026-08-20 21:19:30] Bootstrapping worker clones + Docker containers...
+[2026-08-20 21:20:47] Seeding topic failure flags from history...
+[2026-08-20 21:20:47] flags seed: {"blockedStems":2,"blockedThemes":0,"failures":2}
+[2026-08-20 21:20:47] Recovering any orphaned merge state...
+[2026-08-20 21:20:48] merge recover: {
+  "recover": true,
+  "recovered": false,
+  "reason": "no stash state"
+}
+[2026-08-20 21:20:53] Assigning job job-mt29je86-t8imy -> worker 4
+[2026-08-20 21:21:03] Spawned worker 4 shell pid=24876 for job-mt29je86-t8imy (attempt 1)
+[2026-08-20 21:21:10] Merging ready job job-mt28skwh-gdiqo (ai-financing-concentration-2026) from post/ai-financing-concentration-2026-w5
+[2026-08-20 21:21:10] Blessing ai-financing-concentration-2026 (post/ai-financing-concentration-2026-w5) - pausing other workers
+[2026-08-20 21:21:43] merge-ready-job exit=0
+[2026-08-20 21:21:43] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-financing-concentration-2026-w5"
+  ],
+  "log": [
+    "merge start slug=ai-financing-concentration-2026 branch=post/ai-financing-concentration-2026-w5",
+    "worktree: using existing branch tip",
+    "fetched post/ai-financing-concentration-2026-w5 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 6",
+    "post allowlist on branch: 30 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/capital-markets-ai-financing-concentration-2026-hero.png, scripts/qa-ai-financing-concentration-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiFinancingConcentrationDashboard.tsx, src/data/ai-financing-concentration-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-financing-concentration-2026-w5"
+  ]
+}
+[2026-08-20 21:21:43] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:22:17] sync-worker-clones exit=0   "mergedBranch": "post/ai-financing-concentration-2026-w5",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "rebased post/ai-capex-intensity-update-202608-w1",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/ai-supply-chain-update-202608-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-update-202608-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/ai-compute-demand-concentration-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 21:22:18] Shipped: ai-financing-concentration-2026 | duration_sec=1331
+[2026-08-20 21:22:19] Closed branch(es) after merge: post/ai-financing-concentration-2026-w5
+[2026-08-20 21:22:29] W5 idle (no recovery candidate) - assigning producer job-mt29lgbo-1pzd0 (consumer-finance-markets-concentration-2026)
+[2026-08-20 21:22:29] Assigning job job-mt29lgbo-1pzd0 -> worker 5
+[2026-08-20 21:22:30] Spawned worker 5 shell pid=21228 for job-mt29lgbo-1pzd0 (attempt 1)
+[2026-08-20 21:22:34] Merging ready job job-mt28qhwg-x494y (energy-systems-update-202608) from post/energy-systems-update-202608-w4
+[2026-08-20 21:22:35] Blessing energy-systems-update-202608 (post/energy-systems-update-202608-w4) - pausing other workers
+[2026-08-20 21:22:59] merge-ready-job exit=0
+[2026-08-20 21:22:59] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/energy-systems-update-202608-w4"
+  ],
+  "log": [
+    "merge start slug=energy-systems-update-202608 branch=post/energy-systems-update-202608-w4",
+    "worktree: using existing branch tip",
+    "fetched post/energy-systems-update-202608-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 26 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/energy-energy-systems-update-202608-hero.png, scripts/qa-energy-systems-update-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/EnergySystemsUpdate202608Dashboard.tsx, src/data/energy-systems-update-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/energy-systems-update-202608-w4"
+  ]
+}
+[2026-08-20 21:22:59] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:23:21] sync-worker-clones exit=0 ate-202608-w4",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "rebased post/ai-capex-intensity-update-202608-w1",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/ai-supply-chain-update-202608-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-update-202608-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/ai-compute-demand-concentration-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/consumer-finance-markets-concentration-2026-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 21:23:25] Shipped: energy-systems-update-202608 | duration_sec=1474
+[2026-08-20 21:23:25] Closed branch(es) after merge: post/energy-systems-update-202608-w4
+[2026-08-20 21:25:07] Merging ready job job-mt295ne2-292xa (macro-growth-trade-update-202608) from post/macro-growth-trade-update-202608-w3
+[2026-08-20 21:25:07] Defer merge of macro-growth-trade-update-202608 - worker 3 still finishing this job
+[2026-08-20 21:25:30] Merging ready job job-mt295ne2-292xa (macro-growth-trade-update-202608) from post/macro-growth-trade-update-202608-w3
+[2026-08-20 21:25:30] Defer merge of macro-growth-trade-update-202608 - worker 3 still finishing this job
+[2026-08-20 21:25:53] Assigning job job-mt29pu8s-qfb3e -> worker 3
+[2026-08-20 21:25:53] Spawned worker 3 shell pid=384 for job-mt29pu8s-qfb3e (attempt 1)
+[2026-08-20 21:25:58] Merging ready job job-mt295ne2-292xa (macro-growth-trade-update-202608) from post/macro-growth-trade-update-202608-w3
+[2026-08-20 21:25:58] Blessing macro-growth-trade-update-202608 (post/macro-growth-trade-update-202608-w3) - pausing other workers
+[2026-08-20 21:26:19] merge-ready-job exit=0
+[2026-08-20 21:26:19] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/macro-growth-trade-update-202608-w3"
+  ],
+  "log": [
+    "merge start slug=macro-growth-trade-update-202608 branch=post/macro-growth-trade-update-202608-w3",
+    "worktree: using existing branch tip",
+    "fetched post/macro-growth-trade-update-202608-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 26 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/economics-macro-growth-trade-update-202608-hero.png, scripts/qa-macro-growth-trade-update-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MacroGrowthTradeUpdate202608Dashboard.tsx, src/data/macro-growth-trade-update-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/macro-growth-trade-update-202608-w3"
+  ]
+}
+[2026-08-20 21:26:19] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:27:39] sync-worker-clones exit=2 \Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/2)\rRebasing (2/2)\rerror: could not apply 1ebdd0b... wip(ai-compute-demand-concentration-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 1ebdd0b... # wip(ai-compute-demand-concentration-2026): dashboard + viz wireup"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-20 21:28:08] Shipped: macro-growth-trade-update-202608 | duration_sec=1068
+[2026-08-20 21:28:08] Closed branch(es) after merge: post/macro-growth-trade-update-202608-w3
+[2026-08-20 21:30:11] Orphaned merging job job-mt28outq-ijl20 (chokepoint-commodities-concentration-2026) age=12.375625455m - branch missing, failing
+[2026-08-20 21:30:11] Skip kill worker 1 for failed job-mt28outq-ijl20 - slot now on job-mt29ctam-zk7e6
+[2026-08-20 21:37:15] Merging ready job job-mt29dhg3-oj1oy (ai-supply-chain-update-202608) from post/ai-supply-chain-update-202608-w2
+[2026-08-20 21:37:16] Defer merge of ai-supply-chain-update-202608 - worker 2 still finishing this job
+[2026-08-20 21:37:40] Merging ready job job-mt29dhg3-oj1oy (ai-supply-chain-update-202608) from post/ai-supply-chain-update-202608-w2
+[2026-08-20 21:37:40] Defer merge of ai-supply-chain-update-202608 - worker 2 still finishing this job
+[2026-08-20 21:38:03] Assigning job job-mt2a5i4b-rp4yz -> worker 2
+[2026-08-20 21:38:06] Spawned worker 2 shell pid=2712 for job-mt2a5i4b-rp4yz (attempt 1)
+[2026-08-20 21:38:12] Merging ready job job-mt29dhg3-oj1oy (ai-supply-chain-update-202608) from post/ai-supply-chain-update-202608-w2
+[2026-08-20 21:38:12] Blessing ai-supply-chain-update-202608 (post/ai-supply-chain-update-202608-w2) - pausing other workers
+[2026-08-20 21:39:28] merge-ready-job exit=0
+[2026-08-20 21:39:28] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-supply-chain-update-202608-w2"
+  ],
+  "log": [
+    "merge start slug=ai-supply-chain-update-202608 branch=post/ai-supply-chain-update-202608-w2",
+    "worktree: using existing branch tip",
+    "fetched post/ai-supply-chain-update-202608-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 26 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/industry-ai-supply-chain-update-202608-hero.png, scripts/qa-ai-supply-chain-update-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiSupplyChainUpdate202608Dashboard.tsx, src/data/ai-supply-chain-update-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-supply-chain-update-202608-w2"
+  ]
+}
+[2026-08-20 21:39:28] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:39:46] sync-worker-clones exit=2 bort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 1ebdd0b... # wip(ai-compute-demand-concentration-2026): dashboard + viz wireup"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/3)\rRebasing (2/3)\rerror: could not apply 410ab06... wip(consumer-finance-markets-concentration-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 410ab06... # wip(consumer-finance-markets-concentration-2026): dashboard + viz wireup"
+    }
+  ]
+}
+[2026-08-20 21:39:48] Shipped: ai-supply-chain-update-202608 | duration_sec=1404
+[2026-08-20 21:39:48] Closed branch(es) after merge: post/ai-supply-chain-update-202608-w2
+[2026-08-20 21:39:59] Merging ready job job-mt29ctam-zk7e6 (ai-capex-intensity-update-202608) from post/ai-capex-intensity-update-202608-w1
+[2026-08-20 21:39:59] Defer merge of ai-capex-intensity-update-202608 - worker 1 still finishing this job
+[2026-08-20 21:40:24] Merging ready job job-mt29ctam-zk7e6 (ai-capex-intensity-update-202608) from post/ai-capex-intensity-update-202608-w1
+[2026-08-20 21:40:25] Defer merge of ai-capex-intensity-update-202608 - worker 1 still finishing this job
+[2026-08-20 21:40:49] Assigning job job-mt2a91sr-skiwb -> worker 1
+[2026-08-20 21:40:50] Spawned worker 1 shell pid=28544 for job-mt2a91sr-skiwb (attempt 1)
+[2026-08-20 21:40:55] Merging ready job job-mt29ctam-zk7e6 (ai-capex-intensity-update-202608) from post/ai-capex-intensity-update-202608-w1
+[2026-08-20 21:40:55] Blessing ai-capex-intensity-update-202608 (post/ai-capex-intensity-update-202608-w1) - pausing other workers
+[2026-08-20 21:41:19] merge-ready-job exit=0
+[2026-08-20 21:41:19] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-capex-intensity-update-202608-w1"
+  ],
+  "log": [
+    "merge start slug=ai-capex-intensity-update-202608 branch=post/ai-capex-intensity-update-202608-w1",
+    "worktree: using existing branch tip",
+    "fetched post/ai-capex-intensity-update-202608-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 50 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/capital-markets-ai-capex-intensity-update-202608-hero.png, scripts/qa-ai-capex-intensity-update-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiCapexIntensityUpdate202608Dashboard.tsx, src/data/ai-capex-intensity-update-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-capex-intensity-update-202608-w1"
+  ]
+}
+[2026-08-20 21:41:19] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:41:48] sync-worker-clones exit=2 bort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 1ebdd0b... # wip(ai-compute-demand-concentration-2026): dashboard + viz wireup"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/3)\rRebasing (2/3)\rerror: could not apply 410ab06... wip(consumer-finance-markets-concentration-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 410ab06... # wip(consumer-finance-markets-concentration-2026): dashboard + viz wireup"
+    }
+  ]
+}
+[2026-08-20 21:41:53] Shipped: ai-capex-intensity-update-202608 | duration_sec=1552
+[2026-08-20 21:41:53] Closed branch(es) after merge: post/ai-capex-intensity-update-202608-w1
+[2026-08-20 21:47:22] Merging ready job job-mt29lgbo-1pzd0 (consumer-finance-markets-concentration-2026) from post/consumer-finance-markets-concentration-2026-w5
+[2026-08-20 21:47:22] Defer merge of consumer-finance-markets-concentration-2026 - worker 5 still finishing this job
+[2026-08-20 21:47:45] W5 idle (no recovery candidate) - assigning producer job-mt2ahylj-yq0za (heavy-industrial-capacity-update-2026q3)
+[2026-08-20 21:47:45] Assigning job job-mt2ahylj-yq0za -> worker 5
+[2026-08-20 21:47:45] Spawned worker 5 shell pid=8432 for job-mt2ahylj-yq0za (attempt 1)
+[2026-08-20 21:47:50] Merging ready job job-mt29lgbo-1pzd0 (consumer-finance-markets-concentration-2026) from post/consumer-finance-markets-concentration-2026-w5
+[2026-08-20 21:47:50] Blessing consumer-finance-markets-concentration-2026 (post/consumer-finance-markets-concentration-2026-w5) - pausing other workers
+[2026-08-20 21:48:05] merge-ready-job exit=0
+[2026-08-20 21:48:05] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/consumer-finance-markets-concentration-2026-w5"
+  ],
+  "log": [
+    "merge start slug=consumer-finance-markets-concentration-2026 branch=post/consumer-finance-markets-concentration-2026-w5",
+    "worktree: using existing branch tip",
+    "fetched post/consumer-finance-markets-concentration-2026-w5 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 31 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/consumer-finance-consumer-finance-markets-concentration-2026-hero.png, scripts/qa-consumer-finance-markets-concentration-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/ConsumerFinanceMarketsConcentrationDashboard.tsx, src/data/consumer-finance-markets-concentration-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/consumer-finance-markets-concentration-2026-w5"
+  ]
+}
+[2026-08-20 21:48:05] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:48:13] sync-worker-clones exit=2 ONFLICT (content): Merge conflict in src/data/posts.ts\nRebasing (1/3)\rRebasing (2/3)\rRebasing (3/3)\rerror: could not apply f0bfc35... wip(bank-commercial-credit-update-2026q3): post prose + hero + qa + smoke\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply f0bfc35... # wip(bank-commercial-credit-update-2026q3): post prose + hero + qa + smoke"
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/heavy-industrial-capacity-update-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 21:48:14] Shipped: consumer-finance-markets-concentration-2026 | duration_sec=1538
+[2026-08-20 21:48:14] Closed branch(es) after merge: post/consumer-finance-markets-concentration-2026-w5
+[2026-08-20 21:51:05] Merging ready job job-mt29pu8s-qfb3e (bank-commercial-credit-update-2026q3) from post/bank-commercial-credit-update-2026q3-w3
+[2026-08-20 21:51:05] Defer merge of bank-commercial-credit-update-2026q3 - worker 3 still finishing this job
+[2026-08-20 21:51:29] Merging ready job job-mt29pu8s-qfb3e (bank-commercial-credit-update-2026q3) from post/bank-commercial-credit-update-2026q3-w3
+[2026-08-20 21:51:30] Defer merge of bank-commercial-credit-update-2026q3 - worker 3 still finishing this job
+[2026-08-20 21:51:54] Merging ready job job-mt29pu8s-qfb3e (bank-commercial-credit-update-2026q3) from post/bank-commercial-credit-update-2026q3-w3
+[2026-08-20 21:51:55] Defer merge of bank-commercial-credit-update-2026q3 - worker 3 still finishing this job
+[2026-08-20 21:52:19] Assigning job job-mt2antx9-6l051 -> worker 3
+[2026-08-20 21:52:20] Spawned worker 3 shell pid=9676 for job-mt2antx9-6l051 (attempt 1)
+[2026-08-20 21:52:25] Merging ready job job-mt29pu8s-qfb3e (bank-commercial-credit-update-2026q3) from post/bank-commercial-credit-update-2026q3-w3
+[2026-08-20 21:52:26] Blessing bank-commercial-credit-update-2026q3 (post/bank-commercial-credit-update-2026q3-w3) - pausing other workers
+[2026-08-20 21:52:59] merge-ready-job exit=0
+[2026-08-20 21:52:59] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/bank-commercial-credit-update-2026q3-w3"
+  ],
+  "log": [
+    "merge start slug=bank-commercial-credit-update-2026q3 branch=post/bank-commercial-credit-update-2026q3-w3",
+    "worktree: using existing branch tip",
+    "fetched post/bank-commercial-credit-update-2026q3-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 1",
+    "post allowlist on branch: 22 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/finance-bank-commercial-credit-update-2026q3-hero.png, scripts/qa-bank-commercial-credit-update-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/BankCommercialCreditUpdate2026q3Dashboard.tsx, src/data/bank-commercial-credit-update-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/bank-commercial-credit-update-2026q3-w3"
+  ]
+}
+[2026-08-20 21:52:59] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:53:42] sync-worker-clones exit=2 path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/5)\rRebasing (2/5)\rerror: could not apply 1ebdd0b... wip(ai-compute-demand-concentration-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 1ebdd0b... # wip(ai-compute-demand-concentration-2026): dashboard + viz wireup"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/heavy-industrial-capacity-update-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 21:53:51] Shipped: bank-commercial-credit-update-2026q3 | duration_sec=1675
+[2026-08-20 21:53:51] Closed branch(es) after merge: post/bank-commercial-credit-update-2026q3-w3
+[2026-08-20 21:56:36] Assigning job job-mt2atcax-vq8qe -> worker 4
+[2026-08-20 21:56:36] Spawned worker 4 shell pid=32260 for job-mt2atcax-vq8qe (attempt 1)
+[2026-08-20 21:56:41] Merging ready job job-mt29je86-t8imy (ai-compute-demand-concentration-2026) from post/ai-compute-demand-concentration-2026-w4
+[2026-08-20 21:56:41] Blessing ai-compute-demand-concentration-2026 (post/ai-compute-demand-concentration-2026-w4) - pausing other workers
+[2026-08-20 21:57:07] merge-ready-job exit=0
+[2026-08-20 21:57:07] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-compute-demand-concentration-2026-w4"
+  ],
+  "log": [
+    "merge start slug=ai-compute-demand-concentration-2026 branch=post/ai-compute-demand-concentration-2026-w4",
+    "worktree: using existing branch tip",
+    "fetched post/ai-compute-demand-concentration-2026-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 30 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/technology-ai-compute-demand-concentration-2026-hero.png, scripts/qa-ai-compute-demand-concentration-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiComputeDemandConcentrationDashboard.tsx, src/data/ai-compute-demand-concentration-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-compute-demand-concentration-2026-w4"
+  ]
+}
+[2026-08-20 21:57:07] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:57:24] sync-worker-clones exit=2 git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 8e2e32b... # wip(demographic-cash-flows-concentration-2026): dashboard + viz wireup"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/industrial-robotics-concentration-2026q3-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/geopolitics-institutions-concentration-2026q3-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/migration-humanitarian-update-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-20 21:57:26] Shipped: ai-compute-demand-concentration-2026 | duration_sec=2176
+[2026-08-20 21:57:26] Closed branch(es) after merge: post/ai-compute-demand-concentration-2026-w4
+[2026-08-20 21:58:21] Merging ready job job-mt2a91sr-skiwb (demographic-cash-flows-concentration-2026) from post/demographic-cash-flows-concentration-2026-w1
+[2026-08-20 21:58:21] Defer merge of demographic-cash-flows-concentration-2026 - worker 1 still finishing this job
+[2026-08-20 21:58:44] Merging ready job job-mt2a91sr-skiwb (demographic-cash-flows-concentration-2026) from post/demographic-cash-flows-concentration-2026-w1
+[2026-08-20 21:58:45] Defer merge of demographic-cash-flows-concentration-2026 - worker 1 still finishing this job
+[2026-08-20 21:59:08] Assigning job job-mt2awmaa-20vab -> worker 1
+[2026-08-20 21:59:10] Spawned worker 1 shell pid=29944 for job-mt2awmaa-20vab (attempt 1)
+[2026-08-20 21:59:15] Merging ready job job-mt2a91sr-skiwb (demographic-cash-flows-concentration-2026) from post/demographic-cash-flows-concentration-2026-w1
+[2026-08-20 21:59:15] Blessing demographic-cash-flows-concentration-2026 (post/demographic-cash-flows-concentration-2026-w1) - pausing other workers
+[2026-08-20 21:59:35] merge-ready-job exit=0
+[2026-08-20 21:59:35] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/demographic-cash-flows-concentration-2026-w1"
+  ],
+  "log": [
+    "merge start slug=demographic-cash-flows-concentration-2026 branch=post/demographic-cash-flows-concentration-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/demographic-cash-flows-concentration-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 30 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/global-systems-demographic-cash-flows-concentration-2026-hero.png, scripts/qa-demographic-cash-flows-concentration-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/DemographicCashFlowsConcentrationDashboard.tsx, src/data/demographic-cash-flows-concentration-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/demographic-cash-flows-concentration-2026-w1"
+  ]
+}
+[2026-08-20 21:59:35] Blessed merge ok - syncing worker clones from main
+[2026-08-20 21:59:54] sync-worker-clones exit=2   },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/migration-humanitarian-update-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging scripts/smoke-test-viz-posts.mjs\nAuto-merging src/data/posts.ts\nCONFLICT (content): Merge conflict in src/data/posts.ts\nRebasing (1/3)\rRebasing (2/3)\rRebasing (3/3)\rerror: could not apply 620e42f... wip(heavy-industrial-capacity-update-2026q3): post prose + hero\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 620e42f... # wip(heavy-industrial-capacity-update-2026q3): post prose + hero"
+    }
+  ]
+}
+[2026-08-20 21:59:55] Shipped: demographic-cash-flows-concentration-2026 | duration_sec=1136
+[2026-08-20 21:59:55] Closed branch(es) after merge: post/demographic-cash-flows-concentration-2026-w1
+[2026-08-20 22:25:41] W5 idle (no recovery candidate) - assigning producer job-mt2bup65-fa374 (measurement-science-concentration-2026)
+[2026-08-20 22:25:41] Assigning job job-mt2bup65-fa374 -> worker 5
+[2026-08-20 22:25:44] Spawned worker 5 shell pid=14208 for job-mt2bup65-fa374 (attempt 1)
+[2026-08-20 22:29:32] WARN: orchestrator loop error (continuing): Invalid JSON primitive: 
+}
+.
+[2026-08-20 22:29:55] Assigning job job-mt2c06zw-b4bxo -> worker 2
+[2026-08-20 22:29:56] Spawned worker 2 shell pid=28840 for job-mt2c06zw-b4bxo (attempt 1)
+[2026-08-20 22:30:01] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 22:30:21] Assigning job job-mt2c06zv-o4z7o -> worker 3
+[2026-08-20 22:30:23] Spawned worker 3 shell pid=31276 for job-mt2c06zv-o4z7o (attempt 1)
+[2026-08-20 22:33:05] Merging ready job job-mt2atcax-vq8qe (migration-humanitarian-update-2026q3) from post/migration-humanitarian-update-2026q3-w4
+[2026-08-20 22:33:05] Defer merge of migration-humanitarian-update-2026q3 - worker 4 still finishing this job
+[2026-08-20 22:33:35] Merging ready job job-mt2atcax-vq8qe (migration-humanitarian-update-2026q3) from post/migration-humanitarian-update-2026q3-w4
+[2026-08-20 22:33:35] Defer merge of migration-humanitarian-update-2026q3 - worker 4 still finishing this job
+[2026-08-20 22:34:01] Merging ready job job-mt2atcax-vq8qe (migration-humanitarian-update-2026q3) from post/migration-humanitarian-update-2026q3-w4
+[2026-08-20 22:34:01] Defer merge of migration-humanitarian-update-2026q3 - worker 4 still finishing this job
+[2026-08-20 22:34:25] Assigning job job-mt2c5z51-ijpeo -> worker 4
+[2026-08-20 22:34:26] Spawned worker 4 shell pid=1492 for job-mt2c5z51-ijpeo (attempt 1)
+[2026-08-20 22:34:32] Merging ready job job-mt2atcax-vq8qe (migration-humanitarian-update-2026q3) from post/migration-humanitarian-update-2026q3-w4
+[2026-08-20 22:34:32] Blessing migration-humanitarian-update-2026q3 (post/migration-humanitarian-update-2026q3-w4) - pausing other workers
+[2026-08-20 22:35:51] merge-ready-job exit=0
+[2026-08-20 22:35:51] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/migration-humanitarian-update-2026q3-w4"
+  ],
+  "log": [
+    "merge start slug=migration-humanitarian-update-2026q3 branch=post/migration-humanitarian-update-2026q3-w4",
+    "worktree: using existing branch tip",
+    "fetched post/migration-humanitarian-update-2026q3-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 22 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/politics-migration-humanitarian-update-2026q3-hero.png, scripts/qa-migration-humanitarian-update-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MigrationHumanitarianUpdate2026q3Dashboard.tsx, src/data/migration-humanitarian-update-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/migration-humanitarian-update-2026q3-w4"
+  ]
+}
+[2026-08-20 22:35:51] Blessed merge ok - syncing worker clones from main
+[2026-08-20 22:36:34] sync-worker-clones exit=2 skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply c5a49e2... # wip(fiscal-industrial-p"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/demographic-cash-flows-concentration-2026q3-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/fiscal-plumbing-update-202608-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-concentration-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-20 22:36:36] Shipped: migration-humanitarian-update-2026q3 | duration_sec=2393
+[2026-08-20 22:36:36] Closed branch(es) after merge: post/migration-humanitarian-update-2026q3-w4
+[2026-08-20 22:36:45] WARN: orchestrator loop error (continuing): The process cannot access the file 'E:\AI Projects\data-insights-blog\artifacts\agent-jobs.json' because it is being used by another process.
+[2026-08-20 22:37:08] Assigning job job-mt2c9hn4-f6q0u -> worker 1
+[2026-08-20 22:37:09] Spawned worker 1 shell pid=17924 for job-mt2c9hn4-f6q0u (attempt 1)
+[2026-08-20 22:37:14] Merging ready job job-mt2awmaa-20vab (fiscal-industrial-policy-concentration-2026q3) from post/fiscal-industrial-policy-concentration-2026q3-w1
+[2026-08-20 22:37:15] Blessing fiscal-industrial-policy-concentration-2026q3 (post/fiscal-industrial-policy-concentration-2026q3-w1) - pausing other workers
+[2026-08-20 22:40:10] merge-ready-job exit=0
+[2026-08-20 22:40:10] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/fiscal-industrial-policy-concentration-2026q3-w1"
+  ],
+  "log": [
+    "merge start slug=fiscal-industrial-policy-concentration-2026q3 branch=post/fiscal-industrial-policy-concentration-2026q3-w1",
+    "worktree: using existing branch tip",
+    "fetched post/fiscal-industrial-policy-concentration-2026q3-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 34 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/politics-fiscal-industrial-policy-concentration-2026q3-hero.png, scripts/qa-fiscal-industrial-policy-concentration-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/FiscalIndustrialPolicyConcentration2026q3Dashboard.tsx, src/data/fiscal-industrial-policy-concentration-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/fiscal-industrial-policy-concentration-2026q3-w1"
+  ]
+}
+[2026-08-20 22:40:10] Blessed merge ok - syncing worker clones from main
+[2026-08-20 22:40:34] sync-worker-clones exit=0  [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "rebased post/ai-capex-spend-concentration-2026q3-w1",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/fiscal-plumbing-update-202608-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-concentration-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-20 22:40:36] Shipped: fiscal-industrial-policy-concentration-2026q3 | duration_sec=2479
+[2026-08-20 22:40:36] Closed branch(es) after merge: post/fiscal-industrial-policy-concentration-2026q3-w1
+[2026-08-20 22:55:48] Merging ready job job-mt2c5z51-ijpeo (macro-growth-trade-concentration-2026) from post/macro-growth-trade-concentration-2026-w4
+[2026-08-20 22:55:48] Defer merge of macro-growth-trade-concentration-2026 - worker 4 still finishing this job
+[2026-08-20 22:56:12] Merging ready job job-mt2c5z51-ijpeo (macro-growth-trade-concentration-2026) from post/macro-growth-trade-concentration-2026-w4
+[2026-08-20 22:56:12] Defer merge of macro-growth-trade-concentration-2026 - worker 4 still finishing this job
+[2026-08-20 22:56:34] Merging ready job job-mt2c5z51-ijpeo (macro-growth-trade-concentration-2026) from post/macro-growth-trade-concentration-2026-w4
+[2026-08-20 22:56:34] Defer merge of macro-growth-trade-concentration-2026 - worker 4 still finishing this job
+[2026-08-20 22:56:56] Assigning job job-mt2cyxr9-xxtdo -> worker 4
+[2026-08-20 22:56:56] Spawned worker 4 shell pid=19684 for job-mt2cyxr9-xxtdo (attempt 1)
+[2026-08-20 22:57:00] Merging ready job job-mt2c5z51-ijpeo (macro-growth-trade-concentration-2026) from post/macro-growth-trade-concentration-2026-w4
+[2026-08-20 22:57:01] Blessing macro-growth-trade-concentration-2026 (post/macro-growth-trade-concentration-2026-w4) - pausing other workers
+[2026-08-20 22:57:14] merge-ready-job exit=0
+[2026-08-20 22:57:14] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/macro-growth-trade-concentration-2026-w4"
+  ],
+  "log": [
+    "merge start slug=macro-growth-trade-concentration-2026 branch=post/macro-growth-trade-concentration-2026-w4",
+    "worktree: using existing branch tip",
+    "fetched post/macro-growth-trade-concentration-2026-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 30 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/economics-macro-growth-trade-concentration-2026-hero.png, scripts/qa-macro-growth-trade-concentration-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MacroGrowthTradeConcentrationDashboard.tsx, src/data/macro-growth-trade-concentration-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/macro-growth-trade-concentration-2026-w4"
+  ]
+}
+[2026-08-20 22:57:14] Blessed merge ok - syncing worker clones from main
+[2026-08-20 22:57:38] sync-worker-clones exit=2 l\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/consumer-finance-markets-concentration-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/4)\rRebasing (2/4)\rerror: could not apply 115d24c... wip(measurement-science-concentration-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 115d24c... # wip(measurement-scie"
+    }
+  ]
+}
+[2026-08-20 22:57:39] Shipped: macro-growth-trade-concentration-2026 | duration_sec=1382
+[2026-08-20 22:57:39] Closed branch(es) after merge: post/macro-growth-trade-concentration-2026-w4
+[2026-08-20 22:57:46] Assigning job job-mt2d00yh-7pf00 -> worker 3
+[2026-08-20 22:57:47] Spawned worker 3 shell pid=31740 for job-mt2d00yh-7pf00 (attempt 1)
+[2026-08-20 22:57:51] Merging ready job job-mt2c9hn4-f6q0u (ai-capex-spend-concentration-2026q3) from post/ai-capex-spend-concentration-2026q3-w1
+[2026-08-20 22:57:51] Defer merge of ai-capex-spend-concentration-2026q3 - worker 1 still finishing this job
+[2026-08-20 22:57:58] Merging ready job job-mt2c9hn4-f6q0u (ai-capex-spend-concentration-2026q3) from post/ai-capex-spend-concentration-2026q3-w1
+[2026-08-20 22:57:58] Defer merge of ai-capex-spend-concentration-2026q3 - worker 1 still finishing this job
+[2026-08-20 22:58:19] Assigning job job-mt2d0q41-pf0fd -> worker 1
+[2026-08-20 22:58:19] Spawned worker 1 shell pid=20548 for job-mt2d0q41-pf0fd (attempt 1)
+[2026-08-20 22:58:23] Merging ready job job-mt2c9hn4-f6q0u (ai-capex-spend-concentration-2026q3) from post/ai-capex-spend-concentration-2026q3-w1
+[2026-08-20 22:58:23] Blessing ai-capex-spend-concentration-2026q3 (post/ai-capex-spend-concentration-2026q3-w1) - pausing other workers
+[2026-08-20 22:58:36] merge-ready-job exit=0
+[2026-08-20 22:58:36] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-capex-spend-concentration-2026q3-w1"
+  ],
+  "log": [
+    "merge start slug=ai-capex-spend-concentration-2026q3 branch=post/ai-capex-spend-concentration-2026q3-w1",
+    "worktree: using existing branch tip",
+    "fetched post/ai-capex-spend-concentration-2026q3-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 54 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/capital-markets-ai-capex-spend-concentration-2026q3-hero.png, scripts/qa-ai-capex-spend-concentration-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiCapexSpendConcentration2026q3Dashboard.tsx, src/data/ai-capex-spend-concentration-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-capex-spend-concentration-2026q3-w1"
+  ]
+}
+[2026-08-20 22:58:36] Blessed merge ok - syncing worker clones from main
+[2026-08-20 22:58:42] sync-worker-clones exit=2 y, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply e507c8c... # wip(demographic-cash-flows-concentration-2026q3): dashboard + viz wireup"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/fiscal-industrial-policy-concentration-202608-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/consumer-finance-markets-concentration-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-20 22:58:43] Shipped: ai-capex-spend-concentration-2026q3 | duration_sec=1284
+[2026-08-20 22:58:43] Closed branch(es) after merge: post/ai-capex-spend-concentration-2026q3-w1
+[2026-08-20 22:58:50] Merging ready job job-mt2c06zw-b4bxo (demographic-cash-flows-concentration-2026q3) from post/demographic-cash-flows-concentration-2026q3-w2
+[2026-08-20 22:58:50] Defer merge of demographic-cash-flows-concentration-2026q3 - worker 2 still finishing this job
+[2026-08-20 22:59:11] Merging ready job job-mt2c06zw-b4bxo (demographic-cash-flows-concentration-2026q3) from post/demographic-cash-flows-concentration-2026q3-w2
+[2026-08-20 22:59:11] Defer merge of demographic-cash-flows-concentration-2026q3 - worker 2 still finishing this job
+[2026-08-20 22:59:33] W5 idle (no recovery candidate) - assigning producer job-mt2d2aqu-dpfyy (ai-financing-concentration-2026q3)
+[2026-08-20 22:59:33] Assigning job job-mt2d2aqu-dpfyy -> worker 5
+[2026-08-20 22:59:33] Spawned worker 5 shell pid=25904 for job-mt2d2aqu-dpfyy (attempt 1)
+[2026-08-20 22:59:37] Merging ready job job-mt2c06zw-b4bxo (demographic-cash-flows-concentration-2026q3) from post/demographic-cash-flows-concentration-2026q3-w2
+[2026-08-20 22:59:38] Defer merge of demographic-cash-flows-concentration-2026q3 - worker 2 still finishing this job
+[2026-08-20 22:59:44] Assigning job job-mt2d2k0k-7nmma -> worker 2
+[2026-08-20 22:59:45] Spawned worker 2 shell pid=30916 for job-mt2d2k0k-7nmma (attempt 1)
+[2026-08-20 22:59:49] Merging ready job job-mt2c06zw-b4bxo (demographic-cash-flows-concentration-2026q3) from post/demographic-cash-flows-concentration-2026q3-w2
+[2026-08-20 22:59:49] Blessing demographic-cash-flows-concentration-2026q3 (post/demographic-cash-flows-concentration-2026q3-w2) - pausing other workers
+[2026-08-20 23:00:02] merge-ready-job exit=0
+[2026-08-20 23:00:02] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/demographic-cash-flows-concentration-2026q3-w2"
+  ],
+  "log": [
+    "merge start slug=demographic-cash-flows-concentration-2026q3 branch=post/demographic-cash-flows-concentration-2026q3-w2",
+    "worktree: using existing branch tip",
+    "fetched post/demographic-cash-flows-concentration-2026q3-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 6",
+    "post allowlist on branch: 34 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/global-systems-demographic-cash-flows-concentration-2026q3-hero.png, scripts/qa-demographic-cash-flows-concentration-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/DemographicCashFlowsConcentration2026q3Dashboard.tsx, src/data/demographic-cash-flows-concentration-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/demographic-cash-flows-concentration-2026q3-w2"
+  ]
+}
+[2026-08-20 23:00:02] Blessed merge ok - syncing worker clones from main
+[2026-08-20 23:00:08] sync-worker-clones exit=0 kers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "rebased post/ai-capex-intensity-concentration-2026-w1",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/ai-capex-spend-concentration-202608-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/fiscal-industrial-policy-concentration-202608-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/consumer-finance-markets-concentration-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/ai-financing-concentration-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 23:00:08] Shipped: demographic-cash-flows-concentration-2026q3 | duration_sec=1797
+[2026-08-20 23:00:08] Closed branch(es) after merge: post/demographic-cash-flows-concentration-2026q3-w2
+[2026-08-20 23:00:15] Merging ready job job-mt2c06zv-o4z7o (fiscal-plumbing-update-202608) from post/fiscal-plumbing-update-202608-w3
+[2026-08-20 23:00:15] Blessing fiscal-plumbing-update-202608 (post/fiscal-plumbing-update-202608-w3) - pausing other workers
+[2026-08-20 23:00:27] merge-ready-job exit=0
+[2026-08-20 23:00:27] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/fiscal-plumbing-update-202608-w3"
+  ],
+  "log": [
+    "merge start slug=fiscal-plumbing-update-202608 branch=post/fiscal-plumbing-update-202608-w3",
+    "worktree: using existing branch tip",
+    "fetched post/fiscal-plumbing-update-202608-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 26 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/global-systems-fiscal-plumbing-update-202608-hero.png, scripts/qa-fiscal-plumbing-update-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/FiscalPlumbingUpdate202608Dashboard.tsx, src/data/fiscal-plumbing-update-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/fiscal-plumbing-update-202608-w3"
+  ]
+}
+[2026-08-20 23:00:27] Blessed merge ok - syncing worker clones from main
+[2026-08-20 23:00:32] sync-worker-clones exit=0  {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/ai-capex-spend-concentration-202608-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/fiscal-industrial-policy-concentration-202608-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/consumer-finance-markets-concentration-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/ai-financing-concentration-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 23:00:32] Shipped: fiscal-plumbing-update-202608 | duration_sec=1794
+[2026-08-20 23:00:32] Closed branch(es) after merge: post/fiscal-plumbing-update-202608-w3
+[2026-08-20 23:00:54] Merging ready job job-mt2bup65-fa374 (measurement-science-concentration-2026) from post/measurement-science-concentration-2026-w5
+[2026-08-20 23:00:54] Blessing measurement-science-concentration-2026 (post/measurement-science-concentration-2026-w5) - pausing other workers
+[2026-08-20 23:01:06] merge-ready-job exit=0
+[2026-08-20 23:01:06] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/measurement-science-concentration-2026-w5"
+  ],
+  "log": [
+    "merge start slug=measurement-science-concentration-2026 branch=post/measurement-science-concentration-2026-w5",
+    "worktree: using existing branch tip",
+    "fetched post/measurement-science-concentration-2026-w5 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 29 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/global-systems-measurement-science-concentration-2026-hero.png, scripts/qa-measurement-science-concentration-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MeasurementScienceConcentrationDashboard.tsx, src/data/measurement-science-concentration-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/measurement-science-concentration-2026-w5"
+  ]
+}
+[2026-08-20 23:01:06] Blessed merge ok - syncing worker clones from main
+[2026-08-20 23:01:12] sync-worker-clones exit=0 kers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "rebased post/ai-capex-intensity-concentration-2026-w1",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/ai-capex-spend-concentration-202608-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/fiscal-industrial-policy-concentration-202608-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/consumer-finance-markets-concentration-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/ai-financing-concentration-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 23:01:13] Shipped: measurement-science-concentration-2026 | duration_sec=2108
+[2026-08-20 23:01:13] Closed branch(es) after merge: post/measurement-science-concentration-2026-w5
+[2026-08-20 23:09:26] Orphaned merging job job-mt2c5z51-ijpeo (macro-growth-trade-concentration-2026) age=12.3368138983333m - branch missing, failing
+[2026-08-20 23:09:26] Skip kill worker 4 for failed job-mt2c5z51-ijpeo - slot now on job-mt2cyxr9-xxtdo
+[2026-08-20 23:11:41] Merging ready job job-mt2d00yh-7pf00 (fiscal-industrial-policy-concentration-202608) from post/fiscal-industrial-policy-concentration-202608-w3
+[2026-08-20 23:11:42] Defer merge of fiscal-industrial-policy-concentration-202608 - worker 3 still finishing this job
+[2026-08-20 23:12:04] Assigning job job-mt2diei3-ef9gw -> worker 3
+[2026-08-20 23:12:05] Spawned worker 3 shell pid=6740 for job-mt2diei3-ef9gw (attempt 1)
+[2026-08-20 23:12:09] Merging ready job job-mt2d00yh-7pf00 (fiscal-industrial-policy-concentration-202608) from post/fiscal-industrial-policy-concentration-202608-w3
+[2026-08-20 23:12:10] Blessing fiscal-industrial-policy-concentration-202608 (post/fiscal-industrial-policy-concentration-202608-w3) - pausing other workers
+[2026-08-20 23:12:30] merge-ready-job exit=0
+[2026-08-20 23:12:30] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/fiscal-industrial-policy-concentration-202608-w3"
+  ],
+  "log": [
+    "merge start slug=fiscal-industrial-policy-concentration-202608 branch=post/fiscal-industrial-policy-concentration-202608-w3",
+    "worktree: using existing branch tip",
+    "fetched post/fiscal-industrial-policy-concentration-202608-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 38 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/politics-fiscal-industrial-policy-concentration-202608-hero.png, scripts/qa-fiscal-industrial-policy-concentration-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/FiscalIndustrialPolicyConcentration202608Dashboard.tsx, src/data/fiscal-industrial-policy-concentration-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/fiscal-industrial-policy-concentration-202608-w3"
+  ]
+}
+[2026-08-20 23:12:30] Blessed merge ok - syncing worker clones from main
+[2026-08-20 23:12:45] sync-worker-clones exit=2 entration-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/data/posts.ts\nCONFLICT (content): Merge conflict in src/data/posts.ts\nRebasing (1/3)\rRebasing (2/3)\rRebasing (3/3)\rerror: could not apply 5657e59... wip(ai-financing-concentration-2026q3): post prose + hero\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 5657e59... # wip(ai-financing-concentration-2026q3): post prose + hero"
+    }
+  ]
+}
+[2026-08-20 23:12:46] Shipped: fiscal-industrial-policy-concentration-202608 | duration_sec=897
+[2026-08-20 23:12:46] Closed branch(es) after merge: post/fiscal-industrial-policy-concentration-202608-w3
+[2026-08-20 23:13:15] Merging ready job job-mt2d0q41-pf0fd (ai-capex-intensity-concentration-2026) from post/ai-capex-intensity-concentration-2026-w1
+[2026-08-20 23:13:16] Defer merge of ai-capex-intensity-concentration-2026 - worker 1 still finishing this job
+[2026-08-20 23:13:38] Assigning job job-mt2dkf9q-p1anx -> worker 1
+[2026-08-20 23:13:39] Spawned worker 1 shell pid=16388 for job-mt2dkf9q-p1anx (attempt 1)
+[2026-08-20 23:13:44] Merging ready job job-mt2d0q41-pf0fd (ai-capex-intensity-concentration-2026) from post/ai-capex-intensity-concentration-2026-w1
+[2026-08-20 23:13:44] Blessing ai-capex-intensity-concentration-2026 (post/ai-capex-intensity-concentration-2026-w1) - pausing other workers
+[2026-08-20 23:13:59] merge-ready-job exit=0
+[2026-08-20 23:13:59] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-capex-intensity-concentration-2026-w1"
+  ],
+  "log": [
+    "merge start slug=ai-capex-intensity-concentration-2026 branch=post/ai-capex-intensity-concentration-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/ai-capex-intensity-concentration-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 58 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/capital-markets-ai-capex-intensity-concentration-2026-hero.png, scripts/qa-ai-capex-intensity-concentration-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiCapexIntensityConcentrationDashboard.tsx, src/data/ai-capex-intensity-concentration-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-capex-intensity-concentration-2026-w1"
+  ]
+}
+[2026-08-20 23:13:59] Blessed merge ok - syncing worker clones from main
+[2026-08-20 23:14:09] sync-worker-clones exit=2 entration-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/data/posts.ts\nCONFLICT (content): Merge conflict in src/data/posts.ts\nRebasing (1/3)\rRebasing (2/3)\rRebasing (3/3)\rerror: could not apply 5657e59... wip(ai-financing-concentration-2026q3): post prose + hero\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 5657e59... # wip(ai-financing-concentration-2026q3): post prose + hero"
+    }
+  ]
+}
+[2026-08-20 23:14:10] Shipped: ai-capex-intensity-concentration-2026 | duration_sec=948
+[2026-08-20 23:14:10] Closed branch(es) after merge: post/ai-capex-intensity-concentration-2026-w1
+[2026-08-20 23:14:17] Merging ready job job-mt2d2aqu-dpfyy (ai-financing-concentration-2026q3) from post/ai-financing-concentration-2026q3-w5
+[2026-08-20 23:14:17] Defer merge of ai-financing-concentration-2026q3 - worker 5 still finishing this job
+[2026-08-20 23:14:39] Merging ready job job-mt2d2aqu-dpfyy (ai-financing-concentration-2026q3) from post/ai-financing-concentration-2026q3-w5
+[2026-08-20 23:14:39] Defer merge of ai-financing-concentration-2026q3 - worker 5 still finishing this job
+[2026-08-20 23:15:01] Merging ready job job-mt2d2aqu-dpfyy (ai-financing-concentration-2026q3) from post/ai-financing-concentration-2026q3-w5
+[2026-08-20 23:15:01] Defer merge of ai-financing-concentration-2026q3 - worker 5 still finishing this job
+[2026-08-20 23:15:23] Assigning job job-mt2dmo9y-ucwkb -> worker 4
+[2026-08-20 23:15:23] Spawned worker 4 shell pid=25820 for job-mt2dmo9y-ucwkb (attempt 1)
+[2026-08-20 23:15:28] Merging ready job job-mt2d2aqu-dpfyy (ai-financing-concentration-2026q3) from post/ai-financing-concentration-2026q3-w5
+[2026-08-20 23:15:28] Defer merge of ai-financing-concentration-2026q3 - worker 5 still finishing this job
+[2026-08-20 23:15:34] Merging ready job job-mt2d2aqu-dpfyy (ai-financing-concentration-2026q3) from post/ai-financing-concentration-2026q3-w5
+[2026-08-20 23:15:34] Defer merge of ai-financing-concentration-2026q3 - worker 5 still finishing this job
+[2026-08-20 23:15:56] Merging ready job job-mt2d2aqu-dpfyy (ai-financing-concentration-2026q3) from post/ai-financing-concentration-2026q3-w5
+[2026-08-20 23:15:56] Defer merge of ai-financing-concentration-2026q3 - worker 5 still finishing this job
+[2026-08-20 23:16:17] Merging ready job job-mt2d2aqu-dpfyy (ai-financing-concentration-2026q3) from post/ai-financing-concentration-2026q3-w5
+[2026-08-20 23:16:17] Defer merge of ai-financing-concentration-2026q3 - worker 5 still finishing this job
+[2026-08-20 23:16:39] Merging ready job job-mt2d2k0k-7nmma (ai-capex-spend-concentration-202608) from post/ai-capex-spend-concentration-202608-w2
+[2026-08-20 23:16:39] Defer merge of ai-capex-spend-concentration-202608 - worker 2 still finishing this job
+[2026-08-20 23:16:59] WARN: orchestrator loop error (continuing): Invalid JSON primitive: tem": "ai-power-grid-update-202608",
+        "themeId": "ai-power-grid",
+        "workerId": "4",
+        "phase": "researching",
+        "error": "worker_exit_0",
+        "infra": true,
+        "activity": "Worker 4 starting agent session",
+        "attempts": 1
+      }
+    ]
+  }
+}
+.
+[2026-08-20 23:17:19] Assigning job job-mt2dp68l-5rw34 -> worker 2
+[2026-08-20 23:17:20] Spawned worker 2 shell pid=25544 for job-mt2dp68l-5rw34 (attempt 1)
+[2026-08-20 23:17:24] W5 idle (no recovery candidate) - assigning producer job-mt2dp68l-wcx8x (ai-supply-chain-concentration-2026)
+[2026-08-20 23:17:24] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 23:17:44] Assigning job job-mt2dp68l-wcx8x -> worker 5
+[2026-08-20 23:17:44] Spawned worker 5 shell pid=26064 for job-mt2dp68l-wcx8x (attempt 1)
+[2026-08-20 23:25:30] Merging ready job job-mt2dp68l-wcx8x (ai-supply-chain-concentration-2026) from post/ai-supply-chain-concentration-2026-w3
+[2026-08-20 23:25:30] Blessing ai-supply-chain-concentration-2026 (post/ai-supply-chain-concentration-2026-w3) - pausing other workers
+[2026-08-20 23:25:48] merge-ready-job exit=0
+[2026-08-20 23:25:48] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-supply-chain-concentration-2026-w3"
+  ],
+  "log": [
+    "merge start slug=ai-supply-chain-concentration-2026 branch=post/ai-supply-chain-concentration-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/ai-supply-chain-concentration-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 30 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/industry-ai-supply-chain-concentration-2026-hero.png, scripts/qa-ai-supply-chain-concentration-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiSupplyChainConcentrationDashboard.tsx, src/data/ai-supply-chain-concentration-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-supply-chain-concentration-2026-w3"
+  ]
+}
+[2026-08-20 23:25:48] Blessed merge ok - syncing worker clones from main
+[2026-08-20 23:26:33] sync-worker-clones exit=2 hen run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConf"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/data/ai-supply-chain-concentration-2026-data.ts\nCONFLICT (add/add): Merge conflict in src/data/ai-supply-chain-concentration-2026-data.ts\nRebasing (1/4)\rerror: could not apply 2f1678c... wip(ai-supply-chain-concentration-2026): data module\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 2f1678c... # wip(ai-supply-chain-concentration-2026): data module"
+    }
+  ]
+}
+[2026-08-20 23:26:34] Shipped: ai-supply-chain-concentration-2026 | duration_sec=527
+[2026-08-20 23:26:34] Closed branch(es) after merge: post/ai-supply-chain-concentration-2026-w3
+[2026-08-20 23:26:42] Assigning job job-mt2dp68l-jfalj -> worker 3
+[2026-08-20 23:26:43] Spawned worker 3 shell pid=22168 for job-mt2dp68l-jfalj (attempt 1)

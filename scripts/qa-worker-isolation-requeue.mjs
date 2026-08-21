@@ -5,6 +5,9 @@
  * remap + soft-requeue instead of parking as open dashboard issues.
  *
  * Usage: node scripts/qa-worker-isolation-requeue.mjs [--requeue]
+ *
+ * --requeue reopens live Manual Review infra parks via operator retry (same slug,
+ * cap BLOG_OPERATOR_REQUEUE_MAX). It does not use a hardcoded slug list.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -17,9 +20,12 @@ import {
   isSoftRequeueError,
   maybeSoftRequeueTransportKill,
   listOpenIssues,
+  listOperatorRetryJobs,
+  listManualReview,
   readJobs,
   writeJobs,
   rebuildFlagBlocks,
+  reopenJobForOperatorRetry,
   TRANSPORT_REQUEUE_MAX,
 } from "./lib/agent-jobs.mjs";
 
@@ -168,71 +174,38 @@ assert(cli.status === 0, "remap CLI exits 0");
 const cliJson = JSON.parse(cli.stdout || "{}");
 assert(cliJson.error === "silence_kill", "remap CLI returns silence_kill");
 
-// --- 6) Optionally requeue the five open issues ---
-const TARGET_SLUGS = [
-  "global-shipbuilding-gt-delivery-concentration-2026",
-  "copper-mine-vs-refinery-geography-2026",
-  "demographic-cash-flows-research-2026",
-  "measurement-science-research-2026",
-  "consumer-finance-markets-research-2026",
-];
-
+// --- 6) Optionally operator-retry live Manual Review infra parks ---
 if (doRequeue) {
   const data = readJobs();
-  const now = new Date().toISOString();
+  const parked = listManualReview(data);
+  const eligible = listOperatorRetryJobs(data);
   let n = 0;
-  for (const job of data.jobs || []) {
-    if (!TARGET_SLUGS.includes(job.slug)) continue;
-    if (job.status !== "failed" || job.resolution) continue;
-    if (!job.flagged && !isSoftRequeueError(job.lastError)) continue;
-    const err = String(job.lastError || "");
-    Object.assign(job, {
-      status: "claimed",
-      workerId: null,
-      lastError: null,
-      flagged: false,
-      flagReason: null,
-      flaggedAt: null,
-      recovery: false,
-      // Reset budget so producers get fresh soft-requeue room after the harness fix
-      transportRequeues: 0,
-      activity: `Requeued after harness fix (was ${err}) - awaiting worker`,
-      heartbeat: now,
-      updatedAt: now,
-      startedAt: null,
-    });
+  for (const job of eligible) {
+    const err = String(job.lastError || job.manualReviewReason || job.flagReason || "");
+    const reopened = reopenJobForOperatorRetry(data, job.id);
+    if (!reopened) continue;
     n++;
-    console.log(`REQUEUE: ${job.id} ${job.slug} (was ${err})`);
+    console.log(`REQUEUE: ${reopened.id} ${reopened.slug} (was ${err}, retry ${reopened.operatorRequeues})`);
   }
-
-  // Orphan: adaptation left building with dead worker slot
-  for (const job of data.jobs || []) {
-    if (job.slug !== "adaptation-economics-research-2026") continue;
-    if (job.status !== "building" && job.status !== "qa" && job.status !== "researching") continue;
-    const w = data.workers?.[String(job.workerId)];
-    const slotOwns = w && w.jobId === job.id && w.status === "busy";
-    if (!slotOwns) {
-      Object.assign(job, {
-        status: "claimed",
-        workerId: null,
-        lastError: null,
-        flagged: false,
-        activity: "Requeued orphaned in-flight job (worker slot cleared) - awaiting worker",
-        heartbeat: now,
-        updatedAt: now,
-      });
-      n++;
-      console.log(`REQUEUE orphan: ${job.id} ${job.slug}`);
-    }
+  const skipped = parked.filter(
+    (p) => !eligible.some((j) => j.id === p.id),
+  );
+  for (const p of skipped) {
+    console.log(
+      `SKIP MR: ${p.id} ${p.slug} (${p.error}) — not operator-retryable or retry cap exhausted`,
+    );
   }
 
   rebuildFlagBlocks(data);
   writeJobs(data);
-  const open = listOpenIssues(data).filter((i) => TARGET_SLUGS.includes(i.slug));
-  assert(open.length === 0, `target slugs cleared from open issues (left ${open.length})`);
-  console.log(`Requeued ${n} job(s); open target issues: ${open.length}`);
+  const stillOpen = listOpenIssues(data);
+  assert(Array.isArray(stillOpen), "open issues listable after requeue");
+  console.log(`Requeued ${n} job(s); skipped ${skipped.length} parked MR(s)`);
 } else {
-  console.log("NOTE: pass --requeue to clear the five open dashboard issues");
+  const parked = listManualReview();
+  console.log(
+    `NOTE: pass --requeue to operator-retry live Manual Review infra parks (${parked.length} parked now)`,
+  );
 }
 
 // Unit tests from transport QA still matter

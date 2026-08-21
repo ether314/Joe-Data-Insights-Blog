@@ -144,7 +144,8 @@ export interface Post {
     | "measurement-science-concentration-2026"
     | "fiscal-industrial-policy-concentration-202608"
     | "ai-capex-intensity-concentration-2026"
-    | "ai-supply-chain-concentration-2026";
+    | "ai-supply-chain-concentration-2026"
+    | "ai-power-grid-update-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

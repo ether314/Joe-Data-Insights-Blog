@@ -1105,6 +1105,7 @@ function listRunningAgents() {
   const hasWorkerSlots = Boolean(jobs?.workers && Object.keys(jobs.workers).length > 0);
   const parallel =
     lock?.mode === "parallel-worktrees" ||
+    lock?.mode === "docker-isolated-workers" ||
     jobs?.orchestrator?.status === "running" ||
     hasWorkerSlots ||
     (Array.isArray(jobs?.jobs) && jobs.jobs.some((j) => !["shipped", "failed"].includes(j.status)));

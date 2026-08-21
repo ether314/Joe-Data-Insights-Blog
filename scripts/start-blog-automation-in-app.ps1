@@ -2,13 +2,15 @@
 # 1. Cursor self-hosted worker (for cloud automations on this machine)
 # 2. Production stream dashboard at http://127.0.0.1:4177
 # 3. 10-minute watchdog background loop
-# 4. Immediate watchdog check - starts 5-agent orchestrator (1 + 4 worktree workers) if idle
+# 4. Immediate watchdog check - starts Docker-isolated orchestrator (1 + 4 workers + recovery) if idle
 #
 # Usage: powershell -ExecutionPolicy Bypass -File scripts/start-blog-automation-in-app.ps1
 
 $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $LogDir = Join-Path $RepoRoot "artifacts\automation-logs"
+. (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
+[void](Ensure-BlogGitOnPath)
 $WatchdogScript = Join-Path $RepoRoot "scripts\watch-blog-production.ps1"
 $WorkerScript = Join-Path $RepoRoot "scripts\start-cursor-worker.ps1"
 $StreamScript = Join-Path $RepoRoot "scripts\production-stream-server.mjs"
@@ -20,9 +22,7 @@ $StreamPort = if ($env:STREAM_PORT) { [int]$env:STREAM_PORT } else { 4177 }
 $LocalBlogPort = if ($env:BLOG_LOCAL_PORT) { [int]$env:BLOG_LOCAL_PORT } else { 4173 }
 $WorkerName = "$env:COMPUTERNAME-blog"
 $BootstrapScript = Join-Path $RepoRoot "scripts\bootstrap-worktrees.ps1"
-$WorktreeRoot = if ($env:BLOG_WORKTREE_ROOT) { $env:BLOG_WORKTREE_ROOT } else {
-    Join-Path (Split-Path -Parent $RepoRoot) "data-insights-blog-worktrees"
-}
+$WorktreeRoot = Get-BlogWorkerRoot $RepoRoot
 $LocksDir = Join-Path $RepoRoot "artifacts\locks"
 
 New-Item -ItemType Directory -Path $LogDir -Force | Out-Null
@@ -192,7 +192,7 @@ function Ensure-Worktrees {
         }
     }
     if ($missing.Count -eq 0) {
-        Write-Log "Worktrees ready under $WorktreeRoot (worker-1..5)"
+        Write-Log "Worker clones ready under $WorktreeRoot (worker-1..5)"
         return
     }
     if (-not (Test-Path $BootstrapScript)) {
@@ -251,9 +251,17 @@ function Start-WatchdogLoop {
     }
 }
 
-Write-Log "=== Blog automation startup (5-agent parallel worktrees) ==="
+Write-Log "=== Blog automation startup (Docker-isolated workers) ==="
 Test-AgentCli
 Ensure-Worktrees
+$containerScript = Join-Path $RepoRoot "scripts\worker-containers.ps1"
+if (Test-Path $containerScript) {
+    Write-Log "Starting Docker worker containers (profile workers; will not touch web/ollama)..."
+    & powershell -NoProfile -ExecutionPolicy Bypass -File $containerScript -Action start
+    if ($LASTEXITCODE -ne 0) {
+        Write-Log "WARN: worker containers exited $LASTEXITCODE"
+    }
+}
 Start-WorkerIfNeeded
 Start-LocalBlogIfNeeded
 Start-StreamDashboardIfNeeded
@@ -261,8 +269,8 @@ Start-WatchdogLoop
 Write-Log "Running immediate watchdog check (starts orchestrator if idle)..."
 & powershell -NoProfile -ExecutionPolicy Bypass -File $WatchdogScript
 Write-Log "=== Done ==="
-Write-Log "Orchestrator: scripts/run-blog-orchestrator.ps1 (spawns workers 1-4 + recovery 5)"
-Write-Log "Worktrees: $WorktreeRoot"
+Write-Log "Orchestrator: scripts/run-blog-orchestrator.ps1 (spawns workers 1-4 + recovery 5 in Docker clones)"
+Write-Log "Worker clones: $WorktreeRoot (containers blog-worker-1..5)"
 Write-Log "Local blog: http://127.0.0.1:$LocalBlogPort/"
 Write-Log "Stream: http://127.0.0.1:$StreamPort/"
 Write-Log "Watchdog loop PID: $(Get-Content $LoopPidFile -ErrorAction SilentlyContinue)"

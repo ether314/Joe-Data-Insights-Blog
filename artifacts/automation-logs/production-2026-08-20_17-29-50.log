@@ -1,0 +1,267 @@
+[2026-08-20 17:29:50] Starting orchestrator (orch-20260820-172950)
+[2026-08-20 17:29:50] Transport mitigations: producers=4 spawnStagger=20s (env BLOG_PRODUCTION_WORKER_COUNT / BLOG_WORKER_SPAWN_STAGGER_SEC)
+[2026-08-20 17:29:50] Bootstrapping worker clones + Docker containers...
+[2026-08-20 17:30:00] Seeding topic failure flags from history...
+[2026-08-20 17:30:00] flags seed: {"blockedStems":3,"blockedThemes":0,"failures":3}
+[2026-08-20 17:30:00] Recovering any orphaned merge state...
+[2026-08-20 17:30:00] merge recover: {
+  "recover": true,
+  "recovered": false,
+  "reason": "no stash state"
+}
+[2026-08-20 17:36:34] Assigning job job-mt1jt2i5-l47cg -> worker 1
+[2026-08-20 17:36:35] Spawned worker 1 shell pid=14616 for job-mt1jt2i5-l47cg (attempt 1)
+[2026-08-20 17:36:39] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 17:36:59] Assigning job job-mt1jt2i5-60swf -> worker 2
+[2026-08-20 17:37:00] Spawned worker 2 shell pid=10196 for job-mt1jt2i5-60swf (attempt 1)
+[2026-08-20 17:37:04] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 17:37:24] Assigning job job-mt1jt2i5-z76wv -> worker 3
+[2026-08-20 17:37:24] Spawned worker 3 shell pid=14104 for job-mt1jt2i5-z76wv (attempt 1)
+[2026-08-20 17:50:59] Merging ready job job-mt1jt2i5-l47cg (energy-systems-research-2026) from post/energy-systems-research-2026-w1
+[2026-08-20 17:50:59] Defer merge of energy-systems-research-2026 - worker 1 still finishing this job
+[2026-08-20 17:51:04] Merging ready job job-mt1jt2i5-l47cg (energy-systems-research-2026) from post/energy-systems-research-2026-w1
+[2026-08-20 17:51:05] Defer merge of energy-systems-research-2026 - worker 1 still finishing this job
+[2026-08-20 17:51:11] Merging ready job job-mt1jt2i5-l47cg (energy-systems-research-2026) from post/energy-systems-research-2026-w1
+[2026-08-20 17:51:11] Defer merge of energy-systems-research-2026 - worker 1 still finishing this job
+[2026-08-20 17:51:17] Merging ready job job-mt1jt2i5-l47cg (energy-systems-research-2026) from post/energy-systems-research-2026-w1
+[2026-08-20 17:51:17] Defer merge of energy-systems-research-2026 - worker 1 still finishing this job
+[2026-08-20 17:51:23] Merging ready job job-mt1jt2i5-l47cg (energy-systems-research-2026) from post/energy-systems-research-2026-w1
+[2026-08-20 17:51:23] Blessing energy-systems-research-2026 (post/energy-systems-research-2026-w1) - pausing other workers
+[2026-08-20 17:51:39] merge-ready-job exit=0
+[2026-08-20 17:51:39] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/energy-systems-research-2026-w1",
+    "post/energy-systems-research-2026-w2"
+  ],
+  "log": [
+    "merge start slug=energy-systems-research-2026 branch=post/energy-systems-research-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/energy-systems-research-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty GÇö path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/energy-energy-systems-research-2026-hero.png, scripts/qa-energy-systems-research-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/EnergySystemsResearchDashboard.tsx, src/data/energy-systems-research-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/energy-systems-research-2026-w1, post/energy-systems-research-2026-w2"
+  ]
+}
+[2026-08-20 17:51:39] Blessed merge ok - syncing worker clones from main
+[2026-08-20 17:51:47] sync-worker-clones exit=0 orkers",
+  "main": "master",
+  "excludeId": "1",
+  "mergedBranch": "post/energy-systems-research-2026-w1",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/bank-commercial-credit-research-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 17:51:48] Shipped: energy-systems-research-2026 | duration_sec=911
+[2026-08-20 17:51:48] Closed branch(es) after merge: post/energy-systems-research-2026-w1, post/energy-systems-research-2026-w2
+[2026-08-20 17:56:23] Merging ready job job-mt1jt2i5-z76wv (consumer-finance-markets-research-2026) from post/consumer-finance-markets-research-2026-w3
+[2026-08-20 17:56:24] Defer merge of consumer-finance-markets-research-2026 - worker 3 still finishing this job
+[2026-08-20 17:56:30] Merging ready job job-mt1jt2i5-z76wv (consumer-finance-markets-research-2026) from post/consumer-finance-markets-research-2026-w3
+[2026-08-20 17:56:30] Defer merge of consumer-finance-markets-research-2026 - worker 3 still finishing this job
+[2026-08-20 17:56:37] Merging ready job job-mt1jt2i5-z76wv (consumer-finance-markets-research-2026) from post/consumer-finance-markets-research-2026-w3
+[2026-08-20 17:56:37] Defer merge of consumer-finance-markets-research-2026 - worker 3 still finishing this job
+[2026-08-20 17:56:44] Merging ready job job-mt1jt2i5-z76wv (consumer-finance-markets-research-2026) from post/consumer-finance-markets-research-2026-w3
+[2026-08-20 17:56:44] Blessing consumer-finance-markets-research-2026 (post/consumer-finance-markets-research-2026-w3) - pausing other workers
+[2026-08-20 17:57:03] merge-ready-job exit=0
+[2026-08-20 17:57:03] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/consumer-finance-markets-research-2026-w3",
+    "post/consumer-finance-markets-research-2026-w1"
+  ],
+  "log": [
+    "merge start slug=consumer-finance-markets-research-2026 branch=post/consumer-finance-markets-research-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/consumer-finance-markets-research-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 15 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty GÇö path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/consumer-finance-consumer-finance-markets-research-2026-hero.png, scripts/qa-consumer-finance-markets-research-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/ConsumerFinanceMarketsResearchDashboard.tsx, src/data/consumer-finance-markets-research-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/consumer-finance-markets-research-2026-w3, post/consumer-finance-markets-research-2026-w1"
+  ]
+}
+[2026-08-20 17:57:03] Blessed merge ok - syncing worker clones from main
+[2026-08-20 17:57:11] sync-worker-clones exit=0 ether\\AppData\\Local\\data-insights-blog-workers",
+  "main": "master",
+  "excludeId": "3",
+  "mergedBranch": "post/consumer-finance-markets-research-2026-w3",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/bank-commercial-credit-research-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 17:57:12] Shipped: consumer-finance-markets-research-2026 | duration_sec=1185
+[2026-08-20 17:57:12] Closed branch(es) after merge: post/consumer-finance-markets-research-2026-w3, post/consumer-finance-markets-research-2026-w1
+[2026-08-20 18:00:20] Assigning job job-mt22din7-mihxf -> worker 1
+[2026-08-20 18:00:21] Spawned worker 1 shell pid=31716 for job-mt22din7-mihxf (attempt 1)
+[2026-08-20 18:00:25] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 18:00:45] Assigning job job-mt22din7-iwgv4 -> worker 2
+[2026-08-20 18:00:46] Spawned worker 2 shell pid=6440 for job-mt22din7-iwgv4 (attempt 1)
+[2026-08-20 18:00:50] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 18:01:10] Assigning job job-mt22din7-nt0rw -> worker 3
+[2026-08-20 18:01:11] Spawned worker 3 shell pid=29152 for job-mt22din7-nt0rw (attempt 1)
+[2026-08-20 18:01:15] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-20 18:01:35] Assigning job job-mt1jt2i5-60swf -> worker 4
+[2026-08-20 18:01:36] Spawned worker 4 shell pid=24816 for job-mt1jt2i5-60swf (attempt 1)
+[2026-08-20 18:01:47] Assigning job job-mt22din7-iwgv4 -> worker 2
+[2026-08-20 18:01:48] Spawned worker 2 shell pid=25604 for job-mt22din7-iwgv4 (attempt 1)
+[2026-08-20 18:10:06] Merging ready job job-mt22din7-iwgv4 (ai-capex-intensity-update-2026) from post/ai-capex-intensity-update-2026-w2
+[2026-08-20 18:10:06] Defer merge of ai-capex-intensity-update-2026 - worker 2 still finishing this job
+[2026-08-20 18:10:12] Merging ready job job-mt22din7-iwgv4 (ai-capex-intensity-update-2026) from post/ai-capex-intensity-update-2026-w2
+[2026-08-20 18:10:12] Defer merge of ai-capex-intensity-update-2026 - worker 2 still finishing this job
+[2026-08-20 18:10:18] Merging ready job job-mt22din7-iwgv4 (ai-capex-intensity-update-2026) from post/ai-capex-intensity-update-2026-w2
+[2026-08-20 18:10:18] Defer merge of ai-capex-intensity-update-2026 - worker 2 still finishing this job
+[2026-08-20 18:10:24] Merging ready job job-mt22din7-iwgv4 (ai-capex-intensity-update-2026) from post/ai-capex-intensity-update-2026-w2
+[2026-08-20 18:10:24] Defer merge of ai-capex-intensity-update-2026 - worker 2 still finishing this job
+[2026-08-20 18:10:30] Merging ready job job-mt22din7-iwgv4 (ai-capex-intensity-update-2026) from post/ai-capex-intensity-update-2026-w2
+[2026-08-20 18:10:30] Defer merge of ai-capex-intensity-update-2026 - worker 2 still finishing this job
+[2026-08-20 18:10:36] Merging ready job job-mt22din7-iwgv4 (ai-capex-intensity-update-2026) from post/ai-capex-intensity-update-2026-w2
+[2026-08-20 18:10:36] Defer merge of ai-capex-intensity-update-2026 - worker 2 still finishing this job
+[2026-08-20 18:10:43] Assigning job job-mt22qv71-6tue5 -> worker 2
+[2026-08-20 18:10:44] Spawned worker 2 shell pid=6740 for job-mt22qv71-6tue5 (attempt 1)
+[2026-08-20 18:10:48] Merging ready job job-mt22din7-iwgv4 (ai-capex-intensity-update-2026) from post/ai-capex-intensity-update-2026-w2
+[2026-08-20 18:10:48] Blessing ai-capex-intensity-update-2026 (post/ai-capex-intensity-update-2026-w2) - pausing other workers
+[2026-08-20 18:11:01] merge-ready-job exit=0
+[2026-08-20 18:11:01] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-capex-intensity-update-2026-w2"
+  ],
+  "log": [
+    "merge start slug=ai-capex-intensity-update-2026 branch=post/ai-capex-intensity-update-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/ai-capex-intensity-update-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 26 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty GÇö path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/capital-markets-ai-capex-intensity-update-2026-hero.png, scripts/qa-ai-capex-intensity-update-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiCapexIntensityUpdateDashboard.tsx, src/data/ai-capex-intensity-update-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/ai-capex-intensity-update-2026-w2"
+  ]
+}
+[2026-08-20 18:11:01] Blessed merge ok - syncing worker clones from main
+[2026-08-20 18:11:06] sync-worker-clones exit=0 excludeId": "2",
+  "mergedBranch": "post/ai-capex-intensity-update-2026-w2",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "rebased post/ai-financing-update-2026-w1",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/ai-supply-chain-update-2026-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/ai-capex-spend-update-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/bank-commercial-credit-research-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-20 18:11:08] Shipped: ai-capex-intensity-update-2026 | duration_sec=557
+[2026-08-20 18:11:08] Closed branch(es) after merge: post/ai-capex-intensity-update-2026-w2

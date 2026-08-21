@@ -10,7 +10,7 @@ Finish a job that **Failed before merge**. Do not start a new topic. Rescue {{SL
 - Theme ID: {{THEME_ID}}
 - Category: {{CATEGORY}}
 - Branch: {{BRANCH}}
-- Worktree: {{WORKTREE}}
+- Worktree / Docker clone: {{WORKTREE}}
 - Main repo (job updates only): {{REPO_ROOT}}
 - Smoke port: {{SMOKE_PORT}}
 - Homepage QA port: {{SMOKE_QA_PORT}}
@@ -19,9 +19,9 @@ Finish a job that **Failed before merge**. Do not start a new topic. Rescue {{SL
 - Recovery attempt: {{RECOVERY_ATTEMPT}}
 
 ## Hard rules
-1. Work ONLY in this worktree. Do not modify the main repo checkout except via job-status updates.
+1. Work ONLY in this clone/worktree. Do not modify the main repo checkout except via job-status updates.
 2. Build / finish ONLY {{SLUG}}. No other topics.
-3. Do NOT merge to main. Do NOT push. Do NOT Firebase deploy.
+3. Do NOT merge to main. Do NOT commit to master/main. Do NOT push. Do NOT Firebase deploy.
 4. Prefer **repairing existing branch work** over rewriting from scratch.
 5. After local QA, commit on {{BRANCH}}, mark ready, EXIT.
 

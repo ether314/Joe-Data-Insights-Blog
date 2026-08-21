@@ -1,5 +1,5 @@
 ---
-description: Deploy policy for interactive edits vs parallel worktree conveyor
+description: Deploy policy for interactive edits vs Docker-isolated conveyor
 alwaysApply: true
 ---
 
@@ -23,10 +23,11 @@ npm run deploy:firebase
 
 Only skip Firebase if the user explicitly says not to deploy for that specific change.
 
-## Parallel worktree conveyor (orchestrator + workers)
+## Parallel Docker-isolated conveyor (orchestrator + workers)
 
 Workers and the orchestrator **must not** run Firebase / `deploy:hosting` / `deploy:firebase`.
 
-- Workers: `npm run deploy` (local build + smoke) inside their worktree, then mark job `ready`.
-- Orchestrator: merge `ready` branches into main; optional main-tree local verify.
+- Each worker runs in `blog-worker-N` against its own clone (`%LOCALAPPDATA%\data-insights-blog-workers\worker-N`) on a **job git branch**. Do not edit the main checkout or commit to `master`/`main`.
+- Workers: `npm run deploy` (local build + smoke) inside that clone, then mark job `ready`.
+- **Bless:** orchestrator is the only merger. On `ready` it pauses other workers, merges the job branch into main, syncs the other clones, then resumes.
 - Hosting publish stays operator-gated (`deploy:firebase` from main) unless re-enabled explicitly.
