@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-industrial-policy-geography-202608",
+    slug: "fiscal-industrial-policy-geography-202608",
+    title:
+      "Geographic Split: NA Owns ~71% of Package $ — Until Korea’s Mega-Plan Flips East Asia to ~66%",
+    excerpt:
+      "August 202608 geography lens: North America still holds ~71% of core industrial-policy package dollars (+50 pp vs stock), but adding Korea’s ~$951B mega-plan flips East Asia to ~66% of an alt $1.58T universe. Ownership stakes cluster in Anhui·Guangdong·Shanghai; USMCA battery nodes tip at MI·ON·TX.",
+    category: "Politics",
+    themeId: "fiscal-industrial-policy",
+    imageUrl:
+      "/images/politics-fiscal-industrial-policy-geography-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic map of East Asia, North America, and Europe with cyan package-dollar bars, rose stock-count markers, amber Korea mega-plan spike, and teal USMCA battery corridor nodes",
+    publishedAt: "2026-08-22T04:00:00Z",
+    featured: true,
+    visualization: "fiscal-industrial-policy-geography-202608",
+    layout: "default",
+    content: `Our [2026 geography print](/blog/fiscal-industrial-policy-geography-2026) showed that industrial-policy maps disagree: East Asia leads cumulative *counts*, North America owns major *package dollars*, and rest-of-world still dominates a busy *monthly tape*. The [Q3 geography vintage](/blog/fiscal-industrial-policy-geography-2026q3) then asked where the stock–package mismatch lives inside US states and EU members. The [August concentration companion](/blog/fiscal-industrial-policy-concentration-202608) folded Korea’s mega-plan and Jun–Jul ownership stakes into the *tip* meters. This **August 202608 geography lens** answers the map question that follows: **where does that sensitivity land — and how far down the map do equity stakes and battery dollars travel?**
+
+The dashboard above is a **sensitivity + ownership + corridor board**, not another AZ·TX·NY fab ladder. Toggle **Sensitivity**, **Ownership**, **Instruments**, and **Battery / flow**. On Sensitivity, flip **Universe** between core packages and +Korea mega. The punchline is deliberately two-map. **Core packages** still put North America near **71%** of war-chest dollars (+**50 pp** versus its ~**21%** stock share). **Alt packages** that include Korea’s ~**$951B** headline flip East Asia to ~**66%** of a **$1.58T** universe. Ownership stakes and the USMCA battery corridor then show where fiscal capacity lands *below* the capital level.
+
+## The August scoreboard: which region leads depends on the meter
+
+| Meter | Geography tip | Share | What it measures |
+| --- | --- | ---: | --- |
+| Cumulative stock (counts) | East Asia | **~33%** | Where interventions accumulate |
+| Core fiscal packages ($) | North America | **~71%** | War-chest capacity excl. Korea mega |
+| Alt packages (+Korea mega) | East Asia | **~66%** | Capacity if $951B headline enters |
+| Ownership / equity stakes | Anhui funds | **~28%** | Where Jun–Jul equity LOIs land |
+| June 2026 monthly flow | Rest of world | **~62%** | Latest disclosed month geography |
+| NA battery nearshore tip | Michigan | **~22%** | USMCA battery corridor dollars |
+
+Read the table as a **family of maps**, not one slogan. Stock counts ask *who intervenes how often*. Core packages ask *who can relocate a fab with a fiscal claim large enough to move a board*. The alt universe asks what happens to those sentences when one outsized East Asian headline enters the war-chest ledger. Ownership asks where *equity* — not appropriations — lands. June flow asks where the *latest month* prints. Battery nodes ask where *nearshore cell dollars* concentrate inside North America.
+
+## Sensitivity: the Korea mega-plan flips the package map
+
+Open **Sensitivity**. The mismatch bars are the geography twin of the [August concentration Korea meter](/blog/fiscal-industrial-policy-concentration-202608). On the **core** universe, North America’s package-minus-stock gap is about **+50 pp**; East Asia sits near **−18 pp** — frequent intervention, thinner disclosed package dollars. Flip **Universe** to **+Korea mega** and the signs reverse for the two poles: East Asia’s mismatch jumps to roughly **+33 pp**, North America compresses toward **+7 pp**, and Europe’s modest underweight deepens as the denominator expands to **$1.58T**.
+
+The dual ladder beside the mismatch makes the same point without subtraction: rose stock bars still put East Asia first; cyan package bars put North America first *only* on the core ledger. After Korea’s mega-plan enters, cyan jumps to East Asia. That is the capital-allocation hinge for August. Desks that only watch IRA/CHIPS headlines underweight East Asian *announced* capacity once the mega-plan is in scope; desks that only watch the mega-plan headline underweight that the dollar is not comparable to IRA tax-expenditure scores or CHIPS appropriations. Both maps belong on the desk; neither should be quoted without naming the universe.
+
+The sensitivity waterfall states the flip in four bars: NA core ~**71%**, East Asia core ~**15%**, NA after Korea ~**28%**, East Asia after Korea ~**66%**. Pair that panel with the jurisdiction scatter — the United States still sits far above the stock=package diagonal on *core* dollars — so the alt flip is a *perimeter* change, not a rewriting of US statutory war-chest arithmetic.
+
+## Ownership geography: equity is a China-subnational story
+
+Switch to **Ownership**. The Jun–Jul tracked equity / LOI universe is only about **$5.2B** — small beside packages, large as a *place* signal. Anhui provincial and municipal funds lead near **28%**, Guangdong near **22%**, Shanghai / Yangtze near **13%**. Together the top-three China nodes hold roughly **63%** of the tracked stake tape; roll the donut to regions and East Asia clears most of the pie, with thinner US federal offtake/equity and EU IPCEI co-invest legs.
+
+Treat this as **ownership geography**, not a full census of industrial-policy equity. It still matters for the same reason AZ·TX·NY matter on awards: “China” as a Teneo Big Three jurisdiction is not a uniform fiscal surface. Provincial fund complexes absorb a disproportionate share of the disclosed stake tip. Pair this panel with the [August toolkit update](/blog/fiscal-industrial-policy-update-202608) on monthly flow — ownership is a *place* story about where balance-sheet industrial policy lands when the theme is EV, semis, and dual-use tech.
+
+The meter board under the donut ranks top-region shares across stock, core packages, alt packages, ownership, June flow, and battery. It is the one-screen reminder that “who leads” is meter-dependent: East Asia on counts and (conditionally) alt dollars; North America on core packages; RoW on June flow; Michigan on the battery tip.
+
+## Instruments: barriers thicken in North America, subsidies in East Asia
+
+Open **Instruments**. The 2025 toolkit mix rolled to regions shows *how* capitals intervene, not only *where*. East Asia’s within-region mix is subsidy-heavy (~**48%**), consistent with Big Fund–style industrial finance and provincial support. North America’s mix is barrier-heavier (~**41%** import barriers) beside a still-material subsidy share (~**34%**) — tariffs, procurement preferences, and IRA/CHIPS credits living in the same toolkit. Europe’s finance-control leg (~**29%**) is thicker than North America’s, reflecting state-aid and IPCEI-style mobilisation. Rest-of-world remains barrier-tilted on the estimated roll-up.
+
+The composed stock-versus-package panel beside the stack keeps the Sensitivity universe toggle live: flip to +Korea mega and the cyan package line jumps on East Asia while stock bars stay fixed. That is intentional. Instrument mix answers *toolkit geography*; the package line answers *war-chest geography*. Confusing the two produces the false comfort that “everyone uses the same tools at the same scale.”
+
+## Battery / flow: USMCA nodes and a RoW-majority tape
+
+Toggle **Battery / flow**. The nearshore battery corridor tip (~**$52B** tracked) is the August geography addition that Q3’s semis-heavy US-state ladder did not own. Michigan leads near **22%**, Ontario near **19%**, Texas near **14%** — top-three **MI · ON · TX** about **54%**. Filter **Nodes** to Canada or Mexico to isolate provincial and Bajío nearshore legs. This is *inside-bloc package geography* for cells and packs under IRA / USMCA offtake logic, not a full North American industrial-policy census.
+
+The May→Jul flow path beside the ladder reprints the humility check from the [August toolkit update](/blog/fiscal-industrial-policy-update-202608): *stock concentration is not flow concentration*. June’s disclosed geography still leaves about **62%** of interventions to rest-of-world even as July volume jumped ~**25%** versus May. Narrative that “only three capitals matter” fails the monthly map even when it roughly fits the cumulative stock and core package-dollar maps. The amber total line rising into July while the RoW area stays dominant is the visual proof.
+
+## Who is exposed — and what would rewrite the map
+
+**Exposed on the core package map:** desks that treat East Asia’s stock lead as dollar capacity; European strategy decks that equate Teneo Big Three membership with US-scale war chests; clients who quote “industrial policy is everywhere” without separating count stock from package dollars.
+
+**Exposed on the alt package map:** IRA/CHIPS-centric narratives that ignore Korea’s mega-plan perimeter; East Asia capacity stories that treat the $951B headline as dollar-for-dollar comparable to US tax-expenditure scores; HHI readers who do not restate the universe when the mega-plan enters.
+
+**Exposed on ownership geography:** analysts who stop at “China ~24% of stock” without provincial fund nodes; equity desks that miss Anhui·Guangdong·Shanghai as the tip of the Jun–Jul stake tape; EU IPCEI readers who confuse member co-invest legs with US-scale federal offtake.
+
+**Exposed on battery / flow:** semis-only US-state maps that miss MI·ON·TX as the battery tip; USMCA supply-chain models that underweight Ontario and Nuevo León; narrative that Big Three headlines dominate monthly *counts* when RoW still clears ~**62%** in June.
+
+**What would rewrite the map:** a restated package universe that permanently includes Korea-comparable envelopes for China/Japan without the mega-plan caveat; Jun–Jul ownership disclosures that push China subnational share below ~**40%** of tracked stakes; a battery corridor tip that dilutes MI·ON·TX below ~**40%**; a monthly roundup where Big Three blocs clear a majority of interventions. None of those clear this August geography vintage. The continental architecture is sticky; the Korea sensitivity and ownership nodes are the new meters beside it.
+
+## Caveats and methodology
+
+- **Regional stock shares** roll Teneo Big Three (~**63%**) plus estimated Japan/Korea/RoW splits into four continental buckets — geography reconstructions, not a new NIPO microdata extract.
+- **Package USD figures** are statutory appropriations, mobilisation targets, state-aid approvals, or tax-credit scores — **not outlays-to-date**. Do not sum them as simultaneous fiscal cost.
+- **Korea mega-plan (~$951B)** is a disclosed headline used only in the alternate package universe; it is **not** dollar-for-dollar comparable to IRA TE / CHIPS appropriations.
+- **Ownership stakes** follow GTA Jun–Jul 2026 Roundups (equity LOIs / funds) inside a ~**$5.2B** tracked tip — a lower-bound geography, not a full industrial-equity census.
+- **Instrument mix** rolls Teneo Fig.2 (2025) toolkit shares to regions; within-region percentages are analytical, not a second disclosed table.
+- **Battery corridor nodes** are estimated from public IRA / USMCA / provincial notices inside a ~**$52B** tip — not full North American EV outlays.
+- **June 2026 bloc shares** are disclosed in the GTA Monthly Roundup; May/Jul totals are disclosed without matching geography — regional paths for those months are editorial.
+- Pair with [Q3 geography](/blog/fiscal-industrial-policy-geography-2026q3) for US/EU subnational fab ladders; this post owns the Korea sensitivity, ownership nodes, and battery corridor.
+
+## The shareable takeaway
+
+In the **August 202608 geography vintage**, East Asia still leads stock counts (~**33%**), North America still owns ~**71%** of *core* package dollars, and rest-of-world still dominates June’s monthly tape (~**62%**). Add Korea’s mega-plan and East Asia flips to ~**66%** of an alt **$1.58T** universe. Ownership stakes cluster in Anhui·Guangdong·Shanghai; the USMCA battery tip clusters in MI·ON·TX. Concentration told you the tip is thick and sensitive to Korea. Geography tells you **which regions own which tip — and that the answer flips when the universe changes**.
+
+Related reading: [Q3 geography](/blog/fiscal-industrial-policy-geography-2026q3) · [Geography 2026](/blog/fiscal-industrial-policy-geography-2026) · [August concentration](/blog/fiscal-industrial-policy-concentration-202608) · [H-NIPO research](/blog/fiscal-industrial-policy-research-2026) · [August toolkit update](/blog/fiscal-industrial-policy-update-202608).`,
+  },
+  {
     id: "bank-commercial-credit-concentration-2026q3",
     slug: "bank-commercial-credit-concentration-2026q3",
     title:

@@ -2462,6 +2462,21 @@ const BankCommercialCreditConcentration2026q3Dashboard = dynamic(
   },
 );
 
+const FiscalIndustrialPolicyGeography202608Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FiscalIndustrialPolicyGeography202608Dashboard"
+    ).then((m) => m.FiscalIndustrialPolicyGeography202608Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3105,6 +3120,10 @@ export function PostVisualization({
 
   if (type === "bank-commercial-credit-concentration-2026q3") {
     return <BankCommercialCreditConcentration2026q3Dashboard />;
+  }
+
+  if (type === "fiscal-industrial-policy-geography-202608") {
+    return <FiscalIndustrialPolicyGeography202608Dashboard />;
   }
 
   return null;

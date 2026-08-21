@@ -190,7 +190,8 @@ export interface Post {
     | "adaptation-economics-concentration-202608"
     | "geopolitics-institutions-geography-2026"
     | "macro-growth-trade-geography-2026"
-    | "bank-commercial-credit-concentration-2026q3";
+    | "bank-commercial-credit-concentration-2026q3"
+    | "fiscal-industrial-policy-geography-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

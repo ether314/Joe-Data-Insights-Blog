@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "fiscal-industrial-policy-geography-202608",
+    marker: "Fiscal & industrial policy — Aug 202608 geography lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "bank-commercial-credit-concentration-2026q3",
     marker: "Bank & commercial credit — Q3 concentration lens",
     forbidden: "Loading interactive charts",
