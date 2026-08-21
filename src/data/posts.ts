@@ -2,6 +2,102 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-geography-2026",
+    slug: "macro-growth-trade-geography-2026",
+    title:
+      "Geographic Split: Asia Owns ~54% of World Growth & 71% of Trade Gains",
+    excerpt:
+      "Geography lens on growth, trade and prices: Asia delivers ~54% of world PPP growth contribution and 71% of merchandise trade-volume gains, while North America still holds ~18% of PPP stock with only ~10% of growth — and elevated CPI burden stays thick in the US and EM, not in China.",
+    category: "Economics",
+    themeId: "macro-growth-trade",
+    imageUrl:
+      "/images/economics-macro-growth-trade-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with amber Asia growth arcs, teal North America stock nodes, and violet Europe trade corridors, Visual Capitalist–style economics thumbnail",
+    publishedAt: "2026-08-22T00:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-geography-2026",
+    layout: "default",
+    content: `Our [April research triangle](/blog/macro-growth-trade-research-2026) mapped the growth–trade–price path. The [concentration companions](/blog/macro-growth-trade-concentration-2026) then asked how thick the tip of that distribution is — Top-1, Top-3, HHI across PPP stock, growth contribution, and merchandise trade. This post answers a different desk question: **where does activity, risk, and capacity sit on the map?** Concentration tells you China is ~32% of world PPP growth; geography tells you that Asia as a *region* clears ~**54%** of growth contribution and **71%** of merchandise trade-volume gains, while North America still anchors ~**18%** of PPP stock with only ~**10%** of growth.
+
+The interactive dashboard above is built as a **geography lens**, not another Top-k ladder. Toggle **Regions**, **Scatter**, **Trade**, and **Prices**. On Regions, flip the metric among growth contribution, PPP stock, trade-growth, and export value. On Scatter, filter by continent and open Asia’s internal split. The punchline is deliberately two-map. **Activity** (growth and trade volume) is Asian. **Stock weight** remains more balanced across Asia, North America, and Europe. **Price burden** is thickest where growth is *not* thickest — the United States and large EM weights sit in the elevated CPI band while China prints near-zero inflation beside the largest growth contribution on the board.
+
+## The headline map: stock vs flow geography
+
+| Meter | Geography tip | Share | What it measures |
+| --- | --- | ---: | --- |
+| Growth contribution (Asia) | Asia | **~54%** | Who drives world PPP Δ |
+| Merch trade-volume growth (Asia) | Asia | **71%** | Who drives goods volume Δ |
+| PPP GDP stock (Asia) | Asia | **~40%** | Where the stock weight sits |
+| PPP GDP stock (N. America) | North America | **~18%** | US-dominated stock |
+| Growth contribution (N. America) | North America | **~10%** | Stock without matching flow |
+| Export value (Europe) | Europe | **~28%** | High $ share vs low growth |
+| Elevated-CPI GDP share | US · IN · LatAm core | **~38%** | Price burden perimeter |
+
+Read the table as a **family of maps**, not one slogan. Growth contribution answers which *regions create world ΔGDP*. Trade-growth answers which *regions create merchandise volume*. PPP stock answers where *weights* live. Export value answers where *dollar trade* clears — and Europe’s ~**28%** export-value share against ~**8%** growth contribution is the cleanest reminder that value hubs and growth engines are not the same geography.
+
+## Regions: four meters, one continental story
+
+Open **Regions**. On **Growth**, Asia prints ~**54%**, Rest-of-world residual ~**21%**, North America ~**10%**, Europe ~**8%**, LatAm ~**4%**, MENA ~**3%**. Flip to **PPP stock** and Asia softens to ~**40%** while North America and Europe thicken to ~**18%** and ~**17%**. Flip to **Trade Δ** and Asia jumps to the WTO-disclosed **71%** (3.2 pp of 2025 merchandise volume growth). Flip to **Export $** and Europe reappears at ~**28%** beside Asia’s ~**32%** — a value geography that does not match the volume-growth corridor.
+
+The four-meter stacked compare panel makes the hinge visual: Asia’s bar lengthens as you move from stock → growth → trade-growth, then shortens again on export dollars once European and Middle East value hubs re-enter. Desks that quote “Asia owns the global economy” without specifying *which meter* are averaging four different maps into one slogan.
+
+Pair this panel with the [prior concentration print](/blog/macro-growth-trade-concentration-2026). Concentration says China’s Top-1 growth share is ~**32%**. Geography says the *region* around China — India, ASEAN, Japan/Korea — pushes the continental growth share to ~**54%**. Both statements are true; they answer different questions.
+
+## Scatter: growth engines are not price leaders
+
+Switch to **Scatter**. The growth-contribution × CPI bubble chart (bubble = PPP stock) puts China in the soft-CPI / thick-growth quadrant: ~**0.2%** CPI beside ~**32%** of world growth and ~**19%** of PPP stock. India sits in the elevated-CPI / thick-growth quadrant (~**4.6%** CPI, ~**15%** growth contribution). The United States sits as a large elevated-CPI weight (~**15%** PPP, **3.4%** July CPI) with only ~**9%** of growth contribution. Germany and Japan cluster near target-adjacent CPI with thin growth contributions and thick export footprints.
+
+Filter the scatter to **Asia** and open the **Asia lens** ladder. China alone is ~**32%** of *world* growth; India ~**15%**; ASEAN-5+ ~**5%**; Japan+Korea ~**2%**. Flip the Asia lens to **Export $** and Japan+Korea thicken relative to India — another reminder that Asia’s *growth* geography and Asia’s *export-value* geography are not identical. India’s growth contribution is world-scale; its merchandise export-value share is still modest.
+
+The country table under the scatter is the desk receipt: region tag, PPP %, growth %, export %, CPI. Use it when a client asks “where does the US sit relative to Europe on growth contribution?” without opening a second workbook.
+
+## Trade corridors: volume is Asian, value is plural
+
+Open **Trade**. The WTO March 2026 regional decomposition of 2025 merchandise volume growth still puts **Asia at 3.2 pp / 71%**, Europe ~**15%**, North America ~**11%**, and the rest of the world ~**4%**. That is the disclosed geography of *volume growth* — not of export dollars.
+
+The export-value donut tells the second map: Asia ~**32%**, Europe ~**28%**, Rest-of-world (including energy exporters) ~**28%**, North America ~**12%**. Europe’s value share is nearly double its volume-growth share. MENA and other energy corridors inflate Rest-of-world dollars without owning the volume Δ. The dual bar of 2025 contribution pp versus 2026 merchandise import forecasts keeps Asia’s import path at ~**3.3%** — still the thickest regional demand forecast in the theme vintage.
+
+This is the geography companion to the [August concentration update](/blog/macro-growth-trade-concentration-202608) and the [August CPI/PCE vintage](/blog/macro-growth-trade-update-202608). Those posts asked whether Top-1 shares moved and whether US prices cooled. This post asks *where* the trade corridor still lives while those meters refresh. Asia’s **71%** is a regional fact, not a China-only fact — and it remains carried until a newer GTOS vintage re-ranks 2025 contribution shares.
+
+## Prices: soft growth, elevated burden
+
+Toggle **Prices**. Soft / near-zero CPI economies hold ~**22%** of world PPP GDP but deliver ~**34%** of world growth — China-led. The elevated band (roughly **3–6%** CPI) holds ~**38%** of PPP GDP and ~**28%** of growth: the United States, India, and large LatAm weights. High/outlier CPI economies are a thin GDP share with a thicker growth residual once Türkiye and select EM/SSA prints enter.
+
+Regional median CPI ranks Rest-of-world and MENA hottest, LatAm next, North America elevated, Europe nearer target, and Asia softest as a continental median — because China’s near-zero print pulls the Asian median down even while India sits elevated. That is why “Asia is disinflating the world” is half-true: Asia’s *growth* is soft-CPI led; Asia’s *second engine* (India) is not.
+
+The hinge for inflation desks: **the growth leader is not the price leader.** Soft-landing narratives that need China’s world-growth share *and* a US-led disinflation story to rhyme geographically fail this map. The growth map points east; the elevated-burden map still has a thick North American weight.
+
+## Who is exposed — and what would rewrite the map
+
+**Exposed on the growth map:** factor models that treat “global growth” as a G7 residual while Asia clears ~**54%** of PPP contribution; US-centric soft-landing decks that underweight India’s second-place contribution; European exporters who confuse their ~**28%** export-value share with growth-engine status.
+
+**Exposed on the trade map:** supply-chain desks that treat May–June CPB MoM noise as a regional re-decomposition of Asia’s **71%** volume-growth share; importers who underwrite only China risk inside an Asia corridor that includes India, ASEAN, Korea, and Japan on different meters.
+
+**Exposed on the price map:** inflation debates that imply the growth leader is the price leader; portfolios that treat “elevated CPI GDP share ~38%” as an Asia story when North America is a large piece of that perimeter; EM desks that average Türkiye’s outlier CPI into an Asia median.
+
+**Relative winners under current maps:** Asian intermediate-goods and AI-goods corridors inside the **71%** volume-growth share; India’s growth contribution even when export-value share lags; US demand weight that still anchors PPP stock (~**15%** alone) while contribution ranks third among sovereigns; European value hubs that clear dollars without clearing growth; desks that keep concentration Top-1s and regional geography in separate columns.
+
+**What would rewrite the map:** a sustained WEO restatement that puts Asia’s share of world PPP growth below ~**40%**; Asian merchandise volume-growth contribution falling below ~**50%** of a new GTOS vintage; Europe’s growth contribution rising toward its export-value share; China CPI re-accelerating toward the world average while keeping its growth weight; US CPI falling clearly below the elevated threshold in a way that shrinks the ~**38%** elevated-GDP band. None of those clear this geography vintage. The continental architecture is sticky; the meters beside it still refresh.
+
+## Caveats and methodology
+
+- **Regional PPP stock and growth-contribution shares are estimated roll-ups** of IMF WEO April 2026 country weights × growth into continental buckets. Residuals close each perimeter; they are not a second WEO table.
+- **Merchandise trade-growth geography follows WTO GTOS March 2026** (Asia **71% / 3.2 pp** disclosed). Other regional shares are estimated to close the 4.6% world volume-growth print.
+- **Export-value geography uses ~$26.3T world merchandise exports (2025)**; re-export hubs (e.g. Netherlands) inflate value versus domestic origin. Services (~**$9.6T**) excluded.
+- **CPI regimes and regional medians mix disclosed BLS / Eurostat prints with theme WEO paths**; “elevated-CPI GDP share” (~**38%**) is a burden perimeter, not an additive market share.
+- **Asia internal split (China / India / ASEAN / JP+KR)** is an analytical partition of the Asia growth engine for the scatter panel — not a WTO region code.
+- **Türkiye’s CPI outlier is hidden on the scatter** so the main growth×price cloud stays readable; it remains in the country table.
+- **Euro-area growth contribution inside Europe is aggregated** in theme vintages; this geography post rolls Europe as one continental bucket.
+- Pair with [Q3 hard-data](/blog/macro-growth-trade-update-2026q3) and [July Update](/blog/macro-growth-trade-update-2026) for level tapes; this post owns the map question.
+
+## The shareable takeaway
+
+In the **2026 geography vintage** for growth, trade, and prices, Asia owns ~**54%** of world PPP growth contribution and **71%** of merchandise trade-volume gains, while holding ~**40%** of PPP stock. North America still anchors ~**18%** of stock with only ~**10%** of growth. Europe clears ~**28%** of export dollars against a thin growth contribution. Soft-CPI Asia delivers disproportionate growth; the elevated-CPI burden (~**38%** of PPP GDP) remains thick in the United States and large EM weights. Concentration told you the tip is thick. Geography tells you **which continents own the tip — and that stock, flow, and price do not share one map**.
+
+Related reading: [Prior concentration print](/blog/macro-growth-trade-concentration-2026) · [Q3 concentration lens](/blog/macro-growth-trade-concentration-2026q3) · [August concentration](/blog/macro-growth-trade-concentration-202608) · [August CPI/PCE vintage](/blog/macro-growth-trade-update-202608) · [July IMF vintage](/blog/macro-growth-trade-update-2026) · [April research](/blog/macro-growth-trade-research-2026) · [China–US–India GDP](/blog/china-us-india-gdp-30-years).`,
+  },
+  {
     id: "geopolitics-institutions-geography-2026",
     slug: "geopolitics-institutions-geography-2026",
     title:

@@ -188,7 +188,8 @@ export interface Post {
     | "consumer-finance-markets-geography-2026"
     | "ai-compute-demand-geography-2026"
     | "adaptation-economics-concentration-202608"
-    | "geopolitics-institutions-geography-2026";
+    | "geopolitics-institutions-geography-2026"
+    | "macro-growth-trade-geography-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

@@ -2432,6 +2432,21 @@ const GeopoliticsInstitutionsGeography2026Dashboard = dynamic(
   },
 );
 
+const MacroGrowthTradeGeography2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/MacroGrowthTradeGeography2026Dashboard"
+    ).then((m) => m.MacroGrowthTradeGeography2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3067,6 +3082,10 @@ export function PostVisualization({
 
   if (type === "geopolitics-institutions-geography-2026") {
     return <GeopoliticsInstitutionsGeography2026Dashboard />;
+  }
+
+  if (type === "macro-growth-trade-geography-2026") {
+    return <MacroGrowthTradeGeography2026Dashboard />;
   }
 
   return null;
