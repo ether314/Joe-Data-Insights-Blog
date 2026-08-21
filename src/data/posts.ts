@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-geography-2026q3",
+    slug: "demographic-cash-flows-geography-2026q3",
+    title:
+      "Q3 Geography: LatAm Destination Share Slips to ~16% After Banxico — South Asia Still ~26%",
+    excerpt:
+      "Q3 geography vintage of demographic cash flows: Banxico’s FY2025 Mexico restatement ($61.791B) softens LatAm destination share to ~16.3% (−0.9 pp vs Brief 41) and US→LatAm corridor bloc to ~11%, while South Asia still leads destination dollars (~26%) and extreme remittance/GDP risk remains a Central Asia / Central America map.",
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl:
+      "/images/global-systems-demographic-cash-flows-geography-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with amber Gulf–South Asia and cyan US–Latin America remittance arcs, with a teal Banxico vintage-delta marker near LatAm",
+    publishedAt: "2026-08-21T22:30:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-geography-2026q3",
+    layout: "default",
+    content: `Our [Brief 41 geography lens](/blog/demographic-cash-flows-geography-2026) mapped where remittance dollars and age risk sit: South Asia ~**26%** of destination dollars, the United States ~**31%** of estimated outbound origin, US→LatAm ~**12%** as the thickest corridor bloc, Tajikistan ~**45%** remittance/GDP as the risk tip. The [Q3 concentration vintage](/blog/demographic-cash-flows-concentration-2026q3) then restated Mexico with Banxico FY2025 **$61.791B** (−**$6.2B** vs Brief 41’s ~**$68B** estimate). This post asks the geography question *after* that restatement: **does Banxico rewrite the regional map — or only soften one corridor region?**
+
+The interactive dashboard above opens on **Vintage Δ**. Toggle Δ pp dumbbell versus Brief 41 → Q3 slope, then step through **Destinations**, **Hosts**, **Corridors**, and **Age & risk**. The punchline is a selective rewrite. **LatAm destination share** slips to about **16.3%** (from ~**17.2%**). **US→LatAm corridor bloc** eases to ~**11%** (from ~**12%**). **South Asia** still leads destinations at ~**26%**. Host origin shares and extreme GDP-dependence geography barely move. Geography after Banxico is still multi-map — the vintage only relocates weight inside the LatAm / residual close.
+
+## The Q3 headline table: what moved, what did not
+
+| Meter | Brief 41 geography | Banxico Q3 | Δ | What it means |
+| --- | ---: | ---: | ---: | --- |
+| South Asia destination $ | **~26.3%** | **~26.3%** | **0** | Still the destination tip |
+| LatAm destination $ | **~17.2%** | **~16.3%** | **−0.9 pp** | Mexico FY restatement |
+| Top-3 destination regions | **~58%** | **~57%** | **−0.9 pp** | Same ordering |
+| US → LatAm corridor bloc | **~12%** | **~11%** | **−0.9 pp** | Softens, still #1 pipe |
+| US host origin share | **~31%** | **~31%** | **0** | Host map carried |
+| Tajikistan remittance/GDP | **~45%** | **~45%** | **0** | Risk map carried |
+
+Read the table as a **vintage filter**, not a new planet. The Banxico print moves Mexico’s *country* dollars and therefore LatAm’s *regional* dollars. It does not move India’s South Asia tip, the US host tip, or Tajikistan’s dependence tip. Desks that collapse “Mexico fell” into “remittances deconcentrated globally” are mixing a LatAm corridor restatement with a planetary geography claim.
+
+## Vintage Δ: Banxico softens LatAm, not South Asia
+
+Open **Vintage Δ**. The dumbbell shows LatAm destination share, US→LatAm corridor, and top-3 destination regions each down about **0.9 pp**; South Asia destination share and US host origin share sit at **0**. Flip to **Brief 41 → Q3 slope** for the same story as paired line readings. The residual LMIC close absorbs the Mexico delta — rising from ~**17.7%** to ~**18.6%** — because we keep the Brief 41 **$685B** perimeter fixed and re-roll destination regions after Banxico’s disclosed Mexico total.
+
+That is the first hinge of the Q3 vintage: **a country restatement is a regional event only where the country is the region’s tip**. Mexico is LatAm’s tip; India is South Asia’s tip; China+Philippines tip EAP. Restating Mexico therefore softens LatAm and the US→LatAm pipe without touching South Asia’s lead. Pair this panel with the [Q3 concentration lens](/blog/demographic-cash-flows-concentration-2026q3) when you need top-1 / top-3 *country* shares on the same Banxico books.
+
+## Destination regions after Banxico: South Asia still leads
+
+Filter **Destinations**. South Asia still rolls to about **$180B** / **~26%** of the **$685B** LMIC universe on India (**$129B**), Pakistan (**$33B**), and Bangladesh (**$18B**) anchors. LatAm follows near **$112B** / **~16.3%** once Mexico is Banxico FY2025 **$61.791B** plus Central America / Caribbean corridors — down from Brief 41 geography’s ~**$118B** / **~17.2%**. East Asia & Pacific remains near **15%** on China (**$48B**) plus the Philippines (**$40B**). MENA, SSA, and ECA fill the mid- to high-single-digit bands; the analytical residual closes the restated perimeter.
+
+Toggle **Dollars** versus **Share %**. Ordering is unchanged: South Asia, LatAm, EAP. Absolute weight of India’s **$129B** still dwarfs Banxico Mexico’s **$61.8B**. The destination pie is therefore still **South Asia–weighted without monopoly** — only the LatAm slice is a touch thinner. That is the geographic twin of the [Q3 concentration](/blog/demographic-cash-flows-concentration-2026q3) finding that Mexico’s second-place *country* share slipped while India’s first-place share held.
+
+## Host geography: origin tip unchanged
+
+Open **Hosts**. Estimated outbound origin still puts the United States near **31%** (~**$212B**), GCC near **14%**, and Western Europe near **11%**. Russia & CIS remain small on dollars and oversized on Central Asian destination risk. Banxico restates *recipient* Mexico books; it does not rewrite KNOMAD host / origin geography. Filter **Hosts only** to drop the residual and see the disclosed tip; the host-age companion still shows Europe’s mid-30s old-age dependency beside GCC hosts in the single digits.
+
+This is why the vintage table’s **0 pp** on US host share matters. A desk watching only Mexico’s Banxico print can over-index LatAm corridor news and under-index the still-dominant US *origin* tip that feeds multiple destination regions — LatAm, EAP (Philippines), and South Asia skilled corridors alike. Host geography and destination geography remain different maps after Q3, just as they were in the [Brief 41 geography](/blog/demographic-cash-flows-geography-2026) print.
+
+## Corridor blocs: US→LatAm still thickest, slightly softer
+
+Switch to **Corridors**. **US → Latin America** remains the largest regional pipe at about **11%** of the LMIC perimeter (~**$76B**), down from ~**12%** / **$82B** on Brief 41 geography. Inside that bloc, the KNOMAD US→Mexico matrix print (~**$52B**) still sits below Banxico’s Mexico total (~**$61.8B**) — the same pipe/share gap the concentration series tracks. **GCC → South Asia** still follows near **8.5%**. US→EAP, US→South Asia, Europe→Africa/MENA, and Russia→Central Asia complete the ladder.
+
+H1 2026 Banxico **$30.759B** (+**3.1%** YoY) annualizes near **$61.5B** — roughly flat with FY2025 on a run-rate basis. The corridor vintage therefore softens *level shares* versus Brief 41 without claiming a structural collapse of the US→LatAm pipe. For bilateral plumbing keep the [global remittance corridors](/blog/global-remittance-corridors-2026) post open; for the monthly Banxico path keep the [Q3 update](/blog/demographic-cash-flows-update-2026q3) and [August update](/blog/demographic-cash-flows-update-202608) open.
+
+## Age & risk: dollar giants ≠ dependence giants (still)
+
+Open **Age & risk**. The dependence × age scatter still puts Tajikistan (~**45%** remittance/GDP), Nicaragua, Lebanon, Honduras, and peers far right — high household reliance, young age structures. India (~**3.4%**), Banxico Mexico (~**3.4%** remittance/GDP on restated dollars), and China (~**0.3%**) sit left. Filter by **LatAm** or **ECA** to isolate clusters. Bubble sizes use √dollar heuristics; Mexico’s bubble shrinks slightly with Banxico dollars but does not migrate into the dependence tip.
+
+The host pension × age panel is unchanged by design. Italy’s public pension burden near **16.3%** of GDP and Japan’s old-age dependency near **54** still sit opposite Saudi Arabia’s young host demography. OECD average public pension spending remains about **8.1%** of GDP. Age still shows up in money flows twice: as the *sending* labour force and as the *host* fiscal burden. Banxico does not rewrite that geometry.
+
+## How this complements the geography and concentration series
+
+Pair this Q3 geography vintage with the [Brief 41 geography](/blog/demographic-cash-flows-geography-2026) when you need the pre-Banxico regional baseline, with the [Q3 concentration](/blog/demographic-cash-flows-concentration-2026q3) when you need top-k *country* shares on the same books, and with the [August concentration / T12M](/blog/demographic-cash-flows-concentration-202608) when Mexico’s trailing-twelve print (**$63.389B**) is the relevant Mexico meter. Geography after Banxico still answers *where*; concentration still answers *how tip-heavy*; Banxico vintages still answer *which Mexico book*.
+
+The research scatter in the [2026 research ledger](/blog/demographic-cash-flows-research-2026) already separated young remittance-heavy economies from old pension-heavy hosts. This Q3 lens keeps that separation and adds one operational sentence for desks: **Banxico’s Mexico restatement is a LatAm destination and US→LatAm corridor event of about −0.9 pp — not a South Asia destination event and not a host-origin event.**
+
+## Caveats and what this map is not
+
+- **Regional recipient shares** re-roll Brief 41 country anchors into World Bank-style destination regions after substituting Banxico FY2025 Mexico **$61.791B** for Brief 41’s ~**$68B**; the residual closes the fixed **$685B** perimeter and is analytical, not a new World Bank extract.
+- **Host / origin shares** are carried from the Brief 41 geography estimate (KNOMAD corridor dollars vs the same perimeter); Banxico does not disclose a full host-origin census.
+- **Corridor blocs** aggregate bilaterals; US→LatAm’s Banxico-softened tip is an editorial regional roll-up, not a Banxico “corridor” series.
+- **H1 2026 Banxico $30.759B (+3.1% YoY)** informs run-rate colour only; annualized **$61.5B** is not a FY2026 forecast.
+- **Dependence × region points** use Brief 41 GDP-dependence ranks with UN WPP old-age dependency; Mexico’s remittance/GDP is restated with Banxico dollars and remains an estimate.
+- **Host pension % GDP** figures follow OECD Pensions at a Glance and are not remittance outflows.
+- **August T12M Mexico ($63.389B)** is a different vintage meter than FY2025; do not splice T12M into this Q3 regional roll-up without saying so.
+
+## What to watch next
+
+Watch three geography meters into the next Banxico and Brief releases. First, whether LatAm’s restated ~**16%** destination share stabilises or slips further if US labour-market and enforcement news hit the corridor harder than H1’s +**3.1%** YoY rebound implies. Second, whether South Asia’s ~**26%** destination lead holds if GCC labour demand softens — still a regional, not only Indian, event. Third, whether host-origin geography (US ~**31%**) and dependence geography (Tajikistan ~**45%**) continue to refuse to move when recipient-country books are restated. For bilateral pipes keep [corridors](/blog/global-remittance-corridors-2026) open; for top-of-distribution shares keep [Q3 concentration](/blog/demographic-cash-flows-concentration-2026q3) open; for the pre-Banxico regional baseline keep [geography 2026](/blog/demographic-cash-flows-geography-2026) open.
+
+Related reading: [Geography (Brief 41)](/blog/demographic-cash-flows-geography-2026) · [Q3 concentration](/blog/demographic-cash-flows-concentration-2026q3) · [Aug concentration / T12M](/blog/demographic-cash-flows-concentration-202608) · [Global remittance corridors](/blog/global-remittance-corridors-2026).`,
+  },
+  {
     id: "fiscal-plumbing-concentration-202608",
     slug: "fiscal-plumbing-concentration-202608",
     title:
