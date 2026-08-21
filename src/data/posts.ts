@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-update-202608",
+    slug: "demographic-cash-flows-update-202608",
+    title:
+      "Update: Mexico Remittance T12M Still −0.1% at $63.4B; Real Purchasing Power −8.3%",
+    excerpt:
+      "Versus our Q3 H1 rebound (+3.1% / $30.8B), Banxico’s June vintage still shows trailing-twelve incomes at $63.39B (−0.1% YoY) and BBVA prints June real remittance power −8.3%. Five YoY growth months; OECD pension path to 10% of GDP by 2050 unchanged.",
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl:
+      "/images/global-systems-demographic-cash-flows-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of US→Mexico remittance pipes with a soft yellow trailing-twelve pulse and a teal aging-host pension ledger climbing on the right",
+    publishedAt: "2026-08-21T02:15:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 H1 rebound
+
+The [Q3 demographic cash flows update](/blog/demographic-cash-flows-update-2026q3) closed on a clean mid-year flip: Banxico’s June 2026 bulletin printed Mexico family remittance incomes at **$30.759 billion** for H1 (**+3.1% YoY**), after the [August Banxico-2025 update](/blog/demographic-cash-flows-update-2026) had booked the first full-year decline in eleven years (**−4.6% / $61.791B**). Tickets rose to **$405**, wires fell **1.8%**, and OECD-32 public pensions still grind from **8.8% to 10.0% of GDP by 2050**. That post answered whether the private US→Mexico pipe could reverse inside two half-years. This August 202608 refresh answers the *next* vintage question desks actually trade after a rebound headline: **does the recovery survive trailing-twelve and real purchasing-power lenses, or is H1 a partial rebound sitting on still-soft twelve-month plumbing?**
+
+Three meters rewrite the scoreboard without inventing a newer Banxico month. **Trailing-twelve incomes for July 2025–June 2026 print $63.389 billion, still −0.1% YoY** — the thirteenth consecutive soft T12M window on research-desk framing. **BBVA Research marks June real remittance purchasing power −8.3% YoY** after exchange-rate and inflation adjustment, even as Banxico’s nominal June print clears **$5.472 billion (+4.2%)**. And **seasonally adjusted June incomes fell 2.4% month-on-month**, the second SA fade of 2026, while the YoY streak still stretches to **five consecutive growth months** through June. Host-side OECD Pensions at a Glance 2025 is unchanged between Q3 and this print.
+
+The dashboard above is built as a Q3→Aug vintage delta: T12M soft path with growth-regime overlay, nominal-versus-real bars, state leaders (Guanajuato **$2.705B**; Mexico City **+27.3%**), cash-versus-deposit payout mix, Q3→Aug dumbbell, an age×remittance scatter with a mild Mexico T12M nudge, and the unchanged host-pension grind. Use the **panel**, **real lens**, **scatter vintage**, and **ledger** controls to separate dollar desks from peso households.
+
+## The headline table: Q3 H1 frame → Aug T12M / real lens
+
+| Metric | Prior (Q3 update) | New (Aug 202608) | Δ |
+| --- | ---: | ---: | --- |
+| Mexico remittances T12M | H1 **+3.1%** headline | **$63.39B (−0.1% YoY)** | 13th soft T12M month |
+| Real remittance power (June) | Nominal June **+4.2%** | **−8.3% real YoY** | FX + inflation bite |
+| June SA MoM incomes | YoY streak intact | **−2.4% SA MoM** | 2nd SA fade in 2026 |
+| Consecutive YoY growth months | H1 rebound framed | **5 months** through June | Feb–Jun streak |
+| State leaders (H1) | National aggregate | GTO **$2.71B**; CDMX **+27.3%** | Concentration + outliers |
+| Cash vs deposit (H1) | Electronic ~99% pipe | Deposit **53.3%** / cash **46.7%** | Last-mile claim mix |
+| OECD-32 public pensions / GDP | **8.8% → 10.0%** by 2050 | Unchanged (PaG 2025) | Host ledger still +1.2 pp |
+
+Treat the growth conflict carefully. **+3.1% H1** and **−0.1% T12M** are both Banxico-booked windows — not measurement residuals — but they answer different questions. H1 asks whether 2025’s decline deepened into early 2026; T12M asks whether the twelve-month stock of flows has healed. The clean claim is that **the mid-year sign flipped while the trailing-twelve meter is still soft**, and that **nominal June strength is not the same as real household purchasing power**.
+
+## Trailing-twelve still soft — the rebound is incomplete
+
+H1 **$30.76 billion** remains the second-highest first half on Banxico’s modern record, behind only H1 2024’s **$31.34 billion**. That is a real recovery in half-year dollars. It is not yet a healed twelve-month stock. T12M incomes rose from **$63.171 billion** (Jun 2025–May 2026) to **$63.389 billion** (Jul 2025–Jun 2026) as June entered the window — an absolute lift of about **$218 million** — yet the YoY print on that same T12M still sits at **−0.1%**. Research desks counting consecutive soft T12M months now mark **thirteen**.
+
+The growth-regime panel makes the sequence visible: FY 2024 peak (**+2.3% / $64.7B**), FY 2025 decline (**−4.6% / $61.8B**), H1 2026 rebound (**+3.1%**), T12M Jun’26 soft (**−0.1% / $63.4B**). Desks that only quote the H1 meter will overstate healing; desks that only quote T12M will understate the mid-year inflection. Age and migration still show up here as **speed**: the private origin pipe can reverse a half-year sign without immediately repairing the twelve-month stock that finance ministries watch for external-buffer planning.
+
+Net of outflows, Banxico’s remittance-account surplus for the same T12M window is about **$62.17 billion**. Outflows remain tiny relative to inflows; they do not rewrite the surplus story, but they do remind that the “demographic cash flow” is a *net* corridor, not a one-way pipe.
+
+## Nominal rebound, real erosion
+
+June’s **$5.472 billion (+4.2% YoY)** looks like confirmation of the H1 rebound. BBVA’s real lens does not. After peso and inflation adjustment, remittance-receiving households received about **8.3% fewer real resources** in June than a year earlier — continuing a multi-month real-softness theme Mexican research desks have flagged. Seasonally adjusted, Banxico itself reported June incomes down **2.4% MoM** after May’s strength. Average June ticket **$422 (+3.9%)** on **13.0 million** operations (**+0.3%**) still says the same compositional story as H1: **larger tickets, barely more wires**.
+
+That **+4.2% nominal / −8.3% real** gap is an **11-plus percentage-point** swing between the dollar desk and the household ledger. It is also why this vintage refuses to clone the Q3 rebound narrative. Migration shows up in money flows as dollar transfers; aging and local price dynamics show up as the **real claim** those dollars buy in Mexican cities. Confusing the two is how analysts celebrate a Banxico print that households experience as a squeeze.
+
+H1 payout mix sharpens the last-mile picture: **53.3%** of remittance dollars were claimed as deposits (**$16.26B**) and **46.7%** as cash (**$14.26B**). Electronic transfers still carry roughly **99%** of the pipe; cash versus deposit is about claim method, not wire technology — and it matters if US compliance friction raises KYC costs on the formal corridor.
+
+## States still concentrate the private pipe
+
+National aggregates hide geography. BBVA’s H1 state ranking puts **Guanajuato** at the top of reception with **$2.705 billion**. **Mexico City** printed the sharpest disclosed growth among highlighted states at **+27.3%**. Traditional remittance states in the west-central corridor still dominate dollar levels; the capital’s growth outlier shows that migration-linked transfers are not frozen in historic destination maps.
+
+The dashboard’s horizontal state panel is deliberately mixed confidence: Guanajuato level and CDMX growth are **disclosed** BBVA/Banxico framing; peer state dollars are **constructed** for visual rank context and should not be cited as official Banxico state prints. The analytical point does not require perfect state microdata: **even when T12M is soft nationally, the private pipe remains geographically concentrated** — the same dual-ledger architecture the [research baseline](/blog/demographic-cash-flows-research-2026) mapped with dependency×remittance scatters.
+
+## Age and migration still run on two clocks
+
+Nothing in the June bulletin, the T12M soft print, or BBVA’s real lens rewrites the theme’s architecture. Aging hosts (Italy, Japan, much of Western Europe) run **public pension** shares of GDP that grind higher over decades. Younger remittance-origin economies run **private cross-border** pipes that can swing several percentage points inside a year. August 202608 refreshes the *quality* of the private clock: rebound in H1 dollars, soft in T12M, negative in real June purchasing power.
+
+Toggle the age×remittance scatter. Mexico’s estimated remittance/GDP share sits near **3.5%** on the Q3 H1 run-rate and nudges only mildly under a T12M-soft narrative — not a regime change. Aging hosts stay on the high-dependency, low-remittance ledge. The United States remains the bridge: low remittance *receipt* share of GDP, high remittance *origin* role for Mexico, and a Social Security / Medicare fiscal path that belongs on the host ledger even when Banxico’s monthly print dominates the news cycle.
+
+For corridor fees and bilateral plumbing, keep [global remittance corridors](/blog/global-remittance-corridors-2026) open beside this update. This post’s job is narrower: **qualify the Q3 rebound with T12M and real lenses, and confirm the host pension path still has not been restated.**
+
+## Host pensions still grind toward 10% of GDP
+
+OECD Pensions at a Glance 2025 remains the newest host-side vintage between Q3 and August 202608. The OECD-32 average still runs from **8.8% of GDP in 2023–24 to 10.0% by 2050** (**+1.2 pp**). Italy stays near **16%**. Japan climbs more slowly through the low teens. The United States sits lower on cash-pension shares but carries an old-age dependency near **29**.
+
+Remittance desks can debate whether H1 **+3.1%** or T12M **−0.1%** is the “true” Mexico pulse in the same week pension offices mark a multi-decade climb. Age shows up in money flows as **slow public commitments**; migration shows up as **fast private transfers**. The August vintage’s contribution is to show that even the *fast* clock has multiple dials — half-year, trailing-twelve, nominal, real — that can disagree for months without breaking the dual-ledger story.
+
+## Forward risks: compliance friction and a still-soft volume count
+
+Two caveats sit on top of the mixed rebound. First, reporting around US measures that would restrict undocumented migrants’ access to formal financial channels — including transfer-related verification themes into **September 2026** — remains a **forward operational risk** to the electronic pipe, not a factor already baked into H1 or June. If compliance friction raises costs or pushes flows informal, Banxico’s next bulletins could show volume softness even if migrant wages hold. Second, H1 transaction count is still down **1.8%**, and June operations rose only **0.3%**. A rebound built mainly on ticket size is more fragile than one built on remitter counts, especially while real peso purchasing power of dollar transfers keeps eroding.
+
+## Caveats
+
+- **H1 vs T12M vs full-year**: **+3.1%** is first-half YoY; **−0.1%** is trailing-twelve YoY; neither is a closed full-year 2026 call.
+- **Real −8.3%** is BBVA Research’s June purchasing-power estimate (FX + inflation), not a Banxico line item.
+- **State peers** beyond Guanajuato level and CDMX growth are **constructed** for rank context.
+- **GDP shares** for Mexico (~3.5%) remain **estimated** narrative anchors.
+- **OECD pension path** is carried unchanged from PaG 2025; absence of a newer OECD vintage is itself the host-ledger update.
+- **Brief 41 LMIC $685B** remains the aggregate anchor where no newer World Bank Migration & Development Brief has restated 2024e/2025e.
+- **US compliance / financial-access rules** are forward risk narrative from secondary research (including BBVA’s June note); they are not Banxico H1 accounting items.
+- **Scatter coordinates** for non-Mexico economies reuse theme dependency and remit/GDP levels from the research/update chain.
+
+## Methodology
+
+Headline vintage delta follows Banxico *Ingresos y Egresos por Remesas, junio de 2026* for T12M incomes **$63.389B**, T12M surplus **$62.166B**, June **$5.472B (+4.2%)**, SA MoM **−2.4%**, H1 **$30.759B (+3.1%)**, H1 cash/deposit split **46.7% / 53.3%**, and electronic share ~**99%**. Real June purchasing power **−8.3%**, five-month YoY streak, Guanajuato H1 **$2.705B**, and CDMX **+27.3%** follow BBVA Research (3 Aug 2026). Prior Q3 anchors and OECD-32 **8.8%→10.0%** follow our [Q3 demographic cash flows update](/blog/demographic-cash-flows-update-2026q3) and OECD Pensions at a Glance 2025. Dual-ledger and scatter panels reuse the theme’s age×remittance framing from the [research baseline](/blog/demographic-cash-flows-research-2026).
+
+## Bottom line
+
+The newest official lens on the same June Banxico vintage does not erase Q3’s H1 rebound — it **qualifies** it. Trailing-twelve remittances are still **−0.1% at $63.4B**, real June purchasing power is **−8.3%**, and SA MoM faded **2.4%**, even as five consecutive YoY growth months and H1 **+3.1%** keep the mid-year sign flipped. Host-side public pensions still grind toward **10% of OECD-32 GDP by 2050**. Age and migration still show up as two ledgers: a private origin pipe whose half-year, twelve-month, and real dials can disagree for months, and a public host commitment that moves over decades. For the H1 rebound framing see the [Q3 update](/blog/demographic-cash-flows-update-2026q3); for the streak-break vintage see the [August Banxico-2025 update](/blog/demographic-cash-flows-update-2026); for corridor plumbing see [global remittance corridors](/blog/global-remittance-corridors-2026); for the stock essay see the [research post](/blog/demographic-cash-flows-research-2026).`,
+  },
+  {
     id: "industrial-robotics-concentration-2026",
     slug: "industrial-robotics-concentration-2026",
     title:

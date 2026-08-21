@@ -116,7 +116,8 @@ export interface Post {
     | "consumer-finance-markets-update-202608"
     | "fiscal-plumbing-update-2026"
     | "bank-commercial-credit-update-2026"
-    | "industrial-robotics-concentration-2026";
+    | "industrial-robotics-concentration-2026"
+    | "demographic-cash-flows-update-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

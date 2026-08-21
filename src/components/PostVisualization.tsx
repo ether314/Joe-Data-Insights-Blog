@@ -1352,6 +1352,21 @@ const IndustrialRoboticsConcentrationDashboard = dynamic(
   },
 );
 
+const DemographicCashFlowsUpdate202608Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/DemographicCashFlowsUpdate202608Dashboard"
+    ).then((m) => m.DemographicCashFlowsUpdate202608Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1699,6 +1714,10 @@ export function PostVisualization({
 
   if (type === "industrial-robotics-concentration-2026") {
     return <IndustrialRoboticsConcentrationDashboard />;
+  }
+
+  if (type === "demographic-cash-flows-update-202608") {
+    return <DemographicCashFlowsUpdate202608Dashboard />;
   }
 
   return null;

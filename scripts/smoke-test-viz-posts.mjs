@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "demographic-cash-flows-update-202608",
+    marker: "Aug 202608 vintage delta — Q3 H1 rebound → T12M soft + real −8.3%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "industrial-robotics-concentration-2026",
     marker: "Industrial robotics — concentration lens",
     forbidden: "Loading interactive charts",
