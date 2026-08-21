@@ -171,7 +171,8 @@ export interface Post {
     | "adaptation-economics-concentration-2026q3"
     | "industrial-robotics-concentration-202608"
     | "bank-commercial-credit-concentration-2026"
-    | "geopolitics-institutions-concentration-202608";
+    | "geopolitics-institutions-concentration-202608"
+    | "macro-growth-trade-concentration-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

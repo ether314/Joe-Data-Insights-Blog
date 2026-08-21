@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-concentration-202608",
+    slug: "macro-growth-trade-concentration-202608",
+    title:
+      "Aug Concentration: Growth Top-1 Still ~32% / Asia Trade 71% — CPI Cools, Share Architecture Flat",
+    excerpt:
+      "August 202608 concentration lens on growth, trade and prices: China remains ~32% of world PPP growth (top-3 ~55%); Asia still owns 71% of merchandise trade-volume gains; PPP stock top-3 ~42% and export top-3 ~29% stay carried; US CPI 3.4% YoY (−0.1 pp) and PCE 3.7% cool while elevated-CPI GDP share holds ~38% and CPB June / GDP second estimate stay pending.",
+    category: "Economics",
+    themeId: "macro-growth-trade",
+    imageUrl:
+      "/images/economics-macro-growth-trade-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber and violet Top-1/Top-3 concentration bars with teal trade arcs and cyan price-meter sparks",
+    publishedAt: "2026-08-21T20:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-concentration-202608",
+    layout: "default",
+    content: `Our [Q3 concentration lens](/blog/macro-growth-trade-concentration-2026q3) answered the hard-data stress question: China still ~**32%** of world PPP growth on the carried base (only ~**29%** under a Q2 sensitivity), Asia still **71%** of merchandise trade-volume gains, PPP stock top-3 ~**42%**, goods-export top-3 ~**29%**. The [August CPI/PCE vintage](/blog/macro-growth-trade-update-202608) then refreshed price *levels* — US CPI **3.4%** YoY (−**0.1** pp vs June), PCE **3.7%** YoY (−**0.4** pp vs May), euro-area HICP **2.9%** — while flagging two still-pending flow meters (CPB June WTM due **25 Aug**, BEA Q2 second estimate **26 Aug**). This August concentration cut asks the desk question next: **did those price prints rewrite the top-of-distribution shares, or only refresh the meters that sit beside a still-sticky architecture?**
+
+The interactive dashboard above is built as an **August concentration lens**. Toggle **Scoreboard**, **Prices**, **Growth ladder**, and **Trade + pending**. Use **Growth vintage** to flip the carried 2025 base against the Q2 sensitivity, and on Prices switch **Cooling path** versus **YoY vs SAAR**. The punchline is deliberately flat on shares and sharp on process. Top-1 growth contribution remains ~**32%** (China) and top-3 ~**55%**. Asia’s trade-growth share stays **71%**. PPP stock and export-value ladders stay **carried**. What August adds is a disclosed cooling path, a YoY-vs-SAAR dual meter, and explicit pending flags so desks do not confuse a quiet share board with a finished data month.
+
+## The headline ladder: Q3 vs August restatement
+
+| Lens | Q3 concentration | Aug print | Δ |
+| --- | ---: | ---: | ---: |
+| Growth contribution Top-1 (China) | **~32%** | **~32%** base | **0 pp** (carried) |
+| Growth Top-1 Q2 sensitivity | **~29%** | **~29%** | **0 pp** (held pending GDP 2nd) |
+| Growth Top-3 (CN·IN·US) | **~55%** / **~52%** sens. | same | **0 pp** |
+| PPP GDP stock Top-3 | **~42%** | **~42%** | **0 pp** |
+| Merch trade-volume growth Top-1 (Asia) | **71%** | **71%** | **0 pp** (CPB June pending) |
+| Goods export value Top-3 | **~29%** | **~29%** | **0 pp** |
+| US CPI YoY | **3.4%** | **3.4%** (−**0.1** pp vs Jun) | levels cool; share band unchanged |
+| Elevated-CPI GDP share | **~38%** | **~38%** | **0 pp** (threshold still ~3.4%) |
+
+Read the table as a **stability-plus-pending scoreboard**. August did not re-rank the pie. It cooled several US price YoY meters, left the elevated-CPI burden perimeter at ~**38%**, and left two flow meters that *could* restate growth or trade sensitivity still blank on the calendar.
+
+## Scoreboard: carried architecture, August process flags
+
+Open **Scoreboard**. The Q3 → Aug restatement panel keeps PPP stock, base growth contribution, trade-growth, export value, and elevated-CPI GDP share flat. US CPI and PCE YoY sit at the same July/June prints the August vintage already disclosed — the *path* cooling (−**0.1** / −**0.4** pp versus the prior month) is the new desk receipt, not a new Top-1 share.
+
+The Top-1 vs Top-3 scatter still puts trade-growth (Asia **71%** / **97%**) in the extreme corner, growth contribution (**32%** / **55%**) steeper than PPP stock (**19%** / **42%**), and export value (**14%** / **29%**) milder. The elevated-CPI GDP point (~**15%** US weight / **~38%** elevated band) sits as a *burden* perimeter, not an additive market-share portfolio.
+
+That is the first August hinge. **Price cooling and share concentration are different objects.** A −**0.1** pp CPI print does not move China’s ~**19%** PPP stock weight. A pending CPB June MoM does not automatically re-rank Asia’s **71%** of *2025* merchandise volume-growth contribution. Desks that treat “CPI cooled” as “concentration eased” are reading the wrong column.
+
+## Prices: cooling path, dual meter, unchanged geometry
+
+Toggle **Prices**. The CPI × growth scatter still puts China at ~**0.2%** CPI beside ~**5%** GDP growth and the thickest growth contribution. The United States remains the large elevated-CPI weight (~**15%** of world PPP) at **3.4%** July CPI and **3.7%** June PCE against a **5.1%** Q2 PCE SAAR. Euro-area HICP sits at **2.9%** (+**0.1** pp vs June). Roughly **38%** of world PPP GDP in this cross-section still sits in economies with CPI at or above ~**3.4%**.
+
+Switch the price panel to **Cooling path**. US CPI, PCE, and core PCE all print cooler than the prior month; EA HICP edges hotter; China CPI is unchanged near zero. Flip to **YoY vs SAAR**. The US PCE YoY–SAAR spread remains about **+1.4** pp, and July CPI still sits **−0.2** pp under the IMF’s **3.6%** US CPI 2026 path. That dual meter is the August contribution relative to the [Q3 concentration companion](/blog/macro-growth-trade-concentration-2026q3): not a new share ladder, but a clearer receipt that *unit choice* still dominates soft-landing arguments inside the same concentration geometry.
+
+Pair this with the [August monthly vintage](/blog/macro-growth-trade-update-202608). That post owns the level tape. This lens owns the distribution question: the growth leader is still not the price leader, and a cooler US YoY does not shrink the elevated-CPI GDP band while the US stays at **3.4%**.
+
+## Growth contribution: base sticky, Q2 sensitivity held
+
+Switch to **Growth ladder**. On the carried 2025 base, China is ~**31.8%** of world PPP growth, India ~**14.6%**, the United States ~**9.1%** — top-3 ~**55%**. Flip **Growth vintage** to **Q2 sensitivity**. China scales toward the **4.3% YoY** hard print, the US toward **1.5% SAAR**, and top-1 eases to ~**29%** / top-3 ~**52%**. August does not invent a new sensitivity — it *holds* the Q3 restatement because the BEA Q2 second estimate is still pending (**26 Aug**).
+
+That is the second hinge. **Pending revisions can restate contribution shares; they cannot yet be treated as if they already did.** A softer second estimate would clip the US rung further without touching China’s PPP stock weight. A firmer revision would thicken the US contribution without democratising the tip. Either way, China would still clear roughly three times the US contribution on the base ladder. Soft-landing narratives that need China’s world-growth share below ~**20%** still fail the same concentration test the [prior concentration print](/blog/macro-growth-trade-concentration-2026) posed.
+
+## Trade and pending: Asia’s 71% holds while June is blank
+
+Open **Trade + pending**. The WTO March 2026 regional decomposition of 2025 merchandise volume growth still puts **Asia at 3.2 pp / 71%**, Europe ~**15%**, North America ~**11%**, and the rest of the world ~**4%**. Top-3 regional share remains ~**97%**. The donut is carried because there is no newer GTOS vintage that re-ranks 2025 contribution shares.
+
+The CPB line now shows March **−2.1%**, April **+0.7%**, May **+1.0% MoM**, and an explicit **June pending** marker. Cumulative Mar–May is still only about **−0.4%** below February. June (due **25 Aug**) can confirm or fade that rebound — it remains a *flow overlay*, not a country or regional concentration census. Export-value shares stay at China ~**14%**, US ~**8%**, Germany ~**7%** — top-3 ~**29%** of ~**$26.3T** merchandise exports.
+
+The third hinge is process discipline. **A blank June cell is not a quieter Asia share.** Treating “no new MoM” as “trade concentration eased” confuses calendar silence with distribution change. The pending-meter cards exist so the scoreboard’s flat Top-1s are read next to what August has not yet disclosed.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that translate US CPI −**0.1** pp into a thinner elevated-CPI GDP band while the US remains at **3.4%**; growth factor models that treat the Q2 sensitivity as already revised by a second estimate that has not printed; trade narratives that treat May’s rebound as a finished regional re-decomposition before CPB June; soft-landing calls that quote cooler YoY without the **5.1%** PCE SAAR still sitting in the dual meter; inflation debates that still imply the growth leader is the price leader.
+
+**Relative winners under current rules:** Asian intermediate-goods and AI-goods corridors that still sit inside the **71%** regional volume-growth share; India’s second-place growth contribution even under the Q2 sensitivity; US demand weight that still anchors PPP stock (~**15%**) while contribution ranks third; exporters diversified across the residual half of the $26T goods perimeter; desks that keep the August vintage and this share map in separate columns instead of averaging them into one “global cooling = less concentration” slogan.
+
+**What would change the story:** a sustained WEO restatement that puts China’s share of world PPP growth below ~**20%**; Asian merchandise volume-growth contribution falling below ~**50%** of a new GTOS vintage; export-value top-3 climbing above ~**40%**; China CPI re-accelerating toward the world average while keeping its growth weight; a multi-month CPB freefall that forces a regional re-decomposition of *who* drives volume; US CPI falling clearly below the elevated threshold in a way that shrinks the ~**38%** elevated-GDP band. None of those clear this August window. The architecture is sticky; two flow meters are still pending.
+
+## Caveats and methodology
+
+- **PPP stock and base growth-contribution shares are carried** from the prior/Q3 concentration prints (IMF WEO April 2026 PPP weights × country growth). No new period census.
+- **Q2 growth sensitivity is illustrative and held**, scaling China toward **4.3% YoY** and the US toward **1.5% SAAR** advance. It is not a reconstructed WEO weight table; the **26 Aug** second estimate may restate the US rung.
+- **Merchandise trade-growth shares follow WTO GTOS March 2026** (Asia **71% / 3.2 pp** disclosed). CPB MoM through May is a flow overlay only; **June is pending (25 Aug)**.
+- **Export value shares use ~$26.3T world merchandise exports (2025)**; re-export hubs inflate value versus domestic origin. Services (~**$9.6T**) excluded.
+- **Price ladder mixes disclosed BLS July CPI, BEA June PCE, and Eurostat July HICP with theme China CPI**; “elevated-CPI GDP share” (~**38%**) is a burden perimeter, not an additive market share.
+- **YoY versus SAAR / IMF dual meters mix units on purpose** — directional context for the US price weight, not like-for-like gaps.
+- **Euro-area growth contribution is an aggregate**, not a single sovereign.
+- **Oil near ~$89/bbl** in the July Update remains the energy backdrop for elevated YoY components; it is not re-estimated here.
+
+## The shareable takeaway
+
+In the **August 2026 concentration vintage**, growth Top-1 is still ~**32%** China on the carried base — and only ~**29%** under the held Q2 sensitivity. Asia still owns **71%** of merchandise trade-volume growth. PPP stock top-3 stays ~**42%**; goods-export top-3 stays ~**29%**. US CPI **3.4%** and PCE **3.7%** cool on a month-to-month path without shrinking the ~**38%** elevated-CPI GDP band, while CPB June and the BEA Q2 second estimate remain pending. August refreshed price meters and process flags. The top of the distribution held.
+
+Related reading: [Q3 concentration lens](/blog/macro-growth-trade-concentration-2026q3) · [Prior concentration print](/blog/macro-growth-trade-concentration-2026) · [August CPI/PCE vintage](/blog/macro-growth-trade-update-202608) · [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3) · [July IMF vintage delta](/blog/macro-growth-trade-update-2026) · [April research triangle](/blog/macro-growth-trade-research-2026) · [China–US–India GDP](/blog/china-us-india-gdp-30-years).`,
+  },
+  {
     id: "geopolitics-institutions-concentration-202608",
     slug: "geopolitics-institutions-concentration-202608",
     title:
