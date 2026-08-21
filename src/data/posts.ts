@@ -2,6 +2,99 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "geopolitics-institutions-concentration-2026",
+    slug: "geopolitics-institutions-concentration-2026",
+    title:
+      "Charted: IMF Top-1 Holds 16.5% of Votes — Top-3 Reach 28.7%, UNSC Vetoes Are 100% P5",
+    excerpt:
+      "Concentration lens on institutions & governance: US alone is 16.5% of IMF votes (and the sole solo blocker of 85% special majorities); Top-3 US+Japan+China reach 28.7%; Top-5 hit 40%. UNSC veto authority is fully concentrated in five permanent seats.",
+    category: "Politics",
+    themeId: "geopolitics-institutions",
+    imageUrl:
+      "/images/politics-geopolitics-institutions-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero of teal-amber institutional concentration bars rising toward five glowing crimson veto seals, Visual Capitalist–style governance data viz",
+    publishedAt: "2026-08-21T05:00:00Z",
+    featured: true,
+    visualization: "geopolitics-institutions-concentration-2026",
+    layout: "default",
+    content: `## The concentration question, not the consent question
+
+Our [institutions research ledger](/blog/geopolitics-institutions-research-2026) answered *who is over- and under-weighted*: China sits roughly **−12.6 pp** under its PPP GDP share on IMF votes; the United States sits near parity-plus on the same meter. Our [August mid-window update](/blog/geopolitics-institutions-update-202608) answered *what moved in the newest vintage*: quota consents still **76.66%**, **87** days to the November effectiveness gate, relative shares frozen.
+
+This companion asks a different meter: **how concentrated is authority at the top of the distribution?** Not the gap between vote and GDP, not the consent clock — the Top-1 / Top-3 / Top-5 *share of formal power*, the blocking threshold that turns one shareholder into a structural veto, and how that concentration compares when you switch the institution from IMF votes to IBRD shares to UN Security Council vetoes.
+
+The dashboard above is built as a concentration lens: Lorenz-style cumulative curve versus equal split, ranked IMF/IBRD bars, cross-institution Top-k compare, regional vote donut with vote×GDP scatter, blocking-power bars, and a UNSC veto stack. Use the **View**, **Metric**, **Cut**, and **Region** controls to move between ladder, institutions, regions, and veto practice.
+
+## The headline ladder: Top-1 / Top-3 / Top-5
+
+| Cut | Members (IMF) | IMF vote share | IBRD vote share |
+| --- | --- | ---: | ---: |
+| **Top-1** | United States | **16.5%** | **15.8%** |
+| **Top-3** | US + Japan + China | **28.7%** | **28.5%** |
+| **Top-5** | + Germany + France | **40.0%** | **~40%** |
+| **Top-10** | + UK, Italy, India, Russia, Brazil | **52.4%** | **50.6%** |
+
+Read the table as a *power geography* story, not a growth story. One sovereign shareholder (the United States) holds more IMF voting power than Japan and China combined. The Top-3 still do not reach one-third of the Fund; the Top-5 only just clear **40%**. That looks “mild” next to commodity chokepoints where Top-1 can exceed **50%** of mine output — until you remember the Fund’s **85%** special-majority rule. Concentration here is not about owning half the pie; it is about owning enough of the pie to stop the pie from being recut.
+
+Open **Concentration ladder** and toggle **IMF vote %** → **IBRD vote %** → **Cumulative %**. The Lorenz panel is the visual punchline among the top ten: cumulative share is already past **one-sixth** at rank 1 and past **half** by rank 9–10, while an equal-split diagonal across ten chairs would still be climbing linearly. Formal multilateral voting is not “one member, one weight.”
+
+## Why 16.5% is a blocking share, not just a large share
+
+The Fund’s hardest decisions — quota changes, SDR allocations of consequence, certain amendments — require an **85%** special majority. Arithmetic says any coalition holding **more than 15%** can block. The United States, alone at **16.5%**, clears that line. No other single member does.
+
+That is the concentration insight markets often miss when they quote “Top-5 = 40%” as if it were a soft oligopoly. In an 85% world, the binding concentration metric is not how much the top hold jointly — it is whether **anyone** sits alone above the residual **15%**. Toggle **Institutions → Top-1** and compare IMF to IBRD: both put the US near **16%**, but only the Fund’s special-majority design turns that into a **solo institutional veto** on the hardest votes.
+
+The blocking-power panel makes the coalition math explicit. Japan + China together are **~12.2%** — still short of solo block. A European DE+FR+UK+IT+ES cluster clears **~18%** as a bloc. A CN+IN+BR+RU+ZA grouping lands near **~14%**, just shy. Concentration is therefore *asymmetric*: one state can stop special majorities alone; rival clusters need coordination that the charter does not automate.
+
+## Cross-institution: votes, shares, and vetoes are different meters
+
+Switch **View → Institutions** and step **Top-1 → Top-3 → Top-5**. The same concentration cut tells three different stories:
+
+- **IMF voting power** — Top-1 **16.5%**, Top-3 **28.7%**, Top-5 **40%**. Continuous weights; special majorities create a hard block threshold.
+- **IBRD voting power** — nearly the same ladder (**15.8% / 28.5% / ~40%**). Twin hierarchy, separate Governors gates (SCI **75%**, amendment **85%**). Our August update noted those Bank-side realignment talks remain stuck.
+- **UNSC veto power** — Top-5 = **100%**. Five permanent members hold *all* negative authority. There is no sixth veto.
+- **UNSC seats** — P5 are only **33%** of the fifteen-member Council. Seat share understates veto concentration; veto share overstates everyday agenda power. Both are true.
+
+This is why a single “multilateral concentration” number is a category error. IMF concentration bites through *threshold arithmetic*. UNSC concentration bites through *binary negative rights*. IBRD concentration bites through *capital and voice reform coalitions* that have repeatedly failed to reopen the hierarchy.
+
+## Regions and representation gaps still skew the ladder
+
+Open **Regions & gaps**. The regional donut among tracked clusters shows Americas and Europe each near the low-**20%s** of IMF vote weight among majors, Asia-Pacific closer to the high-teens despite carrying a far larger PPP GDP claim. The scatter plot is the companion to our research gap ledger: China sits far right on GDP and mid-pack on votes; India is similarly under-weighted; Japan and several European creditors sit above the diagonal.
+
+Filter **Region → Asia-Pac** and the under-weight story sharpens without changing the Top-1 fact. Even a full Asia-Pacific realignment bargain would still have to clear a US consent gate on Fund-side effectiveness — the same gate our [Q3](/blog/geopolitics-institutions-update-2026q3) and August updates tracked at **76.66%** of quotas. Concentration and consent are coupled: the Top-1 shareholder is also the pivotal consent holdout in the current vintage.
+
+## UNSC practice: veto counts concentrate further inside the P5
+
+Toggle **UNSC vetoes**. Charter concentration already says five states own **100%** of vetoes. Practice concentrates further: recent annual stacks are dominated by Russia, with the United States and China as secondary users, and the United Kingdom and France near zero in the 2018–2024 window shown. Formal equality among P5 (“each has a veto”) coexists with highly unequal *use* of that veto.
+
+That matters for anyone modeling “institutional reform” as a single coalition problem. Expanding elected seats without touching the veto leaves Top-5 veto share at **100%**. Touching the veto requires the consent of states that currently hold it. Concentration is self-protecting by design.
+
+## Who is exposed under a high-concentration reading
+
+**Exposed:** emerging-market coalitions that treat Top-5 = 40% as “diffuse enough” for voice reform; program countries whose access narratives embed quota enlargements that still need **85%** effectiveness; modelers who equate seat expansions at the UN with veto dilution; and forecasts that assume Japan+China or BRICS-style clusters can match US blocking power without additional mid-weight partners.
+
+**Relative winners under current rules:** the sole shareholder above the **15%** special-majority block line; P5 members whose negative rights do not scale with GDP; European multi-country chairs that can assemble block weight as a cluster; and any bilateral or plurilateral safety net that does not wait on Fund/Bank realignment.
+
+**What would change the story:** a 17th GRQ formula that actually moves relative shares (not only another equiproportional enlargement); US consent that clears the residual quota/NAB gaps before the November gate; an IBRD SCI or Basic Votes amendment that reopens Bank hierarchy; or a UNSC reform that redistributes veto rights rather than only elected seats. None of those print in the disclosed share tables this dashboard reads.
+
+## Caveats and methodology
+
+- **Vote share ≠ quota share.** Consent thresholds for the 16th GRQ use quota denominators; voting power includes basic votes. Top-k ladders here are **voting power** shares.
+- **Top-5 IMF composition** uses US, Japan, China, Germany, France. The UK is tied with France at **~4.0%**; swapping UK for France moves Top-5 by rounding, not by regime change.
+- **Regional buckets** among tracked majors are analytical aggregations for the donut — not official IMF constituency totals. “Rest of membership” is a residual.
+- **HHI / Lorenz curves** among the top ten are derived from disclosed member shares; they are not Fund-published concentration indices.
+- **UNSC veto counts** are annual aggregates from public Security Council documentation patterns; they measure *use*, not latent veto power.
+- **Gaps vs PPP GDP** use WEO-style anchors rounded to 0.1 pp — same convention as our research post — and are not claims about every decimal in every annex PDF.
+- This is a **concentration lens**. For vote-vs-GDP stock detail, use the [research post](/blog/geopolitics-institutions-research-2026). For the consent clock and August vintage, use the [August update](/blog/geopolitics-institutions-update-202608).
+
+## The shareable takeaway
+
+Institutions & governance concentrate authority in two incompatible ways at once. On IMF votes, Top-1 is **16.5%**, Top-3 **28.7%**, Top-5 **40%** — and that Top-1 alone sits above the **15%** line that blocks **85%** special majorities. On the Security Council, Top-5 veto share is **100%**, even though permanent members are only one-third of seats. IBRD mirrors the Fund’s share ladder without the same solo-block folklore, yet Bank realignment remains stuck on separate Governors thresholds. In this system, **power is not evenly thin at the top** — it is thick enough at rank 1 to stop the hardest reforms, and absolute at the veto layer where five states can say no forever.
+
+Related reading: [Institutions & governance research](/blog/geopolitics-institutions-research-2026) and [August institutions update](/blog/geopolitics-institutions-update-202608).`,
+  },
+  {
     id: "heavy-industrial-capacity-update-2026",
     slug: "heavy-industrial-capacity-update-2026",
     title:

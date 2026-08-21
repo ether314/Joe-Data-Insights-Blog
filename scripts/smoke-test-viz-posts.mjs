@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "geopolitics-institutions-concentration-2026",
+    marker: "Institutions & governance — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "heavy-industrial-capacity-update-2026",
     marker: "Asia ship trio slips to 91%",
     forbidden: "Loading interactive charts",
