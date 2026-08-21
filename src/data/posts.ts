@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-concentration-2026",
+    slug: "demographic-cash-flows-concentration-2026",
+    title:
+      "Charted: India Alone Is ~19% of LMIC Remittances — Top-3 Recipients Clear 36%",
+    excerpt:
+      "Concentration lens on demographic cash flows: India leads the $685B LMIC recipient ladder (~19% top-1 / 36% top-3), US→Mexico is ~8% of the perimeter as a single corridor, Tajikistan hits 45% of GDP dependence, and Italy’s public pensions run ~2× the OECD average.",
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl:
+      "/images/global-systems-demographic-cash-flows-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber remittance concentration bars, teal corridor arcs, and a rose GDP-dependence spike across a subtle world map",
+    publishedAt: "2026-08-21T08:00:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-concentration-2026",
+    layout: "default",
+    content: `Our [demographic cash flows research](/blog/demographic-cash-flows-research-2026) answered the *stock* question: how age and migration show up in money flows across a dependency×remittance scatter, corridor pipes, and OECD pension shares. The [Banxico vintage updates](/blog/demographic-cash-flows-update-2026) then answered the *flow* question on Mexico’s private pipe. This post answers the distribution question finance ministries and desks trade next: **how concentrated is the system at the top?**
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Recipient ladder**, **Corridor pipes**, **GDP dependence**, and **Host pensions**. The punchline is deliberately multi-sided. Inside the Brief 41 LMIC remittance perimeter (~**$685B**), **India alone is about 19%** and the **top three recipients clear ~36%**. Zoom into bilateral pipes and **US→Mexico alone is about 8%** of that same perimeter. Zoom into GDP dependence and **Tajikistan hits ~45% of GDP** — a top-1 that dwarfs any dollar share. Zoom into host public pensions and **Italy runs ~16.3% of GDP**, roughly **2×** the OECD average. Same theme, four different tops.
+
+## The headline ladder: top-1 and top-3 across lenses
+
+| Lens | Top-1 | Top-3 | What it measures |
+| --- | ---: | ---: | --- |
+| Recipient dollars (LMIC) | **~19%** (India) | **~36%** (IN·MX·CN) | Share of ~$685B Brief 41 inflows |
+| Bilateral corridors | **~8%** (US→Mexico) | **~13%** (US→MX·UAE→IN·US→PH) | Corridor $ vs $685B perimeter |
+| GDP dependence | **~45% of GDP** (Tajikistan) | **~33% avg** (TJ·NI·LB) | Remittances as % of destination GDP |
+| Host public pensions | **~16.3% of GDP** (Italy) | **~13.7% avg** (IT·FR·DE) | OECD Pensions at a Glance |
+
+Read the table as a **family of market shares**, not one number. Recipient-dollar concentration is moderate: India leads, but the residual “all other LMICs” bucket still holds nearly half the perimeter. Corridor concentration looks milder as a share of global flows — yet a single bilateral pipe at **$52B** is still larger than most countries’ entire remittance take. GDP-dependence concentration is extreme even when absolute dollars are small. Host-pension concentration is a *fiscal* story: aging hosts concentrate public cash commitments while remittance origins concentrate private inflows.
+
+Analysts who quote only “remittances hit $685B” understate how top-heavy the *inside* of that stock is. Analysts who quote only India’s dollar lead understate how Tajikistan-style dependence and Italy-style pension burdens concentrate risk on different ledgers.
+
+## Recipient dollars: India owns the thick end of the ladder
+
+Filter the dashboard to **Recipient ladder**. The cumulative curve for named Brief 41 recipients rises to about **19%** at top-1 (India, **$129B**), **29%** at top-2 (plus Mexico’s **$68B**), and **36%** at top-3 (plus China’s **$48B**). The Philippines and Pakistan push the top-5 near **46%**. Approximate HHI on the disclosed ladder sits near **620** — concentrated relative to an equal global split, but far from a single-name monopoly.
+
+That is the first hinge. Remittance *dollars* concentrate in large labour-export and diaspora economies. India is not “most of remittances”; it is the modal top-1 inside a still-broad perimeter. Mexico’s second place is the US corridor story in another costume. China’s third place is a reminder that bridge economies can sit high on dollars and low on GDP dependence at the same time.
+
+Pair this panel with the research post’s flow-compare framing: LMIC remittances (~**$685B**) still dwarf FDI to LMICs (~**$470B**) and DAC ODA (~**$210B**). Concentration of *recipients* can coexist with remittances remaining the largest private external flow into emerging markets.
+
+## Corridor pipes: one bilateral channel is still a system
+
+Switch the view to **Corridor pipes**. Against the same **$685B** perimeter, **US→Mexico** alone is about **$52B / 8%**. The next rungs — UAE→India (**$20B**), US→Philippines (**$15B**), Saudi→India (**$13B**) — push the tracked **top-3 corridor share to ~13%**. The eight named corridors in the dashboard sum to roughly **$130B**, or about **19%** of the Brief 41 stock.
+
+That looks “less concentrated” than the recipient ladder until you remember what a corridor is. A recipient share asks *which country books the inflow*. A corridor share asks *which bilateral pipe carries it*. India can lead recipient dollars while no single India corridor matches US→Mexico’s absolute size, because India’s inflows arrive through a **fan of Gulf and OECD pipes**. Mexico’s second-place recipient share is the opposite architecture: one dominant US corridor.
+
+Treat corridor percentages of the $685B perimeter as a **lower bound** on true bilateral concentration. The KNOMAD matrix does not enumerate every pipe; the residual is not “diversified,” it is untracked in this lens. For corridor plumbing detail see [global remittance corridors](/blog/global-remittance-corridors-2026).
+
+## GDP dependence: small dollars, extreme tops
+
+Open **GDP dependence**. Tajikistan’s remittances are only about **$5.5B**, yet they equal roughly **45% of GDP**. Nicaragua and Lebanon sit near **27%**. The Philippines and Pakistan — large enough to matter on the dollar ladder — still run **8–8.5% of GDP**. The dual-ledger scatter underneath puts the geometry in one frame: aging hosts (Japan, Italy, Germany) sit at high old-age dependency and near-zero remittance GDP shares; remittance origins sit at low dependency and elevated remittance GDP shares; Tajikistan and Lebanon are the extreme upper-left of the dependence axis.
+
+This is the second hinge of the theme. **Dollar concentration and dependence concentration are not the same ranking.** India can be top-1 on dollars at ~**3.4% of GDP**. Tajikistan can be top-1 on dependence with a rounding error of the global stock. Finance ministries that watch Banxico’s monthly print are trading a large-dollar, moderate-dependence pipe. Finance ministries that watch Russia→Central Asia labour channels are trading a small-dollar, existence-level dependence pipe.
+
+The [August 202608 vintage](/blog/demographic-cash-flows-update-202608) showed how Mexico’s T12M and real purchasing-power dials can disagree with H1 rebound headlines. Dependence ladders explain *why* those dials matter: when remittances are several percent of GDP, a soft twelve-month print is a macro event, not a diaspora curiosity.
+
+## Host pensions: Italy’s fiscal top vs the OECD average
+
+Toggle **Host pensions**. Italy’s public cash pensions run about **16.3% of GDP** — roughly **2×** the OECD average near **8.1%**. France (~**14.5%**) and Germany (~**10.4%**) fill the next rungs; the **top-3 average** sits near **13.7%**. Japan’s pension share (~**9.3%**) is less extreme than its old-age dependency (~**54**), a reminder that benefit design and contribution bases mediate the fiscal translation of aging. The United States (~**7.1%**) sits below the OECD average even as OASDI trust-fund math grinds toward the mid-2030s.
+
+This is the host side of the dual ledger. Remittance origins concentrate *private* cross-border cash. Aging hosts concentrate *public* domestic cash. The cross-lens scatter in the dashboard puts the asymmetry on one chart: recipient dollars and corridors sit in a moderate top-1 / top-3 band; GDP dependence is the extreme outlier on top-1; host pensions are a high-but-not-Tajikistan fiscal concentration.
+
+OECD-32 pensions are still projected to grind from roughly **8.8% toward 10.0% of GDP by 2050** in the theme’s vintage posts. Concentration today (Italy vs peers) and level tomorrow (OECD average rising) are compatible: the distribution can stay steep while the mean drifts up.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that treat “remittances” as a diversified emerging-market flow when three countries clear ~**36%** of LMIC dollars; Mexico-watchers who price only Banxico totals without noting that US→Mexico alone is ~**8%** of the global perimeter; Gulf and OECD labour hosts whose outflows fan into India’s top-1 recipient share; Central Asian and Levantine finance ministries for whom remittance GDP shares near **27–45%** make corridor politics a fiscal policy; European fiscal planners who inherit Italy/France-scale pension burdens while dependency ratios keep rising.
+
+**Relative winners under current rules:** large recipient platforms (India, Mexico, Philippines) that can intermediate diaspora liquidity at scale; corridor specialists on the US–Mexico and Gulf–South Asia pipes; aging hosts with contribution bases and benefit reforms that keep pension % GDP below Italy’s print; diversified ODA/FDI strategies that still cannot match remittance stock size but can target the residual half of the $685B perimeter.
+
+**What would change the story:** a sustained flattening of the recipient ladder so top-1 falls below ~**12%** of LMIC dollars; corridor diversification that cuts US→Mexico below ~**5%** of the perimeter *without* simply relocating dependence elsewhere; dependence leaders falling below ~**20% of GDP** through growth or corridor disruption; host pension burdens compressing so Italy-scale outliers converge toward the OECD mean. None of those appear cleanly in the Brief 41 / OECD vintages summarised here — and Mexico’s 2025 streak break plus 2026 H1 rebound show how fast the *dollar* side can move even when dependence architecture is sticky.
+
+## Caveats and methodology
+
+- **Recipient shares use Brief 41’s ~$685B LMIC perimeter (2024).** India / Mexico / China / Philippines / Pakistan prints are disclosed anchors; the residual “all other LMICs” bucket is analytical and closes the universe to 100%.
+- **Mexico’s Brief 41 estimate (~$68B) was later restated lower in Banxico’s official vintage** (see the [August update](/blog/demographic-cash-flows-update-2026)). Treat top-2 as order-of-magnitude concentration, not a prospectus table.
+- **Corridor shares are bilateral matrix dollars divided by the same $685B perimeter** — a lower bound on true pipe concentration because not every corridor is enumerated.
+- **GDP-dependence ranks follow Brief 41’s dependence table**; small-dollar / high-share countries can move sharply year to year with GDP revisions.
+- **Host pension % GDP figures are OECD Pensions at a Glance prints** (Italy **16.3%** disclosed; some peers estimated in the theme cross-section).
+- **Top-3 “shares” for dependence and pensions are averages of GDP%**, not additive market shares — they are burden ladders, not a closed portfolio.
+- **Old-age dependency** is UN WPP 2024 (65+ per 100 aged 15–64); it is a demographic stock, not a cash-flow share.
+- **HHI (~620)** on the disclosed recipient ladder is an analytical index, not an official statistic.
+
+## The shareable takeaway
+
+Demographic cash flows are **concentrated at the top — but which top depends on the meter**. Inside LMIC remittance dollars, top-1 (India) is about **19%** and top-3 about **36%**. Of the same **$685B** perimeter, US→Mexico alone is about **8%** as a bilateral corridor. Of GDP dependence, Tajikistan hits about **45%**. Of host public pensions, Italy runs about **16.3% of GDP**, roughly **2×** the OECD average. Age and migration show up in money flows through a system that looks diversified in country counts and **top-heavy once you rank the distribution**.
+
+Related reading: [Demographic cash flows research 2026](/blog/demographic-cash-flows-research-2026) · [Banxico streak-break update](/blog/demographic-cash-flows-update-2026) · [Q3 H1 rebound](/blog/demographic-cash-flows-update-2026q3) · [Global remittance corridors](/blog/global-remittance-corridors-2026).`,
+  },
+  {
     id: "ai-compute-demand-concentration-2026",
     slug: "ai-compute-demand-concentration-2026",
     title:
