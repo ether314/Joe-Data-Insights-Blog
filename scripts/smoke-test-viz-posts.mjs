@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-capex-spend-update-202608",
+    marker: "202608 vintage delta — mid-Q3",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "chokepoint-commodities-update-202608",
     marker: "Vintage delta — IEA GCMO 2026 / Q3 midstream → Pink Sheet Aug 2026 (Jul monthly)",
     forbidden: "Loading interactive charts",

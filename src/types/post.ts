@@ -104,7 +104,8 @@ export interface Post {
     | "energy-systems-update-2026q3"
     | "fiscal-industrial-policy-update-202608"
     | "geopolitics-institutions-update-202608"
-    | "chokepoint-commodities-update-202608";
+    | "chokepoint-commodities-update-202608"
+    | "ai-capex-spend-update-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
