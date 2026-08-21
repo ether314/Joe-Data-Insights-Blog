@@ -2,6 +2,86 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "adaptation-economics-concentration-202608",
+    slug: "adaptation-economics-concentration-202608",
+    title:
+      "Aug Concentration Lock: Residual Top-1 Holds 38% — Rebound Risk to 39.5%",
+    excerpt:
+      "August adaptation-economics concentration lock: H1-adjusted residual Top-1 (households & SMEs) stays ~38% (−2 pp vs FY), Top-3 ~86%; annualized rebound would push Top-1 toward ~39.5%; WBG still ~34% of the $35B MDB LMIC tip; gap geography Top-3 stuck at ~53%.",
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl:
+      "/images/energy-adaptation-economics-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz with amber Top-1/Top-3 concentration bars, teal coastal hazard glow, and a thin lime adaptation-finance stream into a charcoal residual basin",
+    publishedAt: "2026-08-22T12:00:00Z",
+    featured: true,
+    visualization: "adaptation-economics-concentration-202608",
+    layout: "default",
+    content: `Our [2026 concentration print](/blog/adaptation-economics-concentration-2026) put residual Top-1 (uninsured households & SMEs) near **40%**, Top-3 near **87%**, and protection-gap Top-3 regions near **53%** of the **$424B** stock. The [Q3 concentration lens](/blog/adaptation-economics-concentration-2026q3) then marked an H1-adjusted ease to about **38% / 86%** after Swiss Re’s benign first half and the MDB Joint Summary’s **$35B** LMIC adaptation print. The [August MDB + H1 update](/blog/adaptation-economics-update-202608) locked the *levels*. This August **202608 concentration lock** asks the durability question: **is the softer residual tip a durable deconcentration — or a quiet-half artifact that rebounds if H2 insurance ratios revert toward the FY ~29% framing?**
+
+The interactive dashboard above is built as that **Aug 608 concentration lock**. Toggle **Scenario lock**, **Residual & hazards**, **MDB & donors**, **Vintage slope**, and **Gaps & scarcity**. Flip the residual scenario among **FY framing**, **H1 lock**, and **annualized rebound**. The punchline is multi-sided on purpose. On the **H1 lock**, residual Top-1 stays about **38%** (−**2 pp** vs FY) and Top-3 about **86%** — HHI near **2,684**. On the **rebound scenario**, Top-1 drifts back toward about **39.5%** (+**1.5 pp** vs H1) if covered-sleeve shares compress. On **MDB LMIC banks**, World Bank Group remains about **34%** of the **$35B** tip and Top-3 (WBG + ADB + IDB) about **68%**. On **protection-gap geography**, Top-3 regions still hold about **52.6%** of the **$424B** stock. On **scarcity**, AGR needs mid still runs roughly **9.6×** MDB LMIC adaptation.
+
+## The August concentration scoreboard
+
+| Lens | Top-1 | Top-3 | HHI | Δ / risk |
+| --- | ---: | ---: | ---: | ---: |
+| Residual bearers (H1 lock) | **38%** (households & SMEs) | **86%** | **~2,684** | **−2 pp** vs FY |
+| Residual rebound scenario | **~39.5%** | **~86.5%** | **~2,750** | **+1.5 pp** vs H1 |
+| MDB LMIC adaptation banks | **34%** (World Bank Group) | **68%** | **~1,986** | **+2 pp** vs Conc '26 |
+| Protection-gap geography | **22.4%** (N. America) | **52.6%** | **~1,518** | **0 pp** |
+| OECD adaptation donors | **18%** (Germany) | **46%** | **~1,124** | **0 pp** |
+| Public adaptation instruments | **67%** (loans) | **100%** (3 buckets) | **~5,346** | Extreme tip |
+
+Read the table as a **family of market shares plus a scenario band**, not one number. August does not rewrite Q3’s H1 lock — it **stress-tests** it. The residual tip *eased* because insurance’s constructed share rose with H1’s **42%** coverage ratio. The rebound row exists because that ratio is a quiet-half print, not a structural rewrite of who pays when the next severe season arrives. Gap geography and OECD donors remain the stuck meters: new flow prints did not redraw who holds uninsured exposure dollars or who supplies the bilateral tip.
+
+## Scenario lock: FY, H1, and rebound
+
+Open **Scenario lock**. The paired Top-1 / Top-3 bars walk **FY (40% / 87%) → H1 lock (38% / 86%) → rebound (~39.5% / ~86.5%)**. Residual HHI softens from about **2,826** to **2,684**, then firms toward about **2,750** under rebound. Beside that panel, the ranked HHI scoreboard still puts residual incidence and public instruments in the high / extreme bands, MDB banks in the moderate-to-high band (~**1,986**), gap geography moderate (~**1,518**), and OECD donors plural (~**1,124**).
+
+The insured-share composed chart is the damage-side twin of the scenario toggle: FY 2025 insured share ~**29%**, H1 2025 a severe half, H1 2026 benign at **42%** on insured **$42B** against economic ~**$100B**. Scarcity multiples underneath remind the desk that even with a record MDB tip, needs mid ÷ MDB LMIC adaptation is still about **9.6×**, needs ÷ OECD tip about **9.7×**, and the protection-gap stock ÷ MDB about **12×**. A quieter insured half does not close the unmet-demand concentration story.
+
+## Residual ladder and hazard burden
+
+Switch to **Residual & hazards** and keep the scenario toggle live. The Lorenz curve under the H1 lock still rises far above the equal-split diagonal: **38%** at households, **64%** once sovereigns stack, **86%** once insurance’s covered share is included. Toggle **Share %**, **Cumulative %**, and **Δ vs FY pp**. Under H1, households show **−2 pp**, sovereigns **−1 pp**, insurance **+2 pp**, MDB adapt **+1 pp**. Flip to rebound and the household tip thickens again — a constructed sensitivity, not a forecast, but the right risk band for desks that mark residual incidence to the newest damage print.
+
+The stacked **hazard burden** panel is the Aug-specific cut. Drought / heat / crop remains household-heavy (~**52%** household / **35%** sovereign / **13%** insurance). Flood sits near **44 / 28 / 28**. Storm and quake show thicker insured sleeves. Wildfire sits in between. The point is not a precision hazard extract — it is that **Top-1 residual is not one weather story**. A benign tropical-cyclone half can lift the global insurance ratio while drought and flood corridors still concentrate uninsured incidence on households and local budgets. Pair that with the [Q3 concentration lens](/blog/adaptation-economics-concentration-2026q3): Q3 established the H1 ease; August asks which hazard mix would unwind it.
+
+## MDB banks, donors, and the loan tip
+
+Toggle **MDB & donors**. On estimated bank shares of MDB LMIC adaptation **$35B (2025)**, World Bank Group leads near **34%** (~**$11.9B**), ADB **20%**, IDB **14%**, AfDB **11%**, EIB LMIC sleeve **9%**, other MDBs **12%**. Top-3 clears about **68%**. These bank shares remain **estimated** from published MDB climate-finance patterns — not an official adaptation-only extract — and are labeled as such in the dashboard source note.
+
+OECD donor bars stay the milder tip: Germany ~**18%**, Japan **16%**, France **12%**, Top-3 **46%** of **$34.7B**. The instrument donut still shows **67%** loans / **29%** grants. So the August lock is not “finance democratised.” It is “the largest institutional engine got larger (+**31%** YoY) while remaining bank-concentrated, and the bilateral tip remained plural-but-thin under a loan-heavy instrument mix.” The [August update](/blog/adaptation-economics-update-202608) tracks the level bounce; this lens tracks *who inside the club* holds the tip — and whether residual incidence softens with it (it barely does).
+
+## Vintage slope: Q3 to Aug 608
+
+Open **Vintage slope**. The multi-vintage line now walks Research → Concentration 2026 → Q3 concentration → **Aug 608 lock**. Residual Top-1 drifts **42% → 40% → 38% → 38%**; residual HHI **~3,010 → ~2,826 → ~2,684 → ~2,684**; gap Top-3 stays near **53%**. Toggle slope metric among residual Top-1 / Top-3 / HHI / gap Top-3, and optionally overlay MDB Top-1 (null on research, then **32% → 34% → 34%**).
+
+August’s contribution is the **flat lock plus the rebound risk band**, not another −2 pp. Desks that treat “Aug vintage” as further deconcentration are reading a level update into a distribution that did not move. Desks that treat the H1 lock as permanent are ignoring the scenario panel. The right reading is: **Q3 discovered the soft tip; August locks it and prices the unwind**.
+
+## Gaps, scarcity, and who still pays
+
+Toggle **Gaps & scarcity**. Protection-gap geography is unchanged in ranking: North America ~**$95B** (**22.4%**), South Asia, LAC, SSA, Western Europe, advanced APAC, MENA. Filter by **Income** and the resilience×gap scatter still lights up South Asia and SSA — low resilience, large absolute gap. Scarcity ledgers keep AGR needs mid (~**$338B**), the implied gap versus MDB **$35B**, OECD **$34.7B**, CPI **$65B**, UNEP **$26B**, and the FRLD delivered micro-print (~**$0.45B** of ~**$0.82B** pledged). Do **not** sum across ledgers.
+
+**Exposed:** uninsured households and SMEs whose constructed share only fell **2 pp** on a benign H1 and sits **+1.5 pp** higher under rebound; LMIC sovereigns borrowing into a **67%** loan-heavy public tip; drought and flood corridors where household residual shares stay above **40%**; regional corridors (SSA, South Asia) stuck in the low-resilience / large-gap quadrant; desks that treat MDB **+31%** YoY or H1 insured **$42B** as proof the residual tip deconcentrated for good.
+
+**Relative winners under current rules:** advanced-economy insured systems that printed a higher H1 coverage ratio; World Bank Group and the Top-3 MDB bloc inside the **$35B** LMIC adaptation engine; grant niches inside the **29%** public-adaptation grant sleeve; investors and cities that price residual incidence by *bearer, hazard, and bank* rather than by headline insured loss alone.
+
+**What would change the story:** a severe season that pushes the insurance ratio back toward the FY ~**29%** framing and restores household Top-1 near **40%+**; official MDB adaptation bank tables that break the estimated **34% / 68%** tip; donor and grant diffusion that lifts UNEP/OECD/MDB numerators toward the **$310–365B** needs band; or resilience in developing regions that lifts the global index well above **~27%**. None of those dominate the Aug 608 official vintages summarised here.
+
+## Caveats and methodology
+
+- **Residual bearer shares are a constructed incidence panel** with explicit FY / H1-lock / rebound scenarios — not a single audited global ledger of who paid last year’s losses.
+- **Hazard burden mixes are constructed** illustrative splits for dashboard comparison; they are not hazard-by-hazard insurance extracts.
+- **MDB bank shares of LMIC adaptation are estimated** from published MDB climate-finance patterns and labeled estimated — not an official bank-by-bank adaptation extract from the Joint Summary.
+- **Regional protection-gap dollars are estimated allocations** of the Swiss Re-style **$424B** stock; geography illustrates uninsured exposure, not a country extract.
+- **Donor country shares of OECD adaptation remain estimated** from bilateral patterns.
+- **Do not splice** OECD, UNEP, CPI, MDB, Swiss Re gap, and FRLD ledgers into one total — different scopes, years, and methodologies.
+- HHI is analytical on stated buckets (0–10,000). Primary sources: MDB Joint Summary (13 Jul 2026), OECD May 2026 climate finance, Swiss Re H1 2026 (11 Aug), UNEP Adaptation Gap Report 2025.
+
+August locks the soft residual tip at **38% / 86%** and refuses to pretend the tip cannot rebound. For levels see the [August update](/blog/adaptation-economics-update-202608); for the Q3 distribution discovery see the [Q3 concentration lens](/blog/adaptation-economics-concentration-2026q3); for the FY baseline see the [2026 concentration print](/blog/adaptation-economics-concentration-2026); for theme structure see [adaptation economics research](/blog/adaptation-economics-research-2026).`,
+  },
+  {
     id: "ai-compute-demand-geography-2026",
     slug: "ai-compute-demand-geography-2026",
     title:

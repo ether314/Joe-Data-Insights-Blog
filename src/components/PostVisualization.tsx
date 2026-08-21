@@ -2402,6 +2402,21 @@ const AiComputeDemandGeography2026Dashboard = dynamic(
   },
 );
 
+const AdaptationEconomicsConcentration202608Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AdaptationEconomicsConcentration202608Dashboard"
+    ).then((m) => m.AdaptationEconomicsConcentration202608Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3029,6 +3044,10 @@ export function PostVisualization({
 
   if (type === "ai-compute-demand-geography-2026") {
     return <AiComputeDemandGeography2026Dashboard />;
+  }
+
+  if (type === "adaptation-economics-concentration-202608") {
+    return <AdaptationEconomicsConcentration202608Dashboard />;
   }
 
   return null;

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "adaptation-economics-concentration-202608",
+    marker: "Adaptation economics — Aug 608 concentration lock",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-compute-demand-geography-2026",
     marker: "Where tokens, sites, and capacity land on the map",
     forbidden: "Loading interactive charts",
