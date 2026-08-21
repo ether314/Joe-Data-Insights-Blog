@@ -196,7 +196,8 @@ export interface Post {
     | "ai-financing-geography-2026"
     | "ai-supply-chain-geography-2026"
     | "energy-systems-concentration-202608"
-    | "macro-growth-trade-geography-2026q3";
+    | "macro-growth-trade-geography-2026q3"
+    | "fiscal-plumbing-concentration-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "fiscal-plumbing-concentration-202608",
+    marker: "Fiscal plumbing — Aug 202608 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "macro-growth-trade-geography-2026q3",
     marker: "Q3 2026 geography lens · growth · trade · prices",
     forbidden: "Loading interactive charts",
