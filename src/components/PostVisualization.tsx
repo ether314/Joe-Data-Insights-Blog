@@ -1727,6 +1727,21 @@ const MeasurementScienceConcentrationDashboard = dynamic(
   },
 );
 
+const FiscalIndustrialPolicyConcentration202608Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FiscalIndustrialPolicyConcentration202608Dashboard"
+    ).then((m) => m.FiscalIndustrialPolicyConcentration202608Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2174,6 +2189,10 @@ export function PostVisualization({
 
   if (type === "measurement-science-concentration-2026") {
     return <MeasurementScienceConcentrationDashboard />;
+  }
+
+  if (type === "fiscal-industrial-policy-concentration-202608") {
+    return <FiscalIndustrialPolicyConcentration202608Dashboard />;
   }
 
   return null;

@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-industrial-policy-concentration-202608",
+    slug: "fiscal-industrial-policy-concentration-202608",
+    title:
+      "Aug Concentration: Ownership Top-1 ~63% (CN Funds) — Core Package Top-1 Still 71% US",
+    excerpt:
+      "August 202608 concentration lens: China subnational equity funds own ~63% of the Jun–Jul stake tape; core CHIPS/IRA war-chest dollars still put the US at ~71% (HHI ~5,320) until a Korea mega-plan sensitivity flips top-1; stock counts remain top-3 at 63% while June flow leaves 62% to the rest of the world.",
+    category: "Politics",
+    themeId: "fiscal-industrial-policy",
+    imageUrl:
+      "/images/politics-fiscal-industrial-policy-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of glowing top-1 and top-3 industrial-policy concentration bars with amber, cyan, rose ownership, and emerald monthly-flow accents",
+    publishedAt: "2026-08-21T12:00:00Z",
+    featured: true,
+    visualization: "fiscal-industrial-policy-concentration-202608",
+    layout: "default",
+    content: `Our [H-NIPO research ledger](/blog/fiscal-industrial-policy-research-2026) mapped the stock: jurisdictions using trade-distorting subsidies nearly doubled from **36% to 59%**, and China, the EU, and the United States together account for roughly **53%** of the historical tape. The [Q3 concentration print](/blog/fiscal-industrial-policy-concentration-2026q3) then answered the distribution question with package-dollar HHI near **5,320** and IRA TE alone ~**83%** of the US rollup. The [August 202608 toolkit update](/blog/fiscal-industrial-policy-update-202608) added May–Jul monthly flow and a disclosed 2025 instrument mix. This **August concentration lens** asks the same core question desks actually trade — **how concentrated is this system at the top of the distribution?** — and folds ownership stakes, Korea mega-plan sensitivity, and the May→Jul flow path into the meter.
+
+The dashboard above is built as a **four-view concentration toolkit**. Toggle **HHI radar**, **Package ladders**, **Ownership stakes**, and **Flow path**. The punchline is deliberately multi-sided. On **Jun–Jul ownership / equity stakes**, China subnational funds alone are about **63%** of a ~**$5.2B** tracked tape and the top three deals clear roughly **90%**. On **core fiscal-package dollars**, concentration remains extreme: analytical HHI ≈ **5,320**, the United States alone is about **71%** of the CHIPS/IRA/EU/CN/JP/KR war-chest universe, and the same Big Three clear roughly **93%**. Flip the package universe to include Korea’s ~**$951B** mega-plan headline and **top-1 flips** to Korea near **60%**. On **intervention counts**, the top is thick but not monopolistic: top-1 near **24%**, top-3 near **63%**. Monthly flow sits flatter still — June’s Roundup still leaves **62%** to the rest of the world even as July volume jumps **+25%** versus May.
+
+## The August headline ladder: top-1, top-3, and HHI
+
+| Lens | Top-1 | Top-3 | HHI (approx.) | What it measures |
+| --- | ---: | ---: | ---: | --- |
+| Core fiscal packages ($) | **~71%** (US) | **~93%** | **~5,320** | CHIPS + IRA + EU + CN + JP/KR headlines |
+| Ownership / equity stakes | **~63%** (CN subnational) | **~90%** | **~4,470** | Jun–Jul Roundup LOIs / funds (~$5.2B) |
+| Packages + Korea mega-plan | **~60%** (Korea) | **~89%** | **~4,280** | Sensitivity: adds ~$951B headline |
+| 2025 toolkit instruments | **27%** (import barriers) | **~76%** | **~2,550** | Barriers / subsidies / finance / other |
+| Cumulative stock (counts) | **~24%** (China, est.) | **63%** (US·EU·CN) | **~1,846** | Teneo / GTA cumulative IPs |
+| June 2026 monthly flow | **20%** (US) | **38%** | **~980** | GTA Roundup geography |
+
+Read the table as a **family of market shares**, not one number. Count-based top-3 sits in a **48–63%** band depending on vintage. Dollar-based top-3 among large packages sits near **93%** in the core universe — or near **89%** once Korea’s mega-plan is admitted as a sensitivity. Ownership concentration sits between those extremes. Flow-based top-3 in a single busy month can fall to **38%**. Analysts who quote only the Big Three stock share understate how dollarised US packages and China equity funds dominate fiscal and ownership capacity; analysts who quote only IRA or Korea headlines understate how many capitals still generate the daily intervention count.
+
+## HHI radar: six lenses, six industrial-organisation objects
+
+Open **HHI radar**. The horizontal bars rank analytical Herfindahl indexes on the stated bucket shares. Core package dollars clear the field near **5,320**. Ownership stakes sit next near **4,470** — a five-deal ledger where one China subnational fund cluster is already **63%**. The Korea mega-plan sensitivity softens package HHI to about **4,280** even while flipping the top-1 label. The disclosed 2025 toolkit mix prints a mid-range HHI near **2,550** because import barriers (**27%**), domestic subsidies (**26%**), finance/FDI controls (**23%**), and export/other (**24%**) are nearly level. Stock counts sit near **1,846**. June flow drops under **1,000** once rest-of-world’s **62%** share is in the mix.
+
+That ordering is the August contribution relative to a simple top-3 quote. Top-3 shares can look “similar” across lenses when they are not. A top-3 of **63%** on counts and **93%** on packages both sound concentrated in prose; the HHI meter shows they are different markets. The scatter next to the bars plots each lens by top-1 (x) and top-3 (y): core packages and ownership sit in the upper-right; June flow sits lower-left; toolkit mix and stock counts occupy the middle.
+
+## Ownership stakes: the August dollar ladder nobody quoted as “market share”
+
+Switch to **Ownership stakes**. The Jun–Jul Roundup equity tape is small in absolute dollars next to IRA TE, but it is the cleanest *new* concentration object the August vintage adds. China subnational equity funds (~**$3.3B**, five governments) are about **63%** of the tracked ~**$5.2B** universe. US CHIPS equity LOIs (~**$874M** across seven firms) are about **17%**. SandboxAQ’s CHIPS stake (~**$500M**) adds another **10%**. Top-3 deals therefore clear roughly **90%**.
+
+This is how industrial policy reshapes ownership geography without requiring a statutory appropriation headline. Equity LOIs and subnational funds concentrate *control claims* even when monthly intervention *counts* look diversified. The Lorenz curve on this view shows how far the ownership ladder sits above an equal five-way split — and why desks that only watch CHIPS appropriations miss the China fund peak that dominates the summer stake tape.
+
+Treat the ownership universe as a **Roundup sample**, not a global M&A census. Missing deals would change shares; the qualitative story — one China fund cluster as top-1 — is robust to modest omissions at the thin end of the ladder.
+
+## Dollar packages: war chests, and the Korea sensitivity that flips top-1
+
+Open **Package ladders** and leave the universe on **Core war chest**. Among the major semiconductor and clean-tech fiscal headlines we roll up — US IRA clean-energy tax expenditures (~**$370B** original score), US CHIPS appropriations (**$52.7B**) and ITC (~**$24B**), EU Chips mobilisation (~**$47B**), EU IPCEI state aid (~**$40B**), China’s Big Fund III (~**$48B**), plus Japan and Korea semiconductor envelopes — the **United States alone is ~71%** of the dollar universe and the **top three jurisdictions clear ~93%**.
+
+Toggle **+ Korea mega-plan**. The alternate universe adds the disclosed ~**$951B** industrial mega-plan headline and expands the pie to about **$1.58T**. Top-1 flips to Korea near **60%**; the US falls to roughly **28%**; top-3 still clears near **89%**. Package HHI softens from ~**5,320** to ~**4,280** — still extreme, but a different story about *which* capital sits at the tip of the distribution.
+
+That sensitivity is methodological as much as empirical. Korea’s mega-plan is not dollar-for-dollar comparable to IRA tax-expenditure scores or CHIPS appropriations. Including it answers a different question: what happens to “market share” narratives when one outsized announced envelope enters the war-chest ledger. Excluding it preserves comparability with the [Q3 concentration print](/blog/fiscal-industrial-policy-concentration-2026q3). Both meters belong on the desk; neither should be quoted without naming the universe.
+
+## Stock counts and vintage slope: the top is thick, not monopolistic
+
+On cumulative intervention counts, China / US / EU still sum to the disclosed Teneo Big Three share of **63%**, with an estimated top-1 near **24%** (China-led) and stock HHI ≈ **1,846**. That is concentrated relative to an equal six-way split. It is **not** a winner-take-all market. A system where the top three hold three-fifths of recorded interventions still leaves a long tail of capitals that can start subsidy races, copy HS6 product lists, or free-ride on templates written in Washington, Brussels, and Beijing.
+
+IMF’s H-NIPO check sits a notch lower — China+EU+US at **53%** of the **2009–2023** stock — and the **2023** census alone put the same trio at about **48%** of **2,580** measures. The vintage slope on the Package ladders view shows why a single “concentration is rising” slogan fails: census intensity, cumulative stock coding, and monthly flow geography are different instruments. Toggle to **Top-1 %** and the slope flattens further — estimated top-1 shares cluster near **18–24%** on count vintages and **20%** on June flow, while package-dollar and ownership top-1 live on a different chart entirely.
+
+## Flow path: volume up, geography still RoW-heavy
+
+Open **Flow path**. May→Jul GTA Roundup totals rise from **804** to **823** to **1,008** developments — a **+25%** jump from May to July. Only June discloses a clean Big Three versus rest-of-world split: US **20%**, EU **12%**, China **6%**, rest-of-world **62%**. That is the flattest concentration print in the August toolkit, and it warns against equating *stock concentration* with *flow concentration*. Rest-of-world can still dominate a month’s tape even when the cumulative ledger and the ownership stake ladder are top-heavy.
+
+The June pie is therefore a flow check, not a substitute for multi-year stock. July’s louder volume without a matching geography disclosure is itself a data warning: rising intervention intensity does not automatically imply rising Big Three share.
+
+## Toolkit mix and strategic intensity still reshape the top
+
+Concentration is not only *who* intervenes; it is *what* they intervene with. The HHI view’s toolkit donut restates the August update’s instrument punchline: import barriers (**27%**), domestic subsidies (**26%**), and finance/FDI controls (**23%**) are nearly co-equal in the 2025 distortive mix — a sharp break from older subsidy-monopoly intuitions. The US alone still accounts for roughly **20%** of 2025 import-barrier actions inside that barrier slice. The strategic panel restates ZG #88: China’s dual-use / advanced-tech subsidy share sits near **98%**, the US near **76%**, and the EU near **70%**.
+
+That combination — **concentrated ownership stakes**, **concentrated core fiscal packages**, **thick but not monopolistic intervention counts**, **strategic targeting converging upward inside the Big Three**, and a **more balanced toolkit** — is how subsidies, tariffs, and industrial policy reshape economies at the top of the distribution without requiring a single global monopoly capital.
+
+## Caveats
+
+- **Individual China / US / EU count splits inside the Teneo Big Three 63% are estimated** so the ladder sums; treat top-1 stock (~24%) as order-of-magnitude, not a census microdata print.
+- **Package USD figures mix appropriations, mobilisation targets, state-aid approvals, fund raises, and tax-credit scores** — not outlays-to-date and not dollar-for-dollar comparable.
+- **Korea mega-plan (~$951B) is a disclosed headline used only in the alternate universe**; do not splice it into IRA/CHIPS comparability without naming the sensitivity.
+- **Ownership stakes are a Jun–Jul Roundup sample (~$5.2B)**, not a global equity-as-IP census; missing deals would move shares.
+- **HHI values are analytical indexes on the stated bucket shares**, not official competition-authority statistics; changing the bucket set changes the index.
+- **June 2026 flow is one month’s Roundup geography** — useful as a flow check, not a substitute for multi-year stock; July volume lacks a matching geography split.
+- **Strategic intensity shares are percent of subsidy-based IP actions**, not percent of dollars.
+- **Toolkit instrument mix is the disclosed 2025 Teneo Fig.2 cross-section**; export/other is the residual that closes the pie.
+
+## The shareable takeaway
+
+Fiscal and industrial policy is **concentrated at the top — but which top depends on the meter**. On Jun–Jul ownership stakes, China subnational funds alone are about **63%** and top-3 deals about **90%**. Among core war-chest headlines, package-dollar HHI is about **5,320**, US top-1 about **71%**, and Big Three about **93%** — until a Korea mega-plan sensitivity flips top-1 near **60%**. On cumulative intervention counts, top-1 is about **24%** and top-3 about **63%**. On June’s monthly tape, top-3 falls to **38%** with rest-of-world still at **62%**, even as July volume jumps **+25%** versus May. Subsidies, tariffs, and industrial policy reshape economies through a system that looks diversified in country counts and **top-heavy once you rank dollars, ownership stakes, and strategic intensity**.
+
+Related reading: [Q3 concentration](/blog/fiscal-industrial-policy-concentration-2026q3) · [Concentration 2026](/blog/fiscal-industrial-policy-concentration-2026) · [H-NIPO research](/blog/fiscal-industrial-policy-research-2026) · [August toolkit update](/blog/fiscal-industrial-policy-update-202608).`,
+  },
+  {
     id: "measurement-science-concentration-2026",
     slug: "measurement-science-concentration-2026",
     title:
