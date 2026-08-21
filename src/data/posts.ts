@@ -2,6 +2,87 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-supply-chain-concentration-202608",
+    slug: "ai-supply-chain-concentration-202608",
+    title:
+      "Aug Concentration: Median Top-1 70.5%; CoWoS Dual Tip 75%/52% — Test Tools +31% vs Packaging +9.6%",
+    excerpt:
+      "August Mid-Year concentration lens on the AI chip stack: median top-1 eases 71%→70.5%, CoWoS supply tip slips to ~75% while NVIDIA buyer share softens to ~52%, and the 21.4-pt back-end growth gap (test +31% vs assembly & packaging +9.6%) keeps packaging as the binding midstream gate.",
+    category: "Industry",
+    themeId: "ai-supply-chain",
+    imageUrl:
+      "/images/industry-ai-supply-chain-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber and cyan concentration bars across semiconductor stack layers with glowing wafers and circuit motifs",
+    publishedAt: "2026-08-22T02:00:00Z",
+    featured: true,
+    visualization: "ai-supply-chain-concentration-202608",
+    layout: "default",
+    content: `Our [mid-window concentration companion](/blog/ai-supply-chain-concentration-2026) mapped the chip stack as a family of top-1 / top-3 shares. The [Q3 concentration refresh](/blog/ai-supply-chain-concentration-2026q3) then re-metered the tip after the CoWoS tracker: median top-1 eased **72% → 71%**, HBM firmed to **~55%**, and CoWoS supply tip slipped to **~76%** while NVIDIA buyer share stayed **~55%**. The [August Mid-Year back-end cut](/blog/ai-supply-chain-update-202608) changed the *flow* story — test equipment **$15.3B (+31%)** versus assembly & packaging tools only **$6.7B (+9.6%)** on a **$165.9B** Mid-Year path. This **August 202608 concentration lens** asks the distribution question again: **did that growth asymmetry rewrite where the stack concentrates at the top — or only explain why the packaging gate still binds?**
+
+The dashboard above is built as a **dual-tip + growth-concentration board**. Toggle **Dual tip**, **Layer ladder**, **Growth conc.**, and **Geo / gates**. The punchline is deliberately two-sided. **Median top-1 eases 71% → 70.5%** and stack HHI softens **~5,620 → ~5,550** — mild tip softening, not a regime change. **CoWoS supply tip slips 76% → 75%** while **buyer tip softens 55% → 52%** at **140k wpm**. EUV remains **100%** ASML; leading-edge foundry stays **~90%** TSMC; HBM holds **~55%** SK Hynix inside a closed three-player set. The Mid-Year print’s **21.4-point** test-versus-packaging YoY gap is the growth-concentration input that keeps CoWoS binding even as supply ownership dilutes a little.
+
+## The August scoreboard: top-1, Δ vs Q3, and HHI
+
+| Layer | Aug top-1 | Δ vs Q3 | Top-3 cum. | Approx. HHI | Stage |
+| --- | ---: | ---: | ---: | ---: | --- |
+| EUV lithography scanners | **100%** (ASML) | **0 pp** | **100%** | **10,000** | Upstream |
+| Leading-edge foundry (<7 nm) | **~90%** (TSMC) | **0 pp** | **~100%** | **~8,170** | Midstream |
+| AI data-center GPU / accel. | **~86%** (NVIDIA) | **−1 pp** | **~97%** | **~7,480** | Downstream |
+| CoWoS-class AI packaging | **~75%** (TSMC) | **−1 pp** | **~93%** | **~5,840** | Midstream |
+| HBM (high-bandwidth memory) | **~55%** (SK Hynix) | **0 pp** | **100%** | **~4,360** | Midstream |
+| EDA / design software | **~42%** (Synopsys) | **0 pp** | **~88%** | **~2,940** | Upstream |
+| 300 mm silicon wafers | **~30%** (Shin-Etsu) | **0 pp** | **~72%** | **~1,890** | Upstream |
+| Wafer-fab equipment (WFE) | **~22%** (Applied) | **0 pp** | **~56%** | **~1,120** | Upstream |
+
+Read the table as a **family of market shares with a Q3→Aug Δ column**, not one semiconductor “concentration number.” Most of the ladder is *structurally flat* this vintage — EUV, foundry tip, HBM, EDA, wafers, and broad WFE do not move. The movers that matter for AI shipping risk are **GPU (−1 pp tip)** and **CoWoS (−1 pp supply tip)** — small, same-direction tip easing that still leaves five of eight layers at top-1 ≥ **70%**.
+
+## Dual tip: supply ownership is not buyer concentration
+
+Open **Dual tip**. The composed panel puts CoWoS capacity (bars, thousand wafers per month) against two share lines: **TSMC supply tip** and **NVIDIA buyer tip**. Across theme vintages the geometry is sticky: capacity rises toward **140k wpm**, the supply tip drifts down from the research-era **~80%** toward **~75%**, and the buyer tip oscillates in a **~52–55%** band rather than collapsing. The dashed gap line still reprints near **~20%** on the Mid-Year cut.
+
+That is why “more CoWoS capacity” is not the same sentence as “less concentration.” Supply-side tip softens a little as OSAT and rival advanced-packaging ramps add wafers; demand-side concentration at the tip of the queue softens only to **~52%** — still a majority reservation narrative for a single buyer. The Q3→Aug dumbbells beside the dual path show most layers flat; GPU and CoWoS are the visible movers. Stage averages still put **midstream near ~73%** average top-1 and **downstream at ~86%**. For the capacity-versus-demand frame that feeds this lens, see the [Q3 CoWoS tracker](/blog/ai-supply-chain-update-2026q3) and the [August Mid-Year update](/blog/ai-supply-chain-update-202608).
+
+## Layer ladder: saturation still happens before top-3
+
+Switch to **Layer ladder**. Rank by top-1, top-3, or HHI; filter by stage. The companion **top-k path** still shows EUV, foundry, and GPUs near ceiling at top-1; HBM and CoWoS still climb into top-2/top-3; WFE never saturates. The Lorenz-style mass panel under the path remains well above an equal-share guide: the first few layers still carry most of the single-vendor risk mass in the stack.
+
+Relative to the [Q3 concentration companion](/blog/ai-supply-chain-concentration-2026q3), the qualitative ordering is unchanged. What changed is the *meter*: median top-1 ticks **71% → 70.5%**, stack HHI softens **~5,620 → ~5,550**, and CoWoS remains above the **70%** top-1 bar even after another **1 pp** supply-tip ease. Toggle **Movers only** on the Δ panel to hide the structural ceilings — EUV’s flat **100%** and foundry’s flat **~90%** are not “no news”; they are the reminder that Mid-Year equipment dollars and AI demand did not create a second EUV vendor or a second leading-edge foundry tip this vintage.
+
+## Growth concentration: the Mid-Year back-end punchline
+
+Open **Growth conc.** The Mid-Year OEM segment bars are the August contribution. Toggle **YoY %** versus **Level $B**. **DRAM tools +39% to $38.8B** and **test equipment +31% to $15.3B** race ahead of the stack; **assembly & packaging tools only +9.6% to $6.7B** on a total equipment path of **$165.9B (+23.2%)**. The asymmetry panel states the gap in one view: **31.0 − 9.6 = 21.4 points**.
+
+That is *growth concentration*, not vendor HHI inside each segment. Upstream dollars fund the stack; **slow packaging-tool growth helps explain why CoWoS still gates the ship** even when broad WFE top-3 is only ~**56%**. The HBM donut and foundry dual bars underneath restate the midstream structure: SK Hynix **~55%**, Samsung **~33%**, Micron **~12%** — top-3 still equals the market — and TSMC **~90%** advanced-node versus **~62%** overall. A held HBM tip inside a closed three-player set is still *more* concentration risk for GPU ship schedules than a diversified memory census would imply, because qualification cycles and HBM3E/HBM4 ramps do not create a fourth supplier on a slide.
+
+## Geo / gates: install geography plus the packaging dual tip
+
+Open **Geo / gates**. SEMI’s 2025 WWSEMS billings still put **China + Taiwan + Korea at ~79%** of global equipment dollars — a geographic top-3 that rivals vendor concentration inside several layers. China alone is ~**36.5%** of billings; Taiwan’s AI-install signature from the [research map](/blog/ai-supply-chain-research-2026) remains intact. Q1 2026 billings at **$36.55B (+14%)** are the pace check against the Mid-Year annual path, not a rewrite of install geography.
+
+The CoWoS close-up restates the dual tip without the capacity bars: supply **75%**, buyer **52%**, gap **~20%**. That geometry is why desks that quote only “TSMC CoWoS share” or only “NVIDIA reservation share” miss half the concentration object. For the packaging-and-memory bottleneck frame that precedes these vintages, see [GPU packaging & memory](/blog/ai-gpu-packaging-memory-bottleneck-2025).
+
+## Why WFE still looks diversified next to EUV
+
+The analytical error the mid-window and Q3 posts warned about remains the live risk: collapsing “semiconductor equipment” into one concentration statement. ASML’s EUV monopoly is still **100%**. Applied / ASML / Lam as a ~**56%** top-3 in broad WFE is also still real. Quoting either without the other mis-states resilience. The August twist is that *even diversified WFE growth* does not unlock the packaging gate when assembly & packaging tool growth lags by more than **20 points**. Export controls, tool lead times, and service networks still create friction in diversified WFE — but the industrial-organisation object is different from a single-scanner monopoly. EDA sits between those poles: Synopsys + Cadence still clear roughly **~72%**, and top-3 approaches **~88%**.
+
+## Caveats
+
+- **Layer shares are public narrative bands and company-disclosure composites**, not a single SEMI census of vendor revenue by AI-relevant slice. Treat advanced-foundry and GPU percentages as order-of-magnitude structure, not filing-precision microdata.
+- **Δ columns are editorial vintage comparisons** against the Q3 concentration companion — useful for ranking what moved, not a formal market-share audit trail.
+- **HHI figures are derived** from stated top buckets plus a residual; they are analytical meters for ranking layers, not antitrust exhibits.
+- **Tightness scores are editorial** (1–10) carried from the theme’s bottleneck framework; they are not SEMI metrics.
+- **CoWoS dual tip mixes capacity ownership and buyer reservation narratives** across theme vintages — useful for concentration storytelling, not a substitute for TSMC’s full packaging P&L or NVIDIA’s disclosed purchase commitments.
+- **Segment YoY figures are Mid-Year OEM-forecast growth**, not vendor HHI inside each equipment segment. Regional equipment shares are install geography (where tools ship), not where corporate parents are headquartered.
+
+## What to watch next
+
+Watch whether CoWoS supply tip keeps easing as OSAT and Samsung advanced-packaging capacity scales — or whether TSMC’s AI-relevant share re-firms when demand re-accelerates faster than wafer-out. Watch the **buyer tip**: Mid-Year softens it to **~52%**, but capacity growth without durable buyer diversification still leaves a majority reservation narrative as the demand-side concentration print. Watch HBM: a true fourth supplier would change the oligopoly math; incremental Micron share inside a three-player set would not. Watch the Mid-Year back-end asymmetry — if assembly & packaging tool growth stays stuck near **+10%** while AI wafer demand compounds, the packaging gate remains the binding midstream object even when front-end WFE looks “diversified.” And keep EUV as the upstream ceiling — High-NA does not create a second EUV vendor.
+
+**Primary sources:** SEMI Mid-Year OEM Forecast (July 2026) and Q1 2026 billings; TrendForce / company disclosures for HBM and CoWoS reservation bands; theme posts [Q3 concentration](/blog/ai-supply-chain-concentration-2026q3), [mid-window concentration](/blog/ai-supply-chain-concentration-2026), [August Mid-Year back-end cut](/blog/ai-supply-chain-update-202608), [Q3 CoWoS tracker](/blog/ai-supply-chain-update-2026q3), [research](/blog/ai-supply-chain-research-2026), and [packaging & memory](/blog/ai-gpu-packaging-memory-bottleneck-2025).
+
+**Bottom line:** The August Mid-Year concentration lens does **not** rewrite the ladder of extremes — it **re-meters the tip and names the growth gap that keeps midstream binding**. Median top-1 eases **71% → 70.5%**; CoWoS dual tip prints **~75% supply / ~52% buyer** at **140k wpm**; test tools **+31%** versus packaging tools **+9.6%** leave a **21.4-pt** asymmetry. Upstream/downstream bottlenecks are still where high share and high tightness coincide — and quoting one layer’s Δ, or one equipment segment’s YoY, as “the” semiconductor deconcentration story is how desks get the risk wrong.`,
+  },
+  {
     id: "fiscal-industrial-policy-geography-2026q3",
     slug: "fiscal-industrial-policy-geography-2026q3",
     title:

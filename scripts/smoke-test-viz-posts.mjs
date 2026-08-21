@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-supply-chain-concentration-202608",
+    marker: "Semiconductor supply chain — August 202608 Mid-Year concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-industrial-policy-geography-2026q3",
     marker: "Fiscal & industrial policy — Q3 geography lens",
     forbidden: "Loading interactive charts",
