@@ -2,6 +2,95 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-update-202608",
+    slug: "chokepoint-commodities-update-202608",
+    title:
+      "Update: Copper Jul $13,543/mt (+36% YoY); Metals Idx +25%; Spot TC ~−$90/t",
+    excerpt:
+      "Versus our Q3 IEA GCMO midstream print, World Bank Pink Sheet August 2026 prices the same thin gates hotter: copper +36% YoY, tin +56%, metals index +25%, while spot treatment charges deepened below the $0/t settle.",
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz hero with copper cathode bars, orange price-spike arrow, and a bottleneck funnel constricting ore streams into a single smelter gate",
+    publishedAt: "2026-08-20T23:55:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 IEA GCMO vintage
+
+In our [Q3 chokepoint commodities update](/blog/chokepoint-commodities-update-2026q3) we treated the IEA Global Critical Minerals Outlook 2026 as the newest official midstream print: average top refining-country share (ex-REE) at **72%**, rare-earth refining eased to **85%**, China copper *smelting capacity* near **50%**, and the 2026 annual copper treatment-and-refining charge settled at **$0 per tonne**. That post answered the *share and fee* question against the [MCS 2026 mine/refine update](/blog/chokepoint-commodities-update-2026). This August note answers the next official print the market forces: **what moved when the World Bank Pink Sheet (August 4, 2026 release; July monthly) restated base-metal and fertilizer prices — and when smelter-stress follow-through showed spot TCs deepening below the zero settle?**
+
+USGS Mineral Industry Surveys remain paused, so there is still no fresher monthly mine census to overwrite MCS 2026 country tables. IEA refine percentages are held, not restated. The binding August delta is therefore a **price-and-stress vintage**: copper July **$13,543/mt** versus 2025 annual **$9,947** (**+36.2%** YoY); the metals-and-minerals index at **140.5** versus **112.2** (**+25.2%**); tin **+55.5%** YoY; phosphate rock finally breaking higher to **$170/mt** after a flat **$152.5** print; and copper spot treatment charges deepening to about **−$90/t** while China answered with a **>10%** planned primary cut and roughly **2 Mt** of halted planned smelting capacity. The dashboard above is a vintage delta — toggle **YoY Δ**, **Price path**, **Price × conc.**, **Fertilizer**, **Smelter reply**, and **Full ledger**, then filter by stage, direction, and sector.
+
+## The headline table: Q3 GCMO → Pink Sheet Aug 2026
+
+| Meter | Q3 prior / carry | Aug newest print | Δ |
+| --- | ---: | ---: | ---: |
+| Copper LME ($/mt) | 2025 ann. **9,947** | Jul **13,543** | **+36.2%** YoY |
+| Metals & minerals idx (2010=100) | 2025 ann. **112.2** | Jul **140.5** | **+25.2%** |
+| Tin LME ($/mt) | 2025 ann. **34,059** | Jul **52,971** | **+55.5%** |
+| Aluminum LME ($/mt) | 2025 ann. **2,632** | Jul **3,161** | **+20.1%** |
+| Nickel LME ($/mt) | 2025 ann. **15,162** | Jul **16,651** | **+9.8%** (off May peak) |
+| Phosphate rock ($/mt) | 2025 ann. **152.5** | Jul **170.0** | **+11.5%** |
+| Copper TC/RC | Annual settle **$0/t** | Spot path **~−$90/t** | Deeper stress |
+| Avg top refine (ex-REE) | IEA **72%** | **Hold 72%** | No new refine reprint |
+| China Cu smelt capacity | IEA **~50%** | **Hold ~50%** | Cut/halt, not new census |
+
+Read the table as **stress meters on the same gates**, not as a second concentration encyclopedia. Share rows that say **hold** are deliberate: Pink Sheet does not restate refining shares, and MIS posting is still paused. What moved is the *price of thinness* — and the smelter system’s reply to a fee structure that already failed in Q3.
+
+## Record-adjacent cathode does not mean a healthy midstream
+
+Open **YoY Δ** and **Price path**. Copper’s July print sits at **$13,543/mt**, essentially flat with May–June after a 2026 Q1 jump to **$12,831**. Versus the 2025 annual average the YoY is **+36%** — the kind of move markets usually read as “mine scarcity solved by price.” The Q3 chokepoint story says otherwise. China still holds about **half** of global copper smelting capacity after capturing over **90%** of capacity growth since 2005. Custom smelters outside China already saw utilisation fall below roughly **70%** while China stayed near **85%**. When the annual TC/RC settle hit **$0/t**, processing income for benchmark contracts disappeared; when spot deepened toward **−$90/t**, custom plants were effectively *paying* for concentrate.
+
+That is the August paradox in one sentence: **cathode prices can scream scarcity while the midstream gate that delivers cathode and by-products is being priced out of existence outside the dominant capacity holder.** Pair the path chart with [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-geography-2026) — the pit map stays plural; the July price spike does not reopen Japanese or European custom margins.
+
+Tin’s **+56%** YoY is the loudest single Pink Sheet base-metal print in this set, and it matters for the same theme reason gallium and germanium matter: solder and electronics sit downstream of concentrated midstream chemistry. Aluminum’s **+20%** YoY (July still elevated after a May peak of **$3,666**) and zinc’s **+25%** keep the bulk-metals complex in a high-stress band even after the metals index cooled **5.6%** from its May peak of **148.8**.
+
+## Price × concentration: the thin spots are still thin
+
+Switch to **Price × conc.** The scatter does not invent new share numbers — it plots Pink Sheet YoY stress against the Q3 concentration *holds*. Copper sits in the uncomfortable quadrant: **~50%** smelting-capacity concentration *and* **+36%** price YoY. Nickel’s YoY is milder (**+9.8%**) but the midstream growth-capture story from GCMO still points at Indonesia and Chinese peers taking the bulk of refined-supply growth. Fertilizer rock and potash sit lower on the YoY axis but remind the reader that “always available” assumptions are not only about batteries and grids — food-system inputs are chokepoints too.
+
+The metals-and-minerals index path is the composite tell. From a 2025 annual **112.2**, the index ran to **137.1** in 2026 Q1, peaked at **148.8** in May, and printed **140.5** in July. That is still a **+25%** YoY stress print even after a midsummer cool-off. World Bank commentary earlier in 2026 already flagged metal prices surging on supply pressures; the August Pink Sheet is the official monthly that prices how far that surge carried into summer.
+
+## Fertilizer gates broke their flat line
+
+Open **Fertilizer**. Phosphate rock spent most of 2024–early 2026 stuck near **$152.5/mt** — a deceptively calm print after the 2023 spike to **$321.7**. July’s **$170** is not a crisis reprint by 2023 standards, but it is the first clear break higher in this vintage and it arrives alongside DAP at **$781** (**+14%** vs 2025 annual) and potash at **$396.5** (**+14%**). Processed phosphate and potash were already elevated; rock catching up means the fertilizer trio is no longer a quiet corner of the chokepoint ledger.
+
+That matters for the theme’s core question — *what physical inputs does the economy assume will always be available?* — because fertilizer export dependence and rock concentration were already mapped in the theme’s [phosphate fertilizer](/blog/phosphate-fertilizer-export-dependence-2026) and [phosphate rock](/blog/phosphate-rock-supply-concentration-2024) posts. August’s contribution is the price meter, not a new USGS mine table.
+
+## Smelter reply: cut and halt are not diversification
+
+Switch to **Smelter reply**. Q3’s binding fee headline was the **$0/t** annual settle. August’s follow-through is uglier on spot and more revealing on policy response. Spot treatment charges deepened to about **−$90/t** on the March 2026 path cited in industry and policy commentary. China’s top smelters agreed to cut primary output by more than **10%** in 2026 — on the order of **~961 kt** of refined copper foregone if delivered — and authorities halted roughly **2 Mt** of planned new smelting capacity.
+
+Those moves slow *further* concentration. They do **not** restore a diversified midstream. IEA’s copper commentary is blunt that the cuts are not enough to rebalance the market for custom smelters outside China, and that China remains a net importer of refined copper — which makes large-scale Chinese closures unlikely. Read the reply pack as **damage control inside a 50% capacity share**, not as the diversification path rare-earth refining printed when top-supplier refine fell to **85%**.
+
+By-product economics still matter for this theme’s thin minors. When TC/RCs vanish, smelters lean on gold, silver, acid, and the strategic recoveries (gallium, germanium, tellurium) that hitchhike on base-metal circuits. High cathode *and* high precious-metal prices can mask midstream fragility for a while; a by-product correction with fees still broken would be the next stress vintage to watch.
+
+## Who is more exposed under the August print
+
+**More exposed:** custom copper smelters and wire-rod chains that treated the $0/t settle as a one-negotiation fluke; OEMs and grid builders who read **$13,543** copper as proof that “price will bring supply” without asking *which* midstream can still process concentrate; tin and solder buyers facing the largest YoY in this Pink Sheet set; fertilizer importers watching rock finally leave its flat **$152.5** line while DAP stays elevated; and any planner still waiting for USGS MIS to reopen before updating risk registers — the price vintage already moved.
+
+**Relatively less pressured on this print alone:** rare-earth separation buyers who still sit on the Q3 **85%** top-refine relief (unchanged this month, but not worsened); copper mine developers in corridors where the 2035 pipeline deficit narrowed in GCMO (still a deficit, still not a smelter fix); and public-finance programs that can point to the Q3 **$65B** commitment stock — provided disbursements catch commitments and midstream, not only mines, gets funded.
+
+**What would change the next update:** copper TC/RCs sustainably positive outside China with utilisation converging; metals index rolling back under **120** for two Pink Sheet months without a new export-control shock; phosphate rock mean-reverting under **$155** while DAP cools; a resumed USGS MIS (or MCS 2027) confirming whether MCS 2026 mine easings survived; and an IEA refine reprint that pushes average top refine (ex-REE) back under **70%**.
+
+## Caveats and methodology
+
+- **Price Δ ≠ share Δ.** Pink Sheet restates LME and fertilizer prices; it does not restate USGS/IEA concentration. Cross-meter comparison is directional stress, not identical accounting.
+- **No fresher USGS MIS mine vintage.** Public MIS posting remains paused; mine and refine *share* rows hold MCS 2026 / IEA GCMO anchors from prior posts.
+- **Spot TC is a path estimate** (~−$90/t Mar 2026 commentary), not a Pink Sheet series — labeled estimated beside the disclosed **$0/t** annual settle.
+- **China cut / halt figures** are planned responses (~10% / ~961 kt / ~2 Mt); delivery and offsetting compliant capacity can dilute the effective cut.
+- **Index cool-off ≠ stress end.** July metals index **140.5** is below May **148.8** but still **+25%** vs 2025 annual.
+- **Fertilizer series** use World Bank definitions (rock f.o.b. N. Africa; DAP f.o.b. US Gulf; potash CFR Brazil) — not identical to USGS mine-share tables.
+- This post is an **August price/stress vintage delta**. For the Q3 midstream share scoreboard use the [Q3 update](/blog/chokepoint-commodities-update-2026q3); for MCS mine tables use the [MCS 2026 update](/blog/chokepoint-commodities-update-2026); for the full twenty-stage research ledger use the [research post](/blog/chokepoint-commodities-research-2026).
+
+## The shareable takeaway
+
+Versus our Q3 IEA GCMO print, the newest official price vintage — World Bank Pink Sheet August 2026 — says the economy’s quiet assumption that specialty and bulk physical inputs keep flowing is **pricing hotter at the same thin gates**: copper July **$13,543/mt** (**+36%** YoY), metals index **+25%**, tin **+56%**, phosphate rock finally off its flat line, while copper spot treatment charges deepened below the **$0/t** settle and China answered with cuts and halted planned capacity. Share tables hold; the August move is the market’s invoice for midstream concentration.`,
+  },
+  {
     id: "geopolitics-institutions-update-202608",
     slug: "geopolitics-institutions-update-202608",
     title:

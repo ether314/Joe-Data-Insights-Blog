@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "chokepoint-commodities-update-202608",
+    marker: "Vintage delta — IEA GCMO 2026 / Q3 midstream → Pink Sheet Aug 2026 (Jul monthly)",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "geopolitics-institutions-update-202608",
     marker: "87 Days to IMF Consent",
     forbidden: "Loading interactive charts",

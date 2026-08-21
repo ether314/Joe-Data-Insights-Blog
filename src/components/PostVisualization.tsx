@@ -1157,6 +1157,21 @@ const GeopoliticsInstitutionsUpdate202608Dashboard = dynamic(
   },
 );
 
+const ChokepointCommoditiesUpdate202608Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ChokepointCommoditiesUpdate202608Dashboard"
+    ).then((m) => m.ChokepointCommoditiesUpdate202608Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1452,6 +1467,10 @@ export function PostVisualization({
 
   if (type === "geopolitics-institutions-update-202608") {
     return <GeopoliticsInstitutionsUpdate202608Dashboard />;
+  }
+
+  if (type === "chokepoint-commodities-update-202608") {
+    return <ChokepointCommoditiesUpdate202608Dashboard />;
   }
 
   return null;
