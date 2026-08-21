@@ -150,7 +150,8 @@ export interface Post {
     | "ai-compute-demand-concentration-2026q3"
     | "chokepoint-commodities-concentration-2026q3"
     | "heavy-industrial-capacity-update-2026q3"
-    | "adaptation-economics-concentration-2026";
+    | "adaptation-economics-concentration-2026"
+    | "ai-financing-concentration-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

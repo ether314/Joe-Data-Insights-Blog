@@ -2,6 +2,100 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-financing-concentration-2026q3",
+    slug: "ai-financing-concentration-2026q3",
+    title:
+      "Q3 Concentration: Amazon Still ~39% of Hyperscaler IG — Top-3 Holds 74%",
+    excerpt:
+      "Mid-Q3 concentration lens on AI financing: five-name IG YTD ~$218B (Amazon ~39% top-1 / 74% top-3), hyperscalers ~42% of a ~$520B AI debt perimeter, HS senior channels ~47% of ~$1.15T funded stock, and private DC overflow ~$200B now sits inside the channel map.",
+    category: "Capital Markets",
+    themeId: "ai-financing",
+    imageUrl:
+      "/images/capital-markets-ai-financing-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber concentration bars, teal bond curves, and cyan ETF flow ribbons converging into a Mag-7 proxy stream",
+    publishedAt: "2026-08-21T20:00:00Z",
+    featured: true,
+    visualization: "ai-financing-concentration-2026q3",
+    layout: "default",
+    content: `Absolute AI financing dollar totals answer *how large is the credit stack*. They do not answer *how concentrated is the system at the top of the distribution*. That is the capital-markets question this mid-Q3 concentration lens is built for.
+
+Our theme already maps the vintage path. The [July research](/blog/ai-financing-research-2026) put hyperscalers on a Goldman path toward **~$250B / ~33%** of AI capex funded with IG bonds. The [mid-year update](/blog/ai-financing-update-2026) answered the *theme perimeter* question: AI-related debt near **$489B**, with the five names only ~**40%** of that stack and AI's share of US IG supply near **18%**. The [Q3 supply-share refresh](/blog/ai-financing-update-2026q3) pushed theme weight to ~**23%** of USD IG and ~**20%** of HY, and quantified private data-centre transactions near **$200B** since early 2025. The [late-Aug concentration companion](/blog/ai-financing-concentration-2026) then answered the distribution question on the Aug YTD spine (~**$194B**, Amazon ~**41%** / top-3 ~**76%**). This post re-asks the same core question on a **mid-Q3 YTD vintage** — so shares and levels stay on one tape as issuance continues toward the FY path.
+
+The interactive dashboard above is a concentration lens, not another KPI strip. Toggle **Issuer ladder**, **Theme stack**, **Credit channels**, and **ETF + lenses**. **Top-1 share is 39%** (Amazon, ~$85B of ~$218B). **Top-3 share is 74%** (Amazon + Alphabet + Meta). Approximate five-name **HHI is ~2,486**. Absolute YTD rose from the Aug **$194B** print; top-1 eased from **41%** as peers printed into Q3 — larger oligopoly dollars, slightly less extreme top-1 share.
+
+## The Q3 concentration scoreboard
+
+| Lens | Top-1 | Top-3 | What it measures |
+| --- | ---: | ---: | --- |
+| Hyperscaler IG issuers (mid-Q3 YTD) | **~39%** (Amazon) | **~74%** (AMZN·GOOGL·META) | Five-name ~$218B universe |
+| AI debt theme stack | **~42%** (HS bloc) | n/a (bloc vs tail) | Share of ~$520B AI-related debt |
+| Funded credit channels | **~47%** (HS senior IG) | **~90%** | Booth/Hepp + Q3 private-DC ~$1.15T |
+| Private DC overflow (channel) | **~$200B** | — | Quantified since early 2025 |
+| Thematic ETF flows (2025) | **~50%** (QQQ) | **~75%** | FactSet thematic sleeve ~$43.5B |
+| US IG calendar weight | **~23%** (AI theme) | n/a (theme share) | Q3 AI share of USD IG supply |
+| Aug → Q3 issuer universe | **$194B → $218B** | Top-1 **41% → 39%** | Absolute up; top-1 share eases |
+
+Read the table as a **family of market shares**, not one number. Issuer concentration inside the hyperscaler cohort remains thick. Theme-stack concentration is milder once utilities, DC JVs, and ecosystem credit enter the perimeter — and the HS bloc share actually *rose* slightly (~40% → ~42%) as the YTD spine grew faster than the mid-year ecosystem estimate. Channel-stock concentration stays extreme at the senior sleeve even after rebasing for private-DC overflow. ETF concentration remains a *sentiment* story, not an issuer-proceeds story.
+
+## Issuer concentration: Amazon still owns the thick end
+
+Filter the dashboard to **Issuer ladder**. The mid-Q3 cumulative curve for the five-name YTD universe rises to about **39%** at top-1, **59%** at top-2, and **74%** at top-3. Approximate HHI on five buckets sits near **2,486** — still well above an equal five-way split (~2,000). Amazon's disclosed multi-tranche USD/EUR prints keep it the modal top-1; Alphabet and Meta fill the next rungs; Oracle's releveraging path and Microsoft's still-OCF-heavy posture close the ladder.
+
+The **Aug → Q3 → FY path** panel is the vintage delta that the late-Aug companion could not show. Absolute YTD climbed **$194B → $218B** toward the **~$250B** FY path. Top-1 eased **41% → 39%**; top-3 eased **76% → 74%**. That is *not* diversification in the industrial sense — three names still clear three-quarters of hyperscaler IG. It is peer catch-up inside a still-steep ladder as Alphabet, Meta, and Oracle kept printing into Q3.
+
+Pair this panel with the research post's funding-mix story: debt is still only about a **third** of hyperscaler capex on Goldman's path. Concentration of *issuance* can coexist with concentration of *cash-flow funding* — Amazon can dominate the bond calendar while the cohort as a whole still funds the majority of servers from operating cash flow.
+
+## Theme stack: thick inside, still a minority outside
+
+Switch the view to **Theme stack**. Of the mid-Q3 AI-related debt perimeter (~**$520B**, up from the Aug **$489B** mid-year print), hyperscaler IG is about **$218B / 42%** and the broader ecosystem is about **$302B / 58%**. The five-name bloc is concentrated *internally* (top-1 ~**39%**) but is still a **minority of the theme** once utilities, industrials, data-centre JVs, HY, loans, and private-DC overflow enter the tally.
+
+That is the hinge the [August mid-year update](/blog/ai-financing-update-2026) introduced and this Q3 concentration lens sharpens. Desks that underwrite "AI credit = Mag 7 bonds" are reading the thick end of a minority sleeve. Desks that underwrite "AI credit is everywhere" without noting issuer ladders miss how much primary-calendar risk still sits in three tickers.
+
+The supply-path panel underneath shows *calendar* concentration rising even when issuer ladders stay sticky: AI's share of US IG gross supply climbed from ~**1%** in 2024 to ~**7%** in 2025, ~**18%** at the August desk print, and ~**23%** in the Q3 refresh — with HY near **20%**. Theme weight inside the calendar can concentrate without any single issuer matching Amazon's inside-cohort share. The [Q3 update](/blog/ai-financing-update-2026q3) also flags the rating-vs-market gap (Meta and Amazon long-dated paper pricing below official AA) — a *pricing* concentration of supply technicals, not a default narrative.
+
+## Credit channels: senior IG still near half — private DC now counted
+
+Open **Credit channels**. Rebasing the Booth/Hepp stock map with Q3 private-DC overflow puts funded AI-infra credit near **$1.15T** (from ~**$1.065T** in the late-Aug companion). HS senior unsecured alone is about **$540B / 47%**. Project / data-centre finance (~**$260B / 23%**) and private credit + DC overflow (~**$230B / 20%**, including the ~**$200B** private-DC deals quantified since early 2025) push the **top-3 channel share to ~90%**. ABS and GPU-secured sleeves remain thin residuals.
+
+This is a different concentration story from issuer YTD flow. Flow asks *who printed paper this year*. Channel stock asks *where the outstanding claims sit*. A market can look diversified on monthly deal tapes while the *stock* remains dominated by senior unsecured held by funds, insurers, and pensions. The Q3 twist is that private DC is no longer a dry-powder abstraction — it is a quantified overflow sleeve that raises the funded perimeter without dethroning the senior IG top-1.
+
+Treat the channel ladder as a **funded-stock index**, not a stress loss forecast. Uncommenced lease overhang still sits *outside* funded totals — a parallel concentration of off-balance commitments that this lens flags but does not fold into the **47% / 90%** prints.
+
+## ETF flows: half the thematic sleeve is still one ticker
+
+Toggle **ETF + lenses**. FactSet's 2025 US thematic ETF inflow sleeve was about **$43.5B**. **QQQ alone absorbed ~$21.7B — roughly 50%**. Semiconductor proxies (SOXX-scale) add another ~**20%**; narrow robotics/AI thematics remain a thin wedge; the residual thematic sleeve fills the last quarter.
+
+Equity-side concentration is a **sentiment-capacity** meter. Creations into QQQ are not issuer proceeds for Amazon's data centres; they are secondary ownership of a Mag 7–heavy Nasdaq-100 proxy. Still, for the theme's public-markets question — *how is the build-out funded in credit **and** public markets?* — the answer remains asymmetric. Credit funding concentrates in a handful of IG issuers and a senior channel stock. Equity *flow* concentration concentrates in one broad proxy that prices the same names.
+
+The cross-lens scatter makes the asymmetry visual: issuer and channel lenses sit high on both top-1 and top-3 axes; the AI-debt bloc and IG-calendar lenses are high on top-1 but lack a meaningful top-3 ladder because they are single-bloc / theme prints; ETF flows sit near **50% / 75%**.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** IG portfolios that treat "hyperscaler" as five equal credits when three names still clear ~**74%** of mid-Q3 YTD issuance; desks that size AI theme risk off the **$520B** perimeter without noticing the **42%** HS minority and the **39%** Amazon inside share; insurers and pensions whose AI-infra exposure is mostly the **$540B** senior sleeve and therefore inherit issuer-ladder concentration whether or not they own project-finance paper; equity allocators who read thematic ETF creations as diversified AI exposure when half the sleeve is QQQ; credit desks that ignored private-DC overflow until the Q3 quantification made the channel visible.
+
+**Relative winners under current rules:** mega-issuers that can still clear multi-tranche books inside AA/A technicals (even when long-dated paper prices through the official rating); intermediaries that intermediate the overflow into project finance and private credit as IG calendars saturate toward **23%** theme weight; holders of the senior unsecured sleeve while lease overhang and GPU-secured risk sit elsewhere in the capital stack; broad-proxy ETF complexes that capture Mag 7 ownership demand without needing narrow AI wrappers.
+
+**What would change the story:** a sustained flattening of the issuer ladder so top-1 falls below ~**25%** of hyperscaler IG; ecosystem debt growing so fast that the HS bloc share of the AI perimeter falls well below **30%** *and* issuer concentration inside the bloc breaks; a funded-stock mix where project + private credit displace HS senior below ~**35%**; thematic ETF flows dispersing so no single ticker holds more than ~**30%** of the sleeve. Mid-Q3 shows absolute dollars rising and top-1 *easing* slightly — not breaking.
+
+## Caveats and methodology
+
+- **Issuer shares inside the five-name mid-Q3 YTD spine are estimated** from disclosed Reuters/LSEG deal prints and close to a ~**$218B** desk total on the path toward Goldman's ~**$250B** FY. Treat top-1 / top-3 as order-of-magnitude concentration, not a prospectus table.
+- **AI debt perimeter (~$520B) mixes IG, HY, loans, ecosystem credit, and private-DC overflow**; the **42%** HS share is a bloc share, not an issuer ladder. The prior Aug mid-year print was ~**$489B / 40%**.
+- **IG/HY calendar weights (~23% / ~20%)** are theme shares of gross supply — not top-1 issuer shares of the calendar.
+- **Channel stock (~$1.15T)** rebases Booth/Hepp with Q3 private-DC quantification; private-credit and some project sleeves are estimated and can overlap deal tallies.
+- **Uncommenced leases** remain excluded from funded-stock concentration by design.
+- **ETF flows are net creations, not AUM**, and QQQ is a Mag 7 proxy rather than a pure AI product.
+- **Equity raises** (e.g. Alphabet's mid-2026 ~**$85B** print) are excluded from the IG issuer ladder on purpose — they concentrate *funding* without concentrating *bond* supply.
+- **Rating-vs-market gaps** (Meta/Amazon long-dated paper) are pricing technicals from the Q3 update, not implied default probabilities.
+
+## The shareable takeaway
+
+AI financing remains **concentrated at the top — and mid-Q3 mostly moved the absolute dollars, not the shape**. Inside hyperscaler IG, top-1 (Amazon) is about **39%** (from **41%** at the Aug print) and top-3 about **74%** of a larger ~**$218B** YTD spine. Of the ~**$520B** AI debt perimeter, the five-name bloc is still only ~**42%**. Of funded credit stock, HS senior unsecured alone is ~**47%** and the top-3 channels clear ~**90%**, with private DC now a quantified ~**$200B** overflow. Of thematic ETF inflows, QQQ still takes ~**50%**. The build-out is funded in credit and public markets through a system that looks diversified in press-release counts and **top-heavy once you rank the distribution**.
+
+Related reading: [Late-Aug concentration companion](/blog/ai-financing-concentration-2026) · [Q3 supply-share refresh](/blog/ai-financing-update-2026q3) · [AI financing research 2026](/blog/ai-financing-research-2026) · [Mid-year $489B update](/blog/ai-financing-update-2026).`,
+  },
+  {
     id: "adaptation-economics-concentration-2026",
     slug: "adaptation-economics-concentration-2026",
     title:
