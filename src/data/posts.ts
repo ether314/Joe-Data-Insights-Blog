@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-industrial-policy-concentration-2026q3",
+    slug: "fiscal-industrial-policy-concentration-2026q3",
+    title:
+      "Q3 Concentration: Package HHI ~5,320 — US Owns 71% of War-Chest Dollars, IRA Alone ~59%",
+    excerpt:
+      "Q3 concentration lens on fiscal & industrial policy: package-dollar HHI ~5,320 with US top-1 at ~71% and Big Three ~93%; stock counts still top-3 at 63%; inside the US rollup IRA TE is ~83% — while June flow leaves 62% to the rest of the world.",
+    category: "Politics",
+    themeId: "fiscal-industrial-policy",
+    imageUrl:
+      "/images/politics-fiscal-industrial-policy-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of glowing top-1 and top-3 industrial-policy concentration bars with amber, cyan, and emerald fiscal war-chest accents",
+    publishedAt: "2026-08-21T10:00:00Z",
+    featured: true,
+    visualization: "fiscal-industrial-policy-concentration-2026q3",
+    layout: "default",
+    content: `Our [H-NIPO research ledger](/blog/fiscal-industrial-policy-research-2026) mapped the stock: jurisdictions using trade-distorting subsidies nearly doubled from **36% to 59%**, and China, the EU, and the United States together account for roughly **53%** of the historical tape. The [Q3 chokepoint update](/blog/fiscal-industrial-policy-update-2026q3) then answered the *targeting* question — strategic / dual-use subsidy shares inside the Big Three now sit at **76–98%**. The [2026 concentration print](/blog/fiscal-industrial-policy-concentration-2026) introduced the distribution ladder. This **Q3 concentration lens** sharpens the same core question desks actually trade: **how concentrated is this system at the top of the distribution?** — and adds the meters that change the read once you stop treating “industrial policy is everywhere” as a single market share.
+
+The dashboard above is built as a **four-view concentration toolkit**. Toggle **HHI radar**, **Share ladders**, **Sectoral packages**, and **Vintage slope**. The punchline is deliberately multi-sided. On **major fiscal-package dollars**, concentration is extreme: analytical HHI ≈ **5,320**, the United States alone is about **71%** of the CHIPS/IRA/EU/CN/JP/KR war-chest universe, and the same Big Three clear roughly **93%**. Zoom inside the US rollup and **IRA clean-energy tax expenditures alone are ~83% of US package dollars** — about **59%** of the entire five-jurisdiction universe. On **intervention counts**, the top is thick but not monopolistic: top-1 near **24%**, top-3 near **63%**, stock HHI ≈ **1,846**. Monthly flow sits flatter still — June’s Roundup still leaves **62%** to the rest of the world.
+
+## The Q3 headline ladder: top-1, top-3, and HHI
+
+| Lens | Top-1 | Top-3 | HHI (approx.) | What it measures |
+| --- | ---: | ---: | ---: | --- |
+| Major fiscal packages ($) | **~71%** (US) | **~93%** | **~5,320** | CHIPS + IRA + EU + CN + JP/KR headlines |
+| US sectoral (IRA vs CHIPS) | **~83%** (IRA TE) | 100% | **~7,130** | Inside US package rollup only |
+| Cumulative stock (counts) | **~24%** (China, est.) | **63%** (US·EU·CN) | **~1,846** | Teneo / GTA cumulative IPs |
+| H-NIPO 2009–2023 | ~20% (est.) | **53%** | — | IMF WP/25/222 bloc total |
+| 2023 NIPO census | ~18% (est.) | **48%** | — | IMF WP/24/1 of 2,580 measures |
+| June 2026 monthly flow | **20%** (US) | **38%** | **~980** | GTA Roundup geography |
+
+Read the table as a **family of market shares**, not one number. Count-based top-3 sits in a **48–63%** band depending on vintage. Dollar-based top-3 among large packages sits near **93%**. Sectoral concentration *inside* the US rollup is even sharper. Flow-based top-3 in a single busy month can fall to **38%**. Analysts who quote only the Big Three stock share understate how dollarised US packages dominate fiscal capacity; analysts who quote only IRA headlines understate how many capitals still generate the daily intervention count.
+
+## HHI radar: why dollars and counts are different markets
+
+Open **HHI radar**. The horizontal bars rank analytical Herfindahl indexes on the stated bucket shares. Package dollars clear the field near **5,320**. Stock counts sit near **1,846** — concentrated relative to an equal six-way split, but nowhere near a single-jurisdiction monopoly. June flow drops under **1,000** once rest-of-world’s **62%** share is in the mix. The US sectoral two-slice (IRA TE vs CHIPS) prints the sharpest HHI in the panel (~**7,130**) because a two-bucket ledger with an **83/17** split is definitionally extreme.
+
+That ordering is the Q3 contribution relative to a simple top-3 quote. Top-3 shares can look “similar” across lenses when they are not. A top-3 of **63%** on counts and **93%** on packages both sound concentrated in prose; the HHI meter shows they are different industrial-organisation objects. The scatter next to the bars plots each lens by top-1 (x) and top-3 (y): package dollars and US sectoral slices sit in the upper-right; June flow sits lower-left; stock counts occupy the middle.
+
+## Dollar concentration: war chests are a different distribution
+
+Switch to **Share ladders** and set the Lorenz curve to **Package dollars**. Among the major semiconductor and clean-tech fiscal headlines we roll up — US IRA clean-energy tax expenditures (~**$370B** original score), US CHIPS appropriations (**$52.7B**) and ITC (~**$24B**), EU Chips mobilisation (~**$47B**), EU IPCEI state aid (~**$40B**), China’s Big Fund III (~**$48B**), plus Japan and Korea semiconductor envelopes — the **United States alone is ~71%** of the dollar universe and the **top three jurisdictions clear ~93%**.
+
+This remains the sharpest top-1 / top-3 print on the jurisdiction ladder, and it answers a different policy question than NIPO counts. Counts ask *who intervenes how often*. Package dollars ask *who can put nine- and ten-figure claims on factory geography*. A jurisdiction that records many firm-level awards can look “active” on the count ladder while still lacking US-scale tax-credit and appropriation capacity. Conversely, a single IRA-sized tax-expenditure envelope can dominate a dollar pie without matching China’s historical intervention count share.
+
+Treat the package pie as a **war-chest index**, not an outlay tracker. Appropriations, mobilisation targets, state-aid approvals, equity-fund raises, and tax-credit scores are not interchangeable cash. They *are* comparable as political commitments: fiscal industrial policy, measured in headline dollars among the large packages, is **more concentrated than the intervention stock**.
+
+## Sectoral packages: IRA TE is the hidden top-1
+
+The Q3 dashboard’s **Sectoral packages** view zooms one level deeper. Inside the ~**$447B** US rollup, **IRA clean-energy tax expenditures are ~83%** and CHIPS (appropriations + ITC) about **17%**. Against the five-jurisdiction universe (~**$626B**), IRA alone is roughly **59%**. That is the shareable Q3 statistic most desks miss when they stop at “US 71%.”
+
+Why it matters for concentration analysis: the US lead on package dollars is not a balanced CHIPS-plus-green portfolio in headline-dollar terms. It is **green tax-expenditure dominance with a semiconductor rider**. Semiconductor industrial policy is geopolitically loud; clean-energy tax expenditures are fiscally large. Mixing those stories without a sectoral split overstates how “chip race” dollars drive the fiscal capacity ladder and understates how IRA TE shapes the top of the distribution.
+
+The stacked bar and universe-share toggles are there so readers can flip between absolute billions and share-of-universe without losing the jurisdiction pie on the same view.
+
+## Count concentration: thick top, living tail
+
+Back on **Share ladders**, filter the curve to **Stock counts**. The cumulative curve rises to about **24%** at top-1, **45%** at top-2, and **63%** at top-3 — the Teneo Big Three share of cumulative industrial-policy interventions. Japan and Korea add a thin next rung; rest-of-world still holds roughly **28%** of the stock in our six-bucket reconstruction.
+
+That is concentrated relative to an equal six-way split. It is **not** a winner-take-all market. A system where the top three hold three-fifths of recorded interventions still leaves a long tail of capitals that can start subsidy races, copy HS6 product lists, or free-ride on templates written in Washington, Brussels, and Beijing. Our [August 202608 toolkit update](/blog/fiscal-industrial-policy-update-202608) already flagged the same asymmetry in monthly data: Big Three *headlines* dominate narrative; rest-of-world *counts* still dominate parts of the flow.
+
+IMF’s H-NIPO check sits a notch lower — China+EU+US at **53%** of the **2009–2023** stock — and the **2023** census alone put the same trio at about **48%** of **2,580** measures. Different windows, different coding intensity, same qualitative story: **the top is thick; the middle and tail remain politically alive.**
+
+## Vintage slope: top-3 is not a monotone story
+
+Open **Vintage slope**. Plotting disclosed (and estimated) top-3 shares across H-NIPO (**53%**), the 2023 census (**48%**), Teneo cumulative stock (**63%**), and June 2026 flow (**38%**) shows why a single “concentration is rising” slogan fails. Census intensity, cumulative stock coding, and monthly flow geography are different instruments. The June print in particular warns against equating *stock concentration* with *flow concentration*: rest-of-world can still dominate a month’s tape even when the cumulative ledger is Big-Three heavy.
+
+Toggle to **Top-1 %** and the slope flattens further — estimated top-1 shares cluster near **18–24%** on count vintages and **20%** on June flow, while package-dollar top-1 (**71%**) lives on a different chart entirely. The Q3 lesson is methodological as much as empirical: **pick the meter before you pick the narrative.**
+
+## Strategic intensity and toolkit mix still reshape the top
+
+Concentration is not only *who* intervenes; it is *what* they intervene with. The HHI view’s strategic panel restates the ZG #88 punchline: China’s dual-use / advanced-tech subsidy share sits near **98%**, the US near **76%** (up from ~**33%** in the early window), and the EU near **70%**. The toolkit donut reminds readers that subsidies still dominate the distortive mix (~**55%** in our approximate cross-section), with import barriers (~**27%**) and export/other measures filling the rest — and the US alone still accounts for roughly **20%** of 2025 import-barrier actions in the theme’s toolkit framing.
+
+That combination — **concentrated fiscal packages**, **thick but not monopolistic intervention counts**, **strategic targeting converging upward inside the Big Three** — is how subsidies, tariffs, and industrial policy reshape economies at the top of the distribution without requiring a single global monopoly capital.
+
+## Caveats
+
+- **Individual China / US / EU count splits inside the Teneo Big Three 63% are estimated** so the ladder sums; treat top-1 stock (~24%) as order-of-magnitude, not a census microdata print.
+- **Package USD figures mix appropriations, mobilisation targets, state-aid approvals, fund raises, and tax-credit scores** — not outlays-to-date and not dollar-for-dollar comparable.
+- **HHI values are analytical indexes on the stated bucket shares**, not official competition-authority statistics; changing the bucket set changes the index.
+- **IRA TE (~$370B) is an original score**, not a realised cash-flow series; later CBO / JCT restatements can move the sectoral split.
+- **June 2026 flow is one month’s Roundup geography** — useful as a flow check, not a substitute for multi-year stock.
+- **Strategic intensity shares are percent of subsidy-based IP actions**, not percent of dollars.
+- **Toolkit instrument mix is an approximate theme cross-section** for orientation; do not treat the donut as a global national-accounts allocation.
+
+## The shareable takeaway
+
+Fiscal and industrial policy is **concentrated at the top — but which top depends on the meter**. Among major war-chest headlines, package-dollar HHI is about **5,320**, US top-1 about **71%**, and Big Three about **93%**. Inside the US rollup, **IRA TE alone is ~83%** of US package dollars and ~**59%** of the tracked universe. On cumulative intervention counts, top-1 is about **24%** and top-3 about **63%**. On June’s monthly tape, top-3 falls to **38%** with rest-of-world still at **62%**. Subsidies, tariffs, and industrial policy reshape economies through a system that looks diversified in country counts and **top-heavy once you rank dollars, sectors, and strategic intensity**.
+
+Related reading: [Concentration 2026](/blog/fiscal-industrial-policy-concentration-2026) · [H-NIPO research](/blog/fiscal-industrial-policy-research-2026) · [Q3 chokepoint update](/blog/fiscal-industrial-policy-update-2026q3) · [August toolkit update](/blog/fiscal-industrial-policy-update-202608).`,
+  },
+  {
     id: "migration-humanitarian-update-2026q3",
     slug: "migration-humanitarian-update-2026q3",
     title:

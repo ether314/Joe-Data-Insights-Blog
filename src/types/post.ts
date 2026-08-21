@@ -135,7 +135,8 @@ export interface Post {
     | "bank-commercial-credit-update-2026q3"
     | "ai-compute-demand-concentration-2026"
     | "demographic-cash-flows-concentration-2026"
-    | "migration-humanitarian-update-2026q3";
+    | "migration-humanitarian-update-2026q3"
+    | "fiscal-industrial-policy-concentration-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
