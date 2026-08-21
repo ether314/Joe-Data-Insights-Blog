@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-concentration-202608",
+    slug: "demographic-cash-flows-concentration-202608",
+    title:
+      "Aug Concentration: T12M Lifts Mexico to ~9.3% of LMIC Dollars — Top-3 Holds ~35%",
+    excerpt:
+      "Aug 202608 concentration vintage: India still ~19% top-1 of the $685B LMIC perimeter; Banxico’s T12M Mexico print ($63.4B, −0.1% YoY) nudges top-2 to ~9.3% and keeps top-3 near 35%; real June purchasing power −8.3% splits nominal share from household purchasing power while the US→MX pipe still clears ~8–9%.",
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl:
+      "/images/global-systems-demographic-cash-flows-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber remittance concentration bars, teal US–Mexico corridor arcs, and a rose purchasing-power spike across a subtle world map",
+    publishedAt: "2026-08-22T12:00:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-concentration-202608",
+    layout: "default",
+    content: `Our [Q3 concentration lens](/blog/demographic-cash-flows-concentration-2026q3) answered the distribution question after Banxico restated Mexico’s FY2025 print to **$61.791B**: India ~19% top-1, top-3 ~35%, US→Mexico ~8–9% of the $685B LMIC perimeter. The [August Banxico/BBVA vintage](/blog/demographic-cash-flows-update-202608) then qualified the H1 rebound with a soft trailing-twelve (**$63.389B / −0.1% YoY**) and a sharp real June purchasing-power hit (**−8.3%**). This post is the **concentration vintage of that Aug qualification**: how much did the top of the distribution move once Mexico is measured on T12M books — and what happens when you split *nominal dollar share* from *household purchasing power*?
+
+The dashboard above is built as an **Aug 202608 concentration lens**. Toggle **Vintage delta**, **Recipient ladder**, **Corridor pipes**, and **Dependence + pensions**. Switch **T12M Jun’26**, **Banxico FY**, and **Brief 41** on the recipient side. The punchline is deliberately multi-sided. Inside the Brief 41 LMIC remittance perimeter (~**$685B**), **India alone is still about 19%**. Banxico’s T12M Mexico print lifts the **top-two share from FY 9.0% to ~9.3%** (+0.3 pp) while top-3 holds near **35%** — still softer than Brief 41’s ~**36%**. Zoom into bilateral pipes and **US→Mexico remains ~8%** on the KNOMAD matrix — yet T12M-implied Mexico *total* is about **9.3%** of the same perimeter. Zoom into real purchasing power and an illustrative −8.3% adjustment drops Mexico’s *effective* share toward **~8.5%**. Zoom into GDP dependence and **Tajikistan still hits ~45% of GDP**. Zoom into host public pensions and **Italy still runs ~16.3% of GDP**, roughly **2×** the OECD average. Same theme, five different tops — now with a T12M-vs-real dual meter on the dollar ladder.
+
+## The headline ladder: top-1 and top-3 after T12M
+
+| Lens | Top-1 | Top-3 | What changed in Aug |
+| --- | ---: | ---: | --- |
+| Recipient $ (T12M MX) | **~19%** (India) | **~35%** (IN·MX·CN) | MX share 9.0% → **9.3%** (+0.3 pp vs FY) |
+| Recipient $ (Banxico FY) | **~19%** (India) | **~35%** (IN·MX·CN) | Q3 restatement baseline |
+| Recipient $ (Brief 41) | **~19%** (India) | **~36%** (IN·MX·CN) | Static prior concentration post |
+| US→MX corridor (matrix) | **~8%** | **~13%** (top-3 pipes) | KNOMAD $52B print unchanged |
+| US→MX (T12M-implied) | **~9.3%** | — | MX T12M $63.4B / $685B perimeter |
+| MX real-adj. (illustrative) | **~8.5%** | — | T12M × June −8.3% real hit |
+| GDP dependence | **~45% of GDP** (Tajikistan) | **~33% avg** (TJ·NI·LB) | Carried Brief 41 dependence table |
+| Host public pensions | **~16.3% of GDP** (Italy) | **~13.7% avg** (IT·FR·DE) | OECD PaG; path still grinding to ~10% by 2050 |
+
+Read the table as a **family of market shares with a dual meter on the second rung**. Recipient-dollar concentration barely moved at the top-1 (India is sticky). The Aug story is not another leaderboard reshuffle — it is a **soft T12M re-tightening of Mexico’s share** against a **real purchasing-power collapse** that makes the same dollars buy less for households. Analysts who only quote H1 **+3.1%** overstate the concentration recovery; analysts who only quote real **−8.3%** understate how sticky the pipe remains in nominal share-of-perimeter terms.
+
+## Vintage delta: FY 9.0% → T12M 9.3%, top-3 still ~35%
+
+Open **Vintage delta**. Triple bars put Brief 41, Banxico FY, and T12M side by side. Top-1 (India) is flat at **~18.8%**. Mexico moves **9.9% → 9.0% → 9.3%**. Top-3 recipients sit **~35.8% → ~34.9% → ~35.1%** — shareable as **~36% → ~35%**, with Aug’s T12M printing a **modest bounce** off the FY trough rather than a return to Brief 41’s estimate.
+
+That is **concentration softening that partially re-hardens at the second rung**, not a reshuffle of the leaderboard. India remains the modal top-1. China remains third. The Philippines and Pakistan still push a T12M top-5 near **46%**. Approximate HHI on the T12M named ladder sits near **605** — still concentrated relative to an equal global split, slightly less top-heavy than Brief 41’s Mexico estimate implied, slightly more than FY alone.
+
+The dual-pulse panel underneath is the Aug hinge. H1’26 printed **+3.1%**; T12M printed **−0.1%**; real June purchasing power printed **−8.3%**; June nominal YoY still cleared **+4.2%**. Concentration desks that collapse those four meters into one “Mexico is back / Mexico is broken” headline will mis-rank both share and household welfare.
+
+## Recipient dollars: India still owns the thick end
+
+Filter to **Recipient ladder** and keep **T12M Jun’26**. The cumulative curve for named recipients rises to about **19%** at top-1 (India, **$129B**), **28%** at top-2 (plus Mexico’s **$63.4B**), and **35%** at top-3 (plus China’s **$48B**). Flip the vintage toggle to Banxico FY and watch Mexico’s bar slip to **$61.8B / 9.0%**; flip to Brief 41 and watch it jump toward **$68B / 9.9%**. The entire visual difference of this Aug post lives in that one rung — and in the **nominal vs real** panel that shows how a −8.3% purchasing-power hit can erase more *welfare* than the T12M soft print erases in *share*.
+
+That is the first hinge, unchanged in structure from the [prior concentration posts](/blog/demographic-cash-flows-concentration-2026). Remittance *dollars* concentrate in large labour-export and diaspora economies. India is not “most of remittances”; it is the modal top-1 inside a still-broad perimeter. Mexico’s second place is still the US corridor story — now measured on Banxico’s T12M books rather than Brief 41’s estimate or FY alone. China’s third place still reminds that bridge economies can sit high on dollars and low on GDP dependence at the same time.
+
+Pair this panel with the research post’s flow-compare framing: LMIC remittances (~**$685B**) still dwarf FDI to LMICs (~**$470B**) and DAC ODA (~**$210B**). Nudging Mexico’s share by three-tenths of a percentage point does not change remittances’ status as the largest private external flow into emerging markets.
+
+## Corridor pipes: matrix 8% vs T12M-implied 9.3%
+
+Switch to **Corridor pipes**. Against the same **$685B** perimeter, the KNOMAD **US→Mexico** print is about **$52B / 8%**. The next rungs — UAE→India (**$20B**), US→Philippines (**$15B**), Saudi→India (**$13B**) — push the tracked **top-3 corridor share to ~13%**.
+
+The Aug twist is the **matrix → FY → T12M → real** bar panel. Banxico’s Mexico T12M of **$63.4B** is **~9.3%** of the LMIC perimeter — a touch above FY’s **9.0%** and still well above the matrix **7.6%**. An illustrative real-adjusted T12M (~**$58.1B / 8.5%**) sits between the matrix print and the FY total. If nearly all of Mexico’s disclosed inflow is US-origin electronic transfers — Banxico routinely prints electronic shares above **99%** — then the disclosed bilateral matrix understates the top corridor’s share of global remittance dollars. Treat the matrix **8%** as a **lower bound** on pipe concentration, the T12M-implied **9.3%** as a **country-total upper reference**, and the real-adj. **8.5%** as a **purchasing-power caution**, not an audited bilateral split.
+
+That looks like a small gap until you remember what a corridor is. A recipient share asks *which country books the inflow*. A corridor share asks *which bilateral pipe carries it*. India can lead recipient dollars while no single India corridor matches US→Mexico’s absolute size, because India’s inflows arrive through a **fan of Gulf and OECD pipes**. Mexico’s second-place recipient share is the opposite architecture: one dominant US corridor — and Banxico’s T12M books make that architecture look *more*, not less, concentrated than the thinner matrix print, even while real purchasing power says households are poorer.
+
+For corridor plumbing detail see [global remittance corridors](/blog/global-remittance-corridors-2026). For the monthly streak-break, H1 rebound, and T12M/real qualification path see the [August vintage](/blog/demographic-cash-flows-update-202608) and [Q3 update](/blog/demographic-cash-flows-update-2026q3).
+
+## GDP dependence and host pensions: the tops that did not move
+
+Open **Dependence + pensions**. Tajikistan’s remittances are only about **$5.5B**, yet they equal roughly **45% of GDP**. Nicaragua and Lebanon sit near **27%**. Mexico — large enough to move the dollar ladder when Banxico restates T12M — still runs only about **3.5% of GDP**. The dual-ledger scatter puts the geometry in one frame: aging hosts (Japan, Italy, Germany) sit at high old-age dependency and near-zero remittance GDP shares; remittance origins sit at low dependency and elevated remittance GDP shares; Tajikistan and Lebanon remain the extreme upper-left of the dependence axis.
+
+This is the second hinge of the theme, and Aug does not rewrite it. **Dollar concentration and dependence concentration are not the same ranking.** India can be top-1 on dollars at ~**3.4% of GDP**. Tajikistan can be top-1 on dependence with a rounding error of the global stock. Banxico’s T12M restatement moves Mexico’s *dollar* share; it barely moves Mexico’s *dependence* share — and the real purchasing-power hit moves *household welfare* without rearranging the GDP% ladder at all.
+
+On the host side, Italy’s public cash pensions still run about **16.3% of GDP** — roughly **2×** the OECD average near **8.1%**. France (~**14.5%**) and Germany (~**10.4%**) fill the next rungs; the **top-3 average** sits near **13.7%**. OECD-32 pensions are still projected to grind from roughly **8.8% toward 10.0% of GDP by 2050** in the theme’s vintage posts. Concentration today (Italy vs peers) and level tomorrow (OECD average rising) remain compatible — the slow public ledger against the fast private pipe.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that still price Mexico’s Brief 41 ~$68B estimate into a ~10% LMIC share after Banxico’s **$63.4B** T12M and **$61.8B** FY prints; Mexico-watchers who treat H1 **+3.1%** as a full concentration recovery while T12M is still **−0.1%** and real June is **−8.3%**; Gulf and OECD labour hosts whose outflows fan into India’s sticky **~19%** top-1; Central Asian and Levantine finance ministries for whom remittance GDP shares near **27–45%** make corridor politics a fiscal policy; European fiscal planners who inherit Italy/France-scale pension burdens while dependency ratios keep rising; compliance desks watching the **September 2026** US remittance-rule calendar as a concentration risk on the same US→MX pipe.
+
+**Relative winners under current rules:** large recipient platforms (India, Philippines, Pakistan) whose Brief 41 anchors were not restated downward in this vintage; corridor specialists on US–Mexico who can trade Banxico’s T12M path against the global share-of-perimeter frame *and* BBVA’s real meter; aging hosts with contribution bases and benefit reforms that keep pension % GDP below Italy’s print; diversified ODA/FDI strategies that still cannot match remittance stock size but can target the residual ~**46%** of the $685B perimeter after T12M’s Mexico print.
+
+**What would change the story:** a Brief 42-style restatement that cuts India’s top-1 below ~**12%** of LMIC dollars; corridor diversification that cuts US→Mexico below ~**5%** of the perimeter *without* simply relocating dependence elsewhere; Banxico T12M that falls materially below **$60B** so Mexico’s share slips under ~**8.8%**; real purchasing-power recovery that closes the −8.3% gap without a nominal bust; dependence leaders falling below ~**20% of GDP** through growth or corridor disruption; host pension burdens compressing so Italy-scale outliers converge toward the OECD mean. None of those appear cleanly in the Banxico June 2026 / BBVA Aug / Brief 41 / OECD vintages summarised here — and the Aug delta shows how a soft twelve-month print can nudge top-2 by three-tenths of a point while real meters tell a harsher household story.
+
+## Caveats and methodology
+
+- **Recipient shares use Brief 41’s ~$685B LMIC perimeter (2024)** as the universe. India / China / Philippines / Pakistan prints are carried Brief 41 anchors; **Mexico uses Banxico T12M Jul’25–Jun’26 $63.389B** in the default ladder, with FY2025 **$61.791B** and Brief 41 ~**$68B** as comparators.
+- **H1 2026 Banxico $30.759B (+3.1% YoY)** is retained for rebound direction and annualized corridor pressure (~**$61.5B**), not as a full-year substitute.
+- **Real-adjusted Mexico share (~8.5% / ~$58.1B)** applies BBVA’s June **−8.3%** real purchasing-power print illustratively to the T12M stock — it is **not** an official Banxico restatement and should not be cited as a disclosed share.
+- **Corridor matrix shares are bilateral dollars divided by the same $685B perimeter** — a lower bound on true pipe concentration because not every corridor is enumerated.
+- **T12M-implied US→MX share (~9.3%)** treats Mexico’s country total as a pipe reference; it is **not** a disclosed bilateral split and should not be read as audited US-origin dollars.
+- **GDP-dependence ranks follow Brief 41’s dependence table**; small-dollar / high-share countries can move sharply year to year with GDP revisions.
+- **Host pension % GDP figures are OECD Pensions at a Glance prints** (Italy **16.3%** disclosed; some peers estimated in the theme cross-section).
+- **Top-3 “shares” for dependence and pensions are averages of GDP%**, not additive market shares — they are burden ladders, not a closed portfolio.
+- **Old-age dependency** is UN WPP 2024 (65+ per 100 aged 15–64); it is a demographic stock, not a cash-flow share.
+- **September 2026 US compliance calendar** is a concentration *risk* flag for the US→MX pipe, not a measured share shift in this vintage.
+
+## The shareable takeaway
+
+Demographic cash flows remain **concentrated at the top — and Aug’s T12M print mostly nudged the second rung while real meters split the story**. Inside LMIC remittance dollars, top-1 (India) is still about **19%**; Banxico’s T12M Mexico print lifts top-2 from about **9.0% to 9.3%** and keeps top-3 near **35%**. Of the same **$685B** perimeter, US→Mexico is about **8%** on the bilateral matrix and about **9.3%** on a T12M-implied country-total reference — while an illustrative real adjustment lands near **8.5%**. Of GDP dependence, Tajikistan still hits about **45%**. Of host public pensions, Italy still runs about **16.3% of GDP**, roughly **2×** the OECD average. Age and migration show up in money flows through a system that looks diversified in country counts and **top-heavy once you rank the distribution** — even after the second-largest recipient is measured on soft twelve-month books and hard real purchasing-power dials.
+
+Related reading: [Q3 concentration (Banxico FY)](/blog/demographic-cash-flows-concentration-2026q3) · [Aug T12M / real update](/blog/demographic-cash-flows-update-202608) · [Concentration lens (Brief 41)](/blog/demographic-cash-flows-concentration-2026) · [Global remittance corridors](/blog/global-remittance-corridors-2026).`,
+  },
+  {
     id: "energy-systems-concentration-2026",
     slug: "energy-systems-concentration-2026",
     title:

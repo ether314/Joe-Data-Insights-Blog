@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "demographic-cash-flows-concentration-202608",
+    marker: "Demographic cash flows — Aug 202608 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "energy-systems-concentration-2026",
     marker: "Energy systems — concentration lens",
     forbidden: "Loading interactive charts",
