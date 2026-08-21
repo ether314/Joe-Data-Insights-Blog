@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "fiscal-industrial-policy-update-202608",
+    marker: "Vintage change (counts / percentage points)",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "energy-systems-update-2026q3",
     marker: "Renewables overtake coal in electricity",
     forbidden: "Loading interactive charts",

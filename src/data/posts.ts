@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-industrial-policy-update-202608",
+    slug: "fiscal-industrial-policy-update-202608",
+    title:
+      "Update: Distortive IP Hits 1,977 in 2025 as Barriers (27%) Match Subsidies (26%)",
+    excerpt:
+      "Versus our Q3 chokepoint print, Teneo–NIPO’s 2025 toolkit shows import barriers, domestic subsidies, and finance/FDI controls as co-equal pillars. GTA monthly flow jumps May→Jul 804→1,008; EU steel out-of-quota duty doubles to 50%.",
+    themeId: "fiscal-industrial-policy",
+    category: "Politics",
+    imageUrl:
+      "/images/politics-fiscal-industrial-policy-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of three industrial-policy pillars—crimson tariff wall, teal subsidy beam, violet FDI lock—converging on a semiconductor-steel chokepoint",
+    publishedAt: "2026-08-21T02:00:00Z",
+    featured: true,
+    visualization: "fiscal-industrial-policy-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 chokepoint vintage
+
+Our [Q3 fiscal and industrial policy update](/blog/fiscal-industrial-policy-update-2026q3) answered the *targeting* question forced by GTA Zeitgeist #88: US strategic subsidy coverage leapt **33% → 76%**, the EU reached **70%**, and China sat at **98%**, while selective industrial actions plateaued near **1,900** a year and same-product subsidy races crowded into a **60–80%** follow band. That print told you *where* Big Three subsidies land. It left open a sharper instrument question the newest full-year NIPO and mid-2026 monthly prints now force: **once you look past strategic-product shares, has the global toolkit stayed subsidy-led — or have import barriers and finance/FDI controls become co-equal pillars?**
+
+Two information events supply the refresh. **Teneo’s March 2026 Industrial Policy Series**, built on Global Trade Alert NIPO, prints a clean 2009→2025 path for *distortive* industrial actions — **1,141 → 1,977** — and a 2025 instrument mix in which import barriers (**~27%**, **547** actions), domestic subsidies (**~26%**), and financial/investment controls (**~23%**) sit within a few points of each other. **GTA Monthly Roundups for May, June, and July 2026** then show the high-frequency flow accelerating into summer: **804 → 823 → 1,008** documented trade and industrial developments, with June’s geography split exposing that the rest of the world still supplies **62%** of the monthly count even as US Section 301, EU steel reverse TRQs, and CHIPS equity stakes dominate the headlines.
+
+The dashboard above is built as a vintage delta: diverging change bars, the 2009–2025 annual path, a 2025 toolkit pie, May–Jul monthly area, June geography bars, an EU steel dumbbell, ownership-stake horizontals, and a barrier×subsidy scatter. Use the **monthly scope** and **delta group** controls to isolate Big Three vs rest-of-world flow and to filter flow, toolkit, coercion, or ownership deltas.
+
+## The headline table: Q3 targeting context vs 2025 toolkit + mid-2026 flow
+
+| Metric | Prior window / Q3 context | Newest print | Δ |
+| --- | ---: | ---: | ---: |
+| Annual distortive IP actions | **1,141** (2009) | **1,977** (2025) | **+836 (+73%)** |
+| Import barriers in distortive toolkit | Secondary in subsidy narratives | **~27% (547)** | Co-equal pillar |
+| Domestic subsidies in distortive toolkit | CN/EU stock **85–97%** of actions | **~26%** global mix | No longer alone at top |
+| Finance / investment controls | Pre-2020 niche | **~23%** | Third co-equal pillar |
+| GTA monthly developments | **804** (May 2026) | **1,008** (Jul 2026) | **+204 (+25%)** |
+| EU steel out-of-quota duty | **25%** (safeguard) | **50%** (reverse TRQ) | **+25 pp**; in-quota **−47%** |
+| Section 301 forced-labour coverage | Country-case model | **60 economies @ 10–12.5%** | Duty-regime scale-up |
+| Q3 context — US strategic subsidy share | **76%** (ZG #88) | Still elevated | Targeting stands; toolkit shifted around it |
+
+The story is not “chokepoint targeting reversed.” Strategic product maps from Q3 still describe *where* money and barriers concentrate. This vintage says the *how* changed: the 2025 global mix is no longer a subsidy monopoly with occasional tariffs at the margin. Barriers, credits, and capital-account controls arrive as a three-pillar package — and the mid-2026 monthly tape is still accelerating.
+
+## Flow first: 1,977 is a plateau with an upward tilt
+
+Toggle **Delta group → Flow**. Teneo’s NIPO-based annual series lifts distortive industrial actions from **1,141 in 2009 to 1,977 in 2025** — a **+836** absolute move, or roughly **+73%**. That endpoint sits just above the Q3 Market-Shaping selective-activity plateau of about **1,900** for **2022–24**, which is the right way to read continuity: the post-COVID regime did not unwind, and the newest full-year print slightly *exceeds* the prior plateau rather than mean-reverting toward the **~1,100** 2009–19 mean.
+
+Mid-2026 monthly Roundups sharpen the near-term slope. May printed **804** developments, June **823**, July **1,008** — a **+25%** jump from May to July on the all-jurisdiction tape. Filter **Monthly scope → US+EU+CN** versus **Rest of world**: June’s disclosed split is **163 / 100 / 47** for the United States, EU+member states, and China, against **513** for everyone else. Big Three *headlines* dominate the narrative; rest-of-world *counts* still dominate the monthly flow. That asymmetry matters for desks that treat every US Section 301 notice as the entire industrial-policy cycle.
+
+For the long stock rather than the 2025 flow, keep our [H-NIPO research ledger](/blog/fiscal-industrial-policy-research-2026) open: **34,248** historical interventions through **2023**, **85%** distorting. Teneo’s contemporaneous NIPO stock figure — about **32,136** interventions with **~81%** (**25,968**) labelled trade-distortive through early 2026 — sits in the same universe but is not a cell-by-cell restatement of H-NIPO windows. Use both as order-of-magnitude confirmation that the distortive share remains the overwhelming majority.
+
+## The toolkit flip: barriers ≈ subsidies ≈ finance controls
+
+Switch **Delta group → Toolkit**. The Q3 print’s China/EU instrument note — domestic subsidies and export incentives still **roughly 85–97%** of recorded industrial actions in those jurisdictions — remains true as a *bloc stock* fact. The 2025 *global distortive mix* is a different object. Import barriers take **~27%** of distortive actions (**547** of **1,977**), domestic subsidies **~26%**, and financial/investment controls **~23%**. Of those import-barrier actions, about **55%** are tariffs, and the United States alone accounts for almost **20%** of global import-barrier interventions.
+
+Read that against the earlier [August motive-and-instrument update](/blog/fiscal-industrial-policy-update-2026). That vintage showed Western *green* measures flipping from subsidy-heavy (**68% → 32%**) toward import barriers (**under 4% → 48%**) while security motives jumped **26% → 63%**. The 2025 full-year mix says the same coercive turn is no longer confined to the green slice: across all distortive industrial policy, barriers and capital controls now share the podium with subsidies. The scatter panel’s “Global 2025 mix” anchor sits near the barrier=subsidy diagonal; the “CN/EU stock intuition” anchor from Q3 sits deep in subsidy territory. Both can be true if you keep geography and universe straight.
+
+Teneo’s US path narrative fits the pie. Export incentives fade; import tariffs surge with the **2025** tariff agenda; finance and investment controls rise; public procurement and localisation thicken; domestic subsidy intensity softens as large IRA-era packages are pared or redirected. China and the EU+UK remain more subsidy-centric in the country panels — which is exactly why a *global* mix that still puts subsidies at only **26%** is such a strong signal about how much barrier and FDI activity the rest of the system (and the US) is contributing.
+
+## Coercion hardens: steel reverse TRQs and Section 301 as a duty regime
+
+Filter **Delta group → Coercion**. June’s Roundup documents the EU replacing its steel safeguard with a **reverse** tariff-rate quota from **1 July 2026**: in-quota volume cut by roughly **47%** versus 2024 quotas, out-of-quota duty raised from **25% to 50%** ad valorem across **291** CN codes. The United Kingdom mirrored the architecture. That is not a soft safeguard renewal; it is a deliberate tightening of market access dressed in quota clothing.
+
+July’s Roundup then shows Section 301 migrating from bilateral casework into a multi-economy duty regime. USTR’s forced-labour investigations conclude against **60** economies, with additional duties of **10% or 12.5%** structured across four rate categories — some applied net of MFN, others as flat adders. Brazil faces an additional **25%** on essentially all goods (with a broadened exemption list). Canada draws the first modern use of **Section 338** for **50%** duties on selected agricultural and industrial lines effective mid-August. Pair that with Q3’s export-control persistence finding (**80–90%+** twelve-month retention): coercive tools are not only more common in the mix — they are being written as durable regimes rather than one-off notices.
+
+## Ownership enters the toolkit beside grants
+
+Switch **Delta group → Ownership**. Mid-2026 Roundups keep repeating a motif Q3’s subsidy-share charts could not see: **equity and fund stakes as industrial policy**. July alone lists US Commerce CHIPS letters of intent worth **USD 874 million** across seven compute-supply-chain firms, each taking a minority non-controlling stake as a condition of award. June had already logged **USD 500 million** into SandboxAQ and **USD 250 million** into I-Pulse under the same equity template. Canada’s Growth Fund puts **USD 283 million** into Teck; five Chinese subnational governments launch funds worth about **USD 3.3 billion** investing through direct equity; the EIB commits up to **USD 1.4 billion** to a European scaleup fund of funds. South Korea’s **USD 951 billion** public-private “Three Mega Projects” plan for semiconductors, physical AI, and AI data centres sits at the extreme of announcement scale.
+
+Ownership does not replace subsidies in the 2025 pie — domestic incentives remain **~26%** — but it changes what “support” means for corporate control, disclosure, and exit. A CHIPS equity LOI is not a production tax credit; a nationalisation statute for British Steel is not a state-aid grant. The dashboard’s ownership panel is deliberately denominated in dollars of disclosed stakes, not in NIPO action counts, so it complements rather than double-counts the toolkit pie.
+
+## Who is exposed under the August 202608 vintage
+
+**Exposed:** exporters into markets where import-barrier shares now rival subsidy shares on the global mix; steel and metals shippers facing EU/UK reverse TRQs with **50%** out-of-quota duties; jurisdictions caught in the **60-economy** Section 301 forced-labour duty grid; firms that underwrote Western industrial policy as a subsidy-race story and now face co-equal FDI screening, procurement localisation, and tariff walls; mid-sized economies that cannot match either Big Three subsidy follow speed *or* US/EU coercive scale.
+
+**Relative winners under current rules:** incumbents already inside dual-use and advanced-technology product lists (Q3’s map still binds); capitals that can stack multi-year subsidy commitments, persistent export controls, *and* equity stakes; upstream critical-mineral, packaging, and equipment suppliers sitting at the intersection of CHIPS ownership deals and barrier-protected home markets; rest-of-world policymakers who still generate most of the monthly intervention count and can free-ride on Big Three templates.
+
+**What would change the story:** a 2026 full-year NIPO mix where domestic subsidies reclaim a clear majority above **40%**; a monthly Roundup sequence that falls back below **800** developments for several consecutive months; or a retreat from equity-conditioned industrial support back to pure grants. None of those reverse signals appear in the March 2026 Teneo print or the May–July 2026 Roundups.
+
+## Caveats and methodology
+
+- **Universes differ.** Q3 emphasised ZG #88 *strategic subsidy shares* and Market-Shaping *selective* industrial actions. This print emphasises Teneo’s *distortive* annual counts and GTA Monthly Roundup *all-development* totals. Do not treat **1,977** and **1,900** as identical series — they are neighbouring plateaus, not the same cell.
+- **Shares ≠ dollars.** A licensing rule, a tariff line, and a multi-billion grant remain comparable *actions* in NIPO; fiscal exposure is a different question (see [US industrial subsidies vs tariffs](/blog/us-industrial-subsidies-vs-tariffs-30-years)).
+- **Toolkit residual.** Export barriers and “other” are coded near **24%** as the residual after the disclosed top-three shares (**27 / 26 / 23**); treat that residual as estimated.
+- **Annual path midpoints** between 2009 and 2025 on the line chart are **estimated** for visual continuity; endpoints **1,141** and **1,977** are disclosed.
+- **Monthly Roundups** include trade defence, sanctions-adjacent measures, and liberalising actions in the headline count — broader than NIPO-only selective IP.
+- **Scatter anchors** for “CN/EU stock intuition” and “US tariff-heavy 2025” are **estimated** narrative placements against the disclosed global 2025 mix point.
+- **Big Three share of cumulative IPs (~63%)** is a stock composition fact from Teneo, not a 2025 flow share.
+
+## The shareable takeaway
+
+Versus our Q3 chokepoint-targeting vintage, the newest official prints show industrial policy **still hot on volume and no longer subsidy-monopolised on instruments**: annual distortive actions reach **1,977** in **2025**, the toolkit splits roughly **27% / 26% / 23%** across import barriers, domestic subsidies, and finance/FDI controls, and GTA’s monthly tape jumps **804 → 1,008** from May to July 2026 as steel reverse TRQs, multi-economy Section 301 duties, and CHIPS equity stakes harden the coercive-and-ownership edge. Q3 told you the product map; **this vintage tells you the toolkit is now a three-pillar regime**.
+
+Related reading: [Q3 fiscal & industrial policy update (chokepoints)](/blog/fiscal-industrial-policy-update-2026q3) and [August motive/instrument update](/blog/fiscal-industrial-policy-update-2026).`,
+  },
+  {
     id: "energy-systems-update-2026q3",
     slug: "energy-systems-update-2026q3",
     title:
