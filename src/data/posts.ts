@@ -2,6 +2,99 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "migration-humanitarian-update-2026",
+    slug: "migration-humanitarian-update-2026",
+    title:
+      "Update: Forced Displacement Fell 5.4M to 117.8M — First Decade Decline, Funding Still Broken",
+    excerpt:
+      "UNHCR Global Trends 2025 cuts the stock −4% from our research print’s 123.2M end-2024 peak. Returns surged; resettlement halved; LMIC host share slipped to 68% while LDCs rose to 26%. GHO coverage barely moved as the ask shrank 26%.",
+    category: "Politics",
+    themeId: "migration-humanitarian",
+    imageUrl:
+      "/images/politics-migration-humanitarian-update-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero with teal −5.4M callout and first-decade-decline migration corridor arcs",
+    publishedAt: "2026-08-21T08:00:00Z",
+    featured: true,
+    visualization: "migration-humanitarian-update-2026",
+    layout: "default",
+    content: `## What changed since the research print
+
+Our [migration–humanitarian research post](/blog/migration-humanitarian-research-2026) closed on a brutal scissors: **123.2 million** forcibly displaced at end-2024, **73%** of refugees hosted in low- and middle-income countries, UNHCR needs only **37%** funded in 2025, and OCHA’s Global Humanitarian Overview appeals **23.4%** funded by October 2025. That piece asked who bears costs when people stocks rise and cash falls. **UNHCR Global Trends 2025** (data as of 1 May 2026) and the **GHO 2026 Mid-Year Review** (FTS through 31 May 2026) answer the vintage question: **what moved once the first decade-long stock decline landed — and did the funding ledger heal with it?**
+
+The stock answer is unambiguous. Forced displacement fell to **117.8 million** at end-2025 — **−5.4 million / −4%** versus the research print — the first meaningful decline in a decade. Conflict IDPs (IDMC) dropped from **73.5M to 68.7M**; refugees including UNRWA and other people needing international protection slipped from **42.7M to 41.6M (−3%)**. Asylum-seeker backlogs moved the other way: **8.4M → 9.0M**. Returns of refugees and IDPs jumped **+50% to 14.7 million**; resettlement and sponsorship arrivals **halved to 81,800** against a **2.9 million** stated need. Host geography reshuffled: LMIC share of refugee hosting fell **73% → 68%**, high-income rose **27% → 29%**, and Least Developed Countries rose **23% → 26%** (to **9.4 million** people).
+
+The cash answer is colder. UNHCR’s Global Report 2025 confirms the research print’s **37%** funded year (**$3.93B** available against a **$10.6B** budget; **63%** gap; expenditure **−22%** YoY). GHO appeal coverage inched from **23.4% to 24.4%** — but requirements were cut from **$45.4B to $33.7B (−26%)**. Coverage did not recover because donors filled the old ask; the ask was prioritized down while funded dollars also fell (**$10.6B → $8.2B**). Border narratives still treat migration as a rich-country arrival crisis. The vintage delta says the system’s people ledger eased slightly via **often adverse returns**, while the money ledger remained a structural gap.
+
+## The vintage scoreboard
+
+| Meter | Research print | Global Trends / GHO 2026 | Δ |
+| --- | ---: | ---: | --- |
+| Forcibly displaced | 123.2M (end-2024) | 117.8M (end-2025) | **−5.4M (−4%)** |
+| Conflict IDPs | 73.5M | 68.7M | −4.8M |
+| Refugees + UNRWA + OPNIIP | 42.7M | 41.6M | −1.1M (−3%) |
+| Asylum-seeker stock | 8.4M | 9.0M | +0.6M |
+| LMIC host share | 73% | 68% | −5pp |
+| LDC host share | 23% | 26% | +3pp |
+| Neighbour host share | 67% | 65% | −2pp |
+| High-income host share | 27% | 29% | +2pp |
+| UNHCR needs funded | 48% (2024) / 37% (2025) | 37% confirmed | −11pp vs 2024 |
+| GHO requirements | $45.4B (2025 Oct) | $33.7B (2026 May) | −26% |
+| GHO coverage | 23.4% | 24.4% | +1.0pp |
+| Refugee + IDP returns | (elevated 2024 H2) | 14.7M (+50% YoY) | Record-scale |
+| Resettlement / sponsorship arrivals | 2024 multi-decade high | 81,800 (halved) | Collapse |
+
+Read the table as one sentence: **the people stock finally fell, mostly because returns surged; the funding stock did not heal — it was resized.**
+
+## The first decade decline is not a soft landing
+
+A −4% drop after a decade of rises invites victory narratives. Global Trends is careful for a reason. Nearly **5.4 million** people still fled across borders in 2025 — Sudan, Ukraine, Venezuela, South Sudan, Burkina Faso, Afghanistan, Mali, and Myanmar alone accounted for roughly six in ten of those movements. The stock fell because **returns outpaced new displacement**, not because conflict stopped generating refugees.
+
+UNHCR flags that many returns occurred under **adverse circumstances**: insecurity, damaged infrastructure, and weak services in places of origin, plus shrinking protection space in some asylum countries. Afghan returns (~2.9M including ~1.9M refugees) were the largest refugee return corridor and were assessed as largely **involuntary**, driven by host-country policy shifts in Iran and Pakistan. Syrian returns (~1.3M refugees plus ~2M IDPs) followed the December 2024 political rupture but landed in a country still marked by destruction and fragile services. Sudanese refugee and IDP returns were large even as Sudan remained the world’s largest internal displacement crisis (**9.1M IDPs** at end-2025, down 2.4M but still enormous).
+
+Composition matters for reading the decline. IDPs drove most of the absolute drop. Asylum stocks **rose**. That mix is the opposite of a “crisis solved at the border” story: the backlog of people waiting for protection decisions grew while the visible stock of already-displaced people shrank through returns of uneven quality.
+
+## Who still hosts — and how the ranking reshuffled
+
+The research print’s host×donor scatter put Iran, Türkiye, Colombia, Germany, and Uganda in the people-heavy quadrant and the United States in the cash-heavy quadrant. End-2025 reorders the people side. **Colombia (2.8M)** and **Germany (2.7M)** lead; **Türkiye falls to 2.4M (−19%)** on Syrian returns; **Uganda rises to 1.9M**; **Iran collapses to 1.7M (−53%)** on Afghan returns and reclassification; **Chad jumps to 1.5M** on Sudanese arrivals; **Pakistan slips to 1.3M (−17%)**.
+
+That reshuffle is not burden-sharing by design. It is **policy-driven stock compression** in Iran/Pakistan/Türkiye plus **neighbour absorption** in Chad/Uganda. Low-income countries still host **18%** of refugees while representing ~8% of world population and ~0.3% of world GDP. LDCs now host **26%** — a **+3pp** rise and **+12%** in absolute refugee numbers versus end-2024. High-income countries’ share rose only to **29%**. Our earlier [refugee hosting burden map](/blog/global-refugee-hosting-burden-2024) remains the right framing: **geography of asylum is still neighbour geography**, even after a year of record returns.
+
+## Funding: coverage flat, ask cut, flexibility worse
+
+The research print already showed UNHCR’s 2025 cliff. Global Report 2025 locks it in: **$3.932B** available, **37%** of needs, expenditure **$3.830B (−22%)**, tightly earmarked funding rising from **24% to 44%** of the portfolio. Agencies lost both volume and the ability to move money toward under-attended crises. That is the operational meaning of a “funding gap” beyond the headline percentage.
+
+On the OCHA side, comparing GHO 2025 October to GHO 2026 mid-year is deliberately imperfect — different plan years, different FTS cut dates — but the direction is clear enough for a vintage read. Requirements fell **~26%** to **$33.7B** while coverage only rose **~1pp to 24.4%**. People in need in the mid-year frame sit near **252M** (targeted **143M**), below the research print’s **300M / 181M** GHO 2025 framing, consistent with a stripped-back, prioritized appeal architecture rather than a funded recovery. Total humanitarian cash did not refill the old envelope; the envelope was redrawn smaller.
+
+Donor politics still dominate rich-country debate. The [OECD DAC aid drop](/blog/oecd-dac-oda-first-drop-2024) remains the right companion: official development assistance and humanitarian envelopes are under fiscal and political pressure precisely when return sustainability and host-community services need multi-year finance. Private remittances cannot substitute for that public ledger — a point our demographic cash-flow series keeps returning to in a different corridor.
+
+## Returns without resettlement is not a durable solutions system
+
+Durable solutions rhetoric usually lists three channels: voluntary return, local integration, and resettlement/complementary pathways. The 2025 vintage is lopsided. Returns hit **14.7M**. Resettlement and sponsorship arrivals fell by more than half to **81,800**, while UNHCR estimated **2.9M** refugees needed resettlement. Arrivals cover roughly **3%** of stated need. The United States’ sharp reduction in arrivals is the main arithmetic driver; the systemic effect is that the only large-scale “solution” operating is return — often into fragility.
+
+That imbalance matters for the cost narrative. When high-income states cut resettlement while neighbours host and then push returns, the fiscal and political burden does not disappear. It is **reassigned** to origin countries with destroyed services and to remaining host communities that still carry protracted caseloads (**70%** of refugees in protracted situations; **24.9M** people under the revised definition). The dashboard’s solutions panel is meant to make that asymmetry visible without treating every return as a protection success.
+
+## What the dashboard is for
+
+Use the controls as a vintage desk tool, not a decoration. **Meter scope** switches the dumbbell set among people stocks, funding meters, and host-share meters. **Sort** ranks by largest absolute delta, newest level, or name. **Region** filters host-delta and return-corridor panels. The dual-axis stock×funded chart shows why a falling displacement stock does not imply a healing system: UNHCR’s funded share kept falling into 2025 even as the people stock finally turned. The income-mix scatter shows upper-middle-income hosting losing share (Iran effect) while high-income and LDC shares ticked up.
+
+## Caveats
+
+- **End-2025 Global Trends figures are official but still subject to revision** as governments and partners update registration and estimates
+- **Return statistics mix voluntary, self-organised, and involuntary movements**; large corridors (Afghanistan, Sudan) are hard to classify cleanly
+- **GHO 2025 Oct vs GHO 2026 May are different plan years and cut dates** — coverage deltas are directional, not identical instruments
+- **Income-group and LDC hosting shares exclude some unclassified cases** (~3% of refugees in 2025)
+- **Host country rankings use refugees + other people needing international protection**; IDP stocks are a separate ledger
+- **Reclassifications** (especially Afghans in Iran/Pakistan moving between refugee-like and OPNIIP categories) affect levels without always reflecting new physical movements
+- **Resettlement “need” is a UNHCR planning estimate**, not a binding quota
+
+## Methodology
+
+**Prior research vintage** mirrors meters from [migration-humanitarian-research-2026](/blog/migration-humanitarian-research-2026): end-2024 Global Trends stocks, GHO 2025 October FTS coverage, and Global Report 2024/2025 funding ratios. **Newest stock and host geography** follow UNHCR Global Trends 2025 (end-2025; data received as of 1 May 2026), including the first decade decline to **117.8M**, host ranking (Colombia, Germany, Türkiye, Uganda, Iran, Chad, Pakistan), income-group and LDC shares, return totals (**14.7M**), refugee returns (**4.4M**), and resettlement arrivals (**81,800**). **UNHCR funding** uses Global Report 2025 final budget (**$10.604B**), funds available (**$3.932B**), funded share (**37%**), and expenditure change (**−22%**). **GHO 2026** mid-year meters use the Mid-Year Review snapshot as of **31 May 2026**: requirements **$33.66B**, funding **$8.21B**, coverage **24.4%**, people in need **252.1M**. Dashboard deltas are arithmetic comparisons of those disclosed prints; mid-path displacement years before 2024 remain labeled estimated where carried forward from the research series.
+
+**Unlike a border-apprehension dashboard, this update measures global forced-displacement stocks, host shares, return flows, and humanitarian appeal coverage — the cost ledger outside rich-country arrival headlines.**`,
+  },
+  {
     id: "geopolitics-institutions-concentration-2026",
     slug: "geopolitics-institutions-concentration-2026",
     title:

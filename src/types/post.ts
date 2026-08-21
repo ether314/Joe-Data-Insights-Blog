@@ -119,7 +119,8 @@ export interface Post {
     | "industrial-robotics-concentration-2026"
     | "demographic-cash-flows-update-202608"
     | "heavy-industrial-capacity-update-2026"
-    | "geopolitics-institutions-concentration-2026";
+    | "geopolitics-institutions-concentration-2026"
+    | "migration-humanitarian-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

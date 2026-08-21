@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "migration-humanitarian-update-2026",
+    marker: "First decade decline — hosts still carry the ledger",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "geopolitics-institutions-concentration-2026",
     marker: "Institutions & governance — concentration lens",
     forbidden: "Loading interactive charts",
