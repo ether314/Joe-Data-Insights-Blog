@@ -1712,6 +1712,21 @@ const FiscalPlumbingUpdate202608Dashboard = dynamic(
   },
 );
 
+const MeasurementScienceConcentrationDashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/MeasurementScienceConcentrationDashboard"
+    ).then((m) => m.MeasurementScienceConcentrationDashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2155,6 +2170,10 @@ export function PostVisualization({
 
   if (type === "fiscal-plumbing-update-202608") {
     return <FiscalPlumbingUpdate202608Dashboard />;
+  }
+
+  if (type === "measurement-science-concentration-2026") {
+    return <MeasurementScienceConcentrationDashboard />;
   }
 
   return null;

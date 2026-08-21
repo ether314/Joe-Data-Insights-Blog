@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "measurement-science-concentration-2026",
+    marker: "Measurement & science — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-plumbing-update-202608",
     marker: "Fiscal plumbing — late-Aug 202608 vintage delta",
     forbidden: "Loading interactive charts",

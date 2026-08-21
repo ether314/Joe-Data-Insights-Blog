@@ -140,7 +140,8 @@ export interface Post {
     | "macro-growth-trade-concentration-2026"
     | "ai-capex-spend-concentration-2026q3"
     | "demographic-cash-flows-concentration-2026q3"
-    | "fiscal-plumbing-update-202608";
+    | "fiscal-plumbing-update-202608"
+    | "measurement-science-concentration-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

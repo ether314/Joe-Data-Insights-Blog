@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "measurement-science-concentration-2026",
+    slug: "measurement-science-concentration-2026",
+    title:
+      "Concentration: China Is 29.4% of World GERD — Top-3 Clears 65%; AI Patents Hit 75%",
+    excerpt:
+      "A distribution lens on measurement & science: GERD Top-1 is China at 29.4% and Top-3 is 65.2%; S&E publications Top-3 (China–US–India) print half the world; CET AI priority patents concentrate to ~75% China — while KTI value-added and HCA rates still favor the US on influence.",
+    category: "Global Systems",
+    themeId: "measurement-science",
+    imageUrl:
+      "/images/global-systems-measurement-science-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber and rose Top-1/Top-3 concentration bars beside glowing lab, patent, and publication motifs",
+    publishedAt: "2026-08-21T10:00:00Z",
+    featured: true,
+    visualization: "measurement-science-concentration-2026",
+    layout: "default",
+    content: `Our [2022 research ledger](/blog/measurement-science-research-2026) answered the stock question — where progress was funded and published under NSF Indicators framing. The [August NSF update](/blog/measurement-science-update-2026), [Q3 OECD/AAAS restatement](/blog/measurement-science-update-2026q3), and [August 202608 China-flow vintage](/blog/measurement-science-update-202608) then tracked how the US–China knife-edge moved. This post asks the sharper distribution question: **how concentrated is the system at the top?** Top-1, Top-3, and HHI-style ladders — across GERD, publications, CET patents, and KTI value-added.
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Scoreboard**, **Concentration ladder**, **CET patents**, and **Volume vs impact**. The punchline is deliberately multi-sided. On PPP R&D funding, **China alone is about 29.4%** and the **top three clear ~65%**. On S&E articles, **China is 31%** and **China–US–India print half the world**. On critical-and-emerging-technology priority patents, **China’s AI share is ~75%**. On knowledge- and technology-intensive value-added, the **United States is still Top-1 at 28%**. Same theme, four different tops.
+
+## The concentration scoreboard
+
+| Perimeter | Top-1 | Top-3 | Extra meter |
+| --- | ---: | ---: | --- |
+| GERD funding (PPP 2024) | **29.4%** (China) | **65.2%** (CN·US·JP) | US+China **58.5%** |
+| S&E publication volume | **31%** (China) | **50%** (CN·US·IN) | ~3.5M world articles |
+| CET AI priority patents | **~75%** (China) | **~92%** (CN·US·EU) | Semi China ~42% |
+| KTI value-added | **28%** (United States) | **71%** (US·CN·EU) | World KTI ~$11.7T |
+
+Read the table as a **family of market shares**, not one number. GERD concentration is a near-duopoly: China’s lead over the United States is only **0.3 pp** on the OECD/AAAS restatement, yet the two together hold nearly three-fifths of world PPP R&D. Publication concentration is steeper at Top-1 and already a half-world oligopoly at Top-3. CET AI patents are the extreme perimeter — volume IP so top-heavy it would look cartoonish next to GERD if you plotted them on the same axis without labels. KTI value-added flips the Top-1 label back to the United States even while China sits one step behind at **25%**.
+
+Analysts who quote only “China overtook the US on GERD” understate how thin that lead is and how thick the combined duopoly is. Analysts who quote only publication volume understate how little HCA rates and KTI leadership have fully followed the paper count.
+
+## GERD: knife-edge Top-1, thick Top-2
+
+Filter the dashboard to **Concentration ladder → GERD**. The cumulative curve rises to **29.4%** at Top-1 (China), **58.5%** at Top-2 (plus the United States at **29.1%**), and **65.2%** at Top-3 (plus Japan at roughly **6.7%** of the ~$3.48T NSF world total). Germany and Korea push the Top-5 near **75%**. Approximate HHI on the disclosed ladder sits near **1,890** — concentrated relative to an equal global split, but the story is less “China monopoly” than “US–China floor.”
+
+That is the first hinge. Funding effort concentrated as China’s share climbed from ~**5% in 2000** to the high twenties, while the US share fell from ~**39%** toward ~**29%**. Top-1 as a single-country meter actually *eased* as leadership flipped; US+China and Top-3 *tightened*. The [Q3 restatement](/blog/measurement-science-update-2026q3) made the knife-edge explicit: business BERD explained most of China’s dollar edge, market exchange rates still put China near half US GERD, and alternate PPP sensitivity kept the ranking fragile.
+
+Treat PPP shares as the international concentration meter. Do **not** splice China NBS yuan GERD (¥3.93T domestic in 2025) into the world-share frame without conversion — the [August 202608 update](/blog/measurement-science-update-202608) tracks that domestic flow separately.
+
+## Publications: half the world in three names
+
+Switch the view to **Publications** on the ladder (or read the Scoreboard path series). China prints about **31%** of fractional-count S&E articles; the United States about **12%**; India about **7%**. Top-3 equals **50%**. The residual “rest of world” is still large in country count and thin in share once you rank the distribution.
+
+This is the second hinge. Publication volume concentrated faster than GERD Top-1. China overtook the US in article count around **2016** and kept widening; India’s rise made the Top-3 a China–US–India story rather than a North-Atlantic club. Germany, the UK, and Japan remain visible on the ladder but no longer define the thick end.
+
+Volume is not influence. NSF HCA rates — the share of an economy’s own articles that land in the world top **1%** cited — still put the United States near **1.7%** against China’s **1.3%**. That is a *rate*, not a world HCA market share, but it is enough to show why “half the papers” does not yet mean “half the frontier citations.” Open **Volume vs impact** in the dashboard: China sits far right on publication share and only mid-pack on HCA rate; the US sits left on volume and higher on impact, with a GERD bubble still near China’s funding weight.
+
+## CET patents: the 75% perimeter
+
+Toggle **CET patents**. Across NSF Translation critical-and-emerging-technology fields, China’s volume share of international priority patent families runs from the high thirties (biotech) through the forties (semiconductors, quantum, nuclear) to roughly **75% in artificial intelligence**. Every listed field still shows a United States citation lead in the theme’s NSF framing — the same volume–impact asymmetry the publication ledger shows, sharpened into IP.
+
+If GERD Top-1 at **29.4%** is a knife-edge, CET AI at **~75%** is a cliff. The dashboard’s residual ladder (China disclosed; US/EU/RoW estimated to close the universe) puts Top-3 near **92%**. That is not a claim that China “owns AI science”; it is a claim that **priority-family volume** in the NSF CET AI meter is extraordinarily top-heavy. Semiconductors at ~**42%** China are still concentrated by ordinary industry standards and mild next to AI.
+
+Pair this panel with August’s intensity and basic-research meters: China domestic R&D intensity printed **2.80%** in 2025, basic research crossed **7%** of domestic R&D, and the patent concentration story arrived as a separate NSF Translation meter rather than a restatement of the 29.4/29.1 GERD frame.
+
+## KTI value-added: US Top-1 on the output ledger
+
+KTI world value-added is about **$11.7T**. The United States holds roughly **28%**, China **25%**, EU-27 **18%** — Top-3 near **71%**. Here the Top-1 label flips back. China leads KTI manufacturing value-added; the US leads KTI services. Concentration is real, but the identity of the top name depends on whether you meter **funding**, **papers**, **priority patents**, or **downstream KTI output**.
+
+That is the third hinge of the theme. A desk that only watches GERD PPP shares sees a China knife-edge. A desk that only watches S&E article counts sees a China-led half-world oligopoly. A desk that only watches CET AI families sees a three-quarter volume share. A desk that watches KTI VA still sees a US-led near-duopoly with Europe in third. All four can be true in the same vintage year.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** ministries and multilaterals that treat “global R&D” as a diversified OECD club when US+China already clear ~**59%**; research strategists who equate publication Top-1 with citation leadership; industrial-policy desks that miss CET patent volume extremes while debating GERD intensity gaps of a few tenths of a point; investors who price KTI services leadership without noticing manufacturing VA concentration on the China side of the same ledger.
+
+**Relative winners under current meters:** platforms and labs that convert GERD into cited output and standards (still a US-favoring game on HCA rates); China-scale volume producers in AI priority families and S&E articles; US KTI services franchises on the $11.7T output ledger; smaller high-intensity systems (Korea, Taiwan, Israel in prior theme tables) that punch above share on GERD/GDP even when they are not Top-3 on world dollars.
+
+**What would change the story:** a sustained widening of the China–US GERD gap beyond converter noise (or a clean US reclaim on PPP); publication Top-3 falling back below ~**40%** as mid-tier producers scale; CET AI China share compressing toward the semiconductor ~**40%** band; KTI Top-1 flipping to China on total VA, not only manufacturing. None of those appear cleanly in the 2024–2025 vintages summarised here — and the Q3 converter debate shows how even a **0.3 pp** GERD gap can be restated without changing the concentration *shape*.
+
+## Caveats and methodology
+
+- **GERD shares use OECD/AAAS 2024 PPP restatement (China 29.4% / US 29.1%)** and NSF/NSB State of S&E 2026 world totals (~$3.48T). Japan’s ~6.7% Top-3 rung uses NSF dollar framing; mid-ranks after Top-5 are analytical residuals.
+- **Do not mix China NBS domestic yuan GERD with PPP world shares** without conversion; August 202608 treats the yuan ledger as a separate flow meter.
+- **Publication shares are NSF Indicators fractional-count S&E articles (2024).** Top-4/Top-5 rungs for Germany/UK are estimated from prior Indicators structure.
+- **HCA figures are rates** (share of an economy’s articles in the world top 1% cited), not world HCA market shares. US ~1.7% vs China ~1.3% is an impact intensity contrast.
+- **CET patent China shares** for AI (~75%) are disclosed NSF Translation anchors; non-AI fields and the US/EU residual ladder are estimated to illustrate concentration shape.
+- **KTI VA shares (US 28% / China 25% / EU-27 18%)** follow NSF State of S&E 2026; Japan and RoW are estimated closures.
+- **Path years between disclosed anchors (2000–2024)** blend research and update vintages; intermediates are labeled estimated in the data module.
+- **HHI (~1,890 on the GERD ladder)** is an analytical index on the disclosed-plus-residual basket, not an official statistic.
+- **Market-exchange-rate GERD** still paints a very different China-vs-US picture (~half on EXR in Q3 framing); concentration conclusions are PPP-meter dependent.
+
+## The shareable takeaway
+
+Measurement and science are **concentrating at the top — but which top depends on the meter**. On world GERD, Top-1 (China) is about **29.4%** and Top-3 about **65%**, with US+China alone near **59%**. On S&E publications, Top-1 is **31%** and Top-3 **50%**. On CET AI priority patents, Top-1 is about **75%**. On KTI value-added, Top-1 flips to the United States at **28%** with Top-3 near **71%**. Funding and papers keep climbing the concentration ladder; citation impact and output leadership have not fully followed volume — yet.
+
+Related reading: [Measurement & science research (2022)](/blog/measurement-science-research-2026) · [August NSF update](/blog/measurement-science-update-2026) · [Q3 OECD/AAAS restatement](/blog/measurement-science-update-2026q3) · [August 202608 China flow + CET](/blog/measurement-science-update-202608).`,
+  },
+  {
     id: "fiscal-plumbing-update-202608",
     slug: "fiscal-plumbing-update-202608",
     title:
