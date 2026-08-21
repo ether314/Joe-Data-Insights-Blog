@@ -2,6 +2,99 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "bank-commercial-credit-concentration-2026q3",
+    slug: "bank-commercial-credit-concentration-2026q3",
+    title:
+      "Q3 Concentration: Top-1 Bank Still ~12.8% of Deposits — Top-3 33%; CMBS +51 bp, SLOOS CRE Flips to Ease",
+    excerpt:
+      "Q3 concentration lens on bank & commercial credit: deposit top-1 / top-3 remain ~12.8% / 33.4%, while Trepp July CMBS overall hits 7.86% (+51 bp MoM), multifamily +1.05 pp, and July SLOOS CRE NFNR flips to −11.3 net easing — stress dollars still tip-heavy in cards, office, and mega-bank CRE PDNA.",
+    category: "Finance",
+    themeId: "bank-commercial-credit",
+    imageUrl:
+      "/images/finance-bank-commercial-credit-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside charcoal bank towers and teal commercial real estate silhouettes with cyan share-ladder curves",
+    publishedAt: "2026-08-21T22:00:00Z",
+    featured: true,
+    visualization: "bank-commercial-credit-concentration-2026q3",
+    layout: "default",
+    content: `Our [prior concentration print](/blog/bank-commercial-credit-concentration-2026) answered the distribution question with a multi-meter map: deposit top-1 / top-3 near **12.8% / 33.4%**, $1–10B banks at **311%** CRE/capital versus a **200%** industry median, mega banks ~**48%** of CRE PDNA dollars, cards ~**48%** of charge-off dollars, and office ~**42%** of CMBS delinquent balances. The [Q3 theme update](/blog/bank-commercial-credit-update-2026q3) then refreshed the *process* tape — July SLOOS CRE NFNR at **−11.3** net easing and Trepp July CMBS overall at **7.86%**. This Q3 concentration cut asks the desk follow-up: **did those prints rewrite the top-of-distribution shares, or only refresh the meters that sit beside a still-sticky architecture?**
+
+The interactive dashboard above is built as a **Q3 concentration lens**. Toggle **Scoreboard**, **Bank shares**, **CRE cohorts**, **Stress + HHI**, and **Supply + CMBS**. Use deposit/asset metrics, CRE sort keys, charge-off versus delinquency dollar shares, SLOOS July-net versus Δ-vs-prior, and CMBS pie modes (delinquent $ / rate / MoM Δ). The punchline is deliberately flat on firm shares and sharp on process. Top-1 deposits remain ~**12.8%** and top-3 ~**33.4%**. Peak CRE/capital remains **311%**. What Q3 adds is a disclosed CMBS MoM path (+**51** bp overall; multifamily +**1.05** pp), a SLOOS supply flip into net easing on CRE, and analytical HHIs that show stress-dollar tips (charge-offs ~**3,420**, CRE PDNA ~**3,180**) sit far above deposit-firm HHI (~**680**).
+
+## The headline ladder: Q3 vs prior restatement
+
+| Lens | Prior concentration | Q3 print | Δ |
+| --- | ---: | ---: | ---: |
+| Deposit Top-1 (JPM) | **~12.8%** | **~12.8%** | **0 pp** (carried) |
+| Deposit Top-3 | **~33.4%** | **~33.4%** | **0 pp** |
+| Peak CRE/capital ($1–10B) | **311%** | **311%** | **0 pp** |
+| CRE PDNA $ (>$100B share) | **~48%** | **~48%** | **0 pp** |
+| Charge-off $ (cards share) | **~48%** | **~48%** | **0 pp** |
+| CMBS overall delinq | **~7.35%** | **7.86%** | **+51 bp MoM** |
+| Office CMBS delinq | **11.31%** | **11.91%** | **+0.6 pp** |
+| MF CMBS delinq | **6.64%** | **7.69%** | **+1.05 pp** |
+| SLOOS CRE NFNR net | **~+12** est. | **−11.3** | **flip to easing** |
+| Office share of CMBS delinq $ | **~42%** | **~42%** | **0 pp** (rate up, share sticky) |
+
+Read the table as a **stability-plus-process scoreboard**. Q3 did not re-rank the deposit tip or the CRE capital cohort ladder. It raised several CMBS *rates*, flipped CRE credit-supply nets into easing, and left stress-dollar *shares* sticky even as rates moved. Desks that treat “SLOOS eased” as “concentration eased” are reading the wrong column.
+
+## Scoreboard: carried architecture, Q3 process flags
+
+Open **Scoreboard**. The prior → Q3 restatement bars keep deposit Top-1 / Top-3, peak CRE/capital, and office delinquent-$ share flat. CMBS overall, office, and multifamily rates step up; SLOOS CRE NFNR flips from a prior estimated tighten into **−11.3** net easing. The Top-1 vs Top-3 scatter (bubble size ∝ HHI) still puts charge-off and CRE PDNA stress lenses in the extreme corner, deposit/asset firm shares mid-left, and office CMBS stress dollars upper-right.
+
+That is the first Q3 hinge. **Supply easing and share concentration are different objects.** A −**11.3** SLOOS net print does not move JPMorgan’s ~**12.8%** deposit weight. A +**51** bp CMBS MoM does not automatically shrink office’s ~**42%** of delinquent balances — rates can rise inside a sticky share geometry. Pair this with the [Q3 vintage update](/blog/bank-commercial-credit-update-2026q3): that post owns the level tape. This lens owns the distribution question.
+
+## Bank shares: Lorenz confirms a thick tip, not a monopoly
+
+Filter to **Bank shares**. Ranked deposit bars still put **JPMorgan** first near **12.8%**, **Bank of America** near **11.4%**, **Wells Fargo** near **9.2%**, and **Citigroup** near **7.2%** — top-4 around **41%**, long tail still above half of domestic deposits. Switch to assets and the order is familiar. The Q3 addition is the **deposit Lorenz** against a 45° equal-share diagonal: cumulative deposit share stays below the diagonal through the named tip, then the residual “Rest” bucket closes the curve — a visual that firm concentration is moderate, not winner-take-all.
+
+The cumulative top-N ladder still clears ~**33%** by top-3, ~**41%** by top-4, and ~**54%** by top-10. Deposit-firm HHI near **680** is the analytical twin of that geometry — far below stress HHIs on the Stress + HHI panel. Treat firm ranks as **estimated order-of-magnitude** from FDIC QBP / Summary of Deposits framing, rounded for visualization.
+
+## CRE cohorts: capital intensity and stress dollars still disagree
+
+Switch to **CRE cohorts**. Median CRE / (Tier 1 + ACL) still peaks at **311%** in the **$1–10B** band, **289%** in **$10–100B**, industry ~**200%**, mega banks near **95%**. PDNA rates still run the other way: mega banks near **1.67%** versus mid/community under **1%**. Stock-versus-stress bars keep mega banks at ~**38%** of CRE stock and ~**48%** of CRE PDNA dollars.
+
+Q3 does not invent a new size census — the [FDIC Risk Review](https://www.fdic.gov/media/189821) framing and the [prior concentration print](/blog/bank-commercial-credit-concentration-2026) still own that architecture. The Q3 contribution is juxtaposition: CRE *supply* is easing on SLOOS while CRE *capital concentration* and *PDNA dollar concentration* remain the same two disagreeing maps. **Easing standards do not automatically rebalance who holds the past-due dollars.**
+
+## Stress + HHI: cards own losses; analytical indexes confirm the tip
+
+Open **Stress + HHI**. Sorting by charge-off dollar share still puts **cards** near **48%**, then **C&I** near **26%**, with CRE only ~**8%** of realized loss dollars. Delinquency dollar share lifts residential and CRE — past-due stock without matching charge-off velocity. Fed SA still closes on **2026Q1**: cards **3.84%** charge-off / **2.92%** delinquency; CRE **1.56%** delinquency / **0.17%** charge-off (~**9×** multiple).
+
+The HHI panel is the Q3 analytical addition. Deposit and asset firm HHIs sit near **680–705**. CRE PDNA dollar HHI ~**3,180**, CMBS delinquent-$ HHI ~**2,680**, and charge-off dollar HHI ~**3,420**. Those indexes are constructed on stated share buckets (0–10,000 scale) — not a regulator filing — but they make the geometric claim falsifiable: **stress dollars concentrate harder than deposit firms**. Our [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026) post tracks the loss tape; this lens tracks *who owns the dollars inside that tape* and how tip-heavy the analytical index sits.
+
+## Supply + CMBS: July easing meets sticky office share
+
+Toggle **Supply + CMBS**. July SLOOS nets print CRE NFNR **−11.3**, multifamily **−5.7**, construction & land **−3.7**, C&I large **0.0**, C&I small **+1.8**, and cards still **+6.7** net tightening. Flip to Δ vs prior estimated tighten and CRE NFNR’s **−23** pp swing is the visual hinge — the largest supply re-pricing in the theme’s Q3 window. Cards remain the product that *tightens* while CRE *eases*: supply concentration is asymmetric across the same loan book that already concentrates *losses* in cards.
+
+The CMBS prior-versus-July bars show multifamily as the fastest MoM (+**1.05** pp to **7.69%**), office still the highest rate (**11.91%**, +**0.6** pp), overall **7.86%** (+**51** bp). The pie — whether delinquent-$ share, rate, or MoM Δ — keeps office near **42%** of delinquent balances. That is the second Q3 hinge. **Rate heat and share architecture can move on different clocks.** Multifamily’s MoM spike does not yet dethrone office’s dollar tip; industrial remains the calm residual.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that translate SLOOS CRE easing into thinner CRE PDNA dollar concentration while mega banks still hold ~**48%**; CMBS books that treat multifamily’s +**1.05** pp as a finished re-ranking of delinquent-$ shares while office stays ~**42%**; consumer lenders whose charge-off share remains near half of industry loss dollars while cards are the one major product still net-tightening on SLOOS; $1–100B banks still printing **290–310%** CRE/capital even as standards ease; policymakers who quote only deposit top-3 ~**33%** as the concentration meter for commercial credit.
+
+**Relative winners under current rules:** diversified mega banks with lower CRE/capital ratios and capital-markets access; industrial/logistics CMBS sleeves where delinquency stays low-single-digit; regional books tilted away from office; desks that keep the [August maturity / special-servicing tape](/blog/bank-commercial-credit-update-202608) and this Q3 share map in separate columns instead of averaging “easier standards = less concentration.”
+
+**What would change the story:** a sustained collapse of office CMBS delinquency that breaks office’s ~**42%** delinquent-dollar share; FDIC prints that bring $1–10B CRE/capital medians back toward **200%**; Fed SA where cards cease to dominate charge-off dollars; or a multi-survey SLOOS path that eases *cards* as hard as CRE while charge-off shares rotate. None of those clear this July / 2026Q1 window.
+
+## Caveats and methodology
+
+- **Bank asset and deposit shares are rounded FDIC QBP / SoD–style ranks** — order-of-magnitude concentration, not a live league table after every acquisition.
+- **CRE/capital medians and CRE PDNA by size** follow FDIC 2026 Risk Review disclosed framing where labeled; some small-bank cells are estimated.
+- **CRE stock / PDNA dollar shares and loan-book stress-dollar shares** are estimated reallocations that sum to 100% for visualization.
+- **HHI values are analytical indexes** on stated bucket shares (0–10,000), not a published FDIC concentration filing.
+- **SLOOS net %** = share of banks tightening minus easing (July 2026 survey). Prior estimates used for Δ are theme-carried, not a second official vintage.
+- **CMBS property rates** follow Trepp July 2026; delinquent-dollar shares are estimated from rates × approximate stock mixes.
+- **Fed SA closes on 2026Q1** (May 19, 2026) while CMBS/SLOOS are July 2026 — do not force a single as-of date.
+- **Concentration ≠ causation.** Easier CRE standards do not automatically shrink PDNA dollar tips; higher CMBS rates do not automatically rewrite firm deposit shares.
+
+## The shareable takeaway
+
+In the **Q3 2026 concentration vintage**, deposit Top-1 / Top-3 still sit near **12.8% / 33.4%**. Peak CRE/capital remains **311%** in the $1–10B band. Mega banks still hold ~**48%** of CRE PDNA dollars; cards ~**48%** of charge-off dollars; office ~**42%** of CMBS delinquent balances. What Q3 changed is the process overlay: CMBS overall **7.86%** (+**51** bp MoM), multifamily +**1.05** pp, and July SLOOS CRE NFNR at **−11.3** net easing while cards stay net-tight. Firm tip sticky. Stress tip skewed. Supply easing concentrated in CRE — not in the products that already own realized losses.
+
+Related reading: [Prior concentration print](/blog/bank-commercial-credit-concentration-2026) · [Q3 theme update](/blog/bank-commercial-credit-update-2026q3) · [August vintage](/blog/bank-commercial-credit-update-202608) · [Research roll-up](/blog/bank-commercial-credit-research-2026) · [CRE size split](/blog/cre-bank-delinquency-size-split-2026) · [Bank loan charge-offs](/blog/bank-loan-chargeoffs-2026).`,
+  },
+  {
     id: "macro-growth-trade-geography-2026",
     slug: "macro-growth-trade-geography-2026",
     title:
