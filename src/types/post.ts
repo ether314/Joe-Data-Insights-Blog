@@ -138,7 +138,8 @@ export interface Post {
     | "migration-humanitarian-update-2026q3"
     | "fiscal-industrial-policy-concentration-2026q3"
     | "macro-growth-trade-concentration-2026"
-    | "ai-capex-spend-concentration-2026q3";
+    | "ai-capex-spend-concentration-2026q3"
+    | "demographic-cash-flows-concentration-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

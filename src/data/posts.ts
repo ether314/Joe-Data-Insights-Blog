@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-concentration-2026q3",
+    slug: "demographic-cash-flows-concentration-2026q3",
+    title:
+      "Q3 Concentration: Banxico Cuts Mexico −0.9pp of LMIC Dollars — Top-3 Slips to ~35%",
+    excerpt:
+      "Q3 concentration vintage: India still ~19% top-1 of the $685B LMIC perimeter; Banxico’s FY2025 Mexico print ($61.8B) trims top-3 from ~36% to ~35%; the US→Mexico pipe still clears ~8–9% while Tajikistan hits 45% of GDP and Italy’s pensions run ~2× the OECD average.",
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl:
+      "/images/global-systems-demographic-cash-flows-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber remittance concentration bars, teal US–Mexico corridor arcs, and a rose GDP-dependence spike across a subtle world map",
+    publishedAt: "2026-08-21T18:00:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-concentration-2026q3",
+    layout: "default",
+    content: `Our [static concentration lens](/blog/demographic-cash-flows-concentration-2026) answered the distribution question with Brief 41’s ~$68B Mexico estimate: India ~19% top-1, top-3 ~36%, US→Mexico ~8% of the perimeter. The [Q3 Banxico update](/blog/demographic-cash-flows-update-2026q3) then restated Mexico’s full-year 2025 print at **$61.791B** (−4.6% YoY) and showed H1 2026 rebounding to **$30.759B** (+3.1%). This post is the **concentration vintage** of those restatements: how much did the top of the distribution move once the second-largest recipient is measured on Banxico’s books?
+
+The dashboard above is built as a **Q3 concentration lens**. Toggle **Vintage delta**, **Recipient ladder**, **Corridor pipes**, and **Dependence + pensions**. Switch **Banxico restated** vs **Brief 41** on the recipient side. The punchline is deliberately multi-sided. Inside the Brief 41 LMIC remittance perimeter (~**$685B**), **India alone is still about 19%**. Banxico’s Mexico print cuts the **top-three recipient share from ~36% to ~35%** (−0.9 pp). Zoom into bilateral pipes and **US→Mexico remains ~8%** on the KNOMAD matrix — yet Banxico’s Mexico *total* implies a **~9%** share of the same perimeter if the pipe is treated as the country’s disclosed inflow. Zoom into GDP dependence and **Tajikistan still hits ~45% of GDP**. Zoom into host public pensions and **Italy still runs ~16.3% of GDP**, roughly **2×** the OECD average. Same theme, four different tops — now with a vintage delta on the dollar ladder.
+
+## The headline ladder: top-1 and top-3 after Banxico
+
+| Lens | Top-1 | Top-3 | What changed in Q3 |
+| --- | ---: | ---: | --- |
+| Recipient $ (Banxico MX) | **~19%** (India) | **~35%** (IN·MX·CN) | MX share 9.9% → **9.0%** (−0.9 pp) |
+| Recipient $ (Brief 41) | **~19%** (India) | **~36%** (IN·MX·CN) | Static prior concentration post |
+| US→MX corridor (matrix) | **~8%** | **~13%** (top-3 pipes) | KNOMAD $52B print unchanged |
+| US→MX (Banxico-implied) | **~9%** | — | MX total $61.8B / $685B perimeter |
+| GDP dependence | **~45% of GDP** (Tajikistan) | **~33% avg** (TJ·NI·LB) | Carried Brief 41 dependence table |
+| Host public pensions | **~16.3% of GDP** (Italy) | **~13.7% avg** (IT·FR·DE) | OECD PaG; path still grinding to ~10% by 2050 |
+
+Read the table as a **family of market shares with one restated rung**. Recipient-dollar concentration barely moved at the top-1 (India is sticky). The story is the **second rung and the corridor meter**: Brief 41’s Mexico estimate overstated top-2 share by almost a percentage point of the global LMIC stock, while Banxico’s disclosed total *raises* the implied pipe share relative to the thinner KNOMAD bilateral print.
+
+Analysts who still quote “Mexico is ~10% of remittances” are on the Brief 41 estimate. Analysts who quote only Banxico’s monthly streak without a share-of-perimeter frame understate how large the US→Mexico channel remains even after the 2025 decline.
+
+## Vintage delta: −0.9 pp on Mexico, top-3 to ~35%
+
+Open **Vintage delta**. Grouped bars put Brief 41 and Banxico side by side. Top-1 (India) is flat at **~18.8%**. Mexico drops from **9.9% to 9.0%**. Top-3 recipients slip from **~35.8% to ~34.9%** — shareable as **~36% → ~35%**. Top-5 follows the same −0.9 pp shift. The residual “all other LMICs” bucket absorbs the difference, rising from ~45% to ~46% of the perimeter.
+
+That is a **concentration softening at the second rung**, not a reshuffle of the leaderboard. India remains the modal top-1. China remains third. The Philippines and Pakistan still push a Banxico-restated top-5 near **45.5%**. Approximate HHI on the restated named ladder sits near **600** — still concentrated relative to an equal global split, slightly less top-heavy than the Brief 41 Mexico estimate implied.
+
+The H1 rebound line underneath matters for *direction*. H1’25 was the streak-break trough (**$29.84B**); H1’26 printed **$30.76B** (+3.1%). Annualized, that is roughly **$61.5B** — almost exactly Banxico’s FY2025 level. Concentration did not collapse with the 2025 decline; the pipe is **re-tightening from a lower base**, not diversifying away from US→Mexico.
+
+## Recipient dollars: India still owns the thick end
+
+Filter to **Recipient ladder** and keep **Banxico restated**. The cumulative curve for named recipients rises to about **19%** at top-1 (India, **$129B**), **28%** at top-2 (plus Mexico’s **$61.8B**), and **35%** at top-3 (plus China’s **$48B**). Flip the vintage toggle to Brief 41 and watch Mexico’s bar jump back toward **$68B / 9.9%** — the entire visual difference of this Q3 post lives in that one rung.
+
+That is the first hinge, unchanged in structure from the [prior concentration post](/blog/demographic-cash-flows-concentration-2026). Remittance *dollars* concentrate in large labour-export and diaspora economies. India is not “most of remittances”; it is the modal top-1 inside a still-broad perimeter. Mexico’s second place is still the US corridor story — now measured on Banxico’s official books rather than Brief 41’s estimate. China’s third place still reminds that bridge economies can sit high on dollars and low on GDP dependence at the same time.
+
+Pair this panel with the research post’s flow-compare framing: LMIC remittances (~**$685B**) still dwarf FDI to LMICs (~**$470B**) and DAC ODA (~**$210B**). Softening Mexico’s share by less than a percentage point does not change remittances’ status as the largest private external flow into emerging markets.
+
+## Corridor pipes: matrix 8% vs Banxico-implied 9%
+
+Switch to **Corridor pipes**. Against the same **$685B** perimeter, the KNOMAD **US→Mexico** print is about **$52B / 8%**. The next rungs — UAE→India (**$20B**), US→Philippines (**$15B**), Saudi→India (**$13B**) — push the tracked **top-3 corridor share to ~13%**.
+
+The Q3 twist is the **matrix vs Banxico** bar panel. Banxico’s Mexico total of **$61.8B** is **~9%** of the LMIC perimeter. H1’26 annualized lands in the same band. If nearly all of Mexico’s disclosed inflow is US-origin electronic transfers — Banxico routinely prints electronic shares above **99%** — then the disclosed bilateral matrix understates the top corridor’s share of global remittance dollars. Treat the matrix **8%** as a **lower bound** on pipe concentration and the Banxico-implied **9%** as a **country-total upper reference**, not a audited bilateral split.
+
+That looks like a small gap until you remember what a corridor is. A recipient share asks *which country books the inflow*. A corridor share asks *which bilateral pipe carries it*. India can lead recipient dollars while no single India corridor matches US→Mexico’s absolute size, because India’s inflows arrive through a **fan of Gulf and OECD pipes**. Mexico’s second-place recipient share is the opposite architecture: one dominant US corridor — and Banxico’s books make that architecture look *more*, not less, concentrated than the thinner matrix print.
+
+For corridor plumbing detail see [global remittance corridors](/blog/global-remittance-corridors-2026). For the monthly streak-break and H1 rebound path see the [August vintage](/blog/demographic-cash-flows-update-202608) and [Q3 update](/blog/demographic-cash-flows-update-2026q3).
+
+## GDP dependence and host pensions: the tops that did not move
+
+Open **Dependence + pensions**. Tajikistan’s remittances are only about **$5.5B**, yet they equal roughly **45% of GDP**. Nicaragua and Lebanon sit near **27%**. Mexico — large enough to move the dollar ladder when Banxico restates — still runs only about **3.5% of GDP**. The dual-ledger scatter puts the geometry in one frame: aging hosts (Japan, Italy, Germany) sit at high old-age dependency and near-zero remittance GDP shares; remittance origins sit at low dependency and elevated remittance GDP shares; Tajikistan and Lebanon remain the extreme upper-left of the dependence axis.
+
+This is the second hinge of the theme, and Q3 does not rewrite it. **Dollar concentration and dependence concentration are not the same ranking.** India can be top-1 on dollars at ~**3.4% of GDP**. Tajikistan can be top-1 on dependence with a rounding error of the global stock. Banxico’s restatement moves Mexico’s *dollar* share; it barely moves Mexico’s *dependence* share.
+
+On the host side, Italy’s public cash pensions still run about **16.3% of GDP** — roughly **2×** the OECD average near **8.1%**. France (~**14.5%**) and Germany (~**10.4%**) fill the next rungs; the **top-3 average** sits near **13.7%**. OECD-32 pensions are still projected to grind from roughly **8.8% toward 10.0% of GDP by 2050** in the theme’s vintage posts. Concentration today (Italy vs peers) and level tomorrow (OECD average rising) remain compatible.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that still price Mexico’s Brief 41 ~$68B estimate into a ~10% LMIC share after Banxico’s **$61.8B** print; Mexico-watchers who treat the 2025 streak break as diversification away from US→Mexico when H1’26 is already re-tightening; Gulf and OECD labour hosts whose outflows fan into India’s sticky **~19%** top-1; Central Asian and Levantine finance ministries for whom remittance GDP shares near **27–45%** make corridor politics a fiscal policy; European fiscal planners who inherit Italy/France-scale pension burdens while dependency ratios keep rising; compliance desks watching the **September 2026** US remittance-rule calendar as a concentration risk on the same US→MX pipe.
+
+**Relative winners under current rules:** large recipient platforms (India, Philippines, Pakistan) whose Brief 41 anchors were not restated downward in this vintage; corridor specialists on US–Mexico who can trade Banxico’s monthly path against the global share-of-perimeter frame; aging hosts with contribution bases and benefit reforms that keep pension % GDP below Italy’s print; diversified ODA/FDI strategies that still cannot match remittance stock size but can target the residual ~**46%** of the $685B perimeter after Banxico’s restatement.
+
+**What would change the story:** a Brief 42-style restatement that cuts India’s top-1 below ~**12%** of LMIC dollars; corridor diversification that cuts US→Mexico below ~**5%** of the perimeter *without* simply relocating dependence elsewhere; Banxico H2’26 that fails to hold the H1 rebound so annualized Mexico falls materially below **$60B**; dependence leaders falling below ~**20% of GDP** through growth or corridor disruption; host pension burdens compressing so Italy-scale outliers converge toward the OECD mean. None of those appear cleanly in the Banxico June 2026 / Brief 41 / OECD vintages summarised here — and the Q3 delta shows how a single-country restatement can move top-3 by almost a point without touching top-1.
+
+## Caveats and methodology
+
+- **Recipient shares use Brief 41’s ~$685B LMIC perimeter (2024)** as the universe. India / China / Philippines / Pakistan prints are carried Brief 41 anchors; **Mexico uses Banxico FY2025 $61.791B** in the restated ladder.
+- **Brief 41’s ~$68B Mexico estimate is retained only as the vintage-delta comparator**, matching the [prior concentration post](/blog/demographic-cash-flows-concentration-2026).
+- **H1 2026 Banxico $30.759B (+3.1% YoY)** is used for rebound direction and annualized corridor pressure (~**$61.5B**), not as a full-year substitute.
+- **Corridor matrix shares are bilateral dollars divided by the same $685B perimeter** — a lower bound on true pipe concentration because not every corridor is enumerated.
+- **Banxico-implied US→MX share (~9%)** treats Mexico’s country total as a pipe reference; it is **not** a disclosed bilateral split and should not be read as audited US-origin dollars.
+- **GDP-dependence ranks follow Brief 41’s dependence table**; small-dollar / high-share countries can move sharply year to year with GDP revisions.
+- **Host pension % GDP figures are OECD Pensions at a Glance prints** (Italy **16.3%** disclosed; some peers estimated in the theme cross-section).
+- **Top-3 “shares” for dependence and pensions are averages of GDP%**, not additive market shares — they are burden ladders, not a closed portfolio.
+- **Old-age dependency** is UN WPP 2024 (65+ per 100 aged 15–64); it is a demographic stock, not a cash-flow share.
+- **September 2026 US compliance calendar** is a concentration *risk* flag for the US→MX pipe, not a measured share shift in this vintage.
+
+## The shareable takeaway
+
+Demographic cash flows remain **concentrated at the top — and Q3’s Banxico restatement mostly moved the second rung**. Inside LMIC remittance dollars, top-1 (India) is still about **19%**; Banxico’s Mexico print cuts top-3 from about **36% to 35%**. Of the same **$685B** perimeter, US→Mexico is about **8%** on the bilateral matrix and about **9%** on a Banxico-implied country-total reference. Of GDP dependence, Tajikistan still hits about **45%**. Of host public pensions, Italy still runs about **16.3% of GDP**, roughly **2×** the OECD average. Age and migration show up in money flows through a system that looks diversified in country counts and **top-heavy once you rank the distribution** — even after the second-largest recipient is restated lower.
+
+Related reading: [Concentration lens (Brief 41)](/blog/demographic-cash-flows-concentration-2026) · [Q3 Banxico H1 rebound](/blog/demographic-cash-flows-update-2026q3) · [Demographic cash flows research 2026](/blog/demographic-cash-flows-research-2026) · [Global remittance corridors](/blog/global-remittance-corridors-2026).`,
+  },
+  {
     id: "ai-capex-spend-concentration-2026q3",
     slug: "ai-capex-spend-concentration-2026q3",
     title:
