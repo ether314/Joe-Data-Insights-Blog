@@ -157,7 +157,8 @@ export interface Post {
     | "bank-commercial-credit-update-202608"
     | "energy-systems-concentration-2026"
     | "demographic-cash-flows-concentration-202608"
-    | "macro-growth-trade-concentration-2026q3";
+    | "macro-growth-trade-concentration-2026q3"
+    | "fiscal-industrial-policy-geography-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

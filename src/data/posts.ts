@@ -2,6 +2,89 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-industrial-policy-geography-2026",
+    slug: "fiscal-industrial-policy-geography-2026",
+    title:
+      "Charted: East Asia Holds 33% of Industrial-Policy Stock — North America Owns 71% of Package Dollars",
+    excerpt:
+      "Geography lens on fiscal & industrial policy: East Asia leads cumulative intervention counts (~33%), North America dominates major war-chest dollars (~71%), AZ·TX·NY capture ~58% of tracked US CHIPS megaproject awards — while June’s monthly tape still leaves 62% to the rest of the world.",
+    category: "Politics",
+    themeId: "fiscal-industrial-policy",
+    imageUrl:
+      "/images/politics-fiscal-industrial-policy-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with glowing regional share blocks and geometric industrial-policy geography bars in rose, sky blue, and violet",
+    publishedAt: "2026-08-21T20:00:00Z",
+    featured: true,
+    visualization: "fiscal-industrial-policy-geography-2026",
+    layout: "default",
+    content: `Our [H-NIPO research ledger](/blog/fiscal-industrial-policy-research-2026) mapped the stock and toolkit of modern industrial policy. The [concentration companion](/blog/fiscal-industrial-policy-concentration-2026) then asked how thick the *top* of that distribution is — top-1 near **24%**, Big Three near **63%** on counts, and roughly **93%** of major package dollars in three capitals. This post answers a different desk question: **where does activity, risk, and fiscal capacity sit on the map?**
+
+The interactive dashboard above is built as a **geography lens**. Toggle **Regions**, **Count × $**, **US states**, and **Sectors**. Filter regions by stock counts, package dollars, or June flow; filter sectors by semis, clean energy, EV/battery, dual-use, or minerals. The punchline is deliberately multi-map. On **cumulative counts**, East Asia leads at about **33%** and the top-three regions (East Asia + North America + Europe) clear roughly **72%**. On **major fiscal packages**, North America alone is about **71%** of the war-chest universe we track. On **US subnational awards**, Arizona, Texas, and New York together hold about **58%** of a ~**$39B** tracked CHIPS megaproject tip. And on **June 2026 monthly flow**, rest-of-world still prints **62%** of the tape.
+
+## The headline map: four meters, four geographies
+
+| Meter | Top region / state | Top share | Top-3 share | What it measures |
+| --- | --- | ---: | ---: | --- |
+| Cumulative stock (counts) | East Asia | **~33%** | **~72%** | Where interventions accumulate |
+| Major fiscal packages ($) | North America | **~71%** | **~97%** | Where war-chest capacity sits |
+| June 2026 monthly flow | Rest of world | **62%** | **38%** (US·EU·CN) | Where the latest month prints |
+| US CHIPS megaproject awards | Arizona | **~22%** | **~58%** (AZ·TX·NY) | Where US fab dollars land |
+
+Read the table as a **family of maps**, not one slogan. Count geography tells you who generates intervention *frequency*. Package geography tells you who can put nine- and ten-figure claims on factory sites. Flow geography tells you that a busy month can still be RoW-heavy even when the multi-year stock is Big-Three thick. Subnational geography tells you that even inside the US dollar tip, awards cluster into a handful of fab corridors. Averaging these rows into a single “industrial policy is concentrated in X” sentence is a category error.
+
+## Regional stock: East Asia leads the count map
+
+Filter **Regions** to **Stock counts**. East Asia — China plus estimated Japan and Korea shares — sits near **33%** of the cumulative industrial-policy stock. North America (US-led) follows near **21%**, Europe (EU + member states as one bloc) near **18%**, and rest-of-world still holds about **28%**. That ordering is the geographic twin of the [concentration ladder](/blog/fiscal-industrial-policy-concentration-2026): China remains the largest single jurisdiction; rolling Asia’s next rung on top of China makes East Asia the thickest *region*.
+
+The stock pie is therefore Asia-weighted without being Asia-monopoly. A system where East Asia holds one-third of recorded interventions still leaves North America and Europe with nearly two-fifths combined, and a long RoW tail that can start subsidy races, copy HS6 lists, or free-ride on templates written in Beijing, Washington, and Brussels. IMF’s H-NIPO check (China+EU+US ≈ **53%** of the **2009–2023** stock) and the **2023** NIPO census (same trio ≈ **48%** of **2,580** measures) sit one notch below the Teneo cumulative Big Three framing — different windows, same qualitative map: **the tip is regional, not planetary**.
+
+## Package dollars: North America owns the war chest
+
+Switch the region metric to **Package $**. The map flips. North America jumps to about **71%** of the major CHIPS/IRA/EU/CN/JP/KR war-chest universe (~**$627B** statutory / mobilisation / tax-credit tip). Europe and East Asia together hold most of the remainder; rest-of-world barely registers on this particular dollar pie because the tracked packages are the large, disclosed industrial-policy war chests — not every SME voucher on earth.
+
+That asymmetry is the core geography insight for capital allocation. Counts ask *who intervenes how often*. Package dollars ask *who can relocate a fab, battery plant, or advanced-packaging line with a fiscal claim large enough to move board decisions*. A jurisdiction that records many firm-level awards can look “active” on the count map while still lacking US-scale tax-credit and appropriation capacity. Conversely, a single IRA-sized tax-expenditure envelope can dominate a dollar pie without matching China’s historical intervention *count* share. Desks that only watch NIPO counts will underweight North American fiscal capacity; desks that only watch IRA headlines will underweight East Asian intervention frequency.
+
+## Count × dollar scatter: two powers, two axes
+
+Open **Count × $**. The scatter places jurisdictions on stock-count share (x) versus package-dollar share (y). The United States sits mid-count (~**21%**) and extreme-dollar (~**71%**). China sits high-count (~**24%**) and mid-dollar (~**8%** on the Big Fund III tip we score). The EU sits mid on both axes. Japan and Korea are thin on counts and small-but-nonzero on packages. Rest-of-world is the high-count / zero-package tip on this war-chest construction — politically alive on the tape, fiscally invisible in the mega-package pie.
+
+Bubble size tracks package dollars, so the US circle dominates the visual field even when its *count* share is not first. That is intentional. Industrial-policy geography is not a single choropleth; it is at least two overlays — frequency and fiscal firepower — that disagree about which region is “on top.”
+
+## US subnational: AZ · TX · NY as the fab corridor tip
+
+Toggle **US states**. Inside the North American dollar tip, awards still cluster. On a tracked ~**$39.2B** CHIPS megaproject tip built from public facility notices, Arizona (~**$8.5B**, ~**22%**), Texas (~**$8.0B**, ~**20%**), and New York (~**$6.2B**, ~**16%**) together clear about **58%**. Ohio and Oregon add another ~**18%**; the residual “other tracked states” bucket holds the remaining quarter.
+
+This is facility geography, not a full Commerce outlay census, and it is not IRA clean-energy tax-credit *claims* by ZIP code. It still answers a practical location question: when Washington writes a semiconductor industrial-policy cheque, the first-order map is not “the United States” in the abstract — it is a short list of metro corridors with fab campuses, packaging plans, and supplier ecosystems. Supply-chain desks that only model “US onshoring” as a national switch will miss the state-level concentration that determines labour markets, power interconnect queues, and water/permitting risk.
+
+## Sector maps: semis lean Asia; clean energy leans North America
+
+Open **Sectors**. Estimated regional intensity by strategic theme shows why a single world map fails. Semiconductors and advanced packaging remain East Asia–heavy (~**41%** of that sector’s IP geography in our allocation), with North America close behind (~**32%**) on the back of CHIPS awards. Clean energy and grid flip the other way: North America near **48%**, Europe **24%**, East Asia **22%** — the IRA tax-credit machine showing up as geography. EV/battery and dual-use sit more balanced across the three industrial-policy poles. Critical minerals processing still puts East Asia near **44%**, with a thicker RoW tail (~**22%**) reflecting mining and midstream jurisdictions outside the Big Three.
+
+Filter the sector control to **Semis** or **Clean energy** to isolate those two maps. The policy implication is blunt: **tariffs, subsidies, and local-content rules do not redistribute a single homogeneous “industrial capacity”** — they push different sector maps in different directions. A semiconductor export-control stack that bites East Asia is not the same geography as an IRA domestic-content rule that pulls clean-energy capex into North American corridors.
+
+## Flow check: June still belongs to the rest of the world
+
+Switch Regions to **June flow**. The monthly Roundup geography is the humility check. United States **20%**, EU+MS **12%**, China **6%**, rest-of-world **62%** of **823** interventions. Top-3 blocs together are only **38%**. That does not falsify the East Asia stock lead or the North America package lead. It warns that *stock concentration is not flow concentration*: in a single busy month, capitals outside the Big Three can still dominate the raw count tape even when multi-year ledgers and statutory war chests look oligopolistic.
+
+Our [August 202608 toolkit update](/blog/fiscal-industrial-policy-update-202608) already flagged the same asymmetry in monthly data. Geography makes it visual: the RoW slice on the June pie is larger than any single industrial-policy pole. Narrative that “only three capitals matter” fails the monthly map even when it roughly fits the cumulative stock and package-dollar maps.
+
+## Caveats and what this map is not
+
+- **Regional stock shares** roll jurisdiction buckets into continents using the Teneo Big Three (~**63%**) plus estimated Japan/Korea/RoW splits from the theme concentration ledger — they are geography reconstructions, not a new GTA microdata extract.
+- **Package USD figures** are statutory appropriations, mobilisation targets, state-aid approvals, or tax-credit scores — **not outlays-to-date** — and are not comparable dollar-for-dollar across jurisdictions.
+- **US state award shares** are estimated from public CHIPS megaproject / facility notices for a ~**$39B** tracked tip, not a complete Commerce disbursement census, and not IRA energy tax-credit claims.
+- **Sector × region intensities** are estimated allocations of strategic / dual-use themes (GTA ZG #88 + NIPO sector coding), useful for relative geography, not audit-grade HS6 maps.
+- **June 2026 flow** is one month’s Roundup geography — a flow check, not a substitute for multi-year stock.
+- EU is treated as one bloc (EU + member states) to match Teneo Big Three framing; intra-EU member-state geography is out of scope here.
+
+## What desks should take from the map
+
+Industrial-policy geography is a **stack of disagreeing maps**. East Asia leads the cumulative *count* map (~**33%**). North America owns the major *package-dollar* map (~**71%**). AZ·TX·NY own the US *fab-corridor* map (~**58%** of tracked awards). Rest-of-world still owns much of the *monthly flow* map (**62%** in June). Semiconductors lean Asia; clean energy leans North America. Subsidies, tariffs, and industrial-policy toolkits reshape economies by moving these layers at different speeds — not by painting one colour onto one world map.
+
+Related reading: [research ledger](/blog/fiscal-industrial-policy-research-2026) · [concentration companion](/blog/fiscal-industrial-policy-concentration-2026) · [Q3 chokepoint update](/blog/fiscal-industrial-policy-update-2026q3) · [August toolkit update](/blog/fiscal-industrial-policy-update-202608).`,
+  },
+  {
     id: "macro-growth-trade-concentration-2026q3",
     slug: "macro-growth-trade-concentration-2026q3",
     title:
