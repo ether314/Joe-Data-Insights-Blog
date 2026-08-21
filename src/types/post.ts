@@ -129,7 +129,8 @@ export interface Post {
     | "ai-financing-concentration-2026"
     | "energy-systems-update-202608"
     | "macro-growth-trade-update-202608"
-    | "ai-supply-chain-update-202608";
+    | "ai-supply-chain-update-202608"
+    | "ai-capex-intensity-update-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

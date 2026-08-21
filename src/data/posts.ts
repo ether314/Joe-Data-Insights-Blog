@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-intensity-update-202608",
+    slug: "ai-capex-intensity-update-202608",
+    title:
+      "Update: Capex Intensity Edges +0.9 pp — Big-4 Weighted Hits 27.8% After Late-Aug Raises",
+    excerpt:
+      "Versus the mid-Q3 intensity guide, the late-Aug 202608 desk refresh lifts Amazon to 23.8%, Alphabet to 28.3%, and Meta to 40.5%. Big-4 weighted intensity rises +0.9 pp to 27.8% while Amazon’s FCF cushion thins to 0.3%.",
+    category: "Capital Markets",
+    themeId: "ai-capex-intensity",
+    imageUrl: "/images/capital-markets-ai-capex-intensity-update-202608-hero.png",
+    imageAlt:
+      "Dark navy capital-markets hero of rising intensity step-ladder and hyperscaler ratio bars with vintage-delta arrows toward 28%",
+    publishedAt: "2026-08-21T04:00:00Z",
+    featured: true,
+    visualization: "ai-capex-intensity-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 intensity mid-guide
+
+In late August we published the theme’s mid-Q3 guide refresh: [Big-4 weighted intensity at 26.9%](/blog/ai-capex-intensity-update-2026q3) after Amazon / Alphabet / Meta CY26 midpoints and Oracle’s FY26 guide replaced the August H1 annualizations. That post answered what moved once *guidance* replaced *run-rates*. This **202608** note answers the next capital-markets question: **what moved again once the late-August Axis / Street spend vintage stepped Amazon, Alphabet, and Meta midpoints one more time — and does the free-cash-flow cushion still cover the incremental intensity?**
+
+Three information events force the refresh. **Amazon, Alphabet, and Meta** absolute midpoints rise again in the companion [late-Aug spend tracker](/blog/ai-capex-spend-update-202608) (~$240B / ~$218B / ~$150B), and we scale the intensity-frame capex prints by the same step so the ratio ledger stays consistent with the dollar ledger. **Microsoft** still has no new full-year K — FY26 intensity is **held at 26.8%** — while the FCF path slips another half point. **Oracle** FY26 guide intensity is **held at 43.5%**; the credit story does not need another raise to stay extreme. The dashboard above is a vintage delta: Q3 → Aug-20 percentage-point bars, paired levels, an intensity path extended through Aug-20, a toggleable FCF-area cushion path, a dual-vintage intensity×FCF scatter, a Big-4 weighted ladder from July research through this print, and an absolute-dollar bridge.
+
+Pair the ratios with absolute dollars. The spend post says Big-5 midpoints are ~**$858B** (+$23B vs mid-Q3). This post says the *fraction of revenue* those dollars represent is still climbing — and the residual free cash is still shrinking.
+
+## The headline table: Q3 mid-guide vs late-Aug 202608
+
+| Company | Q3 mid-guide | Late-Aug desk | Intensity Δ | Aug-20 FCF | FCF Δ |
+|---------|-------------:|--------------:|------------:|-----------:|------:|
+| Microsoft | FY26 held **26.8%** | FY26 held **26.8%** | **0.0 pp** | 20.9% | −0.5 pp |
+| Amazon | CY26 guide **22.8%** | Late-Aug desk **23.8%** | **+1.0 pp** | 0.3% | −0.8 pp |
+| Alphabet | CY26 guide **27.2%** | Late-Aug mid **28.3%** | **+1.1 pp** | 9.9% | −0.9 pp |
+| Meta | CY26 guide **39.1%** | Late-Aug mid **40.5%** | **+1.4 pp** | 12.6% | −1.3 pp |
+| Oracle | FY26 guide **43.5%** | FY26 held **43.5%** | **0.0 pp** | 3.0% | −0.5 pp |
+
+Revenue-weighted across the big four (ex-Oracle), intensity moves from **26.9% → 27.8%** — a **+0.9 percentage-point** Q3→Aug-20 vintage delta. That is a smaller step than the Aug→Q3 jump (+1.6 pp) and smaller still than the July→August filing jump, but the ladder is monotonic: **21.8% → 25.3% → 26.9% → 27.8%** from July research through this late-August desk. Cumulatively, the big four have added roughly **+6.0 pp** of weighted intensity across four theme vintages in about six weeks of refreshes.
+
+Absolute dollars in this intensity frame rise by about **+$16.5B** across the three raisers (Amazon +$8B, Alphabet +$5B, Meta +$3.5B). Microsoft and Oracle are flat on the ratio *and* on the intensity-scope dollar print; their contribution to the weighted delta is zero, which is why a +0.9 pp headline can coexist with three names doing all the work.
+
+## Meta crosses 40% — the extreme band is no longer a one-name story
+
+Meta’s late-Aug mid intensity of **40.5%** (+1.4 pp vs the Q3 guide) puts the firm past a round number that credit desks actually trade on. Absolute intensity-scope capex near **$98.5B** on ~**$243B** of revenue leaves even less room for the “advertising cash engine absorbs AI” narrative that worked when intensity sat in the low-to-mid thirties. FCF margin slips to **12.6%** (−1.3 pp) — still positive, further from comfortable, and now paired with a ratio that looks more like a foundry than a social-ad platform.
+
+Oracle does not need to move to remain the credit case study. **43.5%** intensity with FCF margin at **3.0%** (−0.5 pp on the path refresh) is still the operating model, not a bridge. Toggle the dashboard’s company filters to isolate Meta + Oracle on the scatter — Meta drifts further right and down; Oracle holds the x-coordinate and slides on the cash axis.
+
+## Amazon’s FCF cushion is inside the noise band
+
+Amazon’s intensity step again looks modest in isolation — **22.8% → 23.8%** (+1.0 pp) — until you read the cash line. FCF margin compresses from **1.1% to 0.3%**. That is still non-negative on the late-Aug framing, but it is inside the error band of working-capital timing, AWS seasonal mix, and guide midpoint rounding. For equity desks that underwrote Amazon after the Q3 print as “thin but positive,” the 202608 vintage says the cushion is effectively gone *before* any recession or delayed monetization year.
+
+Absolute dollars still dominate the industry stack: ~**$183B** of intensity-scope CY26 desk capex aligns in direction with the [late-Aug spend update](/blog/ai-capex-spend-update-202608) Amazon midpoint near **$240B** (different scope — leases and economic framing inflate the spend tracker relative to SEC gross PP&E). The point of this post is not to reconcile those two dollar prints one-for-one. It is that **each revenue dollar is being reinvested harder while the residual free cash shrinks to a rounding error**.
+
+## Alphabet clears 28%; Microsoft remains the control observation
+
+Alphabet’s late-Aug mid intensity of **28.3%** (+1.1 pp) sits deeper above the historical telecom ~20% line and alongside Microsoft in the high twenties. FCF margin at **9.9%** (−0.9 pp) remains healthier than Amazon or Oracle, but the direction matches the cohort: more reinvestment, less residual cash. The fourth raise of the year in the spend tracker is not “just dollars” — it is another percentage point of revenue committed to PP&E.
+
+Microsoft is again the control observation. Intensity is **unchanged at 26.8%** because FY26 is already disclosed and we refuse to invent an FY27 full-year print before the next K. What does move is the FCF path refresh to **20.9%** (−0.5 pp) — still the widest cushion in the set, still drifting lower. For desks that treat Microsoft as the “affordable” AI builder, affordability remains a *relative* statement inside a stretched peer group. The firm is not low-intensity; it is merely the least cash-stressed at a still-elevated 27% reinvestment rate.
+
+## How the Jul→Aug-20 ladder changes the narrative
+
+The dashboard’s weighted ladder panel is the stock answer to “is this just noise?” Four theme vintages in sequence:
+
+1. **July research** — Big-4 weighted ~**21.8%** on FY25 / early-2026 framing.
+2. **August intensity update** — **25.3%** after Microsoft’s FY26 print and H1 annualizations.
+3. **Q3 mid-guide** — **26.9%** after CY26 / FY26 guides replaced run-rates.
+4. **Late-Aug 202608** — **27.8%** after Amazon / Alphabet / Meta desk midpoints stepped again.
+
+No vintage revised *down*. The step sizes are shrinking (+3.5 → +1.6 → +0.9 pp on the weighted print), which is what you expect as the calendar year solidifies — but the *level* is now nearly **six percentage points** above the July research baseline. That is the difference between “elevated reinvestment” and “telecom / foundry territory” as a *cohort* statement, not a Meta/Oracle footnote.
+
+## How to read intensity without mixing scopes
+
+1. **Guide vs disclosed vs desk.** Microsoft FY26 is a closed year. Amazon / Alphabet / Meta late-Aug prints are desk-scaled from Q3 guides using the spend-tracker midpoint step — they will revise at earnings. Oracle FY26 guide is held.
+2. **Ratio vs dollars.** Intensity answers *fraction of revenue reinvested*. Absolute $B answers *cash leaving the firm*. Both appear in the dashboard; they answer different questions. The spend tracker’s Big-5 ~$858B is a different scope than this post’s intensity-frame dollars.
+3. **FCF margin is residual, not optionality.** (OCF − capex) ÷ revenue can be positive while the firm still needs debt or equity to fund the multi-year path — especially when intensity sits above 35%, and especially when Amazon’s residual is 0.3%.
+4. **Oracle is not in the weighted headline.** The big-four weighted print excludes Oracle by design; company panels always include all five for credit context.
+5. **Update vs research.** This post is a vintage delta on top of the [Q3 intensity mid-guide](/blog/ai-capex-intensity-update-2026q3), the [August intensity update](/blog/ai-capex-intensity-update-2026), and the [July research baseline](/blog/ai-capex-intensity-research-2026). Those posts remain the stock ledgers for earlier vintages.
+
+## Is it sustainable?
+
+Sustainability here is not a moral claim. It is a cash-flow claim: can the firm fund the reinvestment rate without a permanent capital-structure change? On the late-Aug 202608 vintage:
+
+- **Microsoft** — still yes on disclosed FY26, with a narrowing but still solid FCF cushion near 21%.
+- **Alphabet** — still yes at ~10% FCF, with rising sensitivity to ad-cycle shocks and a fourth raise already in the books.
+- **Meta** — increasingly contingent on advertising growth outrunning **40%+** intensity; equity can absorb it longer than credit will like.
+- **Amazon** — the mid-guide FCF print is inside noise; any further intensity raise without revenue acceleration makes net debt a feature, not a bridge.
+- **Oracle** — the multi-year releveraging case remains the base case, consistent with the credit narrative in our [AI financing updates](/blog/ai-financing-update-202608).
+
+The scatter panel makes the geometry obvious: the cohort is still migrating toward the bottom-right quadrant (high intensity, thin FCF). That is the opposite of the pre-AI cloud equilibrium (~11% intensity, mid-to-high teens FCF). The Q3→Aug-20 move is smaller than Aug→Q3, but it is directionally the same — and Amazon’s y-coordinate is now kissing zero.
+
+## Caveats and methodology
+
+- **Capex** is gross purchases of property and equipment as reported (or guided) — not net of disposals, and not including all lease-capitalized capacity unless the firm’s guide framing already embeds it. Late-Aug Amazon / Alphabet / Meta intensity-scope dollars are scaled from the Q3 intensity print by the spend-tracker midpoint step; they are not a new SEC line item.
+- **Intensity** = capex ÷ total revenue for the labeled fiscal / calendar window. Microsoft remains on disclosed FY26; calendar names use late-Aug desk midpoints; Oracle uses FY26 guide held.
+- **FCF margin** = (operating cash flow − capex) ÷ revenue. Desk-period FCF uses midpoints and can move with working-capital seasonality.
+- **Spend-tracker scope ≠ intensity scope.** The companion [202608 spend update](/blog/ai-capex-spend-update-202608) includes economic / lease framing that inflates absolute $B relative to SEC gross PP&E. Use each post for its question.
+- **Big-4 weighted intensity** excludes Oracle by design; company panels always include all five.
+- Sector reference bands (telecom ~20%, pre-AI cloud ~11%) carry forward from FCC ARMIS / TIA historical aggregates used in the theme research post.
+- Figures are explanatory data journalism for capital-markets context — **not investment advice**.
+
+**Primary sources:** Microsoft FY26 Form 10-K (held intensity; FCF path refresh); Amazon, Alphabet, and Meta late-Aug CY26 midpoint steps aligned with the companion spend tracker; Oracle FY26 guide intensity (held); prior theme vintages in [capex intensity update (Q3)](/blog/ai-capex-intensity-update-2026q3), [capex intensity update (Aug)](/blog/ai-capex-intensity-update-2026), and [capex intensity research](/blog/ai-capex-intensity-research-2026); absolute-dollar context from [AI capex spend update (202608)](/blog/ai-capex-spend-update-202608).`,
+  },
+  {
     id: "ai-supply-chain-update-202608",
     slug: "ai-supply-chain-update-202608",
     title:

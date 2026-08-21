@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-capex-intensity-update-202608",
+    marker: "Vintage delta — Q3’26 mid-guide → late-Aug 202608",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-supply-chain-update-202608",
     marker: "Vintage delta — Q3 CoWoS tracker → Aug Mid-Year back-end cut",
     forbidden: "Loading interactive charts",
