@@ -2372,6 +2372,21 @@ const ChokepointCommoditiesGeography2026Dashboard = dynamic(
   },
 );
 
+const ConsumerFinanceMarketsGeography2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ConsumerFinanceMarketsGeography2026Dashboard"
+    ).then((m) => m.ConsumerFinanceMarketsGeography2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2991,6 +3006,10 @@ export function PostVisualization({
 
   if (type === "chokepoint-commodities-geography-2026") {
     return <ChokepointCommoditiesGeography2026Dashboard />;
+  }
+
+  if (type === "consumer-finance-markets-geography-2026") {
+    return <ConsumerFinanceMarketsGeography2026Dashboard />;
   }
 
   return null;

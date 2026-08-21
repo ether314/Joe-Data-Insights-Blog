@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "consumer-finance-markets-geography-2026",
+    marker: "Consumer finance — geography lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "chokepoint-commodities-geography-2026",
     marker: "Chokepoint commodities — geography lens",
     forbidden: "Loading interactive charts",

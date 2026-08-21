@@ -2,6 +2,84 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "consumer-finance-markets-geography-2026",
+    slug: "consumer-finance-markets-geography-2026",
+    title:
+      "Charted: West Holds 28% of US Household Debt — California Alone 15%",
+    excerpt:
+      "Geography lens on consumer finance: the West leads Census-region household debt (~28% of the $18.9T perimeter), California alone is ~15%, revolving tip and card 90+ stress lean South, while bank-deposit capacity still thickens in the Northeast (~32%) — three maps that disagree.",
+    category: "Consumer Finance",
+    themeId: "consumer-finance-markets",
+    imageUrl:
+      "/images/consumer-finance-consumer-finance-markets-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic US map with cyan West, amber South, violet Northeast, and teal Midwest debt-share heat plus amber concentration bars",
+    publishedAt: "2026-08-21T23:45:00Z",
+    featured: true,
+    visualization: "consumer-finance-markets-geography-2026",
+    layout: "default",
+    content: `Our [consumer finance markets research](/blog/consumer-finance-markets-research-2026) answered the *structure* question: how households save, borrow, and park retail money after the pandemic cash flood — ~**$169T** in net worth, NY Fed debt near **$18–19T**, thin personal saving, and liquid cash split between deposits and money-market funds. The [concentration lens](/blog/consumer-finance-markets-concentration-2026) then answered the *people* question: top-1 wealth near **30.5%**, equities near **54%**, revolving inverted so the bottom half holds about **30%** of card debt. This post answers the desk question that sits beside those prints: **where does activity, risk, and cash capacity sit on the US map?**
+
+The interactive dashboard above is built as a **geography lens**. Toggle **Regions**, **States**, **Products**, and **Risk & cash**. On regions flip share, dollars, or debt-versus-population; on states filter by Census region; on products switch regional stacks versus Top-1-by-product. The punchline is deliberately multi-map. On **household debt stock**, the West leads at about **28%** of the ~**$18.9T** 2026Q2 perimeter. On **state tips**, California alone is ~**15.2%** — roughly the next two large states combined. On **revolving / card stress**, the South owns both a thicker balance share (~**32%**) and the highest regional 90+ transition (~**8.4%**). On **bank deposits**, the Northeast still clears ~**32%** of FDIC Summary-of-Deposits geography. Debt activity, delinquency, and cash parking are **three different maps**.
+
+## The headline ladder: regional and state shares that disagree
+
+| Lens | Top-1 | Share / rate | What it answers |
+| --- | --- | ---: | --- |
+| HH debt stock (Census regions) | West | **~28%** | Where balances sit |
+| Mortgage balances | West | **~30.5%** | Housing leverage geography |
+| Top-state debt | California | **~15.2%** | Single-state tip |
+| Revolving / cards | South | **~32%** | Unsecured balance geography |
+| Bank deposits (SOD) | Northeast | **~32%** | Cash / capacity geography |
+| Card 90+ stress | South | **~8.4%** | Risk rate (not $ share) |
+
+Read the table as a **family of maps**, not one slogan. Regional debt share tells you which *Census blocs* absorb the NY Fed stock. State tip tells you how much of that stock is a California story. Product geography tells you that mortgages and cards do not share a tip. Deposit geography tells you where *capacity* parks — and it is not the same as where *debt* parks. Averaging these rows into “households are a Sun Belt story” or “households are a coastal wealth story” is a category error — both can be true on different ledgers.
+
+## Regions: West leads dollars; South leads stress
+
+Filter **Regions**. Against the theme’s ~**$18.9T** NY Fed 2026Q2 / Aug-tape perimeter, the West rolls to about **$5.3T** (**~28%**), the South about **$5.1T** (**~27%**), the Northeast about **$4.35T** (**~23%**), and the Midwest about **$4.2T** (**~22%**). West + South clear roughly **55%** of national household debt. Flip the metric to **vs Pop** and the geometry sharpens: the West and Northeast run *above* population share; the South runs *below* population share even while posting the largest absolute population bloc — a reminder that debt stock is a price-and-mortgage story as much as a headcount story.
+
+The debt-share pie is therefore **West-weighted without being a monopoly**. A system where one region holds a little more than a quarter of recorded household debt still leaves three other regions with mid-20s shares. That is the geographic twin of the [concentration ladder](/blog/consumer-finance-markets-concentration-2026): California remains the largest single *state*; rolling California, Washington, Colorado, and Arizona onto the same regional sheet makes the West the thickest *debt region* without claiming that “most US household debt is California.”
+
+Open the companion **Risk & cash** view. The debt-share × card-stress scatter puts the South in the upper-middle quadrant — large debt share *and* the highest 90+ transition (~**8.4%** versus a national theme anchor near **7.2%** and a Northeast print near **5.9%**). The West sits large on dollars with milder card stress. The Northeast sits mid on debt dollars with the softest serious delinquency. Geography separates *balance concentration* from *loss incidence* the same way the [household delinquency split](/blog/us-household-debt-delinquency-split-2026) separates product tapes.
+
+## States: California is still the tip; the top four clear ~38%
+
+Switch to **States**. California alone is about **$2.9T** and **~15.2%** of national household debt — a mortgage-heavy tip that dwarfs every other state cell. Texas (~**8.2%**), Florida (~**7.5%**), and New York (~**7.1%**) complete a top-four bloc near **38%**. Filter by region and the ladder reshapes: South states thicken the revolving and auto columns; Northeast states thicken mortgage-and-HELOC dollars with softer card stress.
+
+The state scatter (debt share × card 90+, bubble = revolving $B) makes the category error visual. California sits far right on debt share with mid-pack delinquency. Georgia and Florida sit left-of-CA on dollars but higher on stress. New York and New Jersey sit mid-right on dollars with the softest card transitions in the top ladder. Desks that only watch the national revolving stock from the [August 202608 update](/blog/consumer-finance-markets-update-202608) (**$1.351T** G.19) will miss that the *state composition* of that stock is not the same as the *state composition* of serious delinquency.
+
+Pair this panel with the [Q3 concentration lens](/blog/consumer-finance-markets-concentration-2026q3) when you need product-mix HHI rather than place: mortgage still dominates the national liability stack (~**70%**), but mortgage *geography* is West-led while revolving *geography* is South-led. Same household balance sheet; different maps.
+
+## Products: mortgage tip is not the card tip or auto tip
+
+Toggle **Products → Regional stack**. The stacked bars put West / South / Northeast / Midwest on one axis per liability type. Mortgages are the West story (~**30.5%** tip) because California housing stock dominates balances. HELOCs tilt Northeast (~**30%**) — older equity, denser coastal housing. Autos and revolving lean South (~**34%** / ~**32%**). Student debt also leans South on this roll-up (~**30%**), closer to population than to mortgage price.
+
+Flip to **Top-1 by product**. The meter is not “the South is risky” or “the West is leveraged” as a single slogan — it is a product-conditioned tip list. A Fed hiking-cycle desk that models *national* revolving APR gaps (see our [card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) companion) still needs a regional incidence layer: the same gap hits a South-heavy revolving book harder in *transition rates* even when the West owns more *mortgage dollars*.
+
+This is why “household credit stress” is not one choropleth. Realized card stress concentration is a **South** story in this geography lens. Stock-of-mortgage concentration is a **West / California** story. Deposit capacity is a **Northeast** story. Our [concentration print](/blog/consumer-finance-markets-concentration-2026) already showed that wealth and revolving disagree by *percentile*; this lens shows they also disagree by *place*.
+
+## Cash parking: Northeast deposits vs West debt
+
+Open **Risk & cash** fully. The debt-activity versus deposit-capacity scatter puts the Northeast above the diagonal — ~**23%** of debt stock against ~**32%** of FDIC commercial-bank deposit geography and an even thicker analytical MMF / wealth proxy (~**34–38%**). The West sits near the other side of the story: ~**28%** of debt against ~**24%** of deposits. The South is closer to balanced on debt versus deposits (~**27%** / ~**28%**) while still owning the card-stress tip. The Midwest is underweight deposits relative to debt (~**16%** / ~**22%**).
+
+The cash-parking composed chart (deposit $T bars + debt-share line) restates the same split without pretending that money-market funds have a clean Census-region AUM census. Treat the MMF / wealth proxies as **analytical**, not ICI state filings. The point survives the caveat: liquid *capacity* still thickens where financial centers and older wealth sit; *borrowing activity* thickens where housing prices and Sun Belt growth sit. Our [money-market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) post tracks the national cash-split tape; this lens asks where that cash *and* that debt live.
+
+## What this geography lens does not claim
+
+- **Regional debt shares** are estimated roll-ups of NY Fed state aggregates against the theme’s ~**$18.9T** perimeter — useful as map structure, not a substitute for the official state Excel cells on every product.
+- **Delinquency rates by region** are estimated composites from product transition patterns; they are not a single disclosed Fed “South card 90+” cell.
+- **Deposit shares** follow FDIC Summary of Deposits commercial-bank geography and exclude credit unions and MMF domicile.
+- **Wealth / MMF regional weights** are analytical DFA×geography composites — not official regional Distributional Financial Accounts.
+- **Top-state ranks** are rounded order-of-magnitude tips for viz; small rank swaps among mid-ladder states would not change the California / top-four punchline.
+
+## What to watch next
+
+Watch three geography meters, not one. First, whether California’s mortgage tip keeps lifting West debt share even if national home-price growth cools — a price-level story can hold share while volumes slow. Second, whether South revolving stress stays elevated relative to the Northeast after the hiking cycle’s lag works through, or whether the gap narrows as labor markets diverge. Third, whether Northeast deposit and wealth proxies keep pulling away from debt shares — a capacity map that refuses to follow the Sun Belt debt map. For percentile tips keep the [concentration series](/blog/consumer-finance-markets-concentration-2026) open; for the national tape keep the [August vintage](/blog/consumer-finance-markets-update-202608) open; for product delinquency keep the [household delinquency split](/blog/us-household-debt-delinquency-split-2026) open.
+
+Primary anchors: NY Fed Household Debt and Credit state / regional aggregates rolled to Census regions against the ~$18.9T 2026Q2 perimeter; Fed G.19 revolving stock; FDIC Summary of Deposits for commercial-bank deposit geography; theme baselines from the research roll-up, concentration prints, and August 202608 tape update.`,
+  },
+  {
     id: "chokepoint-commodities-geography-2026",
     slug: "chokepoint-commodities-geography-2026",
     title:
