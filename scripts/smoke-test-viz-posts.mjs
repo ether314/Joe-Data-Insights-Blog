@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-power-grid-concentration-202608",
+    marker: "AI power & grid — late-Aug 202608 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "energy-systems-concentration-2026q3",
     marker: "Energy systems — Q3 concentration lens",
     forbidden: "Loading interactive charts",

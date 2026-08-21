@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-power-grid-concentration-202608",
+    slug: "ai-power-grid-concentration-202608",
+    title:
+      "Aug Concentration: AI Power Top-1 Still 45% / Top-3 Still 85% — LBNL Moves the Queue Tip, Not the Stock Ladder",
+    excerpt:
+      "Late-Aug 202608 concentration lens: IEA stock Top-1 stays 45% (US) and Top-3 85% (US·China·Europe); Mid-Year softens US demand to +1.8% while services/DC stay the tip; LBNL Queued Up restates US active interconnection at 2,061 GW (−10% y/y) with gas in queue +86% to 253 GW.",
+    category: "Energy",
+    themeId: "ai-power-grid",
+    imageUrl:
+      "/images/energy-ai-power-grid-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside glowing GPU racks and cyan high-voltage grid arcs",
+    publishedAt: "2026-08-21T22:00:00Z",
+    featured: true,
+    visualization: "ai-power-grid-concentration-202608",
+    layout: "default",
+    content: `Our [Q3 concentration print](/blog/ai-power-grid-concentration-2026q3) left a sticky scoreboard: the United States still holds **45%** of global data-centre electricity, US+China+Europe still hold **85%**, and Gartner’s **36%** US cut of **565 TWh** remains a different perimeter—not a rewrite of the IEA stock ladder. The [August Mid-Year vintage](/blog/ai-power-grid-update-202608) then moved the *path* clocks—US demand to **+1.8%** in 2026 / **+3%** in 2027, services H1 **+3%**, and LBNL Queued Up 2026 restating US active interconnection at **2,061 GW** (−**10%** y/y) with gas in queue **+86%** to **253 GW**. This late-Aug concentration lens asks the next desk question: **did Mid-Year and Queued Up rewrite the top-of-distribution shares, or only re-meter the queues and demand tip around a still-sticky ladder?**
+
+The interactive dashboard above is built as a **vintage concentration lens**. Toggle **Scoreboard**, **Perimeters**, **Queues & tech**, and **Pace & local**. Use the **Lens** control on the cumulative curve to flip stock versus growth, the queue **Metric** control to swap GW stock for YoY %, and the cluster **Y-axis** control to swap global capacity share for pipeline intensity. The punchline is sticky on purpose. IEA Top-1 remains **45%** and Top-3 **85%**. What *did* restate is the US interconnection tip—solar still Top-1 of the active book at ~**37.5%**, but gas is the only major technology rising—and the Mid-Year evidence that services (including data centres) concentrate growth *inside* a soft US total.
+
+## The headline ladder: Q3 vs late-Aug restatement
+
+| Lens | Q3 concentration | Aug 202608 print | Δ |
+| --- | ---: | ---: | ---: |
+| Top-1 DC electricity stock (US, IEA) | **45%** | **45%** | **0 pp** (carried) |
+| Top-3 regional stock (US·CN·EU) | **85%** | **85%** | **0 pp** |
+| US share — Gartner 2026 DC TWh | **36%** (204 / 565 TWh) | **36%** | **0 pp** (carried) |
+| US + China share of growth to 2030 | **~80%** | **~80%** | **0 pp** |
+| US active interconnection (LBNL) | gen proxy ~**1.3 TW** | **2,061 GW** gen+storage | **scope + restated** |
+| US gas in queue | ~**136 GW** (prior y/y base) | **253 GW** | **+86% y/y** |
+| US median IR→COD | **~5.0 yr** | **5.5 yr** | **+0.5 yr** |
+| US demand growth 2026 | soft narrative | **+1.8%** Mid-Year | **locked** |
+| 2030 dual-ledger gap (IEA vs Gartner) | **~250 TWh** | **~250 TWh** | **0** (carried) |
+
+Read the table as a **stability-plus-queue scoreboard**. Path and interconnection meters moved. Stock concentration *architecture* did not. That is the Aug contribution relative to the [Q3 concentration companion](/blog/ai-power-grid-concentration-2026q3): Mid-Year and Queued Up re-meter delay and demand tips; the top-of-distribution country shares stay put—once you refuse to confuse a gen+storage queue restatement with a regional electricity census.
+
+## Scoreboard: five perimeters, one sticky architecture
+
+Open **Scoreboard**. The vintage-delta bars show flat Top-1 / Top-3 stock shares beside rising US gas-in-queue, a longer median interconnection clock, and a Mid-Year US demand print that softens slightly versus the prior soft narrative. The scoreboard table separates those objects on purpose: IEA stock, Gartner composition, growth, local intensity, and US queue-tech mix are not interchangeable numerators.
+
+The lens scatter puts stock (**45% / 85%**), growth (**~45% / ~78%** US+China as Top-2), US queue tech (**~37.5% / ~86%** solar / solar+storage+gas), and local intensity (**Virginia 25% / Ireland 20%**) on one plane. Stock and growth sit in the high Top-3 corner. The queue-tech lens is the Aug-specific addition: concentration *inside* the interconnection book, not a rewrite of who owns global DC watts. **Global averages still hide the politics; Aug path meters did not invent that fact—they sharpened the firm-power bid inside the queue.**
+
+## Perimeters: why 45% and 36% can still both be true
+
+Switch to **Perimeters**. The US-share compare panel remains the analytical heart of the theme. IEA’s 2024 DC electricity stock still puts the United States at **45%**. Gartner’s June 2026 newsroom path still puts the US at **36%** of **565 TWh**—about **204 TWh**. Those are not competing claims about the same pie. Mixing them into a “US share fell nine points” headline remains a category error. Pair this with the [August update](/blog/ai-power-grid-update-202608) for the Mid-Year path narrative and with the [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) post when you need LBNL demand-versus-miles rather than world shares.
+
+The growth donut still shows US ~**45%** and China ~**33%** of incremental TWh to 2030—together ~**80%**. Europe remains a single-digit growth slice. The dual-ledger line keeps IEA central (~**950 TWh** in 2030) and Gartner (>**1,200 TWh**) on separate tracks. Do not average them. The gap (~**250 TWh**) is still a forecast-dispersion meter. It does not move Top-1 / Top-3 shares by itself—but Mid-Year’s US demand path (**+1.8%** then **+3%**) raises the stakes of *where* the next gigawatts land if the higher Gartner path proves closer to right while queues stay multi-year.
+
+The regional stock bars are carried for a reason. Until a superseding IEA period census prints, US **45%** / China **25%** / Europe **15%** is the live Top-3 architecture. Aug did not democratise that ladder.
+
+## Queues & tech: the concentration that did restate
+
+Toggle **Queues & tech**. This is the Aug desk’s distinctive panel set. LBNL Queued Up 2026 Edition restates US active generation plus storage at **2,061 GW**—down **10%** year-over-year—while the IA backlog sits near **549 GW**. Flip the queue **Metric** control from **GW stock** to **YoY %** and the story flips: solar (**773 GW**, ~**37.5%** of active) and storage (**749 GW**, ~**36%**) still dominate the stock tip, but both are shrinking; gas (**253 GW**, ~**12%**) is the only major technology rising, at **+86%** y/y.
+
+That is the first Aug hinge. **Concentration of firm-power bids into the interconnection book can intensify even while the total queue shrinks.** A −10% headline on active GW is not deconcentration of AI power risk—it is a composition shift toward the fuels and storage that hyperscale campuses need when intermittents alone cannot clear deliverability in five-hub corridors.
+
+The Mid-Year demand path and H1 sector split sit beside the queue pie for a reason. World electricity demand accelerates (**+3.6%** in 2026 / **+3.8%** in 2027). The US softens to **+1.8%** in 2026 after a mild H1 (**+1.0%** total), then re-accelerates to **+3%** in 2027. Inside that soft H1, services (including data centres) print **+3.0%** while residential falls **−1.7%**. Growth concentration *inside* the US demand story is still a data-centre story even when the national aggregate looks calm. Wholesale price geography sharpens a related asymmetry: EU and Japan Q2 wholesale prices jump ~**30%** on Hormuz LNG pass-through while the US prints flat—another reminder that “AI power stress” is not one global meter.
+
+## Pace and local intensity: clocks still outrun campuses
+
+Open **Pace & local**. Demand clocks (campus ~**2.5 years**, GPU refresh ~**1.5**) still outrun grid clocks. What Aug restates is the US median interconnection clock: **5.5 years** IR→COD in Queued Up 2026, a half-year longer than the prior ~**5-year** print carried in earlier theme posts. Transmission in advanced economies still often takes **4–8 years**. Completion rates remain brutal historically (~**13%** of requests from 2000–2020 reaching COD; ~**75%** withdrawn).
+
+Local intensity bars are unchanged for a reason. Virginia ~**25%** of state electricity and Ireland ~**20%** of metered supply are still an order of magnitude above the ~**1.5%** world average. Six US states remain above the **10%** threshold. Northern Virginia still anchors the cluster scatter at roughly **4.9 GW** operating IT load and about **13%** of reported global operational capacity. Nearly **half** of US data-centre capacity still sits in five regional clusters. The second Aug hinge: **a longer median queue clock plus a gas surge into the same corridors is a worse planning problem, not a calmer one.** Firm generation announcements do not clear deliverability by themselves when half the US pipeline still aims at five hubs.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that treat a −**10%** US queue headline as proof AI interconnection risk eased; soft-landing narratives that read Mid-Year’s **+1.8%** US demand print without the services **+3%** tip; interconnection reform debates that quote national generation surplus while Virginia and Ireland intensity stay extreme; capital plans that ignore gas’s **+86%** queue bid as the firm-power answer to AI load in congested hubs.
+
+**Relative winners under current rules:** corridors that can site *outside* saturated US five-cluster footprints without losing latency or fibre depth; utilities and ISOs that clear flexible interconnection and storage packages while gas projects race studies; China growth share that still captures ~**one-third** of incremental TWh; equipment and EPC suppliers whose lead times bind wherever the same two countries bid ~**80%** of sector growth.
+
+**What would change the story:** a superseding IEA period census that drops US stock share well below ~**35%** *and* Top-3 below ~**70%**; multi-year evidence that US pipeline share in existing large clusters falls well below **50%**; Virginia and Ireland intensity peaking and then declining; US median IR→COD compressing back toward ~**3 years** with completion rates well above the historical teens; gas-in-queue growth reversing without simply relocating congestion to Dublin, Singapore, or the Pearl River Delta. None of those clear this late-Aug window. The architecture is sticky; the queue composition and Mid-Year path meters are not.
+
+## Caveats and methodology
+
+1. **IEA regional stock shares (Top-1 45% / Top-3 85%) and US+China growth share (~80%) are carried** from the prior concentration prints and Energy and AI regional cuts. No new IEA period census in this window.
+2. **Gartner’s 36% US share of 565 TWh is a different perimeter** from IEA’s Energy-and-AI stock cut—do not average or chain them into a single “US share path.”
+3. **LBNL Queued Up 2026 (2,061 GW active) is gen+storage** and is not comparable one-for-one to earlier gen-only queue proxies or to IEA’s worldwide stalled connection stock (>**2,500 GW**, carried).
+4. **Gas queue +86%** is a disclosed LBNL year-over-year print for end-2025 data; it is a firm-power *bid* into queues, not COD. Completion rates historically remain low.
+5. **Mid-Year US +1.8% / services H1 +3%** are demand-path meters. They do not rewrite regional DC electricity stock shares by themselves.
+6. **Cluster IT-load and pipeline shares** for non-NoVa markets remain estimated public tallies; treat rank order as directional.
+7. **Dual-ledger 2030 gap (~250 TWh)** is forecast dispersion between IEA central and Gartner—not a concentration share.
+
+**Primary sources:** IEA Electricity Mid-Year Update 2026; LBNL Queued Up 2026 Edition; Gartner newsroom 10 Jun 2026 (carried path); IEA Energy and AI regional shares (carried); theme posts [Q3 concentration](/blog/ai-power-grid-concentration-2026q3), [prior concentration](/blog/ai-power-grid-concentration-2026), [August Mid-Year update](/blog/ai-power-grid-update-202608), [Q3 update](/blog/ai-power-grid-update-2026q3), [research](/blog/ai-power-grid-research-2026), and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).
+
+**Bottom line:** Late-Aug 202608 does **not** rewrite the ladder of country shares—it **re-meters the tip inside the queues and the US demand path**. Top-1 stays **45%**; Top-3 stays **85%**; US active interconnection restates at **2,061 GW** with gas **+86%** to **253 GW** while solar remains the stock Top-1 of the book. Path clocks moved. Stock architecture did not.`,
+  },
+  {
     id: "energy-systems-concentration-2026q3",
     slug: "energy-systems-concentration-2026q3",
     title:
