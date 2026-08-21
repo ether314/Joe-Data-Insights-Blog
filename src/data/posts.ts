@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "migration-humanitarian-update-2026q3",
+    slug: "migration-humanitarian-update-2026q3",
+    title:
+      "Update: GHO Coverage Jumped +16pp to 40.4% — Displacement Still Carried at 117.8M",
+    excerpt:
+      "Versus our May Mid-Year Review vintage, August FTS books $14.08B against a $34.87B ask. Coverage heals from 24.4% to 40.4% while the people stock stays carried and UNHCR’s 2026 budget is already cut 20%.",
+    category: "Politics",
+    themeId: "migration-humanitarian",
+    imageUrl:
+      "/images/politics-migration-humanitarian-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz hero with teal +16pp coverage callout and amber incomplete funding-gap ribbon over migration corridor arcs",
+    publishedAt: "2026-08-21T10:00:00Z",
+    featured: true,
+    visualization: "migration-humanitarian-update-2026q3",
+    layout: "default",
+    content: `## What changed since the May update
+
+Our [May Global Trends / Mid-Year Review update](/blog/migration-humanitarian-update-2026) closed on a scissors that finally bent on the people side: forced displacement down to **117.8 million** at end-2025, returns up **50%**, resettlement halved, LMIC host share at **68%**, and GHO appeal coverage stuck near **24.4%** even after the ask was stripped back to **$33.66B**. That post answered what moved once the first decade-long stock decline landed. This **2026Q3** refresh asks the next vintage question markets and desks actually trade on a summer cadence: **what changed once late-summer FTS and UNHCR’s Global Appeal 2026 prints replaced the 31 May Mid-Year Review cash ledger — and did the funding side finally heal while people meters stayed frozen?**
+
+The cash answer is loud. OCHA’s GHO 2026 monitoring snapshot now shows requirements at **$34.87B** and funding at **$14.08B**, for coverage of **40.4%** — a **+16.0 percentage-point** jump from the May Mid-Year Review’s **24.4%**. Funded inflows rose **+$5.87B**; the unfunded gap narrowed from **$25.45B to $20.79B**. The people answer is quieter by design: displacement stocks, host shares, and GHO people-in-need remain **carried** from Global Trends 2025 / the May MYR until UNHCR’s Mid-Year Trends (typically October/November). Meanwhile UNHCR’s own 2026 needs budget was deliberately cut to **$8.505B** (**−19.8%** versus the 2025 Global Report’s **$10.604B**), with early pledges covering only about **18%** of that smaller ask, and mid-year operational messaging still flagging roughly **11.6 million** people at risk of losing assistance from prior funding cuts.
+
+The dashboard above is built as a May→August vintage delta: dumbbell meters, a coverage waterfall, a dual stock×cash path, diverging “who bears it” bars, an UNHCR budget scissors panel, a host-income scatter, and an editorial crisis-plan coverage scatter. Use the **View**, **Burden lane**, and **Sort** controls to isolate cash, hosts, donors, agency cuts, or plan-level geometry.
+
+## The headline table: May Mid-Year Review → August FTS
+
+| Metric | Prior (May update) | Newest Q3 print | Δ |
+| --- | ---: | ---: | ---: |
+| GHO appeal coverage | **24.4%** | **40.4%** | **+16.0pp** |
+| GHO funded (FTS) | **$8.21B** | **$14.08B** | **+$5.87B** |
+| GHO requirements | **$33.66B** | **$34.87B** | **+$1.21B (+3.6%)** |
+| GHO unfunded gap | **$25.45B** | **$20.79B** | **−$4.66B** |
+| Forcibly displaced | **117.8M** | **117.8M** | **unchanged (carried)** |
+| GHO people in need | **252.1M** | **252.1M** | **unchanged (carried)** |
+| LMIC refugee host share | **68%** | **68%** | **unchanged (carried)** |
+| LDC refugee host share | **26%** | **26%** | **unchanged (carried)** |
+| UNHCR needs budget | **$10.604B** (2025) | **$8.505B** (2026) | **−19.8%** |
+| UNHCR early-pledge / funded share | **37%** (2025 year-end) | **~18%** (2026 pledges) | **−19pp (not like-for-like)** |
+| People at risk from cuts | — | **~11.6M** | **new operational flag** |
+
+The story is not “displacement reversed again.” The stock is **carried**. The lever that moved is the **cash ledger** on a stripped-back appeal — and even that healing leaves a **~$21B** hole while agency budgets were already rewritten downward.
+
+## Coverage healed — the ask still crept up
+
+Toggle **View → Cash ledger**. The coverage waterfall decomposes the **+16pp** into a large funded-inflow contribution and a small negative from ask creep. Requirements rose from **$33.66B to $34.87B** even as funded dollars nearly doubled from the May print. That matters for narrative discipline: coverage can rise because donors write cheques **or** because the ask shrinks. Here donors wrote cheques **and** the ask edged higher — so the coverage gain is the harder kind.
+
+The GHO cash-path panel puts requirements, funded, and gap on one chart. Funded climbs from **$8.21B to $14.08B**; the gap falls from **$25.45B to $20.79B** but does not close. Pair this with our [prior update](/blog/migration-humanitarian-update-2026): the May vintage already showed that shrinking the ask (versus 2025’s **$45B**-class print) does not by itself heal coverage. August shows the complementary truth — inflows can heal coverage without healing the people stock, and without erasing a twenty-billion-dollar shortfall on a deliberately prioritized appeal.
+
+## People meters are carried — and that is the point
+
+The dual stock×cash panel is the visual punchline. Forced displacement sits flat at **117.8M** across the May and August vintage points while coverage jumps from **24.4% to 40.4%**. That is not a data failure; it is calendar hygiene. UNHCR’s Global Trends 2025 remains the last official year-end stock. Mid-Year Trends for H1 2026 are not yet the street print as of this Q3 note. GHO people-in-need (**252.1M**) and people targeted (**143.2M**) are likewise carried from the May Mid-Year Review rather than invented from an incomplete FTS people tab.
+
+Carried meters are still analytical content. They tell you which side of the scissors moved this quarter: **cash**, not **census**. Desks that equate “coverage up” with “crisis resolved” are reading the wrong axis. The people axis is waiting for the autumn Mid-Year Trends print; until then, the honest headline is a funding vintage delta sitting on top of a frozen stock.
+
+## Who still bears the costs
+
+Toggle **View → Who bears it** and filter **Burden lane**. Host shares are carried from Global Trends 2025: LMIC hosts still at **68%**, LDCs at **26%**, high-income hosts at **29%**. Those percentages did not improve because coverage improved. Hosting is a people geography problem; FTS coverage is a donor cash problem. The diverging Δ bars make that asymmetry explicit: donors show the large positive move; host lanes sit near zero because they are carried; the agency lane shows a **−20%** budget rewrite and a new **11.6M** at-risk flag.
+
+That distribution answers the theme’s core cost question more cleanly than arrival headlines. Rich-country political narratives still orbit border encounters and asylum backlogs. The Q3 official vintage says the **cash** side of the multilateral ledger moved late in summer, while the **host** side of the ledger — who shelters refugees day to day — has not been restated and was already majority-LMIC when last measured. Pair the burden panel with our [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024) and [OECD DAC ODA drop](/blog/oecd-dac-oda-first-drop-2024) posts: private remittances and bilateral ODA fights do not substitute for the hosting stock that low- and middle-income countries still carry.
+
+## UNHCR’s scissors cut the ask before coverage healed
+
+The UNHCR budget panel is the agency-level version of the same story. The 2025 Global Report closed at a **$10.604B** needs budget with only **37%** funded. The 2026 Global Appeal resets the needs budget to **$8.505B** — about **20%** lower — while planning around **136 million** forcibly displaced and stateless people. Early pledging covered roughly **18%** of that smaller envelope. The comparison is not like-for-like year-end funded percentages, and the dashboard labels the early-pledge share as estimated relative to the 2025 year-end meter.
+
+Read the cut as strategy under constraint, not as evidence that needs fell **20%**. UNHCR’s own mid-year messaging still ties funding cuts to roughly **11.6 million** people at risk of losing urgently needed assistance. The solutions-channel bars keep the asymmetry from the May update: **14.7 million** returns (carried) dwarf **81,800** resettlement arrivals, while the new at-risk bar sits near the scale of the entire refugee-return corridor. Durable solutions are still mostly returns; third-country pathways remain a rounding error; and operational cut risk is now a first-class meter beside them.
+
+## Crisis plans: average coverage hides the thin corridors
+
+Toggle **View → Crisis plans**. The scatter is an **editorial mix** scaled to the August GHO total — not a cite-ready FTS extract for any single plan. X is requirements, Y is coverage, bubble size tracks people in need. A horizontal reference marks the GHO average at **40.4%**. The geometry matters more than any one bubble: large African and multi-country corridors often sit **below** the average line even when the global coverage meter looks “healed.” Ukraine-class plans can clear **50%** while Sudan / Sahel-class plans stay stuck in the mid-20s in this mix.
+
+That is the vintage lesson for desks that only quote the global percentage. **40.4%** is a portfolio average. It does not mean every crisis corridor is 40% funded. Use the scatter for relative burden geometry; use official FTS plan pages when you need a single-plan citation. The dashboard’s source footer says the same thing in plain language.
+
+## How to read the dashboard
+
+Start with **View → Cash ledger** and **Sort → Largest Δ** to see which meters actually moved. Flat dumbbells are carried people prints; teal bars are cash healing; red marks worsening or cut risk. Open the waterfall for the **+16pp** decomposition, then the dual stock×cash path to keep the frozen census honest. Switch to **Who bears it** and filter by **hosts / donors / agency** when the question is distribution rather than headline coverage. Finish on **Crisis plans** if the question is whether the average hides thin corridors. Hover any mark for confidence labels — disclosed, estimated, or carried.
+
+## Caveats and source boundaries
+
+1. **Displacement stocks and host shares are carried** from UNHCR Global Trends 2025 until Mid-Year Trends land. Do not treat the flat 117.8M as a new H1 2026 census.
+2. **GHO coverage is derived** from disclosed requirements (**$34.87B**) and funding (**$14.08B**) on the humanitarianaction.info monitoring snapshot; FTS figures move daily.
+3. **People-in-need / targeted** remain the May Mid-Year Review prints (**252.1M / 143.2M**) unless a newer GHO people restatement is cited.
+4. **UNHCR 2025 year-end funded % (37%) is not like-for-like** with 2026 early-pledge share (~18%). The scissors panel is a budget-path story, not a matched funding-rate YoY.
+5. **Crisis-plan scatter points are estimated editorial mixes**, not official plan extracts — labeled as such in the viz.
+6. **At-risk caseload (~11.6M)** is an operational UNHCR flag, not a Global Trends stock category.
+7. **Returns and resettlement** remain Global Trends 2025 carried solutions meters in this Q3 note.
+
+## Methodology
+
+**Prior vintage** mirrors meters from [migration-humanitarian-update-2026](/blog/migration-humanitarian-update-2026): end-2025 Global Trends stocks, GHO 2026 Mid-Year Review FTS as of **31 May 2026** (requirements **$33.66B**, funding **$8.21B**, coverage **24.4%**, PiN **252.1M**), and UNHCR Global Report 2025 budget/funded ratios. **Newest cash ledger** uses the OCHA GHO 2026 monitoring snapshot on humanitarianaction.info (**$34.87B** requirements, **$14.08B** funding; coverage **40.4%** derived). **UNHCR 2026** budget and planning figures follow Global Appeal 2026 (**$8.505B**, **136M** planning figure); early-pledge share and at-risk caseload follow UNHCR pledging / mid-year operational messaging. Dashboard deltas are arithmetic comparisons of those prints; carried meters are labeled carried; plan-level bars are estimated mixes for geometry only.
+
+**Unlike a border-apprehension dashboard, this Q3 update measures the late-summer humanitarian cash vintage against a carried global forced-displacement stock — who paid into the stripped appeal, who still hosts, and what the agency cut before coverage healed.**
+
+Related reading: [May Global Trends update](/blog/migration-humanitarian-update-2026), [migration–humanitarian research](/blog/migration-humanitarian-research-2026), [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024), and [OECD DAC ODA first drop](/blog/oecd-dac-oda-first-drop-2024).`,
+  },
+  {
     id: "demographic-cash-flows-concentration-2026",
     slug: "demographic-cash-flows-concentration-2026",
     title:

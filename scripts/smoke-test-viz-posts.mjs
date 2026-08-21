@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "migration-humanitarian-update-2026q3",
+    marker: "Coverage jumped +16pp — people stock still carried",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "demographic-cash-flows-concentration-2026",
     marker: "Demographic cash flows — concentration lens",
     forbidden: "Loading interactive charts",
