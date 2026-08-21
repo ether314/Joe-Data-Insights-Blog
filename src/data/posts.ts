@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-intensity-update-2026q3",
+    slug: "ai-capex-intensity-update-2026q3",
+    title:
+      "Update: Capex Intensity Climbs Another +1.6 pp — Big-4 Weighted Hits 26.9%",
+    excerpt:
+      "Versus the August intensity update, mid-Q3 CY26 guides lift Meta to 39.1% and Oracle to 43.5%. Big-4 weighted intensity rises +1.6 pp to 26.9% while Amazon’s FCF cushion thins to 1.1%.",
+    category: "Capital Markets",
+    themeId: "ai-capex-intensity",
+    imageUrl: "/images/capital-markets-ai-capex-intensity-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of five rising intensity percentage columns crossing a telecom 20% reference line in cyan and amber",
+    publishedAt: "2026-08-21T02:00:00Z",
+    featured: true,
+    visualization: "ai-capex-intensity-update-2026q3",
+    layout: "default",
+    content: `## What changed since the August intensity update
+
+In mid-August we published the theme’s filing refresh: [Big-4 weighted intensity at 25.3%](/blog/ai-capex-intensity-update-2026) after Microsoft’s FY26 print (26.8%), H1’26 annualizations for Amazon / Alphabet / Meta, and Oracle’s FY25 restatement to 39.4%. That post answered what moved once the newest *reported* vintage landed. This Q3 note answers the next capital-markets question: **what moved once CY26 / FY26 guidance midpoints replaced H1 annualizations — and is the free-cash-flow cushion still covering the step-up?**
+
+Three information events force the refresh. **Amazon, Alphabet, and Meta** mid-Q3 desk guides raise absolute capex (and therefore intensity) versus the H1×2 run-rates we carried in August. **Oracle** rolls from restated FY25 into an FY26 guide intensity near the mid-forties. **Microsoft** has no new full-year K — FY26 intensity is **held at 26.8%** — but the FCF path continues to compress on the same disclosed year. The dashboard above is a vintage delta: Aug → Q3 percentage-point bars, paired levels, an intensity path extended to Q3’26 guide, a toggleable FCF-area cushion path, a dual-vintage intensity×FCF scatter, and an absolute-dollar bridge.
+
+Pair the ratios with the companion [mid-Q3 spend tracker](/blog/ai-capex-spend-update-2026q3): absolute dollars and intensity are climbing together. Dollars alone do not tell you whether the build is sustainable; intensity × FCF does.
+
+## The headline table: Aug vintage vs Q3 mid-guide
+
+| Company | Aug vintage | Q3 mid-guide | Intensity Δ | Q3 FCF margin | FCF Δ |
+|---------|------------:|-------------:|------------:|--------------:|------:|
+| Microsoft | FY26 **26.8%** | FY26 held **26.8%** | **0.0 pp** | 21.4% | −0.7 pp |
+| Amazon | H1’26 ann. **21.2%** | CY26 guide **22.8%** | **+1.6 pp** | 1.1% | −1.3 pp |
+| Alphabet | H1’26 ann. **25.4%** | CY26 guide **27.2%** | **+1.8 pp** | 10.8% | −1.8 pp |
+| Meta | H1’26 ann. **36.5%** | CY26 guide **39.1%** | **+2.6 pp** | 13.9% | −2.2 pp |
+| Oracle | FY25 restated **39.4%** | FY26 guide **43.5%** | **+4.1 pp** | 3.5% | −3.7 pp |
+
+Revenue-weighted across the big four (ex-Oracle), intensity moves from **25.3% → 26.9%** — a **+1.6 percentage-point** Aug→Q3 vintage delta. That is a smaller step than the July→August jump (+2.3 pp in the prior update’s headline framing), but it is still another full notch deeper into telecom / foundry territory. Cumulatively from the July research weighted print (~21.8%) to this Q3 guide set, the big four have added roughly **+5.1 pp** of intensity in two months of vintage refreshes.
+
+## Meta and Oracle: the extreme band keeps widening
+
+Meta’s CY26 guide intensity of **39.1%** (+2.6 pp vs August’s H1 annualization) puts the firm deeper inside the historical peak-telecom band and further above the wireline ~20% norm. Absolute guide midpoints near **$95B** of capex on ~**$243B** of revenue leave less room for the “advertising cash engine absorbs AI” narrative that worked when intensity sat in the low thirties. FCF margin slips to **13.9%** (−2.2 pp) — still positive, no longer comfortable.
+
+Oracle’s move is larger in percentage points because the denominator is smaller and the FY26 guide is a true regime change from the restated FY25 base. **43.5%** intensity with FCF margin at **3.5%** is the credit desk’s live case study: reinvestment is no longer a temporary bridge; it is the operating model. Toggle the dashboard’s company filters to isolate Meta + Oracle on the scatter — both points drift right (higher intensity) and down (thinner FCF) between vintages.
+
+## Amazon’s FCF cushion is the sustainability warning light
+
+Amazon’s intensity step looks modest in isolation — **21.2% → 22.8%** (+1.6 pp) — until you read the cash line. FCF margin compresses from **2.4% to 1.1%**. That is still positive on the mid-guide framing, but it is inside the error band of working-capital timing and AWS seasonal mix. For equity desks that underwrite Amazon as the volume AI builder with “enough cash,” the Q3 vintage says the cushion is nearly gone even before a recession or a delayed monetization year.
+
+Absolute dollars still dominate the industry stack: ~**$175B** of CY26 guide capex in this intensity frame aligns with the direction of the [Q3 spend update](/blog/ai-capex-spend-update-2026q3). The point of this post is not the dollar total — it is that **each revenue dollar is being reinvested harder while the residual free cash shrinks**.
+
+## Alphabet steps further into the elevated band; Microsoft holds the ratio
+
+Alphabet’s CY26 guide intensity of **27.2%** (+1.8 pp) clears the historical telecom ~20% line with room to spare and sits alongside Microsoft in the mid-to-high twenties. FCF margin at **10.8%** (−1.8 pp) remains healthier than Amazon or Oracle, but the direction matches the cohort: more reinvestment, less residual cash.
+
+Microsoft is the control observation. Intensity is **unchanged at 26.8%** because FY26 is already disclosed and we refuse to invent an FY27 full-year print before the next K. What does move is the FCF path refresh to **21.4%** (−0.7 pp) — still the widest cushion in the set, still drifting lower. For desks that treat Microsoft as the “affordable” AI builder, affordability is now a relative statement inside a stretched peer group, not a claim that intensity is low.
+
+## How to read intensity without mixing scopes
+
+1. **Guide vs disclosed.** Microsoft FY26 is a closed year. Amazon / Alphabet / Meta CY26 and Oracle FY26 are mid-Q3 guide midpoints — they will revise at earnings.
+2. **Ratio vs dollars.** Intensity answers *fraction of revenue reinvested*. Absolute $B answers *cash leaving the firm*. Both appear in the dashboard; they answer different questions.
+3. **FCF margin is residual, not optionality.** (OCF − capex) ÷ revenue can be positive while the firm still needs debt or equity to fund the multi-year path — especially when intensity sits above 35%.
+4. **Oracle is not in the weighted headline.** The big-four weighted print excludes Oracle because its revenue base would dominate the average without representing the hyperscaler cash-engine story. Oracle is shown in every panel for credit context.
+5. **Update vs research.** This post is a vintage delta on top of the [August intensity update](/blog/ai-capex-intensity-update-2026) and the [July research baseline](/blog/ai-capex-intensity-research-2026). Those posts remain the stock ledgers for FY25 and the first Aug refresh.
+
+## Is it sustainable?
+
+Sustainability here is not a moral claim. It is a cash-flow claim: can the firm fund the reinvestment rate without a permanent capital-structure change? On the Q3 vintage:
+
+- **Microsoft** — still yes on disclosed FY26, with a narrowing but solid FCF cushion.
+- **Alphabet** — still yes at ~11% FCF, with rising sensitivity to ad-cycle shocks.
+- **Meta** — increasingly contingent on advertising growth outrunning 39% intensity; equity can absorb it longer than credit will like.
+- **Amazon** — borderline on the mid-guide FCF print; any further intensity raise without revenue acceleration makes net debt a feature, not a bridge.
+- **Oracle** — the multi-year releveraging case remains the base case, consistent with the credit narrative in our [AI financing updates](/blog/ai-financing-update-2026q3).
+
+The scatter panel makes the geometry obvious: the cohort is migrating toward the bottom-right quadrant (high intensity, thin FCF). That is the opposite of the pre-AI cloud equilibrium (~11% intensity, mid-to-high teens FCF).
+
+## Caveats and methodology
+
+- **Capex** is gross purchases of property and equipment as reported (or guided) — not net of disposals, and not including all lease-capitalized capacity unless the firm’s guide framing already embeds it.
+- **Intensity** = capex ÷ total revenue for the labeled fiscal / calendar window. Microsoft remains on disclosed FY26; calendar names use CY26 guide midpoints; Oracle uses FY26 guide.
+- **FCF margin** = (operating cash flow − capex) ÷ revenue. Guide-period FCF uses desk midpoints and can move with working-capital seasonality.
+- **H1’26 annualized** figures in the August prior vintage are H1×2 run-rates, not full-year actuals — that is why the Aug→Q3 delta mixes a method change (ann. → guide) with a true spending change.
+- **Big-4 weighted intensity** excludes Oracle by design; company panels always include all five.
+- Sector reference bands (telecom ~20%, pre-AI cloud ~11%) carry forward from FCC ARMIS / TIA historical aggregates used in the theme research post.
+- Figures are explanatory data journalism for capital-markets context — **not investment advice**.
+
+**Primary sources:** Microsoft FY26 Form 10-K (held intensity; FCF path refresh); Amazon, Alphabet, and Meta mid-Q3 CY26 guide midpoints aligned with the companion spend tracker; Oracle FY26 guide intensity; prior theme vintages in [capex intensity update (Aug)](/blog/ai-capex-intensity-update-2026) and [capex intensity research](/blog/ai-capex-intensity-research-2026); absolute-dollar context from [AI capex spend update (Q3)](/blog/ai-capex-spend-update-2026q3).`,
+  },
+  {
     id: "macro-growth-trade-update-2026q3",
     slug: "macro-growth-trade-update-2026q3",
     title:
