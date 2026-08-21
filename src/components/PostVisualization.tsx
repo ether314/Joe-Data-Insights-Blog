@@ -2252,6 +2252,21 @@ const AiPowerGridConcentration202608Dashboard = dynamic(
   },
 );
 
+const FiscalIndustrialPolicyGeography2026q3Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FiscalIndustrialPolicyGeography2026q3Dashboard"
+    ).then((m) => m.FiscalIndustrialPolicyGeography2026q3Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2839,6 +2854,10 @@ export function PostVisualization({
 
   if (type === "ai-power-grid-concentration-202608") {
     return <AiPowerGridConcentration202608Dashboard />;
+  }
+
+  if (type === "fiscal-industrial-policy-geography-2026q3") {
+    return <FiscalIndustrialPolicyGeography2026q3Dashboard />;
   }
 
   return null;

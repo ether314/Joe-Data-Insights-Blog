@@ -176,7 +176,8 @@ export interface Post {
     | "ai-financing-concentration-202608"
     | "ai-capex-intensity-concentration-2026q3"
     | "energy-systems-concentration-2026q3"
-    | "ai-power-grid-concentration-202608";
+    | "ai-power-grid-concentration-202608"
+    | "fiscal-industrial-policy-geography-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
