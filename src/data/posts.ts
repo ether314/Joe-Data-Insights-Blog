@@ -2,6 +2,122 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-power-grid-update-2026q3",
+    slug: "ai-power-grid-update-2026q3",
+    title:
+      "Update: Data-Centre Power +26% to 565 TWh in 2026 — IEA 950 vs Gartner >1,200 at 2030; Queues >2,500 GW",
+    excerpt:
+      "Versus our Key Questions print (~950 TWh central 2030), the June Gartner vintage makes near-term the headline: +26% to 565 TWh in 2026, AI servers at 31% of power, US 204 TWh (36%). Dual-ledger gap widens to +250 TWh by 2030; Electricity 2026 restates >2,500 GW stalled worldwide.",
+    category: "Energy",
+    themeId: "ai-power-grid",
+    imageUrl: "/images/energy-ai-power-grid-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of cyan AI electricity arcs racing ahead of slower amber transmission grid lines",
+    publishedAt: "2026-08-21T00:15:00Z",
+    featured: true,
+    visualization: "ai-power-grid-update-2026q3",
+    layout: "default",
+    content: `## What changed since the Key Questions vintage
+
+In our [August Key Questions update](/blog/ai-power-grid-update-2026) we treated IEA *Key Questions on Energy and AI* (April 2026) as the newest official electricity ledger: data centres at **485 TWh** in **2025** (**+17%** y/y), a central path of roughly **950 TWh** by **2030** (only **+5 TWh** versus the April 2025 Base Case), AI-focused load on track to **triple**, and new grid-response meters for **15–27 GW** of onsite gas and **20–25 GW** of campus batteries. That post answered the *IEA restatement* question — what moved when Key Questions rewrote composition and bottlenecks while barely touching the central 2030 line?
+
+This Q3 note answers the next official print the market forces: **what moved when Gartner’s 10 June 2026 newsroom forecast promoted the near-term TWh path from companion meter to primary headline**, and when **IEA Electricity 2026** restated the grid-pace side of the same race?
+
+Three information events rewrite the dashboard. **Gartner** puts worldwide data-centre electricity at **565 TWh in 2026** — up **26.4%** from **447 TWh** in 2025 — with capacity rising **27%** to **132 GW**. **AI-optimised servers** take **31%** of data-centre power in 2026 (from about **20%** in 2025) and are on track to **surpass conventional servers** in **2027**, when total electricity hits **702 TWh**. By **2030**, Gartner’s electricity path exceeds **1,200 TWh** while capacity approaches **290 GW**. That opens a **~250 TWh dual-ledger gap** against the Key Questions central path of **~950 TWh**. **IEA Electricity 2026** adds the wire-side restatement: US data centres drive about **half** of US electricity demand growth through 2030 (more than **420 TWh** of US add), and more than **2,500 GW** of projects — renewables, storage, and large loads including data centres — remain **stalled in connection queues worldwide**, with flexible connections and grid-enhancing technologies potentially unlocking **1,200–1,600 GW**.
+
+The dashboard above is built as a vintage delta — YoY bars with a ledger filter, IEA↔Gartner dumbbells, AI/conventional/cooling stacked areas, a US composition cut, grid-queue Δ meters, a capacity dual-axis path, and a pace-mismatch scatter that adds an unlock cluster. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) for the LBNL demand-versus-miles frame.
+
+## The headline table: Key Questions → Gartner + Electricity 2026
+
+| Metric | Prior (Key Questions update) | Q3 newest print | Δ |
+| --- | ---: | ---: | --- |
+| Near-term DC electricity | Gartner companion **565 TWh (2026)** | **565 TWh** primary; **+26.4%** y/y | Promoted to headline |
+| Gartner 2025 base | Not the lead meter | **447 TWh** (**+15.5%** y/y) | Scope ≠ IEA 485 |
+| IEA 2025 / 2030 central | **485 → ~950 TWh** | **Carried** | Dual-ledger held |
+| Gartner 2027 / 2030 | 702 TWh / GW path only | **702 / >1,200 TWh** | **+250 TWh** vs IEA 2030 |
+| AI server share of DC power | **31%** in 2026 (companion) | **31%** locked; surpass in **2027** | Composition hinge restated |
+| Capacity GW | **104 → 132 → ~290** | Same path, primary | **+27%** in 2026 |
+| US slice (2026) | Not featured | **204 TWh** (**36%** of world); AI **68 TWh** | New geography meter |
+| Worldwide stalled queues | US gen **1,312 GW** (LBNL) | **>2,500 GW** stalled globally | Broader IEA stock |
+| US DC share of demand growth | Narrative driver | **~50%** of US growth to 2030 | New attribution |
+| Unlockable advanced-stage | Reform narrative | **1,200–1,600 GW** via flex + GETs | New unlock range |
+| Onsite gas / DC batteries | **15–27 / 20–25 GW** | **Carried** | Still the bridge |
+| Delay risk | **~20%** | **Carried** | Still binding |
+
+The non-obvious cut is not “IEA doubled the forecast again.” Key Questions’ **950 TWh** central path is still the IEA line we carry. The Q3 news is that the **near-term Gartner path is now loud enough to lead**, the **2030 dual-ledger gap is explicit**, and the **global queue stock** is restated far above the US-only LBNL generation queue we used as congestion context.
+
+## Near-term is the headline: +26% to 565 TWh in 2026
+
+Key Questions made 2025 the locked print (**485 TWh**, **+17%**) and treated Gartner’s capacity path as a companion clock. The June Gartner newsroom reverses that editorial hierarchy for planners who live in the next twenty-four months.
+
+From **447 TWh** in 2025 to **565 TWh** in 2026 is a **26.4%** jump — roughly in line with the capacity surge from **104 GW to 132 GW** (**+27%**). The 2027 step stays steep: **702 TWh** (**+24.1%**). That is not a soft glide path. It is three consecutive years of mid-teens to mid-twenties growth in a sector that already outran global electricity demand in 2025.
+
+Composition explains the slope. Gartner’s segment table shows **conventional servers** barely moving (**193 → 195 → 200 TWh** across 2025–2027) while **AI-optimised servers** roughly double each year (**95 → 175 → 258 TWh**). **Cooling and other infrastructure** rises with the AI stack (**159 → 195 → 243 TWh**). AI’s share of data-centre power crosses **31%** in 2026 and is on track to **overtake conventional** in **2027**. That is the same composition hinge Key Questions described with AI-focused **+50%** in 2025 and a **triple** by 2030 — restated in Gartner’s server-class ledger rather than IEA’s site-class ledger.
+
+Do **not** reconcile **447** with **485** into a single “true” 2025 number. Different scopes, different methods. Chart both. The vintage question is whether the *near-term slope* Gartner publishes changes how you read the IEA central path — and the answer is yes, because operators and utilities budget in GW and next-year TWh, not only in 2030 scenario fans.
+
+## The dual-ledger gap at 2030: 950 vs >1,200
+
+Our prior update stressed that Key Questions moved the IEA central 2030 path only **+5 TWh** to **~950**. That fact still stands. What Q3 adds is an explicit second endpoint: Gartner’s electricity path exceeding **1,200 TWh** by 2030, with capacity near **290 GW**.
+
+A **~250 TWh** gap at 2030 is not a rounding error. It is the difference between “data centres remain about **3%** of world electricity” (IEA framing) and a Gartner path that is closer to a mid-sized country’s annual load. Markets that screenshot only the IEA central line will understate interconnection stress; markets that screenshot only Gartner will overstate consensus among official agencies. The honest frame is **dual ledger**: IEA answers the *scenario-central energy* question; Gartner answers the *capacity-and-near-term electricity* question. Both can be right inside their scopes — and both can be wrong for a specific cluster.
+
+The dashboard’s dumbbell panel makes the divergence visible from 2025 onward. Treat anyone selling a blended “about 1,000 TWh by 2030” as averaging incompatible books.
+
+## US slice: 204 TWh, 36% of world, 68 TWh dedicated AI
+
+Gartner’s geography cut was background in the prior update; Q3 features it. Of the **565 TWh** worldwide in 2026, the **United States** accounts for about **204 TWh** — **36%** of global data-centre electricity. Inside that US total, dedicated AI data centres consume about **68 TWh** (~**one-third**). In five years, AI campuses have gone from a rounding error to a third of US data-centre power.
+
+That US meter rhymes with **IEA Electricity 2026**: US electricity demand is set to add more than **420 TWh** over five years, and data-centre expansions make up about **50%** of that growth. Half of the country’s incremental electrons through 2030 are a data-centre story. Pair this with the theme’s older **~45% US share of AI data-centre capacity by power** carefully — one is a Gartner *electricity composition* for all data centres; the other is an AI-specific *capacity* share from earlier theme posts. Keep them separate.
+
+Concentration still decides politics. A flat global share near **3%** (IEA) can coexist with local brownout risk in Northern Virginia, Texas, Dublin, or Frankfurt. The [concentration companion](/blog/ai-power-grid-concentration-2026) remains the right zoom for *where* interconnection binds.
+
+## Queues restated: >2,500 GW stalled worldwide
+
+The prior update carried LBNL’s **1,312 GW** of active US generation in queues and median IR→COD past **five years**. Electricity 2026 widens the aperture: more than **2,500 GW** of projects encompassing renewables, storage, and large loads such as data centres remain stalled in connection queues **worldwide**. Grid investment has lagged generation, and congestion-related curtailment is already rising in many systems.
+
+The same chapter quantifies unlock tools the prior post could only narrate. Flexible, non-firm connection agreements could enable about **750–900 GW** of advanced-stage projects; grid-enhancing technologies (dynamic line rating, advanced power-flow control, reconductoring, voltage uprating) another **450–700 GW**. Together, roughly **1,200–1,600 GW** could be unlocked if regulators and operators actually deploy the toolkit. That is the green “unlock” cluster on the pace scatter — not a free lunch, but a faster clock than waiting for greenfield transmission alone.
+
+Carried meters still matter. Key Questions’ **~20%** delay-risk estimate, **15–27 GW** of onsite gas (mostly US), and **20–25 GW** of batteries inside data centres are unchanged as official reprints. Onsite gas remains a bridge when wires lose; batteries remain the flexibility answer to AI load swings exceeding **50%** of rated capacity within a second. Turbine-order scarcity still rhymes with interconnection scarcity: the workaround can queue behind the same equipment chokepoint it was meant to bypass.
+
+## Capacity vs energy: two clocks, one race
+
+Capacity (**GW**) remains the interconnection constraint; electricity (**TWh**) remains the energy bill. Gartner’s path — **104 → 132 → ~165 (est.) → ~290 GW** — is the plug-in clock. The TWh path — **447 → 565 → 702 → >1,200** — is the annual energy clock. AI rack density from Key Questions (about **11×** from 2020 to 2025, another ~**4×** by 2027, peak demand near **65 households** per refrigerator-sized rack) explains why transformers, power electronics, and liquid cooling stay midstream bottlenecks even when headline TWh looks “only” a few percent of world load.
+
+The planner’s paradox from the prior update still holds, with sharper numbers: announced gigawatts look unstoppable in press releases; deliverable near-term TWh are clipped by queues; option value after 2030 remains high if bottlenecks clear. Q3 adds that the **near-term clip is measurable in +26% years**, not only in qualitative “bottlenecks bite” language.
+
+## What would rewrite the next vintage
+
+1. **An IEA restatement** (WEO / Key Questions refresh) that moves the 2030 central path by more than ~50 TWh toward — or away from — Gartner’s **>1,200** endpoint.
+2. **Gartner 2H26 / 2027 vintage** that breaks the **702 TWh** step or the AI-surpasses-conventional hinge.
+3. **Energisation prints** showing flexible connections and GETs actually clearing hundreds of GW from the **>2,500 GW** stalled stock — or stalling in paperwork.
+4. **US cluster brownouts or price spikes** that make the flat global share politically irrelevant even if IEA’s **~3%** framing holds.
+5. **Onsite gas connecting at the high end of 15–27 GW** *and* cutting measured wait times — or failing in the turbine queue.
+6. **LBNL Queued Up refresh** that restates the US generation queue well above or below the **1,312 GW** carry.
+
+Until those print, the live frame versus the Key Questions update is: **near-term Gartner path leads (+26% to 565 TWh in 2026); dual-ledger 2030 gap is ~250 TWh (950 vs >1,200); US is 36% of world DC power with 68 TWh dedicated AI; worldwide stalled queues exceed 2,500 GW with 1.2–1.6 TW theoretically unlockable; onsite gas, batteries, and ~20% delay risk remain carried bridges.**
+
+## Caveats and methodology
+
+1. **This is a vintage delta**, not a second encyclopedia. For the full IEA scenario fan, fuel mix, and regional concentration, use the [research post](/blog/ai-power-grid-research-2026), the [Key Questions update](/blog/ai-power-grid-update-2026), and the [concentration companion](/blog/ai-power-grid-concentration-2026).
+2. **IEA TWh ≠ Gartner TWh/GW.** Different scopes and methods; never average into a consensus forecast. Gartner 2025 (**447**) and IEA 2025 (**485**) are not interchangeable.
+3. **Physical generation mix ≠ contractual PPAs.** Carry that research caveat forward.
+4. **2030 Gartner >1,200 TWh** is the public newsroom endpoint used here; treat as disclosed directionally, not as a full scenario table.
+5. **IEA mid-path 2027 (~680 TWh)** in the dumbbell is an *estimated* interpolation from Key Questions language, not a restated official waypoint.
+6. **>2,500 GW stalled** mixes renewables, storage, and large loads — it is not a pure data-centre queue. Use it as a system congestion stock, not a campus count.
+7. **Unlock ranges (1,200–1,600 GW)** require regulatory and technical deployment; they are potential, not scheduled.
+8. **Onsite gas / batteries / delay risk** are carried from Key Questions where Electricity 2026 and Gartner did not restate them.
+9. **US 68 TWh dedicated AI** is a Gartner composition slice, not an IEA AI-focused site definition.
+
+Primary sources: Gartner newsroom, 10 June 2026 (*Data Center Electricity Consumption to Grow 26% in 2026*); IEA *Electricity 2026*; IEA *Key Questions on Energy and AI* (April 2026, carried meters); prior baseline in [AI power-grid update 2026](/blog/ai-power-grid-update-2026).
+
+## The shareable takeaway
+
+**Versus our Key Questions print, the newest vintage makes near-term Gartner electricity the lead meter — +26% to 565 TWh in 2026 — while the 2030 dual-ledger gap widens to IEA ~950 vs Gartner >1,200.** AI-optimised servers take **31%** of data-centre power and are on track to surpass conventional in **2027**; the US alone is **204 TWh** (**36%** of world), with **68 TWh** in dedicated AI. Electricity 2026 restates **>2,500 GW** stalled in connection queues worldwide and puts data centres at roughly **half** of US electricity demand growth through 2030, even as flexible connections and grid-enhancing technologies could unlock **1.2–1.6 TW**. Electricity *can* still be built for AI. The open question is whether grids, unlock tools, and workarounds arrive where the GPUs actually plug in — at a pace that matches **+26%** years, not only 2030 scenario slides.
+
+Related reading: [Key Questions vintage update](/blog/ai-power-grid-update-2026), [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+  },
+  {
     id: "ai-capex-spend-update-202608",
     slug: "ai-capex-spend-update-202608",
     title:

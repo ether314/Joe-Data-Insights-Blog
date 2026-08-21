@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-power-grid-update-2026q3",
+    marker: "Vintage delta — Key Questions Apr 2026 → Gartner Jun 2026",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-capex-spend-update-202608",
     marker: "202608 vintage delta — mid-Q3",
     forbidden: "Loading interactive charts",
