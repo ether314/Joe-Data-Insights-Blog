@@ -1652,6 +1652,21 @@ const FiscalIndustrialPolicyConcentration2026q3Dashboard = dynamic(
   },
 );
 
+const MacroGrowthTradeConcentrationDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/MacroGrowthTradeConcentrationDashboard").then(
+      (m) => m.MacroGrowthTradeConcentrationDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2079,6 +2094,10 @@ export function PostVisualization({
 
   if (type === "fiscal-industrial-policy-concentration-2026q3") {
     return <FiscalIndustrialPolicyConcentration2026q3Dashboard />;
+  }
+
+  if (type === "macro-growth-trade-concentration-2026") {
+    return <MacroGrowthTradeConcentrationDashboard />;
   }
 
   return null;

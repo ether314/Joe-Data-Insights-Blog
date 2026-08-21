@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "macro-growth-trade-concentration-2026",
+    marker: "Growth, trade & prices — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-industrial-policy-concentration-2026q3",
     marker: "Fiscal & industrial policy — Q3 concentration lens",
     forbidden: "Loading interactive charts",

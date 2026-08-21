@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-concentration-2026",
+    slug: "macro-growth-trade-concentration-2026",
+    title:
+      "Concentration: China Takes ~32% of World PPP Growth — Asia Alone Is 71% of Merch Trade-Volume Gains",
+    excerpt:
+      "Concentration lens on growth, trade & prices: China alone is ~32% of world PPP growth (top-3 ~55%), Asia contributes 71% of 2025 merchandise trade-volume growth, PPP stock top-1 is ~19%, and goods-export top-3 clears ~29% — while China’s CPI sits near zero.",
+    category: "Economics",
+    themeId: "macro-growth-trade",
+    imageUrl:
+      "/images/economics-macro-growth-trade-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber growth-contribution bars, teal trade arcs, and a rose Asia trade-growth wedge over a subtle globe",
+    publishedAt: "2026-08-21T10:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-concentration-2026",
+    layout: "default",
+    content: `Our [April research triangle](/blog/macro-growth-trade-research-2026) answered the *path* question: how world GDP, merchandise trade, and CPI co-move through the reopen and into the 2026 forecast. The [July IMF update](/blog/macro-growth-trade-update-2026), [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3), and [August CPI/PCE vintage](/blog/macro-growth-trade-update-202608) then answered the *flow* question on what moved versus those baselines. This post answers the distribution question desks trade next: **how concentrated is the system at the top?**
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Growth contribution**, **PPP stock**, **Trade-growth regions**, and **Export value**. The punchline is deliberately multi-sided. Of 2025 world PPP growth, **China alone is about 32%** and the **top three (China · India · US) clear ~55%**. Of 2025 merchandise trade-*volume* growth, **Asia alone is 71%** (3.2 percentage points of a 4.6% world print). Of world PPP *stock*, China is still only about **19%** and the top three about **42%**. Of goods-*export value*, China is about **14%** and the top three about **29%**. Same triad — four different tops — and China’s near-zero CPI sits beside the thickest growth contribution.
+
+## The headline ladder: top-1 and top-3 across lenses
+
+| Lens | Top-1 | Top-3 | What it measures |
+| --- | ---: | ---: | --- |
+| Growth contribution (PPP) | **~32%** (China) | **~55%** (CN·IN·US) | Share of 2025 world PPP growth |
+| PPP GDP stock | **~19%** (China) | **~42%** (CN·US·IN) | Share of world PPP GDP |
+| Merch trade-volume growth | **71%** (Asia) | **~97%** (Asia·Europe·N. Am.) | Share of 2025 WTO volume growth |
+| Goods export value | **~14%** (China) | **~29%** (CN·US·DE) | Share of ~$26.3T merch exports |
+
+Read the table as a **family of market shares**, not one number. Stock concentration is moderate: China leads, but the residual “all other economies” bucket still holds nearly half of world PPP. Growth contribution is steeper — weight × growth puts China at roughly one-third of the global increment. Trade-*growth* concentration is extreme at the regional level: Asia’s 3.2 pp contribution is most of the world’s 4.6% merchandise volume gain. Export-*value* concentration looks milder again because a large residual of mid-sized exporters still clears more than half of the $26T perimeter.
+
+Analysts who quote only “world GDP grew 3.4%” understate how top-heavy the *inside* of that print is. Analysts who quote only China’s PPP weight understate how much more concentrated *growth* and *trade-volume gains* are than the stock of output.
+
+## Growth contribution: China owns the thick end of the increment
+
+Filter the dashboard to **Growth contribution**. The cumulative curve for named contributors rises to about **32%** at top-1 (China), **46%** at top-2 (plus India), and **55%** at top-3 (plus the United States). Indonesia and Brazil push the disclosed EM ladder higher still; the euro-area aggregate adds another ~6% as a bloc, not a sovereign. Approximate HHI on the growth-contribution ladder sits well above the PPP-stock HHI near **780** — the increment is more concentrated than the stock.
+
+That is the first hinge. *Growing* the world economy is not the same ranking as *being* the world economy. China can be ~19% of PPP stock and ~32% of PPP growth in the same vintage. India can be third on stock (~8%) and second on growth contribution (~15%) because a 7.6% growth rate multiplies a still-rising weight. The United States remains second on stock (~15%) but only third on contribution (~9%) at a 2.1% 2025 growth print.
+
+Pair this panel with the [China–US–India thirty-year comparison](/blog/china-us-india-gdp-30-years): the long weight shift is the stock story; this ladder is the *flow* story inside one WEO year. Soft-landing narratives that treat “EM Asia” as a diversified residual miss that two names clear nearly half of world PPP growth.
+
+## PPP stock: the moderate base the growth ladder sits on
+
+Switch the view to **PPP stock**. China (~**19%**), the United States (~**15%**), and India (~**8%**) sum to about **42%** of world PPP GDP. Japan and Germany fill the next rungs; the top five clear roughly **half** the perimeter. The residual “all other” bucket at ~**43%** is not “diversified growth” — it is the long tail of smaller weights that still matter for *levels* even when they contribute little to the *increment*.
+
+This is the second hinge. **Stock concentration and growth-contribution concentration are not the same ranking.** Quoting China’s PPP weight without the contribution share understates how much of the 2025 global print ran through one economy. Quoting the contribution share without the stock understates how much of world *demand* and *price-weight* still sits in the US and other advanced economies.
+
+The triad path panel under PPP stock reminds you what the aggregates look like while concentration rearranges underneath: world PPP GDP near **3.4%** in 2025 easing toward **3.1%** in 2026f, merchandise volume slowing from **4.6%** toward **1.9%**, and world CPI still elevated near **4.1–4.4%**. Concentration does not cancel the soft landing — it tells you *who* has to land.
+
+## Trade-growth regions: Asia is most of the volume gain
+
+Open **Trade-growth regions**. Against the WTO March 2026 decomposition of 2025 merchandise volume growth, **Asia alone is 3.2 pp / 71%**. Europe (~**15%**) and North America (~**11%**) fill the next rungs; the rest of the world is about **4%**. The tracked **top-3 regional share is ~97%** — almost the entire world print sits in three regional blocs, and one of them owns most of it.
+
+That looks “more concentrated” than the export-value ladder until you remember what the meter is. Export *value* asks which countries book shipments. Trade-*growth contribution* asks which regions drove the *change* in volume. China can lead export value at ~14% while Asia as a region clears 71% of volume growth because the regional print bundles China with the rest of Asian import and export impulse — including the AI-goods and intermediate-goods corridors that showed up in the April research post.
+
+Treat the 71% print as a **disclosed WTO regional share**, not a country monopoly. Inside Asia, China export volume at **+9.2%** in 2025 is the thickest single-country pulse in the theme narrative, but the regional contribution is the right concentration unit for “who moved world trade.” For the longer weight shift under that pulse, see again [China–US–India GDP](/blog/china-us-india-gdp-30-years).
+
+## Export value: milder tops, still a China-led ladder
+
+Toggle **Export value**. Against roughly **$26.3T** in 2025 merchandise exports, China is about **14%**, the United States about **8%**, and Germany about **7%** — a **top-3 near 29%**. The Netherlands’ re-export hub role inflates value share versus domestic origin; Korea and Japan fill the advanced-manufacturing rungs. Services trade (~**$9.6T**) is a separate perimeter and is *not* folded into these goods shares.
+
+This is the third hinge. **Value concentration is milder than growth-contribution or trade-volume-growth concentration.** The world still has a broad exporter set even while the *increment* in merchandise volume runs through Asia. Desks that collapse “China trade” into a single slogan miss the gap between a ~14% value share and a 71% regional volume-growth share.
+
+## Prices: the thick growth contributor is not the hot CPI
+
+The price × growth scatter under the growth view puts the asymmetry on one chart. Brazil, India, and South Africa sit at elevated CPI near **4.4–4.8%** with smaller PPP weights. The United States and euro area print near **2.9–3.4%** YoY in the August vintage (US CPI **3.4%**, EA HICP **2.9%**) with large demand weights. **China prints ~0.2% CPI beside ~5% GDP growth and the ~32% growth-contribution top.** World CPI near **4.1–4.4%** is therefore not “China’s inflation” — it is a weighted average that China is *pulling down* even while China pulls *up* world growth.
+
+That matters for the soft-landing debate the vintage posts already framed. The [August monthly note](/blog/macro-growth-trade-update-202608) showed US CPI cooling on YoY while Q2 PCE SAAR stayed hot. This concentration lens adds the global geometry: the economy contributing the most to world growth is not the one contributing the most to world inflation. Policy debates that treat “global inflation” and “global growth” as the same country set will mis-rank the 2025–26 tape.
+
+Roughly **38%** of world PPP GDP in this cross-section sits in economies with CPI still at or above ~3.4% — a reminder that elevated prices remain a large-*weight* problem even when the growth leader is near price stability.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that treat world GDP growth as a diversified EM residual when China alone is ~**32%** of the PPP increment; trade strategists who quote China’s ~**14%** export-value share without noting Asia’s **71%** of merchandise *volume growth*; inflation narratives that imply the growth leader is also the price leader; advanced-economy demand watches that underweight how much of 2025’s trade impulse was Asian.
+
+**Relative winners under current rules:** Asian intermediate-goods and AI-goods corridors that sit inside the 71% regional volume-growth share; India’s second-place growth contribution at still-elevated CPI; US demand weight that still anchors PPP stock even when contribution ranks third; exporters diversified across the residual half of the $26T goods perimeter.
+
+**What would change the story:** a sustained flattening of growth contribution so China’s share of world PPP growth falls below ~**20%**; Asian merchandise volume-growth contribution falling below ~**50%** of the world print; export-value top-3 climbing above ~**40%** (true goods monopoly risk); China CPI re-accelerating toward the world average while keeping its growth weight. None of those appear cleanly in the April–August vintages summarised here — and the Q3 CPB rebound after March’s war shock shows how fast the *trade* meter can move even when the concentration architecture is sticky.
+
+## Caveats and methodology
+
+- **PPP stock and growth-contribution shares are staff-aligned from IMF WEO April 2026 weights and country growth.** Exact PPP weight tables are not fully reproduced in WEO Table 1.1; treat country shares as analytical concentrations, not prospectus weights.
+- **Merchandise trade-growth shares follow WTO GTOS March 2026** regional decomposition of 2025 volume growth; Asia **71% / 3.2 pp** is the disclosed anchor.
+- **Export value shares use ~$26.3T world merchandise exports (2025)**; re-export hubs (notably the Netherlands) inflate value versus domestic origin.
+- **Services trade (~$9.6T) is excluded** from the goods-export ladder — a separate concentration post would be required.
+- **CPI ladder mixes WEO estimates with disclosed BLS/Eurostat July prints** from the August vintage; price “tops” are burden ranks, not additive market shares.
+- **Euro-area growth contribution is an aggregate**, not a single sovereign — comparable to treating “Asia” as a region on the trade ladder.
+- **Top-3 trade-growth “share” (~97%) is regional**, not country-level; inside Asia the China export-volume pulse (+9.2%) is narrative, not a full intra-Asia decomposition.
+- **HHI (~780) on PPP stock** is an analytical index on the disclosed ladder, not an official statistic.
+- **2026f triad prints** (GDP 3.1%, merch 1.9%, CPI 4.4%) are forecast context; concentration ladders use 2025 outturn weights where possible.
+
+## The shareable takeaway
+
+Growth, trade, and prices are **concentrated at the top — but which top depends on the meter**. Of world PPP growth, top-1 (China) is about **32%** and top-3 about **55%**. Of merchandise trade-*volume* growth, Asia alone is **71%**. Of PPP *stock*, China is about **19%** and the top three about **42%**. Of goods-*export value*, top-1 is about **14%** and top-3 about **29%**. The economy contributing the most to world growth is also the one printing near-zero CPI. The soft landing is still a triad story — and the triad is top-heavy once you rank the distribution.
+
+Related reading: [April research triangle](/blog/macro-growth-trade-research-2026) · [July IMF vintage delta](/blog/macro-growth-trade-update-2026) · [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3) · [August CPI/PCE vintage](/blog/macro-growth-trade-update-202608) · [China–US–India GDP](/blog/china-us-india-gdp-30-years).`,
+  },
+  {
     id: "fiscal-industrial-policy-concentration-2026q3",
     slug: "fiscal-industrial-policy-concentration-2026q3",
     title:
