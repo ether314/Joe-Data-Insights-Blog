@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "energy-systems-update-2026q3",
+    marker: "Renewables overtake coal in electricity",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "industrial-robotics-update-202608",
     marker: "August 2026 vintage · A3 North America orders vs IFR prelim lens",
     forbidden: "Loading interactive charts",

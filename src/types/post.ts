@@ -100,7 +100,8 @@ export interface Post {
     | "heavy-industrial-capacity-research-2026"
     | "measurement-science-update-2026q3"
     | "adaptation-economics-update-2026q3"
-    | "industrial-robotics-update-202608";
+    | "industrial-robotics-update-202608"
+    | "energy-systems-update-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

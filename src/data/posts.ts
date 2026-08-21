@@ -2,6 +2,102 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "energy-systems-update-2026q3",
+    slug: "energy-systems-update-2026q3",
+    title:
+      "Update: Renewables Overtake Coal in Power (33.8% vs 33.0%) as Clean Capex Hits $2.2T",
+    excerpt:
+      "Versus our EI Statistical Review update (TES 602 EJ, fossils 86.2% of primary), Ember’s 2025 census prints renewables above coal in electricity and IEA WEI 2026 puts clean investment at $2.2T vs fossils $1.2T inside a $3.4T (+5%) energy-capex year.",
+    category: "Energy",
+    themeId: "energy-systems",
+    imageUrl: "/images/energy-energy-systems-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic energy-systems viz with teal renewable arcs overtaking charcoal coal stacks, amber LNG trade routes, and a lime solar growth spike",
+    publishedAt: "2026-08-21T00:10:00Z",
+    featured: true,
+    visualization: "energy-systems-update-2026q3",
+    layout: "default",
+    content: `## What changed since the EI Statistical Review update
+
+Our [August energy-systems update](/blog/energy-systems-update-2026) closed on the Energy Institute Statistical Review of World Energy **2026** (calendar **2025**): world **total energy supply (TES)** past **600 EJ (+1.7%)**, **renewables (ex-hydro)** the largest TES growth source outside a recession (**+3.3 EJ**), fossils still **86.2%** of primary energy, solar overtaking wind in the power mix (**8.7% vs 8.4%**), US LNG exports **+27%**, and batteries at **302 GW (+66%)**. That post answered the *primary-energy flow* question after the [theme research ledger](/blog/energy-systems-research-2026).
+
+This Q3 refresh answers the *next* vintage question the official stack actually trades on: **does the newest electricity census and capital-allocation print agree that the mix is greening at the margin while trade and security still pull fossil money?** Two documents force the rewrite. **Ember’s Global Electricity Review 2026** shows **all renewables at 33.8%** of world generation overtaking **coal at 33.0%** for the first time in the modern power system, with clean sources meeting **all** 2025 demand growth and fossil generation falling **0.2%**. **IEA’s World Energy Investment 2026** puts total energy investment at **$3.4 trillion in 2026e (+5%)**, with **~$2.2T** to clean (renewables, nuclear, grids, storage, low-emissions fuels, efficiency, electrification) versus **~$1.2T** to oil, gas, and coal supply — almost a **2:1** clean-to-fossil capital split even as LNG investment **more than doubles** and gas-fired plant orders hit a **25-year high**.
+
+The dashboard above is built as a Q3 vintage delta: renewables-vs-coal power shares, demand-growth attribution, the primary-vs-electricity dual ledger, the IEA capex stack with bucket filters, trade/LNG/manufacturing meters, and a capex path with companion bubbles. It is not a second encyclopedia of the EI Review.
+
+## The headline table: EI update vs Ember + IEA WEI
+
+| Meter | Prior update (EI 2026 / 2025 year) | Q3 newest print | Δ |
+| --- | ---: | ---: | --- |
+| World TES / primary fossils | **602 EJ** · fossils **86.2%** | Carried — still newest primary print | Stock unchanged |
+| Power: solar / wind / nuclear | **8.7% / 8.4% / 8.8%** | Same peer shares; **all-RE 33.8% > coal 33.0%** | Coal below one-third |
+| Who met elec demand growth | Elec demand **+3.0%** (EI) | Solar **75%** · wind+solar **99%** · fossils **−0.2%** | Clean met all growth |
+| Total energy investment | Not in prior update | **$3.4T (+5% YoY)** | New capital ledger |
+| Clean vs fossil investment | Not in prior update | **$2.2T vs $1.2T (~1.8×)** | Clean ≈ **65%** of spend |
+| Oil / gas supply investment | US LNG exports **+27%** (flow) | Oil **<$500B (−3%)** · gas **$330B (+10%)** | Gas decade-high |
+| LNG project pipeline | US export-growth highlight | **~100 bcm** FID 2025 · inv **doubles** 2026e | ~**90%** of FIDs in US |
+| Batteries / storage | **302 GW (+66%)** | Same EI stock; Ember: shifts **~14%** of new solar | Anytime-solar note |
+
+Read the first two rows carefully. The **primary-energy stock** from EI did not get a newer Statistical Review in this window — fossils remain **~86%** of TES. What moved is the **electricity census** (Ember’s all-renewables vs coal crossover) and the **capital ledger** (IEA’s clean-vs-fossil investment split). Averaging those ledgers into one “energy mix” percentage is how readers get lied to. The theme question — how countries **source, mix, and trade** energy — now needs three companion meters: primary stock, power flow, and where the money goes.
+
+## Renewables overtake coal on the electricity ledger
+
+Ember’s 2025 census is the cleanest electricity-side vintage confirmation of the story the prior EI post only hinted at with solar-vs-wind shares. **Renewables (solar, wind, hydro, and other RE) contributed 33.8% (10,730 TWh)** of world generation; **coal contributed 33.0% (10,476 TWh)**. Coal generation fell **63 TWh (−0.6%)** — the first decline since the Covid year — and dropped **below one-third** of global generation for the first time in the modern system.
+
+That crossover matters more than another solar percentage point. The prior update correctly celebrated solar overtaking wind (**8.7% vs 8.4%**) and nearly matching nuclear (**8.8%**). Ember keeps those peer shares in the same neighborhood and adds the system-level punchline: **the renewable *bundle* is now larger than coal**. Solar alone rose a record **636 TWh to 2,778 TWh (+30%)** — enough, Ember notes, to displace gas-fired electricity equivalent to all LNG exports through the Strait of Hormuz last year (~**550 TWh** of gas generation). Ember also flags that **both solar and wind are expected to overtake nuclear in 2026**, which would retire the last “firm low-carbon peer” framing the August post used.
+
+Toggle the dashboard’s **RE vs coal** panel. The story is not that coal vanished. Absolute coal TWh remain enormous. The story is that the **electricity mix** finally printed a structural share flip that primary TES still refuses to show.
+
+## Clean power met all demand growth — fossils fell 0.2%
+
+Open **Demand growth**. Ember’s attribution is the Q3 flow sentence markets should remember: low-carbon generation rose **887 TWh** while electricity demand rose **849 TWh (+2.8%)**. Solar alone met **75%** of net demand growth; wind plus solar met **99%**. Fossil generation recorded a small fall of **38 TWh (−0.2%)** — the first decline since 2020 and only the fifth year this century without a fossil-power rise.
+
+The geography of that halt is as important as the global total. China and India — historically the largest contributors to rising fossil power — both recorded fossil-generation declines in 2025 (China **−56 TWh / −0.9%**; India **−52 TWh / −3.3%**) as clean additions outpaced demand. That is a different sentence from the EI primary-energy path, where absolute fossil joules still rose even as the fossil *share* of TES eased to **86.2%**. Power can flatten fossils while primary TES keeps adding oil and gas for transport and industry. The theme’s three-ledger warning still holds; Ember just sharpened the electricity ledger.
+
+Pair this with the [global electricity generation mix](/blog/global-electricity-generation-mix-2024) post when you need country-level stacks rather than the world crossover.
+
+## Capital follows two stories: clean almost 2× fossils, LNG doubles
+
+IEA World Energy Investment **2026** is the capital vintage the August EI post lacked. Total energy investment rises to **$3.4 trillion in 2026e**, a **5%** increase from 2025, even under Middle East security shock. About **$2.2T** goes to the clean stack; about **$1.2T** goes to oil, gas, and coal supply. Clean is nearly **twice** fossil *supply* investment and about **65%** of total energy spend. Roughly **three-quarters** of anticipated 2026 investment was already locked in before the conflict — so this year’s print is mostly pre-committed capital, not a crisis-time rewiring.
+
+Inside the fuel stack the split is sharper still. **Oil supply investment falls for a third consecutive year to less than $500 billion (−3%)** despite higher prices — capital discipline, depleted exploration portfolios, and Middle East project delays dominate. **Natural gas supply investment rises to $330 billion**, the highest level in a decade (**>~10%** growth), powered by US demand and LNG export facilities. Coal *supply* investment prints its highest level since **2012**. On the power side, renewable power projects still take about **$665 billion** (solar **$365B** — roughly **$1 billion per day** — wind **$200B**, hydro **$75B**) and about **70%** of power-generation investment, even after YoY soft patches from cost deflation and China policy. Nuclear investment exceeds **$80 billion** annually with close to **80 GW** under construction across **15** countries. Gas-fired power investment approaches **$120 billion** after a **25-year high** of **130 GW** of plant orders in 2025 — with US data-centre demand a major driver.
+
+The LNG overlay is the trade-map companion. **2025 was a record FID year** for LNG export capacity (**>~100 bcm** sanctioned, requiring ~**$80B** of multi-year capex), with nearly **90%** of sanctioned projects in the United States. IEA expects LNG investment globally to **more than double in 2026** from 2025 as over **230 bcm** of projects outside the Persian Gulf advance toward peak construction — even as Qatar’s North Field East first train slips and incremental 2026 LNG supply is cut from ~**45 bcm** toward ~**40 bcm**. The prior post’s **US LNG exports +27%** flow print now has a forward capital sentence: the US export lead is being *cemented in steel*, not only in 2025 cargoes.
+
+Toggle **Capex stack** and filter by clean / fossil / oil & gas / power. The dual message is intentional: **clean dominates the investment numerator**, while **gas and LNG still win the security-diversification race** that oil can no longer claim on a rising-capex path.
+
+## Primary vs electricity: do not average the ledgers
+
+The **Dual ledger** panel exists to stop a bad viral chart. EI’s primary TES still prints fossils near **86%**, oil near **33%**, coal near **28%**, renewables ex-hydro near **6%**, nuclear near **5%**. Ember’s electricity ledger prints all-renewables **33.8%** and coal **33.0%**, with solar/wind/nuclear each in the high single digits. Those are not contradictions. Oil is transport-heavy and tiny in power. Coal weighs more in electricity than in primary. “All renewables” on Ember includes hydro and other RE that EI’s ex-hydro primary bucket deliberately excludes.
+
+If you need the import-dependence and LNG-concentration stock map from Eurostat-style meters, keep the [energy systems research](/blog/energy-systems-research-2026) post beside this update. India still imports about **86%** of the oil it consumes; Europe about **75%**; China about **73%**. Europe and India each import roughly half their gas. Those EI trade exposures did not get a newer Statistical Review rewrite in Q3 — the IEA investment print simply raises the *price* of remaining exposed while capital tries to buy domestic renewables, nuclear, efficiency, and diversified LNG.
+
+## Who is exposed under the new vintage
+
+**More exposed to the dual-ledger trap:** analysts and policymakers who quote Ember’s renewables-over-coal headline as if primary TES had flipped; importers still on **70%+** oil-import shares when Hormuz-class shocks reprice security; utilities and hyperscalers ordering gas capacity into a world where power fossils just flatlined globally but local resource adequacy still needs firm MW; and coal-plant owners in systems where Ember’s share crossover arrives before retirement schedules do.
+
+**Relatively better positioned:** solar-plus-storage developers in markets where Ember’s “anytime solar” battery note is already cutting daytime prices; countries that can FID domestic renewables and nuclear faster than they can re-open upstream oil; US LNG project sponsors sitting on the FID wave; and nuclear programs that can convert IEA’s **>$80B / ~80 GW UC** resurgence into completed GW before Ember’s 2026 solar/wind-over-nuclear expectation lands.
+
+**What would rewrite the next update:** a new EI Statistical Review that moves primary fossil share by more than rounding; Ember’s 2026 monthly track showing fossil generation rising again; IEA investment revising clean below **1.5×** fossils; LNG FID collapse outside the US; or gas-fired order books reversing from the **130 GW** spike.
+
+## Caveats and methodology
+
+- **Primary ≠ electricity.** EI TES shares and Ember generation shares use different denominators — never average them into one mix.
+- **Investment is 2026e MER dollars** from IEA WEI 2026; ~**75%** of the year’s spend was locked in before the Middle East conflict. Treat the print as mostly pre-committed capital, not a full crisis-response map.
+- **Clean investment** bundles renewables, nuclear, grids, storage, low-emissions fuels, efficiency, and electrification — wider than “renewable power projects” alone (**$665B**).
+- **Oil <$500B** is an upper-bound framing from IEA (“less than USD 500 billion”); the −**3%** YoY is the directional signal.
+- **LNG FID / UC bcm** figures are capacity, not delivered cargoes; Qatar delays cut incremental 2026 supply toward ~**40 bcm**.
+- **Gas-fired orders (130 GW)** are approvals/orders, not completed plants; the **$120B** 2026e gas-power investment is the spend companion.
+- **Battery 302 GW** and **energy CO₂ +1.1%** remain prior EI companions — Ember’s storage note (shifting ~**14%** of new solar) is qualitative context, not a restated GW census.
+- This post is a **vintage delta**. For the full systems ledger, use the [research post](/blog/energy-systems-research-2026); for the EI 2025-year flow print, use the [August update](/blog/energy-systems-update-2026).
+
+## The shareable takeaway
+
+Versus our [EI Statistical Review update](/blog/energy-systems-update-2026), the newest official stack says the electricity ledger and the capital ledger moved faster than the primary-energy stock. **Renewables overtook coal in world electricity (33.8% vs 33.0%)**, clean power met **all** 2025 demand growth, and fossil generation fell **0.2%**. At the same time, IEA prints **$3.4T** of energy investment (**+5%**), with clean at **$2.2T** — almost **2×** the **$1.2T** still flowing to oil, gas, and coal supply — while LNG investment **doubles** and gas-fired orders hit a **25-year high**. Fossils remain **~86%** of primary TES. The theme answer is sharper: countries are **greening the power mix and the investment numerator** while still **trading and financing** a fossil stock that has not flipped.
+
+Related reading: [Energy systems EI update (Aug 2026)](/blog/energy-systems-update-2026), [Energy systems research](/blog/energy-systems-research-2026), and [Global electricity generation mix](/blog/global-electricity-generation-mix-2024).`,
+  },
+  {
     id: "industrial-robotics-update-202608",
     slug: "industrial-robotics-update-202608",
     title:
