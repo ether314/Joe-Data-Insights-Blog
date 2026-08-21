@@ -154,7 +154,8 @@ export interface Post {
     | "ai-financing-concentration-2026q3"
     | "industrial-robotics-concentration-2026q3"
     | "geopolitics-institutions-concentration-2026q3"
-    | "bank-commercial-credit-update-202608";
+    | "bank-commercial-credit-update-202608"
+    | "energy-systems-concentration-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

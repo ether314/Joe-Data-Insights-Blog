@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "energy-systems-concentration-2026",
+    slug: "energy-systems-concentration-2026",
+    title:
+      "Charted: China Alone Is 27% of World Energy Demand — Top-3 Clears 49%",
+    excerpt:
+      "Concentration lens on energy systems: China holds ~27% of world primary energy demand (top-3 with US+India ~49%), coal exports top-3 at 72%, LNG at 61%, while solar module manufacturing hits ~80% China — demand is oligopoly, clean hardware near-monopoly.",
+    category: "Energy",
+    themeId: "energy-systems",
+    imageUrl: "/images/energy-energy-systems-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic energy-systems viz with amber Top-1/Top-3 concentration bars, teal renewable arcs, charcoal coal stacks, and glowing LNG trade routes",
+    publishedAt: "2026-08-21T14:00:00Z",
+    featured: true,
+    visualization: "energy-systems-concentration-2026",
+    layout: "default",
+    content: `Our [energy-systems research ledger](/blog/energy-systems-research-2026) answered the country question: how do large systems *source, mix, and trade* energy — primary stacks, electricity fossil shares, and import dependence from Japan’s ~**88%** to Australia’s deep export surplus. The [EI Statistical Review update](/blog/energy-systems-update-2026) and later Ember / IEA mid-year refreshes then answered the *vintage* question: what moved in world TES, renewables-vs-coal in power, and capex. This post answers the distribution question desks trade next: **how concentrated is the system at the top?**
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Top-k ladder**, **Demand curve**, **Fuel exports**, and **Import risk**. Filter by lens (demand / export / production / manufacturing) and metric (Top-1 / Top-3 / HHI). The punchline is deliberately multi-sided. On **primary demand**, China alone is about **27%** of world TPES and the **top three (China + US + India) clear ~49%**. On **fuel exports**, concentration is higher still: seaborne coal’s top-3 bloc is ~**72%**, LNG ~**61%**, crude oil a more plural ~**38%**. On **clean-tech manufacturing**, the tip goes extreme — solar modules near **80%** China, battery cells near **75%**. Same theme, three different tops.
+
+## The headline ladder: Top-1 and Top-3 across energy lenses
+
+| Lens | Top-1 | Top-3 | What it measures |
+| --- | ---: | ---: | --- |
+| Primary energy demand (TPES) | **~27%** (China) | **~49%** (CN·US·IN) | Share of world EJ |
+| Coal consumption | **~56%** (China) | **~74%** | Thermal + metallurgical demand |
+| Electricity generation | **~32%** (China) | **~55%** | Share of world TWh |
+| Hard coal exports | **~35%** (Indonesia) | **~72%** (ID·AU·RU) | Seaborne export tons |
+| LNG exports | **~22%** (United States) | **~61%** (US·AU·QA) | Export volumes |
+| Crude oil exports | **~15%** (Saudi Arabia) | **~38%** (SA·RU·IQ) | Crude export volumes |
+| Solar PV modules | **~80%** (China) | **~92%** | Manufacturing capacity |
+| Battery cells | **~75%** (China) | **~92%** | Cell manufacturing capacity |
+
+Read the table as a **family of market shares**, not one slogan. Demand Top-1 tells you who burns and builds the energy stock. Export Top-3 tells you who can move molecules across oceans. Manufacturing Top-1 tells you who can *make* the hardware that greening depends on. Averaging “China’s energy share” across these rows is a category error — **27% of demand is not 80% of modules**.
+
+## Demand: a thick top without a monopoly
+
+Toggle **Demand curve**. The Lorenz-style panel for world TPES rises to ~**27%** at rank 1, ~**43%** at top-2 (China + US), and ~**49%** at top-3 once India enters. An equal-share line across six buckets sits far below until the rest-of-world residual. That geometry is *oligopoly*, not monopoly: no single country owns half of primary energy, but three countries own nearly half.
+
+Coal consumption is the exception inside the demand family. China’s ~**56%** top-1 and ~**74%** top-3 make thermal coal a different concentration class from oil demand, where the United States leads at only ~**16%** and the top-3 (US + China + India) lands near **40%**. Electricity generation sits between them — China ~**32%**, top-3 ~**55%** — which is why power-system stories often *feel* more China-centric than crude markets even when primary oil still looks plural.
+
+Pair this with the [global electricity generation mix](/blog/global-electricity-generation-mix-2024) when you need country-level stacks rather than world-share ladders. The concentration cut answers *who owns the denominator*; the mix cut answers *what fills each country’s numerator*.
+
+## Fuel exports: oligopolies with different tips
+
+Open **Fuel exports**. The stacked bars put Top-1 / Top-2 / Top-3 / rest on one axis per commodity. Coal is the hardest seaborne market in the panel: Indonesia alone ~**35%**, top-3 with Australia and Russia ~**72%**. LNG is a flexible triopoly — United States ~**22%**, Australia and Qatar close behind, top-3 ~**61%** — the same corridor our [LNG capacity post](/blog/lng-export-capacity-us-australia-qatar-2024) tracks from a capacity angle. Pipeline gas still shows Russia as top-1 (~**18%**) with Norway and Canada completing a ~**48%** bloc, even after European route rewiring. Crude oil exports remain the most plural major fuel: Saudi Arabia ~**15%**, top-3 only ~**38%**.
+
+That ordering matters for security analysis. A desk that treats “energy trade concentration” as one number will mis-rank risk: **coal and LNG concentrate at the top; crude does not** to the same degree. HHI bands in the ladder view make the same point continuously — manufacturing rows sit in the extreme band (≥5,000), coal export and coal use in the high band, crude export in the plural band.
+
+## Manufacturing vs molecules: the clean-tech tip is sharper
+
+Stay on **Fuel exports → Export vs manufacturing contrast**, or filter the ladder to **Manufacturing**. Solar module capacity near **80%** China and battery cells near **75%** China are a different political economy from Saudi’s **15%** of crude exports. Greening the power mix can *raise* manufacturing concentration even while it lowers the fossil share of electricity in Ember-style censuses.
+
+This is the bridge to our [chokepoint commodities concentration](/blog/chokepoint-commodities-concentration-2026) work: midstream graphite, rare-earth separation, and refined gallium print even higher Top-1 scores than solar modules. Energy systems concentration and critical-minerals concentration are cousins — one tracks fuels and demand, the other tracks the materials inside the hardware stack.
+
+## Import risk: high dependence is not the same as high Top-1
+
+Toggle **Import risk**. The scatter puts import dependence on the x-axis and fossil primary share on the y-axis, with bubble size proportional to √primary EJ. Japan (~**88%** import dependence, ~**86%** fossil primary) and Korea (~**82%** / ~**84%**) sit in the stress quadrant. The EU-27 prints ~**58%** import dependence on Eurostat’s disclosed meter with still-high fossil primary (~**69%**). China is a large importer in absolute barrels and molecules but only ~**22%** dependent on the net-energy meter because domestic coal still dominates TPES. The United States prints mildly negative (net exporter); Australia and Saudi print deep export surpluses.
+
+Concentration at the *export* tip and concentration of *import exposure* are related but not identical. A world where Indonesia, Australia, and Russia clear **72%** of seaborne coal exports is a concentrated supply market; a world where Japan and Korea sit above **80%** import dependence is a concentrated *vulnerability* map. Both belong in the same risk packet. Our research ledger already ranked import dependence; this lens asks how that exposure sits next to Top-1 / Top-3 supply shares.
+
+## Who is exposed under a concentration reading
+
+**More exposed:** Northeast Asian importers whose power and industry still clear peaks through imported LNG and oil while solar/battery hardware also routes through China-dominated manufacturing; European systems that cut Russian pipe gas but remain ~**58%** energy-import dependent; thermal coal buyers who face a three-country seaborne tip; and analysts who treat Ember’s renewables-over-coal crossover as if it dissolved trade concentration.
+
+**Relatively better positioned:** net energy exporters (US, Canada, Australia, Middle East producers) who sit on the surplus side of the import scatter; buyers who can diversify across plural crude markets even when LNG stays a triopoly; and grids that pair domestic renewables with storage fast enough to shrink import dependence without waiting for manufacturing to decentralise.
+
+**What would rewrite the next concentration cut:** a Statistical Review year where India’s TPES share jumps enough to push top-3 demand past **55%**; US LNG share climbing past **30%** of exports; a material diversification of solar module capacity outside China that drops Top-1 below **60%**; or a European import-dependence print that breaks clearly under **50%**.
+
+## Caveats and methodology
+
+- **Different denominators.** TPES demand, seaborne export tons, LNG volumes, and manufacturing capacity are not interchangeable. Top-1 percentages across rows are comparable as *concentration meters*, not as additive shares.
+- **Primary ≠ electricity.** China’s ~**27%** of TPES is not the same object as ~**32%** of world electricity generation or Ember’s renewables-vs-coal *mix* shares.
+- **Rounded country shares.** EI Review and secondary IEA manufacturing figures are rounded; derived HHI values are approximate and sensitive to how the residual “rest of world” is bucketed.
+- **Eurostat vs national balances.** EU-27 import dependence (~**58%**, 2023) is disclosed; non-EU import figures are estimated from national balances / IEA and marked accordingly.
+- **Manufacturing shares are secondary.** Solar module and battery cell Top-1/Top-3 use IEA supply-chain vintages labeled secondary — useful for order-of-magnitude concentration, not for a single-year EIA-style census.
+- **Trade stance is net.** Indonesia can be a coal exporter and oil importer; the stance label nets those flows.
+- This post is a **concentration companion**. For country mix ledgers use the [research post](/blog/energy-systems-research-2026); for vintage deltas use the [EI update](/blog/energy-systems-update-2026) and later Ember/IEA refreshes.
+
+## The shareable takeaway
+
+Energy systems are **concentrated at the top — but which top depends on the lens**. China alone is ~**27%** of world primary energy demand; China + US + India clear ~**49%**. Seaborne coal and LNG export markets concentrate harder (**72%** and **61%** top-3). Crude oil exports stay comparatively plural (**38%** top-3). Clean-tech manufacturing is the extreme tip: solar modules ~**80%** China, battery cells ~**75%**. Import dependence still peaks in Japan and Korea even when supply-side Top-1 labels sit elsewhere. The theme answer is sharper: countries **source and mix** energy in many ways, but **trade and manufacturing power sit in thick tops** that mix-share headlines alone will miss.
+
+Related reading: [Energy systems research](/blog/energy-systems-research-2026), [Energy systems EI update](/blog/energy-systems-update-2026), [Global electricity generation mix](/blog/global-electricity-generation-mix-2024), and [Chokepoint commodities concentration](/blog/chokepoint-commodities-concentration-2026).`,
+  },
+  {
     id: "bank-commercial-credit-update-202608",
     slug: "bank-commercial-credit-update-202608",
     title:

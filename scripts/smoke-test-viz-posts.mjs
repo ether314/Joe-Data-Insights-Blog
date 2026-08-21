@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "energy-systems-concentration-2026",
+    marker: "Energy systems — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "bank-commercial-credit-update-202608",
     marker:
       "Aug vintage · CMBS delinq up / special servicing down · hard maturities",
