@@ -2,6 +2,99 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-geography-2026q3",
+    slug: "macro-growth-trade-geography-2026q3",
+    title:
+      "Q3 Geographic Split: Asia Still ~54% of Growth — Q2 Softness Trims Sensitivity to ~51%",
+    excerpt:
+      "Q3 geography lens on growth, trade and prices: Asia’s base growth contribution stays ~54% and merchandise trade-volume gains 71%, but Q2 hard-data sensitivity softens Asia’s growth share to ~51% as China prints 4.3% YoY — while stock–growth mismatch and elevated CPI burden still disagree about where risk sits.",
+    category: "Economics",
+    themeId: "macro-growth-trade",
+    imageUrl:
+      "/images/economics-macro-growth-trade-geography-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with amber Asia growth arcs softening under Q2 sensitivity, teal North America stock nodes, violet Europe trade corridors, and cyan elevated-CPI heat over the US",
+    publishedAt: "2026-08-22T06:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-geography-2026q3",
+    layout: "default",
+    content: `Our [2026 geography print](/blog/macro-growth-trade-geography-2026) already answered the map question with a two-layer story: Asia clears ~**54%** of world PPP growth contribution and **71%** of merchandise trade-volume gains, while North America still holds ~**18%** of PPP stock with only ~**10%** of growth — and elevated CPI burden sits thick in the US and EM, not in China. The [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3) and [Q3 concentration companion](/blog/macro-growth-trade-concentration-2026q3) then asked whether Q2 prints (China **4.3%** YoY, US **1.5%** SAAR, CPB May **+1.0%** MoM) rewrote the *tip* of the distribution. This **Q3 geography vintage** keeps the regional anchors and asks the desk follow-up: **does Q2 softness move *where* growth and trade land on the map — or only refresh the sensitivity meters beside a still-Asian activity map?**
+
+The interactive dashboard above is built as a **Q3 geography lens**. Toggle **Mismatch**, **Regions**, **Trade + flow**, and **Prices + Asia**. On Mismatch, read stock–growth gaps and the vintage slope from the prior geography print into Q2 sensitivity. On Regions, flip PPP / base growth / Q2 sens. / trade / export value. On Trade + flow, keep WTO corridors beside the CPB Mar–May MoM path. On Prices + Asia, open regime pies and Asia’s internal base-versus-sensitivity ladder. The punchline is deliberately multi-map. **Base activity geography stays Asian.** **Q2 sensitivity softens Asia’s growth share (~54%→~51%) without rewriting WTO’s 71% trade-growth corridor.** **Stock weight and price burden still disagree with flow geography** — North America and Europe remain stock-thick / growth-thin, and elevated CPI still coats the US while China prints near-zero inflation beside the largest growth engine on the board.
+
+## The headline ladder: Q3 vs prior geography
+
+| Meter | Geo 2026 | Q3 print | Δ / note |
+| --- | ---: | ---: | --- |
+| Asia growth contribution (base) | **~54%** | **~54%** | carried |
+| Asia growth (Q2 sensitivity) | — | **~51%** | **−3 pp** illustrative |
+| China growth contrib. (base → sens.) | **~32%** | **~29%** | **−3 pp** on 4.3% YoY |
+| Asia merch trade-volume growth | **71%** | **71%** | WTO carried |
+| Asia PPP stock | **~40%** | **~40%** | carried |
+| N. America PPP / growth | **~18% / ~10%** | same base | sens. growth ~**9%** |
+| Asia stock–growth mismatch | **+13.9 pp** | **+13.9 pp** | growth > stock |
+| N. America mismatch | **−8.3 pp** | **−8.3 pp** base | sens. wider (~−9.5) |
+| Elevated CPI GDP share | **~38%** | **~38%** | July CPI vintage |
+| CPB May merch MoM | — | **+1.0%** | flow overlay |
+
+Read the table as a **stability-plus-sensitivity scoreboard**. Q3 did not invent a new WEO PPP census or a new WTO volume-growth decomposition. It restated how Q2 hard data would *feel* if run-rate growth replaced the base contribution ladder — and it parked CPB’s Mar–May rebound beside, not on top of, Asia’s 71% corridor. Desks that treat “China slowed to 4.3%” as “Asia lost the map” are reading the wrong column.
+
+## Mismatch: where stock and growth disagree
+
+Open **Mismatch**. The stock–growth bars still put Asia at roughly **+14 pp** (growth contribution above PPP stock) and North America / Europe near **−8 to −9 pp** (stock thick, growth thin). That geometry is the same hinge the [prior geography print](/blog/macro-growth-trade-geography-2026) owned: **owning the stock weight is not the same as owning the flow**. Europe’s export-value share near **28%** of a ~**$26T** merchandise perimeter still sits beside a single-digit growth contribution — a reminder that dollar corridors and volume-growth contribution are different maps.
+
+The vintage slope is the Q3 addition. Flip the meter among Asia growth, Asia trade, Asia PPP, NA mismatch, and soft-CPI growth contribution. Asia *trade* and Asia *PPP* stay flat by construction (carried). Asia *growth* steps from ~**54%** to ~**51%** under Q2 sensitivity. NA mismatch widens slightly as the US SAAR softens. Soft-CPI growth contribution stays near **34%** — China-led soft prices still punch above their ~**22%** PPP stock weight on the growth side even after the China YoY cool.
+
+The GDP-print × growth-sensitivity scatter (bubble = PPP share) makes the same point in country space. China sits mid-right on a **4.3%** YoY print with a still-large sensitivity share and near-zero CPI. The US sits left-and-lower on **1.5%** SAAR with elevated CPI and a thick PPP bubble. India remains the high-growth / elevated-CPI Asian counterweight. Filter by region to isolate the continent without pretending the scatter is a new WEO weight table — it is an **illustrative run-rate map**.
+
+## Regions: base ladder sticky, sensitivity softens Asia
+
+Switch to **Regions**. Toggle the metric among PPP stock, base growth contribution, Q2 sensitivity, trade-growth share, and export-value share. On **base growth**, Asia still clears ~**54%**, North America ~**10%**, Europe ~**8%**. On **Q2 sensitivity**, Asia slips to ~**51%**, North America softens toward ~**9%**, Europe ticks up slightly on the EA Q2 **+0.4%** QoQ flash, and the residual ROW bucket absorbs the arithmetic close. On **trade**, Asia’s **71%** WTO-disclosed corridor does not move. On **export $**, Europe’s thick value share reappears beside Asia’s volume-growth dominance — the same dollar-versus-volume disagreement the research and geography vintages keep restating.
+
+The Asia internal base-versus-sensitivity panel is the regional hinge. China steps from ~**32%** of world growth contribution toward ~**29%** on the Q2 YoY print. India and ASEAN hold or gain slightly in the sensitivity mix. Japan+Korea remain export-thick / growth-thin inside Asia. That is the Q3 geography claim in one sentence: **Asia still owns the activity map; China softens the *intensity* of that ownership without handing the corridor to another continent.**
+
+Pair this panel with the [Q3 concentration lens](/blog/macro-growth-trade-concentration-2026q3): that post measures Top-1 / Top-3 tips on the same perimeters. This lens asks *where those tips sit geographically* when Q2 run-rates are applied as sensitivity, not as a new census.
+
+## Trade + flow: WTO corridors meet CPB’s rebound
+
+Toggle **Trade + flow**. Horizontal corridor bars and the donut still put Asia at **71%** of 2025 merchandise *volume-growth* contribution (**3.2 pp** of a **4.6%** world volume print), Europe ~**15%**, North America ~**11%**, ROW the residual. Those shares are **carried** from WTO GTOS March 2026 — the same disclosed Asia corridor the prior geography and concentration posts used. Q3 does not pretend May’s MoM rebound rewrote 2025 contribution geography.
+
+The CPB composed chart is the flow overlay. March **−2.1%** MoM, April **+0.7%**, May **+1.0%** — a two-month rebound that still leaves the Mar–May chain near **−0.4%**. That path matters for desks watching *momentum*, not for desks that need a new regional *share* table. **A rebound month is not a re-ranking of who contributed last year’s volume gains.** Export-value versus volume-growth dual bars keep Europe’s dollar thickness visible beside Asia’s volume-growth tip — useful when a slide confuses “share of export dollars” with “share of trade-growth contribution.”
+
+IMF July goods+services trade volume for 2026 near **3.5%** and Asia import growth near **3.3%** remain the annual path context from the [July update](/blog/macro-growth-trade-update-2026) and [Q3 vintage check](/blog/macro-growth-trade-update-2026q3). This geography post does not re-litigate those annuals; it parks them next to the map.
+
+## Prices + Asia: soft CPI still funds growth geography
+
+Open **Prices + Asia**. The regime pie still allocates roughly **22%** of world PPP GDP to near-zero / soft CPI, **28%** to target-adjacent, **38%** to elevated (**3–6%**), and **12%** to high/outlier. Dual bars show the soft band delivering ~**34%** of growth contribution — punching above stock weight — while the elevated band holds the largest *stock* slice and a smaller growth share than Asia’s soft-price engine. July vintage prints keep the hinge concrete: US CPI **3.4%** YoY, EA HICP **2.9%**, China ~**0.2%**. North America’s share of the elevated-CPI GDP perimeter remains thick; Asia’s elevated share is real (India and others) but not the China story.
+
+Asia internal toggles (base growth / Q2 sens. / PPP / export $) restate the country geography without another Top-k panel. China leads growth contribution even after sensitivity; India is the second engine; ASEAN is the middle corridor; Japan+Korea are the export-value ballast. The soft-growth paradox survives Q2: **the region that prints the softest major CPI still owns the thickest growth contribution — even when that contribution softens in sensitivity space.**
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that translate China **4.3%** YoY into “Asia lost growth geography” while the base ladder still clears ~**54%** and sensitivity only softens to ~**51%**; US-centric slide decks that quote ~**18%** PPP stock as if it were growth contribution; trade desks that treat CPB May **+1.0%** MoM as a rewrite of WTO’s Asia **71%** volume-growth corridor; price watchers who average world CPI near **4.7%** (IMF July path) without separating China soft from US elevated; Europe-export dollar narratives that confuse ~**28%** of merchandise *value* with single-digit *growth contribution*.
+
+**Relative winners under current rules:** Asia-weighted growth books that keep base and sensitivity columns separate; import-demand stories tied to Asia’s **3.3%** merchandise import path; portfolios that already priced Europe as export-value thick / growth thin; desks that pair this map with the [China–US–India long view](/blog/china-us-india-gdp-30-years) instead of forcing a single-country slogan onto a six-region board.
+
+**What would change the story:** a new IMF WEO PPP weight census that cuts Asia’s stock or growth contribution sharply; a WTO period print that breaks Asia’s ~**71%** trade-growth corridor; a multi-quarter China rebound that restores sensitivity shares to (or above) the base ladder; or a US/EA disinflation path that empties the elevated CPI band’s ~**38%** PPP GDP share. None of those clear this Q2 / July-CPI / WTO-2025 window.
+
+## Caveats and methodology
+
+- **PPP stock and base growth-contribution shares** roll IMF WEO April 2026 country weights into continental buckets — staff-aligned where Table 1.1 omits full PPP weights; labeled estimated where residual.
+- **Q2 growth sensitivity** restates China **4.3%** YoY and US **1.5%** SAAR as an *illustrative* run-rate share — not a new WEO weight table and not a forecast.
+- **Merchandise trade-growth corridors** follow WTO GTOS March 2026 regional decomposition of 2025 volume growth (Asia **3.2 pp / 71%** disclosed); other regional splits are estimated residuals that sum to 100% for visualization.
+- **CPB Mar–May MoM** is a flow overlay from the May 2026 World Trade Monitor print — not a re-rank of 2025 contribution shares.
+- **Export-value geography** uses WTO 2025 merchandise export values vs ~**$26.3T** world; energy and price effects inflate some $ shares vs volume.
+- **Price regimes** mix WEO/BLS/Eurostat prints; elevated-CPI GDP share is a burden perimeter, not an additive market share. Türkiye’s outlier CPI is excluded from median scatter views.
+- **mismatchPp = growth contribution − PPP stock share** on the base ladder; sensitivity mismatch is shown on the vintage slope where labeled.
+- **Geography ≠ causation.** A softer China YoY does not automatically hand trade-growth share to another region; a CPB rebound month does not rewrite last year’s corridor.
+
+## The shareable takeaway
+
+In the **Q3 2026 geography vintage**, Asia still delivers ~**54%** of base world PPP growth contribution and **71%** of merchandise trade-volume gains, with ~**40%** of PPP stock. Q2 hard-data sensitivity softens Asia’s growth share to ~**51%** (−**3 pp**) as China prints **4.3%** YoY and the US **1.5%** SAAR — without moving WTO corridors or PPP stock. Stock–growth mismatch stays Asia-positive (~**+14 pp**) and North America / Europe negative (~**−8 to −9 pp**). Elevated CPI still coats ~**38%** of world PPP GDP while soft-CPI geography punches above its stock weight on growth. Base map Asian. Sensitivity softer. Price burden elsewhere.
+
+Related reading: [Geography 2026](/blog/macro-growth-trade-geography-2026) · [Q3 concentration](/blog/macro-growth-trade-concentration-2026q3) · [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3) · [August CPI vintage](/blog/macro-growth-trade-update-202608) · [July IMF update](/blog/macro-growth-trade-update-2026) · [April research](/blog/macro-growth-trade-research-2026) · [China–US–India GDP](/blog/china-us-india-gdp-30-years).`,
+  },
+  {
     id: "energy-systems-concentration-202608",
     slug: "energy-systems-concentration-202608",
     title:

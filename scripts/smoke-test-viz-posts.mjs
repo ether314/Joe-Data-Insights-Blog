@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "macro-growth-trade-geography-2026q3",
+    marker: "Q3 2026 geography lens · growth · trade · prices",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "energy-systems-concentration-202608",
     marker: "Top-1 still 33.2%",
     forbidden: "Loading interactive charts",
