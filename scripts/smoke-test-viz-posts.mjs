@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "fiscal-industrial-policy-concentration-2026",
+    marker: "Fiscal & industrial policy — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "migration-humanitarian-update-2026",
     marker: "First decade decline — hosts still carry the ledger",
     forbidden: "Loading interactive charts",
