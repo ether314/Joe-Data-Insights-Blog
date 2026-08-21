@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "consumer-finance-markets-concentration-202608",
+    slug: "consumer-finance-markets-concentration-202608",
+    title:
+      "Aug Concentration: Top-1 Equities Still 54% — Official MMF $7.93T (−$92B) While Tip Shares Stay Sticky",
+    excerpt:
+      "August 202608 concentration lens on consumer finance: people-side top-1 equities remain ~54% and top-1 wealth ~30.5%, top-3 card issuers still ~52% of purchase volume, mortgage alone is 70.1% of NY Fed $18.93T debt — while the official ICI MMF print restates to $7.93T (−$92B vs the Q3 claim) without moving the tip.",
+    category: "Consumer Finance",
+    themeId: "consumer-finance-markets",
+    imageUrl:
+      "/images/consumer-finance-consumer-finance-markets-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a glowing wealth concentration ladder beside a teal mortgage column, amber inverted revolving bars, and a purple money-market correction arc",
+    publishedAt: "2026-08-21T23:30:00Z",
+    featured: true,
+    visualization: "consumer-finance-markets-concentration-202608",
+    layout: "default",
+    content: `Our [2026 concentration print](/blog/consumer-finance-markets-concentration-2026) answered the first distribution question: how thick is the top across net worth, equities, deposits, revolving balances, and card issuers — top-1 wealth near **30.5%**, top-1 equities near **54%**, revolving inverted so the bottom half holds about **30%** of card debt. The [Q3 concentration lens](/blog/consumer-finance-markets-concentration-2026q3) then scored HHI across ledgers and put mortgage at **70.1%** of the NY Fed liability stack. The [August 202608 tape update](/blog/consumer-finance-markets-update-202608) restated official ICI money-market assets to **$7.93T** (−**$92B** vs the Q3 theme’s **$8.02T** claim) and locked G.19 revolving at **$1.351T**. This post asks the desk question that sits between those prints: **did the official Aug correction change concentration at the top — or only the cash sleeve around a sticky tip?**
+
+The interactive dashboard above is built as an **August 202608 concentration lens**. Toggle **Top-1 / top-3**, **Liquid tape**, **Save vs borrow**, and **Firms & products**. The punchline is deliberately two-clocked. On **people and product tips**, nothing material moved: top-1 equities still about **54%**, top-1 wealth still about **30.5%**, top-3 issuers still about **52%**, mortgage still **70.1%** of **$18.926T** household debt. On the **liquid pair**, the official ICI week-ended Aug 19 print at **$7.928T** pulls MMF’s share of deposits+MMF to about **34.7%** (from a Q3-theme **34.9%**) while deposits remain the majority parking sleeve. Concentration can be high and stable while the tape still revises.
+
+## The Aug top-1 / top-3 scoreboard
+
+| Lens | Top-1 | Top-3 / thick top | Axis |
+| --- | ---: | ---: | --- |
+| Corporate equities & funds | **54%** | **72%** / **87%** (top 10%) | People |
+| Debt products (NY Fed) | **70.1%** (mortgage) | **87.9%** (top 3 products) | Product |
+| Net worth (DFA) | **30.5%** | **~50%** / **67.5%** (top 10%) | People |
+| Card issuers (purchase $) | **~22%** (Chase) | **~52%** (top 3) | Firm |
+| Deposits & cash-like | **17%** | **~38%** / **50%** (top 10%) | People |
+| Revolving by wealth %ile | **~5%** (est.) | **~16%** / **~24%** (top 10%) | People (inverted) |
+
+Read the table as a **family of market shares**, not one number. Equity concentration tells you who captures market beta. Debt-product concentration tells you how mortgage-dominated the liability ledger is. Issuer concentration tells you which brands intermediate spend. Revolving concentration tells you who carries the consumer product that still shows stress in bureau data. Analysts who quote only aggregate net worth understate the equity tip; analysts who quote only the MMF weekly understate that the tip shares did not move with the cash sleeve.
+
+## Top-1 / top-3: equities and mortgages still dominate different axes
+
+Filter the dashboard to **Top-1 / top-3**. Ranking by top-1 share puts **debt products** first (mortgage **70.1%**) and **equities** second (**54%**), then net worth, issuers, deposits, and revolving. Ranking by top-3 keeps the same story with a thicker tip: debt products **87.9%**, equities about **72%** into the top three wealth bands of the equity stack, issuers **52%**. The scatter panel plots each lens’s top-1 against its thick top — equities and mortgage sit upper-right on different axes; revolving sits low on top-1 even though the bottom half holds about **30%** of card balances.
+
+That ordering is the August contribution relative to the [prior concentration print](/blog/consumer-finance-markets-concentration-2026): we keep the top-1 / top-3 framing the brief asked for, then ask whether the [official Aug tape](/blog/consumer-finance-markets-update-202608) forced a rewrite. It did not — not on people-side DFA shares, not on NY Fed product mix, not on Nilson-style issuer ranks. The Lorenz panel for net worth still rises to about **30.5%** at the top 1%, **67.5%** at the top 10%, and **97.5%** once the upper half is included — leaving the bottom 50% with roughly **2.5%** of ~**$169T**.
+
+## Liquid tape: the sleeve moved; the tip did not
+
+Switch to **Liquid tape**. The donut keeps cash allocation honest after the official correction: deposits still about **65.3%** of the deposits+MMF pair against ICI **$7.928T** MMF. The path panel shows the Q3 theme’s **$8.02T** restatement stepping down to the Aug 20 release’s **$7.928T** plateau — week-over-week the official table moved only about **+$0.9B**. That is a vintage-hygiene event, not a household “run for the exits.”
+
+The Q3→Aug delta bars make the methodological point explicit. Filter to **Sticky tip** and the bars for top-1 equity, top-1 wealth, top-3 issuers, and mortgage-of-debt sit near zero. Filter to **Moved** and you see MMF AUM (−**$92B**), MMF’s liquid share (−**~0.2 pp**), the G.19 revolving concept bridge toward **$1.351T**, and disclosed PSAVERT still at June **2.7%** while the Q3 post’s July **3.1%** claim waits on FRED ahead of BEA’s late-August print. Our [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) piece tracked the product split; here the point is that even after the hiking-cycle MMF boom *and* an official −**$92B** restatement, the household liquid pair is not MMF-dominated — and the people-side tip did not reprice with it.
+
+## Save vs borrow: the mirror still inverts
+
+Open **Save vs borrow**. Grouped bars by wealth percentile put equities, revolving, and deposits on one axis. The top 1% holds about **54%** of equities and only about **5%** of revolving; the bottom 50% holds about **1%** of equities and about **30%** of revolving. Sort by revolving and the middle/bottom bands look “democratic”; sort by equities and they do not. The equity×revolving scatter makes the same geometry: high equity share maps to low revolving share across the tip, and the opposite in the bottom half.
+
+Pair that mirror with the debt-share vs stress panel. Mortgage is **70.1%** of household debt with serious transitions near **1.6%**. Student loans are an **8.8%** sleeve with **90+** stock near **10.6%**. Cards are a **6.8%** sleeve (NY Fed **$1.281T**) against G.19 revolving **$1.351T**, with elevated early/90+ transitions that still steal headlines. Our [delinquency split](/blog/us-household-debt-delinquency-split-2026) already showed product clocks disagree; the concentration lens shows *why* aggregate “households are fine” can coexist with revolving stress — the calm product is also the giant, and the stressed products are small sleeves of **$18.93T**.
+
+The APR−funds gap near **17.3 pp** (May APR / July funds from the Aug update) sits on that same inverted revolving distribution. Rate pain is not evenly shared across the wealth ladder; neither is equity beta. Desks that underwrite from Z.1 net worth alone miss both sides of the mirror.
+
+## Firms & products: moderate issuer concentration, extreme mortgage share
+
+Toggle **Firms & products**. On a Nilson-style general-purpose purchase-volume framing, **Chase** leads near **22%**, **Amex** and **Citi** bring the top three to about **52%**, and the top five clear roughly **71%** — leaving **~29%** for the long tail. The cumulative ladder and mix donut show the same moderate firm-side story: concentrated relative to an equal six-way split, mild next to equity ownership or mortgage’s product share.
+
+Debt-product bars (share or **$ trillions**) keep the liability top-1 unambiguous: mortgage **$13.268T** (**70.1%**), auto **$1.702T** (**9.0%**), student **$1.661T** (**8.8%**), cards **$1.281T** (**6.8%**), HELOC **$0.458T** (**2.4%**), other **$0.556T** (**2.9%**). Top-3 products clear about **87.9%**. That product concentration is orthogonal to who holds revolving stress — and it did not move between the Q3 concentration print and this August tape.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** households in the bottom half and lower middle whose balance sheets are revolving-heavy and equity-light when the APR−funds gap stays near **17 pp**; regional banks and fintechs competing for purchase volume against a top-5 that already clears ~**71%**; mortgage-centric portfolios if serious transitions keep drifting up from **1.6%** even while revolving stress steals headlines; desks that treated the Q3 **$8.02T** MMF claim as a structural break above **$8T** and now need to re-anchor to the official **$7.93T** plateau without inventing a tip-share story that the DFA did not print.
+
+**Relative winners under current rules:** top-percentile owners of corporate equities and private business; deposit-rich households capturing elevated cash yields without carrying revolving stress; large card issuers with scale in purchase volume; mortgage holders with locked-in rates whose primary residence still participates in the less-skewed housing ledger — even as mortgage *product* concentration dominates the liability stack.
+
+**What would change the story:** a sustained multi-year rise in bottom-50 wealth share above the low-single-digit band; equity ownership diffusion that breaks the ~**54%** top-1 / ~**87%** top-10 prints; a material shift in debt-product mix away from mortgage’s ~**70%** without a matching stress spike; a collapse of revolving balances in the middle and bottom that would also show up as healing in card transitions; or an official MMF path that actually clears **$8T** *and* flips the liquid pair toward MMF dominance. None of those dominate the August 202608 map summarised here.
+
+## Caveats and methodology
+
+- **Top-1 / top-3 meters are market-share style reads** on DFA wealth buckets (people), NY Fed 2026Q2 product stocks (liabilities), and Nilson-style purchase volume (issuers) — not a single supervisory HHI cell.
+- **DFA percentiles are wealth ranks, not income ranks.** A high-income renter can sit below a lower-income homeowner on net worth.
+- **Debt-product shares are disclosed NY Fed 2026Q2 stocks** divided by **$18.926T** aggregate — product concentration, not people concentration.
+- **Revolving percentile shares remain estimated** to sum to aggregate revolving and to reflect the qualitative SCF/DFA pattern; treat as order-of-magnitude.
+- **Issuer purchase-volume ranks** follow public Nilson-style tallies and can shift with co-brand mix and network definition.
+- **MMF AUM ($7.928T)** is the ICI Aug 20 release for week-ended Aug 19; the Q3 theme’s **$8.02T** was a restated claim for the same week. Deposits (~**$14.95T**) are theme-carried.
+- **G.19 revolving ($1.351T)** and NY Fed cards (**$1.281T**) are related but not identical concepts — the dashboard treats the bridge as tape context, not a people-share rewrite.
+- **Disclosed PSAVERT** on FRED remains June **2.7%** in the Aug update; the Q3 July **3.1%** claim is carried as a pending confirmation, not a new concentration input.
+- **Aggregate net worth (~$169T)** is carried theme context — the concentration story is about *shares and top-k meters*, not a new Z.1 reprint.
+
+## The shareable takeaway
+
+Consumer finance in August 202608 is still **concentrated at the top — and the official tape did not move the tip**. On **equities**, top-1 about **54%** and top-10 about **87%**. On **debt products**, mortgage alone is **70.1%** of **$18.93T**. On **net worth**, top 1% holds about **30.5%** and the bottom half about **2.5%**. On **card issuers**, top-3 purchase volume sits near **52%**. On **liquid parking**, deposits still dominate the pair after ICI’s official **$7.93T** MMF print (−**$92B** vs the Q3 claim). Households are not one balance sheet. They are a stack of distributions — people, products, and firms — and stress, savings, and market beta live in different parts of that stack.
+
+Related reading: [2026 concentration print](/blog/consumer-finance-markets-concentration-2026), [Q3 concentration lens](/blog/consumer-finance-markets-concentration-2026q3), [August 202608 theme update](/blog/consumer-finance-markets-update-202608), and [household delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+  },
+  {
     id: "fiscal-plumbing-concentration-2026",
     slug: "fiscal-plumbing-concentration-2026",
     title:

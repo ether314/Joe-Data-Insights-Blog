@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "consumer-finance-markets-concentration-202608",
+    marker: "Consumer finance — Aug 202608 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-plumbing-concentration-2026",
     marker: "Fiscal plumbing — concentration lens",
     forbidden: "Loading interactive charts",

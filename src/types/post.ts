@@ -162,7 +162,8 @@ export interface Post {
     | "ai-power-grid-concentration-2026q3"
     | "ai-supply-chain-concentration-2026q3"
     | "measurement-science-concentration-2026q3"
-    | "fiscal-plumbing-concentration-2026";
+    | "fiscal-plumbing-concentration-2026"
+    | "consumer-finance-markets-concentration-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
