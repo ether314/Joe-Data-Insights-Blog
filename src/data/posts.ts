@@ -2,6 +2,114 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "measurement-science-concentration-202608",
+    slug: "measurement-science-concentration-202608",
+    title:
+      "Aug Concentration: GERD Top-1 Still 29.4% China / Top-3 65.2% — CET AI Hits 75% While ¥ Flow Surges +8.1%",
+    excerpt:
+      "August 202608 concentration lens on measurement & science: carried PPP GERD Top-1 stays 29.4% China and Top-3 65.2% with a 0.3 pp gap, while China 2025 domestic R&D hits ¥3.93T (+8.1%) and CET AI priority patents print ~75% Top-1 — USPTO applicants still US-led at ~47%.",
+    category: "Global Systems",
+    themeId: "measurement-science",
+    imageUrl:
+      "/images/global-systems-measurement-science-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of rose Top-1 concentration bars, teal Lorenz curve, violet patent-network clusters, and amber intensity spark lines over a faint globe grid",
+    publishedAt: "2026-08-22T00:30:00Z",
+    featured: true,
+    visualization: "measurement-science-concentration-202608",
+    layout: "default",
+    content: `Our [2026 concentration lens](/blog/measurement-science-concentration-2026) and [Q3 companion](/blog/measurement-science-concentration-2026q3) answered the distribution question on PPP GERD: Top-1 at **29.4%** China, Top-3 at **65.2%**, China–US gap collapsed to **0.3 pp**, and converter frames that can flip who sits at Top-1. The [August theme update](/blog/measurement-science-update-202608) then printed the first post-2024 *flow year* on China’s domestic ledger — **¥3.9262T** R&D (+**8.1%**), intensity **2.80%**, basic research share **7.08%** — plus NSF Translation CET patent meters. This post asks the desk question that sits between those prints: **did the August flow and patent vintages change concentration at the top — or only the tempo and invention sleeves around a sticky tip?**
+
+The interactive dashboard above is an **August 202608 concentration lens**. Toggle **HHI / scoreboard**, **Ladder + Lorenz**, **Flow + intensity**, and **Patents + KTI**. The punchline is deliberately two-clocked. On **carried PPP world shares**, nothing material moved: Top-1 still **29.4%** China, Top-3 still **65.2%**, US+China still **58.5%**, gap still **0.3 pp**. On **flow and invention**, the system looks more concentrated in *tempo and volume*: China domestic R&D grows faster than the plan floor (**+8.1%** vs **≥7%**), CET AI priority families print ~**75%** Top-1, and USPTO utility applicants still US-led at ~**47%**. Progress can be knife-edge on dollars and cliff-like on patents in the same month.
+
+## The August Top-1 / Top-3 scoreboard
+
+| Perimeter | Top-1 | Top-3 | Aug hinge |
+| --- | ---: | ---: | --- |
+| GERD funding (PPP, carried) | **29.4%** (China) | **65.2%** (CN·US·JP) | Gap **0.3 pp** — unchanged vs Q3 |
+| S&E publication volume | **31%** (China) | **50%** (CN·US·IN) | Volume tip sticky |
+| CET AI priority patents | **~75%** (China) | **~92%** | Aug volume extreme |
+| USPTO utility applicants | **~47%** (United States) | **~72%** | Ledger disagreement |
+| KTI value-added | **28%** (United States) | **71%** (US·CN·EU) | US Top-1 via services |
+| Non-OECD R&D ledger | **92.3%** (China) | **~97%** | Extreme sub-perimeter |
+| China 2025 domestic flow | **¥3.93T** (+**8.1%**) | Intensity **2.80%** | Tempo — not world share |
+
+Read the table as a **family of market shares plus one flow-year meter**, not one slogan. GERD PPP answers who leads world expenditure under the OECD/AAAS converter. CET answers who leads critical-technology *priority-family volume*. USPTO answers who leads *US-granted utility applicants*. KTI answers who leads knowledge- and technology-intensive *value-added*. The China ¥ row answers whether the domestic flow is still accelerating — it is not a substitute for the PPP Top-1 cell.
+
+Analysts who splice **¥3.93T** into the **29.4% / 29.1%** frame invent a new world share that neither OECD nor AAAS printed. Analysts who ignore CET while quoting the knife-edge GERD gap understate where concentration is most extreme. Analysts who ignore USPTO while quoting CET miss that patent *ledgers* disagree on who is Top-1.
+
+## Carried PPP tip: the knife-edge did not move
+
+Open **HHI / scoreboard**. Analytical GERD HHI sits near **1,890** — the same mid-band Q3 scored after the NSF rounded → AAAS finer restatement. Top-1 / Top-3 bars put GERD and KTI in a contested duopoly band, publications milder on HHI because RoW is still large, and non-OECD plus CET AI in the extreme club.
+
+The vintage slope panel is the first hinge of this August print. From research → 2026 concentration → Q3 → Aug, **GERD Top-1 and the China–US gap freeze after Q3**. Toggle the metric to **CET AI Top-1** and the line stays pinned near **75%**. August did not restate world PPP shares; it asked whether a new domestic flow year and patent meters change the *distribution story*. They change the sleeves, not the carried tip.
+
+Pair this with the [Q3 concentration companion](/blog/measurement-science-concentration-2026q3): converter frames still matter for whether China is Top-1 at all under alt-PPP or EXR. This August lens keeps that caveat in the methodology and spends its interactive budget on flow tempo, intensity closing, and patent-ledger disagreement instead.
+
+## Flow + intensity: tempo concentrates even when shares freeze
+
+Switch to **Flow + intensity**. The China 2025 domestic signals are the August-specific board:
+
+- **Domestic R&D:** **¥3.632T → ¥3.9262T** (+**8.1%**) — clears the plan’s **≥7%** annual growth floor.
+- **Intensity:** **2.70% → 2.80%** on the NBS domestic meter (OECD-comparable China intensity was **~2.7%** in the 2024 international frame).
+- **Basic research share:** first print above **7%** at **7.08%**, with basic spending up about **+11.1%**.
+- **Intensity gap to US:** narrows toward **~0.6 pp** against a carried US intensity near **3.4%**.
+
+That is the second hinge. A closing intensity gap is *not* diversification of world GERD shares. It is evidence that China’s domestic effort is still concentrating *relative to its own GDP* while the United States remains Top-1 on intensity. The dual-axis intensity path makes the geometry readable: China climbs; US plateaus; the gap line drifts down without crossing zero.
+
+Treat the ¥ ledger as a **tempo and composition meter**. Experimental development still dominates the composition mix (~**82%**); basic research crossing **7%** is a composition shift inside a still-development-heavy stack — not proof that world science funding democratised.
+
+## Ladder + Lorenz: six perimeters, one shape family
+
+Toggle **Ladder + Lorenz**. Flip GERD, pubs, CET, USPTO, KTI, and non-OECD. The Lorenz-style curves all sit above the equal-share line; how far above depends on the perimeter:
+
+- **GERD:** Top-1 **29.4%**, Top-2 **58.5%**, Top-3 **65.2%** — duopoly floor.
+- **Publications:** Top-1 **31%**, Top-3 **50%** (China–US–India).
+- **CET AI:** Top-1 **~75%**, Top-3 **~92%** — cliff, not knife-edge.
+- **USPTO:** Top-1 **~47%** (US), Top-3 **~72%** — oligopoly with a different Top-1 label.
+- **KTI VA:** Top-1 **28%** (US), Top-3 **71%**.
+- **Non-OECD:** Top-1 **92.3%** — the extreme carried perimeter.
+
+The donut beside the ladder makes Top-3 vs rest visual: for CET AI, “rest of world” after Top-3 is a thin residual; for GERD, RoW after Top-5 still clears about a quarter of the universe. That is why HHI and Top-1 can disagree in rank order across lenses even when every lens is “concentrated.”
+
+Open the volume × impact scatter on the scoreboard view. China sits far right on publication share and only mid-pack on highly-cited-article *rate* (**~1.3%** vs US **~1.7%**). Volume concentration and citation-intensity leadership still disagree — the same asymmetry the [research ledger](/blog/measurement-science-research-2026) flagged.
+
+## Patents + KTI: where August concentration is loudest
+
+Switch to **Patents + KTI**. CET field bars rank China volume share from AI (**~75%**) through QIST (**~48%**), semiconductors (**~42%**), advanced nuclear (**~40%**), and biotech (**~38%**). Every field in the data notes US citation leadership even where China leads volume — a volume/impact split that mirrors the publication scatter.
+
+The patent-ledger panel is the third hinge. **CET AI Top-1 is China; USPTO utility Top-1 is the United States.** Same broad “patent” noun; opposite concentration labels. Desks that quote only international priority-family volume see a China cliff. Desks that quote only USPTO applicant share see a US-led utility franchise (~**326k** grants class). Both can be reading honest NSF Translation meters. Concentration answers are **ledger-conditioned**.
+
+KTI splits close the board. On total knowledge- and technology-intensive value-added (~**$11.7T**), the US remains Top-1 at **28%** with China at **25%** and EU-27 at **18%**. Flip to the manufacturing tip and China concentrates (~**$2.4T** mfg VA framing); flip to services and the US share jumps (~**43%** in this mix). Aggregate Top-1 is a services story; production-tip concentration is a China manufacturing story. Averaging them into “KTI is neck-and-neck” without the split is a category error.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** ministries that treat the August ¥**3.93T** print as a new world GERD Top-1 without PPP conversion; patent strategists who equate CET volume leadership with USPTO franchise leadership; industrial-policy desks that celebrate a **0.6 pp** intensity-gap close while CET AI still prints ~**75%** Top-1; investors who price KTI “near-duopoly” without separating manufacturing tip from services share; multilaterals that model non-OECD R&D as a diversified club when one country is **92%** of that ledger.
+
+**Relative winners under current meters:** China-scale platforms that keep domestic R&D above the **7%** growth floor and dominate CET priority-family volume; US services and citation franchises that still lead KTI aggregate VA, HCA rates, and USPTO applicants; labs that convert GERD into cited output rather than article counts alone; smaller high-intensity systems that punch above world-dollar share even when they are not Top-3.
+
+**What would change the story:** a clean US reclaim (or sustained China lead beyond converter noise) on the next OECD/AAAS PPP restatement; CET AI China share compressing toward the semiconductor ~**40%** band; USPTO applicant Top-1 flipping away from the US; KTI total VA Top-1 flipping to China *without* a services offset; non-OECD Top-1 falling well below ~**70%** as India and others scale R&D dollars, not only papers; China domestic intensity closing the US gap to zero *and* showing up in OECD-comparable world shares. August shows **tempo and patent volume concentrating while the PPP tip stays sticky**.
+
+## Caveats and methodology
+
+- **GERD PPP shares are carried from OECD/AAAS 2024** (China **29.4%** / US **29.1%** / Top-3 **65.2%**). August does not invent a 2025 world-share census.
+- **China NBS 2025 domestic R&D (¥3.9262T, +8.1%, intensity 2.80%, basic 7.08%) is a yuan ledger.** Do not splice into PPP world shares without conversion.
+- **Intensity gap (~0.6 pp)** compares China domestic 2025 intensity to a carried US **~3.4%** international meter — dual-ledger, not a single NSF table.
+- **CET AI ~75%** is an NSF Translation volume anchor; field residuals (QIST/semi/etc.) and USPTO Top-3 rungs are estimated closures.
+- **USPTO utility applicant share (~47%)** and Top-3 (~**72%**) are estimated from NSF Translation framing around ~**326k** grants — not a full WIPO world share.
+- **Publication and HCA figures** follow NSF Indicators; HCA is a rate, not a world HCA market share.
+- **KTI manufacturing / services splits** are analytical overlays on NSF State of S&E 2026 total VA shares; treat tip percentages as estimated.
+- **HHI values are analytical** on disclosed-plus-residual buckets (0–10,000), not official NSF or OECD statistics.
+- **Non-OECD China share 92.3%** is carried AAAS; India+ residual rungs are estimated.
+- Cross-agency comparisons (NBS vs OECD vs NSF) are directional; scopes, years, and converters differ.
+
+## The shareable takeaway
+
+Measurement and science remain **concentrated at the top — and August mostly changed the flow and patent sleeves, not the carried PPP tip**. On headline PPP GERD, Top-1 (China) is still **29.4%**, Top-3 about **65%**, and the China–US gap is still **0.3 pp**, with US+China near **59%**. On the China domestic ledger, R&D hits **¥3.93T** (+**8.1%**) and intensity **2.80%** while the gap to US intensity narrows toward **0.6 pp**. On CET AI priority patents, Top-1 is about **75%**; on USPTO utility applicants, Top-1 flips to the United States at ~**47%**. On KTI value-added, Top-1 stays US at **28%** via services even as China concentrates manufacturing VA. Progress is still funded and published through a system that looks contested on PPP dollars and **top-heavy once you rank patents, pubs, and non-OECD ledgers — with August proving that sticky Top-1 shares can coexist with accelerating domestic tempo**.
+
+Related reading: [Q3 concentration lens](/blog/measurement-science-concentration-2026q3) · [Concentration lens (2026)](/blog/measurement-science-concentration-2026) · [August 202608 China flow + CET](/blog/measurement-science-update-202608) · [2022 research ledger](/blog/measurement-science-research-2026).`,
+  },
+  {
     id: "fiscal-plumbing-concentration-2026q3",
     slug: "fiscal-plumbing-concentration-2026q3",
     title:
