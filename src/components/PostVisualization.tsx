@@ -1322,6 +1322,21 @@ const FiscalPlumbingUpdate2026Dashboard = dynamic(
   },
 );
 
+const BankCommercialCreditUpdateDashboard = dynamic(
+  () =>
+    import("@/components/visualizations/BankCommercialCreditUpdateDashboard").then(
+      (m) => m.BankCommercialCreditUpdateDashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1661,6 +1676,10 @@ export function PostVisualization({
 
   if (type === "fiscal-plumbing-update-2026") {
     return <FiscalPlumbingUpdate2026Dashboard />;
+  }
+
+  if (type === "bank-commercial-credit-update-2026") {
+    return <BankCommercialCreditUpdateDashboard />;
   }
 
   return null;

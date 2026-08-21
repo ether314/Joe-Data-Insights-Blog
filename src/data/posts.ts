@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "bank-commercial-credit-update-2026",
+    slug: "bank-commercial-credit-update-2026",
+    title:
+      "Update: Card Charge-Offs −62 bp YoY — CRE Delinquency Still Stuck at 1.56%",
+    excerpt:
+      "Fed SA 2026Q1 vintage: credit-card charge-offs cool to 3.84% (−0.62 pp YoY) while CRE past-dues hold near 1.56%. CRE charge-offs tick +3 bp QoQ to 0.17% — stress still on the PDNA line, losses still consumer-led but cooling.",
+    category: "Finance",
+    themeId: "bank-commercial-credit",
+    imageUrl: "/images/finance-bank-commercial-credit-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of cooling amber card charge-off bars against a sticky cyan CRE delinquency line and a small rose QoQ uptick",
+    publishedAt: "2026-08-21T03:00:00Z",
+    featured: true,
+    visualization: "bank-commercial-credit-update-2026",
+    layout: "canvas",
+    content: `Our [bank & commercial credit research map](/blog/bank-commercial-credit-research-2026) answered the portfolio geography question: cards own realized losses, CRE owns the past-due stock, CMBS office owns the securitized headlines, and mid-size banks own the concentration. This update asks the vintage question the next Fed print always forces: **what moved?**
+
+The Federal Reserve’s seasonally adjusted charge-off and delinquency release (last update **May 19, 2026**) still closes on **2026Q1**. Versus **2025Q1**, **credit-card charge-offs fell 0.62 percentage points** to **3.84%** — the loudest cooling print on the bank loss ledger. **CRE delinquency** barely budged, finishing at **1.56%** (−0.01 pp YoY, −0.02 pp QoQ). **CRE net charge-offs** are still tiny at **0.17%**, lower than a year ago (−0.05 pp) but **up 0.03 pp** from 2025Q4’s 0.14%. That is the update’s contradiction in one sentence: **consumer losses are easing; CRE stress remains a past-due story with a faint QoQ conversion tick.**
+
+## The vintage scoreboard
+
+| Signal | 2025Q1 | 2025Q4 | 2026Q1 | YoY Δ | QoQ Δ |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Card charge-offs | 4.46% | 4.07% | **3.84%** | **−0.62 pp** | −0.23 pp |
+| Card delinquency | 3.06% | 2.94% | **2.92%** | −0.14 pp | −0.02 pp |
+| CRE delinquency | 1.57% | 1.58% | **1.56%** | −0.01 pp | −0.02 pp |
+| CRE charge-offs | 0.22% | 0.14% | **0.17%** | −0.05 pp | **+0.03 pp** |
+| C&I charge-offs | 0.55% | 0.56% | **0.59%** | +0.04 pp | +0.03 pp |
+| C&I delinquency | 1.29% | 1.34% | **1.34%** | +0.05 pp | 0.00 pp |
+| Residential delinquency | 1.77% | 1.79% | **1.89%** | +0.12 pp | +0.10 pp |
+| Total charge-offs | 0.64% | 0.58% | **0.56%** | −0.08 pp | −0.02 pp |
+| Total delinquency | 1.55% | 1.48% | **1.48%** | −0.07 pp | 0.00 pp |
+| CRE delinq / charge-off | ~7.1× | ~11.3× | **~9.2×** | — | — |
+
+Read the table left-to-right and the regime is clearer than any single headline. **Cards cooled on both axes.** **CRE past-dues froze.** **CRE charge-offs bounced off a 2025 trough.** **C&I losses crept higher.** **Residential delinquency rose** without any charge-off print — the lag case that still keeps home-loan stress off the income statement.
+
+## Cards still own the losses — but the peak is fading
+
+The dashboard’s **Δ meters** panel sorts signed vintage moves. On a YoY lens, **card charge-offs (−0.62 pp)** dominate every other category. That is not a rounding error; it is a **full peak-fade** from the 2024–early-2025 consumer-loss spike. Card delinquency also eased (−0.14 pp YoY), so the cooling is not just recoveries or accounting noise — the **past-due stock and the write-off rate are moving together**.
+
+Toggle to **QoQ** and the same story continues at a quieter volume: cards −0.23 pp on charge-offs, −0.02 pp on delinquency. Total loan charge-offs are now **0.56%**, down from **0.64%** a year earlier. Industry losses remain above the soft pre-hiking trough, but they are no longer climbing.
+
+For category-level loss geography without the vintage framing, the dedicated [charge-offs dashboard](/blog/bank-loan-chargeoffs-2026) still holds. This update’s job is different: show that **the consumer fire is smaller than it was twelve months ago**, even though it remains the **largest fire on the P&L**.
+
+## CRE’s sticky past-dues and the QoQ charge-off tick
+
+CRE delinquency at **1.56%** is effectively unchanged from the research print and from 2025Q1 (**1.57%**). That stickiness matters more than the one-basis-point YoY dip. After roughly doubling from the 2021 trough, bank CRE past-dues have **plateaued** rather than mean-reverted. The **CRE path** panel shows delinquency hugging 1.5–1.6% while charge-offs spent 2025 drifting down to **0.14%** before the **0.17%** 2026Q1 bounce.
+
+That bounce is small in absolute terms — three basis points — and CRE charge-offs remain an order of magnitude below cards. But directionally it answers the conversion question the research post flagged: **are past-dues starting to become losses?** One quarter is not a cycle break. It is a **watch item**. If CRE charge-offs sustain above ~0.25–0.40%, the “managed stress” story starts to look more like a loss cycle. Until then, the **multiple** panel still prints roughly **9×** delinquency over charge-off — stress mostly on the PDNA line, not the income statement.
+
+Outside the bank book, CMBS office delinquencies near **11.3%** and multifamily near **6.6%** (December 2025 / FDIC Risk Review framing) still sit far above Call Report CRE averages. That gap is selection and structure, not a Fed data error — and it is unchanged as a qualitative ranking from the research map.
+
+## Where stress is *rising*: C&I and residential past-dues
+
+Not every meter cooled. **C&I charge-offs** rose **+0.04 pp YoY** to **0.59%**, with a matching **+0.03 pp QoQ** lift. **C&I delinquency** is **+0.05 pp YoY** at **1.34%**, flat QoQ. That is mid-cycle drift, not a crisis print — but it is the clearest **business-credit warming** signal on the Fed SA table while consumer revolving credit cools.
+
+**Residential real estate delinquency** jumped **+0.12 pp YoY** (and **+0.10 pp QoQ**) to **1.89%**, while residential charge-offs remain **~0%**. That is the classic lag geometry: past-dues can rise for quarters before net charge-offs move, because home equity, forbearance, and workout mechanics keep losses off the income statement. The **stress map** scatter still puts Resi mid-right and near the floor — high-ish delinquency, near-zero realized loss.
+
+Pair the bank-side residential print with household-side color in our [consumer finance markets update](/blog/consumer-finance-markets-update-2026) and [household delinquency split](/blog/us-household-debt-delinquency-split-2026): mortgage serious transitions remain low in absolute terms even as bank residential past-dues tick up. Two ledgers, one message — **housing stress is visible earlier on delinquency than on write-offs**.
+
+## Size, supply, and what the research map still gets right
+
+This update does not restate the full FDIC size-cohort and CMBS property-type atlas — that lives in the [research roll-up](/blog/bank-commercial-credit-research-2026) and the [CRE size-split](/blog/cre-bank-delinquency-size-split-2026) post. The vintage lens does not overturn those rankings: **large banks still own the CRE past-due stock**, **mid-size banks still own CRE/capital density**, and **office still owns securitized stress**.
+
+What the **SLOOS** panel adds is supply color. Net tightening on CRE remains firmer than C&I into early 2026 — standards have eased from 2023 peaks but have **not flipped to broad CRE easing**. That fits a managed-stress regime: banks grow income-producing CRE carefully, shrink ADC exposure, and keep standards selective while past-dues stay elevated and charge-offs stay small.
+
+## How to read the 2026Q1 vintage for markets
+
+Three practical takes follow from the deltas:
+
+1. **Income-statement stress is still consumer-led — and cooling.** Card charge-offs at **3.84%** dwarf CRE’s **0.17%**, but the YoY path (−62 bp) says the worst of the revolving-credit loss spike is behind the industry for now.
+2. **Balance-sheet CRE stress is sticky, not accelerating.** Delinquency near **1.56%** with a **~9×** multiple means markets should keep watching PDNA, modifications, and refinance walls — not wait for a GFC-style charge-off spike that has not arrived.
+3. **The quiet warmers are C&I losses and residential past-dues.** They are not the loudest headlines, but they are the meters moving **against** the cooling consumer print.
+
+## Caveats and methodology
+
+1. **Same vintage, different question.** The research post and this update both sit on the Fed’s **2026Q1** SA close. This piece is a **delta essay** (YoY / QoQ), not a claim that a newer quarter has published.
+2. **Fed SA ≠ FDIC PDNA.** Seasonally adjusted charge-off/delinquency rates are not identical to Call Report past-due-and-nonaccrual ratios. Levels can differ; direction usually rhymes.
+3. **CRE is a blend.** Construction, multifamily, and nonfarm nonresidential move differently. Aggregate CRE delinquency understates office stress and overstates healthier industrial / owner-occupied books.
+4. **CMBS ≠ bank CRE.** Securitized office and multifamily prints are a stressed subsample. Do not scale CMBS office delinquency onto the entire bank CRE book.
+5. **One QoQ CRE charge-off tick is not a cycle.** The +3 bp move from 0.14% to 0.17% is real and disclosed; it is also small. Sustained conversion would need several quarters and a higher absolute level.
+6. **SLOOS mid-path points** between survey anchors may be estimated; treat early-2026 tightening prints as directional.
+7. **Charge-offs are net of recoveries and annualized.** Soft prints can reflect recoveries as well as lower gross losses.
+
+Primary sources: Federal Reserve Charge-Off and Delinquency Rates (SA; update May 19, 2026 through 2026Q1); Federal Reserve Senior Loan Officer Opinion Survey; FDIC 2026 Risk Review for CMBS / concentration context. Related reading: [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026).
+
+## What to watch next
+
+Three coincident signals will tell you whether the cooling consumer print and sticky CRE past-dues remain a managed regime: (1) **CRE charge-offs** — another QoQ rise toward 0.25%+ would confirm conversion; (2) **card charge-offs** — whether the path stays below 4% or re-accelerates with labor softening; (3) **C&I charge-offs** — if the slow climb from 0.55% continues through mid-2026. Until those break, the live vintage answer is clear: **cards cooled hard YoY, CRE past-dues did not, and the loss ledger is still a consumer story with a quieter CRE QoQ warning light.**`,
+  },
+  {
     id: "fiscal-plumbing-update-2026",
     slug: "fiscal-plumbing-update-2026",
     title:
