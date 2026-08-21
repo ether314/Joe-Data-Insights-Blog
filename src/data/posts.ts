@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-geography-2026",
+    slug: "chokepoint-commodities-geography-2026",
+    title:
+      "Charted: China Holds 9 of 14 Mapped Top-1 Seats — Cobalt Flips 66 pp From DRC Mine to China Refine",
+    excerpt:
+      "Geography lens on chokepoint commodities: mine output still spans Africa, Oceania, and Latin America, but all six midstream Top-1 seats sit in East Asia — China alone holds nine of fourteen mapped Top-1 seats, and cobalt’s mine→refine flip is a 66 percentage-point seat change.",
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with rose East Asia refining hubs, amber Africa mining nodes, teal Oceania lithium pits, and orange Latin America copper belts connected by geometric flow arrows",
+    publishedAt: "2026-08-21T22:00:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-geography-2026",
+    layout: "default",
+    content: `Our [research ledger](/blog/chokepoint-commodities-research-2026) asked which physical inputs modern industry treats as always-on. The [concentration companions](/blog/chokepoint-commodities-concentration-2026) then measured *how top-heavy* those markets are — Top-1, Top-3, HHI — across mine and midstream stages. This post answers a different desk question: **where does activity, risk, and capacity sit on the map?** Concentration tells you the tip is thick; geography tells you *which countries and regions* hold the tip, and whether the pit and the plant even live on the same continent.
+
+The interactive dashboard above is built as a **geography lens**, not another Top-k ladder. Toggle **Country / region shares**, **Mine → mid flips**, **Mine × mid scatter**, and **Regional hubs**. On shares, flip stage (mine vs midstream) and lens (country bars vs regional pie). The punchline is deliberately two-map. On **mine geography**, Top-1 seats still scatter across Africa (cobalt, platinum), Oceania (lithium), Latin America (copper), Southeast Asia (nickel), and East Asia (graphite, rare earths, phosphate). On **midstream geography**, East Asia — almost entirely China — holds **all six** mapped midstream Top-1 seats, and China alone stacks **nine of fourteen** total Top-1 seats across mine and plant.
+
+## The headline map: pits plural, plants East Asian
+
+| Meter | Geography tip | Share / count | What it measures |
+| --- | --- | ---: | --- |
+| Midstream Top-1 seats (East Asia) | East Asia | **6 / 6** | Who processes the tip |
+| China total Top-1 seats | China | **9 / 14** | Mine + midstream combined |
+| Largest mine→mid flip | Cobalt (DRC → China) | **66 pp** | Stage-boundary seat change |
+| Cobalt mine Top-1 | Congo (Kinshasa) | **~74%** | Where the pit sits |
+| Cobalt refine Top-1 | China | **~76%** | Where the plant sits |
+| Copper mine Top-1 | Chile | **~24%** | Plural pit geography |
+| Copper refine Top-1 | China | **~44%** | Concentrated plant geography |
+
+Read the table as a **family of maps**, not one slogan. Mine geography answers which *regions dig*. Midstream geography answers which *regions refine, separate, or chemically convert*. Flip meters answer whether those two maps agree. Averaging them into “China owns critical minerals” is a category error for cobalt and copper — Africa and Latin America still own large pieces of the pit — and understates the plant story for gallium, graphite anodes, and rare-earth separation, where East Asia’s share is already near-monopoly.
+
+## Country shares: start with cobalt’s two continents
+
+Filter **Country / region shares → Mine → Cobalt (mine)**. Congo (Kinshasa) prints about **74%** of mined cobalt, with Indonesia, Russia, and Australia as thin runners-up. Switch the commodity to **Cobalt (refined)** under Midstream and the map inverts: China holds about **76%** of refined cobalt, with Finland and Canada as small OECD footnotes. That is the largest geographic flip in the panel — a **66 percentage-point** Top-1 seat change across a single stage boundary — and the reason battery desks cannot treat “cobalt risk” as one country.
+
+Repeat the exercise for copper. Chile leads mine output near **24%**, with Peru and the DRC each near **10%** and China itself only about **8%** of the pit. Open **Copper (refined)** and China jumps to about **44%** of refined metal. The [copper mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026) post unpacks that gap in tonnage; here it sits as one row in a multi-commodity map that says the same thing in lithium (Australia pit / China chemicals) and, more softly, in rare earths and graphite (China already leads the pit, then thickens further at separation and anode processing).
+
+Toggle the lens to **Regional pie** when you want continents rather than country bars. Cobalt mine is an Africa-dominated pie; cobalt refine is an East Asia–dominated pie. Lithium mine is an Oceania + Latin America story; lithium chemicals collapse toward East Asia. The regional pie does not invent new facts — it makes the stage flip impossible to miss at thumbnail scale.
+
+## Mine → mid flips: five metals, one direction
+
+Open **Mine → mid flips**. The dumbbell panel plots mine Top-1 share (amber) against midstream Top-1 share (rose) for cobalt, copper, lithium, rare earths, and graphite. Cobalt’s Δ is **66 pp**. Copper’s is about **36 pp**. Lithium’s is about **28 pp**. Rare earths and graphite stay China-led on both sides but still thicken at midstream (**+21 pp** and **+11 pp** respectively) — separation and anode processing are even more geographically extreme than the pit.
+
+The geometric reading: **every paired metal either keeps China as Top-1 or moves Top-1 toward China when you cross from mine to midstream.** No metal in this set flips *away* from East Asia at the plant. That is the geography companion to the [concentration scoreboard](/blog/chokepoint-commodities-concentration-2026), where midstream Top-1 shares already sit higher than mine Top-1 shares for the same battery and magnet chain. Concentration says the tip is thicker downstream; geography says the tip *relocates* downstream.
+
+## Mine × mid scatter: above the diagonal
+
+Switch to **Mine × mid scatter**. Each point is a paired metal with mine Top-1 share on the x-axis and midstream Top-1 share on the y-axis. Points above the diagonal are midstream-heavier at Top-1. Outlined points keep the same Top-1 country across stages (China mine + China midstream for rare earths and graphite). Cobalt and copper sit far above the diagonal *and* change Top-1 country — the purest geographic flips. Lithium sits above the diagonal with an Australia→China seat change. The scatter is the dumbbell’s continuous twin: same five metals, same USGS/IEA vintage, different visual grammar for desks that think in quadrants.
+
+## Regional hubs: who holds the seats
+
+Open **Regional hubs**. On **Regional Top-1 seats**, East Asia dominates midstream (six of six mapped midstream Top-1 seats in this cut land in East Asia) while mine seats still spread across Africa (two), East Asia (three), and one each for Southeast Asia, Latin America, and Oceania. Toggle **Country hub stack** to see China alone holding **nine** total Top-1 seats (three mine + six midstream) against single-seat mine specialists: DRC, South Africa, Indonesia, Chile, Australia.
+
+That hub stack is why “diversify mining” and “diversify processing” are not interchangeable policy slogans. Adding a lithium pit in Argentina or a nickel mine in the Philippines can move *mine* geography without touching the midstream tip. Adding separation capacity in Malaysia or anode capacity in North America is a different capital and permitting problem — and the one that actually relocates Top-1 seats on the plant map. Pair this panel with the [Q3 concentration update](/blog/chokepoint-commodities-concentration-2026q3) when the question is whether the tip thickened, and with this geography post when the question is *where the tip lives*.
+
+## Who is exposed — and what would rewrite the map
+
+**Exposed on the pit clock:** battery and stainless buyers who treat DRC cobalt, Indonesian nickel, Chilean copper, or Australian lithium as “one more mining jurisdiction” without pricing logistics, artisanal-mine governance, export bans, or royalty shocks; fertilizer desks that still underweight Morocco’s rock leverage beside China’s larger absolute phosphate output.
+
+**Exposed on the plant clock:** OEMs and governments that fund upstream mines while leaving gallium refining, graphite anode processing, rare-earth separation, cobalt refining, and lithium chemicals inside a single East Asian jurisdiction; semiconductor and magnet supply chains for which midstream Top-1 shares already clear **90%+**.
+
+**Relative winners under current maps:** Chinese midstream platforms that convert plural pit feedstock into concentrated chemicals and metals; African and Latin American mine hosts that collect royalties without capturing refine margins; Indonesia’s nickel franchise as a Southeast Asian mine tip that still feeds China-led conversion chains.
+
+**What would rewrite the story:** multi-year refine and separation capacity outside East Asia that cuts China’s midstream Top-1 count below roughly half of the mapped set; DRC or Indonesian domestic refining that collapses cobalt’s **66 pp** flip; copper smelting outside China that pulls refine Top-1 below ~**35%**; or a lithium chemicals buildout in Australia/Chile/Argentina that keeps chemicals Top-1 closer to the pit map. None of those appear as completed geography shifts in the USGS MCS 2025 / IEA 2025 vintages summarised here.
+
+## Caveats and methodology
+
+1. **Country shares are USGS Mineral Commodity Summaries 2025 (2024e)** restatements for mine and many refine rows; figures are USGS estimates and may not sum to 100% because of rounding.
+2. **Graphite anode, rare-earth separation, and lithium chemicals** midstream shares lean on IEA Global Critical Minerals Outlook 2025 and are labeled secondary where USGS does not publish a matching country table.
+3. **Regional aggregates** re-bucket USGS country rows into East Asia, Southeast Asia, Africa, Latin America, North America, Europe, Middle East, Oceania, and Other — analytical geography, not a USGS publication field.
+4. **Top-1 seat counts** are counted across the **eight mine + six midstream** ledgers in this geography map, not across every commodity in the research ledger.
+5. **Flip Δ (pp)** is the absolute gap between mine Top-1 share and midstream Top-1 share for paired metals — a stage-boundary meter, not a trade-flow volume.
+6. **Helium, palladium, antimony, tungsten, and germanium** appear in concentration/research posts but are not every one re-mapped here; this post prioritises metals with a clear mine↔midstream geographic story.
+7. **Do not average** mine shares and midstream shares into one “China % of critical minerals.” Different stages, different denominators.
+8. **This post is a geography companion.** For Top-k / HHI use the [concentration print](/blog/chokepoint-commodities-concentration-2026); for levels and sector tags use the [research ledger](/blog/chokepoint-commodities-research-2026); for copper tonnage detail use the [mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026) cut.
+
+## Bottom line
+
+Mine geography for chokepoint commodities is still **plural** — Africa, Oceania, Latin America, and Southeast Asia all hold mine Top-1 seats. Midstream geography is not. East Asia holds **all six** mapped midstream Top-1 seats, China alone stacks **nine of fourteen** total Top-1 seats (three mine + six midstream), and cobalt’s DRC→China flip is a **66 pp** seat change across one stage boundary. The economy can keep assuming physical inputs will clear; the map says the plant that clears them is far more geographically concentrated than the pit that digs them.
+
+Related reading: [Chokepoint commodities research](/blog/chokepoint-commodities-research-2026), [concentration lens](/blog/chokepoint-commodities-concentration-2026), [Q3 concentration](/blog/chokepoint-commodities-concentration-2026q3), [copper mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026), and [rare-earth mine concentration](/blog/rare-earth-mine-concentration-2024).`,
+  },
+  {
     id: "migration-humanitarian-concentration-2026",
     slug: "migration-humanitarian-concentration-2026",
     title:

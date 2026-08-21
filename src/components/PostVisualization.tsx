@@ -2357,6 +2357,21 @@ const MigrationHumanitarianConcentration2026Dashboard = dynamic(
   },
 );
 
+const ChokepointCommoditiesGeography2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ChokepointCommoditiesGeography2026Dashboard"
+    ).then((m) => m.ChokepointCommoditiesGeography2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2972,6 +2987,10 @@ export function PostVisualization({
 
   if (type === "migration-humanitarian-concentration-2026") {
     return <MigrationHumanitarianConcentration2026Dashboard />;
+  }
+
+  if (type === "chokepoint-commodities-geography-2026") {
+    return <ChokepointCommoditiesGeography2026Dashboard />;
   }
 
   return null;

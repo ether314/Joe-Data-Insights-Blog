@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "chokepoint-commodities-geography-2026",
+    marker: "Chokepoint commodities — geography lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "migration-humanitarian-concentration-2026",
     marker: "Migration & humanitarian — concentration lens",
     forbidden: "Loading interactive charts",

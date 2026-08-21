@@ -183,7 +183,8 @@ export interface Post {
     | "fiscal-plumbing-concentration-2026q3"
     | "measurement-science-concentration-202608"
     | "ai-capex-spend-geography-2026"
-    | "migration-humanitarian-concentration-2026";
+    | "migration-humanitarian-concentration-2026"
+    | "chokepoint-commodities-geography-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
