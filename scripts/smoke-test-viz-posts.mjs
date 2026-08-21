@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "chokepoint-commodities-concentration-2026",
+    marker: "Chokepoint commodities — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-plumbing-update-2026q3",
     marker: "Fiscal plumbing — Q3 vintage delta",
     forbidden: "Loading interactive charts",

@@ -2,6 +2,108 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-concentration-2026",
+    slug: "chokepoint-commodities-concentration-2026",
+    title:
+      "Charted: 8 of 20 Chokepoint Stages Clear 70% Top-1 Share — Gallium Hits 98%",
+    excerpt:
+      "Concentration lens on chokepoint commodities: median Top-1 is 65% across 20 mine/midstream/export stages; China leads 12; Top-3 ≥85% on 13 stages. Gallium refined sits at 98% China — the thin end of the physical-input distribution.",
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber-rose concentration bars towering beside a glowing mineral chokepoint corridor, Visual Capitalist–style thumbnail",
+    publishedAt: "2026-08-21T05:00:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-concentration-2026",
+    layout: "default",
+    content: `## The concentration question, not the ledger question
+
+Our [chokepoint commodities research ledger](/blog/chokepoint-commodities-research-2026) answered the *stock* question: **what physical inputs does the economy assume will always be available — and where is supply thin?** Twenty mine, midstream, and export stages; China leading twelve; gallium refining near **98%**. The [MCS 2026 update](/blog/chokepoint-commodities-update-2026) and [Q3 midstream scoreboard](/blog/chokepoint-commodities-update-2026q3) then answered *what moved* when newer vintages restated shares. This companion asks a different meter: **how concentrated is the system at the top of the distribution?**
+
+Not “is cobalt important?” — desks already know that. The question is **Top-1 / Top-3 / HHI**: how much of each stage sits in one capital, how often three capitals clear most of the world, and whether midstream processing is systematically tighter than the pit. The dashboard above is built as a concentration lens: ranked Top-1/Top-3/HHI bars, a Lorenz-style cumulative curve, mine→midstream slopes with leader flips, HHI band donuts, a producer Top-1 seat count, and a Top-1 × US import-reliance scatter. Use **View**, **Metric**, **Stage**, and **Sector** to move between geography, processing, and end-market exposure.
+
+## The headline ladder: Top-1 / Top-3 / HHI
+
+| Cut | Threshold | Stages clearing it | Share of 20-stage ledger |
+| --- | --- | ---: | ---: |
+| Top-1 | ≥ **70%** | **8** | **40%** |
+| Top-3 | ≥ **85%** | **13** | **65%** |
+| HHI | ≥ **2,500** | **15** | **75%** |
+| China as Top-1 | — | **12** | **60%** |
+| Median Top-1 | — | **65%** | — |
+| Extreme Top-1 | Gallium refined | **98%** China | — |
+
+Read the table as a **family of market shares**, not one slogan. Eight stages where a single country holds at least seven-tenths of world output is already a thin system. Thirteen stages where the top three clear **85%+** means the “rest of world” is often a residual, not a competitive fringe. Fourteen-plus stages in the antitrust-high HHI band (≥2,500 on country shares) says the concentration is not just a gallium anecdote — it is the median texture of the ledger.
+
+China’s **12 of 20** Top-1 seats are the geography punchline, but they are not the only punchline. Congo leads cobalt mine (**74%**), South Africa leads platinum (**71%**), Indonesia leads nickel (**50%**), Australia leads lithium mine (**37%**), Chile leads copper mine (**23%**), Morocco leads phosphate fertilizer exports (**28%**), and the United States leads helium (**40%**). Concentration is multi-polar at the *identity* of leaders and still extreme at the *share* those leaders hold.
+
+## Lorenz mass: the top of the distribution is heavy
+
+Toggle **Lorenz**. Commodities ranked by Top-1 share show a cumulative “concentration mass” that rises far above the equal-split line. Gallium (**98%**), graphite anode (**90%**), rare-earth separation (**90%**), and tungsten (**83%**) sit at the left of the curve; copper mine (**23%**) and phosphate fertilizer exports (**28%**) sit at the plural right. The analytical claim is simple: **a handful of stages contribute a disproportionate share of total Top-1 mass** across the twenty-row ledger. That is why a policy conversation that averages “critical minerals” into one index understates tail risk — the mean is not the choke.
+
+The equal line is the counterfactual of identical Top-1 shares. Reality bows the other way. Midstream processing stages (anode, separation, refined gallium/cobalt) occupy the steep early segment; several mine stages with more plural pits occupy the flatter tail. Desks that only quote mine tons will miss where the Lorenz curve actually breaks.
+
+## Mine versus midstream: the stage flip is the chokepoint
+
+Switch to **Stages**. Five families with both pit and processing rows make the midstream premium visible:
+
+| Family | Mine Top-1 | Midstream Top-1 | Δ pp | Leader flip? |
+| --- | ---: | ---: | ---: | --- |
+| Graphite | China **79.4%** | China **90%** | +10.6 | No |
+| Rare earths | China **69%** | China **90%** | +21 | No |
+| Cobalt | DRC **74%** | China **76%** | +2 | **Yes** |
+| Lithium | Australia **37%** | China **65%** | +28 | **Yes** |
+| Copper | Chile **23%** | China **44%** | +21 | **Yes** |
+
+Three of five families **flip the leading country** between mine and midstream. Cobalt is the textbook: ore in Congo, metal and chemicals in China. Lithium is more plural at the pit (Australia + Chile + China) and still China-majority in chemicals. Copper looks “diversified” on mine Top-1 (**23%** Chile) until refining (**44%** China) re-concentrates the metal. Graphite and rare earths do not flip leaders — they **tighten** an already China-led chain from ore into anode or separated oxide.
+
+Median Top-1 on mine stages sits near **50%**; median Top-1 on midstream stages sits near **76%** on this ledger. That gap is the physical answer to “where is supply thin?” Often **not only at the hole in the ground**, but at the plant that turns concentrate into battery- or chip-grade material. Pair with [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-geography-2026) for the copper-specific map and [natural graphite mine concentration](/blog/natural-graphite-mine-concentration-2024) for the graphite pit detail.
+
+## Who holds the Top-1 seats
+
+Open **Producers**. China holds **12** Top-1 seats with an average Top-1 share near the high sixties to seventies depending on the mix of extreme midstream rows. No other capital clears more than one or two seats on this twenty-stage board: DRC (cobalt mine), South Africa (platinum), Indonesia (nickel), Australia (lithium mine), Chile (copper mine), Morocco (phosphate fert exports), United States (helium), Russia (palladium).
+
+That distribution matters for diversification rhetoric. Adding a second mine in a friendly jurisdiction does not automatically create a second *processor*. The producer scoreboard counts **who sits at the top of each stage**, not who has announced a feasibility study. Average Top-1 share among China’s seats is high because several of those seats are midstream monopolies (gallium, anode, REE separation), not just large mines.
+
+## Sector exposure: batteries and magnets sit on the thin end
+
+The sector panel ranks end-markets by median Top-1 of their linked commodities. **Permanent magnets** and **batteries & EVs** sit toward the top of the median ladder — rare-earth separation at **90%**, graphite anode at **90%**, cobalt refine at **76%**, lithium chemicals at **65%**. **Semiconductors** inherit gallium (**98%**) and germanium (**60%**) plus antimony and palladium exposures. **Fertilizers / food** look milder on rock Top-1 (**41%** China) until export licenses and Morocco’s processed-fertilizer corridor (**28%** Top-1, **67%** Top-3) remind that food-system chokepoints are often **trade policy**, not geology. **Structural metals** span platinum’s extreme mine concentration and copper’s more plural pit.
+
+Filter the ladder by **Sector → Batteries** or **Semis** to see how quickly the ranked bars turn rose (China-led) versus sky/amber (other leaders). The economy’s assumed-always-available inputs are not evenly distributed across use-cases; electrification and advanced chips lean hardest on the concentrated midstream.
+
+## Import reliance meets concentration
+
+The **Scatter** view plots Top-1 share against USGS US net import reliance. Upper-right is the stress quadrant: high single-country control *and* high US import exposure. Gallium, graphite anode, and natural graphite cluster near **100%** US reliance with Top-1 above **79%**. Rare-earth mine/separation and cobalt sit in the high-high band with reliance in the **76–80%** range. Helium is the opposite corner — US-led production, near-zero net import reliance — still a chokepoint for *other* buyers when Qatar and Algeria fill the Top-3. Copper mine sits mid-reliance with low Top-1; copper refine moves right on concentration without fixing US reliance.
+
+Bubble size tracks √HHI. Extreme HHI points (gallium ~**9,600**, anode/REE separate ~**8,200**) dominate the visual weight even when the scatter is busy. That is intentional: **Herfindahl is the continuous cousin of the Top-1 headline**, and it flags stages where a second- and third-place producer barely dilutes power.
+
+## What “thin supply” means in practice
+
+Concentration is not the same as shortage. A **98%** Top-1 share can coexist with adequate tons if the leader keeps shipping. The risk the dashboard encodes is **optionality**: how many independent decision centers must say “yes” for the physical input to arrive. Eight stages above **70%** Top-1 means eight places where a single capital’s export license, power rationing, or environmental shutdown can clear most of the market. Thirteen stages above **85%** Top-3 means even a “diversified” buyer shortlist often collapses to three jurisdictions.
+
+Policy desks sometimes answer concentration with stockpiles, friend-shoring mines, or recycling targets. Those tools address different parts of the curve. Stockpiles buy time on extreme Top-1 stages; new mines without midstream still leave the Lorenz midstream segment intact; recycling helps where scrap collection and refining exist at scale — weaker for specialty gases and some semiconductor metals. The concentration lens does not pick the instrument; it ranks **where the instrument has to work**.
+
+## Caveats
+
+- **Vintage**: Headline shares follow USGS Mineral Commodity Summaries **2025** (2024e) for mine/refine rows; graphite-anode, lithium-chemical, and rare-earth-separation processing shares are **IEA / secondary** labels, not MCS mine tables.
+- **Rounding**: USGS country and world totals are rounded; Top-1/Top-3 and derived HHI may not reconcile to 100% residual.
+- **HHI**: Approximate on disclosed or estimated country shares plus residual — a visualization index, not a filed antitrust exhibit.
+- **Stage definitions**: “Midstream” bundles refining, chemicals, anode, and separation — different plants, similar concentration logic.
+- **US reliance**: USGS net import reliance can be **100** even when some domestic capacity exists (graphical and definitional conventions in MCS chapters).
+- **Not a price forecast**: Concentration raises interruption option value; it does not by itself predict the next cobalt or copper print.
+- **Companion posts**: For vintage deltas see the [MCS 2026 update](/blog/chokepoint-commodities-update-2026); for the full twenty-stage research scoreboard see the [research ledger](/blog/chokepoint-commodities-research-2026).
+
+## Methodology
+
+Top-1 and Top-3 shares are computed from USGS MCS 2025 country and world totals (2024e) where published, with IEA Global Critical Minerals Outlook 2025 used for labeled processing stages. HHI is derived from country share vectors used in the research ledger. Median Top-1/Top-3 are medians across the twenty stages in the concentration data module. Producer seat counts assign each stage to its Top-1 ISO. Sector medians include a commodity in every sector tag it carries (batteries, semiconductors, magnets, fertilizers, industrial gases, structural). Lorenz cumulative mass normalizes the sum of Top-1 shares so the curve reaches 100% at rank 20. Stage-split deltas are arithmetic midstream Top-1 minus mine Top-1 for graphite, rare earths, cobalt, lithium, and copper.
+
+## Bottom line
+
+The chokepoint commodity system is **concentrated at the top of the distribution**: median Top-1 **65%**, **8 of 20** stages above **70%** Top-1, **13 of 20** above **85%** Top-3, and China in **12** Top-1 seats — with gallium refined at **98%** as the extreme. Midstream medians run hotter than mine medians; cobalt, lithium, and copper **flip leaders** between pit and plant. For the full research scoreboard use the [research post](/blog/chokepoint-commodities-research-2026); for newer MCS/Q3 vintages use the [update](/blog/chokepoint-commodities-update-2026) and [Q3 update](/blog/chokepoint-commodities-update-2026q3); for single-commodity deep dives keep [graphite](/blog/natural-graphite-mine-concentration-2024) and [copper geography](/blog/copper-mine-vs-refinery-geography-2026) open beside this lens.`,
+  },
+  {
     id: "fiscal-plumbing-update-2026q3",
     slug: "fiscal-plumbing-update-2026q3",
     title:

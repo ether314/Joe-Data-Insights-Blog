@@ -1472,6 +1472,21 @@ const FiscalPlumbingUpdate2026q3Dashboard = dynamic(
   },
 );
 
+const ChokepointCommoditiesConcentrationDashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ChokepointCommoditiesConcentrationDashboard"
+    ).then((m) => m.ChokepointCommoditiesConcentrationDashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1851,6 +1866,10 @@ export function PostVisualization({
 
   if (type === "fiscal-plumbing-update-2026q3") {
     return <FiscalPlumbingUpdate2026q3Dashboard />;
+  }
+
+  if (type === "chokepoint-commodities-concentration-2026") {
+    return <ChokepointCommoditiesConcentrationDashboard />;
   }
 
   return null;
