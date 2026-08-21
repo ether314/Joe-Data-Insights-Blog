@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "consumer-finance-markets-update-202608",
+    marker: "Aug 202608 vintage · vs Q3 theme print",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-compute-demand-update-202608",
     marker: "Vintage delta — Q3 2026 site ledger",
     forbidden: "Loading interactive charts",

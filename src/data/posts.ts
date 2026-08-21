@@ -2,6 +2,112 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "consumer-finance-markets-update-202608",
+    slug: "consumer-finance-markets-update-202608",
+    title:
+      "Update: Official MMF Print Restates to $7.93T (−$90B vs Q3) as G.19 Revolving Hits $1.35T",
+    excerpt:
+      "Versus our Q3 theme print ($8.02T MMF; July saving 3.1%), the Aug 20 ICI release puts week-ended Aug 19 AUM at $7.93T (−$92B). G.19 June revolving prints $1.351T; disclosed PSAVERT remains June 2.7% pending Aug 26.",
+    category: "Consumer Finance",
+    themeId: "consumer-finance-markets",
+    imageUrl:
+      "/images/consumer-finance-consumer-finance-markets-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of a descending purple money-market AUM column beside rising revolving-credit bars and a teal saving-rate trough",
+    publishedAt: "2026-08-21T01:10:00Z",
+    featured: true,
+    visualization: "consumer-finance-markets-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 theme vintage
+
+Our [Q3 consumer-finance update](/blog/consumer-finance-markets-update-2026q3) closed on three loud prints: **July PSAVERT at 3.1%** (+0.3 pp from the Q2 2.8% floor), **NY Fed 2026Q2 household debt at $18.926 trillion**, and an **ICI money-market fund restatement at $8.02 trillion**. Student-loan **90+ day** delinquency stock had climbed to **10.6%**; the card APR−funds gap sat near **17.2 pp**. That post answered the *next quarterly* question after the August update — what moved when NY Fed Q2 and a July saving bounce printed.
+
+This **August 202608** refresh answers a narrower, more pedantic question that still moves desks: **what changed in the newest *official* weekly and monthly releases versus that Q3 dashboard?** Three information events force the rewrite. The **Investment Company Institute’s August 20, 2026** money-market release puts week-ended **August 19** assets at **$7.928 trillion** — **−$92 billion** versus the Q3 theme’s **$8.02T** restatement, and essentially flat versus the week-earlier **$7.928T**. The **Board’s G.19** (August 7, covering June) prints **revolving consumer credit at $1.351 trillion** seasonally adjusted (**+$7B** MoM from May’s **$1.344T**) and total consumer credit at **$5.167T**. And on the saving ledger, **FRED PSAVERT’s last disclosed monthly is still June 2026 at 2.7%** — the July print the Q3 post highlighted is **not yet on FRED** ahead of BEA’s **August 26** Personal Income and Outlays release.
+
+The dashboard above is built as a vintage delta: signed meter bars, an MMF Q3-vs-official correction plus weekly stacked path, a G.19 revolving composed chart with a NY Fed card concept bridge, a saving confirmation-lag path, liquid-cash sleeve restatements, and the still-sticky APR−funds gap on disclosed May APR / July funds.
+
+## The headline table: Q3 theme print vs Aug 202608 official
+
+| Metric | Prior (Q3 theme) | New official / carried | Δ |
+| --- | ---: | ---: | --- |
+| Money market fund AUM | **$8.02T** (restated claim) | **$7.928T** (ICI Aug 19 week) | **−$92B** |
+| Retail MMF sleeve | ~**$3.15T** (theme est.) | **$3.106T** (ICI) | **−~$44B** |
+| G.19 revolving credit | (not the Q3 lead) | **$1.351T** (June SA) | **+$7B MoM** |
+| Total G.19 consumer credit | — | **$5.167T** (June SA) | **+$14B MoM** |
+| Personal saving rate | **3.1%** (July claim) | **2.7%** (June disclosed) | **−0.4 pp pending** |
+| NY Fed total HH debt | **$18.926T** (2026Q2) | **$18.926T** (carried) | **0** |
+| Student loan 90+ share | **10.6%** | **10.6%** (carried) | **0** |
+| Card APR − fed funds | **~17.2 pp** (est.) | **~17.3 pp** (May APR / Jul funds) | **+0.1 pp** |
+
+Read the MMF row carefully. Weekly ICI totals **revise**. The Q3 post’s **$8.02T** was a theme restatement of the August 19 week; the **August 20 ICI release** that desks actually cite puts that same week at **$7.928T**. That is not a household “run for the exits” story — week-over-week the official table moved only **+$0.9B**. It *is* a vintage-hygiene story: the live official print is still the **$7.93T** plateau, not a clean break above **$8T**.
+
+## The MMF sleeve never cleared $8T on the official weekly
+
+ICI’s August 20 release is unambiguous in the table: total money market fund assets **$7,928.48 billion** for the week ended Wednesday, August 19, up **$900 million** from the prior week’s **$7,927.58 billion**. Government funds sit near **$6.54T**, prime near **$1.24T**, tax-exempt near **$149B**. The household-facing **retail** sleeve is **$3.106T** (up **$2.7B** week-over-week); institutional is **$4.822T**.
+
+Versus the Q3 theme’s **$8.02T** restatement, the official print is **about $90–92 billion lower**. That correction dominates the signed meter panel. It does **not** reverse the longer structural point from our [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) deep dive — cash still prefers the wrapper that pays mid-**3s** while many deposit products clear under **1%**. It *does* demote the “crossed $8T” headline until a future weekly (or a Financial Accounts quarter-end) actually clears that round number on a disclosed table.
+
+For consumer-finance desks, the practical read is two-sided. Retail MMFs still edged higher into mid-August. The *stock* level the Q3 dashboard advertised was about **1.1% too high** relative to the ICI PDF desks bookmark. Watch the next two weekly prints: another **+$20B**-class week would reopen the $8T conversation; a flat-to-down stretch keeps the plateau framing.
+
+## Revolving credit: G.19 June adds the monthly missing piece
+
+The Q3 post’s debt story was correctly NY Fed–centric: **2026Q2 total household debt $18.926T**, cards **$1.281T**, mortgages doing most of the dollar work. That quarterly stock has **not** been restated — there is no new HHDC PDF yet — so the Aug 202608 dashboard **carries** those figures flat.
+
+What *is* new is the Board’s **G.19 June** monthly (released August 7). Seasonally adjusted **revolving** credit prints **$1.351T**, up from May’s **$1.344T** (**+$6.7B**, about a **6%** annualized month). Total consumer credit prints **$5.167T**. That revolving stock is **not** the same object as NY Fed card balances: G.19 covers owned-and-securitized revolving credit on a Federal Reserve statistical definition; NY Fed cards are bureau-reportable card balances. The dashboard’s bridge panel exists so readers do not treat **$1.351T vs $1.281T** as a QoQ card surge.
+
+Still, the direction rhymes with the Q3 card rebound narrative. After May’s soft spot, June revolving came back. Origination and limit capacity on the NY Fed side remain constructive on the carried Q2 language; the monthly G.19 path says revolving outstanding is still grinding higher into mid-year. Pair this update with the [household debt delinquency split](/blog/us-household-debt-delinquency-split-2026) for stress mechanics — this vintage only needs to say the **monthly revolving ledger moved again** while the quarterly stress meters wait.
+
+## Saving: July’s 3.1% is still a confirmation trade
+
+BEA’s personal saving rate remains a **flow** meter. The Q3 post made a loud July call — monthly PSAVERT **3.1%**, a rebound from June’s **2.7%** trough and from the Q2 quarterly **2.8%** floor. As of this August 202608 writing, **FRED’s PSAVERT series still ends at June 2026 = 2.7%**, with the next BEA Personal Income and Outlays release scheduled for **August 26, 2026**.
+
+That is not a contradiction of the Q3 narrative so much as a **calendar footnote**. The Aug 202608 meters therefore show two layers: the **disclosed** June **2.7%** as the last official monthly, and the Q3 July **3.1%** as a **pending** point awaiting confirmation. If August 26 prints near **3.1%**, the Q3 rebound stands. If it prints back under **2.8%**, the soft-patch story re-opens and July becomes noise. Until then, desks should not treat **+0.3 pp from Q2** as a closed official fact on FRED.
+
+A thin saving flow still leaves revolving borrowers paying sticky APRs with less after-consumption income than in the excess-savings years. See our [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) deep dive for structure; this update’s job is narrower: **do not let an unconfirmed July print outrun the last disclosed monthly**.
+
+## The APR gap stays wide on disclosed May / July prints
+
+Commercial-bank credit-card APRs on the G.19 average (TERMCBCCALLNS) last print **20.94%** for **May 2026**. The effective federal funds rate averaged **3.63%** in **July 2026** (FEDFUNDS). The arithmetic gap is about **17.3 percentage points** — a tenth wider than the Q3 theme’s estimated **~17.2 pp**, mostly because the Q3 path used a higher funds anchor (~**4.0%**) than the July monthly average.
+
+Sticky card pricing plus lagged deposit betas remain the same industrial-organization story. Households that revolvingly finance consumption near **21%** while earning sub-**1%** on many deposits — and only mid-**3s** in MMFs — still pay for rate stickiness with cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when the official MMF print restated lower or when G.19 revolving printed higher.
+
+## What carried unchanged from Q3
+
+Three important ledgers did **not** get a new official quarterly in this window:
+
+1. **NY Fed total household debt** remains **$18.926T** (2026Q2).
+2. **Student-loan 90+ share** remains **10.6%**; mortgage serious transitions **1.6%**; card early transitions **8.4%**; aggregate any-stage delinquency **4.9%**.
+3. **Product mix** is still mortgage-heavy (~**70%** of the carried NY Fed stock).
+
+Carrying those figures is a feature, not a bug. Vintage updates fail when they invent a new quarterly from weekly noise. The Aug 202608 job is to **reconcile the weekly MMF and monthly G.19 / saving calendars** against the Q3 quarterly frame — not to pretend NY Fed published again.
+
+## What would rewrite this update
+
+1. **ICI weekly clearing $8.0T+** on a disclosed table would restore the Q3 “crossed $8T” headline without apology.
+2. **BEA August 26** printing July PSAVERT under **2.8%** would demote the Q3 rebound and re-open the soft-patch story.
+3. **G.19 July** (due early September) showing revolving rolling over would challenge the June rebound footnote.
+4. **NY Fed 2026Q3** moving student 90+ or card early transitions would re-rank the stress panel.
+5. **Faster funds easing that finally compresses card APRs** would shrink the borrowing wedge; if deposit betas still lag, MMFs may keep the cash anyway.
+
+Until those print, the live frame versus the Q3 theme is narrow: **official MMF AUM is $7.93T, not $8.02T; G.19 revolving printed $1.351T in June; disclosed saving is still June 2.7% pending Aug 26; the APR gap stays ~17.3 pp; NY Fed Q2 debt and stress are unchanged.**
+
+## Caveats and methodology
+
+1. **Q3 theme print ≠ a single ICI PDF cell for MMF.** The **$8.02T** figure was a theme restatement; this vintage prefers the **Aug 20 ICI release table** ($7.928T for week-ended Aug 19).
+2. **Saving compares a pending July claim to a disclosed June monthly.** Do not treat **−0.4 pp** as a realized MoM crash — it is a confirmation-lag meter until Aug 26.
+3. **G.19 revolving ≠ NY Fed card balances.** Different universes, different seasonal adjustments, different reporting populations. The bridge panel is a warning, not a delta.
+4. **NY Fed debt and delinquency** in this post are **carried** from the 2026Q2 report already used in the Q3 update — marked \`carried\` in the data module.
+5. **Deposit levels** in the cash panel remain an estimated H.8-style hold; weekly total-deposit series are a different cut and are not spliced in as “ex-large time.”
+6. **Card APR / funds** use disclosed May APR and July FEDFUNDS monthly averages — the gap is arithmetic, not a risk-adjusted credit spread.
+7. **Weekly MMF prints revise**; treat **$7.928T** as the latest disclosed weekly, not a quarter-end Financial Accounts total.
+
+Primary sources: ICI Money Market Fund Assets (Aug 20, 2026 release); Board G.19 Consumer Credit (Aug 7, 2026 / June data); BEA / FRED PSAVERT through June 2026; FRED FEDFUNDS through July 2026; NY Fed *Quarterly Report on Household Debt and Credit*, 2026Q2 (carried); prior theme baseline in [Q3 consumer finance update](/blog/consumer-finance-markets-update-2026q3) and the [August update](/blog/consumer-finance-markets-update-2026).
+
+## The shareable takeaway
+
+**Versus the Q3 theme print, the official ICI week-ended Aug 19 puts money market funds at $7.93T (−$92B vs the $8.02T claim), while G.19 June revolving prints $1.351T and disclosed PSAVERT remains June 2.7% pending the Aug 26 July release.** The card APR−funds gap stays near **17.3 pp** on disclosed May / July prints; NY Fed Q2 debt and student 90+ are unchanged. The three-ledger household — thin saving flow awaiting confirmation, mortgage-heavy debt stock on carry, yield-sensitive cash that never officially cleared $8T — still disagrees until you read the ledgers together. For the prior vintage see the [Q3 update](/blog/consumer-finance-markets-update-2026q3); for structure see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+  },
+  {
     id: "ai-compute-demand-update-202608",
     slug: "ai-compute-demand-update-202608",
     title:
