@@ -166,7 +166,8 @@ export interface Post {
     | "consumer-finance-markets-concentration-202608"
     | "chokepoint-commodities-concentration-202608"
     | "migration-humanitarian-update-202608"
-    | "ai-capex-spend-concentration-202608";
+    | "ai-capex-spend-concentration-202608"
+    | "ai-compute-demand-concentration-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

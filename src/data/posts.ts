@@ -2,6 +2,88 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-compute-demand-concentration-202608",
+    slug: "ai-compute-demand-concentration-202608",
+    title:
+      "Aug Concentration: Cloud Top-3 Eases to 57% — Dual-Hub Still 17%; Pipeline Hits 915",
+    excerpt:
+      "Aug 2026 concentration lens on AI compute: ownership tip stuck at Google 25% / Top-3 54.8%, hyperscale cloud Top-3 softens to 57% (−1 pp vs Q3), top-20 markets still hold 60% of capacity with N.VA + Beijing at 17%, and the pipeline expands to 915 sites.",
+    category: "Technology",
+    themeId: "ai-compute-demand",
+    imageUrl:
+      "/images/technology-ai-compute-demand-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside dual glowing data-center hub nodes and cyan market-seat columns",
+    publishedAt: "2026-08-21T14:00:00Z",
+    featured: true,
+    visualization: "ai-compute-demand-concentration-202608",
+    layout: "default",
+    content: `Our [2026 concentration print](/blog/ai-compute-demand-concentration-2026) answered the first distribution question: how thick is the tip across chip ownership, hyperscale capacity, regional power draw, and token throughput — Google **25%** of H100e, Top-3 owners **54.8%**, cloud Top-3 **57%**, US regions **~45%** of AI DC capacity, and ByteDance leading tokens at **29.2%**. The [Q3 concentration lens](/blog/ai-compute-demand-concentration-2026q3) then re-scored after Synergy’s hyperscale ledger: cloud Top-3 ticked to **58%**, US pipeline seats printed **54.4%**, and the token Top-1 flipped to Google at **~27%**. The [August location rankings update](/blog/ai-compute-demand-update-202608) refreshed the geography tape again — pipeline **915**, cloud Top-3 **57%**, dual-hub **17%**, top-20 markets **60%**. This Aug concentration lens asks the desk follow-up those vintages imply: **how concentrated is the system at the top when you re-score Top-1 / Top-3 after the location rankings, watch the cloud tip ease, and see where new seats land?**
+
+The interactive dashboard above is built as that **Aug concentration lens**. Toggle **Scoreboard**, **Sites & cloud**, **Ownership**, and **Tokens vs chips**. The punchline is deliberately multi-sided. On **chip ownership**, the tip is still *stuck*: Google **~25%**, Top-3 **~54.8%**, Big-5 **71.4%** with within-Big-5 HHI ≈ **2,421**. On **hyperscale cloud capacity**, AWS + Azure + Google Cloud print **57%** — **−1 pp** versus the Q3 capacity tape. On **markets**, Northern Virginia + Greater Beijing alone hold **17%** of hyperscale capacity, the top-20 markets clear **60%**, and the United States occupies **15 of 20** largest-market seats. On **pipeline**, the Aug mix expands to **915** sites (**+112** versus Q3’s **803** hyperscale ledger) while US pipeline share holds near **54%**. Token Top-1 stays carried at Google **~27%** — the Aug location print does not restate the brand cohort.
+
+## The Aug concentration scoreboard
+
+| Perimeter | Top-1 | Twin meter | Extra |
+| --- | ---: | ---: | --- |
+| Chip ownership (H100e) | **25%** Google | **54.8%** Top-3 | Big-5 **71.4%** · HHI ≈ **2,421** |
+| Hyperscale cloud capacity | Dual-hub **17%** (N.VA + Beijing) | **57%** AWS + Azure + Google | Q3 was **58%** |
+| Top-20 market capacity | Dual-hub **17%** | **60%** top-20 markets | Pipeline **915** (+**112** vs Q3) |
+| Token throughput (brand) | **27%** Google | **63%** Top-3 | Carried Q3 cohort |
+
+Read the table as a **family of market shares**, not one slogan. Ownership concentration is thick at the hyperscaler tip and still leaves nearly three-tenths of world H100e outside the Big-5. Cloud concentration is a *capacity* story among operators who rent to frontier labs — and in Aug it softened a point even as the pipeline grew. Market concentration says *where capacity already sits*: two metros equal **17%**, twenty markets equal **60%**, forty markets equal **79%**. Token concentration says *who processes the prompts* — still Google-led in the carried Q3 cohort, while ByteDance and OpenAI sit far above their chip stock.
+
+## Ownership tip: still sticky after the location print
+
+Toggle **Ownership**. Epoch’s Chip Owners frame (Q4 2025 anchors, Aug explorer restatement) remains the carried print: Google near **25%**, Microsoft **17.3%**, Amazon **12.5%**, Meta **11.3%**, Oracle **5.3%**. China as an aggregate owner is still near **5%**. That is the same ladder the [prior concentration companions](/blog/ai-compute-demand-concentration-2026) and the [Q3 lens](/blog/ai-compute-demand-concentration-2026q3) published — because Epoch has not yet closed a Q1/Q2 2026 period delta that would force a restatement.
+
+The concentration geometry therefore freezes: **Top-1 = 25%**, **Top-3 = 54.8%**, Big-5 HHI on the renormalized five-name perimeter ≈ **2,421** versus an equal-five benchmark of **2,000**. The Lorenz panel still rises well above the equal-split line by rank three. What *changed* in the Aug location vintage is not the ownership tip — it is the geography of seats and the one-point cloud ease. Analysts who wait for the ownership tip to “break” before updating risk maps will miss the market-band and pipeline moves that already printed.
+
+Ownership is still not usage. OpenAI, Anthropic, and other frontier labs rent most operational capacity. A lab can dominate the product narrative while owning almost none of the H100e stock. That is why the token scatter remains the corrective lens — and why Google’s dual lead (chips *and* tokens in the carried cohort) is a coincidence of vintages, not a law of nature.
+
+## Sites, markets, and clouds: the Aug tip that actually moved
+
+Open **Sites & cloud**. Synergy’s August 19 location rankings — the same frame as the [Aug theme update](/blog/ai-compute-demand-update-202608) — put **915** pipeline sites on the board (**+112** versus Q3’s **803** hyperscale-only ledger). Treat those as **different universes** when you need a clean delta; the concentration story is that US pipeline *share* held near **54%** even as the absolute seat count grew. Ops seats remain more geographically plural (**US ~42.6%** of **1,360** live hyperscale sites) while *new* seats still concentrate into the US corridor — including inland markets that entered the top-20 (Indiana, Tennessee) as coastal and APAC names churned out.
+
+On capacity among cloud operators, the Aug print puts **AWS + Azure + Google at 57%**, down **1 pp** from the Q3 capacity tape of **58%**. That is a small move with a large meaning: the tip *did* ease slightly as the pipeline expanded and non-Top-3 operators absorbed a point of share — but it did not dilute into a plural market. Market bands still put **top-20 markets at 60%**, **Northern Virginia + Greater Beijing at 17%**, markets **21–40 at 19%**, and the long tail outside the top-40 at **21%**. Seat composition is the US story: **15 US / 4 APAC / 1 Europe (Dublin)** — non-US seats in the top-20 fell to **5** (from **6** YoY / **7** two years ago). Texas operational hyperscale capacity grew **+71% YoY** versus world **+36%**, so the inland corridor is not just adding seats — it is adding *faster* capacity.
+
+The Gartner electricity slice is the watts twin of the site ledger. World DC power prints near **565 TWh** in 2026; the US alone is **204 TWh (36%)**, with roughly **68 TWh** dedicated AI inside the US (~**1/3** of US DC power, ~**12%** of world DC TWh). Regional AI DC capacity by power draw — the synthesis carried from theme research — still puts the United States near **45%**, China near **18%**, and Europe near **14%** (Top-3 regions ≈ **77%**). Site counts, capacity shares, and electricity TWh are three meters on the same geography — they will not match digit-for-digit, and they should not be averaged.
+
+## Tokens: carried Q3 cohort — mismatch geometry intact
+
+Toggle **Tokens vs chips**. The Aug location rankings do not restate brand token shares, so this lens **carries** the Q3 cohort: **Google near 27%**, ByteDance near **21%**, OpenAI near **15%**, token Top-3 about **63%**. That keeps the prior June → Q3 flip visible (ByteDance **29.2%** → Google **27%**) without inventing an Aug token discovery.
+
+That does **not** mean ownership and usage finally agree. Google is the rare name that sits near the diagonal of the scatter: ~**27%** tokens and ~**25%** ownership. ByteDance still prints ~**21%** tokens against ~**1.5%** ownership. OpenAI prints ~**15%** tokens against ~**0%** disclosed chip stock. Microsoft, Amazon, and Meta remain ownership-heavy versus first-party tokens — Azure, Bedrock, and Llama routing dilute credit. The concentration lesson for Aug is therefore two-sided: the *identity* of token Top-1 is carried, but the *mismatch geometry* between rented usage and owned chips did not disappear just because metros re-ranked.
+
+## What the Q3 → Aug deltas actually say
+
+| Meter | Q3 | Aug | Δ |
+| --- | ---: | ---: | ---: |
+| Cloud Top-3 share | **58%** | **57%** | **−1 pp** |
+| Pipeline site count | **803** (hyperscale) | **915** (location mix) | **+112** (scope caution) |
+| Owner Top-3 share | **54.8%** | **54.8%** | **0** (carried) |
+| Dual-hub capacity | **17%** | **17%** | **0** |
+| Top-20 market capacity | **60%** | **60%** | **0** (disclosed Aug band) |
+| Token Top-1 | **27%** Google | **27%** Google | Carried |
+
+The ownership tip is the *stable* risk factor. The cloud tip is the *creeping* one — and in Aug it crept *down* a point, not up. The market bands are the *placement* story: dual-hub and top-20 remain thick even as inland US seats proliferate. The pipeline count is the *expansion* story — more seats, similar US share. The token tip is the *volatile* one, but Aug does not restate it. Desks that collapse these into a single “AI is concentrated” slogan will mis-rank which perimeter actually moved this vintage.
+
+## Caveats and reading rules
+
+1. **Carried ownership is not a no-news print.** It means Epoch has not closed a superseding period. Treat Google **25%** / Big-5 **71.4%** as the last disclosed ladder, not as an Aug discovery.
+2. **Hyperscale-only ≠ location mix.** Synergy’s Q3 **803** pipeline seats are not the Aug **915** large-DC count. Do not subtract them into a fake “+112 hyperscale” claim without noting the scope change.
+3. **Token cohorts are editorial and carried.** Vendor keynotes, China NDA stats, OpenRouter samples, and revenue proxies do not form a single audited market. Aug does not refresh them.
+4. **Dual-hub 17% is capacity, not seats.** Northern Virginia + Greater Beijing as **17%** of hyperscale *capacity* is not the same meter as US **15 of 20** *market seats* or US **~54%** of *pipeline sites*.
+5. **H100-equivalent ≠ identical utility.** Peak 8-bit FLOP/s conversions hide memory, networking, and software differences across TPU, Blackwell, Trainium, and Ascend.
+6. **Cross-perimeter averages are meaningless.** Do not average owner Top-3, cloud Top-3, top-20 market share, and token Top-1 into one “concentration index.”
+
+## What would change the story
+
+A finalized Epoch Q1/Q2 2026 Chip Owners period that moves Google off **25%** or lifts China ownership well above **5%**; a Synergy capacity print that pushes Top-3 cloud below **55%** as neoclouds and Meta/Oracle absorb share; a location ranking where dual-hub falls under **14%** or non-US top-20 seats rebound above **7**; a pipeline mix where US seats fall under **45%** as Middle East and APAC campuses clear; or a token series that restores China-origin brands above **50%** without a matching ownership move. None of those supersede the Aug location bands and cloud **57%** print in the sources we carry here.
+
+Related reading: [August location rankings update](/blog/ai-compute-demand-update-202608), [Q3 concentration lens](/blog/ai-compute-demand-concentration-2026q3), [2026 concentration print](/blog/ai-compute-demand-concentration-2026), [Q3 site-count update](/blog/ai-compute-demand-update-2026q3), and [theme research baseline](/blog/ai-compute-demand-research-2026).`,
+  },
+  {
     id: "ai-capex-spend-concentration-202608",
     slug: "ai-capex-spend-concentration-202608",
     title:
