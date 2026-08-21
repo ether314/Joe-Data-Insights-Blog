@@ -2297,6 +2297,21 @@ const DemographicCashFlowsGeography2026Dashboard = dynamic(
   },
 );
 
+const FiscalPlumbingConcentration2026q3Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FiscalPlumbingConcentration2026q3Dashboard"
+    ).then((m) => m.FiscalPlumbingConcentration2026q3Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2896,6 +2911,10 @@ export function PostVisualization({
 
   if (type === "demographic-cash-flows-geography-2026") {
     return <DemographicCashFlowsGeography2026Dashboard />;
+  }
+
+  if (type === "fiscal-plumbing-concentration-2026q3") {
+    return <FiscalPlumbingConcentration2026q3Dashboard />;
   }
 
   return null;

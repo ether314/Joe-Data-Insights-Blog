@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-plumbing-concentration-2026q3",
+    slug: "fiscal-plumbing-concentration-2026q3",
+    title:
+      "Q3 Concentration: Tax-Exp Top-1 Hits 15.8% of $2.51T — Top-3 Clears 37.6%",
+    excerpt:
+      "Q3 concentration lens on US fiscal plumbing after the CRFB/JCT fall refresh: pensions alone are ~15.8% of a ~$2.51T tax-expenditure universe (top-3 ~37.6%, +0.8 pp vs the 2026 print), OASI remains ~54% of trust-fund costs, and FDIC + GSE MBS still dominate a ~$23.6T off-balance map — while vintage slopes show the tip thickened only at the margin.",
+    category: "Global Systems",
+    themeId: "fiscal-plumbing",
+    imageUrl:
+      "/images/global-systems-fiscal-plumbing-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic fiscal-plumbing data viz with amber Top-1/Top-3 concentration bars, teal trust-fund crossover arcs, and violet off-balance credit pillars",
+    publishedAt: "2026-08-21T23:30:00Z",
+    featured: true,
+    visualization: "fiscal-plumbing-concentration-2026q3",
+    layout: "default",
+    content: `Our [2026 concentration print](/blog/fiscal-plumbing-concentration-2026) answered the distribution question on four plumbing lenses: tax expenditures, trust-fund outlays, off-balance credit stocks, and an editorial layer map. The [Q3 vintage update](/blog/fiscal-plumbing-update-2026q3) then tracked what moved in JCT aggregates, GSE MBS stock, and net-interest framing. This post is the **concentration vintage of that refresh**: did the fall CRFB/JCT restatement and late-Q3 stock prints change *how thick the tip is*, or only the dollar denominators under a stable share geometry?
+
+The interactive dashboard above is built as a **Q3 concentration lens**. Toggle **Lens ladder**, **Concentration curve**, **Trust crossovers**, **Off-balance leverage**, and **Vintage slope**. Filter by metric (Top-1 / Top-3 / HHI) and by lens. The punchline is deliberately multi-meter and vintage-aware. On **tax expenditures**, pensions / retirement exclusions are about **15.8%** of JCT’s ~**$2.51T** fall-refresh universe and the **top three clear ~37.6%** — roughly **+0.4 / +0.8 pp** versus the 2026 concentration print on a ~**$2.3T** base. On **trust-fund outlays**, OASI remains ~**54.3%** of the OASI+DI+HI+SMI cost spine and the top three clear ~**94%**. On **off-balance credit stocks**, FDIC deposit insurance is ~**46.1%** of a ~**$23.6T** map and the top three (FDIC · GSE MBS · FHA/VA) clear ~**91%**. Same theme, three different tops — and a vintage slope that barely moves.
+
+## The Q3 headline ladder: Top-1 and Top-3 across plumbing lenses
+
+| Lens | Top-1 (Q3) | Top-3 (Q3) | Δ Top-1 vs 2026 print |
+| --- | ---: | ---: | ---: |
+| Tax expenditures (JCT fall refresh) | **~15.8%** (pensions) | **~37.6%** | **+0.4 pp** |
+| Trust-fund outlays | **~54.3%** (OASI) | **~94%** | **−0.2 pp** |
+| Off-balance credit stocks | **~46.1%** (FDIC DI) | **~91%** | **−0.9 pp** |
+| Plumbing layers (editorial) | **~29.5%** (tax code) | **~78%** | **+0.1 pp** |
+
+Read the table as a **family of market shares under a new vintage**, not one slogan. Tax-expenditure Top-1 tells you which Code provision dominates the shadow budget after the fall restatement. Trust Top-1 tells you which dedicated account still owns the entitlement cost spine. Off-balance Top-3 tells you which guarantee books steer housing and deposit risk without annual appropriation fights. Averaging “fiscal concentration” across these rows remains a category error — **16% of tax expenditures is not 54% of trust outlays**.
+
+## Tax expenditures: the tip thickened a little on a larger universe
+
+Toggle **Lens ladder** to **Tax exp.** and metric **Top-3**. Inside JCT’s ~**$2.51T** fall-2026 aggregate, the disclosed/estimated top ten sum to about **$1.59T** (~**63%** of the universe). Pensions / retirement exclusions lead at **$396B** (~**15.8%**). Preferential capital-gains and dividend rates (**$281B**) and the employer-sponsored health exclusion (**$268B**) bring the cumulative top-three to ~**37.6%**. Versus the [2026 concentration print](/blog/fiscal-plumbing-concentration-2026) on a ~**$2.3T** base (Top-1 **15.4%**, Top-3 **36.8%**), the tip is **slightly thicker in share terms** even as every large line grew in dollars — an oligopoly that scaled with the universe rather than dispersing.
+
+Open **Concentration curve** on the tax lens. The Lorenz-style panel rises to ~**16%** at rank 1, ~**27%** at top-2, and ~**38%** at top-3, then only ~**63%** by top-10 — leaving a long residual of hundreds of smaller items. Pair this with our [tax-expenditure catalog](/blog/us-tax-expenditure-catalog-2026) when you need the line-item ranking rather than the concentration cut, and with the [Q3 update](/blog/fiscal-plumbing-update-2026q3) when you need the dollar waterfall (+**$90B** aggregate, pensions +**$18B**, ESI +**$13B**, CG/div +**$13B**). The catalog answers *what is on the list*; the update answers *what moved*; this post answers *whether the tip got thicker*.
+
+Two caveats travel with every TE share. **Do not sum line items** as the revenue from simultaneous repeal — interactions and behavior matter. And refundable credits blur revenue loss and outlays; the deficit impact is real either way. Treasury packaging of the employer medical exclusion still sits above JCT ESI (scope gap ~**$49B** in the Q3 framing), so analysts who cite only one office can still cherry-pick a preferred giant.
+
+## Trust funds: OASI is still the cost spine
+
+Switch the lens to **Trust funds**. Annual cost concentration barely moved. OASI alone is ~**$1.52T** and ~**54.3%** of the four-account cost spine; SMI (~**$655B**, ~**23%**) and HI (~**$455B**, ~**16%**) bring the top-three to ~**94%**. DI remains the thin residual (~**6%**). HHI on these four buckets stays in the **high** band (~**3,800**) — a structural fact of entitlement plumbing, not a fall-refresh artifact.
+
+Toggle **Trust crossovers**. Dedicated revenue versus annual cost still shows why reserves matter. OASI runs a sizable negative gap, HI a smaller one, DI a small surplus, and SMI roughly balances because it is premium-financed. The depletion clocks — combined OASDI ~**2033**, HI ~**2035** in the 2026 Trustees Reports — are **carried**, not restated mid-year. For the reserve path itself, see our [Social Security depletion path](/blog/us-social-security-trust-fund-depletion-path-2026). Concentration here means: **the fight that matters is still mostly one account’s arithmetic**, even when the rhetoric is about “Social Security and Medicare” as a blur.
+
+## Off-balance stocks: GSE MBS gained weight; FDIC still Top-1
+
+Open **Off-balance leverage**. On a rounded ~**$23.6T** late-Q3 map of FDIC-insured deposits (~**$10.85T**), GSE-guaranteed MBS (~**$8.35T**), FHA/VA mortgage insurance (~**$2.28T**), Direct Student Loans (~**$1.7T**), and PBGC risk stock (~**$0.37T**), FDIC alone is ~**46.1%** and FDIC + GSE MBS clear ~**82%**. Add FHA/VA and the top-three share hits ~**91%**. Versus the 2026 concentration print (~**$22.4T**, FDIC Top-1 **47.0%**), the universe grew and GSE MBS gained weight (+**$0.25T** vs the Aug update path), so **Top-1 share eased slightly** even as absolute backstop scale rose. That is stock concentration of a different kind: not annual outlays, but **outstanding exposure that steers mortgage rates, deposit confidence, and education credit**.
+
+The visibility × leverage scatter still makes the political geometry explicit. FDIC and GSE MBS sit high on policy leverage and low on budget visibility. Student loans sit mid-visibility with still-high leverage. Desks that only watch discretionary appropriations will systematically underweight the vehicles that actually reprice housing and banking risk. Our [research map](/blog/fiscal-plumbing-research-2026) already flagged this; the concentration cut quantifies how *few* books dominate the stock tip after the Q3 print.
+
+## Plumbing layers: discretionary is still loud, not largest
+
+Switch to **Layers** on the ladder or open the composition pie on the curve view. The editorial annual-flow map puts tax expenditures (~**$2.51T**, ~**29.5%**), SS+Medicare outlays (~**$2.41T**, ~**28%**), and all discretionary (~**$1.74T**, ~**20%**) as the top three — together ~**78%** of a ~**$8.5T** composition universe that also includes net interest (~**$1.12T**) and Medicaid/other health mandatory (~**$0.72T**). Discretionary is loud because it is annual. It is not the largest slice, and net interest’s climb (interest-to-discretionary ratio ~**0.65**) is the quiet layer that keeps gaining share without owning a floor amendment.
+
+That is the core concentration insight for capital allocation and policy risk. A system where Congress argues about nondefense discretionary while pensions, ESI, OASI, GSE guarantees, and deposit insurance quietly dominate their respective meters will keep surprising desks that treat the appropriations calendar as the fiscal calendar. The [August update](/blog/fiscal-plumbing-update-202608) and [FY2026 update](/blog/fiscal-plumbing-update-2026) make the same point from the vintage-delta side: first claims on revenue and guarantee books are not always the loudest markups.
+
+## Vintage slope: what actually changed in Top-1 / Top-3 / HHI
+
+Open **Vintage slope**. Across the four lenses, Q3 did **not** rewrite the concentration map. Tax-expenditure Top-1 / Top-3 thickened by less than a percentage point on a larger universe. Trust Top-1 eased a hair as costs scaled together. Off-balance Top-1 fell ~**0.9 pp** because GSE MBS and related housing books grew faster than the FDIC deposit stock in share terms. Layer Top-1 was essentially flat. HHI bands are unchanged in classification: tax expenditures and layers stay **moderate**; trust outlays and off-balance stocks stay **high**.
+
+That is the market-relevant read. **Dollar scores moved** (JCT +**$90B**, GSE MBS +**$0.25T**, net interest +**$70B** versus the Aug path). **Share geometry barely moved.** Desks that price “concentration risk” as a one-year spike will over-trade the refresh; desks that ignore the tip entirely will keep treating discretionary as the fiscal calendar.
+
+## What “top share” does and does not mean for markets
+
+Top-1 / Top-3 shares are useful for **where a shock hits first**. A reform that trims retirement exclusions hits the thickest TE line. A payroll-tax or benefit change aimed at OASI hits the thickest trust cost. A guarantee-fee or capital change for the GSEs hits the second-largest off-balance stock — and that stock is larger in Q3 than in the 2026 print. They are *not* useful as a single “fiscal HHI” for the entire federal government — the four lenses do not share a denominator, and mixing stock ($T outstanding) with flow ($B / year) without labels is still a spreadsheet crime.
+
+HHI across lenses confirms the multi-meter story. Tax expenditures on the top-10-weighted construction sit near **moderate** (~**1,475**, essentially unchanged from ~**1,486**). Plumbing layers are also moderate (~**2,300**). Trust outlays and off-balance stocks sit **high** (~**3,800** and ~**3,500**). Markets that price “Washington risk” as one factor will mis-rank which plumbing layer actually concentrates.
+
+## Caveats and what this map is not
+
+- **Tax-expenditure shares** use the CRFB/JCT fall-2026 aggregate (~**$2.51T**) and top-10 ranking; the residual after top-10 is estimated to close the universe. Line items **must not be summed** as a joint repeal score.
+- **Prior-print deltas** cite [fiscal-plumbing-concentration-2026](/blog/fiscal-plumbing-concentration-2026) meters on a ~**$2.3T** TE base — denominators differ by vintage, so share deltas are analytical, not a pure like-for-like scoreboard without that caveat.
+- **Trust-fund costs, reserves, and depletion years** are rounded 2026 SSA / Medicare Trustees framing (carried clocks). OASDI combined is excluded from the cost ladder to avoid double-counting OASI+DI.
+- **Off-balance stocks** are late-Q3 public outstanding / exposure round numbers (FHFA, ED, FDIC, FHA/VA, PBGC). They are not mark-to-market risk capital, and FHA/VA / PBGC figures are more estimated than FDIC / GSE / Direct Loan stocks.
+- **Plumbing-layer pie** is an editorial composition of annual flows for orientation — **not** a single official CBO table — and deliberately mixes tax expenditures with outlay concepts.
+- **HHI values** are analytical indexes on the stated bucket shares (0–10,000), useful for relative concentration across lenses, not antitrust thresholds applied to fiscal accounts.
+- Scope is **US federal plumbing**. State tax expenditures, local pensions, and non-US systems are out of scope here.
+
+## Sources and related reading
+
+Primary anchors: Joint Committee on Taxation tax expenditure estimates (fall-2026 refresh) as summarized by CRFB; prior concentration print on the FY2026 / ~$2.3T base; SSA and Medicare Trustees Reports 2026 (carried depletion years); FHFA / ED / FDIC late-Q3 stock figures for GSE MBS, Direct Loans, and insured deposits; CBO late-summer 2026 net-interest framing.
+
+Continue with the [2026 concentration print](/blog/fiscal-plumbing-concentration-2026), the [Q3 vintage update](/blog/fiscal-plumbing-update-2026q3), the [research system diagram](/blog/fiscal-plumbing-research-2026), and the [tax-expenditure catalog](/blog/us-tax-expenditure-catalog-2026) when you need baseline meters, dollar deltas, instruments, or line items rather than this Q3 top-share ladder.
+`,
+  },
+  {
     id: "demographic-cash-flows-geography-2026",
     slug: "demographic-cash-flows-geography-2026",
     title:

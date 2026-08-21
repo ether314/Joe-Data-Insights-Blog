@@ -179,7 +179,8 @@ export interface Post {
     | "ai-power-grid-concentration-202608"
     | "fiscal-industrial-policy-geography-2026q3"
     | "ai-supply-chain-concentration-202608"
-    | "demographic-cash-flows-geography-2026";
+    | "demographic-cash-flows-geography-2026"
+    | "fiscal-plumbing-concentration-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
