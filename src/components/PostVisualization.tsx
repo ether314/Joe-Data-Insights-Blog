@@ -1517,6 +1517,21 @@ const EnergySystemsUpdate202608Dashboard = dynamic(
   },
 );
 
+const MacroGrowthTradeUpdate202608Dashboard = dynamic(
+  () =>
+    import("@/components/visualizations/MacroGrowthTradeUpdate202608Dashboard").then(
+      (m) => m.MacroGrowthTradeUpdate202608Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1908,6 +1923,10 @@ export function PostVisualization({
 
   if (type === "energy-systems-update-202608") {
     return <EnergySystemsUpdate202608Dashboard />;
+  }
+
+  if (type === "macro-growth-trade-update-202608") {
+    return <MacroGrowthTradeUpdate202608Dashboard />;
   }
 
   return null;

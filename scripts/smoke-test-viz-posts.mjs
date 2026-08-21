@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "macro-growth-trade-update-202608",
+    marker: "Aug 202608 vintage · vs Q3 hard-data check",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "energy-systems-update-202608",
     marker: "August 2026 vintage · IEA Electricity Mid-Year Update vs Ember/WEI lens",
     forbidden: "Loading interactive charts",

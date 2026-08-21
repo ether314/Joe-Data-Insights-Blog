@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "macro-growth-trade-update-202608",
+    slug: "macro-growth-trade-update-202608",
+    title:
+      "Update: US CPI Cools to 3.4% YoY — June PCE 3.7% as July IMF Path Comes Back into View",
+    excerpt:
+      "August monthly vintage versus the Q3 hard-data check: BLS July CPI slips −0.1 pp to 3.4% YoY and BEA June PCE YoY drops −0.4 pp to 3.7%, while euro-area HICP ticks up to 2.9%. Trade and GDP meters stay held pending 25–26 Aug prints.",
+    category: "Economics",
+    themeId: "macro-growth-trade",
+    imageUrl: "/images/economics-macro-growth-trade-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of teal trade, cyan growth, and amber inflation trails cooling toward a silver IMF baseline",
+    publishedAt: "2026-08-21T18:00:00Z",
+    featured: true,
+    visualization: "macro-growth-trade-update-202608",
+    layout: "default",
+    content: `## What changed since the Q3 hard-data check
+
+Our [Q3 growth–trade–prices update](/blog/macro-growth-trade-update-2026q3) answered the first hard-data question after the [July IMF WEO Update](/blog/macro-growth-trade-update-2026): CPB May merchandise volume **+1.0% MoM**, US Q2 GDP **1.5% SAAR**, and Q2 PCE **5.1% SAAR**. That triad read **trade firmer, growth softer, prices hotter** versus July’s annual baselines. This August note answers the next vintage question markets actually trade on: **what did the newest official monthly price prints say once that Q3 ledger was on the street — and did the price meter still look hotter than the Fund’s US CPI path?**
+
+Three information events force the refresh. The **BLS Consumer Price Index for July 2026**, released **12 August**, printed all-items CPI at **3.4% YoY** after **3.5%** in June — a **−0.1 pp** cooling — with MoM **+0.1%** after June’s **−0.4%**. Core CPI eased to **2.5% YoY** (from **2.6%**); energy remained elevated at **14.7% YoY**. The **BEA Personal Income and Outlays report for June**, already on the tape before this desk’s cut, put the PCE price index at **3.7% YoY** (down from **4.1%** in May) with MoM **−0.1%**, and core PCE at **3.3% YoY**. **Eurostat’s July HICP** (final, **19 August**) printed euro-area inflation at **2.9% YoY**, up from **2.8%** in June, with energy near **10.3%** YoY. CPB’s June World Trade Monitor is still **scheduled for 25 August**; BEA’s Q2 second estimate lands **26 August**. The dashboard above is built as a monthly vintage delta — CPI×PCE path, MoM inflation deltas, SAAR↔YoY unit bridge, triad tracking with the price meter flipped cooler, energy/core components, a vintage ledger, and a growth×price scatter.
+
+## The headline table: Q3 signal → August monthly print
+
+| Meter | Q3 hard-data signal | Newest Aug print | Vintage delta |
+| --- | ---: | ---: | --- |
+| US CPI YoY | — (not in Q3 triad) | **3.4% (Jul)** | **−0.1 pp** vs Jun 3.5% |
+| US PCE YoY | Q2 SAAR **5.1%** | **3.7% (Jun)** | **−0.4 pp** vs May 4.1% YoY |
+| US core CPI YoY | — | **2.5% (Jul)** | **−0.1 pp** vs Jun 2.6% |
+| US core PCE YoY | Q2 SAAR **3.4%** | **3.3% (Jun)** | Soft YoY vs hot SAAR |
+| EA HICP YoY | — | **2.9% (Jul)** | **+0.1 pp** vs Jun 2.8% |
+| IMF US CPI 2026f | **3.6%** | CPI **3.4%** / PCE **3.7%** | CPI **−0.2 pp** under path |
+| CPB merchandise MoM | May **+1.0%** | Held | June WTM **25 Aug** |
+| US GDP SAAR | Q2 **1.5%** advance | Held | 2nd est **26 Aug** |
+| World trade (IMF G+S) | **3.5%** 2026f | Unchanged | Annual forecast |
+| World GDP (IMF) | **3.0%** 2026f | Unchanged | Annual forecast |
+
+Read the table as a **price-meter rewrite**, not a full triad reset. Growth and trade rows are deliberately held — the Q3 story on US SAAR softness and CPB’s two-month merchandise rebound still stands until late-August releases. What moved is the **monthly YoY price tape**: US headline CPI and PCE YoY both cooled toward (or under) the July IMF US CPI assumption of **3.6%**, even while the Q2 PCE **SAAR** of **5.1%** remains the hotter quarterly impulse the Q3 post correctly flagged. That is not a contradiction if you keep the units straight — and the dashboard’s unit bridge exists for exactly that reason.
+
+## Prices: monthly YoY cools even as the Q2 SAAR stays hot
+
+July’s IMF path still has world CPI rising to **4.7%** in 2026 before easing to **3.9%** in 2027, with the US CPI assumption at **3.6%**. The Q3 desk stress-tested that path with quarterly SAAR: PCE **5.1%** and the purchases deflator **5.7%**. August’s monthly YoY prints tell a narrower story. CPI at **3.4%** YoY is **0.2 pp under** the Fund’s US assumption; June PCE at **3.7%** YoY is **0.1 pp over**. Core measures sit softer still — CPI core **2.5%**, PCE core **3.3%**. Energy is why headlines have not collapsed: US energy CPI **14.7%** YoY and euro-area energy HICP near **10.3%** keep the war/commodity impulse visible even as food and services moderate.
+
+The non-obvious reading: **the Q3 “prices hotter” verdict was a SAAR verdict; the August “prices cooling toward path” verdict is a YoY verdict.** Both can be true in the same macro week. A quarter where the annualised PCE impulse runs **5.1%** can coexist with a twelve-month PCE rate that has already rolled over from **4.1%** to **3.7%** once the MoM print turns slightly negative. Policy debates that collapse those two numbers into one “inflation is hot/cold” slogan will mis-rank the July baseline. Pair this vintage with our [July IMF forecast revision](/blog/macro-growth-trade-update-2026) for the oil assumption near **$89**/bbl that still sits under the energy YoY, and with the [April research triangle](/blog/macro-growth-trade-research-2026) for the longer CPI reopen narrative that July only partially updated.
+
+## Europe’s price meter ticks the other way
+
+Eurostat’s July HICP final at **2.9%** YoY (**+0.1 pp** from June) is a small move with a large interpretive weight. The euro area is not confirming the US monthly cooling one-for-one. Germany (**2.8%**, from **2.4%**) and France (**2.4%**, from **2.0%**) each added **0.4 pp**; Spain rose to **3.9%**; Italy eased slightly to **2.9%**. Energy and services contributions dominate the EA print, consistent with renewed Gulf-related energy volatility cited in market commentary around the flash.
+
+For the triad, that means **US monthly prices are the cooler surprise versus Q3; euro-area monthly prices are a mild reheating**. Neither overturns July’s annual world CPI path of **4.7%**, but the transatlantic split matters for who is tracking the Fund’s country tables. Toggle the dashboard’s region filter to see July−June MoM deltas: US negative, several large EA members positive.
+
+## Growth and trade: held meters, pending late-August tests
+
+Nothing in this vintage revises the Q3 growth or trade hard prints. US Q2 GDP remains **1.5% SAAR** against July’s **2.3%** annual US path — still **0.8 pp** soft on that rough comparator — until the **26 August** second estimate. CPB May merchandise volume remains **+1.0% MoM** after April’s **+0.7%** and March’s **−2.1%** war shock; the June monitor is the first chance to falsify the “shock did not stick” reading, and it is due **25 August**. IMF world trade volume for 2026 is still the July **3.5%** goods-and-services annual figure; WTO has still not issued a post-March GTOS vintage in this window.
+
+The shareable framing for activity meters is therefore continuity: **trade firmer into mid-year on the May monitor, US growth softer than the annual path on the advance estimate — unchanged pending the next two official prints.** What August changes is only whether the price meter still looks like a synchronized overshoot.
+
+## Country trajectories: who cooled, who reheated
+
+Cross-country July−June inflation deltas in the dashboard are a **signal board**, not a forecast error decomposition:
+
+- **United States:** CPI YoY **3.4%** (**−0.1 pp**); PCE YoY **3.7%** (**−0.4 pp**); Q2 SAAR growth **1.5%** held — soft activity, cooler monthly prices.
+- **Euro area:** HICP **2.9%** (**+0.1 pp**); Q2 GDP **+0.4% QoQ** held — sequential rebound with a mild price re-acceleration.
+- **Germany / France:** largest disclosed MoM reheating among big EA members (**+0.4 pp** each).
+- **Spain:** still the hottest large-EA headline at **3.9%** YoY.
+- **Italy:** slight cooling to **2.9%**.
+- **UK / Japan** rows are estimated placeholders pending aligned national CPI sets for this desk — treat as directional only.
+
+Exposure geometry from July still helps: energy-importing advanced economies show the commodity impulse in YoY energy components; AI-hardware exporters remain more visible in the held growth/trade tape than in this month’s price vintage.
+
+## What would rewrite this August vintage
+
+1. **CPB June monitor (25 Aug)** — a renewed negative MoM would break the two-month merchandise rebound narrative from the Q3 post.
+2. **BEA Q2 second estimate + July PCE (26 Aug)** — a large GDP revision or a July PCE YoY that re-accelerates above **4%** would reopen the “hotter than July IMF” price case on a YoY basis.
+3. **Hormuz / Gulf logistics** — another energy spike would lift US and EA energy YoY before core measures move.
+4. **AI-goods trade momentum** — a fade in semiconductor and server-related shipments would hit Korea/Asia export trackers first and CPB second.
+5. **EA HICP August flash** — if the **2.9%** July print is the start of a climb back through **3%**, the US/EA price split widens further.
+
+Until those resolve, the shareable framing is narrow: **versus the Q3 hard-data check, August’s official monthly prints say US CPI and PCE YoY cooled toward the July IMF US CPI path, while euro-area HICP ticked hotter — growth and trade meters are unchanged pending 25–26 August.**
+
+## Caveats and methodology
+
+- **Monthly YoY ≠ quarterly SAAR.** June PCE **3.7%** YoY and Q2 PCE **5.1%** SAAR measure different windows; the unit bridge is explanatory, not a reconciliation identity.
+- **Hard data ≠ annual forecast.** CPI/HICP YoY prints are not interchangeable with IMF annual CPI assumptions (**3.6%** US / **4.7%** world).
+- **CPB MoM merchandise ≠ IMF goods+services volume.** May **+1.0%** MoM remains held; June is pending.
+- **US Q2 advance** will be revised on 26 August; treat **1.5% SAAR** as the 30 July vintage until then.
+- **Feb–May CPI YoY path** in the dashboard includes estimated bridge points for chart continuity; **Jun–Jul CPI** and **May–Jun PCE** are disclosed BLS/BEA prints.
+- **UK / Japan** inflation rows are estimated — do not treat them as disclosed national statistics for this desk.
+- **Oil $89**/bbl is still the July IMF assumption, not an August futures settle.
+- **India / China** national accounts are not re-cut in this price-focused vintage; see the Q3 post for those growth prints.
+
+## The shareable takeaway
+
+In the **August 2026 monthly vintage**, US CPI printed **3.4% YoY** (**−0.1 pp** from June) and June PCE **3.7% YoY** (**−0.4 pp** from May), while euro-area HICP rose to **2.9%**. Relative to the [Q3 hard-data check](/blog/macro-growth-trade-update-2026q3), the price meter **cools on US monthly YoY even as the Q2 PCE SAAR stays hot**; trade (**CPB May +1.0% MoM**) and US growth (**1.5% SAAR**) are **held** into the 25–26 August release window. The soft landing is still not canceled — but the triad’s price leg now depends on whether you quote SAAR or YoY.
+
+Related reading: [Q3 hard-data check on growth, trade & prices](/blog/macro-growth-trade-update-2026q3) and [July IMF vintage delta](/blog/macro-growth-trade-update-2026).`,
+  },
+  {
     id: "energy-systems-update-202608",
     slug: "energy-systems-update-202608",
     title:
