@@ -123,7 +123,8 @@ export interface Post {
     | "migration-humanitarian-update-2026"
     | "fiscal-industrial-policy-concentration-2026"
     | "measurement-science-update-202608"
-    | "ai-capex-spend-concentration-2026";
+    | "ai-capex-spend-concentration-2026"
+    | "fiscal-plumbing-update-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

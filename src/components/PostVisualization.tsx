@@ -1457,6 +1457,21 @@ const AiCapexSpendConcentrationDashboard = dynamic(
   },
 );
 
+const FiscalPlumbingUpdate2026q3Dashboard = dynamic(
+  () =>
+    import("@/components/visualizations/FiscalPlumbingUpdate2026q3Dashboard").then(
+      (m) => m.FiscalPlumbingUpdate2026q3Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1832,6 +1847,10 @@ export function PostVisualization({
 
   if (type === "ai-capex-spend-concentration-2026") {
     return <AiCapexSpendConcentrationDashboard />;
+  }
+
+  if (type === "fiscal-plumbing-update-2026q3") {
+    return <FiscalPlumbingUpdate2026q3Dashboard />;
   }
 
   return null;
