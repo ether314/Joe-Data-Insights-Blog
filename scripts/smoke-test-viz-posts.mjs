@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-financing-geography-2026",
+    marker: "AI financing — geography lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-capex-intensity-concentration-202608",
     marker: "Capex intensity — late-Aug concentration lens",
     forbidden: "Loading interactive charts",

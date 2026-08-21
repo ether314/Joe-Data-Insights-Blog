@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-financing-geography-2026",
+    slug: "ai-financing-geography-2026",
+    title:
+      "Charted: The US Absorbs ~72% of Funded AI Credit — HQ, Facilities, and ETF Maps Disagree",
+    excerpt:
+      "Geography lens on AI financing: the US holds ~72% of the $1.065T Booth funded credit stock, while hyperscaler IG issuer HQ is 100% US, project/DC collateral only ~52% US, USD books ~78%, and US-listed ETFs ~91% of thematic flows.",
+    category: "Capital Markets",
+    themeId: "ai-financing",
+    imageUrl:
+      "/images/capital-markets-ai-financing-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a glowing world map with amber US-dominant AI credit bars, violet bond arcs, and cyan ETF flow ribbons",
+    publishedAt: "2026-08-21T18:00:00Z",
+    featured: true,
+    visualization: "ai-financing-geography-2026",
+    layout: "default",
+    content: `Our theme already maps *who* funds the AI build-out. The [July research](/blog/ai-financing-research-2026) put hyperscalers on a Goldman path toward **~$250B / ~33%** of AI capex funded with IG bonds. The [mid-year update](/blog/ai-financing-update-2026) opened a **~$489B** AI-related debt perimeter. The [August stock-map update](/blog/ai-financing-update-202608) replaced flow-only tallies with a Booth/Hepp **funded channel stock** near **$1.065T**. The [August 202608 concentration companion](/blog/ai-financing-concentration-202608) then scored *distribution*: HS senior unsecured alone ~**49%**, top-3 channels ~**91%**, Amazon ~**41%** of the five-name IG spine. This post answers the map question desks trade next: **where does that activity, risk, and capacity sit geographically — and do HQ, collateral, books, and ETF domiciles agree?**
+
+The interactive dashboard above is built as a **geography lens**, not another Top-k issuer ladder. Toggle **Regions**, **Facilities**, **Books & ETFs**, and **HQ vs assets**. The punchline is deliberately multi-map. On *funded credit stock*, the **United States absorbs about 72%** of ~**$1.065T**. On *hyperscaler IG issuer HQ*, the US share is **100%**. On *project / data-centre collateral*, the US share falls to about **52%**. On *currency books*, **USD still clears ~78%** of the five-name YTD spine. On *ETF listing domicile*, **US listings take ~91%** of 2025 thematic flows. Same theme, five different geographic tips.
+
+## The geography scoreboard
+
+| Lens | Top-1 share | Top-1 tip | What it measures |
+| --- | ---: | --- | --- |
+| Funded credit stock | **~72%** | United States | Booth/Hepp ~$1.065T by economic geography |
+| HS IG issuer HQ | **100%** | United States | Five-name YTD spine ~$194B |
+| Project / DC collateral | **~52%** | United States | Facility-tied finance ~$250B |
+| HS IG currency book | **~78%** | USD | Primary book on Mag-7 AI notes |
+| ETF listing domicile | **~91%** | United States | 2025 thematic + mega-tech flows ~$43.5B |
+| Private credit GP HQ | **~84%** | United States | GP domicile vs ~48% US asset share |
+
+Read the table as a **family of maps**, not one slogan. Funded-stock geography says the US is the modal home of outstanding AI-infra claims. Issuer HQ geography says the *borrowers who print the thickest sleeve* are entirely US-domiciled. Facility geography says the *collateral* is more plural — Europe and Asia-Pacific together clear roughly **42%** of project/DC finance. Book geography says most of those US HQ notes still clear in **USD**. ETF geography says public-market *ownership demand* is even more US-listed than the credit stock. Averaging these rows into “AI financing is American” is true at the tip and false as a single map.
+
+## Funded stock: the US is ~72% of outstanding claims
+
+Open **Regions**. On the Booth/Hepp funded map (~**$1.065T**), the United States holds about **$767B / 72%**. Europe is ~**13%**, Asia-Pacific ~**9%**, and MEA + LatAm + residual close the last **6%**. Top-3 regions (US · Europe · APAC) clear about **94%**.
+
+That US tip is *not* the same as “all AI debt is US IG.” Roughly **$520B** of the US slice is hyperscaler senior unsecured attributed to US issuer HQ. The rest is project finance, private credit, ABS, and GPU-secured claims that sit where facilities and borrowers sit. Flip the metric to **Dollars** and the absolute gap is obvious: the US alone is larger than Europe + APAC + MEA + LatAm combined.
+
+The stacked path underneath (2024 → 2026 YTD) shows the US dollar stack thickening fastest in absolute terms even when *share* stays sticky in the low-to-mid 70s. Geography concentration can rise in levels without every share meter moving the same way — the same hinge the [concentration companion](/blog/ai-financing-concentration-202608) showed for channels versus issuers.
+
+## Facilities: collateral is more plural than HQ
+
+Toggle **Facilities**. Project / data-centre finance (~**$250B**) is the facility-tied sleeve of the funded map. Here the US share is about **52%** — twenty percentage points below the funded-stock tip and forty-eight points below HS IG HQ. Europe takes ~**24%** (Dublin / Nordics / Frankfurt corridors); Asia-Pacific ~**18%** (Tokyo / Singapore / Mumbai tips); MEA + LatAm + residual ~**6%**.
+
+Inside the US project slice (~**$130B**), Northern Virginia remains the densification tip at roughly **25%** of US project credit and ~**13%** of the *global* project perimeter. Texas and the Midwest print smaller absolute shares but faster YoY growth — the same inland shift our [AI capex spend geography](/blog/ai-capex-spend-geography-2026) post tracks on the *spend* side. Flip corridors to **YoY growth** or **Risk score** and NoVA still leads interconnect risk while Texas leads growth. Credit capacity and growth are **two different US maps**.
+
+This is the operational hinge for lenders. Desks that underwrite “AI credit = US Mag-7 bonds” are reading the HQ map. Desks that underwrite project finance are reading a collateral map where Europe and APAC together are almost as large as the US tip. Both sit inside the same **$1.065T** stock.
+
+## Books and ETFs: USD and US listings thicken further
+
+Toggle **Books & ETFs**. On the five-name hyperscaler IG YTD spine (~**$194B**), **USD books clear about 78%**, EUR about **18%**, and other FX about **4%**. Amazon and Meta EUR megadeals widened the European book sleeve without relocating issuer HQ. Currency geography is a *placement* map: where the paper clears, not where the servers sit.
+
+Flip the lens to **ETF domicile**. FactSet’s 2025 thematic + mega-tech inflow sleeve was about **$43.5B**. **US listings absorb ~91%**; UCITS Europe ~**6%**; APAC residual. QQQ alone is ~**$21.7B** of the US tip — the same public-markets concentration the [August stock-map update](/blog/ai-financing-update-202608) and concentration companion already flagged. Equity *flow* geography is even more US-centric than funded credit stock.
+
+Pair the two panels: USD books and US ETF listings are the *public-markets plumbing* around a credit stock that is already US-heavy. Europe’s larger role is in **facility collateral and EUR placement**, not in issuer HQ or ETF domicile.
+
+## HQ vs assets: the mismatch meter
+
+Toggle **HQ vs assets**. For each channel, compare US *funding HQ* share with US *asset / collateral* share. Hyperscaler senior unsecured shows the extreme gap: **100%** US HQ versus roughly **58%** US facility attribution on the spend map — a **~42 pp** mismatch. Private credit is next: GP HQ ~**84%** US versus asset geography ~**48%** US (**~36 pp**). Project finance is nearly aligned (HQ ~**58%** / assets ~**52%**). GPU-secured SPVs again print a thick HQ tip against more global fleets.
+
+The scatter beside the gap bars puts corridor **project credit dollars** against **interconnect risk**. NoVA sits upper-right: large credit tip, highest risk score. Texas sits mid-credit with extreme growth. Dublin and Singapore show how European and APAC corridors can print meaningful credit without matching US HQ dominance. Filter the scatter to **Europe** or **APAC** to see the non-US tips without the US visual field dominating.
+
+This mismatch is why a single choropleth fails. Capital *formation* (who issues, which GPs raise, which listings clear creations) is more US-concentrated than *physical collateral*. Stress that starts in a NoVA interconnect queue is a facility story; stress that starts in Mag-7 IG technicals is an HQ / book story. The maps disagree on purpose.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** Global IG portfolios that treat “AI credit geography” as diversified across regions when ~**72%** of funded stock and **100%** of HS IG HQ sit in the US; European project lenders who correctly own facility risk but incorrectly assume their book diversifies the *theme’s* HQ concentration; ETF allocators who read UCITS AI wrappers as a geographic hedge when ~**91%** of thematic flow still clears in US listings; private-credit LPs who underwrite US GP platforms without noticing ~**half** of assets can sit outside the US; risk books that conflate USD book share (~**78%**) with facility share (~**52%**).
+
+**Relative winners under current rules:** US HQ issuers that can still clear multi-tranche USD *and* EUR books without relocating domicile; US GP platforms that raise against a global DC asset map; NoVA / Texas corridor lenders at the densification tip; US-listed mega-tech ETF complexes that capture ownership demand regardless of where the next campus interconnect clears.
+
+**What would change the story:** a sustained rise in non-US issuer HQ so HS IG HQ share falls materially below **100%**; project/DC collateral where Europe + APAC together exceed the US tip for several vintages; USD book share falling below ~**60%** as EUR / local books absorb Mag-7 AI notes; thematic ETF flows dispersing so US listings hold less than ~**70%** of the sleeve; private-credit GP HQ diversifying so the US GP share falls toward the ~**48%** US asset share. None of those are the central print on this geography vintage.
+
+## Caveats and methodology
+
+- **Funded-stock geography (~$1.065T)** attributes HS senior unsecured to issuer HQ and project / private / ABS / GPU sleeves to facility or borrower geography — a desk reconstruction, not a regulator segment filing.
+- **Regional shares are estimated** from disclosed HQ domicile, FactSet currency tags, and Synergy/CBRE-style capacity roll-ups; treat top-1 / top-3 as order-of-magnitude maps.
+- **Project corridor dollars** inside the US (~**$130B**) are capacity-weighted tips, not loan-tape extracts; interconnect risk scores are ordinal desk ranks.
+- **Currency book shares** cover the five-name IG YTD spine (~**$194B**), not the full funded stock.
+- **ETF domicile shares** use 2025 FactSet thematic listing tallies (flows, not AUM); QQQ is a Mag-7 proxy, not a pure AI product.
+- **HQ vs asset gaps** compare two different attribution rules on purpose — do not average them into one “true” US share.
+- **Lease overhang (~$675B)** remains outside funded totals; the ~**68%** US lease tip is a commitment geography aside, not part of the 72% funded headline.
+- **Cross-border SPVs** in the residual slice can sit in multiple jurisdictions; the residual is a closing plug, not a geographic claim.
+
+## The shareable takeaway
+
+AI financing geography is **US-heavy — but which US share depends on the map**. On funded credit stock, the United States is about **72%** of ~**$1.065T**. On hyperscaler IG issuer HQ, the US share is **100%**. On project / DC collateral, the US share is only about **52%**. On currency books, **USD clears ~78%**. On ETF listings, the US takes ~**91%** of thematic flows. The build-out is funded in credit and public markets through a system that looks globally diversified in campus press releases and **concentrated once you rank HQ, stock, books, and listings — three of which tip harder toward the United States than the facility map does**.
+
+Related reading: [Aug 202608 concentration companion](/blog/ai-financing-concentration-202608) · [August stock-map update](/blog/ai-financing-update-202608) · [AI capex spend geography](/blog/ai-capex-spend-geography-2026) · [AI financing research 2026](/blog/ai-financing-research-2026).`,
+  },
+  {
     id: "ai-capex-intensity-concentration-202608",
     slug: "ai-capex-intensity-concentration-202608",
     title:

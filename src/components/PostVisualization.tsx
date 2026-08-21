@@ -2492,6 +2492,21 @@ const AiCapexIntensityConcentration202608Dashboard = dynamic(
   },
 );
 
+const AiFinancingGeography2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AiFinancingGeography2026Dashboard"
+    ).then((m) => m.AiFinancingGeography2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3143,6 +3158,10 @@ export function PostVisualization({
 
   if (type === "ai-capex-intensity-concentration-202608") {
     return <AiCapexIntensityConcentration202608Dashboard />;
+  }
+
+  if (type === "ai-financing-geography-2026") {
+    return <AiFinancingGeography2026Dashboard />;
   }
 
   return null;
