@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "demographic-cash-flows-geography-2026",
+    slug: "demographic-cash-flows-geography-2026",
+    title:
+      "Charted: South Asia Takes 26% of LMIC Remittance Dollars — US Hosts ~31% of Outbound Origin",
+    excerpt:
+      "Geography lens on demographic cash flows: South Asia leads destination dollars (~26% of the $685B LMIC perimeter), the United States hosts ~31% of estimated outbound origin, US→LatAm is the largest corridor bloc (~12%), while extreme remittance/GDP risk still clusters in Central Asia and Central America — not in the dollar giants.",
+    category: "Global Systems",
+    themeId: "demographic-cash-flows",
+    imageUrl:
+      "/images/global-systems-demographic-cash-flows-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with glowing amber Gulf–South Asia and cyan US–Latin America remittance corridor arcs and subtle age-pyramid silhouette",
+    publishedAt: "2026-08-21T21:00:00Z",
+    featured: true,
+    visualization: "demographic-cash-flows-geography-2026",
+    layout: "default",
+    content: `Our [research ledger](/blog/demographic-cash-flows-research-2026) asked how age structure and migration show up in money flows. The [concentration companion](/blog/demographic-cash-flows-concentration-2026) then measured the *top of the distribution* — India ~**19%** top-1 recipient share, top-3 ~**36%**, US→Mexico ~**8%** of the **$685B** LMIC remittance perimeter. Banxico vintages ([Q3](/blog/demographic-cash-flows-concentration-2026q3), [August T12M](/blog/demographic-cash-flows-concentration-202608)) restated Mexico’s books without rewriting that architecture. This post answers a different desk question: **where do activity, risk, and capacity sit on the map?**
+
+The interactive dashboard above is built as a **geography lens**. Toggle **Destinations**, **Hosts**, **Corridors**, and **Age & risk**. On destinations flip share versus dollars; on hosts filter residual origin; on age risk filter dependence by region. The punchline is deliberately multi-map. On **destination dollars**, South Asia leads at about **26%** of the Brief 41 LMIC perimeter. On **host / origin geography**, the United States alone is roughly **31%** of estimated outbound origin. On **corridor blocs**, US→Latin America clears about **12%** — the thickest regional pipe. And on **GDP dependence**, Tajikistan still prints ~**45%** remittance/GDP inside Europe & Central Asia, while India sits near **3.4%** despite being the absolute dollar champion.
+
+## The headline map: four meters, four geographies
+
+| Meter | Top region / bloc | Top share | What it measures |
+| --- | --- | ---: | --- |
+| Destination remittance $ | South Asia | **~26%** | Where LMIC inflows land |
+| Host / origin $ | United States | **~31%** | Where outbound dollars start |
+| Corridor bloc | US → Latin America | **~12%** | Thickest regional pipe |
+| Remittance / GDP risk | Tajikistan (ECA) | **~45%** | Where household reliance peaks |
+
+Read the table as a **family of maps**, not one slogan. Destination geography tells you which *regions* absorb remittance dollars. Host geography tells you which high-income labour markets generate the outbound tip. Corridor geography tells you which *pipes* carry the densest bilateral stacks. Dependence geography tells you where a shock to a single host labour market becomes a national income event. Averaging these rows into “remittances are concentrated in Mexico” or “India is the remittance story” is a category error — Mexico is a corridor story; India is a destination-dollar story; Tajikistan is a risk story.
+
+## Destination regions: South Asia leads the dollar map
+
+Filter **Destinations**. South Asia — India (**$129B**), Pakistan (**$33B**), Bangladesh (**$18B**) as disclosed Brief 41 anchors — rolls to about **$180B**, or **~26%** of the **$685B** LMIC universe. Latin America & Caribbean follows near **17%** (Mexico’s ~**$68B** tip plus Central America / Caribbean corridors). East Asia & Pacific sits near **15%** on China (**$48B**) plus the Philippines (**$40B**) and a thinner Pacific / SE Asia residual. MENA, Sub-Saharan Africa, and Europe & Central Asia fill the mid-single-digit to high-single-digit bands; an analytical residual closes the perimeter.
+
+The destination pie is therefore **South Asia–weighted without being a monopoly**. A system where one region holds a little more than a quarter of recorded LMIC inflows still leaves LatAm and EAP with roughly another third combined, and a long tail that includes both large absolute recipients (Nigeria, Egypt) and tiny high-dependence islands. That is the geographic twin of the [concentration ladder](/blog/demographic-cash-flows-concentration-2026): India remains the largest single country; rolling Pakistan and Bangladesh onto the same regional sheet makes South Asia the thickest *destination region* without claiming that “most remittances go to South Asia” in a planetary sense.
+
+Toggle the metric to **Dollars** if you want the absolute ladder rather than shares. The ordering is the same; the visual weight of India’s **$129B** becomes clearer beside Mexico’s corridor-driven second place. China’s third-place absolute print still reminds that bridge economies can sit high on dollars and low on GDP dependence at the same time — a point the Age & risk scatter makes geometric.
+
+## Host geography: the United States as origin tip
+
+Open **Hosts**. Estimated outbound origin puts the United States near **31%** of the **$685B** perimeter (~**$212B**), ahead of the GCC labour-export bloc (~**14%**) and Western Europe (~**11%**). Russia & CIS hosts are small on dollars (~**3%**) but oversized on destination risk for Central Asia. An “other high-income” bucket and a large residual / South–South / untracked origin slice close the map — a reminder that KNOMAD corridor tips are a **lower bound** on true bilateral geography.
+
+Filter to **Hosts only** to drop the residual and see the disclosed tip more cleanly. The host-age companion chart then shows why demographic cash flows are not just a migration story: Western Europe’s median old-age dependency sits in the mid-30s, the US in the high-20s, and GCC hosts near the single digits. Remittance *sending* capacity and *public aging* capacity are related but not identical maps. Europe can be both a major remittance host and the OECD public-pension tip; the Gulf can be a major remittance host while remaining demographically young.
+
+## Corridor blocs: US→LatAm as the thickest pipe
+
+Switch to **Corridors**. Regional corridor blocs — not single bilaterals — answer the plumbing question at map scale. **US → Latin America** leads at about **12%** of the LMIC perimeter (~**$82B**), with US→Mexico alone still ~**$52B** inside that bloc (see our [global remittance corridors](/blog/global-remittance-corridors-2026) post for bilateral detail). **GCC → South Asia** follows near **8.5%** — the labour-stack twin of India’s destination lead. US→EAP and US→South Asia add mid-single-digit pipes; Europe→Africa/MENA and Russia→Central Asia are thinner on dollars but politically and macroeconomically loud when hosts tighten visas or oil-linked employment.
+
+The meter strip beside the corridor ladder puts recipient, host, corridor, and dependence shares on one axis so desks can see the category error in one glance: South Asia’s **26%** destination share and the US’s **31%** host share are not the same object as Tajikistan’s **45%** remittance/GDP print. Corridor concentration and recipient concentration already diverge in the [concentration lens](/blog/demographic-cash-flows-concentration-2026); geography makes the divergence spatial.
+
+## Age & risk: dollar giants ≠ dependence giants
+
+Open **Age & risk**. The dependence × age scatter puts remittance/GDP on the x-axis and old-age dependency on the y-axis, with bubble size proportional to √dollar volume. Tajikistan, Nicaragua, Lebanon, Honduras, and peers sit far right — high household reliance, still-young age structures. India, Mexico, and China sit left — large absolute dollars, modest (or tiny) GDP shares. Filter by **LatAm**, **ECA**, or **S. Asia** to isolate regional clusters. The geometry is the post’s second hinge: **risk geography is not dollar geography**.
+
+The host pension × age panel flips the camera to sending countries. Italy’s public pension burden near **16.3%** of GDP and Japan’s old-age dependency near **54** sit in a different quadrant from Saudi Arabia’s young host demography. OECD average public pension spending is about **8.1%** of GDP — Italy roughly **2×** that tip. Remittance corridors therefore run from aging or mid-aging public balance sheets (US, Europe, Japan) *and* from young petro-labour hosts (GCC) into young recipient regions. Age shows up in money flows twice: as the *sending* labour force that generates remittances, and as the *host* fiscal burden that competes with every other claim on public budgets.
+
+## How this complements concentration and Banxico vintages
+
+Pair this map with the [August concentration vintage](/blog/demographic-cash-flows-concentration-202608) when you need top-1 / top-3 shares after Banxico’s T12M restatement, and with the [August update](/blog/demographic-cash-flows-update-202608) when you need the monthly streak-break and real purchasing-power path. Geography does not restate Mexico’s books; it asks whether Mexico’s second-place *country* rank is better understood as a **US→LatAm corridor region** story — which it is — and whether India’s first-place *country* rank is better understood as a **South Asia destination region** story — which it also is.
+
+The research scatter (dependency × remittance) in the [2026 research post](/blog/demographic-cash-flows-research-2026) already hinted that young, remittance-heavy economies and old, pension-heavy hosts live on different axes. This lens turns that insight into explicit regional shares so a desk can say “South Asia is ~26% of destination dollars” and “US hosts ~31% of outbound origin” without pretending those sentences answer the Tajikistan risk question.
+
+## Caveats and what this map is not
+
+- **Regional recipient shares** roll Brief 41 country anchors into World Bank-style destination regions plus an analytical residual that closes the **$685B** perimeter — they are geography reconstructions, not a new World Bank microdata extract.
+- **Host / origin shares** estimate outbound geography from KNOMAD corridor dollars against the same perimeter; tracked corridors are a **lower bound**, and the residual / South–South slice is intentionally large.
+- **Corridor blocs** aggregate bilaterals into regional pipes (US→LatAm, GCC→South Asia, etc.) for map readability; they are not substitutes for the bilateral ladder in the corridors companion.
+- **Dependence × region points** use Brief 41 GDP-dependence ranks with UN WPP old-age dependency; bubble sizes are √dollar heuristics, not formal weights.
+- **Host pension % GDP** figures follow OECD Pensions at a Glance (Italy **16.3%** disclosed; peers estimated where noted) and are not remittance outflows.
+- **Banxico FY / T12M restatements** of Mexico’s print move the second-largest *country* dollar slightly; they do not by themselves rewrite the regional destination ordering at the precision we claim here.
+
+## What to watch next
+
+Watch three geography meters, not one. First, whether South Asia’s destination share holds if Gulf labour demand softens — a GCC→South Asia corridor shock is a regional event, not only an India event. Second, whether US→LatAm corridor dollars track US labour-market and enforcement news more tightly than Brief 41’s annual recipient ladder suggests. Third, whether Europe’s aging public-pension tip and still-material outbound remittance role continue to coexist as fiscal politics tighten. For bilateral plumbing keep the [corridors post](/blog/global-remittance-corridors-2026) open; for top-of-distribution shares keep the [concentration series](/blog/demographic-cash-flows-concentration-2026) open; for Mexico’s official books keep the [August vintage](/blog/demographic-cash-flows-update-202608) open.
+
+Related reading: [Concentration lens (Brief 41)](/blog/demographic-cash-flows-concentration-2026) · [Aug concentration / T12M](/blog/demographic-cash-flows-concentration-202608) · [Research ledger](/blog/demographic-cash-flows-research-2026) · [Global remittance corridors](/blog/global-remittance-corridors-2026).`,
+  },
+  {
     id: "ai-supply-chain-concentration-202608",
     slug: "ai-supply-chain-concentration-202608",
     title:

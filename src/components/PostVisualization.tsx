@@ -2282,6 +2282,21 @@ const AiSupplyChainConcentration202608Dashboard = dynamic(
   },
 );
 
+const DemographicCashFlowsGeography2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/DemographicCashFlowsGeography2026Dashboard"
+    ).then((m) => m.DemographicCashFlowsGeography2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2877,6 +2892,10 @@ export function PostVisualization({
 
   if (type === "ai-supply-chain-concentration-202608") {
     return <AiSupplyChainConcentration202608Dashboard />;
+  }
+
+  if (type === "demographic-cash-flows-geography-2026") {
+    return <DemographicCashFlowsGeography2026Dashboard />;
   }
 
   return null;

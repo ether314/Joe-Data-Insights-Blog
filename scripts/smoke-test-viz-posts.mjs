@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "demographic-cash-flows-geography-2026",
+    marker: "Demographic cash flows — geography lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-supply-chain-concentration-202608",
     marker: "Semiconductor supply chain — August 202608 Mid-Year concentration lens",
     forbidden: "Loading interactive charts",
