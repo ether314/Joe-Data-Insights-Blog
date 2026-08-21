@@ -2192,6 +2192,21 @@ const MacroGrowthTradeConcentration202608Dashboard = dynamic(
   },
 );
 
+const AiFinancingConcentration202608Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AiFinancingConcentration202608Dashboard"
+    ).then((m) => m.AiFinancingConcentration202608Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2763,6 +2778,10 @@ export function PostVisualization({
 
   if (type === "macro-growth-trade-concentration-202608") {
     return <MacroGrowthTradeConcentration202608Dashboard />;
+  }
+
+  if (type === "ai-financing-concentration-202608") {
+    return <AiFinancingConcentration202608Dashboard />;
   }
 
   return null;

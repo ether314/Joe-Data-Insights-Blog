@@ -172,7 +172,8 @@ export interface Post {
     | "industrial-robotics-concentration-202608"
     | "bank-commercial-credit-concentration-2026"
     | "geopolitics-institutions-concentration-202608"
-    | "macro-growth-trade-concentration-202608";
+    | "macro-growth-trade-concentration-202608"
+    | "ai-financing-concentration-202608";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
