@@ -2,6 +2,107 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-concentration-202608",
+    slug: "chokepoint-commodities-concentration-202608",
+    title:
+      "Aug Concentration: Avg Refine Top-1 72% / Top-3 88% — Cu Mine 23% vs Smelt 50% as Cathode +36%",
+    excerpt:
+      "August concentration lens on chokepoint commodities: Q3 IEA/MCS share ladder held (avg refine Top-1 72%, Top-3 88%, 10/19 stages ≥70% Top-1) while Pink Sheet Jul’26 stress overlays tin +55.5% and copper +36% YoY against a copper mine→smelt flip of 23%→50% and spot TC near −$90/t.",
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-concentration-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of copper bars and critical-mineral fragments funneling into a rose concentration tip with amber Top-1 share arcs",
+    publishedAt: "2026-08-21T20:00:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-concentration-202608",
+    layout: "default",
+    content: `Our [Q3 concentration lens](/blog/chokepoint-commodities-concentration-2026q3) answered the distribution question after IEA Global Critical Minerals Outlook 2026 restated midstream shares: average top refining-country share (ex-REE) at **72%**, Top-3 near **88%**, median Top-1 across the tracked table in the low-**70s**, and **10** stages clearing **≥70%** Top-1 — with gallium refined still near **99%** and rare-earth separation the rare durable ease at **85%**. The [August theme update](/blog/chokepoint-commodities-update-202608) then qualified the *flow* side of the same system: World Bank Pink Sheet (Aug 4, 2026; July monthly) printed tin **+55.5%** YoY, copper **+36.2%**, metals & minerals index **+25.2%**, and copper spot treatment charges near **−$90/t** against a **$0/t** 2026 settle, with a China smelter cut plan around **10%**. This **August concentration lens** asks the desk question those two vintages imply together: **how concentrated is the system at the top of the distribution once Pink Sheet stress sits beside the held Top-1 / Top-3 / HHI ladder — and where is supply thin enough that the economy’s “always available” assumption breaks?**
+
+The interactive dashboard above is built as that overlay. Toggle **Binding tip**, **Stress × share**, **Mine → plant**, and **Price & HHI**. Filter by stage, stress band, and minimum Top-1. Metric control flips **Top-1**, **Top-3**, and an analytical **Binding** score (Top-1 × Aug stress weight). The punchline is deliberately two-sided. On **shares**, the Q3 ladder is **held** — we are not pretending July prices restated country capacity. On **stress**, copper, tin, aluminum, zinc, and fertilizer gates show that *thin spots can tighten without the Top-1 percentage moving a point*. Analysts who quote only mine shares miss smelter tips; analysts who quote only price YoY miss that gallium and graphite anode stay extreme even without a Pink Sheet print.
+
+## The Aug concentration scoreboard
+
+| Lens | Top-1 | Top-3 / thick tip | Aug stress overlay |
+| --- | ---: | ---: | --- |
+| Avg refine (ex-REE, IEA) | **72%** | Top-3 ~**88%** · HHI ~**5,400** | Metals idx **+25.2%** YoY |
+| Stages with Top-1 ≥ 70% | **10 / 19** | — | Held tip count; stress does not democratise |
+| Median Top-1 (table) | **~70%** | — | Gallium extreme **99%** still leads |
+| Gallium refined | **99%** | Top-3 ~**99.5%** | No Pink Sheet — substitution / Europe multiple |
+| Graphite anode | **90%** | Top-3 ~**95%** | IEA ~**$300B**/yr disruption framing |
+| REE refining / separation | **85%** | Top-3 ~**96%** | Q3 eased **−5 pp**; tip still extreme |
+| Lithium chemicals | **70%** | Top-3 ~**88%** | Capex **−40%** YoY while share stayed tight |
+| Copper smelting capacity | **50%** | Top-3 ~**68%** | Cu **+36.2%** · spot TC ~**−$90/t** · cut **10%** |
+| Copper mine | **23%** | Top-3 ~**48%** | Same +36% cathode — classic stage flip |
+| Tin (solder gate) | ~**48%** | Top-3 ~**72%** | Largest base-metal YoY **+55.5%** |
+| Phosphate fert. exports | **28%** | Top-3 ~**67%** | DAP **+14%** / rock **+11.5%** |
+
+Read the table as a **family of market shares plus stress meters**, not one index. Top-1 answers who leads a stage. Top-3 answers how thick the tip is. HHI answers how monopolistic the country ladder feels. Pink Sheet YoY answers whether the *price gate* is screaming on the same physical input. Binding score is an analytical product of the first and the last — useful for ranking, not for citing as a disclosed IEA number.
+
+## Binding tip: Top-1 still owns the desk, stress reorders the middle
+
+Open **Binding tip** and leave the metric on **Top-1**. The ranked bar still puts gallium, graphite anode, battery recovery, REE separation, and the cobalt / nickel midstream cluster at the top of the distribution. Flip to **Top-3** and the tip barely softens — many of those stages clear **≥90%** in the top three. Flip to **Binding** and copper smelting / refining and tin climb because Aug stress weights them harder even though their raw Top-1 is “only” the **48–50%** band.
+
+That is the first hinge for August. **Concentration architecture did not need a new IEA census to stay binding.** What changed is which middle-of-the-table stages become *operationally* hot when cathode, solder, and fertilizer prices print double-digit YoY on top of already-elevated shares. Filter **Min Top-1 ≥70%** and you still see ten stages. Filter **Stress = extreme** and copper joins the gallium / graphite / REE club for a different reason: not because Chile’s mine share jumped, but because China smelter capacity at **50%** meets record-adjacent LME copper and broken treatment charges.
+
+Producer seats remain China-heavy on the midstream tip, with Indonesia’s nickel growth-capture and DRC cobalt mine as the clearest non-China Top-1 seats. Sector cards show batteries and semiconductors carrying the highest median Top-1 and the most “hot price” hits where Pink Sheet maps exist.
+
+## Stress × share: price YoY is not a share restatement
+
+Switch to **Stress × share**. The scatter puts Pink Sheet YoY on the vertical axis and held Top-1 on the horizontal. Tin sits high on price (**+55.5%**) with a mid-**40s** Top-1 estimate — stress outrunning the disclosed share tip. Copper sits at **+36%** with smelt / refine Top-1 **50%**. Aluminum (**+20%**) and zinc (**+25.5%**) occupy the structural-metal band. Nickel is the revision story: **+9.8%** YoY but **−11.5%** from the May peak, while Indonesia’s refined-supply growth capture still prints ~**75%** Top-1 on the Q3 share ladder.
+
+The concentration curve beside it is the share geometry the [Q3 lens](/blog/chokepoint-commodities-concentration-2026q3) already scored: cumulative Top-1 mass rises far above the equal line. August does not flatten that curve. It paints which points on the curve are *also* pricing stress. Toggle the equal line off if you want the raw tip heaviness without the 45-degree reference.
+
+Caveat in one sentence, then expand later: **price Δ ≠ share Δ**. A copper mine Top-1 of **23%** can coexist with a **+36%** cathode print because the binding scarcity is midstream fees and capacity geography, not Chilean pit share.
+
+## Mine → plant: the stage flips Pink Sheet makes expensive
+
+Open **Mine → plant**. Lithium still shows the largest gap in the battery stack — Australia mine Top-1 **37%** versus China chemical refining **70%** (**+33 pp**). Copper is the August poster child: Chile-led mine Top-1 **23%** versus China smelting capacity **50%** (**+27 pp**), now paired with LME copper **$13,543/mt** in July and spot TC near **−$90/t**. Graphite’s gap is smaller because the mine is already concentrated (**77.8% → 90%** anode). Cobalt barely flips at all (**74.2% → 75%**) — both ends concentrated. Rare earths separate hotter than they mine (**69% → 85%**).
+
+The smelter stress strip is the fee-side companion to that copper flip: China capacity share **50%**, utilisation **~85%** vs ex-China **~70%**, 2026 TC/RC settle **$0/t**, spot path about **−$90/t**, and a China cut plan near **10%** (~**961 kt** class, with halted planned capacity in the multi-megatonne narrative from the [August update](/blog/chokepoint-commodities-update-202608)). Custom smelters paying to process concentrate while cathode prints record-adjacent is the market’s way of saying the midstream tip is binding even when the mine map looks plural.
+
+Pair this panel with the [copper mine vs refinery geography companion](/blog/copper-mine-vs-refinery-geography-2026) when you need the longer spatial story. This post’s job is the concentration meter with an August stress overlay, not a full GIS rewrite.
+
+## Price path & HHI: basket stress beside band mix
+
+Switch to **Price & HHI**. The composed path shows copper climbing from 2025 annual **$9,947** through Q1 **$12,831** into July **$13,543**, while the metals & minerals index peaks in May (**148.8**) and cools to July **140.5** — still **+25.2%** versus 2025. Nickel’s May spike and July revision sit as a dashed reminder that YoY signs can hide intra-year mean reversion.
+
+The HHI donut answers a different question: how many stages land in extreme (**≥5,000**), high, moderate, or plural bands. Midstream gallium / graphite / recovery / REE / cobalt / nickel growth and the average-refine headline sit in the extreme-to-high club. Copper mine (**~900**) is the plural reminder that *some* pits are diversified even when plants are not. Downstream disruption cards keep IEA’s graphite (**~$300B**/yr) and REE full-chain (**~$6.5T** framing) risk dollars next to their Top-1 shares — order-of-magnitude security meters, not precise loss forecasts.
+
+Top-k clearance counts close the panel: stages clearing Top-1 **≥50%**, **≥70%**, **≥85%**, and Top-3 **≥90%**. August did not move those counts with a new share census; it asks whether desks still treat “plural mines” as proof the system is safe when the clearance ladder says otherwise.
+
+## Who is exposed — and what the Aug overlay buys
+
+**Exposed to quoting the wrong stage:** readers who cite copper mine Top-1 **23%** as evidence the metal is “diversified” while China holds ~**50%** of smelting capacity and spot TC is deeply negative; readers who cite lithium mine plurality while chemical refining sits near **70%**.
+
+**Exposed to price-as-share confusion:** desks that treat tin’s **+55.5%** YoY as proof of a new monopoly share print, or nickel’s May→July pullback as proof Indonesia’s growth-capture tip eased. Shares are held from Q3; prices are stress.
+
+**Exposed to thin future relief:** battery and magnet buyers who hoped IEA’s investment pullback (**critical minerals −9%**, battery metals **−20%**, lithium **−40%**) would automatically flatten Top-1 — capital diversion without delivered midstream capacity leaves the tip intact.
+
+**Exposed on food-system gates:** fertilizer importers who see Morocco’s export Top-1 at “only” **28%** and miss DAP **+14%** and phosphate rock **+11.5%** as thin-gate stress on a top-3 near **67%**. See also the [phosphate fertilizer export companion](/blog/phosphate-fertilizer-export-dependence-2026).
+
+**What the overlay buys:** a single board where **Top-1 / Top-3 / HHI** stay comparable to the Q3 concentration print, while Pink Sheet and smelter meters flag which thin spots are *currently expensive*. That is the August contribution relative to both the [Q3 concentration companion](/blog/chokepoint-commodities-concentration-2026q3) and the [price-stress update](/blog/chokepoint-commodities-update-202608).
+
+## Caveats and methodology
+
+- **Share ladder is held from concentration-2026q3** (IEA GCMO 2026 midstream + MCS 2026 mine anchors). July prices do not restate country capacity shares.
+- **Price Δ ≠ share Δ.** Pink Sheet YoY and spot TC/RC are stress meters on the same chokepoints, not Top-1 revisions.
+- **Binding score is analytical** (Top-1 × stress-band weight). Do not cite it as an IEA or USGS disclosed index.
+- **Top-3 and HHI** on many rows are derived/estimated from disclosed Top-1 plus prior theme ladders; country shares may not sum to 100%.
+- **Tin, aluminum, and zinc Top-1 figures** in this table are approximate midstream / primary gates for stress mapping — confidence tagged estimated.
+- **Copper Q1 / May path points** on the price chart are illustrative bridges between disclosed annual / July Pink Sheet prints and Q3 narrative; July and 2025 annual are the hard anchors.
+- **Spot TC ~−$90/t** follows the IEA / industry Mar-2026 path cited in the August update — fees move faster than annual settles.
+- **Disruption dollar figures** (graphite ~$300B, REE ~$6.5T) are IEA framing orders of magnitude, not loss forecasts.
+- **US net-import reliance** percentages are MCS-linked context, not the concentration numerator.
+- Cross-agency comparisons (IEA vs USGS vs Pink Sheet) are directional; scopes and years differ.
+
+## The shareable takeaway
+
+August did not redraw who owns the chokepoint ladder — it **showed which tips are expensive while the Top-1 / Top-3 architecture stayed intact**. **Avg refining (ex-REE) still prints 72% Top-1 / ~88% Top-3**; **10 of 19 stages clear ≥70% Top-1**; gallium remains the extreme at **~99%**. Copper is the binding Aug story in one line: **mine Top-1 23% → smelt 50%**, cathode **+36% YoY**, spot TC near **−$90/t**. Tin’s **+55.5%** reminds you stress can outrun share. Watch **shares and stress on the same board** — not either meter alone — to see which physical inputs the economy still assumes will always be available.
+`,
+  },
+  {
     id: "consumer-finance-markets-concentration-202608",
     slug: "consumer-finance-markets-concentration-202608",
     title:
