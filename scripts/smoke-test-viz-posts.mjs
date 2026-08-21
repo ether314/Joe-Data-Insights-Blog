@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-capex-intensity-concentration-2026q3",
+    marker: "Capex intensity — Q3 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-financing-concentration-202608",
     marker: "Top-1 channel holds",
     forbidden: "Loading interactive charts",

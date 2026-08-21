@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-intensity-concentration-2026q3",
+    slug: "ai-capex-intensity-concentration-2026q3",
+    title:
+      "Q3 Concentration: Oracle Holds 27.3% of Intensity Sum — Top-3 Clears 68.9%; Dollars Still Crown Amazon",
+    excerpt:
+      "Mid-Q3 ratio lens on hyperscaler reinvestment: top-1 intensity-sum share is Oracle at 27.3% (43.5% of revenue), top-3 is 68.9% (Oracle + Meta + Alphabet), HHI ≈ 2,125 — while absolute-dollar concentration still puts Amazon first at ~33%.",
+    category: "Capital Markets",
+    themeId: "ai-capex-intensity",
+    imageUrl:
+      "/images/capital-markets-ai-capex-intensity-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of rose and amber Top-1/Top-3 intensity concentration bars beside hyperscaler data-center silhouettes and cyan reinvestment arcs",
+    publishedAt: "2026-08-21T16:00:00Z",
+    featured: true,
+    visualization: "ai-capex-intensity-concentration-2026q3",
+    layout: "default",
+    content: `Our theme already maps the *level* of reinvestment: the [July intensity research](/blog/ai-capex-intensity-research-2026) put five hyperscalers inside an 18–37% band; the [August update](/blog/ai-capex-intensity-update-2026) and [Q3 mid-guide](/blog/ai-capex-intensity-update-2026q3) then tracked weighted intensity into the mid-to-high twenties. The [Q3 spend concentration companion](/blog/ai-capex-spend-concentration-2026q3) answered the *dollar* distribution question. The [late-Aug intensity concentration cut](/blog/ai-capex-intensity-concentration-2026) answered the same ratio question on a later desk step. This post locks the **mid-Q3 guide vintage** and asks: **how concentrated is the intensity distribution itself — and is that top of the ladder still cash-flow sustainable?**
+
+The interactive dashboard above is a concentration lens, not another KPI strip. **Top-1 share is 27.3%** of the intensity sum (Oracle at **43.5%** of revenue). **Top-3 share is 68.9%** (Oracle + Meta + Alphabet). Approximate Big-5 intensity **HHI is ~2,125** — elevated versus a five-way equal split (~2,000). Flip the perimeter to capex dollars and Amazon still leads at ~**33%** — ratios and dollars disagree on who sits at the top.
+
+## The concentration scoreboard
+
+| Perimeter | Top-1 | Top-3 | Extra meter |
+| --- | ---: | ---: | --- |
+| Intensity-sum shares (mid-Q3) | **27.3%** (Oracle) | **68.9%** (ORCL·META·GOOG) | HHI ≈ **2,125** |
+| Excess above 11% cloud norm | **31.1%** (Oracle) | **73.5%** | Foundry-like ≥35%: **2** names |
+| Capex-dollar shares (same vintage) | **33.3%** (Amazon) | **75.8%** | Rev-weighted intensity **27.6%** |
+| H1’26 intensity-sum (prior step) | **27.2%** (Oracle) | **69.2%** | HHI ≈ **2,121** |
+
+Read the table as a **family of market shares**, not one number. Intensity-sum concentration is a two-firm extreme at the top (Oracle and Meta together clear **~52%** of the intensity sum) with a flatter middle. Dollar concentration is Amazon-led and thicker at Top-3. Excess-above-norm sharpens the same Oracle/Meta story: the “extra” reinvestment pool is even more top-heavy than the raw intensity sum.
+
+Analysts who only quote Amazon’s absolute program understate how extreme *ratios* have become at Oracle and Meta. Analysts who only quote Oracle’s 43.5% understate that Amazon still funds the largest share of the physical build.
+
+## Intensity ladder: Oracle and Meta own the extreme
+
+Filter the dashboard to **Intensity ladder → Q3 guide → Intensity-sum shares**. The cumulative curve rises to **27.3%** at Top-1 (Oracle), **51.8%** at Top-2 (plus Meta at **39.1%** intensity / **24.5%** of the sum), and **68.9%** at Top-3 (plus Alphabet at **27.2%**). Microsoft (**26.8%**) and Amazon (**22.8%**) fill the lower rungs — still above the **20%** telecom reference, but no longer defining the thick end of the *ratio* distribution.
+
+That is the first hinge. Dollar posts crown Amazon because AWS-scale revenue can absorb a low-to-mid-twenties intensity and still print the largest check. Intensity posts crown Oracle and Meta because smaller revenue bases push the same AI build into the high thirties and low forties. Same vintage, inverted ranking.
+
+Toggle **Excess vs cloud norm**. Excess top-1 rises to **31.1%** and excess top-3 to **73.5%** — every point above the **11%** pre-AI cloud decade is treated as “extra” reinvestment. Oracle’s **32.5 pp** of excess and Meta’s **28.1 pp** dominate that pool; Amazon’s **11.8 pp** of excess is real but diluted by the giants above.
+
+## Dollars vs ratios: two tops, one system
+
+Open **Excess concentration** for the dual-perimeter bars. Amazon’s dollar share (~**33%**) towers over its intensity-sum share (~**14%**). Oracle flips the other way: ~**7%** of Big-5 dollars, ~**27%** of the intensity sum. Meta and Alphabet sit in between — large enough to matter in both ledgers, extreme enough to pull the ratio ladder upward.
+
+This is the second hinge. A credit desk that underwrites *leverage and FCF conversion* should live on the intensity ladder. A supply-chain or power desk that underwrites *physical GW and silicon* should live on the dollar ladder — and then pair it with the [Q3 spend concentration companion](/blog/ai-capex-spend-concentration-2026q3). Collapsing the two into one “hyperscaler concentration” statistic mis-ranks risk.
+
+Revenue-weighted intensity across the five still prints about **27.6%** mid-Q3 — close to the Big-4 (ex-Oracle) path in the [Q3 intensity update](/blog/ai-capex-intensity-update-2026q3). Weighted averages soften Oracle’s ratio extreme; concentration metrics put it back on the scoreboard.
+
+## Multi-year path: top-1 sticky, levels climb
+
+Switch to **Multi-year path**. Top-1 intensity-sum share barely moves: **27.9%** in FY24 (then Meta), **28.5%** in FY25 (Oracle takes the crown), **27.2%** at H1’26, **27.3%** at mid-Q3. Top-3 holds near **69%** across the path. What *does* climb is the absolute intensity at the tip — Oracle from **13%** (FY24) to **43.5%**, Meta from **22.8%** to **39.1%** — and the revenue-weighted system intensity from the low twenties toward the high twenties.
+
+HHI on the intensity-sum perimeter sits near **2,100–2,200** across vintages — modestly above a five-way equal split (**2,000**). This is not a single-name monopoly story. It is a **stable two-firm extreme** sitting on top of a rising mean.
+
+The late-Aug desk step after mid-Q3 nudged Meta and Alphabet intensities higher and trimmed Top-1 share slightly (to **26.7%**) without breaking the Oracle/Meta ordering — see the [late-Aug concentration companion](/blog/ai-capex-intensity-concentration-2026). Concentration *shape* was sticky; concentration *altitude* was not.
+
+## Sustainability: high intensity, thin FCF
+
+Open **Sustainability**. The scatter plots intensity against free-cash-flow margin with bubble size ∝ capex dollars. Microsoft still prints the comfortable corner — **26.8%** intensity with ~**21%** FCF margin. Amazon sits near the floor on FCF (~**1.1%**) despite “only” **22.8%** intensity — scale without cushion. Oracle pairs the highest intensity (**43.5%**) with ~**3.5%** FCF. Meta (**39.1%** intensity / ~**14%** FCF) is the stretched middle: still cash-generative, but deep inside the foundry-like ≥**35%** band.
+
+All five names sit above the **20%** telecom reference. Two (Oracle, Meta) sit in the extreme band the theme has tracked since the July research baseline. That is the third hinge: **concentration of intensity at the top is also concentration of cash-flow stress** — not identically ranked (Amazon’s FCF stress is a scale story), but overlapping enough that the top of the intensity ladder is where funding questions get sharpest.
+
+Pair this panel with the [Q3 intensity update](/blog/ai-capex-intensity-update-2026q3) for vintage deltas and with the [AI financing](/blog/ai-financing-update-2026) theme for how debt is absorbing the gap when FCF no longer covers the build.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** equity desks that treat “hyperscaler capex” as a single Amazon-led beta when ratio stress sits at Oracle/Meta; credit desks that underwrite Amazon’s FCF squeeze without noticing Oracle’s intensity extreme; policy and power desks that use intensity rankings to infer watt shares (they will mis-rank Amazon); theme readers who quote only the weighted **27.6%** average and miss that Top-2 already holds **half** the intensity sum.
+
+**Relative winners under current meters:** Microsoft on the sustainability scatter (high intensity *with* FCF cushion); Amazon on physical build share even while trailing on ratios; suppliers priced to dollar concentration rather than ratio concentration; credit structures that can term out Oracle/Meta’s multi-year intensity without assuming a quick mean-reversion to the cloud decade’s **11%**.
+
+**What would change the story:** Oracle or Meta intensity compressing back toward the mid-twenties (Top-1 share would fall even if dollars stayed elevated); Amazon intensity rising into the thirties without FCF recovery (dollar *and* ratio tops would align — a worse systemic signal); a sustained HHI break above ~**2,400** on the intensity-sum perimeter; revenue-weighted intensity rolling over while Top-1 stays extreme (a bifurcation into “cheap scale” vs “expensive specialists”). None of those cleanly appear in the mid-Q3 guide tape — the path still shows sticky Top-1/Top-3 shares on a rising mean.
+
+## Caveats and methodology
+
+- **Intensity = gross PP&E purchases ÷ total revenue** on the same desk vintage as the companion [Q3 intensity update](/blog/ai-capex-intensity-update-2026q3). Microsoft FY26 intensity is disclosed; Amazon / Alphabet / Meta / Oracle mid-Q3 prints are CY26 / FY26 guide midpoints.
+- **Intensity-sum shares treat each firm’s intensity as a weight in a five-point distribution.** They answer “how concentrated is the *ratio* ladder,” not “what share of global IT capex.” Capex-dollar shares answer the second question inside the Big-5 perimeter.
+- **Excess intensity subtracts an 11% pre-AI cloud norm** used across the theme. Changing the benchmark (e.g. to the 20% telecom norm) re-scales excess shares but does not flip Oracle/Meta leadership on the mid-Q3 tape.
+- **HHI uses percentage-point shares of the chosen perimeter** and is comparable only within that perimeter. Equal five-way share ⇒ HHI = 2,000.
+- **FCF margin = (operating cash flow − capex) ÷ revenue.** Lease accounting, customer prepayments (Oracle), and finance-lease principal can move reported FCF without changing the physical build — see the spend theme’s economic vs accounting notes.
+- **This is a concentration cut on the mid-Q3 guide vintage**, not a restatement of weighted intensity levels. For the late-Aug desk step’s concentration print, use the [2026 intensity concentration companion](/blog/ai-capex-intensity-concentration-2026). For vintage deltas on weighted intensity, use the [Q3 intensity update](/blog/ai-capex-intensity-update-2026q3).
+
+**Primary sources:** Microsoft FY26 Form 10-K (held intensity; FCF path); Amazon, Alphabet, Meta, and Oracle mid-Q3 CY26 / FY26 guide midpoints aligned with the companion intensity and spend trackers; prior theme vintages in [Q3 intensity mid-guide](/blog/ai-capex-intensity-update-2026q3), [August intensity update](/blog/ai-capex-intensity-update-2026), and [intensity research](/blog/ai-capex-intensity-research-2026); dollar-distribution context from [AI capex spend concentration (Q3)](/blog/ai-capex-spend-concentration-2026q3); late-Aug ratio companion [intensity concentration 2026](/blog/ai-capex-intensity-concentration-2026).`,
+  },
+  {
     id: "ai-financing-concentration-202608",
     slug: "ai-financing-concentration-202608",
     title:
