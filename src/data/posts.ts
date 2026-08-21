@@ -2,6 +2,76 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "migration-humanitarian-concentration-2026",
+    slug: "migration-humanitarian-concentration-2026",
+    title:
+      "Charted: FTS Top-1 Donor Is 23% of Tracked Cash — Top-3 Clears 45%",
+    excerpt:
+      "Concentration lens on migration and humanitarian burden: the United States alone is ~23% of tracked 2026 FTS funding (top-3 ~45%), while refugee host Top-3 countries hold only ~19% of the host universe — and LMIC hosts still carry ~68% of refugees under a 40% GHO coverage narrative.",
+    category: "Politics",
+    themeId: "migration-humanitarian",
+    imageUrl:
+      "/images/politics-migration-humanitarian-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data viz with amber and sky Top-1/Top-3 donor concentration bars, rose Lorenz curve, and faint world-map host clusters",
+    publishedAt: "2026-08-22T00:15:00Z",
+    featured: true,
+    visualization: "migration-humanitarian-concentration-2026",
+    layout: "default",
+    content: `Our [migration–humanitarian research map](/blog/migration-humanitarian-research-2026) answered the burden question: who hosts people, who writes cheques, and where the scissors between stocks and cash open. The [May](/blog/migration-humanitarian-update-2026), [Q3](/blog/migration-humanitarian-update-2026q3), and [August](/blog/migration-humanitarian-update-202608) vintages then tracked what moved — a first decade-long stock decline to **117.8 million** forcibly displaced, a May→Aug GHO coverage heal from **24.4% to 40.4%**, and an August unpack that named who paid that heal. This post answers the distribution question desks trade next: **how concentrated is the system at the top — and do cash tips, host tips, and coverage narratives even share a denominator?**
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Lens ladder**, **Concentration curve**, **Burden split**, and **Plan leverage**. Filter by metric (Top-1 / Top-3 / HHI) and by lens (FTS donors, refugee hosts, GHO appeal asks, host income groups). The punchline is deliberately multi-meter. On **tracked FTS cash**, the United States alone is about **23.1%** of a ~**$12.3B** tracked ladder and the **top three clear ~44.7%**. On **refugee hosts**, Colombia is only ~**6.6%** of a ~**42.7M** host universe and the top three clear ~**18.5%** — yet **LMIC hosts still hold ~68%** of refugees. On **GHO requirements**, Sudan / regional alone is ~**12%** of the **$34.87B** ask and the top three plans clear ~**29%**. Same theme, three different tops — and a coverage narrative that can heal without redistributing who bears people costs.
+
+## The headline ladder: Top-1 and Top-3 across burden lenses
+
+| Lens | Top-1 | Top-3 | What it measures |
+| --- | ---: | ---: | --- |
+| FTS donors (cash) | **~23%** (United States) | **~45%** | Share of ~$12.3B tracked FTS |
+| Refugee hosts (people) | **~7%** (Colombia) | **~19%** | Share of ~42.7M host universe |
+| GHO appeal asks | **~12%** (Sudan / regional) | **~29%** | Share of $34.87B requirements |
+| Host income groups | **~33%** (upper-middle) | **~80%** | Share of refugee host stock |
+
+Read the table as a **family of market shares**, not one slogan. Donor Top-1 tells you which chequebook dominates tracked humanitarian cash. Host Top-3 tells you how thin the *country* tip of people hosting is — even while the *income-group* tip is thick (LMIC **68%**). Appeal Top-1 tells you which crisis still owns the largest slice of a deliberately prioritized GHO ask. Averaging “humanitarian concentration” across these rows is a category error — **23% of FTS is not 7% of hosts**, and neither is a **40.4% coverage** print.
+
+## Cash tip: FTS donors are an oligopoly, not a monopoly
+
+Toggle **Lens ladder** to **Donors** and metric **Top-3**. Inside OCHA’s tracked 2026 FTS ranking, the United States leads at **$2.83B** (~**23.1%**). The European Commission (**$1.75B**, ~**14.3%**) and Japan (**$0.89B**, ~**7.3%**) bring the cumulative top-three to ~**44.7%**. Top-5 clears ~**57%**; top-10 clears ~**82%**. That geometry is *oligopoly inside the cash ledger*: no single donor owns half of tracked funding, but three actors own nearly half of a ladder that still leaves a ~**$21B** GHO gap after the summer heal.
+
+Open **Concentration curve** on the donor lens. The Lorenz-style panel rises to ~**23%** at rank 1, ~**37%** at top-2, and ~**45%** at top-3, then ~**82%** by top-10 — leaving a long residual of smaller donors. An equal-share reference across eleven buckets sits below the curve early. Pair this with our [August donor unpack](/blog/migration-humanitarian-update-202608) when you need the vintage who-paid-the-heal story rather than the concentration cut. August answered *whose inflows produced the +16 pp coverage Δ*; this post answers *how thick the tip stays once that Δ is booked*.
+
+Two caveats travel with every FTS share. **Tracked funding is not the whole system** — bilateral, private, and in-kind flows can sit outside the ladder you are ranking. And donor shares are **not** host shares: a high-income capital that writes **23%** of tracked cash can still host a fraction of a percent of refugees.
+
+## People tip: country hosts are diffuse; income groups are not
+
+Toggle **Hosts**. End-2025 vintage stocks put Colombia (~**2.8M**), Germany (~**2.7M**), and Türkiye (~**2.4M**) at the country tip — about **18.5%** of a ~**42.7M** refugee / OPNIIP host universe. Uganda, Iran, Pakistan, Chad, and Bangladesh extend the disclosed ladder, but the residual of “all other hosts” still owns roughly **two-thirds** of the universe. Country-level HHI on this map sits in the **unconcentrated** band. That is not a story of equal burden — it is a story that **no single capital owns the people stock the way the US owns the cash tip**.
+
+Flip to **Income**. Upper-middle income hosts alone hold ~**33%** of refugees; high-income hosts ~**29%**; low and lower-middle together add the rest of a map where **LMIC countries still carry ~68%** and LDCs ~**26%**. Income-group HHI jumps into the **high** band because four coarse buckets replace dozens of countries. The narrative trap is to treat “hosts are diversified” (true at country rank) as “burden is shared with donors” (false once income and cash tips are read together). For the longer hosting-burden frame — Colombia, Germany, Türkiye, Uganda, Iran, Chad, Pakistan — see our [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024).
+
+## Appeal tip: a few crises still own the ask spine
+
+Toggle **Appeals**. Against the August GHO monitoring ask of **$34.87B**, Sudan / regional (~**$4.2B**) is ~**12%** of requirements. Ukraine / regional and oPt / regional bring the top-three to ~**29%**. Eight named plan clusters clear ~**59%**; the residual of other plans still owns ~**41%**. That is a *thick tip without a monopoly*: Sudan is the largest single ask slice, but the GHO remains a portfolio of protracted and acute crises — Africa and MENA spines plus Europe’s Ukraine track — not a one-crisis budget.
+
+Open **Plan leverage**. The scatter of requirement share versus coverage (bubble size ∝ people in need) shows why concentration on the ask side does not equal concentration on the funded side. Ukraine-class plans can sit higher on coverage while Sudan- and Sahel-class plans combine large people-in-need footprints with thinner coverage. A system can look “funded enough” in a headline coverage percentage while the largest need clusters remain under-cash. That is the same scissors the [Q3 update](/blog/migration-humanitarian-update-2026q3) mapped on the May→Aug path — only read here as a **distribution** rather than a **vintage delta**.
+
+## Burden split: cash tips, people tips, and coverage narratives diverge
+
+Toggle **Burden split**. The dual ledger puts FTS Top-1 (**23.1%**) and Top-3 (**44.7%**) next to host Top-3 (**18.5%**) and LMIC host share (**68%**), with GHO coverage (**40.4%**) as a narrative meter rather than a burden meter. The composed Top-1 / Top-3 / Top-5 comparison makes the asymmetry visual: donor cumulative shares rise far steeper than host country cumulative shares. Coverage can heal on a concentrated donor ladder while hosting burden stays where Global Trends left it — **117.8M** forcibly displaced carried until Mid-Year Trends 2026, LMIC hosts still majority.
+
+**Host/donor roles** on the leverage scatter sharpen the cast. Colombia and Uganda sit high on people hosted and near zero on FTS share (host-only). The United States, Japan, Sweden, and the European Commission sit high on donor share and low on hosted stock (donor-heavy). Germany is the rare “both” that appears in the host tip *and* the donor ladder. Narratives that say “the West funds, the South hosts” are crude — but the scatter shows why the crude slogan keeps getting airtime: the extremes are real even when the middle is mixed.
+
+## Caveats, denominators, and what this post is not
+
+Concentration indexes inherit their universes. FTS shares are of **tracked** funding, not of every humanitarian dollar. Host shares use a ~**42.7M** refugee / OPNIIP-style host universe — not the **117.8M** all forcibly displaced stock that includes IDPs inside origin countries. Appeal shares are **estimated plan geometry** against the GHO ask for dashboard readability; they are not a single official HHI table from OCHA. HHI bands (unconcentrated / moderate / high) are analytical DOJ-style thresholds applied to our stated buckets — useful for comparing lenses, not for litigation or procurement screens.
+
+This post is also **not** a forecast of donor politics, a ranking of moral desert, or a substitute for Mid-Year Trends 2026 when host stocks refresh. It does not claim that a less concentrated donor ladder would automatically raise LMIC hosting capacity, or that diversifying appeals would close a **~$21B** gap. It claims something narrower and more operational: **when desks say “the humanitarian system,” they should say which tip they mean** — cash, people, asks, or coverage — because those tips do not move together.
+
+## What to watch next
+
+Three prints would rewrite the concentration story without rewriting the theme. First, a Mid-Year Trends 2026 host refresh that moves Colombia / Germany / Türkiye ranks or the LMIC **68%** meter. Second, an FTS reprint that changes US / EC / Japan shares enough to bend Top-3 off ~**45%**. Third, a GHO ask restatement that reallocates the Sudan–Ukraine–oPt spine or closes more of the **$20.79B** gap without another concentrated heal. Until then, the concentration cut stays stable enough to trade: **cash oligopoly, diffuse country hosts, LMIC-heavy people stock, thick crisis asks, and a coverage narrative that can improve while the burden map does not.**
+
+Related reading: [August donor unpack](/blog/migration-humanitarian-update-202608) · [Q3 May→Aug FTS update](/blog/migration-humanitarian-update-2026q3) · [May Global Trends / MYR update](/blog/migration-humanitarian-update-2026) · [migration–humanitarian research](/blog/migration-humanitarian-research-2026) · [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024) · [OECD DAC ODA first drop](/blog/oecd-dac-oda-first-drop-2024).`,
+  },
+  {
     id: "ai-capex-spend-geography-2026",
     slug: "ai-capex-spend-geography-2026",
     title:
