@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "adaptation-economics-concentration-2026q3",
+    slug: "adaptation-economics-concentration-2026q3",
+    title:
+      "Q3 Concentration: Residual Top-1 Eases to 38% — WBG Holds 34% of the $35B MDB Tip",
+    excerpt:
+      "Q3 adaptation-economics concentration after MDB Joint Summary + benign H1: residual Top-1 (households & SMEs) ~38% (−2 pp vs FY), Top-3 ~86%; World Bank Group ~34% of $35B LMIC adaptation; protection-gap Top-3 regions still ~53% of the $424B stock.",
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl:
+      "/images/energy-adaptation-economics-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside teal coastal hazard zones and a thin lime adaptation-finance stream into a charcoal residual basin",
+    publishedAt: "2026-08-21T16:00:00Z",
+    featured: true,
+    visualization: "adaptation-economics-concentration-2026q3",
+    layout: "default",
+    content: `Our [2026 concentration print](/blog/adaptation-economics-concentration-2026) answered the first distribution question: residual Top-1 (uninsured households & SMEs) ~**40%**, Top-3 ~**87%**, protection-gap Top-3 regions ~**53%** of the **$424B** stock, and OECD adaptation donors Top-3 ~**46%** of a **$34.7B** tip. The [Q3 OECD vintage](/blog/adaptation-economics-update-2026q3) and [August MDB + H1 refresh](/blog/adaptation-economics-update-202608) then moved the *levels*: MDB LMIC adaptation to **$35B in 2025 (+31% YoY)**, H1 2026 insured nat-cat **$42B** with a **42%** insurance ratio. This Q3 concentration lens asks the desk follow-up: **did those prints change who sits at the top of the residual and finance ladders — or mostly rearrange absolute dollars under a stuck tip?**
+
+The interactive dashboard above is built as that **Q3 concentration lens**. Toggle **HHI scoreboard**, **Residual ladder**, **MDB & donors**, **Vintage slope**, and **Gaps & scarcity**. The punchline is deliberately multi-sided. On **residual incidence**, Top-1 eases to about **38%** (−**2 pp** versus the FY framing) and Top-3 to about **86%** as the benign H1 insurance ratio lifts the covered sleeve — HHI near **2,684**. On **MDB LMIC adaptation banks**, World Bank Group alone is about **34%** of the **$35B** tip and Top-3 (WBG + ADB + IDB) clears about **68%**. On **protection-gap geography**, Top-3 regions still hold about **52.6%** of the **$424B** stock — unchanged geography under a newer finance print. On **scarcity**, AGR needs mid still runs roughly **9.6×** MDB LMIC adaptation.
+
+## The Q3 concentration scoreboard
+
+| Lens | Top-1 | Top-3 | HHI | Δ Top-1 |
+| --- | ---: | ---: | ---: | ---: |
+| Residual damage bearers | **38%** (households & SMEs) | **86%** | **~2,684** | **−2 pp** |
+| MDB LMIC adaptation banks | **34%** (World Bank Group) | **68%** | **~1,986** | **+2 pp** |
+| Protection-gap geography | **22.4%** (N. America) | **52.6%** | **~1,518** | **0 pp** |
+| OECD adaptation donors | **18%** (Germany) | **46%** | **~1,124** | **0 pp** |
+| Public adaptation instruments | **67%** (loans) | **100%** (3 buckets) | **~5,346** | — |
+| FRLD pledge micro-tip | **~28%** (host/large pledges) | **~61%** | **~1,680** | — |
+
+Read the table as a **family of market shares**, not one number. The residual tip *eased* slightly because insurance’s constructed share rose with H1’s **42%** coverage ratio — not because households stopped paying. The MDB bank tip *tightened* slightly as the Joint Summary made the institutional engine larger and more legible. Gap geography and OECD donors are the stuck meters: new flow prints did not redraw who holds uninsured exposure dollars or who supplies the bilateral tip.
+
+## HHI scoreboard: which tip is actually hard
+
+Open **HHI scoreboard**. Ranked HHI bars put residual incidence and public instruments in the high / extreme bands, MDB banks in the moderate-to-high band (~**1,986**), gap geography moderate (~**1,518**), and OECD donors still plural (~**1,124**). The paired Top-1 / Top-3 bars make the same point in share space: instruments are loan-dominated at **67%** Top-1; residual Top-3 clears **86%**; donor Top-3 only **46%**.
+
+That ordering matters for narrative risk. Press coverage that celebrates “MDBs hit a record” is true on the August update’s levels — and still describes a tip that is more concentrated *inside* the MDB club than the OECD bilateral club is. Analysts who quote only donor pluralism miss that the residual bearer ladder remains the hardest concentration meter in the theme.
+
+## Residual ladder: −2 pp is not a regime change
+
+Filter **Residual ladder**. The Lorenz curve still rises far above the equal-split diagonal: **38%** at households, **64%** once sovereigns stack, **86%** once insurance’s covered share is included. Toggle **Share %**, **Cumulative %**, and **Δ vs FY pp**. The delta panel is the Q3-specific control: households **−2 pp**, sovereigns **−1 pp**, insurance **+2 pp**, MDB adapt **+1 pp**. The tip moved toward the covered sleeve because H1 2026 was a benign half — Swiss Re’s insured **$42B** against economic ~**$100B** — not because the **$424B** protection-gap stock closed.
+
+Pair that with the [prior concentration lens](/blog/adaptation-economics-concentration-2026). FY framing put households at **40%** and insurance at **20%**. Q3’s H1-adjusted panel is a *vintage sensitivity*, labeled constructed: useful for desks that mark residual risk to the newest damage print, dangerous if mistaken for a structural deconcentration of who pays when the next severe season arrives. Insurance remains the third rung, not Top-1.
+
+## MDB banks and donors: institutional tip vs bilateral tip
+
+Switch to **MDB & donors**. On the estimated bank shares of MDB LMIC adaptation **$35B (2025)**, World Bank Group leads near **34%** (~**$11.9B**), ADB **20%**, IDB **14%**, AfDB **11%**, EIB LMIC sleeve **9%**, other MDBs **12%**. Top-3 clears about **68%**. These bank shares are **estimated** from published MDB climate-finance patterns — not an official adaptation-only extract — and are labeled as such in the dashboard source note.
+
+The OECD donor bars beside them stay the milder tip: Germany ~**18%**, Japan **16%**, France **12%**, Top-3 **46%** of **$34.7B**. The instrument donut still shows **67%** loans / **29%** grants. So the Q3 story is not “finance democratised.” It is “the largest institutional engine got larger (+**31%** YoY) while remaining bank-concentrated, and the bilateral tip remained plural-but-thin under a loan-heavy instrument mix.” The [August update](/blog/adaptation-economics-update-202608) tracks the level bounce; this lens tracks *who inside the club* holds the tip.
+
+## Vintage slope: residual eases, gap Top-3 stuck
+
+Open **Vintage slope**. The multi-vintage line walks Research → Concentration 2026 → Q3/Aug. Residual Top-1 drifts **42% → 40% → 38%**; residual HHI **~3,010 → ~2,826 → ~2,684**; gap Top-3 stays near **53%**. Toggle slope metric among residual Top-1 / Top-3 / HHI / gap Top-3, and optionally overlay MDB Top-1 (null on the research vintage, then **32% → 34%**).
+
+The insured-share composed panel under the same view is the damage-side twin: FY 2025 insured share ~**29%**, H1 2025 a severe half, H1 2026 benign at **42%**. A higher insurance ratio in a quiet half-year is not a resilience-index rewrite — global resilience remains ~**27%** on the Swiss Re-style stock used across this theme. Desks that mark “adaptation is working” from H1 insured totals alone are sampling the covered sleeve.
+
+## Gaps, scarcity, and the FRLD micro-tip
+
+Toggle **Gaps & scarcity**. Protection-gap geography is unchanged in ranking: North America ~**$95B** (**22.4%**), South Asia, LAC, SSA, Western Europe, advanced APAC, MENA. Filter by **Income** and the stress quadrant on the resilience×gap scatter still lights up South Asia and SSA — low resilience, large absolute gap. Scarcity ledgers keep AGR needs mid (~**$338B**), the implied gap versus MDB **$35B**, OECD **$34.7B**, CPI **$65B**, UNEP **$26B**, and the FRLD delivered micro-print (~**$0.45B** of ~**$0.82B** pledged). Do **not** sum across ledgers.
+
+The FRLD row is the extreme thin tip: even if Top-3 pledgers concentrate ~**61%** of a sub-billion pledge book, delivery remains ~**$449M** against multi-hundred-billion needs. Loss-and-damage capitalization is a political milestone and a rounding error on the residual ladder. Our [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026) piece tracks the rich-country insured tape; this lens shows why that tape plus a sub-billion FRLD window still leaves households as Top-1.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** uninsured households and SMEs whose constructed share only fell **2 pp** on a benign H1; LMIC sovereigns borrowing into a **67%** loan-heavy public tip while contingent disaster debt still hits budgets; regional corridors (SSA, South Asia) stuck in the low-resilience / large-gap quadrant; desks that treat MDB **+31%** YoY or H1 insured **$42B** as proof the residual tip deconcentrated.
+
+**Relative winners under current rules:** advanced-economy insured systems that printed a higher H1 coverage ratio; World Bank Group and the Top-3 MDB bloc inside the **$35B** LMIC adaptation engine; grant niches inside the **29%** public-adaptation grant sleeve; investors and cities that price residual incidence by *bearer and bank* rather than by headline insured loss alone.
+
+**What would change the story:** a severe season that pushes the insurance ratio back toward the FY ~**29%** framing and restores household Top-1 near **40%+**; official MDB adaptation bank tables that break the estimated **34% / 68%** tip; donor and grant diffusion that lifts UNEP/OECD/MDB numerators toward the **$310–365B** needs band; or resilience in developing regions that lifts the global index well above **~27%**. None of those dominate the Q3+Aug official vintages summarised here.
+
+## Caveats and methodology
+
+- **Residual bearer shares are a constructed incidence panel** with an explicit H1-adjusted sensitivity versus the FY framing in the 2026 concentration post — not a single audited global ledger of who paid last year’s losses.
+- **MDB bank shares of LMIC adaptation are estimated** from published MDB climate-finance patterns and labeled estimated — not an official bank-by-bank adaptation extract from the Joint Summary.
+- **Regional protection-gap dollars are estimated allocations** of the Swiss Re-style **$424B** stock; geography illustrates uninsured exposure, not a country extract.
+- **Donor country shares of OECD adaptation remain estimated** from bilateral patterns.
+- **OECD, UNEP, MDB, CPI, and FRLD figures must not be summed**; each answers a different accounting question.
+- **HHI values are analytical indexes on stated bucket shares** (0–10,000), comparable within this dashboard.
+- **H1 2026 insured nat-cat $42B** is a half-year damage print; it does not revise FY 2025 insured **$107B** or the **$424B** protection-gap stock.
+- **Needs band $310–365B/yr by 2035** is UNEP AGR 2025 (2023 prices) — developing-country adaptation needs, not a global spending ceiling.
+- **FRLD pledge shares are a constructed micro-concentration meter** on a sub-billion book; treat as illustrative tip geometry.
+
+## The shareable takeaway
+
+Q3 adaptation-economics concentration is **a tip that eased on damage accounting and tightened on institutional finance — without rewriting scarcity**. Residual Top-1 (households & SMEs) prints about **38%** (−**2 pp** vs FY), Top-3 about **86%**. World Bank Group holds about **34%** of the **$35B** MDB LMIC adaptation tip; Top-3 banks ~**68%**. Protection-gap Top-3 regions remain ~**53%** of the **$424B** stock. OECD donors Top-3 stay ~**46%** of a **$34.7B** tip that is still **67%** loans. Needs mid still runs ~**9.6×** the MDB engine. Who pays before policy catches up is still a distribution problem: the residual tip is thick, the institutional tip is bank-concentrated, and the needs ceiling still sits an order of magnitude above both.
+
+Related reading: [2026 concentration lens](/blog/adaptation-economics-concentration-2026), [August MDB + H1 update](/blog/adaptation-economics-update-202608), [Q3 OECD update](/blog/adaptation-economics-update-2026q3), [adaptation economics research](/blog/adaptation-economics-research-2026), and [US billion-dollar weather disasters](/blog/us-billion-dollar-weather-disasters-2026).`,
+  },
+  {
     id: "ai-compute-demand-concentration-202608",
     slug: "ai-compute-demand-concentration-202608",
     title:
