@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "migration-humanitarian-update-202608",
+    slug: "migration-humanitarian-update-202608",
+    title:
+      "August Update: FTS Top-1 Donor Is 23% — LMIC Hosts Still Hold 68% of Refugees",
+    excerpt:
+      "Vintage delta vs the Q3 coverage heal: GHO appeal coverage stays 40.4% with a ~$21B gap, but OCHA FTS shows the United States alone at 23.1% of tracked 2026 funding and Top-3 donors near 45% — while LMIC hosts still carry 68% of refugees and displacement remains 117.8M carried.",
+    category: "Politics",
+    themeId: "migration-humanitarian",
+    imageUrl:
+      "/images/politics-migration-humanitarian-update-202608-hero.png",
+    imageAlt:
+      "Dark navy cinematic data viz with teal donor-concentration bars, amber host-burden clusters, and dotted migration arcs across a subtle world map",
+    publishedAt: "2026-08-21T22:00:00Z",
+    featured: true,
+    visualization: "migration-humanitarian-update-202608",
+    layout: "default",
+    content: `Our [2026Q3 refresh](/blog/migration-humanitarian-update-2026q3) closed on a scissors that finally bent on the *cash* side: GHO appeal coverage jumped from **24.4%** (31 May Mid-Year Review) to **40.4%** on the August FTS monitoring print, funded inflows rose from **$8.21B to $14.08B**, and the unfunded gap fell from **$25.45B to $20.79B** — while forced displacement stayed **117.8 million** (carried from UNHCR Global Trends 2025) and LMIC hosts still held **68%** of refugees. That post answered what moved once late-summer FTS replaced the May cash ledger. This **August 202608** update asks the next vintage question desks actually trade: **who paid that coverage heal — and does donor concentration change who bears migration and humanitarian costs versus the narrative that “the system healed”?**
+
+The interactive dashboard above is built as a **donor-unpack vintage**. Toggle **Donor ladder**, **Hosts vs cash**, and **Crisis plans**. Filter burden lanes and sort by share, Δ, or name. The punchline is deliberately two-sided. **GHO coverage is flat at 40.4%** versus the Q3 print — the heal is already booked. What is new is the *composition* of the cash: OCHA FTS 2026 donor ranking puts the **United States at 23.1%** of tracked funding (**$2.83B**), **Top-3 (US · EC · Japan) near 44.7%**, and **Top-10 near 82%**. People meters remain carried: **117.8M** displaced, **68%** LMIC hosting, **26%** in least-developed hosts. Coverage healed; **burden geography did not**.
+
+## The August scoreboard: donor shares vs carried people meters
+
+| Meter | Q3 print | August 202608 | Δ | Confidence |
+| --- | ---: | ---: | ---: | --- |
+| FTS Top-1 donor share (US) | — | **23.1%** | **new print** | disclosed |
+| FTS Top-3 donor share | — | **44.7%** | **new print** | disclosed |
+| GHO appeal coverage | **40.4%** | **40.4%** | **0 pp** | disclosed |
+| GHO unfunded gap | **$20.79B** | **$20.79B** | **$0** | disclosed |
+| Forcibly displaced | **117.8M** | **117.8M** | **0** | carried |
+| LMIC refugee host share | **68%** | **68%** | **0 pp** | carried |
+
+Read the table as a **family of burdens**, not one slogan. The Q3 story was *coverage Δ*. The August story is *who owns the cash that produced that Δ* — while the people stock and host geography stay frozen until Mid-Year Trends 2026. Pair this with our [May Global Trends / Mid-Year Review update](/blog/migration-humanitarian-update-2026) when you need the stock decline itself (123.2M → 117.8M) rather than the donor ladder inside the later heal.
+
+## Donor ladder: the United States books nearly one-quarter of tracked FTS
+
+Open **Donor ladder**. Against OCHA’s 2026 FTS donor ranking, the United States leads at **$2.83B / 23.1%** of tracked funding. The European Commission follows at **$1.75B / 14.3%**. Japan is third at **$0.89B / 7.3%**. Germany, Sweden, Norway, Switzerland, Canada, the United Kingdom, and Denmark fill the rest of the Top-10. Cumulative share rises to **~45%** at Top-3, **~57%** at Top-5, and **~82%** at Top-10.
+
+That is the first hinge. **A coverage heal that looks “system-wide” in the GHO average is donor-concentrated once you rank the cash.** Narratives that treat August’s 40.4% coverage as a diversified donor recovery miss that one capital books nearly a quarter of tracked FTS and three actors clear nearly half. The perimeter caveat matters: FTS donor shares cover *all tracked* 2026 humanitarian funding (~**$12.3B** in the ranking used here), while the GHO coordinated-plan funded meter sits at **$14.08B** — related books, not identical. Use the ladder for *relative* concentration, not as a line-item reconciliation to every plan.
+
+The cumulative concentration panel puts a half-of-FTS reference line on the chart. Top-3 alone nearly clears that line; Top-5 clears it cleanly. That geometry is why “donors stepped up” and “a handful of donors stepped up” are different sentences with the same coverage percentage.
+
+## Heal attribution: who paid the +16pp (editorial geometry)
+
+The waterfall under **Donor ladder** decomposes the May→Aug **+16pp** coverage rise into illustrative donor-scale slices — US-scale donors, EC + Japan, and other Top-10 residual — bookended by May **24.4%** and August **40.4%**. Treat those mid-steps as **editorial attribution**, not an official FTS allocation of the coverage delta. They exist so desks can see that a +16pp heal *must* have been paid by a concentrated set when Top-10 already owns ~82% of tracked funding.
+
+Context from the [Q3 post](/blog/migration-humanitarian-update-2026q3) still holds on the cash path: requirements crept from **$33.66B to $34.87B** even as funded climbed **+$5.87B**. Ask creep shaved a little off coverage even while inflows healed it. August does not rewrite that arithmetic — it asks whose chequebooks did the healing.
+
+## Hosts vs cash: 68% people burden vs 45% Top-3 cash
+
+Switch to **Hosts vs cash**. The asymmetry panel puts LMIC host share (**68%**) and LDC host share (**26%**) beside FTS Top-1 (**23.1%**), Top-3 (**44.7%**), GHO coverage (**40.4%**), and the still-open **$20.79B** gap. Hosts carry the *people* stock. A thin set of high-income donors concentrates the *cash* that partially funds the appeal. Those are not the same actors, and the August vintage makes the mismatch explicit.
+
+The who-bears-it scoreboard shows the Δ geometry: donor shares are the August move; host and agency meters (UNHCR early-pledge **~18%**, **11.6M** at risk from cuts) are mostly carried flat from the Q3 / Global Appeal prints. For the longer hosting-burden frame — Colombia, Germany, Türkiye, Uganda, Iran, Chad, Pakistan and the income-group mix — see our [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024) and the [theme research ledger](/blog/migration-humanitarian-research-2026).
+
+The dual stock×cash timeline adds the Top-1 donor print only on the August vintage: displacement bars stay flat at **117.8M** after the end-2024 → end-2025 decline; coverage rises May→Aug; Top-1 appears as a dashed violet meter once the donor ranking is unpacked. Mid-Year Trends 2026 (expected Oct/Nov) is still the people-stock gate — until then, “displacement fell” is a *prior* vintage sentence, not an August update.
+
+## Crisis plans: coverage averages hide plan inequality
+
+Open **Crisis plans**. The scatter places estimated plan-level requirements on the x-axis, coverage on the y-axis, and people-in-need as bubble size. A dashed line marks the GHO average **40.4%**. Ukraine-class plans sit above the average; Sudan, Sahel, and several Africa/MENA plans sit below it with large PiN bubbles. That is the second hinge. **A healed global coverage percentage can still leave the largest people-in-need plans under-funded relative to the average.**
+
+Plan points are an **editorial mix** scaled to the August GHO total — useful for relative burden geometry, not for citing a single plan’s official FTS extract. The point for desks is directional: donor concentration at the global ledger and coverage inequality across crises can coexist with a headline 40% that sounds like recovery.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** ministries and media that quote **40.4%** coverage as proof the humanitarian system “healed” without naming Top-1 / Top-3 donor shares; donor capitals that treat LMIC hosting (**68%**) as someone else’s fiscal problem while concentrating cash in a handful of chequebooks; agency planners budgeting as if early UNHCR pledges near **18%** match 2025 year-end funded ratios; desks that average plan coverage when Sudan-class PiN sits below the GHO mean.
+
+**Relative winners under current meters:** Top-3 FTS donors whose shares define the heal; high-income hosts that still hold under one-third of refugees while booking a large cash share; return corridors that remain the dominant “solutions” channel in the carried Global Trends print (**14.7M** returns vs **~82k** resettlement arrivals).
+
+**What would change the story:** Mid-Year Trends 2026 reprinting displacement well below **117.8M**; GHO coverage climbing through **50%+** with Top-1 share *falling* (true diversification of the heal); LMIC host share compressing toward **50%**; the unfunded gap falling below **~$10B** on the strip-back ask; UNHCR early pledges converging toward prior year-end funded ratios without another strategic budget cut. None of those clear cleanly in this August unpack — the new information is concentration of who paid, not a rewrite of people stocks.
+
+## Caveats and methodology
+
+- **FTS donor shares** follow OCHA’s 2026 donor ranking (US **$2.83B / 23.1%**, EC **14.3%**, Japan **7.3%**); Top-3 / Top-5 / Top-10 cumulatives are arithmetic on that disclosed ladder.
+- **GHO requirements / funded / coverage / gap** remain the August monitoring snapshot used in the [Q3 update](/blog/migration-humanitarian-update-2026q3) (**$34.87B** ask, **$14.08B** funded, **40.4%**, **$20.79B** gap) unless a later official reprint supersedes them.
+- **FTS “all tracked” funding and GHO coordinated-plan funding are related but not identical perimeters** — do not force a one-line reconciliation.
+- **Displacement, LMIC/LDC/high-income host shares, returns, and resettlement** are carried from UNHCR Global Trends 2025 (end-2025) until Mid-Year Trends 2026.
+- **Heal-attribution waterfall steps are editorial** geometry scaled to the disclosed +16pp May→Aug coverage rise — not an official donor allocation of that delta.
+- **Plan-level coverage points are estimated mixes** for scatter geometry, not citation-grade FTS plan extracts.
+- **UNHCR 2026 budget ($8.505B), early-pledge share (~18%), and 11.6M at-risk** remain carried Global Appeal / operational messaging from the Q3 print.
+- **ODA / remittance substitutes** are out of scope here; see [OECD DAC ODA first drop](/blog/oecd-dac-oda-first-drop-2024) for the aid-envelope companion.
+
+## The shareable takeaway
+
+The newest official vintage versus the [Q3 post](/blog/migration-humanitarian-update-2026q3) does **not** rewrite the people stock — it **names who paid the cash heal**. GHO coverage stays **40.4%** with a **~$21B** gap. FTS Top-1 (US) is **23.1%** of tracked funding; Top-3 clear **~45%**. LMIC hosts still hold **68%** of refugees; displacement stays **117.8M** carried. Coverage can heal on a concentrated donor ladder while hosting burden stays where it was — and that asymmetry, not another coverage percentage point, is the August desk takeaway.
+
+Related reading: [Q3 May→Aug FTS update](/blog/migration-humanitarian-update-2026q3) · [May Global Trends / MYR update](/blog/migration-humanitarian-update-2026) · [migration–humanitarian research](/blog/migration-humanitarian-research-2026) · [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024) · [OECD DAC ODA first drop](/blog/oecd-dac-oda-first-drop-2024).`,
+  },
+  {
     id: "chokepoint-commodities-concentration-202608",
     slug: "chokepoint-commodities-concentration-202608",
     title:

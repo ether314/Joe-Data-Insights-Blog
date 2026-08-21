@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "migration-humanitarian-update-202608",
+    marker: "FTS Top-1 is 23% — hosts still hold 68%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "chokepoint-commodities-concentration-202608",
     marker: "Chokepoint commodities — Aug 202608 concentration lens",
     forbidden: "Loading interactive charts",
