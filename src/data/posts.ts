@@ -2,6 +2,108 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-supply-chain-update-2026q3",
+    slug: "ai-supply-chain-update-2026q3",
+    title:
+      "Update: CoWoS YE Capacity to ~140k wpm — Gap Reprints ~20% as NVIDIA Locks >50%",
+    excerpt:
+      "Versus our Aug WWSEMS Q1 update (gap ~10%, mid-print ~130k), early-Aug trackers raise YE CoWoS capacity toward 140k wpm but reprint a ~20% supply-demand gap; NVIDIA reservations print 800–850k wafers. Equipment path stays SEMI Mid-Year $165.9B with DRAM tools +39%.",
+    category: "Industry",
+    themeId: "ai-supply-chain",
+    imageUrl: "/images/industry-ai-supply-chain-update-2026q3-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero of a layered chip stack with amber CoWoS bottleneck glow and cyan equipment-spend bars",
+    publishedAt: "2026-08-21T00:30:00Z",
+    featured: true,
+    visualization: "ai-supply-chain-update-2026q3",
+    layout: "default",
+    content: `## What changed since the Aug WWSEMS Q1 update
+
+In our [August equipment-billings update](/blog/ai-supply-chain-update-2026) we treated SEMI’s WWSEMS Q1 2026 print as the newest official flow vintage: global billings at a record **$36.55 billion** (**+14%** YoY), Taiwan **+24%**, Korea **+16%**, and mid-2026 packaging trackers that narrowed the CoWoS supply-demand **gap from ~20% to about 10%** as capacity printed ahead of the July research target. That post answered the *billings pace* question — *is the Mid-Year $165.9B path showing up in quarterly dollars, and did packaging ease?*
+
+This Q3 note answers the next tracker print the market trades on: **what moved when early-August CoWoS / OSAT notes and TSMC’s mid-August advanced-packaging disclosures raised year-end capacity toward ~140k wafers per month — while demand reservations reprinted a ~20% gap and put NVIDIA above half of 2026 CoWoS?**
+
+Three information events rewrite the dashboard. **Capacity** rises again: institutional and tracker midpoints now cluster near **140,000 wpm** by late 2026 (versus **125k** in the July research target and **~130k** in the August mid-print), with some paths extending toward **~220k** in 2027. **Demand** does not sit still: NVIDIA’s reported **800,000–850,000** wafer reservations for 2026 account for **more than 50%** of TSMC CoWoS, and aggregate demand trackers push the **gap back toward ~20%** even as capacity expands. **Process** news matters too — TSMC’s **5.5×** CoWoS solution entered volume production with yields cited above **98%** across some lines, while the company expands outsourcing of a key CoWoS front-end step to OSAT partners. The equipment ledger is **unchanged** as the official OEM path: SEMI Mid-Year still puts **total equipment at $165.9B** in 2026 (**+23%**), **WFE at $143.9B**, and **DRAM equipment at $38.8B** (**+39%**). Q1’s **$36.55B** remains the pace check, not a revision.
+
+The dashboard above is built as a vintage delta — CoWoS capacity versus demand across research / Aug mid-print / Q3 tracker, NVIDIA reservation shares, Mid-Year segment bars, bottleneck tightness Δ and dual-vintage scatter, plus an upstream-dollars → downstream-gate stack with the Q1 AI-install regional signature. For the full equipment-cycle map see the [July research post](/blog/ai-supply-chain-research-2026); for the earlier HBM/CoWoS bottleneck frame see [AI GPU packaging & memory](/blog/ai-gpu-packaging-memory-bottleneck-2025).
+
+## The headline table: Aug mid-print → Q3 tracker
+
+| Meter | Prior (Aug WWSEMS update) | Q3 newest print | Δ |
+| --- | ---: | ---: | --- |
+| CoWoS YE capacity (wpm) | Mid-print **~130k** / YE tracker **~140k** | **~140k** YE consensus; **~220k** path into 2027 | Capacity raised / locked |
+| CoWoS supply-demand gap | **~10%** mid-print | **~20%** on higher demand | Gap reprints wider |
+| Jul research YE target | **125k** vs **~150k** demand | Still the baseline | Capacity beat continues |
+| NVIDIA 2026 CoWoS lock | Not the lead meter | **800–850k** wafers; **>50%** share | New concentration meter |
+| OSAT overflow / front-end | **~50–60k** compatible wpm | Outsourcing of key step expands | Partner binding rises |
+| TSMC packaging footprint | Capacity narrative | **10** advanced packaging fabs; **5.5×** yield **>98%** | Process + footprint |
+| Total equipment 2026f | **$165.9B** (+23%) | **Carried** (Mid-Year) | Official path held |
+| DRAM equipment 2026f | **$38.8B** (+39%) | **Carried** | AI memory signature held |
+| Q1 2026 billings | **$36.55B** (+14% YoY) | **Carried** as pace check | Still 22% of FY path |
+| Taiwan / Korea Q1 YoY | **+24% / +16%** | **Carried** | AI install signature held |
+| Binding stack layers | CoWoS + HBM | **CoWoS re-tightens**; HBM still tight | Editorial scores |
+
+The non-obvious cut is not “tools stopped arriving.” Upstream equipment dollars are still booming. The Q3 news is that **packaging demand re-accelerated faster than the mid-print gap story**, so a higher capacity path can coexist with a **wider** shortage print.
+
+## Capacity up, gap wider: the CoWoS paradox
+
+July’s research vintage treated **125,000 wpm** as the 2026 year-end CoWoS target against demand near **150,000** — a roughly **20%** gap. The August billings update celebrated a mid-year print around **130k** capacity versus **145k** demand, compressing the gap toward **10%**. Early-August tracker notes (TrendForce synthesis of OSAT outsourcing and customer reservations) and mid-August institutional estimates push **year-end capacity toward 140k** — a clear upward revision — but they also lift **implied demand**, reprinting a gap near **20%**.
+
+That is the paradox the dashboard’s composed chart is built to show. **Bars for capacity rise; the amber demand area rises faster; the gap line goes back up.** Markets that only watch capacity headlines will read relief. Markets that watch **gap** and **customer lock-in** will read continued rationing into 2H26. The 2027 path toward **~220k** wpm is the relief valve — not the next two quarters.
+
+Yield and footprint reinforce the same story from the process side. Volume production of larger-reticle CoWoS with **>98%** yields on some lines raises effective output per tool dollar. Ten advanced packaging facilities are a scale statement. Neither fact removes allocation — they change how much scarcity costs.
+
+## NVIDIA’s >50% lock and the OSAT overflow valve
+
+The reservation panel is the concentration meter the prior update lacked. Reports that NVIDIA has reserved roughly **800k–850k** wafers of TSMC CoWoS for 2026 — **more than half** of the year’s capacity — turn packaging from a generic “AI bottleneck” into a **named customer-concentration** risk. Remaining GPU, ASIC, and rising server-CPU CoWoS demand share the residual. When one buyer clears a majority of slots, secondary buyers inherit longer queues even if total capacity rises.
+
+TSMC’s reported expansion of outsourcing a **key CoWoS front-end step** to OSAT partners is the overflow valve. Partner CoWoS-*compatible* capacity in the **50–60k wpm** band (tracker estimate, not identical to TSMC process-of-record) absorbs spillover — and, in our editorial scores, **re-tightens the OSAT layer** because the overflow is no longer optional capacity; it is load-bearing. ASE / Amkor-class additions remain helpful but secondary to TSMC’s share of high-end CoWoS.
+
+## Equipment dollars still boom — DRAM +39% is the memory signature
+
+None of the packaging drama revises SEMI’s Mid-Year OEM forecast. **Total semiconductor manufacturing equipment** is still projected at **$165.9 billion** in 2026 (**+23.2%** from the record **$135.1B** in 2025), with **wafer fab equipment at $143.9B**. Inside that path, **DRAM equipment jumps 39% to $38.8B** — the clearest AI-memory signature in the official OEM print — while NAND equipment rises about **31%** to **$13.9B**. By 2028 SEMI still sees the total market near **$229.5B**.
+
+Q1’s **$36.55B** global billings (**+14%** YoY, **+1%** QoQ) remain the only hard 2026 quarterly stamp against that path — about **22%** of the full-year Mid-Year total on a simple share basis. Taiwan (**$8.77B**, **+24%** YoY) and Korea (**$8.93B**, **+16%**) still carry the AI install signature; China stays the largest absolute market at **$10.99B** but cooled **16%** quarter-over-quarter. Simple ×4 annualization of Q1 would understate a typical H2 AI tool ramp — treat it as a pace check, not a cut to $165.9B.
+
+Toggle the dashboard’s equipment panel: 2025→2026 grouped bars show the level jump; horizontal YoY bars show DRAM leading the growth ranking. The stack-flow panel then connects those dollars to the downstream gate — funded tools do not automatically become shipped GPUs when CoWoS and HBM allocate the last mile.
+
+## Bottlenecks: CoWoS re-tightens; HBM stays allocation-gated
+
+Editorial tightness scores (1–10 composites, **not** SEMI metrics) move for the layers that the August trackers actually changed:
+
+- **CoWoS:** **9 → 10**. Capacity up, but gap and customer lock-in dominate.
+- **OSAT advanced package:** **6 → 7**. Outsourcing makes partners load-bearing.
+- **HBM / advanced DRAM:** **9 → 9**. Korea’s tool dollars help, but HBM remains allocation-gated into 2H26.
+- **EUV, test, substrates, leading-edge logic:** broadly unchanged; logic remains less binding than packaging.
+
+The dual-vintage scatter plots tightness against lead weeks with bubble size for supplier concentration. CoWoS and HBM still sit in the upper-right — long leads, high tightness — while logic fab sits lower. That geometry is why an equipment boom and a GPU shipment constraint can coexist for another year.
+
+## What would rewrite this vintage
+
+1. **WWSEMS Q2 2026 billings** (not yet public in this window) confirm or break the Mid-Year $165.9B path after Q1’s $36.55B stamp.
+2. **CoWoS demand trackers** revise NVIDIA / ASIC reservations materially below the 800–850k band — collapsing the reprinted ~20% gap.
+3. **HBM supply** from Korea eases allocation faster than packaging, flipping which layer binds first.
+4. **OSAT process qualification** fails to absorb the outsourced front-end step at yield — tightening TSMC-only scarcity again.
+5. **SEMI’s next OEM forecast** (year-end cycle) cuts WFE or DRAM equipment after the Mid-Year print.
+
+Until those resolve, the shareable framing is narrow: **capacity rose to ~140k wpm, but the gap reprinted near 20% because demand — led by a >50% NVIDIA lock — rose with it.**
+
+## Caveats and methodology
+
+- **Official vs tracker.** Equipment dollars are SEMI Mid-Year OEM forecast and WWSEMS Q1 billings. CoWoS capacity, demand, gap, and NVIDIA reservation figures are **industry-tracker / disclosure synthesis** (TrendForce, institutional notes, TSMC packaging commentary) and may revise.
+- **Gap arithmetic.** Gap percentages are tracker midpoints (demand vs capacity), not a SEMI series. The Aug mid-print ~10% and Q3 ~20% can both be “true” for different demand assumptions in the same quarter.
+- **OSAT ≠ CoWoS POR.** Overflow capacity is CoWoS-*compatible* advanced packaging, not identical to TSMC’s process of record.
+- **Bottleneck scores** are editorial composites for visualization — directional, not survey microdata.
+- **Q1 annualization** understates typical H2 AI tool intensity; do not treat 4×Q1 as a forecast.
+- This post is explanatory data journalism, **not investment advice**.
+
+**Primary sources:** SEMI, [Mid-Year Total Semiconductor Equipment Forecast – OEM Perspective](https://www.semi.org/en/semi-press-release/global-semiconductor-equipment-sales-forecast-to-reach-a-record-229-billion-dollars-in-2028-semi-reports) (July 14, 2026); SEMI, [Q1 2026 Equipment Billings $36.55B](https://www.semi.org/en/semi-press-release/semi-reports-global-semiconductor-equipment-billings-increased-14-percent-year-over-year-in-q1-2026) (June 4, 2026); TrendForce, [CoWoS OSAT outsourcing / NVIDIA reservation notes](https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/) (Aug 5, 2026); TSMC advanced packaging disclosures (Aug 2026) for 5.5× yield / capacity path context.
+
+## The shareable takeaway
+
+Versus the [August WWSEMS Q1 update](/blog/ai-supply-chain-update-2026), the Q3 packaging vintage raises CoWoS year-end capacity toward **~140k wpm** but **reprints a ~20% gap** as demand — with NVIDIA locking **800–850k** wafers (**>50%**) — re-accelerates. SEMI’s Mid-Year equipment path stays **$165.9B** with DRAM tools **+39%**; Taiwan and Korea still print the AI install signature in Q1. Upstream dollars fund the stack; **CoWoS and HBM still gate the ship.**`,
+  },
+  {
     id: "ai-financing-update-202608",
     slug: "ai-financing-update-202608",
     title:

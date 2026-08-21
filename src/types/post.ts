@@ -108,7 +108,8 @@ export interface Post {
     | "ai-capex-spend-update-202608"
     | "ai-power-grid-update-2026q3"
     | "adaptation-economics-update-202608"
-    | "ai-financing-update-202608";
+    | "ai-financing-update-202608"
+    | "ai-supply-chain-update-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

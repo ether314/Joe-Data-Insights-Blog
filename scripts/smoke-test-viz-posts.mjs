@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-supply-chain-update-2026q3",
+    marker: "Vintage delta — Aug WWSEMS Q1 update → Q3 CoWoS tracker",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ai-financing-update-202608",
     marker: "Vintage delta — Q3 2026 flow print",
     forbidden: "Loading interactive charts",
