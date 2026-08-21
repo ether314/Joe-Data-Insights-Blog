@@ -146,7 +146,8 @@ export interface Post {
     | "ai-capex-intensity-concentration-2026"
     | "ai-supply-chain-concentration-2026"
     | "ai-power-grid-update-202608"
-    | "consumer-finance-markets-concentration-2026q3";
+    | "consumer-finance-markets-concentration-2026q3"
+    | "ai-compute-demand-concentration-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
