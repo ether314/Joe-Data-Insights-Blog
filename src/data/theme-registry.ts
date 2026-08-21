@@ -408,6 +408,7 @@ export const THEME_REGISTRY: ThemeDefinition[] = [
 
 /** Map existing slugs → theme id (backfill before themeId on Post) */
 export const SLUG_THEME_IDS: Record<string, string> = {
+  "ai-capex-spend-geography-2026": "ai-capex-spend",
   "measurement-science-concentration-202608": "measurement-science",
   "fiscal-plumbing-concentration-2026q3": "fiscal-plumbing",
   "demographic-cash-flows-geography-2026": "demographic-cash-flows",

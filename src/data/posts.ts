@@ -2,6 +2,87 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-capex-spend-geography-2026",
+    slug: "ai-capex-spend-geography-2026",
+    title:
+      "Charted: US Takes 58% of Big-5 AI Capex Geography — Northern Virginia Alone ~11%",
+    excerpt:
+      "Geography lens on late-Aug Big-5 midpoints (~$858B gross / ~$644B AI slice): the United States absorbs ~58% of facility dollars, Europe ~18% and Asia-Pacific ~16%, while Northern Virginia alone is ~11% of the global perimeter — and interconnect risk peaks in the same densified corridors that print the largest shares.",
+    category: "Capital Markets",
+    themeId: "ai-capex-spend",
+    imageUrl:
+      "/images/capital-markets-ai-capex-spend-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with glowing cyan and amber AI infrastructure spend concentrations over the United States, Europe, and Asia-Pacific",
+    publishedAt: "2026-08-22T04:00:00Z",
+    featured: true,
+    visualization: "ai-capex-spend-geography-2026",
+    layout: "default",
+    content: `Our [research ledger](/blog/ai-capex-spend-research-2026) sized the multi-house AI infrastructure spend universe — Big-5 guidance midpoints, CreditSights aggregates, GS Investment Research paths, and GS Global Institute all-in AI infra. The [late-Aug update](/blog/ai-capex-spend-update-202608) then restated the 2026 perimeter to ~**$858B** gross Big-5 midpoints (~**$644B** AI-attributed at the CreditSights ~75% convention) after the Jul→Aug20 cumulative raise of ~**$98B**. The [concentration companion](/blog/ai-capex-spend-concentration-202608) answered a different desk question: how thick is the *company* tip inside that perimeter (Amazon ~**28%** top-1, top-3 ~**74%**, HHI ~**2,227**). This post asks the map question: **where do those dollars land geographically — by region, by US metro corridor, and by scenario scope?**
+
+The interactive dashboard above is built as a **geography lens**. Toggle **Regions**, **US metros**, **Scenarios**, and **Risk map**. On regions flip share versus dollars and gross versus AI slice; on metros flip global share, US share, or YoY growth; on risk filter by region. The punchline is deliberately multi-map. On **regional facility geography**, the United States takes about **58%** of the late-Aug Big-5 perimeter. On **metro densification**, Northern Virginia alone is roughly **11%** of global Big-5 dollars. On **raise geography**, about **62%** of the Jul→Aug20 cumulative dollar raise still lands in US facility tips. And on **interconnect risk**, the same corridors that print the largest absolute shares — NoVA, Ireland/Dublin, Singapore, AZ/NV — also sit at the top of the ordinal power-risk ladder.
+
+## The headline map: four meters, four geographies
+
+| Meter | Top region / metro | Top share | What it measures |
+| --- | --- | ---: | --- |
+| Regional facility $ | United States | **~58%** | Where Big-5 campus dollars land |
+| Top-3 regions | US · Europe · APAC | **~92%** | How concentrated the continental map is |
+| Metro tip | Northern Virginia | **~11%** | Thickest single corridor globally |
+| Raise geography | US share of Jul→Aug20 raise | **~62%** | Where the cumulative guidance lift went |
+
+Read the table as a **family of maps**, not one slogan. Regional geography tells you which *continents* absorb hyperscaler facility dollars. Metro geography tells you which *power and interconnect corridors* densify inside the US tip. Scenario geography tells you how the US share moves when you switch from Big-5 gross to GS GI all-in AI infra. Risk geography tells you where a grid or interconnect shock becomes a capacity event. Averaging these rows into “AI spend is an American story” or “Virginia is the AI story” is a category error — the US is a regional story; NoVA is a corridor story; GS GI’s slightly lower US weight is a *scope* story.
+
+## Regional facility dollars: the US still clears a majority
+
+Filter **Regions**. Against the late-Aug Big-5 gross perimeter of ~**$858B**, the United States rolls to about **$498B**, or **~58%**. Europe follows near **18%** (~**$154B**) on Ireland, Nordics, Frankfurt/NL, and UK campus tips. Asia-Pacific sits near **16%** (~**$137B**) on Japan, Singapore, India, and Australia ramps. Middle East & Africa and Latin America remain mid-single-digit and low-single-digit slices; an analytical residual closes the perimeter.
+
+The regional pie is therefore **US-majority without being a monopoly**. A system where one country-bloc holds a little under three-fifths of recorded Big-5 facility geography still leaves Europe and APAC with roughly another third combined. That is the geographic twin of the [company concentration ladder](/blog/ai-capex-spend-concentration-202608): Amazon remains the largest single *company*; rolling campus densification onto a US regional sheet makes the United States the thickest *facility region* without claiming that “most AI compute is American” in a planetary sense once you leave the Big-5 perimeter.
+
+Toggle **Dollars** if you want the absolute ladder rather than shares, and flip **AI slice** to apply the ~75% CreditSights AI-attribution factor (US ~**$374B** of ~**$644B**). Ordering is stable; the visual weight of the US tip becomes clearer beside Europe’s still-material **$154B** print. The stacked area path for 2024–2027 keeps the same geometry at larger scale: US dollars grow fastest in absolute terms, while APAC and Europe gain share only at the margin as sovereign and enterprise campus pipelines mature.
+
+## US metros: Northern Virginia as the global corridor tip
+
+Open **US metros**. Inside the US slice (~**$498B**), Northern Virginia leads at about **19%** of US facility dollars and **~11%** of the *global* Big-5 perimeter (~**$94B**). Texas (Dallas / Central) follows near **8.4%** global; the Midwest power corridor (Ohio / Iowa / Illinois) is close behind at ~**7.9%** with the fastest YoY growth among large corridors (~**48%** desk). Pacific Northwest, Southwest (Arizona / Nevada), and Southeast (Georgia / Carolinas) fill the mid-single-digit global bands; a long “other US” residual closes the domestic map.
+
+The metro ladder is the post’s first hinge: **country majority ≠ corridor monopoly**. The US can be ~58% of regional dollars while NoVA alone is only ~11% of the global perimeter — still the thickest single corridor, still not “half the AI build.” Toggle **YoY growth** to see why Midwest and Texas matter for *forward* geography even when NoVA still wins the *stock* tip: power-available inland corridors are pulling incremental campus announcements even as coastal densification remains the absolute-dollar champion.
+
+The companion scatter (global share × interconnect risk) puts NoVA in the upper-right quadrant — large share, high ordinal power risk — with Texas and Midwest slightly lower on risk but still material on dollars. That geometry foreshadows the Risk map view: dollar geography and constraint geography are related but not identical.
+
+## Scenario geography: scope changes the US weight
+
+Switch to **Scenarios**. Stacked bars apply regional weights to four different perimeters. Late-Aug Big-5 gross (~**$858B**) and the AI slice (~**$644B**) share the same **~58% / 18% / 16%** US–Europe–APAC weights by construction. GS Global Institute’s all-in AI infra scenario (~**$765B** in the Tracking Trillions 2026 frame) is slightly less US-skewed at about **52%** US — because the all-in perimeter pulls in more non-hyperscaler compute, power, and international enterprise build. GS Investment Research’s 2027 hyperscaler base (~**$1.14T**) eases the US share toward ~**56%** as Europe and APAC ramps compound.
+
+Do not mix scopes when reading absolute stacked heights. A GS GI bar that looks “smaller” than a Big-5 bar is not a forecast downgrade — it is a different universe (all-in AI infra versus company gross capex). The useful comparison is *within* a house: how the US share moves when the perimeter widens beyond the five hyperscalers, and how 2027 paths redistribute continental weights even if the US remains the majority tip. Pair this panel with the [research ledger’s scenario table](/blog/ai-capex-spend-research-2026) when you need annual dollar paths rather than geographic weights.
+
+## Risk map: dollar giants and interconnect giants overlap
+
+Open **Risk map**. The spend-share × interconnect-risk scatter puts Northern Virginia at the tip of both axes among large corridors — high global share (~**11%**) and the highest ordinal power-risk score (**92**). Ireland / Dublin and Singapore sit high on risk with mid-single-digit global shares; Nordics print lower risk with still-material Europe dollars; UAE sits lower on both axes but is the MEA tip. Filter to **Europe** or **APAC** to isolate regional clusters without the US corridor weight dominating the visual.
+
+The second hinge is geometric: **risk geography is not the inverse of dollar geography**. The corridors that attract the most hyperscaler dollars are often the ones with the tightest interconnect queues and the loudest local grid politics — not empty deserts waiting for load. Midwest growth is partly a *response* to that overlap: desks chase power availability inland while NoVA and Dublin still clear the largest disclosed campus tips. For power-system companions keep the [AI power-grid concentration series](/blog/ai-power-grid-concentration-202608) open; this lens only ranks ordinal interconnect risk against facility-dollar shares inside the Big-5 perimeter.
+
+## How this complements concentration and spend updates
+
+Pair this map with the [August concentration vintage](/blog/ai-capex-spend-concentration-202608) when you need top-1 / top-3 / HHI among Amazon, Alphabet, Microsoft, Meta, and Oracle, and with the [late-Aug spend update](/blog/ai-capex-spend-update-202608) when you need the Jul→Aug20 dollar path and house-by-house midpoint deltas. Geography does not restate company guidance; it asks whether Amazon’s top-1 *company* rank is better understood as a **US facility-region** story — which it partly is — and whether the ~**$98B** cumulative raise is better understood as a **US raise-geography** story (~**62%** of the lift) — which the meter strip shows explicitly.
+
+The intensity companion ([capex intensity update](/blog/ai-capex-intensity-update-2026)) answers how hard companies are spending relative to revenue and cash flow. This lens answers where the *physical* dollars land. A desk that only watches company shares will miss that NoVA alone is an ~**11%** global corridor tip; a desk that only watches NoVA headlines will miss that Europe and APAC still clear ~**34%** combined of the Big-5 facility map.
+
+## Caveats and what this map is not
+
+- **Regional and metro shares** are desk reconstructions from disclosed campus / interconnect tips plus Synergy-style capacity geography — they are **not** company-reported geographic segment breakouts in 10-K footnotes.
+- **AI-slice dollars** apply a flat ~**75%** CreditSights AI-attribution factor to gross regional weights; true AI intensity varies by company and campus.
+- **Scenario geography** applies regional weights to GS GI and GS IR perimeters for map readability; those houses do not publish identical continental splits, and absolute stacked heights must not be mixed across scopes.
+- **Interconnect-risk scores** are ordinal desk ranks (0–100), not ISO queue extracts or utility interconnection study results.
+- **Jul→Aug20 raise geography** (~**62%** US) attributes the cumulative guidance lift by facility tip, not by HQ domicile — Oracle’s net-of-prepay print and Microsoft’s lease reclass still sit inside the company perimeter from the [spend update](/blog/ai-capex-spend-update-202608).
+- **Residual / other US** buckets close the **$858B** and **$498B** perimeters; they are accounting closures, not claims about a specific metro.
+
+## What to watch next
+
+Watch three geography meters, not one. First, whether the US regional share holds near **~58%** if Europe and APAC sovereign AI campus pipelines convert from announcement to spend faster than the 2027 path implies. Second, whether Midwest and Texas growth rates continue to outpace NoVA even while NoVA remains the absolute-dollar tip — a signal that power availability is rewriting *incremental* geography. Third, whether GS GI-style all-in perimeters keep printing a softer US weight (~**52%**) than Big-5 facility maps as non-hyperscaler and power-side dollars grow. For company tip thickness keep the [concentration series](/blog/ai-capex-spend-concentration-202608) open; for absolute dollar vintages keep the [August update](/blog/ai-capex-spend-update-202608) open; for the multi-house scenario spine keep the [research ledger](/blog/ai-capex-spend-research-2026) open.
+
+Related reading: [Late-Aug spend update](/blog/ai-capex-spend-update-202608) · [Aug concentration](/blog/ai-capex-spend-concentration-202608) · [Research ledger](/blog/ai-capex-spend-research-2026) · [Capex intensity](/blog/ai-capex-intensity-update-2026).`,
+  },
+  {
     id: "measurement-science-concentration-202608",
     slug: "measurement-science-concentration-202608",
     title:
