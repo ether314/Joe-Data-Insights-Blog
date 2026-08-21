@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-capex-intensity-concentration-2026",
+    marker: "Capex intensity — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fiscal-industrial-policy-concentration-202608",
     marker: "Fiscal & industrial policy — Aug 202608 concentration lens",
     forbidden: "Loading interactive charts",
