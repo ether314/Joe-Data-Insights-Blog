@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fiscal-plumbing-update-2026",
+    slug: "fiscal-plumbing-update-2026",
+    title:
+      "Update: JCT Tax Expenditures $2.3T→$2.42T, OASDI Clock 2034→2033, GSE MBS +$0.3T",
+    excerpt:
+      "Versus our fiscal-plumbing research map, the newest official vintage lifts JCT tax expenditures +5.2% to $2.42T, pulls OASDI and HI depletion forward one year, and adds $0.3T to the GSE housing-credit book.",
+    category: "Global Systems",
+    themeId: "fiscal-plumbing",
+    imageUrl: "/images/global-systems-fiscal-plumbing-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic fiscal plumbing diagram with amber tax-code pipes, cyan trust-fund gauges falling 2034 to 2033, and violet off-balance credit valves",
+    publishedAt: "2026-08-21T03:00:00Z",
+    featured: true,
+    visualization: "fiscal-plumbing-update-2026",
+    layout: "default",
+    content: `## What changed since the research map
+
+Our [fiscal plumbing research map](/blog/fiscal-plumbing-research-2026) answered the theme’s core question — **which budget lines, trust funds, and off-balance vehicles move real levers?** — with three anchors: **JCT tax expenditures at about $2.3T in FY2026**, **combined OASDI reserves depleting around 2034**, and **Fannie/Freddie MBS steering roughly $7.8T** of housing credit off-budget. That post was the system diagram. This update is the vintage delta: **what moved once the newest official prints landed?**
+
+Three information events rewrite the scoreboard. **JCT’s FY2027 tax-expenditure path**, as summarized in the summer-2026 CRFB refresh, lifts the aggregate from **$2.3T to about $2.42T** (+$0.12T, **+5.2%**). The **2026 SSA and Medicare Trustees Reports** pull the exhaustion clocks forward one year: **OASDI 2034 → 2033**, **HI 2036 → 2035**. And mid-2026 FHFA stock figures put **guaranteed GSE MBS near $8.1T**, up **+$0.3T** from the research round. Net interest — the quiet first claim on revenue — also steps up in the CBO outlook framing we carry here: **~$970B → ~$1.05T**.
+
+The dashboard above is built as a research→newest vintage delta: diverging change bars, JCT top-line prior/new composites, dual-vintage trust reserve paths, depletion-year dumbbells, plumbing-layer bars, an off-balance leverage scatter, and the Treasury-vs-JCT ESI packaging gap. Use the **layer filter** and **JCT family** controls to isolate tax-code, trust-fund, off-balance, or interest moves.
+
+## The headline table: research map → newest official vintage
+
+| Metric | Prior (research map) | Newest print | Δ |
+| --- | ---: | ---: | ---: |
+| JCT tax expenditures (aggregate) | **$2.3T** (FY2026) | **$2.42T** (FY2027 path) | **+$0.12T (+5.2%)** |
+| JCT top-10 sum (approx) | **$1.43T** | **$1.52T** | **+$84B** |
+| Employer health exclusion (JCT) | **$240B** | **$255B** | **+$15B** |
+| Pensions / retirement exclusion | **$355B** | **$378B** | **+$23B** |
+| OASDI combined depletion year | **2034** | **2033** | **−1 year** |
+| Medicare HI depletion year | **2036** | **2035** | **−1 year** |
+| GSE guaranteed MBS outstanding | **~$7.8T** | **~$8.1T** | **+$0.3T (+3.8%)** |
+| Net interest (approx) | **~$970B** | **~$1.05T** | **+$80B** |
+| All discretionary (approx) | **~$1.70T** | **~$1.72T** | **+$20B** |
+
+The story is not “discretionary suddenly matters.” Discretionary barely budges. The levers that moved are the ones the research map already flagged as high-leverage and low-visibility: the tax-code shadow budget, the trust-fund clocks, and the housing-credit guarantee book.
+
+## Tax expenditures: the shadow budget grew another $120B
+
+Toggle **Layer filter → Tax code**. The JCT aggregate is the cleanest public meter of “spending through the Code.” Moving from the FY2026 research print (**$2.3T**) to the FY2027 path (**~$2.42T**) adds roughly **$120B** of annual shadow budget — more than the entire discretionary delta in the table above. The top-ten lines alone add about **$84B**, led by pensions/retirement (**+$23B**), preferential capital-gains and dividend rates (**+$16B**), and the employer-sponsored health exclusion (**+$15B**).
+
+Two caveats travel with every tax-expenditure chart. **Do not sum line items** as the revenue from simultaneous repeal — interactions and behavior matter. And refundable credits blur revenue loss and outlays; the deficit impact is real either way. For the line-item ranking deep dive, pair this update with our [tax-expenditure catalog](/blog/us-tax-expenditure-catalog-2026). For industrial-policy credits that live on the same Code, see the [fiscal and industrial policy series](/blog/fiscal-industrial-policy-research-2026).
+
+Filter **JCT family → health** and the ESI line is the packaging story, not just the level story. Treasury’s published employer-medical headline still sits well above JCT’s ESI concept. The packaging gap narrows only slightly — **$56B → $52B** — which means analysts who cite only one office can still cherry-pick a preferred giant. Methodology, not a spreadsheet error.
+
+## Trust funds: the entitlement spine pulled forward one year
+
+The research map used mid-2020s Trustees framing: **OASI ~2033**, **OASDI combined ~2034**, **Medicare HI ~2036**, with SMI remaining premium-and-general-revenue financed rather than a classic exhaustion clock. The **2026 Trustees Reports** do not invent a new crisis architecture. They move the clocks. **Combined OASDI now prints ~2033**; **HI prints ~2035**. OASI itself shifts **2033 → 2032** in the rounded path we carry. DI remains long-solvent on a multi-decade horizon; SMI still has no depletion year in the classic sense.
+
+That one-year pull-forward matters for politics more than for actuarial novelty. Markets already price the idea that payroll-tax and benefit-formula fights arrive before the 2030s are over. A 2033 combined date compresses the legislative runway by a session. Pair the dual-vintage reserve path in the dashboard with our [Social Security depletion path](/blog/us-social-security-trust-fund-depletion-path-2026) for the household-level framing; this update is the Trustees restatement of the system clock those posts sit inside.
+
+Reserve stocks move with the clocks. We carry combined OASDI reserves from roughly **$2.7T → $2.55T** and HI from **~$0.23T → ~$0.20T** in the estimated path — rounded, labeled, and not a live scoreboard tick. The dumbbell panel makes the year deltas the object: every exhausting fund we track moves earlier or stays flat; none move later.
+
+## Off-balance credit: GSE MBS is still the quiet housing lever
+
+Filter **Layer filter → Off-balance**. The research map’s punchline still holds: the guarantee books that steer mortgage rates, underwriting standards, and deposit risk rarely show up as appropriation-title fights. What changed is scale. **GSE guaranteed MBS** rises from about **$7.8T to $8.1T**. Federal Direct Student Loans tick **$1.6T → $1.65T**. FDIC-insured deposit stock and FHA/VA exposure edge higher in the rounded mid-2026 prints; PBGC risk stock is roughly flat.
+
+The scatter panel puts the same vehicles on two axes the unified deficit does not: **budget visibility** versus **policy leverage**, with bubble size proportional to newest stock. GSE MBS remains the extreme: enormous stock, low appropriation visibility, very high leverage over housing credit. Student loans sit higher on visibility because credit-reform scoring and forgiveness debates force them onto the partisan stage — which is why they look anomalous next to the quiet GSE book. Deposit insurance is the systemic backstop: low day-to-day budget noise, near-maximal leverage when it matters.
+
+Read the off-balance deltas as stock, not flow. A **+$0.3T** GSE move is not a $300B appropriation. It is additional guaranteed credit that steers who gets a mortgage and at what rate while the discretionary fight argues over tens of billions.
+
+## Net interest vs discretionary: the loud fight is still the small delta
+
+Net interest in the outlook framing we carry steps from about **$970B to $1.05T** (**+$80B**). All discretionary moves roughly **$1.70T → $1.72T** (**+$20B**). That ratio is the political irony of fiscal plumbing: the line Congress argues about loudest grows least, while the first claim on revenue and the permanent-law Code grow without an annual floor amendment. Interest is not a “program” anyone votes to expand; it is the arithmetic of the debt stock rolling at higher coupons.
+
+The plumbing-layer bars make the composition point without pretending to be a single official CBO pie. Tax expenditures and SS/Medicare outlays remain the two largest annual-flow layers on our editorial map; discretionary is third; net interest is closing. Medicaid and other health mandatory also step up. None of these layers sum to “the budget” without double-counting and definition fights — which is why the research post warned against treating the pie as an accounting identity. The update inherits that caveat and asks only what *moved*.
+
+## What did not change — and why that matters
+
+Several research-map conclusions survive the vintage. **SMI is still not an exhaustion clock** in the OASI/HI sense. **DI remains long-dated** relative to OASI. **Tax expenditures still dwarf any single discretionary title** on a like-for-like annual scale. **Off-balance credit still steers housing and education** without looking like spending in the cable-news sense. The ESI packaging gap between Treasury and JCT **narrows slightly but does not close**.
+
+What changed is timing and magnitude at the margin that markets and legislative calendars actually feel: a larger Code, an earlier OASDI/HI date, a bigger GSE book, and a higher interest bill. Those are the real levers. The appropriation titles remain the theater.
+
+## How to read the dashboard
+
+Start with **All layers** on the diverging delta bars to see which meters moved in which direction. Year shifts are scaled for visibility; hover for the true year delta. Switch to **Tax code** and then use **JCT family** to isolate retirement, capital, or health lines. Open the dual-vintage trust path to compare dashed prior reserves against solid newest paths, then the dumbbell for the depletion-year restatement. Finish on the off-balance scatter and ESI gap panel if the question is packaging and guarantee leverage rather than outlay headlines.
+
+## Caveats and source boundaries
+
+Trust-fund depletion years and reserve paths are rounded from Trustees framing — not a live actuarial score. Off-balance figures are outstanding or exposure stocks for scale, not annual outlays. Tax-expenditure line items interact; do not treat the top-ten sum as a joint-repeal score. Layer composition bars are an editorial map for orientation, not a substitute for the unified budget. Where we mark confidence as estimated, the direction of the vintage delta is the claim, not the last significant digit. Primary anchors: CRFB summaries of JCT FY2026 and FY2027-path prints, 2026 SSA and Medicare Trustees Reports, FHFA GSE MBS outstanding, Education Direct Loan portfolio, and CBO net-interest outlook framing.
+
+**Unlike the research map alone, this piece is the delta tape:** what the newest official vintage moved on the same three plumbing layers. **Unlike a single trust-fund or tax-catalog post, it keeps the system diagram intact** so a one-year OASDI shift and a $0.3T GSE move stay comparable on one screen.`,
+  },
+  {
     id: "consumer-finance-markets-update-202608",
     slug: "consumer-finance-markets-update-202608",
     title:

@@ -113,7 +113,8 @@ export interface Post {
     | "macro-growth-trade-update-2026q3"
     | "ai-capex-intensity-update-2026q3"
     | "ai-compute-demand-update-202608"
-    | "consumer-finance-markets-update-202608";
+    | "consumer-finance-markets-update-202608"
+    | "fiscal-plumbing-update-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

@@ -1307,6 +1307,21 @@ const ConsumerFinanceMarketsUpdate202608Dashboard = dynamic(
   },
 );
 
+const FiscalPlumbingUpdate2026Dashboard = dynamic(
+  () =>
+    import("@/components/visualizations/FiscalPlumbingUpdate2026Dashboard").then(
+      (m) => m.FiscalPlumbingUpdate2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -1642,6 +1657,10 @@ export function PostVisualization({
 
   if (type === "consumer-finance-markets-update-202608") {
     return <ConsumerFinanceMarketsUpdate202608Dashboard />;
+  }
+
+  if (type === "fiscal-plumbing-update-2026") {
+    return <FiscalPlumbingUpdate2026Dashboard />;
   }
 
   return null;
