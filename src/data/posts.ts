@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "bank-commercial-credit-concentration-2026",
+    slug: "bank-commercial-credit-concentration-2026",
+    title:
+      "Charted: Top-1 Bank Holds ~12.8% of Deposits — Top-3 Reach 33%; CRE Stress Skews Mega and Office",
+    excerpt:
+      "Concentration lens on bank & commercial credit: top-1 / top-3 domestic deposit shares near 12.8% / 33.4%, $1–10B banks print median CRE/capital at 311% vs 200% industry, while mega banks hold ~48% of CRE PDNA dollars and office takes ~42% of CMBS delinquent balances.",
+    category: "Finance",
+    themeId: "bank-commercial-credit",
+    imageUrl:
+      "/images/finance-bank-commercial-credit-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside charcoal bank towers and teal commercial real estate silhouettes",
+    publishedAt: "2026-08-21T15:00:00Z",
+    featured: true,
+    visualization: "bank-commercial-credit-concentration-2026",
+    layout: "default",
+    content: `Our [bank & commercial credit research](/blog/bank-commercial-credit-research-2026) answered the *stress location* question: where delinquencies and charge-offs print on Fed SA loan books, how FDIC CRE past-due-and-nonaccrual (PDNA) splits by bank size, and how Trepp-style CMBS property rates diverge — cards still own realized losses (~**3.84%** charge-off), CRE still owns the past-due stock (~**1.56%** delinquency with charge-offs only **0.17%**), and office CMBS delinquency sits in double digits. The [August 202608 vintage](/blog/bank-commercial-credit-update-202608) then answered the *tape* question: overall CMBS delinquency at **7.86%**, special servicing at **11.09%**, office special servicing **16.58%**, and an August hard-maturity cohort near **$5.5B**. This post answers the distribution question desks trade next: **how concentrated is this system at the top — and where does stress pile up inside that distribution?**
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Bank shares**, **CRE cohorts**, **Loan-book stress**, and **CMBS property**. The punchline is deliberately multi-sided. On **domestic deposits**, the tip is moderate, not monopolistic: top-1 (JPMorgan Chase) near **12.8%**, top-3 near **33.4%**, top-4 near **40.6%**, top-10 near **54%**. On **CRE capital intensity**, community and mid-size banks are the thick tip — **$1–10B** medians at **311%** of Tier 1 capital plus ACL versus an industry median near **200%**, while **>$100B** banks sit near **95%**. On **CRE stress dollars**, the map flips: mega banks hold an estimated **~48%** of CRE PDNA balances even with lower capital ratios. On **loss realization**, cards take roughly **half** of estimated charge-off dollars. On **CMBS**, office alone takes about **42%** of delinquent balances despite a smaller stock share.
+
+## The headline ladder: firm share vs stress share
+
+| Lens | Top-1 | Thick top | What it measures |
+| --- | ---: | ---: | --- |
+| Domestic deposits | **~12.8%** (JPM) | **~33.4%** (top 3) | Firm-side funding share |
+| Bank assets | **~13.2%** (JPM) | **~32.7%** (top 3) | Firm-side balance-sheet share |
+| CRE / (T1 + ACL) | **311%** ($1–10B) | **289%** ($10–100B) | Capital concentration by cohort |
+| CRE PDNA dollars | **~48%** (>$100B) | **~72%** (top 2 cohorts) | Where past-due CRE dollars sit |
+| Charge-off dollars | **~48%** (cards) | **~86%** (cards+C&I+other cons.) | Where losses realize |
+| CMBS delinquent $ | **~42%** (office) | **~82%** (office+MF+retail) | Securitized CRE stress tip |
+
+Read the table as a **family of market shares**, not one slogan. Deposit concentration tells you who intermediates household and commercial cash. CRE/capital concentration tells you which *size cohorts* are levered to commercial property relative to capital. CRE PDNA dollar concentration tells you who is already carrying the past-due stock. Charge-off concentration tells you which products are realizing losses *now*. CMBS property concentration tells you which collateral types dominate the securitized stress tape. Analysts who quote only “banks are concentrated” or only “CRE is fine at the industry median” are reading different columns of the same ledger.
+
+## Bank shares: a thick tip, not a single rail
+
+Filter the dashboard to **Bank shares**. Ranked deposit bars put **JPMorgan** first near **12.8%**, **Bank of America** near **11.4%**, **Wells Fargo** near **9.2%**, and **Citigroup** near **7.2%** — a top-4 bloc around **41%**, with the long tail of regional and community banks still holding more than half of domestic deposits. Switch the metric to assets and the order is familiar: the same four names clear roughly **40%** of the Call Report–style asset tip. The cumulative curve rises to **~33%** by top-3, **~41%** by top-4, and **~54%** by top-10 — concentrated relative to an equal-thousand-bank fantasy, but **not** a one-name monopoly.
+
+That geometry matters for policy and for credit. Funding and payments scale concentrate at the tip; CRE *capital intensity* does not. The mega banks that own the deposit tip often run **lower** median CRE/capital ratios than $1–100B cohorts. Pair this with our [CRE bank delinquency size split](/blog/cre-bank-delinquency-size-split-2026): the size lens and the firm-share lens answer different risk questions. Deposit top-3 at **~33%** is a competition and resolution story. CRE/capital at **311%** in the $1–10B band is a capital-adequacy story. Confusing the two produces the wrong stress map.
+
+Treat firm ranks as **estimated order-of-magnitude** from FDIC QBP / Summary of Deposits framing, rounded for visualization — not a live ticker of every merger close.
+
+## CRE cohorts: capital intensity and stress dollars disagree
+
+Switch to **CRE cohorts**. The composed panel puts median CRE / (Tier 1 + ACL) beside CRE PDNA rates. **$1–10B** banks print the capital peak (**311%**); **$10–100B** sit close behind (**289%**); industry median is about **200%**; mega banks (>$100B) sit near **95%**. PDNA rates run the other way on the rate axis: mega banks still show the highest CRE PDNA near **1.67%** versus mid and community bands under **1%** in the FDIC 2026 Risk Review framing.
+
+The grouped stock-versus-stress bars make the dollar story explicit. Mega banks hold an estimated **~38%** of CRE loan stock but **~48%** of CRE PDNA dollars — they are *under*-represented on capital intensity and *over*-represented on stress balances. Mid-size and community cohorts are the reverse: high capital ratios, smaller shares of the past-due dollar pile. That is the analytical hinge of the concentration cut. **Concentration of exposure** (CRE/capital) and **concentration of stress** (PDNA dollars) are related but not identical maps. Desks that only screen “banks above 300% CRE/capital” will miss mega-bank office and urban CRE books that dominate the dollar PDNA stack; desks that only watch GSIBs will miss community banks whose *capital* is CRE-saturated even when their PDNA *rate* looks calmer.
+
+## Loan-book stress: cards own losses; CRE owns the past-due stock
+
+Open **Loan-book stress**. Sorting by estimated charge-off dollar share puts **cards** first near **48%**, then **C&I** near **26%**, with CRE only about **8%** of realized loss dollars despite its policy salience. Sorting by delinquency dollar share lifts **residential** and **CRE** — past-due stock without matching charge-off velocity. The dual rate chart restates the research punchline: cards charge off at **3.84%** with delinquency **2.92%**; CRE delinquencies sit at **1.56%** with charge-offs only **0.17%** — a past-due-to-charge multiple near **9×**.
+
+This is why “bank credit stress” is not one meter. Realized loss concentration is a **consumer revolving** story in 2026Q1 Fed SA. Stock-of-past-dues concentration is a **property and mortgage** story. Our [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026) post tracks the loss tape; this lens tracks *who owns the dollars inside that tape*. A system can look “fine” on aggregate net charge-offs while cards still dominate the loss share and CRE still dominates the unresolved delinquency share.
+
+Treat product stress-dollar shares as **estimated** reallocations that sum to 100% for visualization. They are not a Call Report microdata extract of every bank’s loss allocation.
+
+## CMBS property: office is the securitized tip
+
+Toggle **CMBS property**. On a Trepp / CREFC July–Aug 2026 framing, overall CMBS delinquency prints near **7.86%**, with office delinquency near **11.91%** and office special servicing near **16.58%**. The donut of delinquent-balance shares puts office at about **42%**, multifamily and retail filling much of the remainder, and industrial still a thin residual. Switch the pie to delinquency *rates* and office remains the tall spike; industrial stays the calm end of the spectrum.
+
+The cross-lens scatter (firm deposit/asset shares versus stress-dollar tips) shows why one “concentration” headline fails. Deposit top-1 near **13%** sits mid-left; charge-off and CMBS office stress shares sit upper-right near **40–50%** top-1 with thick tops above **70%**. Banking *firms* are moderately concentrated. Banking *stress dollars* — especially cards charge-offs and office CMBS delinquencies — are more tip-heavy. That is the concentration story for commercial credit in this vintage: **moderate firm share, skewed stress share**.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** $1–100B banks whose CRE/capital medians sit near **290–310%** if office and urban multifamily refinancing stays sticky; mega-bank CRE desks that already carry nearly half of estimated CRE PDNA dollars; CMBS investors overweight office in a book where office is ~**42%** of delinquent balances; consumer lenders whose charge-off share remains near half of industry loss dollars while APRs stay wide of funds; policymakers who treat “top-4 deposit share ~41%” as the only concentration meter that matters for CRE.
+
+**Relative winners under current rules:** diversified mega banks with lower CRE/capital ratios and deep capital markets access; industrial and logistics CMBS sleeves where delinquency rates remain low-single-digit; regional banks with CRE books tilted away from office and toward amortizing multifamily or owner-occupied; desks that keep the [August maturity / special-servicing tape](/blog/bank-commercial-credit-update-202608) beside this share map instead of averaging them into one “CRE is healing” slogan.
+
+**What would change the story:** a sustained collapse of office CMBS delinquency and special servicing that breaks office’s ~**42%** delinquent-dollar share; FDIC prints that bring $1–10B CRE/capital medians back toward the **200%** industry band; or a Fed SA path where cards cease to dominate charge-off dollars. None of those dominate the 2026Q1 / July–Aug 2026 window summarised here.
+
+## Caveats and methodology
+
+- **Bank asset and deposit shares are rounded FDIC QBP / SoD–style ranks** for visualization — treat as order-of-magnitude concentration, not a live league table after every acquisition.
+- **CRE/capital medians and CRE PDNA by size** follow FDIC 2026 Risk Review disclosed framing where labeled; some small-bank cells are estimated.
+- **CRE stock and PDNA dollar shares by cohort** are estimated to illustrate the stock-versus-stress disagreement; they are not a full Call Report allocation.
+- **Loan-book stress-dollar shares** are estimated reallocations consistent with Fed SA rates and typical book weights; labeled estimated.
+- **CMBS property delinquent-dollar shares** are estimated from Trepp/CREFC rate prints and approximate stock mixes; office rate and special-servicing prints are disclosed anchors.
+- **Fed SA closes on 2026Q1** (May 19, 2026 release) while CMBS tape is July–Aug 2026 — do not force a single “as-of” date across ledgers.
+- **Concentration ≠ causation.** High CRE/capital does not automatically equal high PDNA; high deposit share does not automatically equal high CRE stress.
+
+## The shareable takeaway
+
+Bank & commercial credit is **concentrated at the top — but which top depends on the meter**. On **deposits**, top-1 / top-3 sit near **12.8% / 33.4%**. On **CRE capital intensity**, $1–10B banks print **311%** versus a **200%** industry median. On **CRE PDNA dollars**, mega banks hold about **48%**. On **charge-offs**, cards take about **48%** of loss dollars. On **CMBS**, office takes about **42%** of delinquent balances. Firm share is moderate. Stress share is skewed. The system’s risk is not “the biggest banks own everything” — it is that **capital concentration, past-due dollars, realized losses, and securitized collateral each concentrate in different places**.
+`,
+  },
+  {
     id: "industrial-robotics-concentration-202608",
     slug: "industrial-robotics-concentration-202608",
     title:

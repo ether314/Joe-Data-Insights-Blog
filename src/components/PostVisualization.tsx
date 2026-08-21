@@ -2147,6 +2147,21 @@ const IndustrialRoboticsConcentration202608Dashboard = dynamic(
   },
 );
 
+const BankCommercialCreditConcentration2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/BankCommercialCreditConcentration2026Dashboard"
+    ).then((m) => m.BankCommercialCreditConcentration2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -2706,6 +2721,10 @@ export function PostVisualization({
 
   if (type === "industrial-robotics-concentration-202608") {
     return <IndustrialRoboticsConcentration202608Dashboard />;
+  }
+
+  if (type === "bank-commercial-credit-concentration-2026") {
+    return <BankCommercialCreditConcentration2026Dashboard />;
   }
 
   return null;

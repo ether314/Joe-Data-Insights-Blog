@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "bank-commercial-credit-concentration-2026",
+    marker: "Bank & commercial credit — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "industrial-robotics-concentration-202608",
     marker: "Industrial robotics — Aug 202608 dual-ledger concentration",
     forbidden: "Loading interactive charts",
