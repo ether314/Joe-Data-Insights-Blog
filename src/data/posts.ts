@@ -2,6 +2,112 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "heavy-industrial-capacity-update-2026",
+    slug: "heavy-industrial-capacity-update-2026",
+    title:
+      "Update: Asia Ship Trio Slips to 91% of 2025 GT (−4.2 pp) as China Steel Share Eases to 52%",
+    excerpt:
+      "Versus our research map (95.2% Asia trio / 53.8% China steel), UNCTADstat’s Jun 2026 print puts 2025 GT completions at 91% for China+Korea+Japan, and World Steel 2025 cuts China’s crude share to 52.0%. Dry docks and the six-shop forge club are unchanged.",
+    category: "Industry",
+    themeId: "heavy-industrial-capacity",
+    imageUrl: "/images/industry-heavy-industrial-capacity-update-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic shipyard dry dock with gantry cranes, welding glow, and teal concentration bars — heavy industrial capacity vintage update",
+    publishedAt: "2026-08-21T04:00:00Z",
+    featured: true,
+    visualization: "heavy-industrial-capacity-update-2026",
+    layout: "default",
+    content: `## What changed since the research map
+
+Our [heavy industrial capacity research](/blog/heavy-industrial-capacity-research-2026) answered the cross-sector builder-base question with a 2024–25 scoreboard: China delivered **54.6%** of merchant GT, the Asia trio cleared **95.2%**, China held **~62%** of tracked VLCC-capable dry docks, US large-jet FALs still owned a majority of attributed handovers, and ultra-heavy nuclear-class forging sat in a **six-shop** club with **zero** US members. That post was a *map*. This update is a *vintage delta*.
+
+Two official prints force the rewrite. **UNCTADstat’s maritime insights** (updated **18 June 2026**) estimate that **91%** of ships completed in **2025** by gross tonnage were built in China, the Republic of Korea, or Japan — **−4.2 percentage points** versus the research post’s **95.2%** on 2024 deliveries. Separately, the **World Steel Association’s 2025 totals** put China at **960.8 Mt** of crude steel (**−4.4% YoY**) and **52.0%** of world output (**1,849.4 Mt**), down from the research frame’s **53.8%** share on 2024 production. Ownership also moved: at the start of 2026 Greece still leads beneficial ownership at **397 Mdwt**, but China has closed to **377 Mdwt** (**~15.1%** of a **2.5 Bdwt** world fleet).
+
+What did *not* move is as important as what did. The tracked **VLCC-capable dry-dock** China share (~**62%**) and the **six-shop** RPV-class forge inventory are **held** — there is still no audited global registry update that adds a Western ultra-heavy forge or rewrites the dock map. Aircraft is a *reframing* print: Cirium’s **H1 2026** wrap shows Airbus and Boeing combined at **649** commercial deliveries (**+14%** vs the prior half), with Airbus at **54%** of that duo and Renton’s 737-8 Max alone still near **~31%** of duo volume.
+
+The dashboard above is built as a vintage delta: diverging pp bars, the ship-trio path with the new 91% print, World Steel 2025 share/YoY toggles, an updated build-vs-own scatter, H1 aircraft bars, and a held forge strip.
+
+## The headline table: research prior vs Aug 2026 print
+
+| Metric | Prior (research) | New print | Δ |
+| --- | ---: | ---: | --- |
+| Asia ship trio (CN+KR+JP) | **95.2%** of 2024 GT | **91%** of 2025 GT | **−4.2 pp** |
+| China merchant GT (derived into trio) | 54.6% | ~52.2% | −2.4 pp |
+| Rest of world ex Asia trio | 4.8% | ~9.0% | +4.2 pp |
+| China crude steel share | 53.8% (2024) | **52.0%** (2025) | **−1.8 pp** |
+| India crude steel | ~7.9% / 149.4 Mt | **8.9%** / **164.9 Mt** | +1.0 pp / **+10.4% YoY** |
+| China beneficial ownership | 14.4% | **~15.1%** (377 Mdwt) | +0.7 pp |
+| Greece beneficial ownership | ~16.4% | **~15.9%** (397 Mdwt) | still #1 |
+| Airbus share of A+B duo | ~56.9% FY2025 | **54%** H1 2026 | −2.9 pp (mix) |
+| China VLCC dry docks (tracked) | ~62% | ~62% | **held** |
+| Ultra-heavy forge shops | 6 | 6 | **held** |
+
+Open **Vintage Δ** and toggle **Moved only** versus **Held / flat**. The thesis of this update is not “Asia stopped building.” It is that the *newest official completions vintage* shows a measurable **de-concentration at the margin** in GT and steel shares — while the scarce dock and forge layers stay frozen.
+
+## Shipyards: the trio still dominates — but 91% is not 95%
+
+UNCTAD’s June 2026 insight is blunt: in GT terms, **91%** of 2025 completions came from the China–Korea–Japan trio. That is still an oligopoly. It is also a clear step down from the research post’s **95.2%** on 2024 deliveries (itself the peak-concentration vintage in our [shipbuilding GT companion](/blog/global-shipbuilding-gt-delivery-concentration-2026)).
+
+Country splits inside the 91% are **derived** — UNCTADstat discloses the trio total, not a full public country table in the insight card — by scaling the research post’s relative China/Korea/Japan weights into the new trio print. That puts China near **~52%**, Korea near **~27%**, Japan near **~12%**, with the **ex-trio residual doubling** from ~5% to ~9%. Treat the country points as illustrative; treat the **−4.2 pp trio move** as the disclosed headline.
+
+Why would GT concentration ease while Chinese yards still dominate orderbooks in many broker reports? Completions vintages lag contracting. A higher rest-of-world GT share can also reflect **smaller and specialized hulls** (Europe cruise/naval, Viet Nam, Türkiye, others) that punch above their dwt weight. Deadweight-based country tables in secondary compilations still show a ~**94%** Asia-trio share on 2025 dwt output — another reminder that **GT and dwt are not interchangeable**. The update’s official GT print is the one that moved versus our research frame.
+
+Switch to **Ship path**. The area stack still climbs from Japan’s 1980s-era dominance through China’s >50% milestone; the new 2025 point is the first **visible pullback** in the trio line on this chart.
+
+## Steel: China still half the world — India is the YoY story
+
+World Steel’s 2025 annual totals are the second hard vintage. China produced **960.8 Mt** (**−4.4%** from **1,005.1 Mt**), while the world printed **1,849.4 Mt**. China’s share lands at **52.0%** — still extraordinary, but **−1.8 pp** versus the research post’s **53.8%** 2024 frame (and about **−1.3 pp** versus a strict 1005.1/1886 restatement). India is the clearest counterweight: **164.9 Mt**, **+10.4% YoY**, lifting world share to **~8.9%**. The US edged up to **82.0 Mt** (**+3.1%**); Japan and Korea both contracted.
+
+Toggle **Steel 2025** between world share, YoY, and million tonnes. The industrial-capacity implication is nuanced. Crude steel is **not** ultra-heavy forging and **not** VLCC dock concrete. A one-to-two point China share dip does not unlock reactor-pressure-vessel capacity in Ohio. It does mean the *feedstock geography* for plate and sections is slightly less China-weighted than the research map implied — with India absorbing part of the relative gain.
+
+## Build vs own: China ownership closes on Greece
+
+The research post’s cleanest illustration was Greece owning ~**16%** of tonnage while building almost none, versus China building ~**55%** while owning ~**14%**. The start-2026 UNCTAD ownership vintage tightens that gap from the ownership side: Greece **397 Mdwt**, China **377 Mdwt**, Japan **243 Mdwt**, on a world fleet of **2.5 Bdwt**. China ownership share rises to ~**15.1%**; Greece remains first at ~**15.9%**.
+
+Open **Build vs own**. China’s shipping point still sits far above the 1:1 diagonal on the build axis, but it has edged **up** on ownership while **down** on the derived build share. Korea remains the extreme “builds more than it owns” yard economy. The United States remains a rounding error on commercial GT (~**0.04%**) with modest ownership — the merchant-marine ambition problem did not get fixed by a vintage update.
+
+Aviation points use the H1 duo frame (Airbus **54%**, Boeing residual **~46%**) rather than the research post’s site-attributed large-jet pool. That is intentional: this update’s aircraft story is an OEM delivery recovery print, not a new FAL-campus census. For site geography, the [commercial aircraft FAL companion](/blog/commercial-aircraft-final-assembly-geography-2026) still governs.
+
+## Aircraft H1 2026: Renton still a third of the duo
+
+Cirium’s first-half 2026 wrap puts Airbus+Boeing at **649** commercial deliveries — the strongest combined H1 since 2018 and **+14%** versus the prior half-year. Airbus takes **54%** of that duo. The type leaderboard still centers on a single US campus product: the **737-8 Max** shipped just shy of **200** units, roughly **~31%** of duo H1 volume by itself. The A321neo follows at **167**.
+
+That is why the Renton line on the vintage table shows only a mild **−0.9 pp** versus the research post’s **31.7%** of the *large-jet attributed pool*. Different denominators, same industrial fact: **one Washington hangar complex still rivals entire multi-site OEM networks** on narrowbody throughput. Boeing’s H1 recovery also trims Airbus’s duo share versus the lopsided FY2025 delivery split (~793 vs ~600). The Atlantic-heavy FAL map from the research post is not overturned; the *tempo* inside it has normalized.
+
+## What stayed frozen: docks and the six-shop forge club
+
+Industrial-capacity commentary loves to extrapolate from steel or ship GT into “manufacturing power.” The held layers refuse that leap. Tracked **VLCC-capable dry docks** remain China-heavy at ~**62%**. The ultra-heavy forge strip is unchanged: Japan Steel Works, Doosan, CFHI, Shanghai Electric’s heavy complex, Framatome/Le Creusot, and Sheffield Forgemasters. **North America still has no RPV-class member** in that inventory.
+
+Open **Forges held**. Equal-weight shop counts are not throughput weights — JSW and Doosan matter more than the strip implies — but the *phone book* did not get a seventh number. Nuclear new-build, naval propulsion, and any industrial strategy that treats “steel capacity” as a synonym for “forging capacity” still face the same bottleneck the research post flagged.
+
+Pair this update with [fiscal-industrial policy](/blog/fiscal-industrial-policy-update-202608) when the question is which incentives can touch yards and FALs rather than generic plant investment. Completions and ownership vintages move every year; dock concrete and certified ultra-heavy forges do not.
+
+## Who is exposed — and what the delta actually buys
+
+**Exposed to the wrong headline:** readers who treat “Asia trio slipped to 91%” as evidence that Western merchant yards are back. A **9%** rest-of-world GT residual is still not a US or EU newbuild renaissance. US commercial GT remains noise.
+
+**Exposed to frozen scarcity:** nuclear and naval programs that hoped a steel-share dip implied forge relief; shippers who assume dry-dock slots outside China/Korea are fungible; airlines whose delivery risk still clusters on Renton, Hamburg, and Toulouse even as duo totals recover.
+
+**What the delta buys:** a clearer separation between **movable shares** (GT completions, crude steel, ownership) and **immobile capital** (large docks, RPV forges, FAL campuses). China builds slightly less of the 2025 GT pie than the 2024 research peak, owns slightly more of the fleet, and still anchors docks and half of world steel. India is the steel YoY story. Airbus leads the H1 duo, but Renton’s Max line still looks like a country.
+
+## Caveats and methodology
+
+- **Sectors are not additive.** Do not average ship GT with steel share into a fake industrial-capacity index.
+- **UNCTAD trio 91% is disclosed; China/Korea/Japan country splits inside it are derived** from prior relative weights.
+- **GT ≠ dwt.** Secondary dwt tables can show higher Asia-trio concentration than the GT completions print.
+- **Research China steel 53.8%** came from the prior World Steel vintage framing; a strict 2024 restatement is ~53.3% — the update’s **−1.8 pp** uses the research headline as the prior anchor.
+- **Aircraft H1 figures are duo-only** (Airbus+Boeing). COMAC and other OEMs are outside Cirium’s highlighted 649.
+- **Renton H1 share is estimated** from the MAX-8 type count versus duo totals — not a full campus attribution audit.
+- **Dry-dock and forge counts are held inventories**, not a 2026 re-census.
+- **Ownership shares** divide UNCTAD Mdwt figures by the stated **2.5 Bdwt** world fleet; rounding applies.
+- **Naval and cruise yards** remain strategically important and deliberately outside the merchant GT leaderboard.
+
+## The shareable takeaway
+
+The newest official vintage did not redraw who can build physical capital stock — it **nudged the movable layers**. **Asia’s ship trio slipped to 91% of 2025 GT (−4.2 pp)** versus our research peak; **China’s crude steel share eased to 52.0% (−1.8 pp)** while India printed **+10.4% YoY**; China ownership closed on Greece. **Dry docks (~62% China) and the six-shop forge club did not move**, and **Renton still ships about a third of the Airbus–Boeing H1 duo**. Watch **vintage deltas by layer**, not a single “manufacturing” headline, to see who still has the yards, docks, hangars, and forges.
+`,
+  },
+  {
     id: "demographic-cash-flows-update-202608",
     slug: "demographic-cash-flows-update-202608",
     title:
