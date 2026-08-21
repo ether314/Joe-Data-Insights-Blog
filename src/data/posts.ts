@@ -2,6 +2,95 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-power-grid-concentration-2026q3",
+    slug: "ai-power-grid-concentration-2026q3",
+    title:
+      "Q3 Concentration: AI Power Top-1 Still 45% / Top-3 Still 85% — Gartner’s 36% US Cut Is a Different Perimeter",
+    excerpt:
+      "Q3 concentration vintage on AI power & grid: IEA stock Top-1 stays 45% (US) and Top-3 85% (US·China·Europe); Gartner’s 2026 US share of all DC electricity prints 36% (204 of 565 TWh) as a scope cut, not a rewrite; US+China still ~80% of growth while Electricity 2026 restates >2,500 GW stalled queues.",
+    category: "Energy",
+    themeId: "ai-power-grid",
+    imageUrl:
+      "/images/energy-ai-power-grid-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside glowing GPU racks and cyan high-voltage grid arcs",
+    publishedAt: "2026-08-21T19:00:00Z",
+    featured: true,
+    visualization: "ai-power-grid-concentration-2026q3",
+    layout: "default",
+    content: `Our [prior concentration print](/blog/ai-power-grid-concentration-2026) answered the distribution question with a hard scoreboard: the United States holds **45%** of global data-centre electricity, US+China+Europe hold **85%**, and US+China capture roughly **80%** of growth to 2030. The [Q3 Gartner + Electricity update](/blog/ai-power-grid-update-2026q3) then moved the *path* meters — world DC electricity to **565 TWh** in 2026 (**+26%**), a dual-ledger 2030 gap (IEA ~**950** vs Gartner >**1,200**), and worldwide stalled connection queues restated above **2,500 GW**. This Q3 concentration lens asks the next desk question: **did those vintage moves rewrite the top-of-distribution shares, or only stress the pace clocks around a sticky ladder?**
+
+The interactive dashboard above is built as a **vintage concentration lens**. Toggle **Scoreboard**, **Perimeters**, **Clusters**, and **Pace & queues**. Use the **Lens** control on the cumulative curve to flip stock versus growth, and the cluster **Y-axis** control to swap global capacity share for pipeline intensity. The punchline is sticky on purpose. IEA Top-1 remains **45%** and Top-3 **85%**. Gartner’s US cut at **36%** of 2026 DC electricity is a *different perimeter*, not a re-rank of the IEA stock ladder. Local intensity (Virginia ~**25%**, Ireland ~**20%**) and five-cluster US capacity (~**50%**) are carried. What *did* restate is the queue stock — concentration of delay risk, not of country shares.
+
+## The headline ladder: prior print vs Q3 restatement
+
+| Lens | Prior concentration | Q3 print | Δ |
+| --- | ---: | ---: | ---: |
+| Top-1 DC electricity stock (US, IEA) | **45%** | **45%** | **0 pp** (carried) |
+| Top-3 regional stock (US·CN·EU) | **85%** | **85%** | **0 pp** |
+| US share — Gartner 2026 DC TWh | — | **36%** (204 / 565 TWh) | **scope** (−9 pp vs IEA stock) |
+| US + China share of growth to 2030 | **~80%** | **~80%** | **0 pp** |
+| US DC share of US demand growth (5-yr) | — | **~50%** of ~**420 TWh** | **new attribution** |
+| Virginia / Ireland local intensity | **~25% / ~20%** | **~25% / ~20%** | **0 pp** |
+| Stalled worldwide connection queues | US proxy ~**1.3 TW** | **>2,500 GW** | **restated** |
+| 2030 dual-ledger gap (IEA vs Gartner) | — | **~250 TWh** | **new path meter** |
+
+Read the table as a **stability-plus-scope scoreboard**. Path meters moved. Stock concentration *architecture* did not. That is the Q3 contribution relative to the [prior concentration companion](/blog/ai-power-grid-concentration-2026): the dual ledger and queue stock wiggled; the top-of-distribution shares mostly stayed put — once you refuse to mix Gartner’s all-DC composition with IEA’s Energy-and-AI stock cut.
+
+## Scoreboard: five perimeters, one sticky architecture
+
+Open **Scoreboard**. The vintage-delta bars show flat Top-1 / Top-3 stock shares beside rising near-term world TWh, a restated queue stock, and a dual-ledger gap. The scoreboard table separates those objects on purpose: IEA stock, Gartner composition, growth, local intensity, and queues are not interchangeable numerators.
+
+The lens scatter puts stock (**45% / 85%**), growth (**~45% / ~78%** US+China as Top-2), US five-cluster / NoVa (**13% / 50%**), and local intensity (**Virginia 25% / Ireland 20%**) on one plane. Stock and growth sit in the high Top-3 corner. Cluster and local lenses print extreme *local* shares even when the global DC share of electricity is still only ~**1.5–3%**. That is the first hinge for Q3. **Global averages still hide the politics; Q3 path meters did not invent that fact — they amplified the cost of ignoring it.**
+
+## Perimeters: why 45% and 36% can both be true
+
+Switch to **Perimeters**. The US-share compare panel is the analytical heart of this vintage. IEA’s 2024 DC electricity stock still puts the United States at **45%**. Gartner’s June 2026 newsroom path puts the US at **36%** of **565 TWh** in 2026 — about **204 TWh**, of which dedicated AI data centres take roughly **68 TWh** (~**one-third** of the US total). AI-optimised servers already take **31%** of data-centre power in 2026 on that path.
+
+Those are not competing claims about the same pie. One is an IEA Energy-and-AI regional stock cut. The other is a Gartner all-data-centre electricity composition for a later year. Mixing them into a “US share fell nine points” headline is a category error. The second hinge is blunt: **vintage deltas and concentration shares are different objects — and so are perimeters.** Pair this with the [Q3 update](/blog/ai-power-grid-update-2026q3) for the path narrative and with the [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) post when you need LBNL demand-versus-miles rather than world shares.
+
+The growth donut still shows US ~**45%** and China ~**33%** of incremental TWh to 2030 — together ~**80%**. Europe remains a single-digit growth slice. Electricity 2026 adds a related but non-identical meter: data centres account for about **half** of a ~**420 TWh** five-year US electricity demand add. That is concentration *inside* the US demand growth story, not a rewrite of the global stock ladder.
+
+The dual-ledger line keeps IEA central (~**950 TWh** in 2030) and Gartner (>**1,200 TWh**) on separate tracks. Do not average them. The gap (~**250 TWh**) is a forecast-dispersion meter. It does not move Top-1 / Top-3 shares by itself — but it does raise the stakes of *where* the next gigawatts land if the higher path proves closer to right.
+
+## Clusters and local intensity: still where brownout politics live
+
+Toggle **Clusters**. Northern Virginia remains the global hub — roughly **4.9 GW** operating IT load and about **13%** of reported global operational capacity in the carried public tallies. Flip the Y-axis to **pipeline intensity** and Dallas-class markets still show how load *and* development stack into the same corridors. Nearly **half** of US data-centre capacity still sits in five regional clusters; about **50%** of US capacity under development remains inside those pre-existing large hubs.
+
+Local intensity lollipops are unchanged for a reason. Virginia ~**25%** of state electricity and Ireland ~**20%** of metered supply are still an order of magnitude above the ~**1.5%** world average. Six US states remain above the **10%** threshold. Emerging and developing economies outside China still hold roughly **half** of internet users and **under 10%** of global data-centre capacity. The third hinge: **Q3 did not democratise siting.** Faster world TWh growth without geographic diversification simply packs more megawatts into the same political grids.
+
+## Pace and queues: the concentration that did restate
+
+Open **Pace & queues**. Demand clocks (campus ~**2.5 years**, GPU refresh ~**1.5**) still outrun grid clocks (US median interconnection ~**5 years**, transmission often **4–8**). That mismatch was already the theme’s core physical question. What Q3 restates is the *stock* of delay: worldwide stalled connection queues above **2,500 GW**, with an unlock band of roughly **1,200–1,600 GW** if flexibility and grid-enhancing technologies clear. The carried IEA delay-risk share — about **20%** of planned data-centre projects unless grid risks are addressed — sits beside that queue stock as a project-level probability, not a GW bar.
+
+This is the fourth hinge. **Concentration of delay risk can move even when concentration of country shares does not.** A sticky Top-1 / Top-3 ladder plus a restated multi-terawatt queue is a worse planning problem, not a calmer one. Firm generation announcements do not clear deliverability by themselves when half the US pipeline still aims at five hubs.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** desks that treat Gartner’s **36%** US electricity share as proof the IEA **45%** stock ladder broke; soft-landing narratives that assume dual-ledger dispersion means geographic diversification; interconnection reform debates that quote national generation surplus while Virginia and Ireland intensity stay extreme; EMDE hosting pitches that ignore the still-yawning gap between internet-user share (~**50%**) and DC capacity share (~**10%**).
+
+**Relative winners under current rules:** corridors that can site *outside* saturated US five-cluster footprints without losing latency or fibre depth; utilities and ISOs that clear flexible interconnection and GET packages inside the **1.2–1.6 TW** unlock band; China growth share that still captures ~**one-third** of incremental TWh; equipment suppliers whose lead times bind wherever the same two countries bid ~**80%** of sector growth.
+
+**What would change the story:** a superseding IEA period census that drops US stock share well below ~**35%** *and* Top-3 below ~**70%**; multi-year evidence that US pipeline share in existing large clusters falls well below **50%**; Virginia and Ireland intensity peaking and then declining; EMDE ex-China capacity share rising toward internet-user share; stalled worldwide queues compressing toward the unlock band without simply relocating congestion to Dublin, Singapore, or the Pearl River Delta. None of those clear this Q3 window. The architecture is sticky; the path and queue meters are not.
+
+## Caveats and methodology
+
+- **IEA regional stock shares (Top-1 45% / Top-3 85%) and US+China growth share (~80%) are carried** from the prior concentration print and Energy and AI regional cuts. No new IEA period census in this window.
+- **Gartner 10 Jun 2026** supplies near-term world / US TWh and AI-server power share. Scopes differ from IEA (Gartner 2025 print **447 TWh** vs IEA Key Questions **485 TWh** for adjacent vintages) — do not splice into one forecast.
+- **US 36% of 2026 DC electricity is not a re-statement of the IEA 45% stock share.** Treat it as a separate perimeter.
+- **Cluster IT loads outside Northern Virginia** remain ranked estimates consistent with IEA named-market order; NoVa ~**4.9 GW** / ~**13%** anchors to public Cushman / JLARC tallies cited in the prior print.
+- **Electricity 2026 queue stock (>2,500 GW)** is a worldwide connection-queue restatement; prior theme posts sometimes used a US queue proxy — not like-for-like.
+- **Delay-risk ~20%** is a carried project-share meter, not convertible 1:1 into the GW unlock band.
+- **Dual-ledger 2030 gap (~250 TWh)** measures forecast dispersion between IEA central and Gartner paths; it is not a concentration share.
+- **Local intensity figures** (Virginia, Ireland, six US states >10%) are carried disclosed IEA narrative meters.
+
+## The shareable takeaway
+
+In the **Q3 2026 concentration vintage**, AI power Top-1 is still **45%** United States and Top-3 still **85%** (US·China·Europe) on the carried IEA stock ladder. Gartner’s **36%** US share of **565 TWh** is a different perimeter — useful for near-term composition, dangerous as a false “de-concentration” headline. US+China still capture ~**80%** of growth; Virginia and Ireland intensity remain extreme; and Electricity 2026 restates **>2,500 GW** of stalled queues around that sticky map. Path meters moved. The top of the distribution held.
+
+Related reading: [Prior concentration print](/blog/ai-power-grid-concentration-2026) · [Q3 Gartner + Electricity update](/blog/ai-power-grid-update-2026q3) · [August Mid-Year vintage](/blog/ai-power-grid-update-202608) · [Key Questions update](/blog/ai-power-grid-update-2026) · [IEA research frame](/blog/ai-power-grid-research-2026) · [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+  },
+  {
     id: "fiscal-industrial-policy-geography-2026",
     slug: "fiscal-industrial-policy-geography-2026",
     title:

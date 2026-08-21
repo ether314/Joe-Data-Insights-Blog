@@ -158,7 +158,8 @@ export interface Post {
     | "energy-systems-concentration-2026"
     | "demographic-cash-flows-concentration-202608"
     | "macro-growth-trade-concentration-2026q3"
-    | "fiscal-industrial-policy-geography-2026";
+    | "fiscal-industrial-policy-geography-2026"
+    | "ai-power-grid-concentration-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
