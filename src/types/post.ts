@@ -125,7 +125,8 @@ export interface Post {
     | "measurement-science-update-202608"
     | "ai-capex-spend-concentration-2026"
     | "fiscal-plumbing-update-2026q3"
-    | "chokepoint-commodities-concentration-2026";
+    | "chokepoint-commodities-concentration-2026"
+    | "ai-financing-concentration-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
