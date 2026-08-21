@@ -2,6 +2,87 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-compute-demand-concentration-2026",
+    slug: "ai-compute-demand-concentration-2026",
+    title:
+      "Concentration: Google Owns 25% of AI Compute — Top-3 Holds 55%; Tokens Tell a Different Story",
+    excerpt:
+      "A distribution lens on AI compute: chip ownership Top-1 is 25% (Google) and Top-3 is 54.8%; hyperscale Top-3 cloud is 57%; US regions hold ~45% of AI DC capacity — while token Top-1 is ByteDance at 29%.",
+    category: "Technology",
+    themeId: "ai-compute-demand",
+    imageUrl:
+      "/images/technology-ai-compute-demand-concentration-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber Top-1/Top-3 concentration bars beside glowing GPU racks and a hub-map of US and China data-center dots",
+    publishedAt: "2026-08-21T06:00:00Z",
+    featured: true,
+    visualization: "ai-compute-demand-concentration-2026",
+    layout: "default",
+    content: `## The concentration question, not the stock question
+
+The theme’s [July research essay](/blog/ai-compute-demand-research-2026) answered *who owns the chips and where the watts sit*. The [August explorer update](/blog/ai-compute-demand-update-2026) and [Q3 / Aug location vintages](/blog/ai-compute-demand-update-202608) restated Microsoft’s H100e share and Synergy’s site rankings. This post asks a sharper distribution question: **how concentrated is the system at the top?** Top-1, Top-3, and HHI — across ownership, hyperscale capacity, regional power draw, and token throughput.
+
+The interactive dashboard above is built as a **concentration lens**. Toggle **Scoreboard**, **Ownership ladder**, **Sites & regions**, and **Tokens vs chips**. The punchline is deliberately multi-sided. On chip ownership, **Google alone is about 25%** and the **top three clear ~55%**. On hyperscale cloud capacity, **AWS + Azure + Google still hold 57%**. On geography, the **United States hosts ~45%** of AI data-center capacity by power draw, and **fifteen of twenty** largest hyperscale markets. On tokens, **ByteDance leads at ~29%** and China-origin brands clear ~**62%** of June 2026 volume — while China as a chip *owner* is still near **5%**. Same theme, four different tops.
+
+## The concentration scoreboard
+
+| Perimeter | Top-1 | Top-3 | Extra meter |
+| --- | ---: | ---: | --- |
+| Chip ownership (H100e) | **25%** Google | **54.8%** Google + Microsoft + Amazon | Big-5 **71.4%** · within-Big-5 HHI ≈ **2,421** |
+| Hyperscale cloud capacity | Dual-hub **17%** (N.VA + Beijing) | **57%** AWS + Azure + Google | Top-20 markets **60%** |
+| AI DC capacity (region) | **45%** United States | **77%** US + China + Europe | US ~**54%** of 915 pipeline sites |
+| Token throughput (brand) | **29.2%** ByteDance | **59.6%** ByteDance + Google + Alibaba | China-origin **61.8%** |
+
+Read the table as a **family of market shares**, not one slogan. Ownership concentration is thick at the hyperscaler tip and still leaves nearly three-tenths of world H100e outside the Big-5. Cloud concentration is a *capacity* story among operators who rent to frontier labs. Regional concentration says *where the megawatts live*. Token concentration says *who processes the prompts* — and it does not match the ownership ladder. Analysts who quote only “Big-5 own 71%” understate how top-heavy the *inside* of that 71% is; analysts who quote only ByteDance’s token lead understate how little chip stock that usage owns.
+
+## Ownership: Google is Top-1, the tip is sticky
+
+Toggle **Ownership ladder**. Epoch’s Chip Owners framework (Q4 2025 anchors, Aug explorer restatement carried through the [August 202608 location update](/blog/ai-compute-demand-update-202608)) puts Google near **25%** of cumulative world AI compute — mostly custom TPUs. Microsoft sits at **17.3%** after the explorer restatement that lifted it roughly **+2.3 pp** versus the July residual. Amazon **12.5%**, Meta **11.3%**, and Oracle **5.3%** complete a Big-5 bloc of **71.4%**. China as an aggregate owner remains near **5%**.
+
+That produces the ownership concentration print: **Top-1 = 25%**, **Top-3 = 54.8%**, Big-5 HHI on the renormalized five-name perimeter ≈ **2,421** versus an equal-five benchmark of **2,000**. The Lorenz panel shows cumulative mass rising well above the equal-split line by rank three. Pair this with the [research baseline](/blog/ai-compute-demand-research-2026): the Big-5 share path from **63%** in Q1 2024 to **71%** by Q4 2025 was already a concentration story; the Aug carry freezes the *level* while this lens ranks the *tip*.
+
+Ownership is not usage. Frontier labs — OpenAI, Anthropic, xAI — rent most of their operational capacity from Microsoft, Oracle, Amazon, Google, and neoclouds. A lab can dominate the product narrative while owning almost none of the H100e stock. That is why the token scatter exists.
+
+## Sites and clouds: Top-3 still dominate, markets stay tight
+
+Open **Sites & regions**. Synergy’s 19 August 2026 hyperscale location rankings — the newest site vintage in the [Aug update](/blog/ai-compute-demand-update-202608) — put **AWS + Azure + Google Cloud at 57%** of hyperscale capacity, down **1 pp** from the Q3 **58%** print. That is still a concentrated operator oligopoly. The market-band chart is sharper on *place*: **top-20 markets hold 60%** of capacity; **Northern Virginia + Greater Beijing alone are 17%**; top-40 reach **79%**. The United States fills **15 of 20** largest-market seats. Pipeline sites rose **803 → 915 (+112)** while concentration at the tip barely budged.
+
+Regional AI DC capacity by power draw — the synthesis carried from theme research — still puts the **United States near 45%**, China near **18%**, and Europe near **14%**. Top-3 regions therefore clear about **77%**. Texas operational capacity growing **+71% YoY** against a **+36%** world average is a *growth* concentration story inside an already US-heavy stock: the inland corridor is where new megawatts land, not where the ownership tip breaks.
+
+Geography and ownership can diverge. US-HQ operators dominate hyperscale revenue and chip stock, but China-origin *token* brands can lead usage while sitting inside a thin ownership slice. The [build tracker](/blog/global-ai-data-center-build-tracker) keeps the campus-level map; this lens ranks how much of the capacity distribution sits in the first few seats.
+
+## Tokens: ByteDance is Top-1 — ownership does not follow
+
+Switch to **Tokens vs chips**. The June 2026 slice of the [major AI brands token series](/blog/major-ai-brands-token-consumption-2022-2026) totals about **18,500 trillion tokens/month** across tracked brands. **ByteDance (Doubao) leads at ~29.2%**, Google follows at **~19%**, Alibaba (Qwen) at **~11.3%**. Top-3 brands therefore clear **~59.6%**. China-origin brands as a group hold about **61.8%** of that month’s volume; US-origin brands about **37.7%**.
+
+That is the divergence that makes concentration analysis useful. Google is **#1 in chips (~25%)** and **#2 in tokens (~19%)** — roughly aligned. ByteDance is **#1 in tokens (~29%)** with a negligible ownership seat inside China’s ~**5%** aggregate. OpenAI holds mid-single-digit token share with **no disclosed chip ownership**. Microsoft and Amazon sit **ownership-heavy** relative to first-party token share because Azure and AWS rent capacity to other brands. The scatter’s upper-left is *usage without chips*; the lower-right is *owns more than it first-parties*.
+
+Do not average token Top-1 with ownership Top-1. They answer different questions: *who processes prompts this month* versus *who holds the depreciating capital stock*. Policy that targets “AI concentration” without naming the perimeter will pick the wrong instrument.
+
+## Who is exposed under a concentrated tip
+
+**More exposed:** enterprises and governments whose AI roadmaps assume a plural supplier set when three cloud operators still clear **~57%** of hyperscale capacity; power planners who underweight Northern Virginia / inland Texas / Midwest corridors while **15 of 20** largest markets sit in the US; chip-allocation desks that treat China-origin token growth as evidence of China chip stock (it is not — ownership stays near **5%**); and investors who read OpenAI product share as OpenAI balance-sheet compute.
+
+**Relatively better positioned:** operators already inside the Top-3 cloud perimeter with contracted power and fiber in dual-hub and inland metros; buyers who multi-home inference across Google / Azure / AWS *and* China MaaS surfaces when latency and data residency allow; and analysts who keep separate ledgers for ownership, sites, regions, and tokens.
+
+**What would change the story:** a new Epoch period print that drops Google below ~**20%** or the Big-5 below ~**60%**; Synergy Top-3 cloud falling through **50%** as neoclouds and sovereign builds scale; US regional AI DC share falling materially below **35%**; or token Top-1 dispersing so no brand holds more than ~**15%** of the June-style series. None of those appear in the mid-2025 to mid-2026 vintages summarised here.
+
+## Caveats and methodology
+
+- **Perimeters are not interchangeable.** Ownership is H100-equivalent stock; cloud Top-3 is hyperscale *capacity*; regional shares are AI-relevant power draw; tokens are monthly throughput across vendor surfaces.
+- **Ownership shares for residual non-Google entities** below the Big-5 aggregate are staff-aligned estimates that sum to Epoch’s disclosed hyperscaler total; treat Top-3 as order-of-magnitude concentration, not a prospectus table.
+- **Synergy market capacity hints** inside the dual-hub / top-20 bands are illustrative within disclosed concentration prints (17% / 60% / 79%).
+- **Token figures include internal workloads** (Search AI Overviews, recommendation, moderation). US and China headlines inflate the same way, so ratios remain useful; absolute “economy tokens” are overstated.
+- **Open-weight routing** can double-count tokens between model authors and serving clouds.
+- **Chinese text tokenization** differs from English; equal token counts are not equal work.
+- **Epoch period print for Q1/Q2 2026 is still open** — Aug 202608 carries Big-5 ownership; the location vintage does not restate H100e.
+- This post is a **concentration lens**. For the ownership essay use [July research](/blog/ai-compute-demand-research-2026); for explorer deltas use the [August update](/blog/ai-compute-demand-update-2026); for site rankings use the [Aug 202608 update](/blog/ai-compute-demand-update-202608); for tokens use the [brand series](/blog/major-ai-brands-token-consumption-2022-2026).
+
+## The shareable takeaway
+
+AI compute demand is **concentrated at the top of the distribution** — but the *name* of the top depends on the meter. Chip ownership Top-1 is **Google at 25%**; Top-3 is **~55%**; Big-5 hold **~71%** with within-cohort HHI ≈ **2,400**. Hyperscale Top-3 cloud is still **57%**, top-20 markets **60%**, and the US ~**45%** of AI DC capacity by power draw. Token throughput tells the other story: **ByteDance ~29%** Top-1, Top-3 brands ~**60%**, China-origin ~**62%** — while China ownership stays near **5%**. For the stock essay keep [research](/blog/ai-compute-demand-research-2026) open; for sites keep the [Aug location update](/blog/ai-compute-demand-update-202608); for usage keep the [token series](/blog/major-ai-brands-token-consumption-2022-2026).`,
+  },
+  {
     id: "bank-commercial-credit-update-2026q3",
     slug: "bank-commercial-credit-update-2026q3",
     title:
