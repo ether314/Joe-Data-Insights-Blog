@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ai-capex-spend-concentration-2026",
+    marker: "AI capex & spend — concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "measurement-science-update-202608",
     marker: "China domestic R&D +8.1%; intensity 2.80%; AI patents ~75%",
     forbidden: "Loading interactive charts",

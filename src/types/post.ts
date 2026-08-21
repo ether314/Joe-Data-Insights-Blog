@@ -122,7 +122,8 @@ export interface Post {
     | "geopolitics-institutions-concentration-2026"
     | "migration-humanitarian-update-2026"
     | "fiscal-industrial-policy-concentration-2026"
-    | "measurement-science-update-202608";
+    | "measurement-science-update-202608"
+    | "ai-capex-spend-concentration-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
