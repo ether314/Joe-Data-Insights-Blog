@@ -2,6 +2,108 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "geopolitics-institutions-concentration-2026q3",
+    slug: "geopolitics-institutions-concentration-2026q3",
+    title:
+      "Q3 Concentration: IMF Top-1 Still 16.5% / Top-3 28.7% — Consent Climbs to 76.66%",
+    excerpt:
+      "Q3 concentration lens on institutions & governance: vote tip frozen (US 16.5%, Top-3 28.7%, Top-5 40%) while quota consents rise +3.88 pp to 76.66% — the sole special-majority blocker remains the pivotal consent holdout ahead of the Nov 15 gate.",
+    category: "Politics",
+    themeId: "geopolitics-institutions",
+    imageUrl:
+      "/images/politics-geopolitics-institutions-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of teal-amber institutional concentration bars rising toward five glowing crimson veto seals, Visual Capitalist–style governance thumbnail",
+    publishedAt: "2026-08-21T13:00:00Z",
+    featured: true,
+    visualization: "geopolitics-institutions-concentration-2026q3",
+    layout: "default",
+    content: `Our [2026 concentration print](/blog/geopolitics-institutions-concentration-2026) answered the first distribution question: how thick is formal authority at the tip — IMF Top-1 **16.5%**, Top-3 **28.7%**, Top-5 **40%**, with the United States alone above the **15%** line that blocks **85%** special majorities, and UNSC veto share already **100%** inside five permanent seats. The [Q3 theme update](/blog/geopolitics-institutions-update-2026q3) then refreshed the *consent clock*: quota consents at **76.66%** (**+3.88 pp** vs Oct 2025), gap to effectiveness narrowed to **−8.34 pp**, NAB still **83.9%**, relative vote shares still frozen, deadline extended to **15 Nov 2026**. This Q3 concentration lens asks the sharper follow-up desks actually trade: **how concentrated is the system when you re-score Top-1 / Top-3 after the consent gate moves — and the tip does not?**
+
+The interactive dashboard above is built as a **Q3 concentration lens**. Toggle **Scoreboard**, **Vote ladder**, **Consent gate**, and **Block & veto**. The punchline is deliberately two-sided. On **voting power**, the tip is *stuck*: US still **16.5%**, Top-3 still **28.7%**, Top-5 still **40%**, IBRD nearly identical (**15.8% / 28.5% / ~40%**). On **consent**, the gate *moved*: quota share consented climbed to **76.66%**, residual to the **85%** threshold narrowed by almost **4 pp**, and the sole shareholder who can block special majorities alone is still the pivotal holdout. Concentration did not dilute. It coupled more tightly to effectiveness.
+
+## The Q3 concentration scoreboard
+
+| Perimeter | Top-1 | Top-3 / thick top | What moved vs prior concentration |
+| --- | ---: | ---: | --- |
+| IMF voting power | **16.5%** (US) | **28.7%** (US+JP+CN) | **0 pp** — shares frozen |
+| IBRD voting power | **15.8%** (US) | **28.5%** | **0 pp** — twin hierarchy held |
+| Quota consent gate | **76.66%** consented | Threshold **85%** | **+3.88 pp** vs Oct 2025 |
+| Gap to 85% | **−8.34 pp** | Prior gap **−12.22 pp** | Narrower residual, same blocker math |
+| NAB rollback | **83.9%** | Threshold **90%** | **0 pp** — held flat |
+| Special-majority block | US alone **>15%** | JP+CN **12.2%** (short) | Still one sovereign solo blocker |
+| UNSC veto power | Any P5 **20%** equal | Top-5 **100%** | Charter concentration unchanged |
+| UNSC seats | P5 **33.3%** of 15 | — | Seat share still understates veto |
+
+Read the table as a **family of market shares**, not one slogan. Vote Top-1 / Top-3 tell you who owns continuous weight. Consent percentages tell you whether that weight can *activate* a reform. Blocking arithmetic tells you who can stop the hardest votes even when most members say yes. UNSC veto share tells you who owns binary negative rights. Analysts who quote only “Top-5 = 40%” miss the solo block; analysts who quote only “consent = 76.66%” miss that the residual gap is still sized like a Top-1 shareholder.
+
+## Frozen tip: Top-1 / Top-3 did not move in Q3
+
+Toggle **Vote ladder**. Epoch-style restatement is unnecessary here: the Fund and Bank have not published a relative-share rewrite. The Lorenz panel among the top ten still rises past **one-sixth** at rank 1 and past **half** by rank 9–10, while an equal-split diagonal across ten chairs climbs linearly. Ranked bars still put the United States alone near **16.5%** IMF / **15.8%** IBRD, with Japan and China clustered near **6%** each — and China still sitting roughly **−12.6 pp** under its PPP GDP claim on the scatter.
+
+That freeze is the Q3 contribution relative to a naive “update = new shares” instinct. Our [prior concentration companion](/blog/geopolitics-institutions-concentration-2026) already scored the tip; Q3 does not rewrite it. What Q3 rewrites is the *environment around the tip*: how close the membership is to making an equiproportional enlargement *effective*, and therefore how much the frozen Top-1 weight still gates the system.
+
+Open **Scoreboard → Cross-perimeter HHI**. Analytical HHI proxies still rank UNSC veto equality highest (~**2,000** on five equal rights), then seat-bloc geometry, then the IMF/IBRD top-ten ladders (~**520** / ~**490**). Continuous multilateral voting looks “mild” next to commodity chokepoints — until the **85%** rule turns **16.5%** into a structural veto on the hardest decisions.
+
+## Moving gate: consent climbed while shares stayed put
+
+Filter **Consent gate**. The path chart is the vintage delta: Oct 2025 quota consents at **72.78%** → Apr/May 2026 print at **76.66%** → November effectiveness deadline still marked at **85%**. NAB stays flat at **83.9%** against a **90%** credit-share gate. The residual quota gap is **−8.34 pp** — narrower than the prior **−12.22 pp**, but still large enough that a US-scale non-consent remains pivotal.
+
+This is why a Q3 *concentration* lens belongs next to the Q3 *update*. Consent is not a separate soft-politics story. It is the mechanism that decides whether the existing concentration map can be even slightly diluted by an equiproportional increase that does **not** yet move relative weights. Until effectiveness clears, Top-1 / Top-3 shares stay the live distribution of authority.
+
+Member flags on the tip reinforce the coupling: among tracked majors, the United States prints as the disclosed non-consent on the Top-1 chair; China prints as consented on a Top-3 chair that is still far under its GDP weight. Concentration and representation gaps therefore point in opposite directions on the same ledger — the over-weighted tip holds the gate; the under-weighted mid-pack cannot open it alone.
+
+## Why 16.5% is still a blocking share — and now a consent share
+
+The Fund’s hardest decisions still require an **85%** special majority. Arithmetic still says any coalition holding **more than 15%** can block. The United States, alone at **16.5%**, still clears that line. No other single member does.
+
+Q3 adds the consent overlay: the same chair that can block special majorities is the chair whose non-consent keeps the 16th GRQ from becoming effective. Toggle **Block & veto**. Japan + China together are still **~12.2%** — short of solo block even though both are in the consented camp on the majors panel. A European DE+FR+UK+IT+ES cluster still clears **~18%** as a bloc. A CN+IN+BR+RU+ZA grouping still lands near **~14%**. Rival clusters need coordination the charter does not automate; the Top-1 shareholder does not.
+
+That asymmetry is the concentration insight markets miss when they celebrate **+3.88 pp** of consent progress as if it diluted power. Progress narrowed the *residual*. It did not create a second solo blocker, and it did not move Top-3 share one tenth of a point.
+
+## Cross-institution: votes, shares, and vetoes remain different meters
+
+Stay on **Scoreboard** and step **Institutions Top-k** through Top-1 → Top-3 → Top-5 → HHI. The same concentration cut still tells incompatible stories:
+
+- **IMF voting power** — Top-1 **16.5%**, Top-3 **28.7%**, Top-5 **40%**. Continuous weights; special majorities create a hard block threshold; Q3 consent is the activation layer.
+- **IBRD voting power** — nearly the same ladder (**15.8% / 28.5% / ~40%**). Twin hierarchy; SCI / amendment gates remain stuck on separate Governors politics our theme updates have tracked as non-moving.
+- **UNSC veto power** — Top-5 = **100%**. Five permanent members hold *all* negative authority. There is no sixth veto.
+- **UNSC seats** — P5 are only **33%** of the fifteen-member Council. Seat share understates veto concentration; veto share overstates everyday agenda power. Both remain true.
+
+A single “multilateral concentration index” that averages these four perimeters is still a category error. IMF concentration bites through *threshold arithmetic plus consent*. UNSC concentration bites through *binary negative rights*. IBRD concentration bites through *capital and voice coalitions* that have repeatedly failed to reopen the hierarchy.
+
+## Regions, gaps, and veto practice inside the P5
+
+Open **Vote ladder → Regions**. The regional donut among tracked clusters still shows Americas and Europe each near the low-**20%s** of IMF vote weight among majors, Asia-Pacific closer to the high-teens despite a far larger PPP GDP claim. Filter **Asia-Pac** and the under-weight story sharpens without touching Top-1: even a full Asia-Pacific realignment bargain would still have to clear a US consent gate on Fund-side effectiveness.
+
+Toggle **Block & veto** for practice concentration inside formal equality. Charter concentration already says five states own **100%** of vetoes. Recent annual stacks remain dominated by Russia, with the United States and China as secondary users, and the United Kingdom and France near zero in the 2018–2024 window. Formal P5 equality (“each has a veto”) coexists with highly unequal *use*. Expanding elected seats without touching the veto still leaves Top-5 veto share at **100%**.
+
+## Who is exposed under a high-concentration Q3 reading
+
+**Exposed:** emerging-market coalitions that treat Top-5 = 40% plus rising consent as “diffuse enough” for imminent voice reform; program countries whose access narratives embed quota enlargements that still need **85%** effectiveness; modelers who equate seat expansions at the UN with veto dilution; and forecasts that assume Japan+China or BRICS-style clusters can match US blocking power without additional mid-weight partners — especially now that several of those chairs have already consented while the Top-1 has not.
+
+**Relative winners under current rules:** the sole shareholder above the **15%** special-majority block line who also holds pivotal consent weight; P5 members whose negative rights do not scale with GDP; European multi-country chairs that can assemble block weight as a cluster; and any bilateral or plurilateral safety net that does not wait on Fund/Bank realignment or on the November gate.
+
+**What would change the story:** US consent that clears the residual quota/NAB gaps before **15 Nov 2026**; a 17th GRQ formula that actually moves relative shares (not only another equiproportional enlargement); an IBRD SCI or Basic Votes amendment that reopens Bank hierarchy; or a UNSC reform that redistributes veto rights rather than only elected seats. None of those print as a new Top-1 / Top-3 rewrite in the disclosed share tables this dashboard reads.
+
+## Caveats and methodology
+
+- **Vote share ≠ quota share.** Consent thresholds for the 16th GRQ use quota denominators; voting power includes basic votes. Top-k ladders here are **voting power** shares — carried because relative weights remain frozen.
+- **Consent figures** follow IMF Policy Paper **2026/017** (staff cut-off **29 Apr 2026**) versus the prior Oct 2025 print used in theme updates — not a claim about every bilateral quiet consent after the cut-off.
+- **Top-5 IMF composition** uses US, Japan, China, Germany, France. The UK is tied with France at **~4.0%**; swapping UK for France moves Top-5 by rounding, not by regime change.
+- **HHI / Lorenz curves** among the top ten are analytical derivatives from disclosed member shares; they are not Fund-published concentration indices. Cross-perimeter HHI rankings are illustrative.
+- **Regional buckets** among tracked majors are analytical aggregations for the donut — not official IMF constituency totals. “Rest of membership” is a residual.
+- **UNSC veto counts** are annual aggregates from public Security Council documentation patterns; they measure *use*, not latent veto power.
+- **Gaps vs PPP GDP** use WEO-style anchors rounded to 0.1 pp — same convention as our research post.
+- This is a **Q3 concentration lens**. For the frozen tip without the consent overlay, use the [2026 concentration print](/blog/geopolitics-institutions-concentration-2026). For the consent clock and deadline mechanics, use the [Q3 update](/blog/geopolitics-institutions-update-2026q3). For vote-vs-GDP stock detail, use the [research ledger](/blog/geopolitics-institutions-research-2026).
+
+## The shareable takeaway
+
+Institutions & governance still concentrate authority in two incompatible ways at once — and Q3 made the coupling louder. On IMF votes, Top-1 is still **16.5%**, Top-3 **28.7%**, Top-5 **40%** — a frozen tip where one state alone sits above the **15%** line that blocks **85%** special majorities. On the consent gate, quotas climbed to **76.66%** (**+3.88 pp**), the residual to effectiveness narrowed to **−8.34 pp**, and the same Top-1 chair remains the pivotal holdout ahead of **15 Nov 2026**. On the Security Council, Top-5 veto share is still **100%** even though permanent members are only one-third of seats. In this system, **power is not thinning at the top** — it is thick enough at rank 1 to stop the hardest reforms, absolute at the veto layer, and still decisive on whether an enlargement that does not yet rewrite relative shares can become real.
+
+Related reading: [2026 concentration print](/blog/geopolitics-institutions-concentration-2026), [Q3 consent update](/blog/geopolitics-institutions-update-2026q3), [August mid-window update](/blog/geopolitics-institutions-update-202608), and [institutions research ledger](/blog/geopolitics-institutions-research-2026).`,
+  },
+  {
     id: "industrial-robotics-concentration-2026q3",
     slug: "industrial-robotics-concentration-2026q3",
     title:

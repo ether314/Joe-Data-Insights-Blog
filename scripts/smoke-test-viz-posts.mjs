@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "geopolitics-institutions-concentration-2026q3",
+    marker: "Institutions & governance — Q3 2026 concentration lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "industrial-robotics-concentration-2026q3",
     marker: "Industrial robotics — Q3 concentration lens",
     forbidden: "Loading interactive charts",
