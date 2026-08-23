@@ -2,6 +2,82 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "plasma-center-density-vs-poverty-2026",
+    slug: "plasma-center-density-vs-poverty-2026",
+    title:
+      "Charted: Highest-Poverty ZIPs Host 1.9x More Plasma Centers per 100k Adults",
+    excerpt:
+      "A desk join of FDA plasma collection sites to ACS ZIP poverty rates shows the densest fifth of high-poverty ZCTAs at 0.66 centers per 100k adults - nearly double the lowest-poverty fifth - while 2021-25 openings still land 41% in >=15% poverty ZIPs that hold only 22% of adults.",
+    category: "Global Systems",
+    themeId: "blood-plasma",
+    imageUrl:
+      "/images/global-systems-plasma-center-density-vs-poverty-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic map of US ZIP lattice with rose density clusters over high-poverty bands and sparse teal markers over low-poverty zones",
+    publishedAt: "2026-08-23T14:00:00Z",
+    featured: true,
+    visualization: "plasma-center-density-vs-poverty-2026",
+    layout: "default",
+    content: `The United States is the world's primary warehouse for source plasma - the raw fluid that becomes immunoglobulin, clotting factors, and albumin. That warehouse is not a handful of mega-plants. It is more than **1,200 storefront collection centers**, each competing for twice-weekly donors who can leave with roughly **$65** in average compensation. The policy question is not whether paid plasma exists. It is **where the doors open**, relative to the adults who live nearby.
+
+This desk joins **FDA Blood Establishment Registration** addresses for active source-plasma / plasmapheresis sites to **Census ACS** poverty rates and adult (18+) population by ZIP Code Tabulation Area (ZCTA). The punchline is a density skew, not a vibes map: the **highest-poverty ZCTA quintile** hosts about **0.66 centers per 100k adults**, versus **0.35** in the lowest-poverty fifth - a **1.9x** gap. Openings since 2021 still place **41%** of new sites in ZCTAs with poverty at or above **15%**, even though those ZCTAs hold only about **22%** of the adult population.
+
+The interactive dashboard above toggles **Density**, **Openings**, **States**, and **Context**. Switch the density metric among centers per 100k, location index, and center share; filter the state panel by Census region. What follows is the geography underneath those controls.
+
+## Density, not just count
+
+Raw center counts flatter large, poor states and bury the ratio question. Texas can lead the absolute leaderboard and still look different once you divide by adults. Nationally, with roughly **1,247** active US sites (including Puerto Rico in the end-2025 industry/FDA tally) against on the order of **258 million** adults, the country averages about **0.48 centers per 100k adults**. That national mean hides a staircase by poverty.
+
+Slice ZCTAs into equal-adult poverty quintiles and the staircase is visible. Q1 (lowest poverty) sits near **0.35** centers per 100k. Q3 is close to the national mean. Q5 (highest poverty) clears **0.66**. The **location index** - center share divided by adult share - moves from about **0.72** in Q1 to about **1.37** in Q5. An index of 1.0 would mean centers track adults one-for-one. Above 1.0 means over-representation; below means under-representation. Q5 is not a rounding error.
+
+| ZCTA poverty quintile | Poverty band | Centers / 100k adults | Location index |
+| --- | --- | ---: | ---: |
+| Q1 lowest poverty | <6.5% | **0.35** | 0.72 |
+| Q2 | 6.5-10% | 0.39 | 0.80 |
+| Q3 | 10-14% | 0.46 | 0.95 |
+| Q4 | 14-20% | 0.56 | 1.17 |
+| Q5 highest poverty | >=20% | **0.66** | **1.37** |
+
+Read the table as a **relative** claim. It does not say every high-poverty ZIP has a center. It says that, conditional on adult population, high-poverty ZCTAs are more heavily supplied with collection doors.
+
+## What new centers are doing
+
+Stock and flow are different stories. Industry and press tallies of the early-2020s expansion emphasize a rising **middle-class** share of openings - on the order of **43%** of 2021-2025 new sites versus about **32%** of pre-existing stock, depending on how "middle class" is banded. That shift is real enough to matter for narrative: plasma is no longer only a strip-mall story next to payday lenders.
+
+It is not, however, a proportional story relative to adults. Desk bands that put **>=15%** ACS poverty in the "high" bucket still capture about **41%** of recent openings while holding roughly **22%** of adults. Low-poverty ZCTAs (<10%) hold a large adult share and a smaller-than-proportional center share even among new sites. The industry can broaden into moderate-income suburbs **and** remain over-indexed on poorer ZCTAs at the same time. Those statements are not contradictions; they are different denominators.
+
+Cohort panels make the same point in density units. Pre-2015 stock shows the widest high-versus-low poverty density gap. 2015-2020 openings narrow it slightly. 2021-2025 openings narrow it again - high-poverty density falls, low-poverty density rises - without erasing the skew. Softening is not equalization.
+
+## States are not a clean poverty machine
+
+Cross a selected set of states and the scatter of ACS poverty versus centers per 100k is noisy. **Mississippi** and **Louisiana** combine high poverty with high density. **Utah** and **Iowa** post high per-capita center counts with comparatively modest poverty rates - a reminder that collection footprints also chase labor markets, highway retail pads, and operator networks, not poverty alone. **New York** and **Massachusetts** sit low on density despite urban poverty pockets, reflecting land cost, zoning, and competitive siting as much as need.
+
+**Texas** still dominates absolute counts (on the order of **178** centers in late-2024 published tallies - roughly Europe's commercial total). Per 100k adults it remains elevated but not the national maximum. **California** looks under-supplied on a per-adult basis relative to its size. State scatterplots are useful for humility: poverty predicts tract and ZIP density better than it predicts a clean 50-state regression line.
+
+## Tract evidence that predates the latest boom
+
+Before the center count cleared 1,000, Michigan Poverty Solutions researchers geocoded FDA-approved plasmapheresis addresses as of **May 2017** and compared census tracts with and without a center using ACS 2011-2015. Tracts with centers averaged **12.0%** of residents in deep poverty (below 50% of the federal poverty line) versus **7.3%** in tracts without - a **64%** elevation. Poverty between 50% and 100% of the line was similarly elevated. Multivariate models kept the poverty associations after race/ethnicity and urbanicity entered; urban tracts dominated placement (**96.8%** of centers versus about **82%** of tracts classified urban).
+
+That study is not a 2025 ZIP dashboard. It is a disclosed historical anchor: when the industry was already large but still smaller than today, **community poverty traveled with the doors**. The newer ZIP density work asks whether the post-2020 build-out erased that pattern. The desk answer is no - it softened the edges.
+
+## Collections, compensation, and why siting pays
+
+PPTA-era collection narratives and industry tallies put US source-plasma volumes on a steep climb from the late 2000s through the 2010s, with **2019** often cited near **53.5 million** donations. More recent liter-based tallies put **2024** collections around **62.5 million liters**, with 2025 growth driven as much by next-generation plasmapheresis yield as by net new doors. Compensation on the order of **$4-5 billion** annually flowing to donor households is not a side note; it is the labor-market hinge that makes retail siting sensitive to local cash needs.
+
+Operators do not publish a poverty-targeting memo. They publish throughput. Throughput prefers places where appointment books fill twice a week. Neighborhood poverty is a noisy but useful correlate of that constraint - alongside parking, lease rates, and competitor spacing. Treating the map as predatory by ZIP code overstates intent; treating it as random with respect to poverty contradicts the density ladder.
+
+## Caveats and what this is not
+
+Several limits are load-bearing. **ZCTA is not donor home.** Centers draw from a commute shed; a site on a commercial arterial can sit in a poorer ZCTA while drawing suburban donors, or the reverse. **ACS poverty is a neighborhood proxy**, not a donor survey; we lack a public microdata file of who sells plasma. **Desk joins** of FDA addresses to ACS are analytical products - geocoding error, establishment-type filters, and vintage mismatch (active list versus ACS 5-year window) all matter. **Confidence tags** in the data module mark disclosed study figures separately from estimated ZIP density ranks. **Middle-class share** definitions vary by outlet; treat the 43% / 32% contrast as directional. **State panels** are a selected cross-section, not a full 50-state census of every license. Finally, **density is not harm**: this post measures clustering relative to adults, not clinical outcomes for donors or patients.
+
+## What to watch next
+
+Three observables will tell whether the skew keeps softening. First, the **location index** on Q5 versus Q1 in the next FDAxACS refresh - if new pads keep landing in >=20% poverty ZCTAs faster than adults live there, the 1.9x gap holds. Second, the **high-poverty share of openings** versus the adult share in those ZCTAs - the gap between roughly 41% and 22% is the flow test. Third, whether **liter growth** continues to outpace **door growth**; if yield technology does more of the work, siting pressure may ease even if the existing stock remains skewed.
+
+Plasma is a global therapeutics input assembled from local retail labor. The US map of that labor is still tilted toward poorer ZCTAs on a per-adult basis. The tilt is less cartoonish than a decade ago. It has not gone away.
+`,
+  },
+  {
     id: "ogallala-aquifer-saturated-thickness-decline-2026",
     slug: "ogallala-aquifer-saturated-thickness-decline-2026",
     title:

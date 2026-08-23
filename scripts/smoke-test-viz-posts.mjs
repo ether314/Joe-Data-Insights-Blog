@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "plasma-center-density-vs-poverty-2026",
+    marker: "Plasma · density vs poverty",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ogallala-aquifer-saturated-thickness-decline-2026",
     marker: "High Plains · saturated-thickness change",
     forbidden: "Loading interactive charts",

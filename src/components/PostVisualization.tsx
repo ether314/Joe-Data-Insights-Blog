@@ -2972,6 +2972,21 @@ const OgallalaAquiferSaturatedThicknessDecline2026Dashboard = dynamic(
   },
 );
 
+const PlasmaCenterDensityVsPoverty2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/PlasmaCenterDensityVsPoverty2026Dashboard"
+    ).then((m) => m.PlasmaCenterDensityVsPoverty2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3751,6 +3766,10 @@ export function PostVisualization({
 
   if (type === "ogallala-aquifer-saturated-thickness-decline-2026") {
     return <OgallalaAquiferSaturatedThicknessDecline2026Dashboard />;
+  }
+
+  if (type === "plasma-center-density-vs-poverty-2026") {
+    return <PlasmaCenterDensityVsPoverty2026Dashboard />;
   }
 
   return null;
