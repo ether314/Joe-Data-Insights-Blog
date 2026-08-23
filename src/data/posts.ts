@@ -1135,9 +1135,9 @@ Sources: IEA Global EV Outlook 2025–2026 charging chapters; DOE AFDC public DC
     featured: true,
     visualization: "spot-container-freight-vs-blank-sailings-2026",
     layout: "default",
-    content: `Container spot desks watch two dials that rarely move in lockstep: the **Shanghai Containerized Freight Index (SCFI)** and the share of **blank sailings** — scheduled sailings cancelled before departure. When demand softens, carriers blank voyages to shrink offered TEU. When demand firms, blanks shrink and rates can reprice even without dramatic cancellations. The question for East–West trades is operational, not rhetorical: **how did Shanghai–US and Shanghai–EU spot prints move with blank shares**, and when did blanks fail to defend a floor?
+    content: `42% of Asia–USEC capacity vanished for a single week in May 2025. That was the sharpest blank-sailing print of the post-pandemic tariff shock — and yet spot rates kept falling through it. Container markets run on two dials that rarely move in lockstep: the **Shanghai Containerized Freight Index (SCFI)** and the share of **blank sailings** — scheduled sailings cancelled before departure. When demand softens, carriers blank voyages to shrink offered TEU; when demand firms, blanks shrink and rates can reprice even without dramatic cancellations. The operational question for East–West trades: **how did Shanghai–US and Shanghai–EU spot prints move with blank shares**, and when did blanks fail to defend a floor?
 
-The interactive dashboard above is built as a **rate × capacity lens**. Toggle the spot metric among **USWC**, **USEC**, **N. Europe**, **Med**, and the **SCFI composite**; filter the scatter by lane; switch focus panels among the dual-axis tape, blank×spot scatter, blank-mix pie, and peak-event bars. The punchline is deliberately two-clock. Blank intensity can spike while rates still fall, and rates can rebound with only modest blank shares when cargo demand returns.
+The dashboard pairs the two series as a rate-versus-capacity view. The spot metric switches among **USWC**, **USEC**, **N. Europe**, **Med**, and the **SCFI composite**; focus panels cover the dual-axis tape, a blank-by-spot scatter, a blank-mix breakdown, and peak-event bars. The lesson is deliberately two-sided: blank intensity can spike while rates still fall, and rates can rebound with only modest blank shares when cargo demand returns.
 
 ## What SCFI measures — and what blanks measure
 
@@ -1151,7 +1151,7 @@ UNCTAD’s maritime reviews supply the structural backdrop: fleet deliveries, sc
 
 The sharpest blank prints in the recent sample sit in the **May 2025** tariff-adjustment window. Sea-Intelligence-style coverage put Asia–USWC blanks near **28%** of weekly capacity in a peak week and Asia–USEC near **42%** in another — demand expectations revised down so fast that carriers cancelled sailings in batches rather than sail half-empty. Drewry’s blank tracker in the same season attributed roughly **56%** of near-term blanked sailings to Transpac trades, with Asia–Europe around **31%** and the transatlantic a thinner slice.
 
-Spot did **not** treat those blanks as a hard floor. Nearby SCFI-style USWC and USEC prints still moved **about −17%** across the blank window in the event table — capacity came off, but the booking market kept repricing lower as importers paused or redirected cargo. The desk lesson is narrow: **a 40% blank share is a demand confession**, not a guarantee that next week’s FEU print holds.
+Spot did **not** treat those blanks as a hard floor. Nearby SCFI-style USWC and USEC prints still moved **about −17%** across the blank window in the event table — capacity came off, but the booking market kept repricing lower as importers paused or redirected cargo. The lesson is narrow: **a 40% blank share is a demand confession**, not a guarantee that next week's FEU print holds.
 
 Linerlytica-style restatements of Transpac capacity removal after the tariff shock — on the order of **~200,000 TEU** and dozens of ships shifted or idled — show how large the physical adjustment can be. Those TEU figures are illustrative tracker windows, not a full-year blank census. Use them for scale, not for precise P&L attribution.
 
@@ -1161,7 +1161,7 @@ Seasonal blanks behave differently from tariff blanks. In the **October 2025 Gol
 
 That pairing is the post’s second clock. Carriers blanked aggressively into the holiday demand dip, and Europe spot still printed soft because **oversupply and rate competition** outran the blank lever. A single soft Transpac week in the same season saw USWC FEU drop on the order of **~31%** week-on-week and USEC about **~23%** even while blank shares remained elevated. Blanks slowed the bleed; they did not erase it.
 
-Post–Golden Week, SCFI composite prints near **~$1,246** (week ~43 path) showed a rebound as blanks normalized toward high-single-digit scheduled shares. The sequence — blank spike, soft print, then partial rebound — is why the dashboard’s dual-axis tape matters more than any one week’s blank percentage.
+Post–Golden Week, the SCFI composite index rebounded to about **2,185 points** by late October (with Europe leg prints recovering toward **$2,226/TEU** after GRI attempts) as blanks normalized toward high-single-digit scheduled shares. The sequence — blank spike, soft print, then partial rebound — is why the dashboard's dual-axis tape matters more than any one week's blank percentage.
 
 ## Correlation is soft — and lane-specific
 
@@ -1186,7 +1186,7 @@ Read the table as a **family of maps**. USEC owns the blank-peak extreme in this
 
 Blanks work best as a **short-horizon inventory tool**: remove sailings for a holiday week, a port congestion pocket, or a sudden booking cancellation wave. They work poorly as a substitute for **structural demand**. When importers defer cargo after a tariff shock, blanking 40% of USEC capacity stops some empty slots from sailing; it does not recreate the missing bookings. When Asia–Europe is oversupplied after cascade redeployments, blanking a quarter of FEWB capacity can still leave enough tonnage to keep SCFI Europe soft.
 
-August 2026-style firmness on Transpac — rates rising while blank shares stayed near high single digits — is the mirror case. Space tightened because cargo showed up, not because carriers cancelled half the string. Desks that only watch blank calendars miss the demand half of the clearing price.
+August 2026-style firmness on Transpac — rates rising while blank shares stayed near high single digits — is the mirror case. Space tightened because cargo showed up, not because carriers cancelled half the string. Anyone watching only blank calendars misses the demand half of the clearing price.
 
 Redeployment complicates the story further. Capacity pulled from Transpac can reappear on Asia–Europe or Med strings within weeks, so a blank on one corridor is sometimes a **transfer**, not a net global cut. Blank-mix pies in the dashboard (Transpac vs Asia–Europe vs transatlantic shares of blanked sailings) keep that geography honest: who cancels where is not the same question as how much net TEU left the water.
 
@@ -1194,7 +1194,7 @@ Redeployment complicates the story further. Capacity pulled from Transpac can re
 
 Several limits apply. SCFI is a **Shanghai-export spot survey**, not a global all-in contract index and not identical to Drewry WCI or booking-exchange prints. Blank percentages come from **schedule trackers** with differing universes (sailings vs TEU; announced vs executed). Monthly averages **smooth** peak weeks — the May USEC **42%** print is a weekly peak, not a monthly mean. Red Sea routing and canal constraints change effective capacity without appearing as “blanks.” Confidence tags in the data module mark disclosed tracker windows versus estimated/carried monthly paths.
 
-Use the dashboard to stress-test a claim, not to replace carrier advisories. If a procurement memo says “blanks will floor rates next month,” ask which corridor, which blank share, and whether demand is pausing or merely seasonal. The 2025–2026 East–West tape says blanks are a real lever — and a frequently over-credited one.
+Use the dashboard to stress-test a claim, not to replace carrier advisories. If a procurement memo says "blanks will floor rates next month," ask which corridor, which blank share, and whether demand is pausing or merely seasonal. The 2025–2026 East–West tape says blanks are a real lever — and a frequently over-credited one.
 
 **Bottom line:** Peak Asia–USEC blanks near **42%** and Golden Week FEWB blanks near **25%** show carriers will cut sailings hard. Soft SCFI Europe near **$1,052/TEU** and double-digit FEU drops inside blank-heavy weeks show the market can still clear lower. Watch SCFI and blank share **together**, by lane — never as a single slogan.`,
   },
