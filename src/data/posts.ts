@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "migration-humanitarian-concentration-2026q3",
+    slug: "migration-humanitarian-concentration-2026q3",
+    title:
+      "Q3 Concentration: Coverage Healed +16 pp — FTS Top-1 Still 23%",
+    excerpt:
+      "Q3 stickiness lens on migration and humanitarian burden: GHO coverage rose from 24.4% to 40.4%, yet FTS Top-1 stayed at 23.1% and Top-3 at 44.7%. Host Top-3 (~19%) and LMIC hosting (~68%) did not move — the narrative meter changed; the tip did not.",
+    category: "Politics",
+    themeId: "migration-humanitarian",
+    imageUrl:
+      "/images/politics-migration-humanitarian-concentration-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber coverage climbing beside flat sky Top-1/Top-3 donor bars and rose host clusters",
+    publishedAt: "2026-08-22T14:00:00Z",
+    featured: true,
+    visualization: "migration-humanitarian-concentration-2026q3",
+    layout: "default",
+    content: `Our [2026 concentration print](/blog/migration-humanitarian-concentration-2026) answered the first distribution question: FTS Top-1 (United States) ~**23.1%**, Top-3 ~**44.7%**, host-country Top-3 ~**18.5%**, and LMIC hosts still ~**68%** of refugees under a **40.4%** GHO coverage narrative. The [Q3 vintage](/blog/migration-humanitarian-update-2026q3) and [August donor unpack](/blog/migration-humanitarian-update-202608) then moved the *levels*: May→Aug coverage healed **+16 pp** (24.4% → 40.4%) as funded FTS jumped from **$8.21B** to **$14.08B**. This Q3 concentration lens asks the desk follow-up: **did that heal redistribute who sits at the top of the cash and people ladders — or mostly rearrange absolute dollars under a stuck tip?**
+
+The interactive dashboard above is built as that **Q3 stickiness lens**. Toggle **Δ scoreboard**, **Tip stickiness**, **Heal attribution**, **Agency tip**, and **Plan leverage**. Filter tip metrics (Top-1 / Top-3 / HHI), slope meters, moved-only deltas, and plan-versus-role scatters. The punchline is deliberately multi-sided. On **coverage**, the narrative meter jumped **+16 pp**. On **FTS donors**, Top-1 and Top-3 stayed at **23.1%** and **44.7%** — Δ **0 pp** versus the concentration print. On **hosts**, country Top-3 and LMIC shares stayed put. On **heal attribution** (constructed), roughly **77%** of the +16 pp lift sits on Top-3-scale donor clusters. Coverage can heal on an oligopoly cash ladder without democratising who bears people costs.
+
+## The Q3 stickiness scoreboard
+
+| Lens / meter | Top-1 / level | Top-3 / peer | Δ vs May / prior |
+| --- | ---: | ---: | ---: |
+| GHO appeal coverage | **40.4%** | — | **+16.0 pp** |
+| FTS donors (cash) | **23.1%** (US) | **44.7%** | **0 pp** |
+| Refugee hosts (people) | **6.6%** (Colombia) | **18.5%** | **0 pp** |
+| Host income groups | **33%** (UMI) | **80%** | LMIC **68%** flat |
+| UNHCR early pledge | **18%** | — | **−19 pp** vs 2025 YE funded |
+
+Read the table as a **family of market shares under a moving narrative**, not one slogan. Coverage Top-line tells you the GHO cash path healed. Donor Top-1 tells you which chequebook still dominates tracked humanitarian cash. Host Top-3 tells you how thin the *country* tip of people hosting remains. Averaging “humanitarian concentration improved because coverage rose” is a category error — **40.4% coverage is not 23% of FTS**, and neither redistributes a **68%** LMIC host stock.
+
+## Coverage healed; the tip did not
+
+Toggle **Tip stickiness**. The dual-path chart is the post’s central hinge: amber GHO coverage climbs from **24.4%** to **40.4%** while dashed FTS Top-1 and Top-3 lines sit flat at **23.1%** and **44.7%**, and rose host Top-3 / LMIC lines do not move. That is *level* change without *share* change. Absolute funded dollars rose (**+$5.87B**); the tip geometry of who owns those dollars did not.
+
+Open **Vintage slope** and flip the meter. Coverage shows the only steep climb from research → concentration print → Q3/Aug. Donor Top-1, donor Top-3, and host Top-3 are near-flat after the concentration lock. Pair this with our [August donor unpack](/blog/migration-humanitarian-update-202608) when you need the vintage *who paid* story rather than the stickiness cut. August answered whose inflows produced the +16 pp; this post answers whether those inflows changed the *shape* of the tip (they did not).
+
+Two caveats travel with every stickiness claim. **Tracked FTS is not the whole system** — bilateral, private, and in-kind flows can sit outside the ladder you are ranking. And a flat share tip under rising absolute cash still concentrates *power*: the same three actors can write a larger cheque stack without losing oligopoly geometry.
+
+## Who paid the heal — still an oligopoly cash story
+
+Toggle **Heal attribution**. The constructed waterfall decomposes the May→Aug path: US-scale donors ~**+7.2 pp**, EC + Japan ~**+5.1 pp**, other Top-10 ~**+3.7 pp**, residual FTS ~**+0.8 pp**, minus ask creep ~**−0.8 pp**, landing at **40.4%**. The heal-share donut puts roughly **45% / 32% / 23%** of the positive lift on those three clusters — about **77%** on Top-3-scale money. That is editorial geometry, not an official FTS attribution filing, but it matches the same oligopoly tip the concentration print already named.
+
+Flip the lens filter to **Donors** on the share ladder beside the waterfall. The United States (**$2.83B**, **23.1%**), European Commission (**$1.75B**, **14.3%**), and Japan (**$0.89B**, **7.3%**) still clear the cumulative top-three. Top-10 still clears ~**82%** of ~**$12.3B** tracked. The concentration curve rises to ~**45%** by rank 3 and ~**82%** by rank 10 — leaving a long residual that did not suddenly democratise when coverage healed.
+
+## People tips stayed diffuse at country rank — thick at income rank
+
+Host-country geometry did not get a Mid-Year Trends refresh in this window, so the Q3 concentration lens **carries** end-2025 stocks: Colombia (~**2.8M**, ~**6.6%**), Germany (~**2.7M**), Türkiye (~**2.4M**) for a Top-3 near **18.5%** of a ~**42.7M** refugee / OPNIIP universe. Country-level HHI stays in the **unconcentrated** band. That is not equal burden — it is the claim that **no single capital owns the people stock the way the US owns the cash tip**.
+
+Income-group geometry stays the thicker tip: upper-middle ~**33%**, high-income ~**29%**, with **LMIC hosts still ~68%** and LDCs ~**26%**. Income-group HHI (~**2,711**) sits in the **high** band because four coarse buckets replace dozens of countries. The narrative trap is unchanged from the [2026 concentration print](/blog/migration-humanitarian-concentration-2026): treat “hosts are diversified” (true at country rank) as “burden is shared with donors” (false once income and cash tips are read together). For the longer hosting-burden frame, see our [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024).
+
+## Appeal tip and plan leverage: large asks can still sit thin on cash
+
+Toggle **Plan leverage**. Against the August GHO ask of **$34.87B**, Sudan / regional (~**$4.2B**) remains ~**12%** of requirements; Ukraine / regional and oPt / regional bring Top-3 to ~**29%**. The ask-share × coverage scatter (bubble size ∝ people in need) still shows Ukraine-class plans higher on coverage while Sudan- and Sahel-class plans combine large PIN footprints with thinner coverage. A healed *headline* coverage percentage can coexist with under-cash tips inside the largest need clusters.
+
+Flip scatter to **Host/donor roles**. Colombia, Uganda, and Türkiye sit high on people hosted and near-zero on FTS donor share; the US and Japan sit the other way; Germany is one of the few dual roles. That role scatter is the people-side cousin of tip stickiness: healing the cash narrative does not move who hosts.
+
+## Agency tip: UNHCR early pledges thinned while GHO coverage rose
+
+Toggle **Agency tip**. UNHCR’s 2026 needs budget (**$8.505B**) is about **−20%** versus the 2025 needs print, and early-pledge share sits near **18%** — roughly **−19 pp** versus 2025 year-end funded (**37%**). About **11.6M** people sit in an at-risk cuts framing against a ~**136M** planning figure. That is a second tip: agency cash can arrive later and thinner even while GHO coverage narratives look healthier and the FTS oligopoly tip stays locked.
+
+Put agency scarcity beside the still-open GHO gap (~**$20.8B** after the heal). Coverage at **40.4%** is progress relative to May’s **24.4%**; it is not a fully funded system, and it is not evidence that donor or host concentration eased. Our [Q3 update](/blog/migration-humanitarian-update-2026q3) tracks the vintage deltas; this lens tracks whether those deltas changed the *distribution*.
+
+## Caveats: what this lens does not claim
+
+- **Do not average** FTS cash shares, host people shares, GHO coverage %, and UNHCR early-pledge % into one “humanitarian concentration” index — they answer different questions on different denominators.
+- **Heal attribution pp slices are constructed** for geometry; they are not an official OCHA who-paid table. Treat them as editorial decomposition consistent with the disclosed tip, not as cite-ready micro-attribution.
+- **Host stocks and LMIC/LDC shares are carried** from UNHCR Global Trends 2025 until Mid-Year Trends 2026. Tip stickiness on the people side partly reflects a missing stock refresh, not a proven intra-year freeze.
+- **Tracked FTS ≠ whole-of-system finance.** Private philanthropy, remittances, in-kind military-adjacent flows, and unreported bilateral lines can sit off-ladder.
+- **HHI values are analytical** on stated bucket shares (0–10,000). Income-group HHI looks “high” partly because the bucket count is four; country-host HHI looks “low” partly because the residual is large.
+
+## Bottom line for desks
+
+Q3 did not democratise migration and humanitarian burden at the tip. GHO coverage healed **+16 pp** on a cash inflow that still clears through an FTS Top-1 of **~23%** and Top-3 of **~45%**. Host-country Top-3 stays near **19%** while LMIC hosts still carry **~68%** of refugees. Constructed heal attribution puts most of the coverage lift on the same Top-3-scale donor clusters. UNHCR early pledges thinned even as the GHO narrative meter improved. Read coverage as a *funding-path* meter; read Top-1 / Top-3 as the *market-share* meter — and do not confuse a healed path with a redistributed tip.
+
+Related reading: [2026 concentration print](/blog/migration-humanitarian-concentration-2026), [August donor unpack](/blog/migration-humanitarian-update-202608), [Q3 vintage update](/blog/migration-humanitarian-update-2026q3), [research map](/blog/migration-humanitarian-research-2026), and [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024).`,
+  },
+  {
     id: "adaptation-economics-geography-2026",
     slug: "adaptation-economics-geography-2026",
     title:
