@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-housing-permits-vs-household-formation-2026",
+    slug: "us-housing-permits-vs-household-formation-2026",
+    title:
+      "Charted: The US Authorized 0.94 Housing Units per Net New Household in 2024",
+    excerpt:
+      "Census BPS permits lagged HVS household growth again in 2024. San Francisco’s sample ratio sits near 0.42; several Sun Belt metros clear 1.0 — but the national stock still needs replacement on top of net demand.",
+    category: "Economics",
+    themeId: "housing-permits-supply",
+    imageUrl:
+      "/images/economics-us-housing-permits-vs-household-formation-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero with dual permit-versus-household bars and a bold 0.94 permits-per-net-household callout",
+    publishedAt: "2026-08-24T12:00:00Z",
+    featured: true,
+    visualization: "us-housing-permits-vs-household-formation-2026",
+    layout: "default",
+    content: `Mortgage rates get the headlines. Permit tallies get the monthly press release. Household formation — the actual headcount of new dwelling demand — usually gets neither. That omission matters. In **2024**, Census Building Permits Survey (BPS) authorized roughly **1.47 million** privately owned housing units while the Housing Vacancy Survey path, as tabulated by Harvard’s Joint Center for Housing Studies, shows about **1.56 million** net new households. The ratio is **0.94 authorized units per net household** — still below one, and further below a replacement-aware benchmark near **1.2** once demolitions and other stock losses are acknowledged.
+
+The dashboard above is built for that ratio, not for a single month’s seasonally adjusted annual rate. Toggle **National ratio**, **Cumulative gap**, **Metro ladder**, **Metro scatter**, **Structure mix**, and **Region stack**. Filter metros by Census region, sort by lowest ratio or largest unit gap, and stretch the national series back to 2015 when you want the pre-surge baseline. The question is simple: **is the permit pipeline keeping up with the people who need roofs?**
+
+## Why permits-per-household is the right scoreboard
+
+Starts and completions lag permits. Existing-home sales recycle the same walls. Vacancy rates move for reasons that include second homes, short-term rentals, and measurement revisions. None of that replaces a stock-flow identity: over a multi-year window, **net new households need net new housing units**, plus replacement for units lost to demolition, disaster, and conversion out of residential use.
+
+BPS counts **authorized** units in permit-issuing places — a forward signal, not a certificate of occupancy. HVS household totals are survey-based and revised when independent housing-unit controls update. ACS 1-year household estimates at the metro scale carry sampling error that can swamp a single year’s change in smaller markets. Treat the national ratio as a **directional scoreboard** and the metro ladder as a **rank-order diagnostic**, not as audited deed counts.
+
+Still, directionally the scoreboard has been unkind. From **2019 through 2022**, JCHS puts average annual household growth near **1.93 million**. Permits rose too — peaking near **1.74 million** authorized units in **2021** — but not enough to erase the gap. By **2023–2024**, household growth cooled to **1.61 million** and **1.56 million**, while permits settled near **1.47–1.48 million**. The ratio improved from the deep-surge lows near **0.7**, yet never reclaimed a durable surplus.
+
+## The national path since the surge
+
+Open the **National ratio** panel. Twin bars show authorized units and net household growth in thousands; the teal line is the ratio. Before the pandemic, the United States was already skating near or under 1.0 in several years. The surge years punched the denominator. **2020** and **2021** combined hot headship with strong immigration and remote-work reshuffling; permits recovered from the April 2020 trough but could not fully match the household pulse.
+
+The **Cumulative gap** panel sums annual permit-minus-household residuals from the selected start year. On the **2019–2024** window used in the headline stack, the running gap sits near **−920 thousand** units — almost a million authorized units “short” of net household growth before any replacement add-on. That is not the same as a realtor.com-style cumulative shortage since 2012; it is a narrower statement about **this** six-year vintage of flow imbalance.
+
+A replacement-adjusted reading is harsher. Housing analysts often budget **250–300 thousand** units per year nationally for demolitions and other losses — roughly **0.2%** of a ~145 million unit stock. Adding that to net household growth implies a permit (or completion) need closer to **1.8–1.9 million** in a 1.56-million-household year. Against that **~1.2** benchmark, 2024’s **0.94** ratio is not a near miss; it is a structural shortfall that rents and prices eventually price in.
+
+## Which metros sit furthest below replacement?
+
+National averages hide local extremes. The **Metro ladder** ranks a sixteen-metro sample by authorized units per net household over a recent multi-year window that pairs BPS CBSA annuals with ACS household change. **San Francisco–Oakland–Berkeley** prints near **0.42** — fewer than half a permitted unit per net new household. **Boston**, **Los Angeles**, **New York**, and **San Diego** cluster in the **0.49–0.59** band. These are not slow places in absolute permit volume; New York still authorizes tens of thousands of units. They are slow **relative to the household flow they actually experience**, once migration, headship, and international arrivals are netted.
+
+Sun Belt metros tell a different story. **Dallas**, **Houston**, **Austin**, **Charlotte**, and **Raleigh** clear **1.0** on the sample ladder, with Raleigh near **1.18**. That does not mean those markets feel “oversupplied” to renters — vacancy and absorption still matter — but it does mean the **permit response** is closer to measured household growth than the coastal constraint markets.
+
+The **Metro scatter** makes the geometry explicit: household growth on the x-axis, permits on the y-axis, bubble size scaled to rental vacancy. Points below the 1:1 diagonal under-permit relative to net demand. Coastal metros hug the lower-right or mid-right with subdued y-values; Texas and Carolinas sit closer to or above the diagonal with larger absolute volumes.
+
+| Metro (short) | Permits / net HH | Region | Rental vacancy (proxy %) |
+| --- | ---: | --- | ---: |
+| San Francisco | 0.42 | West | 5.8 |
+| Boston | 0.49 | Northeast | 4.1 |
+| Los Angeles | 0.55 | West | 4.6 |
+| New York | 0.58 | Northeast | 3.9 |
+| Seattle | 0.66 | West | 6.2 |
+| Chicago | 0.77 | Midwest | 6.0 |
+| Phoenix | 0.92 | West | 8.4 |
+| Dallas | 1.03 | South | 9.2 |
+| Austin | 1.09 | South | 10.5 |
+| Raleigh | 1.18 | South | 7.6 |
+
+Vacancy is not a perfect inverse of the ratio — Phoenix and Austin can clear higher vacancies while still permitting near household growth because prior boom years overshot and because single-family greenfield pipelines behave differently from urban infill. But the coastal cluster’s combination of **sub-0.7 ratios and mid-single-digit rental vacancies** is the textbook underbuilding signature.
+
+## Structure mix: apartments helped, then cooled
+
+The **Structure mix** panel tracks the share of authorized units in 1-unit, 2–4, and 5+ buildings. Multifamily’s share climbed into the mid-30%s around **2022–2023** as apartment developers raced to meet pandemic-era demand and cheap pre-rate-hike financing. By **2024**, the mix eased as multifamily starts rolled over — JCHS notes multifamily starts down sharply even while rents remained elevated. Single-family regained share, but not enough volume to close the national household gap.
+
+That composition shift matters for the metro ladder. Coastal underbuilders often rely on **5+** product because land and entitlement favor vertical delivery; when multifamily capital stalls, their ratios worsen first. Sun Belt metros can substitute **1-unit** subdivisions on the fringe. The national pie for **2024** still shows roughly **three-fifths** single-family and about **one-third** 5+ — a reminder that “housing supply” is not one industrial process.
+
+## The South still writes most of the permits
+
+Open **Region stack**. The South’s share of authorized units sits near **55%** of the 2024 national total in this dataset — a continuation of a long geographic reallocation of construction. Northeast and Midwest volumes are smaller in absolute terms and often serve slower household growth; West permits are larger than the Northeast but still insufficient for several Pacific metros’ household tallies.
+
+Geography therefore splits into two policy problems that look alike in national media and diverge in data:
+
+1. **Constraint metros** (coastal CA, Boston, parts of NY) — ratios far below 1.0, limited lots, long entitlement clocks, and political resistance to density where jobs already are.
+2. **Throughput metros** (Texas triangle, Carolinas, parts of Arizona) — ratios near or above 1.0, but infrastructure, insurance, and water constraints can still bind, and cumulative national shortages do not vanish just because Dallas clears parity.
+
+Sorting the ladder by **largest unit gap** rather than lowest ratio elevates the biggest absolute shortfalls — New York and Los Angeles can outrank a smaller metro with a worse ratio simply because tens of thousands of households are involved.
+
+## Caveats, measurement traps, and what the ratio cannot say
+
+Several traps deserve equal billing with the headline.
+
+**Permits are not homes.** Cancellation, multi-year build times, and manufactured housing outside the BPS frame all wedge authorization from occupancy. Completions series and Master Address File-based unit counts (where available) are better for stock accounting; permits remain the best high-frequency **intent** signal.
+
+**Household surveys disagree.** ACS, HVS, and AHS can differ by hundreds of thousands of households in a given year. JCHS emphasizes trailing averages for good reason. This post leans on the HVS/JCHS national path for the headline and ACS for metro change; swapping survey vintage would move point estimates without erasing the coastal-vs-Sun-Belt rank order in most published comparisons.
+
+**Metro definitions drift.** CBSA boundary updates and ACS margins of error mean a 0.42 vs 0.49 gap between San Francisco and Boston should be read as **both badly under 1.0**, not as a precise horse race.
+
+**Replacement is local.** Fire, flood, and teardown intensity vary. A national 1.2 benchmark overstates need in slow-teardown metros and understates it after disasters.
+
+**Demand is not destiny.** Some household growth is itself a function of rents and vacancies — people double up when units are scarce. Underbuilding can suppress measured household formation, which **improves** the apparent ratio while worsening welfare. The 2019–2022 surge showed the opposite: when incomes and preferences allowed, headship jumped and the ratio collapsed.
+
+## What to watch next
+
+Three prints will tell whether 2024’s 0.94 was a floor or a plateau. First, **BPS annual 2025** — whether authorized units hold near 1.45–1.50 million or slip as multifamily financing stays expensive. Second, **HVS household change** — JCHS already flags a further slowdown toward a **~1.26 million** annual pace into early 2025 as immigration and demographics cool; a softer denominator can lift the ratio even without a construction boom. Third, **metro ACS releases** — watch whether coastal ratios stay pinned below 0.6 while Sun Belt vacancies normalize from their post-boom highs.
+
+For desks that usually frame housing as a mortgage-credit story, the permits-per-household scoreboard is a useful discipline. Credit conditions explain who can buy the marginal unit. **Authorization versus household formation** explains whether the unit exists at all — and which metros remain furthest below replacement when the national average looks almost fine.
+`,
+  },
+  {
     id: "us-cyber-insurance-premiums-vs-incurred-losses-2026",
     slug: "us-cyber-insurance-premiums-vs-incurred-losses-2026",
     title:

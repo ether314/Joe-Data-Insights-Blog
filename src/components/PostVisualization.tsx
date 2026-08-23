@@ -3212,6 +3212,21 @@ const UsCyberInsurancePremiumsVsIncurredLosses2026Dashboard = dynamic(
   },
 );
 
+const UsHousingPermitsVsHouseholdFormation2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UsHousingPermitsVsHouseholdFormation2026Dashboard"
+    ).then((m) => m.UsHousingPermitsVsHouseholdFormation2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4055,6 +4070,10 @@ export function PostVisualization({
 
   if (type === "us-cyber-insurance-premiums-vs-incurred-losses-2026") {
     return <UsCyberInsurancePremiumsVsIncurredLosses2026Dashboard />;
+  }
+
+  if (type === "us-housing-permits-vs-household-formation-2026") {
+    return <UsHousingPermitsVsHouseholdFormation2026Dashboard />;
   }
 
   return null;

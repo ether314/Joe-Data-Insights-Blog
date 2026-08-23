@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-housing-permits-vs-household-formation-2026",
+    marker: "units authorized per net new household",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-cyber-insurance-premiums-vs-incurred-losses-2026",
     marker: "Premium raced ahead of losses",
     forbidden: "Loading interactive charts",
