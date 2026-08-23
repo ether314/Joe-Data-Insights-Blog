@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "blast-furnace-vs-eaf-steel-by-country-2026",
+    marker: "Heavy materials · steel route mix",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "egg-price-shocks-and-pass-through-2026",
     marker: "Wholesale-to-retail lag",
     forbidden: "Loading interactive charts",

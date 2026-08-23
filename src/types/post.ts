@@ -258,7 +258,8 @@ export interface Post {
     | "us-childcare-price-vs-women-s-prime-age-lfp-2026"
     | "us-nevi-corridor-gaps-2026"
     | "generic-price-declines-versus-manufacturer-exits-2026"
-    | "egg-price-shocks-and-pass-through-2026";
+    | "egg-price-shocks-and-pass-through-2026"
+    | "blast-furnace-vs-eaf-steel-by-country-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

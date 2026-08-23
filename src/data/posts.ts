@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "blast-furnace-vs-eaf-steel-by-country-2026",
+    slug: "blast-furnace-vs-eaf-steel-by-country-2026",
+    title:
+      "Charted: China Still Makes ~90% of Its Steel via Blast Furnace — the US Is ~70% EAF",
+    excerpt:
+      "Global crude steel remains about 71% blast-furnace / BOF. China’s BF share sits near 89.6% and India’s near 55%, while the US runs ~70% electric-arc and the EU-27 about 44% EAF — a route split that locks in residual process emissions far more than scrap slogans do.",
+    category: "Industry",
+    themeId: "heavy-materials-carbon",
+    imageUrl:
+      "/images/industry-blast-furnace-vs-eaf-steel-by-country-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split of amber blast-furnace glow versus teal electric-arc steel motifs over a faint world map",
+    publishedAt: "2026-08-23T12:00:00Z",
+    featured: true,
+    visualization: "blast-furnace-vs-eaf-steel-by-country-2026",
+    layout: "default",
+    content: `Crude steel is not one process. It is two dominant industrial families — blast-furnace ironmaking paired with basic oxygen furnaces (BF/BOF), and electric-arc furnaces (EAF) melting scrap or direct-reduced iron — plus a long tail of national quirks such as India’s induction furnaces. worldsteel’s process tables still put the **BF/BOF family near 71%** of global crude output in the 2023–2024e window this desk uses. That share is sticky: China alone pours on the order of **one billion tonnes** of crude a year at roughly **89–90%** oxygen-converter route, while the United States has spent decades rebuilding capacity as **~70% EAF**. The emissions residual follows the route mix, not the press release.
+
+The interactive dashboard above separates a tonnage stack of BF versus EAF, a BF-share ladder, peer bars for China/India versus US/EU-27, a global route donut, an intensity path, and a scatter of BF share against residual process intensity. Treat the country figures as desk reconstructions aligned to worldsteel process magnitudes and IEA-style route intensities — planning geometry, not plant inventories.
+
+## Why route share is the emissions question
+
+IEA Iron and Steel Tracking puts typical **BF-BOF** near **2.0–2.3 tonnes of CO₂ per tonne of crude** when ore, coke, and converter steps are counted together. **Scrap-based EAF** on a mid-carbon grid often lands near **0.4–0.7 t/t**. Direct-reduced iron into an arc furnace sits between those poles and depends on whether the reductant is natural gas or hydrogen. Multiply those intensities by national route shares and the residual process ledger stops looking like a uniform “steel is dirty” smear. A tonne of US mini-mill product and a tonne of Chinese integrated flat product are not the same carbon object.
+
+That is why this post leads with **BF share of crude**, not with absolute emissions inventories. Inventories mix scope choices, electricity factors, and captive power. Route share answers a simpler question: how much of each country’s steel still requires a blast furnace to exist at all? Until that share falls, residual process CO₂ has a floor.
+
+## China and India still carry the blast-furnace mass
+
+China’s crude output in this panel is about **1,019 Mt**, with BF/BOF share near **89.6%**. That is roughly **910 Mt** of blast-furnace-route steel in a single country — more than the entire crude output of the next several producers combined. India’s **140 Mt** at about **54.8%** BF adds another **~77 Mt** of BF-route crude. Together, China and India account for roughly **three-quarters** of the BF tonnage in this country panel.
+
+India’s mix is more complicated than China’s. A large induction-furnace sector melts scrap and sponge iron outside classic EAF statistics; this desk folds that secondary melt into an **EAF-family** share for route comparison so the BF share remains comparable to oxygen-converter tables elsewhere. Even with that courtesy, India is not an EAF economy in the US sense. Capacity additions still lean on blast furnaces and coal-based DRI as construction and auto demand grow.
+
+Japan (**~75% BF**), South Korea (**~69%**), Brazil (**~77%**), and Germany (**~70%**) show that high BF shares are not only a China story. They are the signature of integrated flat-product complexes built around ore, coke, and continuous casting for automotive and appliance grades. Scrap-rich EAF systems struggle to match some of those metallurgical specs without expensive DRI or virgin iron units — which is why route transition is capital- and product-mix constrained, not just a scrap collection problem.
+
+## The US and EU sit on a different side of the furnace
+
+The United States produces about **81 Mt** of crude in this panel with **~69.8% EAF**. That is the opposite of China’s stack: most US tons already avoid the blast furnace. The residual BF share (~**30%**) concentrates in a handful of integrated works that still matter for certain sheet and plate markets. Türkiye (~**72% EAF**) and Italy (~**84% EAF**) look even more arc-heavy; Iran’s published mix is also EAF-dominant on worldsteel-order tables, though confidence is carried.
+
+The **EU-27** aggregate sits mid-pack: roughly **126 Mt** crude, **~44% EAF / 56% BF**. Germany and France pull the union toward BF; Italy and Spain pull toward EAF. Policy narratives that treat “European steel” as a single decarbonization object miss that internal split. A German blast furnace facing CBAM-era carbon costs is not the same asset as an Italian scrap mill on a cleaner power mix.
+
+| Economy | Crude (Mt) | BF / BOF share | EAF-family share | Desk intensity (t CO₂/t) |
+| --- | ---: | ---: | ---: | ---: |
+| China | 1,019 | 89.6% | 10.4% | 1.98 |
+| India | 140 | 54.8% | 45.2% | 1.43 |
+| Japan | 87 | 74.8% | 25.2% | 1.75 |
+| United States | 81 | 30.2% | 69.8% | 1.03 |
+| EU-27 | 126 | 56.4% | 43.6% | 1.46 |
+| Türkiye | 34 | 28.4% | 71.6% | 1.01 |
+| Germany | 35 | 70.1% | 29.9% | 1.67 |
+| Italy | 21 | 15.8% | 84.2% | 0.81 |
+
+The intensity column is a **route-weighted desk construct** (BF at 2.15 t/t, scrap-EAF at 0.55 t/t). It is not a national inventory. It exists to show order-of-magnitude: China’s residual intensity sits near **2 t/t**; the US near **1 t/t**; Italy below **0.9**. Route share does most of the work.
+
+## Global BF share barely budged this decade
+
+The intensity-path panel sketches a stubborn global picture. From 2010 through 2023e, **global BF share** in this construction stays in a band around **70–72%**. Average intensity drifts only modestly downward. Efficiency gains inside BF plants — better burden, PCI, waste-heat recovery — matter at the margin. They do not rewrite the arithmetic when China and peers keep adding or sustaining BF tons while EAF growth elsewhere is smaller in absolute mass.
+
+That stickiness is the residual-emissions punchline. Even if every scrap-EAF mill in the OECD ran on near-zero-carbon power tomorrow, **most of the world’s steel would still be BF-route**. Process emissions from reduction chemistry would remain. Hydrogen DRI, CCUS on blast furnaces, and ore-grade shifts are the levers that move the BF residual; recycling slogans alone do not.
+
+## What residual process emissions mean for buyers and policymakers
+
+For auto OEMs, appliance makers, and construction buyers writing embodied-carbon specs, **country of melt plus route** beats generic “green steel” labels. A coil melted in an Italian EAF on a relatively clean grid is not interchangeable with a BF coil from a high-coke integrated works, even if both meet mechanical specs. Procurement that ignores route share will mis-rank suppliers.
+
+For policymakers, the peer contrast is the policy map. Jurisdictions with **EAF-majority** fleets (US, Türkiye, Italy) can chase grid decarbonization, scrap quality, and DRI bridging for grades that need virgin iron. Jurisdictions with **BF-majority** fleets (China, Japan, Korea, Germany, Brazil) face furnace replacement cycles measured in decades and ore/coke logistics that do not vanish because a carbon border exists. India’s mixed stack needs both: secondary melt growth *and* a plan for the BF and coal-DRI base that still supplies half-plus of crude.
+
+Carbon border adjustments and product standards that treat all steel identically will hit the BF economies hardest in trade terms — which may be intended — but will not by themselves retire Chinese or Indian blast furnaces serving domestic construction. Domestic demand, scrap availability, and capital cost of greenfield EAF or DRI-EAF do that.
+
+## Caveats and how to read the numbers
+
+**Crude tonnages** follow worldsteel-order magnitudes for ~2023–2024e and will revise with later yearbooks. **Process shares** map oxygen-converter output to BF/BOF and EAF (+ induction where noted) to the EAF family; open-hearth remnants are negligible in modern tables. India’s IF share is an analytical fold-in, not a claim that induction equals scrap-EAF metallurgy. **Process Mt** and **intensity** use fixed IEA-style factors (2.15 / 0.55 t/t) and ignore country-specific grid factors, captive power, and DRI reductant mixes — so absolute Mt are directional. Russia and Iran rows are marked carried where disclosure quality is thinner. EU-27 is an aggregate for peer comparison and is not double-counted in the country table. This is **not** a UNFCCC inventory submission.
+
+## What to watch next
+
+Three signals will move BF share of crude from here. First, **China’s EAF share**: even a few percentage points on a billion-tonne base rearrange global BF mass more than large EAF gains in mid-size producers. Second, **India’s capacity mix** — whether new blast furnaces or scrap/DRI-EAF absorb the next hundred megatonnes of demand. Third, **European BF relining and closures** under carbon costs: Germany’s integrated fleet is the EU’s swing factor. Scrap prices, ore grades, and hydrogen DRI project FIDs are the market tapes underneath those three.
+
+The blast furnace is not a historical footnote. It still makes roughly **seven of every ten tonnes** of global crude, and closer to **nine of ten** in China. The United States and parts of Europe prove that EAF-majority systems are possible where scrap, power, and product mix allow it. Until Asia’s BF share falls in absolute tonnes — not just in speeches — residual process emissions in steel will remain a geography of furnaces, not a uniform industry average.
+`,
+  },
+  {
     id: "egg-price-shocks-and-pass-through-2026",
     slug: "egg-price-shocks-and-pass-through-2026",
     title:

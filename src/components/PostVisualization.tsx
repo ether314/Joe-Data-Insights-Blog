@@ -3407,6 +3407,21 @@ const EggPriceShocksAndPassThrough2026Dashboard = dynamic(
   },
 );
 
+const BlastFurnaceVsEafSteelByCountry2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/BlastFurnaceVsEafSteelByCountry2026Dashboard"
+    ).then((m) => m.BlastFurnaceVsEafSteelByCountry2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4302,6 +4317,10 @@ export function PostVisualization({
 
   if (type === "egg-price-shocks-and-pass-through-2026") {
     return <EggPriceShocksAndPassThrough2026Dashboard />;
+  }
+
+  if (type === "blast-furnace-vs-eaf-steel-by-country-2026") {
+    return <BlastFurnaceVsEafSteelByCountry2026Dashboard />;
   }
 
   return null;
