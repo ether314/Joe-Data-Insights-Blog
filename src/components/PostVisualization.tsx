@@ -2822,6 +2822,21 @@ const CementClinkerProcessEmissionsByCountry2026Dashboard = dynamic(
   },
 );
 
+const OecdChildcareCostsVersusTotalFertility2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/OecdChildcareCostsVersusTotalFertility2026Dashboard"
+    ).then((m) => m.OecdChildcareCostsVersusTotalFertility2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3561,6 +3576,10 @@ export function PostVisualization({
 
   if (type === "cement-clinker-process-emissions-by-country-2026") {
     return <CementClinkerProcessEmissionsByCountry2026Dashboard />;
+  }
+
+  if (type === "oecd-childcare-costs-versus-total-fertility-2026") {
+    return <OecdChildcareCostsVersusTotalFertility2026Dashboard />;
   }
 
   return null;

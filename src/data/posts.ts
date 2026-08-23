@@ -2,6 +2,73 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "oecd-childcare-costs-versus-total-fertility-2026",
+    slug: "oecd-childcare-costs-versus-total-fertility-2026",
+    title:
+      "Charted: OECD Net Childcare Costs vs Fertility — The Scatter Is a Cloud, Not a Slope",
+    excerpt:
+      "Dual-earner net childcare averages 13% of average wage across the OECD. Across 33 countries the correlation with TFR is only r = 0.24 — and low-cost countries average lower fertility than high-cost ones.",
+    category: "Economics",
+    themeId: "fertility-childcare",
+    imageUrl:
+      "/images/economics-oecd-childcare-costs-versus-total-fertility-2026-hero.png",
+    imageAlt:
+      "Dark navy data-journalism hero with a teal-and-amber scatter cloud, faint grid, and geometric parent-child silhouette",
+    publishedAt: "2026-08-23T08:00:00Z",
+    featured: true,
+    visualization: "oecd-childcare-costs-versus-total-fertility-2026",
+    layout: "default",
+    content: `Family-policy debates often treat childcare prices as a fertility lever: make dual-earner care cheaper, the argument goes, and births should follow. The OECD's TaxBEN net-childcare series lets us test that claim in a hard way — not with a slogan, but with a scatter. For a dual-earner couple on **100% + 67% of average wage** with two toddlers in full-time centre-based care, **net childcare cost averages 13% of average wage** across the OECD in 2022. Join that series to World Bank total fertility rates for the same year and the cross-section is blunt: **Pearson r = 0.24** across 33 countries. That is a cloud, not a tidy inverse slope. If anything, countries in the **under-8% AW** cost band average **TFR 1.39**, while the **20%+ AW** band averages **1.53**.
+
+The dashboard above is built for that discomfort. Toggle **Scatter** for the country cloud (dual-earner or lone-parent lens), **Cost bands** for mean TFR by price tier, **Regions** for Anglosphere-versus-Nordic geography, and **Fee vs benefit** for the gross-fee / offset decomposition that makes Italy's near-zero net cost look nothing like Germany's.
+
+## What "net childcare cost" actually measures
+
+OECD TaxBEN does not report the sticker price on a daycare invoice. **Net childcare cost** is the reduction in family disposable income from purchasing full-time centre-based care for two children aged 2–3, after fee rebates, childcare benefits, and tax changes. Where fees are set locally, the model typically uses capital-city schedules. The dual-earner case used here — earnings at **100% and 67% of average wage** — is the standard middle-income couple benchmark in the Family Database.
+
+That definition matters for interpretation. A country can post a **low net cost** either because gross fees are low (Germany's roughly **1% of AW**) or because large benefits nearly cancel a high gross fee (Italy: fee near **40% of AW**, benefits near **−40%**, net near **0%**). Korea sits in the same structural family: gross fee around **16% of AW**, benefits of similar magnitude, **net about 5%** — yet Korea records the sample's lowest fertility at **TFR 0.78**. Net cost is a fiscal outcome, not a guarantee of available places, quality, or evening coverage.
+
+## The scatter is a cloud — and the slope has the wrong sign
+
+Plot dual-earner net cost (% of average wage) on the x-axis and 2022 TFR on the y-axis. New Zealand anchors the high-cost end at **37% of AW** with TFR **1.67**. The United States (**32%**), Canada (**30%**), and Ireland (**29%**) cluster nearby. At the other end, Latvia and Italy sit near **0% net cost** with TFRs of **1.47** and **1.24**. Germany is almost free on this metric (**1%**) at TFR **1.46**. Israel is the fertility outlier: mid-teens net cost (**14%**) with TFR **2.89**.
+
+The Pearson correlation across the 33-country join is **+0.24**. Drop Israel and Korea and it rises to **+0.37** — still positive, still weak. The naive family-policy story predicts a **negative** slope (cheaper care, higher fertility). The OECD/WDI cross-section delivers the opposite sign and a cloud wide enough that no honest analyst would call childcare prices the binding fertility constraint on their own.
+
+## Cost bands: cheaper care, lower mean TFR
+
+Bucket countries by dual-earner net cost. **Under 8% of AW** (10 countries) averages TFR **1.388**. The **8–19%** band (15 countries) averages **1.523**. The **20%+** band (8 countries, mostly Anglophone) averages **1.531**. Mean net cost in those bands is **3.5%**, **11.1%**, and **26.8%** of AW respectively.
+
+That ordering is the chart's punchline. The cheapest childcare fiscal packages in the OECD sample do **not** deliver the highest fertility. Southern Europe's low-to-moderate net costs sit beside some of the lowest TFRs in the club. East Asia combines moderate-to-low net costs with the sample floor. The Anglosphere pays the highest net bills and still clears a higher mean TFR than the cheap-care South.
+
+## Regions tell different stories with the same metric
+
+Regional means underline composition. **Southern Europe** averages about **5.8% of AW** net cost and TFR **1.29**. **East Asia** averages roughly **8%** net cost and TFR **1.02**. **Nordics** sit near **8.8%** and TFR **1.48**. **Continental Europe** averages about **11.6%** and TFR **1.48**. The **Anglosphere** averages **28.8%** net cost — more than triple the Southern European mean — with TFR **1.56**.
+
+If childcare net cost were destiny, the Anglosphere should be the fertility laggard. It is not. Housing markets, partnership timing, leave entitlements, migrant age structure, and norms around maternal employment all move in the same years as fee schedules. The regional panel is a reminder that **one fiscal ratio cannot carry a demographic regime**.
+
+## Fees versus benefits: why "cheap" countries are not alike
+
+The fee/benefit decomposition separates gross centre fees from the benefit and tax offsets that produce the net figure. New Zealand's gross fee near **50% of AW** is pulled down by benefits around **−14%**, leaving net **37%**. The US shows a high fee with little offset in this dual-earner case (**net 32%**). Canada posts fee near **37%** with modest tax relief and net **30%**.
+
+Contrast Italy and Korea: large gross fees almost fully neutralized by benefits, yielding near-zero or mid-single-digit nets. Germany barely needs offsets because the fee itself is tiny. Reading only the net column collapses those regimes into a false peer group. A parent facing a **40% gross fee** that is later rebated lives a different cash-flow year than a parent whose posted fee was **1%** from day one — even when TaxBEN nets match.
+
+Lone-parent schedules add another lens. At **67% of average wage**, many countries drive lone-parent net costs far below the dual-earner case (the UK and Australia are sharp examples). The United States is the glaring exception in this sample: lone-parent net cost remains about **32% of AW**, matching the dual-earner burden. Canada's lone-parent schedule even flips slightly negative — a net income *gain* relative to the no-care counterfactual under TaxBEN assumptions — while dual earners still face roughly **30%**. Fertility, however, is a population rate, not a lone-parent subsample, so the dual-earner scatter remains the headline test for the "make dual careers affordable" claim.
+
+## Caveats the cloud does not erase
+
+Cross-section is not causation. Countries that subsidize childcare heavily may already have low desired fertility, aging age structures, or housing markets that dominate the birth decision. TaxBEN assumes full-time centre-based care for two toddlers; many families use informal care, grandparents, or part-time slots. Capital-city fee schedules can misrepresent national averages. TFR is a period rate sensitive to tempo effects — delayed births depress current TFR even when cohort fertility holds up.
+
+None of those caveats rescue the simple slogan. If lower net dual-earner childcare costs were a reliable cross-country predictor of higher fertility in 2022, the scatter would slope down. It does not. The OECD average net cost of **13% of AW** is a useful fiscal fact. The join to TFR is a useful demography fact. Together they say: **price the care, but do not pretend the price tag alone writes the birth rate.**
+
+| Band (dual-earner net cost) | Countries | Mean net cost (% AW) | Mean TFR (2022) |
+| --- | ---: | ---: | ---: |
+| Under 8% AW | 10 | 3.5 | 1.388 |
+| 8–19% AW | 15 | 11.1 | 1.523 |
+| 20%+ AW | 8 | 26.8 | 1.531 |
+
+Sources: OECD TaxBEN / Family Database net childcare costs (dual-earner couple, 100%+67% AW, two children aged 2–3, % of average wage, 2022); World Bank WDI SP.DYN.TFRT.IN (2022).`,
+  },
+  {
     id: "cement-clinker-process-emissions-by-country-2026",
     slug: "cement-clinker-process-emissions-by-country-2026",
     title:

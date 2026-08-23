@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "oecd-childcare-costs-versus-total-fertility-2026",
+    marker: "OECD childcare costs vs total fertility - family-policy lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "cement-clinker-process-emissions-by-country-2026",
     marker: "Heavy materials · clinker process CO₂",
     forbidden: "Loading interactive charts",
