@@ -2,6 +2,78 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+  id: "construction-sand-extraction-and-trade-2026",
+  slug: "construction-sand-extraction-and-trade-2026",
+  title:
+    "Charted: Singapore Takes ~54% of Top-10 Disclosed Sand Imports — China MFA ~18 Gt vs US MCS 0.87 Gt",
+  excerpt:
+    "UNEP puts global sand resources near 40–50 Gt/yr. USGS discloses US construction sand & gravel at 870 Mt (2025e) but no world total. On COMTRADE, Singapore’s 27.4 Mt of HS 2505.90 imports in 2023 dominate the top-10 quantity reporters — the clearest city-state fill dependence on the map.",
+  category: "Industry",
+  themeId: "construction-aggregates",
+  imageUrl:
+    "/images/industry-construction-sand-extraction-and-trade-2026-hero.png",
+  imageAlt:
+    "Dark navy cinematic data-viz of amber sand volumes and teal shipping corridors flowing toward a glowing city-state island with reclaimed land rings",
+  publishedAt: "2026-08-23T07:00:00Z",
+  featured: true,
+  visualization: "construction-sand-extraction-and-trade-2026",
+  layout: "default",
+  content: `Sand is the unglamorous feedstock of the built world. Concrete, asphalt, glass, and land reclamation all run on grains that most statistical systems barely bother to count. The United Nations Environment Programme (UNEP) still frames global **sand resources** — sand, gravel, and related aggregates — near **40–50 billion tonnes per year**, second only to water among extracted materials. Yet the U.S. Geological Survey’s Mineral Commodity Summaries (MCS) publishes a meticulous U.S. construction sand-and-gravel series and then writes **“world total: NA”** for everyone else. That gap is the story. The interactive dashboard above treats extraction and trade as two different ledgers: what countries *report* digging, and what city-states *must import* for fill.
+
+Toggle **Extractors**, **Importers**, **City-states**, and **US MCS path**. The punchline is deliberately two-sided. On the *extraction* side, material-flow analyses put **China’s sand use near 17.7 Gt**, while the largest fully disclosed MCS reporter — the United States — sits at **870 Mt** in 2025e. On the *trade* side, Singapore’s **27.4 Mt** of HS 2505.90 natural-sand imports in 2023 account for about **54% of the top-10 disclosed COMTRADE tonnage set**, more than Belgium, the Netherlands, and the United States combined.
+
+## Scoreboard: extraction vs disclosed trade
+
+| Metric | Value | Why it matters |
+| --- | ---: | --- |
+| UNEP sand-resources envelope | **40–50 Gt/yr** | Global physical scale |
+| China MFA sand use (desk) | **~17.7 Gt** | Dominant extraction/use estimate |
+| China share of UNEP mid (45 Gt) | **~39%** | Concentration on the demand map |
+| US construction sand & gravel (MCS 2025e) | **870 Mt** | Largest fully disclosed USGS series |
+| Germany sand & gravel (UEPG) | **211 Mt** | Best European disclosed pit total |
+| Singapore HS 2505.90 imports (2023) | **27.4 Mt** | Largest disclosed importer |
+| Singapore share of top-10 import Mt | **~54%** | City-state fill dependence |
+| Singapore cumulative sand imports (20y UNEP-era) | **~517 Mt** | Reclamation stock, not one-year flow |
+
+Read the table as a **mismatch between physical reality and statistical coverage**. The top rows are planetary. The middle rows are the few agencies and associations that publish comparable pit tonnages. The bottom rows are trade — the only place where tiny, pit-poor jurisdictions light up brighter than continental producers.
+
+## Why “world production” is missing from USGS
+
+USGS MCS is unusually honest about sand and gravel. For 2025 it estimates **870 million tonnes** of U.S. construction sand and gravel sold or used, down from **880 Mt** in 2024 and well below the **967 Mt** peak year of 2023. Average unit value climbs to about **$14.50 per tonne**. Leading states (Texas, California, Arizona, and others) still concentrate roughly half of national output. End-use shares remain concrete-heavy: about **42%** portland cement concrete aggregate, **20%** road base, **12%** construction fill, **9%** asphaltic mixtures, and the rest a long tail of drainage, filtration, and specialty uses.
+
+What MCS refuses to invent is a global total. Footnotes explain that countries report sand and gravel inconsistently — or not at all — and that some of the most important commercial deposits are glacial, riverine, or offshore. That is not a minor data footnote. It means any chart that pretends to show “top sand producers” without labeling **disclosed vs estimated** is marketing, not measurement. The dashboard’s **Disclosed only** lens therefore drops MFA giants and keeps USGS/UEPG-style reporters; the **MFA giants** lens restores China and India as the physical heavyweights UNEP’s envelope implies.
+
+## The extraction map that statistics can actually defend
+
+Once you accept mixed metrics, the ranking becomes readable rather than false-precise. **China** dominates sand *use* in material-flow studies at roughly **17.7 Gt** — nearly two-fifths of a 45 Gt UNEP midpoint. **India** is the next large carried estimate in Asia’s construction boom, with a wide uncertainty band. Among series that look like traditional mineral statistics, the **United States** leads disclosed construction sand and gravel at **870 Mt**. **Germany** follows in the European association tables at about **211 Mt** of sand and gravel, with **France (~97 Mt)** and **Italy (~64 Mt)** further down. Those European figures sit inside a broader UEPG-sphere aggregates industry near **3 Gt/yr** when crushed rock, marine, manufactured, and recycled streams are included — a reminder that “sand” and “aggregates” are related but not identical columns.
+
+Regional demand buckets in the dashboard assign China ~39%, India ~10%, rest of Asia-Pacific ~18%, Europe ~7%, North America ~6%, and the rest of the world the remainder. The analytical Herfindahl on those shares lands in the high-teens hundreds — concentrated by commodity standards, even before you remember that China’s MFA figure alone can exceed the entire disclosed U.S. series by an order of magnitude.
+
+## Trade: where city-states become visible
+
+Physical sand barely travels far when pits are nearby; bulk density and low unit value punish distance. Trade therefore lights up where geography fails: dense city-states, landlocked micro-markets, and reclamation programs. UN Comtrade / WITS **HS 2505.90** (natural sands excluding metal-bearing sands) is an imperfect but usable window. In **2023**, quantity reporters put **Singapore at 27.4 Mt**, **Belgium at 11.6 Mt**, the **Netherlands at 3.0 Mt**, the **United States at 2.0 Mt**, and a long tail of Switzerland, France, China, Luxembourg, Germany, Thailand, Hong Kong, Macao, and the Maldives.
+
+Singapore’s share of that top-ten disclosed tonnage set is about **54%**. Amber bars in the importers view mark city-states; teal marks larger territorial markets. Belgium’s large import total is mostly **cross-border European logistics** (historically dominated by Netherlands partners), not a Singapore-style reclamation story. That distinction matters: high import tonnage is not automatically high *fill dependence*. Dependence is about whether domestic pits can substitute if a neighbor closes the gate.
+
+## City-states and the fill problem
+
+Singapore is the archetype. UNEP-era tallies put cumulative sand imports near **517 Mt over two decades**, and land area has grown on the order of **25–28%** since independence through reclamation. In 2023 COMTRADE, nearly **all** of Singapore’s disclosed HS 2505.90 tonnage is attributed to **Malaysia**. Neighbor export bans and diplomatic friction in earlier decades are the political shadow of that dependence: when a city-state has no glacial outwash plain of its own, fill becomes foreign policy.
+
+Hong Kong and Macao show smaller absolute tonnages (~0.3 Mt each in 2023 quantity fields) but sit high on the dashboard’s **dependence score** because domestic pit access is scarce and reclamation history is long. The Maldives imports for atoll construction and coastal protection. Bahrain appears in value fields even when quantity cells are incomplete — a reminder that Gulf reclamation markets are structurally import-leaning. Luxembourg is the landlocked European cousin: not a reclamation island, but a high per-area import intensity relative to neighbors. Malta’s absolute tonnage is tiny, yet limestone geology and island constraints keep virgin natural sand scarce.
+
+The **City-states** scatter plots disclosed import tonnage on a log axis against a desk dependence score. Singapore sits alone in the upper-right: large absolute imports *and* extreme structural dependence. Corridor bars then score Malaysia→Singapore fill intensity near the top of the analytical set, with Netherlands→Belgium cross-border flows and Canada→U.S. construction logistics as secondary patterns.
+
+## US MCS path: volume down, unit value up
+
+The U.S. series is the cleanest time path in the file. Sold-or-used tonnage rose through **2023 (967 Mt)**, then stepped down to **880 Mt (2024e)** and **870 Mt (2025e)** as housing, highway, and weather cycles bit. Average unit value still climbed — from about **$10.52/t in 2021** to **$14.50/t in 2025e** — consistent with MCS commentary on urban permitting friction, longer haul distances from new pits, and fuel costs. Net import reliance remains negligible as a share of apparent consumption; U.S. imports of construction sand and gravel are a few million tonnes, mostly from Canada. That is the opposite of Singapore’s balance sheet: continental producers can be price-stressed without being fill-dependent.
+
+## Caveats the dashboard will not hide
+
+Several hard limits apply. First, **UNEP’s 40–50 Gt** envelope mixes sand, gravel, and crushed aggregates; it is a physical-order estimate, not a customs code. Second, **China’s 17.7 Gt MFA sand-use figure** is not interchangeable with USGS “construction sand and gravel sold or used.” Third, **COMTRADE HS 2505.90** undercounts illicit and unreported flows and often disagrees with mirror export statistics — Singapore’s historical import/export mismatches are a famous example. Fourth, Belgium-style European imports can reflect **internal market logistics**, not strategic scarcity. Fifth, recycled asphalt and concrete are rising substitutes in MCS commentary but remain a small share of total aggregate supply in the United States. Sixth, industrial silica sand (glass, foundry, proppants) is a different MCS chapter with a published world table; this post stays on **construction** sand, gravel, and fill.
+
+None of those caveats erase the headline geometry. The countries that dominate *physical* extraction are the ones pouring concrete and reclaiming coastlines at continental scale — led, on available MFA evidence, by China. The jurisdictions that dominate *reported* import dependence for fill are the pit-poor city-states, with Singapore’s disclosed 2023 tonnage still the clearest spike on the COMTRADE map. Between those two facts sits the statistical void USGS refuses to paper over: a world that digs tens of billions of tonnes of sand each year, and a global production table that still reads **NA**.`,
+},
+  {
     id: "who-glass-bloodstream-resistance-2026",
     slug: "who-glass-bloodstream-resistance-2026",
     title:

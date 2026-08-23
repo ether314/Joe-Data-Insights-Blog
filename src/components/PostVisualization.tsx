@@ -2717,6 +2717,21 @@ const WhoGlassBloodstreamResistance2026Dashboard = dynamic(
   },
 );
 
+const ConstructionSandExtractionAndTrade2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ConstructionSandExtractionAndTrade2026Dashboard"
+    ).then((m) => m.ConstructionSandExtractionAndTrade2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3428,6 +3443,10 @@ export function PostVisualization({
 
   if (type === "who-glass-bloodstream-resistance-2026") {
     return <WhoGlassBloodstreamResistance2026Dashboard />;
+  }
+
+  if (type === "construction-sand-extraction-and-trade-2026") {
+    return <ConstructionSandExtractionAndTrade2026Dashboard />;
   }
 
   return null;

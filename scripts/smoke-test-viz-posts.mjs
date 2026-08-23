@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "construction-sand-extraction-and-trade-2026",
+    marker: "Construction aggregates · sand extraction & trade",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "who-glass-bloodstream-resistance-2026",
     marker: "WHO GLASS bloodstream resistance — resistant isolate share",
     forbidden: "Loading interactive charts",
