@@ -217,7 +217,8 @@ export interface Post {
     | "cement-clinker-process-emissions-by-country-2026"
     | "oecd-childcare-costs-versus-total-fertility-2026"
     | "endowment-payout-vs-tuition-dependence-2026"
-    | "us-traffic-deaths-per-vmt-vs-peer-countries-2026";
+    | "us-traffic-deaths-per-vmt-vs-peer-countries-2026"
+    | "admitted-homeowners-insurers-exiting-coastal-states-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

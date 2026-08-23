@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "admitted-homeowners-insurers-exiting-coastal-states-2026",
+    marker: "Admitted HO premium → residual markets",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-traffic-deaths-per-vmt-vs-peer-countries-2026",
     marker: "US traffic deaths per VMT vs peer countries — road-safety lens",
     forbidden: "Loading interactive charts",

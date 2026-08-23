@@ -2867,6 +2867,21 @@ const UsTrafficDeathsPerVmtVsPeerCountries2026Dashboard = dynamic(
   },
 );
 
+const AdmittedHomeownersInsurersExitingCoastalStates2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AdmittedHomeownersInsurersExitingCoastalStates2026Dashboard"
+    ).then((m) => m.AdmittedHomeownersInsurersExitingCoastalStates2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3618,6 +3633,10 @@ export function PostVisualization({
 
   if (type === "us-traffic-deaths-per-vmt-vs-peer-countries-2026") {
     return <UsTrafficDeathsPerVmtVsPeerCountries2026Dashboard />;
+  }
+
+  if (type === "admitted-homeowners-insurers-exiting-coastal-states-2026") {
+    return <AdmittedHomeownersInsurersExitingCoastalStates2026Dashboard />;
   }
 
   return null;
