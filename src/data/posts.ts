@@ -684,7 +684,7 @@ Sources:
     featured: true,
     visualization: "office-vacancy-versus-conversion-pipelines-2026",
     layout: "default",
-    content: `Empty office floors and apartment waitlists now share the same skyline photographs — but they do not share the same economics. At the start of 2026, RentCafe / Yardi counted **90,300** U.S. apartments in an office-to-residential conversion pipeline, up **28%** from a year earlier and nearly four times the ~23,000-unit count in 2022. CBRE’s Q2 2026 national office vacancy print sat near **18.3%**, down 30 basis points in a single quarter. Those two facts travel together in headlines. They do not travel together on a metro map.
+    content: `Empty office floors and apartment waitlists now share the same skyline photographs — but they do not share the same economics. At the start of 2026, RentCafe / Yardi counted **90,300** U.S. apartments in an office-to-residential conversion pipeline, up **28%** from a year earlier and nearly four times the ~23,000-unit count in 2022 [RentCafe Mar 2026]. Broker composites put national office vacancy near **19%** at the end of 2025 (CBRE), easing toward **17.6%** by May 2026 as removals and leasing bit [CBRE Vacancy 2026]. Those two facts travel together in headlines. They do not travel together on a metro map.
 
 The useful ratio is not “how vacant is downtown?” It is **converted units per million vacant square feet** — how much residential pipeline attaches to each chunk of empty office stock. On that intensity lens, **New York** clears about **212** units per million vacant SF. **Houston**, with overall vacancy near **25.8%**, clears about **9**. That is a **24×** gap between two large inventories of unused desks. Vacancy is a necessary condition for conversion stories. It is not a sufficient one.
 
@@ -749,7 +749,11 @@ Do not read this panel as a prediction that Houston “should” match New York�
 
 Three prints will move the intensity map faster than another round of “office is dead” essays. First, **deliveries versus starts** inside conversion trackers — whether the 90k-unit pipeline is turning into keys or into stalled renderings. Second, **inventory removals** in CoStar / CBRE supply tables — conversions and demolitions that actually shrink the office denominator. Third, **city program revisions** in New York, D.C., Chicago, and California: abatement cliffs and zoning tweaks change intensity without waiting for vacancy to peak again.
 
-For desks that need a single headline: **New York converts on the order of 212 apartments per million vacant office square feet; Houston converts on the order of 9.** National vacancy near **18%** and a **90,300**-unit pipeline can both be true while half the high-vacancy map remains stranded. Pair the vacancy print with the pipeline — or you are measuring the wrong empty building.`,
+For desks that need a single headline: **New York converts on the order of 212 apartments per million vacant office square feet; Houston converts on the order of 9.** National vacancy near **18%** and a **90,300**-unit pipeline can both be true while half the high-vacancy map remains stranded. Pair the vacancy print with the pipeline — or you are measuring the wrong empty building.
+
+Sources:
+[RentCafe Mar 2026]: RentCafe/Yardi (via Bisnow) — Office-to-resi conversions up 28% from last year’s record levels, March 2026 pipeline census. https://www.bisnow.com/news/national/adaptive-reuse/office-resi-conversions-up-28-percent-from-last-year-record-levels-133841
+[CBRE Vacancy 2026]: CBRE — U.S. Real Estate Market Outlook 2026 / national office vacancy tracker. https://www.cbre.com/insights/reports/us-real-estate-market-outlook-2026`,
   },
   {
     id: "hospital-system-clout-vs-commercial-prices-2026",
