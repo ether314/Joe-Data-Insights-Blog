@@ -644,13 +644,13 @@ That portfolio shift is the dashboard’s stacked area panel. It answers the bri
 
 Program structure matters as much as occupation title. Across more than 6,700 registered construction apprenticeship programs, IWPR finds **78.5%** had **no** female apprentices. Only **7.1%** reported at least **10%** women — yet those more integrated programs accounted for about **30%** of women construction apprentices. A small slice of sponsors carries a disproportionate share of integration.
 
-**Union-sponsored** construction programs look different from non-union ones: **25.3%** of union sponsors had zero women, versus **88.6%** of non-union sponsors. Programs with at least 10% women were roughly twice as common in the union channel (**13.1%** vs **5.9%**). For women electricians, completion rates were nearly **three times** as high in union programs (**58.3%**) as in non-union ones (**20.2%**). Intake segregation and retention failure compound: sparse female cohorts and higher cancellation risk shrink the completer pipeline even when registrations tick up.
+**Union-sponsored** construction programs look different from non-union ones: **25.3%** of union sponsors had zero women, versus **88.6%** of non-union sponsors. Programs with at least 10% women were roughly twice as common in the union channel (**13.1%** vs **5.9%**). For women electricians, completion rates were nearly **three times** as high in union programs (**58.3%**) as in non-union ones (**20.2%**) [IWPR RAPIDS FY2023]. Intake segregation and retention failure compound: sparse female cohorts and higher cancellation risk shrink the completer pipeline even when registrations tick up.
 
 CPWR’s construction new-registration cut (2015–2021) puts women’s share of new construction apprentices near **4.1%** overall, with painters again near the top of the trade ranking and elevator/HVAC near the bottom — a registration-side echo of the stock shares in RAPIDS.
 
 ## Geography still swings hard
 
-State averages remind readers that “national 14.8%” is a blended fiction. IWPR reports statewide women shares as high as **36.5%** in West Virginia and **35.4%** in South Carolina, and as low as **3.1%** in Delaware and **3.5%** in Oklahoma. Among 44 states with construction industry cuts, women’s construction share ranged from **1.6%** in South Dakota to **10.7%** in Massachusetts. Military and public-administration apprenticeships also pull the national average up: women were **22.2%** of that block and **38.2%** of all women apprentices, with military electrician female shares more than **triple** the civilian electrician rate (**12.4%** vs **4.2%**).
+State averages remind readers that “national 14.8%” is a blended fiction. IWPR reports statewide women shares as high as **36.5%** in West Virginia and **35.4%** in South Carolina, and as low as **3.1%** in Delaware and **3.5%** in Oklahoma [IWPR RAPIDS FY2023]. Among 44 states with construction industry cuts, women’s construction share ranged from **1.6%** in South Dakota to **10.7%** in Massachusetts. Military and public-administration apprenticeships also pull the national average up: women were **22.2%** of that block and **38.2%** of all women apprentices, with military electrician female shares more than **triple** the civilian electrician rate (**12.4%** vs **4.2%**).
 
 Desks that only watch the national women-share line will miss both the **construction desert** and the **military/health** anchors that pad the average.
 
@@ -660,7 +660,12 @@ RAPIDS is powerful and incomplete. IWPR’s FY 2023 tables exclude apprentices w
 
 For policy readers, the practical implication is narrow: tracking “women in apprenticeship” as a single KPI will celebrate headcount growth while missing whether women are entering **electrician and plumber** seats or **nurse aide and childcare** seats. The segregation map — not the national share alone — is what predicts exit wages and retirement replacement in the trades.
 
-None of those caveats erase the core pattern: **apprentice intakes remain starkly sex-segregated by trade**, construction integration is slow and sponsor-concentrated, and the fastest recent change in women’s apprenticeship mix has been toward health and care titles rather than toward the highest-paying building trades.`,
+None of those caveats erase the core pattern: **apprentice intakes remain starkly sex-segregated by trade**, construction integration is slow and sponsor-concentrated, and the fastest recent change in women’s apprenticeship mix has been toward health and care titles rather than toward the highest-paying building trades.
+
+Sources:
+[IWPR RAPIDS FY2023]: Institute for Women’s Policy Research — As Apprenticeships Expand, Breaking Down Occupational Segregation Is Key to Women’s Economic Success (analysis of DOL RAPIDS, March 2024). https://iwpr.org/wp-content/uploads/2024/03/IWPR-Apprenticeship-Report-March-2024.pdf
+[DOL Trendlines FY2024]: US Department of Labor ETA — Trendlines: Registered Apprenticeship active counts, FY 2024. https://www.apprenticeship.gov/data-and-statistics
+[CPWR 2015-2021]: CPWR — The Center for Construction Research and Training, women’s share of new construction apprenticeship registrations, 2015–2021. https://www.cpwr.com`,
   },
   {
     id: "office-vacancy-versus-conversion-pipelines-2026",
