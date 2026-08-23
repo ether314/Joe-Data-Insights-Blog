@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "public-dc-fast-chargers-vs-ev-stock-2026",
+    marker: "Public DC fast chargers · BEV stock coverage",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "spot-container-freight-vs-blank-sailings-2026",
     marker: "SCFI vs blank-sail %",
     forbidden: "Loading interactive charts",

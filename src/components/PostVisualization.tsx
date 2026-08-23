@@ -2777,6 +2777,21 @@ const SpotContainerFreightVsBlankSailings2026Dashboard = dynamic(
   },
 );
 
+const PublicDcFastChargersVsEvStock2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/PublicDcFastChargersVsEvStock2026Dashboard"
+    ).then((m) => m.PublicDcFastChargersVsEvStock2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3504,6 +3519,10 @@ export function PostVisualization({
 
   if (type === "spot-container-freight-vs-blank-sailings-2026") {
     return <SpotContainerFreightVsBlankSailings2026Dashboard />;
+  }
+
+  if (type === "public-dc-fast-chargers-vs-ev-stock-2026") {
+    return <PublicDcFastChargersVsEvStock2026Dashboard />;
   }
 
   return null;

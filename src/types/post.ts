@@ -211,7 +211,8 @@ export interface Post {
     | "construction-sand-extraction-and-trade-2026"
     | "us-atc-delay-minutes-by-cause-2026"
     | "correspondent-banking-corridor-retreat-2026"
-    | "spot-container-freight-vs-blank-sailings-2026";
+    | "spot-container-freight-vs-blank-sailings-2026"
+    | "public-dc-fast-chargers-vs-ev-stock-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
