@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "cement-clinker-process-emissions-by-country-2026",
+    marker: "Heavy materials · clinker process CO₂",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "colorado-river-compact-vs-actual-flows-2026",
     marker: "Colorado River · compact vs actual flows",
     forbidden: "Loading interactive charts",

@@ -2,6 +2,77 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "cement-clinker-process-emissions-by-country-2026",
+    slug: "cement-clinker-process-emissions-by-country-2026",
+    title:
+      "Charted: Top-3 Cement Producers Hold ~61% of Global Clinker Process CO₂",
+    excerpt:
+      "China, India, and Vietnam account for about 912 Mt of an estimated 1,485 Mt global cement process CO₂ in 2023e. GCCA intensity is down ~25% since 1990 — but volume still swamps the absolute process ledger outside China’s property-led cutback.",
+    category: "Industry",
+    themeId: "heavy-materials-carbon",
+    imageUrl:
+      "/images/industry-cement-clinker-process-emissions-by-country-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of orange kiln rings and limestone-to-clinker process bars with teal CO₂ trails over an industrial horizon",
+    publishedAt: "2026-08-23T08:00:00Z",
+    featured: true,
+    visualization: "cement-clinker-process-emissions-by-country-2026",
+    layout: "default",
+    content: `Cement’s carbon problem is mostly chemistry, not just kilns. When limestone (CaCO₃) becomes clinker, calcination releases CO₂ whether the heat comes from coal, petcoke, or a future electric kiln. That **process** slice — typically ~60% of cement’s CO₂ — is the hard residual. Fuel can be swapped; carbonate rock still vents. The interactive dashboard above asks a geographic question with an intensity twist: **what share of global cement process CO₂ sits in the top three producers**, and **did intensity fall or did volume swamp it?**
+
+Toggle **Rank & ladder**, **Intensity vs volume**, **Regions**, and **Scatter**. Rank by process Mt, cement Mt, or intensity; filter Asia / EMEA / Americas. The punchline is concentrated and stubborn: China, India, and Vietnam — the USGS-order top cement producers — hold about **912 Mt** of an estimated **1,485 Mt** global process CO₂ in 2023e, or **~61.4%**. GCCA’s Getting the Numbers Right (GNR) database shows industry-reported CO₂ intensity down roughly **25%** since 1990, yet absolute process tonnes still track where clinker is made.
+
+## Scoreboard: process tonnes, not marketing tonnes
+
+| Metric | Value | Why it matters |
+| --- | ---: | --- |
+| Global process CO₂ (2023e) | **1,485 Mt** | Calcination only; kiln fuel excluded |
+| Top-3 process share | **61.4%** | China + India + Vietnam |
+| China process CO₂ | **718 Mt** | ~48% of world process |
+| India process CO₂ | **152 Mt** | Second producer, rising demand |
+| Vietnam process CO₂ | **42 Mt** | Third producer by cement Mt |
+| GCCA intensity vs 1990 | **−25%** | GNR cementitious CO₂/t (member set) |
+| Clinker ratio vs 1990 | **~−10.7% rel.** | Blending / SCM path in GNR |
+| Process share of cement CO₂ | **~60%** | Hard-to-abate chemistry residual |
+
+Read the table as a **volume × chemistry** ledger. Intensity improvements are real on the GNR panel. Absolute process CO₂ still concentrates where clinker tonnes concentrate — and that map is overwhelmingly Asian.
+
+## What “process CO₂” means in this post
+
+Industry and inventory literature split cement emissions into **process** (calcination of carbonates) and **energy** (fuel burned in the kiln and, separately, power). The IPCC mineral-industry guidance treats clinker process emissions with a default factor on the order of **~0.52 t CO₂ per tonne of clinker**, adjusted for kiln dust and carbonate chemistry. This desk reconstructs country process Mt as estimated clinker × that factor, then pins China’s level near the Global Carbon Project / Our World in Data cement-process series (~**718 Mt** in 2023). Fuel CO₂ is deliberately left out so the map answers the chemistry question, not the fuel-mix question.
+
+That framing matches how climate desks talk about “hard-to-abate” cement. Even a fully electrified kiln still calcines limestone unless the binder system changes (lower clinker factors, alternative binders, or carbon capture on the process stream). GCCA’s Concrete Future roadmap and IEA cement tracking both treat process emissions as the stubborn core once thermal efficiency and alternative fuels have done their easier work.
+
+## USGS producers, process shares
+
+USGS Mineral Commodity Summaries remain the cleanest public **cement tonnage** ranking for cross-country comparison. In the 2023e desk used here, China (~**2,030 Mt** cement), India (~**395 Mt**), and Vietnam (~**98 Mt**) lead disclosed producer order-of-magnitude tables. Process CO₂ does not equal cement Mt one-for-one: clinker-to-cement ratios differ, and some countries grind imported clinker. Still, the producer ladder and the process ladder rhyme. China alone is ~**48%** of global process CO₂; add India and the share clears **58%**; add Vietnam and the top-three producer set reaches **~61%**.
+
+Vietnam’s absolute process tonnes (~**42 Mt**) are far below China’s, but the concentration story is about the **producer club**, not equal thirds. The dashboard’s concentration ladder shows how fast cumulative share rises: top 5 ~**69%**, top 10 ~**80%**, with a long tail of mid-sized EMEA and Americas producers. Process HHI in the desk sits in a high-concentration band because one country is nearly half the global calcination total.
+
+## Intensity fell — volume still dominated the tape
+
+GCCA’s 2023 GNR release reported about a **25%** cut in CO₂ per tonne of cementitious product since 1990, alongside roughly **11%** relative improvement in the clinker-to-cementitious ratio and large gains in alternative-fuel use. Those are genuine industrial progress markers on the reporting set. They are also easy to misread as “cement CO₂ is falling everywhere in tonnes.”
+
+The composed **intensity vs volume** panel indexes both series to 1990 = 100. Intensity drifts down into the mid-70s by 2023. Cement volume more than doubles over the same arc as Asia’s build-out scales. The product — a process-Mt index — rises for decades even as intensity improves, then softens only when China’s property-led cement cutback pulls absolute tonnes down after the late-2010s peak. IEA’s industry notes on 2022 already flagged how China’s cement and steel process declines pulled global industry CO₂ lower even while other regions kept building. **Intensity fell; volume still wrote most of the absolute history** — until China’s volume broke the other way.
+
+## Regions: Asia holds the calcination map
+
+Asia-Pacific accounts for roughly **two-thirds** of desk process CO₂. That is not a narrative preference; it is where clinker capacity and cement demand sit. EMEA’s named producers (Türkiye, Iran, Egypt, Saudi Arabia, Russia in the carried set) matter for trade and standards but do not move the global process needle the way East and South Asia do. The Americas — led by the United States at ~**42 Mt** process — are visible on intensity scatter charts and nearly invisible on the global share ladder.
+
+For policy and offtake desks, the geographic implication is blunt. Clinker-factor regulation, SCMs, LC3-style blends, and process-side CCS pilots create the most tonnes of avoided process CO₂ where the kilns already are. A European intensity win that does not travel into Asian clinker lines is a local decarbonization story, not a global process story.
+
+## Caveats, coverage gaps, and what this is not
+
+Several limits are load-bearing. **First**, GCCA GNR coverage is strong in Europe, Latin America, and North America and historically thin in China — the association itself has flagged Chinese coverage near single-digit percentages of plants in older commentary. Intensity trends from GNR are therefore best read as the **reporting cohort’s** progress, not a perfect census of every Chinese kiln. **Second**, country process Mt here are **analytical reconstructions**, not UNFCCC inventory line items; carbonate factors, CKD corrections, and clinker trade can move national totals. **Third**, USGS cement tonnage and process CO₂ can diverge when grinding capacity and kiln capacity sit in different countries. **Fourth**, 2023e figures will revise as MCS tables and GCP updates land. **Fifth**, this post excludes fuel CO₂, electricity, and downstream concrete — on purpose — so it should not be cited as “all cement emissions.”
+
+None of those caveats erase the headline geometry. Roughly three producers hold about three-fifths of global calcination CO₂; one producer holds nearly half; intensity improvements since 1990 are real and still smaller, in absolute tonnes, than the Asian volume wave that defined the last three decades.
+
+## What the share question answers
+
+If the question is “where does process CO₂ live?”, the answer is a short list headed by China, with India and Vietnam completing the USGS top-three producer set at **~61%** combined. If the question is “are we winning on intensity?”, GNR says yes on a per-tonne basis. If the question is “did intensity alone bend the absolute process curve?”, the volume index says not until China’s cement tonnes rolled over. Desks that conflate those three questions will mis-price both abatement technology and demand risk. The dashboard keeps them on separate toggles for a reason: **share, intensity, and volume are three clocks**, and only recently have two of them ticked in the same direction on the global process ledger.
+`,
+  },
+  {
     id: "colorado-river-compact-vs-actual-flows-2026",
     slug: "colorado-river-compact-vs-actual-flows-2026",
     title: "Charted: Colorado River Compact Allocations vs Actual Flows",
