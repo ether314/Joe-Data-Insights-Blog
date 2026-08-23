@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "alliance-capacity-share-on-transpacific-2026",
+    marker: "Top-alliance TEU share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "four-firm-beefpacking-share-2026",
     marker: "Headline — fed CR4 81%",
     forbidden: "Loading interactive charts",
