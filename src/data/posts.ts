@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-generic-sterile-injectable-shortages-2026",
+    slug: "us-generic-sterile-injectable-shortages-2026",
+    title:
+      "Charted: Sterile Injectables Are 71% of Active US Drug Shortages",
+    excerpt:
+      "USP’s end-2025 shortage map puts sterile injectables at 71% of 75 active shortages, while ASHP’s molecule tally sits at 227 in Q2 2026—with 48% of new shortages sole-source and one North Carolina plant still anchoring ~8% of hospital injectable volume.",
+    category: "Health Economics",
+    themeId: "generic-drug-supply",
+    imageUrl:
+      "/images/health-economics-us-generic-sterile-injectable-shortages-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic viz of glowing hospital vials and a single factory beacon marking sterile-injectable supply risk",
+    publishedAt: "2026-08-23T16:00:00Z",
+    featured: true,
+    visualization: "us-generic-sterile-injectable-shortages-2026",
+    layout: "default",
+    content: `Hospital pharmacies do not run out of “drugs” in the abstract. They run out of **vials, ampules, and premixed bags**—the sterile injectable products that keep operating rooms, ICUs, oncology chairs, and emergency departments moving. When those lines thin, the clinical problem is immediate and the economic problem is structural: few plants, thin margins, and long restart clocks.
+
+The United States Pharmacopeia’s 2026 Annual Drug Shortages Report, mapping FDA Center for Drug Evaluation and Research shortage listings through the USP Medicine Supply Map as of **31 December 2025**, counts **75** active shortages. Of those, **71%** are sterile injectables—about **53** products—versus **16%** oral solids and **13%** other forms. That injectable share is the headline of this post. The second question is how little manufacturing depth sits behind the tip: ASHP and the University of Utah Drug Information Service put the broader molecule-level shortage tally at **227** in Q2 2026, and report that **48%** of *new* 2026 shortages are sole-source. One disclosed plant vignette still matters for scale: Pfizer’s Rocky Mount, North Carolina site has been described by the company and the FDA as supplying roughly **8%** of sterile injectables used in US hospitals.
+
+The interactive dashboard above toggles **Dosage mix**, **Shortage path**, **Site depth**, **Makers**, and **Geography**. Switch path metrics between ASHP counts and injectable share; flip site units between share and an index on the ASHP tally; change the geography lens among volume share, shortage-volume share, and the gap between them.
+
+## The injectable share is not a rounding error
+
+Dosage form is the first cut that matters. Oral solids can often be multi-sourced across dozens of finished-dose plants. Sterile injectables cannot. Aseptic fill-finish requires specialized cleanrooms, validated lines, and quality systems that fail loudly when they fail. USP’s end-2025 map makes the imbalance numerical: injectables are more than four times the oral-solid share of active shortages.
+
+That imbalance is durable, not a one-quarter spike. Desk anchors that carry USP’s injectable share back through the early 2020s sit in the mid-to-high sixties even as absolute shortage counts rose and then partially fell. The 2025 print—**71%**—is the highest clear dosage-form tip in the recent USP series. When shortages fall in *count* while injectables stay dominant in *share*, the residual list is more hospital-critical, not less.
+
+| Dosage form (USP end-2025) | Share of active shortages | Approx. count (of 75) |
+| --- | ---: | ---: |
+| Sterile injectable | **71%** | **~53** |
+| Oral solid | 16% | ~12 |
+| Other forms | 13% | ~10 |
+
+Read the table as a **form-factor claim**, not a claim that every injectable molecule is unavailable. Presentation-level FDA registries can show hundreds of injectable NDC entries in short supply even when molecule-level USP or ASHP counts sit lower. The form tip survives the unit-of-analysis change: injectables dominate whichever lens you pick.
+
+## Three counters, one fragility story
+
+Shortage statistics confuse desks that treat every published number as the same object. Three counters run in parallel:
+
+- **USP / FDA molecule-mapped actives** — **75** at end-2025, down **23%** from **98** in 2024 on USP’s series. Nearly all were carryovers; only **four** new shortages first appeared in 2025.
+- **ASHP / Utah molecule actives** — **216** at end-2025, **223** in Q1 2026, **227** in Q2 2026, still well below the **323** peak in Q1 2024 but rising for a third straight quarter.
+- **FDA presentation-level registry** — thousands of NDC/status rows; independent desk summaries put active injectable presentations in the high hundreds, again ~**70%** injectable by form.
+
+These are not contradictions. ASHP registers disruption when pharmacies cannot obtain product; FDA lists national medically necessary mismatches; USP’s annual map freezes a year-end FDA-linked set and overlays Medicine Supply Map geography. A hospital can feel ASHP’s **227** while USP’s **75** correctly describes a narrower national confirmation set. For this post, the **71% injectable share** is the USP year-end form tip; the **227** is the operational load still sitting on health-system pharmacies.
+
+## How many sites stand between patients and empty shelves?
+
+“How many manufacturing sites?” is the question buyers ask after the share chart. The honest answer is layered.
+
+At the **manufacturer** layer, ASHP reports that **48%** of new shortages so far in 2026 are sole-source—one company left standing. Dual- and multi-source products still fail, but sole-source failures convert a quality event or business exit into a national gap overnight. Analytical site-redundancy buckets in the dashboard put roughly half of new shortages on a single manufacturer, with the remainder split between dual- and multi-source—labels that are carried where agencies publish sole-source shares without a full ANDA census.
+
+At the **plant** layer, concentration is even more visceral. Public FDA and Pfizer disclosures after the July 2023 Rocky Mount tornado put that single facility at about **8%** of US *hospital* sterile-injectable volume, inside a Pfizer franchise that itself was described as roughly one-third of the hospital sterile-injectable market. USP Medicine Supply Map work around that event pointed to well over a hundred products associated with the site, many on essential-medicine lists. Redundancy at the molecule level does not erase the fact that a weather event at one address can reallocate an entire hospital class of SKUs.
+
+At the **upstream** layer, USP’s KSM module shows that **44%** of drugs in shortage have at least one key starting material manufactured in a single country—typically China or India. On the 2025 Vulnerable Medicines List, **48%** carry the same single-country KSM flag, and **63%** of the hundred vulnerable medicines are injectables. Finished-dose diversity can be an illusion when every ANDA holder pulls the same starting material from one geography.
+
+## Manufacturers at the tip of the registry
+
+Presentation-level shortage registries concentrate on a short list of sterile-injectable labels. Desk roll-ups of recent FDA registry summaries put **Hospira (Pfizer)** near **166** active entries, **Fresenius Kabi** near **160**, and **Hikma USA** near **97**—about **423** entries across the top three alone. Those figures are not a complete market census, and they are not interchangeable with USP’s 75-molecule map. They do show where hospital buyers already know the pain: the same firms that fill OR and ICU carts are the firms whose quality holds or line outages ripple nationally.
+
+Concentration is not evidence of malice. It is evidence of economics. Sterile injectable generics are hard to make, expensive to keep compliant, and priced as if they were commodities. When a line stops, rivals cannot spin up aseptic capacity in a quarter. The manufacturer ladder in the dashboard is therefore a **fragility roster**, not a league table of villains.
+
+## Geography: domestic plants still own the shortage volume
+
+USP’s geography print for injectables is easy to misread as an offshoring morality play. The United States produced about **47%** of injectable finished-dose volume in the mapped set and **57%** of the volume tied to shortages. India produced **16%** of volume and **26%** of shortage volume. The European Union produced **20%** of volume and only **5%** of shortage volume. Domestic production does not immunize against shortage; it can *concentrate* shortage when the domestic plants are the ones under quality and margin stress.
+
+The geography panel’s gap lens (shortage-volume share minus volume share) makes that concrete: the US and India sit positive; the EU sits deeply negative. Policymakers who hear “reshoring” as a shortage cure need that split. Bringing more volume onshore without fixing the incentive to maintain redundant, high-quality aseptic lines simply moves the chokepoint—it does not remove it.
+
+## Duration, discontinuations, and the price floor
+
+Share and sites describe *who* fails. Duration describes *how long patients wait*. USP puts average shortage duration at **5.3 years** in 2025, up from **4.3** in 2024 and roughly **two years** in 2019. **64%** of active shortages have lasted more than three years; **39%** more than five. Injectables drive that stickiness: once a sterile line is down, requalification, remediation, and second-source tech transfer chew years.
+
+Discontinuations compound the problem. USP counts **170** discontinuations in 2025, a **60%** jump from 2024 and the highest print since 2019. Prices on discontinued medicines fell—consistent with a market that exits when the floor is too low to fund compliance. A shortage that resolves because the last manufacturer walks away is not a recovery; it is a deletion.
+
+## What the dashboard is for
+
+Use **Dosage mix** for the form tip and duration bands. Use **Shortage path** to watch ASHP counts ease from the 2024 peak while injectable share drifts upward. Use **Site depth** for sole-source exposure and the Rocky Mount-scale capacity facts. Use **Makers** for the presentation-entry ladder. Use **Geography** for the volume-versus-shortage scatter and gap bars. Therapy-stress indexes and upstream KSM flags are analytical overlays—useful for prioritization conversations, not FDA severity grades.
+
+## Caveats
+
+This is a desk synthesis, not a substitute for FDA, ASHP, or hospital pharmacy allocation systems. USP year-end molecule counts, ASHP rolling molecule counts, and FDA presentation-level rows measure different objects; do not average them into a fake “true” shortage total. Manufacturer entry tallies and dual/multi-source splits mix disclosed anchors with carried estimates and will move as registries refresh. Rocky Mount’s **8%** hospital sterile-injectable figure is a 2023 disclosure snapshot, not a live telemetry feed. Geography shares describe mapped finished-dose volume, not every vial in every hospital cupboard. Stress indexes by therapy class are analytical, not regulatory. Nothing here is clinical advice, formulary guidance, or a claim about any single patient’s access.
+
+The economic punchline survives the caveats. **Seventy-one percent** of the USP-mapped active shortage list is sterile injectable. Nearly half of new shortages in 2026 still lean on a single manufacturer. And a single disclosed plant can still represent on the order of **eight percent** of what US hospitals inject. Empty shelves are not a mystery of demand. They are a map of thin aseptic capacity priced like a commodity.
+`,
+  },
+  {
     id: "freight-rail-velocity-versus-shipper-rates-2026",
     slug: "freight-rail-velocity-versus-shipper-rates-2026",
     title:

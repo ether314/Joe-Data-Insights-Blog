@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-generic-sterile-injectable-shortages-2026",
+    marker: "Sterile injectables · shortage share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "freight-rail-velocity-versus-shipper-rates-2026",
     marker: "Velocity vs revenue per carload",
     forbidden: "Loading interactive charts",

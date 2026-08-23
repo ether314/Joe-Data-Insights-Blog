@@ -3017,6 +3017,21 @@ const FreightRailVelocityVersusShipperRates2026Dashboard = dynamic(
   },
 );
 
+const UsGenericSterileInjectableShortages2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UsGenericSterileInjectableShortages2026Dashboard"
+    ).then((m) => m.UsGenericSterileInjectableShortages2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3808,6 +3823,10 @@ export function PostVisualization({
 
   if (type === "freight-rail-velocity-versus-shipper-rates-2026") {
     return <FreightRailVelocityVersusShipperRates2026Dashboard />;
+  }
+
+  if (type === "us-generic-sterile-injectable-shortages-2026") {
+    return <UsGenericSterileInjectableShortages2026Dashboard />;
   }
 
   return null;
