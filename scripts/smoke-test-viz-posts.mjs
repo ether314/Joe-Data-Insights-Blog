@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "instant-domestic-rails-vs-swift-for-retail-2026",
+    marker: "Headline — rail share of retail FX",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "rare-disease-trial-desert-map-2026",
     marker: "Rare-disease trials per million",
     forbidden: "Loading interactive charts",

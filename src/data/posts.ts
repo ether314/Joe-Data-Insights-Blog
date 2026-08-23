@@ -2,6 +2,106 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "instant-domestic-rails-vs-swift-for-retail-2026",
+    slug: "instant-domestic-rails-vs-swift-for-retail-2026",
+    title:
+      "Charted: Instant Domestic Rails Still Carry Only ~9% of Retail Cross-Border Value",
+    excerpt:
+      "Desk estimate: ~74% of global retail cross-border value still clears on correspondent / SWIFT messaging. FPS interlinks (PIX/UPI/FedNow-style links) are ~9% of value even as CPMI says ~47% of fast payment systems can process a cross-border leg. Capability is not rail share.",
+    category: "Finance",
+    themeId: "cross-border-payments",
+    imageUrl:
+      "/images/finance-instant-domestic-rails-vs-swift-for-retail-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of thick correspondent banking flows versus thin teal instant FPS rails for retail cross-border payments",
+    publishedAt: "2026-08-23T23:30:00Z",
+    featured: true,
+    visualization: "instant-domestic-rails-vs-swift-for-retail-2026",
+    layout: "default",
+    content: `Domestic instant rails feel ubiquitous. PIX clears hundreds of millions of Brazilian payments a day. UPI dominates Indian P2P. FedNow, Faster Payments, TIPS, PayNow, and PromptPay keep expanding operating hours and participant lists. The marketing line writes itself: instant at home, therefore instant abroad.
+
+The ledger does not cooperate. On a **desk estimate** of global **retail** cross-border **value** — remittances, person-to-person, and small merchant receipts, not wholesale FX or securities settlement — about **74%** still clears on **correspondent banking** chains that message over SWIFT (or equivalent) and settle through nostro/vostro accounts. **FPS interlinks** and multi-jurisdictional fast payment systems account for roughly **9%**. Closed-loop nonbanks and card-acquired retail paths take about **14%**. A residual **3%** covers crypto on/off-ramps and miscellaneous channels.
+
+That is the core gap this dashboard is built to hold: **system capability ≠ value share**. The BIS CPMI 2025 monitoring survey finds that **47%** of fast payment systems and **48%** of RTGS systems can process a cross-border leg. Among FPS that already enable cross-border payments, on the order of **43%** use interlinking arrangements. Those are infrastructure facts. They do not mean nearly half of retail FX value now rides PIX-to-PayNow style pipes.
+
+Toggle **Rail mix timeline**, **Corridor share**, **Regional stack**, **Speed vs cost**, **System arrangements**, and **Domestic FPS lens**. Switch **Value share / Cost / Speed** and filter by region. The stacked areas show correspondent share grinding down from the mid-80s in 2019 toward a **66%** 2027 carry — still a majority.
+
+## Scoreboard: rails vs capability
+
+| Cut | Figure | Reading |
+| --- | ---: | --- |
+| Correspondent share of retail CB **value** (2025e) | **74%** | Still the default clearing path |
+| FPS interlink / multi-jurisdiction share of value | **9%** | Growing, still single-digit |
+| Closed-loop nonbank / card share of value | **14%** | Competes on UX, not always on rail |
+| FPS systems capable of XB legs (CPMI 2025) | **47%** | Capability, not volume |
+| RTGS systems capable of XB legs (CPMI 2025) | **48%** | Majority still corr-led on legs |
+| FPS among XB-capable using interlinks (CPMI 2024 framing) | **~43%** | Arrangement mix inside capable set |
+| World Bank-style global avg remittance cost | **~6.3%** | Above G20 **3%** target |
+| Median hours · correspondent retail path | **~28h** | Days, not seconds |
+| Median minutes · live FPS–FPS corridor | **~45m** | Often seconds–minutes end-to-end |
+
+Read the left column as a value story and the capability rows as a plumbing story. Mixing them produces the false headline that “instant rails have already replaced SWIFT for retail.”
+
+## Correspondent banking still clears most of the money
+
+Correspondent chains remain the workhorse because they are **currency-complete** and **corridor-complete**. A US dollar remittance into a thin African corridor, a euro invoice into a Balkan account, or a sterling payout into a jurisdiction without an FPS link still needs a bank that holds the foreign currency and knows the beneficiary’s bank. SWIFT messaging is the coordination layer for that network; the settlement is the nostro account, not the message.
+
+Closed-loop providers (digital remittance apps, card-funded wallets) have taken a visible bite of **customer experience** — especially US→Mexico and US→India — without always exiting correspondent banking underneath. Many “instant” consumer receipts are funded by a nonbank that still settles net through banks. That is why the dashboard separates **closed-loop** (~14% of value) from **FPS interlink** (~9%). Instant to the user is not the same as instant on a public FPS-to-FPS rail.
+
+The timeline panel’s slow decline in correspondent share — roughly **86% → 74%** from 2019 to 2025 on the desk series — is real progress and still a majority story. Even the 2027 carry at **66%** assumes continued Asia-Pacific link densification and European SCT Inst / TIPS reach. It does not assume FedNow becomes a cross-border hub.
+
+## Instant rails win corridors, not the globe
+
+Where FPS–FPS links are live, value share can flip. Desk corridor cuts put **India → Singapore** and **euro-area retail cross-border** near or above **40%** FPS share of corridor value, with correspondent compressed. **Singapore → Thailand**, **Australia ↔ NZ**, and selected GCC→South Asia routes show double-digit FPS shares. Those corridors prove the product: seconds-to-minutes credit, lower disclosed fees, fewer intermediary layers.
+
+They do not generalize. **Sub-Saharan corridors** still print ~**72%** correspondent on the desk ladder, with high remittance costs (~**7.8%**) and multi-day medians. **US → Euro area** and **China → ASEAN** remain correspondent-heavy because the bilateral FPS fabric is thin or absent. **US → Mexico** is a closed-loop story more than an FPS-interlink story: big nonbank share, limited public FPS-to-FPS path.
+
+Asia-Pacific leads on interlinking in CPMI surveys; the Americas lag on average in planning many priority enhancements. That regional asymmetry shows up in the **Regional stack** panel: APAC FPS value share ~**18%**, Americas ~**7%**, Africa & Middle East ~**5%**, with correspondent still **55–78%** everywhere.
+
+## Capability surveys measure pipes, not flows
+
+CPMI’s monitoring surveys ask central banks what their payment systems **can** do and **how** cross-border legs are arranged. By 2025, nearly half of FPS and RTGS respondents can process a cross-border payment. For RTGS, **correspondent banking remains the primary method** for more than half of systems that handle inbound/outbound legs. For FPS, interlinking is rising — especially in Asia-Pacific — and a smaller slice is multi-jurisdictional by design.
+
+That arrangement pie (dashboard **System arrangements**) is essential and easy to misuse. A jurisdiction can report “FPS capable of cross-border” while **25%+** of that capable set still routes the foreign leg solely through participants’ correspondent relationships. Capability includes “we accept an outbound payment that a bank will still send via SWIFT.” It is not a census of PIX-style foreign credits.
+
+World Bank Remittance Prices Worldwide and GPSS frame **cost and access**, not rail taxonomy. Global average remittance costs remain well above the G20 **3%** retail target. Speed distributions still show a fat tail of multi-day correspondent paths even as linked FPS corridors deliver minutes. The **Speed vs cost** scatter puts live FPS paths in the lower-left (cheaper, faster) and correspondent paths up and right — but bubble sizes remind you which paths still carry the value.
+
+## Domestic giants are not automatic cross-border giants
+
+PIX, UPI, FedNow, and peers are domestic success stories first. The **Domestic FPS lens** indexes 2025 volume against a rough **outbound touch** share — the fraction of that jurisdiction’s outbound retail remittances that actually touch the FPS as a cross-border leg.
+
+UPI and PayNow show meaningful outbound touch where links exist. FedNow’s domestic index is still early and its cross-border status is effectively **domestic-only** for retail value. PIX’s international work is better read as **pilot / expanding** than as a global value shift. Faster Payments and SPEI often appear as **correspondent overlays**: domestic instant credit after a bank has already moved value across the border the old way.
+
+Treating domestic TPS (transactions per second) fame as proof of cross-border rail share is the most common error in this file. Domestic instant adoption is necessary for interlinking; it is not sufficient for global value migration.
+
+## What would actually move the 74%
+
+Three conditions have to stack before correspondent share falls much faster:
+
+1. **Dense bilateral or multilateral FPS links** on high-value remittance corridors — not demos, live with FX conversion and dispute rules.
+2. **Extended RTGS/FPS hours and nonbank access** so the last mile is not forced back into weekday correspondent windows (CPMI’s operating-hours and access workstreams).
+3. **ISO 20022 + API harmonisation** that makes data travel with the payment instead of repairing it in investigating messages.
+
+Absent those, closed-loop apps will keep winning UX share while still leasing correspondent capacity underneath, and the headline rail share will move in single digits per year — exactly the slope on the timeline panel.
+
+## Caveats (read before you trade the 74%)
+
+- **Value shares are desk estimates.** CPMI discloses system capability and arrangement type; it does not publish a unified global retail-FX value ledger by rail. The 74 / 9 / 14 / 3 split is an order-of-magnitude synthesis consistent with survey direction, public remittance volumes, and corridor case studies — not a SWIFT or CPMI extract.
+- **Retail ≠ wholesale.** This post excludes large-value RTGS wholesale, securities settlement, and bank-to-bank funding. Correspondent dominance is even stickier in wholesale.
+- **Closed-loop vs FPS.** Consumer “instant” often means a nonbank credit promise. We allocate those flows to closed-loop unless a public FPS–FPS or multi-jurisdiction FPS path is the clearing rail.
+- **Survey sample drift.** CPMI 2024 (68 jurisdictions) and 2025 (82) samples differ; percentages are not a perfect panel.
+- **2026–2027 points are carried.** They assume continued APAC link growth and European instant reach, not a US FPS cross-border breakthrough.
+
+## Sources
+
+- BIS CPMI — Enhancing cross-border payments step by step (2025 monitoring survey)
+- BIS CPMI — Moving on up (2024 monitoring survey)
+- BIS CPMI — Interlinking fast payment systems (Brief 7)
+- FSB — G20 Roadmap consolidated progress report 2025
+- World Bank — Remittance Prices Worldwide / GPSS
+`,
+  },
+  {
     id: "rare-disease-trial-desert-map-2026",
     slug: "rare-disease-trial-desert-map-2026",
     title:
