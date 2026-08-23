@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-childcare-price-vs-women-s-prime-age-lfp-2026",
+    marker: "CPI childcare vs LFP",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "electrician-and-plumber-age-cohorts-2026",
     marker: "Near-retirement share by state",
     forbidden: "Loading interactive charts",

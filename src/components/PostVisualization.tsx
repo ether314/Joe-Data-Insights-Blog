@@ -3347,6 +3347,21 @@ const ElectricianAndPlumberAgeCohorts2026Dashboard = dynamic(
   },
 );
 
+const UsChildcarePriceVsWomenSPrimeAgeLfp2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UsChildcarePriceVsWomenSPrimeAgeLfp2026Dashboard"
+    ).then((m) => m.UsChildcarePriceVsWomenSPrimeAgeLfp2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4226,6 +4241,10 @@ export function PostVisualization({
 
   if (type === "electrician-and-plumber-age-cohorts-2026") {
     return <ElectricianAndPlumberAgeCohorts2026Dashboard />;
+  }
+
+  if (type === "us-childcare-price-vs-women-s-prime-age-lfp-2026") {
+    return <UsChildcarePriceVsWomenSPrimeAgeLfp2026Dashboard />;
   }
 
   return null;
