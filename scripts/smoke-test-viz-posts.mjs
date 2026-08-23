@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "egg-price-shocks-and-pass-through-2026",
+    marker: "Wholesale-to-retail lag",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "generic-price-declines-versus-manufacturer-exits-2026",
     marker: "Price decline vs exit lag",
     forbidden: "Loading interactive charts",

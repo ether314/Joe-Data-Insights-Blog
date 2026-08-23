@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "egg-price-shocks-and-pass-through-2026",
+    slug: "egg-price-shocks-and-pass-through-2026",
+    title:
+      "Charted: Egg Wholesale Spikes Hit Shelves Late — and Unwind Slower Still",
+    excerpt:
+      "In the 2025 HPAI crest, AMS national loose wholesale peaked near $8.05/doz while BLS retail hit $6.23 about four weeks later. Wholesale then fell ~30% Mar→Apr; retail dropped only ~18% in the first month of unwind.",
+    category: "Food & Agriculture",
+    themeId: "food-dollar-farm-share",
+    imageUrl:
+      "/images/food-agriculture-egg-price-shocks-and-pass-through-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual price paths: teal wholesale spike peaking early and amber retail curve lagging behind, egg-carton silhouettes",
+    publishedAt: "2026-08-23T12:00:00Z",
+    featured: true,
+    visualization: "egg-price-shocks-and-pass-through-2026",
+    layout: "default",
+    content: `When highly pathogenic avian influenza empties barns, the first price that moves is not the sticker on a grocery carton. It is the negotiated trucklot quote for graded loose Large white eggs — the USDA Agricultural Marketing Service (AMS) print that volume buyers watch daily. Only later does the Bureau of Labor Statistics (BLS) average price for Grade A large eggs catch up. The interactive dashboard above tracks that wholesale-to-retail lag across the 2022–23, 2024, and 2025 HPAI waves: how fully spikes reached shelves, and how slowly cartons came back down once barns started to refill.
+
+The 2025 crest is the cleanest recent illustration. On the February 28, 2025 AMS Egg Markets Overview week, national loose Large white trucklots printed near **$8.05 per dozen**, with Midwest cartoned warehouse formula at **$8.30** and New York retailer delivery at **$8.53**. BLS’s city-average carton price for March 2025 hit a series high of **$6.23 per dozen**. That is not a contradiction. Wholesale is a thin spot market for bulk product; retail is a sticky shelf average that blends private-label, branded, cage-free, and promotional mix. The gap between an $8 wholesale print and a $6 retail average is the story of pass-through friction — not a data error.
+
+## Wholesale moves first; shelves follow by weeks
+
+Across the three HPAI episodes in the dashboard, retail peaks lag wholesale peaks by roughly **two to four weeks**. In 2022–23 the lag compressed toward three weeks as winter demand and depleted inventories pulled cartons up almost in lockstep with the spot market. In 2025 the lag stretched toward **four weeks**: wholesale cresting in late February, retail cresting in March.
+
+That lag has a mechanical reading. Grocers and distributors buy ahead. Cartons already on the shelf were purchased at last week’s cost. Feature ads are locked days or weeks in advance. Foodservice contracts reset on their own calendars. When AMS negotiated loose quotes jump a dollar overnight, the BLS average price — collected across urban outlets for a representative dozen — cannot teleport. It ratchets.
+
+The pass-through ratio at the crest is incomplete. Desk arithmetic that compares the 2025 wholesale peak ($8.05) with the retail peak ($6.23) against a quiet-period baseline near $2 puts crest pass-through around **72%** — lower than the **~86%** estimated for the 2022–23 crest. Retail did not fully “catch” the wholesale spike; it absorbed most of it with a delay, then stopped short of the trucklot extreme.
+
+## The unwind is asymmetric
+
+Pass-through is not just about the way up. The politically salient question after every HPAI wave is how fast shoppers get relief. Here the asymmetry is stark.
+
+CRS’s synthesis of AMS monthly wholesale averages shows March 2025 wholesale near **$5.33/doz** falling to **$3.74** in April — a drop of about **30%** in a single month. BLS retail fell from **$6.23** in March to **$5.12** in April — about **18%**. By May, retail was **$4.55** while wholesale kept grinding lower. Indexed from the late-February wholesale peak, wholesale was near half its crest within roughly **six weeks**; retail needed on the order of **fourteen weeks** to cut its peak in half.
+
+By the August 22, 2025 AMS report week, national loose had steadied near **$2.19**, Midwest cartoned near **$2.53**, and New York cartoned near **$2.61** — drops of **69–73%** from the late-February prints on the same channels. BLS retail in August was still **$3.59**. The shelf had come down, but not at wholesale’s pace. That sticky retail residual is what households feel as “eggs are still expensive” long after traders declare the spot market broken.
+
+## Why retail sticks when wholesale collapses
+
+Several stacking frictions explain the slow unwind without requiring a conspiracy theory about grocer margins.
+
+**Inventory valuation.** Chains that paid $6–$8 for product in February still have that cost in the pipeline. Selling through at the new $2 wholesale replacement cost would crystallize a loss; they bleed it down over weeks.
+
+**Promotion calendars.** Egg ads are high-traffic loss leaders. When supply is uncertain, retailers pull promotions rather than race the spot market lower. When supply returns, they reintroduce ads cautiously.
+
+**Mix shift.** BLS’s average price includes cage-free, organic, and specialty cartons whose wholesale benchmarks (especially California-compliant quotes) stayed elevated longer. A conventional-only shopper may see faster relief than the city-average series implies.
+
+**Risk premia.** After consecutive HPAI winters, buyers and sellers price optionality for the next barn depopulation. Spot can crash on a quiet week; contract and shelf pricing embeds a buffer.
+
+None of these frictions mean pass-through is “broken.” They mean pass-through is **state-dependent**: fast and incomplete on the way up, slow and incomplete on the way down.
+
+## Layer losses set the amplitude, not the lag
+
+USDA APHIS tallies since February 2022 put cumulative HPAI-affected birds in the high hundreds of millions, with commercial table-egg layers taking repeated concentrated hits. Early 2025 alone saw on the order of **30+ million** layers depopulated in the first months of the year across multiple states — enough to remove a meaningful share of the conventional caged flock in a single season.
+
+Annual layer-loss tallies in the dashboard line up with wholesale amplitude: larger loss seasons produce higher wholesale highs. They do **not** by themselves predict the shelf lag. Lag is a distribution and pricing-process variable. Amplitude is a supply variable. Conflating them produces bad forecasts: “we lost X million birds, therefore retail will peak in Y weeks at Z dollars” is one equation with three unknowns.
+
+The 2024 autumn rebuild is a useful foil. Wholesale and retail both rose into year-end, but the lag stayed shorter and the pass-through ratio sat between the 2022 and 2025 extremes. Losses were large; the marketing calendar and inventory position differed from mid-winter 2025.
+
+## Reading the dual series without confusing them
+
+AMS Market News and BLS average prices answer different questions.
+
+| Series | What it measures | Frequency feel | Best use |
+| --- | --- | --- | --- |
+| AMS national loose Large white | Negotiated trucklot f.o.b. dock | Weekly / daily undertone | Spot supply stress |
+| AMS Midwest cartoned warehouse | Formula sales delivered to warehouse | Weekly | Regional wholesale |
+| AMS NY cartoned to retailers | Formula delivery to store | Weekly | Gateway retail cost |
+| BLS APU0000708111 | City-average Grade A large carton | Monthly | Household shelf reality |
+| AMS national retail ad average | Featured ad price, not all SKUs | Weekly | Promo intensity |
+
+Comparing a weekly AMS loose print to a monthly BLS average without acknowledging the frequency mismatch will invent “gaps” that are partly measurement. The dashboard’s monthly spread panel therefore anchors wholesale to month-scale AMS/CRS averages where disclosed, and marks carried interpolations between report weeks. Treat those carried months as directional, not audit-grade.
+
+Also note what BLS itself warns: average prices are best for **level** comparisons in a month, while CPI index values are preferred for pure inflation rates. This post uses average dollars per dozen because the pass-through question is about levels households and buyers actually quote.
+
+## What “full pass-through” would have looked like
+
+If retail had matched the February 2025 wholesale crest one-for-one from a ~$2 quiet baseline, March BLS would have needed to clear something near **$8**, not $6.23. It did not. If retail had matched the wholesale unwind one-for-one, April and May cartons would have fallen faster toward the $3 handle. They did not.
+
+A more honest benchmark is **lagged partial pass-through**: most of the wholesale shock arrives at shelves within a month; a residual wedge persists for a quarter or more; and on the way down, retail half-lives run **two to three times** wholesale half-lives. That pattern repeated, with different amplitudes, in 2023’s unwind after the January retail peak of **$4.82** and again after the 2025 March peak.
+
+Regional AMS quotes reinforce the national story. California-compliant benchmarks peaked above **$9** in late February 2025 and were still above **$3** in late August — a slower percentage drop than national loose on some weeks, consistent with regulatory and cage-free mix constraints that do not bind the Midwest conventional plant the same way.
+
+## Caveats and confidence
+
+- **Wholesale monthly series** mixes disclosed AMS report-week anchors and CRS monthly averages with carried interpolations. Do not treat every month as a published AMS monthly mean.
+- **Pass-through percentages** are desk ratios against a quiet baseline, not econometric elasticities with confidence intervals.
+- **Layer-loss millions** are order-of-magnitude APHIS-linked tallies by season; they are not a formal regression input.
+- **BLS October 2025** is missing in the published average-price table (appropriations lapse marker); the path skips that month.
+- **Retail ads** on AMS can print far below BLS averages during promotions — a different object than the city-average series.
+- Organic and specialty SKUs can dominate local sticker shock even when conventional wholesale has normalized.
+
+## Bottom line for desks
+
+HPAI egg shocks are a two-clock problem. The wholesale clock runs in days and weeks; the retail clock runs in months. In 2025, an ~**$8** loose wholesale crest translated into a **$6.23** retail crest about **four weeks** later at roughly **three-quarters** pass-through, then wholesale halved while retail was still working off the first fifth of its decline. Anyone reading only one series will mis-time both the pain and the relief.
+
+Sources: BLS average price APU0000708111; USDA AMS Egg Markets Overview / Market News (selected 2024–2025 report weeks); CRS IF12949 monthly wholesale averages for Mar–Apr 2025; USDA APHIS HPAI detection summaries.`,
+  },
+  {
     id: "generic-price-declines-versus-manufacturer-exits-2026",
     slug: "generic-price-declines-versus-manufacturer-exits-2026",
     title:
