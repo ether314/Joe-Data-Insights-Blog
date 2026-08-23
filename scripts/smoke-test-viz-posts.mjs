@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "rail-headcount-after-precision-scheduling-2026",
+    marker: "Headcount vs dwell inflection",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "blast-furnace-vs-eaf-steel-by-country-2026",
     marker: "Heavy materials · steel route mix",
     forbidden: "Loading interactive charts",

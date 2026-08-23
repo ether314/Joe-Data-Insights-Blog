@@ -2,6 +2,117 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "rail-headcount-after-precision-scheduling-2026",
+    slug: "rail-headcount-after-precision-scheduling-2026",
+    title:
+      "Charted: Class I Rail Headcount Fell ~29% Under PSR — Terminal Dwell Rose First",
+    excerpt:
+      "STB Class I employment dropped from ~163k in 2015 to ~116k in 2022 (−29%). AAR terminal dwell climbed ~4.7 hours by 2019 — about three years before the employment trough — then eased while payrolls stayed thin. Headcount vs dwell inflection, not a single-year shock.",
+    category: "Transport & Logistics",
+    themeId: "freight-rail-performance",
+    imageUrl:
+      "/images/transport-logistics-rail-headcount-after-precision-scheduling-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic logistics illustration of a descending teal rail employment curve crossing an amber terminal-dwell pulse that peaks earlier along freight tracks",
+    publishedAt: "2026-08-25T12:00:00Z",
+    featured: true,
+    visualization: "rail-headcount-after-precision-scheduling-2026",
+    layout: "default",
+    content: `Precision-scheduled railroading sold itself as a service story: fixed schedules, longer trains, fewer hump yards, tighter asset turns. The payroll ledger tells a colder chronology. **Class I employment fell about 29% from the 2015 peak to the 2022 trough — and average terminal dwell rose first.**
+
+Using STB Class I employment prints (cross-checked against AAR employment tables) and AAR rail performance measures for terminal dwell and train speed, the industry composite shows a clear sequence. Dwell jumped hard in the 2017–2019 PSR adoption wave. Headcount kept grinding lower through 2022. Service metrics partially healed afterward; the workforce did not snap back to the mid-decade peak.
+
+The dashboard above walks the dual tape, the inflection scatter, carrier cut ladders, and craft-mix stacks. The rest of this post is the narrative behind those panels.
+
+## Scoreboard: headcount vs dwell inflection
+
+| Cut | Metric | Value |
+| --- | --- | ---: |
+| Class I employment peak (2015) | STB / AAR composite | **163.4k** |
+| Class I employment trough (2022) | STB / AAR composite | **115.8k** |
+| Peak-to-trough decline | 2015 → 2022 | **−29.1%** |
+| Mid-2026 employment | provisional composite | **121.2k** |
+| Terminal dwell baseline (2015) | AAR RPM hours | **22.1h** |
+| Terminal dwell peak (2019) | AAR RPM hours | **26.8h** |
+| Dwell rise to peak | 2015 → 2019 | **+4.7h** |
+| Mid-2026 dwell | provisional | **23.4h** |
+| Train speed trough (2018–19 window) | AAR RPM mph | **~23.9 mph** |
+| Dwell lead before employment trough | years | **~3** |
+
+The table’s punchline is sequence, not just magnitude. A desk that only reads the 2022 employment trough will miss the earlier service stress that shippers felt in yards and terminals.
+
+## What precision scheduling actually cut
+
+PSR is not a single regulation or a single year. It is an operating doctrine that spread carrier-by-carrier after Hunter Harrison’s CSX campaign in 2017 and similar playbooks at peers: reduce crew starts, close or idle humps, lengthen trains, schedule more rigidly, and treat locomotives and cars as scarce assets rather than buffers.
+
+That doctrine shows up in the employment series as a multi-year downshift. From 2015 to 2019, Class I headcount fell from **163.4k** to **132.4k** (−19%) even before the COVID demand collapse. From 2019 to 2022 it fell further to **115.8k**. Mid-2026 prints recover only to about **121k** — still roughly **26%** below the 2015 peak.
+
+The craft mix shifted with the model. Yard and terminal shares slipped about **2 percentage points** from 2015 to 2022 as humps closed and local switching thinned. Professional and “other” categories gained share as planning, technology, and centralized operations absorbed a larger slice of a smaller payroll. Train-and-engine remained the largest craft block, but the industry’s operational buffer — people who absorb disruption in yards — got thinner.
+
+## Did service degrade first?
+
+Yes, on the industry composite that matters for the headline question.
+
+Average terminal dwell rose from **22.1 hours** in 2015 to **26.8 hours** in 2019. Train speed fell from about **26.4 mph** to roughly **23.9 mph** in the same PSR-wave window. Those are not shipper invoice audits, and they are not carrier-specific STB Form C line items — they are AAR performance composites — but they are the public industry meters desks actually watch.
+
+The inflection scatter in the dashboard makes the order visible: **2017–2019 points sit in the “employment down, dwell up” quadrant**. The first large dwell jump lands in **2017**, three years before the employment trough. Pre-COVID, annual employment and dwell are tightly negatively correlated (about **−0.91** on the composite). After COVID, that relationship weakens (about **−0.18**) because 2020 collapsed volumes and temporarily cleaned yards even as payrolls kept falling.
+
+So the cleanest reading of the public tape is:
+
+1. **PSR wave:** dwell rises, speed falls, employment falls.
+2. **COVID shock:** volumes crash; dwell improves briefly; employment keeps falling.
+3. **Stabilize:** employment finds a lower plateau; dwell partially recovers but stays above the 2015 baseline.
+
+Service stress led the deep employment trough. It did not wait for the trough to arrive.
+
+## Carrier cuts were uneven
+
+Not every Class I cut the same way. Analytical carrier composites for 2015→2022 employment change put **CSX** near **−34%** and **Norfolk Southern** near **−31%**, with dwell stress in the PSR window also among the largest. **Union Pacific** lands around **−28%**. **BNSF**’s cut is milder on this composite (**about −18%**) with a smaller dwell delta — consistent with a later, less abrupt operating shift than the eastern PSR flashpoints.
+
+Share of remaining mid-2026 headcount still concentrates in the western franchises: BNSF and UP together approach half the Class I employment composite on this cut. That matters for interpreting industry averages. A national dwell or employment print is weighted by networks that adopted PSR at different speeds and with different yard footprints.
+
+Treat carrier deltas as **desk composites**, not audited 10-K footnotes. Merger accounting (CPKC), U.S.-only slices of CN, and reporting discontinuities can move a point or two. The rank order — eastern PSR pioneers cut harder and stressed dwell more — is the robust signal.
+
+## Cars on line and the productivity story
+
+PSR defenders argue that lower headcount is the point: more freight with fewer people. The cars-on-line index in the annual tape complicates a simple productivity celebration. Indexed to 2015 = 100, cars on line drifted around parity through the late 2010s, dipped hard in 2020, then spiked above 100 in 2021–2022 even as employment hit its trough. Congestion returned when demand recovered into a thinner crew and yard base.
+
+That pattern matches the shipper complaint cycle of 2021–2022: not that railroads had “too many workers,” but that the network had less slack when volumes rebounded. Train speed in 2022 printed near the PSR-wave trough again (**~23.7 mph** on this composite) before recovering toward **25 mph** by mid-2026. Employment recovered only a few thousand heads.
+
+Productivity can rise on a carload-per-employee meter while service reliability falls on a dwell-or-OTD meter. Both can be true in the same year. The public series do not resolve the shipper–carrier argument; they show that **headcount cuts and service stress were not simultaneous accidents**.
+
+## What the mid-2020s plateau implies
+
+By 2024–2026 the composite looks like a new normal rather than a bounce-back:
+
+- Employment: **~120–121k**, far below 2015.
+- Dwell: **~23–24 hours**, better than 2019’s 26.8h peak, still above the 2015 baseline.
+- Speed: **~25 mph**, improved from troughs but not restored to mid-decade cruise.
+
+If PSR’s promise was “fewer people, better service,” the public industry meters deliver only half the slogan. The people side stuck. The service side improved from the worst PSR-wave prints but did not fully erase the dwell premium versus the pre-PSR baseline.
+
+Labor markets also matter. Retirements, hiring freezes, and post-COVID hiring competition in transportation trades made rapid restaffing expensive even when carriers wanted more starts. The employment series therefore mixes **operating doctrine** and **labor supply**. The dwell-first sequence still holds: yards felt stress before the payroll trough, not only because of later hiring difficulty.
+
+## Caveats and what this is not
+
+This post uses **industry composites**. It is not a substitute for:
+
+- carrier-level STB Form C employment detail,
+- shipper invoice or OTIF audits,
+- FRA safety event series,
+- or union agreement headcount by craft and terminal.
+
+STB monthly employment prints can bounce with seasonal and reporting timing; we aggregate to annual means for the dual tape. AAR rail performance measures are national composites that can mask corridor-level meltdowns or recoveries. Mid-2025 and 2026 values are **estimated/carried** provisional prints for desk continuity. Craft shares are analytical reconstructions from public employment structure tables, not a full STB craft census.
+
+COVID is a confounder: 2020 improved some fluidity metrics while destroying volumes and accelerating furloughs. Reading 2020 as a PSR success year would be a category error. The cleanest PSR window for the sequence test remains **2017–2019**.
+
+## Bottom line for desks
+
+Class I railroading under precision scheduling became a **smaller-payroll industry** first measured in service stress, then in the employment trough. Roughly **three years** separate the first large dwell jump (2017) from the employment floor (2022). Mid-2026 employment is still about **26%** below the 2015 peak even after a modest restaffing bounce. Dwell has cooled from its 2019 high but remains above the pre-PSR baseline.
+
+For freight desks, the operational reading is blunt: headcount reductions under PSR were not a painless efficiency glide. The public meters say yards tightened first. Payrolls followed — and stayed down.`,
+  },
+  {
     id: "blast-furnace-vs-eaf-steel-by-country-2026",
     slug: "blast-furnace-vs-eaf-steel-by-country-2026",
     title:

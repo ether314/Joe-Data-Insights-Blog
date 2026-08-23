@@ -3422,6 +3422,21 @@ const BlastFurnaceVsEafSteelByCountry2026Dashboard = dynamic(
   },
 );
 
+const RailHeadcountAfterPrecisionScheduling2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/RailHeadcountAfterPrecisionScheduling2026Dashboard"
+    ).then((m) => m.RailHeadcountAfterPrecisionScheduling2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4321,6 +4336,10 @@ export function PostVisualization({
 
   if (type === "blast-furnace-vs-eaf-steel-by-country-2026") {
     return <BlastFurnaceVsEafSteelByCountry2026Dashboard />;
+  }
+
+  if (type === "rail-headcount-after-precision-scheduling-2026") {
+    return <RailHeadcountAfterPrecisionScheduling2026Dashboard />;
   }
 
   return null;
