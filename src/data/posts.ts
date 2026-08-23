@@ -536,7 +536,7 @@ The dashboard above is built for that gap. Toggle **Regional HHI vs cash**, **Na
 
 ## National CR4: the plateau everyone quotes
 
-Between 1980 and 1995, fed-cattle packing consolidated at industrial speed. AMS’s Federal Register recounting of the series shows CR4 rising from **35.7% to 79.3%**. PSD’s later annual table keeps the industry in a narrow band: mid-80%s through most of the 2010s, then **81% in both 2020 and 2021**. COVID-year plant disruptions shaved a few points off the prior peak; they did not reopen the market structure of the early 1980s.
+Between 1980 and 1995, fed-cattle packing consolidated at industrial speed. AMS’s Federal Register recounting of the series shows CR4 rising from **35.7% to 79.3%** [USDA AMS CR4]. PSD’s later annual table keeps the industry in a narrow band: mid-80%s through most of the 2010s, then **81% in both 2020 and 2021**. COVID-year plant disruptions shaved a few points off the prior peak; they did not reopen the market structure of the early 1980s.
 
 Cow and bull slaughter tells a different story. The same PSD table puts cow/bull CR4 near **47% in 2021** — more than **30 percentage points** below the fed-cattle print. That gap matters for anyone collapsing “beef packing” into one competition narrative. Fed plants optimized for Choice/Prime boxed programs are not the same buyer set as cow plants serving grinding and further-processed channels. When desks say “the Big Four,” they usually mean **fed** slaughter.
 
@@ -581,7 +581,11 @@ Several traps sit next to this chart pack. First, **national CR4 stability is no
 ## What desks should take from the regional print
 
 If you need one national concentration headline, use **81% fed-cattle CR4** and remember the **1980→1995** consolidation wave already did the structural work. If you need the competition headline that feedlots actually live inside, use **regional HHI >3,200 in Texas–OK–NM** and cash shares in the **low single digits**. If you need the cycle headline for 2024–2026, use the packer-margin path from **positive mid-2023 levels into sustained negatives** once herd contraction tightened fed supplies. National four-firm share tells you the industry’s ownership shape. Regional HHI, cash residual depth, and packer margins together tell you how that shape behaves when cattle get scarce.
-`,
+
+Sources:
+[USDA AMS CR4]: USDA AMS — Cattle & Beef Statistics / Federal Register CR4 series recounting. https://www.ams.usda.gov/market-news/cattle-and-beef
+[USDA AMS Regional HHI]: USDA AMS — Concentration in the Red Meat Packing Industries / regional procurement HHI commentary. https://www.ams.usda.gov
+[Sterling Profit Tracker]: Sterling Marketing (via Drovers) — Beef Profit Tracker, weekly packer/feedlot margins. https://www.drovers.com/markets/profit-tracker`,
   },
   {
     id: "women-and-men-in-apprentice-trades-2026",
