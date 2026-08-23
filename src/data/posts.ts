@@ -2,6 +2,81 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "colorado-river-compact-vs-actual-flows-2026",
+    slug: "colorado-river-compact-vs-actual-flows-2026",
+    title: "Charted: Colorado River Compact Allocations vs Actual Flows",
+    excerpt:
+      "Since 2000, Lees Ferry natural flow has averaged about 12.4 maf — roughly 4.0 maf (24%) below the ~16.4 maf supply the 1922 Compact still budgets against. Paper claims of 16.5 maf leave an even wider gap against millennial-drought hydrology.",
+    category: "Global Systems",
+    themeId: "freshwater-basins",
+    imageUrl:
+      "/images/global-systems-colorado-river-compact-vs-actual-flows-2026-hero.png",
+    imageAlt:
+      "Dark navy Colorado River canyon with turquoise flow line below an amber compact-allocation reference at 16.4 maf",
+    publishedAt: "2026-08-23T08:00:00Z",
+    featured: true,
+    visualization: "colorado-river-compact-vs-actual-flows-2026",
+    layout: "default",
+    content: `The Southwest still plans cities, farms, and power plants against a **1922 water budget** that assumed a wetter river than the one that arrives. At Lees Ferry — the Compact Point dividing Upper and Lower Basins — Reclamation’s naturalized water-year series shows what the basin actually delivers before storage games and depletion accounting. Since **2000**, that natural flow has averaged about **12.4 million acre-feet (maf)** per year. The Compact-era planning assumption was roughly **16.4 maf**. The gap is about **4.0 maf per year, or 24%** — not a rounding error, and not a single dry winter.
+
+The interactive dashboard above treats the problem as a **flow-versus-budget** lens. Toggle panels among natural flow overlays, era gaps, paper claims, and use-versus-entitlement; change the year window from the full post-1964 Glen Canyon record to the millennial drought or the last decade. The punchline is structural: **legal paper still adds to 16.5 maf while recent hydrology clears closer to 12–13**.
+
+## What the Compact actually allocated
+
+The **Colorado River Compact of 1922** split the system at Lees Ferry. Article III(a) apportioned **7.5 maf** of beneficial consumptive use to the Upper Basin and **7.5 maf** to the Lower Basin. Article III(b) gave the Lower Basin a further right to increase use by **1 maf** in some readings of surplus — a clause that still sparks argument. Article III(d) bound the Upper Division not to deplete Lees Ferry flow below **75 maf in any ten consecutive years** (a **7.5 maf/yr** equivalent floor on *delivered* flow, not on natural runoff).
+
+The Compact did **not** invent Mexico’s share. The **1944 US–Mexico Water Treaty** later set a **1.5 maf** delivery obligation. Stack the two basin compact blocks with Mexico and the familiar **16.5 maf of paper claims** appears. Negotiators in the early 1920s were working from a short, wet gage era; modern summaries put their implied mean near **16–17+ maf**. Reclamation and CRS now publish a **1906–2024** natural average near **14.6 maf** — already below the paper stack before the 21st-century drought.
+
+## Lees Ferry natural flow is the right yardstick
+
+**Naturalized** Lees Ferry flow estimates the runoff that would arrive without upstream storage changes, evaporation from reservoirs, and consumptive depletions. It is the hydrology clock. Gage flow below Glen Canyon Dam is the *operations* clock — releases, equalization, and drought contingency rules can hold gage volumes near 8–9 maf even when natural runoff collapses.
+
+For budget stress, natural flow is the harder truth. A year like **2002** (~5.9 maf natural) or **2021** (~7.2 maf) cannot fund 16.5 maf of simultaneous claims no matter how cleverly Powell and Mead are managed. Wet spikes (**2011** ~20.2 maf, **2023** ~17.4 maf) refill storage and buy political time; they do not rewrite the multi-decade mean.
+
+GCDAMP hydrology tables compiling Reclamation natural-flow accounting put the **2015–2024** ten-year natural average near **12.6 maf** — still about **3.8 maf** under the compact-assumed **16.4**. The millennial-drought window (**2000–2024**) averages **12.4**. Those are not provisional blog estimates; they are the same order of magnitude Reclamation cites in post-2026 operations materials (stress-test ~13.0; millennial drought ~12.4).
+
+## Paper claims versus observed eras
+
+| Benchmark | Volume (maf/yr) | Gap vs 16.4 assumed | Notes |
+| --- | ---: | ---: | --- |
+| Compact-era assumed supply | 16.4 | — | Planning hydrology embedded in Law of the River culture |
+| Paper claims (UB+LB+MX) | 16.5 | −0.1 (claims above assumed) | 7.5 + 7.5 + 1.5 |
+| 1906–2024 natural average | 14.6 | 1.8 (~11%) | Full instrumented-era mean |
+| 1988–2024 stress-test average | 13.0 | 3.4 (~21%) | Reclamation stress-test framing |
+| 2000–2024 millennial drought | 12.4 | 4.0 (~24%) | Driest multi-decade stretch in the gage era |
+| 2015–2024 ten-year average | 12.6 | 3.8 (~23%) | Recent operating decade |
+
+The table is the desk version of the dashboard’s **Era gaps** panel. Long-term hydrology was already short of paper; the 21st century opened a **four-maf** hole relative to the Compact’s mental model. That hole is larger than Nevada’s entire Lower Basin apportionment (**0.3 maf**) by an order of magnitude, and comparable to a large share of Arizona’s **2.8 maf**.
+
+## Lower Basin math is fixed; Upper Basin math is residual
+
+The **Boulder Canyon Project Act (1928)** carved the Lower Basin’s **7.5 maf** into fixed state shares: **California 4.4**, **Arizona 2.8**, **Nevada 0.3**. Those numbers are politically sticky because they are *statutes*, not percentages of leftover water. Shortage guidelines and Drought Contingency Plan tiers cut junior users first — Arizona’s Central Arizona Project and Nevada feel curtailment earlier than California’s senior contractors — but the *headline* apportionments do not shrink when Lees Ferry natural flow averages 12.4.
+
+Upper Basin states live under a different geometry. The **1948 Upper Colorado River Basin Compact** assigns **percentages** of whatever remains after Lee Ferry duties (Colorado **51.75%**, Utah **23%**, Wyoming **14%**, New Mexico **11.25%**, plus Arizona’s small fixed **50 kaf** Upper Basin slice). In practice, Upper Basin consumptive use has recently hovered near **~4.5 maf** — well under the **7.5** paper entitlement — precisely because meeting the non-depletion delivery culture and protecting Powell elevations leaves less water to develop. The Lower Basin, by contrast, has historically run much closer to a full **7.5** take before ICS, conservation programs, and shortage tiers forced cuts.
+
+That asymmetry matters for post-2026 talks. A basin that “balances” on paper by leaving Upper Basin entitlement unused is not in surplus; it is using under-development as a hidden buffer. If Upper Basin use rises toward 7.5 while Lower Basin refuses to permanently reduce its take, the **16.5 paper stack** collides harder with **12-ish** hydrology.
+
+## Reservoirs deferred the reckoning — they did not cancel it
+
+Lake Powell and Lake Mead were built as multi-year batteries. When natural flow runs below consumptive use plus losses, storage falls. The 2000s–2020s drawdown sequence — Mead and Powell both visiting elevations that triggered shortage tiers and emergency releases — is the physical expression of the table above. Wet years **2011** and **2023** proved the battery can still charge; they did not prove the Compact’s assumed mean has returned.
+
+Evaporation and system losses add another quiet debit. Basin accounting often treats **~1+ maf** of combined reservoir evaporation and phreatophyte / operational losses as real water that never reaches a contractor. That volume sits outside the neat 7.5 / 7.5 / 1.5 story even when deliveries look “full” on a Lower Basin water-accounting report.
+
+## What the rolling ten-year lens shows
+
+Compact Article III(d)’s **75 maf / 10 yr** floor is a *delivery* constraint on Upper Division depletion, not a promise that nature will supply 7.5 maf of virgin flow forever. The dashboard’s rolling ten-year natural mean stays well above 7.5 in most windows — natural runoff averaged over a decade is usually **12–16 maf** even in drought decades — which is why the non-depletion clause can be met while the *allocation* stack still exceeds supply. The political crisis is not that Upper Basin states failed the letter of III(d); it is that **simultaneous full use of all paper claims is hydrologically impossible** under millennial-drought means.
+
+Desk takeaway: do not confuse “the Compact delivery floor was met” with “the Compact budget is solvent.” The first is a legal test on cumulative Lee Ferry volumes. The second is an arithmetic test on whether **16.5** can be satisfied from **12.4**.
+
+## Caveats and limits
+
+Natural-flow series are **model reconstructions**, revised when consumptive-use-and-losses data are updated. GCDAMP / Reclamation tables can differ slightly from a given Excel vintage; treat individual years as ± a few tenths of an maf and focus on multi-year means. Compact “assumed supply” (~16.4) is a **historiographical** figure — what negotiators thought the river would yield — not a single line in Article III. Mexico’s **1.5 maf** is a treaty delivery with Minute flexibility under extreme shortage; it is not identical to a U.S. state apportionment. Upper Basin “~4.5 maf use” is an approximate recent consumptive band, not a certified CUL year. Shortage tiers, Intentionally Created Surplus, and system-conservation programs change *who* gets cut without rewriting the underlying hydrology gap. This post is an analytical comparison of published flow means against statutory paper — **not** an operating guideline, legal opinion, or forecast of post-2026 alternatives.
+
+## Sources and method
+
+Primary flow path: Reclamation natural-flow accounting as compiled in GCDAMP hydrology tables for Lees Ferry water-year naturalized volumes (1964–2025 sample used in the dashboard). Apportionments: 1922 Compact text; Boulder Canyon Project Act Lower Basin splits; 1944 Mexico Treaty. Era averages: Reclamation / CRS published summaries for 1906–2024 (~14.6), stress-test (~13.0), and millennial drought (~12.4). Gap percentages divide (16.4 − era mean) by 16.4. Use-versus-entitlement bars are illustrative recent levels for Upper Basin under-use versus Lower Basin near-full take — labeled as such in the data module.`,
+  },
+  {
     id: "public-dc-fast-chargers-vs-ev-stock-2026",
     slug: "public-dc-fast-chargers-vs-ev-stock-2026",
     title:

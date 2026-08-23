@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "colorado-river-compact-vs-actual-flows-2026",
+    marker: "Colorado River · compact vs actual flows",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "public-dc-fast-chargers-vs-ev-stock-2026",
     marker: "Public DC fast chargers · BEV stock coverage",
     forbidden: "Loading interactive charts",
