@@ -2,6 +2,78 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-cattle-herd-at-seventy-year-lows-2026",
+    slug: "us-cattle-herd-at-seventy-year-lows-2026",
+    title:
+      "Charted: US Cattle Herd at a 75-Year Low — How Liquidation Maps Onto Beef Prices",
+    excerpt:
+      "NASS puts Jan 1, 2026 all-cattle inventory at 86.2 million head — the lowest since 1951. Beef cows sit at 27.6 million. Drought-driven liquidation still shows up in retail beef values near record territory while replacement heifers print a fragile +1% rebuild cue.",
+    category: "Food & Agriculture",
+    themeId: "cattle-beef-squeeze",
+    imageUrl:
+      "/images/food-agriculture-us-cattle-herd-at-seventy-year-lows-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a sparse amber cattle herd on cracked prairie beside a rising cutout price line and falling teal herd-size area",
+    publishedAt: "2026-08-23T16:00:00Z",
+    featured: true,
+    visualization: "us-cattle-herd-at-seventy-year-lows-2026",
+    layout: "default",
+    content: `The United States is running a cattle inventory last seen when Harry Truman was still in office. USDA’s National Agricultural Statistics Service (NASS) Cattle report for January 1, 2026 puts **all cattle and calves at 86.2 million head**, a hair below the **86.5 million** print a year earlier and the lowest Jan-1 total since **1951**. The breeding engine is even tighter: **beef cows that have calved totaled 27.6 million**, down **1%** year over year and the smallest beef-cow herd since **1961**. That is not a one-year weather story. It is the visible tip of a multi-year liquidation that began after the 2019 cycle peak near **94.8 million** head and accelerated as drought priced pasture and hay out of reach across the Southern Plains and Mountain West.
+
+The interactive dashboard above is built for the desk question that follows from those prints: **how does drought-driven herd liquidation map onto retail beef prices, and when does rebuilding begin?** Toggle **Herd vs price**, **Drought**, **Rebuild signals**, and **Price ladder**. Flip the herd series between **All cattle** and **Beef cows**; on the overlay view, switch the right axis between **Choice cutout** and **all-fresh retail**. The headline stack is deliberate. The herd is at a seventy-five-year low. Wholesale Choice cutout values, carried as an annual desk average near **$355/cwt** into 2026, sit in record territory relative to the last expansion. ERS all-fresh retail beef cleared **$8.01/lb** in 2024 and is carried near **$8.55–$8.85/lb** for 2025–26. Those are not the same object as a daily LM_XB403 print — they are the level story the inventory path implies.
+
+## Scoreboard: herd size vs cutout
+
+| Metric | Value | Why it matters |
+| --- | ---: | --- |
+| All cattle & calves (Jan 1, 2026) | **86.2M head** | Lowest since 1951 |
+| Beef cows (Jan 1, 2026) | **27.6M head** | Lowest since 1961 |
+| Peak all-cattle inventory (1975) | **132M head** | Modern ceiling for context |
+| Last year above 100M head | **1997** | Structural downshift, not a blip |
+| Beef replacement heifers YoY | **+1%** | First expansion cue |
+| Calf crop (2025) | **32.9M (−2%)** | Pipeline stays tight |
+| Cattle on feed (Jan 1, 2026) | **13.8M (−3%)** | Near-term fed supply thinner |
+| Cattle inventory in drought (est.) | **~34%** | Still a large weather tax |
+| Choice cutout (2026 carried avg) | **~$355/cwt** | Wholesale scarcity signal |
+| All-fresh retail (2024 ERS / 2025e) | **$8.01 → ~$8.55/lb** | Grocery pass-through |
+
+Read the table as two clocks. The inventory rows are **biological time** — cows, heifers, and calves that cannot be minted on a futures roll. The price rows are **market time** — cutout and retail values that reprice every session but still track the multi-year squeeze. When both clocks run hot in the same direction (herd down, prices up), the story is scarcity. When they diverge, the story is demand, trade, or packing margins.
+
+## From peak to trough: what seventy-five years of drawdown looks like
+
+NASS’s long Jan-1 series makes the structural break obvious. The modern peak in **1975** sat near **132 million** head. Inventories spent the 1980s and 1990s stair-stepping lower as dairy shrank, productivity per animal rose, and competing meats claimed share. The last year the herd cleared **100 million** was **1997**. The cattle cycle that restarted around **2014** rebuilt into a soft peak near **94.8 million** in **2019**, then spent seven years contracting. That contraction is now in its **eighth** year on most cycle clocks and stretches a thirteen-year arc from the prior trough — longer than the textbook eight-to-twelve-year cattle cycle.
+
+Productivity muddies a naive “fewer cattle, less beef” reading. Heavier carcasses, a higher share of grain-finished cattle, and dairy-beef crossbreeding have kept beef disappearance from falling one-for-one with inventory. ERS cattle-and-beef statistics still show total beef disappearance in the high-**20s of billions of pounds** even as the breeding herd thins. The scarcity that shows up in **cutout and retail** is therefore a *margin of tightness*, not a grocery-shelf empty claim. Desks that only watch weekly slaughter can miss the breeding-stock hole that will govern 2027–29 calf crops.
+
+## Drought as the liquidation accelerator
+
+Drought did not invent the cattle cycle, but it compressed this contraction. Extension and Drought Monitor summaries used here put roughly **34%** of the national cattle inventory inside drought-rated areas as of early 2026 — down from the **~50–55%** peaks of 2022–23, still far from a clean pasture year. When range and pasture rate “very poor” to “fair,” producers buy hay at elevated prices or sell cows. NASS hay-price spikes in 2022–23 were the cash-cost twin of that weather map. Beef-cow slaughter ran hot for multiple years; even after cow slaughter cooled — carried here as roughly an **18%** drop in the prior year — the Jan-1 **2026** beef-cow print still fell another **1%**. Selling slowed. Net inventory did not yet turn.
+
+The dashboard’s drought view pairs an estimated **drought-share path** with year-over-year **beef-cow changes**. The geometry is ugly in the obvious years: drought share climbs, cow numbers fall. Texas alone still accounts for on the order of **13%** of national beef cows in the analytical state panel; Oklahoma, Kansas, and the Dakotas thicken the Plains stress belt. A national “34% in drought” average hides county-level pasture failure. That is why liquidation looked national even when rainfall returned unevenly: cows sold in 2022 cannot calve in 2026.
+
+## How the squeeze reaches the cutout — and the grocery case
+
+Wholesale Choice boxed-beef cutout is the carcass-value bridge between fed cattle and retail packages. AMS publishes it daily; this post carries **annual averages** so the inventory path and the price path share a calendar. From the mid-**$200s/cwt** in the late 2010s expansion, cutout marched into the **$300s** as inventories fell. The 2025–26 carried averages near **$328–$355/cwt** sit far above the 2016–18 troughs that accompanied herd rebuilding last cycle.
+
+Retail is stickier and more composite. USDA ERS’s **all-fresh beef retail value** — a weighted mix of steaks, roasts, and ground product — rose from **$5.82/lb** in 2019 to **$8.01/lb** in 2024. That is roughly a **38%** lift in five years. BLS average-price series for ground beef and Choice sirloin tell the same directional story at the item level (ground beef into the high-**$6/lb** band by late 2025 in public CPI prints). Farm-to-retail spreads matter: packing margins, labor, and retail markups can widen even when fed-steer prices pause. The ladder view in the dashboard keeps **fed steer ($/cwt)**, **Choice cutout ($/cwt)**, and **all-fresh retail ($/lb)** on one timeline so the pass-through is visible without pretending the units are identical.
+
+The scatter panel makes the cycle geometry blunt: years with **smaller herds** cluster with **higher retail values**. Correlation is not a trading system. Demand shocks (pandemic protein runs, export bans, competing-meat prices) move the same points. Still, the 2019–26 path is the cleanest recent illustration of liquidation mapping into consumer beef inflation.
+
+## Rebuild signals: heifers first, cows later
+
+Herd expansion is a multi-year relay. Producers retain **heifers** instead of placing them on feed; those heifers calve; the calf crop rises; fed supplies thicken two to three years later. The Jan 1, 2026 report finally printed a positive cue on the first leg: **beef replacement heifers rose 1%** to **4.71 million**, and heifers expected to calve also rose **1%**. That is necessary for expansion. It is not expansion. Beef cows still fell. The **2025 calf crop** fell **2%** to **32.9 million**. Cattle on feed fell **3%** to **13.8 million**. Milk cows rose **2%** to **9.57 million** — a dairy story that adds some beef via cull and crossbred calves but does not refill the beef-cow base.
+
+Most analysts now treat **2026** as a candidate cycle low, with confirmation only if the **January 2027** inventory rises. Even a clean turn in 2027 would leave retail beef tight through much of **2027–28** because biology does not clear on a fiscal-year close. Interest rates and pasture still gate heifer retention: high financing costs and residual drought keep some producers from converting strong calf prices into herd growth. Imports can soften the domestic hole at the margin; they do not recreate a Southern Plains cow herd overnight.
+
+## Caveats and what would falsify the story
+
+Several limits apply. Historical herd figures before the latest NASS revision window are **rounded** for charting; treat them as path geometry, not audit-grade cell values. Choice cutout annual averages for recent years are **desk-carried** from AMS boxed-beef markets and ERS Livestock Outlook framing — refresh against LM_XB403 before any trade. All-fresh retail for 2025–26 is **estimated** pending full ERS annual close. Drought shares of inventory are **estimated** from Drought Monitor / extension summaries, not a NASS line item. State pasture-stress scores are analytical. Rebuild timing language is a scenario, not a USDA forecast.
+
+The thesis weakens if **January 2027** inventory rises while cutout and retail roll over on demand destruction or a surge in competing meats; if drought share collapses and heifer retention accelerates faster than the biological lag implies; or if trade policy floods the domestic market with imported beef at a scale that caps cutout despite a small cow herd. The thesis strengthens if beef-cow inventories fall again in 2027, if calf crops stay below **33 million**, or if drought re-intensifies across Texas–Oklahoma–Kansas while replacement heifers stall.
+
+For desks and grocery buyers, the practical takeaway is narrower than cycle folklore: **price the breeding herd and the heifer cue**, not last week’s slaughter alone. An **86.2 million** head national herd with a **27.6 million** beef-cow base and only a **+1%** replacement uptick is still a scarcity regime — one that maps cleanly onto elevated cutout and retail until the biology of rebuilding shows up in calves, not just in optimism.`,
+  },
+  {
     id: "us-generic-sterile-injectable-shortages-2026",
     slug: "us-generic-sterile-injectable-shortages-2026",
     title:

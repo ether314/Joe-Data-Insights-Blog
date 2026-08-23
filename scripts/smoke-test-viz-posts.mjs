@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-cattle-herd-at-seventy-year-lows-2026",
+    marker: "Food & agriculture · cattle–beef squeeze",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-generic-sterile-injectable-shortages-2026",
     marker: "Sterile injectables · shortage share",
     forbidden: "Loading interactive charts",
