@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "correspondent-banking-corridor-retreat-2026",
+    marker: "Active correspondent corridors",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-atc-delay-minutes-by-cause-2026",
     marker: "US ATC delay minutes by cause — aviation ops lens",
     forbidden: "Loading interactive charts",

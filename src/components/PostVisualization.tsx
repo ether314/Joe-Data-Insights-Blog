@@ -2747,6 +2747,21 @@ const UsAtcDelayMinutesByCause2026Dashboard = dynamic(
   },
 );
 
+const CorrespondentBankingCorridorRetreat2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/CorrespondentBankingCorridorRetreat2026Dashboard"
+    ).then((m) => m.CorrespondentBankingCorridorRetreat2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3466,6 +3481,10 @@ export function PostVisualization({
 
   if (type === "us-atc-delay-minutes-by-cause-2026") {
     return <UsAtcDelayMinutesByCause2026Dashboard />;
+  }
+
+  if (type === "correspondent-banking-corridor-retreat-2026") {
+    return <CorrespondentBankingCorridorRetreat2026Dashboard />;
   }
 
   return null;

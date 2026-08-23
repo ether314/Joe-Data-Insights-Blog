@@ -2,6 +2,89 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "correspondent-banking-corridor-retreat-2026",
+    slug: "correspondent-banking-corridor-retreat-2026",
+    title:
+      "Active Correspondent Corridors: Where SWIFT Connectivity Thinned — and Who Still Stands",
+    excerpt:
+      "CPMI–SWIFT and FSB series show active correspondents down ~22% since 2011 while corridors fell ~12% and message volume rose. Latin America and Pacific SIDS lost the most links; thin corridors now lean on a handful of banks.",
+    category: "Finance",
+    themeId: "cross-border-payments",
+    imageUrl:
+      "/images/finance-correspondent-banking-corridor-retreat-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic map of glowing payment corridors thinning across the globe, with sparse arcs over island and emerging-market routes",
+    publishedAt: "2026-08-23T07:00:00Z",
+    featured: true,
+    visualization: "correspondent-banking-corridor-retreat-2026",
+    layout: "default",
+    content: `Cross-border payments still travel mostly on a nineteenth-century idea wrapped in twenty-first-century messaging: a bank that holds an account for another bank. Correspondent banking is the mesh that lets a remittance, an invoice, or a treasury transfer leave one jurisdiction and settle in another. For more than a decade that mesh has been thinning. CPMI–SWIFT IBOS series and FSB Correspondent Banking Coordination Group prints show **active correspondents down about 22% since 2011** and **active corridors down about 12%**, even as **message volume climbed**. Fewer banks handle more traffic. The interactive dashboard above maps that retreat: a network timeline, regional decline ladders, thin-corridor scatters, active-correspondent (AC) buckets, a concentration curve, and a currency lens.
+
+The operational question for desks is narrow. **Where has SWIFT/correspondent connectivity thinned the most, and which corridors now depend on a handful of banks?** The answer is not “everywhere equally.” Latin America and the Caribbean, Oceania’s Pacific small-island corridor set, and parts of Africa show the deepest relationship attrition. Northern America sits at the shallow end of the decline band. Inside the thin end of the distribution, desk-estimated corridor samples put **median top-3 bank share near 71%** of remaining active correspondents — a dependency map, not a marketing slogan.
+
+## The global ledger: fewer banks, more messages
+
+Start with the disclosed window. From 2011 through the late-2010s IBOS chartpacks, the number of banks that sent or received cross-border payment messages in a corridor fell roughly one-fifth. Corridors — country pairs with at least some active messaging — fell less, from about **10,800 toward 9,800** by 2018. Volume and, in many series, value did not fall with them. That combination is the definition of concentration: the same (or larger) payment load resting on a smaller set of relationships.
+
+FSB progress reporting put a number on the inequality inside corridors: a **Gini coefficient near 0.75** on active correspondents per corridor (holding the corridor population constant) by 2018. Our desk carry nudges that proxy toward **~0.78** by 2025 — not because a new public Gini was published at that grain, but because the mechanical story (volume up, ACs down) has not reversed in subsequent FSB/CPMI framing of cross-border payment friction. Treat the 2025 figure as an **estimated** extension, labeled as such in the viz.
+
+The timeline panel in the dashboard indexes everything to 2011 = 100. Active correspondents drift toward the low seventies; corridors settle in the high eighties; volume climbs into the mid-to-high 160s on the desk extension. The wedge between the volume line and the AC line is the entire story in one chart.
+
+## Regional retreat is uneven — and that is the point
+
+BIS Quarterly Review work on the global retreat of correspondent banks already showed that cumulative AC declines clustered differently by region: **Northern America near the low teens**, **Latin America toward the low thirties**, with Oceania and small-island dependent territories among the hardest hit. CPMI commentaries echoed the same geography: emerging-market and SIDS corridors lost relationships faster than advanced-economy hubs.
+
+Our regional ladder restates that hierarchy with corridor-decline companions:
+
+| Region | AC decline since 2011 | Corridor decline | Confidence |
+| --- | ---: | ---: | --- |
+| Latin America & Caribbean | 34% | 18% | disclosed / carried |
+| Oceania (incl. Pacific SIDS) | 32% | 16% | disclosed |
+| Africa | 28% | 14% | carried |
+| Eastern Europe | 24% | 11% | carried |
+| Asia | 20% | 9% | carried |
+| Western Europe | 18% | 8% | estimated |
+| Northern America | 13% | 5% | disclosed |
+
+Toggle the regional panel between **AC decline** and **corridor decline**. Corridors fall more slowly than relationships almost everywhere — which means the surviving corridors are the ones that matter for access, and the relationships *inside* those corridors are where single-bank risk concentrates.
+
+CPMI’s 2018 snapshot also flagged about **fifteen jurisdictions with fewer than twenty active relationships**. Many were small territories; some sat under sanctions or transparency stress. The absolute count is small, but the policy implication is not: once a jurisdiction falls into the teens of relationships, every subsequent exit is a larger percentage of remaining access.
+
+## Thin corridors: when three banks are the market
+
+Corridor-level AC counts are not published as a tidy public league table for every country pair. The thin-corridor panel is therefore an **illustrative desk sample** — Haiti→US, Samoa→NZ, Solomon Islands→Australia, Jamaica→US, Nigeria→UK, Kenya→UAE, Bangladesh→UAE, Ukraine→Germany — chosen to span the regions where cumulative retreat has been steepest and where remittance or trade corridors are economically meaningful.
+
+In that sample, several Pacific and Caribbean corridors sit at **three to four active correspondents**, with **top-3 shares of 78–100%**. Remittance-heavy Africa–Gulf and South Asia–Gulf corridors look slightly deeper (seven to nine ACs) but still post top-3 shares in the **sixties to low seventies**. The scatter’s x-axis is remaining AC depth; the y-axis toggles among top-3 share, top-1 share, and cumulative AC decline. Bubbles scale with estimated volume share. The upper-left quadrant — few banks, high concentration — is where a single compliance decision can interrupt a national payment artery.
+
+Desk estimate: corridors with **five or fewer** active correspondents account for roughly **40% of corridor counts** in our bucket mix but only about **18% of message volume**. Thinness is widespread in the network graph and smaller in the traffic graph — until you live in one of the thin nodes.
+
+## AC buckets and the concentration curve
+
+The bucket panel splits corridors into **1–3**, **4–5**, **6–10**, and **11+** active correspondents. Switch the pie between **corridor share** and **volume share**. The story flips: deep corridors (11+) hold about a third of corridor counts but nearly three-fifths of volume; the shallow 1–3 bucket is about a fifth of corridors and a sliver of global traffic. That is why global averages can look “fine” while island and small-state treasurers experience a crisis of options.
+
+The concentration curve makes the same point continuously. Rank corridors and accumulate shares of ACs versus messages. Message share pulls far above the diagonal early: a minority of corridors carry a majority of traffic. AC share stays closer to the diagonal longer, then steepens — consistent with a world where many corridors still have *some* banks, but the busy corridors have *many* and the quiet ones have almost none. FSB’s 0.75 Gini is the single-number compression of that shape.
+
+## Currency lens: dollar relationships thinned fastest
+
+FSB’s 2018 currency split remains the cleanest public print of relationship attrition by settlement currency: **USD relationships −5.9%**, **EUR −4.6%**, **GBP −3.0%** in that year alone. The dollar’s role as the dominant correspondent currency means dollar-corridor exits punch harder into emerging-market access — especially where local banks need a USD nostro to clear trade and remittances. The currency panel ranks those declines; message-share context in the data module reminds readers that USD still dominates traffic even as its relationship count shrinks.
+
+De-risking is not a single motive. AML/CFT compliance costs, tax-transparency expectations, sanctions perimeter management, and low expected revenue on small corridors all show up in FSB and IMF narratives. About **22% of correspondent exits** in earlier FSB survey work were attributed primarily to compliance and reputation. The rest mixed economics and strategy. For a small respondent bank, the label on the exit letter matters less than the fact that the letter arrived.
+
+## What the retreat does — and does not — prove
+
+Caveats first, because they are load-bearing:
+
+1. **Public IBOS country-pair AC ladders are sparse.** Corridor samples and 2020–2025 index extensions are desk estimates consistent with published regional bands, not a live SWIFT extract.
+2. **Message volume ≠ economic welfare.** Rising volume with fewer banks can mean efficiency *or* fragile dependency. The data alone do not separate those readings.
+3. **Sanctions and conflict corridors** can lose relationships for policy reasons that are not “de-risking of the innocent.” Treat thinness as a fact pattern; infer motive with jurisdiction-level context.
+4. **Non-correspondent rails** (closed-loop remittance networks, regional payment systems, card schemes, emerging multilateral platforms) can substitute for some retail flows without restoring wholesale correspondent depth. A thinner SWIFT mesh is not always a thinner payment system — but it usually is a thinner *bank-to-bank* system.
+5. **G20 cross-border payments roadmap** work (CPMI/FSB) targets speed, cost, transparency, and access. Progress on ISO 20022 and interoperability can improve the corridors that remain without automatically reversing relationship counts.
+
+What the evidence *does* support is directional and actionable. Connectivity has thinned most where relationships were already economically thin: Caribbean and Pacific corridors, parts of Africa, and other emerging-market pairs far from the North Atlantic hubs. Inside those corridors, surviving traffic increasingly leans on a short list of global and regional correspondents. For supervisors, that is a concentration and contingency-planning problem. For banks still offering the service, it is pricing power with reputational tail risk. For households and firms on the spoke end, it is fewer doors, higher friction, and a larger blast radius when one door closes.
+
+Use the dashboard to move from the global wedge (volume up, ACs down) to the regional ladder, then into the thin-corridor scatter. The headline is not that correspondent banking is disappearing. It is that **active correspondent corridors** are consolidating — and the map of who still stands is becoming the map of who can still clear.`,
+  },
+  {
     id: "us-atc-delay-minutes-by-cause-2026",
     slug: "us-atc-delay-minutes-by-cause-2026",
     title:
