@@ -2,6 +2,87 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "who-glass-bloodstream-resistance-2026",
+    slug: "who-glass-bloodstream-resistance-2026",
+    title:
+      "Charted: Acinetobacter Carbapenem Resistance Hits 54.3% in WHO GLASS Bloodstream Isolates",
+    excerpt:
+      "WHO GLASS 2023 bloodstream isolates: Acinetobacter carbapenem resistance 54.3% globally, African E. coli 3GC 70.7%, SE Asia K. pneumoniae carbapenem 41.2%, EMR MRSA 50.3% — last-line and first-choice failure rates mapped by pathogen and WHO region.",
+    category: "Global Systems",
+    themeId: "antimicrobial-resistance",
+    imageUrl:
+      "/images/global-systems-who-glass-bloodstream-resistance-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic bloodstream corridor with crimson bacterial nodes and cyan WHO regional resistance arcs",
+    publishedAt: "2026-08-23T06:00:00Z",
+    featured: true,
+    visualization: "who-glass-bloodstream-resistance-2026",
+    layout: "default",
+    content: `Bloodstream infections are the severity end of bacterial disease — and the place where antibiotic failure shows up first in global surveillance. WHO’s Global Antimicrobial Resistance and Use Surveillance System (GLASS) now publishes adjusted 2023 estimates across more than **23 million** bacteriologically confirmed infections from **104** reporting countries. This desk cut asks one question: **which pathogen–drug cells, and which WHO regions, post the highest share of bloodstream isolates resistant to last-line and first-choice drugs?**
+
+The interactive dashboard above is built as a **resistant-isolate share lens**. Toggle **Peak cells**, **Regions**, **Trends**, and **US vs GLASS**. On peaks, filter last-line carbapenems versus first-choice agents. On regions, flip among Acinetobacter carbapenem, *K. pneumoniae* carbapenem, *E. coli* carbapenem, *K. pneumoniae* 3GC, *E. coli* 3GC, and MRSA. The punchline is multi-cell, not a single slogan. Globally, **Acinetobacter · imipenem** sits at **54.3%** resistant (95% CrI 49.3–59.2). African Region *E. coli* third-generation cephalosporin resistance hits **70.7%**. South-East Asia *K. pneumoniae* carbapenem resistance reaches **41.2%**. Eastern Mediterranean MRSA bloodstream share is **50.3%**. Same surveillance system — four different failure tips.
+
+## The resistant-isolate scoreboard
+
+| Cell | Geography | Resistant share | Role |
+| --- | --- | ---: | --- |
+| *K. pneumoniae* · cefotaxime | African Region | **77.8%** | First-choice Watch 3GC |
+| Acinetobacter · imipenem | African Region | **71.0%** | Last-line carbapenem |
+| *E. coli* · 3GC | African Region | **70.7%** | SDG AMR indicator pair |
+| *E. coli* · cefotaxime | South-East Asia | **67.3%** | First-choice tip |
+| Acinetobacter · imipenem | Eastern Mediterranean | **66.5%** | Last-line regional peak |
+| *S. aureus* · methicillin | Eastern Mediterranean | **50.3%** | MRSA BSI |
+| *K. pneumoniae* · imipenem | South-East Asia | **41.2%** | Last-line Klebsiella tip |
+| *E. coli* · imipenem | South-East Asia | **17.5%** | Low level, steep slope |
+
+Read the table as a **family of peak cells**, not one global average. Carbapenem rows are the last-line story: Acinetobacter already fails more than half the time globally, and regional peaks push into the high sixties and seventies. Third-generation cephalosporin rows are the first-choice story: *E. coli* and *K. pneumoniae* lose the drugs clinicians reach for first, especially in Africa and South-East Asia. MRSA is a separate Gram-positive lane — lower globally at **27.1%**, but still one in two bloodstream isolates in the Eastern Mediterranean Region.
+
+## Peak cells: where last-line and first-choice break
+
+Open **Peak cells**. The ranked bars put African *K. pneumoniae* cefotaxime first at **77.8%**, then African Acinetobacter imipenem at **71.0%**, African *E. coli* 3GC at **70.7%**, and SE Asia *E. coli* cefotaxime at **67.3%**. Filter **Last-line ★** and the ladder collapses to carbapenem peaks: Africa Acinetobacter, EMR Acinetobacter, SE Asia *K. pneumoniae*, SE Asia *E. coli*. Filter **First-choice** and the 3GC / MRSA cells dominate.
+
+The companion global scoreboard panel shows adjusted bloodstream shares for the same pathogen–drug pairs without the regional tip: *K. pneumoniae* 3GC **55.2%**, Acinetobacter imipenem **54.3%**, *E. coli* 3GC **44.8%**, MRSA **27.1%**, *Salmonella* ciprofloxacin **18.0%**, *K. pneumoniae* imipenem **16.7%**, *E. coli* imipenem **2.4%**. Global medians hide the regional extremes — which is why the peak-cell view exists.
+
+## Regions: the map disagrees by drug
+
+Toggle **Regions**. Flip the metric control. On **Acinetobacter · carbapenem**, Africa and the Eastern Mediterranean lead; Europe sits far lower. On ***K. pneumoniae* · carbapenem**, South-East Asia leads at **41.2%** while Europe and the Western Pacific stay in single digits to low teens. On ***E. coli* · 3GC**, Africa’s **70.7%** dwarfs Europe’s **19.9%**. On **MRSA**, the Eastern Mediterranean’s **50.3%** sits against Europe’s **9.7%**.
+
+The radar panel overlays four regions across six metrics at once. Africa and South-East Asia inflate the carbapenem and 3GC axes; Europe compresses almost every spoke. That is the geographic content of GLASS bloodstream resistance in one view: **failure is thickest where health-system capacity is thinnest**, and the correlation WHO reports between median bloodstream AMR and the UHC service coverage index is strongly inverse (**r = −0.77**). Surveillance coverage itself correlates inversely with reported median resistance (**r = −0.74**) — a reminder that sparse, tertiary-heavy sampling can inflate apparent prevalence even as true burden remains high.
+
+## Trends: level is not slope
+
+Open **Trends**. The scatter plots 2023 resistance level against median annual percentage change from 2018–2023. Carbapenem tips for *K. pneumoniae* and *E. coli* sit mid/low on the level axis but high on slope: **+15.3%** and **+12.5%** per year respectively. Acinetobacter imipenem already sits high on level (**54.3%**) and still climbs (**+5.3%/yr**). *E. coli* 3GC is high and roughly stable (**+1.3%/yr**). MRSA trends slightly downward on the global median (**−2.5%/yr**) while remaining a severe regional problem in EMR.
+
+This is the desk distinction that matters for procurement and stewardship. A drug that is already failing half the time (Acinetobacter carbapenems) is a **stock** crisis. A drug that is still rare globally but rising double-digits annually (*E. coli* imipenem at **2.4%** with **+12.5%/yr**) is a **flow** crisis. Treating only today’s level as the signal underweights the carbapenem trajectory in Enterobacterales.
+
+## US comparator: different frame, useful contrast
+
+Toggle **US vs GLASS**. CDC EIP invasive *E. coli* surveillance is **not** a GLASS cell — different sampling frame, different geography, different clinical mix. It still helps desks avoid treating WHO global medians as if they described US hospital wards. Invasive *E. coli* ESBL share sits near **14%**; ceftriaxone resistance exceeds **15%**; fluoroquinolone resistance lands near **26–27%**. Among carbapenemase-producing *E. coli* in EIP samples, **blaNDM** has become the dominant carbapenemase (~**73%** of CP *E. coli* in 2023 samples). Beside that, WHO’s global *E. coli* 3GC bloodstream share of **44.8%** is a different universe — useful as a scale check, not as a pooled average.
+
+The companion panel shows GLASS reporting coverage by WHO region in 2023: South-East Asia **90.9%** of Member States reporting, Eastern Mediterranean **76.2%**, Europe **58.5%**, Africa **57.4%**, Western Pacific **37.0%**, Americas **20.0%**. High resistance and incomplete participation often coincide. Desks should read thick African and EMR peaks with that coverage caveat attached — not as a reason to dismiss the signal, but as a reason to demand denser surveillance.
+
+## AWaRe use and the syndemic frame
+
+GLASS sits beside WHO’s antimicrobial-use ledger. Access-group antibiotics — the preferred first-choice set — made up only **52.7%** of global use in 2022 against a UN political-declaration target of **70%** Access by 2030. Watch-group agents accounted for **45.3%**, exceeding **70%** of consumption in nearly one third of countries. Reserve agents remain rare at **0.3%**. When 3GC drugs fail, clinicians escalate to carbapenems; when carbapenems fail, options collapse into scarce Reserve agents that are costly and unevenly available in LMICs.
+
+That escalation ladder is why bloodstream resistance shares are not a microbiology curiosity. They are a **treatability map**. Carbapenem-resistant *K. pneumoniae* and Acinetobacter are associated with fatality exceeding **30%** in published burden work WHO cites. Third-generation cephalosporin-resistant *E. coli* and MRSA drive high incidence and disability even when last-line agents still work. The syndemic WHO describes — high resistance where UHC coverage and diagnostic capacity are weak — means the places least able to confirm and treat resistant bacteraemia are often the places reporting the thickest resistant-isolate shares.
+
+## Caveats desks should keep on the page
+
+- **Adjusted ≠ crude.** GLASS 2025 bloodstream percentages are Bayesian, coverage- and population-weighted estimates with credible intervals — not simple lab medians.
+- **Sparse surveillance inflates.** Where few tertiary hospitals report, case-mix bias can push resistance up; the inverse coverage–AMR correlation is part of the signal, not noise to ignore.
+- **Regional peaks ≠ every country.** National maps in the WHO annex vary widely inside each region; this post ranks pathogen–drug–region *cells*, not a country league table.
+- **US EIP ≠ GLASS.** Do not average CDC invasive *E. coli* shares with WHO regional percentages into one “global US-adjusted” rate.
+- **Trend ≠ inevitability.** Annual percentage changes are modelled medians over 2018–2023; stewardship, infection prevention, and Access-share targets can bend slopes.
+- **Infection type matters.** This cut is bloodstream only. Urinary and gastrointestinal resistance patterns differ and should not be pasted onto sepsis empiric protocols.
+
+## Bottom line for desks
+
+WHO GLASS bloodstream surveillance in 2023 puts last-line failure in plain view: **Acinetobacter carbapenem resistance at 54.3% globally**, with African and EMR regional peaks above **65%**. First-choice failure is thicker still for *Enterobacterales* 3GC drugs — **70.7%** for African *E. coli*, **77.8%** for African *K. pneumoniae* cefotaxime. The carbapenem *slope* on *E. coli* and *K. pneumoniae* (+**12.5%** and +**15.3%** per year) is the forward-looking alarm even where today’s levels remain lower than Acinetobacter. Read resistant-isolate share as a treatability meter by pathogen, drug, and region — and keep CDC US figures in a separate column.
+
+Primary sources: [WHO Global antibiotic resistance surveillance report 2025](https://www.who.int/publications/i/item/9789240116337); [WHO news briefing (13 Oct 2025)](https://www.who.int/news/item/13-10-2025-who-warns-of-widespread-resistance-to-common-antibiotics-worldwide); [CDC AMR facts & surveillance](https://www.cdc.gov/antimicrobial-resistance/data-research/facts-stats/index.html).`,
+  },
+  {
     id: "fao-capture-vs-aquaculture-tonnage-2026",
     slug: "fao-capture-vs-aquaculture-tonnage-2026",
     title:

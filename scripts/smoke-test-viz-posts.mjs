@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "who-glass-bloodstream-resistance-2026",
+    marker: "WHO GLASS bloodstream resistance — resistant isolate share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fao-capture-vs-aquaculture-tonnage-2026",
     marker: "FAO capture vs aquaculture tonnage",
     forbidden: "Loading interactive charts",
