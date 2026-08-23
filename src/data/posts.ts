@@ -2,6 +2,80 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "employer-coverage-of-glp-1-weight-loss-drugs-2026",
+    slug: "employer-coverage-of-glp-1-weight-loss-drugs-2026",
+    title:
+      "Charted: Jumbo Employers Covering GLP-1s for Weight Loss Jump to 43% — While Those Drugs Take Nearly Half of 2024 Rx Spend Growth",
+    excerpt:
+      "KFF’s 2025 Employer Health Benefits Survey puts coverage of GLP-1 agonists for weight loss at 43% among firms with 5,000+ workers (up from 28% in 2024). Mercer finds 44% of employers with 500+ already cover obesity medications. Evernorth’s commercial book shows weight-management therapies drove 46.8% of the 2024 pharmacy spend increase.",
+    category: "Health Economics",
+    themeId: "glp1-spending",
+    imageUrl:
+      "/images/health-economics-employer-coverage-of-glp-1-weight-loss-drugs-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of rising teal coverage bars beside a sharp rose pharmacy-spend curve and a geometric injectable-pen motif",
+    publishedAt: "2026-08-23T18:00:00Z",
+    featured: true,
+    visualization: "employer-coverage-of-glp-1-weight-loss-drugs-2026",
+    layout: "default",
+    content: `Employer pharmacy budgets did not invent glucagon-like peptide-1 (GLP-1) agonists. They inherited them — first as diabetes therapies that almost every large plan already covered, then as chronic weight-management products whose list prices and multi-year courses collide with the way employer-sponsored insurance is priced. The policy question for benefits desks is no longer whether the drugs work in trials. It is **who covers the obesity indication**, under what gates, and how fast commercial pharmacy spend has tilted toward the class.
+
+The interactive dashboard above pairs **KFF Employer Health Benefits Survey** coverage shares with **Mercer** national-survey cuts and **Evernorth Research Institute** (Express Scripts’ research arm) commercial trend. Toggle **Coverage**, **Pharmacy**, **Cost shock**, and **Indication**; filter KFF versus Mercer on the size ladder; switch the year-over-year bucket among KFF 200+, KFF 5,000+, Mercer 500+, and Mercer 20,000+.
+
+## Scoreboard: coverage vs spend tilt
+
+| Source | Cut | Year | Metric | Value |
+| --- | --- | ---: | --- | ---: |
+| KFF EHBS | Firms with 200+ workers | 2025 | Cover GLP-1 for weight loss | **19%** |
+| KFF EHBS | Firms with 5,000+ workers | 2024 → 2025 | Cover GLP-1 for weight loss | **28% → 43%** |
+| Mercer | Employers with 500+ | 2023 → 2024 | Cover obesity / weight-loss meds | **41% → 44%** |
+| Mercer | Employers with 20,000+ | 2023 → 2024 | Cover obesity / weight-loss meds | **56% → 64%** |
+| Evernorth | Commercial book | 2024 | Weight-mgmt share of Rx *increase* | **46.8%** |
+| Evernorth | Commercial book | 2024 | Weight-mgmt share of *total* Rx costs | **6.7%** |
+| Evernorth | Commercial book | 2023 / 2024 | GLP-1 weight-loss one-year net trend | **+210% / +149%** |
+
+Two stories sit in one table. On the **coverage** side, jumbo firms moved fast: KFF’s 5,000+ bucket gained fifteen percentage points in a single survey year. On the **spend** side, weight-management therapies already claimed nearly half of 2024’s commercial pharmacy cost *increase* even while representing under 7% of total drug costs — the classic signature of a steep ramp inside a still-small base.
+
+## What “cover” means in each survey
+
+KFF’s Employer Health Benefits Survey asks firms that offer health benefits whether their **largest plan** covers GLP-1 agonists when used **primarily for weight loss**. In 2025, **19%** of firms with 200 or more workers say yes; **57%** say no; about a quarter are unsure. Among firms with **5,000 or more** workers, coverage is **43%**, up from **28%** in 2024. That jumbo-firm jump is the clearest one-year signal in the public employer series.
+
+Mercer’s National Survey of Employer-Sponsored Health Plans uses a different perimeter: employers with **500+** workers, and a separate cut at **20,000+**, asking about coverage of medications for **obesity / weight loss** (not only the newest GLP-1 brands). In 2024, **44%** of the 500+ group covered those drugs (up from **41%** in 2023); among the largest employers, coverage reached **64%** (up from **56%**). Mercer also notes that nearly all plans already cover GLP-1s for **diabetes**, so the contested frontier is the obesity indication, not the molecule class itself.
+
+Do not average KFF and Mercer into a single “large employer coverage rate.” The firm-size floors differ (200 vs 500), the question wording differs (GLP-1 for weight loss vs obesity medications), and “unsure” shares are material in KFF. The dashboard’s survey toggle exists so readers can keep the series separate.
+
+## Firm size is the coverage gradient
+
+Coverage is not randomly sprinkled across American employers. It climbs with headcount. KFF’s 2024 survey put coverage among firms with 1,000 or more workers near **one in four**. The 2025 jumbo cut at 5,000+ clears **43%**. Mercer’s mega-employer cut at 20,000+ clears **64%**. Smaller “large” firms remain more likely to refuse the benefit or to answer that they do not know whether the largest plan covers it.
+
+That gradient matters for who actually has access. A coverage rate of 19% among all firms with 200+ workers understates the share of *workers* at firms that cover, because employment is skewed toward larger establishments. It also overstates access if many of those covering plans wrap the benefit in prior authorization, BMI thresholds, concurrent lifestyle programs, or time-limited courses. KFF finds that among large firms that do cover, roughly a third in 2025 require a meeting with a dietitian, therapist, or other professional — or participation in a lifestyle program — as a condition of coverage. In 2024, about half of covering large firms reported *some* condition or requirement.
+
+## How fast pharmacy spend tilted
+
+Evernorth’s 2025 Pharmacy in Focus report (commercial book) is the spend half of the story. Total commercial drug trend rose from low-single digits at the end of the 2010s to roughly **8–9%** by 2024. Inside that ramp, medications targeting **weight management** accounted for **46.8%** of the *increase* in drug spend in 2024 and **6.7%** of total drug costs. GLP-1 therapies for weight loss posted one-year **net trend** of about **+210%** in 2023 and **+149%** in 2024 — growth rates that dwarf the all-drug trend because they start from a thin base and ride both new starts and higher unit costs.
+
+Express Scripts / Evernorth framing is important: this is a **PBM commercial book**, not a Census of every US prescription. Self-insured employers that carved out obesity coverage, or never covered it, will not show the same claimant mix as fully insured books that do. Still, for desks that *do* cover, the message is blunt — weight-management GLP-1s have moved from a rounding error to a top-tier driver of traditional (non-specialty) trend, enough that traditional drug spend growth has, in Evernorth’s telling, outpaced specialty growth for the first time in the recent series.
+
+## Cost shock and the freeze on new adopters
+
+Coverage expansion and cost regret are arriving together. Among the biggest KFF firms (5,000+) that cover GLP-1s for weight loss, **59%** say cost has **exceeded expectations** and **66%** say the drugs had a **significant** impact on prescription drug spending. Focus-group work published with the Peterson-KFF Health System Tracker describes employers that opened the benefit, saw utilization above forecast, and then tightened utilization management — or narrowed coverage back toward diabetes-only indications.
+
+The inflow of *new* covering firms looks thin. Among large firms that do **not** currently cover GLP-1s for weight loss, only about **1%** say they are “very likely” to add the benefit in the next year (KFF 2025), down from an already-low **3%** in 2024. “Somewhat likely” answers exist, but the very-likely share is the better leading indicator for benefits committees that need board-level conviction. The market is therefore splitting: jumbo employers that already committed keep iterating on gates; many mid-size large employers stay out.
+
+## Indication split: diabetes yes, obesity contested
+
+Almost every large employer already pays for GLP-1 agonists when the diagnosis is type 2 diabetes. Mercer’s language is “nearly all.” The obesity / weight-loss indication is the contested carve. That split creates operational friction: the same molecule (or a closely related one) can be covered under one ICD-coded pathway and denied under another; demand for compounding and cash-pay channels rises where employer plans refuse the weight-loss label; and employees compare notes across employers in the same metro labor market.
+
+Clinically, obesity is a chronic disease with cardiovascular and metabolic sequelae. Budgetarily, a therapy that can cost on the order of **$1,000+ per month** at list price before rebates, often for years, behaves like a specialty drug that happens to sit in the traditional pharmacy bucket. Employers that hoped for rapid medical-cost offsets (fewer orthopedic procedures, better diabetes control, lower cardiovascular events) are still waiting for multi-year claims proof at plan scale. Until that proof arrives in their own book, many will keep treating coverage as a recruitment perk with a hard actuarial leash — not as an open entitlement.
+
+## Caveats and reading rules
+
+Treat every percentage as a **survey share**, not a census of covered lives. KFF’s “unsure” answers are large enough to move headlines if reclassified. Mercer and KFF firm-size cuts are not interchangeable. Evernorth trend rates describe a commercial PBM book and weight-management’s contribution to *increases*; they do not equal the share of employers that cover. Conditions of coverage (BMI floors, step therapy, concurrent behavioral programs, renewals) can make a “yes” on the survey feel like a “sometimes” at the pharmacy counter. Cash-pay, manufacturer savings cards, and compounded alternatives sit outside these employer tallies. And diabetes-indicated use can still generate weight loss — so some spend labeled “diabetes” in claims is economically adjacent to the obesity debate even when the formulary row says otherwise.
+
+The operational takeaway fits on a sticky note. If you need a single coverage headline for **jumbo private employers**, use KFF’s **43%** at 5,000+ workers in 2025 (up from **28%**). If you need a **mega-employer** Mercer cut, use **64%** at 20,000+. If you need the pharmacy tilt, use Evernorth’s **46.8%** of the 2024 spend *increase* and **6.7%** of total drug costs. If you need the freeze signal, remember that only about **1%** of large non-coverers say they are very likely to open the benefit next year — expansion is real among the biggest firms that already moved, and stalled among those that have not.
+`,
+  },
+  {
     id: "farm-share-of-the-food-dollar-2026",
     slug: "farm-share-of-the-food-dollar-2026",
     title:

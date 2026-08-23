@@ -3062,6 +3062,21 @@ const FarmShareOfTheFoodDollar2026Dashboard = dynamic(
   },
 );
 
+const EmployerCoverageOfGlp1WeightLossDrugs2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/EmployerCoverageOfGlp1WeightLossDrugs2026Dashboard"
+    ).then((m) => m.EmployerCoverageOfGlp1WeightLossDrugs2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3865,6 +3880,10 @@ export function PostVisualization({
 
   if (type === "farm-share-of-the-food-dollar-2026") {
     return <FarmShareOfTheFoodDollar2026Dashboard />;
+  }
+
+  if (type === "employer-coverage-of-glp-1-weight-loss-drugs-2026") {
+    return <EmployerCoverageOfGlp1WeightLossDrugs2026Dashboard />;
   }
 
   return null;

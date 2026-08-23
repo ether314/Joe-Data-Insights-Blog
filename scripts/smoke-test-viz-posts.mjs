@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "employer-coverage-of-glp-1-weight-loss-drugs-2026",
+    marker: "GLP-1 employer coverage · Rx spend tilt",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "farm-share-of-the-food-dollar-2026",
     marker: "Headline — USDA ERS Food Dollar",
     forbidden: "Loading interactive charts",
