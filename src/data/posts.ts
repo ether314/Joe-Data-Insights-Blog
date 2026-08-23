@@ -2,6 +2,88 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "global-5g-auction-proceeds-vs-coverage-2026",
+    slug: "global-5g-auction-proceeds-vs-coverage-2026",
+    title:
+      "Charted: High 5G Auction Prices Did Not Buy Faster Population Coverage",
+    excerpt:
+      "The US C-band peak of $0.875 per MHz-pop dwarfed the recent global mid-band average of ~$0.11. Across a cross-country auction sample, price and lagged 5G population coverage show a weak negative link — Brazil’s obligation-heavy award reached ~95% coverage while several high-price European awards lagged the median.",
+    category: "Technology",
+    themeId: "radio-spectrum",
+    imageUrl:
+      "/images/technology-global-5g-auction-proceeds-vs-coverage-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of cyan radio waves from a tower intersecting amber auction-price data points across frequency bands",
+    publishedAt: "2026-08-23T23:30:00Z",
+    featured: true,
+    visualization: "global-5g-auction-proceeds-vs-coverage-2026",
+    layout: "default",
+    content: `
+Governments spent the late 2010s and early 2020s treating mid-band radio spectrum as a fiscal jackpot. Auction rooms filled with mobile-network operators, reserve prices climbed, and finance ministries booked multi-billion-dollar receipts. The public story was tidy: scarce airwaves, competitive bids, and a one-time windfall that would somehow coexist with rapid 5G rollout.
+
+The data tell a messier story. When you normalize awards into **dollars per megahertz per population** — the industry’s standard $/MHz-pop unit — a handful of countries extracted extraordinary rents from the same mid-band frequencies that others licensed cheaply. Those high prices did **not** reliably predict faster population coverage three to five years later. In several markets the opposite pattern shows up: expensive spectrum and middling coverage, or modest prices paired with near-universal outdoor 5G.
+
+This desk builds a cross-country panel of headline mid-band awards, pairs each with a lagged coverage estimate, and asks the policy question that spectrum economists have been pushing for a decade: did auction design maximize treasury revenue at the expense of network investment?
+
+## What $/MHz-pop actually measures
+
+Raw auction proceeds mislead. A $80 billion US award and a $0.5 billion Central European award are not comparable without adjusting for how many megahertz were sold and how many people those licences serve. Divide proceeds by (MHz × population) and you get a unit that spectrum bankers, GSMA analysts, and GSA trackers all use.
+
+On that footing, the United States’ 2021 C-band auction (FCC Auction 107) still sits near the global ceiling at about **$0.875 per MHz-pop**. GSA’s recent C-band averages hover near **$0.11** — roughly an eightfold gap. Italy’s 2018 mid-band package cleared in the same elevated neighborhood once converted to dollars. Germany, the UK, and parts of the Gulf cleared lower but still above the soft post-2022 global mean. Japan’s administrative assignments and China’s state allocations show near-zero cash prices and very high coverage — a reminder that “price” is a policy choice, not a law of physics.
+
+Millimetre-wave tells the other end of the story. India’s 2022 mmWave clearing prices near **$0.0007 per MHz-pop** illustrate how little operators will pay for capacity bands that are hard to turn into nationwide coverage. Coverage spectrum (700 MHz) still clears higher averages than mid-band in recent GSA samples — which is intuitive if the scarce input is outdoor reach rather than downtown capacity.
+
+## The 2021 spike, then the hangover
+
+GSA’s fee sample of completed auctions and assignments shows why 2021 dominates every chart of “spectrum as a budget line.” Global disclosed proceeds hit about **$140 billion** that year, then collapsed to the mid-twenties in 2022, low single digits in 2023, and roughly **$1.1 billion** in 2024. The US C-band award alone explains much of the spike; India’s large 2022 package propped the following year. After that, the easy mid-band inventory was largely assigned in rich markets, and governments that still needed fiscal optics discovered thinner bidding interest.
+
+That boom-bust matters for interpretation. Comparing a 2018 Italian award to a 2023 Polish award without noting the macro window will exaggerate “Europe is expensive.” Comparing either to a 2024 Albanian C-band print near **$0.04 per MHz-pop** will exaggerate how far averages have fallen. The interactive dashboard therefore keeps award year on the tooltip and lets you filter regions rather than pretending every point is a same-year experiment.
+
+## Did high prices buy coverage?
+
+The short answer from the auction-only sample: **no clean positive relationship**. A desk rank correlation between $/MHz-pop and lagged 5G population coverage lands around **−0.31** — weakly negative, not a causal estimate, but enough to reject the folk theory that “operators who pay more will race to monetize.”
+
+Split the sample at median price and median coverage and the quadrants fill unevenly:
+
+| Quadrant | Pattern | Desk reading |
+| --- | --- | --- |
+| High price · high coverage | US, parts of Gulf | Deep capital markets + dense urban demand can absorb high fees |
+| High price · lagging coverage | Several large EU awards | Treasury extraction without matching buildout speed |
+| Low price · high coverage | Finland, Brazil, Japan (admin) | Obligations and industrial policy often dominate sticker price |
+| Low price · lagging coverage | India, South Africa (early window) | Cheap(er) mid-band is not sufficient without densification capital |
+
+Brazil is the case study spectrum lawyers like to cite. Anatel’s 2021 multiband design paired long licence terms, trading rules, and heavy coverage commitments with prices that were not in the Italian stratosphere. GSMA’s public case material points to near-**95%** population coverage by end-2024 and antenna deployments well ahead of minimum licence floors. Finland’s lower clearing prices and high coverage fit the same broad lesson: **scarce capital prefers towers when the licence fee has not already absorbed it**.
+
+Italy and parts of Western Europe sit uncomfortably in the other corner. High clearing prices coincided with protracted site acquisition, local permitting fights, and — in GSMA’s cost-share work — elevated spectrum cost as a share of sector revenue. Coverage eventually rose, but the lagged observation window still leaves several high-price awards below the sample median.
+
+## Obligations beat sticker prices more often than not
+
+Licence text is where coverage is actually purchased. When the desk scores awards on obligation intensity (light / moderate / heavy), average lagged coverage rises with the score even as average $/MHz-pop does not. Heavy-obligation cohorts in this sample clear near **mid-90s** coverage on average; light-obligation cohorts sit closer to the high-70s. That is not a randomized trial — countries that write tough buildout rules often also have denser cities and stronger backhaul — but it lines up with the GSMA argument that **policy design dominates reserve-price maximalism**.
+
+France’s hybrid award, Korea’s early 3.5 GHz contest, and Brazil’s package all bundled spectrum with measurable outdoor and indoor milestones. Pure revenue auctions with weak milestones can still produce excellent networks where equity markets will refinance the fee (the US path). They can also strand operators with expensive licences and slow rural overlays.
+
+## India: high burden, not always high $/MHz-pop
+
+India is easy to misread. Absolute proceeds in 2022 were enormous in rupee and dollar terms, and GSMA’s Global Spectrum Pricing work flags spectrum cost near **26%** of mobile-sector revenue by 2023 — an extreme burden. Yet mid-band $/MHz-pop in the desk’s attributable tranche is closer to the global soft average than to the US C-band peak, because the population denominator is vast. Coverage in the three-year window after the award remains far below East Asian leaders.
+
+The implication for desks that only rank $/MHz-pop: **India looks “cheap” on that unit and “expensive” on affordability**. Both can be true. Operators facing a high cost share of revenue still ration densification even when the population-normalized unit looks moderate. mmWave clearing prices near zero reinforce that the market will not overpay for bands that do not solve the coverage problem.
+
+## Caveats and what this panel cannot claim
+
+Several limits are baked into the file:
+
+- **Coverage is lagged and estimated.** We align to GSMA/GSA-style population-coverage reporting roughly three to five years after the primary mid-band award, not a same-calendar-year snapshot. Early awards get longer windows; 2023 awards get shorter ones and will look “worse” until revisions.
+- **Multi-band packages blur attribution.** Where regulators published only package totals, the desk attributes proceeds to the headline mid-band tranche and marks confidence as estimated.
+- **Administrative assignments break the price axis.** China and Japan appear for coverage contrast; they are excluded from price-rank averages and from the default auction filter.
+- **Correlation is not causation.** High-price countries differ systematically in ARPU, tower regulation, and capital-market depth. The weak negative link rejects a naive “pay more, cover faster” claim; it does not prove that cutting reserve prices always accelerates rollout.
+- **GSA fee samples are incomplete.** Global proceeds totals only include auctions where fee data exist. Missing regional awards bias the boom-year totals, usually downward.
+
+Even with those caveats, the policy signal is durable. Spectrum is an input to coverage, not a substitute for it. Governments that treat mid-band primarily as a one-time tax should expect operators to treat network densification as the residual claim on cash. Governments that write enforceable outdoor milestones, longer licence certainty, and tradable secondary markets can clear lower unit prices and still end up with the coverage map voters were promised.
+
+Use the dashboard to toggle regions, include or exclude administrative assignments, and flip between the price-coverage scatter, top $/MHz-pop bars, global proceeds area, obligation composites, and band-average prices. The headline is not that auctions are wrong — it is that **$ per MHz-pop is a poor leading indicator of 5G population coverage**, and the countries that learned that early wrote it into the licence rather than the press release.
+`,
+  },
+  {
     id: "us-crushed-stone-vs-construction-put-in-place-2026",
     slug: "us-crushed-stone-vs-construction-put-in-place-2026",
     title:

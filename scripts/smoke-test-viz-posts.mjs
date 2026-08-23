@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "global-5g-auction-proceeds-vs-coverage-2026",
+    marker: "$ per MHz-pop vs coverage",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-crushed-stone-vs-construction-put-in-place-2026",
     marker: "Headline — tonnage vs real CIP",
     forbidden: "Loading interactive charts",

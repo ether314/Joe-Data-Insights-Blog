@@ -3257,6 +3257,21 @@ const UsCrushedStoneVsConstructionPutInPlace2026Dashboard = dynamic(
   },
 );
 
+const Global5gAuctionProceedsVsCoverage2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/Global5gAuctionProceedsVsCoverage2026Dashboard"
+    ).then((m) => m.Global5gAuctionProceedsVsCoverage2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4112,6 +4127,10 @@ export function PostVisualization({
 
   if (type === "us-crushed-stone-vs-construction-put-in-place-2026") {
     return <UsCrushedStoneVsConstructionPutInPlace2026Dashboard />;
+  }
+
+  if (type === "global-5g-auction-proceeds-vs-coverage-2026") {
+    return <Global5gAuctionProceedsVsCoverage2026Dashboard />;
   }
 
   return null;
