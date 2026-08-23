@@ -219,6 +219,137 @@ export function CapitalMarketsCategoryIcon({ className = "h-7 w-7" }: IconProps)
   );
 }
 
+export function HealthEconomicsCategoryIcon({ className = "h-7 w-7" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden>
+      <path
+        d="M16 26S5 19.6 5 12.4C5 8.3 8.2 6 11.2 6c1.9 0 3.7.9 4.8 2.5C17.1 6.9 18.9 6 20.8 6 23.8 6 27 8.3 27 12.4 27 19.6 16 26 16 26z"
+        fill="currentColor"
+        fillOpacity="0.15"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10 15h3l1.5-3 2.5 6 2-3h3"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function LaborSkillsCategoryIcon({ className = "h-7 w-7" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden>
+      <rect x="4" y="14" width="24" height="7" rx="2" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M9 14V8h14v6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <circle cx="13" cy="11" r="1.5" fill="currentColor" fillOpacity="0.6" />
+      <circle cx="19" cy="11" r="1.5" fill="currentColor" fillOpacity="0.6" />
+      <path
+        d="M8 21v5M16 21v5M24 21v5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeOpacity="0.55"
+      />
+    </svg>
+  );
+}
+
+export function RealEstateCategoryIcon({ className = "h-7 w-7" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden>
+      <path
+        d="M5 15L16 6l11 9"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8 13v13h16V13"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <rect x="13" y="18" width="6" height="8" fill="currentColor" fillOpacity="0.35" />
+      <path
+        d="M22 8v4"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeOpacity="0.5"
+      />
+    </svg>
+  );
+}
+
+export function FoodAgricultureCategoryIcon({ className = "h-7 w-7" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden>
+      <path
+        d="M16 27C16 18 16 12 16 9"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M16 12c-4 0-6-2.5-6-6 4 0 6 2 6 6zM16 12c4 0 6-2.5 6-6-4 0-6 2-6 6z"
+        fill="currentColor"
+        fillOpacity="0.35"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16 19c-5 0-8-3-8-8 5.5 0 8 3 8 8z"
+        fill="currentColor"
+        fillOpacity="0.25"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8 27h16"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeOpacity="0.45"
+      />
+    </svg>
+  );
+}
+
+export function TransportLogisticsCategoryIcon({ className = "h-7 w-7" }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden>
+      <rect x="3" y="10" width="15" height="10" rx="1.5" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M18 13h6l4 4v3h-4"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+      <circle cx="9" cy="23" r="2.5" stroke="currentColor" strokeWidth="2" />
+      <circle cx="23" cy="23" r="2.5" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M11.5 23H20"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeOpacity="0.6"
+      />
+    </svg>
+  );
+}
+
 export const CATEGORY_ICONS: Record<
   Category,
   ComponentType<{ className?: string }>
@@ -232,4 +363,9 @@ export const CATEGORY_ICONS: Record<
   Industry: IndustryCategoryIcon,
   "Consumer Finance": ConsumerFinanceCategoryIcon,
   "Capital Markets": CapitalMarketsCategoryIcon,
+  "Health Economics": HealthEconomicsCategoryIcon,
+  "Labor & Skills": LaborSkillsCategoryIcon,
+  "Real Estate": RealEstateCategoryIcon,
+  "Food & Agriculture": FoodAgricultureCategoryIcon,
+  "Transport & Logistics": TransportLogisticsCategoryIcon,
 };

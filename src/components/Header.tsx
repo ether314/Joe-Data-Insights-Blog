@@ -18,12 +18,12 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden flex-wrap items-center justify-end gap-1 md:flex md:max-w-[55%]">
           {CATEGORIES.map((cat) => (
             <Link
               key={cat}
               href={`/category/${categorySlug(cat)}`}
-              className="rounded-md px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white"
+              className="rounded-md px-2.5 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white"
             >
               {cat}
             </Link>
