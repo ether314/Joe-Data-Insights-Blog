@@ -2,6 +2,78 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ogallala-aquifer-saturated-thickness-decline-2026",
+    slug: "ogallala-aquifer-saturated-thickness-decline-2026",
+    title:
+      "Charted: Ogallala Saturated Thickness — Which Counties Are Mining Fastest, and How Many Years Remain?",
+    excerpt:
+      "USGS puts High Plains area-weighted water levels −16.5 ft since predevelopment — Texas −44.1 ft. In a mining panel, Hale County, TX is losing ~2.4 ft/yr with roughly 12 years to a 30-ft high-capacity floor.",
+    category: "Global Systems",
+    themeId: "freshwater-basins",
+    imageUrl:
+      "/images/global-systems-ogallala-aquifer-saturated-thickness-decline-2026-hero.png",
+    imageAlt:
+      "Dark navy data-journalism hero of High Plains aquifer cross-section with amber-crimson shrinking saturated-thickness wedge and cyan water table",
+    publishedAt: "2026-08-23T12:00:00Z",
+    featured: true,
+    visualization: "ogallala-aquifer-saturated-thickness-decline-2026",
+    layout: "default",
+    content: `The High Plains aquifer — the Ogallala system in public shorthand — still holds about **2.91 billion acre-feet** of recoverable water. That sounds infinite until you price the stack the way irrigators experience it: **feet of saturated thickness** above the base of the aquifer, drained at **feet per year**. USGS Scientific Investigations Report 2023–5143 puts the **area-weighted** water-level change from predevelopment (~1950) to 2019 at **−16.5 ft** across 111.8 million acres in eight states. Texas alone averages **−44.1 ft**. Kansas averages **−27.3 ft**. Nebraska averages **−0.4 ft**. The same aquifer hosts both a multi-decade mining belt and a near-stable northern shelf.
+
+The dashboard above is built for that geography. Toggle **County decline** for composite ft/yr rates, **Years to floor** for a 30-ft high-capacity lifetime, **Mining scatter** for decline versus years (bubble size ≈ irrigated acres), **State ledger** for the USGS state table and thickness-loss bands, and **Era path** for the cumulative area-weighted decline to the 2019 endpoint.
+
+## What saturated thickness actually measures
+
+Saturated thickness is the vertical distance from the water table to the base of the aquifer. USGS HA 730 and Gutentag and others (1984) framed the High Plains as an unconfined system whose thickness ranges from essentially zero in discontinuous patches to roughly **1,200 ft** in the thickest Nebraska settings. A large water-level decline in a thick stack is a different economic event than the same decline where only **50–80 ft** remain. That is why percent change in saturated thickness (SIR 2023–5143 figure 3) is not a redundant map of water-level change: a modest foot-drop can erase half the usable column where the predevelopment stack was thin.
+
+High-capacity irrigation wells do not run usefully to zero. Kansas Geological Survey usable-lifetime maps treat roughly **30 ft** of remaining saturated thickness as the practical floor for large-volume pumping. The years-to-floor math in this post follows that convention: **(remaining sat − 30) ÷ recent decline rate**. It is a linear projection, not a hydrogeologic simulation — and it is the right first cut for asking which counties are on a short clock.
+
+## The state ledger: Texas and Kansas carry the storage loss
+
+From predevelopment to 2019, recoverable storage in the High Plains fell by about **286.4 million acre-feet** — roughly a **10%** decline from the predevelopment inventory. Texas accounts for **−169.6 Macre-ft** of that loss; Kansas for **−72.0**. Nebraska's long-run storage change is only **−2.7 Macre-ft**, and from 2017 to 2019 Nebraska **gained** **4.3 Macre-ft** while Texas lost another **2.7**. The two-year map is not a reprieve for the southern mining belt; it is a reminder that wet years and northern recharge can move the aquifer-wide average even while Panhandle and southwest Kansas wells keep digging.
+
+Area-weighted averages also hide the extremes. Individual wells in the USGS comparison show declines as large as **265 ft** in Texas and rises as large as **86 ft** in Nebraska. About **12%** of the aquifer area (excluding little-or-no saturated thickness) has seen water-level declines of **50 ft or more**. About **5.7%** of the area has lost **half or more** of its predevelopment saturated thickness. Those are the patches that set land markets, well-deepening costs, and local groundwater rules — not the eight-state mean.
+
+## County mining: who is draining fastest
+
+County-scale rates are where the policy argument lives. The panel in the dashboard is a **desk composite**: recent decline rates consistent with published southwest Kansas / southern High Plains ranges, joined to representative remaining saturated thickness. It is not a substitute for section-level KGS or TWDB well networks — and it is enough to rank the mining front.
+
+On that panel, **Hale County, Texas** leads at about **2.4 ft/yr** with roughly **58 ft** remaining — about **12 years** to a 30-ft floor if the rate holds. **Lamb** (~2.1 ft/yr), **Haskell, Kansas** (~2.2), **Parmer** (~2.0), and **Grant, Kansas** (~2.0) sit in the same multi-foot class. **Finney County**, long among Kansas's heaviest groundwater users, lands near **1.9 ft/yr** with a thicker remaining stack (~110 ft) and a longer — but still finite — clock. **Thomas County** in northwest Kansas shows the GMD 4 pattern: slower decline (~0.7 ft/yr) against a still-usable column. **Holt County, Nebraska** is near-stable (~0.15 ft/yr) on a thick northern stack — the opposite problem from Hale.
+
+Sort the same panel by irrigated acres and the ranking shifts toward large cotton and feed-grain counties; sort by years-to-floor and the thin southern stacks jump to the front even when absolute remaining feet look similar. Decline rate without thickness is incomplete. Thickness without rate is a museum label.
+
+## Kansas GMDs: three districts, three clocks
+
+Kansas Geological Survey Technical Series 25 (2023) compresses the Ogallala region of Kansas into groundwater management districts with blunt averages. **GMD 3** (southwest) shows about **101 ft** of average decline since predevelopment, **142 ft** remaining, and a **1.8 ft/yr** average annual decline over 1996–2022 — a long runway that is still being spent fast. **GMD 1** (west-central) is the short stack: about **32 ft** remaining after losing roughly **61%** of original thickness, even though its long-run rate (~0.6 ft/yr) is slower than GMD 3. **GMD 4** (northwest) sits in between: **~75 ft** remaining, **~0.5 ft/yr**, and a **25%** thickness loss. District averages smooth over section-scale hotspots — the CRP literature and KGS maps both show pockets inside Finney, Haskell, and neighbors that exceed **2 ft/yr** — but the GMD trio is the right state-policy frame: programmed depletion is not one Kansas story.
+
+## Irrigation demand still sits on the mined stack
+
+USGS / USDA inventories put irrigated acreage overlying the High Plains aquifer near **14.8 million acres** in 2017 — about **14%** of the aquifer area excluding little-or-no saturated thickness. Groundwater remains the dominant irrigation source on most of that footprint; roughly **95%** of High Plains groundwater withdrawals in 2015 were for irrigation. Withdrawals have fallen from the peak era (on the order of **19 Macre-ft** around 2000 toward about **13 Macre-ft** in 2015 in national water-use estimates), yet water levels in the southern and central mining belts keep falling because recharge is small relative to pumping where precipitation is low and the unsaturated zone is deep.
+
+That is the saturated-thickness punchline. Efficiency gains and acreage shifts can slow the **rate**, but they do not rewrite the **column**. A county losing **2 ft/yr** on **60 ft** remaining is not rescued by a 10% cut in application rate unless the cut is sustained and large enough to change the trend — and even then the arithmetic only buys decades, not a new aquifer.
+
+## Caveats the linear clock does not erase
+
+Years-to-floor is a planning lens, not a prophecy. Decline rates vary by wet and dry years; 2017–2019 shows aquifer-wide average rise even as Texas kept falling. Specific yield varies spatially; recoverable storage is not simply saturated thickness times area. Wells can fail economically before the 30-ft convention, or keep limping past it at lower yields. County means hide north–south splits inside the same county (Finney is the textbook case). Predevelopment dates differ by locale. Management rules — allocations, LEMA-style cuts, district caps — can change the slope. None of those caveats flatten the ranking: the southern High Plains and southwest Kansas are mining the column on a shorter clock than the northern shelf, and the USGS state ledger already says so in area-weighted feet and million acre-feet of storage.
+
+| County (panel) | State | Decline (ft/yr) | Remaining sat (ft) | Years to 30-ft floor |
+| --- | --- | ---: | ---: | ---: |
+| Hale | TX | 2.4 | 58 | ~12 |
+| Haskell | KS | 2.2 | 95 | ~30 |
+| Lamb | TX | 2.1 | 62 | ~15 |
+| Grant | KS | 2.0 | 105 | ~38 |
+| Parmer | TX | 2.0 | 85 | ~28 |
+| Finney | KS | 1.9 | 110 | ~42 |
+| Lubbock | TX | 1.9 | 70 | ~21 |
+| Curry | NM | 1.7 | 75 | ~26 |
+| Yuma | CO | 1.1 | 120 | ~82 |
+| Thomas | KS | 0.7 | 90 | ~86 |
+| Chase | NE | 0.6 | 180 | ~250 |
+| Holt | NE | 0.15 | 280 | near-stable |
+
+Sources: USGS SIR 2023–5143 (McGuire and Strauch) area-weighted water-level and storage changes; USGS HA 730 / Gutentag and others (1984) saturated-thickness framework; Kansas Geological Survey Technical Series 25 (2023) GMD averages; KGS usable-lifetime 30-ft floor convention; USDA / USGS irrigated-acreage context. County rates and remaining thickness are analytical composites for ranking — not well-level forecasts.`,
+  },
+  {
     id: "veterinary-antibiotic-sales-vs-human-use-2026",
     slug: "veterinary-antibiotic-sales-vs-human-use-2026",
     title:

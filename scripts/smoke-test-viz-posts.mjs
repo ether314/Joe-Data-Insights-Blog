@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ogallala-aquifer-saturated-thickness-decline-2026",
+    marker: "High Plains · saturated-thickness change",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "veterinary-antibiotic-sales-vs-human-use-2026",
     marker: "Metric clash · mg/PCU vs DDD",
     forbidden: "Loading interactive charts",
