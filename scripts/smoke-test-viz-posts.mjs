@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "single-owner-subsea-cable-risk-2026",
+    marker: "Single-owner subsea cable risk — ownership of new km",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "corn-and-soybean-export-chokepoints-2026",
     marker: "Staple crop markets · corn & soybean export chokepoints",
     forbidden: "Loading interactive charts",

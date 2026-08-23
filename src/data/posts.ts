@@ -2,6 +2,81 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "single-owner-subsea-cable-risk-2026",
+    slug: "single-owner-subsea-cable-risk-2026",
+    title:
+      "Charted: Sole-Owner Hyperscalers Control 31% of New Subsea Cable-Km",
+    excerpt:
+      "TeleGeography puts 27% of 2024–29 cable investment in private content-provider systems. Reconstructed route-km shows sole-owner hyperscaler builds at 31% of the newest cohorts — up from 4% in 2015–18 — while carrier consortia still hold about 42%.",
+    category: "Technology",
+    themeId: "subsea-cables",
+    imageUrl:
+      "/images/technology-single-owner-subsea-cable-risk-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic ocean map with a thick cyan single-owner submarine cable contrasted against thinner slate consortium routes",
+    publishedAt: "2026-08-23T14:00:00Z",
+    featured: true,
+    visualization: "single-owner-subsea-cable-risk-2026",
+    layout: "default",
+    content: `For two decades the default wet-plant contract was a **consortium**: a dozen carriers, a shared RFS date, and a board that negotiated landings one ministry at a time. That model still lays a large share of new glass. It no longer sets the pace. Google, Meta, Microsoft, and Amazon now buy or build the systems that move most international bits — and an rising slice of those systems has a **single corporate owner** on the title.
+
+The interactive dashboard above tracks **ownership of new cable-kilometers**, not marketing slogans about “private clouds.” Toggle **Vintage mix**, **By route**, **Owner ladder**, and **Capex vs km**; switch vintage units between share and thousand-km; filter corridors on the route view. The headline stack is deliberate: sole-owner hyperscaler systems take **31%** of new route-km in the 2024–28e cohort, versus **4%** in 2015–18. TeleGeography’s investment ledger puts **27%** of 2024–29 cable dollars into private content-provider builds and another **26%** into hybrids where at least one content provider sits at the table.
+
+## Scoreboard: who owns the new wet plant
+
+| Cohort / metric | Sole-owner CP | Hybrid (CP + carriers) | Carrier consortium | Specialist / other |
+| --- | ---: | ---: | ---: | ---: |
+| New km share, 2015–18 | **4%** | ~18% | ~72% | ~6% |
+| New km share, 2024–28e | **31%** | ~27% | **42%** | ~5% |
+| Capex share, 2024–29 (TeleGeography $) | **27%** private | **26%** hybrid | ~40% | ~7% |
+| Used intl. bandwidth, 2024 (content/cloud) | — | — | — | **74%** demand |
+| Top-4 sole + majority control of new km | **38%** | — | — | — |
+
+Read the table as a **control ledger**, not a traffic ledger. Demand concentration arrived first: content and cloud networks already account for roughly three-quarters of used international capacity. Ownership of the physical plant is catching up unevenly — fastest on Trans-Pacific and US–Latin America corridors, slowest where landing rights still favor multi-carrier clubs.
+
+## Why sole ownership became rational
+
+Hyperscalers did not invent undersea fiber. They inherited a wholesale market that could not provision fiber pairs on the cadence of data-center openings. Buying IRUs on carrier systems worked until growth rates diverged: TeleGeography’s State of the Network series shows content/cloud demand compounding far ahead of backbone demand on every major route group, with Trans-Atlantic, Trans-Pacific, and intra-Asia routes often above **80%** content-provider share of used capacity.
+
+Sole ownership buys three things consortia price poorly. First, **design control** — fiber-pair count, branching units, and landing sequences tuned to a company’s DC mesh rather than the lowest-common-denominator carrier map. Second, **schedule control** — fewer parties to align before a marine campaign sails. Third, **optionality** — the owner can retain most pairs for internal traffic while selling or swapping the rest. Google’s private systems (Equiano, Grace Hopper, Firmina, Dunant, Curie, and the expanding Pacific slate) and Meta’s Anjana / ORCA / Waterworth program are the clearest public expressions of that bargain.
+
+Amazon’s disclosed Fastnet Atlantic build and Microsoft’s mix of part-owner stakes show the same logic arriving at different stages of the curve: not every hyperscaler needs a sixteen-cable private mesh on day one, but each wants the right to commission one when wholesale inventories tighten.
+
+## Capex shares are not kilometer shares
+
+TeleGeography’s **27% / 26%** private-versus-hybrid investment split is the cleanest published dollar mix for 2024–29. It is not a km census. Dollars overweight short, dense, high-fiber builds; kilometers overweight long Pacific and multi-segment global meshes. Meta’s Project Waterworth alone — disclosed at roughly **50,000 km** — can move the sole-owner kilometer needle without matching that share of global cable *spend* in a single year.
+
+The dashboard’s **Capex vs km** scatter makes the gap explicit. Sole-owner systems sit above the 45-degree line in our reconstruction: about **31%** of new km against **27%** of dollars. Carrier consortia sit the other way — still ~**42%** of kilometers while closer to **40%** of remaining investment after private and hybrid slices are booked. Treat both numbers as directional. Planned RFS dates slip; supplier geopolitics reshuffle membership (SeaMeWe-6 is the textbook case); and “sole owner” on a permit filing can still mean a lively secondary market in fiber pairs.
+
+## Route geography: where the consortium still wins
+
+Sole-owner intensity is highest on the Trans-Pacific (~**41%** of new km in our corridor cut) and US–Latin America (~**38%**), where hyperscaler DC-to-DC demand is thickest and political appetite for US-linked private builds is relatively clear. Trans-Atlantic sits in the middle: enough Google/Meta/Amazon private systems to matter, enough classic carrier systems to keep consortia relevant.
+
+Europe–Africa and secondary long-haul corridors still lean consortium or hybrid. Landing rights, coastal permits, and the need for many mid-span branches favor clubs of operators who already hold licenses. Meta’s stake in 2Africa illustrates the hybrid pattern at continental scale: a content provider as a major investor inside a multi-party system, not a sole titleholder of the entire ring. That structure shares risk and expands coverage; it does not give one firm veto power over every fiber pair.
+
+Intra-Asia is the contested middle. Hybrid CP+carrier builds are common because no single hyperscaler can land everywhere it wants without local partners — yet content demand shares keep climbing. Expect more sole segments feeding into hybrid backbones rather than a clean flip to private-only maps.
+
+## Owner ladder: Google leads sole km; Meta extends the horizon
+
+On attributable new kilometers for the 2024–28e window, **Google** still leads the sole-owned ledger, reflecting a decade of private Atlantic, Pacific, African, and Latin American systems. **Meta** is the second sole-owner story and the largest *planned* extension via Waterworth’s multi-ocean span. **Microsoft** remains heavier on part-owner and consortium stakes than on sole title. **Amazon** is earlier on the private curve, with Fastnet as the disclosed Atlantic beachhead.
+
+Carrier consortia remain the largest single *category* when part-owner kilometers are pooled — because many hybrid and classic systems still list ten or more telcos. The risk question is not whether carriers disappear. It is whether the **marginal** kilometer — the next marine campaign that sets wholesale pricing and repair priority — is commissioned by a board of fifteen or a vice president of network infrastructure at one of four companies.
+
+## Fiber pairs: ownership risk is not capacity monopoly
+
+A recurring category error treats “Google-owned cable” as “Google-only traffic.” TeleGeography and company disclosures are clearer: private owners routinely **sell or swap** whole and partial fiber pairs. Our fiber-economy panel puts illustrative retained-pair shares in the **55–75%** range on sole systems — majority control, not exclusivity. Third-party carriers and even rival clouds can ride private wet plant under IRU terms.
+
+That matters for systemic risk. Single-owner title concentrates **repair priority, branching decisions, and landing diplomacy** in one P&L. It does not automatically concentrate *all* international capacity into four private backbones. Wholesale markets still clear on consortia and on leased pairs. The fragility to watch is correlated outage exposure when several private systems share landing stations, marine routes, or supplier queues — not a cartoon in which only four firms can move packets across oceans.
+
+## Caveats and what would falsify the story
+
+Several limits apply. Route-km figures here are **reconstructions** from public system lengths and ownership tags, not a TeleGeography spreadsheet of “km by owner model.” Capex shares are the firm published dollars; treat km shares as best-effort geometry. Planned systems (ORCA, Waterworth, Fastnet) can slip years. Ownership tags change when investors join or exit mid-build. Bandwidth demand shares measure *used capacity*, which can rise on leased pairs without any change in who holds the wet-plant deed.
+
+The thesis weakens if consortium RFS volumes rebound on Pacific routes, if regulators block sole landings in key jurisdictions, or if hyperscalers decide fiber-pair markets are deep enough that owning the cable is optional again. It strengthens if AI training and inference traffic keep forcing private DC-to-DC meshes faster than wholesale inventories refill — and if Waterworth-scale sole builds actually marine as disclosed.
+
+For desks pricing international capacity, the practical takeaway is narrower than geopolitics rhetoric: **price the ownership model of the next kilometer**, not the mythology of the last consortium. When 31% of new km already carries a single hyperscaler on the title — and another quarter sits in hybrids with at least one of those firms in the room — the old “many carriers, one cable” assumption is no longer the base case for new plant.`,
+  },
+  {
     id: "corn-and-soybean-export-chokepoints-2026",
     slug: "corn-and-soybean-export-chokepoints-2026",
     title:

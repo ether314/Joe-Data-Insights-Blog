@@ -226,7 +226,8 @@ export interface Post {
     | "admitted-homeowners-insurers-exiting-coastal-states-2026"
     | "us-state-pension-funded-ratios-2026"
     | "us-work-stoppage-idleness-versus-union-density-2026"
-    | "corn-and-soybean-export-chokepoints-2026";
+    | "corn-and-soybean-export-chokepoints-2026"
+    | "single-owner-subsea-cable-risk-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
