@@ -2,6 +2,80 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "hospital-system-clout-vs-commercial-prices-2026",
+    slug: "hospital-system-clout-vs-commercial-prices-2026",
+    title:
+      "Charted: Where Hospital Systems Dominate, Commercial Prices Run Hotter",
+    excerpt:
+      "Employers pay about 254% of Medicare nationally; desk joins of RAND metro ratios to AHA-derived admissions HHI put very-high-concentration markets near 312%—a 71 pp gap versus unconcentrated CBSAs.",
+    category: "Health Economics",
+    themeId: "hospital-pricing-power",
+    imageUrl:
+      "/images/health-economics-hospital-system-clout-vs-commercial-prices-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of concentrated hospital towers and rising commercial-to-Medicare price bars",
+    publishedAt: "2026-08-23T18:00:00Z",
+    featured: true,
+    visualization: "hospital-system-clout-vs-commercial-prices-2026",
+    layout: "default",
+    content: `Employers do not buy “hospital care” at a national sticker price. They buy it city by city, system by system, through negotiated allowed amounts that sit far above what Medicare pays for the same DRGs and outpatient codes. The RAND Hospital Price Transparency Study’s late vintage still lands near **254%** of Medicare for employer-sponsored care nationwide. The harder question is whether that markup thickens where one or two systems already dominate local admissions.
+
+This post joins those relative-price prints to admissions-based Herfindahl–Hirschman Index (HHI) bands built from American Hospital Association (AHA) system affiliation and discharge patterns across a **48**-CBSA desk panel. Unconcentrated markets (HHI under **1,500**) average about **218%** of Medicare. Highly concentrated markets (HHI **2,500** and up) average about **289%**. The very-high tip (HHI **≥ 4,000**) prints near **312%** — a **71** percentage-point gap versus the competitive band. Roughly **72%** of the mapped panel already sits in the high band; **61%** have a top-two systems controlling at least half of admissions.
+
+The interactive dashboard above toggles **HHI bands**, **Metros**, **Services**, and **Path**. Filter by Census region; on the metro scatter, flip the Y metric among price ratio, top-1 admission share, and top-2 share. The punchline is deliberate: commercial-to-Medicare is not a flat national constant — it tracks local hospital clout, with important residuals where wages, capacity, and bargaining culture pull metros off the HHI line.
+
+## Relative prices are the right unit
+
+Dollar bills confuse the map. A high absolute charge in San Francisco can reflect wages and real estate as much as market power. Medicare-relative prices hold the clinical product closer to constant: they ask what commercial payers allow for the *same* hospital services Medicare prices under IPPS and OPPS. RAND’s employer claims extracts, paired with hospital identifiers, remain the cleanest public window on that ratio at metro scale. Health Care Cost Institute (HCCI) employer books supply corroborating claims context on commercial unit prices and growth, even when they do not publish an identical Medicare-relative metro file.
+
+Treat **254%** as a national center of gravity, not a ceiling. Inpatient in the desk split sits near **247%**; outpatient near **268%**. Emergency, lab, and imaging lines in the service panel run hotter still. That mix matters for benefit design: steerage tools that only watch inpatient DRGs miss where outpatient facility fees and ancillaries push the employer bill.
+
+## Concentration is already the modal US hospital market
+
+FTC/DOJ horizontal-merger guidance still treats HHI above **2,500** as highly concentrated. On an admissions-share construction for the mapped CBSAs, about **three in four** metros clear that line. Median top-1 system admission share sits near **38%**; tip metros such as Charlotte, Oklahoma City, Pittsburgh, and Salt Lake City push top-1 shares into the **50–58%** range. Mergers did not invent that map, but they thickened it: the vintage path in the dashboard carries mean CBSA HHI from roughly **3,100** in the early 2010s toward the high **3,700s** by the mid-2020s while the national commercial/Medicare ratio climbed from the low **210s** toward the mid-**250s**.
+
+| Admissions HHI band | Mean commercial / Medicare | Mean top-1 admission share | CBSAs in panel |
+| --- | ---: | ---: | ---: |
+| Unconcentrated (< 1,500) | **218%** | 22% | 7 |
+| Moderate (1,500–2,499) | **241%** | 31% | 6 |
+| High (2,500–3,999) | **278%** | 42% | 18 |
+| Very high (≥ 4,000) | **312%** | 55% | 17 |
+
+Read the table as a **band claim**, not a causal coefficient. The IQR envelopes widen in the high bands: some concentrated markets still negotiate closer to **280%**, while others clear **340%+**. Clout raises the *floor and the ceiling*; it does not stamp every metro with the same sticker.
+
+## The metro scatter is the argument, not the national average
+
+National averages flatten the bargaining room employers actually sit in. On the metro panel, Pittsburgh, Charlotte, Milwaukee, New Orleans, and Oklahoma City cluster in the high-HHI / high-ratio quadrant. Houston and Dallas sit lower on both axes. Salt Lake City is the instructive soft tip: Intermountain-scale admission share pushes HHI into the **5,500** range, yet the commercial/Medicare print is closer to the national center than the HHI band alone would imply — a reminder that system mission, statewide contracting, and capacity can blunt raw concentration.
+
+Large coastal metros refuse a simple story. New York and Los Angeles print low-to-moderate HHI because many systems share the admissions pie, yet their ratios remain elevated — wage and capacity residuals of **+28** to **+42** percentage points versus an HHI-implied line. San Francisco’s residual is larger still. Concentration is a strong correlate; it is not the only price machine.
+
+## Service lines move at different slopes
+
+Inpatient ratios are high; outpatient and ancillary lines are often higher, and they appear more sensitive to local HHI in the desk slopes. Emergency and imaging show the steepest estimated response per **+1,000** HHI points; inpatient is flatter. That pattern matches how commercial contracts often work: inpatient DRG schedules get the most actuarial attention, while outpatient fee schedules, pharmacy pass-throughs, and “facility” labels on ambulatory visits accumulate quietly. Employers who only benchmark inpatient DRGs against Medicare will understate how concentration shows up in the total allowed bill.
+
+HCCI-style employer books reinforce the same directional claim even when units differ: commercial unit prices vary widely across metros, and the expensive metros are not randomly scattered — they overlap with markets where hospital systems hold thick admission shares. The dashboard’s service view is the operational cut of that claim.
+
+## What the path says about the last decade
+
+The vintage panel is carried, not a single continuous RAND reprint. Still, the co-movement is hard to ignore: as mean HHI and the share of high-HHI CBSAs edged up, the national commercial/Medicare ratio moved from the low **210s** into the mid-**250s**, with a brief COVID-era dip that did not reset the level. Consolidation, certificate-of-need politics, rural closures that strand remaining urban systems, and insurer consolidation on the other side of the table all sit in the background. This post does not allocate those causes share-by-share; it documents that the *price* side of the ledger did not mean-revert while concentration thickened.
+
+## Caveats desks should keep next to the chart
+
+Several limits bind:
+
+- **Medicare is a benchmark, not a cost.** A **300%** ratio can reflect commercial leverage, Medicare underpayment claims, case-mix, or all three. Relative prices answer “how much more than Medicare,” not “how much above cost.”
+- **HHI is admissions-based.** Bed shares, outpatient volumes, and tertiary referral patterns can reorder system power. A system that owns the only Level I trauma center may punch above its admission HHI.
+- **Desk joins are analytical.** RAND metro price prints and AHA-derived system shares are published separately; the MSA scatter and band averages here are constructed joins, labeled estimated where they are not a single agency table.
+- **Residuals are real.** Coastal wage markets and a few integrated nonprofit systems sit off the HHI→price line. Do not treat the slope as a pricing formula for any one city.
+- **Insurer structure is off-stage.** A concentrated hospital facing a concentrated insurer can still print a high ratio if the threat point favors the hospital. This panel does not model insurer HHI.
+
+## What “clout” means for commercial buyers
+
+For self-insured employers and regional plans, the practical read is narrow. If your lives sit in a CBSA where top-two systems already clear half of admissions, expect commercial/Medicare ratios closer to the high-**280s** or low-**300s** unless a local residual (as in Salt Lake) intervenes. Reference-based contracting, ambulatory site-of-care shifts, and multi-year rate caps bite harder in those markets precisely because the outside option is thin. In lower-HHI metros, the same tools still matter, but the baseline markup starts lower and the scatter of competing systems is wider.
+
+The national **254%** figure will keep showing up in policy decks. The band table and metro scatter are what make it usable: commercially insured prices *do* run hotter where hospital systems dominate admissions — with a **71** pp high-versus-low gap on this panel — and the exceptions are measurable, not mystical.`,
+  },
+  {
     id: "institutional-share-of-single-family-rentals-2026",
     slug: "institutional-share-of-single-family-rentals-2026",
     title:

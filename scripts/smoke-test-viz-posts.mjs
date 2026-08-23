@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "hospital-system-clout-vs-commercial-prices-2026",
+    marker: "Hospital clout · commercial prices",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "institutional-share-of-single-family-rentals-2026",
     marker: "Atlanta · 27.9% of SFR stock",
     forbidden: "Loading interactive charts",
