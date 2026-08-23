@@ -3077,6 +3077,21 @@ const EmployerCoverageOfGlp1WeightLossDrugs2026Dashboard = dynamic(
   },
 );
 
+const TruckingSpotRatesVersusCarrierExits2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/TruckingSpotRatesVersusCarrierExits2026Dashboard"
+    ).then((m) => m.TruckingSpotRatesVersusCarrierExits2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3884,6 +3899,10 @@ export function PostVisualization({
 
   if (type === "employer-coverage-of-glp-1-weight-loss-drugs-2026") {
     return <EmployerCoverageOfGlp1WeightLossDrugs2026Dashboard />;
+  }
+
+  if (type === "trucking-spot-rates-versus-carrier-exits-2026") {
+    return <TruckingSpotRatesVersusCarrierExits2026Dashboard />;
   }
 
   return null;

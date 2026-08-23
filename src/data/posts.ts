@@ -2,6 +2,72 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "trucking-spot-rates-versus-carrier-exits-2026",
+    slug: "trucking-spot-rates-versus-carrier-exits-2026",
+    title:
+      "Charted: Trucking Spot Rates Fell 38% — Authority Exits Roughly Doubled Two Quarters Later",
+    excerpt:
+      "After the 2022 dry-van spot peak, national linehaul fell ~38% peak-to-trough while quarterly FMCSA authority exits roughly doubled within two quarters. By mid-2026 the top 1% of active fleets held ~42% of power units among survivors.",
+    category: "Transport & Logistics",
+    themeId: "trucking-market-churn",
+    imageUrl:
+      "/images/transport-logistics-trucking-spot-rates-versus-carrier-exits-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic highway with a cyan descending spot-rate line colliding with rising crimson carrier-exit bars beside a semi-truck convoy silhouette",
+    publishedAt: "2026-08-23T18:00:00Z",
+    featured: true,
+    visualization: "trucking-spot-rates-versus-carrier-exits-2026",
+    layout: "default",
+    content: `Freight desks watch **spot linehaul** as a live thermometer. Safety and insurance desks watch **operating authority** as a slower, uglier ledger. Those clocks rarely tick together. After the mid-2022 dry-van spot peak near **$2.86/mi**, national van linehaul fell about **38%** peak-to-trough into late 2023. Quarterly FMCSA authority exits — voluntary relinquishments plus involuntary revocations — did not crest in the same quarter. They roughly **doubled** within about **two quarters** of the rate trough, from roughly **4,200** exits in the peak-rate quarter to about **9,100** at the exit peak. By mid-2026, van spot had clawed back only into the high **$1.90s**, while the **top 1%** of active fleets held roughly **42%** of power units among survivors — up from about **34%** in 2021.
+
+The dashboard above is built as a **revocations-per-rate-trough** lens. Toggle among the spot×exits tape, lag-2 scatter, survivor fleet tiers, and regional exit map; switch dry van / reefer / flatbed; filter the scatter by boom, bust, or stabilizing era. What follows is the churn tape underneath those controls — not a brokerage tender-reject series, and not a claim that every USDOT exit maps one-for-one to a parked truck.
+
+## What spot and authority exits actually measure
+
+DAT-style national spot averages compress thousands of weekly loads into a linehaul dollar-per-mile print, typically **fuel-excluded** where the source discloses that convention. They are excellent at showing boom and soft-landing cycles. They are poor at telling you whether a particular corridor still has empty trailers on Friday afternoon. Equipment type matters: reefer and flatbed peaks and troughs rhyme with van but do not clone it, which is why the dashboard lets you swap the spot series without rewriting the exit counts.
+
+FMCSA **operating authority** exits are a different animal. A revocation or voluntary relinquishment removes the legal right to haul for hire under that authority. It does **not** instantly delete every tractor from the highway — leased equipment, affiliated USDOTs, and delayed insurance filings create noise. Insurance and BMC-filing lapses dominate the exit mix in soft markets; voluntary relinquishments rise when owners decide the book is not worth the premium. The analytical mix in this post treats insurance/BMC lapses, voluntary relinquishments, involuntary revocations, and merger/transfer as separate channels so the 2023 bust is not misread as a single regulatory purge.
+
+## The 2022 peak and the lagged exit wave
+
+Late 2021 through mid-2022 was the freight boom in chart form: van spot climbing through the mid-**$2.70s** toward **$2.86**, active for-hire authority counts swelling as new entrants chased rates, and large-fleet ATA-style voluntary turnover stuck near **90%+**. Capacity felt scarce even as the census of authorities expanded — a classic boom paradox where new paper authorities arrive faster than experienced drivers and insured trucks.
+
+The soft landing started while many desks were still talking peak. Van spot rolled over through late 2022 into 2023, finding a trough near **$1.77** in 2023Q4. Exit counts climbed on a lag: **~5,100** in 2022Q3, **~6,400** in 2022Q4, then **~7,800–9,100** through 2023. That **two-quarter** lag is the operational punchline. Rate troughs show up on broker screens immediately. Authority exits wait for unpaid premiums, failed cargo claims, and owners who finally stop renewing.
+
+| Milestone | Van spot ($/mi) | Quarterly authority exits | Active authorities (k) |
+| --- | ---: | ---: | ---: |
+| 2022Q2 rate peak | **2.86** | 4,200 | 668 |
+| 2023Q4 rate trough | **1.77** | **9,100** | 612 |
+| 2026Q2 latest | **1.94** | 5,700 | 583 |
+
+The lag-2 scatter in the dashboard makes the relationship geometric: higher spot at quarter *t* pairs with fewer exits at *t+2*; the bust cluster sits in the low-spot / high-exit quadrant. Across 2019–2026 the lagged correlation prints near **−0.72** — strong enough for a desk heuristic, not a trading signal.
+
+## How concentrated is capacity among survivors?
+
+Authority counts and power units tell different stories. Owner-operators and micro fleets (1–5 power units) still dominate **authority share**, but they never dominated **power-unit share**. From 2021 to mid-2026, owner-op authority share slipped from about **48%** to **44%**, while mega fleets (500+ power units) rose from roughly **0.8%** to **2.5%** of authorities and from **26%** to **28%** of power units. The **top 1%** of fleets by size moved from about **34%** to **42%** of power units; the bottom half of the authority census held only about **4%** of power units by 2026.
+
+That is survivor concentration, not a merger wave alone. Soft markets cull thin-balance-sheet fleets first. Insurance markets price the cull. Brokers then discover that the remaining tender board is thicker at the large-fleet end even when total active authorities are down. The regional panel shows the Southwest and Southeast with the hottest 2023 revocation indexes relative to 2021 — corridors where boom-era entry was aggressive and the spot drop was steep.
+
+## Driver turnover did not fall with spot
+
+Large-fleet voluntary turnover is the third series on the tape. ATA-style prints near **94%** at the boom peak did not collapse when spot did. By mid-2026 turnover still printed near **78%** — lower than peak, still historically elevated. Exits remove carriers; they do not automatically stabilize driver tenure at survivors. Fleets that remain often compete harder for experienced CDL holders, which keeps churn elevated even as linehaul softens. Reading spot alone as a "driver shortage solved" narrative misses that wedge.
+
+## Equipment and corridor nuance
+
+Dry van is the headline series because it is the broadest national print. Reefer peaks higher and softens on produce and protein calendars; flatbed tracks construction and industrial loads with its own lag structure. The dashboard equipment control is there so desks do not pretend one number speaks for all trailers. Regionally, a **40%+** van peak-to-trough drop in the Southwest paired with a 2023 revocation index near **228** (2021 = 100), while the Northeast showed a milder spot drop and a softer exit print. National averages hide that geography.
+
+## Caveats and what this does not prove
+
+This composite is **estimated/carried** in places: quarterly means of weekly spot prints, interpolated ATA turnover where prints are annual, and mid-year MCMIS power-unit snapshots. Authority exits are not one-to-one with parked trucks. Some "exits" are insurance cleanup on dormant paper; some active fleets operate under multiple USDOTs. Spot is not contract; contract rates lag and damp the boom-bust amplitude. Correlation with a two-quarter lag is not causation — diesel, insurance pricing, shipper inventory cycles, and enforcement intensity all co-move.
+
+Use the charts as a **churn map**: when spot troughs, watch exits two quarters later, and watch power-unit concentration among who remains. Do not use them as a prediction that the next soft patch will double exits on the same calendar, or that mega fleets will absorb every discarded load without service gaps.
+
+## What desks should watch next
+
+Three prints matter more than a single national van quote. First, the **lagged exit count** — if spot softens again, the authority ledger will tell you whether the soft landing is still flushing thin fleets. Second, **top-1% power-unit share** — further climbs mean tender boards concentrate even if authority headcount looks stable. Third, **insurance/BMC lapse share** of exits — when that channel dominates, the market is pricing risk, not just volumes. Those three together answer the brief: spot downturns **do** predict revocation waves with a short lag, and survivor capacity **is** concentrating upward.
+`,
+  },
+  {
     id: "employer-coverage-of-glp-1-weight-loss-drugs-2026",
     slug: "employer-coverage-of-glp-1-weight-loss-drugs-2026",
     title:

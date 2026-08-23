@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "trucking-spot-rates-versus-carrier-exits-2026",
+    marker: "Revocations per rate trough",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "employer-coverage-of-glp-1-weight-loss-drugs-2026",
     marker: "GLP-1 employer coverage · Rx spend tilt",
     forbidden: "Loading interactive charts",
