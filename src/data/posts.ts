@@ -2,6 +2,88 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-atc-delay-minutes-by-cause-2026",
+    slug: "us-atc-delay-minutes-by-cause-2026",
+    title:
+      "Charted: Weather Still Takes 61% of US ATC Delay Minutes — Staffing Is Only 4%, But Seven Facilities Own 86% of It",
+    excerpt:
+      "FAA OPSNET 2024: 16.1M reportable delay minutes — weather 61%, volume 18%, runway 10%, other (incl. staffing) 8%, equipment 2%. Staffing alone is 623k minutes, and seven facilities hold 86% of that tail.",
+    category: "Industry",
+    themeId: "aviation-ops",
+    imageUrl: "/images/industry-us-atc-delay-minutes-by-cause-2026-hero.png",
+    imageAlt:
+      "Dark navy radar-scope data visualization with cyan weather delay bars and amber staffing segments over a stylized US airspace silhouette",
+    publishedAt: "2026-08-23T06:00:00Z",
+    featured: true,
+    visualization: "us-atc-delay-minutes-by-cause-2026",
+    layout: "default",
+    content: `When flights stack on the taxiway or hold for an EDCT, the Federal Aviation Administration's Operations Network (OPSNET) records a **reportable delay**: instrument-flight-rules traffic detained at least **15 minutes** by the ATC system. Those minutes are the National Airspace System's own stopwatch — not the passenger's gate-to-gate clock, and not the airline's irregular-operations ledger. In **2024**, OPSNET logged **16.07 million** delay minutes across **359,694** reportable delays. The cause stack is blunt: **weather took 61.4%** of the minutes. Volume, runway/taxiway, equipment, and the catch-all Other bucket split the rest. Staffing, coded only as a secondary cause under Other since mid-2022, was **622,669 minutes — 3.9% of the national total** — yet **seven facilities absorbed 86%** of that staffing slice.
+
+The dashboard above treats delay minutes as a **share problem** and a **tail problem**. Toggle **Cause mix** for the decade stack and year donut, **Staffing tail** for facility bars, fill-rate scatter, and concentration curve, and **OPSNET vs BTS** for the taxonomy trap that makes “weather is only 5% of delays” headlines look true in passenger data while OPSNET says weather owns the majority of ATC minutes.
+
+## Weather still owns the majority of ATC minutes
+
+Primary OPSNET causes are mutually exclusive at the report level: **Weather**, **Volume**, **Equipment**, **Runway/taxiway**, and **Other**. Weather means adverse meteorology that cuts capacity — wind, rain, snow or ice, low ceilings and visibility, thunderstorms. In 2024 weather accounted for **9.86 million minutes** (**61.4%**). That is lower than the late-2010s weather share, when several years cleared **70%+** of minutes, but it remains the dominant primary cause every year in the 2015–2024 window except the pandemic trough.
+
+Absolute weather minutes fell hard in 2020–2021 with traffic, then rebuilt: **7.6M (2022) → 8.7M (2023) → 9.9M (2024)**. The share story is slightly different from the level story. Weather's *percentage* of total minutes drifted down as equipment and Other grew faster off a small base, and as runway minutes jumped in 2024. Desks that only watch the weather share can miss that **weather minutes themselves rose more than 1.1 million year over year** even while the share eased from roughly 69% (2023) to 61% (2024).
+
+## Volume, runway, and equipment are not interchangeable “non-weather”
+
+**Volume** is the purity test: delays may be coded volume only when the airport is in an optimum configuration and no impacting condition is reported. In 2024 volume was **2.92 million minutes (18.2%)** — the second-largest primary bucket. Volume is demand pressing against clean capacity, not a synonym for “ATC staffing.”
+
+**Runway/taxiway** delays — closures and configuration changes — reached **1.65 million minutes (10.3%)** in 2024, the highest runway minute total in the decade outside 2017's construction spike. **Equipment** remains small in share (**318k minutes, 2.0%**) but is no longer negligible in levels: equipment minutes roughly **quadrupled** from 2022 to 2024. Treating “everything that is not weather” as one residual hides that runway and equipment are **infrastructure and outage** stories, while volume is a **schedule-vs-capacity** story.
+
+| Cause (2024) | Delay minutes | Share of minutes | Delays | Avg minutes |
+| --- | ---: | ---: | ---: | ---: |
+| Weather | 9,861,692 | 61.4% | 193,056 | 51 |
+| Volume | 2,924,101 | 18.2% | 98,323 | 29 |
+| Runway / taxiway | 1,647,930 | 10.3% | 38,321 | 43 |
+| Other (incl. staffing) | 1,313,470 | 8.2% | 24,174 | 54 |
+| Equipment | 318,122 | 2.0% | 5,820 | 54 |
+| **Total** | **16,065,315** | **100%** | **359,694** | **44** |
+
+## Other is small nationally — until you open the staffing secondary code
+
+**Other** covers airshows, VIP restrictions, military operations, and, since mid-2022, an explicit **staffing** secondary cause. Other was **8.2% of 2024 minutes** (**1.31 million**). Inside that bucket, staffing exploded: **22k minutes in 2022 → 90k in 2023 → 623k in 2024**. Staffing's share of Other minutes rose from **2% to 47%**. Average staffing delay lengthened from **23 to 49 minutes**.
+
+Nationally, staffing is still only **~4% of all OPSNET minutes**. That is the correct headline if the question is “what share of the NAS stopwatch is a staffing code?” It is the wrong headline if the question is “where does the staffing problem live?” Concentration answers that.
+
+## Seven facilities dominate the staffing minute tail
+
+Of **622,669** staffing minutes in 2024, **86%** sat in seven facilities:
+
+- **EWR** — 226,370 minutes (AFN fill rate 87%)
+- **PHL** — 183,934 minutes (fill rate 130%)
+- **ZNY** — 37,953 minutes (77%)
+- **N90** — 36,744 minutes (74%)
+- **AUS** — 18,096 minutes (80%)
+- **ZJX** — 16,860 minutes (78%)
+- **SFO** — 16,035 minutes (92%)
+
+Newark and Philadelphia alone exceed **410,000 minutes** — roughly **two-thirds** of the national staffing total. The New York Center and New York TRACON add another **~75,000**. Jacksonville Center and Austin extend the map beyond the Northeast corridor; San Francisco closes the published top seven.
+
+**PHL at 130% fill** is the scatter-plot outlier. National Academies analysis ties Philadelphia's staffing-coded delays to the deliberate transfer of Newark approach control duties — a safety-driven reallocation that shows up as delay minutes even when the receiving facility is overstaffed on paper. Fill rate and delay minutes are related, not identical; the dashboard scatter is built to keep that distinction visible.
+
+## Core-30 geography already owns the delay map
+
+Across **2022–2024**, Core 30 airports plus associated TRACONs and Centers accounted for about **92% of total OPSNET delay minutes** and **93% of Other minutes**. Nineteen facilities staffed at **85% or less** of target represented roughly **22% of operations** but about **39% of total delay minutes** and **45% of Other minutes**. The delay map is not a uniform fog over 500 towers. It is a **hub-and-center geometry** with a thin staffing secondary code that is even more skewed than the primary-cause map.
+
+ARTCC identifiers in the staffing top seven — **ZNY** and **ZJX** — matter for the “which centers dominate the tail?” question. Centers do not need to lead the *national* minute total to dominate the *staffing* tail; they appear when en-route sectors and adjacent TRACON/tower constraints couple. Towers and TRACONs (EWR, PHL, N90, AUS, SFO) still take most of the staffing minute mass in the published ranking.
+
+## OPSNET weather is not BTS “extreme weather”
+
+Bureau of Transportation Statistics On-Time Performance uses a passenger taxonomy: **air carrier**, **late-arriving aircraft**, **National Aviation System (NAS)**, **extreme weather**, and **security**. Extreme weather is a **narrow** bucket — conditions that prevent flying. Most convective weather that slows the system without grounding it is coded **NAS**. Late-arriving aircraft then cascades prior causes into downstream turns.
+
+That is why passenger-facing charts can show extreme weather near **~5%** of delay minutes while OPSNET shows weather near **~61%** of ATC minutes in the same year. The labels collide; the definitions do not. NAS in BTS absorbs volume, non-extreme weather, airport operations, and ATC effects that OPSNET splits across Weather, Volume, Runway, Equipment, and Other. Carrier and late-aircraft categories have **no OPSNET twin**. Comparing the two without a taxonomy bridge produces false “weather is tiny / weather is everything” debates.
+
+## What the minute shares do — and do not — say
+
+OPSNET minutes answer: *when the ATC system detains IFR traffic for 15+ minutes, what primary cause did the facility report, and how long did it last?* They do not answer passenger welfare directly, airline cost fully, or cancelation burden. They understate impacts shorter than 15 minutes. Staffing secondary coding begins mid-2022, so pre-2022 “Other” is not a clean staffing series. Average minutes rose inside Other even as counts swung — duration, not just incidence, moved.
+
+For operations and policy desks, the actionable split is threefold. **First**, weather remains the majority of the NAS stopwatch; capacity and traffic-management investments that shrink weather impact still move the biggest slice. **Second**, runway and equipment are climbing in levels and should not be folded into a vague non-weather residual. **Third**, staffing is a **concentrated tail**: nationally small, locally decisive, with a Northeast corridor core and a handful of out-of-corridor facilities that punch above their operation share. The share question and the facility question are both true — they just describe different moments of the same OPSNET file.
+`,
+  },
+  {
   id: "construction-sand-extraction-and-trade-2026",
   slug: "construction-sand-extraction-and-trade-2026",
   title:

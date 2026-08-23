@@ -208,7 +208,8 @@ export interface Post {
     | "pivotal-trial-sites-by-country-2026"
     | "fao-capture-vs-aquaculture-tonnage-2026"
     | "who-glass-bloodstream-resistance-2026"
-    | "construction-sand-extraction-and-trade-2026";
+    | "construction-sand-extraction-and-trade-2026"
+    | "us-atc-delay-minutes-by-cause-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
