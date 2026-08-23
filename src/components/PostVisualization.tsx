@@ -3152,6 +3152,21 @@ const WomenAndMenInApprenticeTrades2026Dashboard = dynamic(
   },
 );
 
+const FourFirmBeefpackingShare2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FourFirmBeefpackingShare2026Dashboard"
+    ).then((m) => m.FourFirmBeefpackingShare2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3979,6 +3994,10 @@ export function PostVisualization({
 
   if (type === "women-and-men-in-apprentice-trades-2026") {
     return <WomenAndMenInApprenticeTrades2026Dashboard />;
+  }
+
+  if (type === "four-firm-beefpacking-share-2026") {
+    return <FourFirmBeefpackingShare2026Dashboard />;
   }
 
   return null;

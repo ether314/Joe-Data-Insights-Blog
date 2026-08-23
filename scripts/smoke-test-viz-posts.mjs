@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "four-firm-beefpacking-share-2026",
+    marker: "Headline — fed CR4 81%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "women-and-men-in-apprentice-trades-2026",
     marker: "Female share by trade",
     forbidden: "Loading interactive charts",
