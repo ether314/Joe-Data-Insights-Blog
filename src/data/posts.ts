@@ -2,6 +2,74 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "veterinary-antibiotic-sales-vs-human-use-2026",
+    slug: "veterinary-antibiotic-sales-vs-human-use-2026",
+    title:
+      "Charted: Livestock Antibiotics Still Dominate Tonnes — Europe's Biomass Ruler Flips the Story",
+    excerpt:
+      "FDA livestock sales of medically important antibiotics were 6,100 tonnes in 2023; China's 2020 food-animal ledger cleared ~32,800 tonnes. On JIACRA's shared mg/kg biomass ruler, though, EU/EEA humans sat at 125.0 versus 92.6 in food animals — mg/PCU and DDD are not interchangeable scoreboards.",
+    category: "Global Systems",
+    themeId: "antimicrobial-resistance",
+    imageUrl:
+      "/images/global-systems-veterinary-antibiotic-sales-vs-human-use-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of livestock silhouettes and antibiotic capsules facing a human medical dose icon across conflicting measurement scales",
+    publishedAt: "2026-08-23T14:00:00Z",
+    featured: true,
+    visualization: "veterinary-antibiotic-sales-vs-human-use-2026",
+    layout: "default",
+    content: `Ask how livestock antibiotic tonnage compares with human consumption and you will get three honest answers that refuse to collapse into one ranking. In absolute mass, the largest food-animal systems still move thousands of tonnes of active ingredient each year — China's 2020 national food-animal ledger alone reported about **32,776 tonnes**, and the U.S. Food and Drug Administration's Center for Veterinary Medicine logged **6,100 tonnes** of *medically important* antimicrobials sold for food-producing animals in 2023. On a shared biomass ruler inside Europe, however, the Joint Interagency Antimicrobial Consumption and Resistance Analysis (JIACRA IV) put **human** antimicrobial consumption at **125.0 mg per kg of estimated biomass** in 2021 against **92.6 mg/kg** in food-producing animals. And on the human clinical side, ECDC's ESAC-Net still speaks in **defined daily doses (DDD) per 1,000 inhabitants per day** — **20.0** for the EU population-weighted total in 2023 — a unit that does not convert to livestock milligrams without a full Anatomical Therapeutic Chemical (ATC) mass bridge.
+
+The dashboard above is built for that collision. Toggle **Absolute tonnes**, **Intensity ladder**, **EU animal × human**, **EU PCU & US path**, and **US species mix**. Dim estimated bars when you want only disclosed national ledgers. The point is not to crown a single "worst" sector; it is to show which ruler you are holding before you write the headline.
+
+## Absolute tonnes still favour the livestock ledger
+
+Mass is the blunt instrument. Mulchandani and colleagues (PLOS Global Public Health, 2023) modelled global antimicrobial use in cattle, sheep, pigs, and chickens at roughly **99,500 tonnes** in 2020, with China, Brazil, India, the United States, and Australia together near **58%** of that total. China's disclosed food-animal figure (~32,800 tonnes in 2020) is in a different league from the European Union's mandatory-scope antibacterial veterinary medicinal product sales of about **4,381 tonnes** in 2023 (ESUAvet). The United States sits in between on the medically important slice: **6,100 tonnes** in 2023, down **37%** from the 2015 peak, with swine (~44%) and cattle (~41%) dominating species attribution.
+
+Brazil, India, and Australia appear in the absolute-tonnes panel as **modelled** bars. They rank among Mulchandani's top five consumers, but they do not publish the kind of open, annual sales ledger the FDA and EMA do. Treat those bars as order-of-magnitude placements calibrated to WOAH regional intensity — not as customs receipts.
+
+WOAH's ninth ANIMUSE report, focused on 2022, estimated **70,648 tonnes** reported by 107 participants and an adjusted upper bound near **74,035 tonnes** after coverage corrections. That is lower than Mulchandani's 2020 global model, partly because WOAH does not freely extrapolate every non-respondent and partly because Chinese AMU fell sharply earlier in the last decade before plateauing. Different scopes, different years, different missing-data strategies — the tonnes panel is a ranking of large producers, not a reconciled global census.
+
+## mg/PCU is not mg/kg, and neither is a DDD
+
+Europe's Farm-to-Fork antimicrobial sales target still tracks **milligrams per population correction unit (mg/PCU)** using the legacy ESVAC biomass recipe. The 2018 reference sits at **118.3 mg/PCU**; the 2030 aspiration is **59.2 mg/PCU**. Aggregated EU sales were **88.5 mg/PCU** in 2023 and **89.6 mg/PCU** in 2024 — roughly halfway to the cut on the 2018 baseline, but rising for a second consecutive year after a 2022 low watermark.
+
+Since mandatory ESUAvet reporting, EMA also publishes **mg per kilogram of animal biomass** under a *different* biomass guideline. EU aggregated sales were **45.1 mg/kg** in 2023 and **46.1 mg/kg** in 2024. Those numbers look "better" than the PCU series only because the denominator is larger and constructed differently. EMA is explicit: ESUAvet mg/kg is **not directly comparable** with historical ESVAC mg/PCU.
+
+Human surveillance refuses the livestock vocabulary. ESAC-Net's primary indicator is **DDD per 1,000 inhabitants per day** for ATC group J01. A DDD is an assumed average maintenance dose for a main indication in adults — a clinical bookkeeping unit, not a milligram of active substance divided by livestock liveweight. JIACRA exists precisely because desks kept trying to compare those apples to feedlot oranges. By converting human consumption into **mg/kg of estimated human biomass**, JIACRA IV could place humans and food animals on one axis for 2019–2021. On that axis, Europe's animals were **below** humans in 2021 — a stewardship story that absolute global tonnes obscure.
+
+| Metric | Sector | What it divides | Desk trap |
+| --- | --- | --- | --- |
+| mg/PCU | Food animals (ESVAC legacy) | Sales ÷ population correction unit | Breaks vs ESUAvet biomass after 2023 |
+| mg/kg biomass | Animals (WOAH/ESUAvet) or humans (JIACRA) | Sales or consumption ÷ estimated live biomass | Agency biomass recipes differ |
+| DDD / 1 000 / day | Humans (ESAC-Net) | Assumed daily doses ÷ population-time | Not tonnes without ATC mass conversion |
+| Tonnes active ingredient | Either (sales/import ledgers) | Absolute mass | Ignores population size and species mix |
+
+## Europe's country map: high tonnes are not always high intensity
+
+ESUAvet 2023 country prints make the distinction concrete. Spain sold about **1,175 tonnes** for food-producing animals at **87.9 mg/kg**. Italy sold **651 tonnes** at a higher intensity of **104.7 mg/kg**. Germany's **520 tonnes** landed at only **37.4 mg/kg**. France's **254 tonnes** sat near **16.2 mg/kg**. The Netherlands combined modest mass (**113 tonnes**) with low intensity (**22.0 mg/kg**). Cyprus is a small-mass, high-intensity outlier (**23 tonnes**, **112.9 mg/kg**).
+
+Pair those animal intensities with ESAC-Net human DDD and the scatter refuses a neat diagonal. Some countries run relatively high on both axes; others decouple. That is expected: hospital and community prescribing cultures do not move in lockstep with pig and poultry densification. The dashboard's bubble chart sizes points by veterinary tonnes so mass and intensity stay visually distinct.
+
+## The United States: medically important mass after the peak
+
+FDA CVM's annual sales summary is the cleanest large-market livestock ledger outside Europe. Medically important antimicrobials — those judged important for human medicine — were **6.1 million kg** in 2023 (about **6,100 tonnes**), a **2%** dip from 2022 and **37%** below the 2015 peak. They accounted for roughly **56%** of all antimicrobial sales for food-producing animals; ionophores and other animal-only classes fill much of the remainder and are often excluded from "medically important" headlines.
+
+Species attribution in 2023 still concentrates risk in swine and cattle. Chicken's share of medically important sales is tiny (~2%) relative to production volume — a reminder that intensity and absolute mass can diverge by species as sharply as they do by country. FDA now publishes biomass-adjusted interactive summaries, but it does not replace ESAC-Net with a single U.S. human mg/kg twin. U.S. outpatient surveillance leans on prescription counts (CDC: about **252 million** oral outpatient antibiotic prescriptions in 2023). Prescriptions are not tonnes; tonnes are not DDD. Cross-walking them for a U.S. JIACRA-style panel remains a research exercise, not a routine federal scoreboard.
+
+## Global WOAH intensity and the HPCIA slice
+
+WOAH's trend analysis for 85 participants that consistently reported from 2020 to 2022 shows animal AMU intensity falling about **5%**, from **102 mg/kg** in 2020 to **97 mg/kg** in 2022, covering roughly **62%** of global animal biomass. WOAH also stresses that only a small share of animal antimicrobials fall in the highest-priority critically important antimicrobial (HPCIA) classes for human medicine — on the order of **8%** in 2022 narrative materials — while tetracyclines and penicillins still dominate mass. That composition matters: a tonne of tetracycline is not a tonne of colistin in resistance politics, even if both appear in the same sales total.
+
+Coverage remains the soft underbelly. Many of the world's largest meat exporters still do not publish transparent national AMU ledgers. Regional WOAH aggregates hide national policy performance. Models fill gaps; they also import assumptions about intensity by species and production system. When a briefing slide says "animals use most antibiotics worldwide," ask whether the slide means **tonnes**, **mg/kg**, or **share of medically important classes**.
+
+## Caveats before the memo leaves the building
+
+Sales are not on-farm use. FDA and EMA both warn that distribution volumes need not equal administered doses. Biomass denominators change when methodology changes — Europe's 2023 ESUAvet break is the textbook case. Years do not align across China (2020 national), Mulchandani (2020 model), FDA (2023), ESUAvet (2023–2024), WOAH (2022 focus), and JIACRA (2019–2021). Companion animals are a rounding error in European tonnes (~1.6% in ESUAvet 2023) but can matter for specific critically important classes. Human hospital and community DDD mask indication quality; livestock sales mask prophylaxis versus treatment versus historical growth promotion where still practiced.
+
+The usable synthesis for desks is narrower and stronger than a viral chart. **Absolute tonnes** still concentrate in a handful of livestock-heavy producers, with China in a class of its own on disclosed national mass. **Europe's biomass-aligned comparison** shows food animals below humans on JIACRA's 2021 mg/kg ruler, while Farm-to-Fork mg/PCU remains only partly on track for 2030 and ticked up in 2023–2024. **Human DDD** remain the right language for clinical stewardship targets and the wrong language for a livestock tonnage scoreboard. Hold the ruler you mean — mg/PCU, mg/kg, DDD, or tonnes — and the livestock-versus-human story stops being a single number and starts being a measurable system.`,
+  },
+  {
     id: "single-owner-subsea-cable-risk-2026",
     slug: "single-owner-subsea-cable-risk-2026",
     title:

@@ -2942,6 +2942,21 @@ const SingleOwnerSubseaCableRisk2026Dashboard = dynamic(
   },
 );
 
+const VeterinaryAntibioticSalesVsHumanUse2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/VeterinaryAntibioticSalesVsHumanUse2026Dashboard"
+    ).then((m) => m.VeterinaryAntibioticSalesVsHumanUse2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3713,6 +3728,10 @@ export function PostVisualization({
 
   if (type === "single-owner-subsea-cable-risk-2026") {
     return <SingleOwnerSubseaCableRisk2026Dashboard />;
+  }
+
+  if (type === "veterinary-antibiotic-sales-vs-human-use-2026") {
+    return <VeterinaryAntibioticSalesVsHumanUse2026Dashboard />;
   }
 
   return null;

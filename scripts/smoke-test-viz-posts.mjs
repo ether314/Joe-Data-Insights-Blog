@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "veterinary-antibiotic-sales-vs-human-use-2026",
+    marker: "Metric clash · mg/PCU vs DDD",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "single-owner-subsea-cable-risk-2026",
     marker: "Single-owner subsea cable risk — ownership of new km",
     forbidden: "Loading interactive charts",
