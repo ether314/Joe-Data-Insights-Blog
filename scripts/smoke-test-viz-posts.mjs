@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-work-stoppage-idleness-versus-union-density-2026",
+    marker: "Organized labor · idle days vs coverage",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-state-pension-funded-ratios-2026",
     marker: "State pensions · funded ratios & UAAL",
     forbidden: "Loading interactive charts",

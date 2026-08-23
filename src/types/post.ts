@@ -219,7 +219,8 @@ export interface Post {
     | "endowment-payout-vs-tuition-dependence-2026"
     | "us-traffic-deaths-per-vmt-vs-peer-countries-2026"
     | "admitted-homeowners-insurers-exiting-coastal-states-2026"
-    | "us-state-pension-funded-ratios-2026";
+    | "us-state-pension-funded-ratios-2026"
+    | "us-work-stoppage-idleness-versus-union-density-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
