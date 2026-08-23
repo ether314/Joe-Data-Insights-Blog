@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "rare-disease-trial-desert-map-2026",
+    marker: "Rare-disease trials per million",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "global-5g-auction-proceeds-vs-coverage-2026",
     marker: "$ per MHz-pop vs coverage",
     forbidden: "Loading interactive charts",

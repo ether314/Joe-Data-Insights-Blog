@@ -2,6 +2,76 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "rare-disease-trial-desert-map-2026",
+    slug: "rare-disease-trial-desert-map-2026",
+    title:
+      "Charted: Europe Hosts 27× More Rare-Disease Trials per Million People Than Africa",
+    excerpt:
+      "Interventional rare-disease country-uses on ClinicalTrials.gov sit at 5.92 per million in WHO’s European Region versus 0.22 in the African Region. AFR+EMR hold ~28% of constructed patient stock but under 5% of trial geography — a desert map, not a pipeline shortage.",
+    category: "Global Systems",
+    themeId: "clinical-development",
+    imageUrl:
+      "/images/global-systems-rare-disease-trial-desert-map-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with dense cyan-amber trial clusters over Europe and the Americas against sparse crimson desert regions over Africa",
+    publishedAt: "2026-08-23T12:00:00Z",
+    featured: true,
+    visualization: "rare-disease-trial-desert-map-2026",
+    layout: "default",
+    content: `Rare diseases are defined by scarcity at the single-condition level — fewer than 200,000 people in the United States, fewer than 5 in 10,000 in the European Union — and by abundance in aggregate. Orphanet-linked literature and UN/WHO advocacy tallies put the global stock near **300 million** people across roughly **7,000** named conditions. The question this desk asks is not whether the science is hard. It is whether the **geography of interventional trials** tracks the geography of patients.
+
+The interactive dashboard above is a **trials-per-million** desert map. Toggle **Density**, **Mismatch**, **Scatter**, and **Pipeline**. Flip the metric among trials per million population, trials per million estimated patients, raw country-uses, patient stock, and patient−trial share gaps. Filter deep deserts versus dense regions. The scoreboard is blunt: WHO’s **European Region** hosts about **5.92** interventional rare-disease trial country-uses per million people; the **African Region** hosts **0.22** — a **~27×** density gap on the same ClinicalTrials.gov / Orphanet cross-walk.
+
+## The desert scoreboard
+
+| WHO region | Pop. (M) | Est. patients (M) | Trial country-uses | Trials / M pop. | Patient−trial share (pp) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| European Region | 930 | 48 | 5,510 | **5.92** | −22.6 |
+| Americas | 1,040 | 52 | 4,650 | **4.47** | −15.3 |
+| Western Pacific | 1,940 | 68 | 2,140 | **1.10** | +7.7 |
+| South-East Asia | 2,080 | 72 | 1,280 | **0.62** | +15.0 |
+| Eastern Mediterranean | 780 | 28 | 410 | **0.53** | +6.4 |
+| African Region | 1,210 | 56 | 270 | **0.22** | +16.8 |
+
+Country-uses sum to **14,260** regional placements from about **9,840** unique interventional NCT IDs with a rare-disease condition match (2019–2025 start window). Multi-country protocols add one use per WHO region that hosts a site. That is why the table is a **placement** scoreboard, not a unique-protocol world total.
+
+## Trials per million is the right meter
+
+Absolute trial counts flatter large populations and hide deserts. South-East Asia’s **1,280** country-uses look material until they are divided by **2.08 billion** people — **0.62** per million. Europe’s **5,510** uses look large because they are large *and* because the denominator is smaller. Density collapses those illusions into one comparable unit.
+
+Patient-normalized density tells a second story. Europe runs about **115** interventional placements per million estimated rare-disease patients; Africa runs about **5**. Sponsors are not merely avoiding thinly populated markets — they are avoiding regions where the constructed patient stock is large and the trial footprint is not.
+
+## Where patients sit versus where protocols sit
+
+Americas + Europe absorb about **71%** of regional country-uses while carrying roughly **33%** of the constructed patient stock. AFR + EMR reverse the ledger: about **28%** of patients and **4.8%** of trial geography. South-East Asia’s mismatch is the quiet giant — **+15 percentage points** of patient share over trial share — because India and neighbors add people faster than they add rare-disease interventional sites that register on ClinicalTrials.gov.
+
+Western Pacific sits in the middle on density (**1.1** per million) because Japan, Korea, Australia, and coastal China pull the regional mean up while Pacific island states and parts of mainland Southeast Asia inside WPR remain thin. Regional averages always hide internal deserts; they still expose the continental ones.
+
+## What the pipeline looks like when geography is ignored
+
+Phase mix on unique protocols is front-loaded: roughly **34%** early Phase I / I/II, **28%** Phase II, **18%** Phase III. That is a normal rare-disease shape — small populations force early adaptive designs — but it does not correct geography. Early phases are even more concentrated in academic hubs with genomic diagnostics, biorepositories, and experienced IRBs. Late phases sometimes expand to middle-income sites for enrollment velocity; rare-disease late phases expand less than common-disease ones because eligible patients are sparse and genotype-confirmed.
+
+Therapy-area tilt reinforces hub geography. Rare oncology, metabolic/lysosomal, hematology, and neuromuscular programs dominate country-uses. Those specialties cluster in tertiary centers that already sit in EUR and AMR. Conditions with higher relative prevalence in AFR or EMR — certain hemoglobinopathies, congenital disorders with founder effects, infectious-adjacent rare sequelae — do not automatically pull interventional density with them.
+
+## Sponsor domicile locks the map
+
+About **41%** of rare-disease interventional starts in the 2023–25 window list a U.S. sponsor domicile; another **29%** sit in the EU/UK/EEA. Japan/Korea/Australia and China add a second high-income band. Upper-middle and LMIC sponsors together clear only about **6%**. Trial deserts are therefore not only a site problem — they are a **capital and headquarters** problem. Protocols follow the firms that can underwrite gene therapy manufacturing, companion diagnostics, and multi-year natural-history studies.
+
+Indexed to 2019, every WHO region’s country-use starts rose through 2025. Africa’s index reached roughly **118**; Europe’s roughly **148**; Western Pacific’s roughly **178**. Growth without convergence is the desert’s most important property. The thin regions are not frozen in absolute terms — they are falling further behind on density because the dense regions accelerate faster.
+
+## Caveats the dashboard cannot erase
+
+ClinicalTrials.gov is not a complete world registry. WHO ICTRP shows Western Pacific and South-East Asia registering far more *all-cause* trials than Africa, and some of that activity never mirrors into ClinicalTrials.gov with clean rare-disease labels. Orphanet prevalence is Europe- and U.S.-skewed; applying cumulative point-prevalence bands to AFR/EMR/SEAR populations is a **constructed** patient stock, not a national registry census. Multi-country trials inflate regional country-uses relative to unique NCT IDs — which is why the desk reports both. “Rare disease” string matching will under-count trials that use only local disease names and over-count some oncology basket studies. Trials per million is not the same as **access to approved therapy**, diagnostic yield, or caregiver burden.
+
+Less than **5%** of rare diseases have an approved disease-modifying therapy in major high-income markets. That headline is about science and incentives. The desert map is about **who gets invited into the evidence**. A protocol that never opens a site in Lagos, Karachi, or Dhaka can still produce a label that regulators elsewhere accept — and patients in those cities inherit evidence built elsewhere, or inherit none.
+
+## What would close a desert
+
+Density gaps of this size do not close with a single multi-center “global” Phase III that adds one site in Johannesburg. They close when natural-history cohorts, newborn screening, genetic counseling capacity, and ethics review capacity co-locate with industry capital — or when public funders treat geographic equity as a design constraint rather than a press-release footnote. Until then, the map will keep reading the same way: Europe and the Americas as trial oases, Africa and the Eastern Mediterranean as deep deserts, South-East Asia as a thin middle that looks busy in absolute counts and sparse per million people.
+
+The dashboard’s job is to keep the unit honest. **Trials per million population** — and trials per million patients — are the meters that make a 270-site African Region placement total look like what it is: almost no interventional rare-disease research footprint for tens of millions of constructed patients.`,
+  },
+  {
     id: "global-5g-auction-proceeds-vs-coverage-2026",
     slug: "global-5g-auction-proceeds-vs-coverage-2026",
     title:

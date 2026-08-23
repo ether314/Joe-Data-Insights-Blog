@@ -249,7 +249,8 @@ export interface Post {
     | "us-housing-permits-vs-household-formation-2026"
     | "orbital-launch-cadence-by-operator-2026"
     | "us-crushed-stone-vs-construction-put-in-place-2026"
-    | "global-5g-auction-proceeds-vs-coverage-2026";
+    | "global-5g-auction-proceeds-vs-coverage-2026"
+    | "rare-disease-trial-desert-map-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
