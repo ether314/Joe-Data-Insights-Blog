@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fao-capture-vs-aquaculture-tonnage-2026",
+    slug: "fao-capture-vs-aquaculture-tonnage-2026",
+    title:
+      "Charted: Aquaculture Is 51% of World Aquatic Animals — but Only Asia Has Crossed Majority",
+    excerpt:
+      "FAO SOFIA 2024: farmed aquatic animals hit 94.4 Mt (51%) vs 91.0 Mt wild capture in 2022. Asia’s aqua share is 64%; Northern America still sits at 11%. Where capture still dominates edible supply — and where it does not.",
+    category: "Global Systems",
+    themeId: "capture-fisheries",
+    imageUrl:
+      "/images/global-systems-fao-capture-vs-aquaculture-tonnage-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split scene: wild capture trawlers and fish schools on the left, glowing cyan aquaculture pens on the right",
+    publishedAt: "2026-08-23T06:00:00Z",
+    featured: true,
+    visualization: "fao-capture-vs-aquaculture-tonnage-2026",
+    layout: "default",
+    content: `In 2022, for the first time in the FAO record, aquaculture produced more aquatic animals than capture fisheries: **94.4 million tonnes** farmed against **91.0 million tonnes** wild, or **51%** versus **49%** of a **185.4 Mt** world total. That headline sounds like a clean handoff from ocean to pond. It is not. Open the regional ledger and the story fractures. **Asia** already runs an aquaculture-majority system at **64%** farm share. **Northern America** remains stuck near **11%** — the lowest aquaculture share among major regions — and FAO’s outlook holds that floor through **2032**. Five of six continents still draw most of their aquatic-animal tonnage from the wild.
+
+The interactive dashboard above is built as a **regime map**, not a single world pie. Toggle **Regions**, **Share paths**, **Habitat**, and **Producers**. Switch units between **Million tonnes** and **Aqua share %**, and compare 2022 against the FAO 2032 projection. The operational question for food-system desks is narrow: *in which regions does wild capture still dominate edible aquatic supply, and where has aquaculture already taken the majority?*
+
+## The world crossed 50% — the continents mostly did not
+
+World aquaculture’s climb is old news in the narrative sense and new in the arithmetic sense. SOFIA places the aquaculture share of aquatic-animal production around **4–5%** in the 1950–1970 window, near **20%** by the 1990s, about **44%** across the 2010s, and **51%** in **2022**. The 2032 FAO outlook nudges the world share only to **54%**. The crossover year matters for speeches; the slope after the crossover matters for planning. A three-point rise over a decade is not a stampede.
+
+Volume context matters as much as share. Capture fisheries of aquatic animals produced **91.0 Mt** in 2022 (plus **1.3 Mt** of algae in the broader capture ledger). Marine capture alone still supplied about **80 Mt** of aquatic animals — roughly **43%** of the entire world animal total by itself. Inland capture added **11.3 Mt**, concentrated in Asia and Africa, and remains hard to measure completely. Aquaculture did not replace the ocean; it outgrew a flat wild baseline.
+
+For food desks, the edible cut is sharper than the production cut. Of aquatic-animal production destined for human consumption, aquaculture’s share reached a record **57%** in 2022. Non-food uses — fishmeal and fish oil especially — still pull a larger relative slice from capture streams. Saying “half the fish are farmed” is true for production and understates the farm share of what people actually eat.
+
+## Asia is the only aquaculture-majority continent
+
+Asia produced about **70%** of world aquatic animals in 2022 and contributed the overwhelming bulk of farmed volume. At a **64%** aquaculture share, Asia is the only continent where farmed animals already exceed half of regional output. Derived tonnages put Asia near **83 Mt** farmed and **47 Mt** captured inside a ~**130 Mt** regional total. Remove China from the Asian frame and the aquaculture share falls to roughly **47%** — still high by global standards, no longer a comfortable majority. The continent’s majority is real; it is also China-weighted.
+
+That weighting shows up in producer space. China alone accounts for about **36%** of world aquatic-animal production and runs a deeply aquaculture-skewed national mix. India, Indonesia, and Viet Nam join the farm-majority club among top producers. Peru, by contrast, remains a capture giant on anchoveta and related pelagics, with aquaculture a thin slice of national tonnage. The scatter in the dashboard — world share on one axis, national aquaculture share on the other — separates “large and farmed” from “large and wild” without pretending every coastal state is on the same path.
+
+FAO also notes that ten countries (China, Indonesia, India, Viet Nam, Bangladesh, Philippines, Republic of Korea, Norway, Egypt, and Chile) produced about **90%** of world aquaculture. The farm boom is geographically wide in rhetoric and concentrated in practice. Regions can remain capture-majority even while hosting a few world-class farming champions.
+
+## Where capture still dominates the ledger
+
+Outside Asia, the 2022 aquaculture shares are unambiguous:
+
+| Region | Aqua share 2022 | Aqua share 2032 (FAO) | Regime |
+| --- | ---: | ---: | --- |
+| Asia | **64%** | **67%** | Aquaculture majority |
+| Latin America & Caribbean | **25%** | **26%** | Capture majority |
+| Europe | **20%** | **21%** | Capture majority |
+| Africa | **18%** | **22%** | Capture majority |
+| Oceania | **13%** | **15%** | Capture majority |
+| Northern America | **11%** | **11%** | Capture majority |
+| **World** | **51%** | **54%** | Aquaculture majority |
+
+**Latin America and the Caribbean** sit at **25%** farm share. Chile’s salmon and Ecuador’s shrimp are commercially loud; the continental volume ledger still leans on marine capture, including Peru’s industrial fisheries. **Europe** is near **20%**: Norway’s salmon industry is a value and technology leader, yet the continent-wide tonnage mix remains capture-heavy once you include North Atlantic and other wild fleets. **Africa** is near **18%**, with Egypt carrying much of the farmed weight while inland and marine capture still feed large populations. **Oceania** is near **13%**. **Northern America** is the floor at **11%**, and FAO’s projection does not lift it.
+
+These are not moral rankings. They are supply-regime labels. A capture-majority region can still import farmed fillets, and an aquaculture-majority region still depends on wild fish for fishmeal, broodstock genetics, and culinary niches the ponds do not fill. The table answers the desk question: *who already lives in a farm-first volume world?* Only Asia, at continental scale.
+
+## Marine water is still a capture ocean; inland water is already a farm ditch
+
+Split the same 185.4 Mt by habitat and the regime map flips again. About **62%** of aquatic animals came from marine areas in 2022, and within that marine ledger capture still supplied **69%** of the tonnage (aquaculture **31%**). Inland waters were only **38%** of world aquatic animals — but **84%** of that inland ledger was farmed. Inland aquaculture alone contributed about **62.6%** of all farmed aquatic animals; marine and coastal farming supplied the other **37.4%**.
+
+That habitat split explains why “aquaculture surpassed capture” and “the ocean is still mostly wild” can both be true. The farm majority was won in ponds, cages, and inland systems faster than in open marine ranching. Policy that treats aquaculture as a simple substitute for marine capture mismaps where the tonnes actually moved.
+
+Species composition of the recent farm surge reinforces the point. Of the 2020–2022 increase in farmed aquatic animals, finfish contributed about **58%**, crustaceans **25%**, and molluscs **16%**. Growth is not evenly a salmon story or a shrimp story; it is a finfish-led expansion with crustacean and mollusc legs, heavily Asian in location.
+
+## The 2032 outlook: more farm share, same geographic hierarchy
+
+FAO’s FishStat outlook to **2032** lifts world aquaculture’s share of aquatic animals from **51%** to **54%**. Continentally, Asia edges from **64%** to **67%**, Africa from **18%** to **22%**, Europe from **20%** to **21%**, Latin America and the Caribbean from **25%** to **26%**, Oceania from **13%** to **15%**, and Northern America stays near **11%**. Absolute farm growth is expected on every continent except a slight European decline in one projection cut; Africa’s percentage growth looks fast from a small base and still leaves continental output modest next to Asia.
+
+Excluding China, the world aquaculture share rises from about **35%** in 2022 to **38%** in 2032 — a reminder that the global majority is fragile to one country’s weight. Asian aquaculture excluding China climbs from roughly **47%** to **52%** of that sub-regional mix. The hierarchy does not invert: Asia deepens its farm majority; Northern America remains the capture-heavy outlier among large regions; Africa and Latin America gain farm share without flipping the majority flag.
+
+## What the regime map means for food and trade desks
+
+Treat the dashboard as a **majority test**, not a virtue score. For import planning, a capture-majority region can still be a farmed-product customer, and an aquaculture-majority region can still export wild fish and fishmeal. For climate and biodiversity screens, inland farm growth and marine capture pressure are different risk books even when both appear under “seafood.” For development finance, Africa’s projected farm growth matters because the base is small and food-security demand is large — not because the continent is about to look like coastal China on a share chart.
+
+Three practical reads follow from the 2022 ledger:
+
+1. **If your exposure is Asian farmed finfish, shrimp, and molluscs**, you are already inside the majority regime that defines the world headline.
+2. **If your exposure is Northern American or broad European wild landings**, you are still in a capture-majority volume world even while farmed imports fill retail cases.
+3. **If your model assumes a smooth global substitution of capture by aquaculture**, rewrite it. Substitution is regional, habitat-specific, and China-weighted.
+
+## Caveats and how to read the tonnes
+
+SOFIA 2024 is the spine of this post: reference year **2022**, aquatic animals in live-weight million tonnes unless noted. Regional capture and aquaculture tonnages in the data module are **derived** from disclosed world totals, regional shares, and aquaculture shares; they can miss the world total by a few tenths of a Mt after rounding. Algae are excluded from the animal majority test even though algae loom large in total aquaculture mass. Inland capture is widely believed to be undercounted. National aquaculture shares for the producer scatter are FishStat-informed estimates for illustration, not a substitute for country yearbooks. The 2032 points are FAO projections, not commitments. Edible / human-consumption shares (**57%** aquaculture) differ from raw production shares (**51%**) because non-food uses are uneven across subsectors.
+
+None of those caveats erase the regional regime split. The world average crossed into aquaculture majority in 2022. **Asia** did so decisively. **Northern America, Europe, Africa, Latin America and the Caribbean, and Oceania** still feed their volume ledgers primarily from the wild — and under FAO’s outlook, most of them still will in 2032.`,
+  },
+  {
     id: "pivotal-trial-sites-by-country-2026",
     slug: "pivotal-trial-sites-by-country-2026",
     title:

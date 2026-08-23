@@ -2687,6 +2687,21 @@ const PivotalTrialSitesByCountry2026Dashboard = dynamic(
   },
 );
 
+const FaoCaptureVsAquacultureTonnage2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FaoCaptureVsAquacultureTonnage2026Dashboard"
+    ).then((m) => m.FaoCaptureVsAquacultureTonnage2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3390,6 +3405,10 @@ export function PostVisualization({
 
   if (type === "pivotal-trial-sites-by-country-2026") {
     return <PivotalTrialSitesByCountry2026Dashboard />;
+  }
+
+  if (type === "fao-capture-vs-aquaculture-tonnage-2026") {
+    return <FaoCaptureVsAquacultureTonnage2026Dashboard />;
   }
 
   return null;

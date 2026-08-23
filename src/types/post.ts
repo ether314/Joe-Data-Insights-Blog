@@ -205,7 +205,8 @@ export interface Post {
     | "chokepoint-commodities-geography-2026q3"
     | "measurement-science-geography-2026"
     | "us-share-of-global-source-plasma-2026"
-    | "pivotal-trial-sites-by-country-2026";
+    | "pivotal-trial-sites-by-country-2026"
+    | "fao-capture-vs-aquaculture-tonnage-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

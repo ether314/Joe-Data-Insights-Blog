@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "fao-capture-vs-aquaculture-tonnage-2026",
+    marker: "FAO capture vs aquaculture tonnage",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "pivotal-trial-sites-by-country-2026",
     marker: "Top-3 country site share",
     forbidden: "Loading interactive charts",
