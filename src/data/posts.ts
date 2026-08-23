@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-traffic-deaths-per-vmt-vs-peer-countries-2026",
+    slug: "us-traffic-deaths-per-vmt-vs-peer-countries-2026",
+    title:
+      "Charted: US Traffic Deaths per 100M VMT Still Run ~4.7× Norway",
+    excerpt:
+      "NHTSA put US road deaths at 1.19 per 100M VMT in 2024 — down from the 1.38 peak, but still 7% above 2019. IRTAD’s 2021 distance ladder parks the US next to Korea, not Germany or the Nordics.",
+    category: "Global Systems",
+    themeId: "road-safety",
+    imageUrl:
+      "/images/global-systems-us-traffic-deaths-per-vmt-vs-peer-countries-2026-hero.png",
+    imageAlt:
+      "Dark navy data-journalism hero of a night highway with amber and teal rate bars suggesting deaths-per-mile intensity",
+    publishedAt: "2026-08-23T12:00:00Z",
+    featured: true,
+    visualization: "us-traffic-deaths-per-vmt-vs-peer-countries-2026",
+    layout: "default",
+    content: `Population rates make American roads look uniquely deadly. Distance rates make them look merely bad — and still far from the best peer systems. That is the point of normalizing road deaths by vehicle-miles traveled (VMT). In 2024, NHTSA’s Fatality Analysis Reporting System put the United States at **1.19 deaths per 100 million VMT**, down from a pandemic-era peak of **1.38 in 2021**, but still **about 7% above the 2019 baseline of 1.11**. On the OECD/ITF IRTAD distance ladder for 2021, the US sat at **8.5 deaths per billion vehicle-kilometres** — roughly **4.7× Norway’s 1.8** and in the same neighborhood as Korea (8.2) and Czechia (9.9), not Germany (3.7) or Sweden (2.5).
+
+The dashboard above is built for that double question: how far is US death intensity from high-income peers, and did the 2020–22 spike reverse? Toggle **Peer ladder** for the IRTAD 2021 ranking (switch units between per 100M VMT and per billion vkm), **US path** for the NHTSA series against Norway/Germany bands, **Spike unwind** for the 2019–24 path plus a 2019 CDC gap scatter, and **VMT vs pop** for the dual lens that shows the US as an outlier on both exposure metrics.
+
+## Why deaths per mile beat deaths per capita
+
+Deaths per 100,000 people are easy to publish and hard to interpret across countries that drive different amounts. Americans travel more miles per person than most Europeans; a higher population rate can partly reflect exposure rather than risk per mile. Distance risk — deaths per mile or kilometre traveled — answers a sharper question: given a mile of travel, how often does someone die?
+
+IRTAD treats fatalities per billion vehicle-kilometres as the preferred network-risk indicator when exposure data exist. Coverage is thinner than population rates — only a subset of member countries report validated VMT/vkm every year — but the countries that do report are exactly the peers US policy debates usually invoke: Nordics, Germany, Canada, Australia, France, Korea. Converting IRTAD’s billion-vkm rates into NHTSA’s per-100M-VMT units uses the exact mile–kilometre factor (divide by ≈6.21). Norway’s 1.8 per billion vkm becomes about **0.29 per 100M VMT**; the US 8.5 becomes about **1.37** — matching NHTSA’s 2021 peak of 1.38 within rounding.
+
+That conversion matters because US political debate often mixes the two meters. A claim that “US roads are five times as deadly as Norway’s” can be roughly true on population rates and still roughly true on distance rates in 2021 — but the gap is a bit smaller on distance than on population, and it is still large enough to be a policy problem rather than a statistical illusion.
+
+## The IRTAD ladder: US sits with the high-risk club
+
+In 2021, IRTAD’s validated distance-risk sample ranged from **1.8 (Norway)** to **9.9 (Czechia)** deaths per billion vkm. Four countries cleared under 3: Norway, Iceland (2.3), Denmark (2.4), and Sweden (2.5). Germany posted 3.7; Canada 4.4; Australia 4.5; France 5.2. Three countries cleared above 8: Korea (8.2), the United States (8.5), and Czechia (9.9).
+
+On a per-100M-VMT scale that US readers know from NHTSA tables, those 2021 figures become roughly **0.29 (Norway)**, **0.60 (Germany)**, **0.71 (Canada)**, **0.84 (France)**, **1.32 (Korea)**, **1.37 (US)**, and **1.59 (Czechia)**. The US is not the absolute worst peer in the distance sample — Czechia is higher — but it is not a mid-pack high-income country either. It clusters with East Asian and Central European high-risk observations, not with Western/Northern European Safe System performers.
+
+CDC’s 2022 MMWR comparison for **2019** — before the US spike — already showed the structural gap. Among 21 high-income countries with VMT data, crash deaths per 100M VMT ranged from **0.38 (Norway)** to **2.05 (Hungary)**. The US rate of **1.11** was sixth-highest and above the peer average of **0.92**. Even in a “good” US year, distance risk was elevated.
+
+## The 2020–22 spike: more deaths on fewer miles
+
+The pandemic years broke the usual coupling between travel and deaths. US VMT fell sharply in 2020 (to about **2.90 trillion** miles from **3.26 trillion** in 2019), yet fatalities rose from **36,355** to **39,007**. The rate jumped from **1.11 to 1.34** per 100M VMT. In 2021, travel partially recovered while deaths surged to **43,230**, pushing the rate to **1.38** — the highest in more than a decade. 2022 stayed ugly at **1.34** with **42,721** deaths.
+
+NHTSA and outside researchers have pointed to a familiar cocktail: higher speeds on emptier roads, impaired driving, lower seat-belt use in fatal crashes, and behavioral shifts that did not unwind when traffic returned. The international contrast is stark. IRTAD’s 2022 annual report noted that excluding the United States, aggregate road deaths among validated countries fell by roughly **14%** over the longer 2012–22 window; including the US flipped the group total toward stagnation. In 2021 specifically, US road deaths were about **16% above** the 2017–19 average while many peers were still below pre-pandemic levels.
+
+So the US spike was not “just” a VMT rebound story. Miles fell, then recovered; deaths rose faster than miles. Risk per mile worsened.
+
+## Partial unwind — not a return to baseline
+
+From the 2021 peak, the US rate has eased for three consecutive years: **1.34 (2022) → 1.26 (2023) → 1.19 (2024)**. Fatalities fell to **39,254** in 2024 while VMT reached about **3.29 trillion**. That is real progress relative to the spike. Roughly **70%** of the 2019→2021 rate jump (1.11 → 1.38) had unwound by 2024.
+
+It is not a full reversal. **1.19 remains about 7% above 2019’s 1.11.** In absolute terms, 2024 still killed nearly **3,000 more people** than 2019 despite similar-to-higher travel. Against Norway’s 2021 distance risk (~0.29 per 100M VMT), the 2024 US rate is still on the order of **4×**. Against Germany’s ~0.60, it is about **2×**. The spike is cooling; the peer gap is not closed.
+
+## Population rates and distance rates tell the same story
+
+Skeptics sometimes argue that US geography and driving intensity explain everything. The dual lens disagrees. On IRTAD-style population mortality for 2022, the US sat near **12.8 deaths per 100,000 people**, versus about **2.1 in Norway**, **2.6 in the UK/Japan/Denmark**, **3.4 in Germany**, and **5.0 in Canada**. That is a **~6×** Norway gap on population — larger than the distance multiple, as expected if Americans drive more — but the distance multiple is still **~4–5×**. Exposure explains some of the population gap; it does not erase the risk-per-mile gap.
+
+Canada and Australia are useful Anglo peers: similar language and federal complexity, high car dependence, yet 2021 IRTAD distance rates around **4.4–4.5 per billion vkm** (~0.71–0.72 per 100M VMT) versus the US **8.5**. The US is an outlier even among sprawling, car-oriented peers.
+
+## What the gap is — and is not — saying
+
+Distance risk does not identify a single cause. Vehicle mix (larger light trucks), road design (wide arterials, limited protected intersections), speed, impairment, restraint use, emergency response, and land-use patterns all move the rate. Safe System countries treat fatal crashes as a failure of the system design, not only of individual drivers. US policy has historically leaned harder on education and enforcement after the fact.
+
+Caveats belong in the open. VMT/vkm series are estimated; definitions of a traffic fatality (30-day rule) are harmonized in IRTAD but underlying crash systems differ. Pedestrian and cyclist deaths are included in fatality counts while non-motorized distance is usually excluded from the denominator — which can inflate apparent risk in bike-heavy cities. Small countries’ rates jump around with few deaths (Iceland). US 2024 figures are from the Annual Report File and can revise slightly when the Final File lands. Peer 2022–24 distance rates are still sparse in public IRTAD tables, so the freshest US path must be compared to slightly older peer ladders.
+
+None of those caveats turn 1.19 into a Nordic-class rate. They say: measure carefully, then still confront the gap.
+
+| Country / group | Distance risk (2021, per billion vkm) | ≈ per 100M VMT | Notes |
+| --- | ---: | ---: | --- |
+| Norway | 1.8 | 0.29 | Lowest IRTAD 2021 |
+| Sweden | 2.5 | 0.40 | Nordic peer |
+| Germany | 3.7 | 0.60 | Large EU peer |
+| Canada | 4.4 | 0.71 | Anglo peer |
+| Australia | 4.5 | 0.72 | Anglo peer |
+| France | 5.2 | 0.84 | Large EU peer |
+| Korea | 8.2 | 1.32 | High-risk peer |
+| United States | 8.5 | 1.37 | NHTSA 2021: 1.38 |
+| Czechia | 9.9 | 1.59 | Highest in sample |
+
+Sources: NHTSA FARS / Traffic Safety Facts (US fatalities & rate per 100M VMT, through 2024 ARF); FHWA Highway Statistics (VMT); OECD/ITF IRTAD Road Safety Annual Reports 2022–2023 (peer deaths per billion vkm); CDC MMWR 71(26), 2022 (2019 high-income distance ladder).`,
+  },
+  {
     id: "endowment-payout-vs-tuition-dependence-2026",
     slug: "endowment-payout-vs-tuition-dependence-2026",
     title:

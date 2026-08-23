@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-traffic-deaths-per-vmt-vs-peer-countries-2026",
+    marker: "US traffic deaths per VMT vs peer countries — road-safety lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "endowment-payout-vs-tuition-dependence-2026",
     marker: "Higher-ed endowments · payout vs tuition",
     forbidden: "Loading interactive charts",
