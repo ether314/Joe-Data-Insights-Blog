@@ -231,7 +231,8 @@ export interface Post {
     | "veterinary-antibiotic-sales-vs-human-use-2026"
     | "ogallala-aquifer-saturated-thickness-decline-2026"
     | "plasma-center-density-vs-poverty-2026"
-    | "registered-apprenticeships-vs-trades-retirements-2026";
+    | "registered-apprenticeships-vs-trades-retirements-2026"
+    | "freight-rail-velocity-versus-shipper-rates-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

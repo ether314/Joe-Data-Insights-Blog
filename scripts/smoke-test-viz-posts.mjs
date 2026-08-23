@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "freight-rail-velocity-versus-shipper-rates-2026",
+    marker: "Velocity vs revenue per carload",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "registered-apprenticeships-vs-trades-retirements-2026",
     marker: "Apprenticeship pipelines · entrants per retirement",
     forbidden: "Loading interactive charts",

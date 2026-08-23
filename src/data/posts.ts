@@ -2,6 +2,73 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "freight-rail-velocity-versus-shipper-rates-2026",
+    slug: "freight-rail-velocity-versus-shipper-rates-2026",
+    title:
+      "Charted: Freight Rail Velocity Fell 12% While Revenue per Carload Rose 28%",
+    excerpt:
+      "STB system train speed dropped about 12% peak-to-trough from late 2019 into 2022 while a Class I revenue-per-carload index climbed ~28%. By mid-2026 speed had regained most of the gap, but rates still sat ~18% above the 2019 base — and Kansas City, Memphis, and Laredo still lag on dwell.",
+    category: "Transport & Logistics",
+    themeId: "freight-rail-performance",
+    imageUrl:
+      "/images/transport-logistics-freight-rail-velocity-versus-shipper-rates-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic freight corridor with cyan train-speed line and green revenue-per-carload index diverging over amber terminal-dwell bars",
+    publishedAt: "2026-08-23T16:00:00Z",
+    featured: true,
+    visualization: "freight-rail-velocity-versus-shipper-rates-2026",
+    layout: "default",
+    content: `Shippers experience freight rail as two clocks that rarely tick together. One is **physical**: how fast trains move on the line of road, and how long cars sit in terminals. The other is **commercial**: what carriers collect per carload once fuel surcharges, mix, and contract escalators are baked in. From late 2019 through the 2022 service crisis, those clocks ran in opposite directions. Blended Class I **system train speed** fell roughly **12%** peak-to-trough while a **revenue-per-carload index** (2019Q4 = 100) rose about **28%**. By mid-2026, speed had clawed back most of the gap — yet the rate index still printed near **118**.
+
+The dashboard above is built as a **velocity × rates lens**. Toggle focus among the dual-axis tape, speed×rate scatter, corridor dwell lag, and Class I recovery bars; filter the scatter by pre-crisis, crisis, or recovery era. What follows is the service tape underneath those controls — not a tariff schedule restatement, and not a claim that every invoice rose 28%.
+
+## What STB speed and dwell actually measure
+
+The Surface Transportation Board requires Class I carriers to file weekly **system average train speed** and **terminal dwell**. Speed is train-miles divided by hours operated — a network fluidity metric, not door-to-door transit time for a particular shipper. Dwell is the average time a car resides at a terminal, excluding run-through cars that never get classified. Both series are noisy week to week; weather, crew availability, locomotive power, and interchange congestion move them. Averaging into quarters is how this post keeps the crisis and recovery visible without drowning in weekly spikes.
+
+Neither metric is a perfect proxy for **on-time performance**. A network can recover dwell while trip-plan compliance stays soft, and a corridor can look fluid on system averages while a single gateway (Chicago, Kansas City, Laredo) still burns days. The STB Chicago gateway files and named-terminal dwell prints are the right place to look when the national average says "recovered" and a plant still sees late empties.
+
+## The 2019–2022 divergence
+
+Late 2019 is a useful baseline: blended system speed near **25 mph**, system dwell near **22 hours**, and the revenue index pinned at **100**. COVID volumes briefly *improved* fluidity in mid-2020 — fewer trains, cleaner meets — before the rebound jammed yards. Through 2021 and into 2022, train starts, crew shortages, and terminal congestion pushed speed down toward the low **21–22 mph** range and dwell up toward **30 hours** on the blended system print.
+
+Commercial conditions did not mirror the service trough. Fuel, contract resets, and mix shifts lifted freight revenue per carload even as physical velocity deteriorated. The quarterly scatter in the dashboard shows the crisis cluster: slower miles per hour paired with higher index levels — a soft **negative correlation** (about **−0.41**) across the full 2019–2026 sample. That is the core shipper complaint of the period in chart form: paying more while the network ran slower.
+
+| Milestone | System speed (mph) | System dwell (hrs) | Rev/carload index |
+| --- | ---: | ---: | ---: |
+| 2019Q4 baseline | **25.0** | 22.4 | **100** |
+| 2022Q2 trough / peak | **21.5** | **30.2** | 127 |
+| 2022Q4 rate peak | 22.4 | 27.5 | **128** |
+| 2024Q4 | 24.2 | 23.2 | 118 |
+| 2026Q2 | **24.3** | 23.0 | **118** |
+
+## Recovery closed dwell faster than speed
+
+Service recovery plans filed with the STB after the crisis emphasized hiring, locomotive availability, and terminal discipline. Empirically, **dwell** improved earlier and more cleanly than **train speed**. By late 2023, blended dwell was back near the mid-**23–24 hour** band; speed was still a few tenths below the 2019 line and stayed sensitive to intermodal surges and weather. That pattern matches what carrier earnings calls described: yard productivity gains can clear cars even when line-of-road velocity is capped by meets, track work, or longer trains.
+
+Rates did not snap back to 2019. The index eased from **128** toward the high teens above base as fuel normalized and **intermodal** took a larger share of carloads — intermodal typically prints lower revenue per unit than chemical or automotive carload. Mix can therefore soften the index without any single contract "cutting rates" in a headline sense. AAR weekly carload composition is the volume context: coal's share faded; intermodal's rose. The pie in the corridor panel is that mix story in one glance.
+
+## Which corridors still lag
+
+National averages forgive gateways. Sorting named terminals by **hours of dwell still above the 2019 baseline** leaves a clear lag list: **Kansas City** (~+2.6 hrs), **Memphis** and **Laredo** (~+2.3 hrs), then **LA/Long Beach** and **North Jersey** (~+1.7 hrs). Chicago's complex is no longer at its **38.5-hour** crisis peak, but mid-2026 dwell near **26.2 hours** remains above the **24.8-hour** 2019 print — a stubborn Midwest hub tax on cross-country manifests.
+
+Houston sits closer to baseline (small residual lag), which matters for Gulf chemicals that already pay high revenue intensity. Laredo's residual lag matters for US–Mexico single-line traffic after the CPKC combination: border fluidity is a commercial product, not just a local operating curiosity. BTS freight-flow weights remind us why these names dominate: Chicago and the West Coast intermodal complex carry outsized tonnage shares relative to a mid-size classification yard in the Plains.
+
+## Class I recovery is uneven
+
+Recovery percentages — how much of the 2019-to-trough speed gap each carrier had closed by 2026Q2 — are not uniform. Western roads (**BNSF**, **UP**) and **CSX** sit in the mid-to-high **70s–80s** percent recovery band on this desk's estimate. **Norfolk Southern** and **CPKC** land nearer **63%**: more of the crisis speed loss is still visible in the 2026 print. That does not mean every NS or CPKC shipper faces 2019-minus-service; it means the system averages have not fully rewritten the trough. STB weekly files remain the place to watch week-to-week, especially when a single terminal (Galesburg, Shreveport, Laredo) dominates a corridor story.
+
+Eastern vs western geography also shapes the tape. Coal and chemicals weight the East differently than international intermodal weights the West. When West Coast imports surge, UP and BNSF velocity can soften even as dwell holds — exactly the dual-metric pattern the composed chart is built to show.
+
+## Caveats and what this desk is not
+
+Several caveats belong in plain sight. First, the **revenue-per-carload index** is an analytical blend from carrier statistical supplements and industry summaries, indexed to 2019Q4 — it is **not** a published STB waybill average for every commodity, and it is **not** a spot-truck comparison. Second, STB speed/dwell are **carrier-reported** operational metrics; definitional quirks (which terminals enter the top-10 list, how run-throughs are excluded) can shift levels even when the network feels unchanged to a customer. Third, quarterly averaging **smooths** outage weeks that shippers remember vividly. Fourth, **correlation is not causation**: rates rose with fuel and pricing cycles that only partly overlapped the service crisis; attributing every index point to dwell would overfit the chart.
+
+This post also does not adjudicate reciprocal switching dockets, crew-size rules, or Precision Scheduled Railroading as ideology. It asks a narrower question: how did **train speed and terminal dwell** move against **posted commercial intensity** since 2019, and which **corridors** still fail the 2019 dwell test. On that question the answer is specific. Velocity and rates diverged hard into 2022; dwell recovered first; speed mostly followed; rates stayed elevated; and a short list of gateways — Kansas City, Memphis, Laredo, Chicago — still levy a measurable dwell premium over the pre-crisis baseline.
+
+Sources: STB weekly Class I rail service performance data (system speed, terminal dwell, Chicago gateway); AAR weekly rail traffic; BTS Freight Analysis Framework for corridor weighting; Class I statistical supplements for the revenue-per-carload index construction.`,
+  },
+  {
     id: "registered-apprenticeships-vs-trades-retirements-2026",
     slug: "registered-apprenticeships-vs-trades-retirements-2026",
     title:
