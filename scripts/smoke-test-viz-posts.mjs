@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "institutional-share-of-single-family-rentals-2026",
+    marker: "Atlanta · 27.9% of SFR stock",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "trucking-spot-rates-versus-carrier-exits-2026",
     marker: "Revocations per rate trough",
     forbidden: "Loading interactive charts",

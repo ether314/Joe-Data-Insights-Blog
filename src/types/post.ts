@@ -237,7 +237,8 @@ export interface Post {
     | "us-cattle-herd-at-seventy-year-lows-2026"
     | "farm-share-of-the-food-dollar-2026"
     | "employer-coverage-of-glp-1-weight-loss-drugs-2026"
-    | "trucking-spot-rates-versus-carrier-exits-2026";
+    | "trucking-spot-rates-versus-carrier-exits-2026"
+    | "institutional-share-of-single-family-rentals-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

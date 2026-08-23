@@ -3092,6 +3092,21 @@ const TruckingSpotRatesVersusCarrierExits2026Dashboard = dynamic(
   },
 );
 
+const InstitutionalShareOfSingleFamilyRentals2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/InstitutionalShareOfSingleFamilyRentals2026Dashboard"
+    ).then((m) => m.InstitutionalShareOfSingleFamilyRentals2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3903,6 +3918,10 @@ export function PostVisualization({
 
   if (type === "trucking-spot-rates-versus-carrier-exits-2026") {
     return <TruckingSpotRatesVersusCarrierExits2026Dashboard />;
+  }
+
+  if (type === "institutional-share-of-single-family-rentals-2026") {
+    return <InstitutionalShareOfSingleFamilyRentals2026Dashboard />;
   }
 
   return null;
