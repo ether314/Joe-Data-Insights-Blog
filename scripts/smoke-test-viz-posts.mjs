@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "registered-apprenticeships-vs-trades-retirements-2026",
+    marker: "Apprenticeship pipelines · entrants per retirement",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "plasma-center-density-vs-poverty-2026",
     marker: "Plasma · density vs poverty",
     forbidden: "Loading interactive charts",

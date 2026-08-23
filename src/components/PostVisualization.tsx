@@ -2987,6 +2987,21 @@ const PlasmaCenterDensityVsPoverty2026Dashboard = dynamic(
   },
 );
 
+const RegisteredApprenticeshipsVsTradesRetirements2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/RegisteredApprenticeshipsVsTradesRetirements2026Dashboard"
+    ).then((m) => m.RegisteredApprenticeshipsVsTradesRetirements2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3770,6 +3785,10 @@ export function PostVisualization({
 
   if (type === "plasma-center-density-vs-poverty-2026") {
     return <PlasmaCenterDensityVsPoverty2026Dashboard />;
+  }
+
+  if (type === "registered-apprenticeships-vs-trades-retirements-2026") {
+    return <RegisteredApprenticeshipsVsTradesRetirements2026Dashboard />;
   }
 
   return null;

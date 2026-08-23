@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "registered-apprenticeships-vs-trades-retirements-2026",
+    slug: "registered-apprenticeships-vs-trades-retirements-2026",
+    title:
+      "Charted: Electrician RAP Starts Cover 1.39× Projected Retirements — 14 States Still Below Parity",
+    excerpt:
+      "DOL registered-apprenticeship starts in the electrician and plumbing trades more than match a desk estimate of annual retirements nationally (1.39× and 1.11×), but state pipelines diverge sharply — and BLS openings still dwarf RAP starts because openings include occupational exits, not just retirements.",
+    category: "Labor & Skills",
+    themeId: "apprenticeship-pipelines",
+    imageUrl:
+      "/images/labor-and-skills-registered-apprenticeships-vs-trades-retirements-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of teal apprentice pipelines rising beside descending amber-rose retirement streams over a faint US state mesh",
+    publishedAt: "2026-08-23T16:00:00Z",
+    featured: true,
+    visualization: "registered-apprenticeships-vs-trades-retirements-2026",
+    layout: "default",
+    content: `Electricians and plumbers are the skeleton crew of the built environment. When a cohort ages out, the question is not whether demand exists — the Bureau of Labor Statistics already projects about **81,000** electrician openings and **44,000** plumber/pipefitter openings each year through 2034 — but whether the **registered apprenticeship** pipeline is putting enough *new* people on the books to offset the slice of that demand that is pure retirement.
+
+The interactive dashboard above pairs **desk-estimated FY new RAP entrants** with **projected annual retirements** by state for SOC **47-2111** (electricians) and **47-2152** (plumbers, pipefitters, and steamfitters). Toggle **Electrician** / **Plumber**, switch views among **Scatter**, **Rank**, **Regions**, and **National**, and filter gap bands (≥1.25×, thin 1.0–1.25×, deficit &lt;1.0×). The national punchline is modestly reassuring on the narrow retirement metric and still uncomfortable on the wider openings metric.
+
+## Scoreboard: entrants per retirement
+
+| Trade | Employment base | CPS 55+ share | Projected annual retirements | New RAP entrants (desk FY) | Entrants / retirement | BLS annual openings | RAP / openings |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Electricians | 818,700 | 18.4% | **15,064** | **20,900** | **1.39×** | 81,000 | 0.26× |
+| Plumbers / pipefitters | 504,500 | 20.4% | **10,292** | **11,440** | **1.11×** | 44,000 | 0.26× |
+
+Nationally, electrician RAP starts clear the retirement bar with room; plumbing clears it only thinly. Neither trade’s RAP starts come close to matching **all** projected openings, because BLS openings fold in transfers out of the occupation and other labor-force exits, not just birthday-card retirements.
+
+## How the retirement math is built
+
+There is no official, state-by-state “electricians who will retire next year” file. The Current Population Survey publishes national age shares by detailed occupation. For 2024, electricians show roughly **183,000** workers age 55+ out of **992,000** employed (about **18.4%**); plumbers, pipefitters, and steamfitters show about **130,000** of **636,000** (**20.4%**). Those shares are applied to state OEWS employment stocks.
+
+Projected annual retirements here equal **employment × 55+ share ÷ 10**. The divisor is a transparent decade-cohort assumption: if the 55+ group drains evenly over about ten years, one-tenth leaves each year. That is a **desk construct**, not a BLS product. It deliberately targets *retirements*, not the full separation rate that drives OOH “openings.” If you prefer a faster drain (say eight years), every ratio in the dashboard scales down by 20%; if you prefer twelve years, ratios rise.
+
+State employment cells lean on May 2023 OEWS geographic profiles where disclosed (California, Texas, Florida, New York, and other published leaders) and on residual estimates elsewhere. Confidence tags in the data module mark that distinction.
+
+## What “new RAP entrant” means — and what it does not
+
+The Department of Labor’s Registered Apprenticeship Partners Information Database System (RAPIDS), surfaced on apprenticeship.gov, counts **new**, **active**, **completer**, and **cancelled** apprentices by fiscal year. CRS summaries put FY2024 national activity near **680,000** active apprentices and **311,000** new starts across *all* occupations. Construction still dominates the stock; electricians are repeatedly cited as the single largest trade label (~**95,000** active in industry consolidations of RAPIDS occupation strings), with plumber/pipe labels near **~52,000** active.
+
+Multi-year trades do not turn over like one-year healthcare certificates. A steady-state 4–5 year program implies new starts closer to one-fifth to one-quarter of the active stock, not the all-occupation new/active ratio near **0.46**. This desk uses **0.22** new-to-active for the two trades, producing about **20,900** electrician starts and **11,440** plumber starts nationally — then allocates those starts across states by employment share, reweighted toward disclosed registry anchors (Michigan’s ~**1,500** electrician and ~**600** plumber starts in 2024; Florida’s electrician-heavy RAPIDS occupation table; Montana’s licensing-driven electrician and plumbing stocks).
+
+Important caveats travel with every cell:
+
+- **Entrants are not completers.** Cancellations and long program durations mean today’s start is not tomorrow’s journeyman. The dashboard’s completer proxy applies a **0.55** haircut for illustration only.
+- **Occupation labels are messy.** CRS notes more than fifty distinct strings containing “electrician.” State agencies and RAPIDS uploads do not always map cleanly to OEWS SOC codes.
+- **Non-RAP pathways exist.** Military training, informal helpers, career-technical education, and unregistered programs still feed some hiring — especially where licensing does not force a registered path.
+- **Retirements are not the only exit.** Occupational transfers, injuries, and geographic moves inflate openings far above the retirement slice.
+
+## State scatter: who sits above the 1:1 line?
+
+On the scatter view, each state is a bubble. The x-axis is projected annual retirements; the y-axis is estimated new RAP entrants; the dashed diagonal is **1:1 replacement**. Points above the line are growing the pipeline relative to the retirement drain; points below are not.
+
+Michigan is the clearest electrician **surplus** in the panel: registry-anchored starts near **1,480** against roughly **340** projected retirements — a ratio north of **4×**. That does not mean Michigan has “solved” electrician supply; it means the state’s registered pipeline is aggressive relative to its OEWS stock and age share. Montana shows a similar licensing-driven pattern at smaller scale: active electrician RAP counts reported by state LMI exceed **1,200** against a thin employment base, so the entrant estimate clears retirements by a wide margin.
+
+Large Sun Belt stocks tell a different story. Texas and Florida post strong absolute start counts, but their employment bases are so large that the ratio compresses toward parity. California’s electrician employment (~**73,000**) is the national peak; estimated starts do not fully keep pace with the desk retirement drain, landing the state in or near the deficit band depending on the exact RAP intensity assumption. Wyoming and North Dakota illustrate the opposite problem: among the highest electrician **location quotients** in OEWS, yet absolute RAP volume is small, so a handful of missed classes moves the ratio.
+
+Plumbing is tighter everywhere. The national **1.11×** leaves less headroom; eighteen states in this panel fall below **1.0×**. Massachusetts and Iowa show high plumber location quotients, but high LQ is not the same as high entrant-to-retirement cover — dense employment with only middling RAP intensity still prints thin ratios.
+
+## Rank and gap: ratios versus headcount
+
+The rank view sorts states by **entrants per retirement**. Use it to answer “where is the pipeline thick relative to aging?” The companion gap bars answer “where is the absolute headcount shortfall or surplus?” A small state can post a spectacular ratio on fifty extra starts; a large state can post a modest ratio while adding more net heads than any peer.
+
+That distinction matters for contractors and workforce boards. A **1.3×** ratio in a 3,000-electrician state adds fewer net bodies than a **1.05×** ratio in a 70,000-electrician state. Policy that only celebrates ratios will mis-rank the places where absolute backfill is failing.
+
+Filter the gap control to **&lt;1.0×** to isolate the deficit set. For electricians, fourteen states in the panel sit there under baseline assumptions; for plumbers, eighteen. Re-running the retirement divisor at eight years instead of ten would pull still more states under the line — a reminder that the headline national surplus is sensitive to how fast you assume the 55+ cohort exits.
+
+## Regions: South carries the stock, Midwest punches above weight
+
+Census-region rollups (built only from states in this panel, not a full 50-state census) show the **South** carrying the largest absolute employment and retirement totals for both trades — Texas and Florida dominate — while the **Midwest** often posts higher median ratios, helped by Michigan’s registry surge and denser JATC corridors in Ohio, Illinois, Wisconsin, and Minnesota. The **Northeast** mixes high-wage, high-barrier states (New York, New Jersey, Massachusetts) where licensing and union program slots can throttle starts even when wages signal shortage. The **West** spans California’s scale problem and Mountain states where licensing rules (Montana) or high LQs (Utah, Idaho, Wyoming) create opposite pipeline shapes.
+
+None of these regional averages should be read as destiny. A single large state can dominate a region’s sum; the dashboard’s state rank remains the better operating view.
+
+## National RAPIDS trend versus trade openings
+
+The national view charts all-occupation RAPIDS totals from FY2019–FY2024: active apprentices climbed from about **547,000** to **680,000**; new starts recovered from the FY2020 dip to roughly **311,000**. Completers hover near **112,000**. That is a real expansion of earn-and-learn capacity.
+
+It is also not enough, by itself, to staff BLS openings in the two trades. Electrician RAP starts at ~**21,000** cover only about **26%** of the **81,000** annual openings; plumber starts at ~**11,000** cover about **26%** of **44,000** openings. The retirement-only lens looks healthier precisely because it asks a narrower question. Desks that conflate “we need 81,000 electrician hires” with “we need 81,000 new apprentices” will overstate the RAP gap; desks that treat a national **1.39×** retirement cover as “mission accomplished” will understate state deficits and non-retirement exits.
+
+## Caveats and reading rules
+
+Treat every state RAP cell as an **estimate** unless your agency published a matching occupation start count for the same fiscal year. Treat every retirement cell as a **scenario** keyed to CPS age shares and a ten-year drain. Do not compare RAP starts directly to OEWS employment without dividing by program length. Do not ignore helpers and unregistered trainees where licensing allows them. And do not forget growth: BLS projects electrician employment up **9%** from 2024–34 (**+77,400** jobs), so replacement alone is not the full hiring ask — electrification load is still adding net seats on top of the retirement conveyor.
+
+The operational takeaway is narrow enough to print on a whiteboard. If you need a single national headline for **retirement backfill**, use **1.39×** for electricians and **1.11×** for plumbers. If you need a state action list, open the deficit filter and start with the large-employment states whose bubbles sit under the 1:1 line. If you need a hiring plan, remember openings still run roughly **four times** RAP starts in both trades — the rest of the market still has to come from somewhere.
+`,
+  },
+  {
     id: "plasma-center-density-vs-poverty-2026",
     slug: "plasma-center-density-vs-poverty-2026",
     title:
