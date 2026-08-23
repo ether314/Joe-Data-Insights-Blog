@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-state-pension-funded-ratios-2026",
+    slug: "us-state-pension-funded-ratios-2026",
+    title:
+      "Charted: Top 5 States Hold 55% of U.S. Public Pension Unfunded Liability",
+    excerpt:
+      "Equable end-2025 estimates put the national funded ratio at 82.5% with $1.27T still unfunded. California and Illinois alone account for ~36% of that shortfall — while seven jurisdictions sit at or above full funding.",
+    category: "Finance",
+    themeId: "pension-funding",
+    imageUrl:
+      "/images/finance-us-state-pension-funded-ratios-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of a US map with rose concentration bars for pension debt and a teal funded-ratio gauge",
+    publishedAt: "2026-08-23T09:00:00Z",
+    featured: true,
+    visualization: "us-state-pension-funded-ratios-2026",
+    layout: "default",
+    content: `A national average funded ratio of **82.5%** sounds almost healthy — until you notice that **$1.27 trillion** of promised benefits still lack matching assets, and that a thin slice of states owns most of that gap. Equable Institute’s State of Pensions 2025 January update, read beside Boston College’s Center for Retirement Research (CRR) Public Plans Database path and Pew’s longer funding-gap series, shows a **split map**: seven jurisdictions at or above full funding, three states still below 60%, and a dollar shortfall that is **highly concentrated**.
+
+The dashboard above answers two linked questions. First, what is the **distribution** of statewide funded ratios? Second, how concentrated is **unfunded actuarial accrued liability (UAAL)** — the dollar gap between assets and accrued benefits — in a handful of large systems? Toggle **UAAL share**, **Funded bins**, **Funded × UAAL**, and **National path**; filter by census region; rank by UAAL dollars or funded percent.
+
+## Scoreboard: funded ratio is not the same as UAAL
+
+| Metric (Equable end-2025 est.) | Value | Why it matters |
+| --- | ---: | --- |
+| National funded ratio | **82.5%** | Up from 78.0% in 2024 |
+| National UAAL | **$1.27T** | Down from $1.54T, still >$1T |
+| Top-5 states’ UAAL share | **54.6%** | CA, IL, TX, NJ, PA |
+| CA + IL UAAL share | **36.4%** | Two states, more than a third of the gap |
+| Jurisdictions ≥100% funded | **7** | DC, TN, NE, WI, WA, UT, SD |
+| States <60% funded | **3** | MS, KY, IL |
+| CRR PPD actuarial funded (FY 2025) | **77.7%** | Different measurement basis |
+
+Funded ratio is assets divided by accrued liabilities. UAAL is the **dollar remainder**. A mid-sized state at 58% funded can look worse on the ratio chart than California at 84% — yet California’s **$256B** shortfall dwarfs Kentucky’s **$36B** because the liability base is so much larger. Desks that only rank by percentage miss the fiscal geography of who actually owes the debt.
+
+## The concentration curve: top states own the shortfall
+
+Order states by **positive UAAL** and stack their shares against Equable’s **$1.27T** national shortfall. The cumulative curve rises fast:
+
+- **California** (~$256B) and **Illinois** (~$206B) together are about **36%** of national UAAL.
+- Add **Texas**, **New Jersey**, and **Pennsylvania** and the top five reach roughly **55%**.
+- The top ten clear about **70%**.
+
+That concentration is the headline for budget officers and rating desks. Improving the *national average* funded ratio can coexist with stubborn stress in a few large systems. Illinois sits at **54%** funded with the second-largest dollar gap; New Jersey is near **60%** funded with ~**$86B** UAAL; California’s statewide average is a more respectable **84%**, but its absolute shortfall still leads the country because CalPERS, CalSTRS, and large municipal plans are enormous.
+
+Texas illustrates the other side of the coin: an **82.5%** funded ratio — right on the national average — still produces ~**$87B** of UAAL simply because the liability stock is large. Ratio and dollars answer different questions; both belong on the same dashboard.
+
+## Distribution: resilient, fragile, and distressed
+
+Equable’s state averages (statewide plans plus large municipally managed plans with at least **$1B** of liabilities) spread across a wide band:
+
+- **Resilient (≥90%)**: seventeen jurisdictions, including the fully funded set and strong systems in Minnesota, North Carolina, New York, Virginia, and others.
+- **Fragile (60–90%)**: the crowded middle — most of the map.
+- **Distressed (<60%)**: Mississippi (**59%**), Kentucky (**59%**), and Illinois (**54%**).
+
+The histogram is not a neat bell curve. A cluster sits in the **80–90%** bin near the national average, another cluster fills **90–100%**, and a long left tail of distressed and near-distressed states pulls attention. CRR’s plan-level terciles sharpen the same story with a different cut: among major Public Plans Database plans in FY 2025, the **top third** aggregates near **95%** funded, the **middle third** near **78%**, and the **bottom third** near **58%**. State averages smooth over within-state plan gaps — California’s average hides both well-funded local public-safety plans and thinly funded legacy judge systems — but the tercile split confirms that “the average plan” is not the distressed plan and not the resilient plan.
+
+## Why national progress looks modest on the CRR ledger
+
+Equable’s market/estimated path shows the national funded ratio rising from **78.0%** in 2024 to **82.5%** in 2025 as average investment returns (~**9.5%**) beat the typical assumed return (~**6.9%**) and contributions stayed high. CRR’s actuarial aggregate for FY 2025 is lower — **77.7%**, up only about **1.5 points** since 2023 — because actuarial smoothing, liability growth, and mature-plan cash flows blunt the equity rally.
+
+CRR’s July 2025 brief stresses the mechanics: liabilities still grow roughly **4%** a year; mature plans run **negative net cash flows** near **2%** of assets even when actuarially determined contributions are paid in full; and alternatives-heavy portfolios do not capture a pure equity index’s upside. Those features explain why a **40%+** equity rally does not translate into a **40-point** funding jump. Pew’s longer funding-gap work adds the policy layer: states that chronically undershot actuarially required contributions — historically including Illinois, Kentucky, and New Jersey — compounded interest on pension debt even when markets cooperated.
+
+Together, the sources say the same thing in different dialects: **fundamentals improved**, but the stock of unpaid promises remains large, and **geography still dominates**.
+
+## Large liabilities, thin ratios: the scatter’s outliers
+
+Plot funded ratio against UAAL and four archetypes appear:
+
+1. **High funded, low/negative UAAL** — Wisconsin, Washington, Tennessee, Nebraska, Utah, South Dakota, D.C. These systems are the resilience reference set.
+2. **Mid funded, huge UAAL** — California and, to a lesser degree, Texas, Florida, New York, Ohio. Size, not ratio distress, drives the dollar gap.
+3. **Low funded, large UAAL** — Illinois and New Jersey. Worst of both worlds for taxpayers.
+4. **Low funded, smaller UAAL** — Mississippi and Kentucky. Ratio stress is acute, but absolute dollars are smaller than the coastal and Great Lakes giants.
+
+Region filters matter. The **Northeast** packs New Jersey, Pennsylvania, Connecticut, and Massachusetts into the fragile-to-distressed band with meaningful dollar gaps. The **Midwest** contains both Wisconsin’s surplus and Illinois’s hole. The **South** mixes Tennessee’s overfunding with Mississippi/Kentucky distress and Texas-scale UAAL. The **West** is California’s absolute-dollar story plus a long list of mid-80s funded systems.
+
+## Caveats and how to read the numbers
+
+Treat every figure as a **point-in-time estimate**, not a cash-flow forecast:
+
+- Equable’s 2025 state figures blend reported valuations with **estimated** investment returns for plans that had not closed their fiscal year when the January update was published.
+- CRR’s **actuarial** funded ratios are not interchangeable with Equable’s **market/estimated** ratios; the ~five-point gap between **82.5%** and **77.7%** is methodology, not a contradiction.
+- Statewide averages weight large plans heavily; a city plan can be far healthier (or weaker) than the state label.
+- Assumed returns, amortization methods, and COLA rules differ across systems; a 1-point funded-ratio difference between two states can be smaller than an assumption difference.
+- Overfunded states (negative UAAL) do not “cancel” underfunded states in a political sense — assets are siloed by statute and trust.
+- UAAL share percentages here use Equable’s **$1.27T** national shortfall as the denominator and **positive** state UAAL only; rounding and plan coverage (Equable covers the large majority, not every small local plan) mean shares are approximate.
+
+## What the map implies for 2026 budgets
+
+Contribution rates near **30%+ of payroll** on average are already a hard claim on general funds, school aid, and city budgets. Equable flags mounting **structural budget gaps** in dozens of states even without a recession. That environment raises the political pressure to pause the contribution discipline that helped lift funded ratios since 2022 — especially in states where UAAL amortization already crowds out other priorities.
+
+For desks tracking fiscal risk, the useful cut is not “is the national average above 80%?” It is: **which five states own half the dollar gap**, **which three remain under 60% funded**, and **whether contribution policy in those systems stays intact when revenues soften**. The distribution has improved at the center; the concentration of unfunded liability has not dissolved.
+
+Sources: Equable Institute State of Pensions 2025 (January 2026 update); Equable plan and state funded-ratio rankings; Boston College CRR Issue Brief 25-15 and the Public Plans Database; Pew Charitable Trusts State Pension Funding Gap series.`,
+  },
+  {
     id: "admitted-homeowners-insurers-exiting-coastal-states-2026",
     slug: "admitted-homeowners-insurers-exiting-coastal-states-2026",
     title:

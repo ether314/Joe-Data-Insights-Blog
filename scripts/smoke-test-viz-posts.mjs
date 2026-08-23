@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-state-pension-funded-ratios-2026",
+    marker: "State pensions · funded ratios & UAAL",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "admitted-homeowners-insurers-exiting-coastal-states-2026",
     marker: "Admitted HO premium → residual markets",
     forbidden: "Loading interactive charts",
