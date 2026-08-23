@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "chokepoint-commodities-geography-2026q3",
+    slug: "chokepoint-commodities-geography-2026q3",
+    title:
+      "Charted: China Holds 11 of 16 Mapped Top-1 Seats — Copper Refine Thickens to ~50%",
+    excerpt:
+      "Q3 geography restatement of chokepoint commodities: mine output still spans Africa, Oceania, Latin America, and Southeast Asia, but all eight midstream/smelter/recycle Top-1 seats sit in East Asia — China alone holds eleven of sixteen mapped seats, copper refine thickened +6 pp to ~50%, and lithium chemicals jumped to ~70%.",
+    category: "Global Systems",
+    themeId: "chokepoint-commodities",
+    imageUrl:
+      "/images/global-systems-chokepoint-commodities-geography-2026q3-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with rose East Asia refining hubs, amber Africa mining nodes, teal Oceania lithium pits, orange Latin America copper belts, and cyan Southeast Asia nickel arcs feeding concentrated plant flows",
+    publishedAt: "2026-08-22T14:00:00Z",
+    featured: true,
+    visualization: "chokepoint-commodities-geography-2026q3",
+    layout: "default",
+    content: `Our [prior geography map](/blog/chokepoint-commodities-geography-2026) asked where chokepoint-commodity pits and plants sit on the MCS 2025 / IEA 2025 vintage. The [Q3 concentration companion](/blog/chokepoint-commodities-concentration-2026q3) then restated Top-1 / Top-3 / HHI after IEA’s Global Critical Minerals Outlook 2026. This post answers the desk question those vintages imply but do not draw as a **map**: **where does activity, risk, and capacity sit geographically after the Q3 restatement — and did the plant map thicken even when the pit map barely moved?**
+
+The interactive dashboard above is built as a **Q3 geography lens**, not another Top-k ladder. Toggle **Regional mix**, **Prior → Q3 Δ**, **Mine × mid flips**, **Seat radar**, and **Regional hubs**. On mix, flip stage (mine vs mid/smelt/recycle). On vintage deltas, filter by sector. The punchline is deliberately two-clock. On **mine geography**, Top-1 seats still scatter across Africa (cobalt, platinum), Oceania (lithium), Latin America (copper), Southeast Asia (nickel), and East Asia (graphite, rare earths, phosphate). On **midstream / smelter / recycle geography**, East Asia — almost entirely China — holds **all eight** mapped plant Top-1 seats, and China alone stacks **eleven of sixteen** total Top-1 seats. The largest vintage move on the plant map is copper: refine Top-1 thickened from ~**44%** to ~**50%**, with smelting capacity at the same China tip.
+
+## The headline map: pits plural, plants thicker in East Asia
+
+| Meter | Geography tip | Share / count | What it measures |
+| --- | --- | ---: | --- |
+| Mid/smelt/recycle Top-1 seats (East Asia) | East Asia | **8 / 8** | Who processes the tip |
+| China total Top-1 seats | China | **11 / 16** | Mine + plant combined |
+| Copper refine Top-1 (Q3) | China | **~50%** | Plant thickening vs prior ~44% |
+| Lithium chemicals Top-1 (Q3) | China | **~70%** | +5 pp vs prior geography |
+| REE separation Top-1 (Q3) | China | **~85%** | −5 pp ease vs prior ~90% |
+| Cobalt mine → refine | DRC → China | **~74% / ~75%** | Continent flip still intact |
+| Copper mine Top-1 | Chile | **~23%** | Plural pit geography |
+| Battery recovery Top-1 | China | **~90%** | Secondary supply also concentrated |
+
+Read the table as a **family of maps**, not one slogan. Mine geography answers which *regions dig*. Midstream / smelter / recycle geography answers which *regions refine, separate, smelt, or recover*. Vintage Δ answers whether those plant tips moved since the prior geography print. Averaging them into “China owns critical minerals” is still a category error for cobalt and copper — Africa and Latin America still own large pieces of the pit — and understates the plant story for gallium, graphite anodes, copper smelting, and battery recovery, where East Asia’s share is already near-monopoly or half-of-world capacity.
+
+## Regional mix: start with the plant stack
+
+Open **Regional mix → Mid / smelt / recycle**. Every mapped plant ledger collapses toward East Asia: gallium near **99%**, graphite anode **≥90%**, battery recovery **~90%**, REE separation **~85%**, cobalt refine **~75%**, lithium chemicals **~70%**, copper refine and smelt each **~50%**. Flip to **Mine** and the stacked bars reopen — Africa owns cobalt and platinum tips, Oceania owns lithium, Latin America owns copper, Southeast Asia owns nickel, East Asia still leads graphite / REE / phosphate at the pit. The regional mix chart is the Q3 geography desk’s first slide because it makes the stage disagreement impossible to miss without another Top-k lecture.
+
+Filter **All stages** when you want the full sixteen-ledger wall. The visual grammar is stacked regional shares, not country bars — deliberately different from the prior geography dashboard — so desks can read *continents* at thumbnail scale before drilling a single commodity.
+
+## Prior → Q3 Δ: what actually moved on the map
+
+Switch to **Prior → Q3 Δ**. Copper **smelting** prints the largest directional jump in the panel (a capacity-path restatement that lands China near **50%** of world smelting capacity after two decades of growth capture). Copper **refine** thickens **+6 pp** to ~**50%**. Lithium chemicals jump **+5 pp** to ~**70%**. Battery recovery tightens **+20 pp** to ~**90%** — secondary supply is not a geographic escape hatch. On the easing side, rare-earth **separation** prints **−5 pp** to ~**85%** as US and Malaysia projects chip the prior ~90% China tip, and graphite **mine** eases about **−1.6 pp** to ~**77.8%**. Cobalt refine is roughly flat (~**75%**).
+
+Toggle sector filters (**Batteries**, **Structural**, **Magnets**, **Semis**, **Recycling**) when the desk cares about one chain. Batteries still show the lithium-chemicals thicken and the cobalt continent flip unchanged. Structural is a copper plant story. Magnets are the rare REE separation ease — real, but still East Asia–led.
+
+## Mine × mid flips: five metals, one direction
+
+Open **Mine × mid flips**. The area ribbon plots mine Top-1 share (amber) against midstream Top-1 share (rose) for cobalt, copper, lithium, rare earths, and graphite. The scatter below is the continuous twin. Cobalt remains the extreme **cross-border** flip: Congo (Kinshasa) holds about **74%** of mined cobalt while China holds about **75%** of refined metal — a continent seat change, not a share-gap footnote. Copper’s Chile→China flip now pairs a **~23%** mine tip with a **~50%** refine tip. Lithium’s Australia→China flip pairs **~37%** pit with **~70%** chemicals. Rare earths and graphite keep China on both sides but still thicken at separation and anode processing.
+
+The geometric reading is unchanged in direction and sharper in copper/lithium levels: **every paired metal either keeps China as Top-1 or moves Top-1 toward China when you cross from mine to midstream.** No metal in this set flips *away* from East Asia at the plant. Pair with the [Q3 concentration scoreboard](/blog/chokepoint-commodities-concentration-2026q3) when the question is whether the tip thickened in HHI terms; keep this map when the question is *which country and region own the tip*.
+
+## Seat radar and hubs: who holds the seats
+
+Open **Seat radar**. East Asia dominates the plant ring (eight of eight mid/smelt/recycle Top-1 seats) while mine seats still spread across Africa (two), East Asia (three), and one each for Southeast Asia, Latin America, and Oceania. Switch to **Regional hubs → Country hub stack** to see China alone holding **eleven** total Top-1 seats (three mine + eight plant) against single-seat mine specialists: DRC, South Africa, Indonesia, Chile, Australia.
+
+That hub stack is why “diversify mining” and “diversify processing” remain non-interchangeable slogans after the Q3 vintage. Adding a lithium pit in Argentina or a nickel mine in the Philippines can move *mine* geography without touching the midstream tip. Adding separation capacity in Malaysia or the United States *did* chip REE separation from ~90% to ~85% — proof that plant geography can move — but the copper refine and lithium chemicals thickenings show the opposite vector on larger industrial chains. For copper tonnage detail keep the [mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026) cut open; for the full research ledger keep the [research map](/blog/chokepoint-commodities-research-2026) open.
+
+## Who is exposed — and what would rewrite the Q3 map
+
+**Exposed on the pit clock:** battery and stainless buyers who treat DRC cobalt, Indonesian nickel, Chilean copper, or Australian lithium as “one more mining jurisdiction” without pricing logistics, artisanal-mine governance, export quotas, or royalty shocks; fertilizer desks that still underweight Morocco’s rock leverage beside China’s larger absolute phosphate output.
+
+**Exposed on the plant clock:** OEMs and governments that fund upstream mines while leaving gallium refining, graphite anode processing, rare-earth separation, cobalt refining, lithium chemicals, copper smelting/refining, and battery recovery inside a single East Asian jurisdiction; semiconductor and magnet supply chains for which midstream Top-1 shares still clear **85–99%**.
+
+**Relative winners under the Q3 map:** Chinese midstream and smelting platforms that convert plural pit feedstock into concentrated chemicals and metals; African and Latin American mine hosts that collect royalties without capturing refine margins; Indonesia’s nickel franchise as a Southeast Asian mine tip that still feeds China-led conversion chains; the small set of US/Malaysia REE projects that actually moved a Top-1 share.
+
+**What would rewrite the story:** multi-year refine and separation capacity outside East Asia that cuts China’s midstream Top-1 count below roughly half of the mapped set; DRC or Indonesian domestic refining that collapses cobalt’s continent flip; copper smelting outside China that pulls refine/smelt Top-1 below ~**40%**; or a lithium chemicals buildout in Australia/Chile/Argentina that keeps chemicals Top-1 closer to the pit map. The Q3 vintage shows one partial rewrite (REE separation −5 pp) and several thickenings (copper, lithium chemicals, battery recovery) — not a broad plant diversification wave.
+
+## Caveats and methodology
+
+1. **Mine country shares** lean on USGS Mineral Commodity Summaries 2026 v1.3 anchors where disclosed; figures are estimates and may not sum to 100% because of rounding.
+2. **Midstream, smelter, and battery-recovery shares** lean on IEA Global Critical Minerals Outlook 2026 and are labeled disclosed/estimated/secondary by confidence in the data module.
+3. **Prior→Q3 Δ** compares this map’s Top-1 shares to the [geography-2026](/blog/chokepoint-commodities-geography-2026) print (MCS 2025 / IEA 2025). Cross-agency Δ is directional, not a same-table revision.
+4. **Regional aggregates** re-bucket country rows into East Asia, Southeast Asia, Africa, Latin America, North America, Europe, Middle East, Oceania, and Other — analytical geography, not a USGS/IEA publication field.
+5. **Top-1 seat counts** are counted across the **eight mine + eight mid/smelt/recycle** ledgers in this Q3 geography map, not across every commodity in the research ledger.
+6. **Cross-border flip meters** use the mine Top-1 share when Top-1 *countries* differ (cobalt ~74 pp continent flip); same-country thickeners use mid−mine share gaps.
+7. **Copper smelting** is a capacity share, not a refined-metal output share — keep it on a separate desk tab from copper refine.
+8. **Do not average** mine shares and midstream shares into one “China % of critical minerals.” Different stages, different denominators.
+9. **This post is a geography companion.** For Top-k / HHI use the [Q3 concentration print](/blog/chokepoint-commodities-concentration-2026q3); for the prior map use [geography-2026](/blog/chokepoint-commodities-geography-2026); for levels and sector tags use the [research ledger](/blog/chokepoint-commodities-research-2026).
+
+## Bottom line
+
+Mine geography for chokepoint commodities is still **plural** — Africa, Oceania, Latin America, and Southeast Asia all hold mine Top-1 seats. Midstream / smelter / recycle geography is not. East Asia holds **all eight** mapped plant Top-1 seats, China alone stacks **eleven of sixteen** total Top-1 seats, copper refine thickened to ~**50%**, lithium chemicals to ~**70%**, and cobalt’s DRC→China continent flip remains intact. The economy can keep assuming physical inputs will clear; the Q3 map says the plant that clears them got *more* geographically concentrated on several large chains even as REE separation eased a few points.
+
+Related reading: [Prior geography map](/blog/chokepoint-commodities-geography-2026), [Q3 concentration lens](/blog/chokepoint-commodities-concentration-2026q3), [research ledger](/blog/chokepoint-commodities-research-2026), [copper mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026), and [rare-earth mine concentration](/blog/rare-earth-mine-concentration-2024).`,
+  },
+  {
     id: "ai-capex-spend-geography-2026q3",
     slug: "ai-capex-spend-geography-2026q3",
     title:

@@ -201,7 +201,8 @@ export interface Post {
     | "demographic-cash-flows-geography-2026q3"
     | "adaptation-economics-geography-2026"
     | "migration-humanitarian-concentration-2026q3"
-    | "ai-capex-spend-geography-2026q3";
+    | "ai-capex-spend-geography-2026q3"
+    | "chokepoint-commodities-geography-2026q3";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

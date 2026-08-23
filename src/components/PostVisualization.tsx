@@ -2627,6 +2627,21 @@ const AiCapexSpendGeography2026q3Dashboard = dynamic(
   },
 );
 
+const ChokepointCommoditiesGeography2026q3Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ChokepointCommoditiesGeography2026q3Dashboard"
+    ).then((m) => m.ChokepointCommoditiesGeography2026q3Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3314,6 +3329,10 @@ export function PostVisualization({
 
   if (type === "ai-capex-spend-geography-2026q3") {
     return <AiCapexSpendGeography2026q3Dashboard />;
+  }
+
+  if (type === "chokepoint-commodities-geography-2026q3") {
+    return <ChokepointCommoditiesGeography2026q3Dashboard />;
   }
 
   return null;
