@@ -531,7 +531,7 @@ Read the dashboard as a map of **operating mix**, not of prestige. Market value 
     title:
       "Charted: OECD Net Childcare Costs vs Fertility — The Scatter Is a Cloud, Not a Slope",
     excerpt:
-      "Dual-earner net childcare averages 13% of average wage across the OECD. Across 33 countries the correlation with TFR is only r = 0.24 — and low-cost countries average lower fertility than high-cost ones.",
+      "Dual-earner net childcare runs near 13% of average wage across the OECD. Across 33 countries the correlation with TFR is a soft r = 0.24 — and the cheapest-care countries average lower fertility than the most expensive ones.",
     category: "Economics",
     themeId: "fertility-childcare",
     imageUrl:
@@ -542,9 +542,9 @@ Read the dashboard as a map of **operating mix**, not of prestige. Market value 
     featured: true,
     visualization: "oecd-childcare-costs-versus-total-fertility-2026",
     layout: "default",
-    content: `Family-policy debates often treat childcare prices as a fertility lever: make dual-earner care cheaper, the argument goes, and births should follow. The OECD's TaxBEN net-childcare series lets us test that claim in a hard way — not with a slogan, but with a scatter. For a dual-earner couple on **100% + 67% of average wage** with two toddlers in full-time centre-based care, **net childcare cost averages 13% of average wage** across the OECD in 2022. Join that series to World Bank total fertility rates for the same year and the cross-section is blunt: **Pearson r = 0.24** across 33 countries. That is a cloud, not a tidy inverse slope. If anything, countries in the **under-8% AW** cost band average **TFR 1.39**, while the **20%+ AW** band averages **1.53**.
+    content: `Make childcare cheaper and births should follow — or so the family-policy argument runs. The OECD's TaxBEN net-childcare series lets us test that claim in a hard way: not with a slogan, but with a scatter. For a dual-earner couple on **100% + 67% of average wage** with two toddlers in full-time centre-based care, **net childcare cost averages roughly 13% of average wage** across the OECD (the Family Database's own summary puts the multi-year figure "just under 14%"). Join that series to World Bank total fertility rates for 2022 and the cross-section is blunt: **Pearson r = 0.24** across 33 countries. That is a cloud, not a tidy inverse slope. If anything, countries in the **under-8% AW** cost band average **TFR 1.39**, while the **20%+ AW** band averages **1.53**.
 
-The dashboard above is built for that discomfort. Toggle **Scatter** for the country cloud (dual-earner or lone-parent lens), **Cost bands** for mean TFR by price tier, **Regions** for Anglosphere-versus-Nordic geography, and **Fee vs benefit** for the gross-fee / offset decomposition that makes Italy's near-zero net cost look nothing like Germany's.
+The dashboard is built for that discomfort: a country scatter (dual-earner or lone-parent lens), mean TFR by cost band, regional means, and a gross-fee-versus-offset decomposition that makes Italy's near-zero net cost look nothing like Germany's.
 
 ## What "net childcare cost" actually measures
 
@@ -562,7 +562,7 @@ The Pearson correlation across the 33-country join is **+0.24**. Drop Israel and
 
 Bucket countries by dual-earner net cost. **Under 8% of AW** (10 countries) averages TFR **1.388**. The **8–19%** band (15 countries) averages **1.523**. The **20%+** band (8 countries, mostly Anglophone) averages **1.531**. Mean net cost in those bands is **3.5%**, **11.1%**, and **26.8%** of AW respectively.
 
-That ordering is the chart's punchline. The cheapest childcare fiscal packages in the OECD sample do **not** deliver the highest fertility. Southern Europe's low-to-moderate net costs sit beside some of the lowest TFRs in the club. East Asia combines moderate-to-low net costs with the sample floor. The Anglosphere pays the highest net bills and still clears a higher mean TFR than the cheap-care South.
+That ordering is the chart's quiet rebuke. The cheapest childcare fiscal packages in the OECD sample do **not** deliver the highest fertility. Southern Europe's low-to-moderate net costs sit beside some of the lowest TFRs in the club. East Asia combines moderate-to-low net costs with the sample floor. The Anglosphere pays the highest net bills and still clears a higher mean TFR than the cheap-care South.
 
 ## Regions tell different stories with the same metric
 
@@ -582,7 +582,7 @@ Lone-parent schedules add another lens. At **67% of average wage**, many countri
 
 Cross-section is not causation. Countries that subsidize childcare heavily may already have low desired fertility, aging age structures, or housing markets that dominate the birth decision. TaxBEN assumes full-time centre-based care for two toddlers; many families use informal care, grandparents, or part-time slots. Capital-city fee schedules can misrepresent national averages. TFR is a period rate sensitive to tempo effects — delayed births depress current TFR even when cohort fertility holds up.
 
-None of those caveats rescue the simple slogan. If lower net dual-earner childcare costs were a reliable cross-country predictor of higher fertility in 2022, the scatter would slope down. It does not. The OECD average net cost of **13% of AW** is a useful fiscal fact. The join to TFR is a useful demography fact. Together they say: **price the care, but do not pretend the price tag alone writes the birth rate.**
+None of those caveats rescue the simple slogan. If lower net dual-earner childcare costs were a reliable cross-country predictor of higher fertility in 2022, the scatter would slope down. It does not. The OECD average net cost of roughly **13% of AW** is a useful fiscal fact. The join to TFR is a useful demography fact. Together they say: **price the care, but do not pretend the price tag alone writes the birth rate.**
 
 | Band (dual-earner net cost) | Countries | Mean net cost (% AW) | Mean TFR (2022) |
 | --- | ---: | ---: | ---: |
@@ -590,7 +590,7 @@ None of those caveats rescue the simple slogan. If lower net dual-earner childca
 | 8–19% AW | 15 | 11.1 | 1.523 |
 | 20%+ AW | 8 | 26.8 | 1.531 |
 
-Sources: OECD TaxBEN / Family Database net childcare costs (dual-earner couple, 100%+67% AW, two children aged 2–3, % of average wage, 2022); World Bank WDI SP.DYN.TFRT.IN (2022).`,
+Sources: OECD TaxBEN / Family Database net childcare costs (dual-earner couple, 100%+67% AW, two children aged 2–3, % of average wage); World Bank WDI SP.DYN.TFRT.IN (2022).`,
   },
   {
     id: "cement-clinker-process-emissions-by-country-2026",
@@ -1674,7 +1674,7 @@ That hub stack is why “diversify mining” and “diversify processing” rema
 
 Mine geography for chokepoint commodities is still **plural** — Africa, Oceania, Latin America, and Southeast Asia all hold mine Top-1 seats. Midstream / smelter / recycle geography is not. East Asia holds **all eight** mapped plant Top-1 seats, China alone stacks **eleven of sixteen** total Top-1 seats, copper refine thickened to ~**50%**, lithium chemicals to ~**70%**, and cobalt’s DRC→China continent flip remains intact. The economy can keep assuming physical inputs will clear; the Q3 map says the plant that clears them got *more* geographically concentrated on several large chains even as REE separation eased a few points.
 
-Related reading: [Prior geography map](/blog/chokepoint-commodities-geography-2026), [Q3 concentration lens](/blog/chokepoint-commodities-concentration-2026q3), [research ledger](/blog/chokepoint-commodities-research-2026), [copper mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026), and [rare-earth mine concentration](/blog/rare-earth-mine-concentration-2024).`,
+Related reading: [Prior geography map](/blog/chokepoint-commodities-geography-2026), [Q3 concentration lens](/blog/chokepoint-commodities-concentration-2026q3), [research ledger](/blog/chokepoint-commodities-research-2026), [copper mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026), and [rare-earth mine concentration](/blog/natural-graphite-mine-concentration-2024).`,
   },
   {
     id: "ai-capex-spend-geography-2026q3",
@@ -2721,7 +2721,7 @@ The CMBS prior-versus-July bars show multifamily as the fastest MoM (+**1.05** p
 
 In the **Q3 2026 concentration vintage**, deposit Top-1 / Top-3 still sit near **12.8% / 33.4%**. Peak CRE/capital remains **311%** in the $1–10B band. Mega banks still hold ~**48%** of CRE PDNA dollars; cards ~**48%** of charge-off dollars; office ~**42%** of CMBS delinquent balances. What Q3 changed is the process overlay: CMBS overall **7.86%** (+**51** bp MoM), multifamily +**1.05** pp, and July SLOOS CRE NFNR at **−11.3** net easing while cards stay net-tight. Firm tip sticky. Stress tip skewed. Supply easing concentrated in CRE — not in the products that already own realized losses.
 
-Related reading: [Prior concentration print](/blog/bank-commercial-credit-concentration-2026) · [Q3 theme update](/blog/bank-commercial-credit-update-2026q3) · [August vintage](/blog/bank-commercial-credit-update-202608) · [Research roll-up](/blog/bank-commercial-credit-research-2026) · [CRE size split](/blog/cre-bank-delinquency-size-split-2026) · [Bank loan charge-offs](/blog/bank-loan-chargeoffs-2026).`,
+Related reading: [Prior concentration print](/blog/bank-commercial-credit-concentration-2026) · [Q3 theme update](/blog/bank-commercial-credit-update-2026q3) · [August vintage](/blog/bank-commercial-credit-update-202608) · [Research roll-up](/blog/bank-commercial-credit-research-2026) · [CRE size split](/blog/bank-commercial-credit-research-2026) · [Bank loan charge-offs](/blog/bank-loan-chargeoffs-2026).`,
   },
   {
     id: "macro-growth-trade-geography-2026",
@@ -3116,7 +3116,7 @@ Filter **Regions**. Against the theme’s ~**$18.9T** NY Fed 2026Q2 / Aug-tape p
 
 The debt-share pie is therefore **West-weighted without being a monopoly**. A system where one region holds a little more than a quarter of recorded household debt still leaves three other regions with mid-20s shares. That is the geographic twin of the [concentration ladder](/blog/consumer-finance-markets-concentration-2026): California remains the largest single *state*; rolling California, Washington, Colorado, and Arizona onto the same regional sheet makes the West the thickest *debt region* without claiming that “most US household debt is California.”
 
-Open the companion **Risk & cash** view. The debt-share × card-stress scatter puts the South in the upper-middle quadrant — large debt share *and* the highest 90+ transition (~**8.4%** versus a national theme anchor near **7.2%** and a Northeast print near **5.9%**). The West sits large on dollars with milder card stress. The Northeast sits mid on debt dollars with the softest serious delinquency. Geography separates *balance concentration* from *loss incidence* the same way the [household delinquency split](/blog/us-household-debt-delinquency-split-2026) separates product tapes.
+Open the companion **Risk & cash** view. The debt-share × card-stress scatter puts the South in the upper-middle quadrant — large debt share *and* the highest 90+ transition (~**8.4%** versus a national theme anchor near **7.2%** and a Northeast print near **5.9%**). The West sits large on dollars with milder card stress. The Northeast sits mid on debt dollars with the softest serious delinquency. Geography separates *balance concentration* from *loss incidence* the same way the [household delinquency split](/blog/consumer-finance-markets-research-2026) separates product tapes.
 
 ## States: California is still the tip; the top four clear ~38%
 
@@ -3130,7 +3130,7 @@ Pair this panel with the [Q3 concentration lens](/blog/consumer-finance-markets-
 
 Toggle **Products → Regional stack**. The stacked bars put West / South / Northeast / Midwest on one axis per liability type. Mortgages are the West story (~**30.5%** tip) because California housing stock dominates balances. HELOCs tilt Northeast (~**30%**) — older equity, denser coastal housing. Autos and revolving lean South (~**34%** / ~**32%**). Student debt also leans South on this roll-up (~**30%**), closer to population than to mortgage price.
 
-Flip to **Top-1 by product**. The meter is not “the South is risky” or “the West is leveraged” as a single slogan — it is a product-conditioned tip list. A Fed hiking-cycle desk that models *national* revolving APR gaps (see our [card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) companion) still needs a regional incidence layer: the same gap hits a South-heavy revolving book harder in *transition rates* even when the West owns more *mortgage dollars*.
+Flip to **Top-1 by product**. The meter is not “the South is risky” or “the West is leveraged” as a single slogan — it is a product-conditioned tip list. A Fed hiking-cycle desk that models *national* revolving APR gaps (see our [card APR vs fed funds](/blog/consumer-finance-markets-research-2026) companion) still needs a regional incidence layer: the same gap hits a South-heavy revolving book harder in *transition rates* even when the West owns more *mortgage dollars*.
 
 This is why “household credit stress” is not one choropleth. Realized card stress concentration is a **South** story in this geography lens. Stock-of-mortgage concentration is a **West / California** story. Deposit capacity is a **Northeast** story. Our [concentration print](/blog/consumer-finance-markets-concentration-2026) already showed that wealth and revolving disagree by *percentile*; this lens shows they also disagree by *place*.
 
@@ -3150,7 +3150,7 @@ The cash-parking composed chart (deposit $T bars + debt-share line) restates the
 
 ## What to watch next
 
-Watch three geography meters, not one. First, whether California’s mortgage tip keeps lifting West debt share even if national home-price growth cools — a price-level story can hold share while volumes slow. Second, whether South revolving stress stays elevated relative to the Northeast after the hiking cycle’s lag works through, or whether the gap narrows as labor markets diverge. Third, whether Northeast deposit and wealth proxies keep pulling away from debt shares — a capacity map that refuses to follow the Sun Belt debt map. For percentile tips keep the [concentration series](/blog/consumer-finance-markets-concentration-2026) open; for the national tape keep the [August vintage](/blog/consumer-finance-markets-update-202608) open; for product delinquency keep the [household delinquency split](/blog/us-household-debt-delinquency-split-2026) open.
+Watch three geography meters, not one. First, whether California’s mortgage tip keeps lifting West debt share even if national home-price growth cools — a price-level story can hold share while volumes slow. Second, whether South revolving stress stays elevated relative to the Northeast after the hiking cycle’s lag works through, or whether the gap narrows as labor markets diverge. Third, whether Northeast deposit and wealth proxies keep pulling away from debt shares — a capacity map that refuses to follow the Sun Belt debt map. For percentile tips keep the [concentration series](/blog/consumer-finance-markets-concentration-2026) open; for the national tape keep the [August vintage](/blog/consumer-finance-markets-update-202608) open; for product delinquency keep the [household delinquency split](/blog/consumer-finance-markets-research-2026) open.
 
 Primary anchors: NY Fed Household Debt and Credit state / regional aggregates rolled to Census regions against the ~$18.9T 2026Q2 perimeter; Fed G.19 revolving stock; FDIC Summary of Deposits for commercial-bank deposit geography; theme baselines from the research roll-up, concentration prints, and August 202608 tape update.`,
   },
@@ -3238,7 +3238,7 @@ That hub stack is why “diversify mining” and “diversify processing” are 
 
 Mine geography for chokepoint commodities is still **plural** — Africa, Oceania, Latin America, and Southeast Asia all hold mine Top-1 seats. Midstream geography is not. East Asia holds **all six** mapped midstream Top-1 seats, China alone stacks **nine of fourteen** total Top-1 seats (three mine + six midstream), and cobalt’s DRC→China flip is a **66 pp** seat change across one stage boundary. The economy can keep assuming physical inputs will clear; the map says the plant that clears them is far more geographically concentrated than the pit that digs them.
 
-Related reading: [Chokepoint commodities research](/blog/chokepoint-commodities-research-2026), [concentration lens](/blog/chokepoint-commodities-concentration-2026), [Q3 concentration](/blog/chokepoint-commodities-concentration-2026q3), [copper mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026), and [rare-earth mine concentration](/blog/rare-earth-mine-concentration-2024).`,
+Related reading: [Chokepoint commodities research](/blog/chokepoint-commodities-research-2026), [concentration lens](/blog/chokepoint-commodities-concentration-2026), [Q3 concentration](/blog/chokepoint-commodities-concentration-2026q3), [copper mine-vs-refinery geography](/blog/copper-mine-vs-refinery-geography-2026), and [rare-earth mine concentration](/blog/natural-graphite-mine-concentration-2024).`,
   },
   {
     id: "migration-humanitarian-concentration-2026",
@@ -3881,7 +3881,7 @@ The lens scatter puts stock (**45% / 85%**), growth (**~45% / ~78%** US+China as
 
 ## Perimeters: why 45% and 36% can still both be true
 
-Switch to **Perimeters**. The US-share compare panel remains the analytical heart of the theme. IEA’s 2024 DC electricity stock still puts the United States at **45%**. Gartner’s June 2026 newsroom path still puts the US at **36%** of **565 TWh**—about **204 TWh**. Those are not competing claims about the same pie. Mixing them into a “US share fell nine points” headline remains a category error. Pair this with the [August update](/blog/ai-power-grid-update-202608) for the Mid-Year path narrative and with the [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) post when you need LBNL demand-versus-miles rather than world shares.
+Switch to **Perimeters**. The US-share compare panel remains the analytical heart of the theme. IEA’s 2024 DC electricity stock still puts the United States at **45%**. Gartner’s June 2026 newsroom path still puts the US at **36%** of **565 TWh**—about **204 TWh**. Those are not competing claims about the same pie. Mixing them into a “US share fell nine points” headline remains a category error. Pair this with the [August update](/blog/ai-power-grid-update-202608) for the Mid-Year path narrative and with the [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026) post when you need LBNL demand-versus-miles rather than world shares.
 
 The growth donut still shows US ~**45%** and China ~**33%** of incremental TWh to 2030—together ~**80%**. Europe remains a single-digit growth slice. The dual-ledger line keeps IEA central (~**950 TWh** in 2030) and Gartner (>**1,200 TWh**) on separate tracks. Do not average them. The gap (~**250 TWh**) is still a forecast-dispersion meter. It does not move Top-1 / Top-3 shares by itself—but Mid-Year’s US demand path (**+1.8%** then **+3%**) raises the stakes of *where* the next gigawatts land if the higher Gartner path proves closer to right while queues stay multi-year.
 
@@ -3919,7 +3919,7 @@ Local intensity bars are unchanged for a reason. Virginia ~**25%** of state elec
 6. **Cluster IT-load and pipeline shares** for non-NoVa markets remain estimated public tallies; treat rank order as directional.
 7. **Dual-ledger 2030 gap (~250 TWh)** is forecast dispersion between IEA central and Gartner—not a concentration share.
 
-**Primary sources:** IEA Electricity Mid-Year Update 2026; LBNL Queued Up 2026 Edition; Gartner newsroom 10 Jun 2026 (carried path); IEA Energy and AI regional shares (carried); theme posts [Q3 concentration](/blog/ai-power-grid-concentration-2026q3), [prior concentration](/blog/ai-power-grid-concentration-2026), [August Mid-Year update](/blog/ai-power-grid-update-202608), [Q3 update](/blog/ai-power-grid-update-2026q3), [research](/blog/ai-power-grid-research-2026), and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).
+**Primary sources:** IEA Electricity Mid-Year Update 2026; LBNL Queued Up 2026 Edition; Gartner newsroom 10 Jun 2026 (carried path); IEA Energy and AI regional shares (carried); theme posts [Q3 concentration](/blog/ai-power-grid-concentration-2026q3), [prior concentration](/blog/ai-power-grid-concentration-2026), [August Mid-Year update](/blog/ai-power-grid-update-202608), [Q3 update](/blog/ai-power-grid-update-2026q3), [research](/blog/ai-power-grid-research-2026), and [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026).
 
 **Bottom line:** Late-Aug 202608 does **not** rewrite the ladder of country shares—it **re-meters the tip inside the queues and the US demand path**. Top-1 stays **45%**; Top-3 stays **85%**; US active interconnection restates at **2,061 GW** with gas **+86%** to **253 GW** while solar remains the stock Top-1 of the book. Path clocks moved. Stock architecture did not.`,
   },
@@ -4430,7 +4430,7 @@ Read the table as a **family of market shares**, not one slogan. Deposit concent
 
 Filter the dashboard to **Bank shares**. Ranked deposit bars put **JPMorgan** first near **12.8%**, **Bank of America** near **11.4%**, **Wells Fargo** near **9.2%**, and **Citigroup** near **7.2%** — a top-4 bloc around **41%**, with the long tail of regional and community banks still holding more than half of domestic deposits. Switch the metric to assets and the order is familiar: the same four names clear roughly **40%** of the Call Report–style asset tip. The cumulative curve rises to **~33%** by top-3, **~41%** by top-4, and **~54%** by top-10 — concentrated relative to an equal-thousand-bank fantasy, but **not** a one-name monopoly.
 
-That geometry matters for policy and for credit. Funding and payments scale concentrate at the tip; CRE *capital intensity* does not. The mega banks that own the deposit tip often run **lower** median CRE/capital ratios than $1–100B cohorts. Pair this with our [CRE bank delinquency size split](/blog/cre-bank-delinquency-size-split-2026): the size lens and the firm-share lens answer different risk questions. Deposit top-3 at **~33%** is a competition and resolution story. CRE/capital at **311%** in the $1–10B band is a capital-adequacy story. Confusing the two produces the wrong stress map.
+That geometry matters for policy and for credit. Funding and payments scale concentrate at the tip; CRE *capital intensity* does not. The mega banks that own the deposit tip often run **lower** median CRE/capital ratios than $1–100B cohorts. Pair this with our [CRE bank delinquency size split](/blog/bank-commercial-credit-research-2026): the size lens and the firm-share lens answer different risk questions. Deposit top-3 at **~33%** is a competition and resolution story. CRE/capital at **311%** in the $1–10B band is a capital-adequacy story. Confusing the two produces the wrong stress map.
 
 Treat firm ranks as **estimated order-of-magnitude** from FDIC QBP / Summary of Deposits framing, rounded for visualization — not a live ticker of every merger close.
 
@@ -4524,7 +4524,7 @@ Open **Install ladder** and leave the vintage on **2025 prelim**. The Lorenz pan
 | Market HHI (top-5 + residual) | **~3,120** | **~4,161** | **+1,041** |
 | World installs | **542,076** | **621,000** | **+78,924** |
 
-China's estimated **+85k** units remains **~108%** of the world net add on the Q3 concentration spine — meaning the rest of the tracked ladder, in aggregate, *shed* units even as the global print hit a record. The US return to **+11%** installs (disclosed in IFR's June 2026 US release) is real for the Americas *growth* story; it is still a rounding error next to China's volume claim on the world delta. For density intensity (robots per 10,000 workers) keep [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024) in a second tab — Korea and Singapore still win intensity; China still wins *volume concentration*.
+China's estimated **+85k** units remains **~108%** of the world net add on the Q3 concentration spine — meaning the rest of the tracked ladder, in aggregate, *shed* units even as the global print hit a record. The US return to **+11%** installs (disclosed in IFR's June 2026 US release) is real for the Americas *growth* story; it is still a rounding error next to China's volume claim on the world delta. For density intensity (robots per 10,000 workers) keep manufacturing robot density in a second tab — Korea and Singapore still win intensity; China still wins *volume concentration*.
 
 ## Dual ledger: same automation system, different clocks
 
@@ -5110,7 +5110,7 @@ The Q3→Aug delta bars make the methodological point explicit. Filter to **Stic
 
 Open **Save vs borrow**. Grouped bars by wealth percentile put equities, revolving, and deposits on one axis. The top 1% holds about **54%** of equities and only about **5%** of revolving; the bottom 50% holds about **1%** of equities and about **30%** of revolving. Sort by revolving and the middle/bottom bands look “democratic”; sort by equities and they do not. The equity×revolving scatter makes the same geometry: high equity share maps to low revolving share across the tip, and the opposite in the bottom half.
 
-Pair that mirror with the debt-share vs stress panel. Mortgage is **70.1%** of household debt with serious transitions near **1.6%**. Student loans are an **8.8%** sleeve with **90+** stock near **10.6%**. Cards are a **6.8%** sleeve (NY Fed **$1.281T**) against G.19 revolving **$1.351T**, with elevated early/90+ transitions that still steal headlines. Our [delinquency split](/blog/us-household-debt-delinquency-split-2026) already showed product clocks disagree; the concentration lens shows *why* aggregate “households are fine” can coexist with revolving stress — the calm product is also the giant, and the stressed products are small sleeves of **$18.93T**.
+Pair that mirror with the debt-share vs stress panel. Mortgage is **70.1%** of household debt with serious transitions near **1.6%**. Student loans are an **8.8%** sleeve with **90+** stock near **10.6%**. Cards are a **6.8%** sleeve (NY Fed **$1.281T**) against G.19 revolving **$1.351T**, with elevated early/90+ transitions that still steal headlines. Our [delinquency split](/blog/consumer-finance-markets-research-2026) already showed product clocks disagree; the concentration lens shows *why* aggregate “households are fine” can coexist with revolving stress — the calm product is also the giant, and the stressed products are small sleeves of **$18.93T**.
 
 The APR−funds gap near **17.3 pp** (May APR / July funds from the Aug update) sits on that same inverted revolving distribution. Rate pain is not evenly shared across the wealth ladder; neither is equity beta. Desks that underwrite from Z.1 net worth alone miss both sides of the mirror.
 
@@ -5144,7 +5144,7 @@ Debt-product bars (share or **$ trillions**) keep the liability top-1 unambiguou
 
 Consumer finance in August 202608 is still **concentrated at the top — and the official tape did not move the tip**. On **equities**, top-1 about **54%** and top-10 about **87%**. On **debt products**, mortgage alone is **70.1%** of **$18.93T**. On **net worth**, top 1% holds about **30.5%** and the bottom half about **2.5%**. On **card issuers**, top-3 purchase volume sits near **52%**. On **liquid parking**, deposits still dominate the pair after ICI’s official **$7.93T** MMF print (−**$92B** vs the Q3 claim). Households are not one balance sheet. They are a stack of distributions — people, products, and firms — and stress, savings, and market beta live in different parts of that stack.
 
-Related reading: [2026 concentration print](/blog/consumer-finance-markets-concentration-2026), [Q3 concentration lens](/blog/consumer-finance-markets-concentration-2026q3), [August 202608 theme update](/blog/consumer-finance-markets-update-202608), and [household delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+Related reading: [2026 concentration print](/blog/consumer-finance-markets-concentration-2026), [Q3 concentration lens](/blog/consumer-finance-markets-concentration-2026q3), [August 202608 theme update](/blog/consumer-finance-markets-update-202608), and [household delinquency split](/blog/consumer-finance-markets-research-2026).`,
   },
   {
     id: "fiscal-plumbing-concentration-2026",
@@ -5190,7 +5190,7 @@ Two caveats travel with every TE share. **Do not sum line items** as the revenue
 
 Switch the lens to **Trust funds**. Annual cost concentration is a different class from tax expenditures. OASI alone is ~**$1.45T** and ~**54.5%** of the four-account cost spine; SMI (~**$620B**, ~**23%**) and HI (~**$430B**, ~**16%**) bring the top-three to ~**94%**. DI is the thin residual (~**6%**). HHI on these four buckets lands in the **high** band (~**3,800**) — a structural fact of entitlement plumbing, not a one-year spike.
 
-Toggle **Trust crossovers**. Dedicated revenue versus annual cost shows why reserves matter. OASI runs a sizable negative gap (cost above dedicated revenue), HI a smaller one, DI a small surplus, and SMI roughly balances because it is premium-financed. The depletion clocks on the companion panel — combined OASDI ~**2034**, HI ~**2036** in mid-2020s Trustees framing — are the political translation of those gaps. For the reserve path itself, see our [Social Security depletion path](/blog/us-social-security-trust-fund-depletion-path-2026) and the related [2034 framing](/blog/us-social-security-trust-fund-depletion-2034). Concentration here means: **the fight that matters is mostly one account’s arithmetic**, even when the rhetoric is about “Social Security and Medicare” as a blur.
+Toggle **Trust crossovers**. Dedicated revenue versus annual cost shows why reserves matter. OASI runs a sizable negative gap (cost above dedicated revenue), HI a smaller one, DI a small surplus, and SMI roughly balances because it is premium-financed. The depletion clocks on the companion panel — combined OASDI ~**2034**, HI ~**2036** in mid-2020s Trustees framing — are the political translation of those gaps. For the reserve path itself, see our [Social Security depletion path](/blog/us-social-security-trust-fund-depletion-path-2026) and the related [2034 framing](/blog/us-social-security-trust-fund-depletion-path-2026). Concentration here means: **the fight that matters is mostly one account’s arithmetic**, even when the rhetoric is about “Social Security and Medicare” as a blur.
 
 ## Off-balance stocks: FDIC and GSE MBS own the guarantee map
 
@@ -5202,7 +5202,7 @@ The visibility × leverage scatter makes the political geometry explicit. FDIC a
 
 Switch to **Layers** on the ladder or open the composition pie on the curve view. The editorial annual-flow map puts tax expenditures (~**$2.3T**, ~**29%**), SS+Medicare outlays (~**$2.2T**, ~**28%**), and all discretionary (~**$1.7T**, ~**22%**) as the top three — together ~**79%** of a ~**$7.8T** composition universe that also includes net interest (~**$0.97T**) and Medicaid/other health mandatory (~**$0.65T**). Discretionary is loud because it is annual. It is not the largest slice, and it is not where trust-fund or tax-code levers live.
 
-That is the core concentration insight for capital allocation and policy risk. A system where Congress argues about nondefense discretionary while pensions, ESI, OASI, GSE guarantees, and deposit insurance quietly dominate their respective meters will keep surprising desks that treat the appropriations calendar as the fiscal calendar. The [net interest vs defense framing](/blog/us-net-interest-vs-defense-2025) makes the same point from the debt-service side: first claims on revenue are not always the loudest markups.
+That is the core concentration insight for capital allocation and policy risk. A system where Congress argues about nondefense discretionary while pensions, ESI, OASI, GSE guarantees, and deposit insurance quietly dominate their respective meters will keep surprising desks that treat the appropriations calendar as the fiscal calendar. The net interest vs defense framing makes the same point from the debt-service side: first claims on revenue are not always the loudest markups.
 
 ## What “top share” does and does not mean for markets
 
@@ -5459,7 +5459,7 @@ The lens scatter puts stock (**45% / 85%**), growth (**~45% / ~78%** US+China as
 
 Switch to **Perimeters**. The US-share compare panel is the analytical heart of this vintage. IEA’s 2024 DC electricity stock still puts the United States at **45%**. Gartner’s June 2026 newsroom path puts the US at **36%** of **565 TWh** in 2026 — about **204 TWh**, of which dedicated AI data centres take roughly **68 TWh** (~**one-third** of the US total). AI-optimised servers already take **31%** of data-centre power in 2026 on that path.
 
-Those are not competing claims about the same pie. One is an IEA Energy-and-AI regional stock cut. The other is a Gartner all-data-centre electricity composition for a later year. Mixing them into a “US share fell nine points” headline is a category error. The second hinge is blunt: **vintage deltas and concentration shares are different objects — and so are perimeters.** Pair this with the [Q3 update](/blog/ai-power-grid-update-2026q3) for the path narrative and with the [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) post when you need LBNL demand-versus-miles rather than world shares.
+Those are not competing claims about the same pie. One is an IEA Energy-and-AI regional stock cut. The other is a Gartner all-data-centre electricity composition for a later year. Mixing them into a “US share fell nine points” headline is a category error. The second hinge is blunt: **vintage deltas and concentration shares are different objects — and so are perimeters.** Pair this with the [Q3 update](/blog/ai-power-grid-update-2026q3) for the path narrative and with the [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026) post when you need LBNL demand-versus-miles rather than world shares.
 
 The growth donut still shows US ~**45%** and China ~**33%** of incremental TWh to 2030 — together ~**80%**. Europe remains a single-digit growth slice. Electricity 2026 adds a related but non-identical meter: data centres account for about **half** of a ~**420 TWh** five-year US electricity demand add. That is concentration *inside* the US demand growth story, not a rewrite of the global stock ladder.
 
@@ -5500,7 +5500,7 @@ This is the fourth hinge. **Concentration of delay risk can move even when conce
 
 In the **Q3 2026 concentration vintage**, AI power Top-1 is still **45%** United States and Top-3 still **85%** (US·China·Europe) on the carried IEA stock ladder. Gartner’s **36%** US share of **565 TWh** is a different perimeter — useful for near-term composition, dangerous as a false “de-concentration” headline. US+China still capture ~**80%** of growth; Virginia and Ireland intensity remain extreme; and Electricity 2026 restates **>2,500 GW** of stalled queues around that sticky map. Path meters moved. The top of the distribution held.
 
-Related reading: [Prior concentration print](/blog/ai-power-grid-concentration-2026) · [Q3 Gartner + Electricity update](/blog/ai-power-grid-update-2026q3) · [August Mid-Year vintage](/blog/ai-power-grid-update-202608) · [Key Questions update](/blog/ai-power-grid-update-2026) · [IEA research frame](/blog/ai-power-grid-research-2026) · [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+Related reading: [Prior concentration print](/blog/ai-power-grid-concentration-2026) · [Q3 Gartner + Electricity update](/blog/ai-power-grid-update-2026q3) · [August Mid-Year vintage](/blog/ai-power-grid-update-202608) · [Key Questions update](/blog/ai-power-grid-update-2026) · [IEA research frame](/blog/ai-power-grid-research-2026) · [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026).`,
   },
   {
     id: "fiscal-industrial-policy-geography-2026",
@@ -5817,7 +5817,7 @@ Pair this with the [global electricity generation mix](/blog/global-electricity-
 
 ## Fuel exports: oligopolies with different tips
 
-Open **Fuel exports**. The stacked bars put Top-1 / Top-2 / Top-3 / rest on one axis per commodity. Coal is the hardest seaborne market in the panel: Indonesia alone ~**35%**, top-3 with Australia and Russia ~**72%**. LNG is a flexible triopoly — United States ~**22%**, Australia and Qatar close behind, top-3 ~**61%** — the same corridor our [LNG capacity post](/blog/lng-export-capacity-us-australia-qatar-2024) tracks from a capacity angle. Pipeline gas still shows Russia as top-1 (~**18%**) with Norway and Canada completing a ~**48%** bloc, even after European route rewiring. Crude oil exports remain the most plural major fuel: Saudi Arabia ~**15%**, top-3 only ~**38%**.
+Open **Fuel exports**. The stacked bars put Top-1 / Top-2 / Top-3 / rest on one axis per commodity. Coal is the hardest seaborne market in the panel: Indonesia alone ~**35%**, top-3 with Australia and Russia ~**72%**. LNG is a flexible triopoly — United States ~**22%**, Australia and Qatar close behind, top-3 ~**61%** — the same corridor our LNG capacity post tracks from a capacity angle. Pipeline gas still shows Russia as top-1 (~**18%**) with Norway and Canada completing a ~**48%** bloc, even after European route rewiring. Crude oil exports remain the most plural major fuel: Saudi Arabia ~**15%**, top-3 only ~**38%**.
 
 That ordering matters for security analysis. A desk that treats “energy trade concentration” as one number will mis-rank risk: **coal and LNG concentrate at the top; crude does not** to the same degree. HHI bands in the ladder view make the same point continuously — manufacturing rows sit in the extreme band (≥5,000), coal export and coal use in the high band, crude export in the plural band.
 
@@ -5946,7 +5946,7 @@ Retail deserves a separate watch. Special servicing rose on mall maturity transf
 7. **July loan-piece count (~60)** on the cohort compare panel is estimated from the disclosed August **130** pieces and the ~2× balance multiple — treat as order-of-magnitude, not a prospectus count.
 8. **Charge-offs remain net of recoveries and annualized** when the next Fed SA arrives.
 
-Primary sources: Trepp August 2026 CMBS Hard Maturities; Trepp July 2026 CMBS Special Servicing Report; Trepp July 2026 CMBS Delinquency Report; CREFC July 2026 Monthly CMBS Loan Performance Report; Federal Reserve Charge-Off and Delinquency Rates (SA; May 19, 2026 through 2026Q1, carried). Related reading: [Q3 bank & commercial credit update](/blog/bank-commercial-credit-update-2026q3), [August Fed SA update](/blog/bank-commercial-credit-update-2026), [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026).
+Primary sources: Trepp August 2026 CMBS Hard Maturities; Trepp July 2026 CMBS Special Servicing Report; Trepp July 2026 CMBS Delinquency Report; CREFC July 2026 Monthly CMBS Loan Performance Report; Federal Reserve Charge-Off and Delinquency Rates (SA; May 19, 2026 through 2026Q1, carried). Related reading: [Q3 bank & commercial credit update](/blog/bank-commercial-credit-update-2026q3), [August Fed SA update](/blog/bank-commercial-credit-update-2026), [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/bank-commercial-credit-research-2026).
 
 ## What to watch next
 
@@ -6103,7 +6103,7 @@ World installations rose by roughly **79,000** units. On the IFR narrative estim
 | Germany | **~−3,000** | **~−4%** | estimated |
 | Mexico | **~−500** | **~−1%** | disclosed |
 
-Switch the dashboard to **Delta capture**. The signed bar chart makes the asymmetry visceral: one rose column towers above zero; several mature markets sit below. The US flip to **+11%** (disclosed in IFR’s June 2026 US release) is real and important for the Americas *growth* story — it is still a rounding error next to China’s volume claim on the world delta. For the install-level narrative that this concentration lens sits on, keep the [Q3 update](/blog/industrial-robotics-update-2026q3) open; for density intensity (robots per 10,000 workers) keep [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024) in a second tab — Korea and Singapore still win intensity; China still wins *volume concentration*.
+Switch the dashboard to **Delta capture**. The signed bar chart makes the asymmetry visceral: one rose column towers above zero; several mature markets sit below. The US flip to **+11%** (disclosed in IFR’s June 2026 US release) is real and important for the Americas *growth* story — it is still a rounding error next to China’s volume claim on the world delta. For the install-level narrative that this concentration lens sits on, keep the [Q3 update](/blog/industrial-robotics-update-2026q3) open; for density intensity (robots per 10,000 workers) keep manufacturing robot density in a second tab — Korea and Singapore still win intensity; China still wins *volume concentration*.
 
 ## Regional gravity: Asia 74% → 79%, Europe compressed
 
@@ -6146,7 +6146,7 @@ Industry concentration and geography concentration interact. China’s dominance
 
 **Orders ≠ installs.** North American A3 order books (see the [August A3 update](/blog/industrial-robotics-update-202608)) can broaden across industries while IFR *install* concentration stays Asia- and China-heavy. Different clocks, different ledgers.
 
-**Density ≠ volume.** Korea’s robots-per-worker intensity still dwarfs China’s on the [density post](/blog/manufacturing-robot-density-ifr-2024). Concentration of *installations* and concentration of *intensity* answer different questions.
+**Density ≠ volume.** Korea’s robots-per-worker intensity still dwarfs China’s on the density post. Concentration of *installations* and concentration of *intensity* answer different questions.
 
 ## Bottom line
 
@@ -6652,7 +6652,7 @@ The ranked wealth bars in share or **$ trillions** make the same people-side poi
 
 Open **Debt products**. On NY Fed **2026Q2** disclosed stocks, mortgage is **$13.268T** (**70.1%**), auto **$1.702T** (**9.0%**), student **$1.661T** (**8.8%**), cards **$1.281T** (**6.8%**), HELOC **$0.458T** (**2.4%**), other **$0.556T** (**2.9%**). Top-3 products clear about **87.9%**. Product HHI near **5,080** is the loudest single concentration meter in this Q3 lens — louder than people-side equity HHI — because a single product dominates the stack.
 
-That matters for stress narratives. Card **90+** and early transitions live in a **6.8%** sleeve of total household debt. Student **90+** stock near **10.6%** lives in an **8.8%** sleeve. Mortgage serious transitions near **1.6%** live in the **70%** sleeve. Our [delinquency split](/blog/us-household-debt-delinquency-split-2026) already showed product clocks disagree; the concentration lens shows *why* aggregate “household debt stress” can look calm while revolving and student prints scream — the calm product is also the giant.
+That matters for stress narratives. Card **90+** and early transitions live in a **6.8%** sleeve of total household debt. Student **90+** stock near **10.6%** lives in an **8.8%** sleeve. Mortgage serious transitions near **1.6%** live in the **70%** sleeve. Our [delinquency split](/blog/consumer-finance-markets-research-2026) already showed product clocks disagree; the concentration lens shows *why* aggregate “household debt stress” can look calm while revolving and student prints scream — the calm product is also the giant.
 
 The liquid-parking donut keeps cash allocation honest: deposits still about **65%** of the deposits+MMF pair against ICI **$8.02T** MMF. Our [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) piece tracked the product split; here the point is that even after the hiking-cycle MMF boom, the household liquid pair is not MMF-dominated. Issuer purchase-volume remains a separate firm-side story: top-3 near **52%**, HHI ~**1,962** — moderate next to either equity ownership or mortgage’s product share.
 
@@ -6685,7 +6685,7 @@ That is the methodological lesson. Concentration can be “high and stable” wh
 
 Consumer finance in Q3 is **concentrated at the top — but which top depends on the meter**. On **equities**, people-side HHI near **4,150** with top-1 about **54%**. On **debt products**, mortgage alone is **70.1%** of **$18.93T** household debt (product HHI ~**5,080**). On **net worth**, top 1% holds about **30.5%** and the bottom half about **2.5%**. On **card issuers**, top-3 purchase volume sits near **52%**. On **liquid parking**, deposits still dominate the pair even with MMF at **$8.02T**. Households are not one balance sheet. They are a stack of distributions — people, products, and firms — and stress, savings, and market beta live in different parts of that stack.
 
-Related reading: [2026 concentration print](/blog/consumer-finance-markets-concentration-2026), [Q3 theme update](/blog/consumer-finance-markets-update-2026q3), [research roll-up](/blog/consumer-finance-markets-research-2026), and [household delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+Related reading: [2026 concentration print](/blog/consumer-finance-markets-concentration-2026), [Q3 theme update](/blog/consumer-finance-markets-update-2026q3), [research roll-up](/blog/consumer-finance-markets-research-2026), and [household delinquency split](/blog/consumer-finance-markets-research-2026).`,
   },
   {
     id: "ai-power-grid-update-202608",
@@ -6711,7 +6711,7 @@ This August (202608) note answers the next official prints: **what moved when IE
 
 Three information events rewrite the dashboard. **Mid-Year** puts global electricity demand growth at **3.6% in 2026** and **3.8% in 2027** (from **3%** in 2025), with expanding data-centre capacity named among the structural drivers. For the United States — the market that decides most AI interconnection politics — Mid-Year locks **+2.6% in 2025**, a soft H1 2026 (**~+1%** total; services **+3%** on rising data-centre consumption; residential **−1.7%**), then full-year **+1.8% in 2026** and **+3% in 2027**, and repeats that **data centres remain the main driver** of US demand growth. The same report’s price chapter is the non-obvious geography cut: Q2 2026 wholesale prices rose **more than 30%** y/y in the **EU and Japan** after the Strait of Hormuz LNG shock, while the **United States was largely unchanged** — and H2 futures even point **~10% lower**. **LBNL Queued Up 2026** restates US active queues at **2,061 GW** (generation **1,312 GW** + storage **~749 GW**) — **down 10%** y/y as withdrawals outran new requests — while **natural gas** in the queue jumps **+86% to 253 GW**, and **549 GW** already holds a draft or executed interconnection agreement but is not yet online. Median IR→COD for projects built in 2025 remains **over five years**; only **13%** of 2000–2020 requests had reached COD by end-2025.
 
-The dashboard above is built as a vintage delta — Mid-Year demand-path bars, Hormuz price-shock dumbbells, US H1 sector cuts, LBNL tech stacks with YoY, queue Δ meters, negative-price flexibility hours, a carried dual-ledger path, and a pace-mismatch scatter that adds a price cluster. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) for the LBNL demand-versus-miles frame.
+The dashboard above is built as a vintage delta — Mid-Year demand-path bars, Hormuz price-shock dumbbells, US H1 sector cuts, LBNL tech stacks with YoY, queue Δ meters, negative-price flexibility hours, a carried dual-ledger path, and a pace-mismatch scatter that adds a price cluster. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026) for the LBNL demand-versus-miles frame.
 
 ## The headline table: Q3 → Mid-Year + LBNL
 
@@ -6800,7 +6800,7 @@ Primary sources: IEA *Electricity Mid-Year Update 2026*; LBNL *Queued Up: 2026 E
 
 **Versus our Q3 Gartner/Electricity print, the newest vintage does not move the 565 TWh or dual-ledger 2030 fork — it rewrites the system around them.** Mid-Year locks US electricity at **+1.8% in 2026** and **+3% in 2027**, with data centres still the main growth driver and H1 services at **+3%** even as a mild winter flattened the total. Wholesale prices stayed **flat in the US** while the EU and Japan printed **+30%+** after the Hormuz LNG shock — a power-cost geography that reinforces US cluster concentration. LBNL restates active queues at **2,061 GW (−10%)** while **gas jumps +86% to 253 GW** and **549 GW** sits with an IA but not yet at COD. Electricity *can* still be built for AI. The open question is whether wires, gas bridges, and flexibility tools clear where the GPUs plug in — on a clock that matches **+26%** campus years and **>5-year** interconnection medians, not only 2030 scenario slides.
 
-Related reading: [Q3 Gartner + Electricity update](/blog/ai-power-grid-update-2026q3), [Key Questions vintage update](/blog/ai-power-grid-update-2026), [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+Related reading: [Q3 Gartner + Electricity update](/blog/ai-power-grid-update-2026q3), [Key Questions vintage update](/blog/ai-power-grid-update-2026), [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026).`,
   },
   {
     id: "ai-supply-chain-concentration-2026",
@@ -7198,7 +7198,7 @@ The story is not “another Trustees scare.” The clocks did not move. The leve
 
 Toggle **View → Vintage deltas** and filter **Layer filter → Net interest**, or stay on the interest-race panel. Net interest in the late-August framing steps from about **$1.12T to $1.18T**. That **+$60B** is six times the discretionary delta in the table above. The interest-to-discretionary ratio on our editorial path rises from roughly **0.65 to 0.68** — interest is still not the larger line, but the gap keeps shrinking while Congress still treats discretionary titles as “the budget.”
 
-Interest is not a program anyone votes to expand. It is the arithmetic of the debt stock rolling at higher coupons, plus the path assumptions embedded in the baseline. Pair this late-Aug restatement with the Q3 interest-versus-discretionary irony and our [net interest vs defense](/blog/us-net-interest-vs-defense-2025) framing: the first claim on revenue grows without a floor amendment while discretionary fights argue over tens of billions.
+Interest is not a program anyone votes to expand. It is the arithmetic of the debt stock rolling at higher coupons, plus the path assumptions embedded in the baseline. Pair this late-Aug restatement with the Q3 interest-versus-discretionary irony and our net interest vs defense framing: the first claim on revenue grows without a floor amendment while discretionary fights argue over tens of billions.
 
 ## Tax expenditures: another $60B of Code pressure
 
@@ -7963,7 +7963,7 @@ The dashboard’s **SLOOS path** panel uses Fed chart-data period labels through
 
 That is a clean break from the prior update’s directional SLOOS path, which still carried early-2026 CRE net tightening near **+12**. Disclosed chart data show the turn started earlier than that estimate: NFNR was already **−3.6** in the April survey and **−3.3** in the prior quarter before the July acceleration to **−11.3**. The Q3 essay’s job is not to pretend the August post invented tightening out of thin air — it is to mark that **the newest official supply vintage is an easing print**, and that the **magnitude** of NFNR easing is now unmistakable.
 
-The **size split** panel matters as much as the headline net %. Large banks (≥ **$100B** domestic assets) reported easier standards for **all** CRE loan types. Other banks left multifamily and CLD **basically unchanged**. A moderate net share of **foreign** banks tightened CRE. Aggregate “banks eased CRE” is therefore a **large-bank story**, not a uniform panel thaw — the same size geometry the [CRE delinquency size-split](/blog/cre-bank-delinquency-size-split-2026) research map flagged on the past-due stock.
+The **size split** panel matters as much as the headline net %. Large banks (≥ **$100B** domestic assets) reported easier standards for **all** CRE loan types. Other banks left multifamily and CLD **basically unchanged**. A moderate net share of **foreign** banks tightened CRE. Aggregate “banks eased CRE” is therefore a **large-bank story**, not a uniform panel thaw — the same size geometry the [CRE delinquency size-split](/blog/bank-commercial-credit-research-2026) research map flagged on the past-due stock.
 
 C&I standards for large and middle-market firms sit at **0.0** net (unchanged), with stronger demand from those firms on net. Card standards print a **modest +6.7** net tighten even while Fed SA card charge-offs remain on their cooling 2026Q1 path. Supply and realized losses are not the same clock.
 
@@ -8006,7 +8006,7 @@ The regime question for the next Fed SA print is whether bank CRE charge-offs fo
 6. **Overall CMBS prior (~7.35%)** is estimated from the July MoM **+51 bp** to **7.86%**; office and multifamily priors use the August post’s disclosed anchors.
 7. **Charge-offs remain net of recoveries and annualized** when the next Fed SA arrives; soft prints can reflect recoveries as well as lower gross losses.
 
-Primary sources: Federal Reserve July 2026 Senior Loan Officer Opinion Survey and chart data; Federal Reserve Charge-Off and Delinquency Rates (SA; May 19, 2026 through 2026Q1, carried); Trepp July 2026 CMBS Delinquency Report. Related reading: [August bank & commercial credit update](/blog/bank-commercial-credit-update-2026), [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026).
+Primary sources: Federal Reserve July 2026 Senior Loan Officer Opinion Survey and chart data; Federal Reserve Charge-Off and Delinquency Rates (SA; May 19, 2026 through 2026Q1, carried); Trepp July 2026 CMBS Delinquency Report. Related reading: [August bank & commercial credit update](/blog/bank-commercial-credit-update-2026), [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/bank-commercial-credit-research-2026).
 
 ## What to watch next
 
@@ -8050,7 +8050,7 @@ Read the table as a **family of market shares**, not one number. Wealth concentr
 
 Filter the dashboard to **Wealth ladder**. The cumulative curve rises to about **30.5%** at the top 1%, **67.5%** at the top 10%, and **97.5%** once the upper half is included — leaving the bottom 50% with roughly **2.5%** of net worth, or about **$4T** against a **~$169T** aggregate. That is the DFA-style map behind every serene Z.1 chart: the stock can look enormous while half of households hold almost none of it.
 
-The ranked bars make the same point in dollars. The top 1% holds on the order of **$52T**; the 90th–99th another **~$63T**; the 50th–90th about **$51T**; the bottom half a thin residual. Housing equity and retirement accounts thicken the middle band; private business and publicly traded equities thicken the tip. Pair this with our [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) deep dive: a **2.7–3.9%** flow rate does not rebuild the bottom half’s stock on any policy-relevant clock when assets are already this skewed.
+The ranked bars make the same point in dollars. The top 1% holds on the order of **$52T**; the 90th–99th another **~$63T**; the 50th–90th about **$51T**; the bottom half a thin residual. Housing equity and retirement accounts thicken the middle band; private business and publicly traded equities thicken the tip. Pair this with our personal saving rate deep dive: a **2.7–3.9%** flow rate does not rebuild the bottom half’s stock on any policy-relevant clock when assets are already this skewed.
 
 ## Asset lenses: equities concentrate; housing and cash dilute
 
@@ -8064,7 +8064,7 @@ The scatter panel plots each lens’s top-1 share against its thick top (top 10%
 
 Open **Save vs borrow**. Grouped bars put equity and deposit ownership beside estimated revolving-balance shares by the same percentile cuts. The visual is almost a mirror. Top 1%: **54%** of equities, **17%** of deposits, **~5%** of revolving. Bottom 50%: **~1%** of equities, **~8%** of deposits, **~30%** of revolving. The 50th–90th band — the broad upper-middle — holds about **46%** of estimated card balances while owning only about **12%** of equities.
 
-This is why aggregate debt prints and aggregate wealth prints can both be “true” and still describe different Americas. NY Fed **2026Q2** household debt at **$18.926T** is mortgage-heavy; G.19 June revolving at **$1.351T** is the stress-sensitive sleeve. Card **90+** transitions remain elevated versus mortgages in our [delinquency split](/blog/us-household-debt-delinquency-split-2026) — and the concentration lens says that stress loads onto percentiles that do **not** own the equity boom. The APR−funds gap near **17 pp** in the [card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) post is therefore not a uniform tax on “households”; it is a tax concentrated where revolving shares are thickest.
+This is why aggregate debt prints and aggregate wealth prints can both be “true” and still describe different Americas. NY Fed **2026Q2** household debt at **$18.926T** is mortgage-heavy; G.19 June revolving at **$1.351T** is the stress-sensitive sleeve. Card **90+** transitions remain elevated versus mortgages in our [delinquency split](/blog/consumer-finance-markets-research-2026) — and the concentration lens says that stress loads onto percentiles that do **not** own the equity boom. The APR−funds gap near **17 pp** in the [card APR vs fed funds](/blog/consumer-finance-markets-research-2026) post is therefore not a uniform tax on “households”; it is a tax concentrated where revolving shares are thickest.
 
 Treat the revolving percentile shares as **estimated**. They are constructed to sum to the disclosed aggregate revolving stock and to match the qualitative SCF/DFA pattern that consumer revolving is middle- and bottom-heavier than assets. They are not a Fed supervisory microdata extract.
 
@@ -8095,7 +8095,7 @@ Issuer concentration matters for competition, rewards economics, and funding. It
 
 Consumer finance is **concentrated at the top — but which top depends on the ledger**. On **net worth**, top 1% holds about **30.5%** and top 10% about **67.5%**, while the bottom half holds roughly **2.5%**. On **equities**, top 1% holds about **54%** and top 10% about **87%**. On **revolving debt**, the skew inverts: the bottom half holds about **30%** of balances. On **card issuers**, top-1 / top-3 purchase volume sits near **22% / 52%**. Households are not one balance sheet. They are a stack of distributions — and stress, savings, and market beta live in different parts of that stack.
 
-Related reading: [Consumer finance markets research](/blog/consumer-finance-markets-research-2026), [August 202608 vintage update](/blog/consumer-finance-markets-update-202608), and [household delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+Related reading: [Consumer finance markets research](/blog/consumer-finance-markets-research-2026), [August 202608 vintage update](/blog/consumer-finance-markets-update-202608), and [household delinquency split](/blog/consumer-finance-markets-research-2026).`,
   },
   {
     id: "ai-capex-intensity-update-202608",
@@ -8717,7 +8717,7 @@ The story is not “another Trustees scare.” The clocks did not move. The leve
 
 Toggle **View → Interest race**. Net interest in the late-summer baseline framing steps from about **$1.05T to $1.12T**. That **+$70B** is nearly five times the discretionary delta in the table above. The interest-to-discretionary ratio on our editorial path rises from roughly **0.61 to 0.65** — interest is not yet the larger line, but it is closing on the appropriation theater Congress still treats as “the budget.”
 
-Interest is not a program anyone votes to expand. It is the arithmetic of the debt stock rolling at higher coupons, plus the path assumptions embedded in the baseline. Pair this Q3 restatement with the August update’s interest-versus-discretionary irony and our [net interest vs defense](/blog/us-net-interest-vs-defense-2025) framing: the first claim on revenue grows without a floor amendment while discretionary fights argue over tens of billions.
+Interest is not a program anyone votes to expand. It is the arithmetic of the debt stock rolling at higher coupons, plus the path assumptions embedded in the baseline. Pair this Q3 restatement with the August update’s interest-versus-discretionary irony and our net interest vs defense framing: the first claim on revenue grows without a floor amendment while discretionary fights argue over tens of billions.
 
 ## Tax expenditures: another $90B of shadow budget
 
@@ -9499,7 +9499,7 @@ Open **Concentration ladder** and toggle **Share %** → **Units** → **Cumulat
 
 Switch the dashboard to **Regions**. The donut is almost a single color: Asia takes three-quarters of the 2024 flow. The WR→prelim bridge then shows the concentration *tightening* — not relaxing — as the 2025 install rebound printed **621k** world units and Asia’s share stepped to **79%**. Europe and the Americas did not merely grow slower; their *relative claim* on the world’s new robot deployments compressed.
 
-That matters for anyone reading “global robotics” as a Western labor-displacement story. Most of the new arms are not landing on Detroit or Baden-Württemberg floors. They are landing where electronics, EV supply chains, and general-industry automation are still adding capacity at Asian scale. For the density intensity cut (robots per 10,000 workers) keep [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024) open — Korea and Singapore win intensity; China wins *volume concentration*.
+That matters for anyone reading “global robotics” as a Western labor-displacement story. Most of the new arms are not landing on Detroit or Baden-Württemberg floors. They are landing where electronics, EV supply chains, and general-industry automation are still adding capacity at Asian scale. For the density intensity cut (robots per 10,000 workers) keep manufacturing robot density open — Korea and Singapore win intensity; China wins *volume concentration*.
 
 ## China is the Top-1 *and* the stock gravity
 
@@ -9555,7 +9555,7 @@ Toggle **Lens → China of global**. The picture snaps back to concentration: Ch
 
 ## The shareable takeaway
 
-**Industrial robot demand is a Top-1 / Top-5 story: China alone is 54% of 2024 installations, Top-3 reaches 69%, and five countries take 80% — while Asia’s regional share rose from 74% to 79% in 2025 prelims and China domestic suppliers crossed 57%.** Geography is more concentrated than customer industry; inside the lead verticals, China still dominates. For the level map see the [research vintage](/blog/industrial-robotics-research-2026); for the YoY delta see the [2026 update](/blog/industrial-robotics-update-2026); for density intensity see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024).`,
+**Industrial robot demand is a Top-1 / Top-5 story: China alone is 54% of 2024 installations, Top-3 reaches 69%, and five countries take 80% — while Asia’s regional share rose from 74% to 79% in 2025 prelims and China domestic suppliers crossed 57%.** Geography is more concentrated than customer industry; inside the lead verticals, China still dominates. For the level map see the [research vintage](/blog/industrial-robotics-research-2026); for the YoY delta see the [2026 update](/blog/industrial-robotics-update-2026); for density intensity see manufacturing robot density.`,
   },
   {
     id: "bank-commercial-credit-update-2026",
@@ -9616,11 +9616,11 @@ Not every meter cooled. **C&I charge-offs** rose **+0.04 pp YoY** to **0.59%**, 
 
 **Residential real estate delinquency** jumped **+0.12 pp YoY** (and **+0.10 pp QoQ**) to **1.89%**, while residential charge-offs remain **~0%**. That is the classic lag geometry: past-dues can rise for quarters before net charge-offs move, because home equity, forbearance, and workout mechanics keep losses off the income statement. The **stress map** scatter still puts Resi mid-right and near the floor — high-ish delinquency, near-zero realized loss.
 
-Pair the bank-side residential print with household-side color in our [consumer finance markets update](/blog/consumer-finance-markets-update-2026) and [household delinquency split](/blog/us-household-debt-delinquency-split-2026): mortgage serious transitions remain low in absolute terms even as bank residential past-dues tick up. Two ledgers, one message — **housing stress is visible earlier on delinquency than on write-offs**.
+Pair the bank-side residential print with household-side color in our [consumer finance markets update](/blog/consumer-finance-markets-update-2026) and [household delinquency split](/blog/consumer-finance-markets-research-2026): mortgage serious transitions remain low in absolute terms even as bank residential past-dues tick up. Two ledgers, one message — **housing stress is visible earlier on delinquency than on write-offs**.
 
 ## Size, supply, and what the research map still gets right
 
-This update does not restate the full FDIC size-cohort and CMBS property-type atlas — that lives in the [research roll-up](/blog/bank-commercial-credit-research-2026) and the [CRE size-split](/blog/cre-bank-delinquency-size-split-2026) post. The vintage lens does not overturn those rankings: **large banks still own the CRE past-due stock**, **mid-size banks still own CRE/capital density**, and **office still owns securitized stress**.
+This update does not restate the full FDIC size-cohort and CMBS property-type atlas — that lives in the [research roll-up](/blog/bank-commercial-credit-research-2026) and the [CRE size-split](/blog/bank-commercial-credit-research-2026) post. The vintage lens does not overturn those rankings: **large banks still own the CRE past-due stock**, **mid-size banks still own CRE/capital density**, and **office still owns securitized stress**.
 
 What the **SLOOS** panel adds is supply color. Net tightening on CRE remains firmer than C&I into early 2026 — standards have eased from 2023 peaks but have **not flipped to broad CRE easing**. That fits a managed-stress regime: banks grow income-producing CRE carefully, shrink ADC exposure, and keep standards selective while past-dues stay elevated and charge-offs stay small.
 
@@ -9642,7 +9642,7 @@ Three practical takes follow from the deltas:
 6. **SLOOS mid-path points** between survey anchors may be estimated; treat early-2026 tightening prints as directional.
 7. **Charge-offs are net of recoveries and annualized.** Soft prints can reflect recoveries as well as lower gross losses.
 
-Primary sources: Federal Reserve Charge-Off and Delinquency Rates (SA; update May 19, 2026 through 2026Q1); Federal Reserve Senior Loan Officer Opinion Survey; FDIC 2026 Risk Review for CMBS / concentration context. Related reading: [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026).
+Primary sources: Federal Reserve Charge-Off and Delinquency Rates (SA; update May 19, 2026 through 2026Q1); Federal Reserve Senior Loan Officer Opinion Survey; FDIC 2026 Risk Review for CMBS / concentration context. Related reading: [bank & commercial credit research](/blog/bank-commercial-credit-research-2026), [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/bank-commercial-credit-research-2026).
 
 ## What to watch next
 
@@ -9788,7 +9788,7 @@ The Q3 post’s debt story was correctly NY Fed–centric: **2026Q2 total househ
 
 What *is* new is the Board’s **G.19 June** monthly (released August 7). Seasonally adjusted **revolving** credit prints **$1.351T**, up from May’s **$1.344T** (**+$6.7B**, about a **6%** annualized month). Total consumer credit prints **$5.167T**. That revolving stock is **not** the same object as NY Fed card balances: G.19 covers owned-and-securitized revolving credit on a Federal Reserve statistical definition; NY Fed cards are bureau-reportable card balances. The dashboard’s bridge panel exists so readers do not treat **$1.351T vs $1.281T** as a QoQ card surge.
 
-Still, the direction rhymes with the Q3 card rebound narrative. After May’s soft spot, June revolving came back. Origination and limit capacity on the NY Fed side remain constructive on the carried Q2 language; the monthly G.19 path says revolving outstanding is still grinding higher into mid-year. Pair this update with the [household debt delinquency split](/blog/us-household-debt-delinquency-split-2026) for stress mechanics — this vintage only needs to say the **monthly revolving ledger moved again** while the quarterly stress meters wait.
+Still, the direction rhymes with the Q3 card rebound narrative. After May’s soft spot, June revolving came back. Origination and limit capacity on the NY Fed side remain constructive on the carried Q2 language; the monthly G.19 path says revolving outstanding is still grinding higher into mid-year. Pair this update with the [household debt delinquency split](/blog/consumer-finance-markets-research-2026) for stress mechanics — this vintage only needs to say the **monthly revolving ledger moved again** while the quarterly stress meters wait.
 
 ## Saving: July’s 3.1% is still a confirmation trade
 
@@ -9796,13 +9796,13 @@ BEA’s personal saving rate remains a **flow** meter. The Q3 post made a loud J
 
 That is not a contradiction of the Q3 narrative so much as a **calendar footnote**. The Aug 202608 meters therefore show two layers: the **disclosed** June **2.7%** as the last official monthly, and the Q3 July **3.1%** as a **pending** point awaiting confirmation. If August 26 prints near **3.1%**, the Q3 rebound stands. If it prints back under **2.8%**, the soft-patch story re-opens and July becomes noise. Until then, desks should not treat **+0.3 pp from Q2** as a closed official fact on FRED.
 
-A thin saving flow still leaves revolving borrowers paying sticky APRs with less after-consumption income than in the excess-savings years. See our [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) deep dive for structure; this update’s job is narrower: **do not let an unconfirmed July print outrun the last disclosed monthly**.
+A thin saving flow still leaves revolving borrowers paying sticky APRs with less after-consumption income than in the excess-savings years. See our personal saving rate deep dive for structure; this update’s job is narrower: **do not let an unconfirmed July print outrun the last disclosed monthly**.
 
 ## The APR gap stays wide on disclosed May / July prints
 
 Commercial-bank credit-card APRs on the G.19 average (TERMCBCCALLNS) last print **20.94%** for **May 2026**. The effective federal funds rate averaged **3.63%** in **July 2026** (FEDFUNDS). The arithmetic gap is about **17.3 percentage points** — a tenth wider than the Q3 theme’s estimated **~17.2 pp**, mostly because the Q3 path used a higher funds anchor (~**4.0%**) than the July monthly average.
 
-Sticky card pricing plus lagged deposit betas remain the same industrial-organization story. Households that revolvingly finance consumption near **21%** while earning sub-**1%** on many deposits — and only mid-**3s** in MMFs — still pay for rate stickiness with cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when the official MMF print restated lower or when G.19 revolving printed higher.
+Sticky card pricing plus lagged deposit betas remain the same industrial-organization story. Households that revolvingly finance consumption near **21%** while earning sub-**1%** on many deposits — and only mid-**3s** in MMFs — still pay for rate stickiness with cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/consumer-finance-markets-research-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when the official MMF print restated lower or when G.19 revolving printed higher.
 
 ## What carried unchanged from Q3
 
@@ -9838,7 +9838,7 @@ Primary sources: ICI Money Market Fund Assets (Aug 20, 2026 release); Board G.19
 
 ## The shareable takeaway
 
-**Versus the Q3 theme print, the official ICI week-ended Aug 19 puts money market funds at $7.93T (−$92B vs the $8.02T claim), while G.19 June revolving prints $1.351T and disclosed PSAVERT remains June 2.7% pending the Aug 26 July release.** The card APR−funds gap stays near **17.3 pp** on disclosed May / July prints; NY Fed Q2 debt and student 90+ are unchanged. The three-ledger household — thin saving flow awaiting confirmation, mortgage-heavy debt stock on carry, yield-sensitive cash that never officially cleared $8T — still disagrees until you read the ledgers together. For the prior vintage see the [Q3 update](/blog/consumer-finance-markets-update-2026q3); for structure see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+**Versus the Q3 theme print, the official ICI week-ended Aug 19 puts money market funds at $7.93T (−$92B vs the $8.02T claim), while G.19 June revolving prints $1.351T and disclosed PSAVERT remains June 2.7% pending the Aug 26 July release.** The card APR−funds gap stays near **17.3 pp** on disclosed May / July prints; NY Fed Q2 debt and student 90+ are unchanged. The three-ledger household — thin saving flow awaiting confirmation, mortgage-heavy debt stock on carry, yield-sensitive cash that never officially cleared $8T — still disagrees until you read the ledgers together. For the prior vintage see the [Q3 update](/blog/consumer-finance-markets-update-2026q3); for structure see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/consumer-finance-markets-research-2026).`,
   },
   {
     id: "ai-compute-demand-update-202608",
@@ -10432,7 +10432,7 @@ This Q3 note answers the next official print the market forces: **what moved whe
 
 Three information events rewrite the dashboard. **Gartner** puts worldwide data-centre electricity at **565 TWh in 2026** — up **26.4%** from **447 TWh** in 2025 — with capacity rising **27%** to **132 GW**. **AI-optimised servers** take **31%** of data-centre power in 2026 (from about **20%** in 2025) and are on track to **surpass conventional servers** in **2027**, when total electricity hits **702 TWh**. By **2030**, Gartner’s electricity path exceeds **1,200 TWh** while capacity approaches **290 GW**. That opens a **~250 TWh dual-ledger gap** against the Key Questions central path of **~950 TWh**. **IEA Electricity 2026** adds the wire-side restatement: US data centres drive about **half** of US electricity demand growth through 2030 (more than **420 TWh** of US add), and more than **2,500 GW** of projects — renewables, storage, and large loads including data centres — remain **stalled in connection queues worldwide**, with flexible connections and grid-enhancing technologies potentially unlocking **1,200–1,600 GW**.
 
-The dashboard above is built as a vintage delta — YoY bars with a ledger filter, IEA↔Gartner dumbbells, AI/conventional/cooling stacked areas, a US composition cut, grid-queue Δ meters, a capacity dual-axis path, and a pace-mismatch scatter that adds an unlock cluster. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) for the LBNL demand-versus-miles frame.
+The dashboard above is built as a vintage delta — YoY bars with a ledger filter, IEA↔Gartner dumbbells, AI/conventional/cooling stacked areas, a US composition cut, grid-queue Δ meters, a capacity dual-axis path, and a pace-mismatch scatter that adds an unlock cluster. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026) for the LBNL demand-versus-miles frame.
 
 ## The headline table: Key Questions → Gartner + Electricity 2026
 
@@ -10522,7 +10522,7 @@ Primary sources: Gartner newsroom, 10 June 2026 (*Data Center Electricity Consum
 
 **Versus our Key Questions print, the newest vintage makes near-term Gartner electricity the lead meter — +26% to 565 TWh in 2026 — while the 2030 dual-ledger gap widens to IEA ~950 vs Gartner >1,200.** AI-optimised servers take **31%** of data-centre power and are on track to surpass conventional in **2027**; the US alone is **204 TWh** (**36%** of world), with **68 TWh** in dedicated AI. Electricity 2026 restates **>2,500 GW** stalled in connection queues worldwide and puts data centres at roughly **half** of US electricity demand growth through 2030, even as flexible connections and grid-enhancing technologies could unlock **1.2–1.6 TW**. Electricity *can* still be built for AI. The open question is whether grids, unlock tools, and workarounds arrive where the GPUs actually plug in — at a pace that matches **+26%** years, not only 2030 scenario slides.
 
-Related reading: [Key Questions vintage update](/blog/ai-power-grid-update-2026), [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+Related reading: [Key Questions vintage update](/blog/ai-power-grid-update-2026), [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026).`,
   },
   {
     id: "ai-capex-spend-update-202608",
@@ -10679,7 +10679,7 @@ The metals-and-minerals index path is the composite tell. From a 2025 annual **1
 
 Open **Fertilizer**. Phosphate rock spent most of 2024–early 2026 stuck near **$152.5/mt** — a deceptively calm print after the 2023 spike to **$321.7**. July’s **$170** is not a crisis reprint by 2023 standards, but it is the first clear break higher in this vintage and it arrives alongside DAP at **$781** (**+14%** vs 2025 annual) and potash at **$396.5** (**+14%**). Processed phosphate and potash were already elevated; rock catching up means the fertilizer trio is no longer a quiet corner of the chokepoint ledger.
 
-That matters for the theme’s core question — *what physical inputs does the economy assume will always be available?* — because fertilizer export dependence and rock concentration were already mapped in the theme’s [phosphate fertilizer](/blog/phosphate-fertilizer-export-dependence-2026) and [phosphate rock](/blog/phosphate-rock-supply-concentration-2024) posts. August’s contribution is the price meter, not a new USGS mine table.
+That matters for the theme’s core question — *what physical inputs does the economy assume will always be available?* — because fertilizer export dependence and rock concentration were already mapped in the theme’s [phosphate fertilizer](/blog/phosphate-fertilizer-export-dependence-2026) and [phosphate rock](/blog/phosphate-fertilizer-export-dependence-2026) posts. August’s contribution is the price meter, not a new USGS mine table.
 
 ## Smelter reply: cut and halt are not diversification
 
@@ -10760,7 +10760,7 @@ Switch **Focus → Diriyah**. The radar and horizontal scorecard score eight pri
 
 That juxtaposition is the governance story our [research ledger](/blog/geopolitics-institutions-research-2026) framed as stock and our Q3 update framed as consent flow. August adds the **normative** layer: the membership now has an agreed principle set for the **17th** GRQ that explicitly says completed reforms should be implemented. The incomplete 16th GRQ is therefore not only a resource arithmetic problem; it is a credibility problem against the Fund's own newest guiding text.
 
-Pair this with our [NATO defense-spending vs GDP](/blog/nato-defense-spending-gdp-2-percent-2024) posts when you need the *security-budget* side of state capacity — here the binding constraint remains shareholder consent arithmetic and principle–practice gaps, not tanks.
+Pair this with our NATO defense-spending vs GDP posts when you need the *security-budget* side of state capacity — here the binding constraint remains shareholder consent arithmetic and principle–practice gaps, not tanks.
 
 ## Bank vote stock confirms the twin freeze
 
@@ -11059,7 +11059,7 @@ Non-automotive customers accounted for **56%** of Q2 units. That is a continuati
 
 Collaborative robots tell the mix story from the other side. Cobots were **19.6%** of FY 2025 units (**10.7%** of value), **15.4%** of H1 2026 units (**9.8%** of value), and **12.7%** of Q2 units (**7.1%** of value) — **1,137** cobots and **$44M** in the quarter. Unit share is trending down while total order value climbs. Strip cobots out of Q2 and the remaining **~7,800** units carry about **$578M** — roughly **$74k** per machine. Low-cost entry volume is losing mix share even as the two fastest-growing sectors remain cobot-heavy in A3’s commentary (life sciences and electronics), which concentrates competition for that specific supply.
 
-Do not read the fade as “cobots are dead.” Read it as **the order book’s center of gravity is migrating toward higher-ASP conventional cells** while cobots remain strategically important inside the growth verticals. For robots-per-worker intensity rather than order mix, keep [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024) beside this update.
+Do not read the fade as “cobots are dead.” Read it as **the order book’s center of gravity is migrating toward higher-ASP conventional cells** while cobots remain strategically important inside the growth verticals. For robots-per-worker intensity rather than order mix, keep manufacturing robot density beside this update.
 
 ## Orders are not installations — and the IFR final is still ahead
 
@@ -11092,7 +11092,7 @@ Primary sources: [A3 — Robot orders increase in Q2 as automation demand broade
 
 ## The shareable takeaway
 
-**Versus our Q3 IFR prelim, A3’s August order book says North American robotics is still scaling — but Q2 order value rose 21.3% while units rose only 4.3%, Auto OEM H1 orders fell 25%, and semi/electronics jumped 38% in the quarter.** Implied ASP stepped up to roughly **$70k**; cobot unit share faded from **19.6%** (FY 2025) to **12.7%** (Q2). Physical automation is broadening across industries and getting more expensive per machine, even as Detroit’s assemblers pause. For the install rebound that this order book follows, see the [Q3 IFR update](/blog/industrial-robotics-update-2026q3); for density intensity see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024).`,
+**Versus our Q3 IFR prelim, A3’s August order book says North American robotics is still scaling — but Q2 order value rose 21.3% while units rose only 4.3%, Auto OEM H1 orders fell 25%, and semi/electronics jumped 38% in the quarter.** Implied ASP stepped up to roughly **$70k**; cobot unit share faded from **19.6%** (FY 2025) to **12.7%** (Q2). Physical automation is broadening across industries and getting more expensive per machine, even as Detroit’s assemblers pause. For the install rebound that this order book follows, see the [Q3 IFR update](/blog/industrial-robotics-update-2026q3); for density intensity see manufacturing robot density.`,
   },
   {
     id: "adaptation-economics-update-2026q3",
@@ -11503,7 +11503,7 @@ Read the table as **stages and instruments**, not as a second mine encyclopedia.
 
 Open **Midstream Δ** and **Prior → new**. The IEA’s cross-mineral punchline is blunt: over the past two years, top refiners — **Indonesia for nickel** and **China for other key energy minerals** — accounted for **more than three-quarters** of total growth in refined supply. In manganese, nickel, and graphite, virtually all recent supply growth came from the dominant supplier. Excluding rare earths, the average share of the top refining country rose to **72%** in 2025 from **70%** in 2023.
 
-Rare earths are the deliberate exception that proves the policy point. New projects in the United States and production increases in Malaysia reduced the top supplier’s refining share from **over 90%** in 2023 to **85%** in 2025. If announced projects deliver on schedule, the IEA path points toward roughly **70%** by 2035 — still concentrated, but no longer a flat **90%** secondary carry from our research-era labels. Pair that with the [rare earth mine concentration](/blog/rare-earth-mine-concentration-2024) deep dive: mine pluralism without separation capacity was always the incomplete story; Q3 is the first vintage where the refine side prints measurable relief.
+Rare earths are the deliberate exception that proves the policy point. New projects in the United States and production increases in Malaysia reduced the top supplier’s refining share from **over 90%** in 2023 to **85%** in 2025. If announced projects deliver on schedule, the IEA path points toward roughly **70%** by 2035 — still concentrated, but no longer a flat **90%** secondary carry from our research-era labels. Pair that with the [rare earth mine concentration](/blog/natural-graphite-mine-concentration-2024) deep dive: mine pluralism without separation capacity was always the incomplete story; Q3 is the first vintage where the refine side prints measurable relief.
 
 Everything else in the midstream filter still points the other way. Lithium chemical refining moves from a **~65%** secondary carry toward about **~70%** China in the IEA processing narrative. Cobalt refine share is roughly flat near **75%**, but the *outlook* is revised: DRC export quotas create a new projected cobalt supply gap even while the stage flip (African pit, Asian chemistry) is unchanged. Battery recycling — often sold as the diversification escape hatch — is itself concentrated: China holds over **three-quarters** of pre-treatment capacity and about **90%** of material-recovery capacity.
 
@@ -11606,7 +11606,7 @@ Read the saving row carefully. The August post’s **2.8%** was a **quarterly SA
 
 BEA’s personal saving rate remains a **flow** meter: saving as a share of disposable personal income. The August update made the loud call — Q2 **2.8%**, June monthly near **2.7%**. July’s **3.1%** is a **+0.4 pp** bounce from June and **+0.3 pp** versus the Q2 quarterly floor. That is not a return to the research ~**3.9%** or the mid-2025 **~5%** band. It *is* evidence that Q2’s collapse was not immediately followed by another leg lower.
 
-A 3.1% monthly rate still leaves households thin on the flow ledger while Z.1 net worth stays enormous. Equities and housing still dominate assets; revolving borrowers who already show stress in bureau data still have less new income left after consumption than in the excess-savings years. Pair this update with our dedicated [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) deep dive — the Q3 job is narrower: **the August soft-patch call needs a July rebound footnote**, not a full narrative rewrite.
+A 3.1% monthly rate still leaves households thin on the flow ledger while Z.1 net worth stays enormous. Equities and housing still dominate assets; revolving borrowers who already show stress in bureau data still have less new income left after consumption than in the excess-savings years. Pair this update with our dedicated personal saving rate deep dive — the Q3 job is narrower: **the August soft-patch call needs a July rebound footnote**, not a full narrative rewrite.
 
 For consumer-finance desks, the practical read is two-sided. Income is still being spent at a historically thin saving rate, but the marginal dollar in July did **not** keep drawing down the way June implied. Watch the next BEA Personal Income and Outlays release: another sub-**3%** month would re-open the soft-patch story; a print back above **3.5%** would mark Q2–June as the trough.
 
@@ -11627,7 +11627,7 @@ Aggregate delinquency ticked up: **4.9%** of outstanding debt in some stage of d
 - **Credit cards:** transition into **early (30+) delinquency** cooled **8.6% → 8.4%**. Two consecutive soft ticks after the research-era deterioration narrative — still not a cycle turn, but the pause from Q1 held.
 - **Auto:** early transitions held roughly steady on the Fed’s summary language.
 
-For product-level color on the revolving-vs-housing split, keep the [household debt delinquency](/blog/us-household-debt-delinquency-split-2026) post beside this update. Bank income-statement twins still live in [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026). The Q3 vintage message is narrow: **student reporting/repayment stress extended; mortgage serious flow nudged again; card early flow cooled another tick; aggregate any-stage delinquency finally moved up a tenth.**
+For product-level color on the revolving-vs-housing split, keep the [household debt delinquency](/blog/consumer-finance-markets-research-2026) post beside this update. Bank income-statement twins still live in [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026). The Q3 vintage message is narrow: **student reporting/repayment stress extended; mortgage serious flow nudged again; card early flow cooled another tick; aggregate any-stage delinquency finally moved up a tenth.**
 
 ## Liquid cash: MMFs cross $8T; deposits edge softer
 
@@ -11639,7 +11639,7 @@ Deposits ex-large time edged softer in our H.8-style estimate (**~$14.95T** from
 
 Commercial-bank card APRs still hover near **21.2%** while effective fed funds eased toward roughly **4.0%** on our late-August estimated path. The **APR − funds** gap remains near **17.2 pp** — unchanged from the August update’s **~17.2 pp**. Funds moved another tenth; lending rates barely blinked. Sticky card pricing plus lagged deposit betas remain the same industrial-organization story from opposite sides of the bank book.
 
-That wedge still matters more when the saving flow is only **3.1%**. Households that revolvingly finance consumption at **~21%** while earning sub-**1%** on many deposit products — and only mid-**3s** in MMFs — are paying for rate stickiness with both cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when July saving rebounded or when Q2 debt printed higher.
+That wedge still matters more when the saving flow is only **3.1%**. Households that revolvingly finance consumption at **~21%** while earning sub-**1%** on many deposit products — and only mid-**3s** in MMFs — are paying for rate stickiness with both cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/consumer-finance-markets-research-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when July saving rebounded or when Q2 debt printed higher.
 
 ## What would rewrite this update
 
@@ -11665,7 +11665,7 @@ Primary sources: NY Fed *Quarterly Report on Household Debt and Credit*, 2026Q2 
 
 ## The shareable takeaway
 
-**Versus the August update, July’s personal saving rate rebounded to 3.1% (+0.3 pp from the Q2 2.8% floor), while NY Fed 2026Q2 debt printed $18.93T (+$132B) and student-loan 90+ delinquency rose to 10.6%.** Money market funds revised up to **$8.02T**; the card APR−funds gap stayed near **17 pp**. The three-ledger household — thin-but-rebouncing saving flow, mortgage-heavy debt stock, yield-sensitive cash — still disagrees until you read the ledgers together. For the prior vintage see the [August update](/blog/consumer-finance-markets-update-2026); for structure see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+**Versus the August update, July’s personal saving rate rebounded to 3.1% (+0.3 pp from the Q2 2.8% floor), while NY Fed 2026Q2 debt printed $18.93T (+$132B) and student-loan 90+ delinquency rose to 10.6%.** Money market funds revised up to **$8.02T**; the card APR−funds gap stayed near **17 pp**. The three-ledger household — thin-but-rebouncing saving flow, mortgage-heavy debt stock, yield-sensitive cash — still disagrees until you read the ledgers together. For the prior vintage see the [August update](/blog/consumer-finance-markets-update-2026); for structure see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/consumer-finance-markets-research-2026).`,
   },
   {
     id: "industrial-robotics-update-2026q3",
@@ -11698,7 +11698,7 @@ The dashboard above is built as a vintage delta: forecast-versus-prelim path, di
 | US robot density | Context from prior print | **307** (#8, +2 ranks) | Intensity up |
 | China density (revised) | **567** (prior intensity lens) | **166** (rank #22) | Methodology shock |
 
-The shareable frame is narrow: **physical factory automation did not stay flat — it re-accelerated, Asia took more of the flow, and the US stopped contracting.** For the 2024 *level* geography that this update sits on top of, keep the [research vintage](/blog/industrial-robotics-research-2026) open; for robots-per-worker intensity mechanics see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024).
+The shareable frame is narrow: **physical factory automation did not stay flat — it re-accelerated, Asia took more of the flow, and the US stopped contracting.** For the 2024 *level* geography that this update sits on top of, keep the [research vintage](/blog/industrial-robotics-research-2026) open; for robots-per-worker intensity mechanics see manufacturing robot density.
 
 ## The forecast miss is the structural headline
 
@@ -11756,7 +11756,7 @@ Primary sources: [IFR US double-digit growth release (18 Jun 2026)](https://ifr.
 
 ## The shareable takeaway
 
-**Versus our WR 2025 YoY update, IFR’s April 2026 prelim says factory robot installations re-accelerated to a record 621,000 (+15%) — 46k above the 575k forecast — while Asia’s share rose to 79% and the US flipped from −9% to +11% at 38,000 units.** Electronics led globally at **+25%**; Europe’s share compressed to **13%**; Mexico kept contracting. Physical automation is scaling again, and it is scaling unevenly. For density intensity see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024); for the prior flat-year delta map see the [2026 YoY update](/blog/industrial-robotics-update-2026).`,
+**Versus our WR 2025 YoY update, IFR’s April 2026 prelim says factory robot installations re-accelerated to a record 621,000 (+15%) — 46k above the 575k forecast — while Asia’s share rose to 79% and the US flipped from −9% to +11% at 38,000 units.** Electronics led globally at **+25%**; Europe’s share compressed to **13%**; Mexico kept contracting. Physical automation is scaling again, and it is scaling unevenly. For density intensity see manufacturing robot density; for the prior flat-year delta map see the [2026 YoY update](/blog/industrial-robotics-update-2026).`,
     category: "Industry",
     imageUrl: "/images/industry-industrial-robotics-update-2026q3-hero.png",
     imageAlt:
@@ -11873,7 +11873,7 @@ This update answers the *vintage* question the newest official print forces: **w
 
 Three information events rewrite the dashboard. **Key Questions** confirms **485 TWh** of data-centre electricity in **2025** (+**17%** year-over-year) and puts **AI-focused** sites at **+50%** in the same year. The **central path** to 2030 moves only from **~945 → ~950 TWh** — a **+5 TWh** restatement that markets will screenshot as “unchanged” if they stop there. The binding news is elsewhere: **near-term aggressive scenarios become less likely** because bottlenecks tightened across grids, turbines, transformers, and high-bandwidth memory, while the **post-2030 upside case is raised** if those bottlenecks clear and agentic / video / reasoning workloads keep scaling. New meters arrive that the research post could only narrate: **15–27 GW** of onsite natural gas for data centres by 2030 (mostly United States), **20–25 GW** of batteries inside data centres, a **70%** surge in gas-turbine orders in 2025, and AI-server power density running **11×** from 2020 to 2025 with another **~4×** by 2027.
 
-The dashboard above is built as a vintage delta — YoY growth bars, prior→new demand dumbbells, bottleneck Δ meters, density and emissions paths, a pace-mismatch scatter, and a Gartner companion GW/TWh path. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) for the LBNL demand-versus-miles frame.
+The dashboard above is built as a vintage delta — YoY growth bars, prior→new demand dumbbells, bottleneck Δ meters, density and emissions paths, a pace-mismatch scatter, and a Gartner companion GW/TWh path. Pair the global path with the [concentration cut](/blog/ai-power-grid-concentration-2026) for *where* those watts land, and with [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026) for the LBNL demand-versus-miles frame.
 
 ## The headline table: Energy and AI research vs Key Questions
 
@@ -11963,7 +11963,7 @@ Primary sources: IEA *Key Questions on Energy and AI* (Apr 2026); IEA *Energy an
 
 **Versus our July research print, the newest IEA vintage barely moves the 2030 central path — 945 → 950 TWh — while rewriting the risk shape.** Data centres hit **485 TWh** in 2025 (**+17%**); AI-focused sites grew **+50%** and are on track to **triple** by 2030. Near-term aggressive scenarios lose probability to bottlenecks; post-2030 upside rises if those bottlenecks clear. Operators answer slow wires with **15–27 GW** of onsite gas and **20–25 GW** of campus batteries, against an unchanged **~20%** delay-risk clock and US interconnection medians past **five years**. Electricity *can* still be built for AI. The open question is whether grids, turbines, and queues — or the workarounds — arrive where the GPUs actually plug in.
 
-Related reading: [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+Related reading: [IEA global research frame](/blog/ai-power-grid-research-2026), [power-grid concentration](/blog/ai-power-grid-concentration-2026), and [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026).`,
     category: "Energy",
     themeId: "ai-power-grid",
     imageUrl: "/images/energy-ai-power-grid-update-2026-hero.png",
@@ -12312,7 +12312,7 @@ Effectiveness is a **joint** condition. Even if quota consents somehow cleared *
 
 Open the **BBA donut**. Annex II of the new paper scores a transitional ledger our prior update did not: as of **29 April 2026**, **39** creditors representing **95.92%** of 2020 Bilateral Borrowing Agreement commitments had completed extension procedures; **3** creditors (**4.08%**) had not, with a temporary lending-capacity drop of about **0.67%**. Most extended terms run until 16th GRQ quota effectiveness **or** end-**2027**, whichever comes first.
 
-That is soft institutional adaptation. The Fund says it is **adequately resourced** at the current juncture precisely because bilateral bridges and prior NAB capacity can carry the book while the permanent quota enlargement waits. Pair this with our [NATO defense-spending vs GDP](/blog/nato-defense-spending-gdp-2-percent-2024) posts when you need the *security-budget* side of state capacity — here the binding constraint is shareholder consent arithmetic, not tanks. The BBA panel answers a different slice of the theme question: **when hard vote realignment stalls, which parallel instruments keep authority operable?**
+That is soft institutional adaptation. The Fund says it is **adequately resourced** at the current juncture precisely because bilateral bridges and prior NAB capacity can carry the book while the permanent quota enlargement waits. Pair this with our NATO defense-spending vs GDP posts when you need the *security-budget* side of state capacity — here the binding constraint is shareholder consent arithmetic, not tanks. The BBA panel answers a different slice of the theme question: **when hard vote realignment stalls, which parallel instruments keep authority operable?**
 
 ## Gaps did not budge — only the consent clock and member count did
 
@@ -12359,95 +12359,95 @@ Related reading: [Prior institutions update](/blog/geopolitics-institutions-upda
       "Update: Household Saving Rate Falls to 2.8% — Debt Prints $18.8T as Student 90+ Hits 10.3%",
     excerpt:
       "Versus our research print (~3.9% saving, $18.42T debt), BEA Q2 2026 saving drops to 2.8% (−1.1 pp) and NY Fed 2026Q1 debt prints $18.79T. Student-loan 90+ stock rises to 10.3% (+0.7 pp); MMFs edge up to $7.93T.",
-    content: `## What changed since the research vintage
-
-In mid-August we rolled up the household balance sheet in [consumer finance markets research](/blog/consumer-finance-markets-research-2026): **~$18.42 trillion** in NY Fed–style debt, a personal saving rate near **3.9%**, credit-card stress elevated against calm mortgages, card APRs still ~**17 pp** over funds, and liquid cash split between ~**$15T** deposits and **$7.85T** money market funds. That post answered the *structure* question — how households save, borrow, and park retail money after the pandemic cash flood and hiking cycle.
-
-This update answers the *vintage* question: **what moved in the newest official prints**, and does the three-ledger story still hold? Three information events force a refresh. The **New York Fed’s 2026Q1 Household Debt and Credit report** (May 2026) prints total balances at **$18.794 trillion** — up **$18 billion** QoQ and about **$374 billion** above our research stock. **BEA’s personal saving rate** for **2026Q2** prints **2.8%**, a **−1.1 percentage-point** collapse from the research ~**3.9%** anchor (Q1 was still **3.9%**; June’s monthly rate sat near **2.7%**). **ICI’s weekly MMF tally** for the week ended **August 19, 2026** puts fund assets at **$7.93 trillion**, **+$80 billion** versus the research **$7.85T**.
-
-The dashboard above is built as a vintage delta: signed meter bars, the saving-rate path into Q2, product prior→new balances, a stress multi-line into 2026Q1, liquid-cash sleeve deltas, and the sticky APR−funds gap.
-
-## The headline table: research print vs newest official vintage
-
-| Metric | Prior (research) | New print | Δ |
-| --- | ---: | ---: | --- |
-| Personal saving rate | **~3.9%** | **2.8%** (2026Q2) | **−1.1 pp** |
-| Total household debt | **$18.42T** | **$18.794T** (2026Q1) | **+$0.37T** |
-| Mortgage balances | **$12.86T** | **$13.191T** | **+$331B** |
-| Credit-card balances | **$1.21T** | **$1.252T** | **+$42B** |
-| Student loan 90+ share | **9.6%** (2025Q4) | **10.3%** (2026Q1) | **+0.7 pp** |
-| Mortgage 90+ transition | **1.4%** (2025Q4) | **1.5%** | **+0.1 pp** |
-| Card early (30+) transition | **8.7%** | **8.6%** | **−0.1 pp** |
-| Aggregate any-stage delinq. | **~4.8%** | **4.8%** | Flat |
-| Money market fund AUM | **$7.85T** | **$7.93T** | **+$80B** |
-| Card APR − fed funds | **~17.2 pp** | **~17.2 pp** | Sticky |
-
-Treat the debt **+$0.37T** carefully. Part of it is simply that the research print used a late-2025 estimated stock; NY Fed’s closed **2026Q1** table is the disclosed vintage. The QoQ move itself was tiny (**+$18B / +0.1%**). The saving-rate move is the opposite: a true period delta that rearranges the *flow* ledger without rewriting the *stock* wealth story.
-
-## The saving rate is the loudest vintage delta
-
-BEA’s personal saving rate is a **flow**: saving as a share of disposable personal income. The research post sat near **3.9%** — already a thin post-stimulus norm versus the **26%** spike of 2021 Q2. **2026Q1** held at **3.9%**. **2026Q2** printed **2.8%**. That is a **−1.1 pp** quarter-to-quarter drop into territory that looks less like “pre-pandemic normal” and more like an active drawdown of the marginal dollar.
-
-A low saving rate still does **not** mean households are broke in the Z.1 sense. Aggregate net worth remains enormous; equities and housing still dominate assets. It *does* mean buffers rebuild slowly while revolving borrowers who already show stress in credit-bureau data have less new income left after consumption. Pair this flow meter with our dedicated [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) deep dive — the update’s job is narrower: the research ~**4%** floor just cracked lower in the newest quarterly vintage.
-
-Monthly color reinforces the quarterly print. June 2026’s personal saving rate near **2.7%** (BEA Personal Income and Outlays) sits under the Q2 average, so the soft patch is not a single noisy month averaged away. For consumer-finance desks, the practical read is simple: **income is being spent**, not warehoused into deposits or MMFs at the margin — even while the *stock* of MMFs keeps grinding higher on yield.
-
-## Debt: flat QoQ, higher vs the research stock
-
-NY Fed’s May release is almost boring on the quarter: total household debt **+$18 billion** to **$18.8 trillion**. Mortgages rose **$21 billion** to **$13.19 trillion**. HELOCs extended a sixteen-quarter climb (**+$12B** to **$446B**). Non-housing balances actually **fell $15 billion**, led by a seasonal **$25 billion** drop in credit cards to **$1.25 trillion**. Auto loans rose **$18 billion** to **$1.69 trillion**; student loans were roughly flat at **$1.66 trillion**.
-
-Versus the research dashboard’s **$18.42T / $1.21T cards**, the disclosed Q1 stock is higher on both totals and revolving balances even after the seasonal card dip. Mortgages still dominate — about **70%** of balances. The shareable framing is not “households levered up another half-trillion in one quarter.” It is “the research estimate was light versus the closed NY Fed table, and the product mix still says housing stock / revolving stress.”
-
-Origination color stayed steady: about **$530 billion** in new mortgages and **$182 billion** in new auto loans appearing on credit reports in 2026Q1. Card limits rose another **~$60 billion**. Capacity to borrow is still expanding even as early card delinquency transitions tick down a tenth of a point.
-
-## Stress: student 90+ worsened; cards paused; mortgages nudged
-
-Aggregate delinquency was flat: **4.8%** of outstanding debt in some stage of delinquency, matching 2025Q4 and tied for the highest share since 2017 on the report’s framing. Inside the product cut, the research post’s **7.2% vs 1.1%** social card (card vs mortgage) remains directionally right but needs measurement hygiene on this update:
-
-- **Student loans:** the share of balances **90+ days delinquent** rose to **10.3%** from **9.6%** in 2025Q4 — the cleanest stress delta in the new PDF.
-- **Mortgages:** transition into **serious (90+) delinquency** edged up **1.4% → 1.5%** annuallyized. Absolute levels remain low; the direction is no longer pure calm.
-- **Credit cards:** transition into **early (30+) delinquency** ticked down **8.7% → 8.6%**. Serious transitions were “mostly unchanged.” Do not read a tenth of a point as a cycle turn — but the research narrative of *monotone* card deterioration paused for a quarter.
-- **Auto:** early transitions held steady on the Fed’s summary.
-
-For product-level color on the revolving-vs-housing split, keep the [household debt delinquency](/blog/us-household-debt-delinquency-split-2026) post beside this update. Bank income-statement twins still live in [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026). The vintage message is narrower: **student reporting/repayment stress accelerated; mortgage serious flow nudged; card early flow cooled one tick.**
-
-## Liquid cash: MMFs still absorbing the yield sleeve
-
-ICI’s August 19 week put money market fund assets at **$7.93 trillion**, up **$80 billion** from the research **$7.85T** anchor. Retail MMFs alone sit near **$3.11 trillion**. Indicative taxable MMF yields still clear money-market deposit accounts by roughly **three percentage points**, so the dual-pile map from the research post — sticky bank deposits beside yield-sensitive fund shares — has not inverted.
-
-Deposits ex-large time remain enormous (we hold a **~$15T** estimate pending a cleaner H.8 restatement in this update). The point for allocation desks is unchanged in geometry and slightly richer in dollars: **cash did not leave the household sector; it keeps preferring the wrapper that pays.** See [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) for the deep dive; this dashboard’s cash panel is the vintage check that the sleeve grew, not shrunk, into mid-August.
-
-## The APR gap barely moved — and that is the point
-
-Commercial-bank card APRs still hover in the low **21%** area while effective fed funds eased toward roughly **4.1%** on our mid-2026 estimated path. The **APR − funds** gap remains near **17.2 pp** — essentially unchanged from the research **~17.15 pp**. Funds moved more than lending rates. Sticky card pricing plus lagged deposit betas remain the same industrial-organization story from opposite sides of the bank book.
-
-That wedge matters more when the saving rate is **2.8%**. Households that revolvingly finance consumption at **~21%** while earning sub-**1%** on many deposit products — and only mid-**3s** in MMFs — are paying for rate stickiness with both cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when the saving flow cracked lower.
-
-## What would rewrite this update
-
-1. **BEA 2026Q3 saving** snapping back above **3.5%** would mark Q2 as a soft patch rather than a new floor.
-2. **NY Fed 2026Q2** showing card serious transitions rising again — or student 90+ stabilizing — would re-rank the stress panel.
-3. **A deposit-rate war** that closes the MMDA–MMF gap would pull cash back onto bank books without fixing card APRs.
-4. **Faster funds easing** that finally compresses card APRs would shrink the borrowing wedge; if deposit betas still lag, MMFs may keep the cash anyway.
-5. **Unemployment jump** would hit auto and card delinquency harder than mortgages first — the same sequencing the research post flagged.
-
-Until those print, the live frame versus the research post is narrow: **saving flow broke lower (2.8%); debt stock printed higher ($18.8T); student 90+ worsened to 10.3%; MMFs edged up to $7.93T; the APR gap stayed wide.**
-
-## Caveats and methodology
-
-1. **Research print ≠ a single NY Fed PDF cell.** The prior post mixed disclosed anchors with estimated late-2025 points. Debt **+$0.37T** is versus that print, not only versus 2025Q4’s QoQ **+$18B**.
-2. **Delinquency concepts differ.** This update prefers disclosed 2026Q1 language (early vs serious transitions; student **stock** 90+ shares). Do not splice the research **7.2%** card figure into the new early-transition series without a footnote.
-3. **Saving rate** uses BEA quarterly SAAR (FRED A072RC1Q156SBEA). Monthly June **2.7%** is color, not a substitute for the quarterly print.
-4. **MMF AUM** is ICI weekly (week ended Aug 19, 2026). Weekly prints revise; treat **$7.93T** as the latest disclosed weekly, not a quarter-end Financial Accounts total.
-5. **Deposit levels** in the cash panel remain an estimated hold from the research framing where a fresher H.8 cut is not restated here.
-6. **Card APR / funds** mid-2026 anchors are estimated from Board G.19 / effective funds paths — the gap is arithmetic, not a risk-adjusted credit spread.
-7. **Student-loan series** still carry repayment-reporting normalization noise; cross-product comparisons remain imperfect.
-
-Primary sources: NY Fed *Quarterly Report on Household Debt and Credit*, 2026Q1 (May 2026); BEA / FRED personal saving rate through 2026Q2; ICI Money Market Fund Assets (Aug 20, 2026 release); Board G.19 consumer credit / APR context; prior theme baseline in [consumer finance markets research](/blog/consumer-finance-markets-research-2026).
-
-## The shareable takeaway
-
-**Versus the research print, the household saving rate fell to 2.8% in 2026Q2 (−1.1 pp), while NY Fed debt printed $18.8T and student-loan 90+ delinquency rose to 10.3%.** Money market funds edged up to **$7.93T**; the card APR−funds gap stayed near **17 pp**. The three-ledger household — thin saving flow, mortgage-heavy debt stock, yield-sensitive cash — still disagrees until you read the ledgers together. For the structural essay see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+    content: `## What changed since the research vintage
+
+In mid-August we rolled up the household balance sheet in [consumer finance markets research](/blog/consumer-finance-markets-research-2026): **~$18.42 trillion** in NY Fed–style debt, a personal saving rate near **3.9%**, credit-card stress elevated against calm mortgages, card APRs still ~**17 pp** over funds, and liquid cash split between ~**$15T** deposits and **$7.85T** money market funds. That post answered the *structure* question — how households save, borrow, and park retail money after the pandemic cash flood and hiking cycle.
+
+This update answers the *vintage* question: **what moved in the newest official prints**, and does the three-ledger story still hold? Three information events force a refresh. The **New York Fed’s 2026Q1 Household Debt and Credit report** (May 2026) prints total balances at **$18.794 trillion** — up **$18 billion** QoQ and about **$374 billion** above our research stock. **BEA’s personal saving rate** for **2026Q2** prints **2.8%**, a **−1.1 percentage-point** collapse from the research ~**3.9%** anchor (Q1 was still **3.9%**; June’s monthly rate sat near **2.7%**). **ICI’s weekly MMF tally** for the week ended **August 19, 2026** puts fund assets at **$7.93 trillion**, **+$80 billion** versus the research **$7.85T**.
+
+The dashboard above is built as a vintage delta: signed meter bars, the saving-rate path into Q2, product prior→new balances, a stress multi-line into 2026Q1, liquid-cash sleeve deltas, and the sticky APR−funds gap.
+
+## The headline table: research print vs newest official vintage
+
+| Metric | Prior (research) | New print | Δ |
+| --- | ---: | ---: | --- |
+| Personal saving rate | **~3.9%** | **2.8%** (2026Q2) | **−1.1 pp** |
+| Total household debt | **$18.42T** | **$18.794T** (2026Q1) | **+$0.37T** |
+| Mortgage balances | **$12.86T** | **$13.191T** | **+$331B** |
+| Credit-card balances | **$1.21T** | **$1.252T** | **+$42B** |
+| Student loan 90+ share | **9.6%** (2025Q4) | **10.3%** (2026Q1) | **+0.7 pp** |
+| Mortgage 90+ transition | **1.4%** (2025Q4) | **1.5%** | **+0.1 pp** |
+| Card early (30+) transition | **8.7%** | **8.6%** | **−0.1 pp** |
+| Aggregate any-stage delinq. | **~4.8%** | **4.8%** | Flat |
+| Money market fund AUM | **$7.85T** | **$7.93T** | **+$80B** |
+| Card APR − fed funds | **~17.2 pp** | **~17.2 pp** | Sticky |
+
+Treat the debt **+$0.37T** carefully. Part of it is simply that the research print used a late-2025 estimated stock; NY Fed’s closed **2026Q1** table is the disclosed vintage. The QoQ move itself was tiny (**+$18B / +0.1%**). The saving-rate move is the opposite: a true period delta that rearranges the *flow* ledger without rewriting the *stock* wealth story.
+
+## The saving rate is the loudest vintage delta
+
+BEA’s personal saving rate is a **flow**: saving as a share of disposable personal income. The research post sat near **3.9%** — already a thin post-stimulus norm versus the **26%** spike of 2021 Q2. **2026Q1** held at **3.9%**. **2026Q2** printed **2.8%**. That is a **−1.1 pp** quarter-to-quarter drop into territory that looks less like “pre-pandemic normal” and more like an active drawdown of the marginal dollar.
+
+A low saving rate still does **not** mean households are broke in the Z.1 sense. Aggregate net worth remains enormous; equities and housing still dominate assets. It *does* mean buffers rebuild slowly while revolving borrowers who already show stress in credit-bureau data have less new income left after consumption. Pair this flow meter with our dedicated personal saving rate deep dive — the update’s job is narrower: the research ~**4%** floor just cracked lower in the newest quarterly vintage.
+
+Monthly color reinforces the quarterly print. June 2026’s personal saving rate near **2.7%** (BEA Personal Income and Outlays) sits under the Q2 average, so the soft patch is not a single noisy month averaged away. For consumer-finance desks, the practical read is simple: **income is being spent**, not warehoused into deposits or MMFs at the margin — even while the *stock* of MMFs keeps grinding higher on yield.
+
+## Debt: flat QoQ, higher vs the research stock
+
+NY Fed’s May release is almost boring on the quarter: total household debt **+$18 billion** to **$18.8 trillion**. Mortgages rose **$21 billion** to **$13.19 trillion**. HELOCs extended a sixteen-quarter climb (**+$12B** to **$446B**). Non-housing balances actually **fell $15 billion**, led by a seasonal **$25 billion** drop in credit cards to **$1.25 trillion**. Auto loans rose **$18 billion** to **$1.69 trillion**; student loans were roughly flat at **$1.66 trillion**.
+
+Versus the research dashboard’s **$18.42T / $1.21T cards**, the disclosed Q1 stock is higher on both totals and revolving balances even after the seasonal card dip. Mortgages still dominate — about **70%** of balances. The shareable framing is not “households levered up another half-trillion in one quarter.” It is “the research estimate was light versus the closed NY Fed table, and the product mix still says housing stock / revolving stress.”
+
+Origination color stayed steady: about **$530 billion** in new mortgages and **$182 billion** in new auto loans appearing on credit reports in 2026Q1. Card limits rose another **~$60 billion**. Capacity to borrow is still expanding even as early card delinquency transitions tick down a tenth of a point.
+
+## Stress: student 90+ worsened; cards paused; mortgages nudged
+
+Aggregate delinquency was flat: **4.8%** of outstanding debt in some stage of delinquency, matching 2025Q4 and tied for the highest share since 2017 on the report’s framing. Inside the product cut, the research post’s **7.2% vs 1.1%** social card (card vs mortgage) remains directionally right but needs measurement hygiene on this update:
+
+- **Student loans:** the share of balances **90+ days delinquent** rose to **10.3%** from **9.6%** in 2025Q4 — the cleanest stress delta in the new PDF.
+- **Mortgages:** transition into **serious (90+) delinquency** edged up **1.4% → 1.5%** annuallyized. Absolute levels remain low; the direction is no longer pure calm.
+- **Credit cards:** transition into **early (30+) delinquency** ticked down **8.7% → 8.6%**. Serious transitions were “mostly unchanged.” Do not read a tenth of a point as a cycle turn — but the research narrative of *monotone* card deterioration paused for a quarter.
+- **Auto:** early transitions held steady on the Fed’s summary.
+
+For product-level color on the revolving-vs-housing split, keep the [household debt delinquency](/blog/consumer-finance-markets-research-2026) post beside this update. Bank income-statement twins still live in [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026). The vintage message is narrower: **student reporting/repayment stress accelerated; mortgage serious flow nudged; card early flow cooled one tick.**
+
+## Liquid cash: MMFs still absorbing the yield sleeve
+
+ICI’s August 19 week put money market fund assets at **$7.93 trillion**, up **$80 billion** from the research **$7.85T** anchor. Retail MMFs alone sit near **$3.11 trillion**. Indicative taxable MMF yields still clear money-market deposit accounts by roughly **three percentage points**, so the dual-pile map from the research post — sticky bank deposits beside yield-sensitive fund shares — has not inverted.
+
+Deposits ex-large time remain enormous (we hold a **~$15T** estimate pending a cleaner H.8 restatement in this update). The point for allocation desks is unchanged in geometry and slightly richer in dollars: **cash did not leave the household sector; it keeps preferring the wrapper that pays.** See [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) for the deep dive; this dashboard’s cash panel is the vintage check that the sleeve grew, not shrunk, into mid-August.
+
+## The APR gap barely moved — and that is the point
+
+Commercial-bank card APRs still hover in the low **21%** area while effective fed funds eased toward roughly **4.1%** on our mid-2026 estimated path. The **APR − funds** gap remains near **17.2 pp** — essentially unchanged from the research **~17.15 pp**. Funds moved more than lending rates. Sticky card pricing plus lagged deposit betas remain the same industrial-organization story from opposite sides of the bank book.
+
+That wedge matters more when the saving rate is **2.8%**. Households that revolvingly finance consumption at **~21%** while earning sub-**1%** on many deposit products — and only mid-**3s** in MMFs — are paying for rate stickiness with both cash-flow and delinquency risk. The dedicated [credit-card APR vs fed funds](/blog/consumer-finance-markets-research-2026) chart remains the rate-path companion; this update only needs to say the gap did **not** close when the saving flow cracked lower.
+
+## What would rewrite this update
+
+1. **BEA 2026Q3 saving** snapping back above **3.5%** would mark Q2 as a soft patch rather than a new floor.
+2. **NY Fed 2026Q2** showing card serious transitions rising again — or student 90+ stabilizing — would re-rank the stress panel.
+3. **A deposit-rate war** that closes the MMDA–MMF gap would pull cash back onto bank books without fixing card APRs.
+4. **Faster funds easing** that finally compresses card APRs would shrink the borrowing wedge; if deposit betas still lag, MMFs may keep the cash anyway.
+5. **Unemployment jump** would hit auto and card delinquency harder than mortgages first — the same sequencing the research post flagged.
+
+Until those print, the live frame versus the research post is narrow: **saving flow broke lower (2.8%); debt stock printed higher ($18.8T); student 90+ worsened to 10.3%; MMFs edged up to $7.93T; the APR gap stayed wide.**
+
+## Caveats and methodology
+
+1. **Research print ≠ a single NY Fed PDF cell.** The prior post mixed disclosed anchors with estimated late-2025 points. Debt **+$0.37T** is versus that print, not only versus 2025Q4’s QoQ **+$18B**.
+2. **Delinquency concepts differ.** This update prefers disclosed 2026Q1 language (early vs serious transitions; student **stock** 90+ shares). Do not splice the research **7.2%** card figure into the new early-transition series without a footnote.
+3. **Saving rate** uses BEA quarterly SAAR (FRED A072RC1Q156SBEA). Monthly June **2.7%** is color, not a substitute for the quarterly print.
+4. **MMF AUM** is ICI weekly (week ended Aug 19, 2026). Weekly prints revise; treat **$7.93T** as the latest disclosed weekly, not a quarter-end Financial Accounts total.
+5. **Deposit levels** in the cash panel remain an estimated hold from the research framing where a fresher H.8 cut is not restated here.
+6. **Card APR / funds** mid-2026 anchors are estimated from Board G.19 / effective funds paths — the gap is arithmetic, not a risk-adjusted credit spread.
+7. **Student-loan series** still carry repayment-reporting normalization noise; cross-product comparisons remain imperfect.
+
+Primary sources: NY Fed *Quarterly Report on Household Debt and Credit*, 2026Q1 (May 2026); BEA / FRED personal saving rate through 2026Q2; ICI Money Market Fund Assets (Aug 20, 2026 release); Board G.19 consumer credit / APR context; prior theme baseline in [consumer finance markets research](/blog/consumer-finance-markets-research-2026).
+
+## The shareable takeaway
+
+**Versus the research print, the household saving rate fell to 2.8% in 2026Q2 (−1.1 pp), while NY Fed debt printed $18.8T and student-loan 90+ delinquency rose to 10.3%.** Money market funds edged up to **$7.93T**; the card APR−funds gap stayed near **17 pp**. The three-ledger household — thin saving flow, mortgage-heavy debt stock, yield-sensitive cash — still disagrees until you read the ledgers together. For the structural essay see the [research roll-up](/blog/consumer-finance-markets-research-2026); for revolving stress mechanics see the [delinquency split](/blog/consumer-finance-markets-research-2026).`,
     category: "Consumer Finance",
     themeId: "consumer-finance-markets",
     imageUrl:
@@ -12704,7 +12704,7 @@ So the plateau is not “automation paused.” It is **customer industry reweigh
 
 ## Density: Korea 1,220 vs world 177 — intensity ≠ flow
 
-Pair this update with our [manufacturing robot density chart](/blog/manufacturing-robot-density-ifr-2024). WR 2025 puts **world average density at 177 robots per 10,000 manufacturing employees** in 2019–24’s endpoint year. **Asia averages 204** (12% CAGR since 2019), **Europe 148** (7% CAGR), **Americas 131** (6% CAGR). Country leaders remain **South Korea (1,220)**, **Singapore (818)**, then **China (567)** — density that now sits *above* Germany (**449**) and Japan (**446**).
+Pair this update with our manufacturing robot density chart. WR 2025 puts **world average density at 177 robots per 10,000 manufacturing employees** in 2019–24’s endpoint year. **Asia averages 204** (12% CAGR since 2019), **Europe 148** (7% CAGR), **Americas 131** (6% CAGR). Country leaders remain **South Korea (1,220)**, **Singapore (818)**, then **China (567)** — density that now sits *above* Germany (**449**) and Japan (**446**).
 
 The update’s density panel is the corrective to “US is falling behind because installs fell 9%.” The US can cut *new* units while still running a large *stock*; Korea can install only ~31k units a year and still lead the world on *intensity*. Flow answers **who is buying this year**. Density answers **how automated the floor already is**. Both matter; they are not substitutes.
 
@@ -12734,7 +12734,7 @@ IFR still expects China demand to support roughly **10%** average annual growth 
 
 ## The shareable takeaway
 
-Versus our research print’s *level* map, the YoY update says physical factory automation is **still scaling in Asia while Western installs contract**: Asia **+5%**, Europe **−8%**, Americas **−10%**, China record **295k (+7%)**, world flow flat at **542k**, stock **+9% to 4.66M**, cobots **+12% to 64.5k**. Automotive’s decade share collapse (**43% → 23%**) and China’s domestic supplier majority (**57%**) are the structural footnotes. For density intensity see [manufacturing robot density](/blog/manufacturing-robot-density-ifr-2024); for the geography levels see the [research vintage](/blog/industrial-robotics-research-2026).`,
+Versus our research print’s *level* map, the YoY update says physical factory automation is **still scaling in Asia while Western installs contract**: Asia **+5%**, Europe **−8%**, Americas **−10%**, China record **295k (+7%)**, world flow flat at **542k**, stock **+9% to 4.66M**, cobots **+12% to 64.5k**. Automotive’s decade share collapse (**43% → 23%**) and China’s domestic supplier majority (**57%**) are the structural footnotes. For density intensity see manufacturing robot density; for the geography levels see the [research vintage](/blog/industrial-robotics-research-2026).`,
     category: "Industry",
     imageUrl: "/images/industry-industrial-robotics-update-2026-hero.png",
     imageAlt:
@@ -13069,7 +13069,7 @@ That is the vintage punchline for the theme question. Authority is allocated not
 
 Switch to the **IBRD misalignment** donut. Under the Dynamic Formula (80% GDP blend, 20% IDA contributions, with compression), **45** countries accounting for **47.5%** of shareholding are under-represented; **144** countries with **52.5%** of shareholding are over-represented. Low-income countries hold about **2%** of IBRD voting power. The Review’s own language is blunt: after simulations of Selective Capital Increases, Basic Votes hikes, and targeted unallocated-share options, **there is not sufficient support** for an SCI (Governors’ resolution needing **75%**) or for raising Basic Votes (Articles amendment needing **85%**).
 
-Compare that to the 2020 review, which also produced **no** shareholding adjustment. The 2025 vintage is not a surprise failure; it is a **confirmed pattern**. The formula can print misalignment every five years. The majorities required to fix it sit inside the same weighted-voting structure that the misalignment describes. Pair this Bank ledger with our [NATO defense-spending vs GDP](/blog/nato-defense-spending-gdp-2-percent-2024) and [SIPRI world military expenditure](/blog/sipri-world-military-expenditure-2024) posts when you need the *security-budget* side of institutional power — here the binding constraint is shareholding arithmetic, not tanks.
+Compare that to the 2020 review, which also produced **no** shareholding adjustment. The 2025 vintage is not a surprise failure; it is a **confirmed pattern**. The formula can print misalignment every five years. The majorities required to fix it sit inside the same weighted-voting structure that the misalignment describes. Pair this Bank ledger with our NATO defense-spending vs GDP and SIPRI world military expenditure posts when you need the *security-budget* side of institutional power — here the binding constraint is shareholding arithmetic, not tanks.
 
 What *did* move is the **Voice track**: an expanding Voice Secondment Program, Research Analyst posts for the largest multi-country chairs, a LIC Board working group, formalized President-selection process tweaks, stronger client access at Spring/Annual Meetings, and Global South think-tank partnerships. Those are real procedural gains. They are also explicitly **budget-neutral** and **non-share**. The dashboard’s voice-package split makes the hierarchy visible: soft voice advances; hard vote realignment defers.
 
@@ -13765,7 +13765,7 @@ Related reading: [April research triangle on growth, trade & prices](/blog/macro
       "Fed SA data put CRE past-dues near 1.56% against 0.17% charge-offs (~9× stock vs loss). Cards still own realized losses at 3.84%. FDIC mid-size banks sit at ~289% CRE/capital; CMBS office delinquencies print 11.3%.",
     content: `Bank credit stress is not one number. It is a **map**: where loans are past due, where they are written off, which bank cohorts hold the densest CRE books, and how securitized property markets diverge from Call Report averages. As of **2026 Q1**, Federal Reserve seasonally adjusted series put **commercial real estate delinquency at 1.56%** while **CRE net charge-offs are only 0.17%** — roughly a **9×** gap between past-due stock and realized annualized losses. **Credit-card charge-offs** still dominate the loss ledger at **3.84%**. Outside the bank book, **CMBS office delinquencies** sit near **11.3%** (December 2025), with multifamily up sharply year over year. Mid-size banks hold the densest CRE concentration — about **289%** of tier-1 capital plus allowances in the $10–100B band — even as **median CRE PDNA** remains highest at banks above **$100B**.
 
-This is the theme roll-up for bank and commercial credit. It sits above our product-level charts on [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026) (realized losses by category) and [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026) (the top-100 vs smaller-bank past-due split). Those posts zoom; this one answers the portfolio question markets actually ask: **where is stress showing up?**
+This is the theme roll-up for bank and commercial credit. It sits above our product-level charts on [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026) (realized losses by category) and [CRE delinquency by bank size](/blog/bank-commercial-credit-research-2026) (the top-100 vs smaller-bank past-due split). Those posts zoom; this one answers the portfolio question markets actually ask: **where is stress showing up?**
 
 ## The stress scoreboard
 
@@ -13809,7 +13809,7 @@ The **Bank size** panel restates a finding that still surprises retail narrative
 
 Concentration is the other axis. Industry median CRE loans as a share of tier-1 capital plus the allowance sit near **200%**. Banks with **$1–10B** and **$10–100B** assets print denser books — roughly **311%** and **289%** respectively. The megabanks hold more of the **dollar** past-dues; the mid-size cohort holds more CRE **per dollar of capital**. That is why a single “regional bank CRE crisis” slogan fails: it collapses two different risk geometries into one headline.
 
-Our earlier [CRE size-split](/blog/cre-bank-delinquency-size-split-2026) post documents the top-100 versus smaller-bank delinquency gap in Fed charge-off release detail. This roll-up adds FDIC concentration and CMBS property-type color so the size story is not read in isolation.
+Our earlier [CRE size-split](/blog/bank-commercial-credit-research-2026) post documents the top-100 versus smaller-bank delinquency gap in Fed charge-off release detail. This roll-up adds FDIC concentration and CMBS property-type color so the size story is not read in isolation.
 
 ## Supply still tight even as losses stay small
 
@@ -13836,7 +13836,7 @@ Pair this map with household-side color in our [consumer finance markets](/blog/
 5. **SLOOS and size-cohort CMBS paths** include estimated mid-points between disclosed anchors; treat early-2026 SLOOS prints as directional, not official point estimates where the survey vintage is still settling.
 6. **Charge-offs are net of recoveries and annualized.** Negative prints in soft periods reflect recoveries exceeding new charge-offs — not “negative delinquency.”
 
-Primary sources: Federal Reserve Charge-Off and Delinquency Rates (update through 2026 Q1); Federal Reserve Senior Loan Officer Opinion Survey; FDIC 2026 Risk Review (CRE performance, concentration, CMBS property-type delinquencies). Related reading: [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026), and [household debt’s two-speed delinquency](/blog/us-household-debt-delinquency-split-2026).
+Primary sources: Federal Reserve Charge-Off and Delinquency Rates (update through 2026 Q1); Federal Reserve Senior Loan Officer Opinion Survey; FDIC 2026 Risk Review (CRE performance, concentration, CMBS property-type delinquencies). Related reading: [bank loan charge-offs](/blog/bank-loan-chargeoffs-2026), [CRE delinquency by bank size](/blog/bank-commercial-credit-research-2026), and [household debt’s two-speed delinquency](/blog/consumer-finance-markets-research-2026).
 
 ## What to watch next
 
@@ -13860,7 +13860,7 @@ Three coincident signals will tell you whether this remains managed stress or be
       "IEA concentration lens: the US alone is 45% of global data-centre electricity; US+China+Europe hold 85%. Virginia grids see ~25% DC load, Ireland ~20%, while ~20% of planned projects sit at interconnection delay risk.",
     content: `Global averages hide the real story of AI power. Data centres used about **415 TWh** in **2024** — only **~1.5%** of world electricity — and the IEA Base Case still has them near **~3%** by **2030**. Those percentages are true, and they are also the wrong unit for planning. What matters for grids is **concentration**: how much of the load sits in the top of the distribution, which clusters absorb the next gigawatts, and whether wires can keep pace where the GPUs actually plug in.
 
-The interactive dashboard above answers that distribution question directly. **Top-1 country share is 45%** (United States). **Top-3 regional share is 85%** (US + China + Europe). **US + China capture roughly 80% of growth to 2030.** Pair this concentration cut with our [global IEA scenario frame](/blog/ai-power-grid-research-2026) for the 415→945 TWh path, and with the US-only [data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) post for LBNL demand versus transmission miles.
+The interactive dashboard above answers that distribution question directly. **Top-1 country share is 45%** (United States). **Top-3 regional share is 85%** (US + China + Europe). **US + China capture roughly 80% of growth to 2030.** Pair this concentration cut with our [global IEA scenario frame](/blog/ai-power-grid-research-2026) for the 415→945 TWh path, and with the US-only [data-center power vs grid capacity](/blog/ai-power-grid-research-2026) post for LBNL demand versus transmission miles.
 
 ## The concentration scoreboard
 
@@ -13942,7 +13942,7 @@ None of those are guaranteed by another round of campus announcements. They are 
 
 The AI power problem is a **concentration problem**. Top-1 holds **45%**, top-3 holds **85%**, and US + China take about **80%** of the growth to 2030. Nearly half of US capacity sits in five clusters; Virginia and Ireland already run data-centre shares of electricity an order of magnitude above the global average; and roughly **one in five** planned projects sits at grid-delay risk while interconnection medians stretch past five years. Electricity *can* be built for AI. The open question is whether it can be built **where the distribution is thickest**, on a clock that matches campus construction rather than transmission planning.
 
-Related reading: [IEA global data-centre scenarios](/blog/ai-power-grid-research-2026) and [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).`,
+Related reading: [IEA global data-centre scenarios](/blog/ai-power-grid-research-2026) and [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026).`,
     category: "Energy",
     themeId: "ai-power-grid",
     imageUrl: "/images/energy-ai-power-grid-concentration-2026-hero.png",
@@ -14141,7 +14141,7 @@ Three coincident signals will tell you whether the vintage delta stabilizes or a
       "NY Fed–style household debt sits near $18.4 trillion; credit-card 90+ day delinquency runs about 7.2% against ~1.1% for mortgages. The personal saving rate is back near 3.9%, card APRs still clear fed funds by ~17 pp, and liquid cash splits between ~$15T deposits and $7.85T MMFs.",
     content: `Household finance headlines usually pick one ledger: **saving**, **borrowing**, or **where the cash parked**. The balance sheet only makes sense when you put all three on the same screen. As of **Q4 2025 / early 2026**, US household debt sits near **$18.42 trillion** on a New York Fed–style aggregate. Mortgages still dominate — roughly **70%** of balances — but the stress signal is not in first-lien housing. **Credit-card 90+ day delinquency transition rates** run about **7.2%**, while **mortgage** transitions sit near **1.1%**. Auto loans are in between near **5.3%**. The personal saving rate has settled near **3.9%**, a world away from the **26.2%** stimulus spike of 2021 Q2. Card APRs hover near **21.4%** against fed funds around **4.25%** — a **~17 percentage-point** wedge. And the liquid-cash map still shows **~$15 trillion** in bank deposits beside **$7.85 trillion** in money market funds.
 
-This post is the theme roll-up for consumer finance markets: how households **save**, **borrow**, and **allocate retail money** after the pandemic cash flood, the hiking cycle, and the first cuts. It deliberately sits above our product-level charts on the [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026), [household debt delinquency split](/blog/us-household-debt-delinquency-split-2026), [credit-card APRs vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026), and [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) — those pieces zoom; this one stitches the household balance sheet.
+This post is the theme roll-up for consumer finance markets: how households **save**, **borrow**, and **allocate retail money** after the pandemic cash flood, the hiking cycle, and the first cuts. It deliberately sits above our product-level charts on the personal saving rate, [household debt delinquency split](/blog/consumer-finance-markets-research-2026), [credit-card APRs vs fed funds](/blog/consumer-finance-markets-research-2026), and [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026) — those pieces zoom; this one stitches the household balance sheet.
 
 ## The three-ledger scoreboard
 
@@ -14176,7 +14176,7 @@ BEA’s personal saving rate is a **flow**: saving as a share of disposable pers
 
 A low saving rate does **not** mean households are “broke.” Z.1 net worth near **$169 trillion** says otherwise. It means the *marginal* dollar of income is mostly consumed, so buffers are rebuilt slowly even while asset prices and home equity keep aggregate wealth elevated. That split — rich stock, thin flow — is why delinquency can rise in revolving products while headline wealth charts still look serene.
 
-Our dedicated [saving-rate post](/blog/us-personal-saving-rate-post-excess-2026) walks the excess-saving unwind in more detail. Here the point is simpler: after the transfer cliff, US households did not re-establish a mid-teens saving norm. They re-established a **pre-pandemic-like** low-single-digit flow on top of a **much larger** balance sheet.
+Our dedicated saving-rate post walks the excess-saving unwind in more detail. Here the point is simpler: after the transfer cliff, US households did not re-establish a mid-teens saving norm. They re-established a **pre-pandemic-like** low-single-digit flow on top of a **much larger** balance sheet.
 
 ## Wealth allocation: equities and housing still dwarf deposits
 
@@ -14194,7 +14194,7 @@ That dual-pile map is why “households are flush with cash” and “banks are 
 
 Commercial-bank credit-card APRs rose from the mid-teens into the **low-20s** as the Fed hiked, then barely retreated even as effective fed funds eased from the **5%+** peak toward roughly **4.25%**. The **APR − funds** gap widened into the **mid-to-high teens** and sits near **17 pp** in our 2026 snapshot.
 
-Sticky lending rates plus lagged deposit betas are the same industrial-organization story from opposite sides of the bank book. Cards remain expensive relative to policy rates; cash alternatives remain attractive relative to MMDAs. Households that revolvingly finance consumption at **21%** while parking emergency cash at **sub-1%** deposit yields are paying a brutal wedge — one reason delinquency stress shows up in cards first. Pair with the dedicated [APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026) chart for the rate path alone.
+Sticky lending rates plus lagged deposit betas are the same industrial-organization story from opposite sides of the bank book. Cards remain expensive relative to policy rates; cash alternatives remain attractive relative to MMDAs. Households that revolvingly finance consumption at **21%** while parking emergency cash at **sub-1%** deposit yields are paying a brutal wedge — one reason delinquency stress shows up in cards first. Pair with the dedicated [APR vs fed funds](/blog/consumer-finance-markets-research-2026) chart for the rate path alone.
 
 ## What would change the household regime
 
@@ -14222,7 +14222,7 @@ None of those are required to explain 2026’s snapshot. The snapshot already sa
 
 US households enter the mid-2020s with an **$18.4 trillion** debt stock that is still **mortgage-dominated**, a **saving rate near 4%**, **card delinquency near 7%** against **mortgage delinquency near 1%**, **card APRs still ~17 pp over funds**, and liquid cash split between **~$15T deposits** and **$7.85T MMFs** under a **~$169T** net-worth umbrella heavy on equities and housing. The household is not “one story.” It is three ledgers that disagree until you read them together.
 
-Related reading: [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026), [credit-card APR gap](/blog/us-credit-card-apr-vs-fed-funds-2026), and [household debt delinquency split](/blog/us-household-debt-delinquency-split-2026).`,
+Related reading: [money market funds vs deposits](/blog/money-market-funds-vs-deposits-2026), [credit-card APR gap](/blog/consumer-finance-markets-research-2026), and [household debt delinquency split](/blog/consumer-finance-markets-research-2026).`,
     category: "Consumer Finance",
     themeId: "consumer-finance-markets",
     imageUrl:
@@ -14325,7 +14325,7 @@ Several observables would force a rewrite of this systems ledger:
 3. **China coal share of primary under 45%** with oil import dependence not exploding — a true primary transition, not a power-only story.
 4. **LNG top-3 export share under 50%** as new Atlantic and Middle East trains diversify beyond the US–Australia–Qatar triangle.
 5. **US returning to sustained net energy importer** status — a shale or demand regime change that would rewrite Atlantic LNG and oil politics overnight.
-6. **Nuclear and hydro additions** large enough to open France/Brazil-style primary-vs-power gaps in more of Asia — see also [who is pouring reactors now](/blog/nuclear-under-construction-china-share-2026).
+6. **Nuclear and hydro additions** large enough to open France/Brazil-style primary-vs-power gaps in more of Asia — see also who is pouring reactors now.
 
 Until several of those print together, the default forecast is not “fossil disappears.” It is **regional specialization**: coal-heavy industrializers, oil-and-gas exporters, nuclear/hydro clean-power islands, and import-dependent manufacturing powers buying molecules from a short list of sellers.
 
@@ -14337,7 +14337,7 @@ Until several of those print together, the default forecast is not “fossil dis
 - **2024 primary shares** are approximate EI Statistical Review 2025 country aggregates rounded for dashboard use; country statistical offices can differ on bioenergy and non-hydro renewables classification.
 - **LNG / coal / crude trade shares** are secondary volume estimates for 2024 trade years; contract vs spot and re-exports can move annual ranks.
 - **World row** is excluded from filtered panels by default because global trade nets near zero by construction.
-- This post is a **synthesis**. For power-only detail use the [generation mix](/blog/global-electricity-generation-mix-2024) post; for renewable *capacity* additions use [IRENA 2024](/blog/irena-renewable-capacity-record-2024); for demand spikes on local grids see [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025).
+- This post is a **synthesis**. For power-only detail use the [generation mix](/blog/global-electricity-generation-mix-2024) post; for renewable *capacity* additions use [IRENA 2024](/blog/irena-renewable-capacity-record-2024); for demand spikes on local grids see [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026).
 
 ## The shareable takeaway
 
@@ -14524,7 +14524,7 @@ Filter the dashboard by sector and the geography rearranges:
 - **Semiconductors:** Gallium and germanium refining, helium, tungsten, antimony — a stack of specialty inputs with extreme or high concentration and high US import reliance on several lines.
 - **Permanent magnets:** Rare-earth mine plus separation — China-heavy at both stages.
 - **Fertilizers / food:** Phosphate rock looks plural enough at first glance; [phosphate fertilizer export dependence](/blog/phosphate-fertilizer-export-dependence-2026) shows the binding constraint is often **processed product trade** (Morocco + China + Saudi Arabia near **two-thirds** of exports), not rock reserves alone.
-- **Industrial gases:** Helium is a **US–Qatar–Algeria** production story — different from China-centric battery metals, but still a thin market with limited substitutes for cryogenic and fab uses. See also [global helium supply concentration](/blog/global-helium-supply-concentration-2024).
+- **Industrial gases:** Helium is a **US–Qatar–Algeria** production story — different from China-centric battery metals, but still a thin market with limited substitutes for cryogenic and fab uses. See also global helium supply concentration.
 
 Sector filters matter because **“critical minerals” as a single phrase conceals incompatible risk maps**. A battery OEM, a foundry, and a fertilizer importer do not share the same chokepoint country — but they *do* share the structural feature that **top-1 shares above ~50%** are common, not rare, once you include midstream.
 
@@ -15225,7 +15225,7 @@ Read the table as one sentence: **people stocks are near highs; coverage rates a
 
 Cross-border refugees and asylum seekers dominate Western politics. The composition donut in the dashboard is the corrective. Of the end-2024 forced-displacement stock, **conflict IDPs (~73.5M)** outnumber refugees-and-others (~42.7M) and asylum-seekers (~8.4M) combined. People displaced *inside* Sudan, Myanmar, Ukraine, DRC, and Haiti never appear in EU Mediterranean landing stats or US immigration-court dockets — yet they drive food, shelter, and protection caseloads that UN appeals try (and increasingly fail) to fund.
 
-That invisibility matters for cost-sharing arguments. When high-income electorates debate "migration costs," they usually mean arrivals on *their* territory. The global cost base is mostly **neighbours hosting refugees** plus **home-country IDP crises** that never become asylum claims abroad. Our [US immigration court backlog](/blog/us-immigration-court-backlog-2025) post measures one rich-country processing bottleneck; it is not a proxy for global displacement burden.
+That invisibility matters for cost-sharing arguments. When high-income electorates debate "migration costs," they usually mean arrivals on *their* territory. The global cost base is mostly **neighbours hosting refugees** plus **home-country IDP crises** that never become asylum claims abroad. Our US immigration court backlog post measures one rich-country processing bottleneck; it is not a proxy for global displacement burden.
 
 ## Funding fell while needs did not
 
@@ -15403,7 +15403,7 @@ Related reading: [US industrial subsidies vs tariffs (30 years)](/blog/us-indust
       "IEA Energy and AI: global data-centre electricity doubles to ~945 TWh by 2030 in the Base Case. Renewables meet ~half the incremental load; ~20% of planned projects sit at grid-delay risk. The constraint is local queues and clusters, not global averages.",
     content: `The AI buildout is often framed as a race for chips. It is equally a race for **electrons that arrive on time**. The International Energy Agency’s *Energy and AI* assessment puts a hard global meter on the load: data centres consumed about **415 TWh** in **2024** — roughly **1.5%** of world electricity — and the Base Case roughly **doubles** that to about **945 TWh** by **2030** (just under **3%** of global demand). An IEA follow-up (*Key Questions on Energy and AI*) already sees **485 TWh** in **2025**, with AI-focused sites growing faster than the sector average.
 
-That is the wrong number to panic over if you stop at the global share. Three percent of world electricity is still smaller than the stories about “AI eating the grid” imply. The right number is **where** those terawatt-hours land, **how fast** generation and wires can follow, and **which fuels** fill the gap while transmission queues crawl. This post is the global IEA frame for that question. For the US-only LBNL demand path versus transmission miles, see our companion [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) piece. For who is installing renewable gigawatts while local grids choke, pair this with [IRENA’s 2024 renewable capacity record](/blog/irena-renewable-capacity-record-2024).
+That is the wrong number to panic over if you stop at the global share. Three percent of world electricity is still smaller than the stories about “AI eating the grid” imply. The right number is **where** those terawatt-hours land, **how fast** generation and wires can follow, and **which fuels** fill the gap while transmission queues crawl. This post is the global IEA frame for that question. For the US-only LBNL demand path versus transmission miles, see our companion [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026) piece. For who is installing renewable gigawatts while local grids choke, pair this with [IRENA’s 2024 renewable capacity record](/blog/irena-renewable-capacity-record-2024).
 
 ## The headline ledger
 
@@ -15481,7 +15481,7 @@ Several developments would rewrite the interpretation. A sustained **collapse in
 
 Data centres used **415 TWh** in 2024 and are on track, in the IEA Base Case, for about **945 TWh** by 2030 — a doubling that still leaves them near **3%** of global electricity. The binding constraint is not that global percentage. It is that **US and China drive ~80% of the growth**, **~half of US capacity sits in five clusters**, **renewables cover only about half of incremental supply** while gas and coal cover most of the rest, and **~20% of planned projects** sit at grid-delay risk while US interconnection medians stretch past **five years**. Electricity *can* be built for AI. The open question is whether wires, transformers, and interconnection processes will let it show up where the GPUs actually plug in.
 
-Related reading: [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025) and [record renewable capacity additions in 2024](/blog/irena-renewable-capacity-record-2024).`,
+Related reading: [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026) and [record renewable capacity additions in 2024](/blog/irena-renewable-capacity-record-2024).`,
     category: "Energy",
     themeId: "ai-power-grid",
     imageUrl: "/images/energy-ai-power-grid-research-2026-hero.png",
@@ -15617,7 +15617,7 @@ Ownership answers *who*. Power-draw geography answers *where*. Trackers synthesi
 
 Inside the US, the map is no longer “Northern Virginia plus leftovers.” Traditional cloud metros still host enormous live load, but the **AI-relevant build wave** is Midwest and Sun Belt heavy: Microsoft **Fairwater** (Wisconsin), AWS **Project Rainier** (Indiana / Mississippi), Meta **Hyperion** (Louisiana) and **Prometheus** (Ohio), OpenAI/Oracle **Stargate** campuses in Texas and beyond, xAI **Colossus** in Tennessee/Mississippi. Announced Middle Eastern programs (UAE Stargate with G42, Saudi Humain, NEOM DataVolt) can look enormous on paper — **announced MW ≠ energised MW** — which is why the hub panel tags status as live-heavy, building, or announced.
 
-Europe’s story is denser and more constrained: Ireland, the Nordics, the UK, and new French/Portuguese campuses face permitting, power-price, and political pushback even when national grids look fine on average. Singapore and similar city-states show the same pattern at smaller scale — **local interconnection**, not national generation, is the binding constraint. Our separate [US data-center power vs grid](/blog/us-data-center-power-vs-grid-capacity-2025) piece zooms into the American transmission gap; this post keeps the global ownership + location frame.
+Europe’s story is denser and more constrained: Ireland, the Nordics, the UK, and new French/Portuguese campuses face permitting, power-price, and political pushback even when national grids look fine on average. Singapore and similar city-states show the same pattern at smaller scale — **local interconnection**, not national generation, is the binding constraint. Our separate [US data-center power vs grid](/blog/ai-power-grid-research-2026) piece zooms into the American transmission gap; this post keeps the global ownership + location frame.
 
 ## Power capacity: 104 → 132 GW, AI servers at 31%
 
@@ -16117,7 +16117,7 @@ Related reading: [China–US–India GDP over 30 years](/blog/china-us-india-gdp
     excerpt: "USGS MCS 2025: China alone produced 1.27 of 1.60 Mt of natural graphite. Top-3 countries hit ~90%. The US mined zero tons — and ran 100% net import reliance — while Brazil’s reserves rival China’s but its mine share does not.",
     content: `Battery narratives talk endlessly about lithium, nickel, and cobalt. The anode feedstock that actually coats most lithium-ion cells gets quieter press: **natural graphite**. The U.S. Geological Survey’s Mineral Commodity Summaries 2025 puts a hard number on the geography. In **2024**, world mine production of natural graphite was an estimated **1.60 million metric tons**. **China** accounted for **1.27 Mt** — about **79%** of the global total. Madagascar and Mozambique filled most of what remained. The **top three** producers together supplied roughly **90%**.
 
-Unlike our [copper mine vs refinery](/blog/copper-mine-vs-refinery-concentration-2024) piece — which splits *who digs* from *who refines* the red metal — this post focuses on **natural graphite mine output**, where a single country already owns nearly four-fifths of the dug tons. Unlike our [helium supply concentration](/blog/global-helium-supply-concentration-2024) map — a two-country US–Qatar story — graphite’s chokepoint is a **one-country mine dominance** paired with a United States that mined **zero** tons and posted **100%** net import reliance.
+Unlike our [copper mine vs refinery](/blog/copper-mine-vs-refinery-geography-2026) piece — which splits *who digs* from *who refines* the red metal — this post focuses on **natural graphite mine output**, where a single country already owns nearly four-fifths of the dug tons. Unlike our helium supply concentration map — a two-country US–Qatar story — graphite’s chokepoint is a **one-country mine dominance** paired with a United States that mined **zero** tons and posted **100%** net import reliance.
 
 ## The 79% number, not the “critical mineral” slogan
 
@@ -16163,7 +16163,7 @@ The United States produced **no** natural graphite from mines in 2024. USGS esti
 
 Two implications follow. First, even a US consumer that “diversifies away from China” on paper still faces a market where **China sets the marginal mine supply**. Second, 2024’s drop in US apparent consumption tracks USGS commentary on softer battery demand and more available **synthetic** graphite battery material from China — meaning the US dependence story is not only about natural flake mines, but about a broader anode complex still dominated by Chinese processing. Policy has noticed: USGS cites temporary US EV tax-credit rule extensions on graphite, a scheduled tariff path on Chinese natural graphite, Defense Production Act and Bipartisan Infrastructure Law awards for Canadian mining and US spherical/recycling capacity, and multiple US exploration projects (Alabama, Alaska, Montana, New York). Those are **real industrial-policy bets**. They are not yet visible as mine tons in the 2024 USGS table — the US row is still zero.
 
-Pair this with our [phosphate rock supply concentration](/blog/phosphate-rock-supply-concentration-2024) post: fertilizer phosphate and battery graphite are different molecules, but they share the chokepoint logic — **a handful of jurisdictions control the dug feedstock** that every downstream narrative assumes will keep arriving.
+Pair this with our [phosphate rock supply concentration](/blog/phosphate-fertilizer-export-dependence-2026) post: fertilizer phosphate and battery graphite are different molecules, but they share the chokepoint logic — **a handful of jurisdictions control the dug feedstock** that every downstream narrative assumes will keep arriving.
 
 ## Who wins, who loses, and what “diversification” would require
 
@@ -16192,7 +16192,7 @@ Among USGS battery-adjacent minerals, graphite’s mine concentration sits in th
 
 In **2024**, China mined about **79%** of the world’s natural graphite, the top three producers cleared roughly **90%**, and the United States mined **zero** while running **100%** import reliance — even as Brazil sat on reserves nearly as large as China’s with only a mid-single-digit mine share. Battery security talk that skips anode feedstock is skipping the mineral whose mine map is already a near-monopoly.
 
-Related reading: [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-concentration-2024) and [global helium supply concentration](/blog/global-helium-supply-concentration-2024).`,
+Related reading: [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-geography-2026) and global helium supply concentration.`,
     category: "Global Systems",
     themeId: "chokepoint-commodities",
     imageUrl: "/images/global-systems-natural-graphite-mine-concentration-2024-hero.png",
@@ -16209,7 +16209,7 @@ Related reading: [copper mine vs refinery geography](/blog/copper-mine-vs-refine
     excerpt: "Fed SA data for 2026 Q1: net charge-offs hit 3.84% on credit cards versus 0.17% on CRE. Delinquency headlines about office loans miss the loss ledger — cards still dominate realized bank credit costs.",
     content: `Banking commentary still orbits **commercial real estate**. Office vacancies, regional-bank CRE shares, and “extend and pretend” dominate the narrative. The Federal Reserve’s own charge-off table tells a different loss story. In **2026 Q1**, seasonally adjusted **net charge-offs** on credit cards were **3.84%** of average card loans. On commercial real estate loans booked in domestic offices, the same meter printed **0.17%**. Cards write off roughly **23×** what CRE does.
 
-Unlike our [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026) piece — which charts *past-due* rates and the top-100 vs smaller-bank split — this post focuses on **realized losses**: net charge-offs (charge-offs minus recoveries, annualized). Unlike our [household debt delinquency split](/blog/us-household-debt-delinquency-split-2026) — NY Fed borrower-side transitions — this is the **bank Call Report** loss ledger that hits provision expense and capital.
+Unlike our [CRE delinquency by bank size](/blog/bank-commercial-credit-research-2026) piece — which charts *past-due* rates and the top-100 vs smaller-bank split — this post focuses on **realized losses**: net charge-offs (charge-offs minus recoveries, annualized). Unlike our [household debt delinquency split](/blog/consumer-finance-markets-research-2026) — NY Fed borrower-side transitions — this is the **bank Call Report** loss ledger that hits provision expense and capital.
 
 ## The loss ledger, not the past-due headline
 
@@ -16242,7 +16242,7 @@ From the **2021 Q4** trough — cards at **1.63%**, CRE at **0.02%**, C&I at **0
 
 The dashboard’s post-trough path and year-end heatmap make the same point in two shapes: **cards never leave rank #1**, and the color intensity on consumer rows dwarfs CRE and residential. If your mental model of “bank credit stress 2023–26” is office CMBS and regional CRE concentrations, you are describing a **collateral and funding narrative**. The Fed’s charge-off table is describing a **consumer revolving-credit loss narrative**.
 
-Pair this with [credit card APR vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026): sticky ~21–23% APRs coexist with elevated charge-offs. Issuers price for loss content; the loss content is still concentrated in cards even as policy rates ease.
+Pair this with [credit card APR vs fed funds](/blog/consumer-finance-markets-research-2026): sticky ~21–23% APRs coexist with elevated charge-offs. Issuers price for loss content; the loss content is still concentrated in cards even as policy rates ease.
 
 ## Delinquency vs charge-offs: the scatter that breaks the story
 
@@ -16250,7 +16250,7 @@ Plot each category’s **delinquency** against its **charge-off** and the CRE/re
 
 That scatter is the analytical heart of the post. **Delinquency rankings ≠ loss rankings.** CRE ranks near the middle of delinquency and near the bottom of charge-offs. Cards rank #1 on losses and near the top on delinquency. Commentators who treat “rising CRE delinquency” as synonymous with “banks are eating CRE losses at scale” are conflating two Fed tables that disagree on magnitude by an order of magnitude.
 
-Our [CRE size-split](/blog/cre-bank-delinquency-size-split-2026) analysis showed the **100 largest banks** printing **higher** CRE delinquency than smaller banks — already a counter-narrative to the regional-bank-only story. Charge-offs add a second counter-narrative: even where CRE is past due, **realized industry losses remain small** relative to consumer credit.
+Our [CRE size-split](/blog/bank-commercial-credit-research-2026) analysis showed the **100 largest banks** printing **higher** CRE delinquency than smaller banks — already a counter-narrative to the regional-bank-only story. Charge-offs add a second counter-narrative: even where CRE is past due, **realized industry losses remain small** relative to consumer credit.
 
 ## Who wins, who is exposed
 
@@ -16276,7 +16276,7 @@ Several developments would rewrite the interpretation. A **CRE charge-off breako
 
 In **2026 Q1**, US banks charged off credit cards at **3.84%** and CRE at **0.17%** — about a **23×** gap — while CRE delinquency (**1.56%**) still looks more alarming than CRE losses. Cards never leave the top of the charge-off ranking. The banking stress story that fits the Fed’s **loss** table is still **consumer revolving credit**, not office towers. Watch both meters; do not let the louder headline overwrite the quieter P&L.
 
-Related reading: [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-split-2026) and [household debt’s two-speed delinquency](/blog/us-household-debt-delinquency-split-2026).`,
+Related reading: [CRE delinquency by bank size](/blog/bank-commercial-credit-research-2026) and [household debt’s two-speed delinquency](/blog/consumer-finance-markets-research-2026).`,
     category: "Finance",
     themeId: "bank-commercial-credit",
     imageUrl: "/images/finance-bank-loan-chargeoffs-2026-hero.png",
@@ -16293,7 +16293,7 @@ Related reading: [CRE delinquency by bank size](/blog/cre-bank-delinquency-size-
     excerpt: "IRENA’s 2025 capacity highlights: world renewable power stock hit 4,448 GW after +15.1% growth. Solar alone was 77% of additions; Africa got 0.7%. Even repeating 2024’s pace still misses the COP28 tripling path.",
     content: `Energy headlines love generation mix pie charts — who burned what last year. IRENA’s Renewable Capacity Highlights for 2024 force a different meter: **who is installing gigawatts now**. The world added a record **585 GW** of renewable power capacity in 2024, lifting the stock to **4,448 GW** (+**15.1%**). Solar alone supplied **452 GW** — **77.3%** of renewable additions — and **China alone accounted for 63.9%** of the global renewable build.
 
-Unlike our [global electricity generation mix](/blog/global-electricity-generation-mix-2024) map — which shows *how countries generate TWh today* — this post tracks *capacity additions and stocks*: the industrial pipeline that will shape tomorrow’s mix. Unlike our [nuclear under-construction](/blog/nuclear-under-construction-china-share-2026) ledger — which counts reactors being poured — this is the intermittent-plus-hydro buildout that now dominates *all* power-capacity expansion (**92.5%** of total new power capacity in 2024, up from **85.8%** in 2023).
+Unlike our [global electricity generation mix](/blog/global-electricity-generation-mix-2024) map — which shows *how countries generate TWh today* — this post tracks *capacity additions and stocks*: the industrial pipeline that will shape tomorrow’s mix. Unlike our nuclear under-construction ledger — which counts reactors being poured — this is the intermittent-plus-hydro buildout that now dominates *all* power-capacity expansion (**92.5%** of total new power capacity in 2024, up from **85.8%** in 2023).
 
 ## The headline ledger
 
@@ -16327,7 +16327,7 @@ Asia took **421.5 GW** of renewable additions — **72%** of the world total —
 
 That is the shareable geopolitical cut. A continent with enormous solar resource and rising electricity demand received less than one percent of the world’s renewable capacity growth in the record year. Middle East additions (**3.3 GW**) were in the same rounding-error band. Oceania’s **8.7 GW** on a small base produced a **13.3%** regional growth rate — faster than Europe — without changing the global concentration story.
 
-Country solar leaders make the China outlier visceral: China **278 GW** of solar alone, then the United States **38.3**, India **24.5**, Brazil **15.2**, Germany **15.1**, South Korea **3.1**. China added more solar than the next five countries *combined*. Our [nuclear construction](/blog/nuclear-under-construction-china-share-2026) piece showed China holding roughly half the world’s reactor build pipeline; IRENA shows China holding roughly two-thirds of renewable *capacity* additions. Different technologies, same industrial-scale concentration.
+Country solar leaders make the China outlier visceral: China **278 GW** of solar alone, then the United States **38.3**, India **24.5**, Brazil **15.2**, Germany **15.1**, South Korea **3.1**. China added more solar than the next five countries *combined*. Our nuclear construction piece showed China holding roughly half the world’s reactor build pipeline; IRENA shows China holding roughly two-thirds of renewable *capacity* additions. Different technologies, same industrial-scale concentration.
 
 ## Renewables now dominate *all* expansion — and still miss the path
 
@@ -16341,7 +16341,7 @@ That dual message is why this post pairs celebration panels with a path panel. �
 
 **Winners of the 2024 capacity machine:** Chinese module makers, EPC contractors, and grid operators absorbing hundreds of GW; countries and firms that can finance and interconnect solar at multi-GW annual rates; hydro-heavy systems that still provide the stock ballast while solar scales. **Exposed:** African grids and industry that remain off the addition map; European and US narratives that treat domestic GW as the global story when they are single-digit shares of the world flow; climate diplomacy that counts pledges in TWh rhetoric while GW concentration sits in one national industrial system; and any planner who assumes wind and hydro will co-expand with solar at similar rates — 2024 says they will not.
 
-Pair this with [US data-center power vs grid capacity](/blog/us-data-center-power-vs-grid-capacity-2025): demand spikes in one country can still outrun local interconnection even while *global* renewable additions set records. Global GW and local electrons are different constraints.
+Pair this with [US data-center power vs grid capacity](/blog/ai-power-grid-research-2026): demand spikes in one country can still outrun local interconnection even while *global* renewable additions set records. Global GW and local electrons are different constraints.
 
 ## Historical context and what would change the story
 
@@ -16361,7 +16361,7 @@ Several developments would rewrite the interpretation. A **collapse in Chinese a
 
 2024 was a record renewable year — **585 GW** added, stock **4,448 GW**, renewables **92.5%** of all power-capacity expansion — and still a China story (**64%** of additions) with Africa nearly absent (**0.7%**). Solar ate **77%** of renewable additions. Even repeating that record pace leaves IRENA’s COP28 tripling path short by about **0.8 TW** by 2030. The world is installing green GW faster than ever, in fewer places than the speeches imply, and still not quite fast enough on the path it published.
 
-Related reading: [how major economies generate power today](/blog/global-electricity-generation-mix-2024) and [who is building nuclear reactors now](/blog/nuclear-under-construction-china-share-2026).`,
+Related reading: [how major economies generate power today](/blog/global-electricity-generation-mix-2024) and who is building nuclear reactors now.`,
     category: "Energy",
     themeId: "energy-systems",
     imageUrl: "/images/energy-irena-renewable-capacity-record-2024-hero.png",
@@ -16378,7 +16378,7 @@ Related reading: [how major economies generate power today](/blog/global-electri
     excerpt: "OECD DAC members provided $212.1B in official development assistance in 2024 — the first real drop in six years. The US still supplies 30% of the pile at 0.22% of GNI; Norway, Luxembourg, Sweden, and Denmark alone clear 0.7%.",
     content: `Foreign-aid debates usually start with moral language or with a single country's budget cut. The OECD's preliminary 2024 numbers force a different framing: **rich-country official development assistance (ODA) fell 7.1% in real terms** to **$212.1 billion** — the first decline after five consecutive years of growth — and still only **four** Development Assistance Committee (DAC) members cleared the long-standing UN target of **0.7% of GNI**.
 
-Unlike our [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024) map — which asks who shelters displaced people — this post asks who *funds* development and humanitarian systems on the donor ledger, and how volume rankings diverge from effort-as-a-share-of-income. Unlike our [SIPRI military expenditure](/blog/sipri-world-military-expenditure-2024) chart, the unit here is grant-equivalent ODA, not defense outlays.
+Unlike our [global refugee hosting burden](/blog/global-refugee-hosting-burden-2024) map — which asks who shelters displaced people — this post asks who *funds* development and humanitarian systems on the donor ledger, and how volume rankings diverge from effort-as-a-share-of-income. Unlike our SIPRI military expenditure chart, the unit here is grant-equivalent ODA, not defense outlays.
 
 ## The headline: $212B and the first drop in six years
 
@@ -16427,7 +16427,7 @@ From 2019 to 2023, DAC ODA rose every year in real terms (**+4.0%, +8.3%, +16.8%
 
 Average country effort across DAC members (the unweighted mean of national ODA/GNI ratios) was **0.40%** in 2024 — higher than the GNI-weighted DAC total of **0.33%**, because smaller high-intensity donors pull the average up while the US volume weight pulls the combined ratio down. That gap between average effort and aggregate effort is another way of saying concentration: a few large, low-ratio donors dominate the dollars.
 
-Read this next to [NATO's 2% of GDP defense guideline](/blog/nato-defense-spending-gdp-2-percent-2024): alliance military targets have been *gaining* compliance, while the ODA 0.7% target still has almost no volume-weighted compliance. The same capitals can clear a defense-share line and miss a development-share line in the same fiscal year.
+Read this next to NATO's 2% of GDP defense guideline: alliance military targets have been *gaining* compliance, while the ODA 0.7% target still has almost no volume-weighted compliance. The same capitals can clear a defense-share line and miss a development-share line in the same fiscal year.
 
 ## What would change the story
 
@@ -16445,7 +16445,7 @@ A **US ODA collapse** beyond the preliminary **−4.4%** would move the global t
 
 Rich-country aid fell **7.1%** in 2024 to **$212.1B** — still above 2019, but no longer on an unbroken up-ramp. The United States still supplies **30%** of DAC ODA at **0.22% of GNI**. Only **Norway, Luxembourg, Sweden, and Denmark** clear **0.7%**. Volume is a G7 story. Intensity is a four-country story. Conflating the two is how aid debates talk past the data.
 
-Related reading: [Who hosts the world's refugees](/blog/global-refugee-hosting-burden-2024) and [SIPRI world military expenditure](/blog/sipri-world-military-expenditure-2024).`,
+Related reading: [Who hosts the world's refugees](/blog/global-refugee-hosting-burden-2024) and SIPRI world military expenditure.`,
     category: "Politics",
     themeId: "geopolitics-institutions",
     imageUrl: "/images/politics-oecd-dac-oda-2024-hero.png",
@@ -16462,7 +16462,7 @@ Related reading: [Who hosts the world's refugees](/blog/global-refugee-hosting-b
     excerpt: "ICI puts US money market fund assets at $7.85 trillion as of late July 2026. Government funds are 82% of the pile, and YE 2025 taxable MMF yields still beat money-market deposit accounts by about 3.3 percentage points.",
     content: `Bank deposit rates get the headlines when the Federal Reserve cuts. The quieter cash story is where households and institutions actually parked money during — and after — the hiking cycle. As of the week ended **29 July 2026**, the Investment Company Institute puts US money market fund (MMF) assets at **$7.85 trillion**. That is more than double the **$3.63 trillion** year-end 2019 stock. Government funds alone are **$6.47 trillion** — **82.4%** of the total.
 
-Unlike our [personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) piece — which tracks the *flow* of saving out of disposable income — this post maps the *stock* of cash that left (or never entered) bank checking and savings books and instead sat in money market share classes. The Fed’s own November 2025 FEDS Note on deposit–MMF substitution is the bridge: when policy rates rose, deposits excl. large time deposits stalled near **$15 trillion** while MMF AUM kept climbing, and the MMF share of the combined cash pile jumped from the low-20s into the low-30s.
+Unlike our personal saving rate piece — which tracks the *flow* of saving out of disposable income — this post maps the *stock* of cash that left (or never entered) bank checking and savings books and instead sat in money market share classes. The Fed’s own November 2025 FEDS Note on deposit–MMF substitution is the bridge: when policy rates rose, deposits excl. large time deposits stalled near **$15 trillion** while MMF AUM kept climbing, and the MMF share of the combined cash pile jumped from the low-20s into the low-30s.
 
 ## The headline pile: $7.85T and still growing
 
@@ -16485,7 +16485,7 @@ The Fed FEDS Note (Im, Li, and Wang, November 2025) frames the substitution clea
 
 That share shift is the monetary-policy transmission story banks underplay. When the Fed hiked, wholesale funding costs rose immediately; many banks lagged on retail deposit betas. Money market funds, by design, pass through higher short-rate income quickly. Households and corporates that could move cash did. The FEDS Note estimates a substitution elasticity around **−0.21** on weekly growth — not one-for-one, but large enough that deposit franchise value and MMF AUM became two sides of the same rate-cycle coin.
 
-Pair this with our [credit-card APR](/blog/us-credit-card-apr-vs-fed-funds-2026) chart: cards stuck near **21%** while policy rates fell. Banks can be slow to cut lending rates *and* slow to raise deposit rates. The MMF industry is the residual claimant on that stickiness — it harvests the yield gap households notice when they open a brokerage cash screen.
+Pair this with our [credit-card APR](/blog/consumer-finance-markets-research-2026) chart: cards stuck near **21%** while policy rates fell. Banks can be slow to cut lending rates *and* slow to raise deposit rates. The MMF industry is the residual claimant on that stickiness — it harvests the yield gap households notice when they open a brokerage cash screen.
 
 ## The yield gap that pulled the cash
 
@@ -16525,7 +16525,7 @@ A **sustained bank deposit-rate war** that closes the MMDA–MMF gap under 1 pp 
 
 US money market funds hold **$7.85 trillion** — with **government funds at 82%** — and YE 2025 taxable yields still cleared bank money-market deposit accounts by about **3.3 percentage points**. Deposits excl. large time deposits stalled near **$15 trillion** while the MMF share of the combined cash pile climbed into the **low-30s**. The hiking cycle did not just raise loan rates; it relocated a multi-trillion-dollar cash stock into a yield-sensitive wrapper banks were slow to match.
 
-Related reading: [US personal saving rate](/blog/us-personal-saving-rate-post-excess-2026) and [credit card APRs vs fed funds](/blog/us-credit-card-apr-vs-fed-funds-2026).`,
+Related reading: US personal saving rate and [credit card APRs vs fed funds](/blog/consumer-finance-markets-research-2026).`,
     category: "Consumer Finance",
     themeId: "consumer-finance-markets",
     imageUrl: "/images/consumer-finance-money-market-funds-vs-deposits-2026-hero.png",
@@ -16902,7 +16902,7 @@ Primary source: World Bank Migration and Development Brief 41 (December 2024) bl
 
 Phosphorus has no agricultural substitute. Farmers can stretch nitrogen with better timing and they can recycle some organic matter, but commercial grain systems still depend on **processed phosphate fertilizers** — chiefly **monoammonium phosphate (MAP)**, **diammonium phosphate (DAP)**, and **triple superphosphate (TSP)** — to replace what each harvest removes from soil. More than half of those finished products enter international trade. That is the chokepoint this post maps: **who exports the bags**, not who digs the rock.
 
-Our companion [phosphate rock supply concentration](/blog/phosphate-rock-supply-concentration-2024) piece used USGS mine and reserve tables: Morocco owns the geologic inventory; China digs the most rock. This dashboard answers a different question — **which food systems depend on a short list of phosphate fertilizer exporters** — with shares from The Fertilizer Institute (TFI), corridor evidence from IFPRI, and trade-context from FAO and UN Comtrade patterns.
+Our companion [phosphate rock supply concentration](/blog/phosphate-fertilizer-export-dependence-2026) piece used USGS mine and reserve tables: Morocco owns the geologic inventory; China digs the most rock. This dashboard answers a different question — **which food systems depend on a short list of phosphate fertilizer exporters** — with shares from The Fertilizer Institute (TFI), corridor evidence from IFPRI, and trade-context from FAO and UN Comtrade patterns.
 
 ## Top-3 exporter share: 67%
 
@@ -16944,9 +16944,9 @@ Toggle the **Food-system importers** lens above to see origin donuts and single-
 
 Readers who know the USGS rock table sometimes assume fertilizer trade mirrors mine ranks. It does not. China's **44% production / 21% export** split is the clearest proof: the largest processor can starve the seaborne market while still running plants. Morocco's **14% production / 30% export** split is the mirror: OCP's integrated system is built to ship. Saudi Arabia punches similarly above its production weight.
 
-That is why pairing this post with the [phosphate rock](/blog/phosphate-rock-supply-concentration-2024) dashboard matters. Rock reserves answer "who owns the century." Fertilizer exports answer "who can cancel next season's application rates in India, Kenya, or Bangladesh." The same molecule; different binding constraint.
+That is why pairing this post with the [phosphate rock](/blog/phosphate-fertilizer-export-dependence-2026) dashboard matters. Rock reserves answer "who owns the century." Fertilizer exports answer "who can cancel next season's application rates in India, Kenya, or Bangladesh." The same molecule; different binding constraint.
 
-For another physical chokepoint with a dig-versus-process split, see [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-concentration-2024). For a one-country mine monopoly in battery anodes, see [natural graphite](/blog/natural-graphite-mine-concentration-2024). Phosphate fertilizer is closer to copper's midstream logic than to graphite's mine monopoly — except the "midstream" here is acidulation and ammoniation of rock into MAP/DAP, and the customers are food systems rather than cable mills.
+For another physical chokepoint with a dig-versus-process split, see [copper mine vs refinery geography](/blog/copper-mine-vs-refinery-geography-2026). For a one-country mine monopoly in battery anodes, see [natural graphite](/blog/natural-graphite-mine-concentration-2024). Phosphate fertilizer is closer to copper's midstream logic than to graphite's mine monopoly — except the "midstream" here is acidulation and ammoniation of rock into MAP/DAP, and the customers are food systems rather than cable mills.
 
 ## Prices, affordability, and the slow yield risk
 
@@ -16975,7 +16975,7 @@ The failure mode is slow. Skipping nitrogen shows up in the next harvest. Skippi
 
 Headline top-3 and top-4 export shares and production shares: TFI Phosphorus/phosphate one-pager (2025). China export volumes 2019–2024 and qualitative capacity notes: IFPRI (March 2025). Importer DAP origin shares for India, Brazil, Kenya, and EU context: IFPRI fertilizer-trade analyses (2021–2023 updates). Global phosphate trade tonnage: FAO Focus on Fertilizers. Dashboard gaps and scatter positions are derived from the disclosed TFI share pairs. This post is about **processed fertilizer trade dependence**; rock geology remains covered in the linked USGS-based companion.
 
-**Unlike our [helium supply concentration](/blog/global-helium-supply-concentration-2024) map — a two-country industrial-gas bottleneck — phosphate fertilizer exports are a four-country food-system bottleneck whose binding constraint is often an export license, not a depleted mine.**`,
+**Unlike our helium supply concentration map — a two-country industrial-gas bottleneck — phosphate fertilizer exports are a four-country food-system bottleneck whose binding constraint is often an export license, not a depleted mine.**`,
     category: "Global Systems",
     themeId: "chokepoint-commodities",
     imageUrl:

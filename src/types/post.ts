@@ -7,7 +7,12 @@ export type Category =
   | "Energy"
   | "Industry"
   | "Consumer Finance"
-  | "Capital Markets";
+  | "Capital Markets"
+  | "Health Economics"
+  | "Labor & Skills"
+  | "Real Estate"
+  | "Food & Agriculture"
+  | "Transport & Logistics";
 
 export interface Post {
   id: string;
@@ -236,6 +241,11 @@ export const CATEGORIES: Category[] = [
   "Industry",
   "Consumer Finance",
   "Capital Markets",
+  "Health Economics",
+  "Labor & Skills",
+  "Real Estate",
+  "Food & Agriculture",
+  "Transport & Logistics",
 ];
 
 export function categorySlug(category: Category): string {

@@ -62,4 +62,34 @@ export const CATEGORY_THEMES: Record<Category, CategoryTheme> = {
     accent: "#60a5fa",
     tagline: "Bonds, ETFs, and corporate capital flows",
   },
+  "Health Economics": {
+    gradient: "from-teal-500 via-cyan-700 to-slate-900",
+    glow: "bg-teal-500/30",
+    accent: "#2dd4bf",
+    tagline: "Drugs, trials, and the cost of staying alive",
+  },
+  "Labor & Skills": {
+    gradient: "from-lime-500 via-green-700 to-slate-900",
+    glow: "bg-lime-500/30",
+    accent: "#a3e635",
+    tagline: "Wages, unions, and the changing workforce",
+  },
+  "Real Estate": {
+    gradient: "from-amber-600 via-orange-700 to-stone-900",
+    glow: "bg-amber-500/30",
+    accent: "#f59e0b",
+    tagline: "Housing, land use, and the built economy",
+  },
+  "Food & Agriculture": {
+    gradient: "from-green-600 via-emerald-800 to-stone-900",
+    glow: "bg-green-500/30",
+    accent: "#4ade80",
+    tagline: "Crops, herds, and the price of a full plate",
+  },
+  "Transport & Logistics": {
+    gradient: "from-sky-600 via-indigo-800 to-slate-900",
+    glow: "bg-sky-500/30",
+    accent: "#38bdf8",
+    tagline: "Ports, rails, and the cost of moving things",
+  },
 };

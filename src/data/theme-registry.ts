@@ -4,6 +4,7 @@
  */
 
 import type { Category } from "@/types/post";
+import { NOVEL_THEMES } from "./novel-themes.ts";
 
 export type ThemeLane =
   | "ai-infrastructure"
@@ -35,19 +36,25 @@ export type ThemeDefinition = {
   maxSharePct: number;
   /** Max consecutive posts with this theme id */
   maxConsecutive: number;
+  /** After this many lifetime posts, do not mint sequels — unused named candidates may still claim */
+  maxLifetimePosts?: number;
   status: "active" | "proposed";
   candidates: PipelineCandidate[];
 };
 
 export const BALANCE_CONFIG = {
   /** Posts used for representation math */
-  rollingWindow: 12,
+  rollingWindow: 24,
   /** Max posts in a row from the same lane */
-  maxConsecutivePerLane: 2,
+  maxConsecutivePerLane: 1,
   /** If a lane exceeds this % in rolling window, next post MUST be another lane */
-  laneHardCapPct: 40,
+  laneHardCapPct: 28,
   /** If a lane is below this % and has active themes, prefer it */
-  laneStarvationPct: 8,
+  laneStarvationPct: 6,
+  /** Default lifetime posts before a theme is treated as covered (no sequels) */
+  defaultMaxLifetimePosts: 2,
+  /** AI infrastructure sequels are banned after a single shipped post */
+  aiInfrastructureLifetimeCap: 1,
   /** Min rubric score to justify creating a new theme */
   newThemeMinRubric: 22,
 } as const;
@@ -404,6 +411,7 @@ export const THEME_REGISTRY: ThemeDefinition[] = [
     status: "active",
     candidates: [],
   },
+  ...NOVEL_THEMES,
 ];
 
 /** Map existing slugs → theme id (backfill before themeId on Post) */
@@ -732,6 +740,84 @@ export function computeLaneBalance(
   return out;
 }
 
+export function lifetimePostCount(
+  slugThemePairs: Array<{ slug: string; themeId?: string }>,
+  themeId: string,
+): number {
+  return slugThemePairs.filter((p) => resolveThemeId(p.slug, p.themeId) === themeId).length;
+}
+
+export function themeLifetimeCap(theme: ThemeDefinition): number {
+  if (theme.maxLifetimePosts != null) return theme.maxLifetimePosts;
+  if (theme.lane === "ai-infrastructure") return BALANCE_CONFIG.aiInfrastructureLifetimeCap;
+  return BALANCE_CONFIG.defaultMaxLifetimePosts;
+}
+
+function slugifyCandidateTitle(title: string): string {
+  return String(title || "topic")
+    .toLowerCase()
+    .replace(/^\[[^\]]+\]\s*/, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 72);
+}
+
+export type DiversityPick = PipelineCandidate & {
+  themeId: string;
+  themeLabel: string;
+  category: Category;
+  visualLane: string;
+  lifetime: number;
+  slugHint: string;
+};
+
+/**
+ * Unused named candidates, newest themes first. Never includes
+ * update/concentration/geography sequels — those are not in candidates[].
+ */
+export function getDiversityBacklog(
+  slugThemePairs: Array<{ slug: string; themeId?: string }>,
+  extraTakenSlugs: Iterable<string> = [],
+  year = new Date().getFullYear(),
+): DiversityPick[] {
+  const taken = new Set<string>([...slugThemePairs.map((p) => p.slug), ...extraTakenSlugs]);
+  const yearTag = String(year);
+  const rows: DiversityPick[] = [];
+  for (const theme of THEME_REGISTRY) {
+    if (theme.status !== "active") continue;
+    const lifetime = lifetimePostCount(slugThemePairs, theme.id);
+    for (const c of theme.candidates) {
+      const base = slugifyCandidateTitle(c.title);
+      const slugHint = `${base}-${yearTag}`.replace(/--+/g, "-");
+      if (taken.has(slugHint) || taken.has(base)) continue;
+      let stemTaken = false;
+      for (const s of taken) {
+        if (s === base || s.startsWith(`${base}-`)) {
+          stemTaken = true;
+          break;
+        }
+      }
+      if (stemTaken) continue;
+      rows.push({
+        ...c,
+        themeId: theme.id,
+        themeLabel: theme.label,
+        category: theme.category,
+        visualLane: theme.visualLane,
+        lifetime,
+        slugHint,
+        title: c.title,
+      });
+    }
+  }
+  rows.sort((a, b) => {
+    if (a.lifetime !== b.lifetime) return a.lifetime - b.lifetime;
+    if (a.priority !== b.priority) return a.priority === "high" ? -1 : 1;
+    return a.themeId.localeCompare(b.themeId);
+  });
+  return rows;
+}
+
 /** Pick themes eligible for next post (not over cap, not over consecutive) */
 export function getEligibleThemes(
   slugThemePairs: Array<{ slug: string; themeId?: string }>,
@@ -766,6 +852,7 @@ export function getEligibleThemes(
     const row = balance.find((b) => b.themeId === theme.id);
     if (row?.overCap) return false;
     if ((row?.consecutive ?? 0) >= theme.maxConsecutive) return false;
+    if (lifetimePostCount(slugThemePairs, theme.id) >= themeLifetimeCap(theme)) return false;
     if (overCapLanes.includes(theme.lane)) return false;
     if (consecutiveLane >= BALANCE_CONFIG.maxConsecutivePerLane && theme.lane === recentLane) {
       return false;
