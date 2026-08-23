@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-share-of-global-source-plasma-2026",
+    marker: "Source plasma · fractionation feedstock",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "measurement-science-geography-2026",
     marker: "Measurement & science — geography lens",
     forbidden: "Loading interactive charts",

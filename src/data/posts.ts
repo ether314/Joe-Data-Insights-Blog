@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-share-of-global-source-plasma-2026",
+    slug: "us-share-of-global-source-plasma-2026",
+    title:
+      "Charted: US Collects ~68% of Global Source Plasma — EU PDMP Feedstock Still ~38% US-Origin",
+    excerpt:
+      "Source plasma for fractionation remains a US-centric feedstock: ~62.5M liters and ~1,247 centers in 2025, ~68% of the world pool, while EU manufacturing still draws ~38% of its plasma from US donors — matching the entire EU-4 commercial bloc.",
+    category: "Global Systems",
+    themeId: "blood-plasma",
+    imageUrl:
+      "/images/global-systems-us-share-of-global-source-plasma-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a glowing world map with teal United States plasma volume rings and amber arcs flowing toward Europe",
+    publishedAt: "2026-08-23T06:00:00Z",
+    featured: true,
+    visualization: "us-share-of-global-source-plasma-2026",
+    layout: "default",
+    content: `Plasma protein therapies do not start in a reactor. They start in a chair. Source plasma — the straw-colored fraction collected by plasmapheresis specifically for fractionation — is the scarce biological input behind immunoglobulins, albumin, clotting factors, and a long list of rare-disease products. The geography of that input is extreme. Desk synthesis of PPTA framing, Marketing Research Bureau flow tables, and 2025 center/liter tallies puts the **United States at roughly 68% of global source plasma** collected for medicines, inside a world pool near **92 million liters**. Absolute US volume sits around **62.5 million liters** across about **1,247** FDA-licensed centers. That is not a footnote in biotech logistics. It is the main tank.
+
+The interactive dashboard above is built as a **feedstock map**, not a therapy market-share chart. Toggle **Global share**, **EU dependence**, **Intensity**, and **Capacity**. The punchline is deliberately two-sided. On the *collection* side, the US dominates liters and centers. On the *use* side, EU plasma-derived medicinal product (PDMP) manufacturing still draws about **38%** of its plasma from US donors — the same share PPTA and industry analyses assign to the entire EU-4 commercial bloc (Germany, Austria, Czechia, Hungary). European patients are not abstractly “globalized.” They are specifically tethered to American donation chairs.
+
+## The collection scoreboard
+
+| Metric | Value | Why it matters |
+| --- | ---: | --- |
+| US share of global source plasma (2025 desk) | **~68%** | Feedstock tip for fractionation |
+| US source plasma collected (2025) | **62.5M L** | Absolute volume behind the share |
+| FDA-licensed US plasma centers (end-2025) | **1,247** | Capacity footprint |
+| EU PDMP feedstock from US plasma | **~38%** | Patient-side dependence |
+| EU-4 commercial share of EU PDMP plasma | **~38%** | Domestic compensated counterweight |
+| Other EU domestic (mostly VNRD) | **~24%** | 23 Member States without commercial collections |
+| EU structural deficit (approx.) | **3.8–5M L** | Liters short of Ig self-sufficiency framing |
+| US collection rate (2019 anchor) | **163 L / 1,000** | Intensity gap vs VNRD systems |
+
+Read the table as a **supply-chain balance sheet**. The top rows say where liters are collected. The middle rows say how those liters enter European manufacturing. The bottom rows say why the imbalance is structural: compensated systems pull intensity rates that voluntary non-remunerated donation (VNRD) systems have not matched at scale.
+
+## Global share: one country, most of the pool
+
+Open **Global share**. The regional donut is not subtle. The United States alone clears about **two-thirds** of the world source-plasma pool used for medicines. The EU-4 commercial countries — the only EU jurisdictions with mature compensated plasmapheresis industries — add roughly **9%**. China and other Asia sit in a mid-single-digit to high-single-digit band on carried estimates. CANZUK systems (Canada, Australia, New Zealand, United Kingdom) contribute little to global *surplus* feedstock even when their domestic blood operators run strong VNRD programs; most of them remain net importers of plasma or finished PDMP.
+
+The composed path on the same view shows *why* the share stayed high through a pandemic shock. World collections fell about **14.5%** from 2019 to 2020 (Marketing Research Bureau / Hotchko IPFA tables). US liters dipped, then recovered as collectors added licensed centers — roughly **100+** new FDA licenses in 2020 and again in 2021 — and raised donor fees. By 2025, US volume is back above pre-pandemic levels even while the US *share* of the world pool sits nearer **68%** than the late-2010s peak near **77%**. Absolute dominance and peak percentage dominance are different stories; both still leave the US as the indispensable collector.
+
+Analytical HHI on the regional buckets lands in the high thousands — a concentrated feedstock market by any commodities desk’s definition. That concentration is not an accident of geology. It is an accident of **regulation and payment rules**: FDA-permitted donation frequency and compensated commercial collection create a throughput machine that most other health systems have chosen not to copy.
+
+## EU dependence: 38% equals 38%
+
+Switch to **EU dependence**. The origin pie is the political economy chart. Roughly **38%** of plasma used to manufacture PDMPs for Europe comes from **US imports**. Another **38%** comes from the **EU-4 compensated collectors**. The remaining **~24%** comes from other EU domestic collection, mostly VNRD. In other words, the entire non-commercial EU majority produces less feedstock for European PDMP manufacturing than either the US import channel or the four-country commercial bloc.
+
+That arithmetic explains why European Commission and EDQM self-sufficiency language keeps returning to **strategic autonomy**. Vox Sanguinis and related SoHO policy discussions have framed Europe as needing on the order of **2 million additional donors** and roughly **4–5 million liters** of additional plasma to shrink US dependence — a structural deficit that widened as immunoglobulin demand grew roughly **6–10% per year** for two decades. The EU was nearer balance in the early 2010s; by the late 2010s the US cover share of EU PDMP plasma had climbed into the mid-to-high thirties. The deficit area chart in the dashboard tracks that climb: liters short rise even when domestic collection programs expand, because demand outruns VNRD growth.
+
+About **300,000** EU patients rely on plasma-derived therapies. For those patients, “import dependence” is not a trade slogan. It is inventory risk. When US collections fell in 2020, immunoglobulin rationing and use restrictions appeared across multiple health systems. The lesson was not that US plasma is unsafe. The lesson was that **geographic single-sourcing of a biological input** behaves like every other chokepoint commodity when the main basin shrinks.
+
+## Intensity: liters per thousand people
+
+Open **Intensity**. Collection rate per 1,000 residents is the cleanest way to see the policy fork. The United States collected about **163 liters per 1,000 residents** in the late-2010s anchor window — more than **twice** Czechia’s compensated rate and roughly **nine times** the Netherlands’ strong VNRD performance. Germany’s compensated system lands near **40 L/1,000**. Australia’s widely praised non-compensated system reaches about **29 L/1,000** and still imports a large share of immunoglobulin needs. Canada’s combined operators sit near **10 L/1,000** on estimates that include limited commercial activity; self-reliance for Ig has hovered nearer **20–30%** than autarky.
+
+Filter the ladder to **Compensated** versus **VNRD only**. The pattern is monotonous enough to be useful: every mature compensated jurisdiction in the set runs a surplus or near-surplus relative to domestic PDMP needs; every jurisdiction that bans or tightly constrains compensation runs a deficit that grows with Ig demand. Industry and academic reviews (Niskanen, Jaworski, PPTA) treat that regularity as the central empirical finding of the last twenty years. You do not have to endorse compensation as a moral ideal to notice that **the liters follow the payment rule**.
+
+The scatter on the same view plots **self-reliance %** against **US import share %**. The United States sits alone at full self-reliance with zero US import share (by definition). Canada and the United Kingdom sit in the high-import corner. Mid-European systems fan between **40–85%** self-reliance depending on whether they host commercial collectors. The chart is a dependency map disguised as a scatter.
+
+## Capacity: centers are the physical plant
+
+**Capacity** shows the industrial footprint. US center counts climbed from the mid-hundreds in the mid-2010s to **~1,050** by end-2021 and about **1,247** by end-2025. The EU commercial alliance associated with PPTA’s European collectors operates on the order of **190** centers across four countries — material, but an order of magnitude smaller than the US fleet. Bubble size in the dashboard encodes global share pressure: the US is the outlier on both axes (centers and liters per 1,000).
+
+Centers matter because fractionation cannot invent plasma. A plant can be built in months to years; a mature donor network takes longer and depends on zoning, donor fees, regulatory licensing, and local labor markets. When collectors slowed real-estate expansion after the pandemic fee spike, liters still rose because existing fleets matured. That is efficiency. It is also a reminder that **throughput, not ribbon-cuttings**, is the binding constraint for patient supply.
+
+## Why EU patients stay exposed
+
+Three forces keep EU exposure high even when Brussels talks about SoHO strategic autonomy.
+
+First, **demand growth outruns VNRD supply**. Immunoglobulin indications expanded; grams per 1,000 residents rose for two decades. Domestic collection programs that looked adequate in 2011 look short by 2025.
+
+Second, **policy asymmetry**. Most EU Member States prohibit commercial compensated plasmapheresis. They still consume therapies fractionated from compensated US plasma. The ethical preference for VNRD and the clinical requirement for liters collide; imports resolve the collision quietly.
+
+Third, **industrial location**. Global fractionators (CSL, Grifols, Takeda, Octapharma, Kedrion and peers) optimized collection fleets where rules allow frequency and compensation. US FDA licensing, twice-weekly donation rules, and a commercial center model produced the densest collection geography on Earth. Europe’s commercial density is real but geographically narrow.
+
+None of this implies that recovered plasma from whole-blood donation is worthless. It implies that **source plasma for fractionation** — the product that scales Ig manufacturing — concentrates where compensated plasmapheresis is legal and industrialized.
+
+## Caveats and confidence
+
+Treat the headline **~68%** as a **desk estimate**, not a single PPTA press-release cell. Agencies and industry groups often publish **shares and center counts** more cleanly than a fully reconciled world liter table. The 2025 US **62.5M L** figure is an industry/independent tally; the world total near **92M L** is implied by that share and should move if Asia’s domestic reporting revises. EU **38%** US-origin feedstock is a PPTA-anchored manufacturing share, not a customs HS-code scrape of every intermediate shipment. Per-capita intensity rows lean on EDQM / Jaworski late-2010s anchors and are carried forward where 2023–2025 national microdata are incomplete. Country self-reliance percentages are **illustrative bands** for Ig/PDMP feedstock framing, not hospital inventory audits.
+
+Also distinguish **source plasma** from **recovered plasma**, and **plasma for transfusion** from **plasma for fractionation**. Mixing those series invents fake self-sufficiency. This post tracks the fractionation feedstock that becomes PDMP.
+
+## What to watch next
+
+Watch three meters. **US center utilization and liters per center** — if fleets keep raising throughput without much net new square footage, global share can stay high even with slower site growth. **EU SoHO implementation and any Member State openings to compensated collection** — a few additional commercial jurisdictions would move the EU origin pie faster than another decade of VNRD campaigning alone. **Ig demand growth** — if grams per capita keep rising at mid-to-high single digits, today’s 38% US cover share is a floor under stress, not a ceiling.
+
+For desks that underwrite healthcare supply chains, the operational sentence is simple: **most of the world’s source plasma for medicines is still collected in the United States, and roughly two-fifths of the plasma Europe uses to make those medicines still comes from American donors.** Until intensity rates outside the compensating five converge, that sentence remains the base case.
+`,
+  },
+  {
     id: "measurement-science-geography-2026",
     slug: "measurement-science-geography-2026",
     title:
