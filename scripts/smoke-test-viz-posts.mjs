@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ransomware-payments-vs-uninsured-losses-2026",
+    marker: "Insured share of ransomware loss",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "biologically-unsustainable-stocks-share-2026",
     marker: "Unsustainable stock %",
     forbidden: "Loading interactive charts",

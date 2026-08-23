@@ -2,6 +2,122 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ransomware-payments-vs-uninsured-losses-2026",
+    slug: "ransomware-payments-vs-uninsured-losses-2026",
+    title:
+      "Charted: Insurers Cover Only ~32% of Ransomware Incident Cost — Cash Funds the Rest",
+    excerpt:
+      "On insured cyber claims books, carrier payouts equal about 32% of total ransomware incident cost (NetDiligence). SME victims recover ~69%; large companies only ~27%. Chainalysis on-chain receipts peaked at $1.25B in 2023 while FBI IC3 ransomware losses stayed under $60M — a reporting gap that still leaves most economic damage on operating cash.",
+    category: "Finance",
+    themeId: "cyber-risk-markets",
+    imageUrl:
+      "/images/finance-ransomware-payments-vs-uninsured-losses-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic finance illustration of a teal insured payout stream and a larger amber cash stream splitting from a ransomware loss ledger",
+    publishedAt: "2026-08-24T14:00:00Z",
+    featured: true,
+    visualization: "ransomware-payments-vs-uninsured-losses-2026",
+    layout: "default",
+    content: `Ransomware is usually sold as a cryptocurrency story: wallets, mixers, and a blockchain ledger of what victims paid. That meter matters. It is not the loss that CFOs actually book.
+
+When an organization is hit, the invoice that leaves the treasury is a stack: any ransom (if paid), forensic and legal retainers, system rebuild, overtime, lost revenue during downtime, notification and credit monitoring, and — if a policy exists — the deductible or self-insured retention that must clear before the carrier writes a check. **The open question for cyber risk markets is not “how much crypto moved,” but what share of that stack is insured versus paid from operating cash.**
+
+On the largest published insured-claims book that answers the question directly — NetDiligence’s Cyber Claims Study 2025 — **carrier payouts cover only about 32% of total incident cost**. Roughly **68%** remains with the insured as cash: retentions, sublimit gaps, excluded business interruption, and soft costs that never fit the policy form. SME books look better (~**69%** insured). Large-company books look worse (~**27%**). The dashboard above walks the funding mix, the payment meters, the ransom-versus-recovery stack, and the size gradient.
+
+## Scoreboard: insured share of the loss
+
+| Cut | Metric | Value |
+| --- | --- | ---: |
+| All orgs (NetDiligence 2020–2024 book) | Insurer payout ÷ total incident cost | **32%** |
+| Same book | Cash / SIR / uncovered residual | **68%** |
+| SMEs (<$2B revenue) | Insured payout share | **69%** |
+| Large companies (≥$2B revenue) | Insured payout share | **27%** |
+| Chainalysis on-chain receipts | 2023 peak | **$1.25B** |
+| Chainalysis | 2024 (initial tally) | **$813.55M** |
+| FBI IC3 ransomware adjusted losses | 2023 | **$59.6M** |
+| FBI IC3 | 2024 | **$12.5M** |
+| Sophos 2025 (paying victims) | Median ransom paid | **$1.0M** |
+| Sophos 2025 | Mean recovery excl. ransom | **$1.53M** |
+
+The table’s punchline is structural. Even inside the **insured** population — organizations that bought cyber cover and filed claims — most of the economic damage still clears the operating account. Outside that population, the cash share is higher still.
+
+## Three meters that refuse to agree
+
+Ransomware economics is haunted by incompatible meters.
+
+**Meter one is the FBI IC3 complaint ledger.** In 2023 the IC3 recorded **2,825** ransomware complaints and **$59.6 million** in adjusted losses; in 2024 complaints rose while adjusted losses fell to about **$12.5 million**. The Bureau’s own footnotes say the number excludes lost business, wages, files, equipment, and third-party remediation, and that many victims report only to field offices. Treat IC3 ransomware dollars as a **floor on disclosed complaint loss**, not a GDP-style total.
+
+**Meter two is Chainalysis on-chain receipts.** Blockchain analytics firms attribute payments to ransomware clusters and convert them to dollars. That series peaked at **$1.25 billion** in 2023, fell to roughly **$814 million** in the first 2024 print (later revised upward toward ~$892 million as attributions improved), and sits above **$820 million** in the provisional 2025 reading. These are still **payments**, not total economic loss — but they dwarf the IC3 ransomware line by an order of magnitude or more. In 2023 the Chainalysis÷IC3 multiple was about **21×**.
+
+**Meter three is the total incident cost** that risk managers and insurers actually care about: ransom (sometimes) plus recovery. Sophos’s 2025 State of Ransomware survey puts the **median ransom paid at $1.0 million** (down from $2.0 million in 2024) and the **mean recovery cost excluding ransom at $1.53 million** (down from $2.73 million). For a paying victim, recovery already outweighs the ransom. For a non-paying victim, recovery *is* the loss.
+
+None of these meters alone answers the insured-share question. Together they explain why headlines oscillate between “ransomware is dying” (payments down) and “ransomware is everywhere” (complaints and claims frequency up).
+
+## What “insured share” actually means
+
+NetDiligence asks participating carriers for claim payouts and for an estimate of **total incident cost**, including self-insured retention and costs excluded by the policy. That is why the 32% figure is so useful: it is not premium ÷ something vague. It is **dollars paid by insurers ÷ dollars the incident actually cost**, inside a claims book of more than **10,000** events from 2020–2024.
+
+Two composition facts matter for interpretation:
+
+1. **SMEs are 98% of claims but only about half of aggregate incident dollars.** Their insured share (~69%) looks comforting until you remember that the dollar-weighted book is dragged down by large accounts.
+2. **Large companies are 2% of claims and about half of dollars.** Their insured share (~27%) means that when a hospital system, manufacturer, or global services firm takes a multi-tens-of-millions hit, most of the economic damage still sits with the corporate treasury even after the claim is paid.
+
+Self-insured retention is not a rounding error in that math. NetDiligence includes SIR in total cost. Deductibles that felt manageable at bind become real cash calls when forensics and BI run in parallel. Sublimits on extortion, contingent BI, or system failure can carve the recoverable share further. Soft costs — executive time, customer churn, delayed projects — often never enter either the payout or the “incident cost” field, which means the **true** cash residual is at least as large as the study implies.
+
+## The paying-victim stack: ransom is not the expensive line
+
+Survey evidence and claims evidence now rhyme on one point: **the ransom is often the smaller invoice**.
+
+In Sophos’s 2025 cut, a median **$1.0M** payment sits beside a **$1.53M** mean recovery bill that explicitly excludes the ransom. On that stack, ransom is about **40%** and recovery about **60%**. The 2024 stack was larger in absolute dollars ($2.0M median payment, $2.73M recovery) but still recovery-heavy. Organizations that refuse to pay — Verizon’s 2025 DBIR put refusal near **64%** in its sample — still face the recovery line in full.
+
+Insurance behavior does not map cleanly onto that split. Historical Sophos insurance surveys found that when coverage existed, carriers often funded cleanup more reliably than the ransom itself: clean-up costs were covered in a large majority of insured incidents, while ransom reimbursement appeared in a minority. That is consistent with underwriting practice — extortion sublimits, sanctions screening, and “proof of backups” conditions — and with the NetDiligence result that **payouts trail total cost**.
+
+For CFOs, the operational reading is blunt: buying cyber insurance is not the same as pre-funding the outage. The policy is a partial hedge on a multi-line loss whose largest components are downtime and rebuild.
+
+## NAIC capacity: a soft market with a hardening loss ratio
+
+The U.S. cyber insurance market is the largest in the world, and 2024 was its first clear premium retreat. Domestic writers reported about **$7.08 billion** of direct written premium to the NAIC (down from **$7.25 billion**), while the broader U.S. market including alien surplus lines printed about **$9.14 billion** (down from **$9.84 billion**). Aon’s reading of the supplement puts the industry **loss + defense cost ratio at 49%** in 2024, up from **42%** in 2023, as claim counts jumped toward **~50,000** and earned premium per policy softened.
+
+That backdrop matters for the insured-share story. A market that is still profitable on a calendar-year loss ratio can nonetheless leave insureds cash-exposed if:
+
+- retentions rose during the hard market and stayed elevated,
+- ransomware and BI sublimits tightened,
+- or severity concentrates in large accounts where the payout/total-cost ratio is structurally low.
+
+Premium capacity is not the same as **economic absorption**. The NAIC series tells you how much risk transfer was sold. NetDiligence tells you how much of realized incident cost that transfer actually reimbursed.
+
+## Why large-firm losses stay cash-heavy
+
+Large ransomware events are where the 27% insured-share number becomes intuitive. Business interruption for a manufacturer or health system can run into the tens or hundreds of millions — NetDiligence flags SME outliers with BI above **$90 million** and large-company incidents above **$500 million** in total cost. Even a high limit policy with a multi-million retention will reimburse only a slice once waiting periods, sublimits, and coverage disputes apply.
+
+Ransomware claims with a BI component are also systematically more expensive. In the NetDiligence SME book, ransomware accounted for about **81%** of claims that reported BI; five-year average BI for those ransomware events was about **$1.4 million** against **$2.1 million** total incident cost. BI is precisely the line that is hardest to insure cleanly and easiest to underestimate at bind.
+
+Sector pressure follows the same pattern. Healthcare and manufacturing — low tolerance for downtime, complex OT/IT rebuilds — show up as BI-heavy in every industry note. Retail and hospitality add brand and payment friction. Public entities face budget cash constraints even when coverage exists. Construction often shows lower average severity but still lists ransomware as a top cause. The dashboard’s sector panel is an index, not a loss run; use it as a map of where cash residual tends to thicken.
+
+## Caveats (read before trading the 32%)
+
+- **NetDiligence is an insured-claims book.** It answers “of insured incidents, what share did carriers pay?” It does **not** answer “of all ransomware economic loss in the economy, what share was insured?” Uninsured victims are 100% cash by definition and are mostly outside the study.
+- **IC3 losses are not total economic loss.** The Bureau says so explicitly. Do not divide IC3 by NAIC premium and call it a market loss ratio.
+- **Chainalysis payments are not total economic loss either.** They omit recovery and most non-crypto settlements; they also revise as attributions improve.
+- **Sophos figures are survey means/medians**, not a census. Organization-size mix and geography differ from the NetDiligence carrier book.
+- **NAIC cyber losses are all cyber**, not ransomware-only. Ransomware is a leading driver of claims severity, but BEC, privacy, and other perils share the loss ratio.
+- **“Cash residual” includes SIR by design.** A high insured share with a large deductible can still be a painful cash week.
+- **Confidence tags in the data file mark disclosed vs estimated cells.** Sector relative-severity scores are desk estimates for visualization, not actuarial relativities.
+
+## What desks should take from the funding mix
+
+If you underwrite, broker, or sit on a risk committee, the durable signal is not that cyber insurance “doesn’t work.” Policies do pay — NetDiligence and Sophos both show payouts and recoveries when coverage is on risk. The durable signal is that **ransomware is still mostly a cash event with an insurance overlay**, especially once you dollar-weight toward large organizations.
+
+Three practical implications follow:
+
+1. **Model the stack, not the ransom.** A planning assumption that uses only Chainalysis-style payment medians will understate treasury exposure by the recovery line.
+2. **Stress the large-account ratio.** A portfolio that looks fine on SME frequency can still be cash-concentrated if a handful of ≥$2B revenue names retain ~70%+ of their incident cost.
+3. **Read premium growth and insured share as different questions.** Softening U.S. cyber DWP in 2024 says something about price and shopping. The 32% payout share says something about how much economic damage risk transfer actually absorbs when the claim arrives.
+
+Use the interactive panels to flip between insured-share bands, the 32/68 funding donut beside the NAIC premium path, Chainalysis-versus-IC3 meters, the Sophos cost stack, the size scatter, and sector pressure. The headline number to remember is simple: **about one-third of ransomware incident cost on insured books is reimbursed; about two-thirds is still paid from operating cash.**
+`,
+  },
+  {
     id: "biologically-unsustainable-stocks-share-2026",
     slug: "biologically-unsustainable-stocks-share-2026",
     title:

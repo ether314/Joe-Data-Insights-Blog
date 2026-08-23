@@ -3317,6 +3317,21 @@ const BiologicallyUnsustainableStocksShare2026Dashboard = dynamic(
   },
 );
 
+const RansomwarePaymentsVsUninsuredLosses2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/RansomwarePaymentsVsUninsuredLosses2026Dashboard"
+    ).then((m) => m.RansomwarePaymentsVsUninsuredLosses2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4188,6 +4203,10 @@ export function PostVisualization({
 
   if (type === "biologically-unsustainable-stocks-share-2026") {
     return <BiologicallyUnsustainableStocksShare2026Dashboard />;
+  }
+
+  if (type === "ransomware-payments-vs-uninsured-losses-2026") {
+    return <RansomwarePaymentsVsUninsuredLosses2026Dashboard />;
   }
 
   return null;
