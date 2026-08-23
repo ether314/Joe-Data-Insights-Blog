@@ -772,7 +772,7 @@ Sources:
     featured: true,
     visualization: "hospital-system-clout-vs-commercial-prices-2026",
     layout: "default",
-    content: `Employers do not buy “hospital care” at a national sticker price. They buy it city by city, system by system, through negotiated allowed amounts that sit far above what Medicare pays for the same DRGs and outpatient codes. The RAND Hospital Price Transparency Study’s late vintage still lands near **254%** of Medicare for employer-sponsored care nationwide. The harder question is whether that markup thickens where one or two systems already dominate local admissions.
+    content: `Employers do not buy “hospital care” at a national sticker price. They buy it city by city, system by system, through negotiated allowed amounts that sit far above what Medicare pays for the same DRGs and outpatient codes. The RAND Hospital Price Transparency Study’s late vintage still lands near **254%** of Medicare for employer-sponsored care nationwide [RAND 2022]. The harder question is whether that markup thickens where one or two systems already dominate local admissions.
 
 This post joins those relative-price prints to admissions-based Herfindahl–Hirschman Index (HHI) bands built from American Hospital Association (AHA) system affiliation and discharge patterns across a **48**-CBSA desk panel. Unconcentrated markets (HHI under **1,500**) average about **218%** of Medicare. Highly concentrated markets (HHI **2,500** and up) average about **289%**. The very-high tip (HHI **≥ 4,000**) prints near **312%** — a **71** percentage-point gap versus the competitive band. Roughly **72%** of the mapped panel already sits in the high band; **61%** have a top-two systems controlling at least half of admissions.
 
@@ -786,7 +786,7 @@ Treat **254%** as a national center of gravity, not a ceiling. Inpatient in the 
 
 ## Concentration is already the modal US hospital market
 
-FTC/DOJ horizontal-merger guidance still treats HHI above **2,500** as highly concentrated. On an admissions-share construction for the mapped CBSAs, about **three in four** metros clear that line. Median top-1 system admission share sits near **38%**; tip metros such as Charlotte, Oklahoma City, Pittsburgh, and Salt Lake City push top-1 shares into the **50–58%** range. Mergers did not invent that map, but they thickened it: the vintage path in the dashboard carries mean CBSA HHI from roughly **3,100** in the early 2010s toward the high **3,700s** by the mid-2020s while the national commercial/Medicare ratio climbed from the low **210s** toward the mid-**250s**.
+FTC/DOJ horizontal-merger guidance still treats HHI above **2,500** as highly concentrated [DOJ-FTC Merger Guidelines]. On an admissions-share construction for the mapped CBSAs, about **three in four** metros clear that line. Median top-1 system admission share sits near **38%**; tip metros such as Charlotte, Oklahoma City, Pittsburgh, and Salt Lake City push top-1 shares into the **50–58%** range. Mergers did not invent that map, but they thickened it: the vintage path in the dashboard carries mean CBSA HHI from roughly **3,100** in the early 2010s toward the high **3,700s** by the mid-2020s while the national commercial/Medicare ratio climbed from the low **210s** toward the mid-**250s**.
 
 | Admissions HHI band | Mean commercial / Medicare | Mean top-1 admission share | CBSAs in panel |
 | --- | ---: | ---: | ---: |
@@ -827,7 +827,13 @@ Several limits bind:
 
 For self-insured employers and regional plans, the practical read is narrow. If your lives sit in a CBSA where top-two systems already clear half of admissions, expect commercial/Medicare ratios closer to the high-**280s** or low-**300s** unless a local residual (as in Salt Lake) intervenes. Reference-based contracting, ambulatory site-of-care shifts, and multi-year rate caps bite harder in those markets precisely because the outside option is thin. In lower-HHI metros, the same tools still matter, but the baseline markup starts lower and the scatter of competing systems is wider.
 
-The national **254%** figure will keep showing up in policy decks. The band table and metro scatter are what make it usable: commercially insured prices *do* run hotter where hospital systems dominate admissions — with a **71** pp high-versus-low gap on this panel — and the exceptions are measurable, not mystical.`,
+The national **254%** figure will keep showing up in policy decks. The band table and metro scatter are what make it usable: commercially insured prices *do* run hotter where hospital systems dominate admissions — with a **71** pp high-versus-low gap on this panel — and the exceptions are measurable, not mystical.
+
+Sources:
+[RAND 2022]: RAND Corporation — Prices Paid to Hospitals by Private Health Plans, Round 5.1 (2020–2022 claims). https://www.rand.org/pubs/research_reports/RRA1144-2-v2.html
+[AHA Annual Survey]: American Hospital Association — Annual Survey data on system affiliation and admissions. https://www.aha.org/statistics/annual-survey
+[HCCI]: Health Care Cost Institute — commercial claims research on hospital prices and utilization. https://healthcostinstitute.org
+[DOJ-FTC Merger Guidelines]: US DOJ & FTC — Merger Guidance / HHI concentration thresholds. https://www.justice.gov/atr/merger-guidelines`,
   },
   {
     id: "institutional-share-of-single-family-rentals-2026",
