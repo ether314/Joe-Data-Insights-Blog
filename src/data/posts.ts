@@ -2,6 +2,86 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "corn-and-soybean-export-chokepoints-2026",
+    slug: "corn-and-soybean-export-chokepoints-2026",
+    title:
+      "Charted: Brazil + US Hold ~86% of Soybean Exports — Corn Top-3 Clears ~78%",
+    excerpt:
+      "USDA WASDE 2026/27 puts world soybean exports near 190 Mt with Brazil alone at ~62%. Corn trade is less tip-heavy but still concentrated: the US, Brazil, and Argentina together clear about 78% of ~210 Mt. A few load-port corridors move most of those tons.",
+    category: "Global Systems",
+    themeId: "staple-crop-markets",
+    imageUrl:
+      "/images/global-systems-corn-and-soybean-export-chokepoints-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of amber corn and green soybean export streams flowing into glowing Gulf, Santos, and Black Sea port silhouettes",
+    publishedAt: "2026-08-23T14:00:00Z",
+    featured: true,
+    visualization: "corn-and-soybean-export-chokepoints-2026",
+    layout: "default",
+    content: `Feed, fuel, and food-oil systems do not float on “global grain.” They float on a short list of countries that can ship net-exportable corn and soybeans — and on an even shorter list of elevators and harbors that can load those tons onto vessels. The USDA World Agricultural Supply and Demand Estimates (WASDE) for the 2026/27 marketing year put world **corn** exports near **210 million tonnes** and world **soybean** exports near **190 million tonnes**. Those are trade envelopes, not farm-gate production. The interactive dashboard above asks two linked questions: how concentrated are the *origin* shares of that trade, and what share of national flows still clears through a few *ports*?
+
+Toggle **Origins**, **Ports**, **Exportable supply**, and **Share path**. Flip the crop between **Soybeans** and **Corn**. The punchline is deliberately asymmetric. On soybeans, **Brazil alone holds about 62%** of world exports and **Brazil + the United States hold about 86%**. On corn, the tip is plural but still thick: the **United States (~39%)**, **Brazil (~21%)**, and **Argentina (~18%)** together clear roughly **78%** of world corn trade, and adding Ukraine’s Black Sea slice pushes the Top-4 near **88%**.
+
+## Scoreboard: top-origin share
+
+| Metric | Value | Why it matters |
+| --- | ---: | --- |
+| World corn exports (WASDE 2026/27) | **~210 Mt** | Trade envelope for feed grain |
+| World soybean exports (WASDE 2026/27) | **~190 Mt** | Trade envelope for oilseed beans |
+| US corn export share | **~39%** | Largest single corn origin |
+| Brazil soybean export share | **~62%** | Dominant oilseed tip |
+| Corn Top-3 (US · Brazil · Argentina) | **~78%** | How few origins clear feed trade |
+| Soy Top-2 (Brazil · US) | **~86%** | How few origins clear bean trade |
+| US Gulf share of US grain exports (desk) | **~58%** | Domestic port chokepoint |
+| Santos share of Brazil soy exports (desk) | **~34%** | Single-port share inside Brazil |
+| Ukrainian Black Sea share of UA corn (desk) | **~78%** | Corridor risk on a mid-size origin |
+
+Read the table as two concentration layers. The middle rows are **origin concentration** — WASDE-disclosed export tons as shares of world trade. The bottom rows are **port concentration** — analytical shares of *national* export tons moving through named load corridors. A shock to Santos is not the same object as a shock to “Brazil,” even when Brazil is the tip of the world soy ledger.
+
+## Soybeans: a two-origin market with a one-country tip
+
+On the July–August 2026 WASDE framing used here, Brazil’s soybean exports sit near **118 Mt** against a world envelope of about **190 Mt**. That is roughly **three-fifths** of seaborne (and border) bean trade in a single producer. The United States follows near **45 Mt** (~**24%**). Argentina’s *bean* export line is thin — about **6 Mt** — because the Argentine complex still routes a large crush share into meal and oil rather than whole-bean exports. Paraguay and Canada fill smaller disclosed slices; the residual “other” bucket is deliberately carried.
+
+Cumulative Top-k maths make the tip visible without slogans. Top-1 (Brazil) is already **62%**. Top-2 (Brazil + US) jumps to about **86%**. Top-3 and Top-4 add only a few points. That is what “top-origin share” means operationally: most of the world’s importable soybean supply is not a diversified auction across a dozen peer exporters. It is a Brazil-led pipe with a US swing, plus a thin set of secondary origins.
+
+Destination absorption reinforces the same geometry from the demand side. China still takes on the order of **half or more** of world soybean imports in PSD/COMTRADE-style framings, with the EU, Mexico, Egypt, and a broad “other Asia” residual behind. Origin concentration and destination concentration are not the same risk — a Brazilian harvest shock and a Chinese demand shock hit different contracts — but both shrink the number of balance sheets that matter when the basis blows out.
+
+## Corn: plural origins, still a short list
+
+Corn trade looks more competitive than soybeans if you stop at the Top-1. The United States leads near **81 Mt** (~**39%** of world corn exports), not a Brazil-style majority. Brazil (~**44 Mt**) and Argentina (~**38 Mt**) keep the Americas as a three-way contest, and Ukraine (~**22 Mt** after August WASDE corridor cuts) remains large enough that Black Sea logistics still move world feed prices.
+
+Concentration shows up when you stop pretending that the fifth through fifteenth exporters are a deep bench. Top-3 Americas exporters clear about **78%** of world corn trade. Top-4 with Ukraine approaches **88%**. The EU and Russia appear as smaller estimated slices; the residual “other” bucket is real but not a substitute for Gulf, Paraná, or Black Sea clearances when those corridors clog.
+
+The share-path panel in the dashboard tracks how those origin weights have drifted across recent marketing years. US corn share thickened into the mid-to-high thirties as South American and Black Sea availability shifted; Brazil’s soybean share climbed from the low-to-mid fifties toward the low sixties. Those paths are WASDE-carried desk series, not a claim that every monthly WASDE revision printed identical shares — the point is direction and tip thickness, not decimal worship.
+
+## Exportable supply is not the same as production
+
+Production headlines mislead desks that trade *exports*. The United States produces enormous corn crops — on the order of **400 Mt** in recent WASDE vintages — but domestic feed, ethanol, and residual use absorb most of that tonnage. Exports near **81 Mt** are only about **one-fifth** of US corn production. Argentina and Ukraine sit at the other extreme: exportable shares of production near **70%**, because domestic disappearance is thin relative to the crop. Brazil sits in between for corn and much higher for soybeans, where bean exports near **118 Mt** against production near **186 Mt** imply an exportable share above **60%** even after a large domestic crush.
+
+That balance lens is why “who grows the crop” and “who can put net tons on the water” diverge. Argentina’s soybean *production* is large, but bean *exports* are small once crush claims the seed. The United States can lead corn *trade* without leading every production year if South American weather or Black Sea logistics constrain competitors. The dashboard’s exportable-supply view stacks production, domestic use, and exports so that export dependence is visible as a ratio, not only as a ranking of absolute Mt.
+
+## Ports: where national tips become physical chokepoints
+
+Origin concentration answers who has the surplus. Port concentration answers which berths, draft windows, and river stages must clear that surplus. The port panels are labeled **estimated** for a reason: WASDE does not publish a Santos-versus-Paranaguá line item. Industry throughput patterns still show the geometry clearly enough to trade as risk, not as folklore.
+
+For the United States, the **Gulf complex** — Lower Mississippi elevators plus Gulf load ports — still handles on the order of **three-fifths** of combined US corn and soybean export tons in desk share maths, with the Pacific Northwest as the primary Asia-facing alternative. For Brazil’s soy complex, **Santos** alone often clears about **one-third** of national soy export tons, with **Paranaguá** and **Rio Grande** as the next southern legs. For Argentina, the **Greater Rosario / Up-River** elevator complex dominates corn (and meal) clearances on the Paraná. For Ukraine, **Black Sea ports** still move the large majority of corn exports when the corridor functions; river and rail alternatives are thinner substitutes, not peer capacity.
+
+The scatter panel plots national origin share against a port’s approximate share of *world* crop trade. Santos sits in the high-origin / high-port quadrant because Brazil is the world tip *and* Santos is a thick slice of Brazil. US Gulf corn sits lower on origin share than Brazil soy but still clears a double-digit share of world corn tons through one domestic corridor family. Ukrainian Black Sea corn is mid-origin and high corridor-dependence: a smaller world share with less redundancy behind the berth.
+
+## What COMTRADE adds — and where it disagrees
+
+UN Comtrade / WITS quantity series for cereals and oilseeds are useful mirrors, not drop-in replacements for WASDE. HS codes split beans from meal and oil; marketing years and calendar years disagree; re-exports and mirror statistics can invent fake bilateral intensity. This post therefore treats COMTRADE as a **destination and product-coverage check**, while keeping WASDE as the **export-envelope anchor** for origin shares. Where port literature and Comtrade disagree on a corridor’s weight, the dashboard prefers the conservative label: estimated, with the source note on-screen.
+
+Caveats stack honestly. WASDE export figures are projections that revise; August 2026 already cut Ukrainian corn exports relative to July while lifting US corn export assumptions on stronger demand and constrained Black Sea shipments. Domestic crush capacity in Brazil continues to compete with bean exports for seed. Argentine policy and tax regimes can swing the bean-versus-meal mix faster than production. Drought, low water on the Mississippi or Paraná, labor actions at elevators, and security events on the Black Sea can reorder *effective* chokepoints without changing the annual WASDE average that desks quote in June.
+
+## Reading the map without collapsing it
+
+Three mistakes are common. First, averaging corn and soy into “grains” erases the tip difference: soy is a **two-origin** market with a **one-country** majority tip; corn is a **three-to-four origin** market with no single majority exporter. Second, treating Argentina as a major *bean* exporter because it is a major *oilseed complex* exporter confuses seed trade with crush products. Third, treating “Brazil” or “the US” as interchangeable with their busiest ports ignores draft, rail, and barge constraints that can strand inland surplus even when national balances look comfortable.
+
+The operational takeaway is narrower. If you need a single headline for soybean trade risk, use **Brazil’s ~62% origin share** and the **Santos / southern Brazil load-port cluster**. If you need a headline for corn trade risk, use the **~78% Top-3 Americas share** and watch the **US Gulf**, **Rosario Up-River**, and **Ukrainian Black Sea** corridors as the physical valves. Top-origin share is the stock of exportable supply; port share is the plumbing. Both have to clear for importable feed and oilseed to show up where crushers and feed mills expect it.
+`,
+  },
+  {
     id: "us-work-stoppage-idleness-versus-union-density-2026",
     slug: "us-work-stoppage-idleness-versus-union-density-2026",
     title:

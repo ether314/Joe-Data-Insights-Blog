@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "corn-and-soybean-export-chokepoints-2026",
+    marker: "Staple crop markets · corn & soybean export chokepoints",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-work-stoppage-idleness-versus-union-density-2026",
     marker: "Organized labor · idle days vs coverage",
     forbidden: "Loading interactive charts",
