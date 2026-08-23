@@ -215,7 +215,8 @@ export interface Post {
     | "public-dc-fast-chargers-vs-ev-stock-2026"
     | "colorado-river-compact-vs-actual-flows-2026"
     | "cement-clinker-process-emissions-by-country-2026"
-    | "oecd-childcare-costs-versus-total-fertility-2026";
+    | "oecd-childcare-costs-versus-total-fertility-2026"
+    | "endowment-payout-vs-tuition-dependence-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

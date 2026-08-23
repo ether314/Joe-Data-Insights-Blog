@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "endowment-payout-vs-tuition-dependence-2026",
+    slug: "endowment-payout-vs-tuition-dependence-2026",
+    title:
+      "Charted: Endowment Payout vs Tuition — How Thin Is the Buffer Below the Top?",
+    excerpt:
+      "NCSE FY25: endowments fund 15.2% of operating budgets on average (median 6.1%). The $1B–$5B cohort peaks at 20.1%; Harvard, Yale, and Princeton sit far higher — while net tuition still dominates most public balance sheets.",
+    category: "Finance",
+    themeId: "higher-ed-endowments",
+    imageUrl:
+      "/images/finance-endowment-payout-vs-tuition-dependence-2026-hero.png",
+    imageAlt:
+      "Dark navy data-journalism hero showing teal endowment payout bars towering over amber tuition bars beside a stylized campus skyline",
+    publishedAt: "2026-08-23T12:00:00Z",
+    featured: true,
+    visualization: "endowment-payout-vs-tuition-dependence-2026",
+    layout: "default",
+    content: `When people talk about "rich universities," they usually mean market value — Harvard's **$56.9 billion**, Yale's **$44 billion**, Princeton's **$36 billion**. The operating question is narrower and more useful: **what share of the annual budget does the payout actually fund**, and how does that compare with **net tuition**? The 2025 NACUBO-Commonfund Study of Endowments (NCSE) answers the first half for 657 institutions. Audited financial reports and IPEDS Finance ratios answer the second for a panel of the largest endowments.
+
+The headline NCSE figure for FY25 is deceptively calm: endowments funded an average of **15.2%** of participants' operating budgets, up from **14.0%** in FY24 and **10.9%** in FY23. The median is only **6.1%**. That **9.1 percentage-point** mean–median gap is the story. A thin right tail of mega-endowments and payout-heavy liberal-arts colleges pulls the average; most campuses still live closer to the median — and closer to tuition, appropriations, and grants.
+
+Use the dashboard above to move across four panels: **Size bands** for NCSE cohort support (toggle % of ops vs effective spend rate), **Payout vs tuition** for the institution scatter and table, **Ops-support trend** for the FY18–FY25 mean/median climb and institution-type jump, and **Decile buffer** for how fast endowment support thins below the top decile.
+
+## The NCSE mean hides a thin right tail
+
+NCSE asks institutions what share of the operating budget endowment distributions support. Across FY25 respondents, the **mean is 15.2%** and the **median is 6.1%**. That is not a rounding error. It means half of participating campuses fund roughly one-sixteenth of the budget from endowment — or less — while a smaller set of payout-heavy schools drag the average into the mid-teens.
+
+Total withdrawals hit **$33.4 billion**, up nearly **11%** from **$30.1 billion** in FY24. The average effective spending rate ticked up to **4.9%** from **4.8%**. Purpose allocation still concentrates on aid: **47.4%** of spending went to student financial aid, versus **17.7%** to academic programs and research. Payout is not a generic "operations" faucet; a large slice is already earmarked for discounting sticker price — which is why comparing endowment share to **net** tuition (after aid) is the fair operating lens.
+
+Caveat: NCSE is a volunteer survey, not a census. Share-of-budget definitions are institution-reported and need not match GAAP operating-revenue mixes in audited statements. Treat size-band averages as directional cohort signals, not audited peer benchmarks.
+
+## Size bands: the peak is not the very top
+
+Segment FY25 support by endowment market value and the peak is the **$1 billion–$5 billion** cohort at **20.1%** of operating budgets — not the Over **$5 billion** group, which sits at **18.1%**. Cohorts under **$100 million** already average **14.8%**. The least-reliant band is **$101–$250 million** at **12.1%**. The gap between the peak size band and that trough is **8.0 percentage points**.
+
+That ordering surprises desks that assume "bigger endowment ⇒ higher budget share" is monotonic. Over-$5B universities often run hospitals, sponsored research, and clinical enterprises that inflate the operating base, so a large dollar distribution can still be a mid-teens share of a huge budget. Mid-sized private colleges with concentrated enrollment can post higher *percentage* dependence even with smaller absolute payouts.
+
+Effective spending rates tell a different story from budget shares. The highest average effective rate in FY25 — **5.5%** — was reported by the **$51–$100 million** cohort. Over-$5B averaged about **5.0%**; the **$501 million–$1 billion** group was closer to **4.3%**. Budget dependence and spending-rate intensity are related but not identical levers.
+
+## Mega-endowment financial reports: payout dwarfs net tuition
+
+NCSE size averages compress the elite private tail. Published FY25 operating-revenue mixes show how far above the survey mean the largest private universities sit:
+
+| Institution | Endowment ($B) | Endowment % of ops | Net tuition % of ops | Payout − tuition (pp) |
+|---|---:|---:|---:|---:|
+| Princeton | 36.4 | 67 | 12 | +55 |
+| Amherst | 3.8 | 52 | 18 | +34 |
+| Harvard | 56.9 | 37 | 21 | +16 |
+| Yale | 44.2 | 34 | 8 | +26 |
+| MIT | 27.4 | 28 | 11 | +17 |
+| Notre Dame | 20.0 | 26 | 22 | +4 |
+| Stanford | 40.0 | 22 | 14 | +8 |
+| Penn | 22.3 | 18 | 24 | −6 |
+| Columbia | 14.8 | 16 | 28 | −12 |
+| Michigan | 19.2 | 9 | 26 | −17 |
+| UT System | 44.0 | 7 | 22 | −15 |
+| UVA | 10.0 | 11 | 30 | −19 |
+
+Harvard's FY25 distribution was **$2.5 billion** — **37%** of operating revenue — while the university still had to fund nearly two-thirds of a **~$6.7–6.8 billion** operating base from research, tuition, and gifts. Yale's endowment spending was **34%** of operating revenue; **net tuition, room, and board** was only **8%**. Princeton sits near the extreme: endowment provides about **two-thirds** of net annual operating revenue. Those three alone explain why "15% average" feels nothing like the Ivy operating model.
+
+Public flagships reverse the sign. Michigan, UT System, and UVA post endowment shares in the high single digits to low teens while net tuition (and, off-table, state appropriations) carry the larger operating pillar. Absolute endowment size is not destiny: UT System's multi-ten-billion pool is diluted across campuses; Amherst's few billions against a small enrollment base produce a payout-dominant mix.
+
+## How thin is the buffer below the top decile?
+
+Map size cohorts into a decile-style profile anchored on NCSE bands and the institution panel. Top-decile mean endowment support sits near **~28%** of operations in this construction — pulled by mega-privates and payout-heavy colleges. Decile 9 (roughly the $1B–$5B / upper-public mix) averages about **20%**. By decile 8, mean endowment support falls toward the mid-teens while net-tuition shares climb into the high twenties. Mid-pack deciles cluster near the NCSE mid-teens-to-low-teens endowment shares — and tuition takes the lead.
+
+The buffer below D10 is therefore steep in the first step (**~8 pp** into D9) and then flattens: D7–D4 sit only a few points apart on endowment share, but their **tuition dependence** keeps rising. That is the operating risk asymmetry. Losing a few points of payout share hurts a Princeton-like budget differently than a tuition-majority public — but the *modal* NCSE campus already looks more like the mid-pack than like Harvard.
+
+Another buffer metric is mean versus median for the whole survey: **15.2% vs 6.1%**. If markets force a synchronized cut in distributions, the median campus has less endowment cushion in percentage terms — yet may also have less absolute dollar exposure. The top decile has the opposite problem: deep percentage dependence on a smoothed spending rule that still assumes long-run returns clear spending + inflation + fees.
+
+## Private, public, and foundation paths diverge
+
+By institution type, FY25 was not a quiet year. Public institutions' average endowment support of the operating budget jumped to **13.1%** from **8.4%** in FY24. Institutionally-related foundations averaged **24.7%** (from **19.4%**), though IRF medians in prior years have often sat near **1–2%**, implying a few large foundations dominate the average. Private nonprofits remain the steadier double-digit story across FY18–FY25.
+
+Longer history reinforces the level shift. Commonfund's reconstruction shows average endowment support of budgets near **~4%** in the late 1970s, roughly **10.5%** when the question returned in FY08, mid-single to low-double digits through the 2010s, then a climb through FY18–FY25 that pushed the mean past **15%**. The median rose from **4.0%** in FY18 to **6.1%** in FY24–FY25 — slower than the mean, but still a one-half increase.
+
+Smaller endowments closed part of the gap with the largest. From FY18 to FY25, under-$50M support more than doubled from **6.9%** to **14.8%**, while Over-$5B moved from **16.7%** to **18.1%**. The size gap shrank from nearly **10 pp** to about **3 pp**. Convergence from below is not the same as convergence to Ivy operating models; it does mean tuition-and-appropriation campuses are asking more of thinner asset pools.
+
+## What the payout–tuition gap implies for risk
+
+Portfolio risk tolerance and budget dependence are linked. Institutions whose payout is a small slice of the budget can, in principle, absorb larger mark-to-market swings without immediate program cuts. Institutions whose payout is a third or two-thirds of revenue need spending rules, reserves, and liquidity that survive equity drawdowns without freezing hiring and aid. FY25's **4.9%** average effective spending rate against a **7.7%** 10-year average return looks manageable at the survey mean — until HEPI (**3.6%** in FY25) and fees claim their share of the hurdle.
+
+Tuition dependence is the other side of the hedge. Net tuition shares in the **20–30%** range (Columbia, Penn, Michigan, UVA in the panel) expose budgets to enrollment and discounting cycles. Payout-dominant schools hedge enrollment risk with market risk. Tuition-dominant schools do the reverse. Neither mix is "safer" in the abstract; they fail in different years.
+
+## Caveats and reading rules
+
+Several measurement traps matter. First, **endowment share of budget** (NCSE) and **endowment share of operating revenue** (financial reports) are cousins, not twins — donor restrictions, transfers, and hospital consolidations move the denominator. Second, **net tuition** already embeds discounting; comparing endowment aid spending to *gross* tuition double-counts the discount story. Third, system endowments (e.g., Texas) should not be read as single-campus operating dependence. Fourth, FY25 public and IRF averages jumped sharply; one year does not prove a permanent regime. Fifth, IPEDS Finance vintages lag some FY25 audited reports, so panel tuition shares mix adjacent fiscal years where necessary.
+
+Read the dashboard as a map of **operating mix**, not of prestige. Market value ranks who has capital. Payout and net-tuition shares rank who can miss a tuition cycle — or a market cycle — without rewriting the budget in a single summer.
+`,
+  },
+  {
     id: "oecd-childcare-costs-versus-total-fertility-2026",
     slug: "oecd-childcare-costs-versus-total-fertility-2026",
     title:

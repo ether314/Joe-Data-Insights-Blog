@@ -2837,6 +2837,21 @@ const OecdChildcareCostsVersusTotalFertility2026Dashboard = dynamic(
   },
 );
 
+const EndowmentPayoutVsTuitionDependence2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/EndowmentPayoutVsTuitionDependence2026Dashboard"
+    ).then((m) => m.EndowmentPayoutVsTuitionDependence2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3580,6 +3595,10 @@ export function PostVisualization({
 
   if (type === "oecd-childcare-costs-versus-total-fertility-2026") {
     return <OecdChildcareCostsVersusTotalFertility2026Dashboard />;
+  }
+
+  if (type === "endowment-payout-vs-tuition-dependence-2026") {
+    return <EndowmentPayoutVsTuitionDependence2026Dashboard />;
   }
 
   return null;

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "endowment-payout-vs-tuition-dependence-2026",
+    marker: "Higher-ed endowments · payout vs tuition",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "oecd-childcare-costs-versus-total-fertility-2026",
     marker: "OECD childcare costs vs total fertility - family-policy lens",
     forbidden: "Loading interactive charts",
