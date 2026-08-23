@@ -240,7 +240,8 @@ export interface Post {
     | "trucking-spot-rates-versus-carrier-exits-2026"
     | "institutional-share-of-single-family-rentals-2026"
     | "hospital-system-clout-vs-commercial-prices-2026"
-    | "office-vacancy-versus-conversion-pipelines-2026";
+    | "office-vacancy-versus-conversion-pipelines-2026"
+    | "women-and-men-in-apprentice-trades-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

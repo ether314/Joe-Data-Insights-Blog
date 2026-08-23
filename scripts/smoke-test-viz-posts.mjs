@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "women-and-men-in-apprentice-trades-2026",
+    marker: "Female share by trade",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "office-vacancy-versus-conversion-pipelines-2026",
     marker: "Converted units per vacant sq ft",
     forbidden: "Loading interactive charts",

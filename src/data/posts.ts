@@ -2,6 +2,81 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "women-and-men-in-apprentice-trades-2026",
+    slug: "women-and-men-in-apprentice-trades-2026",
+    title:
+      "Charted: Women Are 14.8% of Apprentices Overall — But Only 4.5% in Construction Trades",
+    excerpt:
+      "IWPR analysis of DOL RAPIDS puts women at 14.8% of apprentices with sex reported in FY 2023, up from 9.2% in 2014. Construction remains at 4.5% women while health and social assistance sits at 84.7%. The fastest shift is inside women’s own pipeline: health’s share of women apprentices rose from 5.6% to 16.0% (2016–2023) as construction’s slice fell.",
+    category: "Labor & Skills",
+    themeId: "apprenticeship-pipelines",
+    imageUrl:
+      "/images/labor-skills-women-and-men-in-apprentice-trades-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz hero with amber construction trade bars beside magenta health-apprenticeship bars and geometric hard-hat and wrench motifs",
+    publishedAt: "2026-08-23T20:00:00Z",
+    featured: true,
+    visualization: "women-and-men-in-apprentice-trades-2026",
+    layout: "default",
+    content: `Registered apprenticeship is sold as a sex-blind earn-and-learn ladder into middle-class trades. The RAPIDS ledger tells a sharper story: **intakes are still heavily segregated by occupation**, even as women’s headcount has more than tripled since the mid-2010s. In FY 2023, women were **14.8%** of apprentices with sex reported — up from **9.2%** in 2014 — yet they were only **4.5%** of construction apprentices while making up **84.7%** of those in health care and social assistance.
+
+The interactive dashboard above uses **IWPR’s analysis of DOL RAPIDS** (active apprentices plus same-year completers), **DOL ETA Trendlines** for the FY 2024 active count, and **CPWR** construction new-registration shares. Toggle **Trade ladder**, **Wage scatter**, **Portfolio shift**, **System trend**, and **Program mix**; filter by trade family; sort the ladder by lowest share, highest share, or most women.
+
+## Scoreboard: segregation in one glance
+
+| Cut | Year | Metric | Value |
+| --- | ---: | --- | ---: |
+| RAPIDS (sex reported) | FY 2023 | Women share of apprentices | **14.8%** |
+| RAPIDS | FY 2014 | Women share of apprentices | **9.2%** |
+| Construction industry | FY 2023 | Women share of apprentices | **4.5%** |
+| Health & social assistance | FY 2023 | Women share of apprentices | **84.7%** |
+| Electrician occupation | FY 2023 | Women share | **4.2%** |
+| Plumber occupation | FY 2023 | Women share | **2.5%** |
+| Nurse assistant | FY 2023 | Women share | **81.4%** |
+| Active women (DOL) | FY 2024 | Approx. active women apprentices | **~100,000 (~14%)** |
+| Completers | FY 2023 | Women/men median exit-wage ratio | **64.3%** |
+
+The headline is not “women are absent from apprenticeships.” It is that **growth and integration are not the same thing**. Women’s numbers rose **230%** from 2014 to 2023 while men’s rose **97%**, and women absorbed about **one-fifth** of net new apprenticeships — yet the largest male trades barely moved their female shares, and women’s own portfolio tilted toward lower-paid care fields.
+
+## Female share by trade is the real map
+
+System averages hide the occupation cliff. Among large construction titles in FY 2023, **painters** and **operating engineers** approach **10%** women. **Laborers** sit near **6.4%**, **carpenters** near **5.2%**, **electricians** near **4.2%**, **pipefitters** near **3.5%**, **plumbers** near **2.5%**, and **elevator constructors** near **1.7%**. On the other side of the ledger, **early childhood** apprentices are **97.4%** women, **medical assistants** **92.3%**, and **registered nurse** residencies **87.5%**.
+
+That is not a gentle gradient. It is a **bimodal intake regime**: care and health titles that are already female-dominated in the wider labor market, and building trades that remain male-dominated even relative to women’s already-low share of construction employment. The dashboard’s trade ladder sorts that cliff; the wage scatter shows why it matters for earnings — high exit wages cluster where female shares are lowest.
+
+Within-occupation exit wages often show women matching or beating men at the median (electricians and plumbers are examples in IWPR’s tables). The **system-wide** completer gap — women at **$22.00**/hour versus men at **$34.20** — is therefore mostly a **composition** story: women are overrepresented in low-wage apprenticeship titles and underrepresented in the high-wage trades that still dominate the men’s top twenty.
+
+## Where the mix is changing fastest
+
+Speed of change is uneven. On the construction side of this build, **painters** show among the larger multi-year share gains (about **+2.4** percentage points on an IWPR-aligned 2016–2023 reading), with **operating engineers** and **truck drivers** also moving faster than electricians or plumbers. **Elevator** and **drywall** titles barely budge from near-zero female shares.
+
+The more consequential “fast change,” though, is inside **women’s own pipeline**. Between 2016 and 2023, the share of women apprentices sitting in **health and social assistance** rose from **5.6%** to **16.0%**, while the share sitting in **construction** fell from **14.3%** to **10.3%**. Expansion succeeded at pulling women into registered programs — and, at the margin, **intensified occupational segregation** by packing new women seats into care titles rather than into the trades that pay construction exit wages near **$34**/hour for both sexes.
+
+That portfolio shift is the dashboard’s stacked area panel. It answers the brief’s second question directly: the mix is changing fastest not inside electrician cohorts, but in **which industries absorb women’s apprenticeship growth**.
+
+## Union programs integrate; most sites still do not
+
+Program structure matters as much as occupation title. Across more than 6,700 registered construction apprenticeship programs, IWPR finds **78.5%** had **no** female apprentices. Only **7.1%** reported at least **10%** women — yet those more integrated programs accounted for about **30%** of women construction apprentices. A small slice of sponsors carries a disproportionate share of integration.
+
+**Union-sponsored** construction programs look different from non-union ones: **25.3%** of union sponsors had zero women, versus **88.6%** of non-union sponsors. Programs with at least 10% women were roughly twice as common in the union channel (**13.1%** vs **5.9%**). For women electricians, completion rates were nearly **three times** as high in union programs (**58.3%**) as in non-union ones (**20.2%**). Intake segregation and retention failure compound: sparse female cohorts and higher cancellation risk shrink the completer pipeline even when registrations tick up.
+
+CPWR’s construction new-registration cut (2015–2021) puts women’s share of new construction apprentices near **4.1%** overall, with painters again near the top of the trade ranking and elevator/HVAC near the bottom — a registration-side echo of the stock shares in RAPIDS.
+
+## Geography still swings hard
+
+State averages remind readers that “national 14.8%” is a blended fiction. IWPR reports statewide women shares as high as **36.5%** in West Virginia and **35.4%** in South Carolina, and as low as **3.1%** in Delaware and **3.5%** in Oklahoma. Among 44 states with construction industry cuts, women’s construction share ranged from **1.6%** in South Dakota to **10.7%** in Massachusetts. Military and public-administration apprenticeships also pull the national average up: women were **22.2%** of that block and **38.2%** of all women apprentices, with military electrician female shares more than **triple** the civilian electrician rate (**12.4%** vs **4.2%**).
+
+Desks that only watch the national women-share line will miss both the **construction desert** and the **military/health** anchors that pad the average.
+
+## Caveats and measurement edges
+
+RAPIDS is powerful and incomplete. IWPR’s FY 2023 tables exclude apprentices with missing sex and note that Minnesota, Wisconsin, and the District of Columbia remain imperfectly covered in some years; earlier growth partly reflects **more states entering the database**, not only organic expansion. Occupation titles are program labels grouped to analogous trades — “electrician” spans interior, maintenance, and substation variants. Exit wages are medians for completers who report earnings, not career earnings ten years out. CPWR’s construction registration shares use a different window (2015–2021) and state set than IWPR’s FY 2023 stock tables; treat them as directional cross-checks, not identical vintages. FY 2024’s “nearly 100,000 active women / about 14%” figure from DOL Trendlines is an active-apprentice cut, not the active-plus-completer perimeter used in IWPR’s 14.8% headline.
+
+For policy readers, the practical implication is narrow: tracking “women in apprenticeship” as a single KPI will celebrate headcount growth while missing whether women are entering **electrician and plumber** seats or **nurse aide and childcare** seats. The segregation map — not the national share alone — is what predicts exit wages and retirement replacement in the trades.
+
+None of those caveats erase the core pattern: **apprentice intakes remain starkly sex-segregated by trade**, construction integration is slow and sponsor-concentrated, and the fastest recent change in women’s apprenticeship mix has been toward health and care titles rather than toward the highest-paying building trades.`,
+  },
+  {
     id: "office-vacancy-versus-conversion-pipelines-2026",
     slug: "office-vacancy-versus-conversion-pipelines-2026",
     title:
