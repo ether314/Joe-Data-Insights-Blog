@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-cyber-insurance-premiums-vs-incurred-losses-2026",
+    marker: "Premium raced ahead of losses",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-counties-with-no-local-news-outlet-2026",
     marker: "Counties with 0–1 local news outlets",
     forbidden: "Loading interactive charts",

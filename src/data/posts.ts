@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-cyber-insurance-premiums-vs-incurred-losses-2026",
+    slug: "us-cyber-insurance-premiums-vs-incurred-losses-2026",
+    title:
+      "Charted: US Cyber Premium Grew 157% While Estimated Incurred Losses Rose 88%",
+    excerpt:
+      "NAIC domestic cyber DWP climbed from $2.75B (2020) to $7.08B (2024). Estimated incurred loss+DCC rose only ~88%. Loss ratio fell 67%→42%, then rebounded to 49% as rates softened — while IC3 still shows BEC, not ransomware $, as the multi-billion threat.",
+    category: "Finance",
+    themeId: "cyber-risk-markets",
+    imageUrl:
+      "/images/finance-us-cyber-insurance-premiums-vs-incurred-losses-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a cyan cyber-insurance premium curve racing ahead of an amber incurred-loss line beside a subtle shield silhouette",
+    publishedAt: "2026-08-23T22:00:00Z",
+    featured: true,
+    visualization: "us-cyber-insurance-premiums-vs-incurred-losses-2026",
+    layout: "default",
+    content: `US cyber insurance wrote its way out of the 2020–21 loss spike — then stumbled into a different problem. Domestic direct written premium (DWP) reported to the NAIC rose from **$2.75 billion in 2020** to **$7.08 billion in 2024**, a **157%** climb. Over the same window, a desk estimate of incurred loss plus defense and cost containment (DCC) — the calendar-year loss ratio times same-year domestic DWP — rose from about **$1.85 billion to $3.47 billion**, or roughly **88%**. Premium grew faster than losses. The loss ratio that was **67% in 2020** bottomed near **42% in 2023** before climbing back to **49% in 2024** as rate softening and claim frequency caught up with the hard-market cushion.
+
+That is the core chart in the dashboard: an indexed race (2020 = 100) between written premium and estimated incurred dollars, with toggles for domestic-only versus total market including alien surplus lines. The total book — domestic plus alien — peaked at **$9.84 billion in 2023** and fell to **$9.14 billion in 2024**, the first annual drop in the NAIC’s published series. Softening is no longer a rumor; it is in the statutory print.
+
+## Premium outran losses through the hard market
+
+The ransomware years punished underwriters before rate and underwriting controls caught up. Aon’s compilations of the NAIC Cyber Supplement put the industry calendar-year loss + DCC ratio at **67% in 2020** and **66% in 2021**. Then premium per policy exploded. Domestic DWP jumped **75% in 2021** and another **50% in 2022**, landing near **$7.26 billion**. The loss ratio collapsed to **45% in 2022** and **42% in 2023** — back to pre-spike territory.
+
+Indexed to 2020, domestic premium sits near **257** by 2024 while estimated incurred sits near **188**. The **~69 percentage-point** gap between those growth rates is the underwriting story of the cycle: more dollars of premium arrived faster than dollars of loss, even though absolute claims activity remained noisy. Absolute estimated incurred still rose — from roughly **$1.85B to $3.47B** — so this is not a “losses fell” narrative. It is a **premium raced ahead** narrative.
+
+Use the dashboard’s **Premium vs losses** panel in index mode first, then flip to dollar mode. The slope difference is the point; the 2023–24 flattening of premium is the warning.
+
+## Softening flipped the loss-ratio path in 2024
+
+Rate decreases earned into portfolios while claim frequency rose. Aon reads the 2024 NAIC file as a **seven-point** deterioration in the industry loss + DCC ratio, from **42% to 49%**. Domestic DWP slipped **2.3%** to **$7.08 billion**; policies in force were roughly flat; written premium per policy eased. Frequency and lower earned premium per policy outpaced severity relief. Broker commentary also points to large systemic events — CrowdStrike, Change Healthcare, CDK — that generated precautionary notifications even when ultimate incurred was uneven.
+
+A **49%** loss + DCC ratio still leaves roughly **51 points** of room for expenses before a 100 combined ratio, which is why the line can look “still profitable” even as the direction of travel worsened. That cushion is thinner than 2023’s, and it sits on a market that is no longer growing. The **Loss ratio** panel pairs the path with 2024 closed-claim outcomes: about **9,941** claims closed with payment versus **28,555** closed without — frequency without payment is not free for insureds or for adjusters, but it is a reminder that reported claims and paid severity are different instruments.
+
+## How concentrated is ransomware in the money?
+
+Ransomware still anchors severity for many cyber insurance portfolios, but the public IC3 ledger tells a different dollar story. In **2024**, the FBI’s Internet Crime Complaint Center logged **3,156** ransomware complaints and only about **$12.5 million** in *reported* ransomware losses — down from **$59.6 million** across **2,825** complaints in 2023. Those IC3 ransomware dollars exclude business interruption, remediation, legal, and most operational downtime. They are a lower bound on *reported ransom payments*, not a measure of insured cyber severity.
+
+Business email compromise (BEC) remains the multi-billion class. IC3 shows roughly **$2.7–3.0 billion** in BEC losses each year from 2022 through 2024 on about **21,000–22,000** complaints. Personal data breach losses jumped to about **$1.45 billion** in 2024. Total IC3 losses hit **$16.6 billion**, with cyber-enabled fraud dominating the stack. Toggle the **IC3 threat $** panel across years: ransomware complaints trend up; ransomware *reported dollars* do not; BEC stays the thick bar.
+
+For insurance claim mix, NAIC does not publish a clean ransomware share of incurred. The dashboard’s **Claim drivers** radial is therefore a **desk estimate** of severity contribution — ransomware plus business interruption still near half, with funds-transfer/BEC, privacy/third-party, and other first-party costs filling the rest. Treat that mix as directional. Third-party claims as a share of reported cyber claims rose toward **~25% in 2024**, which lengthens development and can lift incurred relative to paid even when ransom checks shrink.
+
+## Policy structure: primary dollars, endorsement counts
+
+The 2024 Cyber Supplement’s primary / excess / endorsement split clarifies where premium lives. **Primary** takes about **65%** of DWP, **excess** about **31%**, and **endorsement** about **4%** — even though endorsement policies are numerous. Excess books close claims more slowly (**~77%** closure rate versus **~92%** for endorsement), which matches the intuition that tower losses are messier and stickier. The **Policy stack** panel shows both the premium donut and the closure-rate bars; do not confuse policy count leadership with premium leadership.
+
+Alien surplus lines still matter for market size. The total US cyber print including alien writers was about **$9.14 billion in 2024**, down **7%** from **$9.84 billion**. Domestic-only series understate capacity and can mis-time the peak. Keep the premium-scope toggle honest when you brief a board that buys both admitted and non-admitted paper.
+
+## Reading the hard→soft scatter
+
+Plot domestic DWP year-over-year growth against the loss ratio and the cycle geometry appears. **2021** and **2022** sit far to the right: huge premium growth with improving ratios. **2023** hugs the vertical axis with a still-low ratio. **2024** drifts left (negative growth) and up (higher ratio). That is the soft-market signature in two dimensions. The **Hard→soft** scatter is built for that briefing slide — not for predicting next year’s combined ratio, which also needs expense, reinsurance, and catastrophe-event assumptions the Cyber Supplement does not fully supply.
+
+| Year | Domestic DWP ($B) | Total DWP incl. alien ($B) | Loss + DCC ratio | Est. incurred ($B) |
+| --- | ---: | ---: | ---: | ---: |
+| 2020 | 2.75 | 4.07 | 67% | 1.85 |
+| 2021 | 4.83 | 6.54 | 66% | 3.19 |
+| 2022 | 7.26 | 9.69 | 45% | 3.27 |
+| 2023 | 7.25 | 9.84 | 42% | 3.04 |
+| 2024 | 7.08 | 9.14 | 49% | 3.47 |
+
+Estimated incurred = disclosed loss + DCC ratio × same-year domestic DWP. It is a proxy, not a statutory incurred total, and it inherits calendar-year reserve noise.
+
+## Caveats and how not to over-read the print
+
+- **Calendar year ≠ accident year.** Loss ratios mix current accident activity with prior-year reserve changes. A rising paid-to-incurred ratio in 2024 can mean both more cash payments and reserve release, not a single clean severity story.
+- **Written ≠ earned.** Softening rates hit earned premium with a lag; 2024’s ratio already reflects some of that lag, and 2025 will inherit more.
+- **Package / endorsement reporting gaps.** Historically, package incurred reporting was thinner on IBNR than standalone; the 2024 move to primary/excess/endorsement improves clarity but breaks some long series.
+- **IC3 ransomware $ ≠ insured ransomware severity.** Underreporting, field-office channels, and excluded BI/remediation make IC3 ransom dollars a floor. Concentration in *insurance* severity can remain high while IC3 $ falls.
+- **BEC coverage form risk.** Large BEC losses often sit on crime / social-engineering forms rather than cyber towers; comparing IC3 BEC billions to cyber DWP without form mapping overstates cyber-insurer exposure.
+- **Desk-estimated claim-driver mix.** The severity radial is not a NAIC table. Do not cite it as a regulatory statistic.
+- **Catastrophe clustering.** A handful of systemic events can move industry results without rewriting the long-run ransomware frequency trend.
+
+## What desks should take from the 2020–24 print
+
+If the question is whether cyber written premium grew faster than incurred losses through the hard market, the NAIC-plus-Aon answer is **yes**: roughly **+157%** premium versus about **+88%** estimated incurred from 2020 to 2024, with the loss ratio improving by **25 points** into 2023 before giving back **7 points** in 2024. If the question is whether losses are “concentrated in ransomware,” separate the lenses. On **IC3 dollars**, concentration sits in fraud and BEC, not in the tiny ransomware payment line. On **insurance severity**, ransomware plus business interruption remains the working assumption for first-party towers — but it is an assumption that needs claims audits, not IC3 alone.
+
+The actionable briefing is therefore three numbers and one caveat: **$7.08B** domestic DWP, **49%** loss + DCC, **$2.77B** IC3 BEC losses — and the reminder that ransomware’s economic footprint is still mostly off the IC3 loss table. Watch earned-premium per policy and third-party claim share next; those are the quiet ways a soft market turns a 49% year into something uglier without a headline ransomware spike.`,
+  },
+  {
     id: "us-counties-with-no-local-news-outlet-2026",
     slug: "us-counties-with-no-local-news-outlet-2026",
     title:

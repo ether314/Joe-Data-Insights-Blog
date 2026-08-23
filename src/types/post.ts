@@ -244,7 +244,8 @@ export interface Post {
     | "women-and-men-in-apprentice-trades-2026"
     | "four-firm-beefpacking-share-2026"
     | "alliance-capacity-share-on-transpacific-2026"
-    | "us-counties-with-no-local-news-outlet-2026";
+    | "us-counties-with-no-local-news-outlet-2026"
+    | "us-cyber-insurance-premiums-vs-incurred-losses-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
