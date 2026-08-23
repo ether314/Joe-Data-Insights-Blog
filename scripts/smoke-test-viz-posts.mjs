@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "farm-share-of-the-food-dollar-2026",
+    marker: "Headline — USDA ERS Food Dollar",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-cattle-herd-at-seventy-year-lows-2026",
     marker: "Food & agriculture · cattle–beef squeeze",
     forbidden: "Loading interactive charts",

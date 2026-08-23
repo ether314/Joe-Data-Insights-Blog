@@ -3047,6 +3047,21 @@ const UsCattleHerdAtSeventyYearLows2026Dashboard = dynamic(
   },
 );
 
+const FarmShareOfTheFoodDollar2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FarmShareOfTheFoodDollar2026Dashboard"
+    ).then((m) => m.FarmShareOfTheFoodDollar2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3846,6 +3861,10 @@ export function PostVisualization({
 
   if (type === "us-cattle-herd-at-seventy-year-lows-2026") {
     return <UsCattleHerdAtSeventyYearLows2026Dashboard />;
+  }
+
+  if (type === "farm-share-of-the-food-dollar-2026") {
+    return <FarmShareOfTheFoodDollar2026Dashboard />;
   }
 
   return null;

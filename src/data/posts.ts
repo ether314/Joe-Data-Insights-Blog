@@ -2,6 +2,86 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "farm-share-of-the-food-dollar-2026",
+    slug: "farm-share-of-the-food-dollar-2026",
+    title:
+      "Charted: Only 18.5¢ of the Grocery Dollar Reaches the Farm — Marketing Still Takes the Rest",
+    excerpt:
+      "USDA ERS's revised Food Dollar puts the 2024 food-at-home farm share at 18.5¢ (up 0.1¢). The all-food farm share fell to 11.8¢ as dining-out grew — and farm-gate egg PPI still swings far harder than grocery CPI.",
+    category: "Food & Agriculture",
+    themeId: "food-dollar-farm-share",
+    imageUrl:
+      "/images/food-agriculture-farm-share-of-the-food-dollar-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dollar bill splitting farm wheat fields labeled 18.5 cents from grocery and restaurant marketing margins labeled 81.5 cents",
+    publishedAt: "2026-08-23T16:00:00Z",
+    featured: true,
+    visualization: "farm-share-of-the-food-dollar-2026",
+    layout: "default",
+    content: `Of every dollar U.S. households spent on **food at home** in 2024, farm establishments collected **18.5 cents** — a tenth of a cent more than in 2023. That is the cleanest answer to the grocery-aisle question. The messier answer sits one layer out: for **all** domestically produced food — groceries plus restaurants, schools, and other away-from-home outlets — the farm share slipped to **11.8 cents** from **12.1 cents**, while the marketing bill absorbed **88.2 cents**. USDA's Economic Research Service (ERS) published those figures in the March 2026 Food Dollar update, which revises the model and is **not** comparable, dollar-for-dollar, with pre-update releases.
+
+The dashboard above is built for that split. Toggle **Marketing bill path**, **Product farm ladder**, **Industry group bill**, **CPI vs farm eggs**, and **At-home vs away**. Dim carried pre-2023 years when you want only disclosed anchors. The point is not that farmers are "losing" in a moral sense — it is that most of what consumers pay for is processing, logistics, retailing, and foodservice labor, and those layers damp farm-gate volatility before it reaches the checkout.
+
+## What the farm share actually measures
+
+The marketing bill's **farm share** is the gross return to farm establishments from commodities linked to consumer food spending. It is **not** net farm income after seed, fertilizer, feed, interest, and hired labor. ERS is explicit about the wedge: industry-group **farm value added** was only **6.7 cents** per food dollar in 2024 (crops **2.5¢**, livestock **3.3¢**, forestry/fishing/ag services **0.9¢**). The **5.1-cent** gap between the 11.8¢ gross farm share and 6.7¢ of farm value added is what farms spent on inputs purchased from other industry groups — agribusiness alone was **3.0 cents**.
+
+That distinction matters for desks that treat "farm share" as a poverty narrative or as a retail-margin accusation. A rising marketing share can mean more value-added packaging and dining-out labor, cheaper farm commodities relative to services, or both. The Food Dollar attributes **value**, not fairness.
+
+## Food at home vs food away from home
+
+Channel mix is doing real work in the 2023→2024 print. Food-at-home spending rose **1.4%** to about **$901 billion**. Food-away-from-home spending rose **4.2%** to about **$1.27 trillion**. Farms get a larger slice of the grocery dollar (**18.5¢**) than of the restaurant dollar (**7.1¢**, down from **7.5¢**). Shift the consumption basket toward dining out and the **all-food** farm share falls even if the grocery farm share holds or inches up — which is exactly what happened.
+
+ERS also notes that food-away-from-home uses roughly **12 cents more labor** per dollar of output than food at home (about **59.1¢** vs **47.1¢** on the primary-factor framing). Food services alone contributed **38.6 cents** of value added per all-food dollar in 2024, up **1.1 cents** year over year, and added **$836.8 billion** of value — a **5.9%** rise that outran the **3%** increase in domestic food spending. The marketing bill did not expand because farmers "lost"; it expanded because Americans bought more of the labor-heavy channel.
+
+## Product accounts: eggs vs bakery
+
+Averaging across groceries hides a vertical cliff. In 2024 food-at-home product accounts, **fresh eggs** returned **69.1 cents** per product dollar to the farm. **Beef** returned **52.2¢**, **tree nuts and peanuts** **51¢**, **fresh milk** **50.8¢**, **fresh fruits** **39.6¢**. Move down the processing ladder and the farm claim collapses: **cereals** **11¢**, **snack foods** **9.7¢**, **bakery products** **4.8¢**. Soft drinks and bottled water — newly emphasized in the revised food definition — sit in the low-farm-share tail by construction.
+
+| Product account (food at home, 2024) | Farm share (¢) | Processing intensity |
+| --- | ---: | --- |
+| Fresh eggs | 69.1 | Minimal |
+| Beef | 52.2 | Moderate |
+| Tree nuts & peanuts | 51.0 | Minimal |
+| Fresh milk | 50.8 | Minimal |
+| Fresh fruits | 39.6 | Minimal |
+| Poultry | 30.4 | Moderate |
+| Fresh vegetables | 26.7 | Minimal |
+| Pork | 23.7 | Moderate |
+| All food at home | 18.5 | Mix |
+| Cereals | 11.0 | Heavy |
+| Snack foods | 9.7 | Heavy |
+| Bakery products | 4.8 | Heavy |
+
+Of 28 food-at-home farm shares in the March release, ERS reports that **10 decreased**, **11 increased**, and **7** were within a tenth of a cent of their 2023 values. The grocery average can look stable while individual protein and produce accounts move with disease, weather, and herd cycles.
+
+## Industry groups: who takes the other eighty-eight cents
+
+The industry group bill apportions the domestic food dollar by value added. In 2024 the largest slices were **food services (38.6¢)**, **food processing (16.1¢)**, **food retail (13.8¢)**, and **food wholesale (6.3¢)**. Farm production value added summed to **6.7¢** after purchased inputs. Livestock value added rose **12.1%** in dollar terms — faster than total food spending — while crops **fell 10.5%**, energy **fell 7.8%**, and transportation **fell 1.5%**. Crop producers' industry share slipped from roughly **2.9¢** to **2.5¢**; livestock moved from **3.0¢** to **3.3¢**.
+
+On the primary-factor bill, **labor** claimed **54.1 cents** of the 2024 food dollar (up from **52.0¢**), while **property income** fell to **32.7¢** from **34.5¢**. Workers in the food system received about **$1.17 trillion**. That labor share is the mechanical partner of the foodservices boom: you cannot staff dining rooms and grocery stores without bidding for hours.
+
+## How marketing margins absorb commodity swings
+
+Farm-gate prices and retail CPI do not share a volatility regime. ERS Food Price Outlook figures show **CPI food at home** rising **11.4%** in 2022, **5.0%** in 2023, and just **1.2%** in 2024 — while **farm-level egg PPI** swung **+158.1%**, **−28.3%**, and **+43.1%** across those same years (HPAI is the obvious culprit). Food-away-from-home CPI kept a steadier, stickier climb (**7.7%**, **7.1%**, **4.1%**). When farm eggs explode, grocery CPI for eggs rises, but the **all-items food-at-home** index is a basket where eggs are one weight among many — and processors, wholesalers, and retailers sit between the hen house and the carton.
+
+That is the marketing-margin absorption story in one sentence: **post-farm layers have fixed costs, contracts, and assortment buffers that convert farm-gate spikes into smaller, slower retail moves — and convert farm-gate crashes into delayed relief.** The Food Dollar share series will not tick one-for-one with a single commodity PPI. Shares are annual value attributions across the whole diet; PPIs are price paths for narrow products. Use the dashboard's **CPI vs farm eggs** panel to see the amplitude gap; do not treat a 40-point farm PPI print as a 40-point grocery inflation forecast.
+
+Domestic farm establishments still received **$256.7 billion** in 2024 from commodities linked to the food system — up **1.0%** or **$2.7 billion** from 2023 — even as their **share** of the food dollar edged down. Absolute farm receipts can rise while the farm share falls if marketing value grows faster. That is what a services-heavy food system looks like in the accounts.
+
+## Caveats and model breaks
+
+Treat three caveats as first-class, not footnotes. **First**, the March 2026 Food Dollar revision broadens the food definition (bottled water, soft drinks, coffee, tea, beverage materials) and refreshes source data. ERS states results are **not directly comparable** to previous releases; the broader basket alone reduces the reported 2024 farm share from **12.3¢** to **11.8¢** on a same-year illustration. **Second**, farm share ≠ farm profit. The 5.1¢ input wedge and the crop/livestock split matter more for income analysis than the headline marketing bill. **Third**, product-account shares are not a menu of "fair" prices — they encode supply-chain length. Bakery's 4.8¢ farm share is a processing fact, not proof that bakers "take" what growers "deserve."
+
+Pre-2023 points in the trend panel are **carried interpolations** for directional context under the revised framing; lean on disclosed **2023–2024** when you need audit-grade cents. Residual industry-group bars that close the dollar after disclosed ERS categories are marked as estimates in the data module.
+
+## What desks should take from the 2024 print
+
+If you underwrite grocery retail margins, the at-home farm share's **+0.1¢** nudge is not a margin squeeze story — the **away-from-home** channel and **labor** share are the louder moves. If you underwrite protein packers, watch product-account farm shares and livestock value-added growth, not the all-food average. If you forecast CPI food at home off farm PPIs, haircut the pass-through and lengthen the lag — egg PPI in 2022–2025 is the teaching case. And if you cite "farmers get less than twelve cents of the food dollar," specify **all food** versus **food at home**, and say whether you mean **gross farm share** or **farm value added**. Those are three different sentences.
+
+Sources: USDA ERS Food Dollar Series summary findings and chart gallery (March 10, 2026 model update); ERS Charts of Note on at-home vs away farm shares; ERS Food Price Outlook / Amber Waves on CPI and farm-level egg PPI paths. Product-account cents cross-checked against public reporting of the 2024 ERS accounts.`,
+  },
+  {
     id: "us-cattle-herd-at-seventy-year-lows-2026",
     slug: "us-cattle-herd-at-seventy-year-lows-2026",
     title:
