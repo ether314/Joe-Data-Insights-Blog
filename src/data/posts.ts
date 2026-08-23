@@ -2,6 +2,107 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "pivotal-trial-sites-by-country-2026",
+    slug: "pivotal-trial-sites-by-country-2026",
+    title:
+      "Charted: Top-3 Countries Hold 34% of Late-Stage Trial Country-Uses — 52% of Phase III Oncology Facilities",
+    excerpt:
+      "Industry Phase III geography still concentrates in the US, China, and a thin European tier. IQVIA-style country-uses put the Top-3 near 34%; oncology facility counts push past 52% — while Sub-Saharan Africa carries ~25% of DALYs on under 2% of sites.",
+    category: "Global Systems",
+    themeId: "clinical-development",
+    imageUrl:
+      "/images/global-systems-pivotal-trial-sites-by-country-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with amber trial-site clusters over the US, China, and Western Europe against sparse African and South Asian dots",
+    publishedAt: "2026-08-23T06:00:00Z",
+    featured: true,
+    visualization: "pivotal-trial-sites-by-country-2026",
+    layout: "default",
+    content: `Pivotal trials are where evidence becomes a label claim. The geography of those sites is therefore not a logistics footnote — it is a claim about whose patients, whose clinics, and whose regulators shape the evidence base the rest of the world inherits. This desk restates industry late-stage site geography from IQVIA country-prioritization shares, ClinicalTrials.gov / WHO ICTRP site listings, and a 2026 Phase III oncology facility census, then places those shares against WHO-style disease-burden (DALY) anchors.
+
+The interactive dashboard above is built as a **mismatch lens**, not a simple league table. Toggle **country-use vs oncology facility** metrics, filter by region, switch therapy geography, and flip Phase III initiation year. The punchline is deliberately double-booked. On *pipeline country-uses* (2021–23), the **United States holds about 16%**, **China about 13%**, and **Spain about 5%** — a **Top-3 near 34%**, with the **Top-10 near 58%**. On *unique Phase III oncology research facilities*, the United States alone is about **40%**, and **US + China + Germany clear roughly 52%**. Same question, two meters: initiation geography is spreading toward China; facility stock still looks American.
+
+## Top-3 country site share is the wrong comfort number
+
+Desks like Top-3 because it fits a slide. The useful version of the number is which Top-3 — and which perimeter.
+
+On IQVIA's country-use framing, utilization consolidated toward the United States and China even as Western Europe remained the largest *regional* bloc. Western Europe's share of global country-uses fell from about **32% in 2019 to 25% in 2023** (a **21% relative decline**). Eastern Europe fell harder — about **17% to 11%**. North America rose from roughly **19% to 23%**. China rose from about **10% to 15%** (**+57% relative**). That is not "Europe left the building." It is Europe still first as a bloc, while the *country* leaderboard and the *facility* leaderboard disagree about who sits second and third.
+
+Spain's outsized role in European Phase III *initiations* (often third globally on Citeline/ABPI ranks) is a reminder that country-use, initiation counts, and unique facilities are not interchangeable. Germany can lead Europe on facility stock while Spain leads on trial starts. Treating "Europe" as one row hides that internal rotation.
+
+| Perimeter | Top-1 | Top-3 share | What it measures |
+| --- | --- | --- | --- |
+| Country-uses (IQVIA 2021–23) | United States ~16% | ~34% (US + China + Spain) | How often countries appear in industry pipelines |
+| Oncology Phase III facilities | United States ~40% | ~52% (US + China + Germany) | Unique research facilities listed on trials |
+| Phase III initiations 2024 | China (overtook US) | China + US + Spain | New late-stage starts, not site stock |
+| Western Europe bloc 2023 | — | ~25% of country-uses | Regional utilization, still #1 bloc |
+
+The table's lesson is procedural: **do not splice initiation ranks into facility shares**. China overtaking the United States on Phase III *starts* in 2024 is a real signal about where protocols are opening. It does not erase a facility census in which US institutions still dominate unique site identity — especially in oncology.
+
+## US, China, and Europe versus the burden they claim to treat
+
+The core question is not "who has the most sites?" It is whether site geography tracks the disease burden those trials claim to address.
+
+Approximate DALY shares (WHO GBD / Global Health Estimates style anchors, carried for gap math) put the **United States near 7%** of global burden and **China near 18%**. Sub-Saharan Africa is on the order of **one-quarter** of DALYs. South Asia is not far behind. Against those anchors, US country-use share (~16%) implies a gap ratio around **2.2×** (sites over burden). Western Europe's ~25% country-use share against roughly **8–9%** of DALYs is closer to **3×**. China's ~13% country-use against ~18% DALYs is a mild *under*-index (~0.7×) — surprising to readers who only watch initiation headlines. Sub-Saharan Africa's ~**1.8%** site share against ~**25%** DALYs is a gap ratio near **0.07×**: the largest mismatch in the set.
+
+That mismatch is not proof of bad faith. Industry site selection optimizes for enrollment speed, investigator density, data quality, IP enforcement, and regulatory predictability. Those criteria correlate with high-income clinic infrastructure. The analytical claim is narrower: **if pivotal evidence is generated where patients are easiest to instrument, external validity for high-burden regions is a residual, not a design target.**
+
+Cardiometabolic and infectious-disease programs show slightly more Rest-of-World share than rare-disease and CNS programs in the therapy lens. Rare/orphan and many oncology regimens still lean US–Europe. The dashboard's therapy control is a stylized roll-up of disclosed patterns — use it as a directional scanner, not a protocol census.
+
+## China's rise is real — and still not a burden match
+
+Two narratives collide. Narrative A: China is taking over late-stage research. Narrative B: trials still ignore Asia's disease burden. Both can be locally true.
+
+On *starts*, China more than doubled Phase III initiations into 2024 and overtook the United States on ABPI/Citeline ranks. On *country-uses*, China's share rose from ~10% to ~15% in five years. On *oncology facilities*, China is about **7%** of unique research facilities — meaningful, not hegemonic. Domestic China-only programs (especially from China-headquartered sponsors, which IQVIA puts near **30% of global trial starts** in 2024, many single-country) inflate start counts without exporting site diversity.
+
+For global multi-regional trials aimed at FDA/EMA labels, China is increasingly a must-have region for enrollment math and for China NMPA strategy — not a substitute for US and EU evidence packages. The burden gap remains: China is under-weighted on country-uses relative to DALYs even while it leads some initiation tables. That is what a fast-growing base from a low share looks like.
+
+## Europe's share compression is a concentration story, not an exit
+
+Western Europe's relative decline gets read as "Europe is dead for trials." The levels still say otherwise. At **25%** of country-uses, Western Europe remains the largest regional bloc — larger than North America or China alone. What changed is the *dispersion inside Europe* and the *opportunity cost* against US/China growth.
+
+Central and Eastern Europe's drop from ~17% to ~11% is the sharper operational story for CROs: geopolitics, slower start-up in some markets, and competition from Spain, Germany, UK, and France for the protocols that still want European diversity. Spain's Phase III initiation strength is the clearest European counter-example to decline fatalism — a country that punches far above its DALY weight (gap ratio >7× on our carried anchors).
+
+For evidence policy, Europe's compression matters because EMA-relevant populations still need representation, while global protocols reallocate slots to US mega-sites and China. The risk is not zero European sites; it is **thinner, more repetitive European site lists** that look multinational on paper and monocultural in practice.
+
+## Facility stock versus initiation flow
+
+Facility censuses and initiation ranks answer different desk questions.
+
+- **Initiations** ask: where are new Phase III protocols opening *this year*?
+- **Country-uses** ask: how often does a country appear across the active/starting pipeline?
+- **Unique facilities** ask: how concentrated is the physical institutional base that can run those protocols?
+
+The 2026 oncology facility mapping (roughly **6,600** unique facilities across **84** countries) finds the United States at ~**40%** of facilities and a strong correlation between facility counts and trial participation. Outside high-income settings and China, capacity remains thin and skewed toward industry-sponsored, multiregional, systemic-therapy work. Latin America, South Asia, and Sub-Saharan Africa show high shares of facilities that *only* appear on multiregional industry protocols — a dependency signature, not an indigenous Phase III engine.
+
+That is why Top-3 facility share (~52%) is a harsher concentration meter than Top-3 country-uses (~34%). Starts can rotate; buildings and trained networks move slowly.
+
+## What the burden gap implies for regulators and sponsors
+
+If US and Western European patients are systematically over-represented in pivotal packages, two failures follow.
+
+First, **effect sizes and adverse-event profiles** may not travel. Pharmacogenomics, comorbidity mixes, concomitant medicines, and care pathways differ. Second, **access narratives** diverge from evidence narratives: high-burden countries are asked to trust — and eventually pay for — medicines validated elsewhere.
+
+None of this requires a conspiracy. It requires noticing that "global trial" often means "global enough for the agencies that matter commercially." WHO ICTRP and ClinicalTrials.gov make the geography auditable. The audit is rarely done against DALYs.
+
+Practical responses that show up in protocol design already: stratified regional enrollment floors, Africa and South Asia hub investments, decentralized elements that reduce site dependence, and indication-specific burden matching (infectious disease and some cardiometabolic programs lead; rare disease lags). The dashboard's Africa and South Asia gap ratios are the accountability metric those efforts have to move.
+
+## Caveats and how to read the meters
+
+This print is a **desk synthesis**, not a primary registry scrape shipped as a paper. Country-use percentages follow IQVIA Institute regional and top-country restatements; facility percentages follow a published Phase III oncology facility census; initiation ranks follow ABPI/Citeline reporting; DALY shares are WHO-style regional anchors carried for gap ratios. Gap ratio = site share ÷ DALY share. Values near 1.0 are matched; values >>1 are over-trialed relative to burden; values <<1 are under-trialed.
+
+Do not treat therapy-mix bars as audit-grade. They are directional composites. Do not compare 2024 initiation ranks to 2021–23 country-use shares as if they were the same vintage. Do not read China-only domestic starts as multi-regional diversity. Oncology facility geography is not identical to cardiometabolic or vaccine geography.
+
+HHI figures in the dashboard are analytical on stated country buckets (0–10,000 scale). They are concentration meters for the disclosed table, not filings.
+
+## Reading the dashboard
+
+Start with the **country ladder** on country-use, then flip to **oncology facilities** — watch the US bar jump and the Top-3 pie thicken. Use the **regional path** to see Europe's compression and China's rise on the same axis. The **scatter** puts site share against DALY share: points far above a 1:1 mental diagonal (high burden, low sites) are the equity problem; points far below (high sites, low burden) are the validity problem for exporting evidence. The **bloc mismatch** bars make the same point without requiring scatter literacy. Therapy and initiation-year controls are for stress-testing whether the story is oncology-only or initiation-year-only. It is not.
+
+**Bottom line:** Top-3 country site share is real — about **one-third** of country-uses and **half-plus** of oncology facilities — but the ethically and scientifically sharper headline is the gap ratio. The US and Western Europe remain heavily over-indexed to burden; Sub-Saharan Africa and South Asia remain nearly absent from the pivotal map that decides what counts as evidence.
+`,
+  },
+  {
     id: "us-share-of-global-source-plasma-2026",
     slug: "us-share-of-global-source-plasma-2026",
     title:

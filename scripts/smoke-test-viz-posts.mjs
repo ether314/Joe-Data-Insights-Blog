@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "pivotal-trial-sites-by-country-2026",
+    marker: "Top-3 country site share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-share-of-global-source-plasma-2026",
     marker: "Source plasma · fractionation feedstock",
     forbidden: "Loading interactive charts",
