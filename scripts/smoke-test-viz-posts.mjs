@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "spot-container-freight-vs-blank-sailings-2026",
+    marker: "SCFI vs blank-sail %",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "correspondent-banking-corridor-retreat-2026",
     marker: "Active correspondent corridors",
     forbidden: "Loading interactive charts",

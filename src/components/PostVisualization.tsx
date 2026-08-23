@@ -2762,6 +2762,21 @@ const CorrespondentBankingCorridorRetreat2026Dashboard = dynamic(
   },
 );
 
+const SpotContainerFreightVsBlankSailings2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/SpotContainerFreightVsBlankSailings2026Dashboard"
+    ).then((m) => m.SpotContainerFreightVsBlankSailings2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -3485,6 +3500,10 @@ export function PostVisualization({
 
   if (type === "correspondent-banking-corridor-retreat-2026") {
     return <CorrespondentBankingCorridorRetreat2026Dashboard />;
+  }
+
+  if (type === "spot-container-freight-vs-blank-sailings-2026") {
+    return <SpotContainerFreightVsBlankSailings2026Dashboard />;
   }
 
   return null;
