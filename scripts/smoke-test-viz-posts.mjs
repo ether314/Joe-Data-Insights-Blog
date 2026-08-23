@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-nevi-corridor-gaps-2026",
+    marker: "Unqualified AFC miles",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-childcare-price-vs-women-s-prime-age-lfp-2026",
     marker: "CPI childcare vs LFP",
     forbidden: "Loading interactive charts",

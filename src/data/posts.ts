@@ -2,6 +2,84 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-nevi-corridor-gaps-2026",
+    slug: "us-nevi-corridor-gaps-2026",
+    title:
+      "Charted: 38.4% of US NEVI Corridor Miles Still Lack a Qualifying DC-Fast Pair",
+    excerpt:
+      "Of about 82,250 designated EV Alternative Fuel Corridor miles in this desk panel (~81,700 Joint Office/Atlas anchor), an AFDC NEVI-class overlay still leaves roughly 31,600 miles without a qualifying DC-fast pair under the 50-mile / 1-mile benchmark. Texas, California, and the rural West dominate absolute gap miles.",
+    category: "Industry",
+    themeId: "ev-charging",
+    imageUrl:
+      "/images/industry-us-nevi-corridor-gaps-2026-hero.png",
+    imageAlt:
+      "Dark navy US corridor map with amber unfinished EV charging gaps interrupting teal completed interstate arcs",
+    publishedAt: "2026-08-24T08:00:00Z",
+    featured: true,
+    visualization: "us-nevi-corridor-gaps-2026",
+    layout: "default",
+    content: `The National Electric Vehicle Infrastructure (NEVI) Formula Program was sold as a corridor completion machine: take FHWA’s designated EV Alternative Fuel Corridors (AFCs), place DC-fast stations every fifty miles within a mile of the highway, and unlock a national long-distance network. The designation step largely happened. The Joint Office and subsequent state-plan digests put EV AFC mileage near **81,000–81,700 miles** after Rounds 1–7 — roughly **94%** of the Interstate Highway System and about **37%** of the broader National Highway System. The harder question is whether those miles already host a *qualifying* DC-fast pair.
+
+This desk’s answer, using DOE Alternative Fuels Data Center (AFDC) public DC-fast inventory attributes overlaid on FHWA AFC centerlines and scored against the pre–August 2025 NEVI planning benchmark (≥4 ports, ≥150 kW simultaneous class, ≤50-mile spacing, ≤1-mile proximity), is blunt: about **38.4%** of designated AFC mileage in the state panel — roughly **31,600 miles** — still lacks a NEVI-creditable pair. Call those **unqualified AFC miles**. The interactive dashboard above separates national coverage mix, state gap leaders, the build-out path, failure modes, and the awkward scatter between raw AFDC port counts and corridor gap share.
+
+## Designation is not coverage
+
+FHWA’s Alternative Fuel Corridor program and NEVI’s build-out rulebook are related but not identical. Corridor designation answers “which highways are nominated into the EV AFC network?” NEVI build-out answers “which of those miles have stations that meet the formula program’s creditable criteria?” A segment can be Corridor-Ready for highway signage under older or looser EV criteria and still fail NEVI’s power, port-count, connector, or proximity tests. Treating FHWA Ready mileage as “done” for NEVI understates the gap.
+
+Joint Office reporting through Plan Year 2023–2024 estimated that states collectively planned on the order of **1,000–1,500** new or upgraded stations to finish existing AFC build-out — implying **4,000–6,000** ports at the four-port minimum, and more if sites oversize. By mid-2026, public NEVI trackers put operational NEVI-funded sites only in the low hundreds nationally. Private and legacy DCFC fill some slots, but many of those sites do not clear the NEVI-creditable bar. Designation raced ahead of qualification.
+
+## The national punchline: nearly half the miles
+
+On a national roll-up of about **82,250** panel AFC miles (against a Joint Office/Atlas anchor near **81,700**), this construction scores about **50,650** miles as covered by at least one NEVI-creditable pair under the 50-mile rule and **31,600** as unqualified. That is a **61.6% / 38.4%** split — not a rounding error on the margin of a finished network. The coverage mix panel in the dashboard is the headline chart for a reason: corridor maps look dense; the qualifying-pair denominator does not.
+
+The share is sticky across vintages. AFC mileage jumped with Rounds 6 and 7 while qualifying coverage rose more slowly. Mid-2024 through mid-2026 saw NEVI site openings accelerate from dozens to roughly **200** operational NEVI-funded locations in tracker tallies, yet the unqualified share only compressed modestly because new designations, stricter scoring of legacy sites, and rural spacing failures kept adding or protecting gap miles. More open sites did not automatically erase the corridor math.
+
+## Which states dominate the remaining gaps?
+
+Absolute gap miles concentrate where AFC networks are long *and* NEVI-class pairs are thin. In this panel, **Texas** leads with about **3,520** unqualified miles on roughly **6,200** AFC miles (**56.8%** gap share). **California** follows on absolute gaps (~**2,320** miles) despite a denser AFDC port stock — a reminder that urban charger counts do not equal Interstate pair continuity. **Montana**, **New Mexico**, and **Nevada** round out the top five on gap miles, with gap shares of **60–80%**. Together the top five account for about **31.5%** of national unqualified mileage.
+
+Regional intensity is sharper still. The West’s roll-up gap share sits near **51%** in this desk construction; the Northeast’s is closer to the mid-teens. That is geography and grid as much as politics: long Interstate runs between amenities, weak three-phase service, and sparse host sites produce spacing failures that coastal megaregions rarely see.
+
+| State | AFC miles | Gap miles | Gap share | Why it shows up |
+| --- | ---: | ---: | ---: | --- |
+| Texas | 6,200 | 3,520 | 56.8% | Long Interstate spine; uneven NEVI-class pairs |
+| California | 5,800 | 2,320 | 40.0% | Dense ports, incomplete corridor continuity |
+| Montana | 2,100 | 1,680 | 80.0% | Extreme spacing / grid constraints |
+| New Mexico | 1,950 | 1,365 | 70.0% | Desert Interstate gaps |
+| Nevada | 1,800 | 1,080 | 60.0% | Corridor length vs sparse creditable pairs |
+| Pennsylvania | 1,900 | 285 | 15.0% | Early NEVI activation; FBO path |
+| Rhode Island | 180 | 0 | 0% | First FBO-certified state (2024) |
+
+## Failure modes: spacing still leads
+
+Not every unqualified mile fails for the same reason. Desk attribution of gap segment-miles puts **spacing beyond 50 miles** first (~**38%**), then **power or port shortfalls** on sites that exist but are not NEVI-class (~**27%**), then **>1-mile setbacks** (~**14%**), connector/access mismatches (~**12%**), and not-yet-creditable awarded or under-construction sites (~**9%**). The failure-mode panel exists so “no chargers” is not the only mental model. Plenty of corridors have DC-fast hardware that still does not count.
+
+That distinction matters for procurement. Upgrading a two-port 50 kW legacy site can close a gap without a greenfield pad. Conversely, a new four-port 150 kW site placed 70 miles from the next creditable neighbor leaves a spacing hole that no uptime KPI will fix. Gap miles are a geometry problem as much as a capital problem.
+
+## Fully built-out certification changed the goalposts
+
+In July 2024 Rhode Island became the first state to receive FHWA fully built-out (FBO) certification. By mid-2026 a small set of states — including Rhode Island, Pennsylvania, Michigan, Ohio, North Carolina, Vermont, Utah, and Wyoming in industry tallies — had FBO letters that unlock remaining NEVI funds for publicly accessible sites off designated AFCs. August 11, 2025 Interim Final Guidance then **removed the mandatory 50-mile spacing requirement**, letting states propose reasonable distances and a simplified FBO narrative.
+
+This post keeps the **50-mile / 1-mile benchmark** as the gap yardstick anyway. Without a common ruler, “fully built out” becomes incomparable across states the week after guidance changes. Desks that need to know where a long-distance EV trip still hits a desert should prefer the benchmark map; desks that need to know where formula dollars may leave the Interstate should watch FBO certification instead. Both questions are valid. They are not the same question.
+
+## Ports ≠ pairs: the scatter that embarrasses easy narratives
+
+AFDC public DC Fast port counts correlate only loosely with AFC gap share. California and Florida can stack thousands of ports while still carrying multi-thousand-mile corridor gaps on NEVI-class scoring. Montana and the Dakotas can show high gap shares with thin port stock — the intuitive case. The scatter panel’s point is the non-intuitive middle: **port abundance is not corridor completion**. Destination, depot, and metro charging inflate AFDC totals without stitching Interstate pairs every fifty miles within a mile of the right-of-way.
+
+For industry readers — charge-point operators, utilities sizing feeders, OEMs promising road-trip range anxiety relief — the actionable unit is the **qualifying pair**, not the state port total. A solicitation that awards sites on AFC miles with the highest remaining gap share will close more network risk per federal dollar than one that simply chases population-weighted port gaps.
+
+## Caveats and how to read the numbers
+
+This is a **constructed** national desk overlay, not an FHWA certified build-out ledger. AFC mileage anchors (~81,000 Joint Office; ~81,700 in later digests) are disclosed snapshots and move with nomination rounds. State mile splits are scaled reconstructions, not a published FHWA state mileage table. “NEVI-creditable” scoring uses AFDC attributes and corridor geometry proxies; station-level audit against 23 CFR 680 and each state’s exception letters would reclassify some miles in both directions. August 2025 guidance means some states will certify FBO under spacing rules this dashboard deliberately does not adopt. Puerto Rico and some short urban connectors are imperfectly represented. Treat the **38.4%** unqualified share as a planning estimate with directionally useful state ranks, not a statutory finding.
+
+## What to watch next
+
+Three tapes will move the unqualified-mile share from here. First, **obligation and commissioning velocity** after the 2025 funding thaw — awards are not openings, and openings are not always creditable. Second, **Round 8+ AFC nominations**: adding pending rural segments can raise the denominator faster than the numerator. Third, **how aggressively states use post-FBO flexibility** — community and secondary-road charging may be the right equity move without shrinking Interstate gap miles on the old benchmark. The dashboard’s build-out path is the scoreboard for the first two; FBO counts are the scoreboard for the third.
+
+Unqualified AFC miles are the honest residual of a program that designated a national network faster than it qualified one. Nearly two-fifths of the corridor mileage in this panel still fails a NEVI-class pair test under the planning rule America spent three years explaining to drivers. The states that dominate that residual are not a mystery list of non-adopters — they are the long-spine and rural-West systems where geometry, grid, and host economics bite hardest. Closing them is the difference between a signed corridor and a drivably finished one.
+`,
+  },
+  {
     id: "us-childcare-price-vs-women-s-prime-age-lfp-2026",
     slug: "us-childcare-price-vs-women-s-prime-age-lfp-2026",
     title:
