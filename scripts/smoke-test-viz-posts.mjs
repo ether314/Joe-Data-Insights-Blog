@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-counties-with-no-local-news-outlet-2026",
+    marker: "Counties with 0–1 local news outlets",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "alliance-capacity-share-on-transpacific-2026",
     marker: "Top-alliance TEU share",
     forbidden: "Loading interactive charts",
