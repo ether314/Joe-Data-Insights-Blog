@@ -253,7 +253,8 @@ export interface Post {
     | "rare-disease-trial-desert-map-2026"
     | "instant-domestic-rails-vs-swift-for-retail-2026"
     | "biologically-unsustainable-stocks-share-2026"
-    | "ransomware-payments-vs-uninsured-losses-2026";
+    | "ransomware-payments-vs-uninsured-losses-2026"
+    | "electrician-and-plumber-age-cohorts-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

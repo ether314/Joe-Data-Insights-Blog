@@ -2,6 +2,90 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "electrician-and-plumber-age-cohorts-2026",
+    slug: "electrician-and-plumber-age-cohorts-2026",
+    title:
+      "Charted: Electricians and Plumbers Near Retirement — Where Cohorts Age Fastest",
+    excerpt:
+      "CPS 2024 puts 18.4% of U.S. electricians and 20.4% of plumbers at ages 55+. Maine’s electrician cohort hits 27.8% near retirement; West Virginia plumbers reach 28.4%. Licensure pipelines in those aging states run thinner than in Texas and Florida.",
+    category: "Labor & Skills",
+    themeId: "skilled-trades-aging",
+    imageUrl:
+      "/images/labor-skills-electrician-and-plumber-age-cohorts-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of electrician and plumber silhouettes flanking an amber age-cohort chart highlighting near-retirement shares",
+    publishedAt: "2026-08-23T23:00:00Z",
+    featured: true,
+    visualization: "electrician-and-plumber-age-cohorts-2026",
+    layout: "default",
+    content: `The licensed trades that keep buildings powered and plumbed are not aging evenly across the map. Nationally, **18.4%** of employed electricians and **20.4%** of plumbers, pipefitters, and steamfitters are already **55 or older**, according to the Bureau of Labor Statistics’ 2024 Current Population Survey (Table A-11b). That is nearly **one in five** electricians and **one in five** plumbers sitting in the decade where retirement, reduced hours, or exit from the craft become common.
+
+The sharper story is geographic. In the dashboard above, **Maine** leads the electrician sample at **27.8%** aged 55+, and **West Virginia** leads plumbers at **28.4%**. Large Sun Belt markets such as **Texas** sit near **14%** for electricians — a gap of more than **thirteen percentage points** between the oldest small state and the youngest large one. Licensure pipelines do not automatically offset those gaps: states with the thickest near-retirement bands often issue fewer new licenses relative to the 55+ stock they already carry.
+
+## National age bands, not just a median
+
+CPS reports median ages of **39.6** for electricians and **40.1** for plumbers — middling numbers that can hide the retirement cliff. The age-band panel shows why. Electricians concentrate in the **25–34** and **35–44** decades (**26.0%** and **22.5%** of employment). Plumbers do too (**24.8%** and **24.2%**), but their **55–64** band is thicker: **15.9%** versus **13.7%** for electricians. Add the 65+ tail and plumbers’ combined 55+ share clears **20%**.
+
+In absolute terms the stocks are large. CPS counts about **992,000** electricians and **636,000** plumbers/pipefitters/steamfitters. Roughly **183,000** electricians and **130,000** plumbers are already 55+. Those are the people most likely to leave the craft over the next decade — not a forecast of exact exits, but the cohort that state boards and contractors watch when they talk about “replacing the journeymen.”
+
+## Scoreboard: share near retirement
+
+| Cut | Metric | Value |
+| --- | --- | ---: |
+| National (CPS 2024) | Electricians aged 55+ | **18.4%** |
+| National (CPS 2024) | Plumbers aged 55+ | **20.4%** |
+| National | Electrician median age | **39.6** |
+| National | Plumber median age | **40.1** |
+| Oldest electrician state | Maine share 55+ | **27.8%** |
+| Oldest plumber state | West Virginia share 55+ | **28.4%** |
+| Youngest large electrician market | Texas share 55+ | **14.2%** |
+| Northeast vs South (elec., sample) | Regional share gap | **~7–9 pp** |
+| High pipeline pressure | Electrician states with ≥6 near-retirees per new license | **8** |
+| National desk issuance (2024) | New electrician / plumber licenses | **~38.4k / ~24.1k** |
+
+The table is the policy brief in one glance: national shares are already material, the extremes are regional, and the license faucet is not uniformly thick where the cohort is oldest.
+
+## Which states carry the oldest cohorts
+
+Northern New England and Appalachia dominate the aging ladder. For electricians, **Maine (27.8%)**, **Vermont (26.9%)**, **West Virginia (26.4%)**, and **New Hampshire (25.6%)** clear a **25%** near-retirement share. **Rhode Island** and **Connecticut** follow in the mid-20s. Midwestern industrial states — **Michigan**, **Ohio**, **Illinois**, **Wisconsin** — cluster around **21–23%**, older than the national average but younger than the Northeast fringe.
+
+The young end of the ladder is Sun Belt and Mountain West construction growth. **Texas (14.2%)**, **Utah (12.6%)**, **Colorado (14.0%)**, **Arizona (14.8%)**, and **Florida (15.1%)** sit well below the national electrician 55+ share. Those states still have large absolute counts of older workers — Texas alone employs roughly **70,600** electricians on the OEWS measure — but the **share** is diluted by younger hires flowing into housing, data-center, and infrastructure work.
+
+Plumbers track the same geography with a slightly older national baseline. **West Virginia (28.4%)** and **Maine (27.2%)** again lead; **Pennsylvania** and **Michigan** sit near **23–24%**. **Utah** and **Texas** again look young on share. The pattern is not “the South has no aging tradespeople.” It is that **in-migration and housing starts pull the age distribution left** while slower-growth Northeast and Appalachian markets keep more of their 55+ stock in the denominator.
+
+## Licensure pipelines: issuance, exams, and pressure
+
+Age alone does not say whether a state can replace departing journeymen. The dashboard’s pipeline scatter plots **share 55+** against **pipeline pressure** — defined here as estimated 55+ employment divided by new licenses issued in a recent year. A pressure of **6** means roughly six near-retirement workers for every new license; **4** is closer to the sample median for electricians.
+
+Aging states often stack high on both axes. Maine and Vermont combine mid-to-high 20s shares with thin absolute license counts. New York’s electrician cohort is “only” about **22%** 55+, but a five-year apprenticeship path and a first-time exam pass rate near **57%** keep the faucet from opening as wide as Texas (**~71%** pass rate proxy, **~3,200** new electrician licenses). California’s C-10 and C-36 programs issue thousands of licenses, yet CSLB-style pass rates in the low-to-mid **50s** mean many candidates recycle through the exam gate before they enlarge the licensed stock.
+
+Florida and Texas show the opposite shape: younger shares, thicker issuance, and higher pass-rate proxies. That does not prove those states are “solved.” It does show that **the states with the oldest cohorts are not the states with the fattest license pipelines** — which is the desk’s core comparison.
+
+## Regional rollup: Northeast old, South younger, exams diverge
+
+Employment-weighted regional averages from the state sample put the **Northeast** electrician 55+ share several points above the **South**. Exam pass rates move the other way: South and West boards in the sample clear candidates more often, on average, than Northeast peers where union JATC pathways and municipal licensing layers add friction. Midwest states sit in between on age and often look competitive on pass rates (**Wisconsin** and **Michigan** electrician proxies in the mid-to-high **60s**).
+
+The license-path panel shows national issuance recovering after the **2020** dip and climbing through **2024** (~**38,400** electrician and ~**24,100** plumber licenses on the desk consolidation). That national recovery is real — and still uneven when sliced by the states that need replacement most.
+
+## What “near retirement” does and does not mean
+
+A 55-year-old electrician is not automatically leaving next year. Many craftworkers stay past 65, especially owner-operators and specialists. CPS’s **65+** bands (**4.7%** electricians, **4.6%** plumbers) prove that exit is staggered. The 55+ share is still the cleanest public cohort signal for **how much of today’s stock sits in the retirement window**, not a one-year attrition forecast.
+
+OEWS employment and CPS occupation labels also differ. OEWS state cells for SOC **47-2111** and **47-2152** are the employment base used for pressure math; CPS national totals are larger household estimates. Mixing them without labels would invent false precision. The dashboard and source note keep those lanes separate.
+
+## Caveats and method
+
+State **share 55+** figures are an ACS 2019–2023 PUMS-style synthesis applied to OEWS stocks, then reweighted toward disclosed board or PUMS anchors for Maine, Vermont, West Virginia, New Hampshire, Florida, Texas, California, New York, Pennsylvania, and Michigan. Remaining states are **estimated** and marked as such in the data module. New-license counts and exam pass rates use published board reports where available; elsewhere they are employment-scaled proxies. **Pipeline pressure** is an analytical ratio, not a regulator KPI. Apprenticeship year requirements (typically four, sometimes five) describe statutory or common pathways — they do not measure completion rates. License issuance includes multiple credential types in some states (journeyman vs contractor), so cross-state comparisons are directional.
+
+National age bands and medians are **disclosed** CPS 2024 annual averages. Where May 2024/2025 OEWS state cells were not re-scraped, May 2023 employment is **carried**.
+
+## What to watch next
+
+Three dials matter more than another national “trades shortage” headline. First, whether **Northeast and Appalachian 55+ shares** keep rising as housing and industrial demand stay concentrated in younger Sun Belt markets. Second, whether **exam pass rates and issuance** in aging states climb enough to cut pipeline pressure below **6**. Third, whether large states that look young on share — Texas, Florida, California — can keep issuing licenses fast enough that absolute retirements do not still bite local contractors.
+
+Until those dials move together, the United States will keep running a two-speed trades age map: **older cohorts and thinner license faucets** in parts of the Northeast and Appalachia, and **younger shares with thicker issuance** where construction payrolls are still expanding. The dashboard is built to toggle that comparison by trade, region, and sort — because the national 18–20% near-retirement shares hide where the cliff is steepest.`,
+  },
+  {
     id: "ransomware-payments-vs-uninsured-losses-2026",
     slug: "ransomware-payments-vs-uninsured-losses-2026",
     title:

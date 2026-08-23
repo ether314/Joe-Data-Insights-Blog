@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "electrician-and-plumber-age-cohorts-2026",
+    marker: "Near-retirement share by state",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ransomware-payments-vs-uninsured-losses-2026",
     marker: "Insured share of ransomware loss",
     forbidden: "Loading interactive charts",
