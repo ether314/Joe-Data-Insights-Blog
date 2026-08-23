@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-crushed-stone-vs-construction-put-in-place-2026",
+    marker: "Headline — tonnage vs real CIP",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "orbital-launch-cadence-by-operator-2026",
     marker: "Operator launch share",
     forbidden: "Loading interactive charts",
