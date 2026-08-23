@@ -251,7 +251,8 @@ export interface Post {
     | "us-crushed-stone-vs-construction-put-in-place-2026"
     | "global-5g-auction-proceeds-vs-coverage-2026"
     | "rare-disease-trial-desert-map-2026"
-    | "instant-domestic-rails-vs-swift-for-retail-2026";
+    | "instant-domestic-rails-vs-swift-for-retail-2026"
+    | "biologically-unsustainable-stocks-share-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

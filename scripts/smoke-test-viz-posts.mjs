@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "biologically-unsustainable-stocks-share-2026",
+    marker: "Unsustainable stock %",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "instant-domestic-rails-vs-swift-for-retail-2026",
     marker: "Headline — rail share of retail FX",
     forbidden: "Loading interactive charts",

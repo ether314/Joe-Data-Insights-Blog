@@ -2,6 +2,86 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "biologically-unsustainable-stocks-share-2026",
+    slug: "biologically-unsustainable-stocks-share-2026",
+    title:
+      "Charted: 37.7% of Assessed Fish Stocks Are Fished at Biologically Unsustainable Levels",
+    excerpt:
+      "FAO SOFIA’s long-run panel puts biologically unsustainable marine stocks at 37.7% in 2021 — up from 35.4% in 2019 and 10% in 1974. Landings-weighted, 76.9% of catch still comes from sustainable stocks. The share is still rising; management success is uneven by ocean.",
+    category: "Global Systems",
+    themeId: "capture-fisheries",
+    imageUrl:
+      "/images/global-systems-biologically-unsustainable-stocks-share-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of rising red overfished stock share against a shrinking teal sustainable band over deep-ocean contours",
+    publishedAt: "2026-08-23T23:00:00Z",
+    featured: true,
+    visualization: "biologically-unsustainable-stocks-share-2026",
+    layout: "default",
+    content: `FAO’s State of World Fisheries and Aquaculture keeps a deliberately stubborn scoreboard: the share of assessed marine stocks fished at biologically unsustainable levels. In the 2024 edition, that share reaches **37.7%** for reference year **2021**. It was **35.4%** in 2019 and about **10%** when the modern series opens in **1974**. The interactive dashboard above walks the stock-count path, the FAO Major Fishing Area ladder, the overfished / maximally fished / underfished split, and the management contrasts that separate a bleak equal-stock average from a less bleak tonnage-weighted one.
+
+This is not a harvest-tonnage story and not an aquaculture-majority story. It is a biological-status story: for each assessed stock unit in FAO’s long-run panel, is biomass below the level that can produce maximum sustainable yield? Count those units equally and the unsustainable share keeps grinding higher. Weight them by landings and the picture softens — **76.9%** of 2021 landings from monitored stocks still came from biologically sustainable stocks — because larger, better-watched fisheries pull the average. Both statements are true. Policy desks that quote only one of them are choosing a frame.
+
+## The equal-stock path is still climbing
+
+SOFIA’s Figure 18 family is the continuity series for Sustainable Development Goal 14.4 tracking. Treating each assessed stock the same, regardless of catch size, the unsustainable share moved from **10%** (1974) to **37.7%** (2021). That is a **+27.7 percentage-point** rise across roughly five decades, with a recent **+2.3 pp** jump from 2019 to 2021 alone. FAO describes the multi-decade sustainable-share decline as roughly **0.5–1 percentage point per year** on average. The last two reported steps did not break that pattern; they reinforced it.
+
+Sustainable stocks are the sum of two FAO classes: maximally sustainably fished and underfished. In 2021 those slices were about **50.5%** and **11.8%** of assessed stocks, so the sustainable total is **62.3%**. The underfished slice is thin and has been thin for years; most of the “sustainable” column is stocks already pressed near MSY, not unused surplus sitting politely offshore.
+
+Early decades in the dashboard path include chart-approximate midpoints from the published SOFIA figure; the 2013–2021 prints are disclosed edition values. The direction does not depend on the midpoints: every modern SOFIA print in the 2010s and early 2020s shows the unsustainable share higher than the one before it.
+
+## Stock-count vs landings: two honest denominators
+
+Equal-stock math answers “what fraction of monitored populations are overfished?” Landings-weighted math answers “what fraction of the monitored catch still comes from stocks that are not overfished?” In 2021 those answers diverge: **37.7%** unsustainable by stock count versus about **23.1%** unsustainable by landings weight (because **76.9%** of landings ride on sustainable stocks).
+
+That gap is not a rounding trick. The ten species with the largest landings averaged about **78.9%** sustainably fished in 2021 — well above the world stock-count mean. Major commercial tuna stocks sit near **87%** sustainably fished, with FAO noting that roughly **99%** of tuna catch comes from stocks healthy on abundance. Large, RFMO-watched fisheries are simply not the average stock in the panel. Small, data-poor, coastal stocks are over-represented in the equal-count pain and under-represented in the tonnage-weighted comfort.
+
+Recent landings-weighted prints also moved the wrong way after a brief improvement: narrative reconciliations around SOFIA put landings-weighted sustainability near the low-80%s in 2019 before the 2021 print of **76.9%**. Stock-count and landings-weighted series can therefore worsen together even while landings-weighted levels remain far above stock-count levels. The dashboard’s weight dual path is there so desks do not collapse those two lenses into one slogan.
+
+## Where the map is worst — and where management shows up
+
+FAO’s Major Fishing Area cuts for 2021 still show a wide spread. Eastern Central Pacific, Northeast Atlantic, Northeast Pacific, and Southwest Pacific clear roughly the mid-70%s to mid-80%s on sustainable stock share. Mediterranean and Black Sea sits near **37.5%** sustainable. Southeast Pacific is about **33.3%** sustainable on a stock-count basis even though anchoveta weight means most of that area’s *landings* still come from sustainable stocks. Northwest Pacific — the world’s largest marine-landings region — is only about **44%** sustainable. Eastern Central Atlantic worsened sharply versus 2019, falling to about **48.7%** sustainable.
+
+Northeast Atlantic’s climb into the high-70%s sustainable band is the clearest public reminder that the global path is not destiny for every basin. Where assessment capacity, catch limits, and compliance thicken, stock-status scores can improve on the same FAO definitions that keep deteriorating globally. The area ladder in the dashboard is sorted so that contrast is visible without pretending every ocean is on the same management trajectory.
+
+| FAO area (2021) | Sustainable stock % | Unsustainable stock % | Why it matters |
+| --- | ---: | ---: | --- |
+| Eastern Central Pacific (77) | **84.2** | 15.8 | Best stock-count score in the published set |
+| Northeast Atlantic (27) | **79.4** | 20.6 | Rebuild signal after decades of pressure |
+| Northwest Pacific (61) | **44.0** | 56.0 | Largest marine landings region |
+| Mediterranean & Black Sea (37) | **37.5** | 62.5 | Long-stressed enclosed basin |
+| Southeast Pacific (87) | **33.3** | 66.7 | Worst stock-count score; landings still anchoveta-heavy |
+
+## Composition: overfished is the rising slice
+
+The 2021 pie is not a three-way stalemate. Overfished stocks are **37.7%**. Maximally sustainably fished stocks are about **50.5%**. Underfished stocks are about **11.8%**. Most of the “good” column is already fully used under FAO’s biomass bands; the underfished residual is too small to absorb a global expansion of effort without converting green cells to amber and then red.
+
+FAO’s definitions are biomass-relative to MSY targets (with conventional bands around BMSY), not socioeconomic sustainability, ecosystem integrity, or bycatch externalities. A stock can be “maximally sustainably fished” on biomass and still sit inside a degraded habitat, a high-bycatch gear mix, or a food-security squeeze. The SOFIA status share is a necessary indicator, not a sufficient ocean-health index.
+
+## Why the 2025 Review must not be spliced onto 1974–2021
+
+In 2025 FAO published a broader Review of the state of world marine fishery resources covering on the order of **2,570** stocks. That census prints about **64.5%** sustainable and **35.5%** overfished, with landings-weighted sustainability near **77.2%**. Those levels look slightly “better” than the SOFIA 2021 equal-stock print — and that is exactly why desks must not draw a line from 37.7% (2021 SOFIA) to 35.5% (2025 Review) and call it a turn.
+
+The SOFIA panel is a fixed long-run assessment list designed for continuity. The Review is a wider stock census with different coverage and aggregation choices. Different nets catch different fish. The dashboard’s census scatter keeps both points visible as a methodology contrast, not as adjacent years on one path. If a 2026 SOFIA edition reprints the long-run panel, that will be the next legitimate continuity point — not a crosswalk from a parallel product.
+
+## What is still rising — and what that does not prove
+
+The core question in the brief is binary enough to answer plainly: **yes, the biologically unsustainable share is still rising** on the SOFIA continuity panel. 2019→2021 added **2.3 pp**. The multi-decade climb from **10%** to **37.7%** did not flatten into a plateau in the latest print. Managed cohorts (large species, tunas, some North Atlantic and North Pacific areas) show that recovery is possible where institutions bite. The global equal-stock average is not yet reflecting a world that has generalized those institutions.
+
+Caveats that should travel with the headline:
+
+- **Panel coverage.** The long-run SOFIA panel monitors on the order of a few hundred aggregated stocks covering roughly seven-tenths of marine landings — not every coastal stock on Earth.
+- **Equal-stock vs landings weight.** Quoting 37.7% without the 76.9% landings-weighted companion overstates how much of the *catch* is biologically unsustainable; quoting only 76.9% understates how many *populations* are overfished.
+- **Assessment quality varies.** Some areas lean on full analytical assessments; others lean on catch trends and expert judgment. Data-poor regions can look artificially stable or noisy.
+- **Biomass ≠ ecosystem health.** MSY status ignores habitat loss, climate-driven recruitment shifts, and species interactions except insofar as they already moved biomass.
+- **Edition lag.** SOFIA 2024’s status chapter is a 2021 reference year. The ocean has not been frozen since then; it also has not been re-measured yet on this panel.
+- **Do not splice the 2025 Review.** Broader census, different scope, not a drop-in replacement for the SDG continuity series.
+
+The honest one-line read for desks: **37.7% of assessed stocks were biologically unsustainable in 2021, still rising, while most monitored tonnage still comes from sustainable stocks — and that combination is exactly why management replication, not slogan choice, is the binding constraint.**
+
+Sources: FAO, *The State of World Fisheries and Aquaculture 2024*, status-of-fishery-resources chapter (reference year 2021); FAO newsroom materials on the 2025 Review of the state of world marine fishery resources for the broader census contrast only.`,
+  },
+  {
     id: "instant-domestic-rails-vs-swift-for-retail-2026",
     slug: "instant-domestic-rails-vs-swift-for-retail-2026",
     title:

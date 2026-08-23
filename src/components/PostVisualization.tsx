@@ -3302,6 +3302,21 @@ const InstantDomesticRailsVsSwiftForRetail2026Dashboard = dynamic(
   },
 );
 
+const BiologicallyUnsustainableStocksShare2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/BiologicallyUnsustainableStocksShare2026Dashboard"
+    ).then((m) => m.BiologicallyUnsustainableStocksShare2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4169,6 +4184,10 @@ export function PostVisualization({
 
   if (type === "instant-domestic-rails-vs-swift-for-retail-2026") {
     return <InstantDomesticRailsVsSwiftForRetail2026Dashboard />;
+  }
+
+  if (type === "biologically-unsustainable-stocks-share-2026") {
+    return <BiologicallyUnsustainableStocksShare2026Dashboard />;
   }
 
   return null;
