@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "generic-price-declines-versus-manufacturer-exits-2026",
+    marker: "Price decline vs exit lag",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-nevi-corridor-gaps-2026",
     marker: "Unqualified AFC miles",
     forbidden: "Loading interactive charts",

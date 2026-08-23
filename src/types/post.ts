@@ -256,7 +256,8 @@ export interface Post {
     | "ransomware-payments-vs-uninsured-losses-2026"
     | "electrician-and-plumber-age-cohorts-2026"
     | "us-childcare-price-vs-women-s-prime-age-lfp-2026"
-    | "us-nevi-corridor-gaps-2026";
+    | "us-nevi-corridor-gaps-2026"
+    | "generic-price-declines-versus-manufacturer-exits-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

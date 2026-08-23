@@ -3377,6 +3377,21 @@ const UsNeviCorridorGaps2026Dashboard = dynamic(
   },
 );
 
+const GenericPriceDeclinesVersusManufacturerExits2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/GenericPriceDeclinesVersusManufacturerExits2026Dashboard"
+    ).then((m) => m.GenericPriceDeclinesVersusManufacturerExits2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4264,6 +4279,10 @@ export function PostVisualization({
 
   if (type === "us-nevi-corridor-gaps-2026") {
     return <UsNeviCorridorGaps2026Dashboard />;
+  }
+
+  if (type === "generic-price-declines-versus-manufacturer-exits-2026") {
+    return <GenericPriceDeclinesVersusManufacturerExits2026Dashboard />;
   }
 
   return null;

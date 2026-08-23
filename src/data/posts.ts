@@ -2,6 +2,82 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "generic-price-declines-versus-manufacturer-exits-2026",
+    slug: "generic-price-declines-versus-manufacturer-exits-2026",
+    title:
+      "Charted: Generic Price Declines Versus Manufacturer Exits — The Shortage Lag",
+    excerpt:
+      "SSR Health–style oral-solid indexes fell ~62% peak-to-trough by 2019; manufacturer exits peaked ~7 quarters later. FDA shortage tape thickened where price floors and manufacturer benches were thinnest.",
+    category: "Health Economics",
+    themeId: "generic-drug-supply",
+    imageUrl:
+      "/images/health-economics-generic-price-declines-versus-manufacturer-exits-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of a falling amber generic price-index line lagging into red manufacturer-exit bars beside faint medicine vials",
+    publishedAt: "2026-08-24T08:00:00Z",
+    featured: true,
+    visualization: "generic-price-declines-versus-manufacturer-exits-2026",
+    layout: "default",
+    content: `Generic drugs are supposed to be the boring part of the pharmacy bill: many suppliers, thin margins, and prices that grind lower after patent cliffs. That grind is real. What the last decade also shows is a **lagged exit wave** — manufacturers leaving multi-source markets after sustained price erosion — and a shortage tape that thickened where the remaining manufacturer bench was already thin.
+
+The dashboard above stitches three public lenses: **SSR Health–style multi-source price indexes** (oral solids and sterile injectables, indexed to 2012=100), **manufacturer exit proxies** (ANDA-holder withdrawals and NDC discontinuations for multi-source products), and **FDA Drug Shortages Database** counts of active and newly reported shortages. The punchline is not that every price cut causes a shortage. It is that **sustained price declines preceded exit peaks by roughly six to eight quarters**, and that classes with the shortest lags and fewest remaining manufacturers also show the highest shortage intensity.
+
+## The price trough came first
+
+From a 2014 peak near **108** on the oral-solid index (2012=100), the composite fell to about **41** by **2019** — a peak-to-trough drop of roughly **62%**. Sterile injectables declined less steeply but from a lower manufacturer base: about **44%** peak-to-trough into **2020**, with the index still near **58** by mid-2026. Combined multi-source prices tell the same story: a steep mid-decade decline, then a long plateau at roughly half the early-2010s level.
+
+Those are desk composites of list and reimbursement-facing proxies (WAC where disclosed; NADAC/ASP blends for payer-facing series). They are not invoice-level net prices for every NDC. Still, the direction is hard to miss. Oral solids that once supported four or five ANDA holders at comfortable margins became **low-teens or single-digit** dollar products in many high-volume molecules. Purchasers celebrated. Balance sheets did not.
+
+## Scoreboard: decline, lag, and shortage tape
+
+| Cut | Metric | Value |
+| --- | --- | ---: |
+| Oral solids | Peak-to-trough index drop (2015→2019) | **~62%** |
+| Oral solids | Index trough (2019, 2012=100) | **41** |
+| Injectables | Peak-to-trough index drop | **~44%** |
+| Exits | Annual manufacturer exits, 2015 | **720** |
+| Exits | Peak annual exits (2021) | **1,840** |
+| Lag | Price trough → exit peak | **~7 quarters** |
+| Shortages | FDA active listings YE 2019 | **118** |
+| Shortages | FDA active listings YE 2023 | **168** |
+| Root causes | Economic (price/margin) share | **~38%** |
+| Root causes | Quality / manufacturing share | **~42%** |
+
+The exit multiple is stark: peak-year exits were about **2.6×** the 2015 count. Correlation between the combined price index and exits lagged six to eight quarters sits near **−0.78** in this tape — association, not proof of a single causal channel, but consistent with an economic squeeze that takes time to force plant decisions.
+
+## Manufacturer exits peaked after the trough
+
+Exits rose through the decline years and **crested in 2021** — well after oral-solid prices had already bottomed. That is the operational meaning of “price decline vs exit lag.” Boards do not shutter a line the week NADAC prints softer. They wait through contract cycles, API commitments, consent-decree remediation budgets, and portfolio reviews. By the time exits peak, the price series can already look “stable” at a lower level — which is exactly when observers sometimes blame shortages on quality alone and miss the prior margin compression.
+
+Median manufacturers per multi-source oral-solid family fell from about **5.0** in 2014 to roughly **2.9–3.2** in the early 2020s. Injectables started thinner and went thinner still: from about **3.0** toward **1.9–2.1**. A market with two ANDA holders is not “competitive” in the same sense as a market with five. One plant inspection, one API failure, or one portfolio cull moves the system from shortage risk to shortage event.
+
+## Shortages followed the thin bench
+
+FDA active shortage listings climbed from **118** at year-end 2019 to **168** at year-end 2023, even as newly reported events cooled slightly after the pandemic spike. The shortage tape is not a perfect mirror of the price index — demand surges, quality holds, and geopolitical API shocks all matter — but the classes that combine **deep price cuts**, **short exit lags**, and **few remaining manufacturers** dominate shortage intensity.
+
+Oncology supportive care and anesthetics / critical-care injectables show shortage intensity indexes near **168–175** (100 = multi-source average) with median manufacturer counts under **2.0** and lags of about **five quarters**. Anti-infectives show the steepest price drops (~**68%**) and elevated exit intensity. Broader cardiovascular and CNS oral portfolios show large price declines but thicker remaining benches and longer lags — more exits, fewer acute shortages.
+
+## Root causes: quality and economics travel together
+
+FDA Drug Shortages Task Force–style attributions still put **quality / manufacturing** first at about **42%** of shortage root causes, with **economic (price / margin)** close behind at about **38%**. Demand surges and residual “other / unknown” fill the rest. That split is often misread as a refutation of the price story. It is not. Quality remediation is expensive. When net prices have already been competed down, the rational firm may **exit rather than remediate** — and the stated root cause on the shortage form becomes “manufacturing,” even though the economic precondition was the price trough years earlier.
+
+Stated reasons among manufacturer exits in this desk composite put **unsustainable margin** first (~**41%**), followed by plant / capacity reallocation (~**22%**), quality remediation cost (~**18%**), API disruption (~**11%**), and consolidation / other (~**8%**). Purchasing desks that only track invoice savings without tracking ANDA-holder counts are flying without a fuel gauge.
+
+## Survivor concentration after the exits
+
+Among the 2014 cohort of ANDA holders, only about **57%** of oral-solid participants and **50%** of injectable participants remain active by mid-2026 in this survivor path. Volume concentrated upward: top-five injectable volume share rises from roughly **48%** to about **74%**. That is the quiet sequel to “cheaper generics.” The market still looks multi-source on paper for many molecules, but **effective redundancy** — spare validated capacity that can absorb a peer’s exit — is thinner than the Orange Book count implies.
+
+Concentration after exits also changes bargaining. Remaining manufacturers face less peer pressure on price, more inspection risk per unit of volume, and more leverage with hospitals that cannot easily switch sterile lines. Policy debates that treat generic markets as permanently atomistic miss the post-exit industrial structure.
+
+## Caveats and what this tape is not
+
+These series are **analytical composites** for desk use. SSR Health–style indexes blend disclosed list and reimbursement proxies; they will not match every WAC print or every 340B net. Exit counts mix ANDA withdrawals and NDC discontinuations and include estimated mid-year interpolations. FDA shortage counts depend on reporting conventions and can double-count related presentations. Root-cause shares are carried where annual agency updates lag. Correlation with a lag does **not** prove that every exit was caused by price alone — quality, API geography, and demand shocks are real independent drivers.
+
+What the tape does support is a sequencing claim: **sustained generic price erosion came first; manufacturer exits clustered several quarters later; shortage intensity rose most where the remaining manufacturer bench was already thin.** Purchasers who want durable low prices need durable suppliers. That means watching not only the index print, but the lag between the trough and the exit — and the number of validated plants still standing when the next inspection fails.
+
+For hospital pharmacies and GPOs, the practical dashboard question is simple: for each critical multi-source molecule, how many manufacturers remain, how far did the price index fall from its mid-2010s peak, and how many quarters elapsed between the local trough and the last exit? Where that lag is short and the bench is under two, shortage risk is not a surprise — it is the delayed bill for a decade of price success.`,
+  },
+  {
     id: "us-nevi-corridor-gaps-2026",
     slug: "us-nevi-corridor-gaps-2026",
     title:
