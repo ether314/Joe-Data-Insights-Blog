@@ -2,6 +2,90 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "office-vacancy-versus-conversion-pipelines-2026",
+    slug: "office-vacancy-versus-conversion-pipelines-2026",
+    title:
+      "Charted: New York Clears 212 Converted Units per Million Vacant Office SF — Houston Only 9",
+    excerpt:
+      "National office-to-apartment pipelines hit 90,300 units at the start of 2026 (+28% YoY), but intensity — units per million vacant square feet — splits metros into converters and vacancy-stranded markets.",
+    category: "Real Estate",
+    themeId: "office-conversions",
+    imageUrl:
+      "/images/real-estate-office-vacancy-versus-conversion-pipelines-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split of an empty glass office tower versus the same tower converting to warm-lit apartments, with bold NYC 212 vs Houston 9 intensity labels",
+    publishedAt: "2026-08-23T18:00:00Z",
+    featured: true,
+    visualization: "office-vacancy-versus-conversion-pipelines-2026",
+    layout: "default",
+    content: `Empty office floors and apartment waitlists now share the same skyline photographs — but they do not share the same economics. At the start of 2026, RentCafe / Yardi counted **90,300** U.S. apartments in an office-to-residential conversion pipeline, up **28%** from a year earlier and nearly four times the ~23,000-unit count in 2022. CBRE’s Q2 2026 national office vacancy print sat near **18.3%**, down 30 basis points in a single quarter. Those two facts travel together in headlines. They do not travel together on a metro map.
+
+The useful ratio is not “how vacant is downtown?” It is **converted units per million vacant square feet** — how much residential pipeline attaches to each chunk of empty office stock. On that intensity lens, **New York** clears about **212** units per million vacant SF. **Houston**, with overall vacancy near **25.8%**, clears about **9**. That is a **24×** gap between two large inventories of unused desks. Vacancy is a necessary condition for conversion stories. It is not a sufficient one.
+
+The dashboard above is built for that split. Toggle **Intensity ladder**, **Vacancy × intensity**, **Pipeline path**, **Cost stacks**, and **Reuse + region mix**. Filter by Census region or by whether the city runs a named conversion incentive. The point is not that every vacant tower should become housing — it is that brokers, lenders, and city desks keep pairing the wrong numerator with the wrong denominator.
+
+## Vacancy is inventory; pipelines are politics and floor plates
+
+Broker vacancy measures leased versus available office space. Conversion pipelines measure projects that cleared enough zoning, financing, and design feasibility to enter a tracker. Those are different machines. A Class B tower with deep floor plates, limited light wells, and a CMBS structure that still prices as “office” can sit vacant for years without generating a single residential unit count. A narrower pre-war building with city tax abatements and a cooperative lender can move into a conversion tracker while the metro’s overall vacancy rate is only middling.
+
+That is why national coincidence is misleading. Office vacancy peaked near the high teens / low twenties (depending on the broker’s universe) while conversion pipelines climbed. Removals and demolitions are finally nibbling inventory — CoStar’s August 2026 note flagged net inventory declines and a historically thin construction pipeline. Removals help vacancy math. They do not automatically equal apartments delivered. Demolition is not adaptive reuse; a parking lot is not a unit.
+
+## The intensity ladder: who pairs vacancy with units
+
+Across a fifteen-metro panel that blends CBRE / Colliers / CoStar vacancy composites with RentCafe start-of-2026 pipeline tops, intensity sorts metros into four working buckets:
+
+| Metro | Vacancy % | Pipeline units | Units / M vacant SF | Bucket |
+| --- | ---: | ---: | ---: | --- |
+| New York | 14.8 | 16,358 | 212 | Active conversion |
+| Washington, D.C. | 19.6 | 8,479 | 140 | Active conversion |
+| Cleveland | 20.8 | 1,980 | 140 | Active conversion |
+| Chicago | 22.4 | 4,360 | 78 | Active conversion |
+| Los Angeles | 21.1 | 4,340 | 73 | Active conversion |
+| Houston | 25.8 | 560 | 9 | Vacancy-stranded |
+| Austin | 21.9 | 210 | 11 | Vacancy-stranded |
+| Seattle | 23.1 | 380 | 14 | Vacancy-stranded |
+
+**Active conversion** metros combine meaningful pipelines with intensity well above the panel median (~68 units per M vacant SF). **Vacancy-stranded** metros show elevated vacancy without a proportional residential response. **Balanced** markets (Dallas–Fort Worth, Atlanta, San Francisco in this cut) sit in between — real pipelines, but intensity closer to the middle of the pack. **Tight-market** Boston shows lower vacancy and only modest intensity; it is not “failing” conversion so much as having less distressed inventory to feed the machine.
+
+New York’s leadership is not a vacancy story. Manhattan and metro vacancy have healed faster than many Sun Belt CBDs, and Midtown prime vacancy has printed in the low single digits on some CBRE cuts. The pipeline nonetheless nearly doubled year over year to **16,358** units. Older floor plates, city zoning reforms, and tax tools that reward affordable set-asides turn *some* obsolete offices into countable apartments even as the best towers re-lease. Intensity, not vacancy, is the signal.
+
+## Vacancy-stranded Sun Belt towers
+
+Houston is the cleanest stranded case in the panel. Newmark’s Q2 2026 metro print put overall vacancy at **25.8%** on roughly **241 million** SF of inventory — on the order of **62 million** vacant SF. A carried conversion pipeline near **560** units implies roughly **nine** apartments per million vacant SF. That is not a moral judgment about Houston’s housing politics; it is an arithmetic statement about what currently clears trackers. Suburban campus product, energy-tenant footprints, and a thinner stack of downtown pre-war towers change the feasible set. Ground-up multifamily also remains comparatively cheap in many Houston submarkets, so the conversion discount versus new construction is smaller than in coastal cities where ground-up mid-rises can clear **$500k–$700k** per unit.
+
+Austin and Seattle rhyme with Houston on intensity even if their vacancy stories differ. Both carry vacancy well above the national average with pipelines measured in the low hundreds of units. Seattle’s tech-lease hangover and Austin’s post-boom delivery overhang leave a lot of space that is empty *as office* without being *residentializable* on today’s capital stack. If your thesis is “high vacancy → conversions,” these metros falsify it.
+
+## Incentives move intensity more than vacancy does
+
+Cities that published conversion programs — New York’s tax exemptions for projects with affordable components, D.C.’s Housing in Downtown abatements, Chicago TIF tools, Los Angeles adaptive-reuse ordinances, San Francisco’s financing-district experiments, Minneapolis process streamlining — show a higher average intensity in this panel (**~115** units per M vacant SF) than metros without a named program (**~39**). Correlation is not causation: cities with hard downtown housing shortages are also the ones that write abatements. Still, the gap is large enough that treating vacancy as the sole predictor is analytically lazy.
+
+Cost stacks reinforce the incentive story. Estimated conversion soft-and-hard midpoints still sit below ground-up mid-rise costs in New York, D.C., Chicago, and coastal California — sometimes by **$150k–$230k** per unit before counting tax benefits. In Houston and Dallas, the conversion-versus-ground-up gap shrinks toward **$40k–$70k** per unit. When greenfield multifamily is already cheap and entitled, capital does not need empty offices as a housing workaround.
+
+## National path: pipelines rose while vacancy only lately eased
+
+From 2022 to 2026, national office-to-apartment pipelines climbed from **~23k** to **~90k** units. National vacancy rose through the mid-decade peak and only began a clearer retreat in late 2025 / 2026 as removals and thin construction helped. Office now accounts for about **47%** of future adaptive-reuse projects, ahead of hotels (**18%**), industrial (**16%**), and a grab-bag of schools, health-care, and government buildings (**~19%**). Regionally, the Northeast still holds the largest pipeline share (**~32%**), with the South close behind (**~29%**), then the Midwest (**~22%**) and West (**~17%**). The West’s share looks light relative to California’s housing shortage — a reminder that zoning and construction costs can keep intensity muted even where politics want housing.
+
+## What the scatter plot is for
+
+Plot vacancy on the x-axis and intensity on the y-axis and the panel stops looking like a single “office crisis.” Upper-left metros convert without needing record vacancy. Lower-right metros warehouse empty space. The weak correlation (roughly **−0.12** in this cut) is the finding: **vacancy rate alone does not rank conversion activity**. Pipeline absolute counts still matter for housing supply narratives — New York’s **16k** units dwarf Cleveland’s **2k** — but intensity tells you whether vacant stock is being recycled or merely marked-to-market.
+
+Bubble size (pipeline units) keeps absolute scale honest. A small Midwest city can look “intense” because its vacant denominator is small; that does not make it the national housing fix. Conversely, Dallas can land in the top five for absolute units while intensity stays mid-pack because the vacant office stock is huge.
+
+## Caveats and methodology
+
+Vacancy rates are **broker composites** (CBRE, Colliers, CoStar, local Newmark prints) for mid-2026 where available; they are not a single audited national feed. Inventory and vacant SF for several metros are **estimated** as inventory × vacancy when vacant SF is not published separately. Pipeline units for New York, Washington, Chicago, Los Angeles, and Dallas match disclosed RentCafe / Yardi start-of-2026 tops; other metros are **carried / estimated** from ranking notes and YoY commentary. Intensity inherits those uncertainties — treat stranded-versus-active labels as analytical buckets, not underwriting grades.
+
+Conversion “units” are **pipeline** counts, not certificates of occupancy. Many projects stall, re-trade, or deliver years late. Incentive flags are binary presence of a named city program, not a scored NPV of abatements. Cost-per-unit figures are **estimated midpoints** for soft-and-hard costs; they exclude land basis fights, remediation, and lender reserve haircuts that decide live deals. CoStar’s Conversion Feasibility Index claim that roughly a quarter of office inventory is *suitable* for conversion is a screening concept — suitability is not a project.
+
+Do not read this panel as a prediction that Houston “should” match New York’s intensity. Floor-plate geometry, residential rent levels, construction labor, insurance, and capital-markets structures differ. The claim is narrower: **if the question is which metros pair high vacancy with real conversion pipelines, the answer is not the vacancy ranking.**
+
+## What to watch next
+
+Three prints will move the intensity map faster than another round of “office is dead” essays. First, **deliveries versus starts** inside conversion trackers — whether the 90k-unit pipeline is turning into keys or into stalled renderings. Second, **inventory removals** in CoStar / CBRE supply tables — conversions and demolitions that actually shrink the office denominator. Third, **city program revisions** in New York, D.C., Chicago, and California: abatement cliffs and zoning tweaks change intensity without waiting for vacancy to peak again.
+
+For desks that need a single headline: **New York converts on the order of 212 apartments per million vacant office square feet; Houston converts on the order of 9.** National vacancy near **18%** and a **90,300**-unit pipeline can both be true while half the high-vacancy map remains stranded. Pair the vacancy print with the pipeline — or you are measuring the wrong empty building.`,
+  },
+  {
     id: "hospital-system-clout-vs-commercial-prices-2026",
     slug: "hospital-system-clout-vs-commercial-prices-2026",
     title:

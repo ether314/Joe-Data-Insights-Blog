@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "office-vacancy-versus-conversion-pipelines-2026",
+    marker: "Converted units per vacant sq ft",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "hospital-system-clout-vs-commercial-prices-2026",
     marker: "Hospital clout · commercial prices",
     forbidden: "Loading interactive charts",
