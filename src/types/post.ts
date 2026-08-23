@@ -198,7 +198,8 @@ export interface Post {
     | "energy-systems-concentration-202608"
     | "macro-growth-trade-geography-2026q3"
     | "fiscal-plumbing-concentration-202608"
-    | "demographic-cash-flows-geography-2026q3";
+    | "demographic-cash-flows-geography-2026q3"
+    | "adaptation-economics-geography-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

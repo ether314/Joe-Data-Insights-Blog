@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "adaptation-economics-geography-2026",
+    marker: "Adaptation economics — geography lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "demographic-cash-flows-geography-2026q3",
     marker: "Demographic cash flows — Q3 geography vintage",
     forbidden: "Loading interactive charts",

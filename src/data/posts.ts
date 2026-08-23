@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "adaptation-economics-geography-2026",
+    slug: "adaptation-economics-geography-2026",
+    title:
+      "Charted: N. America Holds 22.4% of the $424B Gap — SSA Takes 28% of MDB Flows",
+    excerpt:
+      "Geography lens on adaptation economics: North America leads the $424B protection-gap stock (~22.4%; Top-3 regions ~52.6%), Sub-Saharan Africa leads estimated MDB LMIC adaptation recipients (~28% of $35B), and Western Europe originates ~52% of OECD adaptation — three maps that disagree on who is exposed, who gets financed, and who writes the cheque.",
+    category: "Energy",
+    themeId: "adaptation-economics",
+    imageUrl:
+      "/images/energy-adaptation-economics-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with cyan North America gap node, violet Africa finance arcs, amber South Asia and LAC heat, and teal Europe donor streams",
+    publishedAt: "2026-08-22T14:00:00Z",
+    featured: true,
+    visualization: "adaptation-economics-geography-2026",
+    layout: "default",
+    content: `Our [theme research](/blog/adaptation-economics-research-2026) mapped the stock ledger — who still pays when insurance and public adaptation leave a residual. The [FY concentration print](/blog/adaptation-economics-concentration-2026) then measured how thick that tip is: residual Top-1 near **40%**, protection-gap Top-3 regions near **53%** of a **$424B** stock. The [Q3](/blog/adaptation-economics-concentration-2026q3) and [August concentration locks](/blog/adaptation-economics-concentration-202608) stress-tested whether a benign insured half softened the tip. This post asks the desk question that sits beside those distributions: **where do exposure dollars, adaptation flows, and donor capacity sit on the map — and do those maps agree?**
+
+The interactive dashboard above is built as a **geography lens**. Toggle **Gap map**, **Flow map**, **Mismatch**, and **Damage map**. On the gap view flip share, dollars, or resilience and filter by income band. On damage flip economic %, insured %, or uninsured dollars. The punchline is deliberately multi-map. On the **protection gap**, North America leads at about **22.4%** of the **$424B** stock (~**$95B**). On **MDB LMIC adaptation**, Sub-Saharan Africa leads estimated recipient geography at about **28%** of **$35B**. On **OECD donor origin**, Western Europe clears about **52%** of **$34.7B**. On **economic losses**, North America again leads the FY **~$368B** framing at about **34%** — while holding roughly **48%** of the insured sleeve. Exposure, finance, donors, and covered losses are **four different maps**.
+
+## The geography scoreboard
+
+| Map | Top-1 | Top-3 / bloc | Universe |
+| --- | ---: | ---: | ---: |
+| Protection-gap stock | **22.4%** (N. America) | **52.6%** (NA · S. Asia · LAC) | **$424B** |
+| MDB LMIC adaptation recipients | **28%** (SSA) | **68%** (SSA · S. Asia · LAC) | **$35B** (2025) |
+| OECD adaptation donor origin | **52%** (W. Europe) | **70%** (+ Adv. APAC) | **$34.7B** (2024) |
+| Economic loss geography | **34%** (N. America) | **84%** (NA · APAC · Europe) | **~$368B** FY |
+| Global insured share | **29.1%** covered | — | **$107B** / **$368B** |
+
+Read the table as a **family of regional shares**, not one slogan. Gap Top-1 tells you where uninsured exposure dollars concentrate in absolute terms. Flow Top-1 tells you where the largest institutional adaptation engine steers LMIC books. Donor Top-1 tells you which advanced-economy bloc still writes the bilateral cheque. Loss Top-1 tells you where the damage calendar prints — and the insured column shows how that calendar is *not* the same as who absorbs residual rebuild costs. Averaging “adaptation geography” across these rows is a category error: **22% of a gap stock is not 28% of an MDB tip**.
+
+## Gap map: absolute dollars vs thin cover
+
+Open **Gap map**. The ranked bars put North America first at **$95B** (**22.4%**), then South Asia (**$66B**, **15.6%**), LAC (**$62B**, **14.6%**), SSA (**$58B**, **13.7%**), Western Europe, advanced APAC, and MENA. Flip to **Resilience** and the order inverts at the bottom: SSA (~**6%**) and South Asia (~**8%**) sit in the thin-cover band while North America (~**42%**) and Western Europe (~**38%**) sit high. Filter **Developing** and the dashboard keeps the corridors that matter for unmet demand — large absolute gaps with almost no insurance penetration.
+
+The pie makes the Top-3 sticky: **N. America + South Asia + LAC ≈ 52.6%** of the stock (HHI ~**1,518**). That is the same geography tip the [FY concentration lens](/blog/adaptation-economics-concentration-2026) printed — this post’s contribution is to put the tip *on a map* beside the flow and donor layers rather than beside residual-bearer HHI. Desks that treat “North America has the biggest gap” as “North America needs the most public adaptation” are conflating absolute uninsured dollars in rich markets with scarcity in low-resilience regions. Both are true; they are not the same claim.
+
+## Flow map: who receives, who originates
+
+Toggle **Flow map**. Estimated MDB LMIC adaptation recipient shares of **$35B (2025)** put SSA first (~**28%**, ~**$9.8B**), South Asia **22%**, LAC **18%**, developing EAP **14%**, MENA **10%**, ECA LMIC **8%**. Top-3 (SSA · South Asia · LAC) clears about **68%**. These shares remain **estimated** from published MDB climate-finance regional patterns — not an official Joint Summary region extract — and are labeled as such in the dashboard source note.
+
+Beside that ladder, the donor-origin pie rolls OECD adaptation **$34.7B** into host geography: Western Europe ~**52%**, Japan & advanced APAC donors ~**18%**, North America ~**14%**, other developed providers ~**16%**. Germany still leads the bilateral tip inside Europe (see the [concentration donor cut](/blog/adaptation-economics-concentration-2026)), but the geography lens asks a different question: **which bloc originates the money**, not which ministry. Pair with the [August MDB + H1 update](/blog/adaptation-economics-update-202608) for the level bounce (+**31%** YoY on the MDB tip) — this post tracks *where inside the club* the tip lands.
+
+The dual bar panel is the mismatch preview: SSA’s flow share (~**28%**) sits well above its gap-share (~**13.7%**); North America’s gap share (~**22.4%**) sits far above its MDB LMIC flow share (~**4%** — most NA exposure sits outside the LMIC perimeter). That is not a bug in the ledgers. It is the point of running two maps.
+
+## Mismatch: resilience, gap dollars, and flow overweight
+
+Open **Mismatch**. The resilience×gap scatter still lights South Asia and SSA — low resilience, large absolute gap — while North America and Western Europe sit in the high-resilience / large-gap quadrant (big dollars, thicker cover). Filter by income and the developing cluster stays in the danger corner. The second scatter plots **gap share vs MDB flow share**: points above a 45° reading are flow-overweight relative to their uninsured-exposure share (SSA, South Asia); points below are flow-underweight or outside the LMIC tip (North America, Western Europe).
+
+Scarcity context does not disappear on a map. AGR needs mid (~**$338B**/yr by 2035) still runs roughly **9.6×** the MDB LMIC adaptation tip. A region can be “favoured” on the flow map and still radically underfunded versus needs. Geography reallocates a thin tip; it does not close the tip.
+
+## Damage map: who gets hit vs who gets a cheque
+
+Toggle **Damage map**. On the constructed FY 2025 loss sleeves, North America takes about **34%** of economic losses but about **48%** of insured losses — the covered calendar is more NA-heavy than the economic calendar. Asia-Pacific takes about **28%** of economic losses but only ~**18%** of the insured sleeve. MENA+SSA is small on both dollar prints (~**7%** economic) and tiny on insured (~**3%**), which is why absolute loss geography understates adaptation scarcity there. Flip to **Uninsured $** and APAC and North America still dominate residual dollars — rich-world storms print large uninsured residuals even when resilience indices look “good” globally (~**27%**).
+
+The hazard stack underneath is illustrative, not a hazard extract: SSA residual skews drought-heavy; South Asia and LAC skew flood; North America mixes storm and wildfire. Pair that with the August concentration hazard panel — Top-1 residual is not one weather story — and the geography cut shows **which regions carry which hazard mix** when the next severe season arrives.
+
+## Who is exposed, who is relatively favoured
+
+**Exposed on current maps:** households and local budgets in South Asia and SSA sitting in the low-resilience / large-gap quadrant; LMIC sovereigns borrowing into a loan-heavy public adaptation tip while needs mid remains ~**9.6×** MDB flows; Asia-Pacific corridors whose economic-loss share exceeds their insured share; desks that read “MDB flows to SSA” as proof the protection gap is closing in dollar terms.
+
+**Relative winners under current rules:** advanced-economy insured systems that capture a thicker share of the covered sleeve than of economic losses; Western European donor blocs that still originate ~**52%** of OECD adaptation; MDB recipient regions (SSA, South Asia, LAC) that clear ~**68%** of the **$35B** tip; investors and cities that price residual incidence by *region, resilience, and ledger* rather than by a single global insured-loss headline.
+
+**What would change the story:** official MDB adaptation region tables that break the estimated **28% / 22% / 18%** recipient tip; donor diffusion that lifts non-Europe origin shares; resilience gains that lift South Asia and SSA well above single-digit penetration; or a severe season that pushes NA and APAC uninsured residuals higher while the global insured ratio falls back toward the FY ~**29%** framing. None of those dominate the official vintages summarised here.
+
+## Caveats and methodology
+
+- **Protection-gap regional dollars are estimated allocations** of the Swiss Re-style **$424B** stock — geography illustrates uninsured exposure, not a country extract.
+- **MDB recipient-region shares are estimated** from published MDB climate-finance patterns and labeled estimated — not an official Joint Summary region table.
+- **Donor-origin blocs roll estimated OECD bilateral shares** into host geography; Germany/Japan/France still anchor the tip inside those blocs.
+- **Economic and insured loss sleeves are constructed** incidence consistent with the theme’s FY **~$368B / ~$107B** framing — not a reinsurance-market geography extract.
+- **Hazard mixes are illustrative** for dashboard comparison across regions.
+- **Do not splice** OECD, UNEP, CPI, MDB, and Swiss Re gap ledgers into one total — different scopes, years, and methodologies.
+- Primary sources: MDB Joint Summary (13 Jul 2026), OECD May 2026 climate finance, Swiss Re Institute protection-gap framing, UNEP Adaptation Gap Report 2025.
+
+Geography does not settle who *should* pay. It shows that the map of uninsured dollars, the map of MDB recipients, the map of donor origin, and the map of insured losses still disagree — and that disagreement is the adaptation-economics story before policy catches up. For bearer concentration see the [FY concentration print](/blog/adaptation-economics-concentration-2026); for the August tip lock see the [202608 concentration lens](/blog/adaptation-economics-concentration-202608); for levels see the [August update](/blog/adaptation-economics-update-202608); for theme structure see [adaptation economics research](/blog/adaptation-economics-research-2026).`,
+  },
+  {
     id: "demographic-cash-flows-geography-2026q3",
     slug: "demographic-cash-flows-geography-2026q3",
     title:
