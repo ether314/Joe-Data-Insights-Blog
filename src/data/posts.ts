@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "measurement-science-geography-2026",
+    slug: "measurement-science-geography-2026",
+    title:
+      "Charted: China Holds 29.4% of World GERD — East Asia ~41%; Pubs and Patents Tip Harder",
+    excerpt:
+      "Geography lens on measurement & science: China 29.4% / US 29.1% of ~$3.48T PPP GERD, East Asia ~41% of funding, China 31% of S&E pubs and ~75% of CET AI priority patents — while KTI value-added still crowns the US at 28%.",
+    category: "Global Systems",
+    themeId: "measurement-science",
+    imageUrl:
+      "/images/global-systems-measurement-science-geography-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a glowing world map with amber East Asia R&D bars, cyan North America knife-edge stacks, and violet patent arcs",
+    publishedAt: "2026-08-21T23:45:00Z",
+    featured: true,
+    visualization: "measurement-science-geography-2026",
+    layout: "default",
+    content: `Our theme already maps *who* funds and publishes science at the top of the distribution. The [2026 concentration print](/blog/measurement-science-concentration-2026) scored GERD PPP Top-1 / Top-3. The [Q3 concentration restatement](/blog/measurement-science-concentration-2026q3) carried the knife-edge. The [August 202608 concentration companion](/blog/measurement-science-concentration-202608) then asked whether China’s 2025 domestic ¥ flow and CET patent meters change tip geometry without splicing yuan into PPP shares. This post answers the map question desks trade next: **where does R&D funding, publication volume, and patent activity sit geographically — and do those maps agree?**
+
+The interactive dashboard above is built as a **geography lens**, not another Top-k ladder. Toggle **Countries**, **Regions**, **Share paths**, and **Funding vs output**. The punchline is deliberately multi-map. On *GERD PPP funding*, **China holds about 29.4%** of a ~**$3.48T** world — a **0.3 pp** knife-edge over the United States at **29.1%**. On *regional blocs*, **East Asia clears about 41%** of world GERD. On *S&E publication volume*, China tips harder at **31%** while the US falls to **12%** and India enters Top-3 at **7%**. On *CET AI priority patents*, China jumps to about **75%**. On *KTI value-added*, the **United States still leads at 28%**. Same theme, five different geographic tips.
+
+## The geography scoreboard
+
+| Lens | Top-1 share | Top-1 tip | What it measures |
+| --- | ---: | --- | --- |
+| GERD funding (PPP) | **29.4%** | China | OECD/AAAS 2024 world ~$3.48T |
+| East Asia GERD bloc | **~41%** | E. Asia | China + Japan + Korea roll-up |
+| S&E publication volume | **31%** | China | NSF Indicators 2024 fractional |
+| CET AI priority patents | **~75%** | China | NSF Translation field tip |
+| KTI value-added | **28%** | United States | World KTI VA ~$11.7T |
+| USPTO utility applicants | **~47%** | United States | Domestic utility grant geography |
+
+Read the table as a **family of maps**, not one slogan. Funding geography says China and the US are co-dominant at the country tip, with East Asia the thickest *bloc*. Publication geography says China already leads by a wide margin and India punches into Top-3. Patent geography splits: CET critical-and-emerging fields tip hard to China; USPTO utility applicants still tip to the US. KTI value-added geography puts the US first even while China leads manufacturing VA inside the same perimeter. Averaging these rows into “science has moved to China” is true on pubs and CET patents and false on KTI VA and USPTO utility.
+
+## Countries: Tip-1 relocates when you change the perimeter
+
+Open **Countries**. On GERD PPP, China **29.4%** and the US **29.1%** sit within rounding of each other; Japan **6.7%**, Germany **5.5%**, and Korea **4.7%** fill the next rungs; Top-3 (China + US + Japan) clears about **65%**. Flip the perimeter to **Publications** and China rises to **31%** while the US drops to **12%** and India appears at **7%** — Top-3 becomes China + US + India at **50%**. Flip again to **CET AI patents** and China alone is about **75%**. Flip to **KTI VA** and the US reclaims Tip-1 at **28%**, with China **25%** and EU-27 **18%**. Flip to **USPTO utility** and the US leads at about **47%**.
+
+That relocation is the operational hinge. Desks that underwrite “China won science” from publication volume are reading one map. Desks that underwrite knowledge-and-technology *industry* value-added are reading another. Desks that underwrite USPTO utility grants are reading a third. The [August concentration companion](/blog/measurement-science-concentration-202608) already showed tip disagreement across perimeters; geography makes the disagreement *spatial*.
+
+## Regions: East Asia owns the funding bloc; North America still owns KTI Tip-1
+
+Toggle **Regions**. On GERD PPP, **East Asia holds about 41%** of world funding (~**$1.42T** of the **$3.48T** perimeter). North America is about **32%**, Europe about **18%**, South Asia about **2%**, and the residual closes the rest. Flip to publications and East Asia stays thick (~**36%**) while South Asia’s India tip lifts that bloc’s share; North America’s *share* collapses relative to its funding weight because US publication volume did not keep pace with US GERD share. Flip to CET AI patents and East Asia jumps toward **~80%** — the regional expression of China’s ~**75%** country tip.
+
+Inside the US funding tip, state geography still densifies. California alone is about **22%** of US domestic R&D on the desk roll-up; Massachusetts, Texas, New York, and Washington fill the next band. Flip the US-state metric to **Intensity %** and Massachusetts leads; flip to **Dollars** and California’s absolute stack dominates. World GERD geography and *inside-US* R&D geography are nested maps — do not confuse a California campus story with a China/US knife-edge.
+
+## Share paths: the knife-edge was earned over a decade
+
+Toggle **Share paths**. From 2010 to 2024, China’s GERD PPP share rises from the mid-teens toward **29.4%** while the US share eases from the low-thirties toward **29.1%**. Publication shares cross earlier: China’s pubs share overtakes the US well before the GERD knife-edge closes. The East Asia versus North America bloc path shows the same story at regional scale — East Asia GERD climbs through the high thirties into ~**41%** while North America eases toward ~**32%**.
+
+The intensity × share scatter beside the path makes the *quality of concentration* visible. Korea sits high on R&D/GDP intensity with a mid-single-digit world GERD share. China sits mid-intensity (~**2.8%**) with the largest absolute share. The US sits higher intensity (~**3.4%**) with a near-tied share. India sits low intensity with a pubs share that punches above its GERD weight. Filter the scatter to **East Asia** or **Europe** to see regional clusters without the China/US visual field dominating.
+
+China’s 2025 domestic flow (¥**3.9262T**, +**8.1%** YoY, intensity **2.80%**) is an *aside* on this geography vintage — a national ledger tempo, not a new PPP world share. The [August theme update](/blog/measurement-science-update-202608) tracks that flow; this lens refuses to splice it into the OECD/AAAS country map.
+
+## Funding vs output: the mismatch meter
+
+Toggle **Funding vs output**. Positive gaps mean *output share exceeds GERD share*. China’s publication gap is a modest **+1.6 pp** (31% pubs vs 29.4% GERD). The US publication gap is about **−17 pp** (12% pubs vs 29.1% GERD) — funding share without matching fractional publication share. India’s gap is about **+5 pp** on pubs. China’s CET AI gap is the extreme: about **+46 pp** (75% CET vs 29.4% GERD). The US USPTO gap runs the other way: about **+18 pp** of utility-applicant share above GERD weight. The US KTI gap is near flat (**−1 pp**).
+
+This is why a single choropleth fails. Capital *formation* for research (who spends GERD) is a China/US knife-edge with an East Asia bloc tip. *Publication* geography is already China-led. *Critical-and-emerging patent* geography is China-extreme. *Knowledge-industry value-added* and *USPTO utility* geography still put the United States first. Stress that starts in a CET patent thicket is an East Asia story; stress that starts in KTI services VA is still a US Tip-1 story.
+
+## Who is exposed — and what would change the story
+
+**Exposed:** Allocators who treat “global science” as geographically diversified when East Asia alone holds ~**41%** of GERD and ~**75%+** of CET AI priority patents; US research agencies that read US GERD share (~**29%**) as proof of publication leadership when US fractional pubs are ~**12%**; corporates that equate USPTO utility leadership (~**47%**) with CET field leadership; development desks that underweight India’s publication tip because its GERD share is still low-single-digit; Europe-focused industrial strategies that assume EU KTI VA share (~**18–22%** bloc) diversifies CET patent risk.
+
+**Relative winners under current maps:** East Asian priority-patent filers in CET AI fields; US KTI services platforms that still clear Tip-1 VA; California / Massachusetts R&D corridors inside the US tip; India on publication volume relative to GERD weight; Korea on intensity even when absolute GERD share is mid-single-digit.
+
+**What would change the story:** a sustained US GERD reclaim that opens more than a few points over China on PPP shares; CET AI priority-patent geography where China’s tip falls materially below ~**50%**; publication Top-3 where India displaces further without GERD catch-up; KTI VA where China overtakes the US on a multi-year print; USPTO utility applicant share where the US tip falls toward the mid-20s. None of those are the central print on this geography vintage.
+
+## Caveats and methodology
+
+- **GERD PPP shares** are carried from OECD/AAAS 2024 restatements (China **29.4%** / US **29.1%**); they are not spliced with China NBS 2025 yuan domestic GERD (¥**3.9262T**).
+- **Regional blocs** are desk roll-ups of disclosed country anchors — not a single OECD choropleth filing; treat East Asia ~**41%** as order-of-magnitude geography.
+- **Publication shares** use NSF Indicators 2024 fractional counts; field mix and language bias can shift country ranks inside disciplines.
+- **CET AI priority-patent shares** follow NSF Translation; they are *field* geography, not all-patent geography — USPTO utility tells a different story on purpose.
+- **KTI VA** is industry value-added geography (~**$11.7T** world); manufacturing vs services composition differs sharply between China and the US.
+- **US state R&D shares** are domestic US roll-ups (CA ~**22%**), not shares of world GERD.
+- **Share paths (2010–2024)** mix disclosed anchors with carried interpolations; use them for direction, not basis-point precision.
+- **Intensity × share scatter** mixes OECD / NBS / NSF intensity prints; Korea’s high intensity and China’s volume tip are not the same concentration claim.
+- **HHI** figures on the meter panel are analytical on stated buckets (0–10,000), not regulator filings.
+
+## The shareable takeaway
+
+Measurement-and-science geography is **East-Asia-heavy on funding blocs and China-tipped on pubs and CET patents — but Tip-1 still relocates by perimeter**. On GERD PPP, China is about **29.4%** of ~**$3.48T**, a knife-edge over the US at **29.1%**, with East Asia as a bloc near **41%**. On publications, China is **31%** and India enters Top-3. On CET AI priority patents, China is about **75%**. On KTI value-added and USPTO utility applicants, the **United States remains Tip-1**. Progress is funded and published through a system that looks globally distributed in press releases and **concentrated once you rank country shares, regional blocs, and funding-versus-output gaps — maps that disagree on who sits first**.
+
+Related reading: [Aug 202608 concentration companion](/blog/measurement-science-concentration-202608) · [August theme update](/blog/measurement-science-update-202608) · [Q3 concentration restatement](/blog/measurement-science-concentration-2026q3) · [2026 concentration print](/blog/measurement-science-concentration-2026).`,
+  },
+  {
     id: "chokepoint-commodities-geography-2026q3",
     slug: "chokepoint-commodities-geography-2026q3",
     title:

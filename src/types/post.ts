@@ -202,7 +202,8 @@ export interface Post {
     | "adaptation-economics-geography-2026"
     | "migration-humanitarian-concentration-2026q3"
     | "ai-capex-spend-geography-2026q3"
-    | "chokepoint-commodities-geography-2026q3";
+    | "chokepoint-commodities-geography-2026q3"
+    | "measurement-science-geography-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

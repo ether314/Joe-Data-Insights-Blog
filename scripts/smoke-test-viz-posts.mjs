@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "measurement-science-geography-2026",
+    marker: "Measurement & science — geography lens",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "chokepoint-commodities-geography-2026q3",
     marker: "Chokepoint commodities — Q3 2026 geography lens",
     forbidden: "Loading interactive charts",
