@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "orbital-launch-cadence-by-operator-2026",
+    slug: "orbital-launch-cadence-by-operator-2026",
+    title:
+      "Charted: One Operator Now Flies ~51% of the World’s Orbital Launches",
+    excerpt:
+      "SpaceX accounted for 50.8% of worldwide orbital launches in 2025 — 165 of ~325 flights — up from 24.3% in 2020. World cadence roughly tripled while a single commercial operator absorbed most of the increment. China’s absolute launches rose too, but its share slipped; mass-to-orbit is even more concentrated than launch count.",
+    category: "Technology",
+    themeId: "orbital-space",
+    imageUrl:
+      "/images/technology-orbital-launch-cadence-by-operator-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic space hero with cyan rocket launch trails and geometric operator-share bars rising against Earth’s limb",
+    publishedAt: "2026-08-24T12:00:00Z",
+    featured: true,
+    visualization: "orbital-launch-cadence-by-operator-2026",
+    layout: "default",
+    content: `For most of the Space Age, “who launches” was a country question: national agencies, national vehicles, national pads. That framing still matters for geopolitics. It is the wrong unit for the 2020s cadence story. **One commercial operator now flies about half of every orbital rocket that leaves Earth.**
+
+In 2025, SpaceX lofted **165** orbital missions — almost all Falcon 9 — out of roughly **325** worldwide attempts tracked in McDowell / BryceTech / SpaceNews year-end tallies. That is a **50.8%** share. Five years earlier, the same operator flew **26** of about **107** worldwide flights (**24.3%**). Absolute world cadence rose about **3×**; SpaceX’s own cadence rose about **6×**. The interactive dashboard above walks the share path, the 2025 operator ladder, five-year deltas, mass-versus-count divergence, bloc stacks, and the U.S. operator mix.
+
+## Scoreboard: the half-world operator
+
+| Cut | Year | Metric | Value |
+| --- | ---: | --- | ---: |
+| SpaceX share of world orbital launches | 2025 | Launch-count share | **50.8%** |
+| SpaceX share | 2020 | Launch-count share | **24.3%** |
+| Share change | 2020→2025 | Percentage points | **+26.5 pp** |
+| SpaceX flights | 2025 | Orbital launches | **165** |
+| World flights | 2025 | Orbital launches | **~325** |
+| China (all vehicles) | 2025 | Orbital launches / share | **92 / 28.3%** |
+| U.S. + China combined | 2025 | Country share of attempts | **~88%** |
+| SpaceX mass-to-orbit (est.) | 2025 | Share of payload mass | **~80%** |
+| Rocket Lab | 2025 | Orbital launches | **18** |
+
+The table’s punchline is not “SpaceX is busy.” It is that **operator concentration and market growth arrived together**. The pie did not stay fixed while one slice expanded; the pie grew, and one baker cooked most of the new loaves.
+
+## How a 24% operator became a 51% operator
+
+In 2020, China as a whole still out-launched SpaceX (about **35** versus **26**). By 2023, SpaceX’s share had already climbed into the low-to-mid **40s**. In **2024** the operator briefly crossed **half** the world manifest on some tallies; **2025** held near **51%** even as total flights jumped another quarter. The share path in the dashboard is not a smooth monopoly curve — it is a step-change enabled by booster reuse, pad throughput at Cape Canaveral and Vandenberg, and a captive constellation customer (Starlink) that absorbs dozens of flights a year.
+
+Reuse is the industrial story behind the statistical one. A Falcon first stage that flies thirty-plus times collapses the marginal hardware cost of cadence. Competitors that still treat each booster as mostly expendable cannot match a two-to-three-day average gap between flights without building an unaffordable factory. That is why Europe’s Ariane transition, Russia’s constrained Soyuz/Angara tempo, and legacy U.S. expendable lines show up as **share losers** even when their absolute flight counts are merely flat.
+
+## China rose in rockets and still lost share
+
+China’s **92** orbital attempts in 2025 were a clear acceleration versus the mid-60s plateau of 2022–2024. Long March vehicles still dominate that stack; Chinese commercial light and medium vehicles add a second tier of roughly a dozen flights. Absolute growth did not buy share. China’s world share slipped from about **33%** in 2020 to about **28%** in 2025 because SpaceX’s increment was larger.
+
+That pattern — **rising volumes, falling shares** — is the cleanest way to see concentration. Rocket Lab also roughly doubled flights (about **7** to **18**) and still edged down in share. Roscosmos and European operators lost more ground. When the global denominator grows by two hundred launches and one firm takes most of them, everyone else’s percentage shrinks unless they can grow even faster.
+
+Treat “China” carefully in operator math. It is a **country aggregate**, not a single company like SpaceX. CASC’s Long March family is the bulk; Galactic Energy, CAS Space, LandSpace, ExPace and peers are real but still mid-teens combined. Collapsing them into one bar is useful for geography; it overstates single-firm concentration on the Chinese side.
+
+## Cadence share is not mass share
+
+Launch count is the right metric for pad congestion, range safety load, and “how often does something go up.” It is a weak metric for how much hardware reaches orbit. BryceTech-style mass-to-orbit estimates put SpaceX near **~80%** of payload mass in 2025 — far above its **~51%** flight share — because Starlink stacks and Falcon fairings move a lot of kilograms per mission relative to smallsat Electron-class flights.
+
+The scatter panel in the dashboard makes the mismatch visible: Rocket Lab can post a mid-single-digit launch share while contributing well under one percent of mass. ULA and European heavy missions sit closer to the diagonal. SpaceX sits high and right. If your risk model cares about **debris surface area** or **constellation replenishment**, weight the mass axis. If it cares about **range ops and insurance event rates**, weight the count axis. Do not pretend they are the same concentration story.
+
+UCS Satellite Database context reinforces why the mass/count split exists: operational satellites are dominated by large LEO broadband fleets. Those fleets create a closed loop — more sats need more launches; more launches deploy more sats — that is hard for a pure rideshare or GEO-centric competitor to interrupt.
+
+## Inside the U.S. stack, concentration is sharper
+
+Once you restrict the frame to U.S.-associated orbital activity (including Rocket Lab’s Mahia flights in many country scorecards), SpaceX’s share jumps into the mid-**80%** range. Rocket Lab is a distant second; ULA, Blue Origin’s early New Glenn flights, and a thin “other” tier fill the remainder. FAA AST licensing and forecasting documents have tracked this commercial reordering for years: the United States regained launch leadership not by spreading flights across many providers, but by one provider industrializing reuse.
+
+That has policy implications. Range capacity, FAA AST staffing, and insurance markets now hinge disproportionately on one company’s manifest. Diversification rhetoric (“many NewSpace entrants”) and realized cadence (“one firm flies most U.S. rockets”) can both be true. The dashboard’s U.S. mix panel is the local version of the global half-world chart.
+
+## What the five-year delta actually measures
+
+Toggle the five-year delta panel between **share %** and **launch count**. On counts, SpaceX and China both surge; Rocket Lab rises; Europe shrinks; ULA is roughly flat. On shares, only SpaceX posts a large positive delta (**+26.5 pp**). China, Rocket Lab, Roscosmos, ULA, and Europe all print negative or near-flat share changes. That is the definition of a concentration episode during a boom: **absolute winners can still be relative losers**.
+
+A useful mental model is incremental capture. Of the ~**218** additional worldwide flights between 2020 and 2025, SpaceX took about **139**. That is roughly **two-thirds of net new cadence**. No other operator came close. Even China’s +57 flights, impressive on any historical agency yardstick, were outpaced.
+
+## Caveats and perimeter
+
+These figures are **year-end orbital tallies**, not a live Space-Track query scraped for this page. Different desks disagree by a handful of attempts on partial failures, air-launched systems, and whether certain test flights count as orbital. Payload’s McDowell-based 2025 scorecard cites **329** attempts and **321** successes; SpaceNews / BryceTech round to the mid-**320s**. We use **325** world / **165** SpaceX as the central 2025 pair so shares stay comparable to the SpaceNews narrative; treat ±2–3 pp as noise, not a different story.
+
+Starship integrated test flights are **excluded** from the SpaceX orbital count unless a flight is catalogued as reaching orbit. Including them would raise SpaceX’s activity further without changing the Falcon-dominated commercial cadence thesis. Suborbital tourism and sounding rockets are out of perimeter.
+
+“Operator” for SpaceX is unambiguous. For China it is deliberately aggregated. For Rocket Lab we follow common practice of counting Electron flights regardless of pad country. Mass-to-orbit shares are **estimates** with wider error bars than launch counts. UCS and Space-Track inform constellation and catalog context; they are not the primary launch-count ledger.
+
+None of this prices launch markets in dollars. A GEO mission sold at a premium can matter more commercially than a Starlink stack even when it barely moves the cadence chart. This post answers a cadence-concentration question, not a revenue-share question.
+
+## Reading the dashboard
+
+Start with **Share path** to see the 2020–2025 climb. Use **Operator ladder** with region filters to isolate U.S., China, or residual operators. Switch **Five-year delta** between share and count to separate volume from concentration. **Mass vs cadence** shows why Starlink-heavy flight lists overstate or understate influence depending on the axis. **Bloc stack** shows where the world’s new flights piled up. **U.S. mix** zooms into the domestic operator pie.
+
+The through-line is simple enough to print on a briefing slide: **in five years, a single operator went from roughly one-quarter to roughly one-half of Earth’s orbital launch cadence — and an even larger share of mass-to-orbit — while the rest of the industry grew in rockets and shrank in percentage points.**`,
+  },
+  {
     id: "us-housing-permits-vs-household-formation-2026",
     slug: "us-housing-permits-vs-household-formation-2026",
     title:

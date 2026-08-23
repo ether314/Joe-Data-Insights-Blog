@@ -246,7 +246,8 @@ export interface Post {
     | "alliance-capacity-share-on-transpacific-2026"
     | "us-counties-with-no-local-news-outlet-2026"
     | "us-cyber-insurance-premiums-vs-incurred-losses-2026"
-    | "us-housing-permits-vs-household-formation-2026";
+    | "us-housing-permits-vs-household-formation-2026"
+    | "orbital-launch-cadence-by-operator-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
