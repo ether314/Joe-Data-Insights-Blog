@@ -222,7 +222,7 @@ Sources: DAT Freight & Analytics trendlines (spot and contract benchmarks); Cass
     featured: true,
     visualization: "medicare-part-d-glp-1-diabetes-spending-2026",
     layout: "default",
-    content: `Medicare’s outpatient drug benefit was built for a world of cheap generics and occasional specialty outliers. That world still exists in claim counts. It no longer exists in dollars. **In 2024, diabetes-indicated GLP-1 receptor agonists cost Medicare Part D about $24.57 billion — 10.8% of the program’s entire drug bill — on roughly 1.3% of claims.**
+    content: `Medicare’s outpatient drug benefit was built for a world of cheap generics and occasional specialty outliers. That world still exists in claim counts. It no longer exists in dollars. **In 2024, diabetes-indicated GLP-1 receptor agonists cost Medicare Part D about $24.57 billion — 10.8% of the program’s entire drug bill — on roughly 1.3% of claims** [CMS Part D 2024].
 
 The interactive dashboard above walks the share path, the brand ladder, enrollee growth, estimated plan-type carriers, and a gross-versus-net illustration. The prose below is the policy arithmetic behind those panels: what the class is, what CMS can and cannot show, and which plan books are most exposed.
 
@@ -250,7 +250,7 @@ The desk headline therefore uses the **diabetes-indicated class total** from CMS
 
 ## The brand ladder is not a democracy
 
-Four brands carry almost the entire class. Ozempic alone is **$12.38 billion** — about half the diabetes GLP-1 total and enough to rank as the second-costliest single drug in Part D behind Eliquis. Mounjaro adds **$5.83 billion**, Trulicity **$4.79 billion**, and oral semaglutide (Rybelsus) **$1.31 billion**. Together they are **98.9%** of class cost.
+Four brands carry almost the entire class. Ozempic alone is **$12.38 billion** — about half the diabetes GLP-1 total and enough to rank as the second-costliest single drug in Part D behind Eliquis [CMS Part D 2024]. Mounjaro adds **$5.83 billion**, Trulicity **$4.79 billion**, and oral semaglutide (Rybelsus) **$1.31 billion**. Together they are **98.9%** of class cost.
 
 That concentration matters for negotiation calendars as much as for pharmacy budgets. Semaglutide products enter Medicare’s Drug Price Negotiation Program on a statutory schedule (with dulaglutide following), which is a net-price story, not a claim-volume story. Until negotiated ceilings bind, the gross POS tape keeps printing list-adjacent numbers that look terrifying relative to metformin.
 
@@ -295,7 +295,11 @@ For the diabetes headline class of **$24.57B**, a 50% rebate assumption implies 
 
 Three calendars matter more than another viral list-price screenshot. First, **utilization**: enrollee and claims paths for Ozempic and Mounjaro still have room to climb inside the diabetes indication alone. Second, **negotiation**: semaglutide and dulaglutide MFP timelines will show up in net, not in the gross dashboard the public sees first. Third, **plan mix**: every percentage point of enrollment that shifts from PDP to MA–PD relocates who underwrites the GLP-1 diabetes invoice.
 
-The honest one-line brief for a pharmacy or Medicare desk: **GLP-1 diabetes therapies are already more than a tenth of Part D gross drug spending, concentrated in four brands, and most of that exposure likely sits in MA–PD books — with net cost perhaps half of gross, and obesity coverage still mostly outside the 2024 tape.**`,
+The honest one-line brief for a pharmacy or Medicare desk: **GLP-1 diabetes therapies are already more than a tenth of Part D gross drug spending, concentrated in four brands, and most of that exposure likely sits in MA–PD books — with net cost perhaps half of gross, and obesity coverage still mostly outside the 2024 tape.**
+
+Sources (headline-only check):
+[CMS Part D 2024]: CMS — Medicare Part D 2024 spending dashboards / Drug Spending data ($226.74B program total; GLP-1 diabetes class $24.57B on ~1.3% of claims; Ozempic $12.38B). https://data.cms.gov/summary-statistics-on-use-and-payments/medicare-medicaid
+`,
   },
   {
     id: "rail-headcount-after-precision-scheduling-2026",
