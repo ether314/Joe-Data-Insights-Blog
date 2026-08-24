@@ -270,7 +270,8 @@ export interface Post {
     | "oecd-strike-days-per-1-000-employees-2026"
     | "catalogued-orbital-debris-growth-2026"
     | "subsidy-cost-per-converted-apartment-2026"
-    | "newspaper-employment-vs-hedge-fund-ownership-2026";
+    | "newspaper-employment-vs-hedge-fund-ownership-2026"
+    | "rural-hospital-closures-and-drive-times-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

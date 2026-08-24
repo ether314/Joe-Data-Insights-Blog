@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "rural-hospital-closures-and-drive-times-2026",
+    marker: "Added drive minutes post-closure",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "newspaper-employment-vs-hedge-fund-ownership-2026",
     marker: "Newsroom jobs vs ownership",
     forbidden: "Loading interactive charts",

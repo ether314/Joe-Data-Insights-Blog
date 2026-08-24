@@ -2,6 +2,82 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "rural-hospital-closures-and-drive-times-2026",
+    slug: "rural-hospital-closures-and-drive-times-2026",
+    title:
+      "Charted: Rural Hospital Closures Since 2005 — How Many Extra Minutes to the Nearest ED?",
+    excerpt:
+      "UNC Sheps Center counts 197 rural hospital closures and conversions since 2005. Across mapped counties that lost their nearest hospital, desk road-network joins put the median added drive to an open emergency department at about 22 minutes — and 38% of those counties face 30 minutes or more.",
+    category: "Health Economics",
+    themeId: "hospital-pricing-power",
+    imageUrl:
+      "/images/health-economics-rural-hospital-closures-and-drive-times-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of a closed rural hospital, a long road to a distant emergency department, and a bold +22 min drive-time callout",
+    publishedAt: "2026-08-28T14:00:00Z",
+    featured: true,
+    visualization: "rural-hospital-closures-and-drive-times-2026",
+    layout: "default",
+    content: `When a rural hospital closes, the headline usually stops at the building. The operational question for the county is harder: **how many extra minutes does it take to reach an open emergency department?** The University of North Carolina Sheps Center’s rural hospital tracker is the clean public census of the first event — complete closures and conversions that end inpatient care. This post joins that event list to desk road-network estimates of drive time before and after the local closure, with Census ACS county population as the exposure weight and Medicare Cost Report composites as the financial backdrop.
+
+The punchline is not subtle. On the Sheps base of **197** rural closures and conversions since January 2005 (**109** complete, **88** converted) across **37** states, mapped counties that lost their nearest hospital show a **median +22 minutes** to the nearest remaining acute-care ED. The mean sits near **+27 minutes**. About **38%** of those counties clear a **+30-minute** threshold; **18%** clear **+45**. Roughly **4.8 million** people live in the ACS counties tied to the mapped panel. Texas alone accounts for **25** Sheps events — the steepest state ladder rung.
+
+The dashboard above is built for that question. Toggle **County drive times**, **Closure vintage**, **State ladder**, **Added-minute bands**, and **Margin stress**. Filter by Census region and by complete vs converted status. On the county scatter, flip the Y lens among added minutes, after-closure minutes, and population. The rest of this post is the narrative behind those panels.
+
+## Sheps counts the buildings; drive times count the road
+
+A “closure” in the Sheps taxonomy is not a single clinical outcome. A **complete** closure means no health services remain at the site. A **converted** closure means inpatient care ends, but something else — outpatient clinics, skilled nursing, urgent care — may continue in the same footprint. Both remove the inpatient and typically the 24/7 ED that rural EMS and residents treated as the default destination. For drive-time analysis, the relevant object is the **nearest open short-term acute-care emergency department**, not whether a clinic light stays on in the old lobby.
+
+Sheps lists **154** events since 2010 alone. The annual path accelerated after 2012, with a desk peak near **18** events in **2019**, then a partial cooling through 2023–25 that still leaves the cumulative tally at **197**. That path is the vintage panel: stacked complete vs converted flows with a cumulative line that does not bend down.
+
+## Where the ladder is steepest
+
+Closures are not evenly sprinkled across the rural United States. They cluster in the South and in a handful of Plains and Appalachian states where thin payer mixes, long travel distances, and limited substitute capacity coincide.
+
+| State | Sheps events | Complete / converted | Beds lost (approx.) | Median added drive (desk) |
+| --- | ---: | ---: | ---: | ---: |
+| Texas | **25** | 14 / 11 | 856 | **+28 min** |
+| Tennessee | **14** | 9 / 5 | 540 | **+26 min** |
+| North Carolina | **12** | 7 / 5 | 404 | **+24 min** |
+| California | **10** | 5 / 5 | 361 | **+31 min** |
+| Missouri | **10** | 6 / 4 | 409 | **+23 min** |
+| Oklahoma | **10** | 6 / 4 | 327 | **+27 min** |
+| Alabama | **9** | 5 / 4 | 252 | **+25 min** |
+| Kansas | **9** | 6 / 3 | 223 | **+29 min** |
+
+The South accounts for roughly **56%** of the national Sheps tally in the regional summary. That is not only a count story. Southern mapped counties also print a higher share of **≥30-minute** added drives (**44%**) than the Northeast (**24%**). Maine’s small sample shows some of the longest individual deltas — sparse road networks punish a single closure harder than a denser Southern county with another PPS hospital one county over.
+
+## Before and after on the same road network
+
+Drive-time estimates here are desk joins: road-network minutes from county population centroids to the nearest open ED **before** the local hospital closed, then again **after** that facility is removed from the open set. They are not EMS response times, not ambulance transport logs, and not Sheps Center products. They answer a narrower question: how far did the nearest *open* acute ED move on the map?
+
+Across the mapped county panel, the median **before** print is about **12 minutes**. The median **after** print is about **40**. The difference — **+22** at the median — is the headline. Individual rows stretch further. Ontonagon County, Michigan, and several Texas and Mississippi examples in the scatter clear **+35 to +44** minutes. Converted closures sometimes leave urgent care behind; they still remove inpatient and usually the full ED, so their added-minute distribution sits only about **6 minutes** below complete closures on the desk split — not a free pass.
+
+Population weighting matters. Small counties can print extreme deltas that affect few people; larger micropolitan counties can print moderate deltas that affect tens of thousands. The scatter’s bubble size tracks ACS county population for that reason. The band panel splits the same idea another way: counties with **&lt;15** added minutes are **22%** of the mapped set but **28%** of the population; the **≥45-minute** tail is **18%** of counties but only **12%** of population — extreme isolation is real, but the median story is the mass of **15–29** and **30–44** minute adds.
+
+## Critical access, PPS, and the payment-class mix
+
+Rural hospital finance is not one balance sheet. Critical Access Hospitals (CAHs), Prospective Payment System (PPS) facilities, Medicare-Dependent Hospitals (MDHs), and newer Rural Emergency Hospital (REH) designations sit under different Medicare rules. In the mapped event mix, CAHs and PPS facilities dominate the count. CAHs in the desk panel show a slightly higher median added-minute print (**~28**) than PPS (**~24**) — consistent with CAHs being sited in thinner markets where the next open ED is farther away once the local CAH fails.
+
+Medicare Cost Report composites for rural hospitals show a stubborn share with **negative operating margins** — often in the **low-to-mid 40%** range through the 2010s, with a stress peak near the **2019** closure spike. The margin-stress panel plots that share against annual Sheps events. The desk correlation is about **0.62**: not a causal identification, but a reminder that closure years and weak-margin years rhyme. Cost Reports do not tell you which specific hospital will close next; they tell you the sector’s ambient financial weather.
+
+## What “lost the nearest hospital” does and does not mean
+
+Losing the nearest hospital is not the same as losing *all* hospital access. Most counties in the panel still have an open ED somewhere in the region. The change is the **first-best** destination: the facility EMS and private vehicles treated as default. That first-best move shows up in stroke and STEMI clocks, in obstetric transfer chains, and in whether a nighttime injury becomes a two-county drive.
+
+It is also not the same as losing all local clinical capacity. Converted sites may keep primary care or SNF beds. Those services matter for chronic care and post-acute placement. They do not substitute for emergency resuscitation or inpatient surgery. Treating conversions as “soft closures” understates the ED access loss; treating them as identical to complete closures overstates the total service wipeout. The dashboard’s kind filter exists so readers can hold both ideas at once.
+
+## Caveats and confidence
+
+**Event counts** for complete and converted closures follow the Sheps Center tracker and should be treated as disclosed public tallies as of the 2026 desk pull; late-year rows can revise as Sheps updates facility status. **State ladders and bed totals** align to published Sheps-linked compilations; small timing differences versus a live scrape are possible. **Drive-time minutes** are estimated desk GIS joins — road network, not travel diary — and use county centroids rather than every census block. Centroid methods understate within-county inequality: the far side of a large rural county can lose more minutes than the median implies. **Population exposure** uses ACS 5-year county totals and does not allocate by age, insurance, or ambulance reliance. **Margin shares** are national rural Cost Report composites, not matched hospital-level audits of the closed facilities. **REH** and other recent designation shifts can reclassify facilities without a classic “closure” label; this post stays inside the Sheps closure/conversion perimeter.
+
+None of those caveats erase the central pattern. Since 2005, nearly two hundred rural hospitals have left the inpatient map. In the counties that lost their nearest facility, the typical resident now faces on the order of **twenty additional minutes** to an open ED — and more than a third of those counties face half an hour or more. That is the access price of the closure ledger, measured in road minutes rather than press releases.
+
+## Reading the dashboard for a briefing
+
+Start on **County drive times** with region = South and lens = Added minutes. Sort attention to bubbles above **+30**. Flip to **After minutes** to see absolute isolation rather than the delta. Switch to **State ladder** for the TX–TN–NC concentration story, then **Added-minute bands** for the distribution. End on **Margin stress** if the briefing needs the financial weather behind the event tape. The source note under the charts carries the full methodology string for citation.`,
+  },
+  {
     id: "newspaper-employment-vs-hedge-fund-ownership-2026",
     slug: "newspaper-employment-vs-hedge-fund-ownership-2026",
     title:
