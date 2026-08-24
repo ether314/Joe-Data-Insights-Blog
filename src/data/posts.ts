@@ -4060,7 +4060,7 @@ Two questions organize everything that follows: **where has SWIFT/correspondent 
 
 ## The global ledger: fewer banks, more messages
 
-Start with the disclosed window. From 2011 through the late-2010s IBOS chartpacks, the number of banks that sent or received cross-border payment messages in a corridor fell roughly one-fifth. Corridors — country pairs with at least some active messaging — fell less, from about **10,800 toward 9,800** by 2018. Volume and, in many series, value did not fall with them. That combination is the definition of concentration: the same (or larger) payment load resting on a smaller set of relationships.
+Start with the disclosed window. From 2011 through the late-2010s IBOS chartpacks, the number of banks that sent or received cross-border payment messages in a corridor fell roughly one-fifth. Corridors — country pairs with at least some active messaging — fell less, from about **10,800 toward 9,800** by 2018 [BIS Quarterly Review]. Volume and, in many series, value did not fall with them. That combination is the definition of concentration: the same (or larger) payment load resting on a smaller set of relationships.
 
 FSB progress reporting examined the inequality inside corridors with a **Gini coefficient on active correspondents per corridor** (holding the corridor population constant), reporting that this measure of concentration **has been rising** since its 2015 baseline. Our desk extension nudges the proxy toward **~0.78 by 2025** — not because a new public Gini was published at that grain, but because the mechanical story (volume up, ACs down) has not reversed in subsequent FSB/CPMI framing of cross-border payment friction. Treat the level and the 2025 figure both as **estimated** extensions, labeled as such in the viz.
 
@@ -4068,7 +4068,7 @@ The timeline panel in the dashboard indexes everything to 2011 = 100. Active cor
 
 ## Regional retreat is uneven — and that is the point
 
-BIS Quarterly Review work on the global retreat of correspondent banks already showed that cumulative AC declines clustered differently by region: **Northern America near the low teens**, **Latin America toward the low thirties**, with Oceania and small-island dependent territories among the hardest hit. CPMI commentaries echoed the same geography: emerging-market and SIDS corridors lost relationships faster than advanced-economy hubs.
+BIS Quarterly Review work on the global retreat of correspondent banks already showed that cumulative AC declines clustered differently by region: **Northern America near the low teens**, **Latin America toward the low thirties**, with Oceania and small-island dependent territories among the hardest hit [BIS Quarterly Review]. CPMI commentaries echoed the same geography: emerging-market and SIDS corridors lost relationships faster than advanced-economy hubs.
 
 Our regional ladder restates that hierarchy with corridor-decline companions:
 
@@ -4102,9 +4102,9 @@ The concentration curve makes the same point continuously. Rank corridors and ac
 
 ## Currency lens: dollar relationships thinned fastest
 
-FSB’s 2018 currency split remains the cleanest public print of relationship attrition by settlement currency: **USD relationships −5.9%**, **EUR −4.6%**, **GBP −3.0%** in that year alone. The dollar’s role as the dominant correspondent currency means dollar-corridor exits punch harder into emerging-market access — especially where local banks need a USD nostro to clear trade and remittances. The currency panel ranks those declines; message-share context in the data module reminds readers that USD still dominates traffic even as its relationship count shrinks.
+FSB’s 2018 currency split remains the cleanest public print of relationship attrition by settlement currency: **USD relationships −5.9%**, **EUR −4.6%**, **GBP −3.0%** in that year alone [FSB Correspondent Banking]. The dollar’s role as the dominant correspondent currency means dollar-corridor exits punch harder into emerging-market access — especially where local banks need a USD nostro to clear trade and remittances. The currency panel ranks those declines; message-share context in the data module reminds readers that USD still dominates traffic even as its relationship count shrinks.
 
-De-risking is not a single motive. AML/CFT compliance costs, tax-transparency expectations, sanctions perimeter management, and low expected revenue on small corridors all show up in FSB and IMF narratives. About **22% of correspondent banks** that terminated relationships in FSB survey work cited compliance and reputation as the primary reason. The rest mixed economics and strategy. For a small respondent bank, the label on the exit letter matters less than the fact that the letter arrived.
+De-risking is not a single motive. AML/CFT compliance costs, tax-transparency expectations, sanctions perimeter management, and low expected revenue on small corridors all show up in FSB and IMF narratives. About **22% of correspondent banks** that terminated relationships in FSB survey work cited compliance and reputation as the primary reason [FSB Correspondent Banking]. The rest mixed economics and strategy. For a small respondent bank, the label on the exit letter matters less than the fact that the letter arrived.
 
 ## What the retreat does — and does not — prove
 
@@ -4118,7 +4118,12 @@ Caveats worth naming up front:
 
 What the evidence *does* support is directional and actionable. Connectivity has thinned most where relationships were already economically thin: Caribbean and Pacific corridors, parts of Africa, and other emerging-market pairs far from the North Atlantic hubs. Inside those corridors, surviving traffic increasingly leans on a short list of global and regional correspondents. For supervisors, that is a concentration and contingency-planning problem. For banks still offering the service, it is pricing power with reputational tail risk. For households and firms on the spoke end, it is fewer doors, higher friction, and a larger blast radius when one door closes.
 
-Use the dashboard to move from the global wedge (volume up, ACs down) to the regional ladder, then into the thin-corridor scatter. The headline is not that correspondent banking is disappearing. It is that **active correspondent corridors** are consolidating — and the map of who still stands is becoming the map of who can still clear.`,
+Use the dashboard to move from the global wedge (volume up, ACs down) to the regional ladder, then into the thin-corridor scatter. The headline is not that correspondent banking is disappearing. It is that **active correspondent corridors** are consolidating — and the map of who still stands is becoming the map of who can still clear.
+
+Sources:
+[BIS Quarterly Review]: Bank for International Settlements — Quarterly Review, March 2020: "The retreat of correspondent banking relationships" (CPMI/SWIFT IBOS data). https://www.bis.org/publ/qtrpdf/r_qt2003.htm
+[FSB Correspondent Banking]: Financial Stability Board — Correspondent Banking Data Report / progress reports on de-risking (2017–2019). https://www.fsb.org/work-of-the-fsb/market-and-institutional-resilience/correspondent-banking/
+[CPMI]: CPMI (BIS) — Cross-border payments statistics and correspondent-banking commentary. https://www.bis.org/cpmi/`,
   },
   {
     id: "us-atc-delay-minutes-by-cause-2026",
