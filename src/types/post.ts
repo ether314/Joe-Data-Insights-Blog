@@ -67,7 +67,6 @@ export interface Post {
     | "global-shipbuilding-gt-delivery-concentration-2026"
     | "industrial-robotics-research-2026"
     | "ai-supply-chain-research-2026"
-    | "us-billion-dollar-weather-disasters-ms94skof"
     | "geopolitics-institutions-research-2026"
     | "chokepoint-commodities-research-2026"
     | "adaptation-economics-research-2026"
@@ -271,6 +270,10 @@ export interface Post {
     | "oecd-strike-days-per-1-000-employees-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
+  tags?: string[];
+  format?: "deep-dive" | "brief" | "explainer" | "data-story" | "field-note";
+  series?: string;
+  keyPoints?: string[];
 }
 
 export const CATEGORIES: Category[] = [
