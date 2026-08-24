@@ -2685,11 +2685,11 @@ Sources:
     featured: true,
     visualization: "institutional-share-of-single-family-rentals-2026",
     layout: "default",
-    content: `Single-family rentals used to be a mom-and-pop asset class. They still mostly are — until you zoom into the Sun Belt metros where deed records, investor mailing addresses, and portfolio operators pile up. The desk question is not whether institutions “own housing.” It is **what share of the single-family rental stock** they hold in each metro, and **which ZIP codes tip highest** once you leave the MSA average behind.
+    content: `Twenty-eight percent. That is how much of Atlanta’s single-family rental stock now sits with operators owning a hundred or more homes — a number your block used to associate with apartment towers, not the house next door. Single-family rentals used to be a mom-and-pop asset class. They still mostly are — until you zoom into the Sun Belt metros where deed records, investor mailing addresses, and portfolio operators pile up. The desk question is not whether institutions “own housing.” It is **what share of the single-family rental stock** they hold in each metro, and **which ZIP codes tip highest** once you leave the MSA average behind.
 
 John Burns Research and Consulting’s July 2025 metro cut — entities owning **100 or more** properties — puts **Atlanta at 27.9%** of single-family rental stock [JBREC Jul 2025]. That is roughly **four times** the national average under the same threshold (~**7%**). The Government Accountability Office’s stricter 2024 panel — operators with **≥5,000** homes nationwide and holdings in **≥5** metros — still shows **Jacksonville at 22%** of SFR, **Phoenix at 13%**, and **Dallas at 9%**, while **Seattle** sits near **4%**. Those are not competing headlines; they are different nets cast over the same neighborhoods.
 
-The interactive dashboard above toggles **Metro shares**, **2018–24 path**, **ZIP tips**, **Operators**, and **Definitions**. Filter metros by owner cut (JB ≥100 / GAO ≥1k / GAO ≥5k); highlight one metro on the GAO path; sort tip ZIPs by share, year built, or three-bedroom density.
+The interactive dashboard above toggles **Metro shares**, **2018–24 path**, **ZIP tips**, **Operators**, and **Definitions**. Filter metros by owner cut (JB ≥100 / GAO ≥1k / GAO ≥5k); highlight one metro on the GAO path; sort tip ZIPs by share, year built, or three-bedroom density. Check your own block before you check the national average.
 
 ## Atlanta is the tip of the SFR ownership map
 
@@ -2727,7 +2727,7 @@ That path matters for policy desks that only watch national averages. A national
 
 ## ZIP tips beat metro averages
 
-Metro percentages understate neighborhood concentration. Desk estimates built from county deed patterns and investor-share overlays put several Atlanta-area ZIPs — notably **30228 (Hampton / Henry County)** and **30281 (Stockbridge)** — near **38–41%** of local SFR stock under institutional mailing and portfolio markers. Jacksonville’s **32256**, Phoenix’s **85048**, Charlotte’s **28269**, and Tampa’s **33647** clear the high twenties to mid-thirties on the same estimated lens.
+Every neighborhood has its own ledger, and the metro average does not read it. Metro percentages understate neighborhood concentration. Desk estimates built from county deed patterns and investor-share overlays put several Atlanta-area ZIPs — notably **30228 (Hampton / Henry County)** and **30281 (Stockbridge)** — near **38–41%** of local SFR stock under institutional mailing and portfolio markers. Jacksonville’s **32256**, Phoenix’s **85048**, Charlotte’s **28269**, and Tampa’s **33647** clear the high twenties to mid-thirties on the same estimated lens.
 
 These ZIP tips share a product recipe: three-bedroom homes built mostly **1995–2005**, cul-de-sac density that fits remote property management, and price bands that cleared institutional underwriting during the low-rate acquisition window. They are not downtown condos and not the most expensive suburbs. They are the **manageable middle** of the single-family stock — which is exactly where portfolio operators scale.
 
@@ -2752,7 +2752,7 @@ RHFS and GAO both remind readers that “institutional” is a threshold, not a 
 
 If the question is “who owns America’s houses?”, the honest answer remains: mostly households and small landlords. If the question is “where does institutional capital already control a meaningful slice of the *single-family rental* stock?”, the answer is geographic and definitional: **Atlanta near 28% under a ≥100-property cut**, **Jacksonville near 22% under a ≥5,000-home cut**, and **selected ZIPs above 35–40%** on estimated local shares. The dashboard is built so those statements stay attached to their nets.
 
-For acquisition and policy work, the actionable cut is the ZIP tip overlay on top of the metro ladder — not a single national percentage repeated without a denominator.
+For acquisition and policy work, the actionable cut is the ZIP tip overlay on top of the metro ladder — not a single national percentage repeated without a denominator. The newsletter will keep printing the block-level numbers; that is where the neighborhood actually lives.
 
 Sources:
 [JBREC Jul 2025]: John Burns Research & Consulting (via Georgia Public Policy Foundation) — SFR institutional ownership by metro, July 2025 cut (100+ properties). https://www.georgiapolicy.org/publications/institutional-investors-and-housing-affordability-in-metro-atlanta/
