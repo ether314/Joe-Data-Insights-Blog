@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "newspaper-employment-vs-hedge-fund-ownership-2026",
+    marker: "Newsroom jobs vs ownership",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "subsidy-cost-per-converted-apartment-2026",
     marker: "Public $ per converted unit",
     forbidden: "Loading interactive charts",

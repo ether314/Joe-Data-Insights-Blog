@@ -3587,6 +3587,21 @@ const SubsidyCostPerConvertedApartment2026Dashboard = dynamic(
   },
 );
 
+const NewspaperEmploymentVsHedgeFundOwnership2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/NewspaperEmploymentVsHedgeFundOwnership2026Dashboard"
+    ).then((m) => m.NewspaperEmploymentVsHedgeFundOwnership2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4530,6 +4545,10 @@ export function PostVisualization({
 
   if (type === "subsidy-cost-per-converted-apartment-2026") {
     return <SubsidyCostPerConvertedApartment2026Dashboard />;
+  }
+
+  if (type === "newspaper-employment-vs-hedge-fund-ownership-2026") {
+    return <NewspaperEmploymentVsHedgeFundOwnership2026Dashboard />;
   }
 
   return null;

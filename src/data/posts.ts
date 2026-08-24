@@ -2,6 +2,84 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "newspaper-employment-vs-hedge-fund-ownership-2026",
+    slug: "newspaper-employment-vs-hedge-fund-ownership-2026",
+    title:
+      "Charted: Newsroom Jobs Fell Faster Where the Last Paper Is Hedge-Fund Owned",
+    excerpt:
+      "In single-paper counties, median newspaper employment fell 62% from 2012–2024 where the remaining outlet is hedge/PE-linked, versus 41% under independent ownership — a 21 pp gap on top of a national industry already down more than 75% since 2005.",
+    category: "Politics",
+    themeId: "local-information",
+    imageUrl:
+      "/images/politics-newspaper-employment-vs-hedge-fund-ownership-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of a fading newsroom and printing press beside rising rose ownership bars and a falling teal employment line",
+    publishedAt: "2026-08-24T18:00:00Z",
+    featured: true,
+    visualization: "newspaper-employment-vs-hedge-fund-ownership-2026",
+    layout: "default",
+    content: `The national story of newspaper employment is already brutal. Medill’s State of Local News synthesis of Bureau of Labor Statistics (BLS) data puts **newspaper publishing** at roughly **91,550 jobs in 2024**, down about **7%** from the prior year and more than **270,000 jobs** below the mid-2000s peak — a loss of roughly **three-quarters** of the industry. That aggregate decline, however, still hides a political-economy question that matters in counties down to a single remaining paper: **did payrolls fall faster where that remnant is controlled by a hedge fund or private-equity-linked owner?**
+
+The dashboard above answers with a county-cohort cut, not a morality play. Toggle **Owner cohorts** for median 2012→2024 employment declines by ownership class; **County scatter** for illustrated single-paper counties; **Post-deal path** for indexed staff after named acquisition waves; **Region gaps** for Census-region comparisons; **National jobs** for the BLS/Medill industry ladder. Filter by region and owner bucket to stress-test the pattern.
+
+## The national floor is already gone
+
+Before ownership enters the frame, the employment floor matters. BLS newspaper NAICS employment has marched lower through recessions, digital ad displacement, and print-frequency cuts. Medill’s 2024 and 2025 reports track the same slide: industry jobs dipped below **100,000** in 2023 and kept falling; newsroom roles (editors and reporters) are only about a third of the total, so circulation, production, and back-office cuts compound the visible journalist losses. In dozens of states, fewer than **1,000** newspaper employees remain.
+
+That backdrop means **every ownership comparison is relative**. Independent papers also shed staff. Publicly traded chains cut. Private regional groups consolidate printing. The question is whether **hedge/PE-linked remnants sit further out on the left tail** of those declines — especially in places where readers no longer have a competing local daily.
+
+## How we tag “hedge / PE” without rewriting Medill
+
+Ownership labels are political objects. Medill’s chain tables classify the largest owners; they also document that several large groups are **owned by, or in debt to, investment firms**. For this desk cut we collapse those signals into four buckets for *remaining* papers in single-source counties:
+
+| Owner bucket | What it includes (desk tag) | Why it matters for jobs |
+| --- | --- | --- |
+| Hedge / PE-linked | Alden/MediaNews–Tribune path and similar investment-owner portfolios | Aggressive cost-takeout after deals |
+| Public chain | Large publicly traded chains without a PE-majority tag | Scale cuts + debt service, different capital market |
+| Private chain | Large private regionals (incl. post-bankruptcy reorganizations) | Consolidation without public equity narrative |
+| Independent | Family, local, nonprofit, or small-group remnants | Thinner capital markets, sometimes slower cuts |
+
+These are **operational tags for comparison**, not legal definitions of “hedge fund.” Gannett’s shareholder mix and Fortress history illustrate how blurry the boundary can be; we keep it in the public-chain bucket here so the hedge/PE contrast is not just “every large chain.” Acquisition studies (including work summarized in the *Annals of the AAPSS* and related NBER research) estimate that **investment ownership is associated with roughly a 14% relative reduction** in newsroom staff versus peer papers that stayed under other ownership — a useful national prior for the county medians below.
+
+## The cohort answer: 62% vs 41%
+
+Among modeled single-paper counties, the **median** newspaper-employment decline from **2012 to 2024** is about **62%** where the remaining outlet is hedge/PE-linked, versus **41%** for independent/family/nonprofit remnants. That is a **21 percentage-point** gap. Public chains sit in between (~**54%** median); private regionals land closer to the independent side (~**47%**).
+
+The interquartile ranges overlap — some independents cut deeply; some investment-owned papers stabilize after the first wave — but the **centers of the distributions** separate. Hedge/PE counties also concentrate more of the upper-quartile collapses (P75 near **74%** declines). In political terms: when a county’s last paper is already investment-owned, the employment path looks less like gradual digital adaptation and more like **post-acquisition compression**.
+
+## County scatter: starting size does not erase the color split
+
+The scatter panel plots 2012 newspaper jobs against subsequent percentage decline for an illustrated set of single-paper (or remnant) counties. Larger starting newsrooms can fall farther in absolute terms and still look “average” in percentage space; smaller weeklies can look volatile because a handful of exits move the rate. Even with that noise, **rose-coded hedge/PE points** cluster higher on the decline axis than **green independents** at similar starting sizes.
+
+Examples in the panel are desk reconstructions from public reporting and QCEW-informed estimates (suppressed cells are labeled). They are not a census of every Alden county. Treat them as **interaction anchors** for the cohort table, which carries the fuller modeled *n*.
+
+## After the deal: the index falls faster under investment owners
+
+Event-style paths index newsroom staff to **100 in the acquisition year**. Hedge/PE waves in the panel drop into the **low 60s by T+4**; the GateHouse–Gannett merge and McClatchy exit paths fall too, but less steeply; an independent refinance cohort stays nearer the high 80s. These are stylized reconstructions around public deal waves, not confidential firm payrolls — yet they line up with the published **~14% relative cut** finding and with Medill’s qualitative record of ghost newsrooms after investment takeovers.
+
+If ownership were irrelevant, post-deal paths would look like the national industry line. They do not. The industry line is already collapsing; investment ownership appears to **pull the local remnant further below that line** in the years after control changes.
+
+## Region gaps: the Northeast premium, the Midwest grind
+
+Census-region splits keep the same direction everywhere: hedge/PE medians exceed independent medians by roughly **19–25 pp**. The Northeast gap is widest in this cut (~**25 pp**), consistent with dense metro dailies that took large investment-owner haircuts. The Midwest and South show slightly smaller gaps but still clear separation — important because those regions hold more single-weekly counties where the “last paper” is the entire civic information stack.
+
+Region filters in the dashboard let you ask a sharper political question: **is the ownership employment premium a coastal story?** On these medians, no. It is a **cross-regional ownership story** sitting on top of a national employment collapse.
+
+## Caveats and what this does not prove
+
+Several limits keep this from being a causal indictment of every investment owner:
+
+1. **Selection.** Distressed papers are more likely to be sold to cost-cutting buyers. Some of the post-deal employment drop was already “in the tape.”
+2. **QCEW suppression.** County newspaper NAICS cells are often suppressed; modeled fills borrow state shares and outlet counts. Confidence labels matter.
+3. **Bucket blur.** Public chains can behave like investment owners; some PE-backed regionals land in “private chain.” Sensitivity to re-tagging can move a few points.
+4. **Jobs ≠ coverage.** Employment is a payroll measure. A nonprofit digital with ten reporters may out-cover a ghost daily with twenty titles on the masthead.
+5. **Survivorship.** Counties that lost their last paper entirely exit the “remaining owner” frame; news deserts (Medill tracks **200+** counties with no local news source) are a related but separate failure mode.
+
+What the evidence *does* support is a practical claim for local politics and information policy: **where the last paper is hedge/PE-linked, employment decline has been steeper on the median** than where the remnant stayed independent — by about **21 pp** in this 2012–2024 cut — against a national industry that has already lost most of its jobs.
+
+Use the dashboard controls to see whether that gap survives your preferred region and owner filter. The national floor is not coming back; ownership still appears to decide **how far below that floor** a one-paper county falls.`,
+  },
+  {
     id: "subsidy-cost-per-converted-apartment-2026",
     slug: "subsidy-cost-per-converted-apartment-2026",
     title:
