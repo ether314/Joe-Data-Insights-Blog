@@ -4174,7 +4174,7 @@ Nationally, staffing is still only **~4% of all OPSNET minutes**. That is the co
 
 ## Seven facilities dominate the staffing minute tail
 
-Of **622,669** staffing minutes in 2024, **86%** sat in seven facilities:
+Of **622,669** staffing minutes in 2024, **86%** sat in seven facilities [National Academies OPSNET]:
 
 - **EWR** — 226,370 minutes (AFN fill rate 87%)
 - **PHL** — 183,934 minutes (fill rate 130%)
@@ -4198,14 +4198,18 @@ ARTCC identifiers in the staffing top seven — **ZNY** and **ZJX** — matter f
 
 Bureau of Transportation Statistics On-Time Performance uses a passenger taxonomy: **air carrier**, **late-arriving aircraft**, **National Aviation System (NAS)**, **extreme weather**, and **security**. Extreme weather is a **narrow** bucket — conditions that prevent flying. Most convective weather that slows the system without grounding it is coded **NAS**. Late-arriving aircraft then cascades prior causes into downstream turns.
 
-That is why passenger-facing charts can show extreme weather near **~5%** of delay minutes while OPSNET shows weather near **~61%** of ATC minutes in the same year. The labels collide; the definitions do not. NAS in BTS absorbs volume, non-extreme weather, airport operations, and ATC effects that OPSNET splits across Weather, Volume, Runway, Equipment, and Other. Carrier and late-aircraft categories have **no OPSNET twin**. Comparing the two without a taxonomy bridge produces false “weather is tiny / weather is everything” debates.
+That is why passenger-facing charts can show extreme weather near **~5%** of delay minutes while OPSNET shows weather near **~61%** of ATC minutes in the same year [BTS On-Time Performance]. The labels collide; the definitions do not. NAS in BTS absorbs volume, non-extreme weather, airport operations, and ATC effects that OPSNET splits across Weather, Volume, Runway, Equipment, and Other. Carrier and late-aircraft categories have **no OPSNET twin**. Comparing the two without a taxonomy bridge produces false “weather is tiny / weather is everything” debates.
 
 ## What the minute shares do — and do not — say
 
 OPSNET minutes answer: *when the ATC system detains IFR traffic for 15+ minutes, what primary cause did the facility report, and how long did it last?* They do not answer passenger welfare directly, airline cost fully, or cancelation burden. They understate impacts shorter than 15 minutes. Staffing secondary coding begins mid-2022, so pre-2022 “Other” is not a clean staffing series. Average minutes rose inside Other even as counts swung — duration, not just incidence, moved.
 
 For operations and policy readers, the actionable split is threefold. **First**, weather remains the majority of the NAS stopwatch; capacity and traffic-management investments that shrink weather impact still move the biggest slice. **Second**, runway and equipment are climbing in levels and should not be folded into a vague non-weather residual. **Third**, staffing is a **concentrated tail**: nationally small, locally decisive, with a Northeast corridor core and a handful of out-of-corridor facilities that punch above their operation share. The share question and the facility question are both true — they just describe different moments of the same OPSNET file.
-`,
+
+Sources:
+[National Academies OPSNET]: National Academies (TRB ACRP) — FAA OPSNET 2024 delay-minute appendix D, cause and facility tables. https://nap.nationalacademies.org
+[BTS On-Time Performance]: US Bureau of Transportation Statistics — On-Time Performance delay-cause taxonomy. https://www.transtats.bts.gov/ot_delay/OT_DelayCause1.asp
+[FAA OPSNET]: FAA — Operations Network (OPSNET) delay reporting definitions. https://aspm.faa.gov/opsnet/sys/Main.asp`,
   },
   {
   id: "construction-sand-extraction-and-trade-2026",
