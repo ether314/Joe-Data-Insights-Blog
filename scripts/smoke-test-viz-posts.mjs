@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "social-housing-stock-share-in-oecd-2026",
+    marker: "Social rental % of dwellings",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "contract-renewal-season-vs-spot-divergence-2026",
     marker: "Spot–contract spread peak",
     forbidden: "Loading interactive charts",

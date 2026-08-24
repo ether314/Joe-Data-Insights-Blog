@@ -262,7 +262,8 @@ export interface Post {
     | "blast-furnace-vs-eaf-steel-by-country-2026"
     | "rail-headcount-after-precision-scheduling-2026"
     | "medicare-part-d-glp-1-diabetes-spending-2026"
-    | "contract-renewal-season-vs-spot-divergence-2026";
+    | "contract-renewal-season-vs-spot-divergence-2026"
+    | "social-housing-stock-share-in-oecd-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
