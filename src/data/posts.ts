@@ -2268,9 +2268,9 @@ The democracy cost is concrete: fewer local reporters means fewer people watchin
     id: "alliance-capacity-share-on-transpacific-2026",
     slug: "alliance-capacity-share-on-transpacific-2026",
     title:
-      "Charted: Ocean Alliance Holds 35.3% of Transpacific TEU After the 2025 Reshuffle",
+      "Charted: The Transpacific Reshuffle Burned Every Label — and Kept Ocean Alliance’s 35.3%",
     excerpt:
-      "Alphaliner’s early-2026 Asia–NA census: Ocean Alliance 35.3%, Premier 21.4%, Gemini 17% (≈884,500 teu). Three alliances still control 73.7% of scheduled capacity — only 0.9 pp below Jan 2025 — even after 2M dissolved and MSC went standalone at ~16%.",
+      "The 2025 reshuffle burned every label — 2M dissolved, Gemini launched, MSC going solo at ~16% — yet Alphaliner’s early-2026 census still reads like the old one: Ocean 35.3%, Premier 21.4%, Gemini 17% (≈884,500 teu), three alliances holding 73.7% of scheduled TEU.",
     category: "Industry",
     themeId: "container-shipping",
     imageUrl:
@@ -2281,9 +2281,9 @@ The democracy cost is concrete: fewer local reporters means fewer people watchin
     featured: true,
     visualization: "alliance-capacity-share-on-transpacific-2026",
     layout: "default",
-    content: `Ocean Alliance still runs more than a third of scheduled Asia–North America TEU. After the February 2025 alliance reshuffle — 2M dissolved, Gemini Cooperation launched, THE Alliance reconstituted as Premier, MSC standing alone — Alphaliner’s early-2026 census puts **Ocean at 35.3%**, **Premier at 21.4%**, and **Gemini at 17%** of deployed capacity on the trade. Add those three and you get **73.7%** of scheduled TEU across eight alliance carriers, versus **74.6%** a year earlier when nine alliance carriers sat inside three older buckets. The names on the funnel changed. The tip thickness barely did.
+    content: `February 2025. The alliance map of the transpacific is quietly redrawn in a handful of filings: 2M dissolves, Gemini Cooperation launches, THE Alliance reconstitutes itself as Premier, and MSC walks away to stand alone. If you expected the concentration math on Asia–North America to come apart with the labels, Alphaliner’s early-2026 census has an anticlimax for you: **Ocean at 35.3%**, **Premier at 21.4%**, and **Gemini at 17%** of deployed capacity. Add the three and you get **73.7%** of scheduled TEU across eight alliance carriers, versus **74.6%** a year earlier when nine alliance carriers sat inside three older buckets. The names on the funnel changed. The tip thickness barely did.
 
-The dashboard above is built for that concentration question. Toggle **Alliance ladder**, **Coast split**, **Carrier YoY Δ**, **Concentration path**, and **Fleet backdrop**. Flip the vintage among pre-reshuffle January 2025, early Gemini March 2025, and the Alphaliner January 2026 print. Sort carriers by share, YoY percent, or absolute TEU. The punchline is deliberate: **top-alliance TEU share stayed near three-quarters** even as vessel pooling and independent MSC growth rearranged who sits under each label.
+The dashboard above is built for that concentration question. Toggle **Alliance ladder**, **Coast split**, **Carrier YoY Δ**, **Concentration path**, and **Fleet backdrop**; flip the vintage among pre-reshuffle January 2025, early Gemini March 2025, and the Alphaliner January 2026 print; sort carriers by share, YoY percent, or absolute TEU. One punchline survives every view: **top-alliance TEU share stayed near three-quarters** even as vessel pooling and independent MSC growth rearranged who sits under each label.
 
 ## What “capacity share” means on this trade
 
@@ -2295,15 +2295,15 @@ UNCTAD’s *Review of Maritime Transport* supplies the structural backdrop — f
 
 ## Ocean still owns the tip
 
-**35.3%** is the number that survives the reshuffle. Ocean Alliance remains the largest single provider of scheduled Asia–NA capacity. Sea-Intelligence’s March 2025 coast note already showed Ocean near **35%** on the west-coast plan even as other carriers injected tonnage faster; the Alphaliner early-2026 blended print lands in the same band. Premier holds **21.4%** — essentially the market weight THE Alliance carried before Hapag left, once ONE’s **+10.3%** YoY injection offsets partner cuts. Gemini’s **17%** (about **884,500 TEU**) is Alphaliner’s disclosed absolute, and it sits within a rounding error of Maersk’s old 2M offer (**883,200 TEU** in January 2025).
+Some numbers survive anything, even a full membership rewrite. **35.3%** is the number that survived this one. Ocean Alliance remains the largest single provider of scheduled Asia–NA capacity. Sea-Intelligence’s March 2025 coast note already showed Ocean near **35%** on the west-coast plan even as other carriers injected tonnage faster; the Alphaliner early-2026 blended print lands in the same band. Premier holds **21.4%** — essentially the market weight THE Alliance carried before Hapag left, once ONE’s **+10.3%** YoY injection offsets partner cuts. Gemini’s **17%** (about **884,500 TEU**) is Alphaliner’s disclosed absolute, and it sits within a rounding error of Maersk’s old 2M offer (**883,200 TEU** in January 2025). Same tip, new wrapper.
 
-MSC’s standalone **16%** sits just behind Gemini. That is the structural novelty of the reshuffle: the former 2M partner did not vanish into another three-carrier club; it grew its own Asia–NA deployment by about **11.7%** YoY and now prints as a fourth large bloc. Independents and niche loops fill the remaining **~10%**. The four-bloc picture (Ocean, Premier, Gemini, MSC) is what concentration desks should watch — not a binary “alliances versus everyone else.”
+MSC’s standalone **16%** sits just behind Gemini — and that is the structural novelty of the reshuffle. The former 2M partner did not vanish into another three-carrier club; it grew its own Asia–NA deployment by about **11.7%** YoY and now prints as a fourth large bloc. Independents and niche loops fill the remaining **~10%**. Watch the four-bloc picture (Ocean, Premier, Gemini, MSC), not a binary “alliances versus everyone else.”
 
 ## The reshuffle changed labels more than tip thickness
 
-January 2025: three alliances, nine carriers, **74.6%** of trade capacity. January 2026: three alliances, eight carriers, **73.7%**. That is a **0.9 percentage-point** slip in the three-alliance tip while the membership map was rewritten. Maersk’s own Asia–NA hulls fell **24.3%** YoY after TPX closed and Gemini pooling reassigned loops; Hapag-Lloyd’s Asia–NA fleet rose **24.3%** as it became the sole tonnage provider on several Far East–USEC strings [Alphaliner Jan 2026]. CMA CGM’s temporary **−15.2%** print reflected incomplete staffing at the census date more than a strategic retreat. Yang Ming redirected roughly **108,600 TEU** of vessel capacity toward Far East–Europe, where it had been thin — spectacular on a carrier scorecard, mundane inside Premier pooling.
+Here is the whole heist in two lines of ledger. January 2025: three alliances, nine carriers, **74.6%** of trade capacity. January 2026: three alliances, eight carriers, **73.7%**. That is a **0.9 percentage-point** slip in the three-alliance tip while the membership map was rewritten. Maersk’s own Asia–NA hulls fell **24.3%** YoY after TPX closed and Gemini pooling reassigned loops; Hapag-Lloyd’s Asia–NA fleet rose **24.3%** as it became the sole tonnage provider on several Far East–USEC strings [Alphaliner Jan 2026]. CMA CGM’s temporary **−15.2%** print reflected incomplete staffing at the census date more than a strategic retreat. Yang Ming redirected roughly **108,600 TEU** of vessel capacity toward Far East–Europe, where it had been thin — spectacular on a carrier scorecard, mundane inside Premier pooling.
 
-The concentration path in the dashboard tracks top-1 share, top-3 alliance share, and a simple HHI of bloc shares across the three vintages. Top-1 barely moves (**36.2% → 35.3%**). Top-3 dips then recovers toward **73.7%**. HHI softens slightly as MSC’s standalone weight separates from the old 2M combined print and the independent residual shrinks. If the policy question is “did the reshuffle deconcentrate the trade?”, the honest answer on *scheduled TEU* is: **not in any material way**.
+The concentration path in the dashboard tracks top-1 share, top-3 alliance share, and a simple HHI of bloc shares across the three vintages. Top-1 barely moves (**36.2% → 35.3%**). Top-3 dips then recovers toward **73.7%**. HHI softens slightly as MSC’s standalone weight separates from the old 2M combined print and the independent residual shrinks. If the policy question is “did the reshuffle deconcentrate the trade?”, the honest answer on *scheduled TEU* is: **not in any material way**. The vault was never breached. It was re-keyed.
 
 ## West coast versus east coast still disagree on the middle
 
@@ -2324,7 +2324,7 @@ Alphaliner’s early-2026 carrier ranking puts **COSCO Shipping Group**, **ONE**
 | Other / independents | **~10.3%** | ~0.54 M | ZIM and niche loops |
 | **Top-3 alliances** | **73.7%** | — | vs **74.6%** in Jan 2025 |
 
-ONE’s **+10.3%** and MSC’s **+11.7%** are the clearest capacity injectors. Maersk’s **−24.3%** and Yang Ming’s **−30%** are the clearest reallocators. Hapag-Lloyd’s **+24.3%** is the Gemini absorption of east-coast tonnage provision. Reading any single YoY without the alliance column invents a false retreat narrative.
+ONE’s **+10.3%** and MSC’s **+11.7%** are the clearest capacity injectors. Maersk’s **−24.3%** and Yang Ming’s **−30%** are the clearest reallocators. Hapag-Lloyd’s **+24.3%** is the Gemini absorption of east-coast tonnage provision. Read any single YoY without the alliance column and you will invent a false retreat narrative — the pooling does that for you, no imagination required.
 
 ## Caveats and how not to over-read the print
 
@@ -2337,9 +2337,9 @@ ONE’s **+10.3%** and MSC’s **+11.7%** are the clearest capacity injectors. M
 
 ## What the concentration print implies for desks
 
-If the question is whether the 2025 reshuffle broke alliance dominance on the transpacific, the Alphaliner early-2026 answer is **no**. Ocean still clears **35%+**. The three alliances still clear **~74%**. Gemini replaced 2M’s *Maersk-side* capacity almost one-for-one at the bloc level while MSC’s independent growth filled the partner-shaped hole. Premier kept THE Alliance’s weight without Hapag. The interesting desk work is no longer “will alliances matter?” — it is **which second-tier contest** (Premier vs Gemini vs MSC) is winning on which coast, and which carrier YoY moves are pooling optics rather than demand signals.
+If the question is whether the 2025 reshuffle broke alliance dominance on the transpacific, the Alphaliner early-2026 answer is **no**. Ocean still clears **35%+**. The three alliances still clear **~74%**. Gemini replaced 2M’s *Maersk-side* capacity almost one-for-one at the bloc level while MSC’s independent growth filled the partner-shaped hole; Premier kept THE Alliance’s weight without Hapag. The interesting desk work is no longer “will alliances matter?” — it is **which second-tier contest** (Premier vs Gemini vs MSC) is winning on which coast, and which carrier YoY moves are pooling optics rather than demand signals.
 
-Use the dashboard vintages when you brief: January 2025 for the old labels, March 2025 for the early Gemini coast lens, January 2026 for the Alphaliner tip. Keep the table’s alliance column attached to every carrier anecdote. Concentration on this trade is a **thick tip with a mobile middle**, not a post-alliance free-for-all.
+Use the dashboard vintages when you brief: January 2025 for the old labels, March 2025 for the early Gemini coast lens, January 2026 for the Alphaliner tip. Keep the table’s alliance column attached to every carrier anecdote. Concentration on this trade is a **thick tip with a mobile middle** — the crew rotated, the cargo never moved.
 
 Sources:
 [Alphaliner Jan 2026]: Alphaliner (via The Loadstar) — Post-CNY demand looks weak after transpacific capacity shuffle. https://theloadstar.com/post-cny-demand-looks-weak-after-transpacific-capacity-shuffle/
