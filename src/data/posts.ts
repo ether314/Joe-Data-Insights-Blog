@@ -1640,7 +1640,7 @@ Sources:
 
 The ledger does not cooperate. On a **desk estimate** of global **retail** cross-border **value** — remittances, person-to-person, and small merchant receipts, not wholesale FX or securities settlement — about **74%** still clears on **correspondent banking** chains that message over SWIFT (or equivalent) and settle through nostro/vostro accounts. **FPS interlinks** and multi-jurisdictional fast payment systems account for roughly **9%**. Closed-loop nonbanks and card-acquired retail paths take about **14%**. A residual **3%** covers crypto on/off-ramps and miscellaneous channels.
 
-That is the core gap this dashboard is built to hold: **system capability ≠ value share**. The BIS CPMI 2025 monitoring survey finds that **47%** of fast payment systems and **48%** of RTGS systems can process a cross-border leg. Among FPS that already enable cross-border payments, on the order of **43%** use interlinking arrangements. Those are infrastructure facts. They do not mean nearly half of retail FX value now rides PIX-to-PayNow style pipes.
+That is the core gap this dashboard is built to hold: **system capability ≠ value share**. The BIS CPMI 2025 monitoring survey finds that **47%** of fast payment systems and **48%** of RTGS systems can process a cross-border leg [BIS CPMI 2025]. Among FPS that already enable cross-border payments, **43%** used interlinking arrangements in the 2024 edition (nine of twenty); by 2025 the interlinked count held at 13 of 27 capable FPS — roughly half [BIS CPMI 2024]. Those are infrastructure facts. They do not mean nearly half of retail FX value now rides PIX-to-PayNow style pipes.
 
 Toggle **Rail mix timeline**, **Corridor share**, **Regional stack**, **Speed vs cost**, **System arrangements**, and **Domestic FPS lens**. Switch **Value share / Cost / Speed** and filter by region. The stacked areas show correspondent share grinding down from the mid-80s in 2019 toward a **66%** 2027 carry — still a majority.
 
@@ -1653,10 +1653,10 @@ Toggle **Rail mix timeline**, **Corridor share**, **Regional stack**, **Speed vs
 | Closed-loop nonbank / card share of value | **14%** | Competes on UX, not always on rail |
 | FPS systems capable of XB legs (CPMI 2025) | **47%** | Capability, not volume |
 | RTGS systems capable of XB legs (CPMI 2025) | **48%** | Majority still corr-led on legs |
-| FPS among XB-capable using interlinks (CPMI 2024 framing) | **~43%** | Arrangement mix inside capable set |
-| World Bank-style global avg remittance cost | **~6.3%** | Above G20 **3%** target |
-| Median hours · correspondent retail path | **~28h** | Days, not seconds |
-| Median minutes · live FPS–FPS corridor | **~45m** | Often seconds–minutes end-to-end |
+| FPS among XB-capable using interlinks (CPMI 2025) | **~48%** | Arrangement mix inside capable set |
+| Global avg cost, $200 remittance (FSB/WB KPI 2025) | **6.5%** | Above G20 **3%** target |
+| Median hours · correspondent retail path (desk) | **~28h** | Days, not seconds |
+| Median minutes · live FPS–FPS corridor (desk) | **~45m** | Often seconds–minutes end-to-end |
 
 Read the left column as a value story and the capability rows as a plumbing story. Mixing them produces the false headline that “instant rails have already replaced SWIFT for retail.”
 
@@ -1670,11 +1670,11 @@ The timeline panel’s slow decline in correspondent share — roughly **86% →
 
 ## Instant rails win corridors, not the globe
 
-Where FPS–FPS links are live, value share can flip. Desk corridor cuts put **India → Singapore** and **euro-area retail cross-border** near or above **40%** FPS share of corridor value, with correspondent compressed. **Singapore → Thailand**, **Australia ↔ NZ**, and selected GCC→South Asia routes show double-digit FPS shares. Those corridors prove the product: seconds-to-minutes credit, lower disclosed fees, fewer intermediary layers.
+Where FPS–FPS links are live, value share can flip. Desk corridor cuts put **India → Singapore** and **euro-area retail cross-border** near or above **40%** FPS share of corridor value, with correspondent compressed [BIS FPS Interlinking]. **Singapore → Thailand**, **Australia ↔ NZ**, and selected GCC→South Asia routes show double-digit FPS shares. Those corridors prove the product: seconds-to-minutes credit, lower disclosed fees, fewer intermediary layers.
 
 They do not generalize. **Sub-Saharan corridors** still print ~**72%** correspondent on the desk ladder, with high remittance costs (~**7.8%**) and multi-day medians. **US → Euro area** and **China → ASEAN** remain correspondent-heavy because the bilateral FPS fabric is thin or absent. **US → Mexico** is a closed-loop story more than an FPS-interlink story: big nonbank share, limited public FPS-to-FPS path.
 
-Asia-Pacific leads on interlinking in CPMI surveys; the Americas lag on average in planning many priority enhancements. That regional asymmetry shows up in the **Regional stack** panel: APAC FPS value share ~**18%**, Americas ~**7%**, Africa & Middle East ~**5%**, with correspondent still **55–78%** everywhere.
+Asia-Pacific leads on interlinking in CPMI surveys; the Americas lag on average in planning many priority enhancements [BIS CPMI 2025]. That regional asymmetry shows up in the **Regional stack** panel: APAC FPS value share ~**18%**, Americas ~**7%**, Africa & Middle East ~**5%**, with correspondent still **55–78%** everywhere (desk cuts).
 
 ## Capability surveys measure pipes, not flows
 
@@ -1682,7 +1682,7 @@ CPMI’s monitoring surveys ask central banks what their payment systems **can**
 
 That arrangement pie (dashboard **System arrangements**) is essential and easy to misuse. A jurisdiction can report “FPS capable of cross-border” while **25%+** of that capable set still routes the foreign leg solely through participants’ correspondent relationships. Capability includes “we accept an outbound payment that a bank will still send via SWIFT.” It is not a census of PIX-style foreign credits.
 
-World Bank Remittance Prices Worldwide and GPSS frame **cost and access**, not rail taxonomy. Global average remittance costs remain well above the G20 **3%** retail target. Speed distributions still show a fat tail of multi-day correspondent paths even as linked FPS corridors deliver minutes. The **Speed vs cost** scatter puts live FPS paths in the lower-left (cheaper, faster) and correspondent paths up and right — but bubble sizes remind you which paths still carry the value.
+World Bank Remittance Prices Worldwide and the FSB's G20 KPI reports frame **cost and access**, not rail taxonomy. The global average cost of sending a **$200** remittance sat at **6.5%** in 2025 — above 6% every year since tracking began — against the G20 **3%** retail target [FSB Progress 2025; World Bank RPW]. Speed distributions still show a fat tail of multi-day correspondent paths even as linked FPS corridors deliver minutes. The **Speed vs cost** scatter puts live FPS paths in the lower-left (cheaper, faster) and correspondent paths up and right — but bubble sizes remind you which paths still carry the value.
 
 ## Domestic giants are not automatic cross-border giants
 
@@ -1710,14 +1710,12 @@ Absent those, closed-loop apps will keep winning UX share while still leasing co
 - **Survey sample drift.** CPMI 2024 (68 jurisdictions) and 2025 (82) samples differ; percentages are not a perfect panel.
 - **2026–2027 points are carried.** They assume continued APAC link growth and European instant reach, not a US FPS cross-border breakthrough.
 
-## Sources
-
-- BIS CPMI — Enhancing cross-border payments step by step (2025 monitoring survey)
-- BIS CPMI — Moving on up (2024 monitoring survey)
-- BIS CPMI — Interlinking fast payment systems (Brief 7)
-- FSB — G20 Roadmap consolidated progress report 2025
-- World Bank — Remittance Prices Worldwide / GPSS
-`,
+Sources:
+[BIS CPMI 2025]: BIS Committee on Payments and Market Infrastructures — Enhancing cross-border payments step by step: insights from the 2025 monitoring survey, CPMI Brief No 13 (82 jurisdictions; FPS 47% / RTGS 48% cross-border capable). https://www.bis.org/cpmi/publ/brief13.htm
+[BIS CPMI 2024]: BIS CPMI — Moving on up: results of the 2024 cross-border payments monitoring survey, CPMI Brief No 10 (68 central banks; 9 of 20 XB-capable FPS on interlinks = 43%). https://www.bis.org/cpmi/publ/brief10.htm
+[BIS FPS Interlinking]: BIS CPMI — Acta non verba: interlinking fast payment systems to enhance cross-border payments, CPMI Brief No 7. https://www.bis.org/cpmi/publ/brief7.htm
+[FSB Progress 2025]: Financial Stability Board — G20 Roadmap for Enhancing Cross-border Payments: Consolidated progress report for 2025 ($200 remittance global average cost 6.5%; $500 at 4.3%). https://www.fsb.org/uploads/P091025-1.pdf
+[World Bank RPW]: World Bank — Remittance Prices Worldwide quarterly / Global Payment Systems Survey (corridor cost and speed distributions). https://remittanceprices.worldbank.org/`,
   },
   {
     id: "rare-disease-trial-desert-map-2026",
