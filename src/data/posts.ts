@@ -1260,7 +1260,7 @@ Unqualified AFC miles are the honest residual of a program that designated a nat
     featured: true,
     visualization: "us-childcare-price-vs-women-s-prime-age-lfp-2026",
     layout: "default",
-    content: `The brief asks a clean coincidence question: after 2019, did metro childcare price inflation line up with a stall in prime-age female labor-force participation? The Bureau of Labor Statistics answers with two series that refuse to tell the same story if you flatten them into one slogan. Day care and preschool in the CPI (CUUR0000SEEB03) rose about **21%** from the 2019 annual average to 2024. The seasonally adjusted labor-force participation rate for women ages **25–54** (LNS11300062) rose from about **76.0%** to **77.9%** over the same window. That is not a stall. It is a record-era print after a pandemic trough.
+    content: `The brief asks a clean coincidence question: after 2019, did metro childcare price inflation line up with a stall in prime-age female labor-force participation? The Bureau of Labor Statistics answers with two series that refuse to tell the same story if you flatten them into one slogan. Day care and preschool in the CPI (CUUR0000SEEB03) rose about **21%** from the 2019 annual average to 2024 [BLS CPI Childcare]. The seasonally adjusted labor-force participation rate for women ages **25–54** (LNS11300062) rose from about **76.0%** to **77.9%** over the same window [BLS CPS LFP]. That is not a stall. It is a record-era print after a pandemic trough.
 
 The interactive dashboard above indexes daycare and all-items CPI to 2019=100, overlays the prime-age female LFP path, isolates the post-2022 YoY divergence, walks the monthly recovery, stacks parental LFP by age of youngest child, and ladders Child Care Aware state infant center prices as metro-proxied markets. Toggle **CPI vs LFP**, **YoY diverge**, **Recovery path**, **Parent gap**, **State prices**, and **Price × LFP**; filter Census region; sort states by price, married-couple affordability share, or female LFP proxy.
 
@@ -1278,7 +1278,7 @@ Labor-intensive local services often reprice with wages and staffing constraints
 
 ## Mothers of young children are the tighter cut
 
-Broad prime-age LFP mixes women without children at home, mothers of school-age kids, and mothers of infants and toddlers. BLS Employment Characteristics of Families annual averages separate the last two. Mothers whose youngest child is under 6 participated at **66.4%** in 2019, dipped to **65.6%** in 2021, recovered to **68.9%** in 2023, then edged to **68.3%** in 2024 and **68.0%** in 2025. Mothers whose youngest is 6–17 sit near **78%**. Fathers with children under 6 clear the mid-90s. The mother–father gap under age 6 remains on the order of **27 percentage points**.
+Broad prime-age LFP mixes women without children at home, mothers of school-age kids, and mothers of infants and toddlers. BLS Employment Characteristics of Families annual averages separate the last two. Mothers whose youngest child is under 6 participated at **66.4%** in 2019, dipped to **65.6%** in 2021, recovered to **68.9%** in 2023, then edged to **68.3%** in 2024 and **68.0%** in 2025 [BLS Families]. Mothers whose youngest is 6–17 sit near **78%**. Fathers with children under 6 clear the mid-90s (94.9% in 2024). The mother–father gap under age 6 remains on the order of **27 percentage points**.
 
 That is where “stalled” language has a thinner, more honest purchase. It is not that mothers of young children never recovered — they did, past 2019. It is that the recovery plateaued and slightly reversed in the same years daycare CPI was printing mid-single-digit YoY while headline inflation cooled. Composition still matters: some of the broad female LFP strength is women without young children, older prime-age cohorts, and mothers whose kids have aged into school. The under-6 series is the one that lives closest to the price of care.
 
@@ -1293,7 +1293,7 @@ That is where “stalled” language has a thinner, more honest purchase. It is 
 
 ## Metro prices are levels, not the national CPI path
 
-National CPI measures *change* in what urban consumers pay for day care and preschool. Child Care Aware of America’s 2024 state infant center prices measure *levels* — market averages that proxy metro costs when CBSA daycare CPI series are sparse. Massachusetts, D.C., Maryland, Hawaii, and California clear **$22k–$26k** annual infant center prices. Mississippi sits near **$7.7k**. Married-couple affordability shares (infant price as a percent of median married-couple income) tip toward Hawaii, California, Maryland, and Oregon in the mid-teens; single-parent shares routinely clear **40–60%** in high-price states.
+National CPI measures *change* in what urban consumers pay for day care and preschool. Child Care Aware of America’s 2024 state infant center prices measure *levels* — market medians that proxy metro costs when CBSA daycare CPI series are sparse. The priciest jurisdictions clear the high teens to low $20k range: **D.C. (~$24.3k)**, **Massachusetts (~$21.6k)**, **California (~$19.8k)**, with New York and Connecticut near **$19k** [CCAA 2024]. Mississippi sits near **$7.2k** — cheapest in the nation, yet still far above the federal 7%-of-income affordability benchmark. Married-couple affordability shares (infant price as a percent of median married-couple income) tip toward Hawaii, California, Maryland, and Oregon in the mid-teens; single-parent shares routinely clear **40–60%** in high-price states.
 
 Those level maps do not automatically sort female prime-age LFP. High-price coastal and Upper Midwest states often also show high female participation; lower-price Southern states can show lower participation for reasons that include industry mix, schooling, disability, and norms — not only sticker prices. The dashboard scatter’s rough panel correlation is near zero-to-mildly-negative. That is a warning label, not a causal claim: expensive care and high female LFP can coexist where wages, dual-earner norms, and public pre-K thicken; cheap care and low LFP can coexist where labor demand is thin.
 
@@ -1315,7 +1315,12 @@ Real wage math still bites. A family facing another **5%** daycare print while t
 ## Bottom line for desks
 
 If the question is whether post-2019 daycare inflation coincided with a stall in prime-age women’s labor-force participation, the BLS answer is no: prices rose, and the 25–54 female rate rose to about **77.9%**. If the question is whether care inflation remained hot after headline CPI cooled while mothers of children under 6 stopped gaining ground, the answer is closer to yes — a soft plateau around **68%**, still far below fathers and below mothers of school-age children, against daycare YoY stuck near **5%**. The dashboard is built to keep those two statements from collapsing into each other.
-`,
+
+Sources:
+[BLS CPI Childcare]: US Bureau of Labor Statistics — CPI for Day Care and Preschool, series CUUR0000SEEB03 (annual averages 2019–2024). https://data.bls.gov/timeseries/CUUR0000SEEB03
+[BLS CPS LFP]: US Bureau of Labor Statistics — CPS Labor Force Participation Rate, women 25–54, series LNS11300062 (76.0% in 2019 to record-era ~77.9% in 2024). https://data.bls.gov/timeseries/LNS11300062
+[BLS Families]: US Bureau of Labor Statistics — Employment Characteristics of Families news releases, Table 5 annual averages (mothers under 6: 66.4% in 2019 → 68.9% in 2023 → 68.3% in 2024 → 68.0% in 2025). https://www.bls.gov/news.release/famee.nr0.htm
+[CCAA 2024]: Child Care Aware of America — Child Care in America: 2024 Price & Supply (infant center-care medians: DC $24,252; MA $21,648; CA $19,836; MS $7,200). https://www.childcareaware.org/price-landscape24/`,
   },
   {
     id: "electrician-and-plumber-age-cohorts-2026",
