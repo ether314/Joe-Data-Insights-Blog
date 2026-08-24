@@ -3572,6 +3572,21 @@ const CataloguedOrbitalDebrisGrowth2026Dashboard = dynamic(
   },
 );
 
+const SubsidyCostPerConvertedApartment2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/SubsidyCostPerConvertedApartment2026Dashboard"
+    ).then((m) => m.SubsidyCostPerConvertedApartment2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4511,6 +4526,10 @@ export function PostVisualization({
 
   if (type === "catalogued-orbital-debris-growth-2026") {
     return <CataloguedOrbitalDebrisGrowth2026Dashboard />;
+  }
+
+  if (type === "subsidy-cost-per-converted-apartment-2026") {
+    return <SubsidyCostPerConvertedApartment2026Dashboard />;
   }
 
   return null;

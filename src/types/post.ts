@@ -268,7 +268,8 @@ export interface Post {
     | "local-police-fire-plan-underfunding-2026"
     | "trade-wages-versus-college-majors-2026"
     | "oecd-strike-days-per-1-000-employees-2026"
-    | "catalogued-orbital-debris-growth-2026";
+    | "catalogued-orbital-debris-growth-2026"
+    | "subsidy-cost-per-converted-apartment-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

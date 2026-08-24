@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "subsidy-cost-per-converted-apartment-2026",
+    marker: "Public $ per converted unit",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "catalogued-orbital-debris-growth-2026",
     marker: "Catalogue grew — but active sats grew faster",
     forbidden: "Loading interactive charts",

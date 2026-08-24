@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "subsidy-cost-per-converted-apartment-2026",
+    slug: "subsidy-cost-per-converted-apartment-2026",
+    title:
+      "Charted: Public Cost per Converted Apartment — NYC ~$386k, Calgary ~$63k, DC’s $5k Framing",
+    excerpt:
+      "Cities buying office-to-residential conversions with tax abatements or cash grants face very different public price tags per delivered unit. Present-value abatements in New York dwarf Calgary’s square-footage grants — and both sit beside ground-up LIHTC and city-capital benchmarks.",
+    category: "Real Estate",
+    themeId: "office-conversions",
+    imageUrl:
+      "/images/real-estate-subsidy-cost-per-converted-apartment-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero of a converted office tower beside glowing public-cost ledger bars labeled $386k, $63k, and $5k in Visual Capitalist editorial style",
+    publishedAt: "2026-08-24T12:00:00Z",
+    featured: true,
+    visualization: "subsidy-cost-per-converted-apartment-2026",
+    layout: "default",
+    content: `When a city pays to turn empty desks into apartments, the politically useful number is not the ribbon-cutting unit count. It is **public dollars per delivered home** — and, when the program buys affordability, **public dollars per income-restricted unit**. Those two denominators tell different stories, and cities that mix tax abatements with cash grants make the comparison even harder.
+
+Three programs that publish enough detail to rough out a ladder are New York’s **467-m** Affordable Housing from Commercial Conversions exemption, Washington, D.C.’s **Housing in Downtown** competitive tax abatement, and Calgary’s **Downtown Office Conversion** cash grant. On a per-delivered-unit basis, the New York City Comptroller’s July 2025 fiscal note implies roughly **$386,000** of present-value tax expenditure for each apartment in a 14,500-unit Manhattan-south-of-59th sample. Calgary’s completed cohort pencils closer to **USD $63,000** per home once a CAD $75-per-square-foot grant is applied to the office floor area removed. D.C. frames a **$41 million** program against about **8,400** projected units — roughly **$4,900** apiece — which is a useful political metric and a poor present-value twin of New York’s 37-year score.
+
+The dashboard above is built for that instrument problem. Switch among **Cost ladder**, **Cost × scale**, **Conversion vs ground-up**, **NYC geo split**, and **Instrument schedule**. Toggle the cost metric (delivered unit vs income-restricted unit), pathway (conversion vs ground-up benchmarks), and city focus. The point is not that every city should match New York’s price tag. It is that “we subsidized conversions” is not a single product.
+
+## What “public cost” means when the check never clears
+
+Cash grants are easy to count: Calgary pays against office gross floor area removed, with a published residential rate of **CAD $75 per square foot** and a typical per-property cap near **CAD $15 million**. Tax abatements are harder. The public cost is forgone property tax over decades, discounted to today. New York’s Comptroller reports both a **tax expenditure** (full residential tax minus tax paid under 467-m) and an **opportunity cost** (tax that would have been collected in a carefully chosen counterfactual). Those two present values are **$5.6 billion** and **$5.1 billion** on the same Manhattan sample — close in total, different in geography.
+
+D.C.’s Housing in Downtown awards are competitive annual abatement amounts inside fiscal-year caps (**$2.5 million** per year in FY24–FY26, rising to **$41 million** in FY28). The Mayor’s office describes the **$41 million** authority as helping deliver about **8,400** downtown units. That framing is disclosed; a full 20-year present-value score for each conditional award is not yet sitting in a single public table. Treat the **~$4,900** per projected unit figure as program marketing math, not a Comptroller-style PV.
+
+## The per-unit ladder, with instruments labeled
+
+| City / cohort | Instrument | Units in score | Public $ / delivered unit | Notes |
+| --- | --- | ---: | ---: | --- |
+| NYC 467-m (MN S of 59th) | Tax exemption PV | ~14,500 | **~$386k** | $5.6B tax expenditure ÷ units |
+| NYC 467-m (opp. cost / IR) | Opportunity-cost PV | ~3,600 IR | **~$1.4M** | $5.1B ÷ income-restricted units |
+| Calgary completed | Cash grant | ~800 | **~USD $63k** | 925k sf × CAD $75 ÷ homes @ 0.73 FX |
+| Calgary 21-project pipe | Cash grant (illustrative) | 2,667 | **~USD $55k** | 2.7M sf at full take-up of $75/sf |
+| DC Housing in Downtown | Program framing | ~8,400 projected | **~$4.9k** | $41M authority ÷ projected units |
+
+Read the table left to right before ranking winners. Calgary’s grant is mostly paid up front against square footage removed; New York’s dollars arrive as a multi-decade exemption schedule that can run **25–35 years** with a step-down; D.C.’s number is an annual-authority narrative. A desk that ranks only the rightmost column without the instrument column will mis-brief a council.
+
+## New York: expensive per apartment, pricier still per restricted unit
+
+467-m requires that **25%** of apartments be permanently income-restricted (on average at about **80% of AMI**) and rent-stabilized. In the Comptroller’s sample, that is about **3,600** restricted units inside **14,500** total. Divide the **$5.1 billion** opportunity cost by those restricted units and the public price is about **$1.4 million** each — **$1.8 million** in Lower Manhattan and **$0.9 million** in the rest of Manhattan south of 59th Street.
+
+That is not an accounting error. In Lower Manhattan, several large conversions were already underwriting before 467-m existed and later received benefits retroactively. For those buildings, the Comptroller’s opportunity-cost counterfactual is a **fully taxable market-rate residential** building, not a continuing office. The program is then buying rent discounts (and neighborhood mix) more than “inducing” the conversion itself. At **25 Water Street**, the note puts opportunity cost near **$538 million** present value against **330** income-restricted units — about **$1.6 million** per restricted apartment, or roughly **$408,000** if spread across all **1,320** units.
+
+Outside Lower Manhattan, the counterfactual leans toward **continuing office** taxation growing slowly. Opportunity cost falls below tax expenditure in that geography, which is the mirror image of downtown’s pattern. The dashboard’s NYC geo-split panel shows both bars and the per-IR-unit line together so the geography of the fiscal story is visible.
+
+## Calgary: pay per square foot removed, not per bedroom created
+
+Calgary’s program is blunt by design. The city wants surplus downtown office square footage gone. Paying **CAD $75 per square foot** of office removed ties the public check to the vacancy problem rather than to unit mix. Eight completed incentivized projects have converted about **925,000** square feet into nearly **800** homes (plus hotel rooms in the wider set). That is roughly **1,150 square feet of former office per home** — a useful yield for translating a square-footage grant into a per-unit cost.
+
+At full take-up of the published rate, the completed residential cohort implies about **CAD $69 million** of grant capacity, or roughly **USD $63,000** per home. The broader **21**-project book (**2.7 million** square feet toward **2,667** homes) pencils near **USD $55,000** per home on the same method. The city also cites roughly **CAD $14 million** of estimated tax uplift so far and a private-leverage story on the order of **four private dollars per public dollar**. Those secondary effects matter for a fiscal scorecard; they do not erase the sticker price on the grant line.
+
+Because the incentive is not structured as a long abatement schedule, Calgary’s public cost is front-loaded and comparatively easy to audit. It is also less explicitly tied to deep affordability set-asides than New York’s statute. Comparing Calgary’s **~$63k** to New York’s **~$386k** without saying “grant versus multi-decade exemption” is how briefings go wrong.
+
+## Washington, D.C.: competitive abatements inside a rising cap
+
+Housing in Downtown offers a **20-year** real property tax abatement for change-of-use projects that deliver at least **ten** residential units and meet affordability floors (**10%** of units at **60% MFI** or **18%** at **80% MFI**). Awards are competitive; DMPED sets the annual dollar amount from pro formas rather than from a rigid square-footage formula (the formula language was stripped in 2024 amendments).
+
+The first conditional cohort is concrete even when award dollars are not fully public: **1625 Massachusetts Avenue NW** (**157** units, at least **15** affordable), **1825 & 1875 Connecticut Avenue NW** (**525** units, at least **69** affordable), and **615 H Street NW** (**72** units, at least **8** affordable) — **754** units and **92** affordable in total. The program’s political math remains the **$41 million** authority versus **~8,400** projected units. Until each reservation letter’s annual abatement is published and discounted, D.C. belongs on the ladder as a **framing** point, not as a Comptroller twin.
+
+## Conversion subsidies versus ground-up public money
+
+Office conversions are often sold as cheaper housing policy because the structure already exists. Public cost is a different question from hard construction cost. Rough ground-up benchmarks still help bound the conversation:
+
+- New York **4% LIHTC** equity capacity is often modeled near **~$231,000** per affordable unit; **9% LIHTC** nearer **~$195,000**.
+- Broader city-financed affordable production is frequently cited near **~$714,000** average public capital cost per unit in recent advocacy syntheses of HPD-era figures.
+- Legacy **421-a / 485-x** forgone revenue is enormous in annual tax-expenditure reports (about **$2.0 billion** in FY2025 across hundreds of thousands of units), but that stock figure is not the present value of a newly vested tower and should not be pasted beside 467-m’s pipeline PV without a long footnote.
+
+On that messy canvas, New York’s **~$386k** tax expenditure per converted apartment sits above typical LIHTC equity-per-unit figures and below deep city-capital averages — while the **~$1.4M** per income-restricted conversion unit lands in a different league entirely, because the denominator shrank to the 25% set-aside. Calgary’s grant-per-home figure looks cheap beside both LIHTC and city capital, which is exactly what a vacancy-removal grant is designed to look like when land and shell costs are already sunk in the private basis.
+
+## Caveats that should travel with every per-unit tweet
+
+**Counterfactuals dominate the New York score.** If Lower Manhattan conversions would have happened anyway, opportunity cost is mostly the price of rent restrictions. If midtown conversions needed the exemption to pencil, opportunity cost is closer to forgone office taxes. The Comptroller is explicit that both statements can be partly true.
+
+**Present value is not annual budget pain.** A $386k PV per unit spread over 30-plus years is not a $386k hit to next year’s expense budget. Cash grants reverse that timing.
+
+**Unit mix skews denominators.** Conversion pipelines are studio-heavy. Cost per bedroom can exceed cost per unit when studios dominate, which is why the Comptroller also publishes per-income-restricted-bedroom figures (about **$1.7 million** sample-wide).
+
+**Currency and FX.** Calgary figures move with the CAD/USD rate; this post uses **0.73** as a working conversion, not a Treasury fix.
+
+**Program framing ≠ audited PV.** D.C.’s $4.9k headline is useful for scale talk and dangerous as a cross-city rank.
+
+None of those caveats erase the core pattern: **cities are buying conversions with different instruments, different affordability hooks, and public price tags that span roughly two orders of magnitude per delivered home** once you put New York’s present-value abatement beside Calgary’s cash grant and D.C.’s authority framing.
+
+Sources:
+[NYC Comptroller FN 6-2025]: Office of the New York City Comptroller — Office-to-Residential Conversions in NYC: Economics and Fiscal Estimates (Fiscal Note 6-2025). https://comptroller.nyc.gov/reports/office-to-residential-conversions-in-nyc-economics-and-fiscal-estimates/
+[DC Mayor HID awards]: Mayor’s Office — first Housing in Downtown conditional awards. https://mayor.dc.gov/release/mayor-bowser-announces-first-commercial-residential-conversion-projects-receive-support-dc%E2%80%99s
+[Calgary DOCP]: City of Calgary — Downtown Office Conversion Program. https://www.calgary.ca/development/downtown-office-conversion-program.html
+[Calgary Newsroom 2026]: City of Calgary — program reopen and completed-project yields (June 2026). https://newsroom.calgary.ca/calgarys-downtown-office-conversion-program-reopens-to-new-opportunities/
+[NYC IBO 2025]: NYC Independent Budget Office — housing tax incentives testimony (October 2025). https://www.ibo.nyc.gov/assets/ibo/downloads/pdf/housing-and-buildings/2025/2025-october-city-council-testomony-housing-incentives.pdf
+`,
+  },
+  {
     id: "catalogued-orbital-debris-growth-2026",
     slug: "catalogued-orbital-debris-growth-2026",
     title:
