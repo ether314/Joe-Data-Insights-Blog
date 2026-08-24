@@ -3725,7 +3725,7 @@ Sources:
     layout: "default",
     content: `Half of cement’s carbon problem cannot be fixed by clean energy. When limestone (CaCO₃) becomes clinker, calcination releases CO₂ whether the heat comes from coal, petcoke, or a future electric kiln. That **process** slice — typically ~60% of cement’s CO₂ — is the hard residual: fuel can be swapped, carbonate rock still vents. So the question that actually matters is geographic — **where does process CO₂ sit, and did intensity gains or volume growth write its recent history?** The dashboard keeps three lenses open (a producer ladder, an intensity-versus-volume index, regional splits, plus a scatter), rankable by process tonnes, cement tonnes, or intensity.
 
-The answer is concentrated and stubborn: China, India, and Vietnam — the USGS-order top cement producers — hold about **912 Mt** of an estimated **1,485 Mt** global process CO₂ in 2023e, or **~61.4%**. GCCA’s Getting the Numbers Right (GNR) database shows industry-reported CO₂ intensity down roughly **25%** since 1990, yet absolute process tonnes still track where clinker is made.
+The answer is concentrated and stubborn: China, India, and Vietnam — the USGS-order top cement producers — hold about **912 Mt** of an estimated **1,485 Mt** global process CO₂ in 2023e, or **~61.4%** [GCCA GNR]. GCCA’s Getting the Numbers Right (GNR) database shows industry-reported CO₂ intensity down roughly **25%** since 1990, yet absolute process tonnes still track where clinker is made [GCCA GNR].
 
 ## Scoreboard: process tonnes, not marketing tonnes
 
@@ -3750,7 +3750,7 @@ That framing matches how climate desks talk about “hard-to-abate” cement. Ev
 
 ## USGS producers, process shares
 
-USGS Mineral Commodity Summaries remain the cleanest public **cement tonnage** ranking for cross-country comparison. In the 2023e desk used here, China (~**2,030 Mt** cement), India (~**395 Mt**), and Vietnam (~**98 Mt**) lead disclosed producer order-of-magnitude tables. Process CO₂ does not equal cement Mt one-for-one: clinker-to-cement ratios differ, and some countries grind imported clinker. Still, the producer ladder and the process ladder rhyme. China alone is ~**48%** of global process CO₂; add India and the share clears **58%**; add Vietnam and the top-three producer set reaches **~61%**.
+USGS Mineral Commodity Summaries remain the cleanest public **cement tonnage** ranking for cross-country comparison [USGS MCS]. In the 2023e desk used here, China (~**2,030 Mt** cement), India (~**395 Mt**), and Vietnam (~**98 Mt**) lead disclosed producer order-of-magnitude tables. Process CO₂ does not equal cement Mt one-for-one: clinker-to-cement ratios differ, and some countries grind imported clinker. Still, the producer ladder and the process ladder rhyme. China alone is ~**48%** of global process CO₂; add India and the share clears **58%**; add Vietnam and the top-three producer set reaches **~61%**.
 
 Vietnam’s absolute process tonnes (~**42 Mt**) are far below China’s, but the concentration story is about the **producer club**, not equal thirds. The dashboard’s concentration ladder shows how fast cumulative share rises: top 5 ~**69%**, top 10 ~**80%**, with a long tail of mid-sized EMEA and Americas producers. Process HHI in the desk sits in a high-concentration band because one country is nearly half the global calcination total.
 
@@ -3775,7 +3775,11 @@ None of those caveats erase the headline geometry. Roughly three producers hold 
 ## What the share question answers
 
 If the question is "where does process CO₂ live?", the answer is a short list headed by China, with India and Vietnam completing the USGS top-three producer set at **~61%** combined. If the question is "are we winning on intensity?", GNR says yes on a per-tonne basis. If the question is "did intensity alone bend the absolute process curve?", the volume index says not until China's cement tonnes rolled over. Conflating those three questions mis-prices both abatement technology and demand risk. The dashboard keeps them on separate views for a reason: **share, intensity, and volume are three clocks**, and only recently have two of them ticked in the same direction on the global process ledger.
-`,
+
+Sources:
+[GCCA GNR]: Global Cement and Concrete Association — Getting the Numbers Right (GNR) database / Concrete Future roadmap. https://gccassociation.org/gnr/
+[USGS MCS]: USGS — Mineral Commodity Summaries, Cement. https://www.usgs.gov/centers/national-minerals-information-center/cement-statistics-and-information
+[IPCC 2019 Refinement]: IPCC — 2019 Refinement to the 2006 IPCC Guidelines, Vol. 3 Ch. 2 (Mineral Industry, clinker production emission factor). https://www.ipcc-nggip.iges.or.jp/public/2019rf/index.html`,
   },
   {
     id: "colorado-river-compact-vs-actual-flows-2026",
@@ -19108,7 +19112,7 @@ None of those appears in the January 2025 Climate.gov / NCEI update. The working
       "Dark navy data visualization of rising US billion-dollar weather disaster costs with $149B/yr callout and storm motifs",
     publishedAt: "2026-07-31T16:10:00.000Z",
     featured: true,
-    visualization: "us-billion-dollar-weather-disasters-ms94skof",
+    visualization: "billion-dollar-disasters",
     layout: "fullscreen",
   },
   {
