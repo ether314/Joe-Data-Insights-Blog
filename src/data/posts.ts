@@ -1734,7 +1734,7 @@ Sources:
     featured: true,
     visualization: "rare-disease-trial-desert-map-2026",
     layout: "default",
-    content: `Rare diseases are defined by scarcity at the single-condition level — fewer than 200,000 people in the United States, fewer than 5 in 10,000 in the European Union — and by abundance in aggregate. Orphanet-linked literature and UN/WHO advocacy tallies put the global stock near **300 million** people across roughly **7,000** named conditions. The question this desk asks is not whether the science is hard. It is whether the **geography of interventional trials** tracks the geography of patients.
+    content: `Rare diseases are defined by scarcity at the single-condition level — fewer than 200,000 people in the United States, fewer than 5 in 10,000 in the European Union — and by abundance in aggregate. Orphanet-linked literature and UN/WHO advocacy tallies put the global stock near **300 million** people across roughly **7,000** named conditions [WHO WHA78; Orphanet Prevalence]. The question this desk asks is not whether the science is hard. It is whether the **geography of interventional trials** tracks the geography of patients.
 
 The interactive dashboard above is a **trials-per-million** desert map. Toggle **Density**, **Mismatch**, **Scatter**, and **Pipeline**. Flip the metric among trials per million population, trials per million estimated patients, raw country-uses, patient stock, and patient−trial share gaps. Filter deep deserts versus dense regions. The scoreboard is blunt: WHO’s **European Region** hosts about **5.92** interventional rare-disease trial country-uses per million people; the **African Region** hosts **0.22** — a **~27×** density gap on the same ClinicalTrials.gov / Orphanet cross-walk.
 
@@ -1779,13 +1779,19 @@ Indexed to 2019, every WHO region’s country-use starts rose through 2025. Afri
 
 ClinicalTrials.gov is not a complete world registry. WHO ICTRP shows Western Pacific and South-East Asia registering far more *all-cause* trials than Africa, and some of that activity never mirrors into ClinicalTrials.gov with clean rare-disease labels. Orphanet prevalence is Europe- and U.S.-skewed; applying cumulative point-prevalence bands to AFR/EMR/SEAR populations is a **constructed** patient stock, not a national registry census. Multi-country trials inflate regional country-uses relative to unique NCT IDs — which is why the desk reports both. “Rare disease” string matching will under-count trials that use only local disease names and over-count some oncology basket studies. Trials per million is not the same as **access to approved therapy**, diagnostic yield, or caregiver burden.
 
-Less than **5%** of rare diseases have an approved disease-modifying therapy in major high-income markets. That headline is about science and incentives. The desert map is about **who gets invited into the evidence**. A protocol that never opens a site in Lagos, Karachi, or Dhaka can still produce a label that regulators elsewhere accept — and patients in those cities inherit evidence built elsewhere, or inherit none.
+Less than **5%** of rare diseases have an approved treatment in major high-income markets — GAO counts about 5% of nearly 10,000 identified conditions with an FDA-approved product, and only a subset of those are disease-modifying [GAO 2024]. That headline is about science and incentives. The desert map is about **who gets invited into the evidence**. A protocol that never opens a site in Lagos, Karachi, or Dhaka can still produce a label that regulators elsewhere accept — and patients in those cities inherit evidence built elsewhere, or inherit none.
 
 ## What would close a desert
 
 Density gaps of this size do not close with a single multi-center “global” Phase III that adds one site in Johannesburg. They close when natural-history cohorts, newborn screening, genetic counseling capacity, and ethics review capacity co-locate with industry capital — or when public funders treat geographic equity as a design constraint rather than a press-release footnote. Until then, the map will keep reading the same way: Europe and the Americas as trial oases, Africa and the Eastern Mediterranean as deep deserts, South-East Asia as a thin middle that looks busy in absolute counts and sparse per million people.
 
-The dashboard’s job is to keep the unit honest. **Trials per million population** — and trials per million patients — are the meters that make a 270-site African Region placement total look like what it is: almost no interventional rare-disease research footprint for tens of millions of constructed patients.`,
+The dashboard’s job is to keep the unit honest. **Trials per million population** — and trials per million patients — are the meters that make a 270-site African Region placement total look like what it is: almost no interventional rare-disease research footprint for tens of millions of constructed patients.
+
+Sources:
+[WHO WHA78]: World Health Organization — WHA78 Resolution: Rare diseases, a global health priority for equity and inclusion (more than 7,000 rare diseases impacting more than 300 million people). https://apps.who.int/gb/ebwha/pdf_files/wha78/a78_r11-en.pdf
+[Orphanet Prevalence]: Nguengang Wakap S et al. — Estimating cumulative point prevalence of rare diseases: analysis of the Orphanet database, Eur J Hum Genet 2020 (≈300M / 3.5–5.9% of population). https://pubmed.ncbi.nlm.nih.gov/31571364/
+[GAO 2024]: US Government Accountability Office — Rare Disease Drugs (only about 5% of nearly 10,000 identified rare diseases have FDA-approved treatments; up to 10,000 diseases). https://www.gao.gov/products/gao-25-106774
+[ClinicalTrials.gov]: US National Library of Medicine — ClinicalTrials.gov registry (interventional studies with rare-disease condition matches; 2019–2025 start window; desk aggregation marked in data module). https://clinicaltrials.gov/`,
   },
   {
     id: "global-5g-auction-proceeds-vs-coverage-2026",
