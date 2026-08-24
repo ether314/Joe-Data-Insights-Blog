@@ -1799,7 +1799,7 @@ Sources:
     title:
       "Charted: High 5G Auction Prices Did Not Buy Faster Population Coverage",
     excerpt:
-      "The US C-band peak of $0.875 per MHz-pop dwarfed the recent global mid-band average of ~$0.11. Across a cross-country auction sample, price and lagged 5G population coverage show a weak negative link — Brazil’s obligation-heavy award reached ~95% coverage while several high-price European awards lagged the median.",
+      "The US C-band clearing near $0.88–0.94 per MHz-pop and Canada’s $2.61 print topped a recent global mid-band average of ~$0.11. Across a cross-country auction sample, price and lagged 5G population coverage show a weak negative link — Brazil’s obligation-heavy award hit ~63% population coverage by end-2024 while several high-price European awards lagged the median.",
     category: "Technology",
     themeId: "radio-spectrum",
     imageUrl:
@@ -1821,13 +1821,13 @@ This desk builds a cross-country panel of headline mid-band awards, pairs each w
 
 Raw auction proceeds mislead. A $80 billion US award and a $0.5 billion Central European award are not comparable without adjusting for how many megahertz were sold and how many people those licences serve. Divide proceeds by (MHz × population) and you get a unit that spectrum bankers, GSMA analysts, and GSA trackers all use.
 
-On that footing, the United States’ 2021 C-band auction (FCC Auction 107) still sits near the global ceiling at about **$0.875 per MHz-pop**. GSA’s recent C-band averages hover near **$0.11** — roughly an eightfold gap. Italy’s 2018 mid-band package cleared in the same elevated neighborhood once converted to dollars. Germany, the UK, and parts of the Gulf cleared lower but still above the soft post-2022 global mean. Japan’s administrative assignments and China’s state allocations show near-zero cash prices and very high coverage — a reminder that “price” is a policy choice, not a law of physics.
+On that footing, the United States’ 2021 C-band auction (FCC Auction 107) cleared near the top of the global range at roughly **$0.88–0.94 per MHz-pop** ($81.2B gross across 280 MHz) [FCC Auction 107] — but it was not the ceiling: Canada’s 3800 MHz award the same year printed about **$2.61 per MHz-pop** [PolicyTracker 2021]. GSA’s recent mid-band averages hover near **$0.11** — an order-of-magnitude gap [GSMA GSP 2025]. Italy’s 2018 mid-band package cleared in the same elevated neighborhood once converted to dollars. Germany, the UK, and parts of the Gulf cleared lower but still above the soft post-2022 global mean. Japan’s administrative assignments and China’s state allocations show near-zero cash prices and very high coverage — a reminder that “price” is a policy choice, not a law of physics.
 
 Millimetre-wave tells the other end of the story. India’s 2022 mmWave clearing prices near **$0.0007 per MHz-pop** illustrate how little operators will pay for capacity bands that are hard to turn into nationwide coverage. Coverage spectrum (700 MHz) still clears higher averages than mid-band in recent GSA samples — which is intuitive if the scarce input is outdoor reach rather than downtown capacity.
 
 ## The 2021 spike, then the hangover
 
-GSA’s fee sample of completed auctions and assignments shows why 2021 dominates every chart of “spectrum as a budget line.” Global disclosed proceeds hit about **$140 billion** that year, then collapsed to the mid-twenties in 2022, low single digits in 2023, and roughly **$1.1 billion** in 2024. The US C-band award alone explains much of the spike; India’s large 2022 package propped the following year. After that, the easy mid-band inventory was largely assigned in rich markets, and governments that still needed fiscal optics discovered thinner bidding interest.
+GSA’s fee sample of completed auctions and assignments shows why 2021 dominates every chart of “spectrum as a budget line.” On the desk’s aggregation of disclosed awards, global proceeds peaked around **$140 billion** that year — the US C-band award alone accounts for roughly $81 billion of it [FCC Auction 107] — then collapsed to the mid-twenties in 2022, low single digits in 2023, and roughly **$1.1 billion** in 2024 (desk series). India’s large 2022 package propped the following year. After that, the easy mid-band inventory was largely assigned in rich markets, and governments that still needed fiscal optics discovered thinner bidding interest.
 
 That boom-bust matters for interpretation. Comparing a 2018 Italian award to a 2023 Polish award without noting the macro window will exaggerate “Europe is expensive.” Comparing either to a 2024 Albanian C-band print near **$0.04 per MHz-pop** will exaggerate how far averages have fallen. The interactive dashboard therefore keeps award year on the tooltip and lets you filter regions rather than pretending every point is a same-year experiment.
 
@@ -1844,7 +1844,7 @@ Split the sample at median price and median coverage and the quadrants fill unev
 | Low price · high coverage | Finland, Brazil, Japan (admin) | Obligations and industrial policy often dominate sticker price |
 | Low price · lagging coverage | India, South Africa (early window) | Cheap(er) mid-band is not sufficient without densification capital |
 
-Brazil is the case study spectrum lawyers like to cite. Anatel’s 2021 multiband design paired long licence terms, trading rules, and heavy coverage commitments with prices that were not in the Italian stratosphere. GSMA’s public case material points to near-**95%** population coverage by end-2024 and antenna deployments well ahead of minimum licence floors. Finland’s lower clearing prices and high coverage fit the same broad lesson: **scarce capital prefers towers when the licence fee has not already absorbed it**.
+Brazil is the case study spectrum lawyers like to cite. Anatel’s 2021 multiband design paired long licence terms, trading rules, and heavy coverage commitments with prices that were not in the Italian stratosphere. Anatel’s Q4 2024 results put 5G population coverage near **63%** by end-2024 — already above its own 57.7% target for 2027 — with licensed base stations well ahead of minimum licence floors [Anatel Q4 2024]. (The often-quoted **95%** figure is the auction’s coverage *obligation* — urban areas of unconnected small districts on 4G-or-better — not achieved population coverage [BNamericas 2021].) Finland’s lower clearing prices and high coverage fit the same broad lesson: **scarce capital prefers towers when the licence fee has not already absorbed it**.
 
 Italy and parts of Western Europe sit uncomfortably in the other corner. High clearing prices coincided with protracted site acquisition, local permitting fights, and — in GSMA’s cost-share work — elevated spectrum cost as a share of sector revenue. Coverage eventually rose, but the lagged observation window still leaves several high-price awards below the sample median.
 
@@ -1856,7 +1856,7 @@ France’s hybrid award, Korea’s early 3.5 GHz contest, and Brazil’s package
 
 ## India: high burden, not always high $/MHz-pop
 
-India is easy to misread. Absolute proceeds in 2022 were enormous in rupee and dollar terms, and GSMA’s Global Spectrum Pricing work flags spectrum cost near **26%** of mobile-sector revenue by 2023 — an extreme burden. Yet mid-band $/MHz-pop in the desk’s attributable tranche is closer to the global soft average than to the US C-band peak, because the population denominator is vast. Coverage in the three-year window after the award remains far below East Asian leaders.
+India is easy to misread. Absolute proceeds in 2022 were enormous in rupee and dollar terms, and GSMA’s Global Spectrum Pricing work flags India’s cumulative spectrum cost burden near **26%** of operator recurring revenues by 2023 — among the highest globally [GSMA GSP 2025]. Yet mid-band $/MHz-pop in the desk’s attributable tranche is closer to the global soft average than to the US C-band peak, because the population denominator is vast. Coverage in the three-year window after the award remains far below East Asian leaders.
 
 The implication for desks that only rank $/MHz-pop: **India looks “cheap” on that unit and “expensive” on affordability**. Both can be true. Operators facing a high cost share of revenue still ration densification even when the population-normalized unit looks moderate. mmWave clearing prices near zero reinforce that the market will not overpay for bands that do not solve the coverage problem.
 
@@ -1873,7 +1873,14 @@ Several limits are baked into the file:
 Even with those caveats, the policy signal is durable. Spectrum is an input to coverage, not a substitute for it. Governments that treat mid-band primarily as a one-time tax should expect operators to treat network densification as the residual claim on cash. Governments that write enforceable outdoor milestones, longer licence certainty, and tradable secondary markets can clear lower unit prices and still end up with the coverage map voters were promised.
 
 Use the dashboard to toggle regions, include or exclude administrative assignments, and flip between the price-coverage scatter, top $/MHz-pop bars, global proceeds area, obligation composites, and band-average prices. The headline is not that auctions are wrong — it is that **$ per MHz-pop is a poor leading indicator of 5G population coverage**, and the countries that learned that early wrote it into the licence rather than the press release.
-`,
+
+Sources:
+[FCC Auction 107]: Federal Communications Commission — Auction 107: 3.7 GHz Service (280 MHz; gross winning bids $81,168,677,645; net $81,114,481,921). https://auctiondata.fcc.gov/public/projects/auction107
+[GSMA GSP 2025]: GSMA — Global Spectrum Pricing 2025 (mid-band averages near $0.11/MHz-pop; India spectrum cost burden ~26% of operator recurring revenues in 2023 vs 14% in 2014). https://www.gsma.com/connectivity-for-good/spectrum/wp-content/uploads/2025/05/Global-Spectrum-Pricing-v2.pdf
+[PolicyTracker 2021]: PolicyTracker — The top five spectrum stories of 2021 (Canada 3800 MHz at $2.61/MHz/POP vs US C-band average $0.94/MHz/POP). https://www.policytracker.com/blog/the-top-five-biggest-spectrum-issues-of-2021/
+[Anatel Q4 2024]: Anatel / Telecompaper — Brazil Q4 2024 results (5G population coverage reached nearly 63% by end-2024, exceeding the 57.7% 2027 target). https://www.telecompaper.com/news/brazil-exceeds-2027-target-for-5g-coverage--1526641
+[BNamericas 2021]: BNamericas — Prices, terms and obligations of Brazil's approved 5G tender (95% urban-coverage obligation for unconnected districts under 30k inhabitants on 4G-or-better). https://www.bnamericas.com/en/features/spotlight-the-prices-terms-and-obligations-of-brazils-approved-5g-tender`,
+
   },
   {
     id: "us-crushed-stone-vs-construction-put-in-place-2026",
