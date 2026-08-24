@@ -157,6 +157,72 @@ html {
   background-color: #f8fafc;
 }
 
+.prose-content .sources-block {
+  margin: 2rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  background-color: color-mix(in srgb, var(--brand-navy) 4%, transparent);
+  border-left: 3px solid var(--brand-cyan);
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.prose-content .sources-block h2 {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+  margin-bottom: 0.75rem;
+}
+
+.prose-content .sources-block ol {
+  list-style: decimal;
+  counter-reset: none;
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+  color: #475569;
+}
+
+.prose-content .sources-block li {
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+  line-height: 1.6;
+}
+
+.prose-content .sources-block li:last-child {
+  margin-bottom: 0;
+}
+
+.prose-content .sources-block li::before {
+  content: none;
+}
+
+.prose-content .sources-block li::marker {
+  color: var(--brand-navy);
+  opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+
+.prose-content .source-tag {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.05em 0.45em;
+  border-radius: 0.25rem;
+  background-color: color-mix(in srgb, var(--brand-navy) 8%, transparent);
+  color: var(--brand-navy);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78em;
+  white-space: nowrap;
+}
+
+.prose-content .sources-block a {
+  font-weight: 500;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
 html[data-layout="fullscreen"] body {
   height: 100dvh;
   max-height: 100dvh;

@@ -1,6 +1,94 @@
 import type { ReactNode } from "react";
 
 const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/;
+const CITATION_LINE_RE = /^\[([^\]]+)\]:\s*(.+)$/;
+const SOURCES_HEADER_RE = /^sources:?$/i;
+const BARE_URL_RE = /https?:\/\/[^\s]+/g;
+
+type SourceEntry = { tag: string; text: string };
+
+/**
+ * Detects a citation-footnote run: optional standalone `Sources:` /
+ * `Sources` line followed by lines like `[Tag]: publisher — detail https://…`.
+ * Returns null unless every non-empty line (after the header) is a citation.
+ */
+function splitSourcesRun(block: string): {
+  entries: SourceEntry[];
+  hasInlineHeader: boolean;
+} | null {
+  const lines = block
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
+  if (lines.length === 0) return null;
+
+  let start = 0;
+  let hasInlineHeader = false;
+  if (SOURCES_HEADER_RE.test(lines[0])) {
+    hasInlineHeader = true;
+    start = 1;
+  }
+
+  const entries: SourceEntry[] = [];
+  for (let i = start; i < lines.length; i++) {
+    const match = lines[i].match(CITATION_LINE_RE);
+    if (!match) return null;
+    entries.push({ tag: match[1], text: match[2] });
+  }
+  if (entries.length === 0) return null;
+  return { entries, hasInlineHeader };
+}
+
+/** Auto-links bare URLs; other text goes through the inline renderer. */
+function renderSourceEntryText(text: string): ReactNode {
+  const nodes: ReactNode[] = [];
+  let remaining = text;
+  let key = 0;
+
+  while (remaining.length > 0) {
+    BARE_URL_RE.lastIndex = 0;
+    const match = BARE_URL_RE.exec(remaining);
+    if (!match) {
+      nodes.push(renderInlineMarkdown(remaining));
+      break;
+    }
+
+    let url = match[0];
+    while (/[.,;:]$/.test(url)) url = url.slice(0, -1);
+
+    if (match.index > 0) {
+      nodes.push(renderInlineMarkdown(remaining.slice(0, match.index)));
+    }
+    nodes.push(
+      <a key={key++} href={url} target="_blank" rel="noopener noreferrer">
+        {url}
+      </a>,
+    );
+    remaining = remaining.slice(match.index + url.length);
+  }
+
+  return nodes.length === 1 ? nodes[0] : nodes;
+}
+
+function renderSourcesBlock(
+  entries: SourceEntry[],
+  key: number,
+  showHeading: boolean,
+): ReactNode {
+  return (
+    <section key={key} className="sources-block">
+      {showHeading ? <h2>Sources</h2> : null}
+      <ol>
+        {entries.map((entry, j) => (
+          <li key={j}>
+            <span className="source-tag">[{entry.tag}]</span>
+            {renderSourceEntryText(entry.text)}
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
 
 type DelimMatch = { start: number; end: number; inner: string };
 
@@ -239,7 +327,8 @@ function renderTable(block: string, key: number): ReactNode {
 }
 
 export function renderPostContent(content: string): ReactNode[] {
-  return content.split("\n\n").map((block, i) => {
+  const blocks = content.split("\n\n");
+  return blocks.map((block, i) => {
     if (block.startsWith("## ")) {
       return (
         <h2 key={i}>{renderInlineMarkdown(block.replace("## ", ""))}</h2>
@@ -273,6 +362,20 @@ export function renderPostContent(content: string): ReactNode[] {
     if (isTableBlock(block)) {
       return renderTable(block, i);
     }
+
+    const sources = splitSourcesRun(block);
+    if (sources) {
+      const prevBlock = blocks[i - 1];
+      const prevIsSourcesHeading =
+        typeof prevBlock === "string" &&
+        SOURCES_HEADER_RE.test(prevBlock.trim().replace(/^#+\s*/, ""));
+      return renderSourcesBlock(
+        sources.entries,
+        i,
+        !sources.hasInlineHeader && !prevIsSourcesHeading,
+      );
+    }
+
     return <p key={i}>{renderInlineMarkdown(block)}</p>;
   });
 }
