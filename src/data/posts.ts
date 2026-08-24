@@ -514,7 +514,7 @@ Sources (headline-only check):
     layout: "default",
     content: `When highly pathogenic avian influenza empties barns, the first price that moves is not the sticker on a grocery carton. It is the negotiated trucklot quote for graded loose Large white eggs — the USDA Agricultural Marketing Service (AMS) print that volume buyers watch daily. Only later does the Bureau of Labor Statistics (BLS) average price for Grade A large eggs catch up. The interactive dashboard above tracks that wholesale-to-retail lag across the 2022–23, 2024, and 2025 HPAI waves: how fully spikes reached shelves, and how slowly cartons came back down once barns started to refill.
 
-The 2025 crest is the cleanest recent illustration. On the February 28, 2025 AMS Egg Markets Overview week, national loose Large white trucklots printed near **$8.05 per dozen**, with Midwest cartoned warehouse formula at **$8.30** and New York retailer delivery at **$8.53**. BLS’s city-average carton price for March 2025 hit a series high of **$6.23 per dozen**. That is not a contradiction. Wholesale is a thin spot market for bulk product; retail is a sticky shelf average that blends private-label, branded, cage-free, and promotional mix. The gap between an $8 wholesale print and a $6 retail average is the story of pass-through friction — not a data error.
+The 2025 crest is the cleanest recent illustration. On the February 28, 2025 AMS Egg Markets Overview week, national loose Large white trucklots printed near **$8.05 per dozen**, with Midwest cartoned warehouse formula at **$8.30** and New York retailer delivery at **$8.53** [USDA AMS Eggs]. BLS’s city-average carton price for March 2025 hit a series high of **$6.23 per dozen** [BLS CPI]. That is not a contradiction. Wholesale is a thin spot market for bulk product; retail is a sticky shelf average that blends private-label, branded, cage-free, and promotional mix. The gap between an $8 wholesale print and a $6 retail average is the story of pass-through friction — not a data error.
 
 ## Wholesale moves first; shelves follow by weeks
 
@@ -591,7 +591,10 @@ Regional AMS quotes reinforce the national story. California-compliant benchmark
 
 HPAI egg shocks are a two-clock problem. The wholesale clock runs in days and weeks; the retail clock runs in months. In 2025, an ~**$8** loose wholesale crest translated into a **$6.23** retail crest about **four weeks** later at roughly **three-quarters** pass-through, then wholesale halved while retail was still working off the first fifth of its decline. Anyone reading only one series will mis-time both the pain and the relief.
 
-Sources: BLS average price APU0000708111; USDA AMS Egg Markets Overview / Market News (selected 2024–2025 report weeks); CRS IF12949 monthly wholesale averages for Mar–Apr 2025; USDA APHIS HPAI detection summaries.`,
+Sources:
+[BLS CPI]: US Bureau of Labor Statistics — CPI average price, eggs Grade A large ($6.23/doz March 2025 record; FRED APU0000708111). https://fred.stlouisfed.org/series/APU0000708111
+[USDA AMS Eggs]: USDA AMS — Egg Markets Overview weekly (loose Large white wholesale ~$8.05–8.17 peak late Feb/early Mar 2025). https://www.ams.usda.gov/market-news/eggs
+[CRS IF12949]: Congressional Research Service — U.S. Egg Production and Retail Prices (In Focus). https://www.congress.gov/crs-product/IF12949`,
   },
   {
     id: "generic-price-declines-versus-manufacturer-exits-2026",
