@@ -3654,7 +3654,7 @@ Read the dashboard as a map of **operating mix**, not of prestige. Market value 
     featured: true,
     visualization: "oecd-childcare-costs-versus-total-fertility-2026",
     layout: "default",
-    content: `Make childcare cheaper and births should follow — or so the family-policy argument runs. The OECD's TaxBEN net-childcare series lets us test that claim in a hard way: not with a slogan, but with a scatter. For a dual-earner couple on **100% + 67% of average wage** with two toddlers in full-time centre-based care, **net childcare cost averages roughly 13% of average wage** across the OECD (the Family Database's own summary puts the multi-year figure "just under 14%"). Join that series to World Bank total fertility rates for 2022 and the cross-section is blunt: **Pearson r = 0.24** across 33 countries. That is a cloud, not a tidy inverse slope. If anything, countries in the **under-8% AW** cost band average **TFR 1.39**, while the **20%+ AW** band averages **1.53**.
+    content: `Make childcare cheaper and births should follow — or so the family-policy argument runs. The OECD's TaxBEN net-childcare series lets us test that claim in a hard way: not with a slogan, but with a scatter. For a dual-earner couple on **100% + 67% of average wage** with two toddlers in full-time centre-based care, **net childcare cost averages roughly 13% of average wage** across the OECD (the Family Database's own summary puts the multi-year figure "just under 14%") [OECD TaxBEN]. Join that series to World Bank total fertility rates for 2022 and the cross-section is blunt: **Pearson r = 0.24** across 33 countries [World Bank WDI]. That is a cloud, not a tidy inverse slope. If anything, countries in the **under-8% AW** cost band average **TFR 1.39**, while the **20%+ AW** band averages **1.53**.
 
 The dashboard is built for that discomfort: a country scatter (dual-earner or lone-parent lens), mean TFR by cost band, regional means, and a gross-fee-versus-offset decomposition that makes Italy's near-zero net cost look nothing like Germany's.
 
@@ -3702,7 +3702,9 @@ None of those caveats rescue the simple slogan. If lower net dual-earner childca
 | 8–19% AW | 15 | 11.1 | 1.523 |
 | 20%+ AW | 8 | 26.8 | 1.531 |
 
-Sources: OECD TaxBEN / Family Database net childcare costs (dual-earner couple, 100%+67% AW, two children aged 2–3, % of average wage); World Bank WDI SP.DYN.TFRT.IN (2022).`,
+Sources:
+[OECD TaxBEN]: OECD — Family Database, net childcare costs (PF3.4; dual-earner couple, 100%+67% AW, two children aged 2–3). https://www.oecd.org/els/soc/PF3_4_Net_childcare_costs.pdf
+[World Bank WDI]: World Bank — World Development Indicators, SP.DYN.TFRT.IN (fertility rate, total, births per woman, 2022). https://data.worldbank.org/indicator/SP.DYN.TFRT.IN`,
   },
   {
     id: "cement-clinker-process-emissions-by-country-2026",
