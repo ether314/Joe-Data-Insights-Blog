@@ -2681,7 +2681,7 @@ The dashboard above is built as a **velocity × rates lens**. Toggle focus among
 
 ## What STB speed and dwell actually measure
 
-The Surface Transportation Board requires Class I carriers to file weekly **system average train speed** and **terminal dwell**. Speed is train-miles divided by hours operated — a network fluidity metric, not door-to-door transit time for a particular shipper. Dwell is the average time a car resides at a terminal, excluding run-through cars that never get classified. Both series are noisy week to week; weather, crew availability, locomotive power, and interchange congestion move them. Averaging into quarters is how this post keeps the crisis and recovery visible without drowning in weekly spikes.
+The Surface Transportation Board requires Class I carriers to file weekly **system average train speed** and **terminal dwell** [STB Rail Service Metrics]. Speed is train-miles divided by hours operated — a network fluidity metric, not door-to-door transit time for a particular shipper. Dwell is the average time a car resides at a terminal, excluding run-through cars that never get classified. Both series are noisy week to week; weather, crew availability, locomotive power, and interchange congestion move them. Averaging into quarters is how this post keeps the crisis and recovery visible without drowning in weekly spikes.
 
 Neither metric is a perfect proxy for **on-time performance**. A network can recover dwell while trip-plan compliance stays soft, and a corridor can look fluid on system averages while a single gateway (Chicago, Kansas City, Laredo) still burns days. The STB Chicago gateway files and named-terminal dwell prints are the right place to look when the national average says "recovered" and a plant still sees late empties.
 
@@ -2703,7 +2703,7 @@ Commercial conditions did not mirror the service trough. Fuel, contract resets, 
 
 Service recovery plans filed with the STB after the crisis emphasized hiring, locomotive availability, and terminal discipline. Empirically, **dwell** improved earlier and more cleanly than **train speed**. By late 2023, blended dwell was back near the mid-**23–24 hour** band; speed was still a few tenths below the 2019 line and stayed sensitive to intermodal surges and weather. That pattern matches what carrier earnings calls described: yard productivity gains can clear cars even when line-of-road velocity is capped by meets, track work, or longer trains.
 
-Rates did not snap back to 2019. The index eased from **128** toward the high teens above base as fuel normalized and **intermodal** took a larger share of carloads — intermodal typically prints lower revenue per unit than chemical or automotive carload. Mix can therefore soften the index without any single contract "cutting rates" in a headline sense. AAR weekly carload composition is the volume context: coal's share faded; intermodal's rose. The pie in the corridor panel is that mix story in one glance.
+Rates did not snap back to 2019. The index eased from **128** toward the high teens above base as fuel normalized and **intermodal** took a larger share of carloads — intermodal typically prints lower revenue per unit than chemical or automotive carload. Mix can therefore soften the index without any single contract "cutting rates" in a headline sense. AAR weekly carload composition is the volume context: coal's share faded; intermodal's rose [AAR Rail Traffic]. The pie in the corridor panel is that mix story in one glance.
 
 ## Which corridors still lag
 
@@ -2723,7 +2723,11 @@ Several caveats belong in plain sight. First, the **revenue-per-carload index** 
 
 This post also does not adjudicate reciprocal switching dockets, crew-size rules, or Precision Scheduled Railroading as ideology. It asks a narrower question: how did **train speed and terminal dwell** move against **posted commercial intensity** since 2019, and which **corridors** still fail the 2019 dwell test. On that question the answer is specific. Velocity and rates diverged hard into 2022; dwell recovered first; speed mostly followed; rates stayed elevated; and a short list of gateways — Kansas City, Memphis, Laredo, Chicago — still levy a measurable dwell premium over the pre-crisis baseline.
 
-Sources: STB weekly Class I rail service performance data (system speed, terminal dwell, Chicago gateway); AAR weekly rail traffic; BTS Freight Analysis Framework for corridor weighting; Class I statistical supplements for the revenue-per-carload index construction.`,
+Sources:
+[STB Rail Service Metrics]: Surface Transportation Board — Weekly Class I Railroad Service Performance (system speed, terminal dwell, Chicago gateway). https://www.stb.gov/reports-data/rail-service-performance-measures/
+[AAR Rail Traffic]: Association of American Railroads — Weekly rail traffic / carload composition. https://www.aar.org/data/
+[BTS FAF]: Bureau of Transportation Statistics — Freight Analysis Framework corridor weights. https://www.bts.gov/faf
+[Class I Supplements]: Class I railroad quarterly statistical supplements — revenue-per-carload index construction (desk-indexed). https://www.bnsf.com/investors/`,
   },
   {
     id: "registered-apprenticeships-vs-trades-retirements-2026",
