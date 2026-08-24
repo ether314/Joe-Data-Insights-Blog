@@ -1899,7 +1899,7 @@ Sources:
     featured: true,
     visualization: "us-crushed-stone-vs-construction-put-in-place-2026",
     layout: "default",
-    content: `Census construction put-in-place (CIP) prints look like a mid-decade boom. USGS quarry ledgers do not. In 2024, US construction aggregates produced for consumption fell about **6%** to **2.38 billion metric tons** — crushed stone to **1.48 Gt** (−5%) and construction sand and gravel to **900 Mt** (−7%), per USGS Mineral Industry Surveys. Over the same 2019–2024 window, the calendar average of Census C30 total construction spending (FRED TTLCONS) rose roughly **61%** in nominal dollars. Strip out construction-cost inflation with a 2019=100 deflator path and real CIP still rises about **15%**. Tonnage ends **below** 2019. That is the story: **tonnage vs real CIP**, not “America stopped building.”
+    content: `Census construction put-in-place (CIP) prints look like a mid-decade boom. USGS quarry ledgers do not. In 2024, US construction aggregates produced for consumption fell about **6%** to **2.38 billion metric tons** — crushed stone to **1.48 Gt** (−5%) and construction sand and gravel to **900 Mt** (−7%), per USGS Mineral Industry Surveys [USGS MIS Q4 2024]. Over the same 2019–2024 window, the calendar average of Census C30 total construction spending (FRED TTLCONS) rose roughly **61%** in nominal dollars [Census C30]. Strip out construction-cost inflation with a 2019=100 deflator path and real CIP still rises about **15%**. Tonnage ends **below** 2019. That is the story: **tonnage vs real CIP**, not “America stopped building.”
 
 The interactive dashboard above indexes USGS tonnage against nominal and constructed real CIP, tracks **Mt per $1B of real CIP**, maps 2024 crushed-stone output by Census division, shows the MCS end-use mix, and scatters unit value against intensity. Toggle **Tonnage vs CIP index**, **Intensity + gap**, **Division map**, **Crushed-stone uses**, and **Price vs intensity**; switch the commodity among total aggregates, crushed stone, and sand & gravel; flip real vs nominal CIP on the dual-index panel.
 
@@ -1925,7 +1925,7 @@ Constructed real CIP — nominal CIP divided by a Turner/ENR-style cost deflator
 
 ## The 2024 cut was real on the quarry side
 
-USGS MIS annual estimates put crushed stone at **1.48 Gt** in 2024 after **1.55 Gt** in 2023, and sand & gravel at **900 Mt** after **967 Mt**. Total construction aggregates: **2.38 Gt** after **2.52 Gt**. MCS salient statistics for crushed stone show a parallel path — sold-or-used near **1.46–1.55 Gt** across 2020–2023, with a 2024 estimate around **1.50 Gt** — and note weather, high mortgage rates, and softer residential demand as the demand brakes. The MIS sample survey is the sharper annual production-for-consumption print used here for 2024; Minerals Yearbook finals can still revise.
+USGS MIS annual estimates put crushed stone at **1.48 Gt** in 2024 after **1.55 Gt** in 2023, and sand & gravel at **900 Mt** after **967 Mt**. Total construction aggregates: **2.38 Gt** after **2.52 Gt** [USGS MIS Q4 2024]. MCS salient statistics for crushed stone show a parallel path — sold-or-used near **1.46–1.55 Gt** across 2020–2023, with a 2024 estimate around **1.50 Gt** — and note weather, high mortgage rates, and softer residential demand as the demand brakes [MCS 2025]. The MIS sample survey is the sharper annual production-for-consumption print used here for 2024; Minerals Yearbook finals can still revise.
 
 Sand & gravel fell harder than crushed stone in percentage terms. That matters because the two products are imperfect substitutes: crushed limestone and granite dominate many eastern and southern pavement markets, while sand & gravel still carry large western and alluvial corridors. A national aggregates total hides that mix shift.
 
@@ -1938,13 +1938,13 @@ Why would real dollars rise while tons soften? Several honest mechanisms can coe
 1. **Mix shift inside CIP.** Manufacturing plants, data-center shells, and high-finish nonresidential work can carry more dollar volume per ton of aggregate than lane-miles of asphalt.
 2. **Price without volume.** Even after a cost deflator, residual price and scope inflation can leave “real” dollars ahead of quarry shipments.
 3. **Stock and recycle.** Stockpiles, recycled asphalt/concrete (still a small national share in MCS notes), and import wedges can buffer local shortages without lifting domestic mine output.
-4. **Use composition.** Only about **72%** of crushed stone is construction aggregate in the MCS 2024e use mix; cement and lime claim **17%** and **6%**. Treating every crushed-stone ton as pavement feedstock overstates the road ledger.
+4. **Use composition.** Only about **72%** of crushed stone is construction aggregate in the MCS 2024e use mix; cement and lime claim **17%** and **6%** [MCS 2025]. Treating every crushed-stone ton as pavement feedstock overstates the road ledger.
 
 None of those excuses a desk that quotes nominal CIP growth as proof that aggregates “kept up.” They did not, on either the MIS tonnage print or the intensity ratio.
 
 ## Geography: the South still ships; the Midwest cut harder
 
-MIS 2024 crushed-stone production for consumption remains a southern story. **South Atlantic** alone is about **341 Mt** (~23% of the US total). **West South Central** adds about **268 Mt**. Together with East South Central, the South is roughly half of national crushed-stone tonnage. **East North Central** is still large (~**231 Mt**) but posted a mid-single-digit percentage drop; **West North Central** fell harder (~**−13%** YoY on the division estimate). Mountain divisions also printed double-digit percentage declines from a smaller base.
+MIS 2024 crushed-stone production for consumption remains a southern story. **South Atlantic** alone is about **341 Mt** (~23% of the US total). **West South Central** adds about **268 Mt**. Together with East South Central, the South is roughly half of national crushed-stone tonnage. **East North Central** is still large (~**231 Mt**) but posted a mid-single-digit percentage drop; **West North Central** fell harder (~**−13%** YoY on the division estimate) [USGS MIS Q4 2024]. Mountain divisions also printed double-digit percentage declines from a smaller base.
 
 That geography matters for freight and ready-mix desks. A national −5% crushed-stone print can feel like a deep cut in the Plains and only a soft patch in Florida–Georgia–Carolinas pavement corridors. The dashboard’s division panel and region filter exist so those two experiences are not averaged into one false calm.
 
@@ -1966,7 +1966,12 @@ It is not evidence that the US is “out of stone.” USGS repeatedly notes that
 
 If highway and IIJA-era public work continue to spend while single-family starts stay rate-sensitive, expect **dollars and tons to keep disagreeing**. Watch three prints together: (1) USGS quarterly MIS aggregates, (2) Census C30 nominal CIP, and (3) an explicit real or volume companion — never nominal alone. The 2019–2024 intensity drop from **1.76 to 1.49 Mt per real CIP billion** is the quantitative form of that disagreement. Closing the gap would require either softer real put-in-place or a clear rebound in quarry shipments. 2024 delivered neither on the aggregates side.
 
-For desks that still need one line: **US aggregate tonnage did not keep up with real construction put-in-place — and the Mt-per-real-dollar gap is wider than it was before the pandemic.**`,
+For desks that still need one line: **US aggregate tonnage did not keep up with real construction put-in-place — and the Mt-per-real-dollar gap is wider than it was before the pandemic.**
+
+Sources:
+[USGS MIS Q4 2024]: USGS — Mineral Industry Surveys, Crushed Stone and Sand and Gravel, Fourth Quarter 2024 (crushed stone 1.48 Gt, −5%; sand & gravel 900 Mt, −7%; total aggregates 2.38 Gt, −6%; division table: South Atlantic 341 Mt, West South Central 268 Mt, East North Central 231 Mt). https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/mis-2024q4-conag.pdf
+[MCS 2025]: USGS — Mineral Commodity Summaries 2025, Stone (Crushed) (72% construction aggregate, 17% cement manufacturing, 6% lime; 2024 mine production ~1.5 Gt). https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-stone-crushed.pdf
+[Census C30]: US Census Bureau / FRED — Value of Construction Put in Place, Total Construction (TTLCONS), SAAR monthly (2019 annual average ≈ $1.390T; 2024 ≈ $2.238T). https://fred.stlouisfed.org/data/TTLCONS`,
   },
   {
     id: "orbital-launch-cadence-by-operator-2026",
