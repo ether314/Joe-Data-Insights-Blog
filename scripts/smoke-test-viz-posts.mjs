@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "oecd-strike-days-per-1-000-employees-2026",
+    marker: "Days not worked per 1,000",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "trade-wages-versus-college-majors-2026",
     marker: "Wage gap at 10 years",
     forbidden: "Loading interactive charts",

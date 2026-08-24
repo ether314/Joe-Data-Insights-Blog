@@ -2,6 +2,112 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "oecd-strike-days-per-1-000-employees-2026",
+    slug: "oecd-strike-days-per-1-000-employees-2026",
+    title:
+      "Charted: Days Not Worked per 1,000 — Which OECD Countries Still Lose Material Time to Strikes?",
+    excerpt:
+      "ILOSTAT puts Canada at 376 days not worked per 1,000 employees in 2023 and Finland at 368 in 2022 — while Sweden sits near zero. The post-2022 inflation bump was real in several countries; the UK’s 2024 cool-down shows it was not permanent everywhere.",
+    category: "Economics",
+    themeId: "organized-labor",
+    imageUrl:
+      "/images/economics-oecd-strike-days-per-1-000-employees-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of horizontal strike-intensity bars in crimson and teal over industrial silhouettes, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-27T12:00:00Z",
+    featured: true,
+    visualization: "oecd-strike-days-per-1-000-employees-2026",
+    layout: "default",
+    content: `Strike headlines travel faster than strike statistics. A single national walkout can dominate a news cycle; the measure that lets you compare countries over time is quieter and meaner: **days not worked per 1,000 employees**. ILOSTAT’s industrial-relations series (STR_DAYS_ECO_RT) and the OECD’s long-standing industrial-disputes composites both use that intensity rate so that a large economy and a small one are not ranked by raw person-days alone.
+
+The question for 2026 desks is twofold. First: **which OECD reporters still lose material days** on that scale? Second: after the 2022–23 inflation bargaining wave, **did the bump reverse** — or did a handful of countries simply re-price conflict into a higher baseline?
+
+The short answer from the dashboard’s intensity ladder: material conflict is still concentrated. On the latest usable ILOSTAT economy-wide totals (plus careful gap-fills), **Canada (375.9 in 2023)**, **Chile (173.5 in 2024)**, **Finland (82.1 in 2024 after a 367.5 spike in 2022)**, and **France (99 in 2022)** sit in a different league from **Germany (12 in 2024)**, **Australia (10.5)**, **Sweden (0.8)**, or **Switzerland (0.8)**. The post-2022 bump is real in Canada, Finland, Norway, and (on a major-stoppage estimate) the United States — but the **United Kingdom’s drop from 83 in 2023 to 22.7 in 2024** is a clean reminder that a wave can crest and fall without rewriting a country’s long-run strike culture.
+
+## Scoreboard: latest days not worked per 1,000
+
+| Country | Latest rate | Year | 2015–19 avg | 2022–24 avg | Read |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Canada | **375.9** | 2023 | 78.6 | **243.6** | Inflation-era surge |
+| Chile | **173.5** | 2024 | ~312 | 158.8 | Still high; cooling from 2019 |
+| Finland | **82.1** | 2024 | 60.8 | **160.4** | 2022 spike, partial cool-down |
+| France | **99** | 2022 | 107.8 | 99 | Structurally elevated |
+| Spain | **32.5** | 2024 | 35.4 | 38.1 | Mid-tier, stable |
+| United Kingdom | **22.7** | 2024 | 109.5* | 61.6 | 2022–23 wave, then reverse |
+| Korea | **21** | 2024 | 43.5 | 17.8 | Below late-2010s |
+| Germany | **12** | 2024 | 15.1 | 11.3 | Low by OECD high-strike standards |
+| Norway | **10.9** | 2024 | 18.8 | 34.7 | Hot 2020–22, cooler 2024 |
+| Australia | **10.5** | 2024 | 8.3 | 11.4 | Mild uptick |
+| Sweden | **0.8** | 2023 | 0.9 | 1.0 | Near floor |
+| United States† | **12** | 2024 | ~8 | ~46 | Major-stoppage estimate |
+
+\\*UK 2015–19 average is pulled up by large 2016–18 disputes; ILOSTAT is missing 2019–21 totals. †USA rates are BLS major work stoppages ÷ CES employment × 1,000 — not the all-disputes perimeter used by many European NSOs.
+
+Toggle the dashboard’s **horizon** control from “latest year” to **2015–19** or **2022–24** averages if you want the ranking without a single spike year. That is the right move for Finland (2022) and Canada (2023): the headline year is the story, but the period average is the policy-relevant temperature.
+
+## The concentration pattern has not disappeared
+
+International strike comparisons used to be caricatured as “France always, Germany never.” The microdata are messier, but the ordinal map is stubborn. ETUI’s Strike Map decade averages — useful where ILOSTAT economy-wide totals go dark — still place **France, Belgium, Denmark, Finland, and Spain** in the high-conflict European club for the 2000s, with **Germany, the Netherlands, and Switzerland** near the floor [ETUI / Euronews compilation]. OECD Employment Outlook industrial-dispute tables through the mid-2010s told the same structural story: Southern and some Nordic systems lose far more days per employee than Germanic or East Asian reporters in quiet years [OECD industrial disputes].
+
+What changed after COVID and the inflation spike is not that Sweden suddenly became France. It is that a few mid- and high-conflict systems **loaded more idle days into 2022–23**, while low-conflict systems mostly stayed low. Germany’s five-year average for 2020–24 is about **10 days per 1,000** on IW Köln’s reading — up from the 2000s, still nowhere near Canada’s 2023 print or Finland’s 2022 spike [IW Köln].
+
+Chile is the important non-European reminder. ILOSTAT shows **382 days per 1,000 in 2019**, then a grinding decline to **103.5 in 2023** and a rebound to **173.5 in 2024**. That is not a Europe-only inflation story; it is a high-conflict OECD economy whose intensity remains **material even after a multi-year cool-down**.
+
+## Did the post-2022 bump reverse?
+
+Open the dashboard’s **Post-2022 bump** panel. The chart subtracts each country’s **2015–19 average** from its **2022–24 average**. Desk rule for a “bump”: recent average at least **five days per 1,000** hotter than baseline.
+
+On that rule, **Canada and Finland** are unambiguous. Canada’s period average jumps from roughly **79 to 244**; Finland from **61 to 160**. Norway’s recent average (**35**) also clears the baseline (**19**), even though **2024 alone (10.9)** looks calm. Australia and Portugal show smaller positive deltas. Spain’s recent average is only a couple of days above baseline — noise, not a regime shift.
+
+Reversal is country-specific, not universal:
+
+- **United Kingdom:** 79.2 (2022) → 83 (2023) → **22.7 (2024)**. The wave is visible; so is the cool-down.
+- **Finland:** 367.5 (2022) → 31.6 (2023) → **82.1 (2024)**. Not a full return to the late-2010s quiet years, but nothing like 2022 either.
+- **Norway:** 66.8 (2022) → 26.5 (2023) → **10.9 (2024)**. Classic crest-and-fade.
+- **Canada:** ILOSTAT’s latest total is still **2023 at 375.9** — Statistics Canada also flags 2023 person-days not worked as the highest since 1986, concentrated in education and public administration [Statistics Canada]. A 2024 ILOSTAT total is not yet in the panel; treat “reversal” as **not yet measurable** on this series.
+- **United States (major-stoppage estimate):** ~21 (2022) → ~104 (2023) → ~12 (2024). The Hollywood/auto idle-day year dominates 2023; 2024 looks like a snap-back on the major-stoppage perimeter.
+
+So the honest headline is not “strikes are back permanently.” It is: **several OECD systems ran a hot inflation bargaining cycle; some have already cooled; a few (Canada on 2023 data; France on levels) still look structurally expensive in idle days.**
+
+## Europe’s split screen: France vs Germany vs the Nordics
+
+France’s latest ILOSTAT total (**99 in 2022**) sits near its 2015–19 average (**108**). That is the definition of a high-conflict equilibrium: even “normal” French years clear what would be a crisis print in Germany. ETUI’s 2020–21 average for France (**79**) was lower than the 2010s decade average (**128**), but still led the European pack in that thin pandemic window [ETUI].
+
+Germany remains the foil. Sparse mid-2010s ILOSTAT coverage, then **5–15 days per 1,000** through 2020–24. IW’s narrative that German industrial action rose from a low base is compatible with the series — and still leaves Germany in the **low** intensity band on our dashboard thresholds (≥100 high, ≥40 elevated, ≥15 moderate, ≥5 low).
+
+The Nordic contrast inside one model family is sharper than the France–Germany cliché. **Finland** can print **367** in a single year; **Sweden** prints **0.8**. Norway oscillates with bargaining rounds (**50.6 and 42.1 in 2020–21**, **66.8 in 2022**, then down). Denmark lacks a recent ILOSTAT economy-wide total in the download; ETUI’s 2020–21 average (**49**) and 2000–09 average (**105**) still mark it as a high-conflict system by European standards. If your mental model is “Nordic = peaceful,” the Finland and Denmark rows will force a rewrite.
+
+Belgium is another gap-fill case: no recent ILOSTAT economy-wide total, but ETUI’s 2020–21 average (**57**) and OECD’s older 2008–18 composite (~**98**) keep it in the elevated European cluster. The dashboard flags these rows when you enable **Hide caution / gap-fill**.
+
+## Outside Europe: Chile hot, Korea cooling, Anglosphere mixed
+
+Chile’s path is the LatAm OECD stress test: multi-year rates above **100 days per 1,000** even after the 2019 peak. Korea moved the other way — **43.5** average in 2015–19 down to **17.8** in 2022–24 — a quieting that rarely makes wire stories. Australia remains in the low-to-moderate band with a mild post-2022 uptick. Poland’s 2019 spike (**170.9**) is a reminder that single-year shocks happen in otherwise quiet systems; 2020–24 sits near zero again.
+
+North America is a methods minefield. Canada’s ILOSTAT totals are in the same conceptual family as European NSO submissions and show a genuine 2023 explosion. The United States series in ILOSTAT is effectively unusable for ranking (near-zero prints), so the dashboard uses a **BLS major-work-stoppage estimate**. That perimeter misses small disputes by construction; it still captures why 2023 felt historic in U.S. labor coverage and why 2024 looks quieter on idle days.
+
+## How to read the dashboard without fooling yourself
+
+Five panels, on purpose:
+
+1. **Intensity ladder** — ordinal ranking for a chosen horizon (latest, 2015–19, 2020–21, or 2022–24).
+2. **Country trends** — annual lines so you can see spikes instead of worshipping averages.
+3. **Post-2022 bump** — diverging deltas for the core question.
+4. **Baseline vs recent scatter** — same comparison in x–y space; points above the diagonal heated up.
+5. **Intensity bands + ETUI context** — distribution of the panel, plus Europe decade averages for gap-fill honesty.
+
+Use **region** and **hide caution** before you screenshot a ranking. A league table that mixes ILOSTAT totals, ETUI gap-fills, and BLS estimates without labels is how bad Twitter charts are born.
+
+## Caveats and comparability (read before citing a rank)
+
+National statistical offices disagree on almost every operational detail that matters: minimum size thresholds, whether public-sector strikes are fully covered, whether lockouts count, and how “days not worked” are imputed from hours. The OECD has warned for years that industrial-dispute statistics support **trend and ordinal** comparisons better than precise level gaps [OECD industrial disputes]. France’s private/public splice in ETUI methodology is a known undercount risk for some public functions. Hungary’s post-2016 ILOSTAT levels look discontinuous versus earlier decades — we show the prints with a caution flag rather than quietly dropping a high bar. Türkiye’s 2024 ILOSTAT total (**140,530**) is excluded as an implausible outlier pending source correction.
+
+Timing gaps matter too. France’s latest economy-wide total in this pull stops at **2022**; Canada’s at **2023**; several small European reporters have multi-year holes. “Latest” is not a synchronized OECD snapshot — it is the freshest usable observation per country.
+
+None of that erases the core pattern. On days not worked per 1,000 employees, **a short list of OECD economies still lose material time to industrial action**; **the 2022–23 inflation bargaining wave raised intensity in identifiable places**; and **by 2024, several of those places had already cooled** — without converting Germany into France, or Sweden into Finland.
+
+Sources: ILOSTAT STR_DAYS_ECO_RT (ECO_SECTOR_TOTAL); OECD industrial-disputes composites; ETUI Strike Map averages as compiled in public summaries; IW Köln OECD peer comparison; BLS Major Work Stoppages; Statistics Canada labour-dispute release for 2023.`,
+  },
+  {
     id: "trade-wages-versus-college-majors-2026",
     slug: "trade-wages-versus-college-majors-2026",
     title:

@@ -3542,6 +3542,21 @@ const TradeWagesVersusCollegeMajors2026Dashboard = dynamic(
   },
 );
 
+const OecdStrikeDaysPer1000Employees2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/OecdStrikeDaysPer1000Employees2026Dashboard"
+    ).then((m) => m.OecdStrikeDaysPer1000Employees2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4473,6 +4488,10 @@ export function PostVisualization({
 
   if (type === "trade-wages-versus-college-majors-2026") {
     return <TradeWagesVersusCollegeMajors2026Dashboard />;
+  }
+
+  if (type === "oecd-strike-days-per-1-000-employees-2026") {
+    return <OecdStrikeDaysPer1000Employees2026Dashboard />;
   }
 
   return null;
