@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { FullscreenShell } from "@/components/FullscreenShell";
 import { PostImage } from "@/components/PostImage";
 import { PostVisualization } from "@/components/PostVisualization";
+import { RelatedPosts } from "@/components/RelatedPosts";
 import { renderPostContent } from "@/lib/markdown";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 import { formatPostDate } from "@/lib/utils";
@@ -38,11 +39,24 @@ function renderContent(content: string) {
   return renderPostContent(content);
 }
 
+/** Rough reading time: strip markdown syntax, then words/200. */
+function estimateReadingMinutes(markdown: string): number {
+  const plain = markdown
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/https?:\/\/\S+/g, " ")
+    .replace(/[#>*_`|-]/g, " ");
+  const words = plain.split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) notFound();
+
+  const allPosts = await getAllPosts();
 
   const hasVisualization = Boolean(post.visualization);
   const isFullscreenLayout = post.layout === "fullscreen";
@@ -103,11 +117,44 @@ export default async function BlogPostPage({ params }: PageProps) {
           {isCanvasLayout ? (
             <p className="blog-header-meta mt-1 max-w-none leading-snug text-slate-400">{post.excerpt}</p>
           ) : null}
-          <p className="blog-header-meta mt-0.5 text-slate-500">{formatPostDate(post.publishedAt)}</p>
+          <p className="blog-header-meta mt-0.5 text-slate-500">
+            {formatPostDate(post.publishedAt)} ·{" "}
+            {estimateReadingMinutes(post.content)} min read
+          </p>
         </div>
       </div>
 
       <div className="site-content site-container py-8">
+        {(post.format || (post.tags && post.tags.length > 0)) && (
+          <div className="mb-6 flex flex-wrap items-center gap-2">
+            {post.format ? (
+              <span className="rounded-full border border-cyan-600/30 bg-cyan-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-700">
+                {post.format}
+              </span>
+            ) : null}
+            {post.tags?.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {post.keyPoints && post.keyPoints.length > 0 && !isCanvasLayout && (
+          <aside className="key-takeaways mb-8 rounded-xl border-l-4 border-cyan-500 bg-slate-50 p-5">
+            <h2 className="key-takeaways-title">Key takeaways</h2>
+            <ul className="mt-3 space-y-2">
+              {post.keyPoints.slice(0, 3).map((point, j) => (
+                <li key={j} className="text-sm leading-relaxed text-slate-700">
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
         {!isCanvasLayout && (
           <p className="mb-8 max-w-none text-xl leading-relaxed text-slate-600">{post.excerpt}</p>
         )}
@@ -142,9 +189,10 @@ export default async function BlogPostPage({ params }: PageProps) {
         )}
 
         <div className={`${isCanvasLayout ? "mt-8" : "mt-12"} border-t border-slate-200 pt-8`}>
+          <RelatedPosts current={post} posts={allPosts} />
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-800"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-800"
           >
             ← Back to all posts
           </Link>
