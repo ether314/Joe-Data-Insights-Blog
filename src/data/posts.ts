@@ -1339,15 +1339,15 @@ Sources:
     featured: true,
     visualization: "electrician-and-plumber-age-cohorts-2026",
     layout: "default",
-    content: `The licensed trades that keep buildings powered and plumbed are not aging evenly across the map. Nationally, **18.4%** of employed electricians and **20.4%** of plumbers, pipefitters, and steamfitters are already **55 or older**, according to the Bureau of Labor Statistics’ 2024 Current Population Survey (Table A-11b). That is nearly **one in five** electricians and **one in five** plumbers sitting in the decade where retirement, reduced hours, or exit from the craft become common.
+    content: `The licensed trades that keep buildings powered and plumbed are not aging evenly across the map. Nationally, **18.4%** of employed electricians and **20.4%** of plumbers, pipefitters, and steamfitters are already **55 or older**, according to the Bureau of Labor Statistics’ 2024 Current Population Survey annual averages (Table 11b) [BLS CPS 11b]. That is nearly **one in five** electricians and **one in five** plumbers sitting in the decade where retirement, reduced hours, or exit from the craft become common.
 
 The sharper story is geographic. In the dashboard above, **Maine** leads the electrician sample at **27.8%** aged 55+, and **West Virginia** leads plumbers at **28.4%**. Large Sun Belt markets such as **Texas** sit near **14%** for electricians — a gap of more than **thirteen percentage points** between the oldest small state and the youngest large one. Licensure pipelines do not automatically offset those gaps: states with the thickest near-retirement bands often issue fewer new licenses relative to the 55+ stock they already carry.
 
 ## National age bands, not just a median
 
-CPS reports median ages of **39.6** for electricians and **40.1** for plumbers — middling numbers that can hide the retirement cliff. The age-band panel shows why. Electricians concentrate in the **25–34** and **35–44** decades (**26.0%** and **22.5%** of employment). Plumbers do too (**24.8%** and **24.2%**), but their **55–64** band is thicker: **15.9%** versus **13.7%** for electricians. Add the 65+ tail and plumbers’ combined 55+ share clears **20%**.
+CPS reports median ages of **39.6** for electricians and **40.1** for plumbers — middling numbers that can hide the retirement cliff [BLS CPS 11b]. The age-band panel shows why. Electricians concentrate in the **25–34** and **35–44** decades (**26.0%** and **22.5%** of employment). Plumbers do too (**24.8%** and **24.2%**), but their **55–64** band is thicker: **15.9%** versus **13.7%** for electricians. Add the 65+ tail and plumbers’ combined 55+ share clears **20%**.
 
-In absolute terms the stocks are large. CPS counts about **992,000** electricians and **636,000** plumbers/pipefitters/steamfitters. Roughly **183,000** electricians and **130,000** plumbers are already 55+. Those are the people most likely to leave the craft over the next decade — not a forecast of exact exits, but the cohort that state boards and contractors watch when they talk about “replacing the journeymen.”
+In absolute terms the stocks are large. CPS counts about **992,000** electricians and **636,000** plumbers/pipefitters/steamfitters. Roughly **183,000** electricians and **130,000** plumbers are already 55+. Roughly **183,000** electricians and **130,000** plumbers are already 55+. Those are the people most likely to leave the craft over the next decade — not a forecast of exact exits, but the cohort that state boards and contractors watch when they talk about “replacing the journeymen.”
 
 ## Scoreboard: share near retirement
 
@@ -1404,7 +1404,12 @@ National age bands and medians are **disclosed** CPS 2024 annual averages. Where
 
 Three dials matter more than another national “trades shortage” headline. First, whether **Northeast and Appalachian 55+ shares** keep rising as housing and industrial demand stay concentrated in younger Sun Belt markets. Second, whether **exam pass rates and issuance** in aging states climb enough to cut pipeline pressure below **6**. Third, whether large states that look young on share — Texas, Florida, California — can keep issuing licenses fast enough that absolute retirements do not still bite local contractors.
 
-Until those dials move together, the United States will keep running a two-speed trades age map: **older cohorts and thinner license faucets** in parts of the Northeast and Appalachia, and **younger shares with thicker issuance** where construction payrolls are still expanding. The dashboard is built to toggle that comparison by trade, region, and sort — because the national 18–20% near-retirement shares hide where the cliff is steepest.`,
+Until those dials move together, the United States will keep running a two-speed trades age map: **older cohorts and thinner license faucets** in parts of the Northeast and Appalachia, and **younger shares with thicker issuance** where construction payrolls are still expanding. The dashboard is built to toggle that comparison by trade, region, and sort — because the national 18–20% near-retirement shares hide where the cliff is steepest.
+
+Sources:
+[BLS CPS 11b]: US Bureau of Labor Statistics — CPS 2024 Annual Averages, Table 11b, Employed Persons by Detailed Occupation and Age (electricians: 992k total, 136k aged 55–64 + 47k 65+, median 39.6; plumbers/pipefitters/steamfitters: 636k total, 101k + 29k, median 40.1). https://www.bls.gov/cps/data/aa2024/cpsaat11b.htm
+[BLS OEWS]: US Bureau of Labor Statistics — Occupational Employment and Wage Statistics, SOC 47-2111 Electricians and 47-2152 Plumbers, Pipefitters, and Steamfitters (state employment base for pipeline math). https://www.bls.gov/oes/
+[ACS PUMS]: US Census Bureau — American Community Survey 2019–2023 PUMS (state age-share synthesis; desk estimates marked in data module). https://www.census.gov/programs-surveys/acs/microdata.html`,
   },
   {
     id: "ransomware-payments-vs-uninsured-losses-2026",
