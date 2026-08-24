@@ -2201,9 +2201,9 @@ The actionable briefing is therefore three numbers and one caveat: **$7.08B** do
     featured: true,
     visualization: "us-counties-with-no-local-news-outlet-2026",
     layout: "default",
-    content: `Local news is not evenly thin. It is **missing in some counties and hanging by a single masthead in many more**. Northwestern Medill’s State of Local News 2025 county-by-county census counts **212** U.S. counties with **zero** locally based news outlets and **1,525** with **only one** — typically a weekly newspaper. Together that is **1,737** limited-access counties and roughly **50 million** people living with limited or no local news under Medill’s all-outlet definition.
+    content: `Local news is not evenly thin. It is **missing in some counties and hanging by a single masthead in many more**. Northwestern Medill’s State of Local News 2025 county-by-county census counts **212** U.S. counties with **zero** locally based news outlets and **1,525** with **only one** — typically a weekly newspaper [Medill 2025]. Together that is **1,737** limited-access counties and roughly **50 million** people living with limited or no local news under Medill’s all-outlet definition.
 
-Twenty years earlier, Medill puts the zero-outlet count near **150**. On a separate newspaper-only lens, people living in counties with zero or one newspaper rose from about **37 million in 2005** to more than **88 million in 2025**. The dashboard above toggles those frames, filters states by region, and walks the risk funnel from one-outlet counties into Medill’s watch list.
+Twenty years earlier, Medill puts the zero-outlet count near **150**. On a separate newspaper-only lens, people living in counties with zero or one newspaper rose from about **37 million in 2005** to more than **88 million in 2025** [Medill 2025]. The dashboard above toggles those frames, filters states by region, and walks the risk funnel from one-outlet counties into Medill’s watch list.
 
 ## Scoreboard: deserts, single-source counties, and people
 
@@ -2217,7 +2217,7 @@ Twenty years earlier, Medill puts the zero-outlet count near **150**. On a separ
 | All outlets | 2025 | People with limited/no local news | **~50M** |
 | Newspapers only | 2005 | People in 0–1 newspaper counties | **~37M** |
 | Newspapers only | 2025 | People in 0–1 newspaper counties | **~88M** |
-| Watch list | 2025 | Counties >40% desert risk / 10y | **249** |
+| Watch list | 2025 | Counties >40% desert risk / 10y | **250** |
 | Rural share | 2025 | Deserts in USDA rural counties | **~80%** |
 
 The headline is not that every American lost a paper. It is that **access collapsed into a two-tier map**: metro and college towns still host stacks of outlets, while large stretches of the county map run on one weekly — or none.
@@ -2232,7 +2232,7 @@ UNC Hussman’s Expanding News Deserts work framed the same geography through th
 
 Deserts get the metaphor. **One-outlet counties are the bigger population story.** At **1,525** counties, they outnumber deserts roughly **seven to one**. Medill notes the remaining source is usually a **weekly**, not a seven-day metro. That means a single ownership change, print-frequency cut, or retirement without succession can tip a county into desert status.
 
-The watch list makes that explicit: **249** one-outlet counties carry a modeled **>40%** chance of becoming deserts within a decade (Medill / Spiegel Research Center). The funnel in the dashboard is the policy-relevant stack — not just “how many are empty now,” but “how many are one failure away.”
+The watch list makes that explicit: **250** one-outlet counties carry a modeled **>40%** chance of becoming deserts within a decade (Medill / Spiegel Research Center) [Medill 2025]. The funnel in the dashboard is the policy-relevant stack — not just “how many are empty now,” but “how many are one failure away.”
 
 ## Where the people are: Georgia, Texas, North Carolina, Mississippi
 
@@ -2242,15 +2242,15 @@ That geography matters for politics because **statehouses, school boards, and sh
 
 ## Rural deserts, urban newspaper losses
 
-Almost **80%** of news deserts sit in counties USDA classifies as predominantly rural. Digital startups do not mirror that map: Medill finds standalone and network digital sites concentrated in **more affluent, higher-education counties**, the demographic opposite of deserts. Broadband gaps compound the problem — in desert counties, Medill cites FCC data showing **less than half** of residents, on average, can reach the fastest terrestrial speeds, and in **20%** of deserts fewer than **10%** can.
+Almost **80%** of news deserts sit in counties USDA classifies as predominantly rural [Medill 2025]. Digital startups do not mirror that map: Medill finds standalone and network digital sites concentrated in **more affluent, higher-education counties**, the demographic opposite of deserts. Broadband gaps compound the problem — in desert counties, Medill cites FCC data showing **less than half** of residents, on average, can reach the fastest terrestrial speeds, and in **20%** of deserts fewer than **10%** can.
 
 Yet the **raw newspaper death count** since 2005 is still heavily urban and suburban. Medill’s twenty-year newspaper path puts nearly **70%** of vanished papers in predominantly urban counties, with a quarter of losses in just ten metro areas. Rural America loses the last outlet; metros lose depth and frequency. Both show up as thinner local information — different mechanisms, same accountability gap.
 
 ## Newspapers, owners, and the density collapse
 
-Medill’s structural path is brutal even before deserts: newspapers per 100,000 residents fell from about **3.0 in 2005** to **1.6 in 2025**; unique owners from roughly **4,000** to under **1,900**; combined circulation from around **120 million** toward **38 million**. Roughly **3,400** papers disappeared net over two decades; **148** vanished in the latest year alone — more than two per week.
+Medill’s structural path is brutal even before deserts: newspapers per 100,000 residents fell from about **3.0 in 2005** to **1.6 in 2025**; unique owners from roughly **4,000** to under **1,900**; combined circulation from around **120 million** toward **38 million**. Roughly **3,200+** papers disappeared net over two decades; **136** vanished in the latest year alone — more than two per week [Medill 2025].
 
-Public broadcasting is the incomplete backstop. Primary public stations reach about **46%** of deserts and **53%** of one-source counties; with repeaters those shares jump to about **82%** and **90%**. That reach is why CPB funding fights are local-information fights, not only cultural ones — especially where public radio is the **only** remaining professional source in a handful of counties.
+Public broadcasting is the incomplete backstop. Primary public stations reach about **46%** of deserts and **53%** of one-source counties; with repeaters those shares jump to about **82%** and **90%** [Medill 2025]. That reach is why CPB funding fights are local-information fights, not only cultural ones — especially where public radio is the **only** remaining professional source in a handful of counties.
 
 ## Caveats and method
 
@@ -2260,9 +2260,13 @@ UNC Hussman’s earlier Expanding News Deserts maps remain useful historical con
 
 ## What to watch next
 
-Three dials matter more than another national “news is dying” headline: (1) whether the **212** desert count keeps ticking up as one-outlet weeklies close, (2) whether **watch-list** counties convert faster after public-media funding shocks, and (3) whether digital and nonprofit startups ever **seed rural counties** at scale instead of clustering where advertising and philanthropy already concentrate. Until those dials move, the United States will keep running a two-speed local information system — dense where markets work, and **0–1 outlets** where they do not.
+Three dials matter more than another national “news is dying” headline: (1) whether the **212** desert count keeps ticking up as one-outlet weeklies close, (2) whether **watch-list** counties convert faster after public-media funding shocks, and (3) whether digital and nonprofit startups ever **seed rural counties** at scale instead of clustering where advertising and philanthropy already concentrate [Medill 2025]. Until those dials move, the United States will keep running a two-speed local information system — dense where markets work, and **0–1 outlets** where they do not.
 
-The democracy cost is concrete: fewer local reporters means fewer people watching school budgets, hospital closures, and election administration in the places least served by national desks. Philanthropy and policy can slow the slide, but only if they target the **county map** Medill keeps updating — not only the metros where startups already cluster.`,
+The democracy cost is concrete: fewer local reporters means fewer people watching school budgets, hospital closures, and election administration in the places least served by national desks. Philanthropy and policy can slow the slide, but only if they target the **county map** Medill keeps updating — not only the metros where startups already cluster.
+
+Sources:
+[Medill 2025]: Northwestern Medill Local News Initiative — The State of Local News 2025 Report. https://localnewsinitiative.northwestern.edu/projects/state-of-local-news/2025/report/
+[Medill PR 2025]: Northwestern Medill — News deserts hit new high and 50 million have limited access to local news, study finds. https://www.medill.northwestern.edu/news/2025/news-deserts-hit-new-high-and-50-million-have-limited-access-to-local-news-study-finds.html`,
   },
   {
     id: "alliance-capacity-share-on-transpacific-2026",
