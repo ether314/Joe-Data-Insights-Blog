@@ -3706,9 +3706,9 @@ The operational takeaway is narrower. If you need a single headline for soybean 
     featured: true,
     visualization: "us-work-stoppage-idleness-versus-union-density-2026",
     layout: "default",
-    content: `Major work stoppages are rare enough that a handful of contracts can rewrite the national idle-day ledger — and common enough that desks still treat “high union density” as a proxy for “where the strikes are.” That proxy fails the 2024–2025 cross-section. The Bureau of Labor Statistics Work Stoppages Program counts stoppages involving **1,000 or more workers** lasting at least one weekday shift. Overlay those idle days on CPS union **membership** and **representation (coverage)** rates, and the map is a scatter, not a staircase.
+    content: `Major work stoppages are rare enough that a handful of contracts can rewrite the national idle-day ledger — and common enough that desks still treat “high union density” as a proxy for “where the strikes are.” That proxy fails the 2024–2025 cross-section. The Bureau of Labor Statistics Work Stoppages Program counts stoppages involving **1,000 or more workers** lasting at least one weekday shift [BLS WSP]. Overlay those idle days on CPS union **membership** and **representation (coverage)** rates, and the map is a scatter, not a staircase.
 
-The interactive dashboard above pairs **2024 industry idle days** (BLS Economics Daily industry table) with **2025 CPS coverage** (Union Members Table 3). Toggle **Scatter**, **Rank**, **Timeline**, and **Ownership**; switch the metric between days idle and workers idled; filter goods, services, or infrastructure bands. The headline is deliberately two-sided: **manufacturing** logged **1.32 million** cumulative days idle at **7.7%** membership, while **utilities** — the highest major private membership rate at **17.8%** — do not appear on the 2024 major-idle industry table at all.
+The interactive dashboard above pairs **2024 industry idle days** (BLS Economics Daily industry table) with **2025 CPS coverage** (Union Members Table 3). Toggle **Scatter**, **Rank**, **Timeline**, and **Ownership**; switch the metric between days idle and workers idled; filter goods, services, or infrastructure bands. The headline is deliberately two-sided: **manufacturing** logged **1.32 million** cumulative days idle at **7.7%** membership, while **utilities** — the highest major private membership rate at **17.8%** — do not appear on the 2024 major-idle industry table at all [BLS WSP 2024] [BLS Union Members 2025].
 
 ## Scoreboard: idle days versus coverage
 
@@ -3722,16 +3722,16 @@ The interactive dashboard above pairs **2024 industry idle days** (BLS Economics
 | Transportation & warehousing | 28,000 | 7,000 | 13.6 | 14.9 |
 | Construction | 48,000 | 1,000 | 11.1 | 12.0 |
 | Utilities | **0** (no table entry) | 0 | **17.8** | **18.8** |
-| Private industry (ownership) | 2,997,400 | 158,200 | 5.9 | 6.7 |
+| Private industry (ownership) | 2,997,400 | 158,200 | 5.9 | 6.8 |
 | State & local government | 366,700 | 113,300 | ~32 (public) | ~36 (public) |
 
 Read the table as a **mismatch ledger**. Education led **headcount**; manufacturing led **duration-weighted idle days**; utilities led **private density** without a 2024 major-idle footprint. High coverage is neither necessary nor sufficient for a large idle-day print.
 
 ## What BLS counts — and what it does not
 
-A “day of idleness” is a scheduled weekday (Monday–Friday, excluding federal holidays) when a counted worker does not work because of a major stoppage. BLS multiplies workers by lost workdays in the reference month. The program **does not separate strikes from lockouts**, and it **excludes secondary idleness** at suppliers or customers. Only disputes that clear the **1,000-worker** threshold enter the major series. Shop-floor walkouts below that bar — and many short private disputes — never hit this dashboard.
+A “day of idleness” is a scheduled weekday (Monday–Friday, excluding federal holidays) when a counted worker does not work because of a major stoppage. BLS multiplies workers by lost workdays in the reference month [BLS WSP]. The program **does not separate strikes from lockouts**, and it **excludes secondary idleness** at suppliers or customers. Only disputes that clear the **1,000-worker** threshold enter the major series. Shop-floor walkouts below that bar — and many short private disputes — never hit this dashboard.
 
-Union rates come from a different survey. The CPS Union Members release measures wage-and-salary workers who are **members** or **represented** by a union on their principal job. Representation is the broader “coverage” concept used on the scatter’s X-axis. For 2025, BLS warns that annual averages are **11-month** figures excluding October (federal shutdown), so year-to-year CPS comparisons are not strictly clean. That caveat matters for trend chatter; it does not erase the cross-industry ranking that puts utilities atop private membership and finance near the floor.
+Union rates come from a different survey. The CPS Union Members release measures wage-and-salary workers who are **members** or **represented** by a union on their principal job. Representation is the broader “coverage” concept used on the scatter’s X-axis [BLS Union Members 2025]. For 2025, BLS warns that annual averages are **11-month** figures excluding October (federal shutdown), so year-to-year CPS comparisons are not strictly clean. That caveat matters for trend chatter; it does not erase the cross-industry ranking that puts utilities atop private membership and finance near the floor.
 
 ## The scatter: mid-coverage industries carried the idle-day mass
 
@@ -3741,19 +3741,19 @@ Information is the other instructive outlier. At **6.6%** membership — near th
 
 ## Education leads people; manufacturing leads days
 
-Workers idled and days idle answer different operational questions. In 2024, educational services involved **110,400** workers — the largest headcount on the industry table — while manufacturing’s **38,000** workers generated **1.32 million** days idle. Average duration (days idle ÷ workers) is a desk ratio, not a BLS product, but the arithmetic is blunt: manufacturing disputes that cleared the major threshold lasted much longer on a worker-weighted basis than the education cluster.
+Workers idled and days idle answer different operational questions. In 2024, educational services involved **110,400** workers — the largest headcount on the industry table — while manufacturing’s **38,000** workers generated **1.32 million** days idle [BLS WSP 2024]. Average duration (days idle ÷ workers) is a desk ratio, not a BLS product, but the arithmetic is blunt: manufacturing disputes that cleared the major threshold lasted much longer on a worker-weighted basis than the education cluster.
 
-That split also explains why ownership totals can look paradoxical. In 2024, **private** employers accounted for most idle days (**3.0 million**) even though **public-sector** membership (**32.2%** in 2024, **32.9%** in 2025) is more than five times the private rate (**5.9%**). Dense public bargaining units can idle many people for shorter calendars; a smaller set of private industrial and media stoppages can dominate the day-count. In 2025 the ownership balance flipped on headcount — state and local government idled **232,800** workers versus **74,000** in private industry — while cumulative days idle stayed closer (**711,600** government vs **784,400** private). Density shapes who can strike; contract calendars and industry structure shape how many days the ledger records.
+That split also explains why ownership totals can look paradoxical. In 2024, **private** employers accounted for most idle days (**3.0 million**) even though **public-sector** membership (**32.2%** in 2024, **32.9%** in 2025) is more than five times the private rate (**5.9%**) [BLS WSP 2024] [BLS Union Members 2025]. Dense public bargaining units can idle many people for shorter calendars; a smaller set of private industrial and media stoppages can dominate the day-count. In 2025 the ownership balance flipped on headcount — state and local government idled **232,800** workers versus **74,000** in private industry — while cumulative days idle stayed closer (**711,600** government vs **784,400** private) [BLS WSP 2025]. Density shapes who can strike; contract calendars and industry structure shape how many days the ledger records.
 
 ## The 2023 spike is not the 2025 baseline
 
-Annual idle days jumped to **16.7 million** in 2023 — an order of magnitude above the mid-2010s quiet years — then fell to **3.36 million** in 2024 and **1.99 million** in 2025. Stoppages beginning in the year stayed near **30–33** across 2023–2025; the volatility is duration and who is idled, not a simple explosion in the count of major disputes. The 2023 industry headcount table is dominated by **information** (**171,500** workers), then health care and education, with manufacturing at **61,200**. Overlay 2025 membership rates and again the ranking is not density-ordered: information and health care out-idled education on workers despite lower membership rates.
+Annual idle days jumped to **16.7 million** in 2023 — an order of magnitude above the mid-2010s quiet years — then fell to **3.36 million** in 2024 and **1.99 million** in 2025 [BLS WSP]. Stoppages beginning in the year stayed near **30–33** across 2023–2025; the volatility is duration and who is idled, not a simple explosion in the count of major disputes. The 2023 industry headcount table is dominated by **information** (**171,500** workers), then health care and education, with manufacturing at **61,200** [BLS WSP 2023]. Overlay 2025 membership rates and again the ranking is not density-ordered: information and health care out-idled education on workers despite lower membership rates.
 
 Treat 2023 as a **spike year**, not a new steady state. The dashboard’s timeline panel shows stoppage counts recovering from the 2020 trough while idle-day totals remain noisy. A single long multi-employer stoppage can overwhelm a year of shorter public disputes. That is why “are strikes happening where density is high?” needs a year label and a metric label before it gets a yes or no.
 
 ## 2025: service sectors own the worker share
 
-For stoppages beginning in 2025, BLS reports **306,800** workers idled and **1.99 million** cumulative days idle. **Service-providing** industries accounted for **98%** of those workers: education and health services alone **196,500** (**64%**), public administration **82,300**, other services **21,800**, and manufacturing only **6,200** (**2%**). The worker-share chart is therefore a public-services story in 2025 — consistent with elevated public density — even as the private idle-day total still slightly exceeds the state/local day total.
+For stoppages beginning in 2025, BLS reports **306,800** workers idled and **1.99 million** cumulative days idle. **Service-providing** industries accounted for **98%** of those workers: education and health services alone **196,500** (**64%**), public administration **82,300**, other services **21,800**, and manufacturing only **6,200** (**2%**) [BLS WSP 2025]. The worker-share chart is therefore a public-services story in 2025 — consistent with elevated public density — even as the private idle-day total still slightly exceeds the state/local day total.
 
 That is the cleanest way to reconcile the two series. **Coverage is highest in government and a few private infrastructure niches. Major idle days in recent years have clustered in education, health, information, and manufacturing — only one of which sits in the top private density tier.** Asking whether strikes “happen where density is already high” gets a partial yes for education and public administration, and a clear no for utilities-versus-manufacturing and for accommodation-and-food’s low-density idle print.
 
@@ -3769,7 +3769,14 @@ That is the cleanest way to reconcile the two series. **Coverage is highest in g
 
 ## Bottom line for the density question
 
-Union coverage tells you where contracts and dues already sit. Major-work-stoppage idle days tell you where large, recorded disputes burned calendar time. In the latest clean industry cross-section, those two maps rhyme only in places — education above all — and diverge sharply where **utilities’ peak private density meets a blank idle-day cell** and **manufacturing’s mid-single-digit density meets the largest idle-day total**. Strikes are not a simple function of how unionized an industry already is; they are a function of bargaining calendars, unit size, duration, and which disputes clear BLS’s major gate.`,
+Union coverage tells you where contracts and dues already sit. Major-work-stoppage idle days tell you where large, recorded disputes burned calendar time. In the latest clean industry cross-section, those two maps rhyme only in places — education above all — and diverge sharply where **utilities’ peak private density meets a blank idle-day cell** and **manufacturing’s mid-single-digit density meets the largest idle-day total**. Strikes are not a simple function of how unionized an industry already is; they are a function of bargaining calendars, unit size, duration, and which disputes clear BLS’s major gate.
+
+Sources:
+[BLS WSP]: U.S. Bureau of Labor Statistics — Work Stoppages Program. https://www.bls.gov/wsp/
+[BLS WSP 2024]: U.S. Bureau of Labor Statistics — Major Work Stoppages in 2024. https://www.bls.gov/news.release/archives/wkstp_02202025.htm
+[BLS WSP 2023]: U.S. Bureau of Labor Statistics — Major Work Stoppages in 2023. https://www.bls.gov/news.release/archives/wkstp_02212024.htm
+[BLS WSP 2025]: U.S. Bureau of Labor Statistics — Major Work Stoppages in 2025. https://www.bls.gov/news.release/wkstp.htm
+[BLS Union Members 2025]: U.S. Bureau of Labor Statistics — Union Members — 2025 (Table 3). https://www.bls.gov/news.release/union2.nr0.htm`,
   },
   {
     id: "us-state-pension-funded-ratios-2026",
