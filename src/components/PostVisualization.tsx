@@ -3497,6 +3497,21 @@ const ReinsuranceRateOnLineVsResidualTakeUp2026Dashboard = dynamic(
   },
 );
 
+const GlobalRoadDeathsVsVehicleStock2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/GlobalRoadDeathsVsVehicleStock2026Dashboard"
+    ).then((m) => m.GlobalRoadDeathsVsVehicleStock2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4416,6 +4431,10 @@ export function PostVisualization({
 
   if (type === "reinsurance-rate-on-line-vs-residual-take-up-2026") {
     return <ReinsuranceRateOnLineVsResidualTakeUp2026Dashboard />;
+  }
+
+  if (type === "global-road-deaths-vs-vehicle-stock-2026") {
+    return <GlobalRoadDeathsVsVehicleStock2026Dashboard />;
   }
 
   return null;

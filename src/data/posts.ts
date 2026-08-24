@@ -2,6 +2,115 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "global-road-deaths-vs-vehicle-stock-2026",
+    slug: "global-road-deaths-vs-vehicle-stock-2026",
+    title:
+      "Charted: Global Road Deaths Fell per Vehicle — But Kenya Still Sees 350 Deaths per 100k Vehicles",
+    excerpt:
+      "WHO GSRRS 2023: deaths per 100k vehicles dropped 41% (79→47) as the fleet more than doubled. Kenya and Nigeria still clear 240+ deaths per 100k vehicles at low motorization; Sweden sits at 3.3.",
+    category: "Global Systems",
+    themeId: "road-safety",
+    imageUrl:
+      "/images/global-systems-global-road-deaths-vs-vehicle-stock-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic scatter of country road-fatality risk versus vehicle density with highway ribbons, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-27T12:00:00Z",
+    featured: true,
+    visualization: "global-road-deaths-vs-vehicle-stock-2026",
+    layout: "default",
+    content: `The world added more than a billion motor vehicles between 2010 and 2021 — a **160%** jump in reported fleet size — and still managed a slight cut in absolute road deaths, to **1.19 million** in 2021 (−5% since 2010). That is the headline the Decade of Action wanted to celebrate. The harder metric is the one that asks whether mobility got safer as it scaled: **deaths per 100,000 registered vehicles** fell from **79 to 47**, a **41%** decline [WHO GSRRS 2023].
+
+Population rates tell a quieter story. The global death rate is now **15 per 100,000 people**, down **16%** from nearly 18 in 2010. Progress is real. It is also uneven enough that the same decade produced two incompatible maps: Northern Europe and Japan pairing high motorization with single-digit (or low-single-digit) population rates, and a set of African and motorcycle-dense Asian economies where fleet growth has not yet bought safety.
+
+This post puts those maps on the same axes — **deaths per 100k people versus vehicles per 1,000**, and the derived **deaths per 100k vehicles** — using WHO Global Status Report on Road Safety 2023 country profiles for 2021.
+
+## The vehicle-risk ladder still runs from Sweden to Kenya
+
+Population rates and vehicle-risk rates answer different questions. A country can look middling on deaths per 100k people while looking catastrophic once you divide by the size of its fleet. That is the African low-motorization trap in one sentence.
+
+| Country | Deaths / 100k pop | Vehicles / 1,000 | Deaths / 100k vehicles |
+| --- | ---: | ---: | ---: |
+| Kenya | **28.2** | 80 | **353.8** |
+| Nigeria | **17.2** | 71 | **241.7** |
+| Thailand | **25.4** | 591 | **43.0** |
+| China | **17.4** | 277 | **62.8** |
+| India | **15.4** | 232 | **66.4** |
+| Brazil | **15.7** | 520 | **30.2** |
+| United States | **14.2** | 819 | **17.3** |
+| Viet Nam | **17.7** | 773 | **22.9** |
+| Japan | **2.7** | 659 | **4.1** |
+| Sweden | **2.1** | 629 | **3.3** |
+
+Kenya's **28.2** deaths per 100k people already tops the panel's population-rate column. Divide by a fleet of only **~80 vehicles per 1,000 people** and the desk ratio explodes to **~354 deaths per 100k vehicles** — more than **100×** Sweden's **3.3**. Nigeria's population rate (**17.2**) is closer to the global average, but its thin fleet (**71 per 1,000**) still yields **~242** deaths per 100k vehicles [WHO country profiles 2023].
+
+Thailand sits in a different failure mode: dense motorization (**591 vehicles per 1,000**) and a still-extreme population rate (**25.4**). The vehicle-risk ratio (**43**) is lower than Kenya's because the denominator is large — but the human burden remains among the world's highest. Viet Nam shows the opposite transition: an enormous registered stock dominated by powered two- and three-wheelers (**~93%** of the profile's fleet) with a population rate of **17.7** that has been drifting down even as stock surges.
+
+## Four archetypes on the scatter
+
+Open the dashboard scatter. The x-axis is motorization (vehicles per 1,000); the y-axis is the WHO population fatality rate; bubble size scales with deaths per 100k vehicles. Four clusters show up quickly:
+
+1. **Safe & motorized** — Sweden, Norway, Japan, Germany, the UK, France, Australia, Korea. High fleet density, population rates under ~7, vehicle-risk ratios in the low single digits to low teens.
+2. **Motorized, still deadly** — the United States, Brazil, Mexico, Colombia, Iran. Dense or mid-dense fleets with population rates that refuse to converge on European levels. The U.S. is the starkest high-income outlier: **14.2** deaths per 100k people at **819** vehicles per 1,000.
+3. **Low fleet, high risk** — Kenya, Nigeria, Ethiopia, South Africa. Sparse fleets, high or rising absolute risk, vehicle-risk ratios that dominate the ladder.
+4. **Transitioning / high-rate outliers** — India, China, Indonesia, Malaysia, Viet Nam on the transition path; Thailand and Saudi Arabia as high-rate outliers even after motorization.
+
+The scatter is not a Kuznets curve you can trust blindly. Motorization *can* coincide with falling rates — Japan and Sweden's decade paths slope down and right — but Kenya and Nigeria's paths slope up and right: more vehicles, no relief on the population rate.
+
+## Where rates fell as the fleet grew
+
+WHO's regional aggregates make the decade split explicit. Europe cut absolute deaths by roughly **36%** while its fleet kept growing; the African Region saw absolute deaths rise **17%** even from a low motorization base. South-East Asia's absolute death count barely moved (−2%) despite the region's motorcycle boom; the Western Pacific posted a clearer **−16%** decline [WHO GSRRS 2023].
+
+Country paths in the dashboard compress that into motorization space:
+
+- **Sweden**: ~560 → 629 vehicles per 1,000 while the population rate fell from an estimated ~3.6 toward the disclosed **2.1**.
+- **Japan**: already dense in 2010, still cut the rate roughly in half to **2.7** — one of the ten countries WHO flags as having halved absolute deaths since 2010.
+- **Viet Nam**: stock roughly doubled-plus (estimated ~320 → **773** per 1,000) while the rate eased from the mid-20s toward **17.7**. Helmet law coverage is strong on paper; rider deaths remain the dominant user type.
+- **India / China**: large absolute death counts (**217k** and **248k** WHO estimates) with mid motorization and vehicle-risk ratios still near **60–66**. Fleet growth is enormous; population-rate progress is incremental, not transformative.
+- **United States**: nearly saturated motorization and a population rate that *rose* into the teens — the opposite of the European path.
+
+The lesson is institutional, not arithmetic. Fleet growth lowers deaths per vehicle almost automatically if absolute deaths are flat; it only lowers deaths per person when infrastructure, speed management, vehicle standards, and post-crash care keep pace.
+
+## Income shares expose the fleet mismatch
+
+WHO's income lens is the cleanest statement of injustice in the file. **Low-income** countries account for about **9%** of world population and **less than 1%** of the powered vehicle fleet — yet **13%** of road deaths, at **21** deaths per 100k people. **High-income** countries hold **16%** of population, **28%** of vehicles, and only **8%** of deaths, at **8** per 100k [WHO GSRRS 2023].
+
+Middle-income countries carry the bulk of absolute deaths: lower- and upper-middle income groups together account for roughly **79%** of fatalities. That is where most of the next billion vehicles will be registered — and where the Decade of Action 2021–2030 will be won or lost.
+
+Used-vehicle trade compounds the mismatch. UNEP-linked reporting cited in GSRRS notes that a large share of used passenger vehicles exported from rich markets lands in low- and middle-income countries, including African markets that already post the highest death rates. De-specified safety equipment is not a footnote; it is a stock composition problem.
+
+## Motorcycle densification changed who dies
+
+Comparisons with the Global status report on road safety 2013 show powered two- and three-wheeler rider deaths up about **30%** in share terms, while four-wheel occupant deaths fell about **19%**. Globally, riders and four-wheel occupants now each account for roughly **30%** of fatalities; pedestrians another ~**23%**. Africa's rider death count roughly doubled in that comparison window [WHO GSRRS 2023].
+
+That user-mix shift is why Viet Nam and Thailand can look "motorized" on the x-axis while still printing high population rates. A fleet of scooters and motorcycles is not the same safety technology as a fleet of cars with electronic stability control, pedestrian protection standards, and high seat-belt wearing. Helmet laws that meet WHO best practice exist in only **54** of **160** countries with helmet legislation — and wearing rates for passengers often collapse even where driver compliance looks decent (Thailand's profile: **52%** drivers, **21%** passengers).
+
+## Caveats and measurement limits
+
+Treat the dashboard as a **2021 WHO-estimate panel**, not a live 2026 crash census.
+
+- **Mortality estimates** are WHO modelled figures with confidence intervals; police-reported fatalities systematically undercount in many low-income settings (Nigeria reports **6,205** fatalities against a WHO estimate of **36,722**).
+- **Registered vehicles** are administrative stocks. They can include long-scrapped vehicles, exclude informal fleets, and — in motorcycle-heavy markets — dominate the denominator without corresponding four-wheel safety kit.
+- **Deaths per 100k vehicles** are **desk ratios** (population rate ÷ vehicle rate × 100,000). They are comparable within this panel but are not a WHO-published official series at country level.
+- **Fleet-growth % and rate-change %** on country rows are flagged estimated/carried where WHO did not publish a clean 2010–2021 pair in the profile extract used here. Regional aggregates for death changes and the global 79→47 vehicle-risk path are disclosed.
+- **Ethiopia's** vehicle stock was not disclosed in the profile extract; the panel uses an estimated low motorization placeholder and marks confidence accordingly.
+- **COVID-19** depressed traffic in 2020–2021 in some high-income markets; Europe's large death reductions partly reflect that shock as well as long-run Vision Zero policies.
+
+## What the 2030 target requires
+
+The UN Decade of Action target is to **halve** road traffic deaths and injuries by 2030. Ten countries already cut deaths by at least **50%** from 2010 to 2021 — including Japan, Norway, Denmark, and the UAE — proving the target is physically achievable. Sixty-six countries went the other way; **28** of them are in the African Region.
+
+For the low-fleet, high-risk archetype, the binding constraint is not "too many cars." It is **unsafe speed and design on thin networks**, mixed traffic with vulnerable users, weak vehicle standards on imported used stock, and emergency care gaps — all while motorization is still in early innings. For Thailand-style outliers, the constraint is motorcycle-era exposure at already-high density. For the U.S., it is a high-income policy failure at full motorization.
+
+The interactive panels let you toggle region filters, switch the risk ladder between per-person and per-vehicle metrics, and walk the global path where the fleet index climbs past **260** (2010=100) while deaths per 100k vehicles fall to **47**. The arithmetic of safer mobility is visible in that dual axis. The geography of who still pays for mobility with their lives is visible in the scatter's upper-left quadrant.
+
+### Sources
+
+- WHO Global Status Report on Road Safety 2023 (ISBN 978-92-4-008651-7)
+- WHO GSRRS 2023 country and territory profiles (Kenya, Nigeria, Thailand, India, China, Brazil, Sweden, Japan, United States, Viet Nam, Ethiopia, and related profiles)
+- Desk ratios and estimated decade paths as documented in the visualization data module
+`,
+  },
+  {
     id: "reinsurance-rate-on-line-vs-residual-take-up-2026",
     slug: "reinsurance-rate-on-line-vs-residual-take-up-2026",
     title:

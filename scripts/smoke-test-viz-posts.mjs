@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "global-road-deaths-vs-vehicle-stock-2026",
+    marker: "Deaths per 100k vs vehicles",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "reinsurance-rate-on-line-vs-residual-take-up-2026",
     marker: "RoL vs residual take-up",
     forbidden: "Loading interactive charts",
