@@ -1432,7 +1432,7 @@ Sources:
 
 When an organization is hit, the invoice that leaves the treasury is a stack: any ransom (if paid), forensic and legal retainers, system rebuild, overtime, lost revenue during downtime, notification and credit monitoring, and — if a policy exists — the deductible or self-insured retention that must clear before the carrier writes a check. **The open question for cyber risk markets is not “how much crypto moved,” but what share of that stack is insured versus paid from operating cash.**
 
-On the largest published insured-claims book that answers the question directly — NetDiligence’s Cyber Claims Study 2025 — **carrier payouts cover only about 32% of total incident cost**. Roughly **68%** remains with the insured as cash: retentions, sublimit gaps, excluded business interruption, and soft costs that never fit the policy form. SME books look better (~**69%** insured). Large-company books look worse (~**27%**). The dashboard above walks the funding mix, the payment meters, the ransom-versus-recovery stack, and the size gradient.
+On the largest published insured-claims book that answers the question directly — NetDiligence’s Cyber Claims Study 2025 — **carrier payouts cover only about 32% of total incident cost** [NetDiligence 2025]. Roughly **68%** remains with the insured as cash: retentions, sublimit gaps, excluded business interruption, and soft costs that never fit the policy form. SME books look better (~**69%** insured). Large-company books look worse (~**27%**). The dashboard above walks the funding mix, the payment meters, the ransom-versus-recovery stack, and the size gradient.
 
 ## Scoreboard: insured share of the loss
 
@@ -1455,11 +1455,11 @@ The table’s punchline is structural. Even inside the **insured** population �
 
 Ransomware economics is haunted by incompatible meters.
 
-**Meter one is the FBI IC3 complaint ledger.** In 2023 the IC3 recorded **2,825** ransomware complaints and **$59.6 million** in adjusted losses; in 2024 complaints rose while adjusted losses fell to about **$12.5 million**. The Bureau’s own footnotes say the number excludes lost business, wages, files, equipment, and third-party remediation, and that many victims report only to field offices. Treat IC3 ransomware dollars as a **floor on disclosed complaint loss**, not a GDP-style total.
+**Meter one is the FBI IC3 complaint ledger.** In 2023 the IC3 recorded **2,825** ransomware complaints and **$59.6 million** in adjusted losses; in 2024 complaints rose to **3,156** while adjusted losses fell to about **$12.5 million** [FBI IC3 2023; FBI IC3 2024]. The Bureau’s own footnotes say the number excludes lost business, wages, files, equipment, and third-party remediation, and that many victims report only to field offices. Treat IC3 ransomware dollars as a **floor on disclosed complaint loss**, not a GDP-style total.
 
-**Meter two is Chainalysis on-chain receipts.** Blockchain analytics firms attribute payments to ransomware clusters and convert them to dollars. That series peaked at **$1.25 billion** in 2023, fell to roughly **$814 million** in the first 2024 print (later revised upward toward ~$892 million as attributions improved), and sits above **$820 million** in the provisional 2025 reading. These are still **payments**, not total economic loss — but they dwarf the IC3 ransomware line by an order of magnitude or more. In 2023 the Chainalysis÷IC3 multiple was about **21×**.
+**Meter two is Chainalysis on-chain receipts.** Blockchain analytics firms attribute payments to ransomware clusters and convert them to dollars. That series peaked at **$1.25 billion** in 2023, fell to roughly **$814 million** in the first 2024 print (later revised upward toward ~$892 million as attributions improved), and sits above **$820 million** in the provisional 2025 reading [Chainalysis 2024; Chainalysis 2026]. These are still **payments**, not total economic loss — but they dwarf the IC3 ransomware line by an order of magnitude or more. In 2023 the Chainalysis÷IC3 multiple was about **21×**.
 
-**Meter three is the total incident cost** that risk managers and insurers actually care about: ransom (sometimes) plus recovery. Sophos’s 2025 State of Ransomware survey puts the **median ransom paid at $1.0 million** (down from $2.0 million in 2024) and the **mean recovery cost excluding ransom at $1.53 million** (down from $2.73 million). For a paying victim, recovery already outweighs the ransom. For a non-paying victim, recovery *is* the loss.
+**Meter three is the total incident cost** that risk managers and insurers actually care about: ransom (sometimes) plus recovery. Sophos’s 2025 State of Ransomware survey puts the **median ransom paid at $1.0 million** (down from $2.0 million in 2024) and the **mean recovery cost excluding ransom at $1.53 million** (down from $2.73 million) [Sophos 2025]. For a paying victim, recovery already outweighs the ransom. For a non-paying victim, recovery *is* the loss.
 
 None of these meters alone answers the insured-share question. Together they explain why headlines oscillate between “ransomware is dying” (payments down) and “ransomware is everywhere” (complaints and claims frequency up).
 
@@ -1478,7 +1478,7 @@ Self-insured retention is not a rounding error in that math. NetDiligence includ
 
 Survey evidence and claims evidence now rhyme on one point: **the ransom is often the smaller invoice**.
 
-In Sophos’s 2025 cut, a median **$1.0M** payment sits beside a **$1.53M** mean recovery bill that explicitly excludes the ransom. On that stack, ransom is about **40%** and recovery about **60%**. The 2024 stack was larger in absolute dollars ($2.0M median payment, $2.73M recovery) but still recovery-heavy. Organizations that refuse to pay — Verizon’s 2025 DBIR put refusal near **64%** in its sample — still face the recovery line in full.
+In Sophos’s 2025 cut, a median **$1.0M** payment sits beside a **$1.53M** mean recovery bill that explicitly excludes the ransom [Sophos 2025]. On that stack, ransom is about **40%** and recovery about **60%**. The 2024 stack was larger in absolute dollars ($2.0M median payment, $2.73M recovery) but still recovery-heavy. Organizations that refuse to pay — Verizon’s 2025 DBIR put refusal near **64%** in its sample, up from 50% two years earlier [Verizon DBIR 2025] — still face the recovery line in full.
 
 Insurance behavior does not map cleanly onto that split. Historical Sophos insurance surveys found that when coverage existed, carriers often funded cleanup more reliably than the ransom itself: clean-up costs were covered in a large majority of insured incidents, while ransom reimbursement appeared in a minority. That is consistent with underwriting practice — extortion sublimits, sanctions screening, and “proof of backups” conditions — and with the NetDiligence result that **payouts trail total cost**.
 
@@ -1486,7 +1486,7 @@ For CFOs, the operational reading is blunt: buying cyber insurance is not the sa
 
 ## NAIC capacity: a soft market with a hardening loss ratio
 
-The U.S. cyber insurance market is the largest in the world, and 2024 was its first clear premium retreat. Domestic writers reported about **$7.08 billion** of direct written premium to the NAIC (down from **$7.25 billion**), while the broader U.S. market including alien surplus lines printed about **$9.14 billion** (down from **$9.84 billion**). Aon’s reading of the supplement puts the industry **loss + defense cost ratio at 49%** in 2024, up from **42%** in 2023, as claim counts jumped toward **~50,000** and earned premium per policy softened.
+The U.S. cyber insurance market is the largest in the world, and 2024 was its first clear premium retreat. Domestic writers reported about **$7.08 billion** of direct written premium to the NAIC (down from **$7.25 billion**), while the broader U.S. market including alien surplus lines printed about **$9.14 billion** (down from **$9.84 billion**) [NAIC 2025]. Aon’s reading of the supplement puts the industry **loss + defense cost ratio at 49%** in 2024, up from **42%** in 2023, as claim counts jumped toward **~50,000** and earned premium per policy softened [Aon 2024].
 
 That backdrop matters for the insured-share story. A market that is still profitable on a calendar-year loss ratio can nonetheless leave insureds cash-exposed if:
 
@@ -1525,7 +1525,17 @@ Three practical implications follow:
 3. **Read premium growth and insured share as different questions.** Softening U.S. cyber DWP in 2024 says something about price and shopping. The 32% payout share says something about how much economic damage risk transfer actually absorbs when the claim arrives.
 
 Use the interactive panels to flip between insured-share bands, the 32/68 funding donut beside the NAIC premium path, Chainalysis-versus-IC3 meters, the Sophos cost stack, the size scatter, and sector pressure. The headline number to remember is simple: **about one-third of ransomware incident cost on insured books is reimbursed; about two-thirds is still paid from operating cash.**
-`,
+
+Sources:
+[NetDiligence 2025]: NetDiligence — 2025 Cyber Claims Study (10,402 claims, incidents 2020–2024; payouts covered 32% of total incident cost overall, 69% for SMEs, 27% for large companies). https://netdiligence.com/wp-content/uploads/2025/09/NetDiligence-Cyber-Claims-Study-2025-Report-.pdf
+[FBI IC3 2023]: FBI Internet Crime Complaint Center — 2023 Internet Crime Report (2,825 ransomware complaints; $59.6M adjusted losses). https://www.ic3.gov/annualreport/reports/2023_ic3report.pdf
+[FBI IC3 2024]: FBI Internet Crime Complaint Center — 2024 Internet Crime Report (3,156 ransomware complaints; ~$12.5M adjusted losses). https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf
+[Chainalysis 2024]: Chainalysis — Ransomware Hit $1 Billion in 2023 / 2024 Crypto Crime Report ($1.25B in 2023; $813.55M initial 2024 estimate). https://www.chainalysis.com/blog/ransomware-2024/
+[Chainalysis 2026]: Chainalysis — Crypto Ransomware: 2026 Crypto Crime Report (2024 revised to $892M; 2025 above $820M). https://www.chainalysis.com/blog/crypto-ransomware-2026/
+[Sophos 2025]: Sophos — The State of Ransomware 2025 (median ransom payment $1.0M; mean recovery excluding ransom $1.53M, down from $2.73M). https://assets.sophos.com/X24WTUEQ/at/9brgj5n44hqvgsp5f5bqcps/sophos-state-of-ransomware-2025.pdf
+[Verizon DBIR 2025]: Verizon — 2025 Data Breach Investigations Report (64% of victim organizations did not pay, up from 50% two years prior). https://www.verizon.com/business/resources/T13b/reports/2025-dbir-executive-summary.pdf
+[NAIC 2025]: NAIC — Report on the Cybersecurity Insurance Market (U.S. domiciled DWP $7.08B in 2024 vs $7.25B in 2023; $9.14B including alien surplus lines). https://content.naic.org/sites/default/files/inline-files/2025_Cybersecurity_Insurance_Report.pdf
+[Aon 2024]: Aon — U.S. Cyber Market Update (loss + defense cost ratio 49% in 2024 vs 42% in 2023; ~50,000 claims reported to NAIC). https://www.aon.com/getmedia/e8087f7c-d1c0-4d15-af60-f4e3fb72bbe0/2024-US-Cyber-Market-Update.pdf`,
   },
   {
     id: "biologically-unsustainable-stocks-share-2026",
