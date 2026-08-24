@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "trade-wages-versus-college-majors-2026",
+    marker: "Wage gap at 10 years",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "local-police-fire-plan-underfunding-2026",
     marker: "Local police / fire · funded-ratio gap",
     forbidden: "Loading interactive charts",

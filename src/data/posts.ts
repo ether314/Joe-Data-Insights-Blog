@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "trade-wages-versus-college-majors-2026",
+    slug: "trade-wages-versus-college-majors-2026",
+    title:
+      "Charted: After License Costs, Electricians Out-Earn Biology Majors by $12,800 at Year 10",
+    excerpt:
+      "Modeled experience paths from BLS OEWS, Georgetown CEW, and NY Fed labor dynamics: at 10 years on the job, electricians clear biology by about $12,800 gross — and roughly $17,800 once tuition and license costs are amortized.",
+    category: "Labor & Skills",
+    themeId: "skilled-trades-aging",
+    imageUrl:
+      "/images/labor-skills-trade-wages-versus-college-majors-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration comparing a trades worker and a graduate with crossing wage-path lines at a ten-year marker, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-24T12:00:00Z",
+    featured: true,
+    visualization: "trade-wages-versus-college-majors-2026",
+    layout: "default",
+    content: `The college-or-trade debate usually compares **starting pay** or **lifetime headlines**. That framing hides the schedule that matters for a household budget: **what you earn at the same number of years on the job, after the cost of getting in**. License fees, tools, and apprenticeship dues are not free. Four years of net tuition are not free either. This desk puts both on the same clock.
+
+Using BLS Occupational Employment and Wage Statistics (OEWS) May 2024 medians for selected trades, Georgetown Center on Education and the Workforce (CEW) major-earnings tables for bachelor's holders, and early-career wage-growth patterns consistent with New York Fed labor-market dynamics research, we model annual wages at 0, 2, 5, 10, 15, and 20 years of experience. Upfront costs are amortized straight-line over ten years. The punchline is concrete: **at ten years, an electrician's modeled path clears a biology bachelor's path by about $12,800 in gross wages — and about $17,800 once amortization is subtracted**.
+
+## The comparison clock, not the prestige clock
+
+Prestige rankings sort majors by mid-career medians. Licensing boards sort trades by exam pass rates. Neither answers the household question: *if two people start working the same year, who is ahead after a decade?*
+
+OEWS gives a national occupational snapshot — electricians at a $62,350 median, plumbers at $61,550, HVAC technicians at $57,460, welders at $48,940 (May 2024). CEW tables give major-family medians for full-time workers whose highest degree is a bachelor's — mechanical engineering near $98,000 mid-career, nursing around $84,000, business around $72,000, biology around $67,000, psychology around $55,000, education around $52,000. Those are **levels**, not **paths**.
+
+To put them on the same experience axis, we interpolate between OEWS entry and experienced percentiles for trades and between CEW early-career and mid-career cells for majors, then apply growth rates in the range reported by NY Fed equitable-growth / labor-dynamics work for early-career wage gains. The result is a desk model, not a longitudinal survey of the same people. It is designed to answer a schedule question with disclosed anchors.
+
+## Wage gap at 10 years: the headline pair
+
+The cleanest contrast is **electrician versus biology**. Biology is a large STEM-adjacent major that often leads to lab, health-adjacent, or further-schooling tracks — not automatically to engineering pay. On our path:
+
+- Year 0: electrician ~$42,800 vs biology ~$38,400 (**+$4,400**)
+- Year 5: ~$60,100 vs ~$51,600 (**+$8,500**)
+- Year 10: ~$71,200 vs ~$58,400 (**+$12,800**)
+- Year 20: ~$84,900 vs ~$70,200 (**+$14,700**)
+
+Psychology and education widen further. Against psychology at year 10 the electrician gap is about **$19,100**; against education, about **$18,800**. Business is closer: plumber versus business sits slightly underwater on gross wages at year 10 (−$2,300) before cost amortization flips the net comparison.
+
+Mechanical engineering remains the counter-example that keeps the story honest. At year 10 the electrician trails mech-eng by roughly **$27,000** gross. Nursing (BSN) also stays ahead of the trade median band. Trades do not "beat college." They beat **specific** bachelor's fields on a **cost-adjusted experience clock**.
+
+## What "after license costs" actually subtracts
+
+Trades are not zero-cost. A realistic national midpoint for license, exam, tools, and early dues lands near **$6,400–$9,200** depending on the craft — we use about $9,200 for electricians and $8,600 for plumbers. Straight-line over ten years, that is roughly **$640–$920 per year**.
+
+Bachelor's net prices are an order of magnitude larger. College Board Trends in College Pricing 2024 implies a four-year public net tuition-fees-books path near **$54,000–$64,000** for many students who receive aid but still pay substantial net costs. Amortized over ten years, that is about **$5,400–$6,400 per year** — a permanent drag on the early-career wage comparison even before student-loan interest.
+
+Subtract those annual amortizations from year-10 wages and the electrician–biology gap rises from **$12,800 to about $17,800**. Plumber versus business flips from a small gross deficit to a modest net surplus. The amortization is deliberately simple: it is not a full NPV with discount rates, tax treatment, or living costs during school. It is a transparent way to stop pretending tuition is free.
+
+| Track | Upfront cost | Wage @ 10y | Amort / yr | Net @ 10y |
+| --- | ---: | ---: | ---: | ---: |
+| Electrician | $9,200 | $71,200 | $920 | $70,280 |
+| Plumber | $8,600 | $69,500 | $860 | $68,640 |
+| HVAC tech | $7,800 | $65,100 | $780 | $64,320 |
+| Welder | $6,400 | $56,400 | $640 | $55,760 |
+| Mechanical eng. | $62,000 | $98,200 | $6,200 | $92,000 |
+| Nursing (BSN) | $64,000 | $84,600 | $6,400 | $78,200 |
+| Business | $56,000 | $71,800 | $5,600 | $66,200 |
+| Biology | $58,000 | $58,400 | $5,800 | $52,600 |
+| Psychology | $56,000 | $52,100 | $5,600 | $46,500 |
+| Education | $54,000 | $52,400 | $5,400 | $47,000 |
+
+## Cumulative net earnings: when the paths cross
+
+Annual gaps understate cash in the bank. Cumulating net wages from career start, the electrician path **passes biology around year six** on our schedule — earlier than the year-10 headline because biology's early wages are soft while the trade is already collecting journey-level pay. Psychology is passed even sooner. Mechanical engineering stays ahead throughout the twenty-year window; the area chart in the dashboard makes that hierarchy visible without slogans.
+
+This cumulative view also clarifies apprenticeship: many trades earn *during* training, while many bachelor's paths defer full-time earnings. Our year-0 trade wages already reflect post-apprenticeship entry rather than unpaid classroom years. If anything, that convention is **conservative against trades** for students who forgo four years of full-time earnings.
+
+## Regional premiums change the edge, not the ranking
+
+OEWS geographic profiles show Pacific and New England electricians well above the national median; East South Central sits below. Applying division-style premiums to both electrician and biology paths, the year-10 trade edge stays positive everywhere in our set — widest in East North Central (~$15,100) and narrowest in East South Central (~$10,400). High-cost coasts lift both tracks; they do not erase the biology gap. Local union scales, prevailing-wage rules, and hospital labor markets can rearrange individual metros — the national model is a baseline, not a zip-code forecast.
+
+## Caveats the dashboard cannot paper over
+
+Several limits matter. First, **composition**: CEW major medians mix industries; OEWS trades mix residential and industrial employers. Second, **hours and overtime**: construction paychecks often embed overtime that salaried BA roles do not. Third, **injury and cycle risk**: trades carry higher physical risk and sharper downturn sensitivity than many office majors. Fourth, **graduate school**: biology and psychology paths frequently continue into advanced degrees that change both cost and earnings — our BA-only CEW perimeter excludes that upside (and that tuition). Fifth, **amortization** ignores interest, grants that reduce net price to near zero for some students, and employer-paid apprenticeship costs. Sixth, the experience paths are **modeled**, not person-level panel data; NY Fed dynamics inform growth rates, they do not identify each SOC–major pair.
+
+None of those caveats reverse the narrow claim we are making: **on a same-experience, cost-aware clock, licensed trades clear several large bachelor's fields by year ten — with a headline electrician–biology gross gap near $12,800 and a net gap near $17,800**.
+
+## What the interactive panels show
+
+The dashboard opens on **wage paths** for a selectable trade and major, with gross or net-of-cost toggles and an experience-year control. **Gap ladder** ranks trade-minus-major differences at the selected year. **Cost scatter** plots upfront training cost against net wage at year 10. **Cumulative net** shows the electrician crossover versus biology and the persistent engineering lead. **Region edge** applies OEWS-style premiums to the year-10 trade advantage.
+
+Use the experience buttons to watch gaps open: many trade–major pairs look close at year 0 and decisive at year 10. That is the schedule the prestige debate usually skips.`,
+  },
+  {
     id: "local-police-fire-plan-underfunding-2026",
     slug: "local-police-fire-plan-underfunding-2026",
     title:
