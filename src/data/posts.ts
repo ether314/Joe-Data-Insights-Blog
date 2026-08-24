@@ -3803,9 +3803,9 @@ The dashboard frames the problem as a **flow-versus-budget** comparison, with sw
 
 ## What the Compact actually allocated
 
-The **Colorado River Compact of 1922** split the system at Lees Ferry. Article III(a) apportioned **7.5 maf** of beneficial consumptive use to the Upper Basin and **7.5 maf** to the Lower Basin. Article III(b) then granted the Lower Basin "the right to increase its beneficial consumptive use … by one million acre-feet per annum" — an unconditional statutory increment, though how it interacts with surplus and Mexico's share is still argued today. Article III(d) bound the Upper Division not to deplete Lees Ferry flow below **75 maf in any ten consecutive years** (a **7.5 maf/yr** equivalent floor on *delivered* flow, not on natural runoff).
+The **Colorado River Compact of 1922** split the system at Lees Ferry. Article III(a) apportioned **7.5 maf** of beneficial consumptive use to the Upper Basin and **7.5 maf** to the Lower Basin. Article III(b) then granted the Lower Basin "the right to increase its beneficial consumptive use … by one million acre-feet per annum" — an unconditional statutory increment, though how it interacts with surplus and Mexico's share is still argued today [Colorado Compact 1922]. Article III(d) bound the Upper Division not to deplete Lees Ferry flow below **75 maf in any ten consecutive years** (a **7.5 maf/yr** equivalent floor on *delivered* flow, not on natural runoff).
 
-The Compact did **not** invent Mexico’s share. The **1944 US–Mexico Water Treaty** later set a **1.5 maf** delivery obligation. Stack the two basin compact blocks with Mexico and the familiar **16.5 maf of paper claims** appears. Negotiators in the early 1920s were working from a short, wet gage era; modern summaries put their implied mean near **16–17+ maf**. Reclamation and CRS now publish a **1906–2024** natural average near **14.6 maf** — already below the paper stack before the 21st-century drought.
+The Compact did **not** invent Mexico’s share. The **1944 US–Mexico Water Treaty** later set a **1.5 maf** delivery obligation. Stack the two basin compact blocks with Mexico and the familiar **16.5 maf of paper claims** appears. Negotiators in the early 1920s were working from a short, wet gage era; modern summaries put their implied mean near **16–17+ maf**. Reclamation and CRS now publish a **1906–2024** natural average near **14.6 maf** — already below the paper stack before the 21st-century drought [CRS Colorado River].
 
 ## Lees Ferry natural flow is the right yardstick
 
@@ -3813,7 +3813,7 @@ The Compact did **not** invent Mexico’s share. The **1944 US–Mexico Water Tr
 
 For budget stress, natural flow is the harder truth. A year like **2002** (~5.9 maf natural) or **2021** (~7.2 maf) cannot fund 16.5 maf of simultaneous claims no matter how cleverly Powell and Mead are managed. Wet spikes (**2011** ~20.2 maf, **2023** ~17.4 maf) refill storage and buy political time; they do not rewrite the multi-decade mean.
 
-GCDAMP hydrology tables compiling Reclamation natural-flow accounting put the **2015–2024** ten-year natural average near **12.6 maf** — still about **3.8 maf** under the compact-assumed **16.4**. The millennial-drought window (**2000–2024**) averages **12.4**. Those are not provisional blog estimates; they are the same order of magnitude Reclamation cites in post-2026 operations materials (stress-test ~13.0; millennial drought ~12.4).
+GCDAMP hydrology tables compiling Reclamation natural-flow accounting put the **2015–2024** ten-year natural average near **12.6 maf** — still about **3.8 maf** under the compact-assumed **16.4** [Reclamation Natural Flow]. The millennial-drought window (**2000–2024**) averages **12.4**. Those are not provisional blog estimates; they are the same order of magnitude Reclamation cites in post-2026 operations materials (stress-test ~13.0; millennial drought ~12.4).
 
 ## Paper claims versus observed eras
 
@@ -3854,7 +3854,12 @@ Natural-flow series are **model reconstructions**, revised when consumptive-use-
 
 ## Sources and method
 
-Primary flow path: Reclamation natural-flow accounting as compiled in GCDAMP hydrology tables for Lees Ferry water-year naturalized volumes (1964–2025 sample used in the dashboard). Apportionments: 1922 Compact text; Boulder Canyon Project Act Lower Basin splits; 1944 Mexico Treaty. Era averages: Reclamation / CRS published summaries for 1906–2024 (~14.6), stress-test (~13.0), and millennial drought (~12.4). Gap percentages divide (16.4 − era mean) by 16.4. Use-versus-entitlement bars are illustrative recent levels for Upper Basin under-use versus Lower Basin near-full take — labeled as such in the data module.`,
+Primary flow path: Reclamation natural-flow accounting as compiled in GCDAMP hydrology tables for Lees Ferry water-year naturalized volumes (1964–2025 sample used in the dashboard). Apportionments: 1922 Compact text; Boulder Canyon Project Act Lower Basin splits; 1944 Mexico Treaty. Era averages: Reclamation / CRS published summaries for 1906–2024 (~14.6), stress-test (~13.0), and millennial drought (~12.4). Gap percentages divide (16.4 − era mean) by 16.4. Use-versus-entitlement bars are illustrative recent levels for Upper Basin under-use versus Lower Basin near-full take — labeled as such in the data module.
+
+Sources:
+[Colorado Compact 1922]: Colorado River Compact (1922), Article III — text via US Bureau of Reclamation. https://www.usbr.gov/lc/region/g1000/pdfiles/crcompct.pdf
+[Reclamation Natural Flow]: US Bureau of Reclamation — Lees Ferry naturalized flow accounting / GCDAMP hydrology tables. https://www.usbr.gov/lc/region/g4000/NaturalFlow/index.html
+[CRS Colorado River]: Congressional Research Service — Colorado River basin reports and 1906–2024 natural-flow summaries. https://www.congress.gov`,
   },
   {
     id: "public-dc-fast-chargers-vs-ev-stock-2026",
