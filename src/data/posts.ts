@@ -2266,9 +2266,9 @@ For acquisition and policy work, the actionable cut is the ZIP tip overlay on to
     id: "trucking-spot-rates-versus-carrier-exits-2026",
     slug: "trucking-spot-rates-versus-carrier-exits-2026",
     title:
-      "Charted: Trucking Spot Rates Fell 38% — Authority Exits Roughly Doubled Two Quarters Later",
+      "Charted: Trucking Spot Rates Fell Roughly Half From the 2022 Peak — Authority Exits Surged Months Later",
     excerpt:
-      "After the 2022 dry-van spot peak, national linehaul fell ~38% peak-to-trough while quarterly FMCSA authority exits roughly doubled within two quarters. By mid-2026 the top 1% of active fleets held ~42% of power units among survivors.",
+      "After the 2022 dry-van spot peak, national linehaul fell roughly by half peak-to-trough while monthly FMCSA authority exits surged on a lag through 2023–24. By mid-2026 the top 1% of active fleets held ~42% of power units among survivors.",
     category: "Transport & Logistics",
     themeId: "trucking-market-churn",
     imageUrl:
@@ -2279,7 +2279,7 @@ For acquisition and policy work, the actionable cut is the ZIP tip overlay on to
     featured: true,
     visualization: "trucking-spot-rates-versus-carrier-exits-2026",
     layout: "default",
-    content: `Freight desks watch **spot linehaul** as a live thermometer. Safety and insurance desks watch **operating authority** as a slower, uglier ledger. Those clocks rarely tick together. After the mid-2022 dry-van spot peak near **$2.86/mi**, national van linehaul fell about **38%** peak-to-trough into late 2023. Quarterly FMCSA authority exits — voluntary relinquishments plus involuntary revocations — did not crest in the same quarter. They roughly **doubled** within about **two quarters** of the rate trough, from roughly **4,200** exits in the peak-rate quarter to about **9,100** at the exit peak. By mid-2026, van spot had clawed back only into the high **$1.90s**, while the **top 1%** of active fleets held roughly **42%** of power units among survivors — up from about **34%** in 2021.
+    content: `Freight desks watch **spot linehaul** as a live thermometer. Safety and insurance desks watch **operating authority** as a slower, uglier ledger. Those clocks rarely tick together. After the mid-2022 dry-van spot peak near **$3.06/mi** all-in (DAT national van average; about **$2.42** excluding fuel), national van linehaul fell roughly **half** peak-to-trough into 2023 [DAT Spot Rates]. FMCSA authority exits — voluntary relinquishments plus involuntary revocations — did not crest in the same month the rates did. Gross monthly exits climbed from a few thousand early in the bust to roughly **9,000 in April 2024**, and net authority losses peaked near **−3,700 in January 2024** — a lag of several quarters after the rate rollover, with the exit wave running through 2023–24 [FMCSA Authority Data]. By mid-2026 van spot had rebounded to about **$3.00/mi** all-in (roughly $2.25 linehaul ex-fuel), while the **top 1%** of active fleets held roughly **42%** of power units among survivors — up from about **34%** in 2021.
 
 The dashboard above is built as a **revocations-per-rate-trough** lens. Toggle among the spot×exits tape, lag-2 scatter, survivor fleet tiers, and regional exit map; switch dry van / reefer / flatbed; filter the scatter by boom, bust, or stabilizing era. What follows is the churn tape underneath those controls — not a brokerage tender-reject series, and not a claim that every USDOT exit maps one-for-one to a parked truck.
 
@@ -2291,15 +2291,17 @@ FMCSA **operating authority** exits are a different animal. A revocation or volu
 
 ## The 2022 peak and the lagged exit wave
 
-Late 2021 through mid-2022 was the freight boom in chart form: van spot climbing through the mid-**$2.70s** toward **$2.86**, active for-hire authority counts swelling as new entrants chased rates, and large-fleet ATA-style voluntary turnover stuck near **90%+**. Capacity felt scarce even as the census of authorities expanded — a classic boom paradox where new paper authorities arrive faster than experienced drivers and insured trucks.
+Late 2021 through mid-2022 was the freight boom in chart form: van spot climbing through the mid-**$2.70s** toward **$3.06** all-in by February–March 2022 (a record), active for-hire authority counts swelling as new entrants chased rates, and large-fleet ATA-style voluntary turnover stuck near **90%+** [DAT Spot Rates]. Capacity felt scarce even as the census of authorities expanded — a classic boom paradox where new paper authorities arrive faster than experienced drivers and insured trucks.
 
-The soft landing started while many desks were still talking peak. Van spot rolled over through late 2022 into 2023, finding a trough near **$1.77** in 2023Q4. Exit counts climbed on a lag: **~5,100** in 2022Q3, **~6,400** in 2022Q4, then **~7,800–9,100** through 2023. That **two-quarter** lag is the operational punchline. Rate troughs show up on broker screens immediately. Authority exits wait for unpaid premiums, failed cargo claims, and owners who finally stop renewing.
+The soft landing started while many desks were still talking peak. Van spot rolled over through late 2022 into 2023, bottoming near **$1.54–$1.65** linehaul ex-fuel and flatlining for nearly two years [DAT Freight Recession]. Exit counts climbed on a long lag: gross monthly revocations ran in the low thousands through early 2023, then surged past **9,000 in April 2024** as FMCSA insurance/BMC cleanups and voluntary exits compounded [FMCSA Authority Data]. That multi-quarter lag is the operational punchline. Rate troughs show up on broker screens immediately. Authority exits wait for unpaid premiums, failed cargo claims, and owners who finally stop renewing.
 
-| Milestone | Van spot ($/mi) | Quarterly authority exits | Active authorities (k) |
+| Milestone | Van spot ($/mi) | Monthly authority exits | Active authorities (k) |
 | --- | ---: | ---: | ---: |
-| 2022Q2 rate peak | **2.86** | 4,200 | 668 |
-| 2023Q4 rate trough | **1.77** | **9,100** | 612 |
-| 2026Q2 latest | **1.94** | 5,700 | 583 |
+| 2022Q1 rate peak (all-in) | **3.06** | ~2,000 | 668 |
+| 2023–24 exit wave | **1.60 (linehaul)** | **~9,000 peak month (Apr 2024)** | 612 |
+| 2026Q2 latest | **3.00 (all-in)** | ~6,000 gross | 583 |
+
+Read the table as two clocks with different units: DAT's published averages mix fuel-surcharge conventions across vintages (the 2022 record was an all-in print; trough quotes are linehaul-only), and FMCSA exit counts are **monthly gross actions**, not quarterly totals — desk summaries differ on filters for brokers, passengers, and private carriers.
 
 The lag-2 scatter in the dashboard makes the relationship geometric: higher spot at quarter *t* pairs with fewer exits at *t+2*; the bust cluster sits in the low-spot / high-exit quadrant. Across 2019–2026 the lagged correlation prints near **−0.72** — strong enough for a desk heuristic, not a trading signal.
 
@@ -2325,7 +2327,12 @@ Use the charts as a **churn map**: when spot troughs, watch exits two quarters l
 
 ## What desks should watch next
 
-Three prints matter more than a single national van quote. First, the **lagged exit count** — if spot softens again, the authority ledger will tell you whether the soft landing is still flushing thin fleets. Second, **top-1% power-unit share** — further climbs mean tender boards concentrate even if authority headcount looks stable. Third, **insurance/BMC lapse share** of exits — when that channel dominates, the market is pricing risk, not just volumes. Those three together answer the brief: spot downturns **do** predict revocation waves with a short lag, and survivor capacity **is** concentrating upward.
+Three prints matter more than a single national van quote. First, the **lagged exit count** — if spot softens again, the authority ledger will tell you whether the soft landing is still flushing thin fleets. Second, **top-1% power-unit share** — further climbs mean tender boards concentrate even if authority headcount looks stable. Third, **insurance/BMC lapse share** of exits — when that channel dominates, the market is pricing risk, not just volumes. Those three together answer the brief: spot downturns **do** precede revocation waves with a lag of several quarters, and survivor capacity **is** concentrating upward.
+
+Sources:
+[DAT Spot Rates]: DAT Freight & Analytics — national van spot/contract rate releases (2022 record; June 2026 spot tops contract). https://www.globenewswire.com/news-release/2026/07/09/3324951/0/en/DAT-Dry-van-spot-rates-top-contract-for-first-time-since-February-2022-flatbed-rates-hit-record-high.html
+[DAT Freight Recession]: DAT Freight & Analytics — Dry Van Report: How small fleets weathered the Great Freight Recession (trough $1.54–$1.65/mi linehaul). https://www.dat.com/blog/dry-van-report-how-small-fleets-weathered-the-great-freight-recession
+[FMCSA Authority Data]: FMCSA operating-authority grants/revocations via Trucking Dive analysis — monthly exit counts, 2024 peak. https://www.truckingdive.com/news/fmcsa-revocations-data-q2-2024/720780/
 `,
   },
   {
