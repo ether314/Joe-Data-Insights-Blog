@@ -1037,7 +1037,7 @@ None of these frictions mean pass-through is “broken.” They mean pass-throug
 
 ## Layer losses set the amplitude, not the lag
 
-USDA APHIS tallies since February 2022 put cumulative HPAI-affected birds in the high hundreds of millions, with commercial table-egg layers taking repeated concentrated hits. Early 2025 alone saw on the order of **30+ million** layers depopulated in the first months of the year across multiple states — enough to remove a meaningful share of the conventional caged flock in a single season.
+USDA APHIS tallies since February 2022 put cumulative HPAI-affected birds near **175 million** across all poultry and wild birds, with commercial table-egg layers taking repeated concentrated hits — table-egg layers alone account for roughly **three-quarters** of total poultry loss [APHIS/CRS R48518]. Early 2025 alone saw on the order of **30+ million** layers depopulated in the first months of the year across multiple states — enough to remove a meaningful share of the conventional caged flock in a single season [USDA AMS Eggs].
 
 Annual layer-loss tallies in the dashboard line up with wholesale amplitude: larger loss seasons produce higher wholesale highs. They do **not** by themselves predict the shelf lag. Lag is a distribution and pricing-process variable. Amplitude is a supply variable. Conflating them produces bad forecasts: “we lost X million birds, therefore retail will peak in Y weeks at Z dollars” is one equation with three unknowns.
 
@@ -1063,9 +1063,9 @@ Also note what BLS itself warns: average prices are best for **level** compariso
 
 If retail had matched the February 2025 wholesale crest one-for-one from a ~$2 quiet baseline, March BLS would have needed to clear something near **$8**, not $6.23. It did not. If retail had matched the wholesale unwind one-for-one, April and May cartons would have fallen faster toward the $3 handle. They did not.
 
-A more honest benchmark is **lagged partial pass-through**: most of the wholesale shock arrives at shelves within a month; a residual wedge persists for a quarter or more; and on the way down, retail half-lives run **two to three times** wholesale half-lives. That pattern repeated, with different amplitudes, in 2023’s unwind after the January retail peak of **$4.82** and again after the 2025 March peak.
+A more honest benchmark is **lagged partial pass-through**: most of the wholesale shock arrives at shelves within a month; a residual wedge persists for a quarter or more; and on the way down, retail half-lives run **two to three times** wholesale half-lives. That pattern repeated, with different amplitudes, in 2023’s unwind after the January 2023 retail peak of **$4.82** [BLS CPI] and again after the 2025 March peak.
 
-Regional AMS quotes reinforce the national story. California-compliant benchmarks peaked above **$9** in late February 2025 and were still above **$3** in late August — a slower percentage drop than national loose on some weeks, consistent with regulatory and cage-free mix constraints that do not bind the Midwest conventional plant the same way.
+Regional AMS quotes reinforce the national story. The California-compliant cartoned benchmark peaked at **$10.35** on February 28, 2025 and was still **$3.09** in late August — a slower percentage drop than national loose on some weeks, consistent with regulatory and cage-free mix constraints that do not bind the Midwest conventional plant the same way [USDA AMS Eggs].
 
 ## Caveats and confidence
 
@@ -1081,9 +1081,10 @@ Regional AMS quotes reinforce the national story. California-compliant benchmark
 HPAI egg shocks are a two-clock problem. The wholesale clock runs in days and weeks; the retail clock runs in months. In 2025, an ~**$8** loose wholesale crest translated into a **$6.23** retail crest about **four weeks** later at roughly **three-quarters** pass-through, then wholesale halved while retail was still working off the first fifth of its decline. Anyone reading only one series will mis-time both the pain and the relief.
 
 Sources:
-[BLS CPI]: US Bureau of Labor Statistics — CPI average price, eggs Grade A large ($6.23/doz March 2025 record; FRED APU0000708111). https://fred.stlouisfed.org/series/APU0000708111
-[USDA AMS Eggs]: USDA AMS — Egg Markets Overview weekly (loose Large white wholesale ~$8.05–8.17 peak late Feb/early Mar 2025). https://www.ams.usda.gov/market-news/eggs
-[CRS IF12949]: Congressional Research Service — U.S. Egg Production and Retail Prices (In Focus). https://www.congress.gov/crs-product/IF12949`,
+[BLS CPI]: US Bureau of Labor Statistics — CPI average price, eggs Grade A large ($6.23/doz March 2025 record; $4.82 January 2023; August 2025 $3.59; FRED APU0000708111). https://fred.stlouisfed.org/series/APU0000708111
+[USDA AMS Eggs]: USDA AMS — Egg Markets Overview weekly (loose Large white wholesale ~$8.05 peak Feb 28, 2025 week; CA-compliant benchmark crest $10.35 on Feb 28, 2025, still $3.09 Aug 22, 2025). https://www.ams.usda.gov/market-news/eggs
+[CRS IF12949]: Congressional Research Service — U.S. Egg Production and Retail Prices (In Focus): retail fell from $6.23 in March to $5.12 in April 2025 as AMS monthly wholesale dropped from $5.33 to $3.74 per dozen. https://www.congress.gov/crs-product/IF12949
+[APHIS/CRS R48518]: USDA APHIS confirmations summarized by CRS R48518 — ~168.6 million birds affected by HPAI since February 2022 as of April 2025; table-egg layers ≈75% of poultry loss. https://www.congress.gov/crs_external_products/R/PDF/R48518/R48518.pdf`,
   },
   {
     id: "generic-price-declines-versus-manufacturer-exits-2026",
