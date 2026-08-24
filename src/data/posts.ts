@@ -3975,7 +3975,7 @@ The dashboard pairs the two series as a rate-versus-capacity view. The spot metr
 
 ## What SCFI measures — and what blanks measure
 
-SCFI is a Shanghai Shipping Exchange weekly survey of **spot** ocean freight plus seaborne surcharges on major export routes from Shanghai. Europe and Mediterranean legs are typically quoted in **$/TEU**; US west- and east-coast legs in **$/FEU**. It is quote-sensitive: it can lead or lag loaded cargo when carriers announce FAK levels that the booking market has not fully cleared.
+SCFI is a Shanghai Shipping Exchange weekly survey of **spot** ocean freight plus seaborne surcharges on major export routes from Shanghai [SSE SCFI]. Europe and Mediterranean legs are typically quoted in **$/TEU**; US west- and east-coast legs in **$/FEU**. It is quote-sensitive: it can lead or lag loaded cargo when carriers announce FAK levels that the booking market has not fully cleared.
 
 Blank sailings are a **capacity** instrument. Tracker shops (Sea-Intelligence, Drewry Capacity Insight, Linerlytica and peers) count cancelled sailings or withdrawn TEU against the announced schedule. A **28% blank share** on Asia–USWC means nearly three-tenths of that week’s scheduled Transpac west-coast capacity did not sail — not that rates must rise 28%. Mixing the two series without naming the corridor invents a false causal law.
 
@@ -3983,7 +3983,7 @@ UNCTAD’s maritime reviews supply the structural backdrop: fleet deliveries, sc
 
 ## The May 2025 tariff blank surge
 
-The sharpest blank prints in the recent sample sit in the **May 2025** tariff-adjustment window. Sea-Intelligence-style coverage put Asia–USWC blanks near **28%** of weekly capacity in a peak week and Asia–USEC near **42%** in another — demand expectations revised down so fast that carriers cancelled sailings in batches rather than sail half-empty. Drewry’s blank tracker in the same season attributed roughly **56%** of near-term blanked sailings to Transpac trades, with Asia–Europe around **31%** and the transatlantic a thinner slice.
+The sharpest blank prints in the recent sample sit in the **May 2025** tariff-adjustment window. Sea-Intelligence-style coverage put Asia–USWC blanks near **28%** of weekly capacity in a peak week and Asia–USEC near **42%** in another — demand expectations revised down so fast that carriers cancelled sailings in batches rather than sail half-empty [Sea-Intelligence May 2025]. Drewry’s blank tracker in the same season attributed roughly **56%** of near-term blanked sailings to Transpac trades, with Asia–Europe around **31%** and the transatlantic a thinner slice [Drewry Blanks 2025].
 
 Spot did **not** treat those blanks as a hard floor. Nearby SCFI-style USWC and USEC prints still moved **about −17%** across the blank window in the event table — capacity came off, but the booking market kept repricing lower as importers paused or redirected cargo. The lesson is narrow: **a 40% blank share is a demand confession**, not a guarantee that next week's FEU print holds.
 
@@ -3995,7 +3995,7 @@ Seasonal blanks behave differently from tariff blanks. In the **October 2025 Gol
 
 That pairing is the post’s second clock. Carriers blanked aggressively into the holiday demand dip, and Europe spot still printed soft because **oversupply and rate competition** outran the blank lever. A single soft Transpac week in the same season saw USWC FEU drop on the order of **~31%** week-on-week and USEC about **~23%** even while blank shares remained elevated. Blanks slowed the bleed; they did not erase it.
 
-Post–Golden Week, the SCFI composite index rebounded to about **2,185 points** by late October (with Europe leg prints recovering toward **$2,226/TEU** after GRI attempts) as blanks normalized toward high-single-digit scheduled shares. The sequence — blank spike, soft print, then partial rebound — is why the dashboard's dual-axis tape matters more than any one week's blank percentage.
+Post–Golden Week, the SCFI composite index rebounded to about **2,185 points** by late October (with Europe leg prints recovering toward **$2,226/TEU** after GRI attempts) as blanks normalized toward high-single-digit scheduled shares [SSE SCFI]. The sequence — blank spike, soft print, then partial rebound — is why the dashboard's dual-axis tape matters more than any one week's blank percentage.
 
 ## Correlation is soft — and lane-specific
 
@@ -4030,7 +4030,12 @@ Several limits apply. SCFI is a **Shanghai-export spot survey**, not a global al
 
 Use the dashboard to stress-test a claim, not to replace carrier advisories. If a procurement memo says "blanks will floor rates next month," ask which corridor, which blank share, and whether demand is pausing or merely seasonal. The 2025–2026 East–West tape says blanks are a real lever — and a frequently over-credited one.
 
-**Bottom line:** Peak Asia–USEC blanks near **42%** and Golden Week FEWB blanks near **25%** show carriers will cut sailings hard. Soft SCFI Europe near **$1,052/TEU** and double-digit FEU drops inside blank-heavy weeks show the market can still clear lower. Watch SCFI and blank share **together**, by lane — never as a single slogan.`,
+**Bottom line:** Peak Asia–USEC blanks near **42%** and Golden Week FEWB blanks near **25%** show carriers will cut sailings hard. Soft SCFI Europe near **$1,052/TEU** and double-digit FEU drops inside blank-heavy weeks show the market can still clear lower. Watch SCFI and blank share **together**, by lane — never as a single slogan.
+
+Sources:
+[Sea-Intelligence May 2025]: Sea-Intelligence — Transpacific blank-sailing analysis, May 2025 tariff-shock windows (via trade-press coverage). https://www.sea-intelligence.com
+[Drewry Blanks 2025]: Drewry — Capacity Insight blank-sailing tracker, 2025. https://www.drewry.co.uk/container-research
+[SSE SCFI]: Shanghai Shipping Exchange — Shanghai Containerized Freight Index weekly prints. https://en.sse.net.cn/indices/scfinew.jsp`,
   },
   {
     id: "correspondent-banking-corridor-retreat-2026",
