@@ -3896,7 +3896,7 @@ Sources:
     layout: "default",
     content: `Homeowners insurance on the U.S. coasts is no longer a story about a single hurricane season. It is a story about **where the premium went** when admitted carriers stopped wanting the risk. Between 2018 and the mid-2020s, Florida’s Citizens Property Insurance Corporation, California’s FAIR Plan, and Louisiana Citizens absorbed a growing share of policies and premium that used to sit in the voluntary admitted market. The interactive dashboard above answers a desk question with numbers: **how much admitted HO-3 premium migrated into residual and FAIR books in Florida, California, and Louisiana — and how fast?**
 
-The short version is uneven but unmistakable. **Florida residual premium share rose from about 7% in 2018 to about 20% in 2023** — a **+13 percentage-point** climb in five years, or roughly **+2.6 pp per year** to the peak. California’s FAIR Plan share of new-and-renewed residential policies moved from **1.6% to 3.7%** over a similar window, while FAIR dwelling policies in force roughly **doubled-plus** from September 2020 to September 2024. Louisiana Citizens swelled from roughly **35,000 policies before Hurricane Laura** to more than **128,000** by late 2022, about **6% of the state’s property market**. Surplus-lines homeowners premium grew faster than admitted premium nationally in 2022–23, but the residual books are the political and fiscal shock absorbers when admitted appetite collapses.
+The short version is uneven but unmistakable. **Florida residual premium share rose from about 7% in 2018 to about 20% in 2023** [Citizens FL MSR] — a **+13 percentage-point** climb in five years, or roughly **+2.6 pp per year** to the peak. California’s FAIR Plan share of new-and-renewed residential policies moved from **1.6% to 3.7%** over a similar window [CDI Jan 2025], while FAIR dwelling policies in force roughly **doubled-plus** from September 2020 to September 2024 [Milliman 2025]. Louisiana Citizens swelled from roughly **35,000 policies before Hurricane Laura** to more than **128,000** by late 2022, about **6% of the state’s property market** [PAR Nov 2022]. Surplus-lines homeowners premium grew faster than admitted premium nationally in 2022–23 [Bloomberg S&P GMI], but the residual books are the political and fiscal shock absorbers when admitted appetite collapses.
 
 ## What “admitted exit” means on a balance sheet
 
@@ -3906,7 +3906,7 @@ Residual mechanisms are not identical. Florida Citizens is a large multiperil re
 
 ## Florida: the fastest residual premium absorption
 
-Citizens Florida market-share reports put the 2018 residual book near **424,000 policies** and about **$827 million** in direct premium written — roughly **7%** of statewide homeowners premium. By year-end 2023 the residual book held about **1.22 million policies** and roughly **$4.17 billion** in premium — about **20%** of statewide homeowners DPW. That is a **five-fold** premium multiple in five years, not a rounding error.
+Citizens Florida market-share reports put the 2018 residual book near **424,000 policies** and about **$827 million** in direct premium written — roughly **7%** of statewide homeowners premium. By year-end 2023 the residual book held about **1.22 million policies** and roughly **$4.17 billion** in premium — about **20%** of statewide homeowners DPW [Citizens FL MSR]. That is a **five-fold** premium multiple in five years, not a rounding error.
 
 The climb was not linear. Residual premium share hovered near **7%** through 2019, then stepped to **9%** in 2020, **12%** in 2021, **19%** in 2022, and **20%** in 2023. The steepest annual jumps coincide with the post-Ian litigation and reinsurance shock window, when admitted appetite visibly contracted and Citizens became, for a stretch, the state’s largest homeowners writer by policies in force.
 
@@ -3921,21 +3921,21 @@ The 2024–25 reverse is real in direction even where year-end shares are still 
 
 ## California: slower share, faster FAIR dollars
 
-California’s retreat looks different on a share chart. CDI’s residential fact sheet (January 2025) shows FAIR Plan **new-and-renewed** policies rising from about **140,000 in 2018** (**1.6%** of the residential market) to about **325,000 in 2023** (**3.7%**). That is a **+2.1 pp** policy-share move — material, but an order of magnitude slower than Florida’s premium-share surge.
+California’s retreat looks different on a share chart. CDI’s residential fact sheet (January 2025) shows FAIR Plan **new-and-renewed** policies rising from about **140,000 in 2018** (**1.6%** of the residential market) to about **325,000 in 2023** (**3.7%**) [CDI Jan 2025]. That is a **+2.1 pp** policy-share move — material, but an order of magnitude slower than Florida’s premium-share surge.
 
-Premium dollars tell a sharper story. Milliman’s synthesis of FAIR Plan disclosures puts written premium near **$424 million in FY2021** and about **$1.27 billion in FY2024** — roughly a **3×** increase — while dwelling policies in force rose from about **203,000 in September 2020** to about **452,000 in September 2024** (**+123%**). Voluntary-market new-and-renewed counts drifted down over 2018–2023 even as FAIR and surplus-lines counts rose. The admitted market did not vanish; it **selectively retreated**, especially in high-fire counties where FAIR concentration far exceeds the statewide average.
+Premium dollars tell a sharper story. Milliman’s synthesis of FAIR Plan disclosures puts written premium near **$424 million in FY2021** and about **$1.27 billion in FY2024** — roughly a **3×** increase — while dwelling policies in force rose from about **203,000 in September 2020** to about **452,000 in September 2024** (**+123%**) [Milliman 2025]. Voluntary-market new-and-renewed counts drifted down over 2018–2023 even as FAIR and surplus-lines counts rose. The admitted market did not vanish; it **selectively retreated**, especially in high-fire counties where FAIR concentration far exceeds the statewide average.
 
 For desks, the California lesson is that **premium can migrate faster than statewide share**. A residual book that is still single-digit as a share of policies can already rank among the largest writers by premium if average rates and exposure climb.
 
 ## Louisiana: a hurricane-timed residual surge
 
-Louisiana’s residual story is timed to named storms. Public snapshots put Louisiana Citizens near **35,000 policies** before Hurricane Laura, then above **128,000** by late 2022 — roughly a **3.7×** policy multiple — with the commissioner framing Citizens at about **6% of the property insurance market**. FAIR-plan homeowners and wind-only premium dominated the residual book’s collections in the 2022 rate-filing window.
+Louisiana’s residual story is timed to named storms. Public snapshots put Louisiana Citizens near **35,000 policies** before Hurricane Laura, then above **128,000** by late 2022 — roughly a **3.7×** policy multiple — with the commissioner framing Citizens at about **6% of the property insurance market** [PAR Nov 2022]. FAIR-plan homeowners and wind-only premium dominated the residual book’s collections in the 2022 rate-filing window.
 
 Desk-estimated residual premium share moves from under **2%** in 2018 toward roughly **7%** by 2023, then eases slightly as private capacity partially returns. The pace to peak — about **+1.1 pp per year** — sits between California’s gradual climb and Florida’s sprint. The institutional twist is the **pricing floor**: Louisiana Citizens is required to price above private-market quotes, so residual growth is a pure availability signal, not a race to undercut admitted rates.
 
 ## Channel mix: admitted, residual, and surplus
 
-Residual markets are only one escape hatch. Nationally, non-admitted homeowners premium grew about **27.5%** from 2022 to 2023 versus roughly **13.8%** for admitted premium, per S&P Global Market Intelligence figures carried in secondary reporting. In coastal states the three-way mix — **admitted / residual / surplus** — is the useful dashboard, not a binary “insured or not.”
+Residual markets are only one escape hatch. Nationally, non-admitted homeowners premium grew about **27.5%** from 2022 to 2023 versus roughly **13.8%** for admitted premium, per S&P Global Market Intelligence figures carried in secondary reporting [Bloomberg S&P GMI]. In coastal states the three-way mix — **admitted / residual / surplus** — is the useful dashboard, not a binary “insured or not.”
 
 Florida’s 2023 mix is the starkest: residual near **20%** of premium with surplus also elevated versus 2018. California’s 2023 policy mix still shows admitted dominance near the mid-90s, but FAIR and surplus both expanded from thin 2018 bases. Louisiana’s estimated mix shows residual and surplus jointly reclaiming a high-single-digit to low-double-digit slice after the hurricane cluster. Surplus lines do not trigger the same fiscal assessment politics as residual plans; residual plans do. That is why residual **share** is the political headline even when surplus growth is the quieter private-market response.
 
@@ -3972,7 +3972,13 @@ For now the coastal ledger is clear enough. Admitted homeowners premium did leav
 - Milliman insight on California homeowners market and FAIR Plan growth (dwelling counts and FY premium)
 - Public Affairs Research Council of Louisiana Citizens residual-market snapshot (Nov 2022)
 - NAIC Market Conduct Annual Statement homeowners report hub (state/zone context)
-- S&P Global Market Intelligence surplus- vs admitted-homeowners premium growth (2022–2023), via secondary reporting`,
+- S&P Global Market Intelligence surplus- vs admitted-homeowners premium growth (2022–2023), via secondary reporting
+
+[Citizens FL MSR]: Citizens Property Insurance Corporation — Florida Residential Property Market Share Report (YE December 31, 2023). https://www.citizensfla.com/documents/20702/93160/20231231%2BMarket%2BShare%2BReport.pdf/
+[CDI Jan 2025]: California Department of Insurance — Fact Sheet: Summary on Residential Insurance Policies and the FAIR Plan. https://www.insurance.ca.gov/01-consumers/200-wrr/upload/CDI-Fact-Sheet-Summary-on-Residential-Insurance-Policies-and-the-FAIR-Plan-v-011325.pdf
+[Milliman 2025]: Milliman — California homeowners insurance: Current state of the market and implications of the Los Angeles wildfires. https://edge.sitecorecloud.io/millimaninc5660-milliman6442-prod27d5-0001/media/Milliman/PDFs/2025-Articles/1-23-25-0194PC_Insurance-Market-and-implications-of-LA-wildfires.pdf
+[PAR Nov 2022]: Public Affairs Research Council of Louisiana — PAR Snapshot: Louisiana property insurance crisis (Nov 22, 2022). https://parlouisiana.org/wp-content/uploads/2023/02/PAR-Snapshot-11.22.22.pdf
+[Bloomberg S&P GMI]: Bloomberg (S&P Global Market Intelligence data) — Florida, California Home Insurance Market Infused by Riskier Carriers. https://www.bloomberg.com/graphics/2024-home-insurance-risky-policy/`,
   },
   {
     id: "us-traffic-deaths-per-vmt-vs-peer-countries-2026",
