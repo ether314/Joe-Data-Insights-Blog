@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "catalogued-orbital-debris-growth-2026",
+    slug: "catalogued-orbital-debris-growth-2026",
+    title:
+      "Charted: ~40,000 Catalogued Objects Orbit Earth — Only ~11,000 Are Working Satellites",
+    excerpt:
+      "ESA’s end-2024 catalogue shows ~40,000 tracked objects versus ~11,000 active payloads — about 3.6 catalogued objects per working satellite. Active sats grew faster than the full catalogue after 2015, but LEO shells near 500–600 km still host debris and operations at the same order of magnitude.",
+    category: "Technology",
+    themeId: "orbital-space",
+    imageUrl:
+      "/images/technology-catalogued-orbital-debris-growth-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic Earth limb with an orange debris shell and teal operational satellite ring in mid-LEO, subtle stepped catalog-count bars in the starfield",
+    publishedAt: "2026-08-24T14:00:00Z",
+    featured: true,
+    visualization: "catalogued-orbital-debris-growth-2026",
+    layout: "default",
+    content: `The public catalogue of objects in Earth orbit is often treated as a debris ledger. That is only half right. **By the end of 2024, space-surveillance networks tracked about 40,000 objects with maintained orbits — and only about 11,000 of them were active payloads**, according to ESA’s Space Environment Report 2025. The rest is a mix of inactive satellites, rocket bodies, fragmentation debris, and mission-related hardware. The interactive dashboard above walks the catalogue path, LEO altitude-band densities, regime composition, growth indexes, and the end-2024 class mix.
+
+The sharper question for operators and insurers is not “how many pieces of junk exist?” It is **how fast the catalogue is growing versus the operational fleet, and which altitude bands concentrate both**. NASA’s Orbital Debris Program Office (ODPO) frames the same decade split differently: below 1,000 km, 2005–2015 was dominated by two mega-breakups; 2015–2025 was dominated by CubeSats and large constellations. Both stories are true. Fragmentation still injects thousands of new tracks in a bad year. Constellation traffic is what changed the slope of *working* satellites.
+
+## Scoreboard: catalogue vs active fleet
+
+| Cut | Epoch | Metric | Value |
+| --- | --- | --- | ---: |
+| Tracked catalogue | End-2024 (ESA) | Objects with maintained orbits | ~40,000 |
+| Active payloads | End-2024 (ESA) | Operational spacecraft | ~11,000 |
+| Objects per active | End-2024 | Catalogue ÷ actives | ~3.6× |
+| Active spacecraft | 2025 ODPO cut | Working sats | ~12,400 |
+| Defunct spacecraft | 2025 ODPO cut | Dead sats still catalogued | ~2,500 |
+| New fragments | 2024 | Catalogued from significant fragmentations | >3,000 |
+| Modelled >10 cm | ESA MASTER | Estimated population | >50,000 |
+| Modelled 1–10 cm | ESA MASTER | Estimated population | ~1.2 million |
+
+The headline ratio — **roughly three to four catalogued objects for every working satellite** — is already a softer congestion signal than the mid-2010s, when the same ratio sat near **13–17×** in our reconstructed path. That improvement is not because debris vanished. It is because **active payloads grew at roughly 18% CAGR from 2015 to 2024 while the full catalogue grew at about 9%**. Working traffic outran the tracked junk pile — and still left mid-LEO denser than any other shell humans use.
+
+## Two clocks: fragments vs constellations
+
+Treat the catalogue as two clocks that sometimes tick together and sometimes diverge.
+
+**Clock one is fragmentation.** ESA notes that non-deliberate fragmentations still average about **10.5 per year** over the last two decades. Most of those events are environmentally minor once fragment lifetime is considered; a much smaller subset produces long-lived clouds. When a “significant” year arrives, the catalogue jumps: **2024 alone added more than 3,000 newly catalogued fragments** from such events. Historical spikes — Fengyun-1C (2007), Iridium 33 × Cosmos 2251 (2009), Cosmos 1408 (2021) — still explain large shares of the debris rows in mid-to-upper LEO.
+
+**Clock two is constellation traffic.** ODPO’s 2025 briefing is blunt: spacecraft counts, including roughly **12,400 active and 2,500 defunct**, have **significantly surpassed fragmentation debris** in the U.S. catalogue cut they present. CubeSats and mega-constellations drove that flip. The catalogue is no longer a museum of Cold War breakups with a thin operational varnish. It is increasingly a live traffic system with a debris underlay.
+
+The dashboard’s **growth index** panel (2015 = 100) makes the dual-clock intuition numeric. Active-payload indexes climb steeply after 2019; debris-fragment indexes rise, but far more slowly until 2024’s fragmentation burst. The full-catalogue line sits between them. If you only watch total tracked objects, you miss that **the mix is shifting toward payloads** even as absolute debris still rises.
+
+## Where density actually lives
+
+Raw object counts by regime mislead if you stop at “LEO is crowded.” LEO is a stack of shells with different drag, different mission economics, and different debris heritage.
+
+ESA’s MASTER-aligned picture for 2024 puts the **peak active-payload concentration around 500–600 km**. In that band, **the density of active objects is now the same order of magnitude as catalogued debris** — a qualitative shift from a world where centimetre-class fragments dominated the threat narrative by sheer count. Preferential constellation altitudes create the peak; about a **quarter of constellation actives now sit below 500 km**, where drag helps disposal but conjunction screening stays busy.
+
+Higher LEO bands tell a different story. **700–900 km** still carries heritage from Fengyun-1C and Iridium–Cosmos fragment clouds. **900–1,200 km** is thinner in active density but slower to self-clean. Below **300 km**, both actives and debris are transient — drag removes many objects on human-planning timescales — which is why short-lived shells can look sparse in a year-end catalogue even when they are operationally intense month to month.
+
+The dashboard’s altitude-density and band-scatter panels index these shells so the **500–600 km peak equals 100**. Use them as ordinal guides, not as absolute number densities from a single radar pass. Sensor limits, catalogue maintenance rules, and solar-cycle drag all move the measurable population.
+
+## Regime ladder: LEO owns the count, crossings own the debris share
+
+An October 2025 public catalogue snapshot (DISCOS-class taxonomy) puts **LEO at about 24,100 objects** — more than half of the multi-regime total in that cut — with **payloads ~13,800**, **rocket bodies ~940**, and **debris/unidentified ~9,300**. LEO’s non-payload share is “only” about **42%**, which sounds reassuring until you remember that many “payload” rows are inactive satellites.
+
+Crossings and transfers invert the mix. **MEO–GEO crossing (MGO)**, **LEO–MEO crossing (LMO)**, **GTO**, and **HEO** regimes show non-payload shares above **96%** in the same snapshot. Extended GEO (EGO) is nearly **90%** non-payload. These orbits matter because they **sweep through altitude bands** that circular-shell operators treat as separate neighbourhoods. A fragment or upper stage on a crossing path can create conjunction opportunities that never appear in a single-shell density chart.
+
+GEO’s narrow ring remains payload-heavy (**~18%** non-payload in the snapshot), which is why graveyard practices and east-west station-keeping dominate the GEO debris conversation more than raw fragment counts. Navigation shells look similar: payload-led, with a stubborn inventory of rocket bodies.
+
+## What the catalogue does *not* count
+
+Every public catalogue number in this post is a **lower bound on risk-relevant objects**, not a census of the environment.
+
+ESA’s MASTER modelling estimates **more than 50,000 objects larger than 10 cm** and about **1.2 million between 1 and 10 cm**. Mission-ending risk for many spacecraft is driven by the centimetre class that catalogues do not maintain as individual tracks. NASA ODPO makes the same point: the U.S. catalogue shows objects roughly **10 cm and larger**; small debris dominates many lethality calculations.
+
+Surveillance improvements also inflate the catalogue without a physical population jump. Better sensors and correlation pipelines bring previously untracked fragments into maintained orbits. When you see a year-over-year catalogue rise, ask whether the increment is **new breakups**, **new launches**, or **new knowledge**. All three are real; only the first two change the physical environment.
+
+Mass and area tell yet another story. Intact rocket bodies and dead large satellites dominate mass; fragments dominate object counts and conjunction message volume. A catalogue that is “only” 40,000 tracks can still represent **well over 10,000 tonnes** of human-made mass in orbit.
+
+## Mitigation is improving — and still insufficient
+
+ESA’s 2025 report is not a counsel of despair on operations. Controlled rocket-body re-entries **outnumbered uncontrolled ones for the first time in 2024**. Roughly **1,200 intact objects** re-entered that year amid high solar activity. Post-mission disposal adherence for lighter constellation-class payloads in LEO is far higher than for heavy legacy buses. Policy is tightening: ESA’s own standard moved the LEO clearance lifetime target from **25 years toward 5**.
+
+None of that yet stabilises the long-term environment under current launch traffic and residual fragmentation rates. ESA is explicit: **even with no further launches**, collisions among objects already on orbit would continue to grow the debris population over centuries. Active debris removal and stricter passivation remain part of the required toolkit, not optional branding.
+
+For desks that underwrite launches, constellations, or in-orbit services, the practical read is narrower. Watch **three series together**: (1) tracked catalogue totals, (2) active-payload counts, and (3) altitude-band density — especially the **500–600 km** shell. A falling objects-per-active ratio can coexist with rising absolute risk if density concentrates where relative velocities stay high and manoeuvre authority is uneven.
+
+## Caveats (read before you quote the ratio)
+
+- **Catalogue ≠ environment.** Tracked objects (~40k) understate MASTER’s >10 cm and 1–10 cm populations.
+- **Payload ≠ active.** Regime tables count payload-*class* objects; many are dead satellites.
+- **Year-path rows before 2020 are estimated** to match disclosed anchors and ODPO’s era narrative; treat them as shape, not audit-grade year-ends.
+- **Density indexes are ordinal** (peak band = 100), not absolute objects per cubic kilometre from a single campaign.
+- **Sensor and solar-cycle effects** move catalogue levels independently of launches and breakups.
+- **Source cuts differ.** ESA’s ~11,000 actives (end-2024) and ODPO’s ~12,400 actives (later 2025) are consistent with growth, not a contradiction to force into one cell.
+
+## What desks should watch next
+
+If constellation replenishment continues while fragmentation stays near ~10 non-deliberate events per year, expect **active counts to keep compressing the catalogue-per-active ratio** even as absolute tracks climb through the mid-40,000s. The stress test is a bad fragmentation year in a dense shell — or a collision involving an intact massive object — which can re-steepen the debris clock faster than launches can dilute it.
+
+For one-line briefings: **the public catalogue now holds about 40,000 tracks against roughly 11,000 working satellites, growth since 2015 is increasingly operational rather than fragment-led, and the densest LEO bands already host actives and debris at the same order of magnitude.**`,
+  },
+  {
     id: "oecd-strike-days-per-1-000-employees-2026",
     slug: "oecd-strike-days-per-1-000-employees-2026",
     title:

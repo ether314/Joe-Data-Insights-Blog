@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "catalogued-orbital-debris-growth-2026",
+    marker: "Catalogue grew — but active sats grew faster",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "oecd-strike-days-per-1-000-employees-2026",
     marker: "Days not worked per 1,000",
     forbidden: "Loading interactive charts",
