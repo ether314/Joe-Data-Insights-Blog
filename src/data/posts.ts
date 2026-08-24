@@ -500,7 +500,7 @@ The investable and policy-relevant takeaway is not that reinsurance pricing “e
 
 The latest PH4.2 release (QuASH rounds through 2023, with observations mostly for 2018–2022) puts social rental dwellings at roughly **7.1%** of the OECD housing stock and **8.0%** in the EU [OECD PH4.2]. Absolute scale is not trivial — about **28 million** dwellings — but the distribution is brutally skewed. Toggle the dashboard’s share ladder and three bars jump the 20% line: the **Netherlands (34.1%, 2021)**, **Austria (23.6%, 2019)**, and **Denmark (21.3%, 2022)** [OECD PH4.2]. A second tier — the United Kingdom (England), France, Ireland, Iceland, and Finland — sits between 10% and 17%. Most remaining OECD reporters fall under 5%. Spain, Portugal, the Baltics, Israel, and Colombia sit under 2%.
 
-The second question in the brief matters as much as the first: **is that share still shrinking?** For countries with a ~2010 and a latest observation, the answer is usually yes. Eighteen of twenty-five paired countries posted a lower social-rental share. Only a short list — Iceland, Korea, France, the Slovak Republic, and (on a LIHTC-inclusive U.S. definition) the United States — moved the other way.
+The second question in the brief matters as much as the first: **is that share still shrinking?** For countries with a ~2010 and a latest observation, the answer is usually yes. The OECD counts **18 of 25** paired countries posting a lower social-rental share over the decade [OECD PH4.2]. Only a short list — Iceland and Korea (up more than **2.5 pp**, the largest gains), France, the Slovak Republic, and (on a LIHTC-inclusive U.S. definition) the United States — moved the other way.
 
 ## Scoreboard: who still has a material social stock
 
@@ -570,9 +570,10 @@ Start on **Share ladder** to see the 20% club and where the OECD/EU averages sit
 
 The headline to take away is narrow and quantitative: **social rental remains a mass tenure in only three OECD countries above 20% of dwellings, the OECD-average share is about 7%, and most countries with a decade of comparable data are watching that share grind lower.**
 
-Sources (headline-only check):
-[OECD PH4.2]: OECD Affordable Housing Database — PH4.2 Social rental housing stock (~7% OECD average; NL 34.1% 2021, AT 23.6% 2019, DK 21.3% 2022). https://www.oecd.org/content/dam/oecd/en/data/datasets/affordable-housing-database/ph4-2-social-rental-housing-stock.pdf
-`,
+Sources:
+[OECD PH4.2]: OECD Affordable Housing Database — PH4.2 Social Rental Housing Stock (~7% OECD average, 8% EU; ~28M dwellings; NL 34.1% 2021, AT 23.6% 2019, DK 21.3% 2022; share fell in 18 of 25 countries over the past decade; Iceland and Korea rose >2.5 pp). https://www.oecd.org/content/dam/oecd/en/data/datasets/affordable-housing-database/ph4-2-social-rental-housing-stock.pdf
+[OECD SH Brief 2020]: OECD — Social Housing: A Key Part of Past and Future Housing Policy, 2020 (sector tiers; decline drivers: slower social construction, privatisation/tenure conversion). https://www.oecd.org/content/dam/oecd/en/publications/reports/2020/10/social-housing-a-key-part-of-past-and-future-housing-policy_ef96d6d9/5b54f96b-en.pdf
+[Statista OECD]: Statista (OECD data) — Social rental housing as a share of housing stock by country (country-year table incl. UK 16.4% 2022, FR 14% 2018, KR 8.9% 2018, US 3.6% 2019, DE 2.6% 2021, ES 1.1% 2019). https://www.statista.com/statistics/1535909/social-rental-housing-as-share-of-housing-stock-worldwide-by-country/`,
   },
   {
     id: "contract-renewal-season-vs-spot-divergence-2026",
