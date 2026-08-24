@@ -4278,7 +4278,7 @@ Sources:
     slug: "colorado-river-compact-vs-actual-flows-2026",
     title: "Charted: Colorado River Compact Allocations vs Actual Flows",
     excerpt:
-      "Since 2000, Lees Ferry natural flow has averaged about 12.4 maf — roughly 4.0 maf (24%) below the ~16.4 maf supply the 1922 Compact still budgets against. Paper claims of 16.5 maf leave an even wider gap against millennial-drought hydrology.",
+      "The river keeps the books now. Since 2000, Lees Ferry natural flow has averaged about 12.4 maf — roughly 4.0 maf (24%) below the ~16.4 maf supply the 1922 Compact still budgets against, while paper claims of 16.5 maf leave an even wider gap against millennial-drought hydrology.",
     category: "Global Systems",
     themeId: "freshwater-basins",
     imageUrl:
@@ -4289,7 +4289,7 @@ Sources:
     featured: true,
     visualization: "colorado-river-compact-vs-actual-flows-2026",
     layout: "default",
-    content: `In November 1922, delegates from the seven Colorado River states signed their compact at Bishop's Lodge near Santa Fe, dividing a river whose gauged record then spanned barely two decades — years hydrologists would later recognize as unusually wet. The bargain still governs the basin. At Lees Ferry — the Compact Point dividing Upper and Lower Basins — Reclamation's naturalized water-year series shows what the river actually delivers before storage operations and depletion accounting. Since **2000**, that natural flow has averaged about **12.4 million acre-feet (maf)** per year against the **~16.4 maf** supply the Compact-era planners assumed. The gap is about **4.0 maf per year, or 24%** — not a rounding error, and not a single dry winter.
+    content: `November 1922, Bishop's Lodge near Santa Fe. The light is thin, the whiskey is neat, and seven states are about to divide a river whose gauged record spans barely two decades — years hydrologists would later recognize as unusually wet. The bargain still governs the basin. At Lees Ferry — the Compact Point dividing Upper and Lower Basins — Reclamation's naturalized water-year series shows what the river actually delivers before storage operations and depletion accounting. Since **2000**, that natural flow has averaged about **12.4 million acre-feet (maf)** per year against the **~16.4 maf** supply the Compact-era planners assumed. The gap is about **4.0 maf per year, or 24%** — not a rounding error, and not a single dry winter. In this basin, the past is never dead; it's on the water ledger.
 
 The dashboard frames the problem as a **flow-versus-budget** comparison, with switchable views for natural-flow overlays, era gaps, paper claims, and use-versus-entitlement, and adjustable windows running from the full post-1964 Glen Canyon record down to the last decade. The structural point survives every window: **legal paper still adds to 16.5 maf while recent hydrology clears closer to 12–13**.
 
@@ -4338,7 +4338,7 @@ Evaporation and system losses add another quiet debit. Basin accounting often tr
 
 Compact Article III(d)’s **75 maf / 10 yr** floor is a *delivery* constraint on Upper Division depletion, not a promise that nature will supply 7.5 maf of virgin flow forever. The dashboard’s rolling ten-year natural mean stays well above 7.5 in most windows — natural runoff averaged over a decade is usually **12–16 maf** even in drought decades — which is why the non-depletion clause can be met while the *allocation* stack still exceeds supply. The political crisis is not that Upper Basin states failed the letter of III(d); it is that **simultaneous full use of all paper claims is hydrologically impossible** under millennial-drought means.
 
-Desk takeaway: do not confuse "the Compact delivery floor was met" with "the Compact budget is solvent." The first is a legal test on cumulative Lee Ferry volumes. The second is an arithmetic test on whether **16.5** can be satisfied from **12.4**.
+Desk takeaway: do not confuse "the Compact delivery floor was met" with "the Compact budget is solvent." The first is a legal test on cumulative Lee Ferry volumes. The second is an arithmetic test on whether **16.5** can be satisfied from **12.4**. Out here, arithmetic always collects.
 
 ## Caveats and limits
 
