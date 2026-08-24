@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "medicare-part-d-glp-1-diabetes-spending-2026",
+    slug: "medicare-part-d-glp-1-diabetes-spending-2026",
+    title:
+      "Charted: GLP-1 Diabetes Drugs Now Take 10.8% of Medicare Part D Spending",
+    excerpt:
+      "CMS 2024: diabetes-indicated GLP-1s cost Part D $24.57B — 10.8% of program drug dollars on ~1.3% of claims. Ozempic alone is $12.38B. MA–PDs likely carry most of the bill.",
+    category: "Health Economics",
+    themeId: "glp1-spending",
+    imageUrl:
+      "/images/health-economics-medicare-part-d-glp-1-diabetes-spending-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart of teal Part D spending bars surging into an amber GLP-1 diabetes spike against a low claims line",
+    publishedAt: "2026-08-24T12:00:00Z",
+    featured: true,
+    visualization: "medicare-part-d-glp-1-diabetes-spending-2026",
+    layout: "default",
+    content: `Medicare’s outpatient drug benefit was built for a world of cheap generics and occasional specialty outliers. That world still exists in claim counts. It no longer exists in dollars. **In 2024, diabetes-indicated GLP-1 receptor agonists cost Medicare Part D about $24.57 billion — 10.8% of the program’s entire drug bill — on roughly 1.3% of claims.**
+
+The interactive dashboard above walks the share path, the brand ladder, enrollee growth, estimated plan-type carriers, and a gross-versus-net illustration. The prose below is the policy arithmetic behind those panels: what the class is, what CMS can and cannot show, and which plan books are most exposed.
+
+## Scoreboard: dollars vs claims
+
+| Cut | Metric | Value |
+| --- | --- | ---: |
+| Diabetes GLP-1 gross cost (2024) | CMS Part D aggregates | **$24.57B** |
+| Part D total drug cost (2024) | CMS | **$226.74B** |
+| GLP-1 share of Part D dollars | Cost / program | **10.8%** |
+| GLP-1 claims | CMS | **~19.6M** |
+| GLP-1 share of Part D claims | Claims / program | **~1.3%** |
+| Avg cost per GLP-1 claim | Class / claims | **~$1,254** |
+| Avg cost per Part D claim | Program | **~$153** |
+| Ozempic gross cost | CMS | **$12.38B** |
+| Top-four brand share of class | Ozempic–Rybelsus | **98.9%** |
+
+Read the table as a leverage story. A class that is roughly one prescription in a hundred now absorbs more than one dollar in ten. Cost-per-claim is about eight times the program average because the fills are still brand-only injectables and orals under patent, while most Part D volume is atorvastatin-and-metformin cheap.
+
+## What “diabetes-indicated” means in Part D
+
+Part D covers GLP-1 products when they are used for FDA-approved indications that Medicare is allowed to pay for — principally type 2 diabetes, and more recently selected cardiovascular and sleep-apnea labels on overlapping molecules. Federal statute still excludes agents when used for weight loss alone. That is why Wegovy and Zepbound barely register in 2024 Part D cost ranks even as Ozempic and Mounjaro dominate the diabetes door that is open.
+
+The desk headline therefore uses the **diabetes-indicated class total** from CMS Part D Prescribers / Drug Spending aggregates — Ozempic, Mounjaro, Trulicity, Rybelsus, plus a thin residual of older GLP-1s — not a commercial “everything people call a GLP-1” grocery list. KFF’s broader CMS claims cut puts **gross GLP-1 spending near $27.5 billion** in 2024 (five-fold since 2019), with Ozempic about 47% of that broader mix and Mounjaro about 23%. The two numbers answer related but different questions; this post’s 10.8% share is anchored to the diabetes Class D spend that already sits inside the program.
+
+## The brand ladder is not a democracy
+
+Four brands carry almost the entire class. Ozempic alone is **$12.38 billion** — about half the diabetes GLP-1 total and enough to rank as the second-costliest single drug in Part D behind Eliquis. Mounjaro adds **$5.83 billion**, Trulicity **$4.79 billion**, and oral semaglutide (Rybelsus) **$1.31 billion**. Together they are **98.9%** of class cost.
+
+That concentration matters for negotiation calendars as much as for pharmacy budgets. Semaglutide products enter Medicare’s Drug Price Negotiation Program on a statutory schedule (with dulaglutide following), which is a net-price story, not a claim-volume story. Until negotiated ceilings bind, the gross POS tape keeps printing list-adjacent numbers that look terrifying relative to metformin.
+
+Cost-per-claim across the big four sits in a tight band around **$1,240–$1,455**. The outlier is not that one brand is uniquely expensive per fill; it is that enough fills now exist to bend the whole Part D cost curve.
+
+## Enrollee growth, not just price, drove the spike
+
+KFF’s CMS claims analysis shows **about two million** Part D enrollees on Ozempic in 2024, up from fewer than **150,000** in 2019. Mounjaro, approved in 2022, reached nearly **one million** enrollees by 2024. Claims for the broader GLP-1 set rose from about **4.8 million** in 2019 to **21.8 million** in 2024.
+
+HHS OIG’s data brief on ten selected diabetes drugs supplies the Ozempic ledger in sharper ink: Part D spending on Ozempic rose from **$552 million in 2019** to **$9.2 billion in 2023**, while enrollees rose from **142,479** to **1,465,482**. That is a utilization explosion on a high list price — not a one-year invoice glitch.
+
+Older agents (Victoza, Byetta, and to some extent Trulicity’s growth path) flattened or ceded share as newer weekly injectables took the guideline center. The dashboard’s enrollee panel is there so desks do not confuse “price inflation” with “more people on therapy.”
+
+## Which plans carry the bill
+
+CMS’s public drug dashboards do not publish a clean, brand-level GLP-1 × plan-type spend table. MedPAC’s July 2025 Data Book does publish the enrollment scaffolding:
+
+- **Non-EGWP Part D**: about **60%** of enrollees in MA–PDs and **40%** in stand-alone PDPs (2024).
+- **LIS**: about **67%** of low-income subsidy enrollees sit in MA–PDs.
+- **EGWPs**: about **17%** of total Part D enrollment.
+
+Diabetes prevalence and LIS concentration lean toward MA–PD books. The desk estimate in the dashboard therefore allocates roughly **64%** of diabetes GLP-1 gross spend to non-EGWP MA–PDs (~$15.7B), **28%** to PDPs (~$6.9B), and **8%** to EGWPs (~$2.0B). Those spend shares are **estimated**, not CMS disclosures. Treat them as exposure weights for plan sponsors and PBM desks, not as audited PDE splits.
+
+Operationally, the implication is blunt. As MA–PD enrollment keeps rising, a larger share of the GLP-1 diabetes invoice lands inside Medicare Advantage pharmacy risk corridors, formulary committees, and Part C rebate buy-down strategies — not only in the classic stand-alone PDP shopping aisle.
+
+## Gross dollars are not net dollars
+
+Everything in the CMS dashboards is **gross point-of-sale drug cost**: plan payment plus beneficiary liability before manufacturer rebates and pharmacy DIR that CMS cannot publish at drug level. MedPAC has estimated that negotiated rebates for diabetic therapy were **equal to or greater than 50%** in 2023. KFF’s illustration applies a flat 50% haircut to the broader 2024 GLP-1 gross total and lands near **~$14 billion** net.
+
+For the diabetes headline class of **$24.57B**, a 50% rebate assumption implies roughly **$12.3B** net. That is still an enormous Part D line item — and still an estimate. Do not convert the 10.8% gross share into a net share without saying so out loud. Gross is the right basis for cross-drug comparison in CMS files; net is the right basis for “what did the Trust Funds and premiums actually absorb.”
+
+## Caveats and what this post is not
+
+- **Gross ≠ net.** Rebates are confidential at drug level; the net panel is illustrative.
+- **Diabetes door ≠ obesity door.** Weight-loss-only labels remain largely outside Part D by statute; BALANCE / GLP-1 Bridge models change the forward path but are not inside the 2024 CMS snapshot.
+- **Plan spend shares are estimated** from MedPAC enrollment + intensity proxies, not a public PDE cross-tab.
+- **Class definitions differ.** KFF’s $27.5B broader GLP-1 gross and this post’s $24.57B diabetes-indicated total are related, not interchangeable.
+- **Appropriateness is out of scope.** High class spend reflects price and volume, not a judgment on any prescription.
+- **Single full data year.** 2024 is the latest complete CMS release used here; 2025–26 will move with utilization, negotiation, and any obesity-coverage models.
+
+## What desks should watch next
+
+Three calendars matter more than another viral list-price screenshot. First, **utilization**: enrollee and claims paths for Ozempic and Mounjaro still have room to climb inside the diabetes indication alone. Second, **negotiation**: semaglutide and dulaglutide MFP timelines will show up in net, not in the gross dashboard the public sees first. Third, **plan mix**: every percentage point of enrollment that shifts from PDP to MA–PD relocates who underwrites the GLP-1 diabetes invoice.
+
+The honest one-line brief for a pharmacy or Medicare desk: **GLP-1 diabetes therapies are already more than a tenth of Part D gross drug spending, concentrated in four brands, and most of that exposure likely sits in MA–PD books — with net cost perhaps half of gross, and obesity coverage still mostly outside the 2024 tape.**`,
+  },
+  {
     id: "rail-headcount-after-precision-scheduling-2026",
     slug: "rail-headcount-after-precision-scheduling-2026",
     title:

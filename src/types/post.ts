@@ -260,7 +260,8 @@ export interface Post {
     | "generic-price-declines-versus-manufacturer-exits-2026"
     | "egg-price-shocks-and-pass-through-2026"
     | "blast-furnace-vs-eaf-steel-by-country-2026"
-    | "rail-headcount-after-precision-scheduling-2026";
+    | "rail-headcount-after-precision-scheduling-2026"
+    | "medicare-part-d-glp-1-diabetes-spending-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }
