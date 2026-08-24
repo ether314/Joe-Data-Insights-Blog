@@ -3884,7 +3884,7 @@ The dashboard ranks markets by **BEVs per public DCFC**, traces whether electric
 
 ## What “BEVs per DCFC” actually measures
 
-IEA classifies public chargers by power band: **slow ≤22 kW**, **fast >22–150 kW**, and **ultra-fast ≥150 kW**. In this post, **DCFC** means the DC-class stock — public fast plus ultra-fast ports — unless the series is explicitly AFDC **DC Fast** stalls for the United States. The headline ratio is straightforward: battery-electric light-duty stock divided by those DC-class ports. Higher ratios mean more BEVs competing for each public fast stall. Lower ratios mean denser DC coverage.
+IEA classifies public chargers by power band: **slow ≤22 kW**, **fast >22–150 kW**, and **ultra-fast ≥150 kW** [IEA GEVO]. In this post, **DCFC** means the DC-class stock — public fast plus ultra-fast ports — unless the series is explicitly AFDC **DC Fast** stalls for the United States. The headline ratio is straightforward: battery-electric light-duty stock divided by those DC-class ports. Higher ratios mean more BEVs competing for each public fast stall. Lower ratios mean denser DC coverage.
 
 That is **not** the same as utilization, queue time, or highway spacing. A country with excellent home charging can tolerate a thinner public DC network for daily driving and still look “fine” on weekend corridor trips — until holiday peaks or apartment-dense metros break the assumption. Conversely, a market with few home chargers needs both dense AC street points **and** enough DC capacity to turn vehicles quickly. IEA’s companion metric — **public kW per electric LDV** — captures that capacity dimension: Korea exceeds **9 kW per EV**, China is near **6**, the world average is about **4.5**, and the United States sits near **1.5**.
 
@@ -3894,7 +3894,7 @@ Where official BEV-only stock is not published beside DCFC stock, the desk estim
 
 On the end-2025 desk panel, **Mexico, Norway, and the United States** sit at the thin end of **BEVs per public DCFC** (roughly the high-50s to high-60s), while **Korea** lands near **8** and **China** near **13**. The United Kingdom and Brazil also cluster in the high-coverage-stress band once you narrow from “all public points” to DC-class ports.
 
-IEA’s broader **electric LDVs per public charging point** (all speeds) tells a related but not identical story. At end-2025 the agency puts the **United States at 33** vehicles per public point — three times the **world average of about 11** — while **China holds near 10** and **Korea just over 2**. The US share of global public charging points is only about **3%**, against roughly **10%** of global electric LDV stock. Korea’s network is small in absolute ports but extremely dense relative to its fleet; China’s network is both large (**over 4.7 million** public points; **2.2 million** fast+ultra) and still dense enough to keep the vehicle-per-point ratio flat.
+IEA’s broader **electric LDVs per public charging point** (all speeds) tells a related but not identical story. At end-2025 the agency puts the **United States at 33** vehicles per public point — three times the **world average of about 11** — while **China holds near 10** and **Korea just over 2** [IEA GEVO]. The US share of global public charging points is only about **3%**, against roughly **10%** of global electric LDV stock. Korea’s network is small in absolute ports but extremely dense relative to its fleet; China’s network is both large (**over 4.7 million** public points; **2.2 million** fast+ultra) and still dense enough to keep the vehicle-per-point ratio flat.
 
 Norway’s high BEV-per-DCFC reading needs context: IEA notes that around **90%** of Norwegian EV owners can charge at home, and that nearly **20%** of its public points are highway-adjacent fast chargers. Thin DC *relative to a near-saturated BEV fleet* is not the same failure mode as thin DC in a market where home access is weaker and highway coverage is patchy.
 
@@ -3904,13 +3904,13 @@ Norway’s high BEV-per-DCFC reading needs context: IEA notes that around **90%*
 
 Year-over-year **2024→2025** deltas sharpen the emerging-market stress. IEA reports Brazil’s electric LDVs per public point rising from **17 to 24** as vehicle stock grew over **80%** while public points grew about **35%**. Thailand moved from **19 to 30**. Mexico’s electric LDV stock more than doubled while public points rose less than **25%**, roughly doubling vehicles per point. Those are classic **sales-outpace-infrastructure** episodes: imports and incentives can add cars faster than utilities and charge-point operators can energize DC stalls.
 
-The US AFDC series shows real absolute progress — public DC Fast ports rose from about **50,400** in mid-December 2024 to roughly **67,900** by January 2026 — yet the **vehicle-side** denominator grew fast enough that the **ratio** still deteriorated on IEA’s all-points metric. Absolute build-out and relative coverage can move in opposite directions.
+The US AFDC series shows real absolute progress — public DC Fast ports rose from about **50,400** in mid-December 2024 to roughly **67,900** by January 2026 — yet the **vehicle-side** denominator grew fast enough that the **ratio** still deteriorated on IEA’s all-points metric [DOE AFDC]. Absolute build-out and relative coverage can move in opposite directions.
 
 ## Capacity, not just points: kW per EV
 
 Point counts flatter AC-heavy networks. The Netherlands leads Europe on public point stock (about **210,000** at end-2025) but remains AC-dominant; its **BEVs-per-DCFC** reading is still middling. IEA’s **kW-per-EV** ladder is the corrective: Korea and China sit at the top; Brazil and Mexico sit near **1 kW per EV**; the United States is only slightly better. Ultra-fast deployment is accelerating — IEA notes ultra-fast stock growing roughly **50%+** in 2024 globally and continuing into 2025 under policies such as the EU’s AFIR corridor rules (≥150 kW every 60 km on the TEN-T core) — but the US still converts that progress into far fewer kilowatts per vehicle than East Asian leaders.
 
-China's scale matters here: China accounted for **over 75% of global growth** in public charging points in 2025, and public capacity per electric LDV is estimated near **6 kW**. That is why China can keep a low vehicles-per-point ratio even as it adds tens of millions of electric LDVs. The US problem is not "zero chargers"; it is **chargers growing slower than the fleet on a capacity basis**, especially outside the densest coastal corridors.
+China's scale matters here: China accounted for **over 75% of global growth** in public charging points in 2025, and public capacity per electric LDV is estimated near **6 kW** [IEA GEVO]. That is why China can keep a low vehicles-per-point ratio even as it adds tens of millions of electric LDVs. The US problem is not "zero chargers"; it is **chargers growing slower than the fleet on a capacity basis**, especially outside the densest coastal corridors.
 
 ## Home charging is the silent variable
 
@@ -3948,7 +3948,9 @@ None of this is a forecast of stranded assets or a prescription for subsidy desi
 | China | ~13 | 10 | ~6.0 | Stable |
 | Korea | ~8 | ~2.1 | >9 | Slightly improved |
 
-Sources: IEA Global EV Outlook 2025–2026 charging chapters; DOE AFDC public DC Fast port counts for the US series; desk ratios labeled estimated where BEV-only or DC-class splits are not disclosed side-by-side. Explore the interactive panels for paths, capacity bars, and fast/slow mix.`,
+Sources:
+[IEA GEVO]: International Energy Agency — Global EV Outlook 2025 & 2026, charging infrastructure chapters. https://www.iea.org/reports/global-ev-outlook-2025
+[DOE AFDC]: US Department of Energy — Alternative Fuels Data Center, public DC Fast charger counts. https://afdc.energy.gov/fuels/electricity-charging`,
   },
   {
     id: "spot-container-freight-vs-blank-sailings-2026",
