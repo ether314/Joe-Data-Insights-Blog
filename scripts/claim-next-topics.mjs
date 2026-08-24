@@ -124,6 +124,50 @@ function persistClaimResult(payload, dryRun) {
   }
 }
 
+const WISHLIST_FILE = path.join(REPO_ROOT, "artifacts", "topic-wishlist.json");
+
+function readWishlist() {
+  try {
+    const parsed = JSON.parse(fs.readFileSync(WISHLIST_FILE, "utf8"));
+    return Array.isArray(parsed?.items) ? parsed.items : [];
+  } catch {
+    return [];
+  }
+}
+
+/** First wishlist entry by priority whose stem is not already taken/blocked. */
+function nextWishlistItem(data, claimedSlugs) {
+  const items = [...readWishlist()].sort(
+    (a, b) => (Number(b.priority) || 0) - (Number(a.priority) || 0),
+  );
+  for (const item of items) {
+    if (!item?.stem || !item?.title) continue;
+    const base = slugify(item.stem);
+    if (!stemTakenLocal(data, claimedSlugs, base)) return item;
+  }
+  return null;
+}
+
+/**
+ * Atomically remove one item from topic-wishlist.json
+ * (write temp file + rename). Returns false when the item vanished.
+ */
+function popWishlistItem(item, dryRun) {
+  if (dryRun) return true;
+  try {
+    const raw = JSON.parse(fs.readFileSync(WISHLIST_FILE, "utf8"));
+    const before = Array.isArray(raw.items) ? raw.items.length : 0;
+    raw.items = (raw.items || []).filter((i) => i?.stem !== item.stem);
+    if (raw.items.length >= before) return false;
+    const tmp = `${WISHLIST_FILE}.tmp`;
+    fs.writeFileSync(tmp, `${JSON.stringify(raw, null, 2)}\n`);
+    fs.renameSync(tmp, WISHLIST_FILE);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Read-modify-write of artifacts/last-claim.json preserving unrelated keys.
  * Returns the next format for this run's claims.
@@ -261,6 +305,36 @@ function main() {
     if (pick.themeId) claimedThemes.add(pick.themeId);
     openSlots--;
   };
+
+  // (0) Operator wishlist: highest-priority untaken item claims before backlog.
+  while (openSlots > 0) {
+    const wish = nextWishlistItem(data, claimedSlugs);
+    if (!wish) break;
+    const slug = `${slugify(wish.stem)}-${yearTag()}`.replace(/--+/g, "-");
+    if (slugTaken(data, claimedSlugs, slug) || SEQUEL_SLUG_RE.test(slug)) {
+      skipped.push({ stem: wish.stem, reason: "wishlist_slug_rejected" });
+      if (!popWishlistItem(wish, args.dryRun)) break;
+      continue;
+    }
+    takePick({
+      themeId: null,
+      category: wish.category || "Economics",
+      slug,
+      title: wish.title,
+      coreQuestion: wish.coreQuestion || "",
+      primarySources: Array.isArray(wish.primarySources)
+        ? wish.primarySources
+        : [],
+      headlineStatHint: "",
+      fromBacklog: false,
+      generated: true,
+      angle: "wishlist",
+    });
+    if (!popWishlistItem(wish, args.dryRun)) {
+      skipped.push({ stem: wish.stem, reason: "wishlist_pop_failed" });
+      break;
+    }
+  }
 
   const takeDiversityRow = (c) => {
     if (openSlots <= 0) return false;
