@@ -2,6 +2,115 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "contract-renewal-season-vs-spot-divergence-2026",
+    slug: "contract-renewal-season-vs-spot-divergence-2026",
+    title:
+      "Charted: Spot–Contract Spread Peaked at +$0.74/mi — Food & Beverage Took the Biggest Renewal Lift",
+    excerpt:
+      "DAT national van spot ran $0.74/mi above contract in July 2022. Fall renewal awards still hit food & beverage hardest (+19% YoY), ahead of automotive parts (+16%) — specialized capacity priced the RFP, not the spot tape alone.",
+    category: "Transport & Logistics",
+    themeId: "trucking-market-churn",
+    imageUrl:
+      "/images/transport-logistics-contract-renewal-season-vs-spot-divergence-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic logistics illustration of diverging teal spot and amber contract rate ribbons peaking apart above silhouetted trucks and a crimson sector bid ladder",
+    publishedAt: "2026-08-26T12:00:00Z",
+    featured: true,
+    visualization: "contract-renewal-season-vs-spot-divergence-2026",
+    layout: "default",
+    content: `Freight desks watch two clocks. One is the **spot tape** — DAT national linehaul prints that mark what a load will clear this week. The other is the **contract book** — awards locked in RFPs that mostly price in the fall and govern the next twelve months. When those clocks diverge, shippers do not all pay the same bill. The question for this desk is concrete: **when the spot–contract spread peaked, which shipper sectors absorbed the biggest renewal bid increases?**
+
+Using DAT-style national spot and contract benchmarks for dry van, reefer, and flatbed, the Cass Freight Index for shipments and expenditures, and a restated panel of shipper bid-cycle awards by vertical, the answer is not “whoever bought the most spot.” **Van spot–contract spread peaked at about +$0.74 per mile in July 2022. Food & beverage still took the largest fall-2022 renewal lift at roughly +19% year over year**, with automotive parts close behind at about **+16%**. Retail and parcel overflow tracked the spot cycle harder on the way up in 2021 — and gave more back in 2023.
+
+The dashboard above walks the dual rate tape, the sector bid ladder, Cass versus spread, the renewal scatter, and equipment peak/trough spreads. The rest of this post is the narrative behind those panels.
+
+## Scoreboard: peak spread vs renewal winners
+
+| Cut | Metric | Value |
+| --- | --- | ---: |
+| Peak van spot−contract spread | Jul 2022 | **+$0.74/mi** |
+| Van spot at peak-spread month | DAT-style national | **$2.68/mi** |
+| Van contract at peak-spread month | DAT-style national | **$1.94/mi** |
+| Peak reefer spread (same month) | spot − contract | **+$0.73/mi** |
+| Peak flatbed spread (same month) | spot − contract | **+$0.66/mi** |
+| Soft-market trough van spread | Nov 2023 | **−$0.28/mi** |
+| Largest fall-2022 bid lift | Food & beverage | **+19% YoY** |
+| Second-largest fall-2022 lift | Automotive parts | **+16% YoY** |
+| Fall-2021 retail/e-commerce lift | prior renewal peak | **+18% YoY** |
+| Lag, peak spread → fall awards | months | **~3** |
+
+The table’s punchline is timing plus vertical. The widest national gap between spot and contract arrived in mid-summer 2022. The awards that locked in that stress landed in the September–December renewal window — and the verticals that paid the most were the ones with scarce specialized capacity, not simply the ones with the highest spot beta.
+
+## What “spread” actually measures
+
+Spread here is **spot minus contract** on the same equipment national print, typically fuel-excluded linehaul dollars per mile. A positive spread means the open market clears above the committed book. A negative spread means carriers can earn more on the contract side than by chasing freight boards — the soft-market configuration that dominated late 2023.
+
+That arithmetic matters because RFPs are not weekly auctions. A shipper that awards in October is pricing a portfolio of lanes for the following year. Procurement teams bring volume commitments, service scorecards, and accessorial rules. Carriers bring network fit and a view on where spot will sit relative to the award. When spot has been running far above contract for months, carriers enter the room with leverage even if the July print was already rolling over by the time the award letter goes out.
+
+The dual-tape panel in the dashboard shows the full path: 2021 squeeze, July 2022 peak gap, autumn 2022 still-elevated awards, then the 2023 soft landing where spot fell *under* contract and renewals flipped from lifts to cuts.
+
+## Fall renewal season is when the bill gets signed
+
+Most large shippers still concentrate primary awards in the **September–December** window. That is not a law of nature; it is a calendar habit tied to budget cycles, peak retail planning, and carrier capacity surveys. Secondary bids and mini-bids happen year-round. The desk panel treats the fall window as the main contract reset.
+
+Across five fall seasons in the panel:
+
+- **Fall 2021** — mean van spread still wide (~+$0.63/mi); volume-weighted mean bid lift about **+13%**, led by retail / e-commerce DC awards (**+18%**).
+- **Fall 2022** — mean van spread already cooling (~+$0.30/mi) after the July peak, but food & beverage still cleared **+19%** and auto parts **+16%**.
+- **Fall 2023** — mean van spread negative (~−$0.24/mi); mean bid lift about **−6.6%**, with chemicals the “least cut” vertical rather than a true winner.
+- **Fall 2024–2025** — modest positive spreads and single-digit lifts as the market firmed unevenly; building materials led the soft rebound.
+
+The gap between July’s peak print and October’s award letter is the lag that fools desks that only watch the weekly tape. Spot can be softening while contracts are still being marked to the memory of the squeeze.
+
+## Which sectors absorbed the biggest bid increases
+
+Rank the fall-**2022** awards by YoY contract lift and the order is deliberate:
+
+1. **Food & beverage — +19%** (reefer-heavy)
+2. **Automotive parts — +16%** (van, tight just-in-time lanes)
+3. **Retail / e-commerce DC — +14%** (van, high spot beta)
+4. **Chemicals — +12%** (flatbed / specialized)
+5. **Parcel / 3PL overflow — +11%**
+6. **Building materials — +9%**
+7. **Electronics — +8%**
+8. **Paper & packaging — +7%**
+
+Food & beverage outrunning retail at the same cycle is the story. Retail lanes are liquid. When spot screams, retail RFPs move — and when spot collapses, they give it back. Reefer networks are thinner. Temperature-controlled capacity, washouts, and seasonal produce calendars mean a shipper cannot always substitute a dry van at the margin. Automotive parts sit in between: dry van equipment, but with dwell, delivery windows, and OEM scorecards that make “cheapest board rate” a false economy.
+
+The renewal scatter in the dashboard plots fall-2022 bid lift against equipment spread at the July peak. Bubbles scale with lane-mile share. Food & beverage sits high on the Y-axis even though its reefer peak spread is not dramatically wider than van’s. **Scarcity and service constraints priced the award; the national spread set the mood.**
+
+## Spot beta is real — and incomplete
+
+The desk assigns each vertical a **spot beta** (0–1) describing how closely awards historically track the open market. Parcel/3PL overflow and retail sit high (~0.78–0.85). Food & beverage and chemicals sit lower (~0.48–0.55). Correlation between spot beta and fall-2022 bid lift is only about **0.41**. That is the quantitative way of saying: yes, liquid van freight followed the tape; no, the ranking of renewal pain is not a sorted list of betas.
+
+If procurement desks had simply marked contracts to the July 2022 van spread, retail and parcel would have led every ladder. They led **2021**. By **2022**, the specialized book was still catching up — and reefer / auto networks had less slack. Equipment scarcity explains a meaningful but partial slice of 2022 bid-lift variance (desk R² near **0.36**). The rest is volume commitments, incumbent relationships, and how badly a shipper needed guaranteed coverage into 2023.
+
+## Cass is the demand backdrop, not the award formula
+
+Cass Freight Index **expenditures** peaked near the same 2021–22 freight boom that produced the wide positive spreads; **shipments** rolled over earlier. Overlaying Cass expenditures on the van spread (dashboard **Cass vs spread** panel) shows the boom financing the gap — high spend, high spot premium — and the 2023 soft patch compressing both.
+
+Cass does not tell you which vertical’s RFP will clear. It tells you whether the industry is in a regime where carriers can push awards. In fall 2022, expenditures were already off the absolute tip but still elevated; carriers still had recent memory of $2.60+ van spot. In fall 2023, expenditures and spreads were both soft, and mean awards fell.
+
+Treat Cass as regime context. Treat sector ladders as the distribution of who paid inside that regime.
+
+## Caveats and what this desk is not claiming
+
+- **National averages hide lanes.** A Midwest produce lane and a long-haul dry van LA–Dallas print do not share one spread. The panel is a national equipment composite.
+- **Bid lifts are restated awards, not invoice audits.** Public RFP commentary and contract-benchmark YoY deltas are noisy. Individual 3PL books will differ.
+- **Fuel, accessorials, and minimums** sit outside the $/mi linehaul cut used here. All-in cost can move when linehaul does not.
+- **Confidence tags** mark disclosed, estimated, and carried series. Peak-spread months and sector ranking are carried composites, not a single DAT CSV download.
+- **Correlation is not a pricing model.** A 0.41 spot-beta correlation is a warning label, not a regression to trade on.
+- **2026 mid-year spreads** (~+$0.20–0.30/mi depending on equipment) are provisional desk levels, not a forecast of the next fall RFP.
+
+## What desks should take into the next renewal window
+
+Watch three objects together. First, the **equipment-specific spread**, not a single van headline — reefer and flatbed peak and trough on related but not identical calendars. Second, the **vertical ladder**: if food & beverage and auto parts are still bidding up while retail is flat, the market is telling you capacity quality matters more than board liquidity. Third, the **Cass regime**: soft expenditures with negative spreads historically paired with award cuts; firming expenditures with positive spreads historically paired with single-digit to mid-teens lifts depending on vertical.
+
+The July 2022 print remains the cleanest modern example of a **spot–contract spread peak**. The fall 2022 awards remain the cleanest example of **who paid after the peak**. Food & beverage absorbed the biggest lift. That is the desk’s answer — and the reason the dashboard keeps the sector ladder one click away from the dual tape.
+
+Sources: DAT Freight & Analytics trendlines (spot and contract benchmarks); Cass Information Systems Freight Index (shipments and expenditures); shipper bid-cycle and 3PL award commentary restated by vertical for Sep–Dec windows 2021–2025.`,
+  },
+  {
     id: "medicare-part-d-glp-1-diabetes-spending-2026",
     slug: "medicare-part-d-glp-1-diabetes-spending-2026",
     title:

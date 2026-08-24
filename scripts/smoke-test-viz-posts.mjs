@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "contract-renewal-season-vs-spot-divergence-2026",
+    marker: "Spot–contract spread peak",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "medicare-part-d-glp-1-diabetes-spending-2026",
     marker: "GLP-1 share of Part D spend",
     forbidden: "Loading interactive charts",

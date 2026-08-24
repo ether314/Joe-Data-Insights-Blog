@@ -3452,6 +3452,21 @@ const MedicarePartDGlp1DiabetesSpending2026Dashboard = dynamic(
   },
 );
 
+const ContractRenewalSeasonVsSpotDivergence2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ContractRenewalSeasonVsSpotDivergence2026Dashboard"
+    ).then((m) => m.ContractRenewalSeasonVsSpotDivergence2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4359,6 +4374,10 @@ export function PostVisualization({
 
   if (type === "medicare-part-d-glp-1-diabetes-spending-2026") {
     return <MedicarePartDGlp1DiabetesSpending2026Dashboard />;
+  }
+
+  if (type === "contract-renewal-season-vs-spot-divergence-2026") {
+    return <ContractRenewalSeasonVsSpotDivergence2026Dashboard />;
   }
 
   return null;
