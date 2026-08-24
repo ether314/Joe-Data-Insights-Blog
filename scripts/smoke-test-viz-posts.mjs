@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "reinsurance-rate-on-line-vs-residual-take-up-2026",
+    marker: "RoL vs residual take-up",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "social-housing-stock-share-in-oecd-2026",
     marker: "Social rental % of dwellings",
     forbidden: "Loading interactive charts",

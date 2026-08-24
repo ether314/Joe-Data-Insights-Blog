@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "reinsurance-rate-on-line-vs-residual-take-up-2026",
+    slug: "reinsurance-rate-on-line-vs-residual-take-up-2026",
+    title:
+      "Charted: US Cat Rate-on-Line Jumped ~94% From 2017 — Residual Policies Surged in the Same States",
+    excerpt:
+      "Guy Carpenter’s US property-catastrophe rate-on-line index climbed from the 2017 soft trough to a 2024 peak (+~94% desk-rebased). Florida Citizens PIF rose ~228% to a 1.4M peak; California FAIR kept climbing into 2026. Softening RoL in 2025–26 breaks the coincidence unevenly.",
+    category: "Finance",
+    themeId: "property-insurance-retreat",
+    imageUrl:
+      "/images/finance-reinsurance-rate-on-line-vs-residual-take-up-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of a cyan rate-on-line curve rising beside an amber residual-policy staircase over a coastal silhouette",
+    publishedAt: "2026-08-24T12:00:00Z",
+    featured: true,
+    visualization: "reinsurance-rate-on-line-vs-residual-take-up-2026",
+    layout: "default",
+    content: `Property catastrophe reinsurance pricing and residual-market enrollment are usually discussed in separate rooms. One desk watches Guy Carpenter’s US rate-on-line (RoL) index at January and mid-year renewals. Another tracks Citizens, FAIR Plans, and wind pools as insurers non-renew coastal and wildfire books. The question that joins them is simple: **did the hard-market climb in US property-cat RoL coincide with residual-policy growth in the same states?**
+
+The short answer is **yes for the hardening window (roughly 2018–2023), with important state timing differences after the peak.** A desk rebase of Guy Carpenter’s US Property Catastrophe Rate-on-Line Index to **2017 = 100** puts the **2024 peak near 194** — about a **94%** rise from the soft-market trough — before disclosed declines of **−6.7% for full-year 2025** and **−12% at 1/1/2026**. Over the same hardening stretch, Florida Citizens policies in force rose from roughly **427,000 in 2018** to a peak near **1.4 million in October 2023** (**+228%**). California’s FAIR Plan kept expanding after RoL softened: total policies in force reached **696,562 by June 2026**, **+157%** versus fiscal year-end 2022. Texas TWIA and Louisiana Citizens also grew through the hard years, though absolute scale stayed far below Florida.
+
+Use the dashboard’s **RoL vs residual** panel first. The dual axis shows the national RoL path against an equal-weight residual “basket” index for Florida, California, Texas, and Louisiana. Through 2023 the two series climb together. After 2024 they diverge: RoL falls on disclosed Guy Carpenter prints while Florida residual shrinks on depopulation and California FAIR keeps adding policies.
+
+## What rate-on-line actually measures
+
+Rate-on-line is premium divided by limit — dollars paid for a layer of catastrophe excess-of-loss cover, not a modeled risk-adjusted price. Guy Carpenter’s US Property Catastrophe Rate-on-Line Index tracks year-on-year change on a consistent brokered program base. That means the index embeds exposure growth, buying habit shifts, and market clearing prices. It is **not** a pure “same-risk” rate. For this post that is a feature: primary carriers facing higher RoL on the same towers also faced higher attachment pressure, thinner surplus, and stronger incentives to shed coastal and wildfire risk into residual mechanisms.
+
+Artemis reprints of the Guy Carpenter series show the US index rising every year from the **2017** soft trough through the **2024** peak, then turning down. Disclosed renewal moves matter for the recent edge: **−6.2% at 1/1/2025**, deepening to **−6.7% for 2025** after mid-year renewals, **−12% at 1/1/2026**, and roughly **−22% from the 2024 peak** after mid-year 2026 activity. Even after that soft stretch, the cumulative rise from 2017 remains large — Artemis has cited roughly **~66%–94%** depending on the exact print and whether mid-year updates are included. Our dashboard uses a desk rebase (2017 = 100 → 2024 ≈ 194) so YoY bars and the index share one chart without implying false precision on pre-2025 levels.
+
+Toggle **RoL path** and flip the lens between index and YoY. Green YoY bars in 2025–26 are the first sustained negative stretch since the soft trough; they are also the years when Florida residual finally contracted hard.
+
+## Residual take-up is the primary-market pressure gauge
+
+Residual markets — Florida Citizens, the California FAIR Plan, Texas Windstorm Insurance Association (TWIA), Louisiana Citizens — are markets of last resort when admitted carriers will not write or renew. Policy-count growth is an imperfect but visible gauge of **voluntary-market retreat**. It is not the same thing as “uninsured.” Many residual insureds previously held admitted policies; others are new construction or forced transitions after non-renewals.
+
+Florida’s path is the clearest coincidence with the hard RoL years. Citizens fell to roughly **427,000** policies around **2018**, then climbed through **2020–22** and peaked above **1.4 million** in **October 2023**. That timing overlaps the steepest RoL years on the Guy Carpenter path. After Florida legislative reforms and aggressive depopulation, Citizens fell to about **777,592** policies by **20 June 2025**, with exposure down roughly **43%** year-over-year in Artemis reporting. Softening reinsurance and a recovering private market helped take-outs; residual take-up is not a one-way ratchet.
+
+California tells a different residual story. FAIR Plan total policies in force hit **696,562** as of **June 2026**, with exposure near **$768 billion** — **+157%** and **+250%** respectively versus fiscal year-end **2022**. Wildfire non-renewals and admitted-market exits continued even as national cat RoL began to ease. National reinsurance pricing and California residual enrollment are **correlated in the hard market and decoupled in the soft patch**.
+
+Texas TWIA and Louisiana Citizens sit between those poles. A Citizens residual-market comparison packet put TWIA near **225,575** policies and Louisiana Citizens near **154,662** around late **2022**. Secondary reporting pointed TWIA toward roughly **265,000** policies by **2024**. Louisiana’s residual book ballooned after hurricane seasons and admitted exits, then stabilized or eased slightly in desk estimates for **2024–25**. Absolute adds are smaller than Florida’s, but percentage growth from 2018 bases is still large.
+
+## Coincidence by phase, not just by level
+
+Coincidence is easier to see in **phases** than in a single correlation coefficient.
+
+| Phase | RoL character (US GC path) | Residual character (desk basket) |
+| --- | --- | --- |
+| 2018–21 build | Steady positive YoY from soft trough | FL / CA / LA residual books expand from post-Irma / wildfire baseline |
+| 2022–23 spike | Steepest RoL YoY years | Florida Citizens surge to ~1.4M; LA / CA still adding |
+| 2024 peak | RoL near high; YoY slows | FL depopulation starts; CA FAIR still climbing |
+| 2025–26 ease | Disclosed GC declines (−6.7%, −12%) | FL residual shrinks fast; CA FAIR still grows into mid-2026 |
+
+Open the **Phase bands** panel. Average RoL YoY and residual-basket pace rise together in the build and spike windows. In the ease window, average RoL YoY turns negative while the basket average is pulled down by Florida even though California remains positive. That is the analytical punchline: **national RoL softening does not automatically empty every residual plan**.
+
+## Hard-market policy adds were Florida-heavy
+
+Absolute take-up during the hardening window was not evenly shared. Approximate net policy adds in the hard years put Florida Citizens in a class of its own — on the order of **~1 million** net policies from trough to peak — with California FAIR, Louisiana Citizens, and TWIA adding smaller but still material books. The **Hard-market mix** pie makes the concentration visible: Florida dominates the residual “shock absorber” role for the Southeast hurricane complex, while California’s FAIR growth is the wildfire analogue on a different timetable.
+
+The **Growth scatter** panel holds national RoL index points gained from 2018→2024 roughly constant across states (same national index) and plots residual policy growth percentages. Florida, California, and Louisiana cluster at high percentage growth; Texas TWIA grows more moderately on a larger coastal wind-only base. Bubble size tracks peak policy counts. The scatter is deliberately simple: it is not a causal identification strategy. It is a coincidence map.
+
+## Why the two series move together — and when they stop
+
+Three mechanisms link RoL to residual take-up without requiring a single regression.
+
+First, **reinsurance cost passes into primary appetite**. When cat RoL rises sharply, admitted carriers face higher cost of capital for peak-zone portfolios. Non-renewals and tighter underwriting push households into residual plans.
+
+Second, **attachment and limit discipline**. Hard markets often come with higher attachments and thinner top covers. Primary net retentions rise; surplus and rating agencies punish concentration. Residual mechanisms absorb the risks carriers no longer want to retain or reinsure on prior terms.
+
+Third, **state residual design and politics**. Florida’s Citizens pricing and eligibility rules, California’s FAIR Plan expansion mandates, TWIA’s coastal perimeter, and Louisiana Citizens’ post-storm role all mediate how fast residual PIF responds. That is why California can keep growing while Florida depopulates under the same national RoL print.
+
+None of these channels says “RoL caused residual growth” in a strict econometric sense. Litigation climates, building codes, interest rates, and catastrophe model revisions also matter. The dashboard’s claim is narrower: **the hard-market RoL climb and residual PIF climb occupied the same years in the same high-risk states**, and the soft patch is revealing where residual demand was about reinsurance cost versus deeper admitted-market exit.
+
+## Caveats and what the charts do not prove
+
+Treat several limits as first-class.
+
+**Index construction.** Guy Carpenter RoL is a brokered excess-of-loss program index, not a state-level price for Florida-only or California-only towers. Mid-year US renewals matter more than 1/1 for some coastal books; we note disclosed full-year updates where published.
+
+**Desk rebasing.** Pre-2025 index *levels* on the 2017 = 100 scale are carried from the published cumulative rise and hard-market shape. Disclosed YoY figures for 2025 (−6.7%) and 1/1/2026 (−12%) are treated as hard anchors. Do not over-read a single index point as a precise premium quote.
+
+**Policy-count heterogeneity.** Citizens multi-peril policies, FAIR Plan dwelling/commercial mixes, TWIA wind-only policies, and Louisiana Citizens forms are not identical products. Comparing PIF across plans measures residual *reliance*, not identical coverage.
+
+**Estimated mid-series points.** Several California, Texas, and Louisiana interim years are estimated or carried from board packets and secondary DOI reporting. Peak and latest disclosed prints are labeled in the data module; hover the dashboard source note for the full caveat string.
+
+**Depopulation and timing.** Florida’s 2024–25 residual shrink coincides with RoL softening *and* with legislative / take-out programs. Attribution to reinsurance price alone would over-claim.
+
+**No household microdata.** We do not observe which non-renewed households landed in residual plans versus going bare or moving. Residual PIF is a stock, not a transition matrix.
+
+## How to read the dashboard
+
+Start on **RoL vs residual** with the index lens, then switch YoY to see the 2025–26 sign flip. Move to **Residual paths** and filter Florida versus California to see the post-peak split. Use **Growth scatter** and **Hard-market mix** for cross-state concentration. Finish on **Phase bands** for the narrative arc: build → spike → peak → ease.
+
+The investable and policy-relevant takeaway is not that reinsurance pricing “equals” residual enrollment. It is that **when US property-cat RoL was still climbing into 2023–24, residual take-up in the same catastrophe states was also climbing** — and that the first disclosed soft renewals are already testing whether residual stocks mean-revert (Florida) or keep expanding on non-price residual demand (California).
+`,
+  },
+  {
     id: "social-housing-stock-share-in-oecd-2026",
     slug: "social-housing-stock-share-in-oecd-2026",
     title:

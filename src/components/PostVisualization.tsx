@@ -3482,6 +3482,21 @@ const SocialHousingStockShareInOecd2026Dashboard = dynamic(
   },
 );
 
+const ReinsuranceRateOnLineVsResidualTakeUp2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ReinsuranceRateOnLineVsResidualTakeUp2026Dashboard"
+    ).then((m) => m.ReinsuranceRateOnLineVsResidualTakeUp2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4397,6 +4412,10 @@ export function PostVisualization({
 
   if (type === "social-housing-stock-share-in-oecd-2026") {
     return <SocialHousingStockShareInOecd2026Dashboard />;
+  }
+
+  if (type === "reinsurance-rate-on-line-vs-residual-take-up-2026") {
+    return <ReinsuranceRateOnLineVsResidualTakeUp2026Dashboard />;
   }
 
   return null;
