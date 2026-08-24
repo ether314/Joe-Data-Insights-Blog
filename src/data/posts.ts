@@ -3788,7 +3788,7 @@ Union coverage tells you where contracts and dues already sit. Major-work-stoppa
     featured: true,
     visualization: "us-state-pension-funded-ratios-2026",
     layout: "default",
-    content: `A national average funded ratio of **82.5%** sounds almost healthy — until you notice that **$1.27 trillion** of promised benefits still lack matching assets, and that a thin slice of states owns most of that gap. Equable Institute’s State of Pensions 2025 January update, read beside Boston College’s Center for Retirement Research (CRR) Public Plans Database path and Pew’s longer funding-gap series, shows a **split map**: seven jurisdictions at or above full funding, three states still below 60%, and a dollar shortfall that is **highly concentrated**.
+    content: `A national average funded ratio of **82.5%** sounds almost healthy — until you notice that **$1.27 trillion** of promised benefits still lack matching assets [Equable Jan 2026], and that a thin slice of states owns most of that gap. Equable Institute’s State of Pensions 2025 January update, read beside Boston College’s Center for Retirement Research (CRR) Public Plans Database path and Pew’s longer funding-gap series, shows a **split map**: seven jurisdictions at or above full funding, three states still below 60%, and a dollar shortfall that is **highly concentrated**.
 
 The dashboard above answers two linked questions. First, what is the **distribution** of statewide funded ratios? Second, how concentrated is **unfunded actuarial accrued liability (UAAL)** — the dollar gap between assets and accrued benefits — in a handful of large systems? Toggle **UAAL share**, **Funded bins**, **Funded × UAAL**, and **National path**; filter by census region; rank by UAAL dollars or funded percent.
 
@@ -3804,7 +3804,7 @@ The dashboard above answers two linked questions. First, what is the **distribut
 | States <60% funded | **3** | MS, KY, IL |
 | CRR PPD actuarial funded (FY 2025) | **77.7%** | Different measurement basis |
 
-Funded ratio is assets divided by accrued liabilities. UAAL is the **dollar remainder**. A mid-sized state at 58% funded can look worse on the ratio chart than California at 84% — yet California’s **$256B** shortfall dwarfs Kentucky’s **$36B** because the liability base is so much larger. Desks that only rank by percentage miss the fiscal geography of who actually owes the debt.
+Funded ratio is assets divided by accrued liabilities. UAAL is the **dollar remainder**. A mid-sized state at 58% funded can look worse on the ratio chart than California at 84% — yet California’s **$256B** shortfall dwarfs Kentucky’s **$36B** because the liability base is so much larger [Equable Jan 2026]. Desks that only rank by percentage miss the fiscal geography of who actually owes the debt.
 
 ## The concentration curve: top states own the shortfall
 
@@ -3820,19 +3820,19 @@ Texas illustrates the other side of the coin: an **82.5%** funded ratio — righ
 
 ## Distribution: resilient, fragile, and distressed
 
-Equable’s state averages (statewide plans plus large municipally managed plans with at least **$1B** of liabilities) spread across a wide band:
+Equable’s state averages (statewide plans plus large municipally managed plans with at least **$1B** of liabilities) spread across a wide band [Equable Jan 2026]:
 
 - **Resilient (≥90%)**: seventeen jurisdictions, including the fully funded set and strong systems in Minnesota, North Carolina, New York, Virginia, and others.
 - **Fragile (60–90%)**: the crowded middle — most of the map.
 - **Distressed (<60%)**: Mississippi (**59%**), Kentucky (**59%**), and Illinois (**54%**).
 
-The histogram is not a neat bell curve. A cluster sits in the **80–90%** bin near the national average, another cluster fills **90–100%**, and a long left tail of distressed and near-distressed states pulls attention. CRR’s plan-level terciles sharpen the same story with a different cut: among major Public Plans Database plans in FY 2025, the **top third** aggregates near **95%** funded, the **middle third** near **78%**, and the **bottom third** near **58%**. State averages smooth over within-state plan gaps — California’s average hides both well-funded local public-safety plans and thinly funded legacy judge systems — but the tercile split confirms that “the average plan” is not the distressed plan and not the resilient plan.
+The histogram is not a neat bell curve. A cluster sits in the **80–90%** bin near the national average, another cluster fills **90–100%**, and a long left tail of distressed and near-distressed states pulls attention. CRR’s plan-level terciles sharpen the same story with a different cut: among major Public Plans Database plans in FY 2025, the **top third** aggregates near **95%** funded, the **middle third** near **78%**, and the **bottom third** near **58%** [CRR IB 25-15]. State averages smooth over within-state plan gaps — California’s average hides both well-funded local public-safety plans and thinly funded legacy judge systems — but the tercile split confirms that “the average plan” is not the distressed plan and not the resilient plan.
 
 ## Why national progress looks modest on the CRR ledger
 
-Equable’s market/estimated path shows the national funded ratio rising from **78.0%** in 2024 to **82.5%** in 2025 as average investment returns (~**9.5%**) beat the typical assumed return (~**6.9%**) and contributions stayed high. CRR’s actuarial aggregate for FY 2025 is lower — **77.7%**, up only about **1.5 points** since 2023 — because actuarial smoothing, liability growth, and mature-plan cash flows blunt the equity rally.
+Equable’s market/estimated path shows the national funded ratio rising from **78.0%** in 2024 to **82.5%** in 2025 as average investment returns (~**9.5%**) beat the typical assumed return (~**6.9%**) and contributions stayed high [Equable Jan 2026]. CRR’s actuarial aggregate for FY 2025 is lower — **77.7%**, up only about **1.5 points** since 2023 — because actuarial smoothing, liability growth, and mature-plan cash flows blunt the equity rally [CRR IB 25-15].
 
-CRR’s July 2025 brief stresses the mechanics: liabilities still grow roughly **4%** a year; mature plans run **negative net cash flows** near **2%** of assets even when actuarially determined contributions are paid in full; and alternatives-heavy portfolios do not capture a pure equity index’s upside. Those features explain why a **40%+** equity rally does not translate into a **40-point** funding jump. Pew’s longer funding-gap work adds the policy layer: states that chronically undershot actuarially required contributions — historically including Illinois, Kentucky, and New Jersey — compounded interest on pension debt even when markets cooperated.
+CRR’s July 2025 brief stresses the mechanics: liabilities still grow roughly **4%** a year; mature plans run **negative net cash flows** near **2%** of assets even when actuarially determined contributions are paid in full; and alternatives-heavy portfolios do not capture a pure equity index’s upside [CRR IB 25-15]. Those features explain why a **40%+** equity rally does not translate into a **40-point** funding jump. Pew’s longer funding-gap work adds the policy layer: states that chronically undershot actuarially required contributions — historically including Illinois, Kentucky, and New Jersey — compounded interest on pension debt even when markets cooperated [Pew Funding Gap].
 
 Together, the sources say the same thing in different dialects: **fundamentals improved**, but the stock of unpaid promises remains large, and **geography still dominates**.
 
@@ -3864,7 +3864,11 @@ Contribution rates near **30%+ of payroll** on average are already a hard claim 
 
 For desks tracking fiscal risk, the useful cut is not “is the national average above 80%?” It is: **which five states own half the dollar gap**, **which three remain under 60% funded**, and **whether contribution policy in those systems stays intact when revenues soften**. The distribution has improved at the center; the concentration of unfunded liability has not dissolved.
 
-Sources: Equable Institute State of Pensions 2025 (January 2026 update); Equable plan and state funded-ratio rankings; Boston College CRR Issue Brief 25-15 and the Public Plans Database; Pew Charitable Trusts State Pension Funding Gap series.`,
+Sources:
+[Equable Jan 2026]: Equable Institute — The State of Pensions 2025, January Update. https://equable.org/wp-content/uploads/2026/01/State-of-Pensions-2025_January-Update_Final.pdf
+[Equable States]: Equable Institute — 2025 Pension Funded Status by State. https://equable.org/news/unfunded-liabilities-for-state-pension-plans-in-2025/
+[CRR IB 25-15]: Boston College Center for Retirement Research (Aubry & Munnell) — The Funded Status of Public Plans Keeps Improving – Albeit Modestly. https://crr.bc.edu/the-funded-status-of-public-plans-keeps-improving-albeit-modestly/
+[Pew Funding Gap]: The Pew Charitable Trusts — State Pension Funding Levels Stayed Stable Despite Volatility. https://www.pew.org/en/research-and-analysis/articles/2025/10/29/state-pension-funding-levels-stayed-stable-despite-volatility`,
   },
   {
     id: "admitted-homeowners-insurers-exiting-coastal-states-2026",
