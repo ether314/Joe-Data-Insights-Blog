@@ -2,6 +2,89 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "local-police-fire-plan-underfunding-2026",
+    slug: "local-police-fire-plan-underfunding-2026",
+    title:
+      "Charted: Local Police/Fire Plans Are Not Systematically Worse Funded Than Teacher Systems",
+    excerpt:
+      "Equable’s FY 2024 liability-weighted averages put municipal public-safety plans at 76.7% funded versus 76.4% for teacher systems — a +0.3 pp gap. Equal-weight medians in a large-plan sample widen that advantage to about +30 pp, even as Chicago fire and Dallas P&F mark a brutal left tail.",
+    category: "Finance",
+    themeId: "pension-funding",
+    imageUrl:
+      "/images/finance-local-police-fire-plan-underfunding-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of a firefighter helmet and police badge beside a split funded-ratio gauge in teal and rose",
+    publishedAt: "2026-08-24T12:00:00Z",
+    featured: true,
+    visualization: "local-police-fire-plan-underfunding-2026",
+    layout: "default",
+    content: `The instinct on many budget desks is that **locally run police and fire pensions** are the soft underbelly of public retirement finance — smaller sponsors, political pressure to keep contribution rates low, and benefit formulas that retire members earlier than teacher or general-employee plans. Equable Institute’s State of Pensions type splits, read beside a desk sample of large plans with disclosed funded ratios, say something sharper and less convenient: **municipal public-safety systems are not systematically worse funded than standalone teacher systems on a liability-weighted basis**, and they look **materially better** than state-employee-only plans. The drama is in the **distribution**, not in a simple “local P&F always loses” ranking.
+
+The dashboard above is built for that double read. Toggle **Weighted gaps** for Equable’s FY 2023–2024 type averages versus teachers; **Median ladder** for equal-weight sample medians; **Funded bins** and **Funded × size** for left-tail and liability-scale risk; **Type path** for the two-year move. Filter the sample by public safety, municipal P&F only, teachers, or state employees.
+
+## Scoreboard: weighted averages vs sample medians
+
+| Metric (Equable FY 2024 unless noted) | Value | Read |
+| --- | ---: | --- |
+| Municipal public safety, liability-weighted funded | **76.7%** | 22 large locally managed P&F systems |
+| Statewide public safety, liability-weighted funded | **82.1%** | 42 separately valued public-safety plans |
+| Teachers / school employees, liability-weighted funded | **76.4%** | 51 standalone teacher / school plans |
+| State employees only, liability-weighted funded | **65.7%** | 22 state-agency systems |
+| Weighted gap: muni P&F − teachers | **+0.3 pp** | Essentially tied |
+| Weighted gap: statewide P&F − teachers | **+5.7 pp** | Public safety ahead |
+| Desk sample median: public safety | **92.0%** | 15 large plans, equal weight |
+| Desk sample median: teachers | **62.0%** | 12 large plans, equal weight |
+| Median gap: public safety − teachers | **+30.0 pp** | Distribution, not dollars |
+| Teacher UAAL (Equable) | **$578.8B** | ~one-third of national shortfall |
+| Muni + statewide public-safety UAAL | **$99.6B** | Far smaller dollar base |
+
+Two numbers that look like they disagree are both true. On Equable’s **liability-weighted** averages — the right tool for “how funded is this *type* of promise in the aggregate?” — municipal public safety and teachers sit within a few tenths of a point. On an **equal-weight median** of large disclosed plans — the right tool for “what does a typical large plan in each cohort look like?” — public safety’s median is about **thirty points** higher than the teacher median in this sample. Dollar risk still lives mostly in teacher systems because their liability base is enormous.
+
+## The core question, answered carefully
+
+**Are local public-safety plans systematically worse funded than state teacher and employee plans?** Against **teachers**, no — not on Equable’s FY 2024 weighted averages, and not on the sample median. Against **state-employee-only** systems, local public safety looks **better** by roughly **eleven percentage points** on the weighted measure (76.7% vs 65.7%). Against **statewide** public-safety plans, local P&F trails (76.7% vs 82.1%) — so the local *administration* margin is real within the public-safety family, even when the teacher comparison is flat.
+
+That nuance matters because “local” and “public safety” are often collapsed into one scare category. Census and CRR work have long noted that **police/fire plans are a much larger share of the local plan universe than of the state plan universe**, while teachers dominate state systems. Comparing “local plans” to “state plans” without slicing by employee type mixes apples and hydrants. The Equable type table is the cleaner cut.
+
+## Why the weighted gap is so small
+
+Equable’s FY 2024 teacher cohort carries **$578.8 billion** of unfunded liability across 51 plans at **76.4%** funded. Municipal public safety carries **$43.9 billion** across 22 plans at **76.7%**. Statewide public safety sits at **82.1%** with **$55.7 billion** unfunded. The teacher bucket is simply larger: a few poorly funded mega-systems (Illinois Teachers, New Jersey TPAF, Chicago Teachers, and peers) pull the weighted average down even when many mid-sized teacher plans look healthier.
+
+Public-safety systems enter that comparison with a different cost structure. CRR’s police-and-fire primer documents earlier retirement ages, higher normal costs, and more frequent Social Security noncoverage — all of which raise the **contribution** burden on cities and special districts. Higher cost does not automatically mean worse **funded ratio**. Sponsors that actually pay the actuarially determined contribution can keep a high-cost plan well funded; sponsors that chronically underpay can wreck a cheaper plan. Equable’s type averages say the large municipal P&F cohort, as a group, has kept pace with teacher funding even while paying for a richer benefit design.
+
+## The left tail is where the scare story lives
+
+Averages hide the plans that dominate local headlines. In Equable’s FY 2024 local rankings, **Chicago Firefighters (23.7%)**, **Chicago Police (28.5%)**, **Dallas Police and Firefighters (36.7%)**, and **Jacksonville Police & Fire (47.2%)** sit deep in distressed territory. Those four alone are enough to make any mayor’s briefing book look radioactive. At the other end, **Los Angeles Fire and Police (101.0%)**, **Houston Firefighters (100.0%)**, **Houston Police (95.4%)**, and **Wichita Police and Fire (92.0%)** clear resilient thresholds.
+
+That spread is the analytical point. Local public-safety underfunding is **concentrated and political**, not a uniform national rule. Chicago’s police and fire funds are a municipal fiscal crisis that happens to wear a badge; they are not proof that every local P&F trust is worse than CalSTRS or Texas TRS. The dashboard’s funded-bin and scatter panels make the same point visually: a cluster of resilient mid-sized P&F plans coexists with a small set of very large, very underfunded outliers.
+
+## Statewide public safety is the quiet outperformer
+
+If the scare story fails against teachers, it fails twice against the statewide public-safety cohort. Equable’s FY 2024 average for separately valued statewide public-safety plans is **82.1%** — **5.7 points** above teachers and **5.4 points** above municipal P&F. Top-end names in Equable’s statewide rankings include **DC Police & Fire (115.2%)**, **Utah Firefighters (110.9%)**, and **Texas LECOS (106.2%)**. Distressed statewide cases still exist — New Jersey’s state police system appears near **51%** in the same ranking set — but the cohort average clears municipal P&F and teachers alike.
+
+One reading is governance and pooling: statewide public-safety systems often sit inside larger investment platforms, with contribution statutes that are harder for a single city council to raid in a bad budget year. Another reading is selection: the classifiable statewide P&F bucket excludes some of the ugliest municipal outliers by construction. Both can be true. For desks comparing *employee type* rather than *administration level*, statewide public safety is the cohort that most clearly beats teachers on funded ratio.
+
+## Dollar risk still sits with teachers — and with a few cities
+
+Funded ratio is not fiscal exposure. Teacher systems hold most of the **dollar** shortfall in Equable’s type table. Public-safety UAAL for municipal and statewide classifiable plans combined is under **$100 billion**; the teacher cohort alone is nearly **$580 billion**. A city with a 30% funded police plan can still be a larger near-term budget problem for *that* city than a 70% funded statewide teacher plan is for a state treasurer — because the contribution spike lands on a narrower tax base.
+
+The scatter panel plots approximate liabilities against funded ratios for that reason. CalSTRS-scale teacher plans and Chicago’s police fund occupy different regions of the chart: one is a large, moderately underfunded statewide promise; the other is a smaller but catastrophically underfunded local promise. Rating analysts and budget officers need both lenses. National type averages answer the systematic question; plan-level left tails answer the local crisis question.
+
+## Caveats and measurement traps
+
+Equable’s type table only includes plans that are **separately valued and classifiable**. Blended statewide systems that fold teachers, general employees, and public safety into one reported trust (Florida is the classic example in Equable’s notes) drop out of the teacher and public-safety rows. That exclusion is honest methodology; it also means the table is not a census of every public-safety promise in America. Small local plans under Equable’s liability threshold are mostly absent. Census counts thousands of tiny local trusts that never appear in State of Pensions rankings.
+
+Funded ratios use **market-valued assets** against GASB total pension liability for recent years — not a risk-free discount rate. Shift the discount rate down a few hundred basis points and every cohort looks worse; the *ranking* across types can move even when the absolute levels collapse. Contribution policies, amortization methods, and assumed returns also differ. Pew’s longer funding-gap series is useful for contribution-discipline history; it is not a substitute for Equable’s current type cross-section.
+
+The desk sample medians are **equal-weight** and deliberately include both resilient and distressed large plans so the left tail is visible. They are not probability samples. Treat the **+30 pp** median gap as a distributional illustration anchored to disclosed rankings, not as a population parameter. Where individual mid-tier plans in the sample are marked estimated, the data module flags confidence explicitly.
+
+## What to watch next
+
+Three tapes matter more than another national average. First, whether **Chicago’s** police and fire contribution schedules close the actuarial gap without crowding out core services — the national “local P&F” narrative rises and falls with a handful of cities. Second, whether **statewide** public-safety systems keep their funding edge as assumed returns and alternative-investment marks normalize. Third, whether teacher systems’ enormous liability base keeps absorbing the majority of national UAAL even if their funded ratios grind higher after strong return years.
+
+For now, the clean answer to the brief is: **local police and fire plans are not systematically worse funded than state teacher plans on Equable’s liability-weighted measure; they are roughly tied, while statewide public safety leads and state-employee-only plans lag.** The median gap in a large-plan sample favors public safety even more. The scare story survives only if you stare exclusively at the left tail — and that tail, while real, is not the whole map.`,
+  },
+  {
     id: "global-road-deaths-vs-vehicle-stock-2026",
     slug: "global-road-deaths-vs-vehicle-stock-2026",
     title:

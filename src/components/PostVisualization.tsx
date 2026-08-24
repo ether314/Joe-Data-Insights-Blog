@@ -3512,6 +3512,21 @@ const GlobalRoadDeathsVsVehicleStock2026Dashboard = dynamic(
   },
 );
 
+const LocalPoliceFirePlanUnderfunding2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/LocalPoliceFirePlanUnderfunding2026Dashboard"
+    ).then((m) => m.LocalPoliceFirePlanUnderfunding2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4435,6 +4450,10 @@ export function PostVisualization({
 
   if (type === "global-road-deaths-vs-vehicle-stock-2026") {
     return <GlobalRoadDeathsVsVehicleStock2026Dashboard />;
+  }
+
+  if (type === "local-police-fire-plan-underfunding-2026") {
+    return <LocalPoliceFirePlanUnderfunding2026Dashboard />;
   }
 
   return null;

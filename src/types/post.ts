@@ -265,7 +265,8 @@ export interface Post {
     | "contract-renewal-season-vs-spot-divergence-2026"
     | "social-housing-stock-share-in-oecd-2026"
     | "reinsurance-rate-on-line-vs-residual-take-up-2026"
-    | "global-road-deaths-vs-vehicle-stock-2026";
+    | "global-road-deaths-vs-vehicle-stock-2026"
+    | "local-police-fire-plan-underfunding-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
 }

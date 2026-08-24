@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "local-police-fire-plan-underfunding-2026",
+    marker: "Local police / fire · funded-ratio gap",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "global-road-deaths-vs-vehicle-stock-2026",
     marker: "Deaths per 100k vs vehicles",
     forbidden: "Loading interactive charts",
