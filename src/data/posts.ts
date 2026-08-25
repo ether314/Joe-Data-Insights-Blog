@@ -2,6 +2,106 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "high-propensity-applications-vs-employer-firms-2026",
+    slug: "high-propensity-applications-vs-employer-firms-2026",
+    title:
+      "High-Propensity Applications vs Employer Firms: 4.4 Apps Per New Employer",
+    excerpt:
+      "For 2020–2022 application months, the U.S. filed 4.4 high-propensity EIN applications for every employer firm that formed within eight quarters — and the state map runs from 2.6 in South Dakota to 7.5 in Mississippi.",
+    category: "Economics",
+    themeId: "business-formation-applications",
+    imageUrl:
+      "/images/economics-high-propensity-applications-vs-employer-firms-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of amber business-application forms funneling into a smaller teal skyline of employer firms",
+    publishedAt: "2026-08-25T15:00:00Z",
+    featured: true,
+    visualization: "high-propensity-applications-vs-employer-firms-2026",
+    layout: "default",
+    content: `The EIN stampede after 2020 looked like a entrepreneurship renaissance. Census Business Formation Statistics (BFS) recorded a multi-year surge in business applications — including the high-propensity subset that historically turns into payroll employers at meaningful rates. The harder question is conversion: **how many of those “likely employer” filings became employing firms within the BFS eight-quarter window, and how does that intensity vary by state?**
+
+This desk’s answer, using seasonally adjusted high-propensity applications (HBA) and spliced eight-quarter formations (BF8Q) for application months **2020–2022**, is blunt. Nationally, the United States filed about **4.4 high-propensity applications for every employer formation** attributed to those months — a **22.8%** BF8Q/HBA intensity proxy. That is softer than the ~**27%** HBA→employer transition Census CES research documented on pre-pandemic vintages. The state ladder is not a tight cluster around 4.4: it stretches from **2.6** apps per employer in South Dakota to **7.5** in Mississippi.
+
+The interactive dashboard above walks the state ladder, the conversion proxy, the national dual path of HBA versus BF8Q, a volume scatter, Census-region bars, and the annual path of apps-per-employer against HBA’s share of all business applications. Toggle region filters and sort keys to stress-test the same cohort.
+
+## What “high-propensity” actually means
+
+BFS does not treat every EIN application as an employer-in-waiting. **Business Applications (BA)** are the broad pool of filings with business intent. Inside BA, **High-Propensity Business Applications (HBA)** flag characteristics on IRS Form SS-4 that historically correlate with payroll formation: corporate form, planned wages or hiring intent, and selected industry codes. Related cuts — applications with planned wages (WBA) and from corporations (CBA) — sit even closer to the employer margin.
+
+Census Center for Economic Studies work places the historical HBA transition near **27% within eight quarters**, versus roughly **4%** for non-HBA filings. That is why HBA is the right numerator for a “likely employer” story — and why raw BA counts alone overstate the entrepreneurship pulse.
+
+Two definitional updates matter for 2026 readers. The January 2026 BFS annual update restated HBA after excluding internet-sales-associated applications from the high-propensity and corporation series, and it refreshed formation splices against Business Dynamics Statistics. The series on FRED that power this dashboard already reflect that restatement. Always pin the vintage when you quote a ratio.
+
+## The national ratio: applications per new employer
+
+For application months **January 2020 through December 2022**, seasonally adjusted HBA sums to about **5.10 million** filings. Spliced BF8Q for the same months sums to about **1.16 million** employer formations within eight quarters of application. Divide and you get **4.38** high-propensity applications per eventual employer — the headline “apps per new employer” statistic.
+
+Invert it and you get the desk’s **conversion proxy**: BF8Q / HBA ≈ **22.8%**. That is *not* a microdata HBA transition probability. BF8Q counts employer births from the **full** application pool, including a thin contribution from non-HBA filings. In a world where nearly all formations came from HBA, BF8Q/HBA would overstate true HBA conversion. The pandemic cohort prints **below** the historical ~27% CES benchmark anyway — so the qualitative story (softer conversion than the pre-2020 research constant) survives the caveat.
+
+Why eight quarters rather than “three years”? BFS publishes formation windows at four and eight quarters. Eight quarters is two years; it is the longest standard window with a continuous spliced series. By mid-2026, the 2020–2022 application months have fully cleared that window (recent months still mix projected formations into the splice). The brief’s three-year language maps onto this fully observed eight-quarter cohort, not a custom twelve-quarter micro follow-up.
+
+## State by state: a wide intensity map
+
+State HBA and BF8Q series on FRED let the desk compute the same apps-per-employer ratio for all fifty states plus D.C. The distribution is skewed:
+
+| State | HBA 2020–22 | BF8Q 2020–22 | Apps / employer | BF8Q / HBA |
+| --- | ---: | ---: | ---: | ---: |
+| Mississippi | 54,150 | 7,265 | **7.45** | **13.4%** |
+| Louisiana | 76,232 | 11,563 | **6.59** | **15.2%** |
+| Delaware | 40,882 | 6,251 | **6.54** | **15.3%** |
+| Georgia | 256,323 | 41,333 | **6.20** | **16.1%** |
+| Florida | 636,745 | 110,613 | **5.76** | **17.4%** |
+| U.S. | **5.10M** | **1.16M** | **4.38** | **22.8%** |
+| Median state | — | — | **4.06** | — |
+| Oregon | 49,412 | 17,052 | **2.90** | **34.5%** |
+| Rhode Island | 11,022 | 3,867 | **2.85** | **35.1%** |
+| Idaho | 29,083 | 10,565 | **2.75** | **36.3%** |
+| South Dakota | 9,791 | 3,746 | **2.61** | **38.3%** |
+
+Twenty-eight states clear **4.0** apps per employer; ten print below **3.0**. The South dominates the high-ratio tail (Mississippi, Louisiana, Georgia, Florida, Maryland, D.C.). The low-ratio tail clusters in the Plains and northern New England (South Dakota, North Dakota, Nebraska, Maine, New Hampshire, Idaho, Rhode Island, Oregon).
+
+A high apps-per-employer print can mean many things at once: a thicker layer of “high-propensity” filings that never hire, a sector mix that BFS labels as high-propensity but that converts slowly, multi-state EIN behavior that credits applications to one geography and payroll births to another, or simply a larger non-employer / sole-prop residue riding alongside true employer intent. The dashboard does not claim causal identification. It ranks formation intensity relative to the HBA stampede.
+
+## Region bars and the volume scatter
+
+Aggregating the same cohort by Census region, the **South** posts the highest apps-per-employer intensity (**4.95**). The **Midwest** (**4.41**) and **Northeast** (**4.38**) sit near the national line. The **West** converts denser relative to its HBA stampede (**3.59** apps per employer — closer to the historical CES constant when inverted). Absolute volume still concentrates in large states: California, Florida, Texas, and New York dominate HBA counts even when their ratios differ. The scatter panel plots HBA volume against apps-per-employer with bubble size scaled to BF8Q — large states can sit near the national line while small states occupy the extremes.
+
+That split matters for briefing books. A national “startup boom” narrative that cites BA or HBA alone will overweight paperwork in high-ratio states. A national “employer birth” narrative that cites BF8Q alone will underweight how much high-propensity filing was required upstream. The ratio joins the two tapes.
+
+## The annual path: surge, then partial normalization
+
+Annual national sums show the mechanics. HBA and BA both jumped in 2020–2021. Apps-per-employer rose as application volume outran eight-quarter formations. HBA’s share of BA compressed in the same window — more of the surge was in the broad BA residual, not only in the high-propensity cut. Later years pull the apps-per-employer ratio partially back as formation splices catch application cohorts and as the restated HBA definition removes some internet-sales filings from the high-propensity count.
+
+The quarterly dual panel makes the same point visually: amber HBA bars spike while the teal BF8Q line rises more modestly and with lag. Formation is not a same-month echo of application. It is a delayed payroll event.
+
+## Caveats the dashboard will not hide
+
+1. **Window mismatch with the colloquial “three years.”** BF8Q is eight quarters. Longer follow-ups would raise cumulative conversion; they are not in the standard monthly BFS release.
+2. **BF8Q is not HBA-only.** Treating BF8Q/HBA as an HBA micro transition overstates HBA conversion when non-HBA filings also become employers — and understates the historical CES constant when pandemic cohorts convert more weakly.
+3. **Seasonal adjustment asymmetry.** HBA series used here are seasonally adjusted; BF8Q spliced series are not. Over a three-year sum the distortion is smaller than in a single month, but it is not zero.
+4. **Geography of the EIN.** Applications are credited to the state on the SS-4; payroll activity can migrate. Multi-entity holding structures and remote-first firms blur state ratios.
+5. **Definition restatement.** The January 2026 HBA/CBA internet-sales exclusion and BDS-linked formation refresh revise history. Ratios from older PDFs will not match this FRED vintage.
+6. **Projected formations in the splice.** Recent application months embed projected BF8Q cells. That is why the primary cohort stops at 2022-12.
+
+## What the ratio is for
+
+The useful briefing line is not “entrepreneurship died” or “everyone hired.” It is: **the post-2020 high-propensity application wave produced employer firms at roughly one birth per 4.4 HBA filings nationally, with state intensity ranging from about 2.6 to 7.5.** Policymakers comparing application dashboards to payroll employment should expect a two-year lag and a large state residual. Lenders and economic developers who treat HBA as a near-term jobs forecast will over-predict hiring in high-ratio states unless they haircut by something close to this desk’s conversion proxy — or, better, by CES-style HBA transition rates updated for the pandemic cohorts.
+
+For one-line briefings: **4.4 high-propensity applications per eight-quarter employer formation in the 2020–2022 cohort; 22.8% BF8Q/HBA intensity versus ~27% historical CES HBA transition; Mississippi near 7.5 apps per employer, South Dakota near 2.6.**`,
+    keyPoints: [
+      "2020–2022 HBA cohort: 4.38 high-propensity apps per BF8Q employer formation (US)",
+      "BF8Q/HBA intensity proxy 22.8% vs ~27% historical CES HBA transition",
+      "State range 2.61 (SD) to 7.45 (MS); 28 states at or above 4.0 apps/employer",
+    ],
+    tags: [
+      "business-formation",
+      "census-bfs",
+      "entrepreneurship",
+      "employer-firms",
+    ],
+    format: "data-story",
+  },
+  {
     id: "uninsurance-by-state-after-medicaid-unwinding-2026",
     slug: "uninsurance-by-state-after-medicaid-unwinding-2026",
     title:

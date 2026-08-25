@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "high-propensity-applications-vs-employer-firms-2026",
+    marker: "Business formation applications",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "uninsurance-by-state-after-medicaid-unwinding-2026",
     marker: "Uninsured-rate change after unwinding",
     forbidden: "Loading interactive charts",

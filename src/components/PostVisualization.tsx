@@ -3722,6 +3722,21 @@ const UninsuranceByStateAfterMedicaidUnwinding2026Dashboard = dynamic(
   },
 );
 
+const HighPropensityApplicationsVsEmployerFirms2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/HighPropensityApplicationsVsEmployerFirms2026Dashboard"
+    ).then((m) => m.HighPropensityApplicationsVsEmployerFirms2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4701,6 +4716,10 @@ export function PostVisualization({
 
   if (type === "uninsurance-by-state-after-medicaid-unwinding-2026") {
     return <UninsuranceByStateAfterMedicaidUnwinding2026Dashboard />;
+  }
+
+  if (type === "high-propensity-applications-vs-employer-firms-2026") {
+    return <HighPropensityApplicationsVsEmployerFirms2026Dashboard />;
   }
 
   return null;
