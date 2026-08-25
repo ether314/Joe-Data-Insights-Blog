@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "credit-outcomes-of-gig-dependent-households-2026",
+    marker: "Delinquency gap vs W-2 — 2.8 pp",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "remote-sales-tax-collection-after-wayfair-2026",
     marker: "Remote-collection share",
     forbidden: "Loading interactive charts",

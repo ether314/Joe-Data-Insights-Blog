@@ -2,6 +2,111 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "credit-outcomes-of-gig-dependent-households-2026",
+    slug: "credit-outcomes-of-gig-dependent-households-2026",
+    title:
+      "Charted: Gig-Primary Households Show a 2.8 pp Card Delinquency Gap vs Matched W-2 Peers",
+    excerpt:
+      "Desk-harmonized CFPB credit-panel and Fed SHED cuts put gig-primary card 60+ DPD at 8.4% versus 5.6% for matched W-2-only households — a 2.8 percentage-point gap — with a 19 pp thinner $400 cash buffer.",
+    category: "Consumer Finance",
+    themeId: "gig-income-volatility",
+    imageUrl:
+      "/images/consumer-finance-credit-outcomes-of-gig-dependent-households-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of gig-income pulse waves versus W-2 paycheck bars feeding a credit delinquency gauge",
+    publishedAt: "2026-08-25T21:00:00Z",
+    featured: true,
+    visualization: "credit-outcomes-of-gig-dependent-households-2026",
+    layout: "default",
+    content: `Platform work is no longer a footnote in household cash flow. Federal Reserve Survey of Household Economics and Decisionmaking (SHED) modules put **any gig or side-platform participation near 16% of adults**, while a thinner slice — about **4%** in our desk cut — reports platform earnings as **half or more** of household income. That gig-primary group is small enough to miss in headline delinquency charts and large enough to matter for revolving-credit stress, because income arrives in irregular pulses rather than a predictable paycheck.
+
+The desk question for this note is narrow: **do households that rely on platform income show different delinquency and cash-buffer patterns than comparable W-2-only households?** Comparable means matched on broad income band and age, not a raw population average that mixes retirees, dual-earner professionals, and gig drivers into one mean. The interactive dashboard above synthesizes **CFPB Consumer Credit Panel–style past-due rates** with **SHED emergency-expense buffers** and a volatility map that links month-to-month income swing to card 60+ day past-due (DPD) rates.
+
+## Headline: a 2.8 percentage-point card delinquency gap
+
+On revolving credit, **gig-primary households print an estimated 8.4% card 60+ DPD rate** against **5.6% for matched W-2-only peers** — a **2.8 percentage-point gap**. That is the headline number. Auto loans show a **2.1 pp** gap; unsecured personal loans a **3.1 pp** gap; first-lien mortgages stay under **1 pp**. Secured credit compresses the differential; revolving and personal credit amplify it.
+
+The gap is not a pandemic artifact. Desk vintages from 2019 through 2024 show the card differential **compressed to roughly 1.3–1.4 pp in 2020–21**, when stimulus and forbearance lowered past-due rates across segments, then **widened every year through 2024** as revolving stress returned. Gig-primary delinquency climbed faster than the W-2 path once the temporary supports faded. For credit-risk desks that only watch the aggregate card 60+ series, that separation is invisible — the national print averages away a dependence premium that is economically large for the households that carry it.
+
+## How we define gig-primary, gig-secondary, and W-2-only
+
+Definitions matter more than branding. **Gig-primary** means platform or contingent platform-like earnings account for **≥50% of household earnings** in the reference window. **Gig-secondary** means some platform earnings under that threshold — typically a side stream on top of W-2 wages. **W-2-only** means no reported platform earnings in the matching frame, drawn from the same income and age cells so the comparison is not "gig workers versus everyone else."
+
+SHED does not publish an official three-way CCP delinquency table. The rates here are **desk-harmonized**: CCP-style product past-due rates are applied to segment cells whose income and age mix approximate SHED gig participants, with **estimated** labels where the join is imperfect. Treat the levels as research synthesis, not a regulatory tabulation.
+
+Population shares in the dashboard — roughly **4% gig-primary**, **12% gig-secondary**, and a large W-2-only majority among working-age adults — are order-of-magnitude guides. Exact SHED wording on "gig," "side activity," and "app-based work" shifts across vintages; we keep the labels stable for charting. Secondary earners are the majority of platform participants; primary-dependent households are the minority that drives most of the credit differential.
+
+## Product gaps: revolving and personal credit lead
+
+Toggle **Product gaps** in the dashboard. Grouped bars show 60+ DPD by product for all three segments. Three patterns stand out:
+
+1. **Cards dominate the absolute gap.** Gig-primary at 8.4% versus W-2 at 5.6% is the clearest revolving stress signal. Utilization also runs hotter — about **62% mean revolving utilization** for gig-primary versus **44%** for matched W-2 — so the same income miss hits closer to the limit.
+2. **Personal loans show the widest relative gap** (+3.1 pp). That product often fills short-term cash holes when platform weeks go soft; higher past-due rates are consistent with that use case.
+3. **Mortgages barely move.** A 0.9 pp gap on first liens is economically small and may partly reflect selection: households that clear underwriting already look different on credit history, even when current income is volatile.
+
+Filter by product to isolate one bar cluster. The story does not reverse: every product shows gig-primary above W-2; only the magnitude changes. Auto sits between cards and mortgages, as expected for a secured installment product with less discretionary drawdown than revolving lines.
+
+## Cash buffers: a 19-point $400-expense gap
+
+Delinquency is a lagging credit outcome. Liquidity is the leading one. On the SHED-aligned **ability to cover a $400 unexpected expense with cash or cash-equivalent**, gig-primary households sit near **48%**, gig-secondary near **58%**, and matched W-2 near **67%** — a **19 percentage-point buffer gap** between gig-primary and W-2.
+
+The **Cash buffers** panel traces 2019–2024. Every segment improved in 2020–21. Gig-primary peaked near **54%** able to cover $400, then slipped back toward the high-40s as inflation and the end of transfers hit irregular earners first. W-2 buffers settled near two-thirds and held. The parallel **would borrow or sell** coping share runs the other way: **41%** gig-primary versus **24%** W-2, consistent with thinner liquid reserves.
+
+Buffers and delinquency are not the same population event — a household can miss a card payment without failing a hypothetical $400 question, and vice versa — but they travel together in the segment averages. Thin buffers make a soft platform week more likely to become a past-due cycle. That is the operational link between SHED liquidity modules and CCP past-due tapes: cash-flow irregularity shows up first as buffer failure, then as missed revolving minimums.
+
+## Volatility map: swing predicts past-due inside income bands
+
+Income *level* does not exhaust the story. Month-to-month **swing** matters. Desk medians put gig-primary MoM income variation near **28%**, gig-secondary near **14%**, and W-2 near **6%**. The **Volatility map** scatter plots those swings against card 60+ DPD inside income bands (<$40k, $40–80k, >$80k).
+
+Within every income band, gig-primary cells sit further right (more swing) and usually higher (more past-due) than W-2 cells. Low-income gig-primary is the stressed corner — roughly **11% card 60+** at a **34%** median swing. High-income W-2 is the calm corner — about **3%** past-due at a **4%** swing. Gig-secondary occupies the middle of the cloud.
+
+Filter the scatter by segment to see each cloud alone. The slope is not a causal claim: volatile work sorts into certain credit products and utilization patterns. It is a descriptive regularity that survives the income-band cut — which is the minimum bar for arguing that volatility, not only poverty, belongs in the monitoring frame.
+
+## Reliance ladder: outcomes step with platform share
+
+If platform income is continuous rather than binary, outcomes should step as the platform share of earnings rises. The **Reliance ladder** does that: 0% (W-2 only), 1–24%, 25–49%, 50–74%, and 75%+. Card 60+ DPD rises from **5.6%** to **9.1%** across those rungs; $400 coverage falls from **67%** to **44%**; revolving utilization climbs from **44%** to **68%**.
+
+Toggle the ladder metric among delinquency, buffer, and utilization. The monotone pattern is the finding: **dependence intensity**, not merely "any gig participation," tracks credit and liquidity stress. That is why blending all platform participants into one "gig worker" average flattens the risk picture — secondary earners dilute the primary-dependent tail. Lenders and policymakers who only see "gig" as a binary flag will understate stress in the ≥50% earnings group and overstate it among casual side-hustlers.
+
+## Vintage: the gap after support winds down
+
+The **Gap vintage** panel overlays gig-primary and W-2 card 60+ rates with the percentage-point gap on a second axis. 2019 opens near **1.9 pp**. 2020–21 compress. 2022–24 reopen to **2.8 pp**. The path matches a simple narrative: temporary income support and forbearance reduced missed payments broadly; when those faded, households with choppier cash flow re-separated from paycheck peers.
+
+This is not a claim that platforms *caused* the 2023–24 revolving cycle. Macro rates, utilization, and lender risk appetite moved for everyone. The claim is thinner and more useful: **among households with similar income and age, platform dependence correlates with a durable delinquency premium** that widened as the support overlay lifted. Watching only the national card past-due series will keep missing that wedge.
+
+## Outcome table and reading rules
+
+The **Outcome table** panel (and the markdown table below) consolidates the desk metrics. Use it as a one-screen brief; use the charts for composition and vintage.
+
+| Metric | Gig-primary | Gig-secondary | W-2 only | Note |
+| --- | --- | --- | --- | --- |
+| Card 60+ DPD rate | 8.4% | 6.5% | 5.6% | Matched income/age CCP cells |
+| Auto 60+ DPD rate | 5.9% | 4.4% | 3.8% | Matched income/age CCP cells |
+| Revolving utilization | 62% | 51% | 44% | Mean utilized / limit |
+| Can cover $400 expense | 48% | 58% | 67% | SHED cash/equivalent |
+| Would borrow or sell | 41% | 32% | 24% | SHED emergency coping |
+| Median MoM income swing | 28% | 14% | 6% | Platform vs paycheck volatility |
+
+## Caveats and what this does not show
+
+**Matching is imperfect.** CCP and SHED are different samples with different gig identifiers. Desk joins on income and age reduce, but do not eliminate, selection bias — people who choose platform-primary work may differ on unobserved credit behavior.
+
+**Estimated rows are labeled.** Where CFPB or Fed publications do not publish the exact crosstab, we carry forward adjacent cells or apply Chase Institute–style volatility patterns to CCP past-due rates. Do not cite a single cell as an official government statistic.
+
+**Mortgage and auto underwriting select survivors.** Lower gaps on secured products partly reflect who gets the loan, not only who pays on time after origination.
+
+**Platform mix shifts.** Delivery, rideshare, and task platforms have different pay volatility and tip shares; a national average hides that. Regional labor markets and app take-rates also move.
+
+**No causal identification.** We do not instrument platform entry or randomize income volatility. The dashboard is a monitoring lens for delinquency and buffer gaps, not a structural model of credit risk.
+
+## Why the 2.8 pp gap is the desk number
+
+For consumer-finance monitoring, the useful headline is not "gig workers are riskier" in the abstract. It is that **households for whom platform income is the paycheck show a roughly three-point card delinquency premium versus matched W-2 peers**, with a **nineteen-point thinner $400 cash buffer** and roughly **four times the month-to-month income swing**. Product gaps, the reliance ladder, and the post-stimulus vintage all point the same direction: dependence intensity and cash-flow volatility travel with revolving stress.
+
+That framing keeps the conversation on measurable credit outcomes — past-due rates, utilization, emergency liquidity — rather than on culture-war debates about gig work itself. Platforms can be flexible income for secondary earners and a hard primary paycheck for others. The credit tape treats those groups differently. The dashboard is built so you can see that split without averaging it away.
+`,
+  },
+  {
     id: "remote-sales-tax-collection-after-wayfair-2026",
     slug: "remote-sales-tax-collection-after-wayfair-2026",
     title:
