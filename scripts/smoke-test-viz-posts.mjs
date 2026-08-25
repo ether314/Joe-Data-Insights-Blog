@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "rent-burden-share-of-renter-income-2026",
+    marker: "Renters above 30% of income",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "rural-hospital-closures-and-drive-times-2026",
     marker: "Added drive minutes post-closure",
     forbidden: "Loading interactive charts",

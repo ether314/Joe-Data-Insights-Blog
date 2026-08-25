@@ -3617,6 +3617,21 @@ const RuralHospitalClosuresAndDriveTimes2026Dashboard = dynamic(
   },
 );
 
+const RentBurdenShareOfRenterIncome2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/RentBurdenShareOfRenterIncome2026Dashboard"
+    ).then((m) => m.RentBurdenShareOfRenterIncome2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4568,6 +4583,10 @@ export function PostVisualization({
 
   if (type === "rural-hospital-closures-and-drive-times-2026") {
     return <RuralHospitalClosuresAndDriveTimes2026Dashboard />;
+  }
+
+  if (type === "rent-burden-share-of-renter-income-2026") {
+    return <RentBurdenShareOfRenterIncome2026Dashboard />;
   }
 
   return null;

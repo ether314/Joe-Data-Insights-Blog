@@ -2,6 +2,99 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "rent-burden-share-of-renter-income-2026",
+    slug: "rent-burden-share-of-renter-income-2026",
+    title:
+      "Charted: Half of U.S. Renters Spend Over 30% of Income on Rent — Which Metros Are Worst?",
+    excerpt:
+      "ACS and Harvard JCHS put cost burdens at a record 50% of renter households in 2023 — 22.6 million. Cape Coral (65%) and Miami (63%) lead large metros; Florida’s five hottest markets all clear 58%.",
+    category: "Real Estate",
+    themeId: "rent-burden-acs",
+    imageUrl:
+      "/images/real-estate-rent-burden-share-of-renter-income-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of an apartment skyline with a bold rent-vs-income bar motif highlighting cost-burdened renters",
+    publishedAt: "2026-08-29T12:00:00Z",
+    featured: true,
+    visualization: "rent-burden-share-of-renter-income-2026",
+    layout: "default",
+    content: `The standard affordability rule of thumb — keep housing under **30%** of household income — stopped describing the typical U.S. renter years ago. By the 2023 American Community Survey vintage that Harvard’s Joint Center for Housing Studies (JCHS) tabulates in *America’s Rental Housing*, **half of all renter households** spent more than that share on rent and utilities. That is **22.6 million** households, including **12.1 million** that crossed the **severe** line of **50%** of income. The national rate sat near **47%** as recently as **2019**; the pandemic rent spike erased the modest mid-2010s improvement and left the burdened share **3.2 percentage points** higher than the pre-pandemic floor.
+
+The interactive dashboard above is built for the metro question desks actually ask: **which markets push the largest share of renters past 30% and 50% of income, and how did those shares move since 2015?** Toggle **Metro ladder**, **2015 → 2023**, **National path**, **By income**, and **Regions & tiers**. Filter by Census region and re-rank metros by burden, severe burden, or vintage delta. The rest of this post walks the same perimeter in narrative form — with caveats, a metro table, and the income-band story that national averages hide.
+
+## What “cost burden” means in ACS and JCHS
+
+**Gross rent** in ACS Table B25070 is contract rent plus estimated utilities. JCHS follows the conventional split: **moderate** burden is **30–50%** of household income; **severe** burden is **more than 50%**. Households reporting zero or negative income are treated as severely burdened; households that do not pay rent are treated as unburdened. Those conventions matter at the tails — they inflate severe counts in thin-income cells and mute burden rates in employer-provided or zero-rent stock — but they are the published series every housing desk cites.
+
+The national path in the dashboard skips **2020**, when ACS collection broke down during the pandemic. From **2015 through 2019**, the burdened share eased from roughly **48%** toward **47%**. Then **2021–2022** snapped the series back to a **50%** plateau that held in **2023** even as asking-rent growth cooled. Cooling asking rents did not unwind leases already signed, nor restore the low-rent stock lost to inflation and filtering. JCHS counts **22.4 million** burdened households in **2022** and **22.6 million** in **2023** — a new household record even while the *rate* stayed flat at half.
+
+## Florida metros sit at the top of the ladder
+
+Among large metros, the 2023 cost-burden ranking is not a coastal California monopoly. JCHS’s affordability update places **five Florida markets** at the top of the large-metro list: **Cape Coral at 65%**, **Miami at 63%**, **Orlando and North Port at 59%**, and **Tampa at 58%**. Rapid in-migration, insurance and tax pass-through into rents, and competition from higher-income remote and retiree households all show up as higher shares of local renters past the 30% line. **New Orleans (58%)** joins them on low incomes rather than peak rents; **Riverside (58%)**, **San Diego (57%)**, and **Las Vegas (57%)** keep the West near the same ceiling.
+
+Even the “affordable” end of the top-100 list is not comfortable. JCHS notes that the lowest large-metro burden rates still leave about **42%** of renters cost-burdened in places like **Des Moines**, **Pittsburgh**, and **Wichita**. Exactly **half** of the 100 largest metros cleared a **50%+** burden rate in 2023, and **89 of 100** saw burdens rise between **2019 and 2023**. The dashboard’s metro panel compresses that landscape into a sortable ladder and a vintage scatter: points above the 2015=2023 diagonal worsened; bubble size tracks renter-household scale so a Miami move outweighs a Cape Coral print in absolute exposure.
+
+| Metro | Burden 2023 | Burden 2015 | Δ pp | Severe 2023 |
+| --- | ---: | ---: | ---: | ---: |
+| Cape Coral, FL | **65%** | 52% | **+13** | 36% |
+| Miami, FL | **63%** | 58% | **+5** | 35% |
+| Orlando, FL | **59%** | 50% | **+9** | 31% |
+| Tampa, FL | **58%** | 49% | **+9** | 30% |
+| New Orleans, LA | **58%** | 54% | **+4** | 33% |
+| Riverside, CA | **58%** | 55% | **+3** | 32% |
+| Las Vegas, NV | **57%** | 48% | **+9** | 30% |
+| Los Angeles, CA | **56%** | 55% | **+1** | 31% |
+| Phoenix, AZ | **52%** | 45% | **+7** | 26% |
+| Pittsburgh, PA | **42%** | 43% | **−1** | 21% |
+
+Cape Coral’s **+13 pp** move since 2015 is the panel’s steepest climb; Las Vegas and the Florida I-4 corridor print mid-to-high single-digit gains. Los Angeles and New York look “stable” only because they were already expensive — their 2015 baselines sat near **50–55%**, so small deltas still leave more than half of renters burdened. Chicago is one of the few large markets in the panel with a slight **improvement** versus 2015, and even there nearly half of renters remain above the 30% line.
+
+## Severe burdens are the half-of-income cliff
+
+The 30% threshold is the headline. The **50%** threshold is the eviction-risk and residual-income cliff. Nationally, **27%** of renter households — **12.1 million** — were severely cost-burdened in 2023. That is not a small left-tail curiosity; it is more than one in four renter households. In the Florida leaders, severe shares climb into the **low-to-mid 30s**. Low-income bands dominate the severe count: **67%** of renters earning under **$30,000** spent more than half their income on housing, and those households still account for roughly **three-quarters** of all severe cases.
+
+Severe burden is also where race and household structure show up most clearly in JCHS’s national cuts. Black (**57%**) and Hispanic (**53%**) renter households have higher overall burden rates than white or Asian renters (**45–46%**). Single-parent (**62%**) and single-person (**59%**) households sit well above married couples without children (**33%**). Those composition effects do not “explain away” metro rankings — Miami’s renter mix and Cape Coral’s insurance-driven rent spike are different mechanisms — but they do mean a metro with the same median rent can print very different severe shares if its renter income distribution is thinner.
+
+## Middle incomes absorbed the sharpest rise
+
+The most under-appreciated shift in the JCHS update is not that poor renters are burdened — they always were — but that **middle-income** bands moved fastest. Renters earning **$45,000–$74,999** saw burden rates nearly double since **2001**, reaching just over **45%** in 2023 (**+22.7 pp** over two decades, **+7.7 pp** since 2019). The **$30,000–$44,999** band sits at **70%** burdened. Higher-income renters (**$75,000+**) are still mostly unburdened at **13%**, but that rate is up **3.3 pp** since 2019 — evidence that even the high end of new Class A supply did not fully shield upper-middle renters in hot markets.
+
+Composition followed the rates. Lower-income households fell from about **61%** of all cost-burdened renters in 2001 to roughly **half** in 2023, while middle-income households rose to about **41%** of the burdened population. Absolute counts still show **11.3 million** burdened households under **$30,000** — the largest block — but the political economy of “who is rent-burdened” now includes a much thicker middle.
+
+Full-time work is no longer a reliable escape hatch. The share of fully employed renter householders with cost burdens climbed from under **25%** in 2001 to **36%** in 2023. Occupation cuts in the JCHS tables put personal/care services and food preparation above **50%** burdened even among full-time workers — a reminder that wage floors in local service sectors did not keep pace with rent distributions after 2019.
+
+## Regions, states, and the rural floor
+
+Census-region averages compress metro drama but clarify direction. In 2023, the **West (52%)** and **South (50%)** led; the **Northeast (49%)** sat close behind; the **Midwest (45%)** remained lowest. The South’s **+4.2 pp** rise since 2019 outpaced every other region. State ranks rhyme with the metro ladder: **Florida at 59%** leads the country, followed by **California, Hawaii, and Nevada** in the mid-50s. **Arizona’s +8.0 pp** jump since 2019 is the largest state delta JCHS highlights; Oregon and Georgia also cleared **+5 pp**. A handful of Plains states (**North Dakota, South Dakota, Wyoming**) improved by more than **2 pp** and still print burden rates in the mid-30s — the national floor, not an affordable paradise.
+
+Geography tiers make the same point without MSA labels. **Largest metros** average **51%** burdened (**+3.5 pp** since 2019); other metros **48%**; micropolitan areas **42%**; rural areas **39%**. Rural America’s lower rate still means nearly **two in five** rural renters are cost-burdened. Desks that treat rent burden as a coastal-only story are reading the wrong map.
+
+## Caveats and how to read the dashboard
+
+1. **ACS is a survey.** Metro shares carry sampling error; year-to-year moves under ~1 pp can be noise, especially outside the largest MSAs.
+2. **Income is household income, not wages.** Multi-earner households and roommate groups lower measured burdens relative to individual renters’ lived experience.
+3. **Gross rent includes utilities.** Markets with high electric or heating costs can print higher burdens at the same contract rent.
+4. **2015 metro comparables are desk joins.** MSA boundary changes and ACS vintage quirks mean some 2015→2023 deltas are carried estimates, not official JCHS appendix reprints.
+5. **Asking-rent indexes are not ACS.** Zillow/Apartment List cooling in 2024–25 can coexist with sticky ACS burdens until turnover resets the occupied stock.
+6. **Assistance is out of frame.** HUD voucher and public-housing tenants appear in ACS, but unmet worst-case needs (JCHS cites millions of unassisted very-low-income renters) are a parallel ledger.
+
+Use the dashboard’s region filter when you want to know whether a Florida-shaped ladder survives outside the South, and flip the sort lens to severe when residual income — not the 30% rule — is the decision variable. For one-line briefings: **half of U.S. renters remain above 30% of income on rent and utilities, 27% are above 50%, and the hottest large-metro prints are Florida’s — Cape Coral at 65% and Miami at 63% — with most large markets still worse than in 2015.**`,
+    keyPoints: [
+      "50% of U.S. renter households (22.6M) spent >30% of income on rent+utilities in 2023; 27% (12.1M) were severely burdened (>50%).",
+      "Cape Coral (65%) and Miami (63%) lead large metros; five Florida markets clear 58%+.",
+      "89 of the 100 largest metros saw burden rates rise from 2019 to 2023; half of those metros exceed a 50% burden share.",
+      "Middle-income renters ($45–75k) saw the steepest long-run rise — burden rates nearly doubled since 2001.",
+    ],
+    tags: [
+      "rent burden",
+      "ACS",
+      "JCHS",
+      "housing affordability",
+      "metros",
+    ],
+    format: "data-story",
+  },
+  {
     id: "rural-hospital-closures-and-drive-times-2026",
     slug: "rural-hospital-closures-and-drive-times-2026",
     title:
