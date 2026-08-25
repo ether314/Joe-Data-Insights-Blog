@@ -2,6 +2,107 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "investor-home-purchases-vs-first-time-buyers-2026",
+    slug: "investor-home-purchases-vs-first-time-buyers-2026",
+    title:
+      "Charted: Investor % of Closings — Which Sun Belt Metros Outbid First-Time Buyers, and Did Rates Reverse It?",
+    excerpt:
+      "Atlanta’s investor share of closings hit 28.4% in 2021 while first-time buyers held just 18.2%. Across 14 Sun Belt metros, ten saw investors outbid FTB share at the peak — and all ten gaps flipped by 2025 as the 30-year mortgage rate reset.",
+    category: "Real Estate",
+    themeId: "institutional-landlords",
+    imageUrl:
+      "/images/real-estate-investor-home-purchases-vs-first-time-buyers-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of amber investor purchase-share bars competing with teal first-time buyer bars over a Sun Belt suburban skyline, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-28T12:00:00Z",
+    featured: true,
+    visualization: "investor-home-purchases-vs-first-time-buyers-2026",
+    layout: "default",
+    content: `The housing debate of 2021–22 often collapsed into a single villain: “investors.” The cleaner question is narrower and measurable. **In which Sun Belt metros did investor purchases claim a larger share of closings than first-time buyers**, and **did that gap reverse once mortgage rates rose**?
+
+Deed-level purchase flags and NAR-style first-time buyer (FTB) profiles do not answer who “deserved” a house. They do answer who cleared more of the closing tape. On our reconstructed metro panel, **Atlanta peaked at 28.4% investor share of closings in 2021** against an **18.2% FTB share** — a **+10.2 percentage-point gap**. Phoenix, Las Vegas, Charlotte, Tampa, Jacksonville, Nashville, Dallas, and Orlando also printed positive investor-minus-FTB gaps at their peaks. Austin, Houston, Raleigh, San Antonio, and Miami tell a different story: investors were loud, but first-time buyers still held the larger slice.
+
+The interactive dashboard tracks investor %, FTB %, and the gap through 2025, with Freddie Mac’s 30-year rate as the rate-rise backdrop. The national punchline is familiar — investor share fell from roughly **18.7% in 2021 to 11.2% in 2025** as the PMMS average climbed from **2.96% to a 2023 peak of 6.81%**. The metro punchline is sharper: **of ten Sun Belt markets where investors outbid FTB share at the peak, all ten saw the gap flip to zero or negative by 2025**. The rate shock did not erase institutional landlords. It did shrink their claim on the closing flow.
+
+## What “investor % of closings” actually measures
+
+Investor purchase share is a **flow** statistic, not a stock statistic. It asks: of recorded single-family and condo deed transfers in a year, what share went to corporate entities, LLCs, or non-occupant buyers identified with cash or investor-financing heuristics? That is different from the share of the single-family rental **stock** owned by large operators — a related but slower-moving object.
+
+First-time buyer share is usually a survey construct. NAR’s Profile of Home Buyers and Sellers publishes a national FTB percentage; metro splits here are **modeled allocations** that reconcile those national cells with ACS tenure and first-lien origination age proxies. Treat metro FTB levels as directional, not as recorder-stamped truth.
+
+The comparison that matters for this brief is the **gap**: investor share minus FTB share, in percentage points. A positive gap means investors claimed more of the year’s closings than first-time buyers. A negative gap means FTB still cleared the larger slice even if investor activity was elevated. That framing avoids a false binary in which any investor purchase is read as a first-time buyer displacement one-for-one.
+
+## The Sun Belt scoreboard: who outbid first-time buyers
+
+Ten of fourteen metros in the panel printed a positive gap at their investor peak — almost always **2021**. Atlanta (+10.2 pp), Las Vegas (+9.3), Phoenix (+7.8), Charlotte (+4.8), Tampa (+4.4), Miami (+3.4), Jacksonville (+2.4), Nashville (+1.6), Dallas (+1.6), and Orlando (+0.6) form the outbid set. The remaining four — Houston, Austin, Raleigh, and San Antonio — kept FTB share above investor share even at the investor peak.
+
+Miami deserves a footnote. Its investor share never reached Atlanta’s altitude, but its FTB share is structurally low, so absolute first-time participation stayed weak even after the gap flipped negative by 2025. That is a different pathology from Phoenix, where the peak gap was large and FTB share recovered further into the mid-20s as investors exited.
+
+| Metro | Peak year | Investor % | FTB % at peak | Gap at peak (pp) | Gap 2025 (pp) | Reversed? |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Atlanta | 2021 | 28.4 | 18.2 | +10.2 | −11.9 | Yes |
+| Las Vegas | 2021 | 27.1 | 17.8 | +9.3 | −13.7 | Yes |
+| Phoenix | 2021 | 26.8 | 19.0 | +7.8 | −12.9 | Yes |
+| Charlotte | 2021 | 25.2 | 20.4 | +4.8 | −13.7 | Yes |
+| Tampa | 2021 | 24.0 | 19.6 | +4.4 | −13.5 | Yes |
+| Jacksonville | 2021 | 23.2 | 20.8 | +2.4 | −14.5 | Yes |
+| Nashville | 2021 | 21.8 | 20.2 | +1.6 | −14.3 | Yes |
+| Dallas–Fort Worth | 2021 | 22.6 | 21.0 | +1.6 | −14.3 | Yes |
+| Orlando | 2021 | 22.0 | 21.4 | +0.6 | −14.9 | Yes |
+| Miami | 2021 | 19.8 | 16.4 | +3.4 | −7.8 | Yes |
+| Houston | 2021 | 20.4 | 22.8 | −2.4 | −15.3 | — |
+| Austin | 2021 | 18.6 | 24.2 | −5.6 | −17.4 | — |
+| Raleigh | 2021 | 17.4 | 25.0 | −7.6 | −18.6 | — |
+| San Antonio | 2021 | 16.8 | 26.2 | −9.4 | −18.2 | — |
+
+All ten outbid metros show a negative investor−FTB gap by 2025 on this series. Miami’s reversal still leaves a structurally low FTB level; see caveats.
+
+## Did the rate shock reverse the gap?
+
+Freddie Mac’s PMMS annual average rose from **2.96% in 2021 to 6.81% in 2023**, then eased only modestly through 2025. That is a **+4.1 percentage-point** rate reset in two years — enough to break leveraged buy-to-rent underwriting that assumed sub-4% debt and rapid rent growth.
+
+On the dashboard’s reversal scatter, metros with the highest peak investor shares also posted the largest peak-to-2025 declines: Atlanta (−15.3 pp), Las Vegas (−16.1), Phoenix (−14.4). The median decline among outbid metros is about **9.6 pp**. Nationally, investor share fell **7.5 pp** from peak to 2025 while FTB share recovered only **2.5 pp** from its 2022 trough. In other words: **most of the gap repair came from investors leaving the tape, not from a surge of first-time closings**.
+
+That asymmetry matters for policy and for desk narratives. A market can look “friendlier” to first-time buyers on a gap chart while still being historically unaffordable on price-to-income and payment-to-income. Gap reversal is a **composition** story about who wins auctions when they occur; it is not an affordability cure.
+
+## Atlanta, Phoenix, Las Vegas: three peak stories
+
+**Atlanta** is the headline metro for a reason. Builders delivered a deep entry-level inventory; institutional single-family rental platforms and smaller LLCs both scaled; and 2021’s rate floor made cash-heavy bids cheap to finance or to justify on rent spreads. The 28.4% investor share did not mean nearly three in ten homes became Wall Street rentals overnight — some investors flip, some are small landlords, some are entities for household purchases — but it did mean first-time buyers were competing against a thick non-occupant bid.
+
+**Phoenix** compressed faster. Investor share fell from 26.8% to 12.4% by 2025 as price cuts, insurance costs, and rate-sensitive leverage hit desert metros hard. The FTB share rose into the mid-20s, and the gap swung from +7.8 pp to −12.9 pp. If you want a clean illustration of “rate rise reversed the outbid,” Phoenix is it.
+
+**Las Vegas** combines a high peak with a sharp exit. The 2021 investor share (27.1%) sat near Atlanta’s; the 2025 share (11.0%) sits near the national average. Tourism-linked labor markets and a thinner owner-occupant base make the FTB series noisier here, but the direction of the investor retreat is not subtle.
+
+## First-time buyers did not simply reclaim the market
+
+It is tempting to read gap reversal as a handoff: investors leave, first-timers arrive. The levels disagree. National FTB share only moved from a **26% trough in 2022 to about 28.5% in 2025** — still well below late-2010s readings near the mid-30s in many NAR vintages. In several Sun Belt metros, FTB share rose a few points while investor share collapsed by double digits. The arithmetic of the gap is dominated by the investor leg.
+
+Why didn’t FTB share explode into the vacuum? Payment shock. A median-priced Sun Belt home at 6.5% is a different object than the same home at 3%. Inventory that investors abandoned did not automatically price into first-time payment affordability. Builders also shifted mix toward larger, higher-margin product in some metros. And credit overlays for lower-down-payment borrowers tightened in practice even when headline programs remained open.
+
+So the honest 2025 read is: **investors lost share of closings; first-time buyers gained some ground; neither restored a pre-pandemic buyer mix**.
+
+## Caveats and measurement limits
+
+Several limits should sit next to every chart in this post.
+
+**Definition risk.** Vendor “investor” flags disagree on LLC households, iBuyers, and entity purchases that are still owner-occupant in economic substance. Our series follows the common corporate / non-occupant heuristic used in ATTOM, CoreLogic, and Redfin-style releases; it is not a IRS Schedule E audit.
+
+**FTB metro modeling.** National NAR cells are disclosed; metro FTB paths are estimated. Ranking metros on FTB levels alone overstates precision. Ranking them on whether the **investor−FTB gap** was positive at the peak is more robust, because investor shares move more and are better anchored in deed flags.
+
+**Coverage.** The panel is Sun Belt–heavy by design. Coastal California, the Northeast corridor, and Midwest metros can show different investor–FTB geometries. Do not globalize Atlanta’s 2021 peak.
+
+**Stock vs flow.** A falling investor share of **purchases** can coexist with a still-rising institutional share of the **rental stock** if large owners simply buy less while holding what they already have. This post is about the closing tape, not the landlord census.
+
+**2025 partial-year fill.** Late-year deed counts are still settling in some counties; 2025 figures are desk estimates consistent with mid-year run-rates, not final recorder yearbooks.
+
+## What desks should watch next
+
+Three observables will decide whether 2025’s gap repair sticks. First, **the rate path**: a return toward 5% would reopen leveraged investor math faster than many underwriting decks admit. Second, **build-to-rent starts** versus existing-home investor purchases — a shift into new supply changes the political economy even if total investor unit growth continues. Third, **FTB payment affordability** on local medians: without that, gap charts can look healthy while household formation into ownership stays stuck.
+
+For now, the Sun Belt evidence is clear enough. Investor purchases did outbid first-time buyer shares in a concentrated set of metros at the 2021 peak — Atlanta, Phoenix, and Las Vegas foremost — and **most of those gaps reversed as the 30-year rate reset**, primarily because investors stepped back from the tape. First-time buyers inherited a quieter auction, not a restored market.
+`,
+  },
+  {
     id: "state-sales-tax-bases-vs-the-service-economy-2026",
     slug: "state-sales-tax-bases-vs-the-service-economy-2026",
     title:

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "investor-home-purchases-vs-first-time-buyers-2026",
+    marker: "Investor % of closings vs first-time buyers",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "state-sales-tax-bases-vs-the-service-economy-2026",
     marker: "Headline — Taxable share of consumption",
     forbidden: "Loading interactive charts",
