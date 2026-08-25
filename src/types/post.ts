@@ -298,7 +298,10 @@ export const CATEGORIES: Category[] = [
 ];
 
 export function categorySlug(category: Category): string {
-  return category.toLowerCase().replace(/\s+/g, "-");
+  return category
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/\s+/g, "-");
 }
 
 export function slugToCategory(slug: string): Category | undefined {
