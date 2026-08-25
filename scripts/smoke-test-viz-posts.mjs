@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "health-insurance-coverage-gaps-census-2026",
+    marker: "Working-age uninsured — Texas 21.6%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "state-sales-tax-base-erosion-2026",
     marker: "Base leak to services",
     forbidden: "Loading interactive charts",

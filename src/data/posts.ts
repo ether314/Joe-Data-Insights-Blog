@@ -2,6 +2,107 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "health-insurance-coverage-gaps-census-2026",
+    slug: "health-insurance-coverage-gaps-census-2026",
+    title:
+      "Charted: Texas Still at 21.6% Working-Age Uninsured as 18 States Lost Ground After Medicaid Unwinding",
+    excerpt:
+      "Census ACS puts the U.S. working-age (19–64) uninsured rate at 11.3% in 2024, up from 11.0%. Texas leads at 21.6%; Massachusetts sits at 3.7%. Seventeen states plus D.C. saw significant increases as continuous enrollment ended — while California, Mississippi, and North Carolina moved the other way.",
+    category: "Health Economics",
+    themeId: "medicaid-coverage-unwinding",
+    imageUrl:
+      "/images/health-economics-health-insurance-coverage-gaps-census-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic U.S. coverage-gap map with 21.6% Texas working-age uninsured callout and teal-amber unwinding sparkline",
+    publishedAt: "2026-08-25T20:00:00Z",
+    featured: true,
+    visualization: "health-insurance-coverage-gaps-census-2026",
+    layout: "default",
+    content: `The continuous-enrollment era is over on the survey tape. Census Bureau American Community Survey (ACS) 1-year estimates put the **U.S. working-age (19–64) uninsured rate at 11.3% in 2024**, up from **11.0% in 2023**. That **+0.3 percentage-point** national move is small in absolute terms and enormous in distribution: **Texas still clears 21.6%**, **Massachusetts sits at 3.7%**, and **17 states plus the District of Columbia** posted statistically significant working-age increases after Medicaid continuous enrollment ended on **March 31, 2023**.
+
+The desk question is not whether the national average twitched. It is **where working-age adults remain uninsured at scale**, and **which states lost ground** during the first ACS year that fully overlaps the post-unwinding renewal cycle. The dashboard above is built for that split. Toggle **State ladder**, **Unwinding delta**, **National path**, **Expansion gap**, **Age & race**, and **Biggest movers**. Filter by Census region and Medicaid expansion status; on the ladder, sort by rate, delta, or estimated headcount.
+
+## What the ACS measures — and why 2024 is the first clean post-unwinding print
+
+ACS asks about **coverage at the time of interview**, averaged across a calendar year. That is not the same concept as the Current Population Survey Annual Social and Economic Supplement (CPS ASEC), which uses a different reference period and yields a national uninsured rate that held near **8.0%** in the 2024 CPS release even as ACS all-ages uninsured rose from **7.9% to 8.2%**. For **state geography**, ACS is the workhorse: sample size supports 50-state-plus-D.C. comparisons with disclosed margins of error.
+
+Policy timing matters for interpretation. The Families First continuous-coverage requirement kept Medicaid enrollees on the rolls through the public-health emergency. Congress ended that requirement effective **March 31, 2023**. States then had a **14-month window** — through **June 30, 2024** — to resume renewals and disenrollments. States started at different speeds. Full-year 2024 ACS averages therefore mix early-unwinding and late-unwinding months; they are the first annual ACS vintage that is not dominated by continuous enrollment, but they are **not** a single-day postmortem of every procedural termination.
+
+Medicaid’s national footprint shrank on the same tape. ACS all-ages **Medicaid coverage fell from 21.3% to 20.5%**, and Census notes declines in **30 states**. Only **California** and **North Carolina** recorded rising Medicaid coverage rates — both tied to eligibility expansions that pulled against the national unwind.
+
+## The level map: who still carries double-digit working-age gaps
+
+Sort states by 2024 working-age uninsured and the Southern non-expansion bloc still owns the top of the ladder. **Texas (21.6%)** remains the highest in the country — nearly **double** the national **11.3%** and almost **six times** Massachusetts. **Georgia (16.5%)**, **Oklahoma (15.9%)**, **Florida (15.5%)**, **Nevada (15.5%)**, and **New Mexico (14.9%)** fill out the high band. At the floor: **Massachusetts (3.7%)**, **Hawaii (4.9%)**, **D.C. (5.7%)**, **Rhode Island (6.3%)**, and **Vermont (6.3%)**.
+
+Census notes that **17 states** had working-age rates **above** the national average in 2024, with **10 of those 17 in the South**. Every Northeastern state printed **below** the national average. That regional pattern is durable: expansion status, employer-coverage density, immigration and labor-market composition, and outreach capacity all stack in the same direction.
+
+Headcount is a different ranking than rate. Desk estimates that apply ACS rates to civilian noninstitutionalized working-age populations put **Texas near 4.1 million** uninsured adults 19–64 — larger than the next several high-rate states combined. **Florida (~2.0M)** and **California (~2.1M)** remain large absolute gaps even where California’s *rate* improved. Rate maps without headcounts understate where the uninsured *live*.
+
+| State | 2023 rate | 2024 rate | Δ pp | Expansion (Jan 2024) |
+| --- | ---: | ---: | ---: | --- |
+| Texas | 21.7% | 21.6% | −0.1 | Non-expansion |
+| Georgia | 16.1% | 16.5% | +0.4 | Non-expansion |
+| Oklahoma | 16.1% | 15.9% | −0.2 | Expanded |
+| Florida | 15.5% | 15.5% | 0.0 | Non-expansion |
+| Nevada | 14.6% | 15.5% | +0.9 | Expanded |
+| New Mexico | 13.3% | 14.9% | +1.7* | Expanded |
+| Mississippi | 15.2% | 14.2% | −0.9* | Non-expansion |
+| Wyoming | 15.6% | 14.2% | −1.4 | Non-expansion |
+| North Carolina | 13.3% | 12.1% | −1.2* | Expanded |
+| California | 9.0% | 8.4% | −0.7* | Expanded |
+| Massachusetts | 3.5% | 3.7% | +0.2 | Expanded |
+
+*Statistically significant at the ACS 90% confidence level (ACSBR-024).
+
+## Who lost ground: the unwinding delta, not the level
+
+The **change** map tells a different story than the **level** map. Significant working-age increases clustered in **expansion states** that had previously compressed uninsured rates with continuous enrollment — then watched renewals bite. The largest jumps: **District of Columbia (+2.2 pp, 3.5% → 5.7%)**, **Kentucky (+1.8)**, **New Mexico (+1.7)**, **Louisiana (+1.6)**, **Minnesota (+1.4)**, **North Dakota and Vermont (+1.3)**, **Colorado (+1.2)**, and a Midwest band of **Illinois, Indiana, Nebraska (+1.0 each)**.
+
+Significant **declines** were rare and policy-colored. **North Carolina (−1.2 pp)** and **California (−0.7)** moved with Medicaid eligibility expansions that raised public coverage against the national tide. **Mississippi (−0.9)** fell from a very high base without expanding Medicaid — a reminder that sampling noise, migration, and private-coverage churn can move a single-year print even when the structural gap remains large.
+
+Texas’s rate was essentially flat (**21.7% → 21.6%**). Flat at the top of the ladder is not good news; it means the highest-scale gap did not heal while other states were actively losing coverage. Florida’s working-age rate was likewise unchanged at **15.5%**.
+
+## Expansion vs non-expansion: still the structural fault line
+
+As of **January 1, 2024**, ten states had not expanded Medicaid under the Affordable Care Act: **Alabama, Florida, Georgia, Kansas, Mississippi, South Carolina, Tennessee, Texas, Wisconsin, and Wyoming**. Population-weighted desk means of ACS working-age rates put that bloc near **16.8%**, versus roughly **9.4%** among expansion states and D.C. — a gap of about **seven percentage points**.
+
+Unwinding did **not** erase that gap. It layered a renewal shock on top of it. Several of the largest *deltas* landed in expansion states (KY, NM, LA, MN, CO, IL) that started from lower bases; several non-expansion states stayed high and quiet on the change tape (TX, FL, GA). Wisconsin — non-expansion but historically lower-rate — posted a significant **+0.7 pp** rise to **7.3%**, showing that “low base” is not immunity.
+
+Recent expanders complicate the binary. **North Carolina** and **South Dakota** expanded on or before January 1, 2024; Oklahoma and Missouri expanded earlier in the 2021–22 window. NC’s improvement is the cleanest ACS illustration that **eligibility policy can still move the rate** even in an unwind year.
+
+## Age and race: where the gap concentrates inside the working-age band
+
+CPS ASEC fills the demographic grain ACS state tables do not. Among working-age adults in 2024, uninsured rates fall with age: **19–25 at 14.3%**, **35–44 at 10.8%**, **45–64 at 8.8%**. Young adults remain the coverage soft underbelly — less tethered to employer plans, more likely to cycle on and off Medicaid or Marketplace coverage, and more exposed to procedural churn.
+
+Race and ethnicity gaps dwarf many state-to-state differences. **Hispanic working-age adults (any race) print 23.0%** uninsured — about **twice** the Black rate (**12.3%**) and more than **triple** White non-Hispanic (**6.8%**) and Asian (**6.9%**) rates. The Black working-age rate rose **1.2 percentage points** year over year in CPS — the largest disclosed race/ethnicity move in that release. Coverage policy that ignores ethnicity and age will miss where the residual uninsured population actually sits.
+
+## Coverage mix: private ticked up; public and Medicaid fell
+
+National ACS coverage type shifts help explain the uninsured bump. **Private coverage** edged up (**67.0% → 67.2%**), driven more by **direct-purchase** than by employer-sponsored insurance, which was statistically flat near **54.6–54.7%**. **Public coverage** fell (**37.4% → 36.8%**), led by Medicaid. Marketplace subsidies remained enhanced through 2025 under the Inflation Reduction Act framework — a partial offset for some Medicaid leavers — but take-up was never one-for-one. KFF and Census both emphasize the same arithmetic: **Medicaid exits exceeded private gains**, so the uninsured rate rose.
+
+For children under 19, ACS uninsured rose from **5.4% to 6.0%**, with significant increases in **19 states** and the largest jump in **North Dakota (+3.1 pp)**. Child coverage is not this post’s primary lens, but it confirms that unwind pressure was not confined to adults 19–64.
+
+## Caveats, definitions, and what this post is not
+
+**ACS vs CPS.** Point-in-time ACS coverage is not interchangeable with CPS ASEC. National narratives that cite only one survey will disagree on the size of the 2023–24 move even when the state geography story is consistent.
+
+**Significance.** Many state deltas are within the margin of error. This post flags ACS 90% significance where Census does; non-significant moves can still be directionally useful but should not be treated as definitive policy verdicts.
+
+**Headcounts.** Million-person estimates for large states are **desk products** (rate × population), rounded. They rank scale; they are not Census official state uninsured counts from ACSBR-024.
+
+**Expansion labels.** Status is frozen at **January 1, 2024** per ACSBR Appendix Table 1 / KFF. Later eligibility or waiver changes are outside that freeze date.
+
+**Unwinding heterogeneity.** Procedural vs eligibility-based disenrollment, ex parte renewal rates, and call-center capacity varied sharply by state. ACS cannot separate “lost eligibility” from “lost paperwork.”
+
+This post is **not** a hospital-pricing piece, **not** a GLP-1 pharmacy-budget piece, and **not** a rural facility-closure map. It is the **working-age coverage gap** on Census geography after continuous enrollment ended.
+
+## What to watch before the next ACS vintage
+
+Three markers will tell you whether 2024 was a one-year unwind scar or a new plateau. First, **Texas and Georgia working-age rates** — still the scale story if they stay above 16–21%. Second, **whether expansion-state deltas reverse** in 2025 as renewal backlogs clear and Marketplace enrollment digests Medicaid leavers. Third, **Medicaid share** — if the all-ages Medicaid rate stabilizes near **20.5%** rather than reclaiming the **21.3%** continuous-enrollment peak, the coverage floor has shifted.
+
+Until then, the 2024 ACS print is clear enough for desks: **the national working-age uninsured rate ticked up**, **the South and non-expansion bloc still own the level gap**, and **a long list of expansion states lost ground on the change tape** even as California and North Carolina showed that eligibility policy can still move the needle the other way.`,
+  },
+  {
     id: "state-sales-tax-base-erosion-2026",
     slug: "state-sales-tax-base-erosion-2026",
     title:

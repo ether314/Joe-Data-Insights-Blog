@@ -280,7 +280,8 @@ export interface Post {
     | "cropland-values-versus-farm-incomes-2026"
     | "uninsurance-by-state-after-medicaid-unwinding-2026"
     | "high-propensity-applications-vs-employer-firms-2026"
-    | "state-sales-tax-base-erosion-2026";
+    | "state-sales-tax-base-erosion-2026"
+    | "health-insurance-coverage-gaps-census-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];
