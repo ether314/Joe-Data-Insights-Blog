@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "medical-collections-on-consumer-credit-reports-2026",
+    slug: "medical-collections-on-consumer-credit-reports-2026",
+    title:
+      "Medical Collections on Credit Reports: Medical Share Fell From 57% to 36% — Remaining Holders Mean Score 582",
+    excerpt:
+      "After the 2022–23 bureau reporting changes, medical collections still account for 36% of third-party collections tradelines. Prevalence fell to 4.1%, but remaining balances concentrate among deep-subprime consumers — Oklahoma at 8.8%.",
+    category: "Health Economics",
+    themeId: "medical-debt-collections",
+    imageUrl:
+      "/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of fading credit-report cards beside a teal medical cross and amber residual balance bars, Visual Capitalist-style health economics editorial",
+    publishedAt: "2026-08-25T18:00:00Z",
+    featured: true,
+    visualization: "medical-collections-on-consumer-credit-reports-2026",
+    layout: "default",
+    content: `Credit reports used to treat medical bills like any other unpaid balance. A hospital statement that sat unpaid for 180 days could become a third-party collections tradeline — and for years, medical collections were the **plurality** of those tradelines. The Consumer Financial Protection Bureau’s Market Snapshot put the medical share of third-party collections tradelines at **57% in Q1 2022**. Fifteen months later, after the industry’s paid-medical, one-year delay, and under-$500 removals, that share printed **36%** in the CFPB’s FDCPA Annual Report for Q1 2023.
+
+That is the headline of this desk: the **medical share of collections** compressed by **21 percentage points**, but it did not vanish. Roughly one in three remaining collections tradelines is still medical. The interactive dashboard above walks the share path, consumer prevalence, a state ladder, credit-score bands among remaining holders, a prevalence?share scatter, and age mix. The narrative below answers the sharper question: **who still carries medical collections after the 2022–23 reporting changes — by state and by score band?**
+
+## What the 2022–23 reporting changes actually removed
+
+Three industry changes matter, and they are not the same as a statutory ban. In **July 2022**, the nationwide consumer reporting agencies stopped reporting **paid** medical collections and extended the reporting delay from 180 days to **one year**. In **April 2023**, they removed unpaid medical collections with balances **under $500**. Separately, Colorado and New York enacted state bans that Urban Institute’s August 2024 credit-bureau panel prints as **0%** prevalence — a policy floor, not a measurement error.
+
+Those steps were designed to clear paid and small-balance medical tradelines that were weakly predictive of repayment risk yet heavily punitive for consumers who had already paid or who owed amounts smaller than many credit-card late fees. They were **not** designed to erase large unpaid hospital or specialty balances that remain in collections after a year. The CFPB’s March 2024 Data Point makes that asymmetry visible in the aggregates: the **share of consumers** with at least one medical collections tradeline fell from about **14% in March 2022** to about **5% in June 2023**, while **nationwide medical collections balances** fell only about **38%**. Fewer people on the tape; larger average tickets among those who remain.
+
+## Prevalence collapsed; residual balances did not
+
+Urban Institute’s August 2024 panel updates the stock: about **4.1%** of consumers — roughly **9.7 million** — still have medical debt in collections on their credit reports, down from about **27 million** in August 2022. That is a two-thirds cut in headcount. It is not a two-thirds cut in economic exposure for the residual group.
+
+Among consumers who still held medical collections on the CFPB Consumer Credit Panel in June 2023, the **average total medical collections balance** rose from about **$2,091** (March 2022) to about **$3,149**. The under-$500 tranche that dominated the pre-change distribution — CFPB printed roughly **65%** of medical collections balances under $500 in March 2022 — was wiped from reports. What remains is the right tail: larger unpaid accounts, often tied to emergency or specialty episodes that insurance did not fully cover.
+
+Mean credit score among remaining holders moved the wrong direction for a “cleanup” story. It fell from **598.2** to **582.0**. Removing small-balance and paid tradelines disproportionately cleared near-prime and thin-file consumers whose only negative mark was a modest medical bill. The residual population is more concentrated in deep subprime — which is exactly what the score-band panel in the dashboard is built to show.
+
+| Metric | Pre-change anchor | Post-change anchor | Direction |
+| --- | ---: | ---: | --- |
+| Medical share of 3P collections tradelines | 57% (Q1 2022) | 36% (Q1 2023) | -21 pp |
+| Consumers with =1 medical collection | ~14% (Mar 2022) / ~27M (Aug 2022) | ~5% (Jun 2023) / 4.1% ? ~9.7M (Aug 2024) | Sharp drop |
+| Avg balance among remaining holders | ~$2,091 (Mar 2022) | ~$3,149 (Jun 2023) | Higher |
+| Mean score among remaining holders | 598.2 | 582.0 | Lower |
+| Highest state prevalence (Urban Aug 2024) | — | Oklahoma 8.8% | South-high |
+
+## Medical share of collections is still the plurality story
+
+A 36% medical share is lower than 57%, and it is still enormous relative to any other single collections category the CFPB’s Market Snapshot tracks. Auto, retail, and telecom collections do not individually approach that weight. For lenders, mortgage underwriters, and landlords who still pull reports that include collections, medical debt remains the **modal** third-party collections mark even after the industry’s voluntary purge.
+
+That matters for interpretation. Headlines that say “medical debt is off credit reports” are describing the **prevalence** collapse, not the **composition** of what remains. Composition is the better object for credit-decisioning risk: among consumers who still show collections, medical is still the largest slice. Among consumers who never had collections, the policy change is mostly invisible. The distributional story lives in the middle — people who lost a small medical mark and people who kept a large one.
+
+Desk-estimated state medical shares of remaining collections tradelines in our panel run from the mid-40s in high-prevalence Southern states down toward the mid-20s in lower-prevalence coastal states. Those cells are **estimated**, calibrated to the national 36% floor and to the South-high geography in CFPB maps — not a bureau microdata dump. Treat them as rank-order geometry, not audit-grade state shares.
+
+## State ladder: Oklahoma at 8.8%, ban states at zero
+
+Urban Institute’s ban-impact brief is the cleanest public state print for August 2024. **Oklahoma** leads disclosed prevalence at **8.8%**. **Colorado** and **New York** print **0%** under 2023 state bans on medical debt credit reporting. Between those poles, the desk ladder in the dashboard places Mississippi, Louisiana, Texas, Alabama, and Arkansas in the high-single-digit band — South-heavy, Medicaid non-expansion or late-expansion geography overlapping with higher uninsured rates and thinner hospital financial assistance uptake.
+
+Northeast and Pacific states cluster lower: Massachusetts, California, Hawaii, and Utah print in the low-single digits in our calibrated ladder. That geography is not a morality play about bill-paying culture. It tracks **insurance coverage**, **hospital charity-care policies**, **state reporting bans**, and the pre-existing density of medical collections before the national removals. States that started with thicker medical-collections stocks still have thicker residuals after the under-$500 cut, because large balances were never the target of the April 2023 purge.
+
+Medicaid expansion is a useful but incomplete covariate. Several expansion states still sit above the national 4.1% mean; several non-expansion states dominate the top of the ladder. Expansion reduces the flow of new uninsured acute episodes; it does not automatically clear legacy specialty balances already in collections. The dashboard’s region filter makes the South vs. Northeast contrast readable without pretending expansion is a sufficient statistic.
+
+## Score bands: deep subprime holds nearly half the residual
+
+Among remaining medical-collections holders in June 2023, the mean score of **582** implies a heavy left-tail mix. Our desk band estimates — calibrated to that mean, not disclosed as CFPB tables — put roughly **48%** of remaining holders in deep subprime (<580), **28%** in subprime (580–619), **16%** in near-prime (620–659), and only **8%** at prime and above.
+
+Prevalence *within* band tells a parallel story. Deep-subprime consumers are estimated near **18.5%** prevalence for medical collections; prime-plus consumers nearer **1.1%**. Medical share of collections tradelines inside the deep-subprime band is estimated above **50%** — meaning that for the most credit-constrained consumers, medical is still the default collections mark. Average balances also rise as scores fall: deep-subprime holders near **$3,700** versus prime-plus near **$2,000** in the desk cut.
+
+This is the population the reporting changes did **not** fully clear. Small-balance removals helped thin-file and near-prime consumers whose only scar was a $200 ER co-pay gone to collections. They did less for consumers with multi-thousand-dollar unpaid balances and scores already below 580 — the group for whom a medical collections tradeline is both more common and more consequential for credit access.
+
+## Age mix shifted toward working-age holders
+
+CFPB age tables show prevalence falling in every age group, but not evenly. Adults **62 and older** saw prevalence drop from **8.4%** to **2.7%** — a large absolute cut that also reduced their share of the remaining holder mix from about **18%** to about **15%**. The **30–44** group rose as a share of remaining holders (about **33.5%** to **37.4%**), consistent with working-age families absorbing more of the residual large-balance stock.
+
+That age shift matters for lenders and for policy. Medical collections that remain are less a story about Medicare-covered seniors with small unpaid balances and more a story about prime-working-age households navigating high-deductible plans, out-of-network surprises, and specialty bills that insurance only partially covered. The under-$500 purge removed a lot of senior small-balance noise; the residual tape looks younger and more balance-heavy.
+
+## Caveats the dashboard will not hide
+
+Credit records are **not** the universe of medical debt owed. Many providers never report to bureaus; many balances sit with providers or early-out agencies before third-party placement; charity-care write-offs never become tradelines. A consumer with zero medical collections can still owe a hospital. Conversely, a medical collections tradeline can overstate current obligation if the consumer has settled or is in a payment plan that the furnisher has not updated.
+
+State cells outside Oklahoma, Colorado, and New York are **desk estimates** ranked to Urban and CFPB geography — labeled in the data module. Score-band shares are estimates calibrated to the disclosed mean score of 582, not bureau micro-tabulations. Medical share of collections at the state level is estimated from the national 36% anchor and prevalence rank order. The national prevalence path between disclosed March 2022 / June 2023 / August 2024 anchors interpolates some intermediate quarters.
+
+VantageScore’s decision to exclude medical collections from score calculation, and FICO’s phased approach, further separate **report presence** from **score impact**. This post measures what remains **on reports**, not the full mapping from those tradelines into every scorecard in production.
+
+## What the residual 36% share implies
+
+The policy success is real: tens of millions of consumers no longer carry a medical collections mark, and the medical share of collections tradelines fell by more than a third. The policy incompleteness is also real: **36%** of third-party collections tradelines are still medical; **~9.7 million** consumers still show medical debt in collections; remaining balances average above **$3,000**; and the mean score of that residual group is **582**.
+
+For desks that price credit risk, the useful frame is not “medical debt is gone.” It is “medical debt on reports is rarer, larger, and more concentrated among already-stressed borrowers — and it still dominates the collections tape.” State bans in Colorado and New York show one path to a true zero on reports. The national industry changes show a different path: a thinner, heavier residual. The dashboard is built so you can toggle between those views — share, prevalence, geography, and score band — without confusing a prevalence collapse for a composition wipeout.`,
+  },
+  {
     id: "us-farmland-values-usda-nass-2026",
     slug: "us-farmland-values-usda-nass-2026",
     title:

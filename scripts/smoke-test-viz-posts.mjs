@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "medical-collections-on-consumer-credit-reports-2026",
+    marker: "Medical share of collections — 57%→36%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-farmland-values-usda-nass-2026",
     marker: "USDA NASS Land Values · regional cropland & pasture",
     forbidden: "Loading interactive charts",
