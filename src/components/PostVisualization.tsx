@@ -3707,6 +3707,21 @@ const CroplandValuesVersusFarmIncomes2026Dashboard = dynamic(
   },
 );
 
+const UninsuranceByStateAfterMedicaidUnwinding2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UninsuranceByStateAfterMedicaidUnwinding2026Dashboard"
+    ).then((m) => m.UninsuranceByStateAfterMedicaidUnwinding2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4682,6 +4697,10 @@ export function PostVisualization({
 
   if (type === "cropland-values-versus-farm-incomes-2026") {
     return <CroplandValuesVersusFarmIncomes2026Dashboard />;
+  }
+
+  if (type === "uninsurance-by-state-after-medicaid-unwinding-2026") {
+    return <UninsuranceByStateAfterMedicaidUnwinding2026Dashboard />;
   }
 
   return null;

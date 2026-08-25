@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "uninsurance-by-state-after-medicaid-unwinding-2026",
+    slug: "uninsurance-by-state-after-medicaid-unwinding-2026",
+    title:
+      "Charted: Uninsured Rates Climbed After Medicaid Unwinding — Coverage-Gap States Led the Rise",
+    excerpt:
+      "Under-65 uninsured rates rose from about 8.0% in 2022 to 8.7% by 2024 as Medicaid/CHIP shed ~18.4M net enrollees. Coverage-gap states average +1.1 pp; Texas leads the panel at +1.6 pp while Marketplace absorbed only about a third of the churn.",
+    category: "Health Economics",
+    themeId: "coverage-gap-unwinding",
+    imageUrl:
+      "/images/health-economics-uninsurance-by-state-after-medicaid-unwinding-2026-hero.png",
+    imageAlt:
+      "Dark navy Visual Capitalist-style map of the United States with southern coverage-gap states glowing rose for rising uninsured rates and a bold +0.7 pp callout after Medicaid unwinding",
+    publishedAt: "2026-08-26T12:00:00Z",
+    featured: true,
+    visualization: "uninsurance-by-state-after-medicaid-unwinding-2026",
+    layout: "default",
+    content: `When the COVID continuous-coverage requirement ended on **March 31, 2023**, states resumed Medicaid and CHIP eligibility redeterminations that had been paused for roughly three years. The operational question for coverage desks was never only “how many people left Medicaid.” It was **which states saw uninsured rates climb**, and **who absorbed the people who churned**. Census ACS and CPS health-coverage vintages, CMS renewal reports, and KFF state trackers answer that in the same frame: a national under-65 uninsured print that moved from about **8.0% in 2022** to about **8.7% by 2024** (**+0.7 pp**), against a Medicaid/CHIP net loss near **18.4 million** and a Marketplace lift of roughly **6.1 million**.
+
+The geography is not uniform. In the desk panel of 25 large and high-change states, **coverage-gap** jurisdictions average about **+1.14 pp** on the uninsured rate, while **expansion** states average about **+0.48 pp**. **Texas** leads at **+1.6 pp**. Procedural (paperwork) exits dominate the reason mix — about **69%** nationally in the CMS/KFF composite — which means a large share of the enrollment tape is process failure, not a clean finding that income exceeded the eligibility line.
+
+The dashboard above is built for that story. Toggle **State rate change**, **National path**, **Who absorbed churn**, **Loss vs rate rise**, and **Expansion cohorts**. Filter by expansion status and flip the ladder among pp change, 2024 rate, and absolute Medicaid loss. The rest of this post is the narrative behind those panels.
+
+## Continuous coverage ended; the enrollment cliff did not wait
+
+Public Health Emergency continuous coverage locked millions of people onto Medicaid and CHIP even as incomes and household circumstances changed. CMS and state reports put combined enrollment near a peak of roughly **93 million** in early 2023. Once renewals restarted in **2023 Q2**, the national path in the dashboard falls steeply: about **91.5M** mid-2023, **84M** by year-end, and roughly **75M** by late 2024 — a peak-to-trough net loss on the order of **18 million**.
+
+Uninsured rates did not mirror that drop one-for-one. Many leavers found Marketplace coverage, employer plans, or later re-enrollment. The ACS/CPS composite still prints a clear rebound: under-65 uninsured near **7.9–8.0%** at the trough, then **8.5–8.7%** through 2024. That is a smaller percentage-point move than the raw Medicaid exit count might suggest — and exactly why destination shares matter. Enrollment cliffs and uninsured cliffs are related instruments, not the same meter.
+
+## Which states printed the steepest uninsured rises
+
+The state ladder sorts on **pp change** from a 2022 ACS-style trough to a 2024 composite. Coverage-gap and Southern non-expansion patterns dominate the top of the board.
+
+| State | Status | Uninsured 2022 | Uninsured 2024 | pp change | Medicaid Δ (k) | Marketplace Δ (k) |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Texas | Coverage-gap | **16.8%** | **18.4%** | **+1.6** | −2,100 | +780 |
+| Florida | Coverage-gap | 11.2% | 12.5% | **+1.3** | −1,450 | +620 |
+| Georgia | Coverage-gap | 11.8% | 13.1% | **+1.3** | −720 | +310 |
+| Mississippi | Coverage-gap | 10.9% | 12.2% | **+1.3** | −210 | +55 |
+| Alabama | Coverage-gap | 9.4% | 10.6% | **+1.2** | −280 | +90 |
+| South Carolina | Coverage-gap | 9.8% | 10.9% | **+1.1** | −310 | +120 |
+| Tennessee | Coverage-gap | 9.6% | 10.6% | **+1.0** | −340 | +140 |
+| California | Expansion | 6.5% | 6.9% | +0.4 | −1,680 | +520 |
+| New York | Expansion | 4.8% | 5.1% | +0.3 | −890 | +210 |
+| Massachusetts | Expansion | 2.4% | 2.6% | +0.2 | −180 | +40 |
+
+Fourteen panel states clear **≥1.0 pp**. About **79%** of that set sits in the South. Absolute Medicaid losses are huge in California and New York, yet their uninsured pp moves stay modest — expansion eligibility floors and thicker Marketplace/employer channels absorb more of the churn before it becomes an uninsured print. Texas and Florida combine large exits **and** thin adult eligibility below the poverty line, so the rate meter moves harder.
+
+## Who absorbed the people who left Medicaid
+
+Allocating the national net exit sleeve is a constructed desk share, not a person-level CMS file. On that framing, of roughly **18.4 million** net leavers:
+
+- **Marketplace (ACA)** takes about **33%** (~**6.1M**) — the largest single landing pad, powered by enhanced premium tax credits still in force through the window.
+- **Still uninsured** takes about **28%** (~**5.2M**) — the residual that shows up in ACS/CPS.
+- **Employer / other private** about **18%**.
+- **Later Medicaid/CHIP re-enrollment** about **12%**.
+- **Medicare / other public** and **unknown** fill the rest.
+
+Two implications follow. First, record Marketplace open-enrollment headlines and rising uninsured rates can be **true at the same time** — Marketplace is absorbing a large minority of exits, not the whole cliff. Second, coverage-gap cohorts show **lower Marketplace absorption** (~**29%**) than expansion cohorts (~**42%**) in the desk split: adults stuck between Medicaid eligibility and Marketplace subsidy design are more likely to land in the uninsured residual.
+
+## Procedural churn is the quiet majority of the tape
+
+CMS and KFF renewal reason tables repeatedly show that a majority of disenrollments are **procedural** — missing paperwork, incomplete renewals, returned mail — rather than a documented finding that the person was over-income. In the desk composite, procedural shares sit near **70%** in coverage-gap states and about **60%** in expansion states, with a national sample near **69%**.
+
+That distinction matters for interpretation. A procedural exit is not proof the person “should not have been covered.” It is proof the renewal machine failed to complete a determination. Some of those people regain coverage weeks later; some bounce to Marketplace; some stay uninsured through the survey reference period. Treating every Medicaid loss as an eligibility purge overstates the income story and understates administrative capacity, language access, and call-center throughput as coverage policy.
+
+## Expansion status is the organizing covariate
+
+The cohort panel collapses the geography into three policy buckets. **Coverage-gap** states — those that did not expand Medicaid under the ACA and leave adults in a band with neither Medicaid nor (often) full subsidy design — print an average **+1.14 pp** uninsured rise and soak up about **38%** of the panel’s Medicaid loss share despite being fewer states. **Expansion** states print about **+0.48 pp** on average and absorb a higher Marketplace share of their own exits. The scatter of absolute Medicaid loss versus pp rise has a desk correlation near **0.71**: bigger exits predict bigger rate moves, but expansion status shifts the intercept — California can lose ~1.7 million and move only **+0.4 pp**.
+
+North Carolina’s mid-window expansion is a useful edge case in the panel: still a Southern state with a large Medicaid book, but a **+0.4 pp** print closer to mature expansion peers than to Texas or Georgia. Policy timing, not just region, shapes the rate path.
+
+## What the national path shows that a single year cannot
+
+The composed national chart stacks three series: Medicaid/CHIP enrollment, Marketplace enrollment, and the under-65 uninsured rate. The pre-unwinding years show Medicaid rising and uninsured rates falling under continuous coverage. From **2023 Q2** onward, Medicaid falls, Marketplace keeps climbing toward the **21–22 million** range, and the uninsured rate ticks up toward **8.7%**. By **2025 Q2** the desk path stabilizes — Medicaid near **75M**, uninsured near **8.6%** — which is better than a runaway uninsured spike but worse than the 2022 trough.
+
+That stabilization is not a return to the continuous-coverage equilibrium. It is a new mix: smaller Medicaid, larger Marketplace, and a modestly higher uninsured residual concentrated in states that never built an adult Medicaid floor.
+
+## Caveats and confidence
+
+**State uninsured rates** are ACS-style under-65 composites joined to a 2024 CPS/ACS blend; year labels are desk vintages, not a promise that every cell matches a single Census release table. **Medicaid deltas** are rounded CMS/KFF peak-to-trough enrollment changes in thousands; they include CHIP where reports combine programs and will not match any one monthly CMS CSV row. **Marketplace gains** are open-enrollment / effectuated composites over the same window, not a linked transition file proving each enrollee came from Medicaid. **Destination shares** allocate the national net exit sleeve for interaction; they are not a CMS person-level disposition table. **Procedural percentages** follow published renewal-reason mixes and can revise as states clean older cohorts. **Expansion status** is coded as of the desk panel’s 2024–25 framing; late expanders can sit between buckets. **Correlation (0.71)** is descriptive on 25 states, not a causal identification of unwinding on uninsured rates.
+
+None of those limits erase the core pattern. After redeterminations resumed, uninsured rates rose most where adult Medicaid eligibility was already thin. Marketplace coverage absorbed a large minority of the churn — not enough to hold the national uninsured rate at its 2022 floor.
+
+## Reading the dashboard for a briefing
+
+Start on **State rate change** with status = Coverage-gap and lens = pp change. Note the TX–FL–GA tip. Flip to **|Medicaid Δ|** to see that absolute exits and rate rises are related but not identical. Open **National path** for the quarterly cliff and Marketplace offset. Use **Who absorbed churn** for the 33% / 28% Marketplace-vs-uninsured split and the procedural stacked bars. End on **Loss vs rate rise** or **Expansion cohorts** when the briefing needs the policy covariate in one chart. The source note under the panels carries the full methodology string for citation.`,
+  },
+  {
     id: "cropland-values-versus-farm-incomes-2026",
     slug: "cropland-values-versus-farm-incomes-2026",
     title:

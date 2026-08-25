@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "uninsurance-by-state-after-medicaid-unwinding-2026",
+    marker: "Uninsured-rate change after unwinding",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "cropland-values-versus-farm-incomes-2026",
     marker: "Headline — $/acre vs income index",
     forbidden: "Loading interactive charts",
