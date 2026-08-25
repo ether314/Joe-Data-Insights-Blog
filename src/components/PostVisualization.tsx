@@ -3632,6 +3632,21 @@ const RentBurdenShareOfRenterIncome2026Dashboard = dynamic(
   },
 );
 
+const RealWageGrowthByWageQuintile2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/RealWageGrowthByWageQuintile2026Dashboard"
+    ).then((m) => m.RealWageGrowthByWageQuintile2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4587,6 +4602,10 @@ export function PostVisualization({
 
   if (type === "rent-burden-share-of-renter-income-2026") {
     return <RentBurdenShareOfRenterIncome2026Dashboard />;
+  }
+
+  if (type === "real-wage-growth-by-wage-quintile-2026") {
+    return <RealWageGrowthByWageQuintile2026Dashboard />;
   }
 
   return null;

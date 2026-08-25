@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "real-wage-growth-by-wage-quintile-2026",
+    marker: "Quintile real growth spread",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "rent-burden-share-of-renter-income-2026",
     marker: "Renters above 30% of income",
     forbidden: "Loading interactive charts",

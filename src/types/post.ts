@@ -272,7 +272,8 @@ export interface Post {
     | "subsidy-cost-per-converted-apartment-2026"
     | "newspaper-employment-vs-hedge-fund-ownership-2026"
     | "rural-hospital-closures-and-drive-times-2026"
-    | "rent-burden-share-of-renter-income-2026";
+    | "rent-burden-share-of-renter-income-2026"
+    | "real-wage-growth-by-wage-quintile-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

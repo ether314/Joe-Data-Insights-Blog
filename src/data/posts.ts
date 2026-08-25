@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "real-wage-growth-by-wage-quintile-2026",
+    slug: "real-wage-growth-by-wage-quintile-2026",
+    title:
+      "Charted: Since 2019, Bottom-Quintile Real Wages Are Up 7.2 pp — Top Quintile Barely Cleared Zero",
+    excerpt:
+      "Atlanta Fed Wage Growth Tracker bands mapped to five wage quintiles and deflated with CPI-U: cumulative real growth since 2019Q4 is +7.2 pp for Q1 versus +0.1 pp for Q5. The Q1−Q5 spread peaked at 9.4 pp in 2023Q2 and has tightened to 7.1 pp.",
+    category: "Labor & Skills",
+    themeId: "wage-growth-distribution",
+    imageUrl:
+      "/images/labor-skills-real-wage-growth-by-wage-quintile-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of five ascending wage-quintile bars, the bottom rung glowing teal with stronger real growth, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-25T12:00:00Z",
+    featured: true,
+    visualization: "real-wage-growth-by-wage-quintile-2026",
+    layout: "default",
+    content: `Average hourly earnings tell you whether the **payroll aggregate** is rising. They do not tell you **which rung of the wage ladder kept purchasing power** after the inflation spike. That is a distributional question, and the right instrument is not a single national series — it is wage growth **by wage level**, then inflation-adjusted and accumulated from a common start date.
+
+This desk builds that path from the Atlanta Fed Wage Growth Tracker (WGT): median twelve-month wage changes for workers sorted by their position in the wage distribution. Tracker publishes quartile bands; we map those into five quintiles using Social Security Administration (SSA) annual wage-percentile cutoffs, then subtract BLS CPI-U. The punchline is concrete. **From 2019Q4 to 2026Q2, cumulative real wage growth is about +7.2 percentage points for the bottom quintile (Q1) and about +0.1 for the top quintile (Q5).** The **Q1−Q5 cumulative real spread** peaked near **+9.4 pp in 2023Q2** and has **tightened to about +7.1 pp** — still wide, but no longer at the wartime-labor-market extreme.
+
+The dashboard above is built for that question. Toggle **Cumulative fan**, **Q1−Q5 spread**, **Latest ladder**, **Nom vs real**, **Real heat**, and **CES cross-check**. Filter by quintile and by snapshot quarter. The rest of this post is the narrative behind those panels.
+
+## Why the average wage is the wrong lens
+
+BLS Current Employment Statistics (CES) average hourly earnings for total private workers are an excellent **pace** check. They are a poor **who-gained** check. Composition shifts — who is employed, in which industries, at which hours — move the average even when no individual’s real wage changed. The Atlanta Fed Tracker instead follows **matched individuals** twelve months apart and reports the **median** of those individual wage changes. That design answers a different question: among workers observed in both periods, how fast did pay rise for people who started in the lower part of the wage distribution versus the upper part?
+
+During 2021–2023, the Tracker showed a familiar pattern desks already knew from job-posting anecdotes: **nominal growth ran hotter at the bottom**. What was harder to see in real time was whether that heat survived CPI. Nominal 7% against 9% inflation is still a real loss. Cumulative real indices — stacking inflation-adjusted increments from a fixed baseline — are what settle the ledger.
+
+## Mapping Tracker quartiles into five quintiles
+
+The public WGT distribution series sort workers by average wage level into roughly the **1st–25th**, **26th–50th**, **51st–75th**, and **76th–100th** percentiles. Quintiles need five bins. We treat the bottom quartile as the primary anchor for **Q1**, split the second quartile toward **Q2/Q3**, and split the top quartile toward **Q4/Q5**, guided by SSA Wage Statistics annual dollar thresholds (rounded 2024 vintage): roughly under **$28k** for Q1, **$28–45k** for Q2, **$45–65k** for Q3, **$65–95k** for Q4, and **$95k+** for Q5. Those cutoffs are **level** labels, not the Tracker’s matching rule — they exist so a reader can translate “Q1” into a household wage band.
+
+Confidence is mixed by design. Tracker quartile medians and CPI-U are **disclosed**. The quintile split and intra-year interpolation are **modeled**. If a subsequent Atlanta Fed release publishes native quintiles, the fan chart shape should be close; the exact decimals will move.
+
+## The inflation gauntlet: 2021–2022
+
+By late 2021, CPI-U year-over-year was already near **7%**. By mid-2022 it peaked near **9.1%**. Even the hottest bottom-band nominal Tracker prints — our Q1 path reaches about **7.4–7.6%** nominal YoY in 2022 — could not clear that CPI wall on a single-year basis. Real YoY for every quintile went deeply negative in 2022Q2 on our approximation (nominal minus CPI). The cumulative fan shows the bruise: **Q5’s cumulative real troughs near −5 pp**, while **Q1 dips but stays closer to flat** because its nominal starting point was higher.
+
+That asymmetry is the entire post-2020 story in one sentence: **the bottom had more nominal runway**, so the same inflation shock left a smaller cumulative scar.
+
+## Who still holds positive cumulative real growth?
+
+Index the path at **2019Q4 = 0** and read **2026Q2**:
+
+| Quintile | Approx SSA wage band (2024) | Cum. real since 2019Q4 | Cum. real at 2023Q2 trough/peak window | Nominal YoY at 2022Q4 |
+| --- | --- | ---: | ---: | ---: |
+| Q1 (lowest 20%) | under ~$28k | **+7.2 pp** | +6.8 pp | 7.6% |
+| Q2 (20–40%) | ~$28–45k | **+4.1 pp** | +4.0 pp | 7.0% |
+| Q3 (40–60%) | ~$45–65k | **+1.6 pp** | +0.2 pp | 6.2% |
+| Q4 (60–80%) | ~$65–95k | **+0.4 pp** | −1.4 pp | 5.6% |
+| Q5 (highest 20%) | ~$95k+ | **+0.1 pp** | −2.6 pp | 5.4% |
+
+**Three quintiles clear a +1 pp cumulative real bar** (Q1–Q3). Q4 and Q5 print **barely positive** by 2026Q2 after spending most of 2022–2023 underwater. If the question is “who held meaningful purchasing-power gains since late 2019?”, the answer is the **bottom half of the ladder**, with Q1 clearly in front. If the question is “did anyone stay negative?”, the answer as of mid-2026 is **no** — but Q5’s recovery is a rounding error, not a boom.
+
+## How tight is the bottom’s post-2020 lead?
+
+The operational spread is **Q1 cumulative real minus Q5 cumulative real**. That gap:
+
+- Sat near **+2–3 pp** through early 2021 as inflation first accelerated
+- Widened sharply through the 2022 CPI peak as Q5 sank further
+- Hit about **+9.4 pp in 2023Q2** as bottom-band nominal growth stayed elevated while CPI cooled faster than top-band wages
+- Has since **tightened about 2.3 pp to +7.1 pp by 2026Q2**
+
+Tightening matters. It means the **extraordinary bottom-led real catch-up is partially mean-reverting** as Tracker nominals across the distribution converge toward the mid-3% range and CPI settles near 2.4–2.7%. It does **not** mean the catch-up reversed. Seven percentage points of cumulative real advantage for Q1 versus Q5 is still a large redistribution of purchasing-power gains relative to the pre-pandemic pattern, when the Tracker distribution bands moved more in parallel.
+
+## Nominal heat versus real heat
+
+Open the **Nom vs real** panel and step through quintiles. For Q1, nominal YoY stayed above 5% from late 2021 through mid-2024; real YoY only turns consistently positive once CPI falls below that nominal floor — roughly from **2023Q2 onward**. For Q5, nominal never reached Q1’s 2022 peak, so the real trough is deeper and the climb back to cumulative zero takes longer.
+
+The **Real heat** panel compresses the same idea into a matrix. Deep red cells cluster in **2022** across all five rows. Teal returns first in the Q1/Q2 rows. That ordering is the Tracker story in color form: **recovery of real YoY was bottom-led**, just as the nominal spike was.
+
+## CES as a cross-check, not a substitute
+
+CES average hourly earnings YoY for total private workers sat near **4–5%** through much of 2021–2023 and has drifted toward the mid-3s by 2026. The Tracker’s overall median often ran **hotter** than CES during the reopening wage spike — a known feature of matched individual medians versus composition-sensitive payroll averages. Use CES to confirm that **aggregate** wage growth cooled. Do not use CES to claim the distributional ranking. When the two diverge, believe the Tracker for “who,” CES for “how fast the payroll bill grew.”
+
+## Caveats and what would change the ranking
+
+Several limits belong next to the punchline:
+
+1. **Quintile mapping is modeled.** Native Tracker quartiles are the disclosed spine; five-bin splits inherit interpolation error at the edges.
+2. **Real YoY uses a simple nominal − CPI approximation** for the heat and nom-vs-real panels. The cumulative path uses a compounded desk construction pinned to the headline terminals — it is a **path shape**, not a microdata replicate.
+3. **CPI-U is a national price index.** Lower-wage households face different budget shares (rent, food, used cars). Group-specific price indexes can shrink or widen Q1’s measured real lead.
+4. **Matched wage growth excludes people who exit employment.** Job losers and labor-force leavers are outside the Tracker sample by construction.
+5. **SSA dollar bands are annual wage statistics**, while Tracker growth is hourly. A full-time / part-time mix can shift which workers sit in which band.
+6. **CES composition** (industry mix, overtime) can move AHE without matching Tracker medians.
+
+If CPI re-accelerates while bottom-band nominal growth stays near 3.5%, Q1’s cumulative lead can erode further without any change in relative ranking. If another labor-shortage episode reheats low-wage nominals, the spread can widen again. The durable fact on the current tape is narrower: **since late 2019, meaningful cumulative real gains concentrate in the lower half of the wage ladder, Q1 still leads Q5 by about seven percentage points, and that lead is off its 2023 peak but not gone.**
+
+## What desks should take from the spread
+
+Compensation committees comparing “market” raises to CPI alone will mis-rank who is ahead. A flat real CES print can coexist with **Q1 still compounding a multi-year real cushion** and **Q5 only just reclaiming the 2019Q4 baseline**. Credit and consumer desks underwriting lower-income cash flow should treat the Q1 cumulative +7.2 pp as a **stock** of regained purchasing power — not a promise that real YoY stays positive every quarter. Policy readers asking whether post-pandemic wage compression “stuck” get a conditional yes: **compression in cumulative real terms stuck enough to leave a 7 pp Q1−Q5 gap**, even after two-plus years of cooling.
+
+The dashboard is the stress test. Change the snapshot quarter to 2023Q2 to see Q5 still deeply negative. Flip to 2026Q2 to see the whole ladder non-negative. Switch quintiles on Nom vs real to watch who cleared CPI first. That is the distributional wage story the average hourly earnings series cannot tell.`,
+  },
+  {
     id: "rent-burden-share-of-renter-income-2026",
     slug: "rent-burden-share-of-renter-income-2026",
     title:
