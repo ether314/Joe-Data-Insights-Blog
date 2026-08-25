@@ -3842,6 +3842,21 @@ const CashRentsVersusLandPricesByState2026Dashboard = dynamic(
   },
 );
 
+const JobSwitcherPremiumAcrossCohorts2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/JobSwitcherPremiumAcrossCohorts2026Dashboard"
+    ).then((m) => m.JobSwitcherPremiumAcrossCohorts2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4853,6 +4868,10 @@ export function PostVisualization({
 
   if (type === "cash-rents-versus-land-prices-by-state-2026") {
     return <CashRentsVersusLandPricesByState2026Dashboard />;
+  }
+
+  if (type === "job-switcher-premium-across-cohorts-2026") {
+    return <JobSwitcherPremiumAcrossCohorts2026Dashboard />;
   }
 
   return null;

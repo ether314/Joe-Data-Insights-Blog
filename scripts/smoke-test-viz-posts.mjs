@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "job-switcher-premium-across-cohorts-2026",
+    marker: "Switcher−stayer premium",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "cash-rents-versus-land-prices-by-state-2026",
     marker: "Headline — U.S. cropland yield",
     forbidden: "Loading interactive charts",

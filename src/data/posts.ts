@@ -2,6 +2,90 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "job-switcher-premium-across-cohorts-2026",
+    slug: "job-switcher-premium-across-cohorts-2026",
+    title:
+      "Charted: Job-Switcher Wage Premium Fell from +2.6 pp to +0.8 pp — and Four Industries Stopped Paying",
+    excerpt:
+      "Atlanta Fed switcher-minus-stayer premium peaked near +2.6 pp in early 2022, zeroed in May 2025, and recovered only to +0.8 pp by mid-2026. Leisure still pays; education is flat; Information, professional services, and finance print negative premiums.",
+    category: "Labor & Skills",
+    themeId: "wage-growth-distribution",
+    imageUrl:
+      "/images/labor-and-skills-job-switcher-premium-across-cohorts-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic labor-market illustration of teal switcher and amber stayer wage ribbons compressing into a thin premium gap between glowing job doorways",
+    publishedAt: "2026-08-25T17:00:00Z",
+    featured: true,
+    visualization: "job-switcher-premium-across-cohorts-2026",
+    layout: "default",
+    content: `The wage story that dominated briefing decks in 2021–22 was simple: **changing jobs paid**. The Atlanta Fed Wage Growth Tracker’s median for job switchers pulled well ahead of the median for job stayers, and the gap — the **switcher-minus-stayer premium** — became a shorthand for worker leverage. That shorthand is now half the size it was at the peak, and in several white-collar industries it has flipped sign.
+
+On Tracker-anchored prints, the national premium peaked near **+2.6 percentage points** around **March 2022**, when switcher median wage growth ran about **6.4%** against stayer growth near **3.8%**. By **May 2025** the two series had **tied at 4.4%** — a zero premium last seen in the post-housing-crisis years. The latest mid-2026 window shows a partial rebound: switchers near **4.4%**, stayers near **3.6%**, premium about **+0.8 pp**. The interactive dashboard above walks that national path against JOLTS quit rates, ranks industry premiums, scatters quits against the premium, heats industry-year cells, and cuts age and education cohorts.
+
+## What the premium actually measures
+The Tracker is not a payroll average. It is a **median of individual year-over-year hourly wage changes** from Current Population Survey matches, reported as a 12-month moving average. A **job switcher** is someone in a different industry or occupation than a year earlier, or whose employer or duties changed in the prior three months. A **job stayer** is everyone else in the matched sample. The premium is therefore a gap between two medians of *wage growth rates*, not a gap in wage levels.
+
+That definition matters for interpretation. Because the CPS is an address-based survey, people who move cities often exit the matched sample. “Switching” here is geographically local in a way LinkedIn churn statistics are not. Voluntary quits, involuntary separations, and within-firm duty changes can all land in the switcher bucket. When layoffs rise, the switcher pool can load with workers who take pay cuts to re-enter employment — which **compresses or inverts** the premium even if voluntary job-hoppers still negotiate well.
+
+## The national compression arc
+From late 2019 into early 2020 the premium sat near **+0.8 pp** — roughly where it sits again today. The pandemic shock briefly crushed both series; the rebound was asymmetric. Switcher medians climbed into the mid-to-high single digits while stayer medians rose more slowly. The **Great Resignation** window (late 2021 through mid-2022) is where the premium cleared **+2 pp** and peaked near **+2.6 pp**.
+
+Compression after the peak was not a one-month event. Through 2023 and 2024 the switcher series drifted down faster than the stayer series, so the gap narrowed even while both remained elevated versus pre-pandemic norms. The **May 2025** print — switcher and stayer both at **4.4%** — was the clean zero. Mid-2026’s **+0.8 pp** rebound coincides with a slightly firmer switcher median while stayers held near **3.6%**. Overall Tracker growth near **3.8%** sits between the two, as expected when switchers are a minority of the matched sample.
+
+JOLTS total nonfarm quit rates tell the same leverage story in a different unit. Quits near **3.0%** at the premium peak have settled near **1.9%** in the latest window. Fewer voluntary exits mean fewer opportunities to convert an outside offer into a raise — and a higher share of switches that are not voluntary at all.
+
+## Industries where switching still pays
+A national **+0.8 pp** average hides a wide industry spread. Desk composites that allocate the national premium using Tracker industry wage-growth ranks, JOLTS industry quit rates, and ADP-style industry wage differentials put **leisure and hospitality** near **+1.9 pp**, **construction** near **+1.5 pp**, **retail** near **+1.2 pp**, and **health care** near **+1.1 pp**. These are high-churn or chronically short-staffed sectors where outside offers still clear a raise above staying put.
+
+Transportation and warehousing sit in the middle (~**+0.7 pp**): still positive, but far below the **+2.9 pp** peak print in the composite. Manufacturing hovers near flat (~**+0.3 pp**). The pattern is intuitive: industries that never fully escaped staffing pressure kept a switcher edge; industries that rebalanced headcount did not.
+
+## Industries where switching stopped paying
+Four industries in the panel print **≤0 pp** at the latest cut — the operational definition of “switching stopped paying” for this desk:
+
+| Industry | Peak premium (~2022) | May-2025 trough | Latest premium | Quit rate proxy |
+| --- | ---: | ---: | ---: | ---: |
+| Educational services | +1.6 pp | −0.2 pp | 0.0 pp | 1.4% |
+| Finance & insurance | +1.8 pp | −0.5 pp | −0.2 pp | 1.2% |
+| Professional & business svcs | +2.4 pp | −0.6 pp | −0.4 pp | 2.0% |
+| Information (incl. tech) | +2.7 pp | −1.1 pp | −0.8 pp | 1.3% |
+
+**Information (including tech)** is the clearest inversion: peak near **+2.7 pp**, trough near **−1.1 pp**, latest about **−0.8 pp**. Professional and business services and finance follow with smaller negative prints; education sits at a clean **zero**. In these sectors, a non-trivial share of “switches” since 2023 have been layoff-driven re-entries, contract-to-perm resets, or lateral moves that do not clear a raise. ADP industry wage growth in the low-to-mid **2–3%** range for these groups lines up with a labor market that no longer rewards hopping the way it did in 2021–22.
+
+The **quits × premium scatter** makes the split visual. High-quit leisure and retail still sit in the upper-right quadrant. Low-quit finance and information sit lower-left. Quit rates are not destiny — professional services can quit at moderate rates and still print a negative premium when the switcher pool is contaminated by involuntary moves — but the correlation is the right first cut for a desk brief.
+
+## Age and education cohorts still disagree
+Even with a thin national premium, **who** switches still matters. Modeled age cuts put **16–24** near **+1.6 pp** and **25–34** near **+1.1 pp**, while **55+** sits near **+0.2 pp**. Younger workers change employers more often *and* still clear larger growth gaps when they do. That is consistent with steeper early-career wage profiles and with employers competing harder for scarce entry-level and early-career supply in services and trades.
+
+Education cuts flip the Great Resignation slogan. **HS or less** still clears about **+1.3 pp**; bachelor’s holders are nearer **+0.4 pp**; advanced degrees print roughly **flat to slightly negative**. Credentialed white-collar markets absorbed the largest post-2022 demand chill. Less-credentialed service and goods cohorts kept more of the switcher edge because the underlying vacancy pressure never fully vanished.
+
+## Why the premium can be zero while wages still rise
+A zero or thin premium does not mean wages are frozen. Stayers at **3.6%** and switchers at **4.4%** are both positive nominal growth. The premium answers a narrower question: **does changing jobs still beat staying, on the median?** When the answer is “barely” or “no,” workers lose the arbitrage that defined 2021–22 bargaining, even if retention raises and schedule bumps keep stayer growth alive.
+
+That distinction matters for compensation teams. A firm that matches outside offers only when employees threaten to leave will see fewer credible threats when the market premium is **+0.8 pp** rather than **+2.6 pp**. A firm in leisure or construction still faces a different outside option set than a firm in information technology. National averages obscure both facts.
+
+## Caveats and confidence
+Several limits apply. First, industry and education/age cohort premiums in this post are **desk composites**, not published Tracker micro cuts — they allocate the disclosed national premium using industry wage-growth ranks, JOLTS quits, and ADP-style differentials. Treat signs and ordering as directional; treat tenth-of-a-point differences as noise. Second, the Tracker switcher definition is local and includes duty/employer changes that are not pure employer hops. Third, 12-month moving averages lag turning points; a sudden layoff wave can take months to fully show in the premium. Fourth, CPS response-rate declines and occasional missing months (including shutdown-related gaps noted by the Atlanta Fed) widen confidence intervals around recent prints. Fifth, ADP and JOLTS are corroborating tapes, not substitutes for the Tracker’s matched-individual methodology.
+
+## What to watch next
+Three prints will tell whether **+0.8 pp** is a floor or a dead-cat bounce. Watch the Tracker switcher and stayer 12-month medians for another tie or a renewed gap above **+1 pp**. Watch JOLTS quits for a move back toward **2.2%+** — historically a companion to a fatter premium. Watch industry ADP wage growth for information and professional services: if those stay soft while leisure wage growth holds, the industry split in this dashboard will persist even if the national premium drifts.
+
+For one-line briefings: **the switcher-minus-stayer premium compressed from about +2.6 pp at the 2022 peak to zero in May 2025 and only +0.8 pp by mid-2026; leisure, construction, retail, and health still pay switchers ≥1.0 pp, while education is flat and information, professional services, and finance print negative premiums.**`,
+    keyPoints: [
+      "National switcher−stayer premium peaked ~+2.6 pp in Mar 2022; zeroed May 2025; latest ~+0.8 pp",
+      "Four industries print ≤0 pp — education at 0.0; Information (~−0.8), ProfBiz, and finance lead the inversion",
+      "Leisure (~+1.9), construction (~+1.5), retail, and health still clear ≥1.0 pp premiums",
+      "Younger and less-credentialed cohorts keep wider premiums than advanced-degree white-collar cuts",
+    ],
+    tags: [
+      "wage growth",
+      "job switchers",
+      "Atlanta Fed",
+      "JOLTS",
+      "labor market",
+    ],
+    format: "data-story",
+  },
+  {
     id: "cash-rents-versus-land-prices-by-state-2026",
     slug: "cash-rents-versus-land-prices-by-state-2026",
     title:
