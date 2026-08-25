@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "cash-rents-versus-land-prices-by-state-2026",
+    marker: "Headline — U.S. cropland yield",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "coverage-gaps-in-gig-and-small-firm-work-2026",
     marker: "Offer-rate gap by firm type",
     forbidden: "Loading interactive charts",

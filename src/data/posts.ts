@@ -2,6 +2,79 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "cash-rents-versus-land-prices-by-state-2026",
+    slug: "cash-rents-versus-land-prices-by-state-2026",
+    title:
+      "Charted: U.S. Cropland Rent Yields Compressed 0.48 pp as Land Prices Outran Cash Rents",
+    excerpt:
+      "USDA NASS cash rents rose 14% from 2021 to 2025 while cropland values jumped 34%. The implied rent yield fell from 3.24% to 2.76%. Nebraska’s −0.91 pp compression led a Northern Plains / Lake States pack where appreciation demand outpaced farming returns.",
+    category: "Food & Agriculture",
+    themeId: "farmland-values-usda",
+    imageUrl:
+      "/images/food-agriculture-cash-rents-versus-land-prices-by-state-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic farmland dusk with a descending amber rent-yield curve over rising teal land-price ridges beside grain bins, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-25T16:00:00Z",
+    featured: true,
+    visualization: "cash-rents-versus-land-prices-by-state-2026",
+    layout: "default",
+    content: `Cash rent is the farming return you can write a check for. Land price is the bid someone will pay to own the acre. When the second rises faster than the first, the implied **rent yield** — cash rent divided by cropland value — compresses. That compression is the market’s way of saying buyers are paying for something other than today’s lease cash flow: expected future rents, scarcity, balance-sheet hedges, or pure appreciation demand.
+
+USDA’s National Agricultural Statistics Service (NASS) priced **U.S. cropland at $5,830 per acre in 2025**, up **4.7%** from 2024 and **34%** above the **$4,350** print in 2021. Over the same 2021–2025 window, the national average cash rent for cropland moved from **$141** to **$161** — only about **+14%**. The implied yield therefore fell from roughly **3.24%** to **2.76%**, a **−0.48 percentage-point** compression. The interactive dashboard above walks that national path, ranks states by how hard yields compressed, scatters value growth against rent growth, maps 2025 regional yields, and overlays Federal Reserve ag-credit pulse prints where values and rents stopped moving together.
+
+## Yield is the cleanest rent-versus-price metric
+Appraisers and ag lenders already live in capitalization-rate language. A current yield of rent ÷ price is not a full income-approach valuation — it ignores property taxes, management, and expected rent growth — but it is the cleanest public ratio NASS lets you build at state scale. When rents rise in line with values, yield holds. When values outrun rents, yield falls and the buyer is accepting a thinner cash return for the same acre.
+
+From 2019 through 2020, U.S. cropland yields hovered near **3.4%**. The 2021–2025 appreciation wave pulled the national figure under **3%** by 2023 and to **2.76%** by 2025 even as rents kept posting small nominal gains. That is not a story of rents collapsing. It is a story of the denominator winning.
+
+## Where compression hit hardest
+On a 26-state panel joining NASS cropland values to Cash Rents Survey prints (and region-anchored estimates where state highlight tables do not publish both vintages), **Nebraska** leads with about **−0.91 pp** of yield compression: rent yield from roughly **4.23%** in 2021 to **3.32%** in 2025. Minnesota (**−0.66**), Wisconsin (**−0.63**), and South Dakota (**−0.62**) fill out a Northern Plains / Lake States cluster. Ohio and Georgia also clear roughly half a point. The Corn Belt giants — Iowa (**−0.45**), Illinois (**−0.23**), Indiana (**−0.27**) — compressed less than the Plains leaders even though their absolute rents remain the country’s highest outside irrigated West Coast specialty acreage.
+
+That geographic pattern matters. Nebraska’s cropland value rose from **$4,660** to **$6,800** (+**46%**) while cash rent rose from **$197** to **$226** (+**15%**). Iowa’s value climb was also steep (**$7,490 → $10,300**, +**38%**), but its rent path kept more pace (**$233 → $274**, +**18%**). Compression is not “expensive land.” It is **value growth minus rent growth**, expressed in yield points.
+
+| State | Value 2021 | Value 2025 | Rent 2021 | Rent 2025 | Yield 2021 | Yield 2025 | Compression |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Nebraska | $4,660 | $6,800 | $197 | $226 | 4.23% | 3.32% | −0.91 pp |
+| Minnesota | $5,030 | $7,000 | $177 | $200 | 3.52% | 2.86% | −0.66 pp |
+| South Dakota | $3,190 | $4,610 | $115 | $138 | 3.61% | 2.99% | −0.62 pp |
+| Iowa | $7,490 | $10,300 | $233 | $274 | 3.11% | 2.66% | −0.45 pp |
+| Illinois | $7,800 | $9,850 | $227 | $264 | 2.91% | 2.68% | −0.23 pp |
+| United States | $4,350 | $5,830 | $141 | $161 | 3.24% | 2.76% | −0.48 pp |
+
+## Regional yields still disagree on what an acre “should” earn
+ERS’s 2025 regional table shows why a single national yield misleads. **Mountain** cropland still clears about **3.79%** ($106 rent on $2,800 value). **Delta States** sit near **3.57%**. **Northern Plains** print about **2.91%** — above the U.S. average even after compression — because the starting yields were high. **Corn Belt** and **Lake States** cluster near **2.6–2.7%**. **Northeast** and **Southern Plains** sit under **2%**, where urban adjacency, amenity value, or pasture-heavy mixes pull prices up relative to cash rents.
+
+Low yield is not automatically “more compressed.” A Northeast acre that has long traded as lifestyle or development optionality can show a thin yield without a recent compression spike. The dashboard’s **region yields** panel holds the 2025 cross-section still; the **compression ladder** asks which states moved farthest from their 2021 starting point.
+
+## Growth scatter: the 45-degree test
+Plot 2021→2025 cash-rent growth on the x-axis and cropland-value growth on the y-axis. States above the 45-degree line appreciated faster than their rents — the mechanical definition of yield compression. Bubble size scales with compression points. The Northern Plains and Lake States cluster sits high and left-of-diagonal: big value gains, middling rent gains. California and Arizona show high absolute rents and high values, but smaller compression prints because both sides of the ratio moved more together from already-elevated bases. Montana’s low rent ($39.50 in 2025) and low value ($1,320) keep yield compressed only modestly even as the national wave rolled through.
+
+The scatter is deliberately not a causal identification strategy. Drought, irrigation mix, livestock cycles, and nonfarm demand all move both axes. It is a coincidence map that answers a desk question: **did the acre’s lease cash flow keep up with the appraisal?**
+
+## What Federal Reserve ag-credit surveys add
+NASS is an annual August tape. Federal Reserve ag-credit surveys are the quarterly pulse lenders hear in credit meetings. The Kansas City Fed’s Tenth District story for late 2024 into Q1 2025 is blunt: farmland values that had been racing flattened, then eased — nonirrigated land about **−2%** year-over-year in Q1 2025, irrigated about **−4%** — while **cash rents were unchanged**. Over a longer horizon the same district notes values still more than **50%** above 2020 levels while rents are only about **30%** higher. That is the compression narrative in lender language: the stock of land wealth ran ahead of the flow of lease payments.
+
+Chicago Fed’s Seventh District AgLetter paints a related Midwestern picture. District farmland values fell about **1%** in calendar 2024, ending a multi-year surge, even as some quarterly prints stabilized. Separate AgLetter commentary on 2025 cash rents pointed to a **2%** decline in annual rents even while early-2025 values ticked slightly higher year-over-year. When rents stall or fall while values hold, yields compress from the numerator. When values keep rising with soft rents, they compress from the denominator. Recent Fed prints show both mechanisms in play across districts.
+
+## Appreciation demand versus farming returns
+A compressed yield does not prove that every buyer is a non-operator investor. Expanding neighbors, 1031 exchange capital, and multi-generation farms all bid. The signal is about **what is being capitalized**. If expected farm returns alone justified the price path, cash rents — the market’s negotiated claim on those returns for non-operators — should have climbed closer to values. They did not. National rent growth lagged value growth by roughly **20 percentage points** from 2021 to 2025. That gap is the purest public proxy for appreciation (and option-value) demand relative to current farming returns.
+
+Caveats belong in the same paragraph as the claim. Cash rent covers only cash-leased acres; share leases and owner-operators sit outside the ratio. State averages mix irrigated and non-irrigated ground. Northeast and Florida prints embed urban influence that is not “row-crop yield” in the Corn Belt sense. Some state rents in the panel are estimated from regional anchors and prior disclosed vintages — the dashboard’s **Disclosed only** toggle drops those rows. And yield compression can reverse quickly if land values cool while multi-year leases roll to higher rents.
+
+## What to watch next
+Three tapes decide whether 2021–2025 compression sticks. First, the August NASS land-value and cash-rent releases: if values flatten while rents catch up, yields heal from the denominator. Second, Fed district surveys: watch whether rent indexes stay sticky while value indexes slip — a numerator-led heal. Third, farm income and interest rates: weaker crop receipts and still-elevated farm mortgage rates raise the opportunity cost of thin current yields. The Kansas City Fed’s lender panel already shows more respondents expecting modest value declines than further gains.
+
+For one-line briefings: **U.S. cropland rent yield compressed about 0.48 percentage points from 2021 to 2025 as values outran rents by roughly twenty points of cumulative growth, and Nebraska’s near-one-point compression led a Plains and Lake States pack where appreciation demand left farming cash returns behind.**`,
+    tags: [
+      "farmland",
+      "cash rents",
+      "USDA NASS",
+      "rent yield",
+      "land values",
+      "agriculture",
+    ],
+  },
+  {
     id: "coverage-gaps-in-gig-and-small-firm-work-2026",
     slug: "coverage-gaps-in-gig-and-small-firm-work-2026",
     title:

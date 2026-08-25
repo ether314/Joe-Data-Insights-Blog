@@ -285,7 +285,8 @@ export interface Post {
     | "remote-sales-tax-collection-after-wayfair-2026"
     | "credit-outcomes-of-gig-dependent-households-2026"
     | "survival-curves-of-pandemic-era-startups-2026"
-    | "coverage-gaps-in-gig-and-small-firm-work-2026";
+    | "coverage-gaps-in-gig-and-small-firm-work-2026"
+    | "cash-rents-versus-land-prices-by-state-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];
