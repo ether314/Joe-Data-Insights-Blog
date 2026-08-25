@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "coverage-gaps-in-gig-and-small-firm-work-2026",
+    slug: "coverage-gaps-in-gig-and-small-firm-work-2026",
+    title:
+      "Coverage Gaps in Gig and Small-Firm Work: A 38-Point Offer-Rate Divide",
+    excerpt:
+      "KFF 2025 firm offer rates run 97% at large employers versus 59% at small firms — a 38-point gap — while MEPS-IC enrollment and Fed SHED gig insurance show how payroll size and platform work reshape employer-coverage access.",
+    category: "Health Economics",
+    themeId: "coverage-gap-unwinding",
+    imageUrl:
+      "/images/health-economics-coverage-gaps-in-gig-and-small-firm-work-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of three unequal coverage pillars for gig, small-firm, and large-firm workers with a glowing offer-rate gap",
+    publishedAt: "2026-08-25T16:00:00Z",
+    featured: true,
+    visualization: "coverage-gaps-in-gig-and-small-firm-work-2026",
+    layout: "default",
+    content: `U.S. health insurance still runs primarily through workplaces — but “workplace” is not a single door. A delivery courier on an app, a bookkeeper at a 20-person shop, and a benefits-eligible analyst at a 2,000-person firm sit in very different offer environments even when their take-home pay looks similar on paper. The core question for this desk is narrow and measurable: **how does employer-coverage access differ between gig workers, small-firm employees, and comparable large-firm staff?**
+
+The short answer is an **offer-rate gap by firm type**. In the 2025 KFF Employer Health Benefits Survey, **97%** of large firms (200+ workers) offer health benefits to at least some employees, versus **59%** of small firms (10–199) — a **38 percentage-point** divide. Zoom into micro employers and the floor drops further: only **51%** of firms with 10–24 workers offer. On the worker side, AHRQ’s MEPS-Insurance Component (fielded by Census) shows private-sector enrollment at **26.8%** in firms under 50 employees versus **54.3%** in firms with 50 or more. Gig activity, measured in the Federal Reserve’s 2024 SHED, does not wipe out insurance entirely — **88%** of gig adults report some coverage — but employer-provided coverage often arrives from a *different* job or a spouse, not from the platform paying the gig.
+
+The interactive dashboard above stacks the KFF offer ladder, MEPS enrollment paths, SHED gig insurance mixes, and the eligibility/take-up cascade that sits between “firm offers” and “worker is covered.” Toggle views and filters before treating any single percentage as the whole story.
+
+## The firm offer ladder is steep before 200 workers
+
+KFF’s 2025 sample covers firms with **10 or more** employees (the survey dropped the 3–9 cut this year). Among that universe, offer rates climb almost monotonically with size:
+
+| Firm size (KFF 2025) | Share of firms offering health benefits |
+| --- | ---: |
+| 10–24 workers | 51% |
+| 25–49 workers | 64% |
+| 50–199 workers | 89% |
+| 200–999 workers | 96% |
+| 1,000+ workers | >99% |
+| All small (10–199) | 59% |
+| All large (200+) | 97% |
+
+That table is the mechanical heart of the coverage gap. Most *firms* are small, so the employer-weighted offer rate for the whole sample is only **61%**. Most *workers*, however, work at larger employers: **91%** of workers are at a firm that offers health benefits to someone. The distribution produces a familiar paradox — headlines about “most employers don’t offer” can coexist with “most workers are at an offering firm” without contradiction.
+
+Two caveats belong next to the ladder. First, firm-weighted and worker-weighted statistics answer different questions; quoting the 59% small-firm offer rate as if it were the experience of the median worker overstates how often payroll Americans meet a non-offering employer. Second, the 2025 frame excludes the tiniest shops (3–9), which historically offered at even lower rates — so the small-firm print is *higher* than older “3+ employee” vintages, not lower.
+
+## Enrollment gaps survive even when a firm offers
+
+Offer is only the first gate. KFF’s cascade among workers at offering firms shows **80%** eligibility, **76%** take-up among the eligible, and **61%** enrolled at offering firms — collapsing to **55%** of *all* workers covered by their own employer once non-offering firms are included. Part-time status, waiting periods, and temporary classifications punch holes in eligibility; premium contributions punch holes in take-up.
+
+MEPS-IC makes the firm-size story concrete on the enrollment margin. In 2024, private-sector employees in establishments with fewer than 50 workers enrolled at **26.8%**, versus **54.3%** at establishments with 50 or more — a **27.5-point** enrollment gap that has been roughly stable since 2020. That is not the same cut as KFF’s 200-worker large-firm definition, and it should not be averaged with it. What it shows, independently, is that smaller payrolls deliver own-employer coverage to a minority of their workers even in an ESI-dominated system.
+
+Contribution design reinforces the split. Among covered workers in 2025, **29%** at small firms were in plans requiring more than half of the family premium from the worker, versus **5%** at large firms. Small firms are also less likely to extend offers to part-time staff (**18%** of offering small firms vs **27%** of offering large firms). The gap is therefore not only “does a plan exist” but “can a low-hour or dependent-heavy worker afford to use it.”
+
+## Gig work is a coverage channel problem, not a pure uninsured spike
+
+SHED’s 2024 Employment and Gig Work chapter is the right instrument for platform and task-based work because it asks adults about *activities*, not just W-2 class of worker. Adults with any gig activity report **88%** with some health insurance versus **92%** among non-gig adults — a modest any-coverage gap. Employer-provided coverage sits at **53%** for gig adults and **56%** for non-gig adults. Those employer shares include coverage from another job or a spouse’s employer. In other words, gig work often sits *beside* traditional ESI rather than replacing it: **51%** of gig workers also hold a non-gig main job.
+
+The platform cut is sharper. Among people doing short-term tasks found via an app or website, employer-provided coverage falls to **45%**, any insurance to **86%**, and **42%** say they wished they had health insurance from gig work (versus **28%** among all gig workers). Selling and renting activity looks closer to the non-gig insurance mix. The policy implication is segment-specific: broad “gig worker uninsured” slogans overstate the any-insurance shortfall and understate how dependent platform workers are on secondary ESI, Medicaid/Medicare (**35%** in the platform cut), or direct purchase.
+
+Census CPS ASEC population anchors help keep scale honest. Employment-based coverage covered **53.7%** of the U.S. population in 2023; direct-purchase covered **10.2%**. Those are all-ages population rates, not worker rates, but they remind readers that ESI remains the modal private channel even as contingent and small-firm work rearrange who can reach it through their own paycheck.
+
+## Three archetypes, three access stacks
+
+Put the sources side by side without forcing a fake pooled sample:
+
+1. **Platform / app gig (SHED).** Own-platform ESI is generally absent. Insurance, when present, leans on another job, a spouse, public coverage, or the individual market. Employer-provided share: **45%**. Wish-for-benefits intensity is highest here.
+2. **Small-firm payroll (KFF + MEPS).** Firm offer is the binding constraint below ~50–200 workers. When offers exist, eligibility and family premium shares still bite. Own-employer enrollment (MEPS <50): **26.8%**.
+3. **Large-firm payroll (KFF + MEPS).** Firm offer is near-universal (**96–99%** by size band). The remaining gaps are eligibility, take-up, and cost-sharing design — not whether a plan exists. Own-employer enrollment (MEPS 50+): **54.3%**.
+
+The same adult can rotate across archetypes in a year — a construction tradesperson with seasonal W-2 weeks and weekend platform gigs is not a single row in any survey. That is why the dashboard separates panels instead of inventing a composite index.
+
+## Why the offer-rate gap matters for Marketplace and public spillover
+
+Coverage-gap conversations often start with Medicaid churn or Marketplace subsidy design. Firm-size and gig channels matter because they determine who *never enters* ESI in the first place. When small firms do not offer, workers spill into Medicaid (if eligible), Marketplace plans, spousal ESI, or uninsurance. When platforms do not sponsor benefits, the spillover looks similar — except hours and income volatility can make premium affordability worse even when a Marketplace plan is available.
+
+ICHRA and other individual-coverage reimbursement arrangements appear in KFF as small but non-zero: **4%** of offering firms and **9%** of non-offering firms provide funds for non-group coverage. That is not yet a substitute for the large-firm group market, but it is the pressure valve small and non-offering employers talk about when premiums rise faster than wages. The offer-rate gap is upstream of those spillover markets: every percentage point of non-offering small firms expands the population negotiating coverage outside a W-2 group plan.
+
+## Caveats and what this desk is not claiming
+
+- **Survey frames differ.** KFF’s large/small cut is 200 workers; MEPS-IC’s is 50. SHED’s gig definition is activity-based and includes people with traditional main jobs. Do not average the 38-point KFF offer gap with the 27.5-point MEPS enrollment gap into a single “coverage gap” number.
+- **Offer ≠ coverage.** A firm that offers to “some” workers may exclude part-time, temporary, or newly hired staff. Worker-level ACS/CPS class-of-worker crosstabs can diverge from establishment surveys for the same conceptual group.
+- **SHED employer coverage is not platform-sponsored ESI.** The 53% employer-provided figure for gig adults is mostly traditional employment or spousal plans.
+- **2025 KFF methods.** Dropping firms with 3–9 workers raises the overall firm offer rate relative to older vintages; year-over-year offer comparisons need the methods note.
+- **No causal claim** that firm size *causes* coverage solely through preferences — industry mix, unionization, average wages, and state insurance rules co-move with size.
+
+## What to watch next
+
+Watch three prints together: KFF’s next firm offer ladder (especially the 10–24 band), MEPS-IC enrollment by the under-50 / 50+ cut, and SHED’s platform-task insurance rows. If micro-firm offer rates stagnate while platform task work grows as a primary earner activity, the ESI access stack thins at both the small-payroll and contingent margins even if national uninsured rates look stable. The offer-rate gap by firm type is the leading indicator; enrollment and gig insurance mixes are the lagging confirmation.
+`,
+    keyPoints: [
+      "KFF 2025: 97% of large firms (200+) offer health benefits vs 59% of small firms (10–199) — a 38-point offer-rate gap",
+      "MEPS-IC 2024 enrollment: 26.8% at firms under 50 employees vs 54.3% at firms with 50+",
+      "SHED 2024: gig adults report 88% any insurance and 53% employer-provided coverage, often from another job or spouse — platform-task workers show weaker ESI and stronger benefit wishes",
+    ],
+    tags: [
+      "employer-sponsored insurance",
+      "gig work",
+      "firm size",
+      "health coverage gaps",
+    ],
+    format: "data-story",
+  },
+  {
     id: "survival-curves-of-pandemic-era-startups-2026",
     slug: "survival-curves-of-pandemic-era-startups-2026",
     title:

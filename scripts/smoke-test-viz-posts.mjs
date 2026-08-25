@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "coverage-gaps-in-gig-and-small-firm-work-2026",
+    marker: "Offer-rate gap by firm type",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "survival-curves-of-pandemic-era-startups-2026",
     marker: "One-year survival share",
     forbidden: "Loading interactive charts",

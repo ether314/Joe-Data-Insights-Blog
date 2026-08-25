@@ -3812,6 +3812,21 @@ const SurvivalCurvesOfPandemicEraStartups2026Dashboard = dynamic(
   },
 );
 
+const CoverageGapsInGigAndSmallFirmWork2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/CoverageGapsInGigAndSmallFirmWork2026Dashboard"
+    ).then((m) => m.CoverageGapsInGigAndSmallFirmWork2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4815,6 +4830,10 @@ export function PostVisualization({
 
   if (type === "survival-curves-of-pandemic-era-startups-2026") {
     return <SurvivalCurvesOfPandemicEraStartups2026Dashboard />;
+  }
+
+  if (type === "coverage-gaps-in-gig-and-small-firm-work-2026") {
+    return <CoverageGapsInGigAndSmallFirmWork2026Dashboard />;
   }
 
   return null;
