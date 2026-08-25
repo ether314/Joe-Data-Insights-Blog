@@ -2,6 +2,102 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "state-sales-tax-base-erosion-2026",
+    slug: "state-sales-tax-base-erosion-2026",
+    title:
+      "Charted: 54.8% of the Potential State Sales-Tax Base Now Escapes a Typical GST — Mostly via Untaxed Services",
+    excerpt:
+      "Spending shifted from taxed goods to services. Under a desk join of BEA PCE shares to FTA service-taxability breadth, about 54.8% of the potential household consumption base sits outside a typical general sales tax — up 16.6 points since 1970, with 12.4 points from the mix alone.",
+    category: "Economics",
+    themeId: "fiscal-plumbing",
+    imageUrl:
+      "/images/economics-state-sales-tax-base-erosion-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of amber household spending leaking from a taxed-goods funnel into escaping service wisps beside a capitol silhouette, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-30T12:00:00Z",
+    featured: true,
+    visualization: "state-sales-tax-base-erosion-2026",
+    layout: "default",
+    content: `State general sales taxes were designed for an economy that bought things you could put in a bag. Households no longer spend that way. Bureau of Economic Analysis (BEA) personal consumption expenditure (PCE) accounts show services climbing from roughly **half of household spending in 1970** to about **68% by 2024**. The Federation of Tax Administrators (FTA) still finds that a typical general-sales-tax (GST) state taxes only a minority of the **176** service items in its 2017 survey — a median near **40**. Put those facts on the same spreadsheet and the question stops being philosophical: **what share of a potential sales-tax base now escapes taxation because spending migrated into untaxed services?**
+
+This desk’s answer, joining BEA mix shares to FTA breadth and Census State Tax Collections (STC) revenue dependence, is blunt. About **54.8%** of the potential household consumption base sits outside a typical GST today. That escaped share was roughly **38.2% in 1970**. The **+16.6 percentage-point** rise is not mostly new grocery exemptions or holiday gimmicks. Roughly **+12.4 pp** traces to the goods→services mix itself: more of what households buy was never added to the base. The interactive dashboard above walks the national erosion path, the leak composition, a state ladder, a rate-versus-breadth scatter, service-category leak scores, and decade deltas.
+
+## The potential base is not the statutory base
+
+A statutory base is whatever a state’s code taxes this year. A *potential* base is a policy counterfactual: the household consumption that a broad consumption tax could reach if services were treated more like goods, while still carving out common necessity exemptions that almost every GST already uses (food for home consumption, prescription drugs, and a rent/housing proxy that sales taxes rarely touch directly).
+
+That framing matters. ITEP’s guide to state and local taxes stresses that most codes still apply to less than half of the services taxed in at least one peer state, and that only Hawaii, New Mexico, and South Dakota approach comprehensive service coverage. FTA’s 2017 counts put those peers at **167 / 164 / 152** of 176 surveyed items. The median GST state is nowhere near that frontier. So “escaped” here does not mean illegal noncompliance. It means **spending that a goods-centric GST leaves on the table** relative to a broad-base peer, after allowing for the necessity carve-outs that are politically durable.
+
+The dashboard’s **Leak mix** panel splits the latest potential base into four buckets: still taxed (~**45.2%**), untaxed or lightly taxed services (~**33.4%**), necessity exemptions (~**15.1%**), and digital/residual gaps (~**6.3%**). Untaxed services alone account for about **61%** of total escape. Necessities are large in dollars and important for regressivity debates, but they are not what *moved* the escape share over five decades. The mix did.
+
+## How the goods→services shift leaks the base
+
+Hold statutory breadth roughly fixed at a median GST pattern and let the BEA mix evolve. In 1970, goods were nearly half of PCE; today they are about a third. Goods are imperfectly taxed — food and Rx carve-outs shrink the goods side — but they remain the historical core of retail sales taxation. Services are the growth engine of household budgets: health care, housing services, financial services, personal care, recreation, and education-related spending. Most of those categories are lightly taxed or exempt in the median state.
+
+Under that desk construction, the taxable share of PCE falls from about **61.8% in 1970** to about **45.2% in 2024**, and the escaped share rises in mirror image. The **mix-shift contribution** series isolates how much of that rise would have happened even if necessity exemptions and digital gaps stayed structurally similar. By 2024 that contribution is **+12.4 pp** — three-quarters of the total escape rise. The remaining points come from residual gaps (including inconsistent digital goods treatment) and modest structural drift in exemptions.
+
+Two caveats sit on that decomposition. First, FTA’s survey is a **count of items**, not a dollar-weighted taxability index; taxing “shoe repair” is not the same as taxing “hospital services.” Second, PCE includes imputed housing and third-party-paid health care that no retail clerk rings up. We treat those as part of the potential base for fiscal-capacity analysis, not as a claim that a checkout tax could trivially collect them tomorrow. The point of the model is direction and scale, not a revenue bill.
+
+## Decade path: fast leak, then slower grind
+
+The **Decade deltas** panel shows the escape rise was front-loaded. From **1970–80** and **1980–90**, services’ PCE share rose more than **4 pp** per decade and escaped share rose roughly in step. The 1990s and 2000s still added **~3 pp** of services share and **~2.7–3.0 pp** of escape. Since **2010**, the services share has risen more slowly (**+1.6 pp** through 2024), and escape has risen only **+1.7 pp**. The pandemic goods spike briefly interrupted the trend — taxable share ticked up in 2020 as durables and nondurables surged — then the service share reasserted itself.
+
+That slowdown is not relief. Absolute escape is already above **half** of the potential base. A slower leak from a high plateau still forces GST-dependent states to chase rates, carve special taxes, or lean harder on income and property. Census STC tables show general sales and gross receipts remaining a first-tier state revenue source even as the household mix works against the base. The politics of raising rates on a narrowing base is harder than the politics of extending the base — which is why the base rarely gets extended.
+
+## States do not leak equally
+
+FTA breadth and desk escape estimates diverge sharply across the panel. Hawaii, New Mexico, and South Dakota print escaped shares near **28–32%** with **150+** services taxed. Washington’s business-and-occupation overlay also lands in the mid-30%s on our escape metric despite a high combined retail rate. At the other end, California, Colorado, Illinois, Massachusetts, and Virginia cluster near **58–60%** escaped with **under 30** FTA services taxed in several cases. Texas and Florida sit in the uncomfortable middle-high zone: **high sales dependence** in STC shares (north of **50%** of state tax in our composite) paired with only middling service coverage.
+
+| State | FTA services taxed (of 176) | Escaped share % | Mix-shift since 1970 (pp) | Sales share of state tax % |
+| --- | ---: | ---: | ---: | ---: |
+| Colorado | 14 | 59.6 | 14.7 | 24.6 |
+| Virginia | 18 | 59.1 | 14.6 | 19.8 |
+| Massachusetts | 18 | 58.9 | 14.5 | 21.4 |
+| Illinois | 17 | 58.8 | 14.4 | 30.1 |
+| California | 21 | 58.4 | 14.2 | 22.8 |
+| Michigan | 26 | 57.6 | 14.0 | 29.2 |
+| North Carolina | 30 | 57.1 | 13.9 | 26.4 |
+| Georgia | 36 | 56.2 | 13.6 | 32.8 |
+| Pennsylvania | 55 | 53.8 | 12.9 | 28.9 |
+| New York | 57 | 53.4 | 12.8 | 18.6 |
+| Texas | 88 | 48.6 | 11.2 | 56.8 |
+| South Dakota | 152 | 32.1 | 5.1 | 52.1 |
+
+The **Rate vs breadth** scatter makes the fiscal trade-off visible. Narrow-base states often pair **high combined rates** with low FTA counts — a strategy that taxes the remaining goods harder while services walk free. Broad-base peers can live with lower statutory rates because more of the receipt tape is in scope. Bubble size tracks escaped share: the upper-left of the chart (high rate, few services) is where leakage and rate pressure reinforce each other.
+
+## Which services drive the leak
+
+Not every service category is equal. Health care and housing dominate PCE weight and sit near the top of the dashboard’s leak-score ladder (**92** and **88** on a 0–100 desk score). Financial services are smaller in PCE share but almost as lightly taxed in most GST states. Food services and accommodations, by contrast, are widely taxed — leak scores in the high 20s — which is why restaurant meals feel “in the sales tax” even as the broader service economy does not. Personal repair and recreation services sit in the middle: taxed in many states for selected items, exempt for others, and rarely dollar-weighted in public debates the way hospital bills are.
+
+That category split also explains why “tax services” is not one reform. Extending the base to lawn care and dry cleaning is administratively different from bringing professional or medical services into a retail tax. ITEP notes that comprehensive service taxation remains rare precisely because the easy categories were often already in, and the hard categories collide with health, finance, and housing politics. The dashboard’s **Service leaks** panel is meant to keep that heterogeneity in view: the national escape number is an average over very different markets.
+
+## Caveats, confidence, and what the model is not
+
+Three limits deserve equal weight with the headline.
+
+1. **FTA vintage.** The latest full FTA services survey in wide use is still anchored to **January 1, 2017** (with some 2007 carry-forwards for non-respondents). States that expanded digital or selective service taxes after 2017 will look slightly too narrow here. Directionally, few GST states reinvented themselves as Hawaii.
+2. **Dollar weights vs item counts.** Escape shares are desk-modeled joins, not audited taxable-base ratios from each revenue department. A state that taxes one huge service category can look “narrow” on FTA counts and “broader” in dollars — or the reverse.
+3. **Business inputs and pyramiding.** This post focuses on the *household* potential base. Taxing business services raises separate cascading issues that ITEP and state tax commissions treat as a different design problem. We do not claim the escaped household share is a free revenue pool with zero incidence distortion.
+
+Census of Governments / STC dollars tell you what states actually collect; they do not, by themselves, reveal how much of household spending was in scope. BEA tells you the mix. FTA tells you the breadth of service taxability. The join is where the leak becomes measurable. For one-line briefings: **about 55% of the potential base escapes a typical GST, the escape share is up roughly 17 points since 1970, and about three-quarters of that rise is the goods→services mix that statutes never fully chased.**`,
+    tags: [
+      "sales tax",
+      "state finance",
+      "services",
+      "tax base",
+      "PCE",
+      "FTA",
+      "ITEP",
+    ],
+    format: "data-story",
+    keyPoints: [
+      "54.8% of the potential household consumption base escapes a typical GST in the desk join",
+      "Escaped share rose +16.6 pp since 1970; +12.4 pp from goods→services mix",
+      "Untaxed services are ~61% of total escape; necessities are large but less of the trend",
+      "HI/NM/SD broad-base peers print ~28–32% escape vs ~58%+ for several narrow-base GST states",
+    ],
+  },
+  {
     id: "high-propensity-applications-vs-employer-firms-2026",
     slug: "high-propensity-applications-vs-employer-firms-2026",
     title:

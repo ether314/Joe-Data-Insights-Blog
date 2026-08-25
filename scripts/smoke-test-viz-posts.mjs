@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "state-sales-tax-base-erosion-2026",
+    marker: "Base leak to services",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "high-propensity-applications-vs-employer-firms-2026",
     marker: "Business formation applications",
     forbidden: "Loading interactive charts",
