@@ -276,7 +276,8 @@ export interface Post {
     | "real-wage-growth-by-wage-quintile-2026"
     | "platform-earnings-swings-and-household-reliance-2026"
     | "state-sales-tax-bases-vs-the-service-economy-2026"
-    | "investor-home-purchases-vs-first-time-buyers-2026";
+    | "investor-home-purchases-vs-first-time-buyers-2026"
+    | "cropland-values-versus-farm-incomes-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

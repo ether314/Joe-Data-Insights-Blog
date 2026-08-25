@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "cropland-values-versus-farm-incomes-2026",
+    marker: "Headline — $/acre vs income index",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "investor-home-purchases-vs-first-time-buyers-2026",
     marker: "Investor % of closings vs first-time buyers",
     forbidden: "Loading interactive charts",

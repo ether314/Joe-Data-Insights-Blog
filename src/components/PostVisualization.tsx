@@ -3692,6 +3692,21 @@ const InvestorHomePurchasesVsFirstTimeBuyers2026Dashboard = dynamic(
   },
 );
 
+const CroplandValuesVersusFarmIncomes2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/CroplandValuesVersusFarmIncomes2026Dashboard"
+    ).then((m) => m.CroplandValuesVersusFarmIncomes2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4663,6 +4678,10 @@ export function PostVisualization({
 
   if (type === "investor-home-purchases-vs-first-time-buyers-2026") {
     return <InvestorHomePurchasesVsFirstTimeBuyers2026Dashboard />;
+  }
+
+  if (type === "cropland-values-versus-farm-incomes-2026") {
+    return <CroplandValuesVersusFarmIncomes2026Dashboard />;
   }
 
   return null;

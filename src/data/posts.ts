@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "cropland-values-versus-farm-incomes-2026",
+    slug: "cropland-values-versus-farm-incomes-2026",
+    title:
+      "Charted: Cropland Hit $5,830/Acre While Net Farm Income Stays ~19% Below Its 2022 Peak",
+    excerpt:
+      "USDA NASS put 2025 U.S. cropland at $5,830 per acre (+4.7%). Lake States led regional gains; Northern Plains and the Corn Belt show the widest estimated gaps between land appreciation and farm-income pressure — and a +100 bp yield shift implies roughly a 26% haircut to the national average.",
+    category: "Food & Agriculture",
+    themeId: "farmland-values-usda",
+    imageUrl:
+      "/images/food-agriculture-cropland-values-versus-farm-incomes-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic aerial cropland geometry with $5,830 per acre callout and diverging teal land-value versus amber income index lines",
+    publishedAt: "2026-08-25T18:00:00Z",
+    featured: true,
+    visualization: "cropland-values-versus-farm-incomes-2026",
+    layout: "default",
+    content: `Farmland appraisals do not wait for the income statement to finish. USDA’s National Agricultural Statistics Service (NASS) priced **U.S. cropland at $5,830 per acre in 2025** — up **$260**, or **4.7%**, from 2024, and **34%** above the 2021 average of **$4,350**. Over the same stretch, USDA Economic Research Service (ERS) net farm income (NFI) spiked to a **$188.8 billion** peak in 2022, then retrenched. The February 5, 2026 ERS forecast puts **2025 NFI at $154.6 billion** and **2026 at $153.4 billion** — still roughly **19%** below that 2022 crest even after the 2025 rebound.
+
+That is the national decoupling in one sentence: **land kept compounding while profits mean-reverted**. The desk question underneath is regional. Which NASS farm-production regions saw cropland appreciation outrun income pressure the hardest — and how much of the next reappraisal is a rates story rather than a receipts story?
+
+The dashboard above is built for that split. Toggle **National path**, **Regional cropland**, **Decoupling scatter**, **Rent-yield stress**, and **Rate bands**. Filter specialization on the scatter; switch YoY vs since-2021 on the bars; pick a focus region to overlay against the U.S. average. What follows is the narrative behind those panels.
+
+## The national tape: two indexes, one divergence
+
+Index both series to 2021 = 100 and the split is visual. Cropland’s path climbs almost every year: **100 → 114 → 122 → 128 → 134** by 2025. NFI’s path spikes to **~140** in 2022, then falls back through **115** (2023) and **104** (2024) before a partial recovery to **~115** in 2025 — with 2026 forecast near **114**. Cropland never took the 2023–24 income haircut. Buyers, lenders, and competing land uses kept bidding the asset even as grain-heavy operating statements softened.
+
+Cash rents tell a quieter story. NASS put average U.S. cropland rent at **$161 per acre** in 2025, only **$1** above 2024. The implied current yield — rent divided by cropland value — sits near **2.76%**. That is thin by historical farmland-income standards and thin versus many competing fixed-income alternatives after the post-2022 rate reset. Thin yields are how you know appreciation, non-farm demand, and balance-sheet inertia are doing more work than operating returns alone.
+
+ERS’s February 2026 note also reminds readers that **net cash farm income** can move differently from NFI: NCFI is forecast at **$158.5 billion** in 2026 (**+3%**), while NFI edges down **0.7%**. Inventory and noncash adjustments matter. For land pricing, the relevant signal is still that **market-driven receipts remain under pressure** while **government payments** are forecast to rise sharply in 2026 (**$44.3 billion**, **+45%**). Transfers can stabilize cash flow without restoring the 2022 commodity boom that first juiced land bids.
+
+## Regional cropland: who re-priced fastest
+
+NASS’s regional table is the clean disclosed layer. From 2021 to 2025, **Northern Plains** cropland rose **46.0%** (to **$4,220**), **Lake States** **39.6%** (to **$6,940**), **Appalachian** **35.8%**, **Southern Plains** **34.7%**, **Southeast** **33.5%**, and **Corn Belt** **32.8%** (to **$8,940**). The slower end of the tape — still positive everywhere — includes **Mountain** (**+26.7%**), **Pacific** (**+21.5%** to **$9,830**), **Northeast** (**+20.8%**), and **Delta States** (**+19.4%** to **$3,750**).
+
+Year-over-year into 2025, leadership flips: **Lake States** led at **+7.3%**, then **Southern Plains** (**+5.6%**), **Appalachian** (**+5.1%**), and **Northern Plains** (**+4.5%**). The Corn Belt printed a still-solid **+4.4%**. No contiguous-state region recorded a cropland decline in the 2025 summary. That uniformity is itself a caution: surveys can lag local transaction thinness, and “no down prints” is not the same as “every county cleared at the average.”
+
+| NASS region | Cropland 2025 ($/acre) | Since 2021 | 2024→25 | 2025 cash rent | Implied yield |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Pacific | 9,830 | +21.5% | +3.3% | $281 | 2.86% |
+| Corn Belt | 8,940 | +32.8% | +4.4% | $240 | 2.68% |
+| Northeast | 7,900 | +20.8% | +2.7% | $102 | 1.29% |
+| Lake States | 6,940 | +39.6% | +7.3% | $183 | 2.64% |
+| Appalachian | 5,950 | +35.8% | +5.1% | $117 | 1.97% |
+| Southeast | 5,860 | +33.5% | +3.9% | $109 | 1.86% |
+| Northern Plains | 4,220 | +46.0% | +4.5% | $123 | 2.91% |
+| Delta States | 3,750 | +19.4% | +2.7% | $134 | 3.57% |
+| Mountain | 2,800 | +26.7% | +3.7% | $106 | 3.79% |
+| Southern Plains | 2,640 | +34.7% | +5.6% | $46 | 1.74% |
+| United States | 5,830 | +34.0% | +4.7% | $161 | 2.76% |
+
+Levels still matter. Pacific and Corn Belt acres clear near five-figure territory; Southern Plains and Mountain acres remain low-absolute, high-percentage stories. Northeast yields look especially compressed (**~1.3%**) because urban-adjacent option value dominates the rent numerator.
+
+## Where value growth decoupled from income pressure
+
+ERS does not publish net farm income on the exact NASS farm-production-region geography used in the Land Values Summary. The dashboard’s **decoupling scatter** therefore pairs **disclosed cropland appreciation** with an **estimated regional income-pressure index** for 2021→2024 — crop-receipt–weighted for Corn Belt, Northern Plains, Lake States, and Delta; cattle-weighted for Southern Plains and Mountain; specialty/urban-adjacent for Pacific and Northeast. Treat the income axis as directional, not audit-grade.
+
+On that framing, the widest gaps sit in **row-crop** districts: **Northern Plains** (~**+74** percentage points of value growth over income pressure), **Corn Belt** (~**+65** pp), and **Lake States** (~**+62** pp). That matches the operating narrative after 2022: corn and soybean receipt collapses hit the Midwest hardest while land bids still cleared higher — helped by thin listings, strong balance sheets from the boom years, and outside capital that prices multi-year optionality.
+
+**Southern Plains** and **Mountain** look different. Cattle strength and pasture economics supported income proxies even as cropland values rose mid-30s / mid-20s percent. Their gaps are smaller (~**25–27** pp) not because land was soft, but because the income side did not crater the same way. **Pacific** and **Northeast** show moderate cropland gains with specialty crops and development pressure — appreciation that is only partly a farm-income story.
+
+The practical read: **decoupling is not uniform**. It concentrates where grain operating returns fell farthest while NASS still printed higher cropland averages. That is the Corn Belt–Northern Plains–Lake States triangle, with Lake States also leading the latest YoY print.
+
+## Rent yields and how rate-sensitive the next print looks
+
+If the next reappraisal is rate-sensitive, the channel is the **capitalization rate** buyers apply to expected returns — proxied here by cash rent over survey value. Mountain and Delta print the widest yields (**~3.8%** and **~3.6%**). Northeast, Southern Plains, and Southeast sit at the tight end (**~1.3–1.9%**). Corn Belt and Lake States cluster near **2.6–2.7%**, close to the U.S. **2.76%** average.
+
+Stress the national tape with a simple scenario: hold 2025 rent at **$161** and shift the implied yield. At the survey base (**2.76%**), value is **$5,830**. At **+100 bp** (**3.76%**), the implied value falls to about **$4,280** — roughly a **26%** haircut versus the 2025 average. At **+150 bp**, the index sits near **65** (base = 100). These are **scenarios**, not NASS forecasts. Rents can adjust, expected growth can absorb rate moves, and non-farm bids ignore farm yields entirely. Still, the sensitivity math shows why ag lenders and farm managers watch the Treasury and ag-mortgage complex as closely as the WASDE.
+
+Regionally, forcing every rent/price ratio toward a **3.5%** stress yield compresses the tightest markets most. Northeast and Southern Plains show the largest modeled value declines; Mountain and Delta — already nearer 3.5% — show far less mechanical compression. That map is a useful stress test for **where a rate-driven reappraisal would bite first**, even if the eventual survey print is smoother.
+
+## What the 2026 income forecast does — and does not — fix
+
+ERS’s 2026 outlook is not a grain renaissance. Crop cash receipts are forecast only **+1.2%** in nominal terms (and down in real terms). Animal receipts fall **5.8%** as egg and milk prices reset, even with cattle receipts still climbing. Production expenses stay historically elevated near **$478 billion**. The stabilizer is **direct government payments**, forecast up more than **$13 billion**.
+
+For cropland pricing, that mix is ambiguous. Higher transfers can support cash rents and debt service without restoring the speculative heat of 2021–22. Soft crop receipts argue for **slower** appreciation in row-crop districts — yet Lake States just posted the fastest YoY cropland gain in the 2025 survey. Momentum, inventory of listings, and competing uses (solar leases, residential fringe, conservation easements) can keep the survey sticky even when the income statement softens.
+
+The rate channel cuts both ways. If policy rates ease and ag mortgage spreads compress, thin yields can be “explained” again and the **−50 / −100 bp** bands in the dashboard become the relevant stress. If term yields stay high or credit standards tighten, the **+50 / +100 bp** bands matter more — especially in regions where income pressure already failed to validate the 2021–25 land bid.
+
+## Caveats, definitions, and what this post is not
+
+**Cropland** averages mix irrigated and non-irrigated acres; state irrigated premiums (especially West) can dominate regional means. NASS **withholds** some state cells; regional aggregates remain the reliable public layer. **Farm real estate** (all land and buildings) is a different series — U.S. farm real estate averaged **$4,350** per acre in 2025 — and should not be confused with the cropland-only tape used here.
+
+**Net farm income** is a sector profits measure, not a per-acre return and not a farm household income measure. Regional income-pressure scores in the scatter are **estimated** composites, not official ERS NASS-region NFI. State-level NFI arrives with a lag; the next full state vintage will refine — not necessarily reverse — the crop-district gap story.
+
+Rate-band math assumes rents fixed and growth premia zero. Real markets adjust both. Cash rent itself was nearly flat nationally in 2025; a yield-driven reappraisal could show up first as **slower value growth** rather than outright survey declines.
+
+This post is **not** a cattle-herd piece, **not** a food-dollar marketing-bill piece, and **not** a cash-rent monograph. It is the land-price vs operating-income wedge on USDA’s own regional cropland geography — and a rate-sensitivity sketch for the next appraisal cycle.
+
+## What to watch before the next Land Values release
+
+Three markers will tell you whether decoupling is healing or hardening. First, **Lake States and Northern Plains YoY cropland prints** — another year of outperformance without an income rebound would widen the gap. Second, **Corn Belt cash rents vs values** — if rents stall while values rise, yields compress further and rate sensitivity rises. Third, the **ERS payment vs receipt mix** for 2026 — if transfers carry the income line while crop receipts stagnate, land can stay bid on balance-sheet and policy support rather than on market returns.
+
+Until those prints arrive, the working conclusion is straightforward. **U.S. cropland at $5,830 per acre is a disclosed fact. NFI still well below its 2022 peak is a disclosed fact. The regions where those facts pull hardest apart are the row-crop Upper Midwest and Plains — and the next reappraisal is at least as rate-sensitive as it is receipt-sensitive.**`,
+  },
+  {
     id: "investor-home-purchases-vs-first-time-buyers-2026",
     slug: "investor-home-purchases-vs-first-time-buyers-2026",
     title:
