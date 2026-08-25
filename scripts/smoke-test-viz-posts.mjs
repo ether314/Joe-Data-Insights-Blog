@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-farmland-values-usda-nass-2026",
+    marker: "USDA NASS Land Values · regional cropland & pasture",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "job-switcher-premium-across-cohorts-2026",
     marker: "Switcher−stayer premium",
     forbidden: "Loading interactive charts",

@@ -2,6 +2,86 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-farmland-values-usda-nass-2026",
+    slug: "us-farmland-values-usda-nass-2026",
+    title:
+      "Charted: Northern Plains Pasture Rose 7.6% as Lake States Cropland Led at +7.3%",
+    excerpt:
+      "USDA NASS priced U.S. cropland at $5,830/acre (+4.7%) and pasture at $1,920 (+4.9%) in 2025. Northern Plains pasture and Lake States cropland led regional gains, while farm loan rates near 8% and a soft income trough tested how tightly values still track the farm economy.",
+    category: "Food & Agriculture",
+    themeId: "farmland-values-usda",
+    imageUrl:
+      "/images/food-agriculture-us-farmland-values-usda-nass-2026-hero.png",
+    imageAlt:
+      "Dark navy dusk over Midwestern cropland and pasture ridges with amber and teal value-contour glow beside grain silos, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-25T18:00:00Z",
+    featured: true,
+    visualization: "us-farmland-values-usda-nass-2026",
+    layout: "default",
+    content: `Farmland is two markets sharing a fence line. **Cropland** is the acre you plant. **Pasture** is the acre you graze. USDA’s National Agricultural Statistics Service (NASS) prices both every August for the 48 contiguous states, then rolls them into a farm-real-estate average. The 2025 summary put **U.S. cropland at $5,830 per acre** — up **4.7%** from 2024 — and **pasture at $1,920**, up **4.9%**. Farm real estate as a whole printed **$4,350** (+**4.3%**).
+
+Those national averages hide the desk question that actually moves lenders and landlords: **where did cropland and pasture rise fastest, and how closely do farm incomes and interest rates still track those moves?** The interactive dashboard above answers with a national path of values versus net farm income and farm-loan rates, regional year-over-year bars, a cropland–pasture growth scatter, a dollar-gap ladder, a who-leads share pie, and state spotlights.
+
+## The 2025 tape in one screen
+After the 2021–2022 spike — cropland jumped **13.6%** in 2022 alone — the national pace cooled into a mid-single-digit crawl. That is still appreciation. It is no longer a boom tape. Pasture’s 2025 gain (**+4.9%**) edged cropland’s (**+4.7%**), a modest flip from years when row-crop acres usually led the headline.
+
+Regionally the leaders split by land type. **Lake States cropland** rose **7.3%** to **$6,940** — the fastest regional cropland print. **Northern Plains pasture** rose **7.6%** to **$1,560** — the fastest regional pasture print. Southern Plains farm real estate climbed **5.9%**, Appalachian cropland **5.1%**, Corn Belt cropland a steadier **4.4%** off an already high base of **$8,940**. Pacific cropland stayed expensive at **$9,830** but rose only **3.3%**. Absolute level and year-over-year speed are different stories; the dashboard’s sort controls let you flip between them.
+
+## Where pasture outran cropland — and where it did not
+A useful regional diagnostic is the **pasture-minus-cropland YoY gap**. When pasture’s percentage gain exceeds cropland’s by more than about half a point, grazing acres are leading the local tape. Northern Plains clears that bar easily (**7.6%** pasture vs **4.5%** cropland). Delta States and Pacific sit closer to a near-tie. Lake States and the Northeast flip the other way: cropland led, and in the Lake States the lead is large (**7.3%** vs **3.7%**).
+
+That split matters for portfolio language. A Northern Plains cow-calf landlord and a Wisconsin cash-grain landlord both saw “farmland up,” but they were not on the same bid curve. Pasture-led regions often reflect livestock margins, forage scarcity, or catch-up from thinner absolute bases. Cropland-led regions more often reflect row-crop balance sheets, local competition among expanding operators, and urban-fringe optionality at the Northeast and Pacific edges.
+
+| Region | Cropland 2025 | Cropland YoY | Pasture 2025 | Pasture YoY | Leader |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Lake States | $6,940 | +7.3% | $2,830 | +3.7% | Cropland |
+| Northern Plains | $4,220 | +4.5% | $1,560 | +7.6% | Pasture |
+| Southern Plains | $2,640 | +5.6% | $2,260 | +4.6% | Cropland |
+| Appalachian | $5,950 | +5.1% | $4,680 | +4.0% | Cropland |
+| Corn Belt | $8,940 | +4.4% | $3,120 | +4.0% | Near-tie |
+| Southeast | $5,860 | +3.9% | $5,720 | +3.8% | Near-tie |
+| Mountain | $2,800 | +3.7% | $946 | +3.7% | Tied |
+| Pacific | $9,830 | +3.3% | $2,450 | +3.4% | Near-tie |
+| Northeast | $7,900 | +2.7% | $4,750 | +1.7% | Cropland |
+| Delta States | $3,750 | +2.7% | $3,360 | +3.4% | Pasture |
+
+## The cropland–pasture dollar gap is a second map
+Percentage gains can flatter cheap acres. Dollar gaps cannot. Subtract pasture from cropland in 2025 and the **Corn Belt** still shows a premium near **$5,820** per acre. **Pacific** sits near **$7,380**. **Mountain** cropland is only about **$1,850** above sparse western pasture, and Southern Plains cropland’s premium over pasture shrinks to a few hundred dollars. The premium ladder in the dashboard is not a yield series — it is a reminder that “farmland” is a category label covering wildly different productive assets.
+
+Five-year compound growth from 2021 to 2025 sharpens the same point. Northern Plains cropland climbed from **$2,890** to **$4,220**; pasture from **$1,060** to **$1,560**. Lake States cropland rose from **$4,970** to **$6,940**. Those multi-year paths are why a single August YoY print can look calm while balance sheets still carry a post-2021 step-up in collateral values.
+
+## Do farm incomes still explain the path?
+Overlay USDA Economic Research Service **net farm income** on the national value path and the timing looks intuitive through 2022: income surged toward about **$186 billion**, cropland jumped **13.6%**, pasture **10.9%**. Then the relationship loosens. Income retreated toward the high-**$130 billions** in 2023–2024 while land values kept rising — slower, but still positive. ERS’s 2025 income forecast rebound (desk-tagged near **$180 billion**) arrives after values have already locked in two more mid-single-digit years.
+
+That is not proof that income “does not matter.” It is evidence that **land prices are sticky** relative to a one-year income print. Buyers capitalize multi-year expectations, scarcity, and balance-sheet capacity. Sellers rarely mark acres to a single soft crop year. The dashboard’s dual-axis national path is built for that visual: values on one scale, income and farm-loan rates on another, so the eye can see coincidence without pretending to estimate an elasticity NASS never published.
+
+## Interest rates are the other side of the ledger
+Average interest rates on **non-real-estate farm loans** — tracked through Kansas City Fed agricultural credit surveys and related bank-rate paths — moved from the high-**3%** to mid-**5%** range in the late 2010s into roughly **8%** by 2023–2024, with a slight desk-average easing toward **7.8%** in 2025. Higher carrying costs should, in textbook fashion, pressure bids for leveraged purchases. The 2023–2025 tape shows cooling year-over-year gains, not a national decline: cropland YoY fell from **13.6%** (2022) to **7.7%** (2023) to **4.7%** (2024 and 2025).
+
+Rates help explain the **deceleration**. They do not, by themselves, explain why every region still printed positive cropland and pasture gains in 2025. Cash buyers, expanding neighbors, 1031 exchange capital, and multi-generation farms that treat land as a long-duration store of wealth all mute the interest-rate channel. Pasture’s Northern Plains surge under elevated rates is a useful warning against mono-causal briefing language.
+
+## State extremes inside the regional averages
+Regional averages smear state leaders. In the 2025 summary’s state highlights, **Utah** cropland rose about **9.7%** to **$5,790** — the fastest state cropland YoY in the desk panel. **Michigan** (**+8.2%** to **$6,350**) and **Tennessee** (**+7.8%** to **$6,050**) reinforce the Lake States and Appalachian regional story. On pasture, **North Dakota** (**+8.6%** to **$1,140**), **Kansas** (**+8.1%** to **$2,270**), and **Nebraska** (**+7.9%** to **$1,510**) power the Northern Plains pasture headline.
+
+Levels still dominate some conversations. **Iowa** cropland at **$10,300** and **Rhode Island** cropland near **$32,900** (urban-fringe scarcity; YoY often withheld) sit on opposite ends of the productive-versus-amenity spectrum. A state can lead YoY from a low base or print a quiet YoY on a sky-high base; both show up as “farmland news,” but they answer different questions.
+
+## Caveats the August release will not put in bold
+NASS land values are **survey-based averages**, not transaction comps. They cover the 48 contiguous states and weight by acreage concepts tied to the Census of Agriculture. Irrigated and non-irrigated ground are mixed in many regional prints. Northeast and Pacific levels embed nonfarm demand that is not a Corn Belt cash-grain story. Net farm income is a sector aggregate — it does not map one-for-one onto any region’s bid. Farm-loan rate series here are desk annual averages from credit-survey paths, not a mortgage-quote panel for every acre purchased. Year-over-year percentages, cropland–pasture premiums, and income/rate co-movement indexes in the dashboard are **desk calculations**, not NASS-published elasticities. ERS 2025 income figures carry a **forecast** flag until successive Farm Income forecasts revise them.
+
+None of those caveats erase the main 2025 pattern: **appreciation cooled nationally but remained positive everywhere on the regional table, with Northern Plains pasture and Lake States cropland setting the speed records while incomes and rates explained the slowing more cleanly than the continued rise.**
+
+For one-line briefings: **U.S. cropland hit $5,830/acre (+4.7%) and pasture $1,920 (+4.9%) in 2025, Northern Plains pasture led regions at +7.6%, Lake States cropland at +7.3%, and the post-2022 slowdown tracks higher farm-loan rates and a soft income trough more tightly than it tracks a national price retreat that never arrived.**`,
+    tags: [
+      "farmland values",
+      "USDA NASS",
+      "cropland",
+      "pasture",
+      "farm income",
+      "interest rates",
+      "agriculture",
+    ],
+  },
+  {
     id: "job-switcher-premium-across-cohorts-2026",
     slug: "job-switcher-premium-across-cohorts-2026",
     title:
