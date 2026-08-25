@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "platform-earnings-swings-and-household-reliance-2026",
+    marker: "Month-over-month platform earnings swing",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "real-wage-growth-by-wage-quintile-2026",
     marker: "Quintile real growth spread",
     forbidden: "Loading interactive charts",

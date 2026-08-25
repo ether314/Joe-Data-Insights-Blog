@@ -2,6 +2,70 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "platform-earnings-swings-and-household-reliance-2026",
+    slug: "platform-earnings-swings-and-household-reliance-2026",
+    title:
+      "Charted: Platform Earnings Swing Month to Month — For Whom Is Gig the Majority Paycheck?",
+    excerpt:
+      "JPMorgan Chase Institute data show labor-platform participants earn in only 56% of months — averaging $533 (33% of income) when active. One in four active labor participants relied on platforms for more than 75% of income, while the median pandemic-era driver sat near 10% of family income.",
+    category: "Consumer Finance",
+    themeId: "gig-income-volatility",
+    imageUrl:
+      "/images/consumer-finance-platform-earnings-swings-and-household-reliance-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of a smartphone earnings chart swinging month to month beside a household budget silhouette and MoM platform swing callout",
+    publishedAt: "2026-08-25T16:00:00Z",
+    featured: true,
+    visualization: "platform-earnings-swings-and-household-reliance-2026",
+    layout: "default",
+    content: `Gig-platform income is sold as flexible side money. Bank-transaction ledgers tell a sharper story: **the swing is the product**. JPMorgan Chase Institute (JPMCI) administrative data show labor-platform participants are active in only **56%** of months after they first earn — so nearly half of months print **$0** platform income after a month that averaged **$533**. In those active months, platform earnings were about **33%** of total income. Capital platforms are thinner still: active **32%** of months, **$314** average, **20%** of income when working.
+
+The household question is not whether platforms exist. It is **how often the paycheck disappears**, and **for what share of participants platforms are the majority of earnings**. As of September 2015, **25%** of *active* labor-platform participants relied on platforms for more than **75%** of total income — a majority-paycheck tail — while **46%** cleared a **25%** reliance bar. Pandemic-era updates put the *median* transport driver near **10%** of family income from platforms: secondary for the middle of the distribution, essential for a thick left tail. Fed SHED 2024 adds the survey layer: only **21%** of adults who did gig activities called them their main job, yet **61%** of platform-task participants wished pay were more consistent.
+
+The dashboard above is built for that tension. Toggle **Earnings swings**, **Reliance bands**, **Participation path**, **Sector medians**, **Substitute vs supplement**, and **Fed SHED attitudes**. Filter labor vs capital on the reliance panel. The rest of this post is the narrative behind those panels.
+
+## The swing is mostly on/off, not a smooth W-2 wobble
+
+Start with the ambient cash-flow weather. In JPMCI’s million-customer sample (October 2012–September 2015), individuals saw an average **40%** absolute month-to-month change in total income; **55%** experienced changes greater than **30%**. Labor income still dominated the volatility budget because it is most of the paycheck. That is the floor under every platform comparison: Americans already live with large MoM swings *inside* traditional jobs.
+
+Platform earnings layer a binary switch on top of that floor. After first participating, labor-platform earners were active only **56%** of months; capital-platform earners only **32%**. The implied MoM swing from an active labor month ($533) to an idle month ($0) is a **100%** drop in platform income — not a 5% overtime wobble. Capital platforms show the same on/off pattern at a lower average ($314). That intermittency is why monthly participation counts understate annual exposure: JPMCI’s pandemic-era path peaked near **2.5%** of families earning platform income in a given month, but about **7.5%** had earned some platform income in the prior year — a five-point gap between the “this month” census and the “this year” census.
+
+Within active months, demand shocks still bite. Among drivers who kept participating, median platform revenues fell about **40%** in April 2020 before rebounding — a within-active MoM crash layered on top of a one-third drop in driver *participation*. Selling platforms kept growing; leasing and transport took the hit. The sector panel is the operational map of which platform “jobs” swung hardest.
+
+## Reliance: secondary for the median, majority for a thick tail
+
+Headline averages can hide the household that treats Uber or DoorDash as rent money. JPMCI’s September 2015 cut of *active* participants is the cleanest public reliance ladder:
+
+| Reliance band (active month) | Labor platforms | Capital platforms |
+| --- | ---: | ---: |
+| More than **75%** of total income | **25%** | **17%** |
+| More than **25%** of total income | **46%** | **25%** |
+| Active months after first entry | **56%** | **32%** |
+| Avg earnings when active | **$533** (33% of income) | **$314** (20% of income) |
+
+Among everyone who had *ever* participated over three years — including months they were idle — **82%** of labor participants and **96%** of capital participants relied on platforms for less than **25%** of income in the September 2015 snapshot. Growth in headcount did **not** deepen reliance: activity rates and income shares stayed roughly flat even as cumulative participation exploded. The platform economy scaled by recruiting new entrants, not by converting side hustles into primary jobs for the typical participant.
+
+The pandemic-era family cut reframes the same idea with sector medians. The median transport driver’s platform share of family income settled near **10%** after the onset of COVID; non-transport work drifted toward **7%**; sellers stayed around **1–2%**; lessors sat highest, roughly **15–20%**. Median is not mean, and median is not the >75% tail. Briefings that say “gig is just a side hustle” are describing the middle of the distribution. Briefings that say “gig is the new job” are describing the left tail — and JPMCI shows that tail is large enough to matter for credit, UI eligibility, and cash-flow stress.
+
+## Labor substitutes; capital supplements
+
+Platforms are not one labor market. In months with labor-platform earnings, non-platform income was about **14%** lower and labor-platform earnings contributed about **15%** of income — so total income barely moved. Labor platforms were filling a hole. Capital platforms (selling goods, leasing assets) behaved differently: non-platform income was almost unchanged, and platform earnings added about **7%**, lifting total income by roughly **7%**. That is the substitute-versus-supplement panel: rides and tasks as gap fillers; Airbnb and marketplace sales as top-ups.
+
+The Fed SHED 2024 survey rhymes without using bank wires. **20%** of adults did some gig activity in the prior month, but only **4%** did short-term tasks arranged through an app or website. Among people who did gig activities, just **21%** called them their main job, and **96%** usually spent under 35 hours a week on them. Yet **31%** said that without gig income they would have trouble making ends meet — **41%** among platform-task adults — and **61%** of platform-task participants wished the pay were more consistent. Flexibility scores high (**78%** for platform tasks); consistency does not. That is the consumer-finance signature of volatile platform earnings: optional on the calendar, non-optional when the rent is due.
+
+## What BLS can and cannot say here
+
+The BLS Contingent Worker Supplement measures a different object. In July 2023, **4.3%** of workers held contingent jobs as their sole or main job — temporary or expected to end. The May 2017 electronically mediated employment questions captured app-arranged short tasks in a single reference week and remain a useful *perimeter* check, not a MoM earnings ledger. Survey main-job rates will understate bank-observed intermittent platform deposits; bank samples will over-represent Chase customers. This post keeps those perimeters labeled: JPMCI for high-frequency earnings and reliance, SHED for attitudes and broad gig prevalence, BLS for contingent / electronically mediated stock.
+
+## Caveats and confidence
+
+**Activity rates, average earnings, and >75% / >25% reliance shares** for labor and capital platforms are disclosed JPMCI findings from the 2012–2015 Chase sample and should be treated as that vintage — the cleanest public MoM ledger, not a 2026 census. **Pandemic participation peaks (2.5% monthly / ~7.5% trailing year), the −25% MoM participation drop, driver revenue and income-share medians** follow JPMCI’s 2018–2021 family sample; chart paths in the dashboard include desk interpolations between disclosed anchors and are tagged estimated where needed. **SHED 2024** gig definitions are broader than online labor platforms (selling used clothes counts); platform-task results use the half-sample aligned to Contingent Worker Supplement wording. **Chase administrative data** are not a probability sample of all U.S. adults. None of those caveats erase the dual pattern: platform income is **intermittent by design**, and **majority reliance is a minority — but a large one** — of active labor participants.
+
+## Reading the dashboard for a briefing
+
+Start on **Earnings swings** to see why idle months dominate MoM platform volatility. Flip to **Reliance bands** and filter **Labor** to put the **25%** majority-paycheck tail on screen. Use **Participation path** for the monthly-versus-trailing-year gap and the COVID participation crash. **Sector medians** separates drivers from sellers and lessors on both dollars and income share. **Substitute vs supplement** is the one-slide labor-versus-capital policy distinction. End on **Fed SHED attitudes** when the room needs the “wish pay were consistent” and ends-meet numbers. The source note under the charts carries the full methodology string for citation.`,
+  },
+  {
     id: "real-wage-growth-by-wage-quintile-2026",
     slug: "real-wage-growth-by-wage-quintile-2026",
     title:
