@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "cheap-metro-rent-convergence-2026",
+    marker: "Burden-share gap narrowing",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "medical-collections-on-consumer-credit-reports-2026",
     marker: "Medical share of collections — 57%→36%",
     forbidden: "Loading interactive charts",

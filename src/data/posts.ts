@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "cheap-metro-rent-convergence-2026",
+    slug: "cheap-metro-rent-convergence-2026",
+    title:
+      "Charted: Once-Cheap Metros Closed 6.1 pp of the Coastal Rent-Burden Gap",
+    excerpt:
+      "ACS ≥30% rent-burden medians for 12 interior metros rose from 40.9% in 2019 to 49.4% in 2024 while eight coastal metros moved only 50.1%→52.5%. The coastal–interior gap narrowed from 9.2 to 3.1 percentage points as ZORI rent indexes in the interior cohort jumped a median 47%.",
+    category: "Real Estate",
+    themeId: "rent-burden-acs",
+    imageUrl:
+      "/images/real-estate-cheap-metro-rent-convergence-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split skyline with teal inland towers and amber coastal towers under two converging rent-burden trend lines, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-25T18:00:00Z",
+    featured: true,
+    visualization: "cheap-metro-rent-convergence-2026",
+    layout: "default",
+    content: `For a decade the rental map told a simple story: coastal metros were expensive and burdened; Sun Belt and Mountain metros were the escape hatch. That story is breaking. Across a tracked panel of **12 interior** and **8 coastal** large metros, the unweighted median share of renter households paying **≥30% of income on gross rent** (Census ACS table B25070 / DP04) climbed from **40.9% in 2019 to 49.4% in 2024** for the interior cohort, while the coastal cohort moved only from **50.1% to 52.5%**. The **coastal–interior burden gap** therefore shrank from **9.2 percentage points to 3.1** — a **6.1 pp** narrowing in five years.
+
+That convergence is not a coastal collapse. Coastals barely budged. It is an interior catch-up: once-affordable metros absorbed a pandemic-era demand shock that showed up first in asking rents (Zillow Observed Rent Index) and then in ACS burden shares. The interactive dashboard above walks the gap path, individual metro trajectories, a ZORI-versus-burden scatter, an interior rise ladder, and how much of each metro’s 2019 distance to the coastal median closed by 2024.
+
+## What rent burden measures — and what it does not
+Rent burden is a **share of households**, not a rent index. ACS asks what fraction of renter households devote at least 30% of household income to gross rent (rent plus utilities when reported that way). Severe burden uses a **50%** threshold. The metric can rise because rents rise, because renter incomes stall, because the renter mix shifts toward lower-income households, or because all three move together. It is the Census Bureau’s primary public signal for housing cost stress at metro scale.
+
+It is not a substitute for a full Joint Center for Housing Studies rental audit. ACS 1-year estimates cover large metros; 2020 ACS 1-year was suppressed, so 2020 cells in this panel are **linear interpolations** between 2019 and 2021 (modeled). Cohort medians are **unweighted metro medians** of the tracked sample — not population-weighted national totals. ZORI is a repeat-rent asking-rent index, seasonally adjusted and indexed to January 2019 = 100 for each metro here; cumulative percent change is end index over start index minus one. Treat the dashboard as a coincidence map of price pressure and household stress, not a causal identification of remote work alone.
+
+## The gap path: coastals flat, interiors climb
+In 2019 the interior median sat near **41%** burdened while coastals sat near **50%**. By 2021 the interior median had already cleared **44%**; by 2022 it was past **47%**; by 2024 it printed **49.4%**. Coastal medians inched from **50.1%** to **52.5%** over the same window — roughly **+2.4 pp** versus the interior’s **+8.5 pp**. The gap series in the dashboard’s first panel is the arithmetic consequence: **9.2 → 3.1 pp**.
+
+Every one of the **12 interior** metros in the sample raised its ≥30% burden share by **at least 5 pp** from 2019 to 2024. Boise (+**11.4**), Tampa (+**8.9**), Salt Lake City (+**10.0**), and Austin (+**8.5**) led the climb. Coastal metros mostly added **1–3 pp**; San Francisco and New York stayed high but comparatively stable as asking-rent growth cooled and, in some years, turned negative after 2022.
+
+## ZORI shows where the price shock landed first
+Zillow’s Observed Rent Index is the market’s early-warning tape. From January 2019 through December 2024, the **interior cohort median cumulative ZORI gain was 47.1%**; the **coastal median was 25.5%**. Boise (~**63%**), Tampa (~**58%**), Phoenix (~**54%**), and Nashville (~**52%**) sit at the top of the interior ladder. Seattle printed roughly **25%** cumulative gains; San Francisco only about **8%** — both far below the Sun Belt surge even though their absolute rent levels remain higher.
+
+Peak year-over-year ZORI prints clustered in **2021** across almost the entire panel: Boise near **+28%**, Tampa near **+26%**, Phoenix near **+24%**, Austin near **+23%**. Coastal peaks were softer — often **9–14%** YoY outside Miami. San Francisco’s cumulative ZORI gain was only about **8%** over the full window; Seattle printed roughly **25%**. Miami is the coastal exception that behaves more like an interior boom metro on the rent tape (**~53%** cumulative ZORI; severe burden still above **35%** in 2024). The dashboard’s scatter puts cumulative ZORI on one axis and ACS burden-share change on the other: interiors cluster up and right; most coastals sit lower-left. Correlation is not proof that remote migration caused every basis point, but the coincidence is hard to ignore.
+
+| Metro | Cohort | Burden 2019 | Burden 2024 | Δ burden | ZORI cum. % |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Boise | Interior | 38.2% | 49.6% | +11.4 pp | 62.8% |
+| Salt Lake City | Interior | 37.6% | 47.6% | +10.0 pp | 49.2% |
+| Tampa | Interior | 44.2% | 53.1% | +8.9 pp | 58.4% |
+| Austin | Interior | 43.1% | 51.6% | +8.5 pp | 41.6% |
+| Phoenix | Interior | 42.6% | 51.2% | +8.6 pp | 54.2% |
+| Nashville | Interior | 40.4% | 49.8% | +9.4 pp | 52.1% |
+| Seattle | Coastal | 46.2% | 49.1% | +2.9 pp | 24.6% |
+| San Francisco | Coastal | 44.8% | 47.2% | +2.4 pp | 8.4% |
+| Boston | Coastal | 48.4% | 51.2% | +2.8 pp | 31.2% |
+| Interior median | — | 40.9% | 49.4% | +8.5 pp | 47.1% |
+| Coastal median | — | 50.1% | 52.5% | +2.4 pp | 25.5% |
+
+## Severe burden rose with the headline share
+The ≥50% severe-burden cut tells the same directional story with sharper household stakes. Boise’s severe share moved from **17.4% to 24.1%**; Tampa from **21.4% to 27.2%**; Phoenix from **20.1% to 25.6%**. Coastal severe shares mostly edged up **1–2 pp** from already elevated bases — Los Angeles and San Diego remain near **30%** severe. Convergence in the ≥30% metric therefore did not spare lower-income renters in boom metros; the whole distribution of cost stress shifted.
+
+Income composition matters here. If higher-income remote workers enter a metro and bid up rents while incumbent lower-income renters stay, burden shares can rise even as mean incomes look healthier in the ACS aggregates. The dashboard does not decompose income mix; it only shows that **household-level cost stress** widened in the same places asking rents exploded.
+
+## Closing the distance to the coastal median
+Another way to read convergence is metro-by-metro: how far below the coastal median was each interior city in 2019, and how much of that distance closed by 2024? Salt Lake City and Boise started furthest below the coastal bar and closed the most ground. Atlanta and Tampa started closer and still narrowed. A few interiors — Dallas–Fort Worth, Charlotte — closed less because their 2019 starting burdens were already mid-pack and their 2024 prints sit near the new interior median rather than overshooting the coastal line.
+
+Important nuance: **closing the gap is not the same as becoming “coastal expensive” in absolute rent dollars**. San Francisco’s asking rents remain far above Boise’s. What converged is the **share of local renters under stress relative to local incomes**. A $1,800 unit can burden a Boise household the way a $3,200 unit burdens a coastal one if wages and household composition differ. Policymakers who only watch absolute rent levels will miss the stress signal ACS is sending.
+
+## Remote work, supply, and other confounders
+The pandemic remote-work wave is the leading narrative for interior demand, and the 2021 ZORI peaks line up with that timing. It is not the only force. Household formation after lockdowns, investor purchases of single-family rentals in Sun Belt metros, construction lags, insurance and tax pass-throughs in Florida and elsewhere, and local income growth all move rents and burdens. Coastal cooling after 2022 — soft tech hiring, return-to-office mandates, and new supply in some coastal submarkets — also narrowed the gap from the high side by a little.
+
+Caveats to keep next to the headline. The panel is **20 metros**, not the full ACS metro universe; small and mid-size markets can diverge. Unweighted medians overweight Boise relative to Dallas. ZORI tracks asking rents for a repeat sample and can diverge from ACS contract rents. Burden shares embed income and household-size change. Interpolated 2020 cells should not be cited as published Census prints. And Miami’s coastal label is geographic, not behavioral — its rent tape looks like a boom interior.
+
+## What to watch next
+Three tapes decide whether the 6.1 pp gap closing sticks or reverses. First, **ACS 1-year 2025** burden shares: if interior metros stabilize near 49–51% while coastals drift, the new equilibrium is a permanently thinner affordability premium for “cheap” metros. Second, **ZORI YoY** prints: sustained negative or flat asking-rent growth in Boise, Phoenix, and Austin would take pressure off future burden rises; a second leg up would push interiors through the coastal median. Third, **migration and employment** microdata — IRS county migration, Census Pulse remote-work shares, and local payroll employment — will show whether demand is still relocating or has already repriced.
+
+For one-line briefings: **the coastal–interior ACS rent-burden gap narrowed about 6.1 percentage points from 2019 to 2024 (9.2→3.1) as twelve once-cheap metros each raised ≥30% burden shares by at least five points while coastal medians barely moved, and interior ZORI cumulative gains outran coastal ones by roughly twenty points.**`,
+    tags: [
+      "rent burden",
+      "ACS",
+      "ZORI",
+      "metros",
+      "housing affordability",
+      "remote work",
+      "Sun Belt",
+    ],
+  },
+  {
     id: "medical-collections-on-consumer-credit-reports-2026",
     slug: "medical-collections-on-consumer-credit-reports-2026",
     title:
