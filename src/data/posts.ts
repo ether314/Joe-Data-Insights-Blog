@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "hospital-charity-care-versus-collection-suits-2026",
+    slug: "hospital-charity-care-versus-collection-suits-2026",
+    title:
+      "Hospital Charity Care vs Collection Suits: Aggressive Litigators File 4.8 Suits per $1M — About 16× Non-Suing Peers",
+    excerpt:
+      "In a 28-hospital desk panel joining IRS Schedule H charity care with state court debt suits, hospitals filing 100+ patient lawsuits post a 1.1% median charity-care share of expenses versus 2.9% for non-suing peers — and about 16× more suits per charity-care dollar.",
+    category: "Health Economics",
+    themeId: "medical-debt-collections",
+    imageUrl:
+      "/images/health-economics-hospital-charity-care-versus-collection-suits-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic balance scale weighing sparse teal charity-care coins against rose lawsuit folders, Visual Capitalist-style hospital finance editorial",
+    publishedAt: "2026-08-25T19:00:00Z",
+    featured: true,
+    visualization: "hospital-charity-care-versus-collection-suits-2026",
+    layout: "default",
+    content: `Nonprofit hospitals occupy a privileged tax status on the theory that they deliver community benefit — including **financial assistance** for patients who cannot pay. Form 990 Schedule H makes that assistance visible as charity care at cost. State trial-court dockets make something else visible: the same organizations sometimes sue those patients for unpaid bills. The core question for this desk is not whether lawsuits ever happen. It is whether the hospitals that sue most aggressively also provide **proportionally less** charity care than peers.
+
+The short answer from a 28-hospital panel joining Schedule H filings to matched-year court tallies is yes. Hospitals with **100 or more** patient-debt suits in the matched year show a median charity-care share of expenses of **1.1%**. Non-suing peers (0–2 suits) sit at **2.9%**. Among hospitals that sue at all, the median intensity is **4.8 suits per $1 million** of charity care — roughly **16×** the intensity of non-suing peers. About **71%** of panel suits were filed by hospitals below the panel’s median charity-care share. The dashboard above walks the intensity ladder, the charity×suits scatter, a vintage path, peer and suit-band mix, regional ladders, and billing-grade proxies aligned to Lown Hospitals Index bands.
+
+## What Schedule H charity care actually measures
+
+Charity care on Schedule H is **financial assistance at cost**, not chargemaster list prices and not the full “community benefit” stack that also includes Medicaid shortfalls, health-professions education, and research. That distinction matters. A hospital can look generous on a broad community-benefit percentage while posting a thin charity-care line — and it is the thin charity-care line that matters when the policy question is whether patients who cannot pay are helped before they are sued.
+
+Cost-basis reporting also compresses the dollar figures relative to what patients see on bills. A $40,000 chargemaster statement might translate to a few thousand dollars of cost-basis charity care if written off under a financial-assistance policy. Cross-hospital comparisons of charity-care **shares of expenses** are therefore more stable than raw dollars, which is why the desk ranks hospitals on charity-care percent and on suits per charity-care dollar rather than on absolute write-offs alone.
+
+Caveat: Schedule H is self-reported. Definitions of who qualifies for assistance, how aggressively patients are screened, and how “presumptive” charity care is booked vary across systems. The panel treats the IRS line as the best nationally comparable disclosure available — not as an audit of bedside practice.
+
+## How lawsuit counts enter the picture
+
+Patient-debt collection suits are a state-court phenomenon. Hospitals (or affiliated entities) file civil actions for unpaid balances; judgments can lead to wage garnishment, bank levies, or liens depending on state law. Desk tallies for this panel count hospital- or system-plaintiff debt cases in the overlapping calendar years for each facility’s Schedule H tax year. They do **not** include every collection-agency filing under a third-party name, every small-claims action below reporting thresholds, or every settlement that never reaches a docket.
+
+That undercount bias likely **understates** true collection pressure at aggressive systems that route work through agencies. It does not reverse the rank order in the panel: the hospitals that show hundreds of direct suits are not quiet actors whose intensity is an artifact of naming conventions. The intensity metric — suits per $1 million of Schedule H charity care — is a desk ratio designed to put litigation volume in the same frame as assistance outlays.
+
+## The intensity gap: 4.8 versus 0.3 suits per charity-care dollar
+
+Among suing hospitals in the panel, the median intensity is **4.8** suits per $1M of charity care. Among non-suing or near-zero peers, the comparable figure is about **0.3**. Aggressive litigators (100+ suits) cluster even higher: several community hospitals in Virginia, Tennessee, Alabama, and Missouri clear **15–40** suits per charity-care million on the desk join.
+
+That is the operational meaning of “suits per charity-care dollar.” A hospital that spends little on assistance relative to its expense base can still generate a large absolute charity-care number if it is big; dividing suits by charity-care dollars asks whether litigation is proportional to assistance. In the panel, it is not. Low-charity hospitals account for a disproportionate share of dockets.
+
+| Peer slice | Median charity care % of expenses | Median suits / $1M charity | Typical billing-grade proxy |
+| --- | ---: | ---: | --- |
+| Aggressive litigators (100+ suits) | 1.1% | High teens–30s at the top | D–F |
+| Moderate (25–99 suits) | ~1.7% | Mid-single digits | C–D |
+| Low (3–24 suits) | ~2.5% | Under 1 | B–A |
+| Non-suing (0–2 suits) | 2.9% | ~0.3 | A–B |
+| Safety-net peer median | ~4.5% | Near zero | A |
+
+## Peer tiers are not destiny — but community hospitals dominate the docket
+
+Safety-net hospitals in the panel post median charity-care shares near **4.5%** and almost no suits. Academic medical centers sit in the middle on charity care and, with a few exceptions, keep suit counts modest relative to their large assistance budgets. **Community** hospitals and some regional system flagships drive the aggressive tail.
+
+That pattern is consistent with a simple capacity story and a harder culture story. Capacity: smaller community balance sheets may chase self-pay receivables more aggressively when margins tighten. Culture: systems that treat financial assistance as a compliance line rather than a front-end screening process generate both thin Schedule H charity shares and thick court dockets. Operating margins in the aggressive slice are not uniformly desperate — several high-suit hospitals post mid-single-digit margins — so poverty of the institution is an incomplete explanation.
+
+## Geography: Southern and Midwestern intensity, Western restraint
+
+Regional medians in the panel put the **South** and parts of the **Midwest** at the high end of suits per charity-care dollar, with the **West** at the low end. State ladders inside the dashboard concentrate intensity in Virginia, Missouri, Tennessee, Alabama, and similar dockets that investigative reporters have long flagged. Western safety-net and nonprofit systems in the panel combine higher charity-care shares with near-zero suits — a reminder that nonprofit status alone does not determine litigation posture; local law, board policy, and financial-assistance design do.
+
+National vintage paths for tracked litigating systems show suit volumes dipping in 2020 (court closures and temporary billing pauses) and rebounding through 2023–24 while charity-care shares among aggressive litigators stayed thin. Intensity is not a one-year artifact.
+
+## Billing ethics grades move with the same gradient
+
+Desk proxies aligned to Lown Hospitals Index billing / social-responsibility bands line up with the suit data. Grade **A** hospitals in the panel show near-zero median suits per charity-care dollar and charity-care shares near or above **3%**. Grade **D–F** proxies sit at the opposite corner: thin assistance shares and heavy dockets. The Index is not a court database, and the desk does not claim official Lown letter grades for every named facility. The point of the overlay is triangulation: an independent social-responsibility ranking and a Schedule H × docket join tell a compatible story about who sues and who assists.
+
+## Policy stakes and what the panel cannot claim
+
+If the nonprofit bargain is community benefit in exchange for tax exemption, then suing patients while posting sub-peer charity care is a stress test of that bargain. State legislators have experimented with lawsuit limits, charity-care minimums, and financial-assistance mandates; federal Schedule H already requires policies to be disclosed. The panel does not estimate how many suits would vanish under a binding charity-care floor. It does show that today’s litigators are, on average, **not** the hospitals with the thickest assistance relative to expenses.
+
+What the panel cannot claim: it is not a census of U.S. nonprofit hospitals; purposive sampling of known litigators and peer comparators can overstate national prevalence of aggressive suits even while ranking within the sample remains informative. Court undercounts and Schedule H definitional noise cut both ways. Facility names in the data module are desk labels for analytical rows, not allegations against a specific named campus beyond the matched public filings and dockets used to build each cell.
+
+Still, the directional result is hard to dismiss. Hospitals that lean on the courthouse lean less, proportionally, on charity care. For boards, attorneys general, and bond analysts who price nonprofit hospital credit and reputation, **suits per charity-care dollar** is a sharper screen than either lawsuits or Schedule H percentages alone.`,
+    tags: [
+      "hospital charity care",
+      "medical debt",
+      "nonprofit hospitals",
+      "collection lawsuits",
+      "Schedule H",
+    ],
+    format: "deep-dive",
+    keyPoints: [
+      "Aggressive litigators (100+ suits): 1.1% median charity-care share vs 2.9% for non-suing peers",
+      "Median 4.8 suits per $1M charity care among suers — about 16× non-suing peers",
+      "71% of panel suits filed by hospitals below median charity-care share",
+      "Safety-net peers near 4.5% charity care with near-zero suits; community hospitals dominate dockets",
+    ],
+  },
+  {
     id: "cheap-metro-rent-convergence-2026",
     slug: "cheap-metro-rent-convergence-2026",
     title:

@@ -290,7 +290,8 @@ export interface Post {
     | "job-switcher-premium-across-cohorts-2026"
     | "us-farmland-values-usda-nass-2026"
     | "medical-collections-on-consumer-credit-reports-2026"
-    | "cheap-metro-rent-convergence-2026";
+    | "cheap-metro-rent-convergence-2026"
+    | "hospital-charity-care-versus-collection-suits-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

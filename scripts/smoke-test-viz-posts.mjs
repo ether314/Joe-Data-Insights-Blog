@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "hospital-charity-care-versus-collection-suits-2026",
+    marker: "Suits per charity-care dollar",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "cheap-metro-rent-convergence-2026",
     marker: "Burden-share gap narrowing",
     forbidden: "Loading interactive charts",

@@ -3902,6 +3902,21 @@ const CheapMetroRentConvergence2026Dashboard = dynamic(
   },
 );
 
+const HospitalCharityCareVersusCollectionSuits2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/HospitalCharityCareVersusCollectionSuits2026Dashboard"
+    ).then((m) => m.HospitalCharityCareVersusCollectionSuits2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4929,6 +4944,10 @@ export function PostVisualization({
 
   if (type === "cheap-metro-rent-convergence-2026") {
     return <CheapMetroRentConvergence2026Dashboard />;
+  }
+
+  if (type === "hospital-charity-care-versus-collection-suits-2026") {
+    return <HospitalCharityCareVersusCollectionSuits2026Dashboard />;
   }
 
   return null;
