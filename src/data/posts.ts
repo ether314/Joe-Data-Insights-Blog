@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "survival-curves-of-pandemic-era-startups-2026",
+    slug: "survival-curves-of-pandemic-era-startups-2026",
+    title:
+      "Survival Curves of Pandemic-Era Startups: One-Year Share Fell From 80.8% to 76.9% After Relief",
+    excerpt:
+      "BLS BED one-year establishment survival — desk-averaged across Census divisions — rose for 2020 births during the PPP/ERC window, then slipped below the 2017–19 baseline for 2022 births once relief wound down.",
+    category: "Economics",
+    themeId: "business-formation-applications",
+    imageUrl:
+      "/images/economics-survival-curves-of-pandemic-era-startups-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of teal and rose startup survival curves crossing an amber baseline beside fading storefront silhouettes, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-31T12:00:00Z",
+    featured: true,
+    visualization: "survival-curves-of-pandemic-era-startups-2026",
+    layout: "default",
+    content: `New establishments do not fail on a single day. They fail on a clock. The Bureau of Labor Statistics Business Employment Dynamics (BED) age series watches each March birth cohort and asks a blunt question: what share still reports positive employment one year later, two years later, five years later? That **one-year survival share** is the cleanest early signal we have for whether a vintage of startups is sturdier or more brittle than the ones that came before.
+
+This desk’s question is narrower than “did the pandemic kill small business?” It is: **once Paycheck Protection Program (PPP) draws and Employee Retention Credit (ERC) claims stopped propping the payroll tape, how did first-year survival for 2020–21 cohorts compare with pre-pandemic vintages — and what happened to the 2022 cohort that opened into the wind-down?** Using BLS The Economics Daily’s division table of 1-year establishment survival through **2022 births**, the national desk mean (unweighted across nine Census divisions) prints **80.8% for 2020 births**, then **78.5% for 2021** and **76.9% for 2022**. The 2017–19 baseline sat near **79.0%**. Relief-era births cleared the first year; post-relief births did not.
+
+The interactive dashboard above walks cohort survival curves, the national one-year path with relief markers, division deltas, a 2020×2022 scatter, and a sector ladder. The rest of this post is the narrative behind those panels.
+
+## What “one-year survival” actually counts
+
+BED age data are March-to-March. An establishment’s birth year is the year it first reports positive employment. Survival to age one means it still has positive employment in the March one year later. The series is establishment-based, not firm-based: a multi-unit firm can spawn several establishments, and breakouts inherit predecessor birth dates. That is the right object for “how many new locations made it through year one,” and a slightly different object from Census Business Dynamics Statistics (BDS) firm shutdown rates.
+
+The TED table that underpins this post reports **1-year survival rates by Census division for birth years 1994–2022**. We take those disclosed cells as given. The **national path** in the dashboard is an **unweighted mean of the nine divisions** — a desk estimate, not an employment-weighted BLS national print. Weighting by births would tilt the series toward populous divisions; the unweighted mean treats New England and the Pacific as equal geographic experiments. Both approaches are defensible; we choose the transparent one.
+
+Ages two through five on the curve panel are **modeled**. We take each cohort’s observed (desk-mean) age-one rate and apply historical BED conditional survival ratios from cohorts with complete follow-up — roughly **0.86** of age-one survivors reach age two, then **0.88**, **0.90**, and **0.91** for the next steps. That preserves the classic downward bow of entrepreneurship Chart 3 without pretending we re-downloaded every cell of Table 7 under BLS bot restrictions. Modeled ages are scenario geometry, not a second disclosure.
+
+## The relief window elevated the 2020 vintage
+
+Eight of nine divisions printed a **higher** 1-year survival rate for **2020 births** than for **2019 births**. East North Central jumped from **78.4% to 82.1%**. West South Central rose from **79.3% to 81.5%**. Mountain climbed from **77.7% to 80.9%**. Only the Pacific — already strong at **82.9%** in 2019 — stayed roughly flat at **81.6%**. The national desk mean moved from **79.0% (2019)** to **80.8% (2020)**, about **+1.8 percentage points** above the 2017–19 baseline.
+
+That lift is not a miracle of business models. It coincides with the CARES Act window: PPP first-draw liquidity in spring–summer 2020, a second draw into 2021, and ERC claims that kept many thin-margin payrolls solvent through the acute shutdowns. Establishments that would have closed for lack of cash could stay on the QCEW tape long enough to print a March employment report. Survival here is **employment continuity**, not profitability, founder wellbeing, or product-market fit.
+
+Census BDS firm-age tables tell a related story at the firm layer: young-firm exit rates fell in the acute pandemic years when forbearance and transfers were thickest, then normalized as programs closed. We do not micro-link BDS firms to BED establishments in this post. The two programs answer adjacent questions — firm shutdowns versus establishment employment survival — and both point the same direction for 2020.
+
+## Post-relief cohorts slipped below the pre-pandemic baseline
+
+The 2021 birth cohort is transitional. National desk-mean one-year survival fell to **78.5%** — already under the 2017–19 baseline — even while the Pacific printed an extraordinary **84.6%**, the highest cell in the recent TED window. Strip that Pacific outlier and the other eight divisions average closer to **77.8%**. West North Central dropped to **75.7%**; South Atlantic to **76.7%**. Second-draw PPP and late ERC claims were still in the system for parts of 2021, but the composition of births had shifted toward a larger application boom and a noisier mix of thin entities.
+
+By **2022 births**, the relief story is mostly over. The national desk mean lands at **76.9%** — **−3.9 pp** versus the 2020 relief peak and **−2.1 pp** versus the 2017–19 baseline. Mountain prints the softest cell at **74.4%**. West North Central sits at **75.6%**. Even the Pacific, which had looked invincible in 2021, falls back to **77.1%**. Eight of nine divisions show a **negative** 2022-minus-2020 delta. The dashboard’s horizontal bar panel and diagonal scatter make that geography visible without a speech.
+
+| Birth year | Desk-mean 1-yr survival % | vs 2017–19 baseline (pp) | Era |
+| --- | ---: | ---: | --- |
+| 2017 | 78.9 | −0.1 | Pre-pandemic |
+| 2018 | 79.0 | 0.0 | Pre-pandemic |
+| 2019 | 79.0 | 0.0 | Pre-pandemic |
+| 2020 | 80.8 | +1.8 | Relief window |
+| 2021 | 78.5 | −0.5 | Transition |
+| 2022 | 76.9 | −2.1 | Post-relief |
+
+The table is the whole argument in six rows. Survival did not collapse to Great Recession lows. It **gave back the relief premium** and then some. That is exactly what you would expect if transfers delayed exits rather than permanently rewriting hazard rates.
+
+## Survival curves, not just a single print
+
+A one-year rate is a snapshot. The curve panel stacks ages 0–5 for focus cohorts. Age zero is always **100%** by construction. Age one is the TED-based desk mean. Ages two through five bend with historical conditional ratios. On that geometry, the **2020** curve starts higher at age one and stays above the **2018** and **2019** curves through the early ages — a parallel shift more than a shape change. The **2022** curve starts lower and stays lower. If conditional hazards re-steepened after relief (a real risk we cannot fully observe yet for the youngest cohorts), the modeled gap would understate the long-run damage; if hazards mean-reverted, the gap would narrow.
+
+That uncertainty is why the headline stays on **one-year survival share**. It is disclosed sooner, comparable across vintages, and less dependent on the modeling layer. Five-year survival for 2020 births will not be fully stamped until later BED releases; treat the outer curve as a planning sketch.
+
+## Geography: relief was broad, the unwind was broader
+
+Division deltas matter because national averages hide who got the soft landing. East North Central’s **+3.7 pp** 2020-over-2019 lift was one of the largest relief bumps; its **−4.8 pp** 2022-versus-2020 drop is among the sharpest givebacks. Mountain’s path — **77.7 → 80.9 → 77.2 → 74.4** — is a miniature of the national story with a steeper final step. Middle Atlantic moved less dramatically but still finished **2022 below 2020**.
+
+Pacific is the stubborn exception on the way up and the reminder that regional booms can dominate a single year. Its **84.6%** 2021 print is a genuine TED cell, not a desk invention. It may reflect sector mix (tech and professional services establishments), delayed closures, or classification quirks. It does not overturn the national path: by 2022 the Pacific had rejoined the softer pack.
+
+## Sector color without overclaiming
+
+The sector ladder is **modeled**. We anchor the all-private row to the TED desk mean, then spread historical young-establishment exit differentials around it — construction and accommodation & food softer, manufacturing and health care sturdier. Under that sketch, accommodation & food shows the largest relief-to-post-relief drop: a big 2020 lift from dining and lodging support, then a sharp 2022 giveback as transfers faded and labor costs stayed high. Professional services and health care move less. Treat those bars as **hypothesis charts**, not NAICS microdata. The geographic TED table is the hard evidence; the sector panel is interpretive shading.
+
+## Caveats the desk will not sand away
+
+First, **establishment ≠ firm ≠ EIN application**. A surge in business applications can raise births without raising durable employers. Survival rates condition on establishments that already appear with positive employment; they say nothing about the large pool of non-employing entities.
+
+Second, **selection**. If relief kept weaker establishments alive into the age-one window, the 2020 survivor pool may be compositionally softer than a pre-pandemic survivor pool at the same age. That would bias multi-year curves down later even if age-one rates looked strong — another reason to keep the modeled ages labeled.
+
+Third, **measurement**. March employment is a point-in-time concept. Seasonal businesses, multi-establishment reorganizations, and predecessor inheritance in breakouts can move establishments across categories without a “death” in the everyday sense.
+
+Fourth, **causal attribution**. We align survival prints with PPP/ERC timelines. We do not estimate a treatment effect with a control group of unassisted establishments. Other forces — demand reopening, labor shortages, rent, inflation, and interest rates — also hit 2021–22 births. The coincidence is strong; the identification is not.
+
+Fifth, **national construction**. Unweighted division means differ from a birth-weighted national rate. If you need the official BLS national Table 7 print for a briefing book, pull it directly; our path is built for transparent geography.
+
+## What the desk takes to the briefing
+
+For one-line briefings: **the one-year survival share for U.S. private establishments rose to about 80.8% for 2020 births during the relief window, then fell to about 76.9% for 2022 births — below the ~79% pre-pandemic baseline — with eight of nine Census divisions giving back the 2020 lift.** That is not a story of total collapse. It is a story of **transfers delaying exit**, then hazard rates reasserting themselves once the programs closed. Operators and lenders who underwrote 2020–21 vintages on the elevated survival print should re-benchmark to the post-relief path. Policymakers who treat the 2020 spike as a permanent improvement in startup durability are reading a liquidity episode as a productivity episode.
+
+The dashboard’s controls let you flip survival versus exit, filter eras, toggle cohorts on the curve, and isolate a division. Use them. The table above is the spine; the maps of geography and the modeled curves are the ribs.`,
+  },
+  {
     id: "credit-outcomes-of-gig-dependent-households-2026",
     slug: "credit-outcomes-of-gig-dependent-households-2026",
     title:

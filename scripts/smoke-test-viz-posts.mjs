@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "survival-curves-of-pandemic-era-startups-2026",
+    marker: "One-year survival share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "credit-outcomes-of-gig-dependent-households-2026",
     marker: "Delinquency gap vs W-2 — 2.8 pp",
     forbidden: "Loading interactive charts",
