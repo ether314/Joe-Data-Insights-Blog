@@ -3767,6 +3767,21 @@ const HealthInsuranceCoverageGapsCensus2026Dashboard = dynamic(
   },
 );
 
+const RemoteSalesTaxCollectionAfterWayfair2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/RemoteSalesTaxCollectionAfterWayfair2026Dashboard"
+    ).then((m) => m.RemoteSalesTaxCollectionAfterWayfair2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4758,6 +4773,10 @@ export function PostVisualization({
 
   if (type === "health-insurance-coverage-gaps-census-2026") {
     return <HealthInsuranceCoverageGapsCensus2026Dashboard />;
+  }
+
+  if (type === "remote-sales-tax-collection-after-wayfair-2026") {
+    return <RemoteSalesTaxCollectionAfterWayfair2026Dashboard />;
   }
 
   return null;

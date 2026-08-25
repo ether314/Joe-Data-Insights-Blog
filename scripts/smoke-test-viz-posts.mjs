@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "remote-sales-tax-collection-after-wayfair-2026",
+    marker: "Remote-collection share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "health-insurance-coverage-gaps-census-2026",
     marker: "Working-age uninsured — Texas 21.6%",
     forbidden: "Loading interactive charts",

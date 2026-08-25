@@ -2,6 +2,88 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "remote-sales-tax-collection-after-wayfair-2026",
+    slug: "remote-sales-tax-collection-after-wayfair-2026",
+    title:
+      "Charted: Remote Sales-Tax Collection Hit 11.4% of Large-State GST — Fast Enough to Offset Erosion in Only 4 of 12 States",
+    excerpt:
+      "After Wayfair, large-state remote and marketplace remittance rose from 2.1% of general sales tax in FY2017 to 11.4% in FY2025. Cumulative recovery leads a modeled service-mix erosion drag by $5.2B — but only California, Texas, Florida, and Washington clear a clean offset.",
+    category: "Economics",
+    themeId: "sales-tax-base-erosion",
+    imageUrl:
+      "/images/economics-remote-sales-tax-collection-after-wayfair-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of teal and amber remote e-commerce remittance streams flowing into a state tax funnel beside a rising gold remote-collection share sparkline",
+    publishedAt: "2026-08-31T12:00:00Z",
+    featured: true,
+    visualization: "remote-sales-tax-collection-after-wayfair-2026",
+    layout: "default",
+    content: `In June 2018 the Supreme Court decided *South Dakota v. Wayfair* and ended the physical-presence rule that had shielded most remote sellers from state sales-tax collection. State legislatures and departments of revenue spent the next two years stacking economic-nexus thresholds and marketplace-facilitator statutes on top of Multistate Tax Commission (MTC) model language. The desk question that matters for fiscal capacity is not whether remote remittance rose — it did — but whether it rose **fast enough to offset ongoing base erosion** in the largest general-sales-tax (GST) states.
+
+This desk’s answer, joining large-state Department of Revenue (DOR) remote and marketplace footnotes to Census State Tax Collections (STC) GST denominators and a modeled service-mix erosion counterfactual, is split. Across a twelve-state panel, **remote-collection share of GST climbed from 2.1% in FY2017 to 11.4% in FY2025** — a **+9.3 percentage-point** rise. Cumulative Wayfair-attributable recovery through FY2025 is about **$49.2 billion**; the modeled erosion drag over the same FY2018–25 window is about **$44.0 billion**. The **net is +$5.2 billion** — recovery ahead in aggregate. Strip the panel into states and the picture hardens: **only four of twelve** (California, Texas, Florida, Washington) clear a clean net offset above **+$0.5B**. Three sit near parity. Five still run short.
+
+The interactive dashboard above walks the share path, remittance channel mix, state ladder, e-commerce-versus-offset scatter, recovery-versus-erosion stacks, and nexus adoption timeline. Toggle panels; filter by Census region; sort by remote share, net offset, recovery dollars, e-commerce intensity, or years to an 8% remote share.
+
+## What “remote-collection share” measures
+
+Remote-collection share is remote-seller plus marketplace-facilitator remittance divided by STC (or DOR-aligned) GST. It is **not** the share of taxable retail that moved online. It is the share of the sales-tax *receipt tape* that arrives through economic-nexus and marketplace channels rather than through brick-and-mortar or other in-state filings.
+
+That distinction matters. A state can print a rising remote share while still losing taxable base to untaxed services, digital leftovers, and necessity exemptions that never entered the remote channel. Wayfair recovered a class of previously under-collected *goods* sales. It did not rewrite service-taxability statutes. GAO’s pre- and post-decision framing on remote sales administration is consistent with that split: collection authority expanded; base design did not automatically broaden.
+
+## From Quill leakage to marketplace remittance
+
+Under *Quill*, many remote sellers without physical presence did not collect. Voluntary programs, click-through nexus, and affiliate rules patched holes unevenly. By FY2017 our large-state desk path still shows remote remittance near **2.1% of GST** — roughly **$6.8 billion** across the panel aggregate.
+
+Wayfair landed in mid-2018. Economic-nexus effective dates clustered in late 2018 and 2019; marketplace-facilitator laws followed on a similar cadence. The **Share path** panel shows the kink: remote dollars jump from **$9.4B in 2018** to **$16.8B in 2019** and **$24.1B in 2020** as platforms began remitting on behalf of third-party sellers. By FY2025 the aggregate is about **$48.6B**, or **11.4% of GST**.
+
+Marketplace facilitators now dominate the remittance channel. In the FY2025 mix, marketplace remittance is about **7.8 percentage points** of GST and direct remote-seller remittance about **3.6 points**, with the remaining **88.6%** still in-state / physical-presence GST. Marketplace dollars are roughly **68% of remote remittance**. That concentration is why DOR footnotes that isolate facilitator lines often move the remote share more than pure remote-seller registration counts.
+
+## Did recovery outrun erosion?
+
+The offset test is deliberately conservative. Recovery is a desk haircut on collections above the FY2017 remote run-rate — not the entire remote dollar stock, which would include voluntary and affiliate remittance that existed before Wayfair. Erosion drag is a modeled service-mix counterfactual: how much GST the panel would have lost relative to a 2017 breadth baseline as household spending continued to tilt toward lightly taxed services.
+
+On that framing, cumulative recovery (**$49.2B**) leads cumulative erosion (**$44.0B**) by **$5.2B** through FY2025. The **Cumulative offset** toggle on the share-path panel shows the two stock series crossing into net-positive territory after the 2020–21 remittance surge. Aggregate victory is real. It is also thin relative to the dollar scale of GST, and it is uneven across states.
+
+| State | Remote share FY2025 | Net offset ($B) | Years to 8% share | Status |
+| --- | ---: | ---: | ---: | --- |
+| Washington | 15.1% | +0.7 | 1.5 | Ahead |
+| Florida | 14.2% | +1.9 | 2.0 | Ahead |
+| Texas | 13.6% | +2.3 | 2.0 | Ahead |
+| California | 12.8% | +2.8 | 2.5 | Ahead |
+| New Jersey | 12.4% | −0.1 | 2.5 | Parity |
+| Georgia | 12.1% | +0.3 | 3.0 | Parity |
+| New York | 11.9% | −0.2 | 3.0 | Parity |
+| North Carolina | 11.2% | −0.1 | 3.5 | Parity |
+| Illinois | 10.4% | −0.6 | 3.5 | Short |
+| Ohio | 10.1% | −0.4 | 3.5 | Short |
+| Pennsylvania | 9.8% | −0.7 | 4.0 | Short |
+| Michigan | 9.6% | −0.7 | 4.5 | Short |
+
+Four states clear the **+$0.5B** “ahead” band and carry about **48% of panel GST weight**. Three sit within ±$0.5B. Five — including Illinois, Pennsylvania, Ohio, and Michigan — still print negative nets. High remote *shares* do not guarantee positive *offsets* when the erosion counterfactual is large relative to the absolute remittance base.
+
+## Speed of the climb mattered as much as the level
+
+Median time from economic-nexus effective date to a remote share of **8%** is about **3.5 years** in the panel. Washington cleared that bar in roughly **1.5 years**; Michigan needed about **4.5**. Early marketplace-facilitator effective dates and high e-commerce intensity both compress the climb. The **Offset scatter** panel plots e-commerce intensity against net offset: Washington, Florida, Texas, and California sit in the upper-right; several Midwestern GST states sit lower-left even after remote shares crossed into the high single digits.
+
+Adoption timing was national, not gradual. The **Nexus adoption** panel shows economic-nexus states jumping from effectively zero GST adopters in 2017 to the mid-30s by 2019 and plateauing near **45** (among GST states) by 2021. Marketplace-facilitator statutes tracked a year behind, then converged. After 2021 the extensive margin was largely done; intensive growth came from rising online goods volume and better facilitator compliance, not from new statute waves.
+
+## Caveats and confidence
+
+Several limits bind the readout.
+
+1. **Footnote heterogeneity.** DOR annual reports differ in whether they isolate marketplace remittances, remote-seller economic-nexus filings, and legacy click-through or affiliate programs. Desk joins reallocate ambiguous lines; some state shares are more modeled than disclosed.
+2. **Erosion is a counterfactual, not an audit.** The service-mix drag is a desk construct against a 2017 breadth baseline. It is not a statutory inventory of untaxed services, and it will not match any single DOR taxable-base reconciliation.
+3. **Fiscal calendars.** FY labels approximate calendar year-ends; a few states report on different fiscal calendars, which smooths or shifts the 2018–19 kink.
+4. **Panel coverage.** Twelve large GST states dominate national GST dollars but do not speak for small states or for the five states without a broad state GST.
+5. **Confidence labels.** STC GST denominators and many remote/marketplace line items are disclosed; national aggregates, offset balances, and mid-series interpolations are desk-modeled joins informed by GAO and MTC framing — not official Treasury estimates.
+
+## What desks should watch next
+
+Three markers will decide whether the post-Wayfair recovery keeps pace with base pressure. First, **marketplace share of remote remittance** — if facilitator concentration stays near **two-thirds**, compliance risk concentrates in a handful of platforms. Second, **Midwest nets** — Illinois, Michigan, Ohio, and Pennsylvania need either faster remote growth or slower modeled erosion to leave the short band. Third, **service-taxability reforms** — Wayfair recovered remote *goods*; any durable offset against services leakage still depends on statute design that nexus rules do not supply.
+
+For one-line briefings: **remote-collection share in the large-state panel is about 11.4%, up from 2.1% before Wayfair; aggregate recovery leads erosion by roughly $5.2B through FY2025; only four of twelve large GST states clear a clean offset.**`,
+  },
+  {
     id: "health-insurance-coverage-gaps-census-2026",
     slug: "health-insurance-coverage-gaps-census-2026",
     title:
