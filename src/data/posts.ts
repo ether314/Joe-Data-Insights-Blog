@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "state-sales-tax-bases-vs-the-service-economy-2026",
+    slug: "state-sales-tax-bases-vs-the-service-economy-2026",
+    title:
+      "Charted: State Sales-Tax Bases vs the Service Economy — Taxable Share of Consumption",
+    excerpt:
+      "Services are ~68% of personal consumption, yet the median general-sales-tax state taxes only 40 of 176 FTA-surveyed services. Desk joins put about 55% of household spending outside that median base — and Florida’s 64.6% sales-tax reliance still rests on just 69 taxed services.",
+    category: "Economics",
+    themeId: "sales-tax-base-erosion",
+    imageUrl:
+      "/images/economics-state-sales-tax-bases-vs-the-service-economy-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic data-viz of an eroding sales-tax pie with a hollow services slice and bold ~55% outside callout",
+    publishedAt: "2026-08-29T12:00:00Z",
+    featured: true,
+    visualization: "state-sales-tax-bases-vs-the-service-economy-2026",
+    layout: "default",
+    content: `State sales taxes were built for an economy that sold things you could put in a bag. The Federation of Tax Administrators still publishes the cleanest cross-state count of how far each code has crawled into services — **176 surveyed items**, last fully refreshed for taxability as of **January 1, 2017**. Overlay that matrix on today’s spending mix and the arithmetic is blunt: **services are about 68% of U.S. personal consumption expenditures**, while the **median general-sales-tax (GST) state taxes only 40** of those 176 services. A desk join of BEA’s goods/services split to FTA coverage puts the **median taxable share of PCE near 45%** — meaning roughly **55% of household spending sits outside** that typical base.
+
+The political economy twist is who leans hardest on the shrinking instrument. Pew’s reading of Census FY2023 state tax collections shows **Florida** drawing **64.6%** of state tax dollars from general sales — the highest share among GST states — while FTA credits Florida with **69** taxed services, a mid-pack count, not a broad one. Nevada pairs **~52%** sales reliance with only **21** FTA services. South Dakota, by contrast, taxes **152** services and still leans heavily on sales — proof that high reliance and a thin base are a choice, not a law of nature.
+
+The dashboard above is built for that double question. Toggle **Reliance vs services**, **Outside-base ladder**, **PCE goods vs services**, **Service categories**, and **Exposure scoreboard**. Filter by Census-style region and by broad / mid / narrow FTA bands. On the ladder, flip among outside share, taxable share, and raw services taxed. On the radar, pick a focus state and see which service categories are hollow.
+
+## What “taxable share of consumption” means here
+
+There is no official Census series that stamps each state’s sales code onto every BEA PCE line and returns a single percentage. Tax Policy Center chartbooks and Tax Foundation base-breadth work come closest in spirit; this post uses a transparent desk construction instead of pretending a statute-by-statute audit exists for every SKU.
+
+Start with BEA’s national goods vs services split (**~31.8% goods / 68.2% services** in the latest annual desk print). Assume GST states still reach most tangible goods, then haircut for common food-for-home exemptions. Layer FTA’s service count as a coverage ratio against the 176-item survey, and multiply into the services share of PCE. The result is a **taxableShareOfPce** and its complement, **outsideShareOfPce**. Hawaii’s near-full FTA matrix lands near **88%** taxable; Virginia’s **17** taxed services land near **33%**. Treat those as **ranking instruments**, not audit certificates — FTA itself warns that the survey list is not exhaustive and that broad line items can overstate true coverage.
+
+That framing answers the headline hint directly: **taxable share of consumption** is the share of the household spending pie a state’s general sales (or gross-receipts consumer) tax can still see. Everything else — untaxed personal services, most professional services in all but a handful of states, many digital and business services — is the leak.
+
+## The FTA map: who taxes services, and who barely tries
+
+FTA’s 2017 category table remains the standard ranking tool because no newer full matrix has replaced it. The extremes are famous for a reason. **Hawaii (167)**, **Washington (167)**, and **New Mexico (164)** sit at the ceiling; **South Dakota (152)** and **West Virginia (115)** are the next broad rung. At the floor among GST states, **Virginia (17)**, **Colorado (19)**, **Massachusetts (19)**, **California (21)**, and **Nevada (21)** tax barely more than a tenth of the survey. Alaska, Delaware, Montana, New Hampshire, and Oregon have no statewide general retail sales tax — Delaware’s high FTA count reflects gross receipts, not a bag-tax twin.
+
+Category structure matters as much as the total. FTA reports that **35** jurisdictions tax more than half of surveyed **utilities**, and **34** clear half of **admissions/amusements**. Only **eight** clear half of **personal services**, **seven** clear half of **business services**, and **five** clear half of **professional services**. The services that grew fastest in household budgets — haircuts, childcare-adjacent personal work, many professional fees, a thicket of business-to-consumer services — are exactly the rings that stay hollow on the radar chart for most states.
+
+| State | FTA services taxed | Sales tax % of collections (FY2023) | Desk taxable share of PCE | Desk outside share |
+| --- | ---: | ---: | ---: | ---: |
+| Hawaii | 167 | 41.8% | 88% | 12% |
+| New Mexico | 164 | 26.8% | 86% | 14% |
+| Washington | 167 | 46.9% | 84% | 16% |
+| South Dakota | 152 | 55.8% | 82% | 18% |
+| Florida | 69 | 64.6% | 49% | 51% |
+| Texas | 90 | 50.6% | 56% | 44% |
+| Nevada | 21 | 52.4% | 35% | 65% |
+| Colorado | 19 | 24.6% | 34% | 66% |
+| Virginia | 17 | 17.6% | 33% | 67% |
+
+Florida’s Pew-disclosed **64.6%** is the reliance anchor; other sales-share figures are desk reads of Census STC / Tax Foundation tables and should be treated as estimated. The ranking story survives modest revision: **high reliance does not imply a broad base**.
+
+## Revenue-hungry states that tax the fewest services
+
+Define “revenue-hungry” as GST states where general sales is a large fraction of state tax dollars — roughly **≥45%** on the desk reads — and “fewest services” as an FTA count in the **narrow band (≤40)**. That intersection is small but sharp. **Nevada** is the clearest case: majority-class sales reliance with **21** taxed services and a desk outside-share near **65%**. **Indiana** clears the reliance threshold with only **36** services. States just outside the cut still matter for desks: **Tennessee** and **Texas** rely heavily on sales while sitting in the mid FTA band (76 and 90), so their erosion risk is real but not the same as Nevada’s hollow radar.
+
+Florida deserves its own paragraph because it tops the Pew reliance chart without sitting in the narrow FTA band. **69** services is not Virginia; it is also not Hawaii. The state’s tourist-exported sales base and lack of a broad individual income tax make the sales tax the fiscal spine. That spine still misses most personal and professional services. When households shift dollars from taxable goods to untaxed services — streaming instead of discs, experiences instead of durables, outsourced household work instead of appliances — Florida’s collections grow only if rates rise, tourists keep coming, or the base quietly expands. Rate increases on a narrowing goods-heavy base are the path many states have already walked.
+
+The dashboard’s **exposure score** multiplies sales-tax share of collections by one minus FTA coverage. It is a desk index, not a statutory stress test, but it surfaces the same names: high-reliance, low-coverage states float to the top of the scoreboard while broad-base Hawaii and South Dakota fall even when reliance is material.
+
+## Why the national spending mix makes the gap worse every decade
+
+In 1970, goods were still close to half of PCE on the carried BEA path in this build; by 2024 the desk print is roughly **32% goods / 68% services**. The pandemic briefly lifted the goods share as households bought durables and delayed travel; the rebound put services back on top. Sales-tax statutes did not rebound with them. ITEP’s long-standing observation still holds: only a handful of states — classically **Hawaii, New Mexico, and South Dakota** — tax services in anything like a comprehensive way, and FTA’s survey shows most states still tax **less than half** of the potentially taxable service list.
+
+That is base erosion without a single dramatic repeal. Each year the untaxed share of the consumption pie grows a little if statutes stand still. States that exempt groceries to blunt regressivity narrow the goods column further. States that add a few digital lines or amusement taxes patch a category without rewriting the personal-services hole. The composed chart in the dashboard is therefore not decoration; it is the denominator that makes a 2017 FTA matrix still decisive in 2026.
+
+## Gross receipts, B&O, and other traps in the ranking
+
+Washington’s FTA total matches Hawaii’s, but Washington’s fiscal design is not a pure retail sales twin — the **business and occupation** tax and retail sales tax interact, and food is generally exempt. New Mexico’s **gross receipts tax** reaches services broadly and is why TPC-style breadth charts put New Mexico near the top. Delaware’s **152** FTA services sit beside **no general retail sales tax**; including Delaware in a “sales tax base” ranking without that caveat would mislead. Alaska’s local-option sales taxes do not create a statewide GST series in Census STC the way Florida’s does.
+
+Food flags also move the desk taxable share. States that tax groceries (Alabama, Arkansas, Hawaii, Kansas, and others in this build) pull more of the goods column into the base; states that exempt food need a wider service net to hold taxable share constant. None of that appears in a raw FTA total, which is why the post carries both the survey count and the PCE join.
+
+## Caveats and limits
+
+- **FTA vintage:** The 2017 matrix is the latest full public FTA services survey. States have amended digital and marketplace rules since then; treat counts as a **structural snapshot**, not a 2026 statute scrape.
+- **Survey design:** FTA warns the list is not exhaustive; broad definitions can count a line as taxed when only a subset is. Rankings are directional.
+- **2007 carries:** Arizona, Louisiana, Maryland, Massachusetts, New Mexico, and Oklahoma use 2007 responses in the FTA summary table where 2017 replies were missing.
+- **Desk taxable share:** Not a TPC microdata rebuild. Confidence is **estimated** for ranking across states.
+- **Sales reliance:** Florida’s **64.6%** is Pew/Census disclosed; other shares are estimated from STC-family tables and may differ slightly from a fresh Census download.
+- **Business inputs:** Taxing business-to-business services can pyramid tax into consumer prices; breadth is not automatically optimal. This post measures coverage and reliance, not a welfare ranking.
+- **No-GST states:** Alaska, Delaware, Montana, New Hampshire, and Oregon are excluded from median GST statistics and from the exposure scoreboard by design.
+
+## What the scoreboard is for
+
+Desks do not need another lecture that “states should tax services.” They need a map of **who already does**, **who depends on sales tax anyway**, and **how much of household spending the typical base cannot see**. On FTA’s 176-item yardstick, the median GST state still taxes **40** services while services dominate consumption. On the desk PCE join, that median leaves about **55%** of spending outside the base. The uncomfortable quadrant is not Hawaii — it is the set of states that ask the sales tax to carry the budget while leaving personal, professional, and many business services untaxed. Florida’s reliance peak and Nevada’s narrow service ring are different versions of the same structural bet: that a mid-century goods tax can finance a service-economy government without continually raising the rate on whatever remains visible at the register.`,
+  },
+  {
     id: "platform-earnings-swings-and-household-reliance-2026",
     slug: "platform-earnings-swings-and-household-reliance-2026",
     title:

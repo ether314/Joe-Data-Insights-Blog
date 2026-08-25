@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "state-sales-tax-bases-vs-the-service-economy-2026",
+    marker: "Headline — Taxable share of consumption",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "platform-earnings-swings-and-household-reliance-2026",
     marker: "Month-over-month platform earnings swing",
     forbidden: "Loading interactive charts",

@@ -274,7 +274,8 @@ export interface Post {
     | "rural-hospital-closures-and-drive-times-2026"
     | "rent-burden-share-of-renter-income-2026"
     | "real-wage-growth-by-wage-quintile-2026"
-    | "platform-earnings-swings-and-household-reliance-2026";
+    | "platform-earnings-swings-and-household-reliance-2026"
+    | "state-sales-tax-bases-vs-the-service-economy-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];
