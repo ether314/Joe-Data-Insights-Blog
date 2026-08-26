@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "library-operating-revenue-per-capita-by-state-2026",
+    marker: "Revenue per capita spread",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "lead-pipe-replacement-pace-versus-inventory-2026",
     marker: "National stock under 2% / 5% / 10% annual clearance",
     forbidden: "Loading interactive charts",

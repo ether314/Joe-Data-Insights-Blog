@@ -4041,6 +4041,21 @@ const LeadPipeReplacementPaceVersusInventory2026Dashboard = dynamic(
   },
 );
 
+const LibraryOperatingRevenuePerCapitaByState2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/LibraryOperatingRevenuePerCapitaByState2026Dashboard"
+    ).then((m) => m.LibraryOperatingRevenuePerCapitaByState2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5104,6 +5119,10 @@ export function PostVisualization({
 
   if (type === "lead-pipe-replacement-pace-versus-inventory-2026") {
     return <LeadPipeReplacementPaceVersusInventory2026Dashboard />;
+  }
+
+  if (type === "library-operating-revenue-per-capita-by-state-2026") {
+    return <LibraryOperatingRevenuePerCapitaByState2026Dashboard />;
   }
 
   return null;

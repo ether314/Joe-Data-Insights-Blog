@@ -299,7 +299,8 @@ export interface Post {
     | "epa-pm2-5-smoke-days-versus-population-2026"
     | "usace-lock-unavailability-versus-barge-tonnage-2026"
     | "homeschool-and-private-share-of-school-age-kids-2026"
-    | "lead-pipe-replacement-pace-versus-inventory-2026";
+    | "lead-pipe-replacement-pace-versus-inventory-2026"
+    | "library-operating-revenue-per-capita-by-state-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

@@ -2,6 +2,99 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "library-operating-revenue-per-capita-by-state-2026",
+    slug: "library-operating-revenue-per-capita-by-state-2026",
+    title:
+      "Library Revenue Per Capita: 6.1× Gap From DC ($110) to Mississippi ($18) — Wider After 2020",
+    excerpt:
+      "IMLS PLS Table 8 puts FY 2022 operating revenue at $110.47 per person in D.C. versus $18.16 in Mississippi (6.08×). The dollar range widened from $69 in FY 2019 to $92 in FY 2022 even as the state mean rose to $48.95.",
+    category: "Economics",
+    themeId: "public-library-use",
+    imageUrl:
+      "/images/economics-library-operating-revenue-per-capita-by-state-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic library stacks with a glowing teal unequal funding ladder hovering over a desk, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-26T03:00:00Z",
+    featured: true,
+    visualization: "library-operating-revenue-per-capita-by-state-2026",
+    layout: "default",
+    content: `Public libraries do not run on goodwill alone. They run on **operating revenue** — the annual stream of local, state, federal, and other dollars that pays for staff, hours, collections, and connectivity. The Institute of Museum and Library Services (IMLS) Public Libraries Survey (PLS) publishes that stream as **dollars per person** in the unduplicated legal service area. The question for this desk is not whether libraries are "funded." It is how wide the **per-capita operating-revenue gap** is across states, and whether that gap **widened after 2020**.
+
+The interactive dashboard above reads IMLS Benchmarking **Table 8** for FY 2018–FY 2022. In FY 2022 the top jurisdiction (the District of Columbia) collected **$110.47** per person. Mississippi collected **$18.16**. That is a **6.08×** max/min ratio and a **$92.31** dollar range — both wider than FY 2019's **5.02×** and **$69.01**. The state mean rose from **$45.22** to **$48.95**, so the average library system had more money per resident. The tails moved farther apart at the same time.
+
+## What Table 8 actually counts
+
+Table 8 is a state roll-up of public library **operating revenue**, not capital campaigns and not endowment corpus. Per-capita rates divide total operating income by the **unduplicated population of legal service areas** (IMLS element POPU_UND). State library agencies construct that unduplicated figure from the most recent jurisdiction population estimates they accept — typically Census-based counts for cities, counties, and districts that libraries legally serve. Territories are excluded from this desk's 51-jurisdiction panel (50 states + D.C.).
+
+Revenue is split four ways in the table: **federal** (notably LSTA pass-through that arrives as income to local systems), **state**, **local**, and **other** (gifts, fines, fees, interest, grants booked as other). Local revenue dominates almost everywhere; Ohio is the structural exception, with state and local nearly co-equal. Hawaii's statewide system is almost entirely state-funded. Those mix differences matter when someone proposes a "national" library funding fix: most of the dollars are still municipal and county decisions.
+
+Caveat: fiscal years are not calendar years. A library whose FY closed in June 2020 sits in a different PLS vintage than one that closed in December. Pandemic relief, delayed local settlements, and temporary closures can shift income across adjacent PLS years without a true permanent change in tax effort.
+
+## The national mean rose — the tails rose faster
+
+From FY 2018 to FY 2022 the cross-state mean climbed from **$44.12** to **$48.95**. The median tracked that rise (**$42.90** → **$47.36**). If you only watched the center, you would tell a story of gradual recovery and modest real gains.
+
+The extremes tell a sharper story. The maximum rose from **$86.67** (FY 2018) to **$110.47** (FY 2022), driven by D.C.'s climb and by high Midwestern and Western peers. The minimum barely moved: Mississippi stayed near **$17–$18** until FY 2022's **$18.16**. Georgia (**$20.77**), Tennessee (**$22.50**), Texas (**$24.11**), and West Virginia (**$24.28**) fill out the bottom of the FY 2022 ladder. Ohio (**$90.44**), Illinois (**$81.48**), Colorado (**$78.89**), and New York (**$78.01**) sit just under D.C. at the top.
+
+Forty-five of fifty-one jurisdictions posted higher per-capita revenue in FY 2022 than in FY 2019. Six posted declines, led by Alaska (**−$10.06**, −16.3%) and smaller drops in Minnesota, Hawaii, New York, Maryland, and Oregon. Gains were not uniform: D.C. (+$24.28), Colorado (+$17.15), Ohio (+$10.60), and Pennsylvania (+$8.35) pulled the upper half of the distribution upward even as several Southern states barely budged.
+
+## Did the gap widen after 2020?
+
+Yes — on the measures that matter for "how far is the top from the bottom."
+
+| Fiscal year | Max/min ratio | Dollar range | P90–P10 spread | State mean |
+| --- | ---: | ---: | ---: | ---: |
+| 2018 | 5.06× | $69.55 | $42.85 | $44.12 |
+| 2019 | 5.02× | $69.01 | $43.59 | $45.22 |
+| 2020 | 5.48× | $77.52 | $51.14 | $46.68 |
+| 2021 | 5.81× | $81.38 | $45.62 | $47.25 |
+| 2022 | 6.08× | $92.31 | $49.86 | $48.95 |
+
+The **max/min ratio** stepped up every year after FY 2019. The **dollar range** jumped in FY 2020 and kept climbing through FY 2022 — a **$23** widening versus FY 2019. The **P90–P10** band spiked in FY 2020 (**$51.14**), eased in FY 2021, then settled higher than the pre-pandemic level by FY 2022. That pattern is consistent with a shock year that stretched the middle of the distribution, followed by a recovery in which high-revenue jurisdictions added more dollars per person than low-revenue ones.
+
+Exclude D.C. and the picture softens but does not reverse. The states-only max/min ratio rose from **4.65×** (FY 2019) to **5.10×** (FY 2021) before easing to **4.98×** (FY 2022). The states-only dollar range still widened from **$62.66** to **$72.28**. Ohio versus Mississippi alone is nearly a **5×** gap. The District amplifies the headline; it does not invent it.
+
+## Local money still dominates the mix
+
+Stack the FY 2022 source mix and a second map appears. In most high-revenue states, **local** dollars are 80–95% of the total. Colorado's **$78.89** per person is almost entirely local (**$73.51**). Illinois looks similar. Ohio's **$90.44** is the policy counterexample: **$43.07** state and **$41.41** local — a deliberate state public-library fund architecture that places Ohio near the top without relying on local property wealth alone.
+
+At the bottom of the ladder, low totals are not usually "missing federal money." Federal per-capita lines are small everywhere (often under **$1–$2**). Mississippi's **$18.16** still has a local core; it is simply a thin core. Pennsylvania's large percentage gain (+35% from a low FY 2019 base) shows that states can move, but starting from **$23.88** still leaves PA mid-pack at **$32.23** in FY 2022.
+
+For equity debates, the mix panel is a warning label. Federal stimulus and LSTA can smooth edges. They do not erase a **$70+** local-and-state gap between the top and bottom of the state ladder.
+
+## Regional texture: South vs Midwest
+
+Regional means in FY 2022 put the **Midwest** and **Northeast** above the **West**, with the **South** lowest on average. That ranking is not destiny for every state — Maryland and Florida sit well above Mississippi and Georgia — but the within-South stretch is large, and the South's floor is the national floor. The Midwest's ceiling (Ohio, Illinois) and the West's climbers (Colorado, Oregon) pull the other regions' means up.
+
+Within-region max/min ratios also shifted. Regions that already contained both high and low peers saw those internal gaps persist or widen as high-revenue systems added dollars faster. The dashboard's region view pairs 2019 and 2022 means with those internal ratios so you can see whether a region's "average" is a cluster or a canyon.
+
+## Caveats and measurement edges
+
+Several limits belong next to every chart:
+
+1. **Legal service area ≠ state resident population.** People outside library districts, overlapping districts, and unduplication methods can move the denominator. Cross-state comparisons are best treated as ordered magnitudes, not precise welfare weights.
+2. **Operating revenue ≠ service quality.** Hours, wages, facility age, and digital licensing costs differ. A high per-capita state can still underfund rural branches; a low per-capita state can still run lean, high-use systems.
+3. **Nominal dollars.** Table 8 is not inflation-adjusted in the published benchmarking files used here. Part of the 2019–2022 mean increase is price level, not real purchasing power.
+4. **Closures and nonresponse.** IMLS notes that closed or temporarily closed libraries and nonresponding outlying areas are handled with documented exclusions and imputation rules; small states can move more from a few systems.
+5. **D.C. is a city-state.** Including it is correct for the published table; excluding it is useful for a states-only equity read. The dashboard toggle exists for that reason.
+
+## What the ladder implies for equity debates
+
+If the policy question is "did pandemic-era budgets compress state differences," the PLS answer through FY 2022 is **no**. The center rose. The top rose faster. The bottom barely moved. A resident of Mississippi's legal service areas still sees roughly **one-sixth** the operating revenue per person of a D.C. resident, and about **one-fifth** of an Ohio resident's.
+
+That does not prescribe a single remedy. Local tax bases, millage caps, state aid formulas, and collective-bargaining wage floors all sit underneath Table 8. It does prescribe honesty about the scale. A **$92** per-person range is not a rounding error, and the post-2020 path widened that range even while national averages looked healthier.
+
+Use the dashboard's gap-over-time view for the widening claim, the ladder for who sits where, the 2019→2022 scatter for who broke above the no-change diagonal, the source mix for who pays, and the delta board for who moved. The numbers are disclosed IMLS state rows; the spread metrics are desk math on those rows — transparent, and large enough that small methodological quibbles do not erase the gap.
+`,
+    format: "data-story",
+    keyPoints: [
+      "FY 2022 max/min ratio 6.08× ($110.47 DC vs $18.16 MS); range $92.31",
+      "Dollar range widened from $69 (FY 2019) to $92 (FY 2022) after 2020",
+      "State mean $45.22 → $48.95; 45 jurisdictions up, 6 down vs FY 2019",
+      "Ohio $90.44 leads states; local revenue dominates most high-revenue peers",
+    ],
+  },
+  {
     id: "lead-pipe-replacement-pace-versus-inventory-2026",
     slug: "lead-pipe-replacement-pace-versus-inventory-2026",
     title:
