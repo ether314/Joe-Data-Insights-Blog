@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ncsc-civil-pending-caseload-per-judge-2026",
+    marker: "Headline — median 380 pending civil",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "school-age-smoke-days-in-western-metros-2026",
     marker: "School-year USG+ days by metro",
     forbidden: "Loading interactive charts",

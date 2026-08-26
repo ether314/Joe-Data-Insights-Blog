@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ncsc-civil-pending-caseload-per-judge-2026",
+    slug: "ncsc-civil-pending-caseload-per-judge-2026",
+    title:
+      "Pending Civil Per Judge: Median State Still at 380 in 2023 — 27% Off Peak, 23% Above 2019",
+    excerpt:
+      "Across a 24-state CSP-aligned panel, median year-end civil pending inventory per authorized general-jurisdiction judge fell from 520 in 2021 to 380 in 2023 — but fourteen states remain above their 2019 baselines.",
+    category: "Politics",
+    themeId: "state-civil-court-backlogs",
+    imageUrl:
+      "/images/politics-ncsc-civil-pending-caseload-per-judge-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic courtroom silhouette with amber-to-slate caseload bulge bars, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-26T04:00:00Z",
+    featured: true,
+    visualization: "ncsc-civil-pending-caseload-per-judge-2026",
+    layout: "default",
+    content: `State civil dockets do not clear themselves. They clear when filings, dispositions, and judicial capacity line up for long enough that year-end **pending inventory** stops rising. The National Center for State Courts (NCSC) Court Statistics Project (CSP) and state administrative offices of the courts (AOCs) already publish the raw pieces — filings, dispositions, pending counts, authorized judges — but the political question sits one ratio deeper: **how many active civil matters sit on each authorized general-jurisdiction judge's plate**, and whether the post-2020 bulge has actually been worked off.
+
+This desk builds that ratio for a **24-state reporting panel**. Pending is year-end active civil inventory where AOCs publish it (or a reconstruction from filing/disposition gaps when they do not). The denominator is authorized general-jurisdiction trial judges from the Book of the States and state directories — not magistrates handling small claims alone, and not appellate benches. The interactive dashboard above lets you sort the ladder, filter by Census region, toggle disclosed-only rows, and compare clearance rates against pending intensity.
+
+## The median did not return to 2019
+
+In 2019 the cross-state **median** pending-per-judge sat near **310**. By 2021 it had climbed to **520**. By 2023 it was **380** — a **27%** drop from the peak, and still a **23%** premium over the pre-pandemic baseline. The 2024 early prints in the national path edge the median down toward **355**, but the interquartile band remains wide: roughly **245–520** pending matters per judge.
+
+That is the shape of a partial recovery. Courts that spent 2021–2022 clearing criminal dockets under speedy-trial pressure often left civil inventories as residual. Clearance rates above 100% in 2022–2023 finally started to draw the median down, but not evenly and not everywhere.
+
+## How we count pending per judge
+
+Three definitional choices matter more than any single state's ranking.
+
+First, **pending** means year-end *active* civil inventory — cases awaiting disposition — not the subset a state brands as "backlog" against a time standard. New Jersey's Superior Court guide, for example, publishes both *active pending* and a stricter *backlog* count; we use active pending so peers remain comparable.
+
+Second, **civil** follows CSP civil categories. Domestic-relations and traffic are out of scope unless an AOC's published civil total cannot be disaggregated. Small-claims limited-jurisdiction dockets are excluded from the pending numerator when the AOC separates them; the judge denominator stays general-jurisdiction so the ratio does not invent "judges" the AOC does not authorize for those matters.
+
+Third, **judges** are authorized general-jurisdiction trial positions (Book of the States Table 5.2, cross-checked to AOC directories). Vacancies, visiting judges, and commissioners change effective capacity; they do not change the authorized stock we use as a transparent denominator. California's authorized judicial positions (~1,756) and Florida's circuit judges (605) illustrate how different court structures still yield a comparable ratio once the same rule is applied.
+
+Caveat: a high pending-per-judge figure can mean a thin bench, a thick inventory, or both. Nevada and South Carolina look extreme partly because their authorized GJ benches are small relative to civil volume; New York looks extreme because Supreme Court civil pending itself is large.
+
+## Which states still carry the heaviest inventory
+
+Sorted by 2023 pending per judge, the top of the panel is not a single region — it is a mix of dense Mid-Atlantic dockets and thinner Sun Belt benches:
+
+| State | Judges (GJ) | Pending/judge 2019 | 2021 peak | 2023 | Still above 2019? |
+| --- | ---: | ---: | ---: | ---: | --- |
+| New York | 324 | 660 | 827 | 745 | Yes |
+| Nevada | 82 | 585 | 878 | 707 | Yes |
+| South Carolina | 61 | 623 | 885 | 689 | Yes |
+| Florida | 605 | 471 | 678 | 575 | Yes |
+| Massachusetts | 82 | 500 | 707 | 537 | Yes |
+| Georgia | 213 | 432 | 648 | 526 | Yes |
+| Texas | 478 | 414 | 554 | 485 | Yes |
+| Arizona | 180 | 400 | 600 | 489 | Yes |
+
+New York's Supreme Court civil print — roughly **214,000** pending around the pre-pandemic baseline and still near **241,500** in the 2023 reconstruction — keeps the state at the top even after partial drawdown. Florida and Texas sit lower on a per-judge basis than New York but dominate absolute inventory; their benches are larger, so the political story is volume *and* intensity.
+
+At the other end, Minnesota, Wisconsin, Oregon, and Indiana have pushed 2023 pending-per-judge **below** 2019. Those systems ran multi-year clearance rates above 108% and converted the pandemic trough in filings into a lasting inventory cut rather than a temporary pause.
+
+## Did the post-2020 bulge clear?
+
+Define the **bulge** as the excess of 2021 pending-per-judge over the 2019 baseline. **Bulge cleared %** asks what share of that excess was gone by 2023. A reading of 100% means the state is back to 2019 intensity; above 100% means it undershot the baseline.
+
+Across the panel, the median bulge-cleared share is roughly **two-thirds** in the Northeast and closer to **half** in the South. The Midwest's median exceeds **100%** — several Great Lakes systems overshot. The West is split: Colorado and Washington largely cleared; Arizona and Nevada did not.
+
+Fourteen of twenty-four panel states remain **above** 2019. That is the headline political fact. Peak rhetoric in 2021–2022 assumed a temporary shock. By 2023 the median had retreated from the peak, but the distribution still carries a long right tail of states whose civil pending intensity never fully reset.
+
+## Clearance rates explain who finished the job
+
+CourTools Measure 2 defines **clearance rate** as dispositions divided by filings. Sustained rates below 100% grow pending; rates above 100% shrink it. The dashboard's clearance scatter plots 2023 clearance against 2023 pending-per-judge. States clustered left of 100% with high pending intensity — parts of the South and Mountain West — are still accumulating relative to capacity. States above 108% clearance with mid-pack pending intensity are the ones that converted temporary filing dips into permanent inventory cuts.
+
+New Jersey's disclosed Civil Division series is the cleanest single-state illustration: active pending rose from **130,366** (2019) to **186,560** (2021), then fell to **161,317** by 2022 as backlog per 100 monthly filings also retreated. Even there, 2023 reconstructions remain above the 2019 floor. Disclosed series like New Jersey's should be weighted more heavily than interpolated peers when a legislature is writing a judgeship bill.
+
+## Regional patterns are structural, not just pandemic leftovers
+
+Census-region medians in 2023 put the **South** near **485** pending per judge and the **Northeast** near **433**, with the **Midwest** near **314** and the **West** near **281**. Southern intensity is not only COVID residue: contract, indebtedness, and foreclosure waves returned faster than judicial authorizations in several states. Northeastern intensity is older — large urban Supreme and Superior Court civil calendars that entered 2020 already heavy and then absorbed eviction and consumer-debt rebounds.
+
+Midwest and West medians look healthier partly because several states added temporary capacity, remote hearing infrastructure, and aggressive case-management orders that stuck. Those operational changes show up in clearance rates more cleanly than in raw filings.
+
+## What the ratio does not settle
+
+Pending per judge is a **capacity pressure** metric, not a quality score. It does not measure time to disposition, settlement fairness, or self-represented litigant outcomes. Weighted caseload studies (NCSC time studies used by Pennsylvania, Alabama, and others) convert filings into judicial FTE *need*; our ratio uses authorized stock and pending stock instead. A state can look "fine" on pending-per-judge while still failing time standards, or look "stressed" while meeting them through heavy commissioner use.
+
+Reporting gaps also matter. CSP participation is uneven; some AOCs publish filings and dispositions but not year-end pending. Those rows are labeled **estimated** in the data module and can be filtered out in the dashboard. Cross-state rankings should be read as an ordered pressure map, not a league table with one-decimal precision.
+
+Finally, civil composition shifted. Seller-plaintiff and debt-collection filings recovered at different speeds than tort or complex commercial tracks. A state that cleared high-volume debt calendars can post a falling pending count while complex civil remains stuck — invisible in a single aggregate.
+
+## Why the bulge still matters for 2026 politics
+
+Judicial-resource fights are usually framed as vacancy rates or "more judges." The pending-per-judge series reframes the fight as **inventory relative to authorized capacity**. When fourteen states still sit above 2019 after three years of above-100% clearance in many systems, the implication is not that courts did nothing — it is that the 2020–2021 shock was large enough that even successful clearance campaigns left a residual premium.
+
+Legislatures writing judgeship packages in 2025–2026 should ask two questions the dashboard surfaces directly: (1) is the state's 2023 pending-per-judge still above 2019, and (2) has clearance stayed above 100% long enough to finish the drawdown? States that answer "yes" and "no" are still in the bulge. States that answer "no" and "yes" have, on this measure, cleared it.
+
+The interactive panels above — national path, pending ladder, clearance scatter, region bulge, and bulge index — are built so a reader can move from the median story to a specific state's path without treating CSP peer medians as destiny. The ratio is simple on purpose. The politics around who still carries the inventory are not.
+`,
+  },
+  {
     id: "school-age-smoke-days-in-western-metros-2026",
     slug: "school-age-smoke-days-in-western-metros-2026",
     title:
