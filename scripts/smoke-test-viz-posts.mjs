@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "average-school-bus-age-versus-epa-clean-school-bus-awards-2026",
+    marker: "Mean age vs CSB units dual axis",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "nurse-aide-turnover-versus-five-star-staffing-ratings-2026",
     marker: "Turnover vs staffing stars",
     forbidden: "Loading interactive charts",

@@ -4345,6 +4345,23 @@ const NurseAideTurnoverVersusFiveStarStaffingRatings2026Dashboard = dynamic(
   },
 );
 
+const AverageSchoolBusAgeVersusEpaCleanSchoolBusAwards2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AverageSchoolBusAgeVersusEpaCleanSchoolBusAwards2026Dashboard"
+    ).then(
+      (m) => m.AverageSchoolBusAgeVersusEpaCleanSchoolBusAwards2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5488,6 +5505,10 @@ export function PostVisualization({
 
   if (type === "nurse-aide-turnover-versus-five-star-staffing-ratings-2026") {
     return <NurseAideTurnoverVersusFiveStarStaffingRatings2026Dashboard />;
+  }
+
+  if (type === "average-school-bus-age-versus-epa-clean-school-bus-awards-2026") {
+    return <AverageSchoolBusAgeVersusEpaCleanSchoolBusAwards2026Dashboard />;
   }
 
   return null;

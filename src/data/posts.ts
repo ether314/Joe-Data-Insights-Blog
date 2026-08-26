@@ -2,6 +2,77 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "average-school-bus-age-versus-epa-clean-school-bus-awards-2026",
+    slug: "average-school-bus-age-versus-epa-clean-school-bus-awards-2026",
+    title:
+      "Mean School-Bus Age Fell to 8.3 Years — But EPA Clean Awards Still Cover Only 1.8% of the Fleet",
+    excerpt:
+      "School Bus Fleet’s 2026 maintenance survey puts mean yellow-fleet age at 8.3 years, a full year below the 2022–23 peak of 9.3. EPA’s Clean School Bus Program had awarded almost $3 billion for more than 8,500 replacements by end of FY2024 — still under 2% of the 483,000-bus national stock, which remains roughly 90% diesel.",
+    category: "Transport & Logistics",
+    themeId: "school-bus-fleet-age",
+    imageUrl:
+      "/images/transport-logistics-average-school-bus-age-versus-epa-clean-school-bus-awards-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic school-bus depot at night with aging yellow diesel buses behind a teal-lit electric bus and a dual-axis age-versus-awards motif",
+    publishedAt: "2026-08-26T12:00:00Z",
+    featured: true,
+    visualization:
+      "average-school-bus-age-versus-epa-clean-school-bus-awards-2026",
+    layout: "default",
+    content: `The yellow bus is the largest mass-transit fleet in the United States that most households never think of as transit. Roughly **483,000** yellow school buses — the School Bus Fleet K-12 count for 2024–25 — move about **20 million** students on ordinary school days. For decades the stock has been overwhelmingly diesel. That is why the Environmental Protection Agency’s Clean School Bus (CSB) Program, funded with **$5 billion** over FY2022–2026 under the Infrastructure Investment and Jobs Act, was sold as a fleet-turning moment: replace the oldest, dirtiest coaches with zero-emission and clean buses, scrap the legacy engines, and clean the air around loading zones.
+
+The interactive dashboard above asks the mean-age question the award press releases do not. **Did those awarded replacements move the national average fleet age, or is the yellow stock still a diesel tail?** The short answer uses two clocks. School Bus Fleet’s March 2026 maintenance-survey chart shows mean yellow-fleet age falling from a **9.3**-year plateau in 2022–23 to **8.3** years in the 2026 print — the lowest reading in at least fifteen years. EPA’s Fourth Report to Congress (FY2024) says the agency had awarded almost **$3 billion** to fund more than **8,500** bus replacements at over **1,200** districts by the end of that fiscal year. Divide 8,500 into 483,041 and you get about **1.8%** of the national stock. A program that is transformative for the districts that win it is still a thin slice of the national mean.
+
+## Two clocks: survey age and award volume
+
+Mean fleet age is a stock statistic. It rises when districts keep coaches longer than they buy new ones, and it falls when replacements — from any budget — outpace aging. School Bus Fleet’s annual maintenance survey asks operators for the average age of their yellow fleets. The March 2026 chart series reports **9.2** years in 2021, **9.3** in both 2022 and 2023, then **8.8**, **8.5**, and **8.3** in 2024–2026. That one-year drop from the peak is real in the survey frame. It is also small relative to a typical **16**-year service life that EPA CSB materials cite for school buses on the road.
+
+Award volume is a flow statistic. The first CSB rebate lottery (announced October 2022) selected on the order of **2,400+** buses and nearly **$1 billion**. The 2023 grant competition and 2023 rebate round pushed the cumulative total toward the **~8,500** / almost-**$3 billion** closeout in the FY2024 report. Electric share in those rounds ran roughly **90–97%**, depending on the opportunity. Deliveries lag awards: EPA’s own project-status language distinguishes tentative selection, funds awarded, and project complete, and selectees often keep a two-year window to align purchases with procurement calendars and utility interconnects.
+
+## The arithmetic of a 1.8% replacement program
+
+If every CSB-awarded bus replaced a sixteen-year diesel with a brand-new unit, the pure arithmetic drag on the national mean would be about **share × 16 years**. At 8,500 buses that is roughly **0.28** years — a few months on a mean near nine. The dashboard’s counterfactual panel adds that drag back onto the observed SBF series as a desk path, not as an EPA scenario. Even generously, CSB alone cannot explain a full year of observed mean-age decline. Local capital budgets, state clean-bus programs, contractor turnover, and ordinary retirement cycles all move the same average. CSB is visible in the award maps and in the districts that receive quiet electric coaches; it is not large enough, yet, to rewrite the national age distribution by itself.
+
+That is the core tension of the brief. Award announcements correctly celebrate thousands of clean replacements and prioritized funding for low-income, rural, and Tribal districts. The national mean still behaves like a half-million-bus stock with a long diesel tail.
+
+## Where the diesel tail still sits
+
+Industry and EPA materials still describe the national yellow fleet as on the order of **90%** diesel entering the CSB era, with propane, CNG, and battery-electric filling thin wedges. EPA notes that millions of students likely ride model-year **2010** or older coaches that predate the latest heavy-duty emission standards — and CSB scrappage rules generally require those older diesels to be destroyed rather than resold into another district. The dashboard’s age-band panel is an illustrative histogram consistent with means near 8–9 years and a ~16-year retirement horizon: a sizable **16+** year slice remains the policy target even as the survey mean drifts younger.
+
+NHTSA’s Fatality Analysis Reporting System (FARS) frames school-bus safety differently — crash involvement and passenger fatalities — but the same aging stock carries both the safety and the emissions stories. Cleaner powertrains do not automatically appear in FARS tables; they do appear in depot fuel mixes and in the CSB award dashboards. The emissions question is therefore mostly about which buses still idle outside elementary schools, not about whether yellow buses are “safe” in the crash sense.
+
+## Award rounds stacked, not evenly spread
+
+The CSB program is not a uniform national replacement rate. EPA’s FY2024 report notes that **New York** had received the greatest number of buses under CSB funding to date (more than **1,700**), with Arizona, California, Illinois, North Carolina, and Texas each above **1,000**. Application volume and grant competitiveness drive that concentration as much as fleet size. A curated state panel in the dashboard pairs awarded clean buses against yellow fleet stock: some large fleets (Texas, Florida, Pennsylvania) show modest award shares of state stock, while a few high-award states punch above their fleet weight. Concentration means the national mean can move slowly even while particular metros — New York City school districts appear repeatedly across rounds — transform depot by depot.
+
+| Metric | Value | Source frame |
+| --- | --- | --- |
+| Mean yellow-fleet age (2026 SBF survey) | 8.3 years | School Bus Fleet March 2026 chart |
+| Mean age peak (2022–23) | 9.3 years | Same SBF series |
+| National yellow buses (2024–25) | 483,041 | SBF K-12 statistics |
+| CSB replacements (end FY2024) | >8,500 buses | EPA Fourth Report to Congress |
+| CSB dollars awarded / reserved | Almost $3 billion | EPA Fourth Report |
+| CSB share of national stock | ~1.8% | Desk ratio |
+| IIJA CSB authorization | $5 billion (FY2022–26) | EPA program overview |
+| Typical service life cited | ~16 years | EPA CSB reports |
+| Diesel share (baseline) | ~90% | Industry / EPA carried |
+
+## What a falling mean does — and does not — prove
+
+A falling survey mean is good news for shop floors and for students who ride newer chassis. It does not prove that CSB caused the decline, and it does not prove that the diesel tail is gone. Survey respondents are not a census of every contractor and district; means can shift with who answers. Awards are not deliveries; deliveries are not yet a permanent fuel-mix print. And a one-year drop from 9.3 to 8.3 still leaves the average bus closer to mid-life than to scrap — especially if retirement ages for Type C/D coaches remain near the mid-teens in the same SBF surveys.
+
+The honest reading is joint causation. CSB is one of several replacement channels that accelerated after 2022. Its unique contribution is targeting prioritized districts and requiring scrappage of the oldest diesels — a distributional and environmental effect that mean age understates. Mean age, conversely, captures the whole stock, including fleets that never applied, lost the lottery, or are still waiting on chargers.
+
+## Caveats and reading rules
+
+Figures here are desk compilations from public EPA reports, press releases, and School Bus Fleet survey charts. Round-level bus counts can differ slightly across EPA tables as selectees withdraw, workplans adjust, and disbursements lag lottery announcements. State award panels mix EPA report callouts with third-party electric-school-bus trackers and should be read as concentration illustrations, not as a live download of the EPA awards map. The counterfactual “without CSB” age path assumes each awarded bus displaces a full service-life diesel; real replacement ages vary, and some CSB funds also cover infrastructure rather than chassis alone. Fuel-mix shares are carried industry approximations. None of these series is a substitute for EPA’s interactive awards tables or for a district’s own fleet inventory.
+
+## Bottom line for fleet planners and air desks
+
+Clean School Bus awards are large enough to change air quality and maintenance economics in winning districts, and small enough that the national mean age still mostly reflects ordinary capital cycles across a diesel-heavy stock. The 2026 survey mean of **8.3** years is a genuine softening of the age profile. The **~1.8%** CSB share of the yellow fleet is the reason that softening cannot be credited to federal awards alone. Until cumulative clean replacements climb from the low four figures into a much larger share of the half-million-bus stock — or until local replacement rates stay elevated for years — the national picture remains a younger average sitting on top of a persistent diesel tail.
+`,
+  },
+  {
     id: "nurse-aide-turnover-versus-five-star-staffing-ratings-2026",
     slug: "nurse-aide-turnover-versus-five-star-staffing-ratings-2026",
     title:
