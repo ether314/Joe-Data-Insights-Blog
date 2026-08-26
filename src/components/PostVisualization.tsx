@@ -3917,6 +3917,23 @@ const HospitalCharityCareVersusCollectionSuits2026Dashboard = dynamic(
   },
 );
 
+const ImlsLibraryVisitsVersusElectronicCirculation2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ImlsLibraryVisitsVersusElectronicCirculation2026Dashboard"
+    ).then(
+      (m) => m.ImlsLibraryVisitsVersusElectronicCirculation2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4948,6 +4965,10 @@ export function PostVisualization({
 
   if (type === "hospital-charity-care-versus-collection-suits-2026") {
     return <HospitalCharityCareVersusCollectionSuits2026Dashboard />;
+  }
+
+  if (type === "imls-library-visits-versus-electronic-circulation-2026") {
+    return <ImlsLibraryVisitsVersusElectronicCirculation2026Dashboard />;
   }
 
   return null;

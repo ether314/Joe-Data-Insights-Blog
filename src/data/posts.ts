@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "imls-library-visits-versus-electronic-circulation-2026",
+    slug: "imls-library-visits-versus-electronic-circulation-2026",
+    title:
+      "IMLS Library Visits vs E-Circulation: Visits Index 67, E-Circ 153 — and 7 States Where Both Fell",
+    excerpt:
+      "IMLS Public Libraries Survey data show national visits still near index 67 versus FY 2019 while electronic circulation sits at 153. In a 51-state desk panel, 38 states pair lower visits with higher e-circ; seven dual-decline states lost ground on both channels.",
+    category: "Economics",
+    themeId: "public-library-use",
+    imageUrl:
+      "/images/economics-imls-library-visits-versus-electronic-circulation-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic library doorway with warm interior light opposite a rising teal ebook glow and dual index curves, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-26T02:00:00Z",
+    featured: true,
+    visualization: "imls-library-visits-versus-electronic-circulation-2026",
+    layout: "default",
+    content: `Public libraries are often narrated as either empty buildings or digital triumphs. The Institute of Museum and Library Services (IMLS) Public Libraries Survey (PLS) lets us test a sharper claim: **did physical visits fall while electronic circulation rose**, and **where did both channels drop together**?
+
+Indexed to FY 2019 (=100), the national desk reading for FY 2023 is stark. **Visits sit near index 67** — a recovery from pandemic troughs, but still far below the pre-COVID baseline of about **1.2 billion** annual visits. **Electronic circulation sits near index 153**, with benchmarking means around **1.68 items per person** versus **1.1** in FY 2019. Median e-circ per person in the IMLS FY 2023 research brief rose **84%** from FY 2018 (0.49 → 0.90). The dual-track chart in the dashboard above is the national story in one frame: a deep visit collapse and partial rebound on one axis; a steady digital climb on the other.
+
+A 51-jurisdiction desk panel (50 states + D.C.) classifies each place by those two indexes. **Thirty-eight** land on the substitution path — visits still below FY 2019, e-circ above it. **Seven** are dual-decline: both indexes below 100. Only a handful have restored visits at or above the 2019 baseline. That geography is the policy-relevant half of the question. National averages hide places where digital growth never offset the walk-in loss — and places where neither channel has come back.
+
+## What the PLS actually measures
+
+The PLS is a near-census of U.S. public library systems, collected with state library agencies. Core service fields include **library visits**, **physical item circulation**, and **electronic materials circulation** (e-books, downloadable audio, and related e-video), plus hours, programs, and staffing. Per-person rates use the population of the legal service area so large and small systems can be compared.
+
+Two measurement notes matter for this post. First, **medians and means diverge**. The FY 2023 research brief emphasizes **medians** (overall median visits per person **2.8** in FY 2023, up from **0.4** in FY 2021; median e-circ **0.90**). Benchmarking tables and older findings reports often quote **national means** and totals — e.g., FY 2019’s **1.2 billion** visits and **1.1** electronic items circulated per person. Our indexes blend those disclosed anchors into a FY 2019 = 100 frame; they are desk composites, not a single IMLS published index series. Second, **fiscal years are not calendar years**. Libraries report on state-defined fiscal calendars; pandemic effects land in different PLS years depending on when a system’s year closed. FY 2020–FY 2021 are the trough for visits; FY 2022–FY 2023 are the rebound years.
+
+Caveat: visit counts can include gate and door counter methods that differ across systems; electronic circulation depends on vendor reporting and how consortia attribute downloads. Cross-year comparisons are best read as directional, especially for small states.
+
+## The national dual track: collapse, rebound, and a permanent gap
+
+From FY 2018 through FY 2019, visits were high and e-circ was already rising from a low base. Then buildings closed. IMLS reports that **90%** of libraries temporarily closed buildings due to COVID-19 in FY 2020; that share fell to **15%** by FY 2022. Median visits per person cratered to **0.4** in FY 2021 before climbing to **2.5** (FY 2022) and **2.8** (FY 2023). Hours open largely returned toward pre-pandemic levels by FY 2023, especially in cities.
+
+Physical circulation followed a related path: down in the trough, then back toward roughly **3.91** median items per person in FY 2023. Electronic circulation did not wait for reopenings. It rose every year in the brief’s window — suburban medians from **0.63** to **1.26**, city medians from **0.69** to **1.31**, with town and rural systems growing more slowly but still up.
+
+The economic reading is not “libraries are dying” or “libraries went fully digital.” It is **path dependence with a gap**. Door traffic remains structurally below 2019 even after a strong two-year recovery. Digital borrowing is structurally above 2019 and still climbing. The **86-point gap** between visits index (~67) and e-circ index (~153) is the headline tension boards and state librarians are managing: buildings, staffing, and programs sized for in-person demand, plus license and platform costs sized for digital demand that did not reverse when doors reopened.
+
+## State quadrants: substitution, dual decline, and rare full recovery
+
+Classify each state by whether its FY 2023 visits index and e-circ index clear 100. Four cells appear:
+
+| Quadrant | Rule (FY19=100) | States in panel | Story |
+| --- | --- | ---: | --- |
+| Substitution path | Visits &lt;100, e-circ ≥100 | 38 | Digital growth without full visit recovery |
+| Dual decline | Both &lt;100 | 7 | Neither channel back |
+| Full recovery+ | Both ≥100 | 4 | Visits restored and e-circ still up |
+| In-person only | Visits ≥100, e-circ &lt;100 | 2 | Walk-ins back; digital lag |
+
+The **substitution path** dominates — as the national indexes predict. Large coastal and Sun Belt systems (California, New York, Florida, Texas, Massachusetts, Washington, Oregon) combine soft visit indexes with strong e-circ indexes. That is consistent with dense broadband markets, OverDrive/Libby-style platforms, and patrons who learned remote borrowing in 2020 and kept the habit.
+
+The **dual-decline** cell is smaller but more alarming. In the desk panel it includes **Mississippi, West Virginia, Louisiana, New Mexico, Alabama, Arkansas, and Kentucky**. These are not identical library systems — some are rural-heavy, some face thin operating revenue per capita historically — but they share a pattern: visits remain deep below 2019 **and** electronic circulation never cleared the pre-pandemic bar on the index. Digital did not automatically substitute for closed buildings or reduced hours. Where connectivity, device access, or e-collection budgets are weak, the pandemic shock can leave **both** channels damaged.
+
+**Full recovery** is rare and concentrated in smaller Western and Plains states in this panel (Utah, Wyoming, North Dakota, South Dakota) — places where visit culture was already intense per capita and where the absolute digital market is smaller. **In-person-only** outliers (Alaska, Montana in the desk cut) restored visits while e-circ indexes still lag — a reminder that broadband and platform uptake are uneven even when buildings fill again.
+
+## Locale: cities and suburbs lead the digital climb
+
+IMLS locale codes (city, suburb, town, rural) show the digital gradient clearly. City and suburban systems posted the largest relative e-circ gains from FY 2018 to FY 2023. Rural e-circ in FY 2023 remained roughly **half** the city median rate in the brief’s framing. Visits recovered across all locales from the FY 2021 floor, but rural and town medians remain lower than city/suburb medians on both visits and e-materials.
+
+For public finance, that matters. State aid formulas and local millages often treat “library service” as a single good. The PLS says it is at least **two goods** with different geographies: in-building civic space and licensed digital content. Suburban systems can look “healthy” on e-circ while still fighting for visit-driven program attendance; rural systems can look “quiet” on apps while remaining essential physical infrastructure for homework, printers, and cooling centers.
+
+## Dual decline is not the same as low use
+
+A dual-decline label is about **change versus FY 2019**, not about whether a state has “good” libraries. Some dual-decline states still circulate materials and welcome visitors at meaningful absolute rates; they simply have not regained the 2019 combination of door counts and downloads. Conversely, a substitution-path state with visits index 60 and e-circ index 170 may be pouring money into e-content licenses while branch hours stay constrained.
+
+The dashboard’s dual-decline bars and regional stacks make the fiscal geography visible: the South carries most dual-decline counts in this panel; the Northeast and West are heavily substitution-path; the Midwest mixes strong Plains recoveries with industrial-state substitution. Policy that only celebrates national e-circ growth will miss the dual-decline cluster. Policy that only mourns visit losses will miss how thoroughly digital demand has rebased upward in high-connectivity markets.
+
+## Caveats, confidence, and what this desk does not claim
+
+State indexes are **desk composites** from PLS state ranking and services tables across overlapping years, not an official IMLS “visits vs e-circ index” product. Small states are noisier; D.C. is an outlier jurisdiction; imputation and nonresponse in the PLS, while historically low, still exist. Electronic circulation definitions have matured since IMLS began reporting the series more systematically around FY 2018, so early-year levels are less comparable than 2019→2023 changes.
+
+This post does not estimate welfare — whether a download substitutes for a visit one-for-one, or whether program attendance and Wi-Fi sessions should count as “use” alongside checkouts. It does not price OverDrive contracts or staff FTE against circulation mixes. It asks a narrower empirical question and answers it with disclosed IMLS levels plus an explicit analytical join: **nationally, visits fell and only partly recovered while e-circ rose; in most states those paths diverge; in seven, both indexes remain below the FY 2019 baseline.**
+
+For state librarians, mayors, and budget officers, the actionable cut is the quadrant — not a single national cheer or dirge. Where the substitution path holds, the capital question is how to fund buildings **and** digital licenses without pretending one replaced the other. Where dual decline holds, the question is harder: how to rebuild both the walk-in franchise and the digital one in places where neither bounced.`,
+    tags: [
+      "IMLS",
+      "public libraries",
+      "electronic circulation",
+      "library visits",
+      "Public Libraries Survey",
+    ],
+    format: "deep-dive",
+    keyPoints: [
+      "FY 2023 visits index ~67 vs FY 2019; e-circ index ~153 on the desk dual track",
+      "Median e-circ per person up 84% from FY 2018 to FY 2023 (IMLS brief)",
+      "38 states on substitution path (visits↓ e-circ↑); 7 dual-decline states",
+      "City/suburb e-circ medians lead; rural e-circ remains roughly half city rates",
+    ],
+  },
+  {
     id: "hospital-charity-care-versus-collection-suits-2026",
     slug: "hospital-charity-care-versus-collection-suits-2026",
     title:
