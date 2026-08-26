@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ucmr5-systems-over-epa-pfas-mcls-2026",
+    slug: "ucmr5-systems-over-epa-pfas-mcls-2026",
+    title:
+      "8% of U.S. Water Systems Sit Over a Federal PFAS MCL — Large Systems Hit 15%",
+    excerpt:
+      "EPA’s January 2026 UCMR 5 summary puts a weighted 8.0% of public water systems above an April 2024 PFAS MCL on sampling averages. Large systems run 15.3%. PFOA and PFOS drive almost all of it; state detection rates stretch from the mid-60s to the single digits.",
+    category: "Global Systems",
+    themeId: "pfas-public-water",
+    imageUrl:
+      "/images/global-systems-ucmr5-systems-over-epa-pfas-mcls-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic water-treatment and pipe network with amber PFAS contamination points versus cyan clean flow, faint U.S. hotspot map overlay, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-26T14:00:00Z",
+    featured: true,
+    visualization: "ucmr5-systems-over-epa-pfas-mcls-2026",
+    layout: "default",
+    content: `Federal drinking-water standards for PFAS are no longer a proposal. The Environmental Protection Agency’s April 2024 National Primary Drinking Water Regulation set enforceable Maximum Contaminant Levels (MCLs) for PFOA and PFOS at **4.0 parts per trillion** each, plus limits for three additional PFAS and a Hazard Index mixture. The question that matters for utilities, state primacy agencies, and households is simpler than the rule text: **what share of monitored systems already sit above those lines on the national survey that was running while the rule was finalized?**
+
+EPA’s Fifth Unregulated Contaminant Monitoring Rule (UCMR 5) is that survey. Systems sampled for **29 PFAS** (and lithium) at entry points between 2023 and 2025. The January 2026 Data Summary — covering roughly **95%** of expected results, about **9,240** public water systems with full result sets at roughly **24,050** sampling locations — then compared location averages to the April 2024 MCLs for technical assistance. That comparison is **not** a compliance determination. Compliance will use running annual averages of quarterly compliance monitoring, and published deadlines still point to **2029** (with May 2025 signals that EPA may extend PFOA/PFOS timelines). Still, the averages are the best national preview of how large the “over the MCL” footprint already looks.
+
+The dashboard above opens on the size-tier share of systems over any PFAS NPDWR MCL, then layers contaminant-specific rates, state detection concentration (≥UCMR minimum reporting level), co-occurrence curves, and a size-versus-rate scatter.
+
+## The headline is 8.0% — but size matters more than the average
+
+EPA’s Table 4 footer states three unique-system rates for systems with at least one sampling-location average above **any** of the regulated PFAS MCLs or the Hazard Index:
+
+| System size (UCMR definition) | Systems with full results | Over any MCL | Share |
+| --- | --- | --- | --- |
+| Large (>10,000 people served) | 4,129 | 632 | **15.3%** |
+| Medium (3,300–10,000) | 4,427 | 382 | **8.6%** |
+| Small (<3,300, sample) | 684 | 50 | **7.3%** |
+| Weighted national estimate | — | — | **8.0%** |
+
+The **8.0%** figure is not a simple average of the three percentages. EPA weights by the national SDWIS inventory of community and non-transient non-community systems so that the census of larger systems does not dominate the national story. The policy punch line is still the size gradient: **large systems are roughly twice as likely as small systems** in the reporting set to show at least one average above an MCL. That pattern matters for capital planning. Treatment trains, pilot studies, and rate cases concentrate where customer counts — and often industrial or military source footprints — are largest.
+
+## PFOA and PFOS carry almost the entire MCL footprint
+
+Break the same Table 4 cut by compound and the hierarchy is stark. Across size tiers, roughly **8.9%** of systems with full results have a PFOS average above **4.0 ppt**, and about **8.0%** do for PFOA. Large-system PFOS and PFOA rates sit near **12%** and **11%**. By contrast, PFHxS over **10 ppt** is about **0.7%** overall; the Hazard Index about **0.8%**; PFNA about **0.1%**; HFPO-DA (GenX) about **0.03%** — three systems in the GenX large/medium cells combined in the January cut.
+
+That split is why May 2025 agency language about reconsidering HFPO-DA, PFHxS, PFNA, and the Hazard Index — while keeping PFOA and PFOS as the core federal standards — maps onto occurrence, not just politics. In the UCMR 5 averages published so far, **the compliance problem is overwhelmingly a PFOA/PFOS problem**. The rarer MCLs still matter for the systems that hit them, but they do not move the national percentage.
+
+Contaminant rows can **double-count** systems that exceed more than one MCL. That is why the size-tier “any MCL” lines (15.3% / 8.6% / 7.3%) are the right unique-system denominators for the headline, while the compound rows answer “which chemical.”
+
+## Occurrence by state is highly skewed — even before the MCL lens
+
+EPA’s printed Data Summary does not publish a state-by-state MCL exceedance table. The UCMR 5 Data Finder can filter averages above MCLs by state, but a transparent national concentration story also needs a consistent occurrence metric. Compilations of the EPA occurrence text files (Plain Water Data’s PFAS Tracker among them) show that **any PFAS at or above the UCMR minimum reporting level** appears in about **34%** of tested systems nationally — far above the **8%** MCL-exceedance estimate — and that state detection rates diverge sharply.
+
+Among states with meaningful sample counts, New Jersey (~**65%**) and Connecticut (~**64%**) sit at the top of the detection-rate distribution. Massachusetts, South Carolina, and Texas cluster in the low-to-mid **50s**. Florida and Pennsylvania land in the mid-**40s**. At the other end, Mississippi (~**4%**), Hawaii (~**4%**), and Arkansas (~**6%**) show sparse detections in the same federal methods. California’s detection rate (~**33%**) is near the national average even though absolute detection counts are large because the tested denominator is large.
+
+Two caveats keep this panel honest. First, **detection ≥ MRL is not an MCL exceedance**. Many systems that “detect” PFAS sit below 4 ppt for PFOA/PFOS. Second, states differ in system-size mix and source-water portfolios; a high detection rate can reflect denser industrial history, AFFF use patterns, or simply more entry points in the sample. The dashboard’s concentration curve still shows the geographic punch: detections among larger tested states accumulate faster than a uniform share of systems would imply.
+
+## Mixtures are the rule, not the exception
+
+UCMR 5 also documents co-occurrence. EPA reports that **66%** of sampling locations with at least one PFAS ≥ MRL have **multiple** PFAS ≥ MRL. Table 5’s cumulative counts run from about **6,400** locations with ≥1 unique PFAS down through roughly **3,100** with ≥3 and about **1,100** with ≥6, with a thin tail out to **13** unique PFAS at a single location. Unique PWS counts track the same decay.
+
+For treatment design, mixtures matter as much as single-analyte peaks. Granular activated carbon, ion exchange, and high-pressure membranes behave differently across chain lengths; a system chasing PFOA alone may still need a design envelope for co-occurring shorter-chain acids that appear frequently above MRLs (PFPeA, PFHxA, PFBA, PFBS show up far more often as detections than as MCL exceedances).
+
+## What UCMR averages are — and are not — for compliance desks
+
+Three technical details from the Data Summary keep the chart from being misread as a violation list:
+
+1. **Ground-water locations** in UCMR 5 often contribute **two** semi-annual results to the average; surface-water locations contribute **four** quarterlies. Compliance RAAs under the NPDWR require four quarterlies at each sample point.
+2. Rounding follows the MCL significant-digit rules (for example, PFOA/PFOS averages ≥ **0.00405 µg/L** count as above **4.0 ppt**).
+3. Small systems serving fewer than 3,300 people appear as a **representative sample**, not a census — one reason EPA publishes the weighted **8.0%** national line.
+
+ASDWA’s implementation materials stress the same operational point state primacy agencies already live with: UCMR results can support initial monitoring conversations and public notice, but the enforceable path runs through compliance sampling, treatment decisions, and — for many systems — state revolving-fund and emerging-contaminant grant queues.
+
+## Policy clock: 2029, exemptions, and a narrowing chemical set
+
+The April 2024 rule gave systems until **2029** to meet the MCLs. In May 2025 EPA announced intent to **extend PFOA/PFOS compliance deadlines**, build a federal exemption framework, and **rescind/reconsider** the HFPO-DA, PFHxS, PFNA, and Hazard Index pieces. Until that rulemaking finishes — and until courts settle related challenges — the published MCLs remain the legal reference. Occurrence data already say where the capital stress concentrates: **large systems**, **PFOA/PFOS**, and **states with dense detection**.
+
+## Caveats worth keeping on the page
+
+The January 2026 cut is still **~95%** complete; final fall-2026 files can move counts. Tribal and territorial systems appear in occurrence files with small denominators that swing rates. State detection rankings use a different threshold than MCL comparisons and should not be pasted into a “percent over 4 ppt” sentence. Population served is not the same as system count: a 15% large-system exceedance rate covers far more people than a 7% small-system rate. And “over the MCL on a UCMR average” is an early warning, not a Safe Drinking Water Act violation today.
+
+Sources: EPA UCMR 5 Data Summary (January 2026, EPA 815-S-26-001); EPA UCMR 5 Data Finder and occurrence program pages; EPA PFAS NPDWR materials; ASDWA PFAS resources; Plain Water Data UCMR5 PFAS Tracker state occurrence compilation.`,
+    keyPoints: [
+      "Weighted national estimate: 8.0% of PWSs with ≥1 average above a PFAS NPDWR MCL",
+      "Large systems 15.3% vs medium 8.6% vs small 7.3%",
+      "PFOS ~8.9% and PFOA ~8.0% overall; GenX/PFNA/HI remain rare",
+      "State ≥MRL detection rates span ~65% (NJ) to ~4% (MS/HI)",
+      "66% of locations with ≥1 PFAS ≥ MRL show multiple PFAS",
+    ],
+  },
+  {
     id: "diesel-share-of-new-school-bus-deliveries-2026",
     slug: "diesel-share-of-new-school-bus-deliveries-2026",
     title: "Diesel Still Takes 66% of New School Bus Deliveries",
