@@ -2,6 +2,106 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "lead-pipe-replacement-pace-versus-inventory-2026",
+    slug: "lead-pipe-replacement-pace-versus-inventory-2026",
+    title:
+      "Lead Lines: ~4M Still in the Ground — A 10% Pace Means ~400k Replacements a Year",
+    excerpt:
+      "EPA’s 2025 inventory synthesis puts about 4 million lead and galvanized lines still needing replacement. LCRI-style 10% clearance implies ~400,000 lines per year. City capital plans show crash programs finishing in years — and mega-inventories stretching decades.",
+    category: "Global Systems",
+    themeId: "lead-service-lines",
+    imageUrl:
+      "/images/global-systems-lead-pipe-replacement-pace-versus-inventory-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic underground water-service cross-section with amber remaining lead laterals and teal replaced lines, descending inventory curve motif, Visual Capitalist-style infrastructure editorial",
+    publishedAt: "2026-08-26T05:00:00Z",
+    featured: true,
+    visualization: "lead-pipe-replacement-pace-versus-inventory-2026",
+    layout: "default",
+    content: `The United States no longer debates whether lead service lines exist. Inventories under the Lead and Copper Rule Revisions forced water systems to count them. The harder question is arithmetic: **how many lines come out of the ground each year relative to what remains?** That ratio — annual replacements versus remaining lead and galvanized-requiring-replacement (GRR) inventory — decides whether federal ten-year clocks are credible or whether households sit on multi-decade waitlists.
+
+EPA’s 2025 update to the 7th Drinking Water Infrastructure Needs Survey and Assessment, built from LCRR inventory filings, now estimates about **4 million** lead and galvanized service lines still requiring replacement nationwide. Apply a Lead and Copper Rule Improvements (LCRI) default of a **10% cumulative average annual** replacement rate and the implied national machine is roughly **400,000 full replacements per year**. Convert that stock with an illustrative 60-foot mean lateral and you are talking on the order of **45,000 miles** of service pipe still in place and about **4,500 miles** of clearance work per year if the LCRI share held everywhere. Most large-city capital plans do not run at that share of their own remaining piles.
+
+The dashboard above stacks national clearance scenarios, city years-to-clear at disclosed paces, a remaining-versus-annual scatter, the inventory revision from the older ~9 million DWINSA cut to the ~4 million inventory synthesis, required rate bands, and Denver Water’s recent program path.
+
+## What “inventory” means after LCRR
+
+A service line is the pipe from the water main to the building — often split between utility-owned and customer-owned segments. Under LCRR and LCRI, systems classify each connection as lead, GRR, non-lead, or unknown, then keep a living inventory as materials are verified and lines are replaced. Galvanized requiring replacement matters because lead can scale onto galvanized steel downstream of a lead segment; regulators treat GRR as part of the replacement pool, not a cosmetic label.
+
+The 2025 DWINSA update is not a brand-new field census of every trench. It folds state-submitted LCRR inventory summaries into the needs survey, with EPA adjustments for blanks and unknowns (including prorating unknowns using ratios of known lead among known materials). That is why the national figure can move when inventory quality improves. The agency’s FY2025 and FY2026 IIJA lead-service-line-replacement allotment memoranda both restate the same headline: approximately **4 million** lead and galvanized lines requiring replacement.
+
+Miles are a secondary translation. Capital plans, LCRI rates, and city annual reports almost always count **lines** (addresses or connections). Mile equivalents help readers picture scale; they are not how compliance is scored.
+
+## The inventory revision that changed the denominator
+
+For allotment planning, the denominator mattered before LCRR inventories matured. The initial 7th DWINSA LSL need assessment and the 2024 one-time update both pointed near **9 million** lead service lines. The 2025 inventory-based cut roughly halves that stock to about **4 million** lead+GRR. That revision does not mean 5 million lines vanished overnight. It means the funding and compliance conversation now runs on a tighter, inventory-anchored stock — while unknowns remain large enough that prorated “projected lead” still moves state allotments.
+
+A smaller denominator makes a 10% annual share look more achievable in absolute line counts (400,000 instead of 900,000). It does not automatically raise the construction crews, contractor capacity, or customer-side access that determine real pace. Cities with enormous remaining piles still face decade-plus calendars unless annual throughput rises with inventory quality.
+
+## LCRI math: 10% is a rate, not a vibe
+
+LCRI generally expects community water systems to replace lead and GRR service lines on a path consistent with a **cumulative average annual replacement rate of 10%**, with formal assessment beginning after program year 3. Systems with very large inventories relative to connections can qualify for deferred deadlines when 10% of known lead+GRR exceeds **39 replacements per 1,000 service connections** — a feasibility off-ramp that exists precisely because some inventories are so deep that a strict ten-year path collides with construction reality.
+
+Translate the default rate onto the national 4 million stock and you get the desk’s headline machine:
+
+| Pace band | Share of starting stock / year | Lines / year at 4M | Years to clear if held |
+| --- | ---: | ---: | ---: |
+| Slow blend | 2% | 80,000 | 50 |
+| Mid | 5% | 200,000 | 20 |
+| LCRI default | 10% | 400,000 | 10 |
+| Crash | 20% | 800,000 | 5 |
+
+These are straight-line illustrations against a fixed starting stock. Real inventories grow when unknowns resolve to lead or GRR and shrink when replacements land. The table still answers the brief’s core question: **annual replacements only “keep up” with a ten-year national story if they approach the 10% band.**
+
+## City paces: crash, on-track, behind, multi-decade
+
+Published program reports show how uneven the machine is when you divide remaining lines by recent annual throughput.
+
+**Newark, New Jersey** ran a crash program: **23,190** lead service lines replaced across a concentrated multi-year push, with peak months near **900** replacements after the city removed customer cost-share and moved neighborhood-by-neighborhood. Remaining inventory for the known lead pool went to essentially zero on that campaign — the rare case where years-to-clear collapses because the annual pace briefly rivaled the stock.
+
+**Denver Water**’s Lead Reduction Program is the cleanest disclosed on-track path in the large-system set. In **2024** the utility completed **7,973** replacements — a **12.5%** annual replacement rate and a **9.5%** cumulative rate against its program inventory, above the variance’s 7% cumulative floor. Remaining stock is still tens of thousands of lines, but the ratio of annual work to remaining inventory is in the teens of percent, not the low single digits.
+
+**Pittsburgh**’s residential campaign reported roughly **11,000** removals by April 2024 with about **7,000** remaining toward an end-2026 goal — a short residual calendar if throughput holds.
+
+**Washington, DC** (Lead-Free DC) replaced **2,199** lines in FY2024 and **6,961** cumulatively since 2019, with **34,196** still remaining as of 1 October 2024. At the FY2024 pace alone, years-to-clear sits near **16** — behind a strict ten-year LCRI-style share of that remaining pile, even as new contracts aim to lift volume.
+
+**Milwaukee** disclosed about **2,700** replacements in 2024 against roughly **63,000** remaining, with goals climbing toward **3,500** and then toward **5,000** per year. At 2024 throughput the residual is multi-decade; at a sustained 5,000 pace it compresses toward the low teens — still a different planet from Newark’s monthly peak.
+
+**Chicago** is the stress test. Department of Water Management inventory work and independent reporting put on the order of **412,000** lead or suspected-lead lines in a system of roughly **491,000** services. Planned throughput near **8,300** replacements per year from 2027 implies roughly **50 years** at that planned pace — a multi-decade band even after federal rules shortened Illinois’s earlier ultra-long windows for the city. Absolute annual counts in the high thousands look large until you divide by a remaining stock measured in the hundreds of thousands.
+
+Scatter the large systems with remaining inventory on one axis and annual replacements on the other and the pattern is geometric, not moral: **years-to-clear ≈ remaining ÷ annual**. Utilities that clear in under a decade either started with smaller piles, ran crash throughput, or both. Utilities with mega-inventories need either deferred deadlines or a step-change in annual construction — funding alone does not dig trenches.
+
+## Funding helps; it does not equal pace
+
+The Bipartisan Infrastructure Law’s dedicated lead-service-line-replacement Drinking Water State Revolving Fund class has been allotting on the order of **$3 billion per year** in recent fiscal memoranda. At a mid-range full-replacement cost near **$11,500** per line, that class could in principle underwrite something like **260,000** replacements a year if every dollar translated one-for-one into completed full replacements — still short of the **400,000** LCRI-implied national machine, and far short of what a 9-million starting stock would have implied. Chicago alone has publicly discussed lifetime program costs on the order of **$12 billion**.
+
+Money also arrives unevenly across states, and construction faces permitting, paving coordination, private-side access, and contractor capacity. Denver’s rising annual counts show what a funded, variance-bound program can do. Chicago’s planned 8,300/year shows what a mega-inventory looks like when absolute capacity is still a small share of remaining stock. Pace is a production function, not a press release.
+
+## Caveats and what this desk is not claiming
+
+Several limits matter. First, **national annual replacement totals are not yet a single audited EPA time series** comparable to inventory dashboards; this analysis therefore anchors on EPA’s stock estimate and on disclosed large-system paces rather than inventing a false national throughput series. Second, **unknown materials** still require prorating assumptions — the 4 million figure already embeds EPA’s inventory adjustments. Third, **partial replacements** (utility-side only) are not equivalent to full lead removal for household exposure; LCRI pushes toward full replacement, but historical city tallies sometimes mix categories. Fourth, **years-to-clear** assumes today’s annual pace holds and that remaining inventories do not swell when unknowns resolve — both optimistic. Fifth, **mile conversions** use a stylized mean length; actual laterals vary by era and city. Sixth, deferred-deadline eligibility and state statutes can legally extend calendars even when health advocates want faster work.
+
+What the evidence does support is narrower and sharper: relative to remaining inventories, only a minority of large disclosed programs currently run at or above an LCRI-like share of their own piles. Crash programs prove high monthly throughput is possible. Mega-inventories prove that without that throughput, the residual calendar stretches into the teens or decades.
+
+## What to watch next
+
+Three observables will decide whether the national story converges on the 10% band. Inventory updates each January will show whether the 4 million stock shrinks from replacements or grows from unknown resolution. City capital plans will show whether annual contracts scale toward the teens of percent of remaining inventory or plateau in the low thousands. And LCRI deferred-deadline filings will reveal how many large systems formally argue that 39 replacements per 1,000 connections is the feasible ceiling. Until annual replacements rise relative to remaining lead and GRR, the United States will keep publishing better inventories of a problem it is still clearing too slowly.`,
+    keyPoints: [
+      "EPA 2025 inventory synthesis: ~4M lead+GRR lines still requiring replacement (down from ~9M DWINSA cuts)",
+      "LCRI-like 10% pace ⇒ ~400,000 lines/year (~4,500 mi/yr at 60 ft mean)",
+      "Denver 2024: 7,973 replacements (12.5% annual); DC FY24: 2,199 with 34,196 remaining (~16 years at that pace)",
+      "Chicago ~412k remaining at ~8,300 planned/year ⇒ ~50 years; Newark crash program cleared 23,190 lines",
+    ],
+    tags: [
+      "lead service lines",
+      "LCRI",
+      "drinking water",
+      "infrastructure",
+      "EPA DWINSA",
+    ],
+    format: "data-story",
+  },
+  {
     id: "homeschool-and-private-share-of-school-age-kids-2026",
     slug: "homeschool-and-private-share-of-school-age-kids-2026",
     title:

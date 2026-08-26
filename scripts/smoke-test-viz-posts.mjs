@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "lead-pipe-replacement-pace-versus-inventory-2026",
+    marker: "National stock under 2% / 5% / 10% annual clearance",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "homeschool-and-private-share-of-school-age-kids-2026",
     marker: "Non-public share of school-age",
     forbidden: "Loading interactive charts",
