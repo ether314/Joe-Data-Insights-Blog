@@ -4362,6 +4362,23 @@ const AverageSchoolBusAgeVersusEpaCleanSchoolBusAwards2026Dashboard = dynamic(
   },
 );
 
+const AgingOutCountsVersusYoungAdultHousingInstability2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AgingOutCountsVersusYoungAdultHousingInstability2026Dashboard"
+    ).then(
+      (m) => m.AgingOutCountsVersusYoungAdultHousingInstability2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5509,6 +5526,10 @@ export function PostVisualization({
 
   if (type === "average-school-bus-age-versus-epa-clean-school-bus-awards-2026") {
     return <AverageSchoolBusAgeVersusEpaCleanSchoolBusAwards2026Dashboard />;
+  }
+
+  if (type === "aging-out-counts-versus-young-adult-housing-instability-2026") {
+    return <AgingOutCountsVersusYoungAdultHousingInstability2026Dashboard />;
   }
 
   return null;

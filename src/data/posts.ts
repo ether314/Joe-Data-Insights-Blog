@@ -2,6 +2,81 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "aging-out-counts-versus-young-adult-housing-instability-2026",
+    slug: "aging-out-counts-versus-young-adult-housing-instability-2026",
+    title:
+      "15,379 Youth Aged Out in FY2024 — NYTD Still Shows a Housing Gap at 21",
+    excerpt:
+      "AFCARS emancipation exits fell about 25% from FY2019 to FY2024, yet still make up roughly 9% of discharges. NYTD Cohort 3: 26% of 21-year-olds reported homelessness in the prior two years; 55% were employed.",
+    category: "Politics",
+    themeId: "foster-care-exits-afcars",
+    imageUrl:
+      "/images/politics-aging-out-counts-versus-young-adult-housing-instability-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero with descending emancipation bars and a fragmented teal-rose house outline suggesting young-adult housing instability",
+    publishedAt: "2026-08-26T14:00:00Z",
+    featured: true,
+    visualization: "aging-out-counts-versus-young-adult-housing-instability-2026",
+    layout: "default",
+    content: `Every federal fiscal year, the Adoption and Foster Care Analysis and Reporting System (AFCARS) counts how many children leave foster care **without a permanent family**—discharged to **emancipation**, the administrative label for aging out. Separately, the National Youth in Transition Database (NYTD) asks cohorts of 17-, 19-, and 21-year-olds whether they have a job, a diploma, an adult they can call, and a roof that has held. The interactive dashboard above puts those ledgers side by side: how many exits still lack permanency, and what NYTD says about housing and work after the clock runs out.
+
+The headline numbers are blunt. In **FY2024**, Children's Bureau AFCARS dashboard figures show **15,379** emancipation exits—about **9%** of **176,730** total discharges. That count is down roughly **25%** from **20,445** in **FY2019**, tracking the broader decline in the foster-care census. Yet the **share** of exits that end in aging out has stayed stubbornly near **8–9%**. On the outcomes side, NYTD Data Brief #8 (Cohort 3) finds that **26%** of 21-year-old respondents reported homelessness in the **prior two years**, and **44%** of youth who completed all three survey waves reported a homeless experience by age 21. Employment rises with age—**55%** employed full- or part-time at 21—but it never closes the housing gap.
+
+## What emancipation counts—and what it does not
+
+AFCARS emancipation is a **discharge reason**. It means the exit was coded as aging out of care rather than reunification, adoption, guardianship, living with a relative, transfer, runaway, or death. It is the cleanest national count of exits **without permanency**, but it is not a headcount of every young person who ever experienced foster care, nor is it identical to the NYTD survey frame.
+
+Youth can leave care at different ages depending on state extended-foster-care statutes. Some remain in care past 18; some exit earlier. Emancipation totals therefore mix jurisdictions with different age cutoffs and pandemic-era extensions. They also sit inside a shrinking system: total exits fell from about **249,000** in FY2019 to about **177,000** in FY2024. Absolute aging-out counts fell with that tide. The policy question is whether the **risk** of exiting without permanency—and the housing instability that follows—fell as fast.
+
+## The volume path from FY2019 to FY2024
+
+The dashboard's emancipation-volume panel charts annual aging-out discharges against their share of all exits:
+
+| Fiscal year | Emancipation exits | Share of exits | Total exits (glance) |
+| --- | ---: | ---: | ---: |
+| FY2019 | 20,445 | 8% | 248,669 |
+| FY2020 | 20,010 | 9% | 223,918 |
+| FY2021 | 19,130 | 9% | 214,542 |
+| FY2022 | 18,538 | 9% | 201,372 |
+| FY2023 | 15,590 | 8% | 184,095 |
+| FY2024 | 15,379 | 9% | 176,730 |
+
+Two patterns matter for desks that only watch one series. First, the **count** fell by about **5,000** over five years—real relief in absolute terms. Second, the **share** never left the high single digits. When the system shrinks mainly through fewer entries and faster reunification or adoption for younger children, older adolescents who remain in care can still dominate the emancipation column. A falling count with a stable share is not the same story as a system that closed the aging-out pathway.
+
+FY2023 detail tables (May 2025 AFCARS dashboard printable) used AFCARS 2020 reporting rules and excluded Washington and Wyoming from some snapshots; FY2024 printables reflect later submissions. Treat year-to-year comparisons as directionally reliable for national emancipations, not as audit-grade state rollups.
+
+## NYTD Cohort 3: housing after the survey clock
+
+NYTD does not survey every emancipated exit. States identify a baseline cohort of 17-year-olds in care and follow them at 19 and 21. Cohort 3 was eligible at age 17 in **FFY 2017** (**24,474** youth); **16,254** completed the baseline (66%). Follow-up response was **73%** at 19 and **64%** at 21 among those still eligible. The Children's Bureau weights responses to correct for non-response bias; published percentages are **weighted national estimates**, not raw respondent shares.
+
+Homelessness wording changes with age. At **17**, the question is lifetime experience; **21%** said yes. At **19** and **21**, the question is homelessness within the **past two years**: **21%** and **26%**, respectively. Of those reporting recent homelessness at 21, **90%** had left foster care. Among the **6,683** young people who completed **all three waves**, **44%** reported a homeless experience by age 21. That cumulative figure is the hardest housing signal in the brief—and the one that should sit next to any celebration of fewer emancipation exits.
+
+## Employment rises; it does not cancel instability
+
+Financial self-sufficiency improves across waves, but from a low floor. Full- or part-time employment was **18%** at 17, **45%** at 19, and **55%** at 21. Broader “employment-related” experience (jobs plus apprenticeships, internships, or on-the-job training) reached **65%** at 21. Educational credentials climb too: **75%** of 21-year-olds reported at least a high school diploma or GED, up from **5%** still in school-age baseline. Adult connections remain high (**87%** at 21), a protective factor that coexists with housing risk rather than erasing it.
+
+Public assistance—asked only of respondents **not in care**—was **23%** at 19 and **31%** at 21. By age 21, **79%** of survey respondents were no longer in foster care. The combination is politically awkward: a majority report work, three-quarters report a credential, nearly nine in ten report an adult connection—and more than one in four still report a recent homeless episode. Employment and housing are not the same outcome, and NYTD makes that visible without requiring a matched AFCARS–NYTD person file.
+
+## Why the two ledgers should be read together
+
+Child-welfare politics often treats aging-out volume and transition outcomes as separate beats. Volume answers “how many leave without permanency this year?” Outcomes answer “among surveyed transition-age youth, how common is homelessness or joblessness?” Neither ledger substitutes for the other.
+
+AFCARS can fall while NYTD housing risk stays elevated if the remaining emancipations are concentrated among youth with longer stays, fewer kin options, or weaker independent-living preparation. Conversely, NYTD can improve while emancipation counts stall if survey cohorts benefit from extended care that AFCARS still codes as in-care rather than emancipated. The dashboard's illustrative “housing-risk exposure” panel multiplies recent emancipation counts by the age-21 past-two-year homeless rate (**26%**). That product is **not** a matched caseload estimate—it is a scale reminder that tens of thousands of non-permanent exits still collide with a housing rate that has not collapsed.
+
+## Extended care, Chafee services, and the measurement gap
+
+Federal Chafee Foster Care Program for Successful Transition to Adulthood funding and state extended-care options are the main policy levers between these numbers. Extended care can delay emancipation and keep youth housed under agency supervision; Chafee services fund housing assistance, education aid, and employment supports that show up indirectly in NYTD. Neither automatically changes AFCARS discharge coding when a youth finally exits, nor does NYTD measure every Chafee-funded bed-night.
+
+Reading rules for the politics desk: (1) prefer emancipation **counts and shares** together; (2) treat NYTD homelessness windows carefully—lifetime at 17, past-two-years later; (3) do not equate survey response rates with population coverage; (4) keep FY2023/FY2024 AFCARS dashboard caveats in footnotes when comparing to pre-2020 report vintages. The interactive panels above let you toggle year windows and NYTD age waves without collapsing those distinctions.
+
+## Caveats
+
+Emancipation is one AFCARS discharge reason among several; “other” exits (transfer, runaway, death) are small nationally but matter in some states. FY2020–FY2021 pandemic extensions temporarily held some youth in care who would otherwise have aged out, so the early-pandemic dip in counts is partly policy, not solely permanency success. NYTD Cohort 3 outcomes are weighted estimates from surveys completed in FFY 2017/2019/2021; they are not a 2024 outcomes vintage. Public-assistance items exclude youth still in care. The illustrative exposure series deliberately mixes an AFCARS flow with an NYTD rate and should be cited as **estimated scale**, not as a Children's Bureau official product.
+
+None of those caveats erase the joint reading: **aging-out volume fell, but not to zero, and NYTD still shows a substantial housing gap by age 21 even as employment and credentials improve.** Volume without outcomes understates risk; outcomes without volume understates scale.
+`,
+  },
+  {
     id: "average-school-bus-age-versus-epa-clean-school-bus-awards-2026",
     slug: "average-school-bus-age-versus-epa-clean-school-bus-awards-2026",
     title:

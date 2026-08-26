@@ -17,6 +17,12 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "aging-out-counts-versus-young-adult-housing-instability-2026",
+    marker:
+      "Headline — 15,379 aged out in FY2024; 26% of NYTD 21-year-olds reported homelessness in the prior two years",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "average-school-bus-age-versus-epa-clean-school-bus-awards-2026",
     marker: "Mean age vs CSB units dual axis",
     forbidden: "Loading interactive charts",
