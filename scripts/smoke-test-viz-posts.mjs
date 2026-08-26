@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "coffee-and-carbonated-drink-cpi-versus-typical-wages-2026",
+    marker: "Coffee vs wage index race",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "nfip-repetitive-loss-properties-versus-policies-in-force-2026",
     marker: "RL share of policies and of paid losses",
     forbidden: "Loading interactive charts",

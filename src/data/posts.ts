@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "coffee-and-carbonated-drink-cpi-versus-typical-wages-2026",
+    slug: "coffee-and-carbonated-drink-cpi-versus-typical-wages-2026",
+    title:
+      "Coffee Ran 19 Points Ahead of Median Wages — Soda Still Trails Them",
+    excerpt:
+      "Since 2019, BLS coffee CPI has climbed to 156 on a wage index of 137 (2019=100). Carbonated drinks sit at 124 — cheaper relative to paychecks even after the inflation spike.",
+    category: "Food & Agriculture",
+    themeId: "caffeine-beverage-cpi",
+    imageUrl:
+      "/images/food-and-agriculture-coffee-and-carbonated-drink-cpi-versus-typical-wages-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero with coffee cup and soda glass silhouettes, amber coffee index line racing above a green wage trail, bold COFFEE 156 and WAGES 137 callouts",
+    publishedAt: "2026-08-26T20:00:00Z",
+    featured: true,
+    visualization: "coffee-and-carbonated-drink-cpi-versus-typical-wages-2026",
+    layout: "default",
+    content: `Grocery aisles have two caffeine stories that stopped moving together. On a 2019 = 100 scale, the Bureau of Labor Statistics **coffee** item index sits at **156.3** in 2026Q2. The same quarter's **median usual weekly earnings** for full-time wage and salary workers land at **137.2**. That is a **+19.1** index-point gap — coffee prices have outrun the typical paycheck by nearly a fifth of the 2019 baseline. **Carbonated drinks**, by contrast, print **123.9**: still up almost a quarter since 2019, but **13.3** points *behind* wages. The dashboard above races those series together, then switches to wage gaps, wage-burden ratios, YoY heat, and annual bars.
+
+The headline is not that everything got expensive. All-items CPI-U is only at **130.7** on the same rebase. Coffee alone cleared both the wage line and the broad inflation line — and it did most of the relative damage in **2025–26**, after years of tracking pay more closely.
+
+## The race in one picture
+
+Rebase every series to its **2019 calendar-year average**. Coffee uses CPI-U series **CUUR0000SEFP01**. Carbonated drinks use **CUUR0000SEFW01**. Wages use CPS **LES1252881500** (median usual weekly earnings, full-time wage and salary workers). All-items CPI-U (**CUUR0000SA0**) is the background rhythm, not the punchline.
+
+Through **2021**, coffee and soda both trailed wages on that scale — pandemic-era composition effects pushed the median paycheck index up even while beverage shelves looked relatively calm. **2022** briefly put coffee above wages as commodity and retail prices jumped, then **2023–24** cooled: coffee's annual average even dipped slightly in 2024 while wages kept grinding higher. The split reopened hard in **2025**, when coffee's twelve-month change peaked near **+21%** in August, and widened further into **2026Q2**.
+
+Soda never staged that second act. Its path is a slow grind under the wage line — higher than 2019, lower than pay growth, and quieter than the coffee scare that dominated food-price headlines.
+
+## What the indexes actually measure
+
+CPI item indexes are **price indexes**, not sticker prices for a particular bag or can. Coffee covers the coffee item stratum in the CPI market basket (ground, whole bean, and related retail coffee as BLS samples it). Carbonated drinks cover soft drinks in the same survey design. Neither series is a futures price, an import unit value, or a café latte ticket — though bean markets and retail promotions feed into what field staff observe.
+
+Median usual weekly earnings are also not a wage bill. CPS asks full-time wage and salary workers for their usual weekly pay before taxes; BLS publishes the median. That is a better “typical paycheck” than average hourly earnings for this story, but it still excludes the self-employed, many part-timers, and non-wage income. Composition shifts — who holds full-time jobs — can move the median even when no individual's pay changes.
+
+Indexing both sides to 2019 puts them on a common percentage-point language. A coffee reading of 156 means the coffee item basket costs about **56%** more than in 2019 on average. A wage reading of 137 means the median full-time weekly check is about **37%** higher. The **gap** is arithmetic, not a claim that households buy only coffee.
+
+## Coffee's late surge
+
+Annual averages tell the pacing story cleanly. Coffee hovered near **100–103** in 2019–21, jumped to roughly **118** in 2022, plateaued near **122–123** in 2023, and actually eased toward **122** in 2024 while wages pushed toward **127**. That 2024 window is easy to miss in a single scary YoY print: coffee was briefly *cheaper relative to wages* than it had been at the 2022 peak.
+
+Then 2025–26 flipped the script. Incomplete 2025 quarters already average near **135** for coffee against wages near **131**; the first half of 2026 averages near **154** against wages near **136**. Monthly YoY for coffee hit **+20.8%** in **2025-08** and was still **+10.3%** in **2026-07**. All-items YoY in those months stayed near **3%**. The coffee move is a **relative-price** event, not a replay of 2022's broad inflation spike.
+
+Supply desks will cite weather in key origins, freight, and retail pass-through. This post does not adjudicate those channels. It only measures how far the BLS coffee stratum has run ahead of the CPS median check — and the answer, as of 2026Q2, is **nineteen index points**.
+
+## Why soda looks different
+
+Carbonated drinks rose too: from 100 in 2019 to about **111** in 2022, **116** in 2023, **120** in 2024, and **124** by 2026Q2. That is real money on the shelf. Relative to wages, though, the soda **gap stays negative** every year in the sample after 2019 — soda's index sits below the wage index. The wage-burden ratio (soda ÷ wages × 100) falls from 100 toward roughly **90** by 2026Q2: the same median worker needs about **10% fewer** wage-index units to cover the soda stratum than in 2019.
+
+That does not mean soda is “cheap” in cash terms. It means **paychecks outpaced soda CPI** over this window. Promotional intensity, private-label share, and packaging shifts can all dampen the measured index even when brand-name six-packs feel dear. Treat the soda line as a contrast case, not a lifestyle verdict.
+
+## Wage-burden arithmetic
+
+Define **wage burden** as beverage index ÷ wage index × 100, still anchored at 2019 = 100. Coffee burden ends 2026Q2 at **113.9**; soda burden at **90.3**. One way to read that: covering the coffee item basket takes about **14% more** of a median weekly check's growth path than it did in 2019, while soda takes about **10% less**.
+
+The burden series also shows *when* coffee hurt. Burden stayed near or below 100 through much of 2020–21 and again in 2024, then climbed through 2025 into 2026. Gap charts (beverage − wages) make the same point in index points: coffee's gap is **+19.1**; soda's is **−13.3**.
+
+Median weekly earnings themselves print **$1,258** in 2026Q2 versus a **$917** 2019 average — useful dollars for scale, but the index comparison remains the fair race because both sides move over time.
+
+## Annual path — indexes at a glance
+
+| Year | Coffee | Soda | Wages | All-items | Coffee−wages |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 100.0 | 100.0 | 100.0 | 100.0 | 0.0 |
+| 2020 | 100.5 | 103.5 | 107.3 | 101.2 | −6.9 |
+| 2021 | 103.1 | 105.3 | 108.8 | 106.0 | −5.7 |
+| 2022 | 117.9 | 110.5 | 115.4 | 114.4 | +2.5 |
+| 2023 | 122.8 | 116.3 | 121.6 | 119.2 | +1.1 |
+| 2024 | 121.7 | 119.7 | 126.5 | 122.7 | −4.8 |
+| 2025* | 135.2 | 120.8 | 131.3 | 125.7 | +3.9 |
+| 2026* | 153.9 | 123.3 | 135.8 | 129.4 | +18.1 |
+
+\\*2025 uses three published quarters (Q4 earnings and some CPI months disrupted by the 2025 appropriations lapse); 2026 uses H1 only. Gaps are annual averages of quarterly gaps.
+
+## Caveats — what this gap is not
+
+Several limits matter. **First**, CPI item indexes are national averages; local coffee and soda prices differ by metro, format, and brand. **Second**, median weekly earnings embed composition: when lower-paid workers exit full-time employment, the median can rise without a raise for those who remain. **Third**, October 2025 CPI cells are missing for these series; quarterly averages use remaining months, and 2025Q4 wages are unpublished in the extract used here. **Fourth**, indexing to 2019 is a storytelling choice — a 2015 or 2021 base would change levels but not the recent coffee–wage divergence. **Fifth**, this is not a welfare measure of caffeine consumption, café spending, or sugar taxes; it is a relative-price race between two BLS beverage strata and one CPS earnings median.
+
+None of those caveats erase the core print: **coffee CPI has run ahead of typical wages; carbonated-drink CPI has not.**
+
+## What to watch next
+
+Three releases keep the story honest. Watch whether coffee's YoY cools below high-single digits while the wage index keeps its recent pace — that would shrink the gap without requiring a coffee *deflation*. Watch whether soda's burden stays near 90 or mean-reverts if promo intensity fades. And watch the next full quarter of CPS medians after any remaining 2025 data gaps close, so the wage side of the race is not carrying a thin 2026 sample alone.
+
+For now the split is sharp enough for a one-line desk note: **coffee at 156, wages at 137, soda at 124 — same 2019 starting line, three different finishes.**
+`,
+  },
+  {
     id: "nfip-repetitive-loss-properties-versus-policies-in-force-2026",
     slug: "nfip-repetitive-loss-properties-versus-policies-in-force-2026",
     title:
