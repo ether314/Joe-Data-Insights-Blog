@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "state-unclaimed-property-holdings-versus-dollars-returned-2026",
+    slug: "state-unclaimed-property-holdings-versus-dollars-returned-2026",
+    title:
+      "State Unclaimed Property: ~$70B Held, $4.49B Returned — Large Vaults Turn Over Slowest",
+    excerpt:
+      "NAUPA members returned $4.49B to owners in FY2024 against a ~$70B custodial float (≈6.4% return rate). A 20-state panel shows New York and California alone near $34B in stock while mid-size programs often reunite owners at higher percentages.",
+    category: "Finance",
+    themeId: "unclaimed-property-escheat",
+    imageUrl:
+      "/images/finance-state-unclaimed-property-holdings-versus-dollars-returned-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic vault of stacked coins beside a U.S. silhouette with an amber stream of returned funds, Visual Capitalist-style finance editorial",
+    publishedAt: "2026-08-26T06:00:00Z",
+    featured: true,
+    visualization: "state-unclaimed-property-holdings-versus-dollars-returned-2026",
+    layout: "default",
+    content: `States do not own the money sitting in unclaimed-property programs. They custody it. When a bank, insurer, employer, or utility cannot find the owner of a dormant balance after a statutory dormancy period, the asset is **escheated** to the state treasurer, controller, or dedicated unclaimed-funds office. The office becomes a perpetual custodian: the owner or heir can claim the property indefinitely, usually for free. That custodial float is now one of the largest quiet balance sheets in U.S. state finance — and one of the least understood when headlines blur "billions waiting" with "billions returned."
+
+The National Association of Unclaimed Property Administrators (NAUPA) reports that member programs returned **$4.49 billion** to rightful owners in fiscal year 2024. The same ecosystem is widely estimated to hold roughly **$70 billion** in aggregate stock. Divide those figures and the national **return rate** lands near **6.4%** of the float in a single year — a payout pace that looks large in absolute dollars and small against the vault. This desk asks a sharper question: **which states hold the largest reported balances, and what share of those balances was paid to owners in the latest reporting year?**
+
+The interactive dashboard above ranks a **20-state panel**, scatters return rates against custodial stock, traces the national path from 2018–2024, shows a property-type mix, and aggregates by Census region and return-rate band. Region and sort controls let you re-order the ladder by holdings, dollars returned, return rate, or per-capita stock. The point is not that states are "keeping" money in the proprietary sense; it is that **stock size and reunification pace are different metrics**, and they tell different stories about the same programs.
+
+## Holdings concentrate in a handful of large states
+
+Custodial balances are not distributed like population. **New York** alone reports about **$19 billion** under the Office of the State Comptroller Office of Unclaimed Funds — roughly **23%** of this desk panel and a material share of any plausible national total. The Comptroller's office has also highlighted tens of millions of accounts dating back decades, which is a reminder that escheat is cumulative: property remitted in the 1980s can still sit in the ledger until someone claims it. **California** Controller statements put the Unclaimed Property Program near **$15 billion**. **Texas** Comptroller disclosures place ClaimItTexas stock above **$10 billion**, with fiscal 2024 owner payments of a record **$422.4 million**.
+
+Add **Illinois** and **Pennsylvania** (each above **$5 billion**) and **Ohio** (about **$4.8 billion**), and six programs already exceed **$59 billion**. That concentration matters for any national return-rate story: when the largest vaults turn over slowly, the dollar-weighted average stays muted even if smaller states reunite owners at higher percentages. Georgia, New Jersey, Arizona, Washington, Michigan, and Florida fill out the next tier — typically in the **$2–3 billion** range on recent treasurer and trade summaries — while Midwestern and Mountain programs populate the lower rungs of the ladder.
+
+| State | Holdings ($B) | Latest-year returned ($M) | Return rate | Confidence |
+| --- | ---: | ---: | ---: | --- |
+| New York | 19.0 | 504 | 2.7% | Disclosed |
+| California | 15.0 | 420 | 2.8% | Estimated |
+| Texas | 10.5 | 422 | 4.0% | Disclosed |
+| Illinois | 5.2 | 299 | 5.7% | Disclosed |
+| Pennsylvania | 5.1 | 255 | 5.0% | Estimated |
+| Ohio | 4.8 | 192 | 4.0% | Estimated |
+
+Panel holdings in the interactive table sum to about **$82 billion** across twenty states — higher than the popular **$70 billion** national cite. That is not a contradiction so much as a timing and definition problem: point-in-time treasurer disclosures, securities marks, and multi-year press figures do not snap to a single audited national ledger. NAUPA anonymizes much of its member detail. Treat the panel as a **disclosed-heavy ranking**, not a Census-style totals table. Census Annual Survey of State Government Finances helps frame custodial and trust-like balances in state accounts, but it does not replace program ledgers published by treasurers and controllers.
+
+## Return rates diverge from stock size
+
+**Return rate** here means latest-year owner payments divided by reported custodial stock. It is a flow-to-stock ratio, not a lifetime reunification probability and not a claim-approval rate. On that definition, the largest holders are not the fastest turners — and that gap is the analytical heart of the post.
+
+New York paid **$504 million** to owners in SFY 2023–24 against a **$19 billion** stock — about **2.7%**. (A subsequent SFY printed a higher absolute payout near **$633 million**, which still leaves the flow-to-stock ratio in the low single digits.) California desk estimates land near **2.8%**. Texas cleared closer to **4.0%** on its FY2024 record payout. Illinois returned nearly **$299 million** in calendar 2024 against a stock above **$5 billion**, a **5.7%** clip that outpaces the mega-vaults and shows what a mature outreach machine can do even on a multi-billion denominator.
+
+Smaller Western and Midwestern programs often post higher rates. **Oregon** and **Utah** sit near or above **6%** in this panel, reflecting proactive outreach and smaller denominators — Utah's Division has publicized record annual returns near **$43 million** on a comparatively modest stock. **Florida** shows a relatively high rate on a modest **~$2 billion** stock — a reminder that high-mobility, tourism-heavy states can look different on both the inflow and the claim side. The scatter view makes the pattern visual: large-X, low-Y states (NY, CA) pull the dollar-weighted panel return rate down to about **3.8%**, well below the headline national **6.4%** that mixes all members and a softer stock estimate.
+
+## The national float keeps rising even when returns set records
+
+From 2018 to 2024, desk-scaled national stock estimates climb from the low **$40 billions** toward **$70 billion**. Owner returns rose as well — peaking near **$5.4 billion** in the FY2023 NAUPA window — then eased to **$4.49 billion** in FY2024. Stock still grew. That sequence is easy to misread as failure. It is closer to open-system math.
+
+Every reporting cycle, holders remit newly dormant checks, accounts, insurance proceeds, and securities. Outreach campaigns, portal modernization, and media partnerships raise outflows — NAUPA has credited technology and awareness work, including national media collaborations, for reunification gains. But inflows arrive continuously. A record payout year can coincide with a larger vault if remittances and audit recoveries outrun claims. Unclaimed-property programs are not closed-end funds that shrink when they succeed; they are open custodial systems fed by the churn of a mobile, account-heavy economy. The finance story sits in **escheat statutes**, dormancy clocks, and holder-compliance audits that determine how fast property arrives and how easy it is to leave.
+
+## What sits inside the vault
+
+Dollar mix varies by state, but large-program compositions typically tilt toward **uncashed checks and accounts-payable items**, **dormant bank and credit-union balances**, and **securities with unpaid dividends**. Insurance proceeds, utility deposits, mineral royalties, and safe-deposit contents fill the remainder. MissingMoney.com claim statistics underscore the skew: the **average** paid claim was about **$2,080** in the FY2024 NAUPA release, while the **median** was only **$100**. Most successful claims are small; a thin tail of large securities and insurance items moves the averages.
+
+That mix shapes politics and operations. High volumes of small checks create processing load and scam-risk confusion — legitimate treasurer outreach is free, while third-party finders may charge fees. Large securities positions create valuation and sale questions when states liquidate abandoned shares under statute. Holder audits refill the vault even as claims empty it: New York has reported hundreds of millions collected through compliance work in recent SFYs, alongside voluntary remittances. The pie chart in the dashboard is a desk composition across large programs — not a NAUPA line item — but it matches the qualitative mix treasurers describe in annual reports.
+
+## Why per-capita holdings tell a different story
+
+Raw stock favors population giants. **Per-capita holdings** re-rank the panel and expose how "big program" and "deep program" are not synonyms. New York approaches **$970** per resident on a **$19 billion** stock. California is closer to **$385**. Florida, despite a large population, shows a much thinner per-capita float on a **~$2 billion** program — either because more property is claimed, remitted elsewhere under priority rules, or simply reported at a different scale and vintage.
+
+Mobility matters. People who move across state lines leave utility deposits, payroll checks, and old bank accounts behind. Priority rules in the Revised Uniform Unclaimed Property Act tradition generally send property first to the state of the owner's last-known address, then to the holder state. Multi-state lives therefore create multi-state search obligations — which is why NAUPA-endorsed MissingMoney.com exists as a cross-jurisdiction portal covering most states, D.C., and Puerto Rico. Regional aggregates in the dashboard show the Northeast stock dominated by New York's OSC balance, while the West's per-capita depth is more even across California and mid-size Mountain and Pacific programs.
+
+## Caveats, confidence, and what the ratios omit
+
+Several limits bind this cut. **First**, NAUPA FY2024 returns are a national aggregate; many state-level lines remain anonymized, so mid-panel payouts are desk-joined from treasurer press releases and annual reports rather than a single NAUPA CSV. Confidence flags in the data module mark **disclosed** versus **estimated** cells — treat estimated return dollars as directional. **Second**, fiscal calendars differ — New York SFY, Texas FY, Illinois calendar — so "latest year" is a nearest-window construct, not a synchronized fiscal close. **Third**, holdings include securities whose market value moves; a stock quote is not a cash ledger, and some states mark or sell abandoned securities on different schedules. **Fourth**, return rate ignores claim latency: dollars paid this year may relate to property remitted a decade ago, so the ratio is not a vintage-matched reunification probability. **Fifth**, the panel excludes smaller states and territories that still matter for owners searching MissingMoney.com, and it cannot see property that holders failed to report.
+
+None of those caveats erase the core pattern. A few states hold most of the reported float. Their annual reunification rates are often lower than mid-size peers. National returns in the **$4–5 billion** range are real and material for households — NAUPA still estimates that roughly **one in seven** Americans has some unclaimed property — and still leave a multi-decade stock of dormant value sitting in state custody.
+
+## What to watch next
+
+Three operational levers will shape the next print of holdings versus returns. **Proactive payment** programs — New York mailing small validated balances without a claim form; California matching Controller records to Franchise Tax Board files for targeted notice campaigns — can raise outflows without waiting for owners to search. **Holder data quality** raises reunification odds when names, addresses, and taxpayer IDs arrive complete; NAUPA has emphasized that return rates rise with better holder records. **Dormancy statute changes** can accelerate inflows if legislatures shorten the clock before escheat, expanding the vault even when claim portals improve.
+
+For owners, the practical step remains simple and free: search official state portals and MissingMoney.com under every prior name and address, and ignore anyone who demands an upfront fee to "find" money the state already holds. For state finance desks, the analytic step is to keep separating **stock size** from **reunification pace**. The first dominates headlines about billions waiting. The second is the measure of whether custodianship is working as advertised — and on that measure, the largest vaults still have the farthest to go.
+`,
+  },
+  {
     id: "ssa-odar-pending-hearings-versus-average-wait-months-2026",
     slug: "ssa-odar-pending-hearings-versus-average-wait-months-2026",
     title:

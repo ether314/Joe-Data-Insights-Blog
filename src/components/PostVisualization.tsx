@@ -4163,6 +4163,23 @@ const SsaOdarPendingHearingsVersusAverageWaitMonths2026Dashboard = dynamic(
   },
 );
 
+const StateUnclaimedPropertyHoldingsVersusDollarsReturned2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/StateUnclaimedPropertyHoldingsVersusDollarsReturned2026Dashboard"
+    ).then(
+      (m) => m.StateUnclaimedPropertyHoldingsVersusDollarsReturned2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5258,6 +5275,10 @@ export function PostVisualization({
 
   if (type === "ssa-odar-pending-hearings-versus-average-wait-months-2026") {
     return <SsaOdarPendingHearingsVersusAverageWaitMonths2026Dashboard />;
+  }
+
+  if (type === "state-unclaimed-property-holdings-versus-dollars-returned-2026") {
+    return <StateUnclaimedPropertyHoldingsVersusDollarsReturned2026Dashboard />;
   }
 
   return null;
