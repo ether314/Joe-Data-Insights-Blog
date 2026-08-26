@@ -2,6 +2,88 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "vehicle-revenue-hours-versus-passenger-trips-2026",
+    slug: "vehicle-revenue-hours-versus-passenger-trips-2026",
+    title:
+      "Trips per Vehicle Revenue Hour Sit at 82% of 2019 — Service Hours Recovered Faster Than Riders",
+    excerpt:
+      "FTA NTD and APTA prints put calendar-year 2024 vehicle revenue hours near 95% of 2019 while unlinked passenger trips reached only about 78%. That 17-point service lead leaves trips per VRH near 82% of the pre-pandemic load — restored schedules with thinner loads, especially on heavy and commuter rail.",
+    category: "Transport & Logistics",
+    themeId: "transit-ridership-ntd",
+    imageUrl:
+      "/images/transport-logistics-vehicle-revenue-hours-versus-passenger-trips-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic transit depot with teal service-hours curve above a dashed amber ridership curve, gap illustrating lower trips per revenue hour",
+    publishedAt: "2026-08-26T14:00:00Z",
+    featured: true,
+    visualization: "vehicle-revenue-hours-versus-passenger-trips-2026",
+    layout: "default",
+    content: `Transit agencies do not sell seats; they sell scheduled vehicle time. The National Transit Database records that time as **vehicle revenue hours (VRH)** — hours when buses, trains, and vans are in service collecting fares or available to passengers. Boardings are recorded separately as **unlinked passenger trips (UPT)**. Divide one by the other and you get a load metric: trips per VRH. When service hours recover faster than boardings, that ratio falls even if the schedule looks almost “back.”
+
+Public prints for calendar year **2024** put national VRH near **95%** of 2019 and national UPT near **78%**. The desk ratio is about **82** trips per VRH for every 100 in 2019. Early-2025 APTA same-period ridership readings near **85%** of 2019 narrow the boarding gap, but they do not erase a multi-year pattern: agencies restored hours ahead of riders. The interactive dashboard above tracks that wedge — dual VRH versus UPT indices, the trips-per-VRH path, mode scatter below the equal-recovery diagonal, and agency slopes where teal service hours sit above amber boardings.
+
+## Why hours and trips diverge
+
+Pandemic lockdowns cut both sides of the ledger, but not symmetrically. Ridership collapsed faster than schedules in spring 2020; many systems kept skeleton service for essential workers while UPT plunged toward **20%** of pre-pandemic weekly levels in the worst weeks. As cities reopened, operators faced a different problem: labor shortages, operator attrition, and maintenance backlogs that limited how fast VRH could rebound. By **2022–2023**, federal relief and hiring drives pulled hours back toward the mid-80s and low-90s of 2019 while UPT still lagged in the 60s and 70s.
+
+That sequence matters for interpretation. A low trips-per-VRH index is not automatically “waste.” Frequency is a product attribute. Running a bus every twelve minutes instead of every twenty can raise ridership with a lag, protect transfers, and serve off-peak workers who never show up in 2019-style peak-hour counts. The same arithmetic also means that when peak office demand permanently shrinks, restored peak rail hours carry fewer boardings per train. The dashboard’s national dual series shows the **service lead** — VRH minus UPT in index points — widening after 2020 and still near **17 points** in the 2024 annual frame.
+
+## National recovery: 95% hours, 78% trips
+
+FTA’s monthly module publishes UPT, VRH, and vehicle revenue miles (VRM) for urban full reporters. Annual National Transit Summaries and secondary compilations of the **2024** release converge on a simple story: service supply is nearly restored; passenger demand is not. VRM near **93%** of 2019 sits beside VRH near **95%**, so the average revenue vehicle is not dramatically slower or faster in aggregate — the main story is hours versus boardings, not speed.
+
+APTA’s May 2025 ridership brief places December 2024 national ridership near **79%** of the same month in 2019 and early-2025 same-period readings around **85%**. Those weekly and monthly boarding indices sit above the **78%** annual UPT frame because recovery accelerated late in 2024 and into 2025. Even at 85% boardings against ~95% hours, trips per VRH would still sit below the 2019 load. The productivity panel’s quarterly path bottoms near the **mid-30s** index in the depth of 2020 and climbs toward the low-**80s** by late 2024, with a further bump when early-2025 ridership prints firm up.
+
+## Mode gaps: bus loads recover; rail hours outrun riders
+
+Mode mixes explain most of the national wedge. APTA’s December 2024 mode recovery prints put **demand response** near **93%** of 2019 ridership, **bus** near **86%**, **light rail** near **76%**, **heavy rail** near **71%**, and **commuter rail** near **70%**. Desk VRH indices for those modes sit higher — typically mid-90s for bus and demand response, low-to-mid-90s for rail — so trips-per-VRH indices cluster near **90** for bus and the mid-**70s** for heavy and commuter rail.
+
+The mode scatter panel places each mode by VRH index (x) and UPT index (y). Points below the 45-degree line restored hours faster than trips. Heavy rail and commuter rail sit farthest below that diagonal: CBD-oriented peak service returned as office occupancy stuck near the low **50s** percent of pre-pandemic norms in many downtowns. Bus networks, which carry more non-commute and service-sector trips, sit closer to the line. Demand response — often ADA paratransit with eligibility-driven demand — shows the smallest service lead.
+
+That pattern is not a moral ranking of modes. Rail agencies that cut hours aggressively in 2020–2021 sometimes preserved trips-per-VRH at the cost of network usefulness. Agencies that restored frequency to win riders back accept thinner loads as a transitional cost. The metric simply makes the trade-off visible.
+
+## Where the agency panel shows the widest service lead
+
+A curated panel of **20** large full reporters illustrates geography without pretending to be an FTA league table. Office-heavy rail agencies — BART, WMATA, Metra, NJ Transit, CTA — show service leads of roughly **24–30** index points: VRH in the high 80s to low 90s against UPT in the high 50s to high 60s. Trips-per-VRH indices in that cluster land in the mid-**60s** to mid-**70s**.
+
+Sun Belt and bus-forward systems compress the gap. Houston METRO, Miami-Dade, CapMetro, and VIA show service leads under **10** points and trips-per-VRH indices in the low-to-mid **90s**. LA Metro and King County Metro sit in between: strong bus recovery with VRH near or above **97%** of 2019 and UPT in the low-to-mid **80s**. The slope chart sorts agencies by service lead so the eye reads teal (hours) above amber (trips) as unused schedule relative to 2019 loads — not as empty vehicles in an absolute sense, but as a shortfall versus the baseline ratio.
+
+| Agency (short) | VRH index | UPT index | Trips/VRH index | Service lead (pts) |
+| --- | ---: | ---: | ---: | ---: |
+| BART | 88 | 58 | 66 | 30 |
+| Metra | 87 | 58 | 67 | 29 |
+| WMATA | 90 | 62 | 69 | 28 |
+| CTA | 93 | 68 | 73 | 25 |
+| NJ Transit | 89 | 65 | 73 | 24 |
+| NYCT | 94 | 72 | 77 | 22 |
+| MBTA | 92 | 70 | 76 | 22 |
+| SEPTA | 94 | 74 | 79 | 20 |
+| LA Metro | 97 | 84 | 87 | 13 |
+| Houston METRO | 97 | 90 | 93 | 7 |
+| CapMetro | 99 | 92 | 93 | 7 |
+| VIA | 98 | 94 | 96 | 4 |
+
+Roughly **88%** of the panel sits below a trips-per-VRH index of 100. Only the strongest Sun Belt bus recoveries approach parity. Filters for region and size band in the dashboard show the Northeast and Midwest mega agencies dominating the upper tail of the service-lead distribution; mid-size Southern bus operators dominate the lower tail.
+
+## What trips per VRH does — and does not — measure
+
+Trips per VRH is a productivity ratio, not a welfare score. It ignores passenger-miles, fare structure, transfer policy, and crowding. A six-car train with sparse mid-day loads can still be the right product if peak crush loads require that consist. Conversely, a high trips-per-VRH bus route can still fail riders if headways are unreliable. NTD’s unlinked trips also double-count journeys that require transfers, so multimodal networks look “busier” per linked trip than single-seat systems.
+
+Caveats compound at the agency row. The panel mixes modes inside single agencies (NYCT bus and subway, LA Metro rail and bus). Primary-mode labels are desk shorthand. Some 2024 agency indices remain **derived** from public totals and secondary compilations rather than a single FTA-published recovery table. Early-2025 boarding strength is an APTA same-period print, not yet a locked annual NTD year. Treat the geometry as a map of the service–demand wedge, not as a precise cost-efficiency audit.
+
+## Policy stakes: frequency, peaks, and budgets
+
+Operating budgets feel the wedge immediately. Labor and vehicle costs track hours more closely than boardings. When VRH returns to 95% of 2019 while fare-paying trips sit near 78–85%, farebox recovery ratios fall unless subsidies or other revenues fill the gap. That is the fiscal shadow of “service restored first.” Agencies choosing to hold frequency for ridership growth are making an explicit bet that boardings will continue climbing into the late 2020s. Agencies trimming peak rail hours are betting that hybrid office demand is structural.
+
+Federal formula funds and discretionary grants still reward service provision and capital state-of-good-repair. They do not automatically penalize low trips-per-VRH. Local debates — downtown business groups asking for peak capacity, riders asking for night and weekend frequency, boards staring at deficit projections — are where the ratio becomes political. The national 82% trips-per-VRH index is the average of those local fights.
+
+## Reading the dashboard
+
+Start with **VRH vs UPT dual recovery** to see the national wedge open after 2019 and remain open through 2024. Switch to **Trips-per-VRH index path** for the quarterly productivity climb from the 2020 trough. Use **Mode productivity scatter** to separate bus-like recoveries from rail-like service leads. Finish on **Agency service-load slope** with region and size filters to see which full reporters restored hours farthest ahead of boardings.
+
+The punchline is stable across those views. U.S. urban transit restored vehicle revenue hours faster than passenger trips. Trips per VRH remain below 2019 — about **82%** in the 2024 annual desk frame — with the deepest shortfalls on heavy and commuter rail and the narrowest gaps on bus and Sun Belt networks. Schedules came back. Loads have not fully followed.`,
+  },
+  {
     id: "jail-adp-versus-property-crime-after-2019-2026",
     slug: "jail-adp-versus-property-crime-after-2019-2026",
     title:

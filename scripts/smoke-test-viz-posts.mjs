@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "vehicle-revenue-hours-versus-passenger-trips-2026",
+    marker: "VRH vs UPT dual recovery",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "jail-adp-versus-property-crime-after-2019-2026",
     marker: "Headline — ADP still 10.4% below 2019; property ~4.5% below",
     forbidden: "Loading interactive charts",
