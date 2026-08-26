@@ -2,6 +2,112 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "small-system-pfas-detections-versus-large-utilities-2026",
+    slug: "small-system-pfas-detections-versus-large-utilities-2026",
+    title:
+      "Large Utilities Lead PFAS MCL Rates — Small Systems Still Face the Treatment Gap",
+    excerpt:
+      "EPA’s January 2026 UCMR 5 cut puts 15.3% of large systems over a PFAS MCL versus 7.3% in the small-system sample. Detections cluster with industrial watersheds and big retail populations — not only with towns that lack GAC or RO.",
+    category: "Global Systems",
+    themeId: "pfas-public-water",
+    imageUrl:
+      "/images/global-systems-small-system-pfas-detections-versus-large-utilities-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split scene: small rural water tower versus large utility plant on an industrial river, amber PFAS particle trails denser toward the large plant, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-26T16:00:00Z",
+    featured: true,
+    visualization: "small-system-pfas-detections-versus-large-utilities-2026",
+    layout: "default",
+    content: `A durable story about forever chemicals in tap water says the problem is concentrated in small systems — towns without granular activated carbon (GAC), ion exchange, or reverse osmosis, and without the capital stacks that big utilities can float. That story has a grain of truth about **treatment readiness**. It is a weaker guide to where **EPA’s Fifth Unregulated Contaminant Monitoring Rule (UCMR 5)** is actually finding sampling-location averages above the April 2024 PFAS Maximum Contaminant Levels (MCLs).
+
+The January 2026 UCMR 5 Data Summary compares location averages to those MCLs for technical assistance (not as compliance determinations). Among systems that have reported a full set of results at least at one location, **15.3% of large public water systems** (more than 10,000 people served) sit over at least one PFAS NPDWR MCL or the Hazard Index. The medium tier (3,300–10,000) lands at **8.6%**. The nationally representative **small-system sample** (fewer than 3,300) lands at **7.3%**. EPA’s size-weighted national estimate is **8.0%**.
+
+In other words: on the national occurrence cut that matters for rule implementation, **detections that breach the new federal lines are more common among large utilities** — the systems most likely to sit on mixed surface supplies and industrialized watersheds — than among the small systems that lack advanced organics treatment. The dashboard above walks size-tier MCL shares, contaminant-specific rates, an estimated treatment-readiness overlay, a watershed-pressure scatter, and a people-versus-systems frame.
+
+## What UCMR 5 actually measures by size
+
+UCMR 5 required community and non-transient non-community water systems serving **3,300 or more** people to monitor 29 PFAS (plus lithium) during 2023–2025, and drew a **nationally representative sample** of systems serving fewer than 3,300. Size labels follow Safe Drinking Water Information System (SDWIS/Fed) retail population as of 1 February 2021. Large systems have always been in the UCMR census; America’s Water Infrastructure Act expanded the medium tier when appropriations and lab capacity allow.
+
+That design matters for interpretation. The small-system percentage is a **sample rate**, not a complete census of the roughly 60,000-plus very small community and non-transient systems nationwide. Medium and large percentages are closer to a near-census of their tiers as results finish arriving. EPA therefore publishes a **weighted** national estimate so the large-system footprint is not over-counted relative to the SDWIS universe. The 8.0% figure is that reweighting — not a simple average of the three tier percentages.
+
+UCMR results also sit **upstream of compliance**. Averages in the Data Finder and Data Summary do not equal running annual averages under the National Primary Drinking Water Regulation, and published compliance clocks for PFOA and PFOS still point past the monitoring years. Treat the size-tier shares as the best public preview of where exceedance pressure is clustering, not as a finished enforcement map.
+
+## The size ladder: 7.3% → 8.6% → 15.3%
+
+| Size tier (people served) | Systems with full results | Systems with ≥1 avg > MCL | Share |
+| --- | ---: | ---: | ---: |
+| Small (<3,300) | 684 | 50 | 7.3% |
+| Medium (3,300–10,000) | 4,427 | 382 | 8.6% |
+| Large (>10,000) | 4,129 | 632 | 15.3% |
+| Weighted national estimate | — | — | 8.0% |
+
+Source: EPA UCMR 5 Data Summary, January 2026 (Table 4 and footer). Counts are unique systems with a full set of results at ≥1 location; a system is counted once if any regulated PFAS average or the Hazard Index clears the MCL comparison.
+
+The step from medium to large is the striking one. Large systems are not merely a little higher — they are roughly **double** the small-sample rate and nearly **80% higher** than the medium tier. PFOS and PFOA dominate that gap: about **12.0%** and **10.9%** of large systems, respectively, show averages above those individual MCLs, versus roughly half those rates in the medium tier and still lower shares in the small sample. PFHxS, HFPO-DA (GenX), and PFNA remain far rarer across all three tiers.
+
+## Industrial watersheds beat the “no GAC” story for occurrence
+
+Why would large utilities post higher MCL-exceeding shares if they are more likely to already run advanced treatment? Two forces pull in opposite directions.
+
+**Source pressure.** Larger retail systems more often draw from surface or mixed supplies that integrate municipal wastewater, airports, military installations, fluoropolymer manufacturing, and firefighting-foam residuals across big basins. USGS PFAS science and mapping programs keep showing that these chemicals move with hydrology and land use — not only with treatment plant age. Small systems are disproportionately groundwater systems. Groundwater can still be badly contaminated (especially near point sources), but the **average** large utility sits closer to the industrial and urban mass that generates PFAS mass flux.
+
+**Treatment readiness.** GAC, ion exchange, and reverse osmosis capable of meaningful PFAS removal are still uneven. Larger utilities are more likely to have some advanced organics capacity already installed or under design; many small systems still run disinfection-and-distribution packages with little adsorption or membrane capacity. That readiness gap is real for **compliance cost and schedule**. It is a weaker explanation for **where UCMR averages already sit above MCLs**, because the occurrence rates rise with size even as estimated advanced-treatment prevalence also rises.
+
+The dashboard’s dual panel makes that tension visible: MCL share climbs from 7.3% to 15.3% across the size ladder while an editorial GAC/IX/RO readiness curve climbs from the high single digits toward roughly one-third of large systems. Treatment rises; occurrence rises faster. The residual “treatment-gap index” (MCL share × share without advanced treatment) is therefore **not** a simple story that small towns own the problem — large systems still dominate the absolute count of systems over an MCL in this cut (632 large versus 50 small), even after giving large systems credit for more existing treatment.
+
+## People served versus systems counted
+
+System rates and people rates are different objects. Small systems are numerous in the SDWIS universe; they serve a thin slice of the U.S. population on community water. Large systems are fewer in count but deliver most of the gallons. In the January 2026 full-results cut, large systems are roughly **45%** of the systems with complete location sets, yet they serve on the order of **four-fifths** of people on community supplies in a typical SDWIS framing.
+
+Combine that with the 15.3% large-system MCL share and the public-health attention correctly shifts toward **big retail utilities on pressurized watersheds**, not only toward towns that lack a carbon contactor. A household on a large-system tap is more likely, in this national cut, to be attached to a utility that has already posted an average above a federal PFAS MCL than a household on a sampled small system — even though that small system may have fewer engineering options if it does exceed.
+
+That does **not** mean small-system exceedances are unimportant. Fifty systems in a 684-system sample already imply a non-trivial national count once the sample is reweighted to the full small-system universe. Those systems often face higher unit costs for treatment, thinner rate bases, and longer procurement cycles. The policy mistake is collapsing “harder to treat” into “where detections cluster.”
+
+## What the contaminant mix says about source chemistry
+
+Looking across contaminants reinforces a source-chemistry reading. PFOS and PFOA — the long-chain workhorses of historical AFFF, coatings, and industrial use — drive almost all of the size gap. HFPO-DA and PFNA barely move the tiers. That pattern fits a world where legacy long-chain residuals and ongoing precursor pathways load larger mixed watersheds more often than they load every groundwater wellfield equally.
+
+Co-occurrence also matters for the Hazard Index and for treatment design. EPA notes that a large majority of sampling locations with any PFAS at or above a UCMR minimum reporting level show **multiple** PFAS above reporting levels. Mixture chemistry is why GAC empty-bed contact time, ion-exchange resin selection, and RO recovery all have to be sized for more than a single analyte — and why small systems that do detect often need technical assistance packages rather than a single cartridge swap.
+
+## Caveats, open questions, and how not to over-read the cut
+
+Several limits keep this from being a finished atlas of PFAS risk by system size:
+
+1. **Incomplete and unequal monitoring.** UCMR 5 collection was still finishing in the January 2026 summary. Medium and large tiers are closer to census; the small tier is a sample. Early reporters can bias rates.
+2. **MCL comparison ≠ compliance.** Technical-assistance averages are not running annual averages under the NPDWR, and compliance deadlines remain later than the monitoring window.
+3. **Treatment shares are estimated.** UCMR 5 collects optional PFASTreatment codes (PAC, GAC, IX, RO, and others), but the published January 2026 summary does not yet hand analysts a clean, size-tier census of installed PFAS-capable treatment. The readiness curve in the dashboard is labeled estimated for that reason.
+4. **Size is a proxy.** “Large” bundles coastal mega-utilities, inland river cities, and suburban wholesalers. Some small systems sit on heavily contaminated plumes; some large systems draw protected supplies. Local SDWIS and state occurrence files still matter more than the national ladder for any single community.
+5. **Non-detects are method-bound.** UCMR minimum reporting levels are laboratory capability floors, not health thresholds. A non-detect is not a proof of zero PFAS.
+
+Open questions for the next public cuts: whether small-system sample rates converge as more results post; how groundwater-only large systems compare with surface-dominated peers; and whether systems that already run GAC/IX/RO show materially lower averages once treatment codes are published with enough completeness to stratify by size.
+
+## Bottom line for operators and readers
+
+If the question is “are UCMR 5 MCL-exceeding averages clustered in small systems that lack GAC or RO?”, the January 2026 national answer is **no — they are more common in large utilities**. If the question is “who will struggle most to install treatment once an exceedance is confirmed?”, small and many medium systems remain the harder capital and staffing cases. Those are related policy problems, not the same occurrence map.
+
+For households, the practical read is narrower: ask your utility for its UCMR 5 results and any finished-water PFAS monitoring, and read size-tier national rates as context — not as a substitute for the entry-point averages that apply to your tap. For primacy agencies and funding desks, the large-system 15.3% share is the signal that industrial and urban watershed pressure is already writing itself into finished-water averages at scale, while the small-system 7.3% sample rate is the signal that the long tail of under-capitalized systems still needs a treatment pathway even when their national detection rate is lower.
+
+The forever-chemical story is not “small towns without carbon filters.” It is “large utilities on loaded basins showing up over federal lines first — and small systems that do show up having fewer tools to respond.”`,
+    keyPoints: [
+      "Large PWSs (>10k) post a 15.3% MCL-exceeding share in EPA’s January 2026 UCMR 5 cut — about 2× the 7.3% small-system sample rate.",
+      "Medium systems (3.3k–10k) land at 8.6%; EPA’s size-weighted national estimate is 8.0%.",
+      "PFOS and PFOA drive the large-system gap; GenX and PFNA remain rare across tiers.",
+      "Estimated GAC/IX/RO readiness rises with size, but MCL rates rise faster — occurrence tracks watershed pressure more than missing treatment alone.",
+      "Large systems dominate absolute counts over an MCL (632 vs 50 small in this cut) and serve most people on community water.",
+    ],
+    tags: [
+      "PFAS",
+      "UCMR 5",
+      "drinking water",
+      "public water systems",
+      "EPA",
+      "system size",
+      "GAC",
+      "SDWIS",
+    ],
+    format: "data-story",
+  },
+  {
     id: "forest-service-suppression-spend-versus-fuels-acres-treated-2026",
     slug: "forest-service-suppression-spend-versus-fuels-acres-treated-2026",
     title:
