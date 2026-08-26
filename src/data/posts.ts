@@ -2,6 +2,87 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "cso-communities-versus-remaining-overflow-volume-2026",
+    slug: "cso-communities-versus-remaining-overflow-volume-2026",
+    title:
+      "700 CSO Communities Still Stand — The Last National Overflow Estimate Is 850 Billion Gallons",
+    excerpt:
+      "EPA still counts about 700 combined-sewer communities, mostly in the Northeast and Great Lakes. The agency’s last national overflow volume — 850 billion gallons in a typical year — dates to 2004. CWNS 2022 still books $36.5 billion for Category V CSO correction.",
+    category: "Global Systems",
+    themeId: "epa-combined-sewer-overflows",
+    imageUrl:
+      "/images/global-systems-cso-communities-versus-remaining-overflow-volume-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic riverside city at night with amber combined-sewer overflow plumes entering a river, cyan community dots clustered northeast and Great Lakes, bold 700 and 850 BG callouts, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-26T18:00:00Z",
+    featured: true,
+    visualization: "cso-communities-versus-remaining-overflow-volume-2026",
+    layout: "default",
+    content: `A combined sewer is a nineteenth-century design choice that still governs wet-weather water quality in much of the industrial Northeast and Great Lakes. One pipe carries sanitary sewage and stormwater. In dry weather it works. In a hard rain, the pipe and the treatment plant run out of headroom, and the system is engineered to spill a mixture of untreated sewage and runoff into rivers, harbors, and lakes through designated outfalls — **combined sewer overflows**, or CSOs.
+
+Two numbers still define the national story. The Environmental Protection Agency’s public program pages continue to say there are **approximately 700 communities** with combined sewer systems that experience CSO discharges. Separately, EPA’s **last national estimate of annual overflow volume** — **850 billion gallons** in a typical year — was published in **2004**. The Government Accountability Office’s 2023 review (GAO-23-105285) confirmed that more recent national volume data are unavailable, even as municipalities have spent decades on long-term control plans (LTCPs), tunnels, storage, and partial separation. The Clean Watersheds Needs Survey (CWNS) 2022 Report to Congress still books **$36.5 billion** in Category V **CSO correction** needs inside a **$630.1 billion** clean-water capital stack.
+
+The dashboard above puts those frames side by side: regional community geography versus residual volume attribution, a sparse program timeline, CWNS category context, illustrative volume scenarios, and disclosed state and basin benches. The point is not that nothing has improved since 2004. It is that **community count and overflow volume no longer move on the same public clock**.
+
+## What a CSO community is — and why ~700 still matter
+
+Under the Clean Water Act’s National Pollutant Discharge Elimination System (NPDES), CSO outfalls are point sources. They require permits, monitoring, and — under EPA’s 1994 CSO Control Policy — the famous “nine minimum controls” plus a long-term control plan aimed at meeting water-quality standards. EPA’s National Combined Sewer Overflow Inventory, published to ECHO in May 2023 and refreshed weekly from ICIS-NPDES, is the current operational map of active outfalls. States are still correcting records; EPA estimated that about **90 percent** of CSO outfalls had been verified by state permitting authorities as of September 2023.
+
+The community count is deliberately approximate. Early-2000s EPA file reviews cited on the order of **859 permits**, **~9,471 outfalls**, and **~772 communities**. Today’s program language rounds to **~700**. That is not a collapse of the problem so much as a slow attrition of systems that fully separated, closed outfalls, or consolidated under regional plants — against a stubborn core of older cities where full separation remains fiscally and physically brutal.
+
+Geography concentrates the risk. EPA states that CSO communities are **mostly located in the Northeast and around the Great Lakes**. The Great Lakes Basin alone accounts for **166 NPDES permits issued to 158 communities** authorizing CSO discharges to the basin. New York’s 2024 CSO annual report lists **42** permitted combined-sewer communities and **799** outfalls, with the New York City, Buffalo, Syracuse, and Albany metros holding roughly three-quarters of those outfalls. Ohio and Indiana’s Great Lakes Basin tabs alone list **42** and **22** basin CSO permits, respectively. The national map is not a thin spray of rural exceptions; it is a dense belt of legacy industrial metros and mill towns.
+
+## The 850-billion-gallon problem that never got a rematch
+
+Volume is the harder ledger. In 2004, EPA estimated that CSOs released **850 billion gallons** of contaminated discharges each year. That figure still appears in GAO’s summary of the national picture. It is not a live telemetry total. It is a **carried national benchmark** — useful as an order of magnitude, dangerous if treated as this year’s measured discharge.
+
+Why no rematch? Overflow volume depends on rainfall intensity, snowmelt, upstream I/I (infiltration and inflow), storage online that year, and how each permittee models or meters events. States publish annual CSO reports with widely different methods. EPA’s Phase 2 NPDES electronic reporting rule is supposed to improve national tracking, with fuller realization still years out on GAO’s monitoring timeline. Until then, the United States has a **community inventory that refreshes weekly** and a **volume census that froze in the mid-2000s**.
+
+That mismatch matters for policy. Ratepayers and bond markets see tunnels and green infrastructure. Beach managers see wet-weather advisories. Neither audience can answer, from a single federal table, whether the country is at 850, 500, or 200 billion gallons in a typical year. The honest national sentence is still: **about 700 communities remain; the last official national volume was 850 billion gallons circa 2004; subsequent reductions are real locally and unsummed nationally**.
+
+## Capital still on the books: $36.5 billion in Category V
+
+CWNS 2022 is the congressional capital needs survey for clean water. Needs are unfunded projects (or portions of projects) addressing water-quality or related public-health problems as of January 1, 2022, or expected within twenty years. Among the published categories:
+
+| CWNS 2022 category | Reported needs |
+| --- | ---: |
+| Conveyance repair + new conveyance | $151.1B |
+| Stormwater management | $115.3B |
+| Nonpoint source control | $94.4B |
+| Advanced wastewater treatment | $83.6B |
+| Decentralized systems | $74.7B |
+| Secondary treatment | $66.6B |
+| **CSO correction (Category V)** | **$36.5B** |
+| Water reuse | $7.7B |
+| **Total reported needs** | **$630.1B** |
+
+Category V is not the largest line — conveyance and stormwater dwarf it — but it is the dedicated CSO correction bucket. Many wet-weather practices that CSO cities use also appear under stormwater categories, so **$36.5 billion is a floor on named CSO work, not a ceiling on all wet-weather capital touching combined systems**. EPA’s CSO cost-estimation tools now lean on documented LTCP project costs rather than the older population-based curves states once criticized as inflated. The survey still shows a multi-decade unpaid invoice for control structures that have not yet been built.
+
+## State benches prove volume can fall without erasing communities
+
+Where states publish consistent annual volume series, the trend is often steeply down even when community counts stay sticky. Maine’s 2024 CSO status report is the clearest public example: statewide untreated combined discharge was about **532.5 million gallons** in 2024, versus roughly **6.2 billion gallons** in 1989 — on the order of a **91 percent** cut. Unitized discharge per inch of precipitation fell from about 128 million gallons per inch to about 11. Progress is real; it is also **weather-dependent**, which is why Maine emphasizes both raw gallons and gallons per inch of rain.
+
+New York’s frame is more about structure than a single statewide gallon total: **42** communities, **799** outfalls, heavy concentration in a handful of metros, and a long roster of LTCP milestones, outfall eliminations, and capture improvements that do not yet roll into a new EPA national volume. The Great Lakes Basin pages give a **community and permit census** (158 / 166) without replacing the 2004 national gallon figure.
+
+These benches support a careful inference: **if national volume tracked the best state-style unit reductions, the residual would be far below 850 billion gallons**. They do not authorize claiming that national figure has already moved. The dashboard’s scenario fan — modest cut, deep cut, Maine-pace extrapolation — is labeled estimated for exactly that reason.
+
+## Reading communities and volume on the same chart
+
+The interactive panels deliberately avoid a single KPI strip. A dual-axis view pairs regional community counts with shares of the 850 BG benchmark (editorial attribution for visualization, not a new EPA allocation table). A scatter plots communities against volume proxies with bubble size tied to illustrative Category V needs. A timeline shows community milestones with volume points only where EPA disclosed them. A horizontal CWNS bar chart highlights Category V inside the wider needs stack. Scenario and state-bench panels separate **disclosed** figures from **illustrative** what-ifs.
+
+Two controls matter for interpretation. Region filters let you isolate Northeast, Great Lakes Basin, Midwest-outside-basin, Mid-Atlantic, South, and West — with Great Lakes communities **disclosed** at 158 and other regional community shares **estimated** to sum to 700. A secondary metric toggle swaps residual volume for illustrative needs dollars on the dual-axis and scatter views. Use those toggles to test whether a region looks “large” because of community count, attributed volume, or capital still on the books.
+
+## Caveats and what would change the headline
+
+Several caveats should travel with every share of this piece. First, **~700 is an EPA approximate community count**, not a frozen registry ID list; weekly ICIS updates and state corrections move outfall inventories even when the round number holds. Second, **850 billion gallons is a 2004 national estimate**; treating it as 2026 measured discharge would overstate confidence. Third, **regional volume shares and needs allocations in the charts are estimated** where EPA does not publish a matching table — they exist to make the dual-metric story visible, not to litigate one city’s residual gallons. Fourth, **CWNS needs are not spent dollars**; they are documented unfunded capital. Fifth, **state annual volumes are not nationally comparable** without harmonizing rainfall normalization, metering coverage, and modeling assumptions. Sixth, some closed outfalls live outside ICIS and enter the national inventory through periodic EPA–state verification rather than continuous electronic reporting.
+
+What would change the headline? A completed Phase 2 e-reporting build that publishes a defensible national annual volume; a new EPA Report to Congress that retires the 2004 gallon figure; or a CWNS cycle that shows Category V collapsing as tunnels and storage come online. Until then, the durable national fact pattern remains: **hundreds of CSO communities are still on the map, the last official national overflow volume is still 850 billion gallons, and tens of billions of Category V capital needs remain on the books.**
+
+## Sources and method notes
+
+Primary sources are EPA’s Combined Sewer Overflows program pages and National CSO Inventory (ECHO / ICIS-NPDES); GAO-23-105285 on national tracking gaps; the CWNS 2022 Report to Congress category totals; EPA’s Great Lakes Basin CSO community and permit counts; the NYSDEC Combined Sewer Overflows 2024 Annual Report; and Maine DEP’s CSO 2024 Status Report. Historical permit and outfall counts lean on EPA’s Report to Congress on Implementation and Enforcement of the CSO Control Policy. Editorial regional shares that fill gaps between disclosed basin counts and the national ~700 are labeled estimated in the data module. Volume scenarios other than the 2004 benchmark are illustrative only.`,
+  },
+  {
     id: "small-system-pfas-detections-versus-large-utilities-2026",
     slug: "small-system-pfas-detections-versus-large-utilities-2026",
     title:
