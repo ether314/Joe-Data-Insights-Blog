@@ -4270,6 +4270,21 @@ const CmsPbjHoursPerResidentDayVersusTheFederalFloor2026Dashboard = dynamic(
   },
 );
 
+const EmmaDefaultedMunicipalParBySector2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/EmmaDefaultedMunicipalParBySector2026Dashboard"
+    ).then((m) => m.EmmaDefaultedMunicipalParBySector2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5393,6 +5408,10 @@ export function PostVisualization({
 
   if (type === "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026") {
     return <CmsPbjHoursPerResidentDayVersusTheFederalFloor2026Dashboard />;
+  }
+
+  if (type === "emma-defaulted-municipal-par-by-sector-2026") {
+    return <EmmaDefaultedMunicipalParBySector2026Dashboard />;
   }
 
   return null;

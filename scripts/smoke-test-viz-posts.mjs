@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "emma-defaulted-municipal-par-by-sector-2026",
+    marker: "Defaulted par share by sector",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026",
     marker: "Share below HPRD floor",
     forbidden: "Loading interactive charts",

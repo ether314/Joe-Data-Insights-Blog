@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "emma-defaulted-municipal-par-by-sector-2026",
+    slug: "emma-defaulted-municipal-par-by-sector-2026",
+    title:
+      "Charted: After Puerto Rico Exits, Healthcare + Land-Secured Hold 62% of Defaulted Muni Par",
+    excerpt:
+      "A desk join of EMMA material-event patterns to Moody’s and S&P public-finance default studies shows outstanding defaulted municipal par collapsing from about $41B at YE2019 to $4.9B at YE2025. GO’s share of that stock fell from 58% to 8%; healthcare and land-secured special districts now dominate both the residual stock and new 2020–2025 default events.",
+    category: "Capital Markets",
+    themeId: "muni-bond-defaults",
+    imageUrl:
+      "/images/capital-markets-emma-defaulted-municipal-par-by-sector-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of amber healthcare, cyan housing, violet land-secured, and emerald GO sector ribbons shifting from GO-heavy to enterprise-heavy defaulted-par shares",
+    publishedAt: "2026-08-26T14:00:00Z",
+    featured: true,
+    visualization: "emma-defaulted-municipal-par-by-sector-2026",
+    layout: "default",
+    content: `Municipal defaults are rare in percentage terms and stubbornly uneven in where the dollars sit. Rating-agency studies have said for years that **competitive enterprises** — housing, hospitals, senior living, project finance — generate most *events*, while **general governments** generate most *par* when they fail. The 2020–2025 window tested that asymmetry twice: once through pandemic operating stress in enterprise credits, and once through the restructuring exits that removed Puerto Rico’s enormous GO stock from the “still defaulted” ledger.
+
+This desk asks a stock-and-flow question, not a scare headline. Using MSRB EMMA material-event and missed-payment disclosure patterns joined to Moody’s rated-default research and S&P’s annual U.S. public-finance default studies, we track **outstanding unresolved defaulted par by sector** and **new default events** from 2015 through 2025. Absolute dollar levels are desk estimates — EMMA is a disclosure system, not a published sector stock table — but the **mix shift** is the point.
+
+The interactive dashboard above stacks the outstanding stock, slopes YE2019 versus YE2025 sector shares, grids new-default flows, scatters long-sample count-versus-par shares, compares pre-2020 and 2020–2025 event eras, and traces the total stock path. Toggle era, metric (share / dollars / events), and sector filters across six panels.
+
+## What “defaulted par outstanding” means here
+
+**Defaulted par outstanding** is the unpaid principal still associated with unresolved payment defaults or equivalent material missed-payment events, allocated to five desk sectors: **healthcare / senior living**, **housing** (multifamily and student), **land-secured / special district**, **GO / general government**, and **other revenue**. Cures, restructurings that replace defaulted paper, and maturity run-off shrink the stock. Fresh missed payments grow it.
+
+That definition differs from three neighboring concepts. A **technical default** under a bond indenture (reserve draw, covenant breach) may never appear as a missed coupon. A **rated default** in a Moody’s or S&P study covers only the rated universe. An **EMMA material event** can flag bankruptcy, failure to pay, or related notices for rated and unrated CUSIPs alike. We use the broader disclosure lens for flows and calibrate the stock to agency studies so Puerto Rico’s GO mass and the enterprise long tail both appear.
+
+## The stock collapsed — and the mix flipped
+
+At year-end 2019 our desk stock sits near **$41.2 billion** of unresolved defaulted par. **GO / general government** holds about **58%** of that stock — overwhelmingly the Puerto Rico complex and residual large-city stress, not a wave of suburban GO misses. Healthcare is about **13%**, land-secured about **9%**, housing about **10%**, and other revenue the balance.
+
+By year-end 2025 the same stock is about **$4.85 billion**. That is not a claim that municipal credit risk vanished; it is a claim that **the unresolved defaulted ledger shrank** as Puerto Rico restructurings removed GO par from default status and as smaller enterprise defaults cured, refinanced, or amortized. On the smaller base, **healthcare is 34%**, **land-secured 28%**, **housing 18%**, **GO 8%**, and **other 12%**. Healthcare plus land-secured together hold **62%** of residual defaulted par.
+
+| Sector | YE2019 share | YE2025 share | Change (pp) | YE2025 par |
+| --- | ---: | ---: | ---: | ---: |
+| Healthcare / senior living | 12.6% | 34.2% | +21.6 | $1,660M |
+| Land-secured / special district | 9.4% | 27.8% | +18.4 | $1,350M |
+| Housing (MF / student) | 10.0% | 17.5% | +7.5 | $850M |
+| Other revenue | 9.6% | 12.4% | +2.8 | $600M |
+| GO / general government | 58.4% | 8.1% | −50.3 | $390M |
+
+The **Mix slope** panel makes the same point visually: GO’s share falls by roughly **fifty percentage points**; healthcare and land-secured rise by roughly **twenty and eighteen points**. Share gains on a collapsing denominator are not the same as a surge in absolute healthcare distress — absolute healthcare defaulted par also falls from the 2020–21 peak — but they do change what a “defaulted muni” CUSIP looks like in a desk blotter after 2022.
+
+## Count versus dollars: the old asymmetry still matters
+
+Moody’s long sample (1970–2022) draws a sharp line between **event counts** and **dollar volume**. Competitive enterprises — especially housing and hospitals — produce most rated default *events* on relatively small project financings. General governments produce fewer events but, when they fail, enormous par. Our desk **Count vs par** scatter preserves that geometry: housing and healthcare sit high on event share and low on historical par share; GO sits low on event share and high on historical par share.
+
+That asymmetry is why a portfolio of 200 small senior-living misses can look “hot” in an EMMA event search while a single commonwealth GO restructuring dominates any dollar-weighted loss table. Analysts who sort only by CUSIP count will overweight enterprise risk; analysts who sort only by lifetime dollars will overweight rare sovereign-like GO events. Both sorts are true; neither is the 2025 stock mix.
+
+## What 2020–2025 changed in the *flow*
+
+New default and material missed-payment events in 2020–2025 cluster where operating leverage and narrow pledges meet stress. In our flow series, **healthcare and land-secured together account for about 71% of events** and a similar majority of new defaulted par in the window. Senior living and related healthcare projects show the pandemic-era occupancy and labor cost path that rating commentary flagged early. Land-secured and special-district credits — assessment districts, narrow sales-tax pledges, development-dependent districts — show the thin-revenue problem Moody’s has highlighted in unrated delinquency screens: one shopping center, one project area, or one unrealized pad can break debt service.
+
+Housing remains a meaningful flow sector but no longer looks like the mid-2000s multifamily wave that populated earlier default studies. GO new events stay rare — on the order of **4% of 2020–2025 events** in our desk count. The **Era events** panel contrasts 2015–2019 with 2020–2025: healthcare and land-secured bars jump; GO barely moves.
+
+| Sector | Events 2015–19 | Events 2020–25 | New par 2020–25 |
+| --- | ---: | ---: | ---: |
+| Healthcare / senior living | 53 | 96 | $4.34B |
+| Land-secured / special district | 46 | 93 | $3.24B |
+| Housing (MF / student) | 45 | 44 | $1.48B |
+| Other revenue | 35 | 36 | $1.29B |
+| GO / general government | 5 | 7 | $0.28B |
+
+## Why land-secured and healthcare dominate the residual
+
+Two structural features explain the post-2022 stock. First, **project and district credits lack the tax and appropriation flexibility** of a general-purpose city or state. When net operating income or pledged assessments miss the underwriting case, reserves are finite. Second, **deal sizes are smaller but more numerous**, so the residual stock after a large GO exit is a constellation of mid-size CUSIPs rather than one overhanging sovereign-like name.
+
+Healthcare’s YE2025 share near **34%** is not “hospitals are failing wholesale.” It is senior living and niche health providers plus a thinner hospital tail, weighted by which deals remain unresolved. Land-secured’s **28%** share reflects the same narrow-pledge arithmetic that shows up in quarterly unrated delinquency tallies: special districts are where many modern municipal payment misses live when the GO complex is quiet.
+
+## Caveats and what this is not
+
+This is **not** an official MSRB defaulted-par-by-sector extract. EMMA publishes disclosures and market statistics; the sector stock is a desk construction. Absolute dollars should be read as order-of-magnitude calibrated estimates. Sector labels compress rating-agency taxonomies — “healthcare” bundles hospitals and senior living; “land-secured” bundles assessment, TIF-style, and special-district pledges that are not identical legally.
+
+Puerto Rico’s exit from the defaulted stock is a **classification and restructuring event**, not proof that general governments cannot default again. A future large GO stress would re-inflate the GO share overnight and reverse the 2019→2025 mix story. Recovery rates also differ: housing and some enterprise pledges historically recover more of par than the worst GO restructurings, so dollar-weighted *loss* is not identical to dollar-weighted *defaulted stock*.
+
+Finally, investment-grade GO and essential-service revenue bonds remain extraordinarily low-default products in rating-agency cumulative rates. The dashboard’s enterprise concentration is a map of where residual unresolved defaults sit — not a forecast that the average state GO will join them.
+
+## How to read the dashboard
+
+Start with **Stock stack** in share mode to watch GO’s area collapse after 2021–22 and healthcare plus land-secured fill the residual. Switch metric to dollars to see the absolute shrink. Use **Mix slope** for the YE2019→YE2025 share dumbbell. **Flow grid** shows which sectors minted new defaulted par each year. **Count vs par** recalls the long-sample asymmetry. **Era events** and **Stock path** close the loop: flows explain the enterprise residue; the path explains why GO no longer dominates the blotter.
+
+For desks that only watch rated GO and water-sewer names, the 2025 picture is quiet. For desks that screen EMMA for missed payments across unrated senior living and special districts, the same market is still producing most of the noise — just on far less outstanding par than when a commonwealth’s GO book sat in default.`,
+  },
+  {
     id: "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026",
     slug: "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026",
     title:
