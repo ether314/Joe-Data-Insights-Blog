@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "forest-service-suppression-spend-versus-fuels-acres-treated-2026",
+    slug: "forest-service-suppression-spend-versus-fuels-acres-treated-2026",
+    title:
+      "Forest Service Suppression Spend Versus Fuels Acres Treated: Dollars Climbed 4.7× While Treatment Acres Rose Only 19%",
+    excerpt:
+      "From FY2010 to FY2023, USDA Forest Service wildfire suppression outlays rose from $578M to $2.7B (peak $3.74B in FY2021), while hazardous-fuels acres treated moved from 3.26M to 3.89M — so suppression dollars per treated acre jumped from $177 to $693.",
+    category: "Global Systems",
+    themeId: "wildfire-suppression-budget",
+    imageUrl:
+      "/images/global-systems-forest-service-suppression-spend-versus-fuels-acres-treated-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic forest ridgeline with towering charcoal suppression-cost columns beside a low amber fuels-treatment ridge, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-26T07:00:00Z",
+    featured: true,
+    visualization:
+      "forest-service-suppression-spend-versus-fuels-acres-treated-2026",
+    layout: "default",
+    content: `Two ledgers govern how the USDA Forest Service talks about fire. One is **suppression** — the fiscal-year dollars the agency spends putting fires out, tracked by the National Interagency Fire Center (NIFC) as federal firefighting costs. The other is **hazardous-fuels treatment** — acres where vegetation is thinned, burned under prescription, or otherwise altered so the next fire is less likely to run through communities and timber. Policy rhetoric often pairs them: spend less fighting fire by treating more ground in advance. The dual series since FY2010 tell a harder story. Suppression outlays multiplied; treatment acres mostly stalled, then recovered only modestly.
+
+From FY2010 to FY2023, Forest Service suppression costs rose from **$578 million** to **$2.70 billion** — about **4.7×** the starting level, with a FY2021 spike to **$3.74 billion**. Over the same window, FS hazardous-fuels acres treated moved from **3.26 million** to **3.89 million** — roughly **+19%**. Divide the two series and the intensity metric jumps from about **$177 per treated acre** in FY2010 to **$693** in FY2023, peaking near **$1,116** in the FY2021 mega-year. The interactive dashboard above pairs the dual track, the dollars-per-acre path, era averages, treatment-type mix, WUI versus non-WUI stacks, and a scatter of each fiscal year so readers can see the divergence without pretending the ratio is an official agency KPI.
+
+## Suppression climbed in steps, not a smooth line
+
+NIFC’s Forest Service column is a fiscal-year cost series in **nominal dollars**. It is not the same as the annual Wildland Fire Management appropriation Congress writes into Interior bills, and it is not the same as acres burned. Cost years and fire seasons overlap imperfectly; a late-season megafire can push suppression into the next fiscal year. Even with that caveat, the path is unambiguous.
+
+FY2010 was a relatively quiet cost year at **$578M**. By FY2012 costs had already more than doubled to **$1.44B**. The mid-2010s mega-fire stretch (roughly FY2015–FY2018) pushed the agency past **$2B** in two consecutive years — **$2.41B** in FY2017 and **$2.62B** in FY2018 — before a brief dip to **$1.15B** in FY2019. Then FY2020–FY2021 reopened the gap: **$1.76B** and the **$3.74B** peak. FY2022 and FY2023 settled at **$2.90B** and **$2.70B** — still roughly **five times** the FY2010 baseline, even after the peak.
+
+Indexed to FY2010 = 100, FY2023 suppression sits near **467**. That is the spending side of the brief’s question.
+
+## Fuels acres never matched the spending multiple
+
+Hazardous-fuels accomplishment acres come from the Forests & Rangelands federal fuels-management tables, rooted in the Forest Service’s FACTS tracking system (with NFPORS lineage for interagency reporting). The FS total used here is the WUI + non-WUI designation sum for each fiscal year.
+
+| Fiscal year | FS suppression ($M) | FS fuels acres | $ / fuels acre | Fuels index (FY2010=100) |
+| --- | ---: | ---: | ---: | ---: |
+| 2010 | 578 | 3,262,000 | 177 | 100 |
+| 2015 | 1,713 | 2,317,000 | 740 | 71 |
+| 2018 | 2,615 | 3,192,000 | 819 | 98 |
+| 2020 | 1,764 | 2,337,857 | 755 | 72 |
+| 2021 | 3,741 | 3,353,607 | 1,116 | 103 |
+| 2023 | 2,700 | 3,894,062 | 693 | 119 |
+
+The acreage series did **not** scale with suppression. It dipped through the mid-2010s — FY2015’s **2.32M** acres and FY2020’s **2.34M** trough sit well below the FY2010 start — then recovered into the Wildfire Crisis Strategy years. FY2023’s **3.89M** acres is the panel high, and FY2024 still shows **3.68M** NFS acres (with the important note that FY2024 NFS reporting excludes some state-assisted grant acres that earlier vintages may have counted differently). Even the best recent year is only about **one-fifth** higher than FY2010, not four or five times higher.
+
+## Dollars per treated acre is the uncomfortable bridge metric
+
+Suppression dollars and fuels acres answer different operational questions. Suppression pays for aircraft, crews, contracts, and overtime on active incidents. Fuels appropriations and accomplishment acres measure advance work — prescribed fire, mechanical thinning, and related treatments, including some acres where managed wildfire is counted toward fuels objectives. Dividing one by the other does **not** mean each treated acre “buys” a dollar of avoided suppression. It does mean the agency’s reactive cost ledger has grown far faster than its reported treatment footprint.
+
+That bridge metric rose from **$177/ac** in FY2010 to **$1,116/ac** in FY2021 before easing to **$693/ac** in FY2023 — still about **4×** the starting ratio. Era averages make the same point without pinning everything on a single spike year: pre-spike FY2010–14 averages roughly **$400/ac**, mega-fire FY2015–20 about **$750/ac**, and crisis-ramp FY2021–23 about **$850/ac**.
+
+## What “treated acre” actually counts
+
+Treatment-type breakouts matter because not every acre is the same kind of work. In FY2023, prescribed fire was about **half** of the typed acres, mechanical treatments roughly **one-third**, wildfire-counted acres about **16%**, and “other” methods a thin remainder. Counting wildfire acres toward fuels accomplishments is policy-legitimate in some contexts — fire that reduces fuel under the right conditions — but it also means a high-suppression year can partially inflate the fuels ledger with the same fire season that drained the suppression account.
+
+WUI designation shares stay high. Roughly **two-thirds** of FY2023 FS designation acres sat in the wildland–urban interface. That geography is where political demand for protection is strongest and where treatment is often most expensive per acre. A national acre total that mixes cheap remote burns with costly community-edge thinning can look stable even while the hard acres that matter most for structure risk move slowly.
+
+## Why the ledgers diverge
+
+Several structural forces pull the series apart.
+
+**Fire behavior and WUI exposure.** Larger, hotter, longer seasons raise suppression bills even when the agency keeps treating a few million acres a year. More homes in the interface raise both the political mandate to suppress aggressively and the cost of each extended attack.
+
+**Budget architecture.** For years, rising suppression obligations crowded other Forest Service programs — the familiar “fire borrowing” problem that Congress tried to blunt with the wildfire funding fix / disaster-cap adjustment. Hazardous-fuels line items rose in some years and shifted accounts (from Wildland Fire Management into the National Forest System after FY2018), but appropriation tables are not the same as acreage delivered, and acreage delivered is not the same as risk reduced on the highest-priority landscapes.
+
+**Capacity and windows.** Prescribed fire needs weather windows, smoke permits, crews, and public tolerance. Mechanical treatment needs contractors, markets for biomass or sawtimber, and NEPA throughput. Suppression, by contrast, is demand-driven: once a fire escapes initial attack near values at risk, the checkbook opens.
+
+**Strategy lag.** The Wildfire Crisis Strategy and Infrastructure Law infusions aimed to raise the pace and scale of treatments on priority landscapes. FY2023’s record acres in this panel are consistent with that ramp. They still do not erase a decade in which suppression multiples outran treatment multiples.
+
+## Caveats the dashboard cannot paper over
+
+Treat the dual panel as a **desk join**, not an official NIFC–Forest Service product. Suppression dollars are nominal, so some of the rise is inflation; even inflation-adjusted, the multiple remains large. Fuels acres can double-count or reclassify work across systems as reporting rules evolve (Recovery Act acres in FY2009–10, wildfire-as-treatment counting, FY2024 NFS-only extract notes). Acres treated are not acres of risk eliminated, and one pass of thinning does not permanently remove fuels. DOI fuels programs are excluded here so the Forest Service story stays clean; a combined federal picture would show more acres and more suppression on the DOI side without changing the FS-only divergence.
+
+Finally, FY2024 suppression was not yet published in the NIFC table used for this desk at close, so the dual panel stops at FY2023 for the cost series while fuels acres continue one year further as context.
+
+## What the gap implies
+
+If the political goal is to “treat our way out of suppression,” the FY2010–FY2023 record is a warning, not a proof of failure. Treatment acres can rise — they did in FY2023 — without catching a suppression ledger that responds to climate, housing, and fire behavior on a different timescale. The actionable read is narrower: **watch the ratio and the indexes together**. When suppression indexes sit near 450–650 while fuels indexes hover near 70–120, the agency is still living in a world where reactive costs dominate the fiscal narrative, even as fuels programs claim record years.
+
+The dashboard’s scatter view makes that geometry visible: fiscal years drift up the suppression axis faster than they move right on the acres axis. Closing that gap would require treatment pace, treatment quality on the right acres, and fire seasons that stop writing blank checks — three conditions that rarely arrive together.`,
+    format: "data-story",
+    keyPoints: [
+      "FS suppression rose from $578M (FY2010) to $2.7B (FY2023), peaking at $3.74B in FY2021",
+      "Hazardous-fuels acres rose only ~19% over the same span (3.26M → 3.89M)",
+      "Suppression $ per fuels acre climbed from $177 to $693 (peak $1,116 in FY2021)",
+      "FY2023 WUI share ~67%; prescribed fire ~50% of typed treatment acres",
+    ],
+  },
+  {
     id: "ucmr5-systems-over-epa-pfas-mcls-2026",
     slug: "ucmr5-systems-over-epa-pfas-mcls-2026",
     title:

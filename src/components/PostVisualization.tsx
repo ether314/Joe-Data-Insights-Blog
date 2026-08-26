@@ -4456,6 +4456,23 @@ const Ucmr5SystemsOverEpaPfasMcls2026Dashboard = dynamic(
   },
 );
 
+const ForestServiceSuppressionSpendVersusFuelsAcresTreated2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/ForestServiceSuppressionSpendVersusFuelsAcresTreated2026Dashboard"
+    ).then(
+      (m) => m.ForestServiceSuppressionSpendVersusFuelsAcresTreated2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5627,6 +5644,10 @@ export function PostVisualization({
 
   if (type === "ucmr5-systems-over-epa-pfas-mcls-2026") {
     return <Ucmr5SystemsOverEpaPfasMcls2026Dashboard />;
+  }
+
+  if (type === "forest-service-suppression-spend-versus-fuels-acres-treated-2026") {
+    return <ForestServiceSuppressionSpendVersusFuelsAcresTreated2026Dashboard />;
   }
 
   return null;

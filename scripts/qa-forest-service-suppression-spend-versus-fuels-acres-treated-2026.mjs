@@ -26,13 +26,13 @@ assert.equal(HEADLINE.fy2010PerAcre, 177);
 assert.equal(HEADLINE.peakPerAcre, 1116);
 assert.equal(HEADLINE.fy2023PerAcre, 693);
 assert.ok(ANNUAL.length >= 14);
-assert.equal(ANNUAL[0]!.fy, 2010);
-assert.equal(ANNUAL[ANNUAL.length - 1]!.fy, 2023);
+assert.equal(ANNUAL[0].fy, 2010);
+assert.equal(ANNUAL[ANNUAL.length - 1].fy, 2023);
 assert.ok(FY2024_FUELS.fuelsAcres > 3_000_000);
 assert.ok(dualSeries().length === ANNUAL.length);
 assert.ok(eraSummary().length === 3);
 assert.ok(treatmentMixForFy(2023).length === 4);
-assert.ok(Math.round(suppressPerAcre(ANNUAL[0]!)) === 177);
+assert.ok(Math.round(suppressPerAcre(ANNUAL[0])) === 177);
 
 const root = process.cwd();
 const slug = "forest-service-suppression-spend-versus-fuels-acres-treated-2026";

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "forest-service-suppression-spend-versus-fuels-acres-treated-2026",
+    marker: "Suppression $ vs fuels acres",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ucmr5-systems-over-epa-pfas-mcls-2026",
     marker: "Share of systems over MCL",
     forbidden: "Loading interactive charts",
