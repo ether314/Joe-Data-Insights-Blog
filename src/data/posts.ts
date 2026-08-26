@@ -2,6 +2,107 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "state-prison-population-versus-violent-crime-rates-2026",
+    slug: "state-prison-population-versus-violent-crime-rates-2026",
+    title:
+      "State Prison Rates Fell 29% After 2010 — Violent Crime Did Not Follow",
+    excerpt:
+      "BJS imprisonment rates dropped from 500 to 355 per 100,000 while FBI violent crime eased only about 6%. Nineteen states cut prison custody as reported violence rose; nineteen cut both. The custody-to-violence map fractured after 2010.",
+    category: "Politics",
+    themeId: "incarceration-crime-gap",
+    imageUrl:
+      "/images/politics-state-prison-population-versus-violent-crime-rates-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial chart with diverging teal prison-rate and amber violent-crime trend lines over faint US state silhouettes",
+    publishedAt: "2026-08-26T09:00:00Z",
+    featured: true,
+    visualization: "state-prison-population-versus-violent-crime-rates-2026",
+    layout: "default",
+    content: `At year-end **2010**, the Bureau of Justice Statistics counted **500** sentenced prisoners per 100,000 U.S. residents — roughly one in 200 people under a sentence of more than one year. By year-end **2022**, that national imprisonment rate had fallen to **355** per 100,000: a **29%** decline on the BJS National Prisoner Statistics (NPS) series. FBI estimated violent-crime rates — murder, rape, robbery, and aggravated assault — moved far less. The national violent rate was about **404.5** per 100,000 in 2010 and **380.7** in 2022, a decline of roughly **6%** after a mid-decade trough, a 2020 spike, and a partial retreat.
+
+That gap between custody and reported violence is the core puzzle. If prison stocks and violent offending moved in lockstep, a near-30% custody cut would imply a large violent-crime drop. It did not. The interactive dashboard above joins BJS state imprisonment rates to FBI state violent rates for **2010** and **2022**, classifies each state into a path bucket (±5% as "flat"), and tracks the national dual series year by year.
+
+## The national dual path after 2010
+
+Imprisonment rates began easing before the pandemic. BJS shows the combined state-and-federal sentenced rate sliding from **500** in 2010 to the low **400s** by 2019, then plunging in **2020** as admissions collapsed and emergency releases accelerated. The 2022 rate (**355**) sits only slightly above the 2021 trough (**350**), still far below the 2010 peak decade.
+
+Violent crime did not mirror that glide path. FBI estimated rates fell into the mid-**360s** around 2014, drifted back toward the high **380s–390s** by 2017–2019, jumped in **2020** (**398.5**), then eased to **380.7** in 2022. In other words: custody trended down for a decade; violence oscillated inside a narrower band and finished the window only modestly below its 2010 level.
+
+The dashboard's **national dual path** panel puts both series on one chart with separate axes so the shapes — not the absolute scales — can be compared. The visual punchline is timing, not a claim that one series "caused" the other.
+
+## Nineteen states cut prison as violence rose
+
+Using a ±5% flat band on 2010→2022 percentage changes, **19** states land in the **prison down / crime up** bucket. Their imprisonment rates fell at least 5% while violent rates rose at least 5%. That set includes large systems such as **California** (prison −43%, violent +14%), **New York** (prison −45%, violent +9%), **Colorado** (prison −35%, violent +52%), **Washington** (prison −35%, violent +20%), and **Oregon** (prison −18%, violent +36%).
+
+These are **descriptive** paths, not verdicts on reform statutes. California's Realignment and Proposition 47, New York's bail and discovery debates, and Western property-crime politics all sit in the background of the custody numbers — but the panel only measures year-end sentenced rates and UCR/NIBRS violent rates. A state can cut prison stocks through admissions policy, sentence length, parole, or demographic change; the NPS rate does not diagnose which lever moved.
+
+Still, the bucket count matters for national narrative. Nearly two-fifths of states reduced custody intensity while reported violence climbed. That is the opposite of a simple "crime follows incarceration" storyline for the post-2010 decade.
+
+## Nineteen other states cut both
+
+Another **19** states sit in **both down**: imprisonment and violent rates each fell at least 5%. **Florida** (prison −32%, violent −52%), **Maryland** (prison −35%, violent −27%), **Connecticut** (prison −55%, violent −47%), **New Jersey** (prison −52%, violent −34%), and **Delaware** (prison −39%, violent −38%) illustrate aligned declines — with the caveat that Florida, Illinois, Maryland, and Pennsylvania face **NIBRS coverage** issues in 2021–2022, so their late-window violent rates are flagged estimated in the data module.
+
+Aligned declines do not prove that lower custody "worked." They do show that prison reduction and violence reduction **coexisted** in a large minority of states. The national average therefore mixes two very different state experiences: simultaneous cuts versus custody cuts paired with violence increases.
+
+## Custody intensity: prison rate divided by violent rate
+
+A useful desk index is the **custody-to-violence ratio**: imprisonment rate divided by violent-crime rate. In 2010, **Louisiana** ran near **1.6** prisoners per reported violent offense (rate-on-rate), while **Massachusetts** sat near **0.4**. By 2022, most states' ratios compressed because prison rates fell faster than violence. High-ratio states in 2022 still cluster in the Deep South and Plains — **Mississippi**, **Louisiana**, **Oklahoma**, **Arkansas** — even after large absolute prison declines from extremely high 2010 baselines.
+
+The ratio is **not** an elasticity and **not** a clearance or conviction rate. It simply asks: for a given reported violence level, how much sentenced custody does the state hold? States that cut prison sharply while violence rose show the steepest ratio declines; that is mechanical, but it clarifies why "tough on crime" rhetoric and "soft on crime" rhetoric can both find a state that looks confirming.
+
+## Regional means hide the fracture
+
+Census-region averages of state percentage changes show **Northeast** and **West** prison rates falling hard (often −30% to −40% means) while violent changes are mixed-to-positive in the West and milder in the Northeast. The **South** still houses the highest absolute imprisonment rates in 2022 — Mississippi at **661**, Louisiana **596**, Arkansas **574**, Oklahoma **563** per 100,000 — yet several Southern states still posted double-digit prison declines from 2010 peaks above 600–800.
+
+Mean regional deltas understate within-region splits. The Midwest, for example, contains both Illinois-style both-down paths and Minnesota-style prison-down / crime-up paths. Region filters on the dashboard exist precisely because a single U.S. storyline is the wrong unit of analysis.
+
+## What the 2010–2022 window cannot settle
+
+Several caveats belong in the foreground.
+
+**First**, imprisonment rates count people sentenced to more than one year under jurisdiction, not jails, not community supervision, and not the full "correctional control" stock. Jail churn and probation can move opposite the prison series.
+
+**Second**, FBI violent rates are reported offenses, not victimizations (NCVS) and not arrests. Reporting propensity, definition changes (especially rape), and the **SRS to NIBRS** transition distort 2021–2022 comparisons for incomplete states.
+
+**Third**, crime and custody are **lagged** systems. Today's prison stock reflects admissions and time served from prior years; today's violence reflects street conditions, policing, demographics, and economics. A 2010→2022 stock comparison is a long difference, not a same-year correlation.
+
+**Fourth**, this desk does not estimate causal effects of specific reforms. Path buckets are arithmetic labels on published rates.
+
+## Selected state paths (2010 to 2022)
+
+| State | Prison /100k 2010 | Prison /100k 2022 | Prison %Δ | Violent /100k 2010 | Violent /100k 2022 | Violent %Δ | Path |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| California | 439 | 250 | −43.1% | 439.6 | 499.5 | +13.6% | Prison down / crime up |
+| New York | 288 | 159 | −44.8% | 394.4 | 429.3 | +8.8% | Prison down / crime up |
+| Colorado | 445 | 288 | −35.3% | 323.7 | 492.5 | +52.1% | Prison down / crime up |
+| Florida | 556 | 377 | −32.2% | 541.3 | 258.9 | −52.2% | Both down (est.) |
+| Connecticut | 376 | 170 | −54.8% | 282.0 | 150.0 | −46.8% | Both down |
+| Louisiana | 867 | 596 | −31.3% | 555.3 | 628.6 | +13.2% | Prison down / crime up |
+| Mississippi | 686 | 661 | −3.6% | 269.3 | 245.0 | −9.0% | Crime down / prison flat |
+| Texas | 648 | 452 | −30.2% | 448.4 | 431.9 | −3.7% | Prison down / crime flat |
+| New Jersey | 286 | 137 | −52.1% | 307.5 | 202.9 | −34.0% | Both down |
+| Washington | 269 | 174 | −35.3% | 313.5 | 375.6 | +19.8% | Prison down / crime up |
+
+Florida's 2022 violent rate carries an estimated flag under incomplete NIBRS coverage.
+
+## How to read the dashboard
+
+Use **path buckets** for the national split (19 / 19 and smaller residual classes). Use **delta scatter** to see the cloud of states in percentage-change space — the upper-left quadrant is the prison-down / crime-up set. **Region means** summarize Census regions; **custody intensity** ranks prison-to-violent ratios; **decouple leaders** lists the sharpest violence increases among prison-cutting states. Region and path filters apply across scatter and ratio panels.
+
+## Bottom line for policy desks
+
+After 2010, the United States ran a large **imprisonment drawdown** that the violent-crime series did not match one-for-one. Nationally, custody fell about five times as much as violence in percentage terms. Across states, the map split: roughly equal blocs of **aligned declines** and **custody cuts with rising violence**, plus a thin set of flat or rising-prison paths. Any claim that "prison and crime moved together" after 2010 fails the state panel. Any claim that "cutting prison always raises violence" fails it too. The data support a narrower statement: **year-end custody and reported violence decoupled in a large share of states**, and the national averages hide that fracture.
+
+Sources: BJS *Prisoners in 2010* and *Prisoners in 2022 – Statistical Tables* (NPS); FBI UCR / Crime Data Explorer estimated violent crime; Census resident population denominators as used by BJS and FBI.
+`,
+    keyPoints: [
+      "National imprisonment rate fell 29% from 500 to 355 per 100,000 (2010–2022)",
+      "National violent crime rate fell only about 6% over the same window",
+      "19 states cut prison rates while violent rates rose (prison down / crime up)",
+      "19 other states cut both rates — aligned declines, not a single national story",
+    ],
+  },
+  {
     id: "afcars-exit-reasons-versus-median-time-in-care-2026",
     slug: "afcars-exit-reasons-versus-median-time-in-care-2026",
     title:

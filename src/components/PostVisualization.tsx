@@ -4300,6 +4300,21 @@ const AfcarsExitReasonsVersusMedianTimeInCare2026Dashboard = dynamic(
   },
 );
 
+const StatePrisonPopulationVersusViolentCrimeRates2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/StatePrisonPopulationVersusViolentCrimeRates2026Dashboard"
+    ).then((m) => m.StatePrisonPopulationVersusViolentCrimeRates2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5431,6 +5446,10 @@ export function PostVisualization({
 
   if (type === "afcars-exit-reasons-versus-median-time-in-care-2026") {
     return <AfcarsExitReasonsVersusMedianTimeInCare2026Dashboard />;
+  }
+
+  if (type === "state-prison-population-versus-violent-crime-rates-2026") {
+    return <StatePrisonPopulationVersusViolentCrimeRates2026Dashboard />;
   }
 
   return null;

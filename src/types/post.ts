@@ -316,7 +316,8 @@ export interface Post {
     | "stranded-spent-fuel-at-shutdown-reactor-sites-2026"
     | "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026"
     | "emma-defaulted-municipal-par-by-sector-2026"
-    | "afcars-exit-reasons-versus-median-time-in-care-2026";
+    | "afcars-exit-reasons-versus-median-time-in-care-2026"
+    | "state-prison-population-versus-violent-crime-rates-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

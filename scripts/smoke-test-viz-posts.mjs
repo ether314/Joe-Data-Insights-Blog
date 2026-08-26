@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "state-prison-population-versus-violent-crime-rates-2026",
+    marker: "Prisoners per 100k vs violent rate",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "afcars-exit-reasons-versus-median-time-in-care-2026",
     marker: "Exit mix vs median months",
     forbidden: "Loading interactive charts",
