@@ -2,6 +2,102 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "issuer-count-in-municipal-distress-versus-go-ratings-2026",
+    slug: "issuer-count-in-municipal-distress-versus-go-ratings-2026",
+    title:
+      "Defaulted Issuers vs IG-to-Junk GOs: A 5.5× Count Gap",
+    excerpt:
+      "From 2015–2025, about 94 unique municipal issuers hit payment default or a distressed exchange, while only 17 GO credits crossed from investment grade to speculative grade. Housing and healthcare dominate distress counts; GO junk crossings stay scarce.",
+    category: "Capital Markets",
+    themeId: "muni-bond-defaults",
+    imageUrl:
+      "/images/capital-markets-issuer-count-in-municipal-distress-versus-go-ratings-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual-column data visual: tall crimson stack of defaulted municipal issuers beside a short emerald stack of GO investment-grade-to-junk crossings",
+    publishedAt: "2026-08-26T12:00:00Z",
+    featured: true,
+    visualization: "issuer-count-in-municipal-distress-versus-go-ratings-2026",
+    layout: "default",
+    content: `Municipal credit has two very different ways of going wrong. One is a **hard stop**: an issuer misses a scheduled principal or interest payment, or engineers a **distressed exchange** that Moody’s and S&P treat as a default substitute. The other is a **rating clock**: a general-obligation (GO) credit that still pays on time slips from investment grade into speculative grade — the market’s shorthand for “IG-to-junk.” Desks often conflate the two. They should not. Over **2015–2025**, a desk join of MSRB EMMA material-event patterns with Moody’s and S&P annual public-finance default studies counts about **94** unique issuers in payment default or distressed exchange, against only **17** unique GO / general-government credits that crossed from investment grade to speculative grade. That is roughly **5.5×** more distress names than GO junk crossings.
+
+The interactive dashboard above plots those two issuer clocks year by year, by sector pledge, and as a cumulative path. The punchline is not that munis are unsafe. It is that **issuer-count risk lives in enterprise and appropriation structures**, while **GO rating floors rarely break** — and when they do, they still outnumber actual GO payment defaults by a wide margin.
+
+## Two clocks, one market
+
+Payment default and distressed exchange are **event counts**. Rating agencies define a default as a missed or delayed debt-service payment, a bankruptcy or receivership that impairs creditors, or a distressed exchange intended to help an obligor avoid a formal miss. MSRB EMMA’s continuing-disclosure regime surfaces many of the same moments as material event notices — especially Rule 15c2-12 payment-related filings — including for names that never carried a rating. Collapsing agency studies and EMMA notices to **unique issuers** (not CUSIPs, not issues) is the right unit for answering “how many credits actually broke?”
+
+GO IG-to-junk is a **transition count**. It asks how many unique GO or general-government credits left the investment-grade universe (BBB− / Baa3 and above) for speculative grade. That transition can happen without a missed coupon. It can also reverse. It is a stress signal, not a cash-flow failure. Comparing the two clocks answers a practical desk question: if you screen out every GO that ever fell below IG, how much of the market’s *actual* distress issuer set have you even touched?
+
+Almost none of it. In the 2015–2025 window, GO pledges are only about **4%** of unique distress issuers. Housing, healthcare, and land-secured special districts absorb most of the rest.
+
+## What the annual dual track shows
+
+S&P’s long-run rated-default history is the best public anchor: across **1986–2023**, about **230** rated issuers defaulted, or roughly **six** per year on average, with a peak near **eighteen** in **2017**. Moody’s rated-default prints are thinner still in quiet years — a single student-housing name in **2022**, for example. Expanding the lens to EMMA material events (rated plus unrated) lifts annual unique-issuer counts without changing the shape: a mid-decade spike, a quieter late-2010s, a 2020 COVID bump concentrated in senior living and related housing, then a return toward mid-single digits.
+
+Against that backdrop, GO IG-to-junk crossings stay in the **one-to-three-issuer** range most years in our desk series. Even in **2017**, when distress unique issuers hit **18**, GO junk crossings print at **3**. In **2023**, the dual track is **9** versus **2**. The ratio is noisy year to year — it can print above **8×** in a quiet GO year — but the cumulative path settles near **5.5×** by 2025. That stability matters more than any single vintage.
+
+## Where distress issuers actually sit
+
+Sector composition explains why the GO rating screen is a weak filter for issuer-count risk. Of the **94** unique distress issuers in the window:
+
+| Sector / pledge family | Unique distress issuers | Share |
+| --- | ---: | ---: |
+| Housing / student / senior living | 36 | 38% |
+| Healthcare / hospitals | 19 | 20% |
+| Land-secured / special district | 14 | 15% |
+| Appropriation / moral obligation | 12 | 13% |
+| Other revenue / enterprise | 9 | 10% |
+| GO / general government | 4 | 4% |
+
+Housing alone is larger than GO junk crossings for the entire decade. Housing plus healthcare is **58%** of the distress set. That matches what rating-agency sector tables have said for years: competitive enterprises and project-finance structures generate most *events*, while general governments dominate headlines only when a Puerto Rico–scale credit family fails. For issuer *counts* in a normal decade, the enterprise stack is the story.
+
+Appropriation and moral-obligation structures sit in an awkward middle. They are not full GO pledges, yet they are often marketed next to tax-backed paper. They contribute about **13%** of distress issuers in the window — more than GO payment defaults, fewer than housing. Treating them as “almost GO” in a credit screen is how desks understate issuer-count risk.
+
+## Payment default versus distressed exchange
+
+Not every distress issuer misses a coupon in the same way. Splitting the **94** names by event type shows:
+
+- **Payment default only** — about **66** issuers (**70%**)
+- **Distressed exchange only** — about **16** issuers (**17%**)
+- **Both in the same multi-year window** — about **12** issuers (**13%**)
+
+Payment remains the dominant path. Distressed exchanges matter because they are the restructuring language of the market: an obligor that cannot refinance or cure reserves may still avoid a formal miss by swapping into weaker terms. Agencies count those as defaults for study purposes; EMMA may show them as material modifications or related notices. For issuer-count work, collapsing payment and exchange into a single “distress” union is conservative and correct — it avoids double-counting the same obligor while still capturing both failure modes.
+
+## Why GO junk crossings stay scarce
+
+GO credits start high on the rating scale. Median municipal ratings remain in the **Aa** / **AA** neighborhood in agency studies, far above the corporate median. Crossing the entire investment-grade band into speculative grade requires sustained fiscal erosion, political refusal to raise taxes or cut services, or a legal crisis that severs the tax pledge’s credibility. Most stressed cities and counties get **notch** downgrades inside IG long before they exit it. State oversight, emergency managers, and access to capital markets further reduce the odds of a clean IG-to-junk print.
+
+That scarcity is why the **17** GO junk crossings in 2015–2025 look large next to **GO payment defaults** (a handful of unique issuers in the same window) and tiny next to **enterprise distress**. The rating clock and the default clock are answering different questions. GO junk is an early-warning census for tax-backed credits. Distress issuer counts are a census of where cash actually broke — and cash breaks in housing, healthcare, and land-secured deals first.
+
+## Era stability: pre-2020 versus 2020–2025
+
+Splitting the window at the pandemic does not rescue the GO screen. Pre-2020 (2015–2019) prints about **48** distress issuers against **9** GO junk crossings (**5.3×**). Post-2020 (2020–2025) prints about **46** against **8** (**5.8×**). COVID raised senior-living and related housing misses in 2020, but it did not produce a wave of GO IG-to-junk transitions. Federal aid, strong property-tax collections in many metros, and rating-agency patience kept most general governments inside IG even when enterprise affiliates struggled.
+
+That era stability is the article’s second punchline. The **5.5×** gap is not an artifact of one boom-year in 2017 or one COVID year in 2020. It is a structural feature of how municipal pledges fail.
+
+## Caveats and confidence
+
+Several limits apply, and they should be read before anyone treats the **94** and **17** as official census numbers.
+
+**Unrated coverage.** Agency default studies cover *rated* universes. EMMA material events catch many unrated misses, especially in conduit housing and special districts, but filing quality varies. Our unique-issuer totals are a desk join, not an MSRB product table.
+
+**Issuer versus issue.** One hospital system can appear under multiple conduit issuers. We collapse where the obligor is clearly the same; residual double-counts would, if anything, inflate distress relative to GO junk.
+
+**GO definition.** “GO IG-to-junk” here means general-obligation or general-government credits at Moody’s or S&P. Appropriation debt that was never IG is excluded from the junk-crossing count and counted on the distress side when it fails.
+
+**Distressed exchange labeling.** Not every tender or modification is a default substitute. We follow agency study conventions where available and treat ambiguous EMMA modifications conservatively.
+
+**Par versus count.** This piece is deliberately an **issuer-count** story. Dollar par outstanding in default is a different map — large GO failures can dominate dollars even when they barely move issuer counts. Do not confuse the two.
+
+Confidence is highest on the **direction and order of magnitude** of the gap (distress issuers multiply GO junk crossings) and on the **sector ranking** (housing and healthcare first). Absolute annual cells for unrated names are **estimated**.
+
+## What desks should do with the gap
+
+If the mandate is to avoid *issuer* distress events, a GO-only or IG-GO-only screen is insufficient. It filters a market where GO payment defaults are rare and GO junk crossings are scarce, while leaving the housing and healthcare conduit stack — where most unique distress issuers live — untouched. If the mandate is to monitor *tax-backed* credit migration, the GO IG-to-junk series is the right clock, and its low absolute level is the news.
+
+The dashboard’s dual track, sector mix, cumulative path, and era ratio panels are built for that split reading. Use the era and pledge controls to stress-test the **5.5×** headline: it holds above **5×** in both halves of the decade. That is the durable fact for 2026 credit committees — not a claim that munis are fragile, but a claim about **where** fragility shows up when you count issuers instead of myths about GO floors.`,
+  },
+  {
     id: "aging-out-counts-versus-young-adult-housing-instability-2026",
     slug: "aging-out-counts-versus-young-adult-housing-instability-2026",
     title:

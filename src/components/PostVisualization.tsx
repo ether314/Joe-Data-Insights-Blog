@@ -4379,6 +4379,21 @@ const AgingOutCountsVersusYoungAdultHousingInstability2026Dashboard = dynamic(
   },
 );
 
+const IssuerCountInMunicipalDistressVersusGoRatings2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/IssuerCountInMunicipalDistressVersusGoRatings2026Dashboard"
+    ).then((m) => m.IssuerCountInMunicipalDistressVersusGoRatings2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5530,6 +5545,10 @@ export function PostVisualization({
 
   if (type === "aging-out-counts-versus-young-adult-housing-instability-2026") {
     return <AgingOutCountsVersusYoungAdultHousingInstability2026Dashboard />;
+  }
+
+  if (type === "issuer-count-in-municipal-distress-versus-go-ratings-2026") {
+    return <IssuerCountInMunicipalDistressVersusGoRatings2026Dashboard />;
   }
 
   return null;

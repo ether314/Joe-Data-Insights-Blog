@@ -321,7 +321,8 @@ export interface Post {
     | "deceased-donor-kidney-discard-versus-offer-filters-2026"
     | "nurse-aide-turnover-versus-five-star-staffing-ratings-2026"
     | "average-school-bus-age-versus-epa-clean-school-bus-awards-2026"
-    | "aging-out-counts-versus-young-adult-housing-instability-2026";
+    | "aging-out-counts-versus-young-adult-housing-instability-2026"
+    | "issuer-count-in-municipal-distress-versus-go-ratings-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

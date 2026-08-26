@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "issuer-count-in-municipal-distress-versus-go-ratings-2026",
+    marker: "Defaulted issuers vs IG-to-junk GOs",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "aging-out-counts-versus-young-adult-housing-instability-2026",
     marker:
       "Headline — 15,379 aged out in FY2024; 26% of NYTD 21-year-olds reported homelessness in the prior two years",
