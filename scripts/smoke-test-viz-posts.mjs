@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ssa-odar-pending-hearings-versus-average-wait-months-2026",
+    marker: "Headline — pending hearings 1.12M → 262k",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ntd-unlinked-trips-versus-2019-by-agency-size-2026",
     marker: "UPT index vs 2019 path",
     forbidden: "Loading interactive charts",

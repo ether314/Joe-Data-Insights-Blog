@@ -4148,6 +4148,21 @@ const NtdUnlinkedTripsVersus2019ByAgencySize2026Dashboard = dynamic(
   },
 );
 
+const SsaOdarPendingHearingsVersusAverageWaitMonths2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/SsaOdarPendingHearingsVersusAverageWaitMonths2026Dashboard"
+    ).then((m) => m.SsaOdarPendingHearingsVersusAverageWaitMonths2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5239,6 +5254,10 @@ export function PostVisualization({
 
   if (type === "ntd-unlinked-trips-versus-2019-by-agency-size-2026") {
     return <NtdUnlinkedTripsVersus2019ByAgencySize2026Dashboard />;
+  }
+
+  if (type === "ssa-odar-pending-hearings-versus-average-wait-months-2026") {
+    return <SsaOdarPendingHearingsVersusAverageWaitMonths2026Dashboard />;
   }
 
   return null;

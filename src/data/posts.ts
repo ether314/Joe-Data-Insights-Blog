@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ssa-odar-pending-hearings-versus-average-wait-months-2026",
+    slug: "ssa-odar-pending-hearings-versus-average-wait-months-2026",
+    title:
+      "SSA Hearing Backlog: Pending Cases Fell 77% Since FY2016 — But Wait Months Still Miss the 270-Day Target",
+    excerpt:
+      "Office of Hearings Operations pending hearings dropped from 1.12 million in FY2016 to about 262,000 by FY2024, while average wait months slid from a 19.9-month peak to 11.3 — still above SSA’s 8.9-month goal as receipts stop falling and ALJ headcount shrinks.",
+    category: "Politics",
+    themeId: "ssa-hearing-backlog",
+    imageUrl:
+      "/images/politics-ssa-odar-pending-hearings-versus-average-wait-months-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic corridor of waiting claimants with amber wait-month markers and descending teal pending-case bars, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-26T06:00:00Z",
+    featured: true,
+    visualization: "ssa-odar-pending-hearings-versus-average-wait-months-2026",
+    layout: "default",
+    content: `When a disability claimant asks for a hearing before an administrative law judge, two clocks matter. One counts **how many cases sit in the queue** — pending hearing requests at the Social Security Administration’s Office of Hearings Operations (OHO), the successor to what many advocates still call ODAR. The other counts **how long those cases take** — average processing time (APT) from the hearing-request date to disposition, often expressed in months of wait.
+
+Those two series do not always move together. Between FY2016 and FY2024, the national pending inventory collapsed from **1.12 million** to roughly **262,000** — a **77%** cut. Average wait months fell from a FY2017 peak of **19.9** to about **11.3**. That is genuine progress. It is not yet the finish line SSA wrote into its own operating plans: a **270-day** APT, about **8.9 months**. The interactive dashboard above pairs the dual national path, receipts-versus-dispositions flow, regional wait bars, a hearing-office scatter cloud, disability program mix, and an estimated backlog-share path so readers can see when inventory drained because dispositions outran receipts — and when wait months rose again even as the stack of cases got shorter.
+
+## Inventory collapsed; the clock only half-reset
+
+SSA’s Annual Statistical Supplement (table 2.F9) tracks hearing-level receipts, dispositions, and end-of-year pending cases in the Case Processing Management System. In FY2016 the agency carried **1,121,519** pending hearings while receiving **712,853** new requests and disposing **652,241**. Clearance sat below 100%: the queue grew because inflows exceeded outflows.
+
+By FY2019 dispositions had surged to **793,863** against **510,901** receipts — a **155%** clearance rate that carved pending down to **575,421**. The CARES-era push (hiring ALJs, video capacity, aged-case transfers) and a softer reconsideration pipeline that feeds hearing requests both mattered. SSA’s Office of the Inspector General later documented that pending fell from about **1.1 million** in FY2016 to **346,567** in FY2022, exceeding the agency’s mid-decade goal of cutting the million-case level in half.
+
+| Fiscal year | Receipts | Dispositions | End-of-year pending | APT (days) | Wait months |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2016 | 712,853 | 652,241 | 1,121,519 | 543 | 17.9 |
+| 2017 | 620,164 | 685,657 | 1,056,026 | 605 | 19.9 |
+| 2019 | 510,901 | 793,863 | 575,421 | 506 | 16.6 |
+| 2021 | 382,870 | 451,046 | 350,137 | 326 | 10.7 |
+| 2023 | 355,565 | 377,685 | 321,819 | 450 | 14.8 |
+| 2024 (est.) | ~368,000 | ~428,000 | ~262,000 | 342 | 11.3 |
+
+Wait months here are APT divided by 30.4. The table’s message is asymmetric: **pending fell almost every year after FY2016**, while **APT bottomed in FY2021 at 326 days (10.7 months)** and then **jumped to 450 days (14.8 months) in FY2023** even as pending kept declining. SSA told oversight bodies it would prioritize the oldest cases — a strategy that shortens the stack of ancient matters but temporarily lengthens the average clock for cases that close.
+
+## Receipts fell harder than capacity rose
+
+The dual-path chart tempts a simple story: “SSA fixed the backlog.” A better story is that **inflows collapsed**. Hearing receipts dropped from **713k** in FY2016 to **349k** in FY2022 — more than halved — before a modest rebound to **356k** in FY2023. Dispositions also fell from their FY2019 peak, but for several years they stayed above receipts, so pending drained.
+
+SSA OIG’s CARES review made the uncomfortable point explicit: without metrics tying each initiative to backlog reduction, it is hard to know how much of the pending decline came from process reforms versus **fewer hearing requests arriving from lower appeals levels**. If reconsideration denials rise again, or initial disability claims surge, receipts can refill the queue faster than OHO can hire.
+
+ALJ headcount underscores the capacity risk. Supplement table 2.F8 shows available ALJs rising to **1,487** in FY2018, then sliding to **1,088** by FY2023 — a **27%** decline from the hiring peak. Average hearings pending per ALJ fell from **723** in FY2016 to **266** in FY2023, which looks healthy until you notice that fewer judges are carrying the remaining inventory. Throughput per judge recovered somewhat (monthly dispositions per ALJ from **26** in FY2022 to **29** in FY2023), but the agency is leaner than in the CARES hiring wave.
+
+## FY2023’s wait-month bounce was a feature, not a bug — until it wasn’t
+
+Average processing time is sensitive to **which** cases close. When OHO works the oldest dockets first, each disposition contributes a long elapsed-time observation to the APT average. SSA anticipated a temporary APT rise in FY2023 for exactly that reason. The data matched the warning: wait months climbed from **11.0** in FY2022 to **14.8** in FY2023 while pending still fell from **346,567** to **321,819**.
+
+That pattern answers the brief’s core question more carefully than a single headline. **Pending counts and wait months both fell from their mid-2010s crisis peaks**, but they did not fall in lockstep after FY2021. Inventory continued to drain; the clock temporarily lengthened. By FY2024, agency performance statements put APT near **342 days (~11.3 months)** and pending near **262,000** — wait months improving again as the aged-case purge worked through. The 270-day target remains unmet.
+
+SSA’s own “hearings backlog” definition is stricter than raw pending: it counts the share of pending cases that push APT above 270 days. OIG figures show that backlog share fell through FY2020–FY2021, then **rose in FY2022** even as total pending edged down — aged cases concentrated in a thinner inventory. The dashboard’s backlog-share panel sketches that path with estimated shares; treat the percentages as directional, not audited line items.
+
+## Regions still disagree by months, not days
+
+National averages hide geography. OHO’s public NetStat and hearing-office workload files show office-level wait months that, when regionally aggregated, still span roughly **9.8 to 14.2 months** in a mid-2020s snapshot — about a **4.4-month** spread between the fastest sampled region (Kansas City) and the slowest (San Francisco). Atlanta and New York clusters also sit well above the 270-day equivalent.
+
+The office cloud plots pending inventory against wait months for two dozen hearing offices. Large coastal dockets (Los Angeles Downtown, Bronx, San Juan, Miami) combine high pending with wait months in the mid-teens. Smaller Midwest offices clear closer to the national target. Case transfers between offices — visible as negative receipt lines when transfers-out exceed new filings — are SSA’s main geographic balancing tool, but they cannot erase local staffing gaps overnight.
+
+Claimants do not experience a national average. A hearing request filed into a constrained office can wait half a year longer than one lucky enough to land in a low-pending chamber, even when both cases are equally meritorious.
+
+## Disability programs dominate — SSI pending fell fastest recently
+
+Almost all hearing-level work is disability-related. In FY2023, end-of-year pending broke down roughly as **129,090** DI-only, **91,137** SSI-only, **100,208** concurrent DI+SSI, and only **1,384** OASI. SSI-only pending dropped sharply from **111,367** in FY2021 to **91,137** in FY2023, while DI-only pending edged up slightly. Concurrent cases also declined.
+
+That mix matters for wait months because program rules, representative involvement, and medical-evidence complexity differ. A national APT treats every disposition equally. Policy changes that shift the reconsideration pipeline for SSI versus DI can change both receipts and the age profile of what OHO closes — again decoupling inventory from elapsed time.
+
+## What would refill the queue
+
+Three refill risks sit in plain sight.
+
+**Receipt rebound.** FY2023 receipts already rose versus FY2022. If initial disability claims and reconsideration appeals climb with demographic aging and economic stress, OHO inherits the surge with a lag. The flow-balance chart’s net-drain line (dispositions minus receipts) turned strongly positive in FY2018–FY2021 and narrowed later; a sustained negative drain would rebuild pending.
+
+**Judge attrition.** ALJ counts fell while the agency still missed the 270-day APT goal. Further attrition without matching productivity gains would stretch wait months even if pending stays historically low.
+
+**Aged-case prioritization without capacity.** Working oldest cases first is fair to long-waiting claimants and can improve backlog-share metrics, but it raises APT in the short run. Without enough writers, support staff, and hearing slots, the bounce can persist.
+
+## Caveats and measurement notes
+
+APT and “wait until hearing held” are related but not identical. SSA publishes a monthly NetStat report for average months from hearing request to **hearing held**, and a separate average processing time to **disposition**. This desk uses disposition APT (days) converted to months for the national path because it matches OIG’s multi-year series and SSA’s 270-day target language. Office-level NetStat months in the region and scatter panels are sampled estimates from public files and should not be treated as audited regional totals.
+
+FY2022 Supplement notes omit a bridging week between fiscal years; values are as of the 52nd week. FY2024 national pending and APT are labeled **estimated** pending the next Annual Statistical Supplement print; receipts and dispositions for FY2024 are reconciled to the pending change and may revise. Program reclassifications during processing create small inconsistencies across DI/SSI rows.
+
+None of these caveats reverse the central finding: **the million-case hearing inventory of the mid-2010s is gone**, wait months are far below the FY2017 peak, and yet **the system still asks claimants to wait longer than SSA’s own reasonable-level standard** — with geography and aged-case strategy deciding who waits longest.`,
+  },
+  {
     id: "ntd-unlinked-trips-versus-2019-by-agency-size-2026",
     slug: "ntd-unlinked-trips-versus-2019-by-agency-size-2026",
     title:
