@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026",
+    marker: "Pool 42,037 vs dry 48,926 MTiHM",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "state-unclaimed-property-holdings-versus-dollars-returned-2026",
     marker: "Holdings vs returned $",
     forbidden: "Loading interactive charts",

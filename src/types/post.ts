@@ -308,7 +308,8 @@ export interface Post {
     | "time-to-disposition-for-civil-jury-cases-2026"
     | "ntd-unlinked-trips-versus-2019-by-agency-size-2026"
     | "ssa-odar-pending-hearings-versus-average-wait-months-2026"
-    | "state-unclaimed-property-holdings-versus-dollars-returned-2026";
+    | "state-unclaimed-property-holdings-versus-dollars-returned-2026"
+    | "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

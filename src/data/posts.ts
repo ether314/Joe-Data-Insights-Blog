@@ -2,6 +2,83 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026",
+    slug: "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026",
+    title:
+      "US Spent Fuel: Dry Casks Hold 48,926 MTiHM vs 42,037 Still in Wet Pools",
+    excerpt:
+      "As of 31 December 2022, commercial light-water spent fuel tipped further into dry ISFSI storage — 53.8% of mass in casks versus 46.2% still cooling in pools — after the first dry-over-pool crossover in 2021.",
+    category: "Energy",
+    themeId: "spent-nuclear-fuel-storage",
+    imageUrl:
+      "/images/energy-us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial split of cyan wet-pool fuel rods versus amber dry storage casks with pool 42,037 and dry 48,926 MTiHM labels",
+    publishedAt: "2026-08-26T06:00:00Z",
+    featured: true,
+    visualization: "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026",
+    layout: "default",
+    content: `Every commercial reactor in the United States discharges spent nuclear fuel into a water-filled pool. That is not a policy choice so much as physics: assemblies leave the core too hot and radioactive for immediate dry storage. After years of cooling, utilities can load assemblies into thick-walled dry casks and move them onto an Independent Spent Fuel Storage Installation (ISFSI) pad — usually still at the plant fence line. The national question is no longer whether dry storage works. It is **how much metric tonnage of initial heavy metal (MTiHM) still sits in pools versus how much has already crossed into casks** while a geologic repository remains deferred.
+
+This desk anchors on the U.S. Department of Energy Nuclear Fuel Data Survey (EIA Form **GC-859**) through 31 December 2022 and the companion inventory print **PNNL-33938 Rev. 1.1**. Together they report **90,963 MTiHM** of commercial light-water spent fuel at nuclear power reactor sites and licensed ISFSIs, including the Morris, Illinois away-from-reactor pool. Of that mass, **42,037 MTiHM** remain in wet storage and **48,926 MTiHM** sit in dry cask systems — a dry lead of roughly **6,900 MTiHM**, or about **53.8%** of the commercial stock by mass. The interactive dashboard above walks the national crossover path, state-level pool–dry stacks, NRC regional shares, and site-group scatter without treating every reactor as identical.
+
+## Dry mass crossed the pool line in 2021
+
+Pools were the entire story for the first decades of commercial nuclear power. Dry storage at U.S. plants began in earnest in the mid-1980s as pool racks filled and utilities sought licensed overflow capacity. Loading accelerated through the 2000s and 2010s as more sites ran out of practical wet space and as shutdown reactors emptied pools into pads as part of decommissioning.
+
+PNNL’s end-2021 inventory print was the first to show **more commercial spent-fuel mass in dry storage than in pools**: about **44,741 MTiHM dry** versus **44,139 MTiHM wet**, on a commercial total near **88,880 MTiHM**, with **3,563** loaded casks. One year later the gap had widened. End-2022 dry inventory reached **48,926 MTiHM** in **3,862** casks, while pool inventory fell to **42,037 MTiHM**. The dry share of mass moved from a knife-edge plurality to a clear majority. Assembly counts tell the same story in a different unit: **169,181** assemblies in dry storage versus **145,697** still in pools, of **314,878** assemblies reported on GC-859.
+
+The crossover is structural, not a one-year blip. Operating plants continue to discharge roughly two thousand metric tons of heavy metal per year into pools, but annual dry loading has been large enough — especially at shutdown sites emptying pools — that the **stock** balance keeps tilting toward casks. DOE budget materials citing the same inventory family now speak of commercial used nuclear fuel on the order of **~97,000 MTHM** in later snapshots; this article stays with the audited end-2022 GC-859 / PNNL tables so pool-versus-dry shares remain internally consistent.
+
+## What the national split actually means
+
+A 54/46 dry/pool split by mass does **not** mean half the country’s nuclear sites are “done” with wet storage. Operating reactors (PNNL **Group C**) still hold the largest pool stock: about **37,958 MTiHM** wet against **35,945 MTiHM** dry at those sites. In other words, the fleet that is still making electricity remains pool-heavy even while the national total flipped. Shutdown-only sites (**Group A**) look almost the opposite: roughly **11,306 MTiHM** dry and only **1,004 MTiHM** still in pools — the residue of sites that have not finished pool-to-pad campaigns. Mixed-status **Group B** sites sit in between. **Group F** is a special case: Morris holds **674 MTiHM** entirely in an away-from-reactor pool — the only non-DOE pool ISFSI of its kind — and contributes zero dry mass.
+
+Mass and assemblies also diverge because pressurized-water and boiling-water assemblies carry different initial uranium loadings. GC-859 Summary 1 attributes **58,953 MTiHM** to PWR fuel and **32,010 MTiHM** to BWR fuel across all storage modes. PWR assemblies are fewer but heavier on average; BWR counts are larger for a given tonnage. Dashboards that show only assembly percentages therefore understate the PWR share of the waste-management problem measured in heavy metal.
+
+| Storage mode (end-2022) | Assemblies | MTiHM | Share of mass | Loaded casks |
+| --- | ---: | ---: | ---: | ---: |
+| Wet pool (incl. Morris) | 145,697 | 42,037 | 46.2% | — |
+| Dry cask (ISFSI) | 169,181 | 48,926 | 53.8% | 3,862 |
+| **Commercial total** | **314,878** | **90,963** | **100%** | **3,862** |
+
+## States where pools still dominate
+
+State tables from PNNL Appendix D make the geography concrete. **Illinois** is the largest commercial host by mass — about **11,577 MTiHM** on site — and remains pool-leaning: **6,607 MTiHM** wet versus **4,971 MTiHM** dry, helped by dense BWR fleets and the Morris pool. **North Carolina** shows an even sharper pool tilt (**3,086** wet vs **1,585** dry). **Texas**, **Ohio**, **Connecticut**, and **Kansas** likewise keep more mass in pools than on pads. Filter the dashboard to “pool only” and those names rise quickly.
+
+Other states have already finished the wet chapter for shutdown units. **Iowa**, **Maine**, **Massachusetts**, **Oregon**, and **Vermont** report **zero pool MTiHM** in the end-2022 state table — their commercial inventories sit entirely in dry casks. **California** and **Virginia** still hold some pool mass but already store most of their commercial inventory dry. **Pennsylvania** is large on both sides (**4,490** dry / **3,882** pool), a reminder that size and storage mode are not the same axis.
+
+NRC regional aggregates reinforce the pattern. **Region I** (Northeast) and **Region II** (Southeast) already keep dry mass ahead of pool mass. **Region IV** (West / South-Central) also tips dry. **Region III** (Midwest) is the outlier that still shows slightly more pool than dry MTiHM — Illinois and neighboring fleets pull the regional average back toward wet storage even as national totals move the other way.
+
+## Why pools empty slowly even after the crossover
+
+Dry storage does not instantly clear pools. Assemblies typically need several years of wet cooling before they meet thermal and dose limits for cask loading. Utilities also pace campaigns around outage schedules, cask-system licensing, crane capacity, and capital budgets. At operating plants, every reload adds new hot assemblies to the pool while older, cooler assemblies leave — so pool inventory can fall even while annual discharges continue.
+
+Shutdown sites behave differently. Once a reactor permanently ceases operation, the economic and regulatory incentive is to empty the pool, demolish wet structures, and leave a dry ISFSI for long-term storage. That is why Group A is nearly dry-only and why the national crossover coincided with a wave of post-2010s retirements moving fuel onto pads. The remaining wet tons at shutdown sites are transitional: they are scheduled for loading, not intended as indefinite wet storage. Caveat: “scheduled” is not the same as “loaded this year.” Licensing amendments, canister fabrication queues, and site-specific hardware can stretch campaigns across multiple seasons.
+
+## Caveats, scope, and what this inventory excludes
+
+These figures are **commercial light-water reactor spent fuel** reported through GC-859 and reconciled in the PNNL inventory. They exclude early fuel reprocessed at West Valley, Three Mile Island Unit 2 debris transferred off-site, Fort St. Vrain high-temperature gas reactor fuel, and most DOE research or defense inventories. Naval fuel and university research reactors are outside the commercial NPR/ISFSI tables used here. Masses are **initial** heavy metal / initial uranium — the uranium (and some plutonium) loaded into the fresh assembly — not the slightly lower heavy-metal mass after burnup, and not a volume or canister count by itself.
+
+Morris is counted under wet storage even though it is an ISFSI, because it is a pool. That classification choice matters for anyone who wants a pure “at-reactor pool versus dry pad” cut; the national pool total would be a few hundred MTiHM lower if Morris were carved out. Cask counts come from StoreFuel-linked sources as cited by PNNL and can lag or lead assembly moves by reporting vintage. Pre-2020 points on the dashboard’s crossover path are desk reconstructions for trend context; the **reported** anchors are end-2021 and end-2022.
+
+Finally, dry storage is **interim** under U.S. statute and licensing practice. Casks are designed for decades of passive cooling, not as a substitute for a repository or consolidated interim storage decision. The inventory numbers answer how the country is managing the waiting room. They do not answer when the waiting room empties into a permanent disposition pathway.
+
+## What to watch next
+
+Three observables will decide whether the dry lead keeps widening. First, **annual dry loading** versus **annual discharges**: if loading stays near recent multi-thousand-MTiHM paces while discharges remain ~2,000 MTiHM per year, pool stocks keep bleeding down. Second, **operating-fleet pool capacity**: Group C still holds nearly **38,000 MTiHM** wet; any slowdown in pad campaigns at large multi-unit sites shows up there first. Third, **shutdown completions**: each Group A pool that goes to zero removes wet inventory permanently from the commercial ledger.
+
+For readers scanning one headline: as of the last full GC-859 / PNNL commercial cut, **dry casks already hold more spent-fuel mass than wet pools** — **48,926** versus **42,037 MTiHM** — and the operating fleet is the main reason pools have not emptied faster. The national majority is dry; the day-to-day nuclear plant still lives with a pool.
+
+### Sources
+
+- [DOE / EIA Form GC-859 Nuclear Fuel Data Survey summaries](https://gc859.pnnl.gov/summary) (assemblies and MTiHM through 31 Dec 2022)
+- [PNNL-33938 Rev. 1.1 Spent Nuclear Fuel and Reprocessing Waste Inventory](https://curie.pnnl.gov/system/files/SNF%20and%20Rep%20Waste%20Inventory%20PNNL%2033938%20Rev.%201.1_0.pdf) (pool/dry, state, region, and site-group tables)
+- [DOE FY 2027 Nuclear Waste Disposal budget narrative](https://www.energy.gov/documents/doe-fy-2027-volume-3-nwd) (later commercial UNF context)
+- [NRC spent fuel storage overview](https://www.nrc.gov/waste/spent-fuel-storage.html) (pool and ISFSI licensing frame)
+`,
+  },
+  {
     id: "state-unclaimed-property-holdings-versus-dollars-returned-2026",
     slug: "state-unclaimed-property-holdings-versus-dollars-returned-2026",
     title:
