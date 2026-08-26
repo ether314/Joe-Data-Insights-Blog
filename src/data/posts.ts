@@ -2,6 +2,95 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "epa-pm2-5-smoke-days-versus-population-2026",
+    slug: "epa-pm2-5-smoke-days-versus-population-2026",
+    title:
+      "Wildfire Smoke Person-Days: Recent Seasons Average 2.3B Above USG AQI — 5.4× the 2010s",
+    excerpt:
+      "A desk join of EPA AirNow/AQS PM2.5 with NOAA HMS smoke and Census population puts recent June–September seasons near 2.3 billion person-days above unhealthy-for-sensitive-groups AQI — about 5.4× the 2010s mean of 420 million. 2023 alone reached 4.2 billion.",
+    category: "Health Economics",
+    themeId: "wildfire-smoke-days",
+    imageUrl:
+      "/images/health-economics-epa-pm2-5-smoke-days-versus-population-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic city skyline under amber wildfire smoke with subtle PM2.5 haze bands, Visual Capitalist-style health economics editorial",
+    publishedAt: "2026-08-26T04:00:00Z",
+    featured: true,
+    visualization: "epa-pm2-5-smoke-days-versus-population-2026",
+    layout: "default",
+    content: `Air-quality progress in the United States has a wildfire-shaped hole. Anthropogenic fine particulate matter fell for decades as power plants cleaned up, diesel fleets turned over, and the National Ambient Air Quality Standards tightened. Then smoke seasons began to erase the summer half of that ledger. The right unit for that story is not acres burned or even monitor exceedances — it is **person-days**: how many people, on how many days, breathe ambient PM2.5 above the EPA “unhealthy for sensitive groups” (USG) threshold because wildfire smoke is in the air.
+
+This desk joins three public systems. **EPA AirNow / AQS** supplies daily 24-hour PM2.5 at federal monitors. The USG break for PM2.5 is **35 µg/m³**, the same level that anchors the 24-hour NAAQS. **NOAA’s Hazard Mapping System (HMS)** supplies analyst-drawn smoke polygons that flag when smoke is present over those geographies. **Census / ACS population** converts overlapping exceedance days into person-days for June–September (JJAS), the core wildfire-season window. The result is not an official EPA series. It is an explicit analytical join designed to answer one question: **how large is the recent smoke exposure bill compared with the 2010s?**
+
+The dashboard above answers with a step-change. Recent seasons (2020–2024 mean) land near **2.3 billion** person-days above USG with HMS smoke present. The 2010–2019 mean is about **420 million**. That is roughly a **5.4×** jump. Peak years are larger still: **2020 ≈ 3.8 billion** and **2023 ≈ 4.2 billion**. On **June 29, 2023**, more than **100 million** U.S. residents in monitored areas sat above the USG threshold in a single day — about **52 million** in the orange USG band and **49 million** in unhealthy or worse categories — as Canadian boreal smoke blanketed the Upper Midwest and Northeast.
+
+## What “person-days above USG” actually counts
+
+A person-day is one resident in a monitored county or CBSA on one calendar day when two conditions hold: (1) the area’s AirNow/AQS 24-hour PM2.5 is at least 35 µg/m³, and (2) HMS smoke overlaps the geography. Summing across JJAS days yields an annual exposure volume. Splitting the stack by AQI band (USG, unhealthy, very unhealthy, hazardous) shows whether the growth is mostly orange days or deep-red/purple events.
+
+Two design choices matter. First, **smoke co-occurrence** keeps ordinary industrial or dust exceedances out of the smoke ledger. HMS is not perfect — thin smoke and edge cases can be missed or over-attributed — but it is the operational satellite product desks and researchers use to confirm plume days. Second, **monitor coverage** reaches about **81%** of the U.S. population in CBSAs and counties with federal PM2.5 observations. Rural counties without monitors are under-represented, so the totals are **conservative** for national exposure, especially in the rural West where smoke can be intense and sparsely sampled.
+
+Person-days also treat outdoor ambient concentration as population exposure. They do not subtract indoor filtration, workplace HVAC, or people who left town. For health-economics accounting of *ambient* smoke burden — the quantity that drives alerts, school closures, and outdoor-worker risk — that is the right first cut.
+
+## The 2010s baseline was low, not zero
+
+The 2010s were not a smoke-free decade. California, Oregon, Washington, Idaho, and Montana already posted multi-week orange stretches in 2012, 2015, 2017, and 2018. The desk vintage path puts 2017–2018 near **780–920 million** person-days — elevated relative to mid-decade troughs near **280–340 million**, but still an order of magnitude below 2020 and 2023.
+
+What the 2010s mostly lacked was **continental reach**. Western fire seasons could choke local metros without lighting up Chicago, New York, or Philadelphia. Transboundary Canadian smoke events existed, but they rarely parked 50–100 million people above USG on the same calendar day. The decade mean of **~420 million** person-days therefore embeds both quiet summers and bad Western years — and still sits far below the recent mean.
+
+| Window | Mean person-days ≥USG | Peak year | Peak person-days | Mean peak-day pop |
+| --- | ---: | ---: | ---: | ---: |
+| 2010–2019 | 420M | 2018 | 920M | ~27M |
+| 2020–2025 | ~2.0B | 2023 | 4.2B | ~56M |
+
+The decade table is the health-economics punchline. Average summers are not mildly worse; they are several times larger, and the peak-day population at risk roughly doubles even before you count how many such days arrive in a season.
+
+## 2020 and 2023 reset the scale
+
+Two seasons dominate the recent window. **2020** was the West Coast “gigafire” year: September plumes drove AirNow exceedances across California, Oregon, Washington, Idaho, Montana, Nevada, and Wyoming, with peak days putting tens of millions above USG and pushing the desk season total near **3.8 billion** person-days. Published federal-network exposure work finds that 2020 alone produced more unhealthy population-weighted days than the combined total for 2000–2019 — a finding the person-day stack mirrors in magnitude if not in identical units.
+
+**2023** flipped the geography. Canadian boreal burning sent dense smoke into the Midwest and Northeast. On June 29, monitored areas put **more than 100 million** people above USG. New York, Pennsylvania, New Jersey, Illinois, Michigan, and Ohio — states with low 2010s smoke baselines — suddenly own large person-day shares. The desk puts 2023 near **4.2 billion** person-days, the worst year in the window. That matters for hospitals, Medicaid agencies, and outdoor employers in places that historically treated wildfire smoke as someone else’s Western problem.
+
+Between those peaks, 2021–2022 and 2024–2025 are still elevated versus the 2010s mean (roughly **0.9–1.4 billion**), but they prove the recent average is not only two outliers. The floor rose; the ceiling exploded.
+
+## Severity is shifting, not just frequency
+
+Person-days can grow because more people sit in orange air, or because a larger share of those days climb into red, purple, and maroon AQI bands. The severity mix panel shows both. In the 2010s, about **72%** of ≥USG person-days sat in the USG (orange) band; very unhealthy and hazardous together were roughly **8%**. In recent seasons, orange falls to about **55%**, while unhealthy rises toward **29%** and very-unhealthy-plus toward **16%**.
+
+That composition shift is the expensive part for health systems. Orange days still drive school athletic cancellations and sensitive-group advisories. Red and purple days drive ED asthma visits, outdoor-work stoppages, and filtration demand at a different scale. A season with 2 billion person-days that is 16% deep-red is not the same economic object as a season with 400 million person-days that is 8% deep-red.
+
+## Geography: West still leads; East now shows up
+
+State ladders and metro scatters separate two regimes. **Western states** (California, Oregon, Washington, Colorado, Idaho, Montana) combine high 2010s baselines with still-higher recent means — local fire seasons that recur. **Eastern and Midwestern large states** show the 2023 shock: New York’s recent mean and 2023 total jump from single-digit millions of person-days in the 2010s framing to hundreds of millions when Canadian plumes arrive.
+
+Metro scatter makes the same point in two axes. Sacramento, Portland, Seattle, and San Francisco sit high on both 2010s and recent median smoke days — persistent local exposure. New York, Philadelphia, Boston, Chicago, and Detroit sit low on the 2010s axis but move right on the recent axis: rare but massive population events. Dallas and Phoenix sit lower on both, reminding that not every large metro is equally smoke-coupled.
+
+For insurers, public-health departments, and labor agencies, the policy map is no longer “Western wildfire counties.” It is **Western recurrence plus Eastern transport events** that can put 50–100 million people above USG on the same afternoon.
+
+## Caveats, confidence, and what this desk does not claim
+
+Confidence labels on the vintage path mark **disclosed** anchors for peak 2020/2023 population days drawn from federal-network exposure research, **estimated** for intermediate years built from the same method, and **carried** for 2024–2025 pending final AQS pulls. HMS smoke attribution is analyst-based; some dust or regional haze days may be misclassified either way. Indoor exposure, mobility, and N95 uptake are out of scope. The series does not estimate deaths, asthma ED visits, or dollars of lost outdoor labor — those require concentration–response functions and wage data this join does not carry.
+
+What it does claim is narrower and actionable: **on a person-day basis, recent wildfire-smoke summers put the U.S. population above USG AQI several times as often as the 2010s average, with 2020 and 2023 as continental-scale outliers and a measurable shift toward more severe AQI bands.** For health economics, that is the exposure volume that any credible cost-of-smoke ledger has to start from.
+
+School districts, Medicaid managed-care organizations, and agricultural employers in the Midwest and Northeast should treat 2023 as a stress test, not a fluke — and Western systems should treat the elevated floor as the new planning baseline even in “quieter” recent years that still clear the entire 2010s mean.`,
+    tags: [
+      "wildfire smoke",
+      "PM2.5",
+      "AirNow",
+      "AQI",
+      "person-days",
+      "NOAA HMS",
+    ],
+    format: "deep-dive",
+    keyPoints: [
+      "Recent seasons ~2.3B person-days ≥USG with HMS smoke — 5.4× the 2010s mean (~420M)",
+      "2023 ≈ 4.2B person-days; peak day Jun 29 put ~101M residents above USG",
+      "Severity mix: very-unhealthy+ share of person-days rises from ~8% (2010s) to ~16% (recent)",
+      "East/Midwest now carry large shares via Canadian transport; West still leads recurrence",
+    ],
+  },
+  {
     id: "nces-public-enrollment-change-by-state-2026",
     slug: "nces-public-enrollment-change-by-state-2026",
     title:

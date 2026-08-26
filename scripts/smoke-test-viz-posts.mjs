@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "epa-pm2-5-smoke-days-versus-population-2026",
+    marker: "Person-days unhealthy AQI",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "nces-public-enrollment-change-by-state-2026",
     marker: "Enrollment % change 2019–24",
     forbidden: "Loading interactive charts",

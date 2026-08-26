@@ -3981,6 +3981,21 @@ const NcesPublicEnrollmentChangeByState2026Dashboard = dynamic(
   },
 );
 
+const EpaPm25SmokeDaysVersusPopulation2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/EpaPm25SmokeDaysVersusPopulation2026Dashboard"
+    ).then((m) => m.EpaPm25SmokeDaysVersusPopulation2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5028,6 +5043,10 @@ export function PostVisualization({
 
   if (type === "nces-public-enrollment-change-by-state-2026") {
     return <NcesPublicEnrollmentChangeByState2026Dashboard />;
+  }
+
+  if (type === "epa-pm2-5-smoke-days-versus-population-2026") {
+    return <EpaPm25SmokeDaysVersusPopulation2026Dashboard />;
   }
 
   return null;
