@@ -4103,6 +4103,21 @@ const NcscCivilPendingCaseloadPerJudge2026Dashboard = dynamic(
   },
 );
 
+const UspsCostCoverageByProductClass2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UspsCostCoverageByProductClass2026Dashboard"
+    ).then((m) => m.UspsCostCoverageByProductClass2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5182,6 +5197,10 @@ export function PostVisualization({
 
   if (type === "ncsc-civil-pending-caseload-per-judge-2026") {
     return <NcscCivilPendingCaseloadPerJudge2026Dashboard />;
+  }
+
+  if (type === "usps-cost-coverage-by-product-class-2026") {
+    return <UspsCostCoverageByProductClass2026Dashboard />;
   }
 
   return null;

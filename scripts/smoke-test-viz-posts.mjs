@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "usps-cost-coverage-by-product-class-2026",
+    marker: "Cost coverage % by class",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ncsc-civil-pending-caseload-per-judge-2026",
     marker: "Headline — median 380 pending civil",
     forbidden: "Loading interactive charts",

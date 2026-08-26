@@ -2,6 +2,111 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "usps-cost-coverage-by-product-class-2026",
+    slug: "usps-cost-coverage-by-product-class-2026",
+    title:
+      "USPS Cost Coverage by Class: Periodicals at 74.8%, Flats Still Fail After DFA Reset",
+    excerpt:
+      "PRC compliance data through FY2025 shows Periodicals remains the only non-compensatory Market Dominant class at 74.8% cost coverage. Marketing Mail flats fell to 73.7% while competitive product failures doubled to 18.",
+    category: "Industry",
+    themeId: "usps-parcel-mix",
+    imageUrl:
+      "/images/industry-usps-cost-coverage-by-product-class-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic bar chart of USPS product class cost coverage with a red 100% break-even line, flats below threshold in crimson, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-26T04:00:00Z",
+    featured: true,
+    visualization: "usps-cost-coverage-by-product-class-2026",
+    layout: "default",
+    content: `Delivering for America promised a leaner postal network, sharper rate design, and products that cover their attributable costs. The Postal Regulatory Commission's Annual Compliance Determination is where that promise meets arithmetic. Each fiscal year the PRC tests whether Market Dominant and Competitive products generate enough revenue to cover the costs the Postal Service can trace to them — and flags the classes and products that do not.
+
+Through FY2025, the headline is not uniform progress. Periodicals remains the only Market Dominant **class** that fails cost coverage, at **74.82%**. Flat-shaped products inside otherwise compensatory classes still leak money: USPS Marketing Mail Flats at **73.7%**, Alaska Bypass at **78.43%**. Aggregate losses from non-compensatory Market Dominant classes and products totaled **$711.6 million** in FY2025 — slightly worse than FY2024's **$705.8 million** despite years of rate authority and network consolidation. On the Competitive side, products failing the cost-coverage test under 39 U.S.C. § 3633(a)(2) jumped from **10** in FY2024 to **18** in FY2025, even though Competitive mail collectively still covers its appropriate share of institutional costs.
+
+The dashboard above maps class trajectories, product-level bars against the 100% break-even line, loss components, and the widening Competitive compliance gap. What follows is the compliance narrative: what cost coverage measures, which classes cleared the bar, where flats still fall short, and why the DFA reset has not yet closed the structural gap.
+
+## What cost coverage measures — and what it does not
+
+Cost coverage is attributable revenue divided by attributable cost, expressed as a percentage. At **100%**, a product or class exactly covers the costs the Postal Service assigns to it through the costing models the PRC reviews. Above 100%, revenue exceeds attributable cost and the product contributes margin toward institutional overhead. Below 100%, the product is **non-compensatory**: it loses money on a fully attributed basis.
+
+That frame differs from the operating profit lines in the USPS Form 10-K. The 10-K reports category revenue and volume; the ACD applies product-level cost models, workshare discount rules, and statutory tests under the Postal Accountability and Enhancement Act. A class can show growing revenue in the 10-K while still failing ACD cost coverage if attributable costs rise faster than rates, if mix shifts toward lower-yield work, or if costing methodology changes reallocate costs across products.
+
+The PRC publishes results in its Annual Compliance Determination, drawing on the Postal Service's Annual Compliance Report and library references (PRC-LR-ACR2025-* for FY2025). Figure III-1 in each ACD is the product report card: green checkmarks for compensatory products, red flags for those below 100%. Class-level tables (III-1 through III-8) provide five-year trajectories. We anchor the analysis on FY2024 and FY2025 — the first full fiscal years after major DFA network and rate actions — with FY2021–FY2023 as context for whether gaps are closing or merely moving.
+
+Caveat: cost coverage is model-dependent. Commenters routinely dispute whether attributable costs for flats reflect true operational efficiency or accounting reallocations after the Flats Study and supplemental plans. Nominal percentages are not inflation-adjusted. Competitive product failures often sit inside Non-Published Rate contracts where list-rate coverage can mask sub-component shortfalls. Treat the ACD as the regulatory scoreboard, not the only economic truth.
+
+## Market Dominant classes: two fully clean, one chronic gap
+
+USPS reports five Market Dominant classes: First-Class Mail, USPS Marketing Mail, Periodicals, Package Services, and Special Services. In FY2025, **two classes were fully compensatory at both the class and every product level**: First-Class Mail and Special Services.
+
+First-Class Mail posted class-level cost coverage of **246.8%** in FY2025, up from **241.6%** in FY2024. Every First-Class product in the FY2024 report card — single-piece letters, presorted letters, flats, international — cleared 100%. That aligns with the broader story of letter-mail yield: volume falls, but price and presort mix lift revenue per piece faster than attributable cost for most letter products. First-Class is not the compliance problem child; it subsidizes the portfolio through positive contribution.
+
+Special Services reached **244.3%** class coverage in FY2025 versus **230.7%** in FY2024. Post office box services, ancillary services, money orders, and address management all show coverage well above break-even. These are not high-volume products, but they are disproportionately profitable on an attributed basis.
+
+Package Services covered costs at the class level (**122.82%** in FY2025, **115.9%** in FY2024) because Bound Printed Matter and Media Mail/Library Mail products compensate. The exception is **Alaska Bypass Service**, which fell to **78.43%** in FY2025 from **99.3%** in FY2024 — narrowly non-compensatory one year, clearly so the next. Unit attributable costs rose **34.2%** in FY2025 while unit revenue grew only **6.0%**. Rural bypass mail is small in volume but symbolic: even within a compensatory class, geographic service obligations can produce persistent gaps.
+
+USPS Marketing Mail is compensatory at the class level (**174.3%** in FY2025) but only because letters, parcels, carrier route, and saturation products over-earn. **USPS Marketing Mail Flats** remain the largest single-product hole: **73.7%** coverage and a **$404 million** negative contribution in FY2025. The class looks healthy; the flat-shaped slice does not.
+
+Periodicals is the sole non-compensatory **class**, at **74.82%** in FY2025 (**73.0%** in FY2024). That is improvement — up from **60.1%** in FY2023 — but still **$297 million** of negative contribution. Both In-County and Outside County products fail individually. The class has failed cost coverage every year in the modern ACD record; DFA cost cuts and maximum rate authority have narrowed the gap without closing it.
+
+## The flats problem: same shape, same shortfall
+
+Flat-shaped mail is the through-line. Periodicals, Marketing Mail Flats, and some Package Services products share processing and delivery paths — bundle preparation, flat sorters, carrier route sequencing — that DFA was supposed to rationalize. The PRC's FY2025 Flats chapter notes improvement at the margin: five of eight flats products covered costs in FY2025 versus three in FY2024, and unit revenue rose across all eight categories. Yet unit costs for **non-compensatory** flats rose sharply, and service performance for most flat categories missed targets.
+
+Marketing Mail Flats illustrates the tension. Cost coverage **improved** from FY2023 to FY2024 (**76.3%**, up **11.8** points) as unit costs fell, then **declined** to **73.7%** in FY2025 when attributable cost per piece jumped from **80¢** to **92¢** — a **14.7%** increase driven by processing and delivery. Volume fell **13.9%**; total revenue fell despite **10.7%** higher unit revenue. The product has cumulatively lost **$10.3 billion** on an attributed basis since FY2008.
+
+Periodicals Outside County — **91.4%** of class volume — saw unit attributable cost hit a five-year high in FY2025. In-County Periodicals coverage slipped as costs rose **13.4%** per piece even while Outside County improved modestly. Weight and advertising content in Outside County mail continue to drift down, limiting yield on heavier-rate schedules.
+
+The regulatory response is repetitive: whenever Marketing Mail rates adjust, flats must increase **at least two percentage points above the class average** (39 C.F.R. § 3030.221). Periodicals can tap an extra **two points** of class rate authority as a non-compensatory class (§ 3030.222). Those tools lift unit revenue but have not yet pushed any chronic flat product above 100%. Commenters from mailer groups argue the Postal Service is pricing flats toward volume collapse; the Postal Service argues volume would be worse without rate authority. The ACD records both views; it does not resolve the elasticity debate.
+
+## Competitive products: collective pass, individual failures
+
+Market Dominant mail is only half the compliance story. Competitive products — Priority Mail, USPS Ground Advantage, international parcels, and contract NSAs — face a different statutory bundle under § 3633: no cross-subsidy from Market Dominant revenue, each product must cover attributable cost, and the Competitive portfolio collectively must cover an appropriate share of institutional costs.
+
+FY2025 passes the collective tests. The PRC found no Market Dominant subsidy of Competitive products (§ 3633(a)(1)) and confirmed Competitive mail met the appropriate share floor (§ 3633(a)(3)). But **18 Competitive products** failed individual cost coverage (§ 3633(a)(2)), up from **10** in FY2024. The failures cluster in Non-Published Rate domestic contracts and international sub-components: five domestic NPR contracts and six international sub-products did not cover costs even when parent products did.
+
+That pattern matters for oversight. A contract can look compensatory in aggregate while individual service tiers inside the contract bleed margin — exactly the kind of intra-product cross-subsidy the statute tries to prevent. Pitney Bowes and other commenters cite the FY2025 data as proof Competitive mail remains broadly compliant; the PRC still names eighteen specific products requiring remediation. Rate filings and NSA renegotiations are the correction channel, not network cuts.
+
+## Five-year trajectory: improvement without resolution
+
+Pulling back to the five-year class paths sharpens the picture. Periodicals climbed from roughly **55%** coverage in FY2021 to **74.8%** in FY2025 — a **20-point** gain — yet remains the only class below 100%. First-Class Mail and Special Services trend upward on coverage as rates outrun attributed cost growth. Package Services and Marketing Mail classes sit comfortably above break-even at the aggregate level even as internal products wobble.
+
+Aggregate non-compensatory losses fell from **$892 million** (FY2021) toward **$706–712 million** (FY2024–FY2025). That is real progress measured in dollars, but the plateau near **$700 million** suggests diminishing returns from price alone. FY2025 losses ticked up slightly despite Periodicals improvement because Marketing Mail Flats worsened and Alaska Bypass crossed below 100%.
+
+| FY2025 snapshot | Cost coverage | Compensatory? | Negative contribution |
+| --- | --- | --- | --- |
+| Periodicals (class) | 74.82% | No | $297M |
+| Marketing Mail flats | 73.7% | No | $404M |
+| Alaska Bypass | 78.43% | No | ~$11M |
+| Marketing Mail (class) | 174.3% | Yes | — |
+| First-Class Mail (class) | 246.8% | Yes | — |
+| Package Services (class) | 122.82% | Yes | — |
+| Special Services (class) | 244.3% | Yes | — |
+| Competitive products failing §3633(a)(2) | — | 18 products | — |
+
+The table is the compliance scoreboard in one view. Letters and ancillary services fund the system; flats and bypass products drain it; Competitive compliance frays at the contract tier even when totals look fine.
+
+## Delivering for America versus the compliance ledger
+
+DFA's operational pillars — consolidating processing facilities, tightening service standards, repositioning flats operations after the Flats Study — were supposed to lower attributable costs for hard-to-handle mail. The FY2025 ACD flats chapter confirms partial success: more flats products crossed above 100%, and compensatory flats saw **22%** higher unit contribution year over year. Non-compensatory flats, however, saw unit contribution fall **13.2%**. Bundle breakage, purchased transportation, and delivery cost inflation ate into savings.
+
+Network consolidation also interacts with cost coverage in ways the 10-K does not capture. Fewer facilities can raise attributed costs for products that still require flat sorting even as letter mail benefits from density. Rate incentives for First-Class and Marketing Mail letters (approved in Docket No. R2023-3) generated additional rate authority by FY2025, but those incentives target letter volume — not flats. Workshare passthrough debates (whether presort discounts sit below avoided cost) continue to draw commenter fire; the PRC notes most high-volume letter passthroughs remain above the **85%** regulatory floor between rate cases, but timing lags mean discounts approved under old avoided costs can slip out of compliance before the next filing.
+
+For congressional and investor readers, the question is not whether USPS revenue grew — it did — but whether each statutory product class covers its attributable cost after the reset. On that test, DFA has delivered letter-mail resilience and Special Services margin, stabilized Periodicals without fixing it, and left flats products in the same structural hole. Competitive mail passed the portfolio tests while failing more individual product lines than the year before.
+
+## What to watch in FY2026 rate proceedings
+
+Three markers will show whether compliance gaps narrow or harden.
+
+First, **Periodicals rate choices** in the next Market Dominant filing. The class can take an extra two points of authority; commenters from publishers argue against using it. Coverage improved to **74.8%** without reaching break-even — another large increase may lift unit revenue but risks accelerating Outside County volume decline.
+
+Second, **Marketing Mail Flats pricing and cost**. The PRC will expect at least class-plus-two-percent increases whenever Marketing Mail adjusts. Watch whether processing and delivery unit costs retreat after supplemental Flats Plan reporting — or whether FY2025's **14.7%** cost spike persists.
+
+Third, **Competitive NPR remediation**. Eighteen failing products require contract-level fixes. The count doubling year over year is a warning that package pricing under DFA is not automatically cost-covering at the finest granularity regulators enforce.
+
+Cost coverage is a dry statistic until you map it to product shape. After the Delivering for America reset, letters and ancillary services carry the portfolio; flats, periodicals, and selected bypass and contract products still do not pay for themselves on attributed costs. The PRC's FY2025 scorecard is improved in places — but not yet a clean sheet.
+`,
+  },
+  {
     id: "ncsc-civil-pending-caseload-per-judge-2026",
     slug: "ncsc-civil-pending-caseload-per-judge-2026",
     title:
