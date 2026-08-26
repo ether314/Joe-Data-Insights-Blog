@@ -4503,6 +4503,23 @@ const CsoCommunitiesVersusRemainingOverflowVolume2026Dashboard = dynamic(
   },
 );
 
+const NfipRepetitiveLossPropertiesVersusPoliciesInForce2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/NfipRepetitiveLossPropertiesVersusPoliciesInForce2026Dashboard"
+    ).then(
+      (m) => m.NfipRepetitiveLossPropertiesVersusPoliciesInForce2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5686,6 +5703,10 @@ export function PostVisualization({
 
   if (type === "cso-communities-versus-remaining-overflow-volume-2026") {
     return <CsoCommunitiesVersusRemainingOverflowVolume2026Dashboard />;
+  }
+
+  if (type === "nfip-repetitive-loss-properties-versus-policies-in-force-2026") {
+    return <NfipRepetitiveLossPropertiesVersusPoliciesInForce2026Dashboard />;
   }
 
   return null;

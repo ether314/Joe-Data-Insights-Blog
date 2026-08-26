@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "nfip-repetitive-loss-properties-versus-policies-in-force-2026",
+    slug: "nfip-repetitive-loss-properties-versus-policies-in-force-2026",
+    title:
+      "2.5% of NFIP Policies, 48% of Claim Dollars: The Repetitive-Loss Imbalance",
+    excerpt:
+      "Unmitigated repetitive-loss properties are about 2.5% of NFIP policies in force, yet properties with two or more losses have absorbed 48% of cumulative claim dollars. GAO and FEMA put the fiscal skew in plain numbers.",
+    category: "Politics",
+    themeId: "nfip-repetitive-loss",
+    imageUrl:
+      "/images/politics-nfip-repetitive-loss-properties-versus-policies-in-force-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic flooded street and house with amber and teal abstract bars comparing a thin policy share to a tall claim-dollar share, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-26T18:00:00Z",
+    featured: true,
+    visualization: "nfip-repetitive-loss-properties-versus-policies-in-force-2026",
+    layout: "default",
+    content: `Congress built the National Flood Insurance Program (NFIP) to do two things at once: keep flood coverage available and affordable for property owners who need it, and keep the federal balance sheet from eating every large flood. Those goals collide hardest on **repetitive-loss (RL) properties** — structures that file paid flood claims again and again. The March 2026 GAO testimony that updated FEMA’s own counts puts the collision in a single pair of percentages: unmitigated RL properties are about **2.5% of NFIP policies in force**, while properties with two or more losses have drawn **48% of cumulative NFIP claim dollars**.
+
+That is the book question this piece answers. Not “where does it flood,” and not “what should premiums be,” but **what share of the policy book versus the paid-loss book sits in the repeatedly damaged slice**. The interactive dashboard above walks the policy-versus-claim split, the growth of the unmitigated RL stock, the decade-scale widening of the imbalance, FEMA’s mitigation method mix, and a state inventory of multiple-loss and severe repetitive-loss (SRL) properties.
+
+## What “repetitive loss” means in FEMA’s vocabulary
+
+FEMA tracks more than one definition, and the distinctions matter for reading any table. **NFIP repetitive loss** generally means an insured structure with two or more claim payments of at least $1,000 in any rolling ten-year window. **Flood Mitigation Assistance (FMA) repetitive loss** uses a damage-to-value threshold (repairs averaging at least 25% of structure value on two occasions, with Increased Cost of Compliance coverage in force on the second event). **Severe repetitive loss** is the hardest-hit tier: four or more claims above $5,000 that cumulatively exceed $20,000, or two building-only claim payments that exceed the building’s fair market value, with timing rules that prevent double-counting near-simultaneous claims.
+
+GAO’s headline 2.5% / 48% pair mixes those lenses carefully. The **policy share** refers to unmitigated RL properties as a fraction of policies in force. The **claim-dollar share** refers to cumulative payments to properties that have experienced two or more losses — a multi-loss history lens that is closely related to, but not identical with, the live RL policy count. Treat them as the best public book-level comparison FEMA and GAO have put in front of Congress, not as a perfect one-to-one mapping of today’s insured RL roster to every historical dollar.
+
+## The book split: 2.5% of policies, 48% of claim dollars
+
+| Segment | Share of policies in force | Share of cumulative claim $ |
+| --- | ---: | ---: |
+| Unmitigated / multi-loss RL book | 2.5% | 48% |
+| Rest of NFIP book | 97.5% | 52% |
+
+Source: GAO-26-109045 (March 2026), citing FEMA. Policies in force: **4.58 million** as of December 2025. RL properties still insured by NFIP: **112,640** as of January 2026 (≈2.5% of that book). Claim-dollar share (48%) is cumulative through December 2021 for properties with two or more losses.
+
+The arithmetic overweight is brutal. If a segment holds 2.5% of policies and 48% of claim dollars, it is absorbing roughly **nineteen times** as much paid loss as a proportional book share would imply. The rest of the program — nearly every other policy — still pays a majority of claim dollars in absolute terms (52%), but it does so from **97.5%** of the policy base. Cross-subsidy language is often vague; this table is not.
+
+Two caveats keep the comparison honest. First, multi-loss properties also tend to face **higher full-risk premiums** under Risk Rating 2.0, so they are not free riders in every sense — they are still a concentrated claim engine. Second, cumulative claim dollars through 2021 embed the Gulf Coast mega-events of the mid-2000s and later storms; the share is a stock of history, not a single-year loss ratio.
+
+## The unmitigated stock is still growing
+
+Mitigation has not kept pace with new RL designations. GAO’s updated stock series shows unmitigated RL properties rising from about **131,000 in 2009** to **176,000 in 2018** and **227,000 in 2026** — roughly a **73%** increase from the 2009 baseline to the 2018 print alone, and continued growth into 2026. Over the same long window FEMA mitigated only **12,972** repetitive-loss properties across its grant programs (1989–2025). Not every mitigated structure was NFIP-insured, and not every unmitigated RL structure still carries a policy, which is why the **insured** RL count (112,640 in January 2026) sits well below the broader unmitigated stock (227,000).
+
+The gap between stock growth and mitigation throughput is the operational version of the fiscal problem. Every year the program can acquire, elevate, relocate, or floodproof only a thin slice of the repeatedly damaged inventory, while storms and mapping updates keep minting new RL designations.
+
+## How the imbalance widened since the older GAO framing
+
+A decade and a half ago, GAO’s shorthand was already alarming but smaller: RL properties were about **1% of policies** and **25–30% of claims** (GAO-10-1063T). The 2021–2026 FEMA/GAO framing — **2.5% of policies**, **48% of claim dollars** — is not a perfect apples-to-apples replacement (definitions and windows differ), but the direction is unambiguous. The repeatedly damaged slice of the book has become both a larger policy footprint and a much larger claim-dollar footprint.
+
+That widening matters for reauthorization politics. NFIP’s current authorization is set to expire on **September 30, 2026**. Debates about rate caps, means-tested assistance, and mitigation budgets all orbit the same fiscal fact: a small inventory drives a large share of paid losses, and the inventory is not shrinking.
+
+## Mitigation exists — and mostly buys houses out
+
+When FEMA does mitigate flood risk at the property level, it leans heavily on **acquisition**. From fiscal years 1989 through 2025, FEMA mitigated **95,762** properties across its hazard-mitigation assistance programs. **Acquisitions** accounted for **69,415** of them (**≈72.5%**). **Elevation** accounted for another **22,039** (**≈23%**). Relocation and floodproofing fill the remainder. About **77%** of mitigated properties were funded through the Hazard Mitigation Grant Program (HMGP), with Flood Mitigation Assistance and the Building Resilient Infrastructure and Communities (BRIC) lineage covering most of the rest — noting that BRIC’s 2025 termination fight and subsequent court order sit outside the RL-share question but shape future capacity.
+
+GAO’s earlier cost benchmarks (2008–2014 FEMA data) put average federal cost near **$136,000 per acquisition** and **$107,000 per elevation**. Acquisition eliminates residual flood risk by converting the parcel to open space in perpetuity; elevation reduces risk but leaves the structure in place. Both are expensive relative to annual premiums, and both face the process frictions GAO catalogs: multi-year timelines, local capacity limits, nonfederal cost shares, and voluntary-participation “checkerboarding.”
+
+For the book question, the mitigation mix is a reminder that the federal answer to RL concentration has mostly been **buyouts**, not rate engineering alone — and buyouts have not scaled to the stock.
+
+## Where the multiple-loss inventory concentrates geographically
+
+OpenFEMA’s NFIP Multiple Loss Properties inventory — and public compilations drawn from it — puts the national multiple-loss count near **237,000** properties, with roughly **35,000** classified as severe repetitive loss. The top of the state list is familiar Gulf and Atlantic flood geography: **Texas, Louisiana, and Florida** lead multiple-loss counts, followed by **New York and New Jersey**, then North Carolina, Pennsylvania, Virginia, Mississippi, and Alabama. SRL shares within those state inventories vary; New Jersey’s SRL fraction of its multiple-loss stock is notably higher than New York’s in the compiled ranks.
+
+These state ranks are **inventory counts**, not policy-share percentages. A state can lead the multiple-loss list because it has a large insured coastal book, a deep historical claim file, or both. Still, for congressional district politics and FMA targeting, the concentration is the point: the national 2.5% / 48% imbalance is not evenly sprinkled across the map.
+
+## Risk Rating 2.0, surcharges, and the premium shortfall
+
+In April 2023 FEMA implemented a pricing approach that more closely aligns premiums with risk. RL policies can face an additional surcharge after more than one loss on or after April 1, 2023 — GAO’s South Carolina single-family example shows a base premium of $1,507 picking up a **$482** surcharge after a second claim and **$964** after a third. That is a direct price signal aimed at the multi-loss book.
+
+Price signals alone do not close the fiscal gap quickly. As of December 2022, GAO estimated that **66%** of NFIP policies still carried discounted premiums, that the 2023 premium shortfall was about **$2.7 billion**, and that the path to 95% of policies at full-risk premiums stretched toward **2037** under statutory annual increase caps — with a multi-year shortfall in the mid-twenties of billions of dollars. Since 2005, FEMA has borrowed about **$38.5 billion** from Treasury to pay NFIP claims. Flooding remained the most expensive U.S. natural-disaster type in FEMA’s 2024 damage accounting (**over $8 billion** that year alone).
+
+GAO’s policy recommendation set pairs mitigation targeting — aim scarce buyout and elevation dollars at properties driving the premium shortfall, which disproportionately include RL — with congressional options such as means-tested assistance instead of blunt rate caps. As of March 2026, FEMA had implemented four of nine GAO recommendations from the related body of work; Congress had not enacted the means-tested assistance redesign.
+
+## Caveats and reading rules
+
+A few limits should travel with every share cited here. **Definition drift**: RL, FMA-RL, and SRL are not interchangeable, and the 48% claim-dollar figure is a multi-loss cumulative, not a live RL-policy loss ratio for calendar 2025. **Vintage mismatch**: policies in force (Dec 2025) and insured RL counts (Jan 2026) are newer than the December 2021 claim-dollar cumulative. **Mitigation incompleteness**: FEMA’s property-mitigation totals include non-RL structures; RL-specific mitigations (12,972) are a subset. **State inventories** compiled from OpenFEMA are labeled estimated in our dashboard where GAO does not publish a matching policy-share cut. **Affordability**: concentrating mitigation on the highest-risk, highest-shortfall properties can improve actuarial soundness and, over time, affordability for remaining owners — but acquisition removes households from neighborhoods, and elevation does not erase residual risk.
+
+None of those caveats erase the headline. A thin slice of the NFIP book still sits on a thick slice of the paid-loss history. Until mitigation throughput or rate design changes that arithmetic, repetitive-loss properties will remain the clearest single window into NFIP’s fiscal exposure.
+
+### Sources
+
+- [GAO-26-109045 — Flood Risk Mitigation (March 2026)](https://www.gao.gov/products/gao-26-109045)
+- [GAO-23-105977 — FEMA rate-setting and NFIP fiscal exposure](https://www.gao.gov/products/gao-23-105977)
+- [FEMA OpenFEMA — NFIP Multiple Loss Properties v1](https://www.fema.gov/openfema-data-page/nfip-multiple-loss-properties-v1)
+- [GAO-10-1063T — earlier RL policy/claims framing](https://www.gao.gov/assets/gao-10-1063t.pdf)
+`,
+  },
+  {
     id: "cso-communities-versus-remaining-overflow-volume-2026",
     slug: "cso-communities-versus-remaining-overflow-volume-2026",
     title:

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "nfip-repetitive-loss-properties-versus-policies-in-force-2026",
+    marker: "RL share of policies and of paid losses",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "cso-communities-versus-remaining-overflow-volume-2026",
     marker: "Combined sewer overflows · communities vs volume",
     forbidden: "Loading interactive charts",

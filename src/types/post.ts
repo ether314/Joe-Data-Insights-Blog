@@ -329,7 +329,8 @@ export interface Post {
     | "ucmr5-systems-over-epa-pfas-mcls-2026"
     | "forest-service-suppression-spend-versus-fuels-acres-treated-2026"
     | "small-system-pfas-detections-versus-large-utilities-2026"
-    | "cso-communities-versus-remaining-overflow-volume-2026";
+    | "cso-communities-versus-remaining-overflow-volume-2026"
+    | "nfip-repetitive-loss-properties-versus-policies-in-force-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];
