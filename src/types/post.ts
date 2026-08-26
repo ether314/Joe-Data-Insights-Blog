@@ -297,7 +297,8 @@ export interface Post {
     | "usps-first-class-decline-versus-shipping-packages-2026"
     | "nces-public-enrollment-change-by-state-2026"
     | "epa-pm2-5-smoke-days-versus-population-2026"
-    | "usace-lock-unavailability-versus-barge-tonnage-2026";
+    | "usace-lock-unavailability-versus-barge-tonnage-2026"
+    | "homeschool-and-private-share-of-school-age-kids-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "homeschool-and-private-share-of-school-age-kids-2026",
+    marker: "Non-public share of school-age",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "usace-lock-unavailability-versus-barge-tonnage-2026",
     marker: "USACE LPMS · lock hours vs barge tons",
     forbidden: "Loading interactive charts",

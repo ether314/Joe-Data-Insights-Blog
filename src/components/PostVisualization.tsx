@@ -4011,6 +4011,21 @@ const UsaceLockUnavailabilityVersusBargeTonnage2026Dashboard = dynamic(
   },
 );
 
+const HomeschoolAndPrivateShareOfSchoolAgeKids2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/HomeschoolAndPrivateShareOfSchoolAgeKids2026Dashboard"
+    ).then((m) => m.HomeschoolAndPrivateShareOfSchoolAgeKids2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5066,6 +5081,10 @@ export function PostVisualization({
 
   if (type === "usace-lock-unavailability-versus-barge-tonnage-2026") {
     return <UsaceLockUnavailabilityVersusBargeTonnage2026Dashboard />;
+  }
+
+  if (type === "homeschool-and-private-share-of-school-age-kids-2026") {
+    return <HomeschoolAndPrivateShareOfSchoolAgeKids2026Dashboard />;
   }
 
   return null;

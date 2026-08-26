@@ -2,6 +2,95 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "homeschool-and-private-share-of-school-age-kids-2026",
+    slug: "homeschool-and-private-share-of-school-age-kids-2026",
+    title:
+      "Non-Public Share of School-Age Kids Rose 2.7 pp — Only 37% of the Public Drop Is Fewer Children",
+    excerpt:
+      "From fall 2019 to fall 2023, U.S. public K–12 enrollment fell 1.3 million (−2.5%). Census school-age population explains about 0.48 million of that loss. Homeschool and other non-public uptake account for most of the rest; private rolls barely moved.",
+    category: "Economics",
+    themeId: "k12-enrollment-shift",
+    imageUrl:
+      "/images/economics-homeschool-and-private-share-of-school-age-kids-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic editorial of layered teal and indigo education-share wedges with a descending rose enrollment curve, Visual Capitalist-style K–12 data aesthetic",
+    publishedAt: "2026-08-26T05:00:00Z",
+    featured: true,
+    visualization: "homeschool-and-private-share-of-school-age-kids-2026",
+    layout: "default",
+    content: `Public K–12 enrollment is down. That sentence is no longer controversial. The harder question is **where the children went**. Did the United States simply get fewer school-age kids, or did families reallocate seats from public campuses into private schools and home instruction?
+
+This desk joins four public systems to answer that allocation question. **NCES Common Core of Data (CCD)** supplies fall public enrollment for the 50 states and D.C. **NCES Private School Universe Survey (PSS)** supplies private K–12 headcounts (odd years disclosed; even years desk-bridged). **NCES National Household Education Survey (NHES)** anchors the 2019 homeschool rate at 2.8% of ages 5–17. **Census ACS / SAIPE** ages 5–17 and **Census Household Pulse** (plus selected state homeschool filings) bridge the post-2019 home sector where NHES has not yet republished a full national rate. The interactive dashboard above stacks private and home shares, indexes paths to 2019, decomposes the public drop into demography versus sector shift, and ladders a 20-state panel.
+
+The punchline is asymmetric. From fall **2019 to fall 2023**, public enrollment fell about **1.3 million** (−2.5%, from 50.8 million to 49.5 million). School-age population slipped only about **0.48 million**. Holding the 2019 public participation rate fixed, demography explains roughly **37%** of the public decline. The other **~63%** is a share shift — and almost all of that shift is **homeschool and other non-public**, not a private-school boom. Private K–12 stayed near **4.7–4.8 million**; its share of school-age kids moved only from about **8.7% to 8.9%**. Combined private-plus-home share of school-age kids rose from **11.4% to 14.1%** — a **+2.7 percentage-point** non-public lift.
+
+## What “non-public share of school-age” means here
+
+School-age population is Census ages **5–17**. Public enrollment in CCD is prekindergarten through grade 12, so the levels are not a perfect partition of the same children. Private PSS is K–12. Homeschool estimates are ages 5–17 with a K–12 grade equivalent in NHES, then Pulse/state bridges afterward. Because of those definitional seams, we **do not** force public + private + home to equal school-age. We track **shares of school-age** for private and home, and we track **public enrollment change** against school-age change. The residual between those frames is real — delayed kindergarten, unreported home instruction, grade-mix, and survey error — and it is labeled explicitly in the decomposition.
+
+That framing matches the policy question. Districts lose aid when CCD headcounts fall. States care whether those losses are demographic (hard to reverse with marketing) or preference-driven (responsive to reopenings, curricula, safety, and voucher design). A pure fertility story would show public and school-age indexes moving together. They do not. School-age indexes stay near 99; public indexes fall toward 97; home indexes spike above 190.
+
+## Demography is real — and not large enough
+
+U.S. fertility has been below replacement for years, and the school-age cohort is no longer growing. Between 2019 and 2023 the desk school-age path declines by about **480,000** children. If every school-age child who “disappeared” demographically had been a public enrollee at the 2019 participation rate, public rolls would have fallen by roughly that amount. They fell by **1.3 million**. Demography is necessary context; it is not a full accounting.
+
+Grade mix sharpens the point. NCES notes that preK–8 public enrollment is more than **4%** below 2019 while grades 9–12 are slightly higher. Younger cohorts shrink first when birth rates fall. That pattern is consistent with demography — and still leaves a large gap versus the total public loss once private and home are brought into the picture.
+
+| Component (2019→2023) | Millions | Share of public drop |
+| --- | ---: | ---: |
+| Public enrollment change | −1.30 | 100% |
+| Fewer school-age children (desk) | −0.48 | 37% |
+| Private uptake | −0.05 | 4% |
+| Homeschool / other non-public | −0.72 | 55% |
+| Grade-mix & residual | −0.05 | 4% |
+
+The table is the article in miniature. **Fewer kids** is the minority slice. **Private uptake** is almost a rounding error at the national level. **Homeschool / other non-public** is the plurality of the public decline.
+
+## Private school rolls held the line
+
+PSS shows private K–12 enrollment at **4.7 million** in both fall 2019 and fall 2021 — flat in levels even while public fell. Desk bridges for 2022–23 keep private near **4.7–4.8 million**. As a share of school-age kids, private inches from **8.7% to 8.9%**. As a share of combined public-plus-private enrollment, NCES has long reported private near **9%** across the decade.
+
+That stability matters for interpretation. Narratives that treat “school choice” as a private-tuition surge miss the measured sector. Some states expanded vouchers after 2021, and those programs may still lift private counts in later PSS vintages. On the currently published national ledger, though, private is **not** where most of the missing public enrollment went. Families who left public rolls did not, in aggregate, show up as a matching private gain.
+
+## Homeschool is the moving piece
+
+NHES put homeschooling at **2.8%** of ages 5–17 in 2019 — about **1.5 million** students. Census Household Pulse readings for 2020–21 put student-level homeschool near **5.4%**, and 2022–23 Pulse-style summaries cluster near **6%** nationally before easing slightly in desk bridges that incorporate state filings. The national path in the dashboard rises from **2.7%** of school-age in 2019 to about **5.2–5.4%** by 2021–23 — a near-doubling of the home share.
+
+In headcounts, that is on the order of **+1.3 to +1.5 million** homeschooled students relative to the 2019 NHES base. That gain is larger than the demographic decline and comparable in magnitude to the entire public enrollment drop. Not every homeschooled child is a one-for-one exit from CCD — some were already outside public rolls, and Pulse can overstate relative to state registries — but the direction and scale are unambiguous: **home instruction absorbed the bulk of the non-demographic public loss.**
+
+State filings reinforce the geography. North Carolina, Idaho, and parts of the Mountain West show home shares that rival or exceed private shares. Northeast states often show the reverse: large private sectors (New York, Pennsylvania, Massachusetts) with smaller measured home shares. The dashboard ladder lets you toggle private, home, and combined non-public to see that split.
+
+## Public fell faster than school-age almost everywhere in the panel
+
+The scatter view plots each state’s public enrollment percent change against its school-age percent change. Points on the diagonal are “demography only.” Points below the diagonal lost public enrollment faster than the child population — a share loss. In the 20-state panel, that pattern is the rule, not the exception. California, Oregon, Colorado, New York, and Illinois combine school-age declines with deeper public declines. Texas and Florida grow school-age populations yet still show flat-to-down public rolls, which is a pure participation story.
+
+Regional averages tell the same story in bars. The West posts the steepest average public percent losses and elevated home shares. The Northeast posts high private shares and still-negative public changes that outrun school-age. The South mixes growing child populations with rising home participation. The Midwest sits in between: moderate private sectors, moderate home shares, and public losses that still exceed demography.
+
+## Caveats, confidence, and what this desk does not claim
+
+Homeschool measurement is the weakest link. NHES is the gold-standard pre-pandemic anchor; Pulse is a rapid survey with different wording; state registries vary in who must file. The desk therefore labels post-2019 home figures **estimated** and treats the national home path as a bridge, not an official NCES series. Private even years are **carried/estimated** between PSS odd-year publications. Public CCD and Census school-age levels are **disclosed** anchors but sit on slightly different age/grade frames.
+
+This article does not estimate learning outcomes, fiscal multipliers per lost pupil, or the durability of pandemic-era home arrangements. It does not claim that every child outside CCD is homeschooled — some are unreported, some delayed entry, some in settings that surveys misclassify. It claims something narrower and actionable: **of the measured 1.3 million public enrollment decline from 2019 to 2023, only about three-eighths lines up with fewer school-age children; private enrollment absorbed almost none of the gap; the non-public share of school-age kids rose about 2.7 percentage points, driven by homeschool.**
+
+For state aid formulas, facilities planning, and choice-program scoring, that decomposition is the first cut that should replace a single “enrollment is down” headline.`,
+    tags: [
+      "homeschool",
+      "private schools",
+      "public enrollment",
+      "NCES",
+      "Census",
+      "school-age population",
+      "K-12",
+    ],
+    format: "deep-dive",
+    keyPoints: [
+      "Public K–12 fell ~1.3M (−2.5%) from fall 2019 to fall 2023",
+      "School-age demography explains ~37% of that drop; home/other non-public ~55%",
+      "Private enrollment stayed near 4.7–4.8M; share of school-age edged 8.7%→8.9%",
+      "Combined private+home share of ages 5–17 rose 11.4%→14.1% (+2.7 pp)",
+    ],
+  },
+  {
     id: "usace-lock-unavailability-versus-barge-tonnage-2026",
     slug: "usace-lock-unavailability-versus-barge-tonnage-2026",
     title:
