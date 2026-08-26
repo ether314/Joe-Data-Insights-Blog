@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "usps-first-class-decline-versus-shipping-packages-2026",
+    marker: "Piece mix vs revenue mix",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "epa-lead-service-line-unknown-share-by-state-2026",
     marker: "EPA LCRR inventories · unknown-material share",
     forbidden: "Loading interactive charts",

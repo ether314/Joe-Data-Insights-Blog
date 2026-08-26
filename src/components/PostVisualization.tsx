@@ -3949,6 +3949,23 @@ const EpaLeadServiceLineUnknownShareByState2026Dashboard = dynamic(
   },
 );
 
+const UspsFirstClassDeclineVersusShippingPackages2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UspsFirstClassDeclineVersusShippingPackages2026Dashboard"
+    ).then(
+      (m) => m.UspsFirstClassDeclineVersusShippingPackages2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4988,6 +5005,10 @@ export function PostVisualization({
 
   if (type === "epa-lead-service-line-unknown-share-by-state-2026") {
     return <EpaLeadServiceLineUnknownShareByState2026Dashboard />;
+  }
+
+  if (type === "usps-first-class-decline-versus-shipping-packages-2026") {
+    return <UspsFirstClassDeclineVersusShippingPackages2026Dashboard />;
   }
 
   return null;

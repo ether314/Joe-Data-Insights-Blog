@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "usps-first-class-decline-versus-shipping-packages-2026",
+    slug: "usps-first-class-decline-versus-shipping-packages-2026",
+    title:
+      "USPS First-Class vs Shipping: Pieces at Index 76.5, Package Revenue at 143 — Mix Flip",
+    excerpt:
+      "Since FY2019, First-Class pieces fell 23.5% while revenue edged up 5.5%. Shipping pieces rose only 11%, but revenue jumped 43% — Shipping now takes 55.8% of the First-Class-plus-Shipping revenue pair.",
+    category: "Industry",
+    themeId: "usps-parcel-mix",
+    imageUrl:
+      "/images/industry-usps-first-class-decline-versus-shipping-packages-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split of fading blue letters versus growing amber packages with dual trend lines, Visual Capitalist-style data editorial",
+    publishedAt: "2026-08-26T03:00:00Z",
+    featured: true,
+    visualization: "usps-first-class-decline-versus-shipping-packages-2026",
+    layout: "default",
+    content: `The United States Postal Service still moves more First-Class pieces than packages by a wide margin. That fact can hide the economic story that matters for rates, network design, and congressional oversight: since fiscal year 2019, First-Class volume has fallen sharply while Shipping and Packages revenue has pulled far ahead of letter mail. Piece mix and revenue mix no longer tell the same tale.
+
+Using USPS service-category tables from Form 10-K and Form 8-K results releases for FY2019 through FY2025, we index First-Class Mail and Shipping and Packages to FY2019 equals 100, then compare whether revenue followed pieces. The short answer is no. First-Class pieces sit near index **76.5** in FY2025 — a **23.5%** decline from **54.9 billion** to **42.0 billion** pieces — while First-Class revenue is still slightly above the 2019 baseline at index **105.5**. Shipping pieces rose only about **11%**; Shipping revenue rose about **43%**, to index **143**. Shipping now claims **55.8%** of the combined First-Class-plus-Shipping revenue pair, up from **48.3%** in FY2019.
+
+The interactive dashboard above walks the same series as dual indexes, stacked mix areas, diverging percent-change bars, revenue-per-piece yields, and year-by-year scatter plots. What follows is the narrative cut: what the category tables measure, where First-Class and Shipping diverged, and why dollars stopped tracking pieces.
+
+## The question the category tables can answer
+
+USPS reports operating revenue and volume by service category: First-Class Mail, Marketing Mail, Shipping and Packages, International, Periodicals, and Other. Those rollups are not product-level RPW detail, but they are the cleanest public frame for asking how far letter mail has fallen relative to packages, and whether dollars moved with pieces.
+
+We treat FY2019 as the pre-pandemic anchor. The pandemic years matter — Shipping surged in FY2020–FY2021 as e-commerce volume jumped — but the endpoint comparison through FY2025 shows the surge did not fully reverse. Shipping revenue stayed elevated even as package pieces cooled from their peak. First-Class pieces kept grinding lower every year in the window.
+
+Caveat: category definitions are not frozen. First-Class Package Service was folded into USPS Ground Advantage during FY2023–FY2024, which reshuffles Shipping sub-lines. Category totals remain the intended comparison frame in USPS releases; sub-product charts would tell a noisier story. RPW reports in thousands of pieces and dollars can also differ slightly from the rounded millions in news-release tables. We stick to the service-category millions for consistency across years. Nominal dollars are not inflation-adjusted; real First-Class revenue would look softer than the nominal index of 105.5.
+
+## First-Class pieces fell; First-Class revenue did not
+
+In FY2019, First-Class Mail brought in **$24.4 billion** on **54.9 billion** pieces. By FY2025, pieces were **42.0 billion** — about **12.9 billion** fewer — yet revenue was **$25.8 billion**. That is the classic postal pricing and mix pattern: fewer letters, higher average yield per piece, and price increases that more than offset volume loss for the category in nominal dollars.
+
+Revenue per First-Class piece rose from about **$0.45** in FY2019 to about **$0.61** in FY2025. That is a yield story, not a volume recovery. Electronic diversion of correspondence, statements, and payments continues. Single-piece letters have fallen faster than some presort streams in recent RPW detail, but the category total is unambiguous: every fiscal year from 2019 through 2025 shows fewer First-Class pieces than the year before in the service-category series we use here.
+
+The dashboard dual-index panel makes the split visible: the piece area sinks below 100 while the revenue line holds or climbs. The FY2025 results release itself framed the same tension — First-Class revenue up about **1.5%** on a **5.0%** piece decline versus FY2024. One year of that pattern is noise; six years of pieces down and revenue flat-to-up is structure.
+
+The policy implication is asymmetric. Volume decline pressures the network on density and delivery-point cost. Revenue resilience from prices can fund operations in the short run while masking how much less letter work remains in the plant and on the street. Piece counts, not just category revenue, still matter for staffing models and facility footprints.
+
+## Shipping grew more in dollars than in pieces
+
+Shipping and Packages started FY2019 at **$22.8 billion** and **6.2 billion** pieces. FY2025 closed at **$32.6 billion** and **6.8 billion** pieces. Piece growth of roughly **11%** looks modest next to a **43%** revenue gain. Revenue per shipping piece rose from about **$3.70** to about **$4.77**.
+
+The path was not linear. FY2020–FY2021 marked the e-commerce spike: Shipping revenue jumped from **$22.8 billion** to **$32.0 billion** in two years, and pieces peaked near **7.6 billion** in FY2021. After that peak, pieces eased — **7.2 billion** in FY2022, **7.1 billion** in FY2023, **7.3 billion** in FY2024, then **6.8 billion** in FY2025 — while revenue stayed near the **$31–$33 billion** band. The FY2025 results release noted Shipping revenue up about **1%** on a **5.7%** piece decline versus FY2024. That is the opposite of First-Class: packages can lose pieces and still hold or grow dollars if mix and rates cooperate.
+
+Competitive intensity from national and regional parcel carriers keeps volume soft even when e-commerce demand is firm. USPS response has emphasized product simplification (Ground Advantage) and network redesign under Delivering for America. Those initiatives show up in the revenue-per-piece climb more clearly than in piece-count records.
+
+## Piece mix barely moved; revenue mix flipped
+
+Among First-Class and Shipping alone, First-Class still dominates pieces — about **90%** of the pair in FY2019 and **86%** in FY2025. Packages remain a thin slice of total piece count. On revenue, the pair flipped toward packages: Shipping rose from **48.3%** to **55.8%** of combined First-Class-plus-Shipping dollars.
+
+Widen the lens to all operating revenue. Shipping share of total operating revenue rose from about **32%** in FY2019 to about **40%** in FY2025, while First-Class slipped from about **34%** to about **32%**. Marketing Mail remains large on pieces and smaller on dollars — still tens of billions of pieces, but only about **$15.7 billion** of revenue in FY2025. The donut view in the dashboard — FY2019 versus FY2025 — shows Shipping as the category that gained weight in the revenue pie.
+
+That divergence is the headline for rate cases and product strategy. A network that is still mostly letter pieces by count is increasingly package dollars by finance. Unit cost allocation, contribution margins, and competitive pricing for Ground Advantage and Priority Mail sit on top of that mix shift. Boards and oversight hearings that quote only total operating revenue miss the internal reallocation: the Postal Service is financing more of itself with packages while still sorting a letter-heavy piece stream.
+
+## Did revenue follow pieces? A category scorecard
+
+| Category | Pieces FY19→FY25 | Revenue FY19→FY25 | Did revenue follow pieces? |
+| --- | ---: | ---: | --- |
+| First-Class Mail | −23.5% | +5.5% | No — revenue rose while pieces fell |
+| Shipping & Packages | +10.9% | +43.0% | No — revenue outran piece growth |
+| Marketing Mail | −25.0% | −3.8% | Partially — both down; revenue fell less |
+| Total operating | −23.8% | +13.1% | No — system pieces down, dollars up |
+
+The scorecard answers the brief directly. For First-Class, revenue did not follow pieces down. For Shipping, revenue did not merely follow pieces up — it amplified them. System-wide, total mail and package volume fell from **142.6 billion** pieces to **108.7 billion** while operating revenue rose from **$71.1 billion** to **$80.5 billion**. Prices, mix, and package contribution explain the wedge.
+
+Indexes make the same point without percentages. First-Class piece index **76.5** versus revenue index **105.5** leaves a **29-point** gap. Shipping piece index **110.9** versus revenue index **143.0** leaves a **32-point** gap — both categories show revenue outrunning pieces, but First-Class does it while shrinking and Shipping does it while expanding.
+
+## Why the wedge exists
+
+Three mechanisms sit behind the indexes. First, scheduled price authority and market-dominant rate changes lift First-Class yield even as electronic diversion removes pieces. Second, competitive Shipping products reprice more freely and shifted toward higher-yield offerings, including Ground Advantage after the FY2023 launch. Third, the pandemic permanently lifted the package baseline relative to 2019 even after the peak cooled — FY2025 Shipping revenue remains about **$10 billion** above FY2019 despite pieces only about **670 million** above that baseline.
+
+None of those mechanisms requires First-Class volume to stabilize. They require enough remaining volume and enough package demand for yield strategies to work. If First-Class pieces keep falling toward the mid-30 billions over the next decade while Shipping plateaus near seven billion, contribution from letters shrinks as a share of work even if letter revenue stays sticky in nominal terms. Delivery density then becomes the binding constraint: fewer letters per stop does not automatically cut the cost of visiting the stop when packages still require a truck.
+
+A fourth, quieter mechanism is Marketing Mail’s simultaneous piece collapse. Marketing pieces fell about **25%** from FY2019 to FY2025. That removes advertising flats and letters from the same network that still must deliver packages six or seven days a week. The First-Class-versus-Shipping comparison is the cleanest two-category cut; the broader piece drought is the operating backdrop.
+
+## Reading limits and what to watch next
+
+This cut uses category totals, not cost coverage by product. Contribution after attributable cost — the Postal Regulatory Commission and Cost and Revenue Analysis lens — can differ from raw revenue rankings. A high-revenue Shipping category can still show thin contribution on some products after delivery costs. Weight also differs: Shipping pounds dwarf First-Class pounds even when pieces are fewer. A weight-based mix chart would look even more package-heavy than the piece chart.
+
+Product reclassifications inside Shipping mean year-over-year sub-line comparisons around FY2023–FY2024 need care. International and Periodicals continue to shrink and are not the focus here. Marketing Mail’s piece collapse is its own story; we include it only as context for the wider piece drought. Inflation adjustments would compress the First-Class revenue “win” and shrink Shipping’s real gain, but they would not reverse the piece-path divergence.
+
+What to watch in the next RPW and 10-K cycle: whether Shipping pieces stabilize near **7 billion** or keep drifting down; whether First-Class revenue can keep rising with piece indexes still sliding; and whether Shipping’s share of the First-Class-plus-Shipping revenue pair holds above **55%**. Piece mix and revenue mix have already diverged. The open question is how far that wedge widens before network and rate design catch up.
+`,
+  },
+  {
     id: "epa-lead-service-line-unknown-share-by-state-2026",
     slug: "epa-lead-service-line-unknown-share-by-state-2026",
     title:
