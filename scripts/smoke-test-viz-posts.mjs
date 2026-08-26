@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "nurse-aide-turnover-versus-five-star-staffing-ratings-2026",
+    marker: "Turnover vs staffing stars",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "deceased-donor-kidney-discard-versus-offer-filters-2026",
     marker: "Headline — overall nonuse 29.3% in 2024; KDPI ≥85% still ~69.5%",
     forbidden: "Loading interactive charts",

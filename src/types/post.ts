@@ -318,7 +318,8 @@ export interface Post {
     | "emma-defaulted-municipal-par-by-sector-2026"
     | "afcars-exit-reasons-versus-median-time-in-care-2026"
     | "state-prison-population-versus-violent-crime-rates-2026"
-    | "deceased-donor-kidney-discard-versus-offer-filters-2026";
+    | "deceased-donor-kidney-discard-versus-offer-filters-2026"
+    | "nurse-aide-turnover-versus-five-star-staffing-ratings-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

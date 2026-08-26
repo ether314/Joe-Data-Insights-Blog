@@ -2,6 +2,113 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "nurse-aide-turnover-versus-five-star-staffing-ratings-2026",
+    slug: "nurse-aide-turnover-versus-five-star-staffing-ratings-2026",
+    title:
+      "Turnover vs Staffing Stars: Nurse-Aide–Heavy Churn Tracks CMS Ratings Across States",
+    excerpt:
+      "CMS Care Compare puts nursing staff turnover near 46% nationally. Homes rated 1★ average 54.7% churn versus 37.5% at 5★. Across states, aide-heavy turnover correlates about −0.74 with mean staffing-domain stars — partly by design, since turnover is scored inside the staffing rating.",
+    category: "Health Economics",
+    themeId: "nursing-home-staffing-cms",
+    imageUrl:
+      "/images/health-economics-nurse-aide-turnover-versus-five-star-staffing-ratings-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of five descending gold stars opposite a rising amber turnover wave with teal caregiving silhouettes",
+    publishedAt: "2026-08-26T16:00:00Z",
+    featured: true,
+    visualization:
+      "nurse-aide-turnover-versus-five-star-staffing-ratings-2026",
+    layout: "default",
+    content: `Nursing homes do not run on licensed nurses alone. **Nurse aides** — certified nursing assistants and closely related job codes in the Payroll-Based Journal (PBJ) — deliver most of the day-to-day help with eating, bathing, toileting, and mobility. National snapshots put aide hours near **2.3 of roughly 3.9** total nurse hours per resident day. When those aides leave, residents meet new faces, and the building’s institutional memory thins.
+
+Since 2022, the Centers for Medicare & Medicaid Services (CMS) has published **total nursing staff turnover** and **RN turnover** on Care Compare and folded both into the **staffing domain** of the Five-Star Quality Rating System. CMS does **not** publish a separate aide-only turnover percentage. Because aides dominate nursing hours, the published nursing-staff turnover series is the operational measure of **aide-heavy workforce churn**. This desk asks a tight question: **how closely does that churn line up with staffing star ratings across states?**
+
+The short answer is: **tightly, and partly on purpose.** Facility-level means fall at every step up the star ladder — from **54.7%** nursing turnover at 1★ homes to **37.5%** at 5★. State averages show a desk Pearson correlation near **−0.74** between nursing turnover and mean staffing-domain stars. That alignment is not a pure “discovery”: turnover already accounts for **130 of 380** staffing points (total nursing, RN, and administrator turnover). The interesting geography is where states **sit off the national gradient** — high churn with relatively better stars, or the reverse.
+
+The dashboard above walks six panels: star-band bars, a state scatter with residual coloring, aide HPRD versus churn, regional means, ownership splits, and the staffing point budget. Use the region and sort controls to isolate markets.
+
+## What CMS actually measures
+
+PBJ captures paid hours by job code and daily census. Turnover is not a self-reported “we lost X people” survey. CMS identifies eligible workers who logged enough hours in a base window, then counts those with a long enough subsequent gap in days worked as turnover. The resulting **percentage** is posted for **total nursing staff** (RNs, LPNs/LVNs, and nurse aides) and for **RNs** alone, plus a count of **administrator** departures.
+
+Those measures enter the staffing domain alongside case-mix–adjusted total and RN hours per resident day and weekend staffing. The Technical Users’ Guide allocates up to **100** points each to total and RN HPRD, **50** to weekend total nurse staffing, **50** each to total nursing and RN turnover, and **30** to administrator turnover — **380** points in all. Stars are cut from the national point distribution. So when we say turnover “lines up” with staffing stars, we are partly describing **how the scorecard is built**.
+
+Aides still matter twice. First, they are inside the nursing turnover numerator and denominator. Second, **aide HPRD** is a large share of the total-nurse hours that earn HPRD points. A building can post decent aide hours while cycling through the people who deliver them — hours without continuity.
+
+## The national ladder is monotonic
+
+Across roughly **13,500** homes with published turnover in a recent CMS Provider Information pull, mean nursing staff turnover is about **45.8%**, and RN turnover about **42.9%**. Nearly **38%** of homes replace at least half their nursing staff in a year. A handful report turnover above **100%** — more departures than positions in the eligible pool.
+
+The star ladder does not stutter. Using overall CMS stars as the published facility band (CareLens join to Provider Information):
+
+| Overall stars | Homes (approx.) | Nursing turnover | RN turnover |
+| --- | ---: | ---: | ---: |
+| 1★ | 2,635 | 54.7% | 56.0% |
+| 2★ | 2,755 | 48.4% | 48.5% |
+| 3★ | 2,635 | 45.7% | 43.8% |
+| 4★ | 2,580 | 42.9% | 38.2% |
+| 5★ | 2,850 | 37.5% | 31.3% |
+
+The **17.2 percentage-point** gap between 1★ and 5★ nursing turnover is the headline consumer fact. The RN gap is wider still (**24.7 pp**). Ownership reinforces the pattern: for-profit homes average about **47.1%** nursing turnover versus **41.2%** at nonprofits. None of that proves causation — poorly rated homes may struggle to retain staff, and unstable staffing may worsen quality — but CMS reports the two together for every facility, and the ordering is unbroken.
+
+## States: the same slope, with outliers
+
+State means stretch from the mid-30s to the mid-50s. Among states with at least twenty reporting homes, **Hawaii (36.4%)** and **California (36.7%)** sit at the low end; **Missouri (56.1%)**, **Oklahoma (55.5%)**, **Vermont (55.4%)**, and **Texas (55.3%)** lead the high end. AARP’s Quality and Safety Dashboard puts the national average near **46%**, with Vermont near the top and the District of Columbia near the bottom — consistent with the Care Compare-derived ranks.
+
+Pair those turnover means with **desk-composite mean staffing-domain stars** (facility staffing ratings averaged to the state) and the scatter slopes down. Our panel’s Pearson **r ≈ −0.74**. Texas and Missouri combine high churn with thin staffing stars and **low aide HPRD** (Texas near **2.0** aide hours per resident day in Q1 2026 PBJ rankings). California and Hawaii combine low churn with higher stars and stronger aide intensity.
+
+Outliers teach more than the regression line. **Vermont** posts high turnover despite relatively solid total HPRD and elevated contract-staff shares — a small market under continuous recruiting pressure. **Oregon** sits near **3.4★** staffing with only mid-40s turnover but **top-decile aide HPRD (~3.36)** — hours that buy points the turnover measures alone would not. **Connecticut** keeps turnover near **37%** without elite aide hours, suggesting wage, ownership mix, or retention practices that the HPRD series does not capture.
+
+Residual coloring on the scatter (actual staffing stars minus a simple national turnover prediction) flags markets that are **under-starred** or **over-starred** relative to churn alone. Those residuals are analytical, not CMS products — useful for asking which states lean on HPRD and weekend staffing to offset turnover, and which do not.
+
+## Aide hours versus aide churn
+
+PBJ state rankings for Q1 2026 put nurse aide HPRD from roughly **2.0** (Texas, Illinois, West Virginia) to above **3.3** (Alaska, Oregon). National commentary from AARP centers near **2.3** aide hours. The composed chart in the dashboard shows that **high aide HPRD does not automatically mean low turnover**. Oklahoma’s aide hours sit mid-pack while nursing turnover exceeds **55%**. Arkansas posts comparatively strong aide intensity with still-elevated churn near **49.5%**.
+
+That dissociation is the policy nub. Minimum staffing rules and Five-Star HPRD scoring reward **hours on the schedule**. Continuity of the people filling those hours is a different lever — wages, schedules, agency reliance, local labor markets, and ownership strategy. GAO and CMS oversight work has long treated staffing **levels** and staffing **stability** as related but separable dimensions of nursing-home quality risk. Care Compare’s dual publication of HPRD and turnover finally lets consumers see both on the same page.
+
+## Regions and ownership tilt the map
+
+Census-weighted regional means compress the extremes but keep the South and parts of the Midwest higher on churn and lower on staffing stars than the Northeast and West coast clusters. Ownership composition matters: states with very high for-profit shares tend to sit higher on the turnover axis, consistent with the national for-profit versus nonprofit gap of nearly **six points**. Chain-level averages (published in CMS-derived studies of large operators) span from the low 30s to above **90%** at the most extreme multi-home operators — a reminder that state means hide building-to-building and brand-to-brand variance.
+
+Administrator turnover, scored at up to **30** points, is a quieter companion series. Nationally, facilities average on the order of **0.5** administrator departures per year, with wide state ranges. Leadership churn rarely dominates the star cut alone, but it correlates with nursing instability in many markets and is part of the same staffing-domain budget.
+
+## Caveats and how not to over-read the correlation
+
+Several limits keep this desk honest.
+
+First, **CMS does not publish nurse-aide-only turnover**. We use total nursing staff turnover as the aide-heavy series and pair it with aide HPRD for intensity. Treating nursing turnover as “CNA turnover” would overclaim.
+
+Second, **staffing stars embed turnover by design**. A strong negative correlation is expected. The analytical value is the **slope’s steepness**, the **residual geography**, and the places where **aide hours and churn diverge**.
+
+Third, **overall stars ≠ staffing stars**. The facility star-band table above uses overall CMS ratings because that is the published national band in the CareLens Provider Information study. Staffing-domain stars can diverge from overall stars when inspection or quality-measure domains pull the other way. Our state staffing-star means are desk composites from staffing-domain ratings — labeled as such in the data module.
+
+Fourth, **state averages are unweighted or census-weighted composites**, not the experience of any single resident. Small states (Vermont, Wyoming, Alaska, D.C.) move sharply with a handful of buildings.
+
+Fifth, **PBJ and Care Compare windows differ**. Hours are quarterly; turnover is a rolling twelve-month construct with specific eligibility rules. Joining Q1 2026 HPRD ranks to a twelve-month turnover print is a contemporaneous desk join, not a CMS merged file.
+
+Sixth, **correlation is not causation**. Labor-market tightness, Medicaid payment rates, local competition from hospitals and home care, and survey pressure all move both sides of the scatter.
+
+What survives those caveats is still actionable. Consumers comparing homes should read **staffing stars and turnover together**, not stars alone. State policymakers watching Five-Star distributions should ask whether their markets are failing on **hours**, on **retention**, or on both. And analysts should stop treating aide HPRD as a sufficient statistic for workforce health: in Texas, Missouri, and Oklahoma, thin or middling aide hours collide with mid-50s turnover — a double deficit the staffing domain is built to punish, and residents experience as unfamiliar hands at the bedside.
+`,
+    keyPoints: [
+      "National nursing staff turnover ~45.8%; 1★ homes 54.7% vs 5★ 37.5% (17.2 pp gap)",
+      "State means: turnover vs staffing-domain stars correlate ≈ −0.74 (desk)",
+      "MO/OK/TX top churn; HI/CA lowest among ≥20-home states",
+      "Turnover is 130/380 staffing points — alignment is partly by CMS design",
+    ],
+    tags: [
+      "nursing homes",
+      "CMS",
+      "PBJ",
+      "turnover",
+      "staffing stars",
+      "nurse aides",
+      "health economics",
+    ],
+    format: "data-story",
+  },
+  {
     id: "deceased-donor-kidney-discard-versus-offer-filters-2026",
     slug: "deceased-donor-kidney-discard-versus-offer-filters-2026",
     title:
