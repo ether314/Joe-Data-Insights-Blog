@@ -4133,6 +4133,21 @@ const TimeToDispositionForCivilJuryCases2026Dashboard = dynamic(
   },
 );
 
+const NtdUnlinkedTripsVersus2019ByAgencySize2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/NtdUnlinkedTripsVersus2019ByAgencySize2026Dashboard"
+    ).then((m) => m.NtdUnlinkedTripsVersus2019ByAgencySize2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5220,6 +5235,10 @@ export function PostVisualization({
 
   if (type === "time-to-disposition-for-civil-jury-cases-2026") {
     return <TimeToDispositionForCivilJuryCases2026Dashboard />;
+  }
+
+  if (type === "ntd-unlinked-trips-versus-2019-by-agency-size-2026") {
+    return <NtdUnlinkedTripsVersus2019ByAgencySize2026Dashboard />;
   }
 
   return null;

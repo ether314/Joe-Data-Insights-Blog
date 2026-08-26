@@ -305,7 +305,8 @@ export interface Post {
     | "school-age-smoke-days-in-western-metros-2026"
     | "ncsc-civil-pending-caseload-per-judge-2026"
     | "usps-cost-coverage-by-product-class-2026"
-    | "time-to-disposition-for-civil-jury-cases-2026";
+    | "time-to-disposition-for-civil-jury-cases-2026"
+    | "ntd-unlinked-trips-versus-2019-by-agency-size-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

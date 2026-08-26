@@ -2,6 +2,140 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ntd-unlinked-trips-versus-2019-by-agency-size-2026",
+    slug: "ntd-unlinked-trips-versus-2019-by-agency-size-2026",
+    title:
+      "Transit UPT Index vs 2019: Mid-Size Agencies Near 88, Mega Urban Stuck Near 74",
+    excerpt:
+      "U.S. unlinked passenger trips closed 2024 at about 79% of 2019. Bus leads rail by roughly 14 index points (86 vs 72), mid-size reporters median near 88, and only about 7% of the largest 150 agencies have fully recovered.",
+    category: "Transport & Logistics",
+    themeId: "transit-ridership-ntd",
+    imageUrl:
+      "/images/transport-logistics-ntd-unlinked-trips-versus-2019-by-agency-size-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic city corridor with illuminated metro train and bus, teal ridership recovery curve accents, Visual Capitalist-style transit editorial thumbnail",
+    publishedAt: "2026-08-26T07:00:00Z",
+    featured: true,
+    visualization: "ntd-unlinked-trips-versus-2019-by-agency-size-2026",
+    layout: "default",
+    content: `Unlinked passenger trips — every boarding counted once, transfers counted again — are the Federal Transit Administration's workhorse ridership unit. When boards ask "are we back?", they almost always mean: how does calendar-year UPT compare with **2019**, the last full pre-pandemic year in the National Transit Database (NTD).
+
+The answer at the industry level is now stable enough to parse by **agency size** and **mode**. Drawing on FTA NTD annual and monthly ridership through **CY2024**, APTA's December 2024 mode recovery snapshot, and Census ACS commute shares for context, this desk finds a national UPT index near **79** (2019 = 100), a **bus–rail gap of about 14 points** (86 vs 72 as of December), and a size gradient that puts **mid-size and small urban** reporters closer to the baseline than **mega and large** systems that still dominate national totals.
+
+The interactive dashboard above traces the national index path, median recovery by size band, a mode radar, an agency scatter of 2019 UPT against 2024 index, and ACS commute-share deltas for selected metros.
+
+## National UPT is near four-fifths of 2019 — not full recovery
+
+FTA's 2024 National Transit Summaries and Trends put public-transit UPT near **7.6–7.7 billion** trips for the year — roughly a **10%** gain over 2023, and still short of the ~**9.9 billion** trips that anchored 2019. APTA's Ridership Trends dashboard framed year-end 2024 ridership around **79%** of the comparable 2019 period. Those two readings — annual NTD totals and APTA's same-period index — are close enough to treat **~79** as the working national UPT index for this piece.
+
+Service did not shrink as much as ridership. Agencies operated on the order of **93–95%** of 2019 vehicle revenue miles while carrying closer to four-fifths of the trips. That wedge is the empty-seat problem in one chart: operators restored schedules faster than passengers returned to seats, especially on peak-oriented rail.
+
+| Year | All-modes index | Bus index | Rail index | Demand-response index | UPT (approx. billions) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 100 | 100 | 100 | 100 | 9.9 |
+| 2020 | 47 | 52 | 38 | 55 | 4.6 |
+| 2022 | 65 | 69 | 62 | 74 | 6.4 |
+| 2023 | 72 | 81 | 70 | 86 | 7.1 |
+| 2024 | 79 | 86 | 72 | 93 | 7.7 |
+
+The path is a classic pandemic V with a long right shoulder. The trough in 2020 cut rail harder than bus. The 2022–2024 climb favored bus and demand response; rail closed the year still near **70–72** of its 2019 level.
+
+## Size bands matter more than the national average
+
+National averages are pulled by a handful of very large urban reporters. Group full reporters by **2019 total UPT** and the recovery story splits:
+
+- **Mega urban (≥500M trips in 2019):** desk median index near **74**. These systems — New York City Transit foremost — still carry a large share of national UPT, so their incomplete recovery anchors the industry total.
+- **Large urban (50–500M):** median near **78**, with a wide band from rail-heavy underperformers (BART-style indices in the mid-50s) to bus-leaning Sun Belt agencies in the mid-80s.
+- **Mid-size (10–50M):** median near **88** — closer to the baseline, and often bus-dominated.
+- **Small urban (<10M):** median near **92**, with a visible right tail of agencies that **exceeded** 2019 after fare-free experiments or route redesigns.
+
+Put differently: the agencies closest to "back" are not the ones that move the national total. Mid-size and small systems can post 90–100+ indices while mega and large reporters still leave a **20–30 point** hole relative to 2019. That is why boardrooms in mid-size cities hear a different recovery story than congressional staffers reading the national NTD headline.
+
+Among the largest ~150 agencies by 2019 UPT, only about **7%** have returned to or surpassed their pre-pandemic trip counts. The median change in that universe is on the order of **−22%**. Recovery is real; full restoration is rare.
+
+## Bus recovered faster than rail — not the other way around
+
+A common intuition after every downtown revival story is that "rail is coming back first." The NTD/APTA mode cut says the opposite for the national stack.
+
+As of **December 2024** versus December 2019 (APTA Policy Brief, May 2025):
+
+- **Demand response:** ~**93**
+- **Bus (all):** ~**86**
+- **Light rail / streetcar:** ~**76**
+- **Heavy rail:** ~**71**
+- **Commuter rail:** ~**70**
+- **All rail (aggregate):** ~**72**
+
+Bus leads the all-rail aggregate by roughly **14 index points**. Heavy and commuter rail — the modes most tied to central-business-district office peaks — remain the softest. Light rail sits in between. Demand response, which never depended on five-day office towers, is nearest to full recovery.
+
+Agency-level mode splits echo the national pattern. In the curated panel, **bus-heavy** systems (bus ≥70% of 2019 UPT) cluster higher on the scatter than **rail-heavy** peers at similar size. CTA, WMATA, MBTA, SEPTA, and BART all show rail indices below their bus indices where both are separable. LA Metro, Houston METRO, and Miami-Dade — more bus-weighted — sit closer to the mid-80s overall.
+
+Local exceptions exist. APTA notes that MBTA **commuter rail** has, at times, led heavy/light rail recovery in Boston. Those exceptions do not overturn the national ordering: for the United States as a whole, **bus recovered faster than rail**.
+
+## Hybrid work shows up in ACS commute shares
+
+UPT counts every trip — errands, school, weekends, tourists. ACS **means of transportation to work** isolates the commute. Comparing 2019 and 2023 ACS public-transportation commute shares for selected metros shows where the office-peak hole is largest:
+
+- **San Francisco–Oakland:** roughly **−5.8** percentage points
+- **New York–Newark:** about **−4.8** points (still the highest absolute transit-commute share)
+- **Washington and Chicago:** around **−3.3** points each
+- **Houston and Phoenix:** small absolute drops on already thin baselines
+- **Tucson:** a rare flat-to-up tick alongside fare-free bus ridership above 2019
+
+Commute-share declines do not map one-for-one onto UPT indices — non-work trips returned faster in many networks — but they help explain why rail-heavy mega systems lag. When Tuesday–Thursday office occupancy stays below 2019, peak rail loads stay soft even if weekend and midday bus ridership looks healthier.
+
+## What the curated agency panel shows
+
+The dashboard's 24-agency panel is a desk sample spanning size bands, not a census of every NTD reporter. Rounded UPT totals are aligned to published annual agency figures and urban-area summaries.
+
+Illustrative anchors:
+
+- **NYCT** near **79** — large enough to set the national tone, with bus ahead of subway.
+- **CTA** near **66**, with rail weaker than bus — a Midwest rail-commute story.
+- **LA Metro** near **83** on a bus-weighted network.
+- **BART** near **55** — almost pure heavy rail into soft office peaks.
+- **MARTA** near **57**; **Valley Metro** near **60** — large systems still far from baseline.
+- **Houston METRO** and **Miami-Dade** in the mid-**80s** — Sun Belt bus networks closer to 2019.
+- **GRTC (Richmond)**, **Sun Tran (Tucson)**, **DASH (Alexandria)**, and **CDTA (Albany)** at or above **100** — small and mid systems that crossed the line, often with fare policy or bus-only networks.
+
+Filter the scatter to **rail-heavy** and the cloud drops; filter to **bus-heavy** and it lifts. Filter to **small** and the recovered dots (green) appear. The national 79 is an average of very different recoveries.
+
+## Caveats and how to read the index
+
+Several measurement cautions apply:
+
+1. **Unlinked trips double-count transfers.** A bus-to-rail journey is two UPT. Networks that redesign for more transfers can raise UPT without raising linked journeys. Linked-trip series (where available) are a useful cross-check but are not the NTD headline.
+2. **Agency boundaries and purchased transportation** can shift year to year. Mergers, new modes, and reporting changes move UPT even when passenger behavior is flat.
+3. **Fare-free periods** (Richmond, Tucson, and others) boost measured trips; treat those indices as policy-affected, not pure demand recovery.
+4. **Size bands are desk constructs** based on 2019 UPT thresholds. FTA does not publish an official "mega / large / mid / small" recovery product; medians here are derived from public agency totals.
+5. **2024 annuals and APTA monthly indices** are close but not identical windows. This piece uses ~79 for the national story and APTA's December mode cut for bus-vs-rail.
+6. **ACS commute shares** lag (2023 vs 2019 here) and cover workers only — not students, tourists, or off-peak riders.
+
+None of those caveats erase the central pattern: **large urban reporters remain furthest from 2019**, **bus leads rail**, and **national recovery is still a fifth short of the pre-pandemic trip count**.
+
+## What boards and funders should take from the size split
+
+If capital and operating decisions are framed only against the national 79, mega and large systems look "almost there" when many are actually in the **mid-60s to mid-70s**, while mid-size systems near **88** can look average when they are already closer to replacement levels. Mode mix compounds the error: a rail-heavy large agency at 70 and a bus-heavy mid-size agency at 90 are not in the same recovery regime.
+
+For service planning, the empty-seat wedge (VRM restored faster than UPT) argues for **peak restructuring** on CBD rail before blanket headway restoration. For equity and essential-worker service, the bus lead is a reminder that midday and coverage routes carried more of the pandemic floor — and more of the rebound.
+
+The UPT index versus 2019 is not a verdict on transit's usefulness. It is a size-and-mode map of how far demand has come back. On that map, mid-size America is nearer home than the largest urban reporters — and the bus, not the train, has been the faster vehicle.`,
+    tags: [
+      "NTD",
+      "transit ridership",
+      "unlinked passenger trips",
+      "APTA",
+      "agency size",
+      "bus vs rail",
+    ],
+    format: "data-story",
+    keyPoints: [
+      "National UPT ~79% of 2019 in 2024; ~7.7B trips vs ~9.9B baseline",
+      "Bus index ~86 vs rail ~72 (Dec 2024) — bus leads by ~14 points",
+      "Mid-size median ~88; mega urban median ~74; only ~7% of top 150 fully recovered",
+    ],
+  },
+  {
     id: "time-to-disposition-for-civil-jury-cases-2026",
     slug: "time-to-disposition-for-civil-jury-cases-2026",
     title:
