@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "afcars-exit-reasons-versus-median-time-in-care-2026",
+    marker: "Exit mix vs median months",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "emma-defaulted-municipal-par-by-sector-2026",
     marker: "Defaulted par share by sector",
     forbidden: "Loading interactive charts",

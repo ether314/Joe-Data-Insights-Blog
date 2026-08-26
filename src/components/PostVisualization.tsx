@@ -4285,6 +4285,21 @@ const EmmaDefaultedMunicipalParBySector2026Dashboard = dynamic(
   },
 );
 
+const AfcarsExitReasonsVersusMedianTimeInCare2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AfcarsExitReasonsVersusMedianTimeInCare2026Dashboard"
+    ).then((m) => m.AfcarsExitReasonsVersusMedianTimeInCare2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5412,6 +5427,10 @@ export function PostVisualization({
 
   if (type === "emma-defaulted-municipal-par-by-sector-2026") {
     return <EmmaDefaultedMunicipalParBySector2026Dashboard />;
+  }
+
+  if (type === "afcars-exit-reasons-versus-median-time-in-care-2026") {
+    return <AfcarsExitReasonsVersusMedianTimeInCare2026Dashboard />;
   }
 
   return null;

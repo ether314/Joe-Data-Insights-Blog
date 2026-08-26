@@ -2,6 +2,85 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "afcars-exit-reasons-versus-median-time-in-care-2026",
+    slug: "afcars-exit-reasons-versus-median-time-in-care-2026",
+    title:
+      "Foster Care Exits: Reunification Fell to 44% as Median Stay Lengthened",
+    excerpt:
+      "After FY2019, national median months in care at exit rose from 15.5 to 17.5 by FY2022 while reunification's share of discharges slipped from 47% to 44% by FY2023. Adoption held near 26–27%; emancipation peaked at 9% then eased.",
+    category: "Politics",
+    themeId: "foster-care-exits-afcars",
+    imageUrl:
+      "/images/politics-afcars-exit-reasons-versus-median-time-in-care-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial chart of foster-care exit mix bars against a rising median months-in-care line for FY2019–FY2023",
+    publishedAt: "2026-08-26T12:00:00Z",
+    featured: true,
+    visualization: "afcars-exit-reasons-versus-median-time-in-care-2026",
+    layout: "default",
+    content: `Federal foster-care statistics are rarely read as a single time series of **two clocks**. One clock is the **exit mix**: the share of children who leave care through reunification with a parent or primary caretaker, adoption, guardianship, living with another relative, or emancipation (aging out without a permanent family exit). The other is **time in care at exit** — especially the national **median months** from the start of the foster-care episode to discharge. After FY2019, those clocks moved in different registers. Median months in care for children exiting rose from **15.5** in FY2019 to **17.5** in FY2021 and held at **17.5** in FY2022, while the reunification share of discharges drifted from **47%** toward **44%** by FY2023. Adoption's share edged from **26%** to **27%**; emancipation rose to **9%** in the pandemic window and later eased. The interactive dashboard above plots that dual story from Children's Bureau AFCARS reports and the FY2023 dashboard printable.
+
+The core policy question is not whether exits "got better" in the abstract. It is whether the **composition of exits** shifted as the typical exit episode lengthened — and whether that shift is large enough to treat as a structural change rather than noise around a still reunification-dominated system.
+
+## Two clocks: exit mix and median months
+
+AFCARS (the Adoption and Foster Care Analysis and Reporting System) is the Children's Bureau's case-level census of children served by title IV-E agencies. Annual report tables publish, among other things, the **reason for discharge** for children exiting during the federal fiscal year and the **mean and median months in care** for that exit cohort. Those are cross-sectional exit-year statistics, not a longitudinal survival curve for a single entry cohort — but they are the figures Congress, states, and advocates most often cite when asking whether permanency practice is speeding up or slowing down.
+
+From FY2019 through FY2022 (legacy AFCARS report tables), the national median for children exiting moved as follows:
+
+| Fiscal year | Exits (report N) | Median months in care | Reunification | Adoption | Emancipation | Guardianship |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| FY2019 | 248,669 | 15.5 | 47% | 26% | 8% | 11% |
+| FY2020 | 224,396 | 15.9 | 48% | 25% | 9% | 10% |
+| FY2021 | 214,971 | 17.5 | 47% | 25% | 9% | 12% |
+| FY2022 | 201,372 | 17.5 | 46% | 27% | 9% | 11% |
+| FY2023* | 184,095 | ~18 (est.) | 44% | 27% | 8% | 10% |
+
+*FY2023 detailed shares follow AFCARS 2020 reporting rules in the dashboard printable (No. 31, as of May 1, 2025); Washington and Wyoming were absent from that detailed snapshot. The FY2023 median is estimated from the published time-in-care distribution because a single national median was not printed in the same form as Reports #27–#30.
+
+The median's **two-month** step-up from FY2019 to FY2021 is the cleanest single number in the series. The mix shift is smaller in percentage points but directionally consistent: reunification's dominance softened, adoption regained and then held a slightly higher share, and emancipation's share of a shrinking exit pool stayed elevated through FY2022.
+
+## Reunification slipped while the exit pool shrank
+
+Reunification remains the plurality exit. Nothing in the national series suggests a collapse of family reunification as the modal pathway. What changed is the **margin**. FY2019's **47%** reunification share (about **117,010** children in Report #27) became **46%** by FY2022 (**91,115** children) and **44%** (**80,857**) in the FY2023 dashboard printable. Absolute reunification exits fell faster than the share alone implies because total exits fell — from roughly a quarter-million in FY2019 to about **184,000** on the FY2023 glance ladder.
+
+That volume context matters for politics as much as for practice. A one- or three-point share shift in a growing system can mean more reunifications in absolute terms. Here the system was **contracting**: entries, in-care stocks on September 30, and exits all declined on the Numbers at a Glance ladder from FY2019 through FY2023. Fewer children entered; fewer exited; the stock of children in care on the last day of the fiscal year fell from about **426,000** to about **343,000**. Against that backdrop, a lower reunification *share* of a smaller exit pool is a softer signal about family preservation than raw percentages alone suggest — and a sharper signal about who still remains in the exit mix.
+
+Living with other relatives (legacy wording) or living with relative(s) under AFCARS 2020 stayed near **6–7%**. Guardianship oscillated between **10%** and **12%**. Those kin and guardianship channels did not absorb the entire reunification softening; adoption and, in some years, emancipation took part of the residual.
+
+## Adoption's share edged up as absolute adoptions fell
+
+Adoption's **share** of exits rose from **26%** in FY2019 to **27%** in FY2022 and FY2023, even as **absolute** adoption exits declined on the glance ladder (about **64,200** in FY2019 to about **50,200** in FY2023). That is the classic shrinking-denominator pattern: adoption became a slightly larger slice of a smaller pie.
+
+For desks that track title IV-E adoption incentives or court backlog narratives, the dual reading is mandatory. A rising adoption *share* can coexist with fewer finalized adoptions if entries and the in-care stock are falling faster. Report #30 and the FY2023 printable both show adoption exits near the low-50,000s after a mid-decade plateau above 60,000. The mix story ("adoption is a larger share of exits") and the volume story ("fewer children exit to adoption") are both true; they answer different questions.
+
+The Children's Bureau's multi-year follow-up brief on time to permanency underscores why adoption and reunification never move on the same clock. In entry cohorts followed for five years, reunification's median time to exit was about **seven months**, while adoption's median was about **27 months**. When an exit-year median for *all* exits rises, the composition can tilt toward pathways that take longer — without any single pathway's internal pace necessarily worsening. The dashboard's "permanency pace" panel isolates that cohort statistic so it is not confused with the annual exit-cohort median.
+
+## Emancipation rose, then partially reversed
+
+Emancipation — exits without reunification, adoption, or guardianship, typically as youth age out — is the outcome most often treated as a permanency failure in federal performance frameworks. Its national share of discharges was **8%** in FY2019, **9%** in FY2020–FY2022, and **8%** again in the FY2023 printable. Absolute emancipation exits fell from about **20,400** to about **15,600** over that span, tracking the smaller exit pool.
+
+The pandemic window is visible here. FY2020 and FY2021 compressed court calendars, visitation, and some reunification services even as entries fell. A higher emancipation share in those years is consistent with delayed permanency work for older youth, not necessarily with a permanent redesign of aging-out policy. By FY2023 the share had returned to the FY2019 level even though the estimated median stay remained elevated — a reminder that **mix** and **median** can decouple again on the way down.
+
+## Why the median lengthened after FY2019
+
+Three forces sit behind the median's step-up, and AFCARS national tables alone cannot fully separate them.
+
+First, **case mix**. When short-stay reunification exits become a smaller share of the exit pool, the median of the remaining pool rises even if every pathway's internal duration is unchanged. Reunification's three-point share decline from FY2019 to FY2023 is large enough to matter at the median, especially because reunification is the fastest major pathway in cohort studies.
+
+Second, **system throughput**. Entries fell sharply after FY2019. A system that brings fewer new short-stay cases onto the caseload will, all else equal, see exit cohorts that look older in episode duration — more of the exits are children who were already in care when the entry wave slowed. The glance ladder's drop in entries (about **252,000** to **175,000**) is the scale of that intake change.
+
+Third, **reporting regime**. FY2023 detailed tables use AFCARS 2020 definitions and exclude two states from the May 2025 detailed snapshot. Cross-walking FY2022 legacy shares to FY2023 AFCARS 2020 shares requires caution: living-arrangement and discharge categories were redesigned. The dashboard flags FY2023 points in amber on the scatter panel for that reason. Treat FY2023 as directionally consistent with the FY2019–FY2022 legacy path, not as a perfectly continuous micro-series.
+
+## What the dual chart answers — and what it does not
+
+Did the mix of reunification, adoption, and emancipation shift as median months in care moved after FY2019? **Yes, modestly, and in a coherent direction.** Median months rose about **two months** from FY2019 to FY2021 and plateaued through FY2022; reunification's share softened; adoption's share edged up; emancipation's share rose then partially reversed. The shifts are measured in single-digit percentage points, not a wholesale replacement of reunification by other exits.
+
+What the national dual chart does **not** answer: whether any given state's courts slowed reunification hearings; whether kinship guardianship substituted for reunification in particular jurisdictions; whether racial disparities in time to permanency widened; or whether NCANDS maltreatment referral patterns explain the entry decline. Those questions need state files, entry-cohort survival methods, and maltreatment surveillance — not only the national exit-year crosstabs.
+
+Caveats worth keeping on the page: preliminary AFCARS estimates revise as states resubmit; report Ns and glance-ladder Ns can differ slightly by vintage; FY2023's estimated median is a distribution-based approximation; and "other" residual categories (transfer, runaway, death, missing) are small but not zero. The honest headline is therefore not a crisis slogan. It is a calibration: **as the typical exit stayed longer, reunification became a slightly smaller share of a shrinking exit pool, while adoption held a slightly larger share of that pool.** That is the national AFCARS reading after FY2019 — and the frame the dashboard is built to keep honest as later fiscal years revise.`,
+  },
+  {
     id: "emma-defaulted-municipal-par-by-sector-2026",
     slug: "emma-defaulted-municipal-par-by-sector-2026",
     title:
