@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "time-to-disposition-for-civil-jury-cases-2026",
+    marker: "Headline — median 495 days to disposition",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "usps-cost-coverage-by-product-class-2026",
     marker: "Cost coverage % by class",
     forbidden: "Loading interactive charts",

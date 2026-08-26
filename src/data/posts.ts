@@ -2,6 +2,124 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "time-to-disposition-for-civil-jury-cases-2026",
+    slug: "time-to-disposition-for-civil-jury-cases-2026",
+    title:
+      "Civil Jury Disposition Time: Median State Took 495 Days in 2023 — 18% Slower Than 2019",
+    excerpt:
+      "Across a 22-state panel aligned to NCSC CSP jury-track reporting, median filing-to-disposition time for civil jury cases fell from a 640-day peak in 2021 to 495 days in 2023 — yet sixteen states remain slower than their pre-pandemic baselines.",
+    category: "Politics",
+    themeId: "state-civil-court-backlogs",
+    imageUrl:
+      "/images/politics-time-to-disposition-for-civil-jury-cases-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic courthouse timeline showing amber median 495-day civil jury disposition bar, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-26T05:00:00Z",
+    featured: true,
+    visualization: "time-to-disposition-for-civil-jury-cases-2026",
+    layout: "default",
+    content: `When a litigant demands a jury in a civil case, the clock starts at filing — and it often does not stop until a verdict, dismissal, or settlement closes the matter. **Time to disposition** is CourTools Measure 3 in the National Center for State Courts (NCSC) Court Statistics Project (CSP): elapsed calendar days from the initiating event to the final order. For jury-track civil dockets, that interval captures discovery battles, motion practice, trial-calendar queues, and the post-verdict tail — not just the hours jurors spend in the box.
+
+State administrative offices of the courts (AOCs) publish disposition-time tables unevenly. Some report median days for all civil; a smaller subset breaks out **jury-demand or jury-track** matters separately. This desk assembles a **22-state reporting panel** where either a disclosed jury cut exists or a reconstruction from bench/jury splits and trial-calendar suspension logs is defensible. The interactive dashboard above lets you trace the national median path with an interquartile band, rank states by 2023 median days, scatter clearance rates against disposition time, chart slowdown deltas versus 2019, and compare regional medians at three anchor years.
+
+## The median did not return to 2019
+
+Across the panel, the **median state needed 495 days** to dispose a civil jury-track case in 2023. That is **18% longer** than the 420-day baseline recorded in 2019 and **23% below** the 640-day peak reached in 2021, when trial moratoria and remote-hearing backlogs stretched calendars from Albany to Las Vegas.
+
+The recovery is real but incomplete. Seven years of data show a classic pandemic distortion: a sharp jump in 2020–2021 as jury trials paused or ran at reduced capacity, followed by partial normalization in 2022–2023 as courts reopened trial lanes and cleared settlement conferences. Yet the 2023 median still sits **above the pre-2020 interquartile band** (p25–p75 of roughly 335–525 days in 2019). In plain terms: the typical jury-track civil case in a reporting state still spends more than a year on the docket before disposition — and in several large states, closer to two.
+
+| Anchor year | Panel median days | p25–p75 band | Median clearance rate |
+| --- | ---: | ---: | ---: |
+| 2019 (baseline) | 420 | 335–525 | 100% |
+| 2021 (peak) | 640 | 495–820 | 85% |
+| 2023 (latest) | 495 | 385–630 | 101% |
+
+Clearance rates — dispositions divided by filings for the same jury-track category — fell to **85%** at the median in 2021 and recovered to **101%** by 2023. That rebound explains part of the disposition-time improvement: courts disposed more cases relative to new filings. But clearance alone did not reset the clock. Cases that entered the pipeline during the pause remained, and their long tails kept medians elevated even as new filings normalized.
+
+## Sixteen states got slower — not just bigger
+
+Pending inventory tells you how many cases wait; **disposition time tells you how long each case waits**. The two metrics correlate but diverge. A court can shrink pending by disposing old cases quickly while new cases still face long queues — or hold pending flat while each case ages.
+
+In 2023, **16 of 22 panel states** recorded a higher median jury-disposition time than in 2019. Six states — Minnesota, Wisconsin, Oregon, Indiana, and others where clearance exceeded 107% — beat or matched their baselines. The split is regional but not uniform: the Northeast median climbed **127 days** versus 2019; the Midwest median added only **9 days**.
+
+**New York** leads the ladder at **718 median days** in 2023, up **180 days** (+33%) from 2019. Supreme Court civil jury tracks in downstate districts faced extended trial moratoria and a backlog of cases that retained pre-pandemic filing dates — inflating median elapsed time even as new trials resumed. **Nevada** shows the largest proportional slowdown: **+188 days** (+46%), concentrated in Clark County's strained jury calendar.
+
+At the other end, **Oregon** improved by **58 days** (−18%), and **Minnesota** by **45 days** (−16%). Both states maintained clearance rates above 108% and prioritized jury-track scheduling after 2021 — suggesting that operational focus, not merely caseload volume, drives disposition-time outcomes.
+
+## Why jury-track medians exceed bench civil
+
+Jury-demand cases carry structural delays bench trials avoid. Juror summons, voir dire, and the constraint of shared trial calendars add weeks before the first witness speaks. Complex discovery — expert reports, Daubert hearings, class-certification fights — clusters in jury-eligible matters with higher stakes.
+
+State AOC reports also differ in **measurement windows**. Some count days to first trial setting; others count to final order including post-verdict motions. NCSC CSP guidance favors filing-to-disposition for comparability, but states that pause the clock during alternative-dispute-resolution stays will show shorter medians than states that keep counting. This desk applies filing-to-disposition consistently and flags states where the AOC uses a different anchor in notes.
+
+Jury trial volume matters for interpretation. **Florida** disposed roughly **4,120** civil jury trials in 2023 against **310** in Nevada. A small state with high per-case complexity can show long medians with few trials; scatter plots in the dashboard encode trial volume as bubble size so readers do not over-weight thin denominators.
+
+## Clearance recovered before the clock did
+
+The clearance scatter panel plots **2023 clearance rate** against **median disposition days**. States in the upper-left quadrant — high clearance, lower median days — cleared the pandemic backlog efficiently. **Minnesota**, **Wisconsin**, and **Virginia** (where comparable civil metrics show strong clearance) cluster there.
+
+States in the lower-right — clearance below 95%, medians above 600 days — face compounding strain: **New York**, **Nevada**, **South Carolina**, and **Massachusetts**. South Carolina's **+165-day** delta (+42%) reflects rural circuit trial calendars that never fully reopened weekly jury slots after 2021.
+
+A clearance rate above 100% means a court disposed more jury-track cases than it filed in the year — drawing down inventory. That is necessary but not sufficient for shorter medians. Old cases disposed in 2023 may have filed in 2019 or 2020; their elapsed times inflate the median even as clearance looks healthy. Policy makers watching only clearance can miss lingering duration risk.
+
+## Regional calendars diverge
+
+Grouped bars compare regional medians at **2019**, **2021**, and **2023**. The **Northeast** moved from roughly **430 days** to **680 days** at peak and **550 days** in 2023 — the slowest regional median and the largest residual gap versus baseline. **Midwest** panels show the most complete recovery: **332 days** in 2023, nearly matching pre-pandemic pace.
+
+The **South** spans wide internal variance: Texas and Georgia near **420–465 days**, while South Carolina and Nevada remain above **560 days**. **West** states split between California's **645-day** median (second-longest in the panel) and Oregon's **260-day** improvement story.
+
+Urbanization, judicial vacancies, and specialty docket rules explain part of the spread. California's unlimited civil jury track combines complex commercial litigation with constrained trial departments in Los Angeles and San Francisco. Colorado and Washington recovered faster than California despite similar West-region labels — underscoring that **state operational choices** dominate regional averages.
+
+## What changed in the pipeline
+
+Three forces stretched jury disposition time between 2019 and 2023:
+
+**Trial suspensions.** COVID-19 orders halted or limited in-person jury trials for multi-month stretches in 2020 and intermittently in 2021. Elapsed time kept accruing for pending cases even when trial dates were continued sine die.
+
+**Hybrid hearings.** Remote proceedings cleared some motion calendars faster but rarely substituted for jury trials. Courts that prioritized remote bench work over jury scheduling saw jury-track medians diverge from bench civil.
+
+**Staffing and specialty courts.** Judicial vacancies, retiring court reporters, and competing criminal calendars pulled resources from civil jury lanes. States that maintained authorized judge counts but lost support staff often show longer medians without higher pending counts per judge.
+
+Post-2022, many AOCs added **mandatory settlement conferences** and **expedited jury tracks** for lower-dollar claims. Early returns are mixed: Florida's median fell from **695** to **528 days** between 2021 and 2023, but remains **83 days** above 2019.
+
+## Reading the headline for reform debates
+
+Legislatures and bar commissions increasingly cite **disposition time** in access-to-justice metrics — alongside pending per judge and clearance. A median near **500 days** means many cases take **18 months or more**, before appeals. For contract disputes, employment claims, and insurance coverage fights, that delay shifts settlement leverage and carrying costs.
+
+Reform proposals — e-discovery limits, presumptive mediation, additional trial judges — should be evaluated against baseline trends, not peak distortions. The panel's **18%** excess versus 2019 is a cleaner target than comparing to 2021's **640-day** spike.
+
+| State (2023) | Median days | Δ vs 2019 | Clearance % | Jury trials |
+| --- | ---: | ---: | ---: | ---: |
+| New York | 718 | +180 | 94 | 1,840 |
+| Nevada | 598 | +188 | 88 | 310 |
+| California | 645 | +125 | 93 | 2,890 |
+| New Jersey | 612 | +127 | 96 | 920 |
+| Oregon | 260 | −58 | 111 | 480 |
+| Minnesota | 235 | −45 | 110 | 510 |
+
+Disclosed rows (New Jersey among them) anchor the panel; estimated rows blend CSP peer structure with partial AOC prints. Toggle **Disclosed only** in the dashboard to see how conclusions shift when estimates drop out.
+
+## Caveats and scope limits
+
+This analysis covers **general-jurisdiction civil jury-track or jury-demand** matters in **22 reporting states**. It excludes domestic relations, probate, juvenile, and limited-jurisdiction small claims. Federal district courts are out of scope — their disposition metrics follow separate AO reporting.
+
+**Median days** suppress outliers: a handful of multi-year asbestos or antitrust trials do not move the median as much as the mean would. States with mandatory arbitration for small civil claims may show shorter jury-track medians because only high-stakes cases remain on the jury path.
+
+Estimated rows use CSP peer medians and trial-calendar suspension logs where AOCs withhold jury-specific cuts. Confidence labels appear in source notes; do not treat estimated values as precision to the day.
+
+Finally, **2024 preliminary prints** suggest continued improvement (panel median near **468 days** in early data), but year-end filings can shift medians. This post locks on **2023** as the latest comparable AOC cycle across the panel.
+
+## Methodology
+
+**Disposition time** = calendar days from filing (or initiating event per state AOC definition) to final disposition order for civil jury-track cases. **Jury-track** includes cases with a jury demand filed or designated to a jury trial calendar.
+
+**Sources:** NCSC Court Statistics Project and CourTools Measure 3 guidance; state AOC annual statistical reports (Florida OSCA SRG, California CSR, Texas OCA, New Jersey Caseload Reference Guide, New York UCS); trial-calendar administrative orders 2020–2022.
+
+**Panel selection:** States with disclosed jury-disposition medians or reconstructable bench/jury splits plus CSP civil category alignment. Twenty-two states meet the threshold; others lack jury-specific disposition cuts.
+
+Use the dashboard controls to filter by Census region, restrict to disclosed rows, isolate states slower than 2019, and switch among five chart panels — disposition band, state ladder, clearance scatter, slowdown delta, and regional year comparison — to test whether your state's jury backlog shows up in duration, clearance, or both.`,
+  },
+  {
     id: "usps-cost-coverage-by-product-class-2026",
     slug: "usps-cost-coverage-by-product-class-2026",
     title:
