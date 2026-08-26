@@ -332,7 +332,8 @@ export interface Post {
     | "cso-communities-versus-remaining-overflow-volume-2026"
     | "nfip-repetitive-loss-properties-versus-policies-in-force-2026"
     | "coffee-and-carbonated-drink-cpi-versus-typical-wages-2026"
-    | "us-caffeine-drink-disappearance-versus-beverage-cpi-2026";
+    | "us-caffeine-drink-disappearance-versus-beverage-cpi-2026"
+    | "sports-admissions-cpi-versus-median-weekly-earnings-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

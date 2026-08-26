@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "sports-admissions-cpi-versus-median-weekly-earnings-2026",
+    marker: "Ticket index vs paycheck",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-caffeine-drink-disappearance-versus-beverage-cpi-2026",
     marker: "Gallons and pounds versus beverage CPI",
     forbidden: "Loading interactive charts",

@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "sports-admissions-cpi-versus-median-weekly-earnings-2026",
+    slug: "sports-admissions-cpi-versus-median-weekly-earnings-2026",
+    title:
+      "Sports Ticket Prices Trail Median Wages by 27 Index Points",
+    excerpt:
+      "On a 2019=100 scale, BLS admissions to sporting events sit at 110 in 2026Q2 while median usual weekly earnings print 137. Gate CPI has not outrun the typical paycheck — it lags by 27 points.",
+    category: "Economics",
+    themeId: "sports-admissions-cpi",
+    imageUrl:
+      "/images/economics-sports-admissions-cpi-versus-median-weekly-earnings-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero with amber ticket stub and teal wage trail, sports index at 110 trailing wages at 137 on a 2019=100 scale",
+    publishedAt: "2026-08-26T21:00:00Z",
+    featured: true,
+    visualization: "sports-admissions-cpi-versus-median-weekly-earnings-2026",
+    layout: "default",
+    content: `The brief that opens this file asks whether sports-admissions CPI has run *ahead* of median usual weekly earnings since 2019. The Bureau of Labor Statistics answer, as of **2026Q2**, is the opposite: admissions to sporting events sit at **109.9** on a 2019 = 100 scale, while seasonally adjusted median usual weekly earnings of full-time wage and salary workers sit at **137.2**. That is a **−27.3** index-point gap. Broad all-items CPI-U lands at **130.7** on the same rebase — so gate prices have also trailed *average* inflation, not only paychecks.
+
+The dashboard above races those three series, then opens a gap waterline, a ticket-burden path, a seasonal radar, a wage-versus-sports scatter, and a two-point slope from 2019 averages to the latest quarter. The story is not that tickets feel cheap in cash terms. It is that **paychecks and the overall price level have outrun this particular CPI stratum** for most of the post-2019 window.
+
+## How the race is scored
+
+Every series is rebased to its **2019 calendar-year average = 100**. Sports admissions use CPI-U item **CUUR0000SS62032** (admission to sporting events, U.S. city average, not seasonally adjusted). All-items CPI-U uses **CUUR0000SA0**. Wages use CPS **LES1252881500** — median usual weekly earnings for full-time wage and salary workers, seasonally adjusted, published as quarterly dollars and then indexed. The 2019 wage base is **$917** per week; **2026Q2** prints **$1,258**.
+
+A sports reading of 110 means the admissions item basket costs about **10%** more than in 2019 on average. A wage reading of 137 means the median full-time weekly check is about **37%** higher. The **gap** is sports index minus wage index in percentage points. The **ticket-burden** index is sports ÷ wages × 100, still anchored at 2019 = 100 — a compact way to ask whether a typical paycheck buys more or less gate access than it did at the starting line.
+
+Indexing is a storytelling choice, not a claim that households buy only tickets or that every metro prices baseball and hockey the same way. It does put a volatile entertainment stratum and a labor-market median on a common language.
+
+## Venue shutdowns, then a soft reopen
+
+Sports admissions are not a smooth series. **July–December 2020** months are unpublished for CUUR0000SS62032 as stadiums and arenas closed or operated without normal paid attendance — so 2020 annual averages here use **first-half months only**. Through those H1 prints the sports index was still near **104**, roughly in line with wages near **107**.
+
+**2021** and **2022** tell a quieter story than headline inflation. Annual sports admissions averaged **98.1** and **95.8** respectively — *below* the 2019 starting line — while wages climbed to **108.8** and **115.4** and all-items CPI pushed to **106** and **114.5**. Dynamic pricing, empty-seat promotions, and composition of which events BLS sampled can all pull an item index down even when a playoff ticket in a sold-out building feels dear. The measured national admissions stratum simply did not track the 2021–22 CPI spike the way food, energy, and shelter did.
+
+By **2023** sports recovered to **103.7** annual average — back above 100 — but wages were already at **121.7**. The quarterly gap trough sits near **−27.5** points in **2023Q2**. That is the deepest “tickets behind paychecks” reading in the sample before the 2026 soft patch.
+
+## The 2024–26 rebound that still lost the race
+
+**2024** is the best year for sports admissions on this rebase: annual average **113.7**, with autumn months pushing the raw index into the high 260s and low 270s (December 1997 = 100 on BLS’s native scale). Wages averaged **126.4**. The gap narrowed to about **−13** points on annual averages — still negative, but less lopsided than 2022.
+
+**2025** opened with a sharp seasonal spike. March 2025 sports YoY hit roughly **+26%**, and the monthly index briefly cleared **130** on the 2019 scale. That print is real in the CPI file; it is also the kind of within-year pulse a radar chart is built for. By mid-year the index cooled, and the October 2025 cell is missing because of the federal appropriations lapse. Using the published months, 2025 still averages only about **116** for sports against wages near **132**.
+
+**2026Q1** briefly lifted sports to **116.3** while wages sat at **134.5**. **2026Q2** then slipped to **109.9** against wages at **137.2** — reopening a **−27.3** point gap, essentially matching the 2023 trough. Year-to-date 2026 (sports through July, wages through Q2) averages near **113** for tickets and **136** for pay. The headline is stable across windows: **admissions have not led wages**.
+
+## What admissions to sporting events actually counts
+
+CPI item indexes are **price indexes**, not posted face values for a specific seat. BLS field staff sample admission prices across the sporting-events stratum in the CPI market basket — professional and amateur events as the survey design captures them — and construct an index with a December 1997 = 100 native base. Rebasing to 2019 does not change month-to-month percent changes; it only resets the storytelling zero.
+
+That means the series can move when the mix of sampled events changes, when fees are bundled differently, or when promotions dominate a collection period. It is **not** a futures curve for NFL secondary-market seats, not an arena-naming-rights index, and not a measure of concession or parking inflation (those live elsewhere in CPI). Treat CUUR0000SS62032 as the Bureau’s best national read on *getting through the gate*, not on the full night-out bill.
+
+Median usual weekly earnings are likewise a specific object. CPS asks full-time wage and salary workers for usual weekly pay before taxes; BLS publishes the median. Composition shifts — who holds full-time jobs — can move the median even when no individual’s pay changes. Self-employed workers and many part-timers are out of scope. For a typical-paycheck-versus-typical-gate story, it remains a cleaner anchor than average hourly earnings of production workers, but it is still not household income.
+
+## Ticket minutes — burden math
+
+Define **ticket burden** as sports index ÷ wage index × 100. At 2019 the ratio is 100 by construction. By **2026Q2** it prints **80.1**: covering the admissions stratum takes about **20% fewer** wage-index units than at the starting line. Annual burden bottoms near **83** in 2022 and again in the 2026 YTD window, with a partial recovery toward **90** in 2024 when gate prices firmed faster than pay for a stretch.
+
+One useful translation: if a median worker’s paycheck and the admissions basket both started at 100 tokens in 2019, the worker now has 137 tokens of pay and faces a 110-token gate. The *relative* price of admission fell even though the *absolute* index rose. Households that buy many tickets in expensive metros may still feel squeezed; the national relative-price race says wages won.
+
+## Annual path — indexes at a glance
+
+| Year | Sports | Wages | All-items | Sports−wages | Burden |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 100.0 | 100.0 | 100.0 | 0.0 | 100.0 |
+| 2020* | 104.3 | 107.3 | 101.2 | −3.0 | 97.2 |
+| 2021 | 98.1 | 108.8 | 106.0 | −10.6 | 90.2 |
+| 2022 | 95.8 | 115.4 | 114.5 | −19.6 | 83.0 |
+| 2023 | 103.7 | 121.7 | 119.2 | −18.0 | 85.2 |
+| 2024 | 113.7 | 126.4 | 122.7 | −12.7 | 89.9 |
+| 2025† | 116.2 | 131.9 | 125.9 | −15.7 | 88.1 |
+| 2026‡ | 112.8 | 135.8 | 129.5 | −23.0 | 83.1 |
+
+\*2020 sports average uses January–June only (later months unpublished). †2025 omits the missing October CPI cell. ‡2026 sports through July; wages through Q2. Gaps and burdens use annual averages of the underlying quarterly or monthly constructs described above.
+
+## Caveats — what this gap is not
+
+Several limits keep the print honest. **First**, CPI admissions are a national urban average; a single city’s playoff premium can diverge sharply from the U.S. city average. **Second**, mid-2020 holes and the October 2025 missing cell thin the sample — quarterly CPI averages use whatever months BLS published. **Third**, median weekly earnings embed labor-force composition; pandemic employment shifts inflated the median in 2020 even as many workers lost hours. **Fourth**, seasonal spikes (early 2025) can dominate a monthly YoY without rewriting the multi-year gap. **Fifth**, 2019 is a convenient base, not a structural equilibrium — choosing 2015 or 2021 would change levels but not the fact that wages and all-items have outpaced this stratum since the reopen. **Sixth**, this is not a welfare score for fans, teams, or cities; it is a relative-price race between one CPI item and one CPS earnings median.
+
+None of those caveats flip the sign. On the shared 2019 = 100 scale, **sports-admissions CPI has run behind median weekly earnings — by roughly twenty-seven points at the latest quarter**.
+
+## What to watch next
+
+Three checkpoints keep the dashboard current. Watch whether autumn 2026 admissions months revisit the 2024 high-260s on BLS’s native scale — that would lift the sports index without requiring wage growth to stall. Watch the next CPS usual-weekly-earnings release for whether the wage index keeps clearing 137. And watch whether all-items CPI continues to sit between the two: a world where tickets stay soft while broad inflation and pay climb is a different relative-price regime than 2022’s across-the-board spike.
+
+For a one-line desk note: **sports admissions at 110, wages at 137, all-items at 131 — same 2019 starting line, and the gate is the laggard.**
+`,
+  },
+  {
     id: "us-caffeine-drink-disappearance-versus-beverage-cpi-2026",
     slug: "us-caffeine-drink-disappearance-versus-beverage-cpi-2026",
     title:
