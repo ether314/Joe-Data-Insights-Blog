@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "usace-lock-unavailability-versus-barge-tonnage-2026",
+    marker: "USACE LPMS · lock hours vs barge tons",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "epa-pm2-5-smoke-days-versus-population-2026",
     marker: "Person-days unhealthy AQI",
     forbidden: "Loading interactive charts",

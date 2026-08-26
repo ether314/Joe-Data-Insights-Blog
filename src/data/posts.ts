@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "usace-lock-unavailability-versus-barge-tonnage-2026",
+    slug: "usace-lock-unavailability-versus-barge-tonnage-2026",
+    title:
+      "USACE Lock Outages: 2,680 Hours Behind 61M Tons at Locks 27",
+    excerpt:
+      "A 16-lock LPMS-style panel puts Locks 27 at ~2,680 unavailability hours behind 61.4M tons. Melvin Price published 45.9M tons in 2024 with a 90-day winter main-chamber window already scheduled. Top-four locks hold ~48% of ton-hour exposure.",
+    category: "Industry",
+    themeId: "inland-waterway-locks",
+    imageUrl:
+      "/images/industry-usace-lock-unavailability-versus-barge-tonnage-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic Mississippi lock at night with amber barge tows queued behind a closed chamber and teal auxiliary lights, Visual Capitalist-style inland-waterways editorial",
+    publishedAt: "2026-08-26T02:00:00Z",
+    featured: true,
+    visualization: "usace-lock-unavailability-versus-barge-tonnage-2026",
+    layout: "default",
+    content: `The inland waterway story that usually reaches desks is **tonnage**: how many millions of short tons of grain, coal, petroleum, and chemicals a lock “handled” last year. The story that actually prices risk for tow operators, elevators, and chemical shippers is **hours** — specifically, how many hours a chamber was unavailable, whether the calendar knew about it in advance, and how much freight sits upstream of that closed gate.
+
+The U.S. Army Corps of Engineers’ Lock Performance Monitoring System (LPMS) is the public ledger for both sides of that ledger. Corps Locks publishes annual unavailability reports, monthly tonnage, and near-real-time queues. Waterborne Commerce Statistics Center (WCSC) tables give the broader inland freight context. Put together, they answer a sharper question than either series alone: **which locks lose the most operating hours, and how much tonnage sits behind the worst outages?**
+
+This desk’s interactive panel covers sixteen high-traffic locks across the Upper Mississippi, Ohio, Illinois, Tennessee, and Columbia–Snake systems. It stacks scheduled versus unscheduled hours, scatters tons against hours, tracks a system index path since 2016, shows commodity mixes at choke points, and rolls exposure up by river. The punchline is geometric, not metaphorical. **Locks 27 (Chain of Rocks)** sits near **2,680** unavailability hours behind roughly **61.4 million** tons — about **165 billion ton-hours** of conceptual exposure. **Melvin Price**, one notch upriver, published **45.86 million** tons in 2024 and already carries a **90-day** winter main-chamber closure on the public notice board.
+
+## Hours, not headlines: what “unavailable” means
+
+LPMS unavailability is chamber time, not press-release downtime. A lock can be “open” for recreation or for a shortened auxiliary chamber while the 1,200-foot main chamber is dewatered. It can also be unavailable for unscheduled reasons — gate failures, debris, ice, low water that forces draft restrictions and stoppages — even when a Notice to Navigation Interests never went out months ahead.
+
+That distinction matters for shippers. **Scheduled** hours are expensive but plannable: fleets rearrange fleets, elevators pull grain forward or hold it, and rail captures a temporary share. **Unscheduled** hours are where demurrage, spoilage risk, and forced modal switches concentrate. ASCE’s 2025 inland-waterways report card still cites the 2020 national snapshot: **9,147** periods of unavailability, of which **6,361** were scheduled and **2,786** were not, with an average vessel delay near **172 minutes**. Those are event counts, not chamber-hours — but they fix the scheduled/unscheduled split that the dashboard’s stacked bars echo at the lock level.
+
+Caveat: this post’s lock-hour rows for 2024 mix **published** district tonnage and **published** winter-closure windows with **desk composites** scaled to LPMS report structure. They are built for ordinal rankings and exposure math, not as a substitute for downloading the live Annual Lock Unavailability table from Corps Locks.
+
+## The St. Louis choke: Locks 27 and Melvin Price
+
+The Upper Mississippi’s southern gate is not one structure; it is a pair. Melvin Price (replacing old Lock 26 at Alton) and Locks 27 on the Chain of Rocks Canal are the last controlled steps before open-river navigation toward the Gulf. St. Louis District’s own annuals put Melvin Price at **41.95 million** tons in 2023 and **45.86 million** in 2024 across roughly **4,800** lockages. Waterways Journal and district messaging consistently describe Locks 27 as moving more Mississippi cargo than any other navigation structure on the river — the panel places it near **61 million** tons for the reference year.
+
+Unavailability tracks that freight weight. In the panel, Locks 27 leads total hours; Melvin Price is close behind on both hours and ton-hour exposure. Notice to Navigation Interests **207255-1** makes the scheduled side concrete for winter 2025: Melvin Price main chamber closed for about **90 days** (Phase III upstream liftgate work), Locks 27 main chamber likewise **90 days** for embedded-metals work, and Lock 25 for **60 days**. Converted to hours, that is **2,160** scheduled hours each for the two big main chambers — before counting auxiliary-chamber limits, approaches, or any unscheduled events that land in the same year.
+
+When a 1,200-foot chamber is offline, tows do not vanish; they queue, split into the 600-foot auxiliary where one exists, or wait for a consolidated reopening. The dashboard’s **Tons × hours** scatter puts both St. Louis locks in the upper-right quadrant: high freight, high hours. That is the definition of a systemic choke rather than a local maintenance story.
+
+## Ohio River: high tons, different failure mode
+
+Olmsted, Markland, McAlpine, Cannelton, and John T. Myers dominate mid- and lower-Ohio commercial lockages. Olmsted — the long-delayed replacement for aging Locks 52 and 53 — shows the panel’s **highest tonnage** (~**72.5M**) with comparatively modest unavailability, which is exactly what a modern twin 1,200-foot project is supposed to buy. Markland and McAlpine tell the older story: still enormous coal, petroleum, and chemical flows, but with larger **unscheduled** shares that reflect mid-century equipment living past its design life.
+
+National Waterways Foundation work on unplanned closures at Markland framed the economic stakes bluntly years ago: shipper supply-chain cost burdens in the **billions** if barge service fails for a year, with chemical and coal networks spanning far beyond the Kentucky/Indiana pool. LPMS and WCSC tonnage often disagree on coal — NWF noted Markland WCSC totals running roughly **13 million** tons above LPMS in the study year — which is why this desk labels Ohio tonnage rows as composites and treats them as ranking inputs, not audited bills of lading.
+
+Toggle the dashboard’s waterway filter to **Ohio** and sort by **Unscheduled**: the bars that jump are the ones where “we planned this dewatering” is not the dominant narrative. That is the failure mode ASCE emphasizes when it notes that **80%** of inland lock-and-dam infrastructure exceeded its 50-year design life by 2024.
+
+## Illinois and Tennessee: grain clocks and rehab calendars
+
+LaGrange, Peoria, and Starved Rock on the Illinois River are smaller in absolute tons than Melvin Price, but their commodity mix is almost a pure **grain and fertilizer** clock. Ten-million-ton farm-product flows through LaGrange and Lock 25 have been a staple of outage-cost literature for a reason: when those chambers go dark in harvest season, the next-best rail and truck options are not theoretical — they are capacity-constrained and expensive. The panel’s **hours per million tons** sort often elevates these 600-foot Illinois locks relative to brand-new Ohio giants, because a week offline against 25–30 million tons is a thicker reliability tax than the same week against 70 million tons on a lock that rarely closes.
+
+Kentucky and Chickamauga on the Tennessee system flip the commodity mix again — aggregates, petroleum, chemicals, residual coal — and show how rehab calendars (Chickamauga’s long modernization arc in particular) load **scheduled** hours even when unscheduled events are manageable. Scheduled does not mean free. It means the industry got a date.
+
+## Exposure math: ton-hours, not vanity rankings
+
+Raw unavailability hours alone would crown any lock that sits offline for a long rehab regardless of traffic. Raw tonnage alone would crown Olmsted and ignore a 90-day main-chamber outage upriver. The useful intersection is **exposure**: locked tons multiplied by unavailable hours (shown in the dashboard as billion ton-hours).
+
+| Rank (exposure) | Lock | Tons (M) | Unavail hours | Ton-hour exposure (B) |
+| --- | --- | ---: | ---: | ---: |
+| 1 | Locks 27 | 61.4 | 2,680 | 164.6 |
+| 2 | Melvin Price | 45.9 | 2,130 | 97.7 |
+| 3 | Markland | 54.1 | 1,620 | 87.6 |
+| 4 | Lock 25 | 38.2 | 2,060 | 78.7 |
+
+The concentration curve in the dashboard shows the top four locks absorbing roughly **half** of panel exposure. That is the policy-relevant shape: reliability investments and winter consolidation schedules at a handful of chambers protect a disproportionate share of national barge commerce. ASCE’s reminder that more than **4%** of U.S. freight tonnage still moves on waterways — and that inland routes carried on the order of **210 million metric tons** of agricultural exports and imports in a recent year — is the national backdrop for why those four rows matter outside St. Louis and Cincinnati.
+
+## System path since 2016: indexes diverge
+
+The **System path** panel indexes unavailability hours and inland tonnage to 2016 = 100. Unavailability climbs into the early-2020s — consistent with deferred maintenance, pandemic-era scheduling chaos, and then **low-water** seasons on the Lower Mississippi that ASCE and BTS both flag as freight shocks. Tonnage softens in the same window and only partially recovers by 2024. Scheduled share of unavailability dips when hydrologic and breakdown events dominate, then rises again when districts stack multi-month winter programs (as in the 2025 Melvin Price / Locks 27 notices).
+
+That divergence is the inland equivalent of an airline’s “aircraft on ground” statistic rising while passenger counts wobble. Capacity is not only the number of chambers; it is chamber-hours available when harvest and chemical turnarounds need them.
+
+## Caveats and how to read the panel
+
+Treat Melvin Price tonnage and the winter 2025 day-counts as **hard anchors**. Treat ASCE’s 2020 event tallies and design-life share as **national context**. Treat other lock tonnage and hour cells as **desk composites** that preserve LPMS-style ordinal relationships for visualization. LPMS and WCSC will not match ton-for-ton, especially on coal. Auxiliary chambers mean a “closed main” is not always a full stop. Low water can strand freight without a formal lock closure. And exposure (tons × hours) is a screening metric — it does not price demurrage, spoilage, or rail diversion costs the way an NWF-style shipper model would.
+
+What the panel does claim, carefully: **the worst outages and the heaviest barge freights concentrate on the same short list of Corps structures**, led by the St. Louis Upper Mississippi gate and a set of aging Ohio and Illinois chambers whose scheduled calendars and unscheduled failures both tax the same national grain-and-energy conveyor.
+
+Use the controls. Sort by unscheduled hours if you care about surprise risk. Sort by hours per million tons if you care about reliability tax per unit of freight. Filter to a single river if you are writing a district brief. The scatter’s upper-right quadrant is the watch list.
+`,
+    tags: [
+      "USACE",
+      "inland waterways",
+      "locks",
+      "barge tonnage",
+      "LPMS",
+      "Mississippi River",
+      "Ohio River",
+    ],
+    format: "data-story",
+    keyPoints: [
+      "Locks 27 leads the panel at ~2,680 unavailability hours behind ~61.4M tons (~165B ton-hours of exposure).",
+      "Melvin Price published 45.86M tons in 2024; Notice 207255-1 schedules a 90-day winter main-chamber closure (2,160 hours).",
+      "Top-four locks hold about 48% of panel ton-hour exposure; ~71% of panel hours are scheduled.",
+      "ASCE: 9,147 unavailability periods in 2020 (6,361 scheduled / 2,786 unscheduled); 80% of lock infrastructure past design life.",
+    ],
+  },
+  {
     id: "epa-pm2-5-smoke-days-versus-population-2026",
     slug: "epa-pm2-5-smoke-days-versus-population-2026",
     title:
