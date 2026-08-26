@@ -324,7 +324,8 @@ export interface Post {
     | "aging-out-counts-versus-young-adult-housing-instability-2026"
     | "issuer-count-in-municipal-distress-versus-go-ratings-2026"
     | "jail-adp-versus-property-crime-after-2019-2026"
-    | "vehicle-revenue-hours-versus-passenger-trips-2026";
+    | "vehicle-revenue-hours-versus-passenger-trips-2026"
+    | "diesel-share-of-new-school-bus-deliveries-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

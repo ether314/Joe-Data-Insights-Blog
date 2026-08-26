@@ -2,6 +2,110 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "diesel-share-of-new-school-bus-deliveries-2026",
+    slug: "diesel-share-of-new-school-bus-deliveries-2026",
+    title: "Diesel Still Takes 66% of New School Bus Deliveries",
+    excerpt:
+      "In the 2024–25 OEM production cycle, diesel accounted for 66.1% of new Type A/C/D school buses — up 6.5 points from 2022–23 — while electric held near 7% and propane slipped to 4%.",
+    category: "Transport & Logistics",
+    themeId: "school-bus-fleet-age",
+    imageUrl:
+      "/images/transport-logistics-diesel-share-of-new-school-bus-deliveries-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic school-bus silhouette with stacked diesel-majority fuel-mix bar in teal and amber accents",
+    publishedAt: "2026-08-26T18:00:00Z",
+    featured: true,
+    visualization: "diesel-share-of-new-school-bus-deliveries-2026",
+    layout: "default",
+    content: `Every autumn, school-bus manufacturers report how many Type A, C, and D coaches left their factories in the prior November-to-October production cycle. Those factory counts are the closest public census of **new deliveries** into North American pupil transportation. The fuel mix inside that census is the question that still surprises people outside the industry: despite multi-billion-dollar federal replacement programs and a decade of propane and electric marketing, **diesel remains the default new bus**.
+
+In the **2024–25** cycle, School Transportation News’ OEM survey put total output near **40,345** units. Of those, **26,677** were diesel — **66.1%** of the cycle. Electric held **2,906** units (**7.2%**). Propane fell to **1,617** (**4.0%**). Gasoline, concentrated in Type A cutaways, stayed above **10,000** units. The interactive dashboard above stacks those fuels by cycle, traces diesel’s share rebound, splits body styles, and contrasts OEM electric output with EPA Clean School Bus award rounds.
+
+## The delivery ledger, not the parked fleet
+
+Parked-fleet statistics and new-delivery statistics answer different questions. Engine Technology Forum analysis of registration-style data still puts diesel above **87%** of the *operating* yellow-bus stock, with electric near **1%**. That stock share moves slowly because the national fleet turns over over many years. **New deliveries** move faster — and they are the right lens for whether procurement is actually shifting.
+
+STN’s annual factory survey of roughly ten OEMs is the industry’s benchmark ledger. Cycles run roughly **November 1 to October 31**. Counts are manufacturer-reported production, a close proxy for deliveries into U.S. and Canadian school districts and contractors. They are not VIN-level registration extracts, and they are not EPA award tallies. Treating them as the same series is how desks misread both the Clean School Bus Program and the diesel rebound.
+
+## Four cycles of fuel mix
+
+| Production cycle | Total units | Diesel | Diesel % | Electric | Propane | Gasoline |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 2021–22 (carried) | 32,930 | 21,450 | 65.1% | 1,184 | 1,220 | 8,920 |
+| 2022–23 | 38,528 | 22,970 | 59.6% | 2,902 | 1,814 | 9,671 |
+| 2023–24 | 37,624 | 22,889 | 60.8% | 2,928 | 1,958 | 10,404 |
+| 2024–25 | 40,345 | 26,677 | 66.1% | 2,906 | 1,617 | 10,326 |
+
+The trough in diesel’s *share* sits in **2022–23**, when electric jumped more than **145%** year over year to **2,902** units and total production rebounded **17%**. Diesel units still rose, but the denominator grew faster and alternative fuels claimed a larger slice. By **2023–24**, diesel share ticked back to **60.8%** even as electric edged up only **26** units. In **2024–25**, diesel volume spiked by about **3,700** units while electric stayed flat near **2,900** — and diesel’s share jumped to **66.1%**, roughly **6.5 percentage points** above the 2022–23 trough.
+
+That pattern is the article’s core claim: **alternative-fuel volume can plateau while diesel volume and share both rise** when total factory output expands and federal award pacing softens.
+
+## Electric plateau, propane retreat
+
+Electric’s absolute ceiling in the OEM survey has been stubborn. After the 2022–23 surge, the next two cycles printed **2,928** and **2,906** electric units — essentially flat. Industry commentary points to finite EV line capacity, uneven chassis and battery supply, and district hesitation once grant timing becomes uncertain. OEM forecasts that a third to a half of *future* sales will be electric remain forward-looking statements, not current delivery math.
+
+Propane’s path is thinner. Blue Bird and Micro Bird remain the primary propane suppliers via ROUSH CleanTech systems after competitors stepped back from propane options. Volume peaked near **1,958** in 2023–24, then fell to **1,617** in 2024–25 (**4.0%** of the cycle). CNG is now a rounding error — **six** units in the latest cycle after roughly **100** the year before. For desks tracking “diesel versus electric or propane,” propane is still the second alternative by stock folklore, but it is no longer expanding in the new-delivery ledger.
+
+Gasoline is the quiet giant of Type A. In 2023–24, STN noted that **7,947** of **10,404** gasoline units were Type A coaches on Ford or GM chassis. Those cutaways dilute diesel’s share of the *all-types* total without saying much about conventional Type C route buses. When readers ask “are big yellow buses still diesel?”, the Type C/D panel in the dashboard is the better answer than the all-fuels headline alone.
+
+## Type A, C, and D tell different fuel stories
+
+Body-style mix shifted across the same window. Type C conventional coaches remain the volume center: about **26,098** in 2023–24 and **30,654** in 2024–25 (**~76%** of that cycle). Type A jumped in 2023–24 to **8,538** (driver-shortage workarounds and easing cutaway chassis constraints), then cooled as Type A-1 under-10,000-lb units collapsed and Type A-2 recovered. Type D transit-style buses stay a single-digit share of output.
+
+Derived fuel splits for 2023–24 underline the body-style divide. Type A is overwhelmingly gasoline. Type C and Type D remain **diesel-majority**, with electric and propane taking the meaningful alternative slices. A district replacing Type C route buses is still choosing diesel most of the time — even in a year when national EV factory output sits near three thousand units.
+
+## Clean School Bus awards are not OEM deliveries
+
+The EPA Clean School Bus Program authorized **$5 billion** over FY2022–2026 to scrap older diesels and fund zero- and low-emission replacements. Award rounds have been heavily electric: the **2023 grant** competition funded about **2,737** buses with nearly all electric; the **2023 rebate** round funded about **3,441** buses with **92%** electric. Cumulative program messaging cites on the order of **8,500** funded replacements across more than a thousand districts.
+
+Those award counts **do not equal** OEM calendar-year electric production. Awards lag purchase orders; some districts buy propane or CNG under “clean” windows; some awarded buses land in later production cycles; and OEM surveys include non-CSB electric and propane orders. The dashboard’s OEM-versus-CSB panel is deliberately a contrast, not a reconciliation. When CSB pacing pauses or restarts — commentary around 2025–2026 described award timing as disrupted even as remaining IIJA funds were expected to move again — diesel OEMs can fill the capacity the grant pipeline was supposed to claim.
+
+DOE’s Alternative Fuels Data Center remains useful context for which fuels are *available* on school-bus platforms. It is not a substitute factory census. AFDC pages explain propane, CNG, and battery-electric options; STN OEM counts show which options buyers actually took delivery of.
+
+## Why diesel rebounded in 2024–25
+
+Several concurrent forces fit the data without requiring a single master narrative:
+
+**Grant timing.** CSB heavily favored electric awards. When award and disbursement cadence softens, districts that still need seats for the next school year default to familiar diesel bids with known residual values and technician skills.
+
+**Total market expansion.** A **~7%** rise in total production to **40,345** units creates room for diesel absolute gains even if alternative-fuel units hold steady. Share math is merciless: flat EV units against a larger denominator *and* a diesel spike is a double hit to EV share.
+
+**Propane supplier concentration.** With fewer OEMs offering propane, districts that once shopped multiple propane catalogs face a thinner menu. Some migrate to gasoline Type A or back to diesel Type C rather than wait on a single propane pipeline.
+
+**Regulatory uncertainty.** Pending greenhouse-gas rules for vocational engines, state ZEV school-bus timelines, and federal political turnover all raise the option value of delaying a fleet-wide fuel bet. Diesel’s aftertreatment stack (DPF + SCR on 2010+ engines) is already the compliance path fleets know how to maintain.
+
+None of that makes diesel “winning a climate argument.” It makes diesel **winning the delivery calendar** in the latest OEM print.
+
+## Caveats and confidence
+
+**Survey coverage.** STN surveys major OEMs; incomplete responses or MFSABs (multifunction school-activity buses) can leave small residuals between fuel-category sums and headline totals. We use disclosed cycle totals as the share denominator.
+
+**2021–22 carry.** Early-cycle cells marked carried or derived — including the electric back-cast from the stated **+145%** jump to 2,902 — are directional scaffolding, not a second audited print.
+
+**Body-fuel splits.** Type A/C/D fuel percentages for 2023–24 are desk allocations anchored on STN’s gasoline-in-Type-A disclosure plus residual balancing. Treat them as illustrative, not OEM line-item releases.
+
+**Awards versus production.** CSB bus counts are funded replacements; OEM counts are factory output. Do not subtract one from the other and call the remainder “unfunded demand.”
+
+**Geography.** Factory surveys are North American OEM totals. California, New York, and other state ZEV timelines can dominate local procurement while barely moving the national delivery mix in a single cycle.
+
+Confidence is highest on the **order of magnitude**: diesel near **60–66%** of recent new deliveries, electric stuck near **7%**, propane in the **4–5%** band, and a clear **diesel-share rebound** into 2024–25. Absolute unit cells for CNG and for carried 2021–22 fuels are lower confidence.
+
+## What the 66% figure means for 2026 buying
+
+If the policy goal is to change the *operating* fleet’s emissions, new-delivery mix is the inflow that eventually compounds. A world where electric holds ~3,000 units a year while diesel clears ~27,000 will not electrify the yellow-bus stock on a decade-scale clock without either much larger EV factory throughput, sustained grant volume, or diesel retirement that outruns diesel replacement — the last of which fights the industry’s seat-capacity needs.
+
+For transportation directors, the practical read is narrower. Budget for diesel residual values and technician pipelines unless a specific award letter or state mandate locks an alternative fuel. For analysts, separate three series: **OEM fuel mix** (this piece), **CSB awards** (funded intent), and **parked-fleet fuel share** (slow stock). Conflating them produced the premature obituaries for diesel deliveries that the 2024–25 factory print just contradicted.
+
+The dashboard’s fuel-mix, diesel-share, body-type, CSB, and OEM-versus-CSB views are built for that three-ledger reading. Toggle the cycle and highlight-fuel controls to watch the **66.1%** headline hold or soften — and remember that the next OEM Buyer’s Guide cycle, not a single award press release, is what will move it.`,
+    keyPoints: [
+      "2024–25 OEM cycle: diesel 66.1% (26,677 of 40,345 units)",
+      "Electric stuck near 2,900 units (~7%) for three cycles",
+      "Diesel share up 6.5 pp from the 2022–23 trough",
+      "Propane fell to 4.0%; Type C still ~76% of body mix",
+    ],
+    format: "data-story",
+  },
+  {
     id: "vehicle-revenue-hours-versus-passenger-trips-2026",
     slug: "vehicle-revenue-hours-versus-passenger-trips-2026",
     title:

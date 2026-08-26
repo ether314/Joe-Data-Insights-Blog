@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "diesel-share-of-new-school-bus-deliveries-2026",
+    marker: "Diesel share of new deliveries",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "vehicle-revenue-hours-versus-passenger-trips-2026",
     marker: "VRH vs UPT dual recovery",
     forbidden: "Loading interactive charts",
