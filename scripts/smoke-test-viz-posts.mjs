@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "hearing-level-allowance-rates-versus-initial-denials-2026",
+    marker: "Headline — cohort gap 29.7 pp → 13.3 pp trough",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026",
     marker: "Pool 42,037 vs dry 48,926 MTiHM",
     forbidden: "Loading interactive charts",

@@ -2,6 +2,101 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "hearing-level-allowance-rates-versus-initial-denials-2026",
+    slug: "hearing-level-allowance-rates-versus-initial-denials-2026",
+    title:
+      "ALJ vs DDS Allowance Gap: Hearing Wins Still Clear Initial Rates by ~14–20 Points",
+    excerpt:
+      "SSA application-year data show the hearing-or-above medical allowance rate still sits well above initial DDS allowances. The gap compressed from 29.7 percentage points for the 2008 cohort to about 13 pp by 2017, then edged back toward 17–20 pp as ALJ rates rebounded while initial rates stayed near the mid-to-high 30s.",
+    category: "Politics",
+    themeId: "ssa-hearing-backlog",
+    imageUrl:
+      "/images/politics-hearing-level-allowance-rates-versus-initial-denials-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial graphic with a tall amber hearing-allowance bar beside a shorter blue initial-DDS bar and a rose gap wedge between them",
+    publishedAt: "2026-08-26T08:00:00Z",
+    featured: true,
+    visualization: "hearing-level-allowance-rates-versus-initial-denials-2026",
+    layout: "default",
+    content: `Disability claims move through a stacked decision machine. State Disability Determination Services (DDS) make the first medical call. Most denials that keep climbing the ladder next hit reconsideration — another DDS look, usually colder than the first. Only then do claimants reach a hearing before an administrative law judge (ALJ) at the Social Security Administration’s Office of Hearings Operations (OHO), the successor to what advocates still shorthand as ODAR.
+
+For decades, that hearing rung has allowed a far larger share of medical decisions than the initial rung. The policy fight is not whether a gap exists — it does — but **how wide it remains** and **whether oversight, staffing, and caseload changes actually closed it**. The interactive dashboard above tracks application-year allowance rates from SSA’s Disability Insurance Annual Statistical Report (DI ASR), fiscal-year ALJ decisional rates from OIG and OHO public files, the FY2024 stage ladder, regional DDS initial rates, and program mix so readers can watch the gap compress, bottom out, and partially reopen.
+
+## What “allowance rate” means at each rung
+
+An **allowance rate** here is medical allowances divided by medical decisions at that adjudicative level — not the share of all filed applications that eventually win benefits. Technical denials (insufficient work credits, excess income for SSI, and similar nonmedical screens) sit outside the medical rate. That distinction matters: a rising share of technical denials can make the overall award rate look worse even when medical allowance rates barely move.
+
+At the hearing level, SSA’s DI ASR publishes **hearing level or above** rates by **year of application**. Those cohort rates are the cleanest apples-to-apples comparison with initial DDS medical rates in the same tables. Separately, OHO and oversight reports publish **fiscal-year ALJ decisional allowance rates** — allowances as a share of ALJ decisions in a given fiscal year. The two series rhyme but are not identical: one follows filing cohorts through the pipeline; the other snapshots the hearing office’s decision mix in a budget year.
+
+Reconsideration sits in the middle of the ladder and usually looks stingy. In FY2024, SSA’s State Agency Operations Report (SAOR) put the national initial medical allowance rate at **38.3%** and reconsideration at **15.9%**. The same year’s ALJ aggregate sat near **58%**. That is the operational stage picture: initial in the high 30s, reconsideration in the teens, hearing in the high 50s.
+
+## The gap compressed — then stopped falling
+
+DI ASR Tables 61 and 63 (all disabled beneficiaries) let us subtract initial medical allowance rates from hearing-or-above rates for the same application year. For the **2008** filing cohort, initial sat at **38.7%** while hearing-or-above cleared **68.4%** — a **29.7 percentage-point** gap. By **2017**, initial was **36.6%** and hearing-or-above **49.9%**, a **13.3-point** gap. That is a **16.4-point** compression from the late-2000s peak.
+
+| Application year | Initial DDS (%) | Reconsideration (%) | Hearing or above (%) | Gap (pp) |
+| --- | ---: | ---: | ---: | ---: |
+| 2008 | 38.7 | 10.8 | 68.4 | 29.7 |
+| 2010 | 36.9 | 9.0 | 59.6 | 22.7 |
+| 2014 | 35.2 | 8.7 | 49.4 | 14.2 |
+| 2017 | 36.6 | 10.0 | 49.9 | 13.3 |
+| 2018 | 37.0 | 10.8 | 50.5 | 13.5 |
+| 2020 | 35.9 | 12.9 | 53.1 | 17.2 |
+
+The trough is real. It is also not a collapse to zero. Even at the tightest mature cohorts in this window, hearing-or-above still cleared initial by roughly **13–14 points**. After 2017 the gap edged **wider** again: **15.3 pp** for 2019 and **17.2 pp** for 2020 as hearing-level rates drifted up while initial rates stayed near the mid-30s. Recent filing years remain incomplete — many 2021–2023 hearing decisions are still pending — so the dashboard’s mature-cohort filter is the honest view of the long compression.
+
+## Why fiscal-year ALJ rates tell a parallel story
+
+Fiscal-year ALJ decisional rates fell hard from the late-2000s peak. SSA’s Inspector General reported about **67%** for ALJs with substantial FY2010 dockets. Oversight write-ups of agency data put the path near **63%** in FY2008–FY2009 and down to about **45%** by FY2014. OIG later marked FY2015 at **53.5%** — the lowest national decisional average in more than two decades at the time — then OHO public-file aggregates and later OIG prints show the mid-50s through the late 2010s, a trough near **52%** in FY2021, and a rebound to about **57%** in FY2023 and **58%** in FY2024.
+
+Put that next to initial DDS rates that mostly lived between **35%** and **39%** over the same span, and the **operational gap** never vanished. It shrank toward roughly **10 pp** around the FY2014 ALJ trough, then rebuilt toward **~20 pp** once hearing rates recovered while DDS initial rates did not race upward in lockstep. FY2024’s **58%** versus **38.3%** is a **19.7-point** operational gap — wider than the 2016–2018 cohort trough, narrower than the 2008–2010 peaks.
+
+GAO’s hearings work (GAO-18-37) adds the consistency layer: even as average allowance rates fell, the **spread across judges** remained large. A typical claim’s estimated allowance chance could still swing by tens of points depending on which ALJ heard it. Closing the national gap is not the same as equalizing outcomes across hearing offices.
+
+## Initial denials still feed most of the hearing docket
+
+The brief’s second half — “versus initial denials” — is about selection, not just rates. Hearings are not a random redraw of the applicant pool. They are concentrated among people who already lost at DDS and chose to keep fighting. That selection alone would push hearing allowance rates above initial rates even if every adjudicator applied the same medical standard with the same evidence.
+
+In practice, evidence quality also changes. By the hearing date, months or years have passed. Impairments can worsen. Representatives assemble fuller longitudinal records. Vocational experts and medical experts appear. None of that proves every allowance is correct, and Appeals Council agree-rate monitoring exists precisely because quality risk cuts both ways. It does explain why a durable double-digit gap is not, by itself, evidence that ALJs ignore the statute while DDS examiners alone defend it.
+
+Reconsideration’s low teens rate sharpens the selection story. Many claimants who reach a hearing have already been denied twice on the written record. The hearing is the first time most of them testify in person. Measuring that stage against the first DDS medical decision without acknowledging the funnel is how political talking points get manufactured.
+
+## Regional DDS floors change how high the hearing rung looks
+
+FY2024 SAOR regional prints show initial allowance rates from the mid-30s to the mid-40s. Atlanta’s region sat near **35.9%**; Kansas City near **43.7%**; Boston near **42.4%**; Dallas near **37.5%**. Against a national ALJ average near **58%**, the implied gap versus a low-initial region exceeds **20 points**, while a high-initial region sits closer to **14–16 points**.
+
+That does not mean every southern hearing office allows more aggressively than every midwestern one. Hearing-office mixes, local labor markets, impairment distributions, and representation rates all intervene. It does mean the national “ALJ versus DDS” talking point is a blend of **level differences across adjudicative stages** and **geography inside the initial stage**. The dashboard’s region panel keeps the DDS floor visible so the gap is not treated as a single national constant.
+
+Program type matters too. In the mature **2018** DI ASR cohort, Social Security-only claims showed a smaller stage gap (**46.0%** initial versus **58.8%** hearing-or-above, **12.8 pp**) than concurrent DI/SSI claims (**24.2%** versus **41.7%**, **17.5 pp**). Concurrent claims start from a colder initial floor, so the hearing rung’s lift looks larger even when absolute hearing rates are lower.
+
+## Did oversight narrow the gap — and did the narrowing stick?
+
+The mid-2010s compression lines up with a management era: closer monitoring of outlier ALJs, quality review sampling, slower per-judge dispositions, and public spotlight on extreme allowance rates. OIG’s later look at FY2023 outliers still found individual judges from the single digits to the mid-90s, but fewer ALJs clustered above **70%** than in FY2010. Averages moved. Tails thinned. The national gap versus DDS did not disappear.
+
+Then the FY series rebounded. From the FY2014 trough near **45%**, ALJ aggregates climbed back into the high 50s by FY2023–FY2024 while DDS initial rates stayed in a comparatively narrow band. The cohort gap’s post-2017 widening matches that rebound. Compression was real; permanence was not automatic.
+
+Workload context matters here without turning this piece into a queue story. When hearing receipts fall and aged cases clear, the mix of impairments and representation on the docket can shift. When staffing tightens or video/hearing formats change, decision tempo shifts. Rate gaps respond to composition as well as to policy. That is a caveat, not an excuse to ignore the numbers.
+
+## Caveats that should travel with every chart
+
+First, **application-year cohort rates for recent filing years are incomplete**. DI ASR notes that hearing-level rates for the newest years will revise as pending decisions close. Treat 2021+ hearing figures as provisional; prefer the mature 2008–2019 window for trend claims.
+
+Second, **FY ALJ rates and application-year hearing rates are different instruments**. Mixing them without labels creates fake precision. The dashboard separates the cohort path from the FY ALJ toggle for that reason.
+
+Third, **medical allowance rates exclude technical denials**. Debates that quote “most applicants are denied” often blend medical denials with nonmedical screens. Both matter for claimants; only the medical series answers the ALJ-versus-DDS consistency question cleanly.
+
+Fourth, **regional and program composition** can move national averages without any change in how a typical identical claim would be decided. Concurrent share, age mix, and state DDS capacity all shift.
+
+Fifth, **representation, hearing format, and expert availability** are omitted from the national rate tables. GAO’s work suggests representation is strongly associated with allowances; that channel is invisible in the DI ASR stage averages.
+
+## Bottom line for the gap question
+
+Hearing-level allowance rates still sit **well above** initial DDS medical allowances — on the order of **13–20 percentage points** depending on whether you read the mature cohort trough, the 2020 partial cohort, or the FY2024 operational snapshot. The gap **did narrow** sharply from the late-2000s peak near **30 pp** to a mid-2010s trough near **13–14 pp**. It did **not** keep narrowing without interruption: as ALJ fiscal-year rates rebounded into the high 50s while initial DDS rates stayed near the mid-to-high 30s, the operational gap rebuilt toward roughly **20 pp**.
+
+That is the durable politics of the disability pipeline. Initial denials remain the volume gate. Hearings remain the high-allowance rung. Oversight can pull the hearing average down and thin the extreme tails — and did — without erasing the stage gap that selection, evidence development, and live testimony keep rebuilding.
+`,
+  },
+  {
     id: "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026",
     slug: "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026",
     title:

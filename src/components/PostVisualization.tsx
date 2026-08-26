@@ -4195,6 +4195,21 @@ const UsSpentFuelInWetPoolsVersusDryCaskInventory2026Dashboard = dynamic(
   },
 );
 
+const HearingLevelAllowanceRatesVersusInitialDenials2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/HearingLevelAllowanceRatesVersusInitialDenials2026Dashboard"
+    ).then((m) => m.HearingLevelAllowanceRatesVersusInitialDenials2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5298,6 +5313,10 @@ export function PostVisualization({
 
   if (type === "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026") {
     return <UsSpentFuelInWetPoolsVersusDryCaskInventory2026Dashboard />;
+  }
+
+  if (type === "hearing-level-allowance-rates-versus-initial-denials-2026") {
+    return <HearingLevelAllowanceRatesVersusInitialDenials2026Dashboard />;
   }
 
   return null;
