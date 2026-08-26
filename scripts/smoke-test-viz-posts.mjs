@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "jail-adp-versus-property-crime-after-2019-2026",
+    marker: "Headline — ADP still 10.4% below 2019; property ~4.5% below",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "issuer-count-in-municipal-distress-versus-go-ratings-2026",
     marker: "Defaulted issuers vs IG-to-junk GOs",
     forbidden: "Loading interactive charts",

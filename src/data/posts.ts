@@ -2,6 +2,84 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "jail-adp-versus-property-crime-after-2019-2026",
+    slug: "jail-adp-versus-property-crime-after-2019-2026",
+    title:
+      "Jail ADP Still ~10% Below 2019 While Property Crime Recovers Closer to Baseline",
+    excerpt:
+      "BJS average daily jail population hit 664,800 in 2023—about 10.4% under the 2019 mark—after a 2021 trough. National property-crime rates (SRS then NIBRS Estimation) sit nearer their pre-pandemic level. The dual index shows jail stock did not refill in lockstep with property reports.",
+    category: "Politics",
+    themeId: "incarceration-crime-gap",
+    imageUrl:
+      "/images/politics-jail-adp-versus-property-crime-after-2019-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial graphic with a teal jail ADP area falling after 2019 beside an amber property-crime index line closer to a dashed baseline",
+    publishedAt: "2026-08-26T14:00:00Z",
+    featured: true,
+    visualization: "jail-adp-versus-property-crime-after-2019-2026",
+    layout: "default",
+    content: `Local jails are the churn layer of American incarceration: short stays, high admissions, and a stock that moves when arrest practices, bail rules, and court calendars move. When COVID-19 hit in 2020, that stock collapsed. The open question for 2022–2023 was whether **average daily population (ADP)** would climb back with reported property crime—or whether jails would stay on a structurally lower path even as offense indexes stabilized.
+
+The Bureau of Justice Statistics (BJS) Annual Survey of Jails and Census of Jails give a census-grade answer for the stock. The FBI’s Summary Reporting System (SRS) and, later, the BJS/FBI National Incident-Based Reporting System (NIBRS) Estimation Program give the national property-crime rate path. Put on the same 2019=100 index, the two series **diverge after the pandemic cliff**: property rates recover closer to baseline; jail ADP does not.
+
+## What ADP measures that a midyear snapshot does not
+
+**ADP** is the sum of persons in jail each day over a twelve-month window, divided by the number of days. It is not the same as the midyear confined count—the one-day stock on the last weekday in June that headlines many press releases. In 2020 the distinction mattered: midyear confined fell **25.2%** (734,500 → 549,100) while ADP fell **11.3%** (741,900 → 658,200). The midyear print caught the acute release-and-intake freeze; ADP averaged across a year that still included pre-shutdown months and a late-year partial refill.
+
+By 2023, the two measures had almost reconverged: ADP **664,800**, midyear confined **664,200**. Both sat roughly **10% under** their 2019 levels. The dashboard’s “Jail metric” toggle lets you watch either path; the politics story is the same either way after 2021—the stock recovered from the trough but stalled short of the pre-pandemic plateau.
+
+## The dual index after 2019
+
+Index both series to 2019=100 and the gap is visible without arguing about absolute scale:
+
+| Year | Jail ADP | ADP index | Property rate /100k | Property index | Property source |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 2019 | 741,900 | 100 | 2,109.9 | 100 | FBI SRS |
+| 2020 | 658,200 | 88.7 | 1,958.2 | 92.8 | FBI SRS |
+| 2021 | 618,600 | 83.4 | — | — | NIBRS gap year |
+| 2022 | 652,500 | 88.0 | 2,085.6 | 98.8 | NIBRS Estimation |
+| 2023 | 664,800 | 89.6 | 2,015.2 | 95.5 | NIBRS Estimation |
+
+In 2023, ADP sits at **89.6%** of 2019 while the NIBRS-estimated property rate sits at **95.5%** of the 2019 SRS rate—a **recovery gap of about 5.9 index points**. That is the headline: property crime, imperfectly measured across a methodology handoff, is nearer its prior mark than the jail stock is.
+
+## Admissions fell harder than the stock
+
+Jail population is a flow identity: stock ≈ admissions × average length of stay. BJS admissions plunged from **10.3 million** in 2019 to **6.9 million** in 2021, then climbed only to **7.6 million** in 2023—still just **74%** of the 2019 flow. Meanwhile the ADP proxy for average days in custody lengthened (from roughly the mid-20s toward the low-30s in BJS’s published duration tables). Fewer people entered; those who stayed stayed longer. That combination can leave ADP only modestly below 2019 even while the admissions machine is still running a quarter cooler.
+
+The “Admissions vs ADP” panel plots both series and the days proxy together. If policy desks assume “crime is back, so bookings must be back,” the admissions series is the hard counterexample.
+
+## Property crime is not one offense
+
+Aggregate property rates hide composition. Burglary and larceny-theft rates kept drifting down relative to 2019. **Motor vehicle theft** did the opposite: the SRS rate rose from **219.9** per 100,000 in 2019 to about **246** in 2020, and NIBRS-era estimates put 2022–2023 near **283–284**—roughly a **29%** lift off the 2019 SRS baseline even as the total property index stayed flat-to-down. Council on Criminal Justice city samples show an even sharper MVT surge through 2023; national estimates are milder but point the same direction.
+
+That mix matters for jails. Vehicle theft and retail theft generate different arrest probabilities, hold practices, and charge severity than residential burglary. A property index that looks “almost recovered” can still coexist with a booking mix that does not refill every jail the same way—especially where prosecutors divert low-level theft or where courts move slowly enough to turn short ADP stays into longer ones.
+
+## Urban and rural jails did not refill alike
+
+National ADP is an average that conceals geography. Vera Institute spot collections through 2022–2024 found **rural and small-metro jails** closer to—or above—their mid-2019 peaks, while **large urban** systems more often remained below. The dashboard’s urban–rural panel is directional, not a substitute for the BJS census: Vera samples counties and state systems for timely signals. The qualitative pattern still fits the national shortfall: big-city decarceration and bail reforms compounded the pandemic drop; rural refill pulled the average up without restoring the 2019 national total.
+
+If your mental model is “jails track crime one-for-one,” the geography panel is the second counterexample. Property reports and jail capacity politics are local. The national dual index is a boundary condition, not a county forecast.
+
+## Caveats and measurement breaks
+
+Three caveats should sit next to any chart that overlays these series.
+
+First, **SRS versus NIBRS Estimation**. The FBI stopped publishing a full national SRS property estimate for 2021 when agency coverage fell during the mandatory NIBRS transition. The 2022–2023 property rates cited here come from the BJS/FBI NIBRS Estimation Program (*Crime Known to Law Enforcement, 2023*): **2,085.6** and **2,015.2** per 100,000. Indexing those to the 2019 SRS level of **2,109.9** is useful for order-of-magnitude storytelling and wrong for claiming a precise tenth-of-a-point recovery. Treat 2020→2022 as a soft join.
+
+Second, **jails are not prisons**. State and federal prison stocks follow different intake valves (sentenced commitments, parole returns). A jail ADP shortfall does not imply an identical prison story, and property crime is only one slice of the booking docket—violence, warrants, and supervision violations also move the count.
+
+Third, **rates are not clearances**. A rising MVT rate with falling clearance rates can mean more reported theft and fewer arrests per theft. ADP responds to arrests and holds, not to victimization surveys or unfounded reports. The National Crime Victimization Survey is a separate thermometer; this post stays with offenses known to law enforcement and jail custody counts.
+
+## What “structurally lower” means for 2024 desks
+
+“Structurally lower” here is descriptive, not a causal claim that crime no longer drives jail use. It means that by the latest matched BJS year (2023), the national jail stock had recovered only about **37%** of the distance from the 2021 ADP trough back to 2019, while the best available national property-rate index sat within about **5%** of its 2019 SRS mark. Admissions remained far below 2019. Urban systems lagged rural ones. Motor vehicle theft rose while burglary fell.
+
+For budget officers, that combination looks like a smaller, slower-turning jail system—not a simple rebound to the late-2010s equilibrium. For crime analysts, it is a warning against reading the property headline alone. For anyone tempted to treat 2020 as a temporary blip, the dual index says the blip in jail stock left a plateau: **ADP still ~10% short of 2019**, even after two years of partial refill.
+
+The interactive dashboard lets you switch windows (2015–2023, from 2019, recovery-only), toggle ADP versus midyear stock, flip index versus levels, overlay admissions, and inspect offense mix, flow proxies, geography, and the year-by-year gap cloud. The sources are BJS Jail Inmates tables, FBI SRS releases, BJS/FBI NIBRS Estimation, and Vera’s People in Jail series—linked in the chart footnote.
+`,
+  },
+  {
     id: "issuer-count-in-municipal-distress-versus-go-ratings-2026",
     slug: "issuer-count-in-municipal-distress-versus-go-ratings-2026",
     title:
