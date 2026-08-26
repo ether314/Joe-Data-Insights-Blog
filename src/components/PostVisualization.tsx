@@ -3966,6 +3966,21 @@ const UspsFirstClassDeclineVersusShippingPackages2026Dashboard = dynamic(
   },
 );
 
+const NcesPublicEnrollmentChangeByState2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/NcesPublicEnrollmentChangeByState2026Dashboard"
+    ).then((m) => m.NcesPublicEnrollmentChangeByState2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5009,6 +5024,10 @@ export function PostVisualization({
 
   if (type === "usps-first-class-decline-versus-shipping-packages-2026") {
     return <UspsFirstClassDeclineVersusShippingPackages2026Dashboard />;
+  }
+
+  if (type === "nces-public-enrollment-change-by-state-2026") {
+    return <NcesPublicEnrollmentChangeByState2026Dashboard />;
   }
 
   return null;

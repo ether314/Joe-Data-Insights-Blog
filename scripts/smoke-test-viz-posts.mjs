@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "nces-public-enrollment-change-by-state-2026",
+    marker: "Enrollment % change 2019–24",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "usps-first-class-decline-versus-shipping-packages-2026",
     marker: "Piece mix vs revenue mix",
     forbidden: "Loading interactive charts",

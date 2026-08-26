@@ -2,6 +2,96 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "nces-public-enrollment-change-by-state-2026",
+    slug: "nces-public-enrollment-change-by-state-2026",
+    title:
+      "Public K–12 Enrollment Fell 2.8% Since 2019 — West Virginia Lost 8.1%",
+    excerpt:
+      "NCES CCD fall 2024 totals show U.S. public enrollment 2.8% below fall 2019. Twenty-one states fell more than 4%; West Virginia (−8.1%), Hawaii (−7.7%), and New Hampshire (−7.4%) lead the losses. The West region is down 4.8%.",
+    category: "Economics",
+    themeId: "k12-enrollment-shift",
+    imageUrl:
+      "/images/economics-nces-public-enrollment-change-by-state-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic U.S. map silhouette with descending amber and rose enrollment arrows and soft teal percent-change curves, Visual Capitalist-style education data editorial",
+    publishedAt: "2026-08-26T04:00:00Z",
+    featured: true,
+    visualization: "nces-public-enrollment-change-by-state-2026",
+    layout: "default",
+    content: `Fall 2019 was the last full pre-pandemic count of U.S. public elementary and secondary enrollment. Fall 2024 is the latest Common Core of Data (CCD) year published in the Digest of Education Statistics. Between those two Septembers, the national headcount moved from **50.80 million** to **49.39 million** — a **−2.8%** decline that looks modest until you open the state ladder.
+
+The interactive dashboard above ranks states by percent change, traces the national path year by year, compares enrollment losses with Census school-age (5–17) population, and groups jurisdictions into loss bands. The core question is simple: **which states lost the largest share of public K–12 enrollment from 2019 to the latest NCES year?** The answer is not a single coastal story. It is a stack of Appalachian, Mountain West, Northeast, and Deep South declines that outran the national average by several percentage points.
+
+## What CCD enrollment actually counts
+
+The NCES Common Core of Data State Nonfiscal Survey tallies students enrolled in public elementary and secondary schools — including public charter schools — in the 50 states and the District of Columbia. Digest Table 203.20 republishes those fall counts for selected years through fall 2024 (table prepared March 2026). Region rows follow Census 2020 region definitions.
+
+Two measurement details matter for percent-change work. First, some years carry footnotes for **imputed prekindergarten** where states did not report PK; those imputations keep national and large-state totals comparable but can nudge small shares. Second, CCD is a **public-system census**, not a full accounting of where children learn. Private-school enrollment and homeschooling sit outside these totals. A state can lose public seats because families leave the jurisdiction, because birth cohorts shrink, or because children remain in-state but exit the public sector. Percent change in CCD counts alone cannot separate those channels.
+
+Caveat: year-over-year noise is real in small states. A one-year swing of a few hundred students can move Vermont or Wyoming's percentage more than the same absolute change would move Texas. Multi-year spans (2019–24) dampen that noise; the 2023–24 column in the Digest is useful for spotting fresh acceleration, not for ranking long-run loss.
+
+## The national path: a cliff, a partial rebound, then drift
+
+Index fall 2019 enrollment at 100. Fall 2020 lands near **97.2** — the sharp pandemic drop. Fall 2021 and 2022 claw back slightly (97.3, then 97.7). Fall 2023 and 2024 ease again to **97.5** and **97.2**. In headcount terms: **49.37M → 49.43M → 49.62M → 49.52M → 49.39M**. The country never recovered the 2019 level. The latest year is essentially back at the 2020 trough on an index basis, even though the intervening years looked like a rebound narrative.
+
+That path is why a 2019 baseline still matters in 2026 reporting. Measuring only from the pandemic bottom flatters recovery. Measuring from the last full pre-COVID fall asks whether public systems have restored their prior footprint. They have not.
+
+## Which states lost the largest share?
+
+Sorted by fall 2019–24 percent change, the steepest losses among the 50 states and D.C. are:
+
+| Rank | State | Fall 2019 | Fall 2024 | % change |
+| --- | --- | ---: | ---: | ---: |
+| 1 | West Virginia | 263,486 | 242,155 | −8.1% |
+| 2 | Hawaii | 181,088 | 167,071 | −7.7% |
+| 3 | New Hampshire | 177,351 | 164,153 | −7.4% |
+| 4 | Mississippi | 466,002 | 431,864 | −7.3% |
+| 4 | New Mexico | 331,206 | 307,110 | −7.3% |
+| 6 | Maine | 180,291 | 167,309 | −7.2% |
+| 7 | Oregon | 610,648 | 570,233 | −6.6% |
+| 8 | Vermont | 86,759 | 81,398 | −6.2% |
+| 9 | Louisiana | 710,439 | 666,840 | −6.1% |
+| 9 | New York | 2,692,589 | 2,527,258 | −6.1% |
+
+**Twenty-one** jurisdictions fell more than 4%. **Seventeen** sit in the deep-loss band (≤ −5%). California (−5.6%), Illinois (−5.2%), Colorado (−5.3%), Wisconsin (−5.8%), and Rhode Island (−5.3%) join the list with much larger absolute seats at risk. New York's −6.1% is roughly **165,000** fewer public students than in 2019 — a district-scale loss wrapped inside a single state percentage.
+
+Only **nine** jurisdictions posted positive percent change over the span. Just two cleared a clean +2% gain: the **District of Columbia (+4.8%)** and **North Dakota (+3.1%)**. Delaware, Idaho, South Carolina, Alabama, Texas, South Dakota, and Nebraska fill out the thin gain list at smaller margins. Florida and Utah round to **0.0%** in the Digest's published percent-change column — flat in percentage terms despite enormous absolute bases.
+
+## Regions tell different stories
+
+Digest region aggregates compress fifty-one local markets into four Census regions:
+
+- **West: −4.8%** (12.45M → 11.85M)
+- **Northeast: −4.1%** (7.91M → 7.59M)
+- **Midwest: −3.1%** (10.44M → 10.12M)
+- **South: −0.8%** (20.00M → 19.83M)
+
+The South still holds the largest public enrollment pile and the shallowest multi-year percent decline. That does not mean Southern states were immune — Mississippi, Louisiana, West Virginia (Census South), and Kentucky all post deep losses — but Texas (+0.9%), Florida (~0%), and several Sun Belt peers offset enough of the drag to keep the region near flat. The West's −4.8% combines California's large absolute drop with Oregon, Hawaii, New Mexico, Colorado, and Arizona (−4.2%).
+
+The latest year-over-year column (2023–24) is quieter nationally (−0.3%) but loud in a few places. Louisiana's **−5.8%** single-year move is an outlier that deserves local reading of reporting changes, disasters, and sector shifts rather than a smooth demographic story. Maine (−3.0%) and West Virginia (−1.9%) also show fresh erosion on top of already deep multi-year losses.
+
+## Enrollment versus school-age population
+
+Public enrollment can fall because there are fewer school-age children, or because a smaller share of those children enroll in public schools. Census Bureau estimates of the resident population ages 5–17, republished in Digest Table 101.40, give a blunt second series through 2022 (in thousands). Nationally, school-age population moved from about **53.5 million** in 2019 to **53.9 million** in 2022 — a slight **+0.7%** — while public enrollment over a longer 2019–24 window fell **2.8%**. The levels are not synchronized to the same end year, so the comparison is directional: demography alone does not explain the CCD decline.
+
+The dashboard's scatter plots each state's enrollment percent change (2019–24) against its school-age percent change (2019–22). Points below the horizontal axis lost public seats; points left of the vertical axis lost school-age population. The **gap** series subtracts school-age percent change from enrollment percent change. Large negative gaps — West Virginia, Hawaii, New Hampshire, Oregon, Mississippi, Maine — mark places where public headcount fell faster than the nearby school-age estimate. Positive or small gaps (Idaho, North Dakota, D.C., South Carolina) mark places where enrollment held up relative to the child population signal.
+
+Caveat: school-age population is not identical to the public-school catchment. Private schools, homeschooling, cross-border commuting, and grade-span differences all sit between Census ages 5–17 and CCD PK–12. Treat the gap as a screening tool for **enrollment intensity**, not as a causal decomposition.
+
+## Why the losses matter for budgets and capacity
+
+State aid formulas, local property-tax bases, and facility plans still assume enrollment is either growing or mean-reverting. A persistent −5% to −8% public footprint changes the arithmetic of per-pupil allocations, bond capacity, and teacher pipelines even when total state population is stable. Large absolute losers (California, New York, Illinois) reshape urban district finances; high-percentage losers in smaller states (West Virginia, Hawaii, New Hampshire, Vermont, Maine) reshape the viability of sparse rural networks.
+
+The band mix in the dashboard is the policy map in one chart: **17** deep-loss states, **12** moderate-loss, **20** near-flat, and only **2** clear gainers at the ≥ +2% threshold. Most of America is not "recovering to 2019." Most of America is either still down or barely even — with a thin set of gainers that cannot offset the national −1.4 million student gap.
+
+## Reading the latest year without rewriting the decade
+
+Fall 2023 to fall 2024 was nearly flat nationally (−0.3%). That fact is true and incomplete. Stabilization after a cliff is not restoration. States that continue to print −1% to −3% annual declines on top of deep multi-year losses are compounding. States that bounce year to year around zero may be finished adjusting — or may simply be between demographic waves.
+
+For analysts, the durable frame remains the **2019–24 percent change** ladder, checked against region aggregates and against school-age population where the Census series overlaps. For operators, the durable frame is headcount: how many seats, how many teachers, how many buildings relative to the last pre-pandemic fall. The CCD table answers both frames with the same numbers. The dashboard is how those numbers stop looking like a single national average.
+`,
+  },
+  {
     id: "usps-first-class-decline-versus-shipping-packages-2026",
     slug: "usps-first-class-decline-versus-shipping-packages-2026",
     title:
