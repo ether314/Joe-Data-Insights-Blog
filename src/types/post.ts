@@ -310,7 +310,8 @@ export interface Post {
     | "ssa-odar-pending-hearings-versus-average-wait-months-2026"
     | "state-unclaimed-property-holdings-versus-dollars-returned-2026"
     | "us-spent-fuel-in-wet-pools-versus-dry-cask-inventory-2026"
-    | "hearing-level-allowance-rates-versus-initial-denials-2026";
+    | "hearing-level-allowance-rates-versus-initial-denials-2026"
+    | "dormancy-periods-versus-escheat-inflows-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

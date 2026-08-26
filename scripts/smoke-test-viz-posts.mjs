@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "dormancy-periods-versus-escheat-inflows-2026",
+    marker: "Inflow change vs reunification",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "hearing-level-allowance-rates-versus-initial-denials-2026",
     marker: "Headline — cohort gap 29.7 pp → 13.3 pp trough",
     forbidden: "Loading interactive charts",

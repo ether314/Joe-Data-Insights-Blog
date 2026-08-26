@@ -2,6 +2,81 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "dormancy-periods-versus-escheat-inflows-2026",
+    slug: "dormancy-periods-versus-escheat-inflows-2026",
+    title:
+      "Dormancy Cuts Raised Escheat Inflows ~34% — Reunification Barely Moved",
+    excerpt:
+      "Across an 18-state panel, jurisdictions that shortened banking dormancy from five years to three saw a median +34% remittance jump. Owner reunification ratios rose a median 0.4 pp — evidence that faster clocks fill vaults faster than they reunite owners.",
+    category: "Finance",
+    themeId: "unclaimed-property-escheat",
+    imageUrl:
+      "/images/finance-dormancy-periods-versus-escheat-inflows-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hourglass dissolving into gold coin streams into a treasury vault, with a thin amber trickle returning to households, Visual Capitalist-style finance editorial",
+    publishedAt: "2026-08-26T08:00:00Z",
+    featured: true,
+    visualization: "dormancy-periods-versus-escheat-inflows-2026",
+    layout: "default",
+    content: `When a checking account, brokerage balance, or unpaid dividend sits untouched long enough, state law calls it abandoned. The holder — a bank, transfer agent, insurer, or employer — must remit the property to the state treasurer or controller. That remittance is an **escheat inflow**. The statute that decides *how long is long enough* is the **dormancy period**. Between 2004 and 2020, **seventeen jurisdictions** shortened banking dormancy clocks, typically from five (or seven) years to **three**. Oversight letters and industry tables now ask the finance question this desk answers with an 18-state panel: **did those shorter clocks raise annual inflows without raising the rate at which owners are reunited with their money?**
+
+The short answer is yes on inflows and no on reunification. In this panel, the **shortening cohort** posts a **median +34%** change in average annual remittances across a three-year post-cut window versus the three years before. **Five-year holdouts** in the same matched windows rise a median **+9%**. The **reunification ratio** — owner returns divided by remittances in the same window — moves a median **+0.4 percentage points** after cuts, versus **+0.6 pp** for holdouts. Eight of eleven shorteners show inflow gains of at least 20% with reunification flat or down. Faster clocks fill the vault; they do not, on these ratios, clear it faster.
+
+The interactive dashboard above walks a national remittance-versus-return path, compares cohort medians, scatters inflow change against reunification change, ranks states, breaks down dormancy triggers, and charts the 2004–2020 adoption wave. Region, cohort, and sort controls re-cut the panel without changing the core result.
+
+## What a dormancy cut actually changes
+
+Dormancy is not a tax. It is a **custody timer**. Under older practice, many states waited five years of inactivity — and some still keyed the clock to **returned-by-post-office (RPO)** mail — before a demand deposit or securities position was presumed abandoned. A cut to three years advances the remittance date by roughly two vintage years for every newly dormant cohort. In the first reporting cycles after a cut, holders also clear a **one-time backlog**: property that would have waited until year five arrives in year three, so remittances spike even if the underlying stock of forgotten balances is unchanged.
+
+That mechanical boost is why inflow deltas are the first place to look. California, New York, Texas, Illinois, Pennsylvania, Ohio, New Jersey, Michigan, Arizona, Washington, and Massachusetts sit in this desk's shortening cohort on banking or demand-deposit clocks. Delaware, Florida, Georgia, North Carolina, Virginia, Wisconsin, and Missouri remain on **five-year** banking dormancy in the holdout set (Delaware's securities clocks can be shorter; the banking contrast is what the cohort labels). Statute tables from NAUPA holder guides and commercial dormancy summaries supply the year counts; treasurer annual reports supply the dollar paths joined to those years.
+
+| Cohort | Panel N | Median inflow Δ | Median reunif Δ | Share with ≥20% inflow & ≤1 pp reunif |
+| --- | ---: | ---: | ---: | ---: |
+| Shortened to 3y | 11 | +34% | +0.4 pp | 73% |
+| Still 5y holdout | 7 | +9% | +0.6 pp | 0% |
+
+The table is the argument in miniature. Shorteners and holdouts faced the same national economy, the same mobile account-holders, and the same MissingMoney.com awareness campaigns. The statute difference lines up with the remittance difference. The reunification difference does not.
+
+## Inflows jumped; reunification ratios did not
+
+**Reunification rate** here is a **flow-to-flow** ratio: dollars paid to owners in a window divided by dollars remitted in that window. It is not a lifetime claim probability, not a stock return rate, and not a claim-approval rate. It answers a narrower question: when remittances accelerate after a dormancy cut, do owner payouts accelerate in proportion?
+
+They mostly do not. New York and California show large remittance lifts with reunification flat to slightly down. Michigan and Pennsylvania print the same pattern. Texas and Illinois are partial exceptions — modest reunification gains accompany solid inflow gains — but even there the reunification move is single-digit percentage points against mid-thirties inflow jumps. Massachusetts posts the softest inflow delta among shorteners (+25%) with only +1 pp reunification. Holdouts such as Florida and Georgia show slower remittance growth and small positive reunification drifts, consistent with organic claim outreach rather than a statute-driven remittance surge.
+
+The scatter panel makes the asymmetry visual. Shorteners cluster on the right (large positive X = inflow Δ) near a horizontal band around zero on the Y axis (reunification Δ). Holdouts sit near the origin. If shorter dormancy were primarily a consumer-protection reform that also improved finding owners, the cloud would tilt up and to the right. It does not.
+
+## The national path tells the same story
+
+Desk-scaled national remittances rise from roughly **$5.8 billion** in 2015 toward **$9.8 billion** in 2024 as the cumulative count of short-dormancy jurisdictions climbs to **seventeen**. Owner returns rise too — peaking near **$5.4 billion** in the FY2023 NAUPA window before **$4.49 billion** in FY2024 — but the **returns-to-remittances ratio** oscillates in the high forties to mid-fifties and ends the decade near **46%**. The vault grows because inflows compound; reunification does not keep pace as a share of what arrives.
+
+That is the policy tension Senate Banking highlighted in its April 2026 letter to the National Association of Unclaimed Property Administrators: aggregate returns look large in absolute dollars, yet the custodial float is widely cited near **$70 billion**, up from roughly **$20 billion** in early-2000s estimates. Short dormancy and inactivity triggers are among the candidate explanations for why remittance volume rose faster than reunification capacity.
+
+## Inactivity triggers amplify the clock
+
+A dormancy cut is only half the statute design. The other half is **what starts the clock**. Under an **RPO** standard, successful mail delivery can reset or delay abandonment. Under an **inactivity** standard, the absence of owner-initiated contact — a login, a trade, a written inquiry — can start the timer even while statements arrive. This panel codes most shorteners as inactivity or hybrid; remaining RPO-leaning states cluster among holdouts and post lower median inflow deltas.
+
+The combination matters for long-horizon investors. Buy-and-hold brokerage accounts are designed for silence. A three-year inactivity clock plus securities liquidation rules can force a sale into state custody before the owner notices, converting a capital-gains path into a cash claim against the treasurer. Proposed federal guardrails in the 2026 SAFER Act debate — including a five-year no-contact floor for covered investment accounts — are a direct response to that interaction. This desk does not litigate the bill; it measures the state-level inflow/reunification wedge the debate assumes.
+
+## Why reunification does not automatically scale with remittances
+
+Three operational frictions explain the flat reunification ratios. **First**, notice quality. Due-diligence letters go to last-known addresses that are often stale precisely because the owner moved — the same mobility that creates unclaimed balances. **Second**, claim friction. Portals, identity verification, and heir documentation take time; a remittance spike arrives as a batch, while claims arrive as a queue. **Third**, securities liquidation. When states sell abandoned shares, owners who later claim receive cash (sometimes without intervening market gains), which can dampen both the incentive and the optics of "reunification success" even when the principal is returned.
+
+Outreach still works. NAUPA members credit media partnerships and portal modernization for absolute-dollar return records. Absolute dollars can rise while the ratio of returns to remittances stays flat if the inflow wave is larger. That is exactly the pattern in the national series and in the shortening cohort medians.
+
+## Caveats, confidence, and what this desk does not claim
+
+Several limits bind the result. **First**, many state remittance series are not published as vintage-matched pre/post statute ledgers; mid-panel inflow and reunification cells are **estimated** joins across fiscal calendars and press totals — directional, not a NAUPA CSV extract. Confidence flags in the data module mark disclosed versus estimated rows. **Second**, dormancy periods vary by property type; this panel focuses on **banking / demand-deposit** clocks as the cleanest cross-state contrast, not payroll (often one year) or every securities subclass. **Third**, Delaware's holder-state role and audit recoveries can inflate remittances for reasons orthogonal to dormancy length, which is why it sits as a five-year banking holdout with still-high inflows. **Fourth**, reunification ratios ignore claim latency: dollars paid this year may relate to property remitted a decade ago. **Fifth**, the seventeen-jurisdiction shortening count comes from published industry and oversight cites; the eighteen-state panel is a large-program subset, not a census of every cut.
+
+None of those caveats erase the cohort gap. Median inflow change after shortening is roughly **four times** the holdout median. Median reunification change is not. The statute reform that accelerates abandonment also accelerates the flow of money into state custody without a matching acceleration in the share paid back out.
+
+## What to watch next
+
+Three signals will test whether the wedge narrows. **Proactive payment** and tax-file matching can lift outflows without waiting for owners to search. **Federal floors** on dormancy or inactivity for investment accounts would slow the next remittance wave if enacted. **Auditor compensation** structures that reward findings over reunification remain a political flashpoint in oversight letters — worth tracking in NAUPA responses and treasurer budget notes.
+
+For holders, the compliance message is unchanged: map every property type to the current clock, send due diligence on time, and expect shorter cycles where statutes moved. For owners, the practical step is still free: search official state portals under every prior name and address. For finance desks, the analytic step is to stop treating remittance records as proof of reunification success. **Inflow change and reunification change are different series.** On the dormancy-cut wave of the last two decades, they diverged — and the vault grew accordingly.
+`,
+  },
+  {
     id: "hearing-level-allowance-rates-versus-initial-denials-2026",
     slug: "hearing-level-allowance-rates-versus-initial-denials-2026",
     title:
