@@ -2,6 +2,74 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "kidney-wait-time-versus-dsa-transplant-rates-2026",
+    slug: "kidney-wait-time-versus-dsa-transplant-rates-2026",
+    title:
+      "Kidney Wait Times: After KAS250, Long-Wait Centers Still ~20 Months Behind",
+    excerpt:
+      "National median wait at deceased-donor kidney transplant fell only from 61 to 58 months after DSA boundaries were removed. Long-wait centers remain near 69 months versus 49 for short-wait peers — while DSA transplant-rate disparity compressed but did not vanish.",
+    category: "Health Economics",
+    themeId: "organ-waitlist-unos",
+    imageUrl:
+      "/images/health-economics-kidney-wait-time-versus-dsa-transplant-rates-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial map of unequal kidney wait-time bars across US donation regions with teal and amber data accents",
+    publishedAt: "2026-08-26T08:00:00Z",
+    featured: true,
+    visualization: "kidney-wait-time-versus-dsa-transplant-rates-2026",
+    layout: "default",
+    content: `For decades, a patient’s odds of receiving a deceased-donor kidney depended heavily on **where** they were listed. Donation service areas (DSAs) — the geographic footprints of organ procurement organizations — were hard boundaries in kidney allocation. A candidate in a high-supply DSA could clear the list years sooner than an otherwise similar patient listed a few hundred miles away. On **15 March 2021**, the Organ Procurement and Transplantation Network (OPTN) replaced that DSA-first architecture with **KAS250**: offers radiate in **250-nautical-mile circles** centered on the donor hospital. That circles policy is the live geographic regime while OPTN continues to develop a full **continuous-distribution** composite allocation score for kidneys.
+
+The equity question that remains is quantitative, not rhetorical. **How large is the remaining gap in median kidney wait time across DSAs and center tiers after the removal of DSA hard boundaries?** Drawing on the OPTN/SRTR 2024 Annual Data Report for Kidney, HRSA/OPTN policy materials, and peer-reviewed KAS250 evaluations, the interactive dashboard above tracks national medians, long-wait versus short-wait center tiers, DSA-sample wait months against deceased-donor kidney transplant (DDKT) rates, and the compression of DSA-level transplant-rate disparity.
+
+## National medians barely moved
+
+A Transplantation Proceedings analysis of adult DDKT recipients in SRTR data compared a pre-KAS250 window (August 2018–July 2019) with an early post window (May 2021–April 2022). **National median waiting time at transplant fell from 61 months to 58 months** — a statistically detectable but clinically modest **three-month** compression. Waiting time here is the accrual clock that drives match-run priority (dialysis and/or listing time), not a forecast of remaining time for everyone still on the list.
+
+That modest national shift sits against a larger operational backdrop. The SRTR 2024 Kidney chapter reports a record **27,660** adult kidney transplants in 2024 and **143,982** adult candidates on the waiting list — approaching the 2019 peak. The share of candidates who had been waiting **five years or longer** continued a gradual decline to **10.7%**, and the share with less than one year of waiting time rose to **39.5%**. Those stock composition shifts are encouraging, but they do not erase geography. Pretransplant mortality still ranged from **2.5 to 7.0 deaths per 100 patient-years by DSA** in 2024, around a national rate of **4.7**.
+
+## Long-wait centers still sit a year and a half higher
+
+Center-tier cuts are sharper than the national median. Researchers classified transplant centers as **long-wait (LWT)** or **short-wait (SWT)** relative to the pre-policy national center median of **57.8 months**. Before KAS250, LWT centers transplanted at a median of **74 months** and SWT centers at **50 months** — a **24-month** gap. After KAS250, LWT medians fell to **69 months** while SWT medians held near **49 months**. The remaining gap is about **20 months**. In other words, circles removed a few months from the longest queues without pulling the two tiers together.
+
+| Tier (center median wait) | Pre-KAS250 (mo) | Post-KAS250 (mo) | Change |
+| --- | ---: | ---: | ---: |
+| Short-wait centers | 50 | 49 | −1 |
+| National median | 61 | 58 | −3 |
+| Long-wait centers | 74 | 69 | −5 |
+| LWT − SWT gap | 24 | 20 | −4 |
+
+The same study found that net annual DDKT volume rose (about **13,561** to **16,130** in the compared windows), cold ischemia times lengthened, and delayed graft function edged up — the efficiency tax of broader sharing. Centers generally accepted more aggressive offers after KAS250, yet differences in donation-after-circulatory-death utilization, hard-to-place offer acceptance, and tolerance for long cold times **persisted between SWT and LWT centers**. Allocation circles change who sees which kidney first; they do not force identical acceptance behavior.
+
+## DSA transplant-rate disparity compressed — then stuck on centers
+
+A complementary Clinical Transplantation analysis decomposed geographic variation in DDKT rates with multilevel models. The **median incidence rate ratio (MIRR)** summarizing DSA-level rate disparity fell from roughly **1.35** before KAS250 to about **1.17** afterward. That is meaningful compression: the typical DSA-to-DSA rate multiplier shrank. Under circles, however, about **93%** of remaining geographic rate variation was attributed to **center practices within DSAs** (offer acceptance and related behavior), up from about **82%** before the policy. Center-level MIRRs remained high (near **1.8**).
+
+The policy implication is blunt. Further redraws of allocation geography — including the composite-score continuous-distribution framework OPTN is designing for kidneys — are unlikely to erase access gaps if center acceptance patterns stay divergent. Geography still matters for supply density and travel logistics, but the residual “DSA gap” increasingly reads as a **within-DSA practice gap** when measured in transplant rates.
+
+## Sample DSA wait months versus transplant rates
+
+Official SRTR DSA scorecards are denser than any single chart can show. For the dashboard, we assemble a **20-DSA estimated sample** anchored to published national ranges: post-policy median wait months from the high **70s** in historically congested coastal metros down toward the high **30s** in higher-throughput Midwestern and mountain areas, paired with DDKT rates from the mid-teens to above **30 transplants per 100 patient-years**. Across that sample, post-policy wait **spread is 34 months** (about 38 to 72), with an interquartile range near **14 months**.
+
+The scatter panel makes the inverse relationship visible: DSAs with higher estimated DDKT rates tend to clear candidates faster. That is not a causal claim that circles failed wherever waits remain long. Candidate blood-type mix, cPRA, living-donor access, multi-listing, and center filters all shape observed waits. It **is** evidence that removing DSA hard boundaries did not flatten the wait surface into a single national queue.
+
+## What continuous distribution still has to solve
+
+OPTN’s continuous-distribution framework — already live for some organs and still in development for kidneys and pancreata — replaces hard geographic classifications with a **composite allocation score** that can weight medical urgency, post-transplant survival, candidate biology, access, and placement efficiency as continuous points. KAS250 was an intermediate step: it killed DSA/Region as the primary sort key for kidneys without yet deploying a full points-based score.
+
+The remaining equity problem has three layers. First, **stock waits** remain multi-year for many blood-type O and highly sensitized candidates even when flow rates improve. Second, **geographic mortality** still spans nearly a threefold range across DSAs (2.5–7.0 per 100 patient-years). Third, **nonuse** of recovered kidneys rose to **29.3%** in 2024 — and even higher for biopsied, older-donor, and high-KDPI organs — so broader sharing coexists with organs that never implant. Continuous distribution will need to balance equity points against placement efficiency if it is not to amplify offer volume without transplant yield.
+
+## Caveats and how to read the numbers
+
+Waiting time at transplant is a **survivor metric**: it describes people who received a kidney, not everyone who listed. Candidates who die or become too sick leave the list without contributing a transplant wait. Median wait also differs from time-to-transplant percentiles published for incident cohorts. DSA labels in the sample panel are **estimated composites** for visualization, not OPTN performance scorecards; treat exact DSA point estimates as directional. KAS250’s early post window (through spring 2022) precedes later volume growth and the January 2023 eGFR waiting-time credit policy that raised DDKT rates among Black candidates. Continuous distribution for kidneys is **not yet the live allocation algorithm** — circles are.
+
+Even with those caveats, the headline gap is robust across sources: **national medians moved by about three months; long-wait centers remain roughly twenty months above short-wait peers; DSA-level rate disparity compressed but center practice now dominates residual geography.** Patients still experience place. Policy closed the brightest hard boundary; it has not yet equalized the clock.
+
+## Sources and method notes
+
+Primary public anchors are the [OPTN/SRTR 2024 Annual Data Report — Kidney](https://srtr.hrsa.gov/adr/2024/Kidney/), [OPTN continuous-distribution framework updates](https://optn.transplant.hrsa.gov/policies-bylaws/public-comment/update-on-continuous-distribution-of-kidneys-and-pancreata), and [HRSA OPTN materials](https://www.hrsa.gov/optn). Pre/post median waits and center-tier gaps follow the Transplantation Proceedings KAS250 evaluation; DSA MIRR compression follows the Clinical Transplantation multilevel decomposition. Dashboard DSA rows are estimated composites for interaction — see the figure source note for the full perimeter.`,
+  },
+  {
     id: "dormancy-periods-versus-escheat-inflows-2026",
     slug: "dormancy-periods-versus-escheat-inflows-2026",
     title:

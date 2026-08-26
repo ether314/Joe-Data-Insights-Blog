@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "kidney-wait-time-versus-dsa-transplant-rates-2026",
+    marker: "Median wait 61→58 months after KAS250",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "dormancy-periods-versus-escheat-inflows-2026",
     marker: "Inflow change vs reunification",
     forbidden: "Loading interactive charts",
