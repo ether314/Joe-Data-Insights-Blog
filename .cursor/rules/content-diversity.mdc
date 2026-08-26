@@ -1,0 +1,24 @@
+---
+description: New posts must be standalone original briefs, not sequels of the live archive. Applies to interactive agents and conveyor workers/orchestrator.
+alwaysApply: true
+---
+
+# Content diversity (no archive sequels)
+
+Each new article is a **new topic**, not a relative of an existing post.
+
+## Orchestrator / claim
+- `scripts/claim-next-topics.mjs` must claim unused named candidates (novel themes first).
+- Never mint `{theme}-update-*`, `{theme}-concentration-*`, `{theme}-geography-*`, or `{theme}-cycle*` sequels of a theme that already has posts.
+- Do not instruct workers to write a companion, vintage delta, or "same question, new quarter" cut.
+
+## Worker / subagents
+- The assigned brief is the whole idea. Do not survey `src/data/posts.ts` `content:` fields for inspiration.
+- When registering the new post, copy **object keys only** from one existing entry; write original prose and a new visualization.
+- If you spawn subagents, give them only this brief + source URLs. Do **not** paste existing article bodies, sibling slugs, or "look at how we did the last concentration post".
+- Forbidden framing: "Our theme already maps", "companion to", "vintage slope versus last print", "the July research put…".
+- Internal links: 0 or 1. Zero is better than a sequel chain.
+- Do not clone another post's dashboard layout (KPI row + one bar chart).
+
+## Why
+The conveyor previously filled idle slots with update/concentration/geography variants of the same ~20 themes. That made the archive a hall of mirrors. New work must look like a different magazine issue, not the same chart with a new date.

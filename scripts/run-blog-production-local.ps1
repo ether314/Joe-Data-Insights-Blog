@@ -163,19 +163,12 @@ function Start-TransportDebug([string]$Reason) {
         Write-Log "WARN: transport debug script missing ($debugScript)"
         return
     }
-    Write-Log "Starting transport debug ($Reason)..."
+    Write-Log "Running transport debug in-process ($Reason)..."
     try {
-        $stdout = Join-Path $LogDir "transport-debug-stdout.log"
-        $stderr = Join-Path $LogDir "transport-debug-stderr.log"
-        $proc = Start-Process -FilePath "powershell.exe" -ArgumentList @(
-            "-NoProfile",
-            "-ExecutionPolicy", "Bypass",
-            "-File", $debugScript
-        ) -WorkingDirectory $RepoRoot -WindowStyle Minimized -PassThru `
-            -RedirectStandardOutput $stdout -RedirectStandardError $stderr
-        Write-Log "Transport debug started (PID $($proc.Id)) -> artifacts/transport-debug/"
+        & $debugScript
+        Write-Log "Transport debug finished -> artifacts/transport-debug/"
     } catch {
-        Write-Log "WARN: failed to start transport debug: $($_.Exception.Message)"
+        Write-Log "WARN: failed to run transport debug: $($_.Exception.Message)"
     }
 }
 
@@ -215,8 +208,9 @@ if (Test-Path $PromptFile) {
     Write-Log "Loaded prompt from scripts/blog-production-prompt.txt (runId=$RunId)"
 } else {
     $Prompt = @"
-Operating mode: infinite conveyor. Follow .cursor/rules/autonomous-blog-production.mdc.
-Run npm run theme-balance before each post. Minimum 2 posts per turn when deploy succeeds.
+Operating mode: infinite conveyor. Follow .cursor/rules/content-diversity.mdc.
+Run npm run theme-balance before each post. Claim unused novel topics only — never {theme}-update/concentration/geography sequels.
+Minimum 2 posts per turn when deploy succeeds.
 "@
 }
 
@@ -234,8 +228,9 @@ Your run ID is still {{RUN_ID}}. You are the active conveyor.
 Read artifacts/blog-production-lock.json. Resume from lastSlug.
 If newest posts in posts.ts are missing from out/blog/, run npm run deploy for those FIRST.
 Do not publish to Firebase Hosting as part of production.
-Then continue the infinite conveyor (ship -> verify local build -> next).
-Do not ask the user anything. Follow scripts/blog-production-prompt.txt gates.
+Then continue the infinite conveyor (ship -> verify local build -> next novel topic).
+Do not claim {theme}-update / concentration / geography sequels.
+Do not ask the user anything. Follow scripts/blog-production-prompt.txt gates and .cursor/rules/content-diversity.mdc.
 "@.Replace("{{RUN_ID}}", $RunId)
 
     while ($session -lt $MaxSessionRestarts) {

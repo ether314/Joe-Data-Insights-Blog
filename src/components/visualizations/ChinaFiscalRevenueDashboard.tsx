@@ -141,7 +141,7 @@ export function ChinaFiscalRevenueDashboard({ embedded = false }: { embedded?: b
     : "flex h-full min-h-0 flex-col";
 
   return (
-    <div className={shellClass}>
+    <div data-viz="china-fiscal-revenue" className={shellClass}>
       <div className="shrink-0 border-b border-slate-200 bg-white px-2 py-2 sm:px-3">
         <h2 className="text-xs font-bold text-slate-900 sm:text-sm">
           Granular Revenue by Line Item — All 4 Budgets ({fmtUsdT(STATS.totalUsdT)} total)

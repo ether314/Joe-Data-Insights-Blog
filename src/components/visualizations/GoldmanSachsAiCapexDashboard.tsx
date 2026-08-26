@@ -78,7 +78,7 @@ export function GoldmanSachsAiCapexDashboard() {
   const headline = focusYear === "2027" ? HEADLINE.y2027 : HEADLINE.y2028;
 
   return (
-    <div className="space-y-6">
+    <div data-viz="goldman-sachs-ai-capex" className="space-y-6">
       <div className="rounded-lg border border-cyan-200 bg-cyan-50 px-4 py-3 text-sm text-cyan-950">
         Source:{" "}
         <a

@@ -1,5 +1,6 @@
 # Registers Windows scheduled task CursorBlogProductionWatchdog.
-# Triggers: current user logon + every 5 minutes while logged on.
+# Trigger: current user logon only. The in-app watchdog loop already polls every
+# 10 minutes; a 5-minute repeating task was a console-flash factory (new WT tabs).
 # Action: one-shot watch-blog-production.ps1 (restart orchestrator / loop / stream /
 # worker containers if down). Never docker compose down. Never Firebase deploy.
 # Respects artifacts/blog-production-lock.json status=paused (watch script no-ops;
@@ -19,22 +20,12 @@ if (-not (Test-Path $WatchScript)) {
 }
 
 $psExe = Join-Path $env:SystemRoot "System32\WindowsPowerShell\v1.0\powershell.exe"
+# -WindowStyle Hidden here is powershell.exe argv (one-shot check), not Start-Process.
 $arg = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$WatchScript`""
 
 $action = New-ScheduledTaskAction -Execute $psExe -Argument $arg -WorkingDirectory $RepoRoot
 
-# Logon + 5-minute repetition (survives reboot once the user is logged on).
 $logon = New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME
-$logonRepeat = New-ScheduledTaskTrigger -Once -At (Get-Date).Date `
-    -RepetitionInterval (New-TimeSpan -Minutes 5) `
-    -RepetitionDuration (New-TimeSpan -Days 9999)
-$logon.Repetition = $logonRepeat.Repetition
-
-# Also start a repeating clock from ~1 minute after register so the interval
-# does not wait for the next logon.
-$interval = New-ScheduledTaskTrigger -Once -At ((Get-Date).AddMinutes(1)) `
-    -RepetitionInterval (New-TimeSpan -Minutes 5) `
-    -RepetitionDuration (New-TimeSpan -Days 9999)
 
 $principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -LogonType Interactive -RunLevel Limited
 
@@ -46,7 +37,7 @@ $settings = New-ScheduledTaskSettingsSet `
     -ExecutionTimeLimit (New-TimeSpan -Hours 2) `
     -DontStopOnIdleEnd
 
-$description = "Blog production conveyor watchdog. Restarts orchestrator, in-app loop, stream dashboard, and Docker workers if they died. Does not compose down or Firebase deploy. Disabled by npm run automation:stop."
+$description = "Blog production conveyor watchdog (logon only). Restarts orchestrator, in-app loop, stream dashboard, and Docker workers if they died. Does not compose down or Firebase deploy. Disabled by npm run automation:stop."
 
 $paused = $false
 if (Test-Path $LockFile) {
@@ -61,7 +52,7 @@ Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false -ErrorAction Silent
 Register-ScheduledTask `
     -TaskName $TaskName `
     -Action $action `
-    -Trigger @($logon, $interval) `
+    -Trigger $logon `
     -Principal $principal `
     -Settings $settings `
     -Description $description `
@@ -75,7 +66,7 @@ if ($paused) {
     Write-Host "Registered $TaskName (ENABLED)."
 }
 
-Write-Host "Triggers: At logon ($env:USERNAME) with 5-min repetition; plus 5-min interval starting in ~1 min."
+Write-Host "Triggers: At logon ($env:USERNAME) only (in-app loop already polls every 10 min)."
 Write-Host "Action: $psExe $arg"
 Write-Host "Stop: npm run automation:stop  (sets lock=paused and disables this task)"
 Write-Host "Resume: npm run automation:resume  (clears pause, enables task, starts stack)"

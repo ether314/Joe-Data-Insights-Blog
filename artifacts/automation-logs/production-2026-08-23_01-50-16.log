@@ -1,0 +1,816 @@
+[2026-08-23 01:50:16] Starting orchestrator (orch-20260823-015016)
+[2026-08-23 01:50:17] Transport mitigations: producers=4 spawnStagger=20s (env BLOG_PRODUCTION_WORKER_COUNT / BLOG_WORKER_SPAWN_STAGGER_SEC)
+[2026-08-23 01:50:17] Bootstrapping worker clones + Docker containers...
+[2026-08-23 01:52:52] Seeding topic failure flags from history...
+[2026-08-23 01:52:52] flags seed: {"blockedStems":4,"blockedThemes":1,"failures":5}
+[2026-08-23 01:52:52] Recovering any orphaned merge state...
+[2026-08-23 01:52:52] merge recover: {
+  "recover": true,
+  "recovered": false,
+  "reason": "no stash state"
+}
+[2026-08-23 01:52:53] Orphaned merging job job-mt2pkn80-7z58v (fiscal-plumbing-concentration-202608) age=2681.93572159833m - branch missing, failing
+[2026-08-23 01:52:53] Skip kill worker 1 for failed job-mt2pkn80-7z58v - slot now on job-mt2qbpwr-i4559
+[2026-08-23 01:52:54] Worker 1 marked busy but process gone - clearing slot (job=job-mt2qbpwr-i4559)
+[2026-08-23 01:52:55] Worker 2 marked busy but process gone - clearing slot (job=job-mt2pw5wk-fxmce)
+[2026-08-23 01:52:55] Worker 3 marked busy but process gone - clearing slot (job=job-mt2pxato-8fg9j)
+[2026-08-23 01:52:56] Worker 4 marked busy but process gone - clearing slot (job=job-mt2qazli-vnf5u)
+[2026-08-23 01:52:57] Worker 5 marked busy but process gone - clearing slot (job=job-mt2q8xna-buful)
+[2026-08-23 01:52:58] WARN: claim-next-topics exit=1
+[2026-08-23 01:52:59] Merging ready job job-mt2qbpwr-i4559 (adaptation-economics-geography-2026) from post/adaptation-economics-geography-2026-w1
+[2026-08-23 01:53:00] Blessing adaptation-economics-geography-2026 (post/adaptation-economics-geography-2026-w1) - pausing other workers
+[2026-08-23 01:53:20] merge-ready-job exit=0
+[2026-08-23 01:53:20] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/adaptation-economics-geography-2026-w1"
+  ],
+  "log": [
+    "merge start slug=adaptation-economics-geography-2026 branch=post/adaptation-economics-geography-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/adaptation-economics-geography-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 42 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/energy-adaptation-economics-geography-2026-hero.png, scripts/qa-adaptation-economics-geography-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AdaptationEconomicsGeography2026Dashboard.tsx, src/data/adaptation-economics-geography-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/adaptation-economics-geography-2026-w1"
+  ]
+}
+[2026-08-23 01:53:21] Blessed merge ok - syncing worker clones from main
+[2026-08-23 01:53:45] sync-worker-clones exit=2 q3-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/migration-humanitarian-concentration-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging scripts/smoke-test-viz-posts.mjs\nAuto-merging src/data/posts.ts\nCONFLICT (content): Merge conflict in src/data/posts.ts\nRebasing (1/3)\rRebasing (2/3)\rRebasing (3/3)\rerror: could not apply 54a2acd... feat(post): ai-capex-spend-geography-2026q3\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 54a2acd... # feat(post): ai-capex-spend-geography-2026q3"
+    }
+  ]
+}
+[2026-08-23 01:53:47] Shipped: adaptation-economics-geography-2026 | duration_sec=160976
+[2026-08-23 01:53:47] Closed branch(es) after merge: post/adaptation-economics-geography-2026-w1
+[2026-08-23 01:53:55] WARN: claim-next-topics exit=1
+[2026-08-23 01:53:56] Merging ready job job-mt2qazli-vnf5u (migration-humanitarian-concentration-2026q3) from post/migration-humanitarian-concentration-2026q3-w4
+[2026-08-23 01:53:56] Blessing migration-humanitarian-concentration-2026q3 (post/migration-humanitarian-concentration-2026q3-w4) - pausing other workers
+[2026-08-23 01:54:38] merge-ready-job exit=0
+[2026-08-23 01:54:38] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/migration-humanitarian-concentration-2026q3-w4"
+  ],
+  "log": [
+    "merge start slug=migration-humanitarian-concentration-2026q3 branch=post/migration-humanitarian-concentration-2026q3-w4",
+    "worktree: using existing branch tip",
+    "fetched post/migration-humanitarian-concentration-2026q3-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 34 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/politics-migration-humanitarian-concentration-2026q3-hero.png, scripts/qa-migration-humanitarian-concentration-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MigrationHumanitarianConcentration2026q3Dashboard.tsx, src/data/migration-humanitarian-concentration-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/migration-humanitarian-concentration-2026q3-w4"
+  ]
+}
+[2026-08-23 01:54:38] Blessed merge ok - syncing worker clones from main
+[2026-08-23 01:54:54] sync-worker-clones exit=2 sed post/chokepoint-commodities-geography-2026q3-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-shipped",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging scripts/smoke-test-viz-posts.mjs\nAuto-merging src/data/posts.ts\nCONFLICT (content): Merge conflict in src/data/posts.ts\nRebasing (1/3)\rRebasing (2/3)\rRebasing (3/3)\rerror: could not apply 54a2acd... feat(post): ai-capex-spend-geography-2026q3\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 54a2acd... # feat(post): ai-capex-spend-geography-2026q3"
+    }
+  ]
+}
+[2026-08-23 01:54:54] Shipped: migration-humanitarian-concentration-2026q3 | duration_sec=161079
+[2026-08-23 01:54:54] Closed branch(es) after merge: post/migration-humanitarian-concentration-2026q3-w4
+[2026-08-23 01:55:01] WARN: claim-next-topics exit=1
+[2026-08-23 01:55:01] Merging ready job job-mt2q8xna-buful (ai-capex-spend-geography-2026q3) from post/ai-capex-spend-geography-2026q3-w5
+[2026-08-23 01:55:02] Blessing ai-capex-spend-geography-2026q3 (post/ai-capex-spend-geography-2026q3-w5) - pausing other workers
+[2026-08-23 01:55:17] merge-ready-job exit=0
+[2026-08-23 01:55:17] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-capex-spend-geography-2026q3-w5"
+  ],
+  "log": [
+    "merge start slug=ai-capex-spend-geography-2026q3 branch=post/ai-capex-spend-geography-2026q3-w5",
+    "worktree: using existing branch tip",
+    "fetched post/ai-capex-spend-geography-2026q3-w5 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 78 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/capital-markets-ai-capex-spend-geography-2026q3-hero.png, scripts/qa-ai-capex-spend-geography-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiCapexSpendGeography2026q3Dashboard.tsx, src/data/ai-capex-spend-geography-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/ai-capex-spend-geography-2026q3-w5"
+  ]
+}
+[2026-08-23 01:55:17] Blessed merge ok - syncing worker clones from main
+[2026-08-23 01:55:25] sync-worker-clones exit=2 ONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/5)\rRebasing (2/5)\rerror: could not apply ed65892... wip(measurement-science-geography-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConf"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/chokepoint-commodities-geography-2026q3-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-shipped",
+      "detail": null
+    }
+  ]
+}
+[2026-08-23 01:55:25] Shipped: ai-capex-spend-geography-2026q3 | duration_sec=161205
+[2026-08-23 01:55:25] Closed branch(es) after merge: post/ai-capex-spend-geography-2026q3-w5
+[2026-08-23 01:55:31] WARN: claim-next-topics exit=1
+[2026-08-23 01:55:31] Merging ready job job-mt2pxato-8fg9j (chokepoint-commodities-geography-2026q3) from post/chokepoint-commodities-geography-2026q3-w3
+[2026-08-23 01:55:31] Blessing chokepoint-commodities-geography-2026q3 (post/chokepoint-commodities-geography-2026q3-w3) - pausing other workers
+[2026-08-23 01:55:46] merge-ready-job exit=0
+[2026-08-23 01:55:46] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/chokepoint-commodities-geography-2026q3-w3"
+  ],
+  "log": [
+    "merge start slug=chokepoint-commodities-geography-2026q3 branch=post/chokepoint-commodities-geography-2026q3-w3",
+    "worktree: using existing branch tip",
+    "fetched post/chokepoint-commodities-geography-2026q3-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 46 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/global-systems-chokepoint-commodities-geography-2026q3-hero.png, scripts/qa-chokepoint-commodities-geography-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/ChokepointCommoditiesGeography2026q3Dashboard.tsx, src/data/chokepoint-commodities-geography-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/chokepoint-commodities-geography-2026q3-w3"
+  ]
+}
+[2026-08-23 01:55:46] Blessed merge ok - syncing worker clones from main
+[2026-08-23 01:55:53] sync-worker-clones exit=2 stry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/5)\rRebasing (2/5)\rerror: could not apply ed65892... wip(measurement-science-geography-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConf"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "reset-shipped",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-23 01:55:54] Shipped: chokepoint-commodities-geography-2026q3 | duration_sec=161777
+[2026-08-23 01:55:54] Closed branch(es) after merge: post/chokepoint-commodities-geography-2026q3-w3
+[2026-08-23 01:56:00] WARN: claim-next-topics exit=1
+[2026-08-23 01:56:00] Merging ready job job-mt2pw5wk-fxmce (measurement-science-geography-2026) from post/measurement-science-geography-2026-w2
+[2026-08-23 01:56:00] Blessing measurement-science-geography-2026 (post/measurement-science-geography-2026-w2) - pausing other workers
+[2026-08-23 01:56:13] merge-ready-job exit=0
+[2026-08-23 01:56:13] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/measurement-science-geography-2026-w2"
+  ],
+  "log": [
+    "merge start slug=measurement-science-geography-2026 branch=post/measurement-science-geography-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/measurement-science-geography-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 41 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/global-systems-measurement-science-geography-2026-hero.png, scripts/qa-measurement-science-geography-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MeasurementScienceGeography2026Dashboard.tsx, src/data/measurement-science-geography-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/measurement-science-geography-2026-w2"
+  ]
+}
+[2026-08-23 01:56:13] Blessed merge ok - syncing worker clones from main
+[2026-08-23 01:56:19] sync-worker-clones exit=0 
+  "ok": true,
+  "workerRoot": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers",
+  "main": "master",
+  "excludeId": "2",
+  "mergedBranch": "post/measurement-science-geography-2026-w2",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "reset-shipped",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-23 01:56:20] Shipped: measurement-science-geography-2026 | duration_sec=161856
+[2026-08-23 01:56:20] Closed branch(es) after merge: post/measurement-science-geography-2026-w2
+[2026-08-23 01:56:26] WARN: claim-next-topics exit=1
+[2026-08-23 01:56:26] Merging ready job job-mt2pk0j1-ehxlq (demographic-cash-flows-geography-2026q3) from post/demographic-cash-flows-geography-2026q3-w4
+[2026-08-23 01:56:26] Blessing demographic-cash-flows-geography-2026q3 (post/demographic-cash-flows-geography-2026q3-w4) - pausing other workers
+[2026-08-23 01:56:33] merge-ready-job exit=0
+[2026-08-23 01:56:33] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/demographic-cash-flows-geography-2026q3-w4"
+  ],
+  "log": [
+    "merge start slug=demographic-cash-flows-geography-2026q3 branch=post/demographic-cash-flows-geography-2026q3-w4",
+    "worktree: using existing branch tip",
+    "fetched post/demographic-cash-flows-geography-2026q3-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 46 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective: post files already match HEAD GÇö treating as shipped",
+    "restored WIP stash",
+    "closed shipped branch(es): post/demographic-cash-flows-geography-2026q3-w4"
+  ]
+}
+[2026-08-23 01:56:33] Blessed merge ok - syncing worker clones from main
+[2026-08-23 01:56:37] sync-worker-clones exit=0 ": true,
+  "workerRoot": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers",
+  "main": "master",
+  "excludeId": "4",
+  "mergedBranch": "post/demographic-cash-flows-geography-2026q3-w4",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-23 01:56:37] Shipped: demographic-cash-flows-geography-2026q3 | duration_sec=162440
+[2026-08-23 01:56:37] Closed branch(es) after merge: post/demographic-cash-flows-geography-2026q3-w4
+[2026-08-23 01:56:43] WARN: claim-next-topics exit=1
+[2026-08-23 01:56:48] WARN: claim-next-topics exit=1
+[2026-08-23 01:56:54] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:00] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:05] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:11] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:16] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:22] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:27] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:33] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:39] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:44] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:50] WARN: claim-next-topics exit=1
+[2026-08-23 01:57:56] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:02] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:14] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:20] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:25] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:31] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:36] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:42] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:47] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:53] WARN: claim-next-topics exit=1
+[2026-08-23 01:58:58] WARN: claim-next-topics exit=1
+[2026-08-23 01:59:04] WARN: claim-next-topics exit=1
+[2026-08-23 01:59:09] WARN: claim-next-topics exit=1
+[2026-08-23 01:59:15] WARN: claim-next-topics exit=1
+[2026-08-23 01:59:20] WARN: claim-next-topics exit=1
+[2026-08-23 01:59:26] Assigning job job-mt5edcs7-my1gf -> worker 1
+[2026-08-23 01:59:26] Spawned worker 1 shell pid=3020 for job-mt5edcs7-my1gf (attempt 1)
+[2026-08-23 01:59:31] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-23 01:59:51] WARN: orchestrator loop error (continuing): The process cannot access the file 'E:\AI Projects\data-insights-blog\artifacts\automation-logs\production-2026-08-23_01-50-16.log' because it is being used by another process.
+[2026-08-23 02:00:11] Assigning job job-mt5edcs7-gba6q -> worker 2
+[2026-08-23 02:00:11] Spawned worker 2 shell pid=30476 for job-mt5edcs7-gba6q (attempt 1)
+[2026-08-23 02:00:15] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-23 02:00:35] Assigning job job-mt5edcs7-6gn8v -> worker 3
+[2026-08-23 02:00:36] Spawned worker 3 shell pid=24172 for job-mt5edcs7-6gn8v (attempt 1)
+[2026-08-23 02:00:40] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-23 02:01:00] Assigning job job-mt5edcs7-8h480 -> worker 4
+[2026-08-23 02:01:00] Spawned worker 4 shell pid=30780 for job-mt5edcs7-8h480 (attempt 1)
+[2026-08-23 02:01:04] W5 idle (no recovery candidate) - assigning producer job-mt5edcs6-3ct3i (who-glass-bloodstream-resistance-2026)
+[2026-08-23 02:01:04] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-23 02:01:24] Assigning job job-mt5edcs6-3ct3i -> worker 5
+[2026-08-23 02:01:25] Spawned worker 5 shell pid=20824 for job-mt5edcs6-3ct3i (attempt 1)
+[2026-08-23 02:18:58] Merging ready job job-mt5edcs7-6gn8v (us-share-of-global-source-plasma-2026) from post/us-share-of-global-source-plasma-2026-w3
+[2026-08-23 02:18:59] Defer merge of us-share-of-global-source-plasma-2026 - worker 3 still finishing this job
+[2026-08-23 02:19:22] Assigning job job-mt5f2z79-oishq -> worker 3
+[2026-08-23 02:19:23] Spawned worker 3 shell pid=29324 for job-mt5f2z79-oishq (attempt 1)
+[2026-08-23 02:19:27] Merging ready job job-mt5edcs7-6gn8v (us-share-of-global-source-plasma-2026) from post/us-share-of-global-source-plasma-2026-w3
+[2026-08-23 02:19:28] Blessing us-share-of-global-source-plasma-2026 (post/us-share-of-global-source-plasma-2026-w3) - pausing other workers
+[2026-08-23 02:20:01] merge-ready-job exit=0
+[2026-08-23 02:20:01] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/us-share-of-global-source-plasma-2026-w3"
+  ],
+  "log": [
+    "merge start slug=us-share-of-global-source-plasma-2026 branch=post/us-share-of-global-source-plasma-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/us-share-of-global-source-plasma-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/global-systems-us-share-of-global-source-plasma-2026-hero.png, scripts/qa-us-share-of-global-source-plasma-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/UsShareOfGlobalSourcePlasma2026Dashboard.tsx, src/data/posts.ts, src/data/theme-registry.ts, src/data/us-share-of-global-source-plasma-2026-data.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/us-share-of-global-source-plasma-2026-w3"
+  ]
+}
+[2026-08-23 02:20:01] Blessed merge ok - syncing worker clones from main
+[2026-08-23 02:20:19] sync-worker-clones exit=2 ata-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nCONFLICT (content): Merge conflict in src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/3)\rRebasing (2/3)\rerror: could not apply 430d301... wip(who-glass-bloodstream-resistance-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeC"
+    }
+  ]
+}
+[2026-08-23 02:20:20] Shipped: us-share-of-global-source-plasma-2026 | duration_sec=1181
+[2026-08-23 02:20:20] Closed branch(es) after merge: post/us-share-of-global-source-plasma-2026-w3
+[2026-08-23 02:22:05] Merging ready job job-mt5edcs7-my1gf (pivotal-trial-sites-by-country-2026) from post/pivotal-trial-sites-by-country-2026-w1
+[2026-08-23 02:22:05] Defer merge of pivotal-trial-sites-by-country-2026 - worker 1 still finishing this job
+[2026-08-23 02:22:28] Merging ready job job-mt5edcs7-my1gf (pivotal-trial-sites-by-country-2026) from post/pivotal-trial-sites-by-country-2026-w1
+[2026-08-23 02:22:29] Defer merge of pivotal-trial-sites-by-country-2026 - worker 1 still finishing this job
+[2026-08-23 02:22:52] Merging ready job job-mt5edcs7-my1gf (pivotal-trial-sites-by-country-2026) from post/pivotal-trial-sites-by-country-2026-w1
+[2026-08-23 02:22:52] Defer merge of pivotal-trial-sites-by-country-2026 - worker 1 still finishing this job
+[2026-08-23 02:23:15] Assigning job job-mt5f7ysw-m2hc7 -> worker 1
+[2026-08-23 02:23:15] Spawned worker 1 shell pid=13516 for job-mt5f7ysw-m2hc7 (attempt 1)
+[2026-08-23 02:23:20] Merging ready job job-mt5edcs7-my1gf (pivotal-trial-sites-by-country-2026) from post/pivotal-trial-sites-by-country-2026-w1
+[2026-08-23 02:23:20] Blessing pivotal-trial-sites-by-country-2026 (post/pivotal-trial-sites-by-country-2026-w1) - pausing other workers
+[2026-08-23 02:23:40] merge-ready-job exit=0
+[2026-08-23 02:23:40] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/pivotal-trial-sites-by-country-2026-w1"
+  ],
+  "log": [
+    "merge start slug=pivotal-trial-sites-by-country-2026 branch=post/pivotal-trial-sites-by-country-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/pivotal-trial-sites-by-country-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/global-systems-pivotal-trial-sites-by-country-2026-hero.png, scripts/qa-pivotal-trial-sites-by-country-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/PivotalTrialSitesByCountry2026Dashboard.tsx, src/data/pivotal-trial-sites-by-country-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/pivotal-trial-sites-by-country-2026-w1"
+  ]
+}
+[2026-08-23 02:23:40] Blessed merge ok - syncing worker clones from main
+[2026-08-23 02:23:50] sync-worker-clones exit=2 d... wip(fao-capture-vs-aquaculture-tonnage-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.merg"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-23 02:23:51] Shipped: pivotal-trial-sites-by-country-2026 | duration_sec=1463
+[2026-08-23 02:23:51] Closed branch(es) after merge: post/pivotal-trial-sites-by-country-2026-w1
+[2026-08-23 02:25:56] Merging ready job job-mt5edcs7-gba6q (fao-capture-vs-aquaculture-tonnage-2026) from post/fao-capture-vs-aquaculture-tonnage-2026-w2
+[2026-08-23 02:25:56] Defer merge of fao-capture-vs-aquaculture-tonnage-2026 - worker 2 still finishing this job
+[2026-08-23 02:26:19] Merging ready job job-mt5edcs7-gba6q (fao-capture-vs-aquaculture-tonnage-2026) from post/fao-capture-vs-aquaculture-tonnage-2026-w2
+[2026-08-23 02:26:19] Defer merge of fao-capture-vs-aquaculture-tonnage-2026 - worker 2 still finishing this job
+[2026-08-23 02:26:43] Merging ready job job-mt5edcs7-gba6q (fao-capture-vs-aquaculture-tonnage-2026) from post/fao-capture-vs-aquaculture-tonnage-2026-w2
+[2026-08-23 02:26:43] Defer merge of fao-capture-vs-aquaculture-tonnage-2026 - worker 2 still finishing this job
+[2026-08-23 02:27:05] Assigning job job-mt5fcwui-24yaq -> worker 2
+[2026-08-23 02:27:06] Spawned worker 2 shell pid=5768 for job-mt5fcwui-24yaq (attempt 1)
+[2026-08-23 02:27:11] Merging ready job job-mt5edcs7-gba6q (fao-capture-vs-aquaculture-tonnage-2026) from post/fao-capture-vs-aquaculture-tonnage-2026-w2
+[2026-08-23 02:27:11] Blessing fao-capture-vs-aquaculture-tonnage-2026 (post/fao-capture-vs-aquaculture-tonnage-2026-w2) - pausing other workers
+[2026-08-23 02:27:43] merge-ready-job exit=0
+[2026-08-23 02:27:43] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/fao-capture-vs-aquaculture-tonnage-2026-w2"
+  ],
+  "log": [
+    "merge start slug=fao-capture-vs-aquaculture-tonnage-2026 branch=post/fao-capture-vs-aquaculture-tonnage-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/fao-capture-vs-aquaculture-tonnage-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/global-systems-fao-capture-vs-aquaculture-tonnage-2026-hero.png, scripts/qa-fao-capture-vs-aquaculture-tonnage-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/FaoCaptureVsAquacultureTonnage2026Dashboard.tsx, src/data/fao-capture-vs-aquaculture-tonnage-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/fao-capture-vs-aquaculture-tonnage-2026-w2"
+  ]
+}
+[2026-08-23 02:27:43] Blessed merge ok - syncing worker clones from main
+[2026-08-23 02:27:58] sync-worker-clones exit=2 ata-insights-blog-workers\\worker-4",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nCONFLICT (content): Merge conflict in src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/4)\rRebasing (2/4)\rerror: could not apply 6e82ad2... wip(us-atc-delay-minutes-by-cause-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConf"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-23 02:27:59] Shipped: fao-capture-vs-aquaculture-tonnage-2026 | duration_sec=1666
+[2026-08-23 02:27:59] Closed branch(es) after merge: post/fao-capture-vs-aquaculture-tonnage-2026-w2
+[2026-08-23 02:37:33] Merging ready job job-mt5edcs6-3ct3i (who-glass-bloodstream-resistance-2026) from post/who-glass-bloodstream-resistance-2026-w5
+[2026-08-23 02:37:33] Defer merge of who-glass-bloodstream-resistance-2026 - worker 5 still finishing this job
+[2026-08-23 02:38:04] Merging ready job job-mt5edcs6-3ct3i (who-glass-bloodstream-resistance-2026) from post/who-glass-bloodstream-resistance-2026-w5
+[2026-08-23 02:38:05] Defer merge of who-glass-bloodstream-resistance-2026 - worker 5 still finishing this job
+[2026-08-23 02:38:33] Merging ready job job-mt5edcs6-3ct3i (who-glass-bloodstream-resistance-2026) from post/who-glass-bloodstream-resistance-2026-w5
+[2026-08-23 02:38:34] Defer merge of who-glass-bloodstream-resistance-2026 - worker 5 still finishing this job
+[2026-08-23 02:39:01] Merging ready job job-mt5edcs6-3ct3i (who-glass-bloodstream-resistance-2026) from post/who-glass-bloodstream-resistance-2026-w5
+[2026-08-23 02:39:02] Defer merge of who-glass-bloodstream-resistance-2026 - worker 5 still finishing this job
+[2026-08-23 02:39:28] Merging ready job job-mt5edcs6-3ct3i (who-glass-bloodstream-resistance-2026) from post/who-glass-bloodstream-resistance-2026-w5
+[2026-08-23 02:39:29] Defer merge of who-glass-bloodstream-resistance-2026 - worker 5 still finishing this job
+[2026-08-23 02:39:53] Merging ready job job-mt5edcs6-3ct3i (who-glass-bloodstream-resistance-2026) from post/who-glass-bloodstream-resistance-2026-w5
+[2026-08-23 02:39:54] Defer merge of who-glass-bloodstream-resistance-2026 - worker 5 still finishing this job
+[2026-08-23 02:40:18] W5 idle (no recovery candidate) - assigning producer job-mt5ftvnj-gkyjt (us-cyber-insurance-premiums-vs-incurred-losses-2026)
+[2026-08-23 02:40:18] Assigning job job-mt5ftvnj-gkyjt -> worker 5
+[2026-08-23 02:40:18] Spawned worker 5 shell pid=4764 for job-mt5ftvnj-gkyjt (attempt 1)
+[2026-08-23 02:40:23] Merging ready job job-mt5edcs6-3ct3i (who-glass-bloodstream-resistance-2026) from post/who-glass-bloodstream-resistance-2026-w5
+[2026-08-23 02:40:23] Blessing who-glass-bloodstream-resistance-2026 (post/who-glass-bloodstream-resistance-2026-w5) - pausing other workers
+[2026-08-23 02:40:45] merge-ready-job exit=0
+[2026-08-23 02:40:45] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/who-glass-bloodstream-resistance-2026-w5"
+  ],
+  "log": [
+    "merge start slug=who-glass-bloodstream-resistance-2026 branch=post/who-glass-bloodstream-resistance-2026-w5",
+    "worktree: using existing branch tip",
+    "fetched post/who-glass-bloodstream-resistance-2026-w5 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/global-systems-who-glass-bloodstream-resistance-2026-hero.png, scripts/qa-who-glass-bloodstream-resistance-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/WhoGlassBloodstreamResistance2026Dashboard.tsx, src/data/posts.ts, src/data/theme-registry.ts, src/data/who-glass-bloodstream-resistance-2026-data.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/who-glass-bloodstream-resistance-2026-w5"
+  ]
+}
+[2026-08-23 02:40:45] Blessed merge ok - syncing worker clones from main
+[2026-08-23 02:40:58] sync-worker-clones exit=2 ta-insights-blog-workers\\worker-4",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nCONFLICT (content): Merge conflict in src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/4)\rRebasing (2/4)\rerror: could not apply 6e82ad2... wip(us-atc-delay-minutes-by-cause-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConf"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/us-cyber-insurance-premiums-vs-incurred-losses-2026-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-23 02:40:59] Shipped: who-glass-bloodstream-resistance-2026 | duration_sec=2353
+[2026-08-23 02:40:59] Closed branch(es) after merge: post/who-glass-bloodstream-resistance-2026-w5
+[2026-08-23 02:42:28] Merging ready job job-mt5f2z79-oishq (construction-sand-extraction-and-trade-2026) from post/construction-sand-extraction-and-trade-2026-w3
+[2026-08-23 02:42:28] Defer merge of construction-sand-extraction-and-trade-2026 - worker 3 still finishing this job
+[2026-08-23 02:42:53] Merging ready job job-mt5f2z79-oishq (construction-sand-extraction-and-trade-2026) from post/construction-sand-extraction-and-trade-2026-w3
+[2026-08-23 02:42:54] Defer merge of construction-sand-extraction-and-trade-2026 - worker 3 still finishing this job
+[2026-08-23 02:43:16] Assigning job job-mt5fxpwe-7ju0e -> worker 3
+[2026-08-23 02:43:17] Spawned worker 3 shell pid=15524 for job-mt5fxpwe-7ju0e (attempt 1)
+[2026-08-23 02:43:22] Merging ready job job-mt5f2z79-oishq (construction-sand-extraction-and-trade-2026) from post/construction-sand-extraction-and-trade-2026-w3
+[2026-08-23 02:43:22] Blessing construction-sand-extraction-and-trade-2026 (post/construction-sand-extraction-and-trade-2026-w3) - pausing other workers
+[2026-08-23 02:43:56] merge-ready-job exit=0
+[2026-08-23 02:43:56] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/construction-sand-extraction-and-trade-2026-w3"
+  ],
+  "log": [
+    "merge start slug=construction-sand-extraction-and-trade-2026 branch=post/construction-sand-extraction-and-trade-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/construction-sand-extraction-and-trade-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/industry-construction-sand-extraction-and-trade-2026-hero.png, scripts/qa-construction-sand-extraction-and-trade-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/ConstructionSandExtractionAndTrade2026Dashboard.tsx, src/data/construction-sand-extraction-and-trade-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/construction-sand-extraction-and-trade-2026-w3"
+  ]
+}
+[2026-08-23 02:43:56] Blessed merge ok - syncing worker clones from main
+[2026-08-23 02:44:18] sync-worker-clones exit=2 ata-insights-blog-workers\\worker-4",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nCONFLICT (content): Merge conflict in src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/5)\rRebasing (2/5)\rerror: could not apply 6e82ad2... wip(us-atc-delay-minutes-by-cause-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConf"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-23 02:44:19] Shipped: construction-sand-extraction-and-trade-2026 | duration_sec=1494
+[2026-08-23 02:44:19] Closed branch(es) after merge: post/construction-sand-extraction-and-trade-2026-w3
+[2026-08-23 02:44:27] Merging ready job job-mt5edcs7-8h480 (us-atc-delay-minutes-by-cause-2026) from post/us-atc-delay-minutes-by-cause-2026-w4
+[2026-08-23 02:44:27] Defer merge of us-atc-delay-minutes-by-cause-2026 - worker 4 still finishing this job
+[2026-08-23 02:44:49] Merging ready job job-mt5edcs7-8h480 (us-atc-delay-minutes-by-cause-2026) from post/us-atc-delay-minutes-by-cause-2026-w4
+[2026-08-23 02:44:50] Defer merge of us-atc-delay-minutes-by-cause-2026 - worker 4 still finishing this job
+[2026-08-23 02:45:12] Merging ready job job-mt5edcs7-8h480 (us-atc-delay-minutes-by-cause-2026) from post/us-atc-delay-minutes-by-cause-2026-w4
+[2026-08-23 02:45:12] Defer merge of us-atc-delay-minutes-by-cause-2026 - worker 4 still finishing this job
+[2026-08-23 02:45:34] Assigning job job-mt5g0o7x-dx7t5 -> worker 4
+[2026-08-23 02:45:34] Spawned worker 4 shell pid=27496 for job-mt5g0o7x-dx7t5 (attempt 1)
+[2026-08-23 02:45:39] Merging ready job job-mt5edcs7-8h480 (us-atc-delay-minutes-by-cause-2026) from post/us-atc-delay-minutes-by-cause-2026-w4
+[2026-08-23 02:45:39] Blessing us-atc-delay-minutes-by-cause-2026 (post/us-atc-delay-minutes-by-cause-2026-w4) - pausing other workers
+[2026-08-23 02:45:55] merge-ready-job exit=0
+[2026-08-23 02:45:55] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/us-atc-delay-minutes-by-cause-2026-w4"
+  ],
+  "log": [
+    "merge start slug=us-atc-delay-minutes-by-cause-2026 branch=post/us-atc-delay-minutes-by-cause-2026-w4",
+    "worktree: using existing branch tip",
+    "fetched post/us-atc-delay-minutes-by-cause-2026-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/industry-us-atc-delay-minutes-by-cause-2026-hero.png, scripts/qa-us-atc-delay-minutes-by-cause-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/UsAtcDelayMinutesByCause2026Dashboard.tsx, src/data/posts.ts, src/data/theme-registry.ts, src/data/us-atc-delay-minutes-by-cause-2026-data.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/us-atc-delay-minutes-by-cause-2026-w4"
+  ]
+}
+[2026-08-23 02:45:55] Blessed merge ok - syncing worker clones from main
+[2026-08-23 02:46:06] sync-worker-clones exit=2 pply 9b19796... wip(correspondent-banking-corridor-retreat-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice."
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/public-dc-fast-chargers-vs-ev-stock-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/oecd-childcare-costs-versus-total-fertility-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/us-cyber-insurance-premiums-vs-incurred-losses-2026-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-23 02:46:07] Shipped: us-atc-delay-minutes-by-cause-2026 | duration_sec=2705
+[2026-08-23 02:46:07] Closed branch(es) after merge: post/us-atc-delay-minutes-by-cause-2026-w4
+[2026-08-23 02:51:42] Merging ready job job-mt5fcwui-24yaq (correspondent-banking-corridor-retreat-2026) from post/correspondent-banking-corridor-retreat-2026-w2
+[2026-08-23 02:51:42] Defer merge of correspondent-banking-corridor-retreat-2026 - worker 2 still finishing this job
+[2026-08-23 02:52:06] Merging ready job job-mt5fcwui-24yaq (correspondent-banking-corridor-retreat-2026) from post/correspondent-banking-corridor-retreat-2026-w2
+[2026-08-23 02:52:06] Defer merge of correspondent-banking-corridor-retreat-2026 - worker 2 still finishing this job
+[2026-08-23 02:52:29] Assigning job job-mt5g9ka4-5oj63 -> worker 2
+[2026-08-23 02:52:30] Spawned worker 2 shell pid=28700 for job-mt5g9ka4-5oj63 (attempt 1)
+[2026-08-23 02:52:34] Merging ready job job-mt5fcwui-24yaq (correspondent-banking-corridor-retreat-2026) from post/correspondent-banking-corridor-retreat-2026-w2
+[2026-08-23 02:52:35] Blessing correspondent-banking-corridor-retreat-2026 (post/correspondent-banking-corridor-retreat-2026-w2) - pausing other workers
+[2026-08-23 02:53:02] merge-ready-job exit=0
+[2026-08-23 02:53:02] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/correspondent-banking-corridor-retreat-2026-w2"
+  ],
+  "log": [
+    "merge start slug=correspondent-banking-corridor-retreat-2026 branch=post/correspondent-banking-corridor-retreat-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/correspondent-banking-corridor-retreat-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 1",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/finance-correspondent-banking-corridor-retreat-2026-hero.png, scripts/qa-correspondent-banking-corridor-retreat-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/CorrespondentBankingCorridorRetreat2026Dashboard.tsx, src/data/correspondent-banking-corridor-retreat-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/correspondent-banking-corridor-retreat-2026-w2"
+  ]
+}
+[2026-08-23 02:53:02] Blessed merge ok - syncing worker clones from main
+[2026-08-23 02:53:29] sync-worker-clones exit=2 ata-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nCONFLICT (content): Merge conflict in src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/3)\rRebasing (2/3)\rerror: could not apply ee30844... wip(us-cyber-insurance-premiums-vs-incurred-losses-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set"
+    }
+  ]
+}
+[2026-08-23 02:53:37] Shipped: correspondent-banking-corridor-retreat-2026 | duration_sec=1584
+[2026-08-23 02:53:37] Closed branch(es) after merge: post/correspondent-banking-corridor-retreat-2026-w2
+[2026-08-23 02:56:00] Merging ready job job-mt5f7ysw-m2hc7 (spot-container-freight-vs-blank-sailings-2026) from post/spot-container-freight-vs-blank-sailings-2026-w1
+[2026-08-23 02:56:00] Defer merge of spot-container-freight-vs-blank-sailings-2026 - worker 1 still finishing this job
+[2026-08-23 02:56:21] Merging ready job job-mt5f7ysw-m2hc7 (spot-container-freight-vs-blank-sailings-2026) from post/spot-container-freight-vs-blank-sailings-2026-w1
+[2026-08-23 02:56:22] Defer merge of spot-container-freight-vs-blank-sailings-2026 - worker 1 still finishing this job
+[2026-08-23 02:56:43] Assigning job job-mt5gf0vp-ixbuc -> worker 1
+[2026-08-23 02:56:44] Spawned worker 1 shell pid=13284 for job-mt5gf0vp-ixbuc (attempt 1)
+[2026-08-23 02:56:48] Merging ready job job-mt5f7ysw-m2hc7 (spot-container-freight-vs-blank-sailings-2026) from post/spot-container-freight-vs-blank-sailings-2026-w1
+[2026-08-23 02:56:48] Blessing spot-container-freight-vs-blank-sailings-2026 (post/spot-container-freight-vs-blank-sailings-2026-w1) - pausing other workers
+[2026-08-23 02:57:10] merge-ready-job exit=0
+[2026-08-23 02:57:10] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/spot-container-freight-vs-blank-sailings-2026-w1"
+  ],
+  "log": [
+    "merge start slug=spot-container-freight-vs-blank-sailings-2026 branch=post/spot-container-freight-vs-blank-sailings-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/spot-container-freight-vs-blank-sailings-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "selective commit ok (9 files): public/images/industry-spot-container-freight-vs-blank-sailings-2026-hero.png, scripts/qa-spot-container-freight-vs-blank-sailings-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/SpotContainerFreightVsBlankSailings2026Dashboard.tsx, src/data/posts.ts, src/data/spot-container-freight-vs-blank-sailings-2026-data.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/spot-container-freight-vs-blank-sailings-2026-w1"
+  ]
+}
+[2026-08-23 02:57:10] Blessed merge ok - syncing worker clones from main
+[2026-08-23 02:57:22] sync-worker-clones exit=2 ata-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nCONFLICT (content): Merge conflict in src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/3)\rRebasing (2/3)\rerror: could not apply ee30844... wip(us-cyber-insurance-premiums-vs-incurred-losses-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set"
+    }
+  ]
+}
+[2026-08-23 02:57:24] Shipped: spot-container-freight-vs-blank-sailings-2026 | duration_sec=2045
+[2026-08-23 02:57:24] Closed branch(es) after merge: post/spot-container-freight-vs-blank-sailings-2026-w1
+[2026-08-23 03:01:37] Merging ready job job-mt5ftvnj-gkyjt (us-cyber-insurance-premiums-vs-incurred-losses-2026) from post/us-cyber-insurance-premiums-vs-incurred-losses-2026-w5
+[2026-08-23 03:01:37] Defer merge of us-cyber-insurance-premiums-vs-incurred-losses-2026 - worker 5 still finishing this job
+[2026-08-23 03:01:59] Merging ready job job-mt5ftvnj-gkyjt (us-cyber-insurance-premiums-vs-incurred-losses-2026) from post/us-cyber-insurance-premiums-vs-incurred-losses-2026-w5
+[2026-08-23 03:01:59] Defer merge of us-cyber-insurance-premiums-vs-incurred-losses-2026 - worker 5 still finishing this job
+[2026-08-23 03:02:20] Merging ready job job-mt5ftvnj-gkyjt (us-cyber-insurance-premiums-vs-incurred-losses-2026) from post/us-cyber-insurance-premiums-vs-incurred-losses-2026-w5
+[2026-08-23 03:02:20] Defer merge of us-cyber-insurance-premiums-vs-incurred-losses-2026 - worker 5 still finishing this job
+[2026-08-23 03:02:41] Merging ready job job-mt5ftvnj-gkyjt (us-cyber-insurance-premiums-vs-incurred-losses-2026) from post/us-cyber-insurance-premiums-vs-incurred-losses-2026-w5
+[2026-08-23 03:02:42] Defer merge of us-cyber-insurance-premiums-vs-incurred-losses-2026 - worker 5 still finishing this job
+[2026-08-23 03:03:03] Merging ready job job-mt5ftvnj-gkyjt (us-cyber-insurance-premiums-vs-incurred-losses-2026) from post/us-cyber-insurance-premiums-vs-incurred-losses-2026-w5
+[2026-08-23 03:03:04] Defer merge of us-cyber-insurance-premiums-vs-incurred-losses-2026 - worker 5 still finishing this job
+[2026-08-23 03:03:25] W5 idle (no recovery candidate) - assigning producer job-mt5gnmr4-syj9u (us-housing-permits-vs-household-formation-2026)
+[2026-08-23 03:03:25] Assigning job job-mt5gnmr4-syj9u -> worker 5
+[2026-08-23 03:03:26] Spawned worker 5 shell pid=32272 for job-mt5gnmr4-syj9u (attempt 1)
+[2026-08-23 03:03:30] Merging ready job job-mt5ftvnj-gkyjt (us-cyber-insurance-premiums-vs-incurred-losses-2026) from post/us-cyber-insurance-premiums-vs-incurred-losses-2026-w5

@@ -1,13 +1,13 @@
-/**
- * AI power & grid — Q3 2026 concentration / market-share lens.
+﻿/**
+ * AI power & grid â€” Q3 2026 concentration / market-share lens.
  * Core question: How concentrated is this system at the top of the distribution?
  * (Can electricity and grid build-out keep pace with AI load?)
  *
  * Vintage delta vs ai-power-grid-concentration-2026:
- * 1. IEA regional stock ladder (Top-1 45% / Top-3 85%) — carried (no new IEA period census)
- * 2. Gartner 2026 electricity composition — US 36% of global DC TWh (different perimeter)
- * 3. Growth + dual-ledger path — US+China ~80% growth carried; IEA ~950 vs Gartner >1,200
- * 4. Grid pace — Electricity 2026 restates worldwide stalled queues >2,500 GW
+ * 1. IEA regional stock ladder (Top-1 45% / Top-3 85%) â€” carried (no new IEA period census)
+ * 2. Gartner 2026 electricity composition â€” US 36% of global DC TWh (different perimeter)
+ * 3. Growth + dual-ledger path â€” US+China ~80% growth carried; IEA ~950 vs Gartner >1,200
+ * 4. Grid pace â€” Electricity 2026 restates worldwide stalled queues >2,500 GW
  *
  * Primary sources: IEA Energy and AI (2025) regional shares; Gartner newsroom 10 Jun 2026;
  * IEA Electricity 2026 (US DC share of demand growth; worldwide queues); LBNL Queued Up;
@@ -17,7 +17,7 @@
 export type Confidence = "disclosed" | "estimated" | "carried" | "restated";
 
 export const SOURCE_NOTE =
-  "Q3 concentration lens vs ai-power-grid-concentration-2026. IEA regional Top-1/Top-3 stock shares (US 45% / US+China+Europe 85%), cluster intensity, and US+China growth share (~80%) are carried — no superseding IEA period census. Gartner newsroom 10 Jun 2026 supplies the near-term electricity composition (565 TWh globally; US 204 TWh / 36%) and AI-server power share (31% in 2026). IEA Electricity 2026 restates US data-centre share of demand growth (~50% of a ~420 TWh five-year add) and worldwide stalled connection queues (>2,500 GW). Dual-ledger 2030 gap (IEA central ~950 vs Gartner >1,200) is a path meter, not a share rewrite. Confidence tags separate disclosed Q3 meters from carried share ladders.";
+  "Q3 concentration lens vs ai-power-grid-concentration-2026. IEA regional Top-1/Top-3 stock shares (US 45% / US+China+Europe 85%), cluster intensity, and US+China growth share (~80%) are carried â€” no superseding IEA period census. Gartner newsroom 10 Jun 2026 supplies the near-term electricity composition (565 TWh globally; US 204 TWh / 36%) and AI-server power share (31% in 2026). IEA Electricity 2026 restates US data-centre share of demand growth (~50% of a ~420 TWh five-year add) and worldwide stalled connection queues (>2,500 GW). Dual-ledger 2030 gap (IEA central ~950 vs Gartner >1,200) is a path meter, not a share rewrite. Confidence tags separate disclosed Q3 meters from carried share ladders.";
 
 export const SOURCES = [
   {
@@ -42,14 +42,14 @@ export const SOURCES = [
   },
   {
     label: "US data-center power vs grid capacity",
-    url: "/blog/us-data-center-power-vs-grid-capacity-2025",
+    url: "/blog/global-ai-data-center-build-tracker",
   },
   {
-    label: "Gartner — DC electricity +26% in 2026 (10 Jun 2026)",
+    label: "Gartner â€” DC electricity +26% in 2026 (10 Jun 2026)",
     url: "https://www.gartner.com/en/newsroom/press-releases/2026-06-10-gartner-says-data-center-electricity-demand-to-grow-26-percent-in-2026",
   },
   {
-    label: "IEA — Electricity 2026",
+    label: "IEA â€” Electricity 2026",
     url: "https://www.iea.org/reports/electricity-2026",
   },
 ] as const;
@@ -58,20 +58,20 @@ export const PRIOR_CONCENTRATION_PATH = "/blog/ai-power-grid-concentration-2026"
 export const PRIOR_Q3_PATH = "/blog/ai-power-grid-update-2026q3";
 export const PRIOR_AUG_PATH = "/blog/ai-power-grid-update-202608";
 export const PRIOR_RESEARCH_PATH = "/blog/ai-power-grid-research-2026";
-export const US_GRID_PATH = "/blog/us-data-center-power-vs-grid-capacity-2025";
+export const US_GRID_PATH = "/blog/global-ai-data-center-build-tracker";
 
 export const HEADLINE = {
   /** Carried IEA stock ladder (2024 DC electricity) */
   top1SharePct: 45,
   top1Label: "United States",
   top3SharePct: 85,
-  top3Label: "US · China · Europe",
+  top3Label: "US Â· China Â· Europe",
   priorTop1SharePct: 45,
   priorTop3SharePct: 85,
   chinaSharePct: 25,
   europeSharePct: 15,
   regionalHhi: 3004,
-  /** Gartner 2026 composition — different perimeter */
+  /** Gartner 2026 composition â€” different perimeter */
   gartnerUsShare2026Pct: 36,
   gartnerUsTwh2026: 204,
   gartnerWorldTwh2026: 565,
@@ -153,7 +153,7 @@ export const SCOREBOARD: ScoreboardRow[] = [
     extraValue: `~${HEADLINE.regionalHhi}`,
     color: "#0ea5e9",
     confidence: "carried",
-    note: "No new IEA period census — stock ladder unchanged",
+    note: "No new IEA period census â€” stock ladder unchanged",
   },
   {
     id: "gartner",
@@ -169,7 +169,7 @@ export const SCOREBOARD: ScoreboardRow[] = [
     extraValue: `${HEADLINE.gartnerUsTwh2026} / ${HEADLINE.gartnerWorldTwh2026}`,
     color: "#f59e0b",
     confidence: "disclosed",
-    note: "Different perimeter than IEA AI/DC stock — not a rewrite",
+    note: "Different perimeter than IEA AI/DC stock â€” not a rewrite",
   },
   {
     id: "growth",
@@ -214,10 +214,10 @@ export const SCOREBOARD: ScoreboardRow[] = [
     priorTop3Pct: 0,
     deltaTop1Pp: 0,
     extraMetric: "Stalled / unlock",
-    extraValue: `>${HEADLINE.globalQueueStalledGw} / ${HEADLINE.unlockTotalGwLow}–${HEADLINE.unlockTotalGwHigh} GW`,
+    extraValue: `>${HEADLINE.globalQueueStalledGw} / ${HEADLINE.unlockTotalGwLow}â€“${HEADLINE.unlockTotalGwHigh} GW`,
     color: "#8b5cf6",
     confidence: "restated",
-    note: "Electricity 2026 restates queue stock — concentration of delay risk",
+    note: "Electricity 2026 restates queue stock â€” concentration of delay risk",
   },
 ];
 
@@ -345,9 +345,9 @@ export const US_SHARE_COMPARE: ShareCompareRow[] = [
   {
     id: "growth",
     lens: "IEA growth to 2030",
-    short: "Growth Δ",
+    short: "Growth Î”",
     usSharePct: 45.3,
-    year: "2024→30",
+    year: "2024â†’30",
     perimeter: "Incremental DC TWh (Base Case)",
     confidence: "carried",
     fill: "#f43f5e",
@@ -477,7 +477,7 @@ export const VINTAGE_DELTAS: VintageDelta[] = [
     unit: "TWh",
     delta: 150,
     direction: "up",
-    note: "2024 IEA → 2026e Gartner",
+    note: "2024 IEA â†’ 2026e Gartner",
     confidence: "disclosed",
   },
   {
@@ -488,7 +488,7 @@ export const VINTAGE_DELTAS: VintageDelta[] = [
     unit: "GW",
     delta: 1188,
     direction: "up",
-    note: "US queue proxy → worldwide Electricity 2026 stock",
+    note: "US queue proxy â†’ worldwide Electricity 2026 stock",
     confidence: "restated",
   },
   {
@@ -668,7 +668,7 @@ export const PACE_CLOCKS: PaceRow[] = [
     short: "Campus",
     years: 2.5,
     kind: "demand",
-    note: "Typical 2–3 years once power is secured",
+    note: "Typical 2â€“3 years once power is secured",
     confidence: "estimated",
   },
   {
@@ -682,11 +682,11 @@ export const PACE_CLOCKS: PaceRow[] = [
   },
   {
     id: "queue",
-    label: "US median interconnection (IR→COD)",
+    label: "US median interconnection (IRâ†’COD)",
     short: "Queue median",
     years: 5,
     kind: "grid",
-    note: "LBNL Queued Up — projects built in 2025",
+    note: "LBNL Queued Up â€” projects built in 2025",
     confidence: "carried",
   },
   {
@@ -695,7 +695,7 @@ export const PACE_CLOCKS: PaceRow[] = [
     short: "Transmission",
     years: 6,
     kind: "grid",
-    note: "IEA — typically 4–8 years",
+    note: "IEA â€” typically 4â€“8 years",
     confidence: "carried",
   },
 ];
@@ -750,7 +750,7 @@ export const QUEUE_METERS: QueueMeter[] = [
     kind: "risk",
     fill: "#f59e0b",
     confidence: "carried",
-    note: "~20% of planned projects — % scale, not GW",
+    note: "~20% of planned projects â€” % scale, not GW",
   },
 ];
 
@@ -776,7 +776,7 @@ export const LENS_COMPARE: LensCompare[] = [
   },
   {
     id: "growth",
-    label: "Growth Δ",
+    label: "Growth Î”",
     short: "Growth",
     top1Pct: 45.3,
     top3Pct: 78.3,

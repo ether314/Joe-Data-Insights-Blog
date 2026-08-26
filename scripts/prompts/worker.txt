@@ -54,8 +54,17 @@ npx tsx "{{REPO_ROOT}}/scripts/update-agent-job.mjs" --job {{JOB_ID}} --status f
 - Sources hint: {{SOURCES}}
 - Headline hint: {{HEADLINE_HINT}}
 
-Follow .cursor/rules/autonomous-blog-production.mdc quality bars (prose depth, viz diversity, themeId).
+Follow .cursor/rules/content-diversity.mdc and quality bars (prose depth, viz diversity, themeId).
 Firebase Hosting is OUT of the production chain.
+
+## Context isolation (mandatory)
+This brief is self-contained. Do **not** survey the existing article archive for ideas.
+- Do **not** open other posts' `content:` fields in `src/data/posts.ts`. To register this post, copy only the TypeScript **object keys** from one nearby entry, then write original prose.
+- Do **not** grep sibling slugs (`*-update-*`, `*-concentration-*`, `*-geography-*`, `*-cycle*`) as templates.
+- Do **not** spawn subagents whose prompt includes existing article text, a list of shipped slugs, or instructions to write a companion / vintage delta / concentration cut of a live post.
+- Forbidden openers: "Our theme already maps", "The July research", "companion to", "vintage delta vs last post", "this post answers the map question desks trade next".
+- Internal links: **0 or 1**, only if a genuinely different domain is cited. Zero is better than a sequel.
+- Treat {{SLUG}} as a standalone original. Do not mention other Theta Scribe posts unless one link is strictly necessary.
 
 ## Deliverables in this worktree
 1. `src/data/{topic}-data.ts`
@@ -81,5 +90,6 @@ Firebase Hosting is OUT of the production chain.
 6. Exit cleanly (do not start another post)
 
 ## Quality blockers
-- >=1200 words, >=6 H2s, caveats, table, >=2 internal links
-- >=3 chart types, >=4 panels, >=2 controls; no KPI+bar template clone
+- >=1200 words, >=6 H2s, caveats, table
+- 0–1 internal links (never a sequel chain)
+- >=3 chart types, >=4 panels, >=2 controls; no KPI+bar template clone of another post

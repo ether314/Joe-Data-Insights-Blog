@@ -11,6 +11,7 @@ import {
   computeLaneBalance,
   computeThemeBalance,
   getEligibleThemes,
+  getDiversityBacklog,
   type ThemeLane,
 } from "../src/data/theme-registry";
 
@@ -61,4 +62,11 @@ for (const t of eligible.slice(0, 8)) {
   console.log(`  • ${t.id} — ${t.label}${cand}`);
 }
 if (eligible.length > 8) console.log(`  … +${eligible.length - 8} more`);
+
+const diversity = getDiversityBacklog(pairs);
+console.log(`\nUnused novel candidates (${diversity.length}), first 8:`);
+for (const c of diversity.slice(0, 8)) {
+  console.log(`  • ${c.slugHint}  [${c.themeId}]  lifetime=${c.lifetime}`);
+}
+if (diversity.length > 8) console.log(`  … +${diversity.length - 8} more`);
 console.log("");

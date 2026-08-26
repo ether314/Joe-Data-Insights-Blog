@@ -88,7 +88,7 @@ export function LastMileDeliveryRoboticsDashboard() {
   );
 
   return (
-    <div className="space-y-6">
+    <div data-viz="last-mile-delivery-robotics" className="space-y-6">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">Tracked fleet</p>

@@ -1,0 +1,355 @@
+[2026-08-25 14:15:13] Starting orchestrator (orch-20260825-141512)
+[2026-08-25 14:15:13] Transport mitigations: producers=4 spawnStagger=20s (env BLOG_PRODUCTION_WORKER_COUNT / BLOG_WORKER_SPAWN_STAGGER_SEC)
+[2026-08-25 14:15:13] Bootstrapping worker clones + Docker containers...
+[2026-08-25 14:15:32] Seeding topic failure flags from history...
+[2026-08-25 14:15:32] flags seed: {"blockedStems":13,"blockedThemes":0,"failures":80}
+[2026-08-25 14:15:32] Recovering any orphaned merge state...
+[2026-08-25 14:15:32] merge recover: {
+  "recover": true,
+  "recovered": false,
+  "reason": "no stash state"
+}
+[2026-08-25 14:15:33] Stale job job-mt8xfkpx-85kr0 (job-switcher-premium-across-cohorts-2026) age=47.2573352333333m - failing + killing worker
+[2026-08-25 14:15:34] Stale job job-mt8okg12-3mm67 (cheap-metro-rent-convergence-2026) age=48.4049019m - failing + killing worker
+[2026-08-25 14:15:34] Stale job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) age=49.4321519m - failing + killing worker
+[2026-08-25 14:15:35] Stale job job-mt7d7hyk-zfasd (us-farmland-values-usda-nass-2026) age=50.5939519m - failing + killing worker
+[2026-08-25 14:15:36] Worker 1 marked busy but process gone - clearing slot (job=job-mt8xfkpx-85kr0)
+[2026-08-25 14:15:38] Worker 2 marked busy but process gone - clearing slot (job=job-mt8okg12-3mm67)
+[2026-08-25 14:15:39] Worker 3 marked busy but process gone - clearing slot (job=job-mt7d9t10-qwub9)
+[2026-08-25 14:15:40] Worker 4 marked busy but process gone - clearing slot (job=job-mt7d7hyk-zfasd)
+[2026-08-25 14:15:42] Assigning job job-mt8xfkpx-85kr0 -> worker 1
+[2026-08-25 14:15:43] Spawned worker 1 shell pid=24956 for job-mt8xfkpx-85kr0 (attempt 1)
+[2026-08-25 14:15:48] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-25 14:16:08] Assigning job job-mt8okg12-3mm67 -> worker 2
+[2026-08-25 14:16:09] Spawned worker 2 shell pid=23004 for job-mt8okg12-3mm67 (attempt 1)
+[2026-08-25 14:17:17] Assigning job job-mt7d9t10-qwub9 -> worker 3
+[2026-08-25 14:17:20] Spawned worker 3 shell pid=33556 for job-mt7d9t10-qwub9 (attempt 1)
+[2026-08-25 14:17:24] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-25 14:17:44] Assigning job job-mt7d7hyk-zfasd -> worker 4
+[2026-08-25 14:17:45] Spawned worker 4 shell pid=15792 for job-mt7d7hyk-zfasd (attempt 1)
+[2026-08-25 14:43:39] Merging ready job job-mt8xfkpx-85kr0 (job-switcher-premium-across-cohorts-2026) from post/job-switcher-premium-across-cohorts-2026-w1
+[2026-08-25 14:43:39] Defer merge of job-switcher-premium-across-cohorts-2026 - worker 1 still finishing this job
+[2026-08-25 14:43:48] Merging ready job job-mt8xfkpx-85kr0 (job-switcher-premium-across-cohorts-2026) from post/job-switcher-premium-across-cohorts-2026-w1
+[2026-08-25 14:43:48] Defer merge of job-switcher-premium-across-cohorts-2026 - worker 1 still finishing this job
+[2026-08-25 14:43:57] Merging ready job job-mt8xfkpx-85kr0 (job-switcher-premium-across-cohorts-2026) from post/job-switcher-premium-across-cohorts-2026-w1
+[2026-08-25 14:43:57] Defer merge of job-switcher-premium-across-cohorts-2026 - worker 1 still finishing this job
+[2026-08-25 14:44:05] Merging ready job job-mt8xfkpx-85kr0 (job-switcher-premium-across-cohorts-2026) from post/job-switcher-premium-across-cohorts-2026-w1
+[2026-08-25 14:44:05] Defer merge of job-switcher-premium-across-cohorts-2026 - worker 1 still finishing this job
+[2026-08-25 14:44:12] Merging ready job job-mt8xfkpx-85kr0 (job-switcher-premium-across-cohorts-2026) from post/job-switcher-premium-across-cohorts-2026-w1
+[2026-08-25 14:44:13] Blessing job-switcher-premium-across-cohorts-2026 (post/job-switcher-premium-across-cohorts-2026-w1) - pausing other workers
+[2026-08-25 14:44:36] merge-ready-job exit=0
+[2026-08-25 14:44:36] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/job-switcher-premium-across-cohorts-2026-w1"
+  ],
+  "log": [
+    "merge start slug=job-switcher-premium-across-cohorts-2026 branch=post/job-switcher-premium-across-cohorts-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/job-switcher-premium-across-cohorts-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/labor-and-skills-job-switcher-premium-across-cohorts-2026-hero.png, scripts/qa-job-switcher-premium-across-cohorts-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/JobSwitcherPremiumAcrossCohorts2026Dashboard.tsx, src/data/job-switcher-premium-across-cohorts-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/job-switcher-premium-across-cohorts-2026-w1"
+  ]
+}
+[2026-08-25 14:44:36] Blessed merge ok - syncing worker clones from main
+[2026-08-25 14:45:25] sync-worker-clones exit=2  (1/5)\rRebasing (2/5)\rerror: could not apply dada99f... wip(cheap-metro-rent-convergence-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConfl"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-25 14:45:26] Shipped: job-switcher-premium-across-cohorts-2026 | duration_sec=1777
+[2026-08-25 14:45:26] Closed branch(es) after merge: post/job-switcher-premium-across-cohorts-2026-w1
+[2026-08-25 14:46:18] Merging ready job job-mt7d7hyk-zfasd (us-farmland-values-usda-nass-2026) from post/us-farmland-values-usda-nass-2026-w4
+[2026-08-25 14:46:18] Defer merge of us-farmland-values-usda-nass-2026 - worker 4 still finishing this job
+[2026-08-25 14:46:25] Merging ready job job-mt7d7hyk-zfasd (us-farmland-values-usda-nass-2026) from post/us-farmland-values-usda-nass-2026-w4
+[2026-08-25 14:46:25] Defer merge of us-farmland-values-usda-nass-2026 - worker 4 still finishing this job
+[2026-08-25 14:46:32] Merging ready job job-mt7d7hyk-zfasd (us-farmland-values-usda-nass-2026) from post/us-farmland-values-usda-nass-2026-w4
+[2026-08-25 14:46:32] Blessing us-farmland-values-usda-nass-2026 (post/us-farmland-values-usda-nass-2026-w4) - pausing other workers
+[2026-08-25 14:46:49] merge-ready-job exit=0
+[2026-08-25 14:46:49] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/us-farmland-values-usda-nass-2026-w4"
+  ],
+  "log": [
+    "merge start slug=us-farmland-values-usda-nass-2026 branch=post/us-farmland-values-usda-nass-2026-w4",
+    "worktree: using existing branch tip",
+    "fetched post/us-farmland-values-usda-nass-2026-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/food-agriculture-us-farmland-values-usda-nass-2026-hero.png, scripts/qa-us-farmland-values-usda-nass-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/UsFarmlandValuesUsdaNass2026Dashboard.tsx, src/data/posts.ts, src/data/theme-registry.ts, src/data/us-farmland-values-usda-nass-2026-data.ts",
+    "closed shipped branch(es): post/us-farmland-values-usda-nass-2026-w4"
+  ]
+}
+[2026-08-25 14:46:49] Blessed merge ok - syncing worker clones from main
+[2026-08-25 14:47:02] sync-worker-clones exit=2 ntent): Merge conflict in src/types/post.ts\nRebasing (1/5)\rRebasing (2/5)\rerror: could not apply dada99f... wip(cheap-metro-rent-convergence-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConfl"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-shipped",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-25 14:47:03] Shipped: us-farmland-values-usda-nass-2026 | duration_sec=1750
+[2026-08-25 14:47:03] Closed branch(es) after merge: post/us-farmland-values-usda-nass-2026-w4
+[2026-08-25 14:47:23] Merging ready job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) from post/medical-collections-on-consumer-credit-reports-2026-w3
+[2026-08-25 14:47:23] Defer merge of medical-collections-on-consumer-credit-reports-2026 - worker 3 still finishing this job
+[2026-08-25 14:47:30] Merging ready job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) from post/medical-collections-on-consumer-credit-reports-2026-w3
+[2026-08-25 14:47:30] Defer merge of medical-collections-on-consumer-credit-reports-2026 - worker 3 still finishing this job
+[2026-08-25 14:47:36] Merging ready job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) from post/medical-collections-on-consumer-credit-reports-2026-w3
+[2026-08-25 14:47:36] Defer merge of medical-collections-on-consumer-credit-reports-2026 - worker 3 still finishing this job
+[2026-08-25 14:47:43] Merging ready job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) from post/medical-collections-on-consumer-credit-reports-2026-w3
+[2026-08-25 14:47:43] Defer merge of medical-collections-on-consumer-credit-reports-2026 - worker 3 still finishing this job
+[2026-08-25 14:47:49] Merging ready job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) from post/medical-collections-on-consumer-credit-reports-2026-w3
+[2026-08-25 14:47:49] Blessing medical-collections-on-consumer-credit-reports-2026 (post/medical-collections-on-consumer-credit-reports-2026-w3) - pausing other workers
+[2026-08-25 14:48:03] merge-ready-job exit=0
+[2026-08-25 14:48:03] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/medical-collections-on-consumer-credit-reports-2026-w3"
+  ],
+  "log": [
+    "merge start slug=medical-collections-on-consumer-credit-reports-2026 branch=post/medical-collections-on-consumer-credit-reports-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/medical-collections-on-consumer-credit-reports-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png, scripts/qa-medical-collections-on-consumer-credit-reports-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MedicalCollectionsOnConsumerCreditReports2026Dashboard.tsx, src/data/medical-collections-on-consumer-credit-reports-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/medical-collections-on-consumer-credit-reports-2026-w3"
+  ]
+}
+[2026-08-25 14:48:03] Blessed merge ok - syncing worker clones from main
+[2026-08-25 14:48:16] sync-worker-clones exit=2 try.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/5)\rRebasing (2/5)\rerror: could not apply dada99f... wip(cheap-metro-rent-convergence-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConfl"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-25 14:48:17] Shipped: medical-collections-on-consumer-credit-reports-2026 | duration_sec=1847
+[2026-08-25 14:48:17] Closed branch(es) after merge: post/medical-collections-on-consumer-credit-reports-2026-w3
+[2026-08-25 14:48:23] Assigning job job-mt90pxmz-mr589 -> worker 1
+[2026-08-25 14:48:23] Spawned worker 1 shell pid=14032 for job-mt90pxmz-mr589 (attempt 1)
+[2026-08-25 14:57:51] Merging ready job job-mt8okg12-3mm67 (cheap-metro-rent-convergence-2026) from post/cheap-metro-rent-convergence-2026-w2
+[2026-08-25 14:57:51] Defer merge of cheap-metro-rent-convergence-2026 - worker 2 still finishing this job
+[2026-08-25 14:57:58] Merging ready job job-mt8okg12-3mm67 (cheap-metro-rent-convergence-2026) from post/cheap-metro-rent-convergence-2026-w2
+[2026-08-25 14:57:58] Defer merge of cheap-metro-rent-convergence-2026 - worker 2 still finishing this job
+[2026-08-25 14:58:04] Merging ready job job-mt8okg12-3mm67 (cheap-metro-rent-convergence-2026) from post/cheap-metro-rent-convergence-2026-w2
+[2026-08-25 14:58:04] Defer merge of cheap-metro-rent-convergence-2026 - worker 2 still finishing this job
+[2026-08-25 14:58:11] Merging ready job job-mt8okg12-3mm67 (cheap-metro-rent-convergence-2026) from post/cheap-metro-rent-convergence-2026-w2
+[2026-08-25 14:58:11] Defer merge of cheap-metro-rent-convergence-2026 - worker 2 still finishing this job
+[2026-08-25 14:58:17] Merging ready job job-mt8okg12-3mm67 (cheap-metro-rent-convergence-2026) from post/cheap-metro-rent-convergence-2026-w2
+[2026-08-25 14:58:17] Blessing cheap-metro-rent-convergence-2026 (post/cheap-metro-rent-convergence-2026-w2) - pausing other workers
+[2026-08-25 14:58:28] merge-ready-job exit=0
+[2026-08-25 14:58:28] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/cheap-metro-rent-convergence-2026-w2"
+  ],
+  "log": [
+    "merge start slug=cheap-metro-rent-convergence-2026 branch=post/cheap-metro-rent-convergence-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/cheap-metro-rent-convergence-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 1",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/real-estate-cheap-metro-rent-convergence-2026-hero.png, scripts/qa-cheap-metro-rent-convergence-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/CheapMetroRentConvergence2026Dashboard.tsx, src/data/cheap-metro-rent-convergence-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/cheap-metro-rent-convergence-2026-w2"
+  ]
+}
+[2026-08-25 14:58:28] Blessed merge ok - syncing worker clones from main
+[2026-08-25 14:58:37] sync-worker-clones exit=0 pData\\Local\\data-insights-blog-workers",
+  "main": "master",
+  "excludeId": "2",
+  "mergedBranch": "post/cheap-metro-rent-convergence-2026-w2",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-25 14:58:37] Shipped: cheap-metro-rent-convergence-2026 | duration_sec=2543
+[2026-08-25 14:58:37] Closed branch(es) after merge: post/cheap-metro-rent-convergence-2026-w2
+[2026-08-25 15:14:11] Merging ready job job-mt90pxmz-mr589 (hospital-charity-care-versus-collection-suits-2026) from post/hospital-charity-care-versus-collection-suits-2026-w1
+[2026-08-25 15:14:11] Defer merge of hospital-charity-care-versus-collection-suits-2026 - worker 1 still finishing this job
+[2026-08-25 15:14:17] Merging ready job job-mt90pxmz-mr589 (hospital-charity-care-versus-collection-suits-2026) from post/hospital-charity-care-versus-collection-suits-2026-w1
+[2026-08-25 15:14:17] Defer merge of hospital-charity-care-versus-collection-suits-2026 - worker 1 still finishing this job
+[2026-08-25 15:14:23] Merging ready job job-mt90pxmz-mr589 (hospital-charity-care-versus-collection-suits-2026) from post/hospital-charity-care-versus-collection-suits-2026-w1
+[2026-08-25 15:14:23] Defer merge of hospital-charity-care-versus-collection-suits-2026 - worker 1 still finishing this job
+[2026-08-25 15:14:30] Merging ready job job-mt90pxmz-mr589 (hospital-charity-care-versus-collection-suits-2026) from post/hospital-charity-care-versus-collection-suits-2026-w1
+[2026-08-25 15:14:30] Defer merge of hospital-charity-care-versus-collection-suits-2026 - worker 1 still finishing this job
+[2026-08-25 15:14:36] Merging ready job job-mt90pxmz-mr589 (hospital-charity-care-versus-collection-suits-2026) from post/hospital-charity-care-versus-collection-suits-2026-w1
+[2026-08-25 15:14:36] Defer merge of hospital-charity-care-versus-collection-suits-2026 - worker 1 still finishing this job
+[2026-08-25 15:14:42] Merging ready job job-mt90pxmz-mr589 (hospital-charity-care-versus-collection-suits-2026) from post/hospital-charity-care-versus-collection-suits-2026-w1
+[2026-08-25 15:14:42] Defer merge of hospital-charity-care-versus-collection-suits-2026 - worker 1 still finishing this job
+[2026-08-25 15:14:48] Merging ready job job-mt90pxmz-mr589 (hospital-charity-care-versus-collection-suits-2026) from post/hospital-charity-care-versus-collection-suits-2026-w1
+[2026-08-25 15:14:48] Blessing hospital-charity-care-versus-collection-suits-2026 (post/hospital-charity-care-versus-collection-suits-2026-w1) - pausing other workers
+[2026-08-25 15:15:01] merge-ready-job exit=0
+[2026-08-25 15:15:01] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/hospital-charity-care-versus-collection-suits-2026-w1"
+  ],
+  "log": [
+    "merge start slug=hospital-charity-care-versus-collection-suits-2026 branch=post/hospital-charity-care-versus-collection-suits-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/hospital-charity-care-versus-collection-suits-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 7",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/health-economics-hospital-charity-care-versus-collection-suits-2026-hero.png, scripts/qa-hospital-charity-care-versus-collection-suits-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/HospitalCharityCareVersusCollectionSuits2026Dashboard.tsx, src/data/hospital-charity-care-versus-collection-suits-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/hospital-charity-care-versus-collection-suits-2026-w1"
+  ]
+}
+[2026-08-25 15:15:01] Blessed merge ok - syncing worker clones from main
+[2026-08-25 15:15:10] sync-worker-clones exit=0  "workerRoot": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers",
+  "main": "master",
+  "excludeId": "1",
+  "mergedBranch": "post/hospital-charity-care-versus-collection-suits-2026-w1",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    }
+  ]
+}
+[2026-08-25 15:15:11] Shipped: hospital-charity-care-versus-collection-suits-2026 | duration_sec=1593
+[2026-08-25 15:15:11] Closed branch(es) after merge: post/hospital-charity-care-versus-collection-suits-2026-w1

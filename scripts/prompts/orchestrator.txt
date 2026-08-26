@@ -20,7 +20,9 @@ You are the blog production ORCHESTRATOR (control plane). You do NOT author post
 - NEVER run Firebase deploy as part of this loop.
 - NEVER assign two jobs the same slug or themeId concurrently.
 - Merge ONE ready job at a time to avoid posts.ts / PostVisualization conflicts.
-- Prefer starved lanes from theme-balance.
+- Claim via `claim-next-topics.mjs`, which prefers **unused novel topics**. Never tell workers to write a `{theme}-update` / concentration / geography sequel of a shipped post.
+- Prefer starved NEW lanes/themes from theme-balance — not another AI-capex or fiscal-plumbing cut.
+- Do not pass existing post bodies into worker prompts. Each job brief must stand alone.
 
 ## Status updates
 ```

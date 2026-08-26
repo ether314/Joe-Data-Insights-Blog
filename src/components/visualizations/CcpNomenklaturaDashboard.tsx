@@ -530,7 +530,10 @@ export function CcpNomenklaturaDashboard() {
   );
 
   return (
-    <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+    <div
+      data-viz="ccp-nomenklatura"
+      className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
+    >
       <div className="space-y-4 p-4 sm:p-5">
         <div className="text-center">
           <h3 className="text-sm font-bold uppercase tracking-wide text-slate-500">Party-state hierarchy</h3>

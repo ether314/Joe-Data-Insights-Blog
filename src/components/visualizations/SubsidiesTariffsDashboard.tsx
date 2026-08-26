@@ -279,7 +279,7 @@ export function SubsidiesTariffsDashboard({ compact = false }: { compact?: boole
   };
 
   return (
-    <div className="site-content w-full min-w-0 space-y-6">
+    <div data-viz="subsidies-tariffs" className="site-content w-full min-w-0 space-y-6">
       {!compact && (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {[

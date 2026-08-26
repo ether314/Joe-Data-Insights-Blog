@@ -236,7 +236,7 @@ export function AiDataCentersDashboard() {
     "rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-200";
 
   return (
-    <div className="site-content w-full min-w-0 space-y-6">
+    <div data-viz="ai-data-centers" className="site-content w-full min-w-0 space-y-6">
       <p className="text-sm text-slate-500">
         {STATS.siteCount} publicly announced AI-focused sites · {STATS.asOf} · {STATS.liveCount} live
         or partially live · {STATS.federalCount} DOE/NNSA federal-land rows · peak IT load is

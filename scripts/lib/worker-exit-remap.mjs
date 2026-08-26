@@ -26,6 +26,18 @@ export function remapWorkerExit(exitCode, logText = "") {
     return { code: EXIT_TRANSPORT, error: "transport_kill", reason: "Cursor connection failed repeatedly" };
   }
 
+  // Agent CLI can die on a network failure yet still exit 0 (observed 2026-08-23:
+  // "Error: [unavailable] getaddrinfo ENOTFOUND api2.cursor.sh" across all 5 workers,
+  // each logged as worker_exit_0 and burning an attempt). Only trusted when the job
+  // did not reach ready/shipped - the caller skips remap for terminal-good statuses.
+  if (
+    code === 0 &&
+    (/\[unavailable\]\s*\S*(?:getaddrinfo\s+ENOTFOUND|EAI_AGAIN|ECONNREFUSED|ECONNRESET|ETIMEDOUT)/i.test(log) ||
+      /getaddrinfo\s+ENOTFOUND\s+\S*cursor/i.test(log))
+  ) {
+    return { code: EXIT_TRANSPORT, error: "transport_kill", reason: "CLI network failure despite exit 0" };
+  }
+
   // Abrupt kill (-1) after reconnect storm — treat as transport even without RetriableError line.
   if (
     (code === -1 || code === 1) &&

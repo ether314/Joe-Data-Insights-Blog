@@ -55,6 +55,8 @@ function Ensure-BlogAutomationPath {
         return (Ensure-BlogGitOnPath)
     } catch {
         return $null
+    } finally {
+        [void](Ensure-BlogAgentCliOnPath)
     }
 }
 
@@ -93,6 +95,27 @@ function Ensure-BlogGitOnPath {
         $env:GIT_CONFIG_VALUE_0 = "*"
     }
     return (Get-Command git).Source
+}
+
+function Ensure-BlogAgentCliOnPath {
+    if (Get-Command agent -ErrorAction SilentlyContinue) {
+        return (Get-Command agent).Source
+    }
+    # cursor-agent installs shims under %LOCALAPPDATA%\cursor-agent, which lives
+    # only on the User PATH - scheduled tasks / hidden spawns may not inherit it.
+    $shimDirs = @(
+        (Join-Path $env:LOCALAPPDATA "cursor-agent"),
+        (Join-Path $env:APPDATA "npm")
+    )
+    foreach ($dir in $shimDirs) {
+        if (-not $dir) { continue }
+        $exe = Join-Path $dir "agent.cmd"
+        if (Test-Path $exe) {
+            $env:PATH = "$dir;$env:PATH"
+            return $exe
+        }
+    }
+    return $null
 }
 
 function Export-BlogWorkerComposeEnv {

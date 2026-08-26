@@ -23,3 +23,7 @@ When creating or updating a blog post, **always generate a beautiful hero/thumbn
 5. Style: Visual Capitalist–inspired — dark navy palette, cinematic data-viz aesthetic, bold and readable at card thumbnail size, no clutter or illegible micro-text.
 
 `PostCard` uses PNG/JPG/WebP heroes directly on listing cards; SVG-only posts fall back to chart thumbnails instead of a custom image.
+
+## Content diversity (conveyor + interactive)
+
+New articles must **not** be sequels of the live archive. Orchestrator claim (`scripts/claim-next-topics.mjs`) prefers unused novel topics (freshwater, subsea cables, trial geography, etc.) and will not mint `{theme}-update` / `concentration` / `geography` variants. Workers must treat each brief as standalone: do not read other posts' `content:` for ideas; 0–1 internal links; do not spawn subagents with the existing article base in context. Rule: `.cursor/rules/content-diversity.mdc`.

@@ -284,7 +284,7 @@ export function GdpInteractiveDashboard({ compact = false }: { compact?: boolean
   const indiaGrowthTotal = ((GDP_LAST.indiaGdp - GDP_FIRST.indiaGdp) / GDP_FIRST.indiaGdp) * 100;
 
   return (
-    <div className="site-content w-full min-w-0 space-y-6">
+    <div data-viz="gdp-analysis" className="site-content w-full min-w-0 space-y-6">
       {!compact && (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {[

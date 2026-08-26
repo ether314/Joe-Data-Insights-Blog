@@ -11,7 +11,11 @@ $PID | Out-File -FilePath $pidFile -Encoding ascii -Force
 
 while ($true) {
     $ts = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    & powershell -NoProfile -ExecutionPolicy Bypass -File $script 2>&1 |
-        ForEach-Object { Add-Content -Path $log -Value "[$ts] $_" }
+    try {
+        & $script 2>&1 |
+            ForEach-Object { Add-Content -Path $log -Value "[$ts] $_" }
+    } catch {
+        Add-Content -Path $log -Value "[$ts] ERROR: $_"
+    }
     Start-Sleep -Seconds $IntervalSeconds
 }

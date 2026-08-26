@@ -7,6 +7,7 @@ $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
 . (Join-Path $RepoRoot "scripts\lib\worker-pause.ps1")
+. (Join-Path $RepoRoot "scripts\lib\hidden-process.ps1")
 [void](Ensure-BlogAutomationPath)
 $LogDir = Join-Path $RepoRoot "artifacts\automation-logs"
 $LockFile = Join-Path $RepoRoot "artifacts\blog-production-lock.json"
@@ -35,6 +36,11 @@ $StaleJobMinutes = if ($env:BLOG_ORCH_STALE_MIN) { [double]$env:BLOG_ORCH_STALE_
 # Worker slot busy with dead/hung process (no job heartbeat) - reclaim sooner.
 $StaleWorkerMinutes = if ($env:BLOG_ORCH_STALE_WORKER_MIN) { [double]$env:BLOG_ORCH_STALE_WORKER_MIN } else { 45 }
 $script:W5SpawnBackoffUntil = $null
+# Fleet-wide spawn cooldown after repeated instant agent deaths (e.g. DNS outage:
+# ENOTFOUND api2.cursor.sh burned 10+ attempts across all workers within minutes
+# on 2026-08-23 - each respawn re-entered the same dead network immediately).
+$script:InstantDeathStreak = 0
+$script:SpawnBackoffUntil = $null
 
 New-Item -ItemType Directory -Path $LogDir -Force | Out-Null
 New-Item -ItemType Directory -Path (Join-Path $RepoRoot "artifacts\locks") -Force | Out-Null
@@ -42,7 +48,20 @@ Set-Location $RepoRoot
 
 function Write-Log($Message) {
     $line = "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] $Message"
-    Add-Content -Path $LogFile -Value $line
+    # Stream dashboards / tail readers can hold the log open briefly. With
+    # $ErrorActionPreference=Stop a single IOException here used to kill the
+    # whole orchestrator mid-run (observed 2026-08-23 01:48 + 03:08 runs).
+    # Retry briefly, then continue - losing one log line must not lose a run.
+    for ($i = 0; $i -lt 3; $i++) {
+        try {
+            Add-Content -Path $LogFile -Value $line -ErrorAction Stop
+            break
+        } catch [System.IO.IOException] {
+            Start-Sleep -Milliseconds (25 * ($i + 1))
+        } catch {
+            break
+        }
+    }
     Write-Host $line
 }
 
@@ -94,8 +113,19 @@ function Read-Jobs {
         Invoke-NodeTsx "scripts/lib/agent-jobs.mjs" @() 2>$null | Out-Null
         node --input-type=module -e "import { writeJobs, emptyQueue } from './scripts/lib/agent-jobs.mjs'; writeJobs(emptyQueue(process.argv[1]));" $RunId | Out-Null
     }
-    $raw = (Get-Content $JobsFile -Raw) -replace '^\uFEFF', ''
-    return $raw | ConvertFrom-Json
+    # Windows file locking can land a read mid-rename; retry briefly before
+    # surfacing the error so one poll does not fail the whole loop iteration.
+    $lastErr = $null
+    for ($i = 0; $i -lt 5; $i++) {
+        try {
+            $raw = (Get-Content $JobsFile -Raw -ErrorAction Stop) -replace '^\uFEFF', ''
+            return $raw | ConvertFrom-Json
+        } catch {
+            $lastErr = $_
+            Start-Sleep -Milliseconds (80 + $i * 60)
+        }
+    }
+    throw "Read-Jobs failed after retries: $lastErr"
 }
 
 function Update-OrchestratorNotes([string]$Notes) {
@@ -157,23 +187,25 @@ function Start-WorkerJob([int]$WorkerId, [string]$JobId) {
         "--activity", "Dispatched to worker $WorkerId"
     ) | Out-Null
 
-    # Start-Process on Windows does NOT quote ArgumentList array elements. Paths with
-    # spaces (e.g. E:\AI Projects\...) must be wrapped in explicit quotes or -File
+    # ProcessStartInfo.Arguments is a single string. Paths with spaces
+    # (e.g. E:\AI Projects\...) must be wrapped in explicit quotes or -File
     # becomes "E:\AI" and the worker exits immediately - causing an infinite
     # recovery re-assign loop (claimed + workerId=null forever).
     $argLine = @(
         "-NoProfile",
         "-ExecutionPolicy Bypass",
-        "-WindowStyle Minimized",
         "-File `"$WorkerScript`"",
         "-WorkerId $WorkerId",
         "-JobId $JobId"
     ) -join " "
+    $stdout = Join-Path $LogDir "worker-$WorkerId-stdout.log"
+    $stderr = Join-Path $LogDir "worker-$WorkerId-stderr.log"
     $proc = $null
     for ($spawnAttempt = 1; $spawnAttempt -le 2; $spawnAttempt++) {
-        $proc = Start-Process -FilePath "powershell.exe" -PassThru -ArgumentList $argLine -WorkingDirectory $RepoRoot
+        $proc = Start-HiddenProcess -FilePath "powershell.exe" -ArgumentList $argLine -WorkingDirectory $RepoRoot `
+            -RedirectStandardOutput $stdout -RedirectStandardError $stderr
         if (-not ($proc -and $proc.Id)) {
-            Write-Log "ERROR: Start-Process returned no PID for worker $WorkerId / $JobId (attempt $spawnAttempt)"
+            Write-Log "ERROR: Start-HiddenProcess returned no PID for worker $WorkerId / $JobId (attempt $spawnAttempt)"
             Start-Sleep -Seconds 2
             continue
         }
@@ -188,12 +220,20 @@ function Start-WorkerJob([int]$WorkerId, [string]$JobId) {
         Start-Sleep -Seconds 4
         if (Get-Process -Id $proc.Id -ErrorAction SilentlyContinue) {
             if ($WorkerId -eq $RecoveryWorkerId) { $script:W5SpawnBackoffUntil = $null }
+            $script:InstantDeathStreak = 0
             return
         }
         Write-Log "WARN: worker $WorkerId pid=$($proc.Id) exited immediately after spawn (attempt $spawnAttempt)"
         Start-Sleep -Seconds 2
     }
     Write-Log "ERROR: worker $WorkerId failed to stay up after spawn retries for $JobId"
+    # Fleet cooldown: N consecutive instant-death spawns across any workers => pause new
+    # dispatches briefly instead of burning attempts into the same dead environment.
+    $script:InstantDeathStreak++
+    $cooldownMin = [math]::Min(1 + $script:InstantDeathStreak, 10)
+    $script:SpawnBackoffUntil = (Get-Date).AddMinutes($cooldownMin)
+    Write-Log ("Fleet spawn cooldown until $($script:SpawnBackoffUntil.ToUniversalTime().ToString('HH:mm:ss')) " +
+        "(streak=$($script:InstantDeathStreak), ${cooldownMin}m)")
     $liveJobs = Read-Jobs
     $dead = @($liveJobs.jobs | Where-Object { $_.id -eq $JobId } | Select-Object -First 1)
     if ($dead) {
@@ -677,9 +717,22 @@ try {
             $claimMax = $TotalWorkerSlots
             $claimArgs = @("--run-id", $RunId, "--include-recovery-idle", "--max", "$claimMax")
         }
-        $claimExit = Invoke-NodeTsx "scripts/claim-next-topics.mjs" $claimArgs
-        if ($claimExit -ne 0) {
-            Write-Log "WARN: claim-next-topics exit=$claimExit"
+        # Fleet spawn cooldown: skip claiming fresh topics while recent spawns keep dying instantly.
+        if ($script:SpawnBackoffUntil -and (Get-Date) -lt $script:SpawnBackoffUntil) {
+            Write-Log "Fleet spawn cooldown active until $($script:SpawnBackoffUntil.ToString('HH:mm:ss')) - skipping topic claim"
+            $claimArgs = $null
+        }
+        if ($claimArgs) {
+            $claimExit = Invoke-NodeTsx "scripts/claim-next-topics.mjs" $claimArgs
+            if ($claimExit -ne 0) {
+                Write-Log "WARN: claim-next-topics exit=$claimExit"
+                # Diagnose without touching job state: dry-run replays the same logic.
+                # Exit 1 is an uncaught throw (the script never exits 1 by design).
+                $diag = & node scripts/claim-next-topics.mjs --dry-run --max 1 2>&1 | Out-String
+                $diagTrim = $diag.Trim()
+                if ($diagTrim.Length -gt 900) { $diagTrim = $diagTrim.Substring($diagTrim.Length - 900) }
+                Write-Log ("claim-next-topics diag (dry-run): exit=$LASTEXITCODE " + $diagTrim)
+            }
         }
 
         $jobsObj = Read-Jobs
@@ -690,6 +743,10 @@ try {
         $assignedThisLoop = 0
         for ($i = 1; $i -le $WorkerCount; $i++) {
             if ($claimed.Count -eq 0) { break }
+            if ($script:SpawnBackoffUntil -and (Get-Date) -lt $script:SpawnBackoffUntil) {
+                Write-Log "Fleet spawn cooldown active until $($script:SpawnBackoffUntil.ToString('HH:mm:ss')) - halting producer dispatch"
+                break
+            }
             $w = $jobsObj.workers."$i"
             $busy = Test-WorkerRunning $i
             if ($busy) { continue }
@@ -712,6 +769,11 @@ try {
         $recSlot = $jobsObj.workers."$RecoveryWorkerId"
         $recFree = (-not $recBusy) -and (-not ($recSlot -and $recSlot.jobId -and $recSlot.status -eq "busy"))
         if ($recFree -and $script:W5SpawnBackoffUntil -and ((Get-Date) -lt $script:W5SpawnBackoffUntil)) {
+            $recFree = $false
+        }
+        # Fleet cooldown also gates recovery dispatches (same dead-network protection).
+        if ($recFree -and $script:SpawnBackoffUntil -and ((Get-Date) -lt $script:SpawnBackoffUntil)) {
+            Write-Log "Fleet spawn cooldown active until $($script:SpawnBackoffUntil.ToString('HH:mm:ss')) - skipping recovery dispatch"
             $recFree = $false
         }
         if ($recFree) {

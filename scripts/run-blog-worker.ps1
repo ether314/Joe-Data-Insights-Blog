@@ -29,9 +29,27 @@ $RecoveryPromptTemplate = Join-Path $RepoRoot "scripts\prompts\recovery-worker.t
 New-Item -ItemType Directory -Path $LogDir -Force | Out-Null
 Set-Location $RepoRoot
 
+# Concurrent writers (stream tee + silence-watchdog job) hit the same log file;
+# Add-Content throws IOException when another handle is open. Retry briefly,
+# then drop the line instead of spraying errors into worker-N-stderr.log.
+$script:DroppedLogLines = 0
+function Add-LogLine([string]$Path, [string]$Value) {
+    for ($i = 0; $i -lt 3; $i++) {
+        try {
+            Add-Content -Path $Path -Value $Value -Encoding UTF8 -ErrorAction Stop
+            return
+        } catch [System.IO.IOException] {
+            Start-Sleep -Milliseconds (25 * ($i + 1))
+        } catch {
+            break
+        }
+    }
+    $script:DroppedLogLines++
+}
+
 function Write-Log($Message) {
     $line = "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] $Message"
-    Add-Content -Path $LogFile -Value $line
+    Add-LogLine $LogFile $line
     Write-Host $line
 }
 
@@ -484,7 +502,7 @@ try {
                 $logStale = ($logAgeMin -ge $SilenceMin)
                 if ($hbStale -and ($logStale -or $hbAgeMin -ge ($SilenceMin + 10))) {
                     $msg = "[silence-watchdog] worker parent=$ParentPid job=$JobId logAge=${logAgeMin}m hbAge=${hbAgeMin}m - killing agent children"
-                    Add-Content -Path $LogFile -Value $msg -Encoding UTF8
+                    Add-LogLine $LogFile $msg
                     Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
                         Where-Object { $_.ParentProcessId -eq $ParentPid -and $_.Name -match "node|cmd|agent" } |
                         ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
@@ -536,11 +554,11 @@ try {
         if (-not $line) { return }
         $script:LastAgentOutputAt = Get-Date
         Write-Host $line
-        Add-Content -Path $LogFile -Value $line -Encoding UTF8
+        Add-LogLine $LogFile $line
         # Pure CoT sidecar (dashboard Chain of Thought table reads only this)
         if ($line -match '^\[cot:(thought|tool|user|system)\]') {
             $cotStamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-            Add-Content -Path $CotLogFile -Value "[$cotStamp] $line" -Encoding UTF8
+            Add-LogLine $CotLogFile "[$cotStamp] $line"
         }
 
         if ($line -match "(?i)WorkerReady:") {
@@ -647,7 +665,18 @@ try {
 
 # Remap Cursor transport / silence deaths (including exit -1) via shared classifier.
 # Old bug: silence-watchdog only remapped exit 0, so killed agents parked as worker_exit_-1.
+# Skip when the job already reached ready/shipped/merging: a network error line logged
+# after a successful handoff must not demote a clean exit to transport_kill.
+$skipExitRemap = $false
+try {
+    $jobsPre = Read-Jobs
+    $jobPre = @($jobsPre.jobs | Where-Object { $_.id -eq $JobId } | Select-Object -First 1)
+    if ($jobPre -and $jobPre.status -in @("ready", "shipped", "merging")) { $skipExitRemap = $true }
+} catch {}
 if (Test-Path $LogFile) {
+    if ($skipExitRemap) {
+        Write-Log "INFO: job already $($jobPre.status) - skipping exit remap of $sessionExit"
+    } else {
     $remapScript = Join-Path $RepoRoot "scripts\lib\worker-exit-remap.mjs"
     $remapJson = & node $remapScript --exit "$sessionExit" --log $LogFile 2>$null
     if ($LASTEXITCODE -eq 0 -and $remapJson) {
@@ -670,6 +699,7 @@ if (Test-Path $LogFile) {
         Write-Log "INFO: remapping exit $sessionExit -> transport_kill (fallback)"
         $sessionExit = 75
     }
+    }
 }
 
 # Re-read job status - agent may have marked ready
@@ -688,10 +718,13 @@ if ($job -and $job.status -eq "ready") {
         "--activity", "Manual review: process failed once ($errCode) - auto-rerun refused"
     )
     if ($sessionExit -eq 75 -and (Test-Path (Join-Path $RepoRoot "scripts\debug-agent-transport.ps1"))) {
-        Start-Process powershell.exe -ArgumentList @(
-            "-NoProfile", "-ExecutionPolicy", "Bypass",
-            "-File", (Join-Path $RepoRoot "scripts\debug-agent-transport.ps1")
-        ) -WindowStyle Minimized | Out-Null
+        $debugScript = Join-Path $RepoRoot "scripts\debug-agent-transport.ps1"
+        Write-Log "Running transport debug in-process (no extra window)"
+        try {
+            & $debugScript
+        } catch {
+            Write-Log "WARN: transport debug failed: $_"
+        }
     }
 } elseif ($job -and $job.status -notin @("ready", "shipped", "failed", "merging")) {
     # If agent exited without ready, check for commit on branch

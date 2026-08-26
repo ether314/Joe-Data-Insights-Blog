@@ -195,10 +195,10 @@ export function FiscalIndustrialPolicyGeography2026q3Dashboard() {
   );
 
   return (
-    <div className="space-y-6">
+    <div data-viz="fiscal-industrial-policy-geography-2026q3" className="space-y-6">
       <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-5 py-5 text-white shadow-sm sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-wider text-sky-300">
-          Fiscal & industrial policy — Q3 geography lens
+          Fiscal &amp; industrial policy — Q3 geography lens
         </p>
         <h2 className="mt-1 text-xl font-bold tracking-tight sm:text-2xl">
           Regional shares that disagree on who leads

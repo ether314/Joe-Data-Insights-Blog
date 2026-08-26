@@ -1,0 +1,563 @@
+﻿[2026-08-25 14:17:23] Worker 3 starting job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) in C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3 (branch post/medical-collections-on-consumer-credit-reports-2026-w3, container blog-worker-3)
+[2026-08-25 14:17:24] Fetching origin (main merge target) into isolated clone
+[2026-08-25 14:17:26] Reusing existing WIP tip post/medical-collections-on-consumer-credit-reports-2026-w3 @ 5fe4c4fa85ca5421c2d996787c6be42400cdbf19 (ahead=2)
+[2026-08-25 14:17:26] Resetting clone then checkout post/medical-collections-on-consumer-credit-reports-2026-w3 at 5fe4c4fa85ca5421c2d996787c6be42400cdbf19 (never master)
+[2026-08-25 14:17:27] git: HEAD is now at 5fe4c4f wip(medical-collections-on-consumer-credit-reports-2026): dashboard + viz wireup
+[2026-08-25 14:17:28] git: Removing public/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png
+[2026-08-25 14:17:28] git: HEAD is now at d5bc50a merge(post): cash-rents-versus-land-prices-by-state-2026 from worker 3 (path-selective)
+[2026-08-25 14:17:29] git: Previous HEAD position was d5bc50a merge(post): cash-rents-versus-land-prices-by-state-2026 from worker 3 (path-selective)
+[2026-08-25 14:17:29] git: Switched to and reset branch 'post/medical-collections-on-consumer-credit-reports-2026-w3'
+[2026-08-25 14:17:31] Agent stream-json -> E:\AI Projects\data-insights-blog\artifacts\automation-logs\worker-3-2026-08-25_14-17-23.log (cot E:\AI Projects\data-insights-blog\artifacts\automation-logs\worker-3-2026-08-25_14-17-23.cot.log, raw E:\AI Projects\data-insights-blog\artifacts\automation-logs\worker-3-2026-08-25_14-17-23.ndjson)
+[cot:system] session model=Auto cwd=C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3
+[cot:user] You are a blog production WORKER in a parallel multi-agent system. ## Identity - Worker ID: 3 - Job ID: job-mt7d9t10-qwub9 - Assigned slug: medical-collections-on-consumer-credit-reports-2026 - Theme ΓÇª
+[cot:thought] Beginning blog production as worker 3 for the medical collections report. Checking conveyor-sync
+[cot:thought] status and updating the job to researching. Reviewing post structure rules before starting the first phase.
+[cot:thought] I will not survey
+[cot:thought] the existing article archive for content ideas. I will study technical patterns like data modules and visualization registration instead. Phase 1 begins with research and data module setup.
+[cot:thought] Starting the medical-collections post in short phases. Checking sync status and scaffolding the data module first.
+[cot:tool] start shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; if (Test-Path "artifacts/conveyor-sync.json") { Get-Content "artifacts/conveyor-sync.json" } else { Write-Output "no conveyor-sync" }; git branch --show-current; git status -sb
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\.cursor\rules\content-diversity.mdc
+[cot:tool] done read ?
+[cot:tool] start glob
+[cot:tool] start shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; npx tsx "E:\AI Projects\data-insights-blog\scripts\update-agent-job.mjs" --job job-mt7d9t10-qwub9 --status researching --activity "Phase 1: checking sync + scaffolding data module"
+[cot:tool] done glob
+[cot:tool] done shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; if (Test-Path "artifacts/conveyor-sync.json") { Get-Content "artifacts/conveyor-sync.json" } else { Write-Output "no conveyor-sync" }; git branch --show-current; git status -sb
+[cot:tool] done shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; npx tsx "E:\AI Projects\data-insights-blog\scripts\update-agent-job.mjs" --job job-mt7d9t10-qwub9 --status researching --activity "Phase 1: checking sync + scaffolding data module"
+[cot:thought] The sync is idle and the correct branch is checked out. Job status is updated.
+[cot:thought] Now examining existing data module structures and visualization registration patterns.
+[cot:thought] Sync is idle. Inspecting registration patterns and a data-module shape (no post prose).
+[cot:tool] start grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\types\post.ts
+[cot:tool] done grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\types\post.ts
+[cot:tool] start grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\theme-registry.ts
+[cot:tool] start glob
+[cot:tool] done grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\theme-registry.ts
+[cot:tool] start glob
+[cot:tool] start grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\components\PostVisualization.tsx
+[cot:tool] done grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\components\PostVisualization.tsx
+[cot:tool] done glob
+[cot:tool] done glob
+[cot:thought] Files for this post already appear to exist in the workspace. Found the data file
+[cot:thought] and dashboard component. Now checking what remains to be completed.Existing files found for this slug ???
+[cot:thought] checking completeness before continuing.
+[cot:tool] start shell git log --oneline -15; git status -sb; ls scripts/qa-medical-collections* 2>$null; ls public/images/*medical-collections* 2>$null; Select-String -Path "src/data/posts.ts" -Pattern "medical-collections-on-consumer-credit-reports-2026" | Select-Object -First 5; Select-String -Path "src/types/post.ts","src/components/PostVisualization.tsx","src/data/theme-registry.ts","artifacts/backend-manifest.json","scripts/smoke-test.mjs" -Pattern "medical-collections|MedicalCollections" | Select-Object -First 30
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\medical-collections-on-consumer-credit-reports-2026-data.ts
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\components\visualizations\MedicalCollectionsOnConsumerCreditReports2026Dashboard.tsx
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\medical-collections-on-consumer-credit-reports-2026-data.ts
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\components\visualizations\MedicalCollectionsOnConsumerCreditReports2026Dashboard.tsx
+[cot:tool] done shell git log --oneline -15; git status -sb; ls scripts/qa-medical-collections* 2>$null; ls public/images/*medical-collections* 2>$null; Select-String -Path "src/data/posts.ts" -Pattern "medical-collections-on-consumer-credit-reports-2026" | Select-Object -First 5; Select-String -Path "src/types/post.ts","src/components/PostVisualization.tsx","src/data/theme-registry.ts","artifacts/backend-manifest.json","scripts/smoke-test.mjs" -Pattern "medical-collections|MedicalCollections" | Select-Object -First 30
+[cot:thought] The data module and dashboard visualization wiring are already committed. Next steps are the
+[cot:thought] hero section, QA script, and smoke marker. Then final deployment and marking the job ready.
+[cot:thought] Data module and dashboard are already committed. Checking registration gaps, then moving to post prose and hero.
+[cot:tool] start grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src
+[cot:tool] start grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\artifacts
+[cot:tool] start glob
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\medical-collections-on-consumer-credit-reports-2026-data.ts
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\types\post.ts
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\medical-collections-on-consumer-credit-reports-2026-data.ts
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\types\post.ts
+[cot:tool] done glob
+[cot:tool] done grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src
+[cot:tool] done grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\artifacts
+[cot:thought] Data module, dashboard, and registration are complete. Next steps include
+[cot:thought] adding the post entry to posts.ts, generating the hero image, running QA, updating the backend manifest, and deploying.
+[cot:thought] I am checking existing post structures for key conventions.
+[cot:tool] start grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\posts.ts
+[cot:tool] done grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\posts.ts
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\posts.ts
+[cot:tool] start shell (Get-Content "src/data/posts.ts" | Measure-Object -Line).Lines; Select-String -Path "src/data/posts.ts" -Pattern "export const posts|^\];" | Select-Object LineNumber,Line; Get-ChildItem scripts/qa-*.mjs | Select-Object -First 3 Name; Select-String -Path "scripts/smoke-test-viz-posts.mjs" -Pattern "SMOKE_MARKERS|slug.*marker|qa-" | Select-Object -First 40
+[cot:tool] start getMcpTools
+[cot:tool] done getMcpTools
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\posts.ts
+[cot:tool] done shell (Get-Content "src/data/posts.ts" | Measure-Object -Line).Lines; Select-String -Path "src/data/posts.ts" -Pattern "export const posts|^\];" | Select-Object LineNumber,Line; Get-ChildItem scripts/qa-*.mjs | Select-Object -First 3 Name; Select-String -Path "scripts/smoke-test-viz-posts.mjs" -Pattern "SMOKE_MARKERS|slug.*marker|qa-" | Select-Object -First 40
+[cot:thought] The first step is generating the hero image. Next steps include
+[cot:thought] writing the post prose and inserting it at the top of posts.ts, creating a QA script, and updating smoke test markers and the backend manifest. I will review existing QA script patterns and smoke marker structures without reading other post content.
+[cot:tool] start glob
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\smoke-test-viz-posts.mjs
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\smoke-test-viz-posts.mjs
+[cot:tool] done glob
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\artifacts\backend-manifest.json
+[cot:tool] start shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; npx tsx "E:\AI Projects\data-insights-blog\scripts\update-agent-job.mjs" --job job-mt7d9t10-qwub9 --status building --activity "Phase 3: writing post prose + generating hero"
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\artifacts\backend-manifest.json
+[cot:tool] done shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; npx tsx "E:\AI Projects\data-insights-blog\scripts\update-agent-job.mjs" --job job-mt7d9t10-qwub9 --status building --activity "Phase 3: writing post prose + generating hero"
+[cot:thought] Reading the QA script template to structure the post. Generating the hero section and drafting the full article.
+[cot:thought] Checking package.json
+[cot:thought] to understand how QA scripts are wired.
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\qa-uninsurance-by-state-after-medicaid-unwinding-2026.mjs
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\qa-uninsurance-by-state-after-medicaid-unwinding-2026.mjs
+[cot:tool] start grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\package.json
+[cot:tool] start generateImage
+[cot:tool] done grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\package.json
+[cot:tool] done generateImage
+[cot:thought] The hero image needs to be copied to public/images/. Next steps include
+[cot:thought] writing the post entry in posts.ts, creating a QA script, adding a smoke marker to the visualization smoke test, and updating the backend manifest.
+[cot:thought] Dashboard button labels also need verification for the QA script.Hero generated.
+[cot:thought] Checking dashboard controls, then writing the post entry and copying the image.
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\components\visualizations\MedicalCollectionsOnConsumerCreditReports2026Dashboard.tsx
+[cot:tool] start shell New-Item -ItemType Directory -Force -Path "public/images" | Out-Null; Copy-Item "C:\Users\ether\.cursor\projects\C-Users-ether-AppData-Local-data-insights-blog-workers-worker-3\assets\health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png" "public/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png" -Force; Test-Path "public/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png"
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\components\visualizations\MedicalCollectionsOnConsumerCreditReports2026Dashboard.tsx
+[cot:tool] done shell New-Item -ItemType Directory -Force -Path "public/images" | Out-Null; Copy-Item "C:\Users\ether\.cursor\projects\C-Users-ether-AppData-Local-data-insights-blog-workers-worker-3\assets\health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png" "public/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png" -Force; Test-Path "public/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png"
+[cot:thought] Writing the post entry and inserting it at the top of samplePosts. Drafting the full
+[cot:thought] post content against the data module facts. Preparing the QA script and updating smoke-test and backend-manifest.
+[cot:thought] Using StrReplace to insert the new entry into the large posts.ts file.Writing the post entry, QA script, smoke marker, and manifest update.
+[cot:tool] start shell $post = @'
+  {
+    id: "medical-collections-on-consumer-credit-reports-2026",
+    slug: "medical-collections-on-consumer-credit-reports-2026",
+    title:
+      "Medical Collections on Credit Reports: Medical Share Fell From 57% to 36% ??? Remaining Holders Mean Score 582",
+    excerpt:
+      "After the 2022???23 bureau reporting changes, medical collections still account for 36% of third-party collections tradelines. Prevalence fell to 4.1%, but remaining balances concentrate among deep-subprime consumers ??? Oklahoma at 8.8%.",
+    category: "Health Economics",
+    themeId: "medical-debt-collections",
+    imageUrl:
+      "/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of fading credit-report cards beside a teal medical cross and amber residual balance bars, Visual Capitalist-style health economics editorial",
+    publishedAt: "2026-08-25T18:00:00Z",
+    featured: true,
+    visualization: "medical-collections-on-consumer-credit-reports-2026",
+    layout: "default",
+    content: `Credit reports used to treat medical bills like any other unpaid balance. A hospital statement that sat unpaid for 180 days could become a third-party collections tradeline ??? and for years, medical collections were the **plurality** of those tradelines. The Consumer Financial Protection Bureau???s Market Snapshot put the medical share of third-party collections tradelines at **57% in Q1 2022**. Fifteen months later, after the industry???s paid-medical, one-year delay, and under-$500 removals, that share printed **36%** in the CFPB???s FDCPA Annual Report for Q1 2023.
+That is the headline of this desk: the **medical share of collections** compressed by **21 percentage points**, but it did not vanish. Roughly one in three remaining collections tradelines is still medical. The interactive dashboard above walks the share path, consumer prevalence, a state ladder, credit-score bands among remaining holders, a prevalence??share scatter, and age mix. The narrative below answers the sharper question: **who still carries medical collections after the 2022???23 reporting changes ??? by state and by score band?**
+## What the 2022???23 reporting changes actually removed
+Three industry changes matter, and they are not the same as a statutory ban. In **July 2022**, the nationwide consumer reporting agencies stopped reporting **paid** medical collections and extended the reporting delay from 180 days to **one year**. In **April 2023**, they removed unpaid medical collections with balances **under $500**. Separately, Colorado and New York enacted state bans that Urban Institute???s August 2024 credit-bureau panel prints as **0%** prevalence ??? a policy floor, not a measurement error.
+Those steps were designed to clear paid and small-balance medical tradelines that were weakly predictive of repayment risk yet heavily punitive for consumers who had already paid or who owed amounts smaller than many credit-card late fees. They were **not** designed to erase large unpaid hospital or specialty balances that remain in collections after a year. The CFPB???s March 2024 Data Point makes that asymmetry visible in the aggregates: the **share of consumers** with at least one medical collections tradeline fell from about **14% in March 2022** to about **5% in June 2023**, while **nationwide medical collections balances** fell only about **38%**. Fewer people on the tape; larger average tickets among those who remain.
+## Prevalence collapsed; residual balances did not
+Urban Institute???s August 2024 panel updates the stock: about **4.1%** of consumers ??? roughly **9.7 million** ??? still have medical debt in collections on their credit reports, down from about **27 million** in August 2022. That is a two-thirds cut in headcount. It is not a two-thirds cut in economic exposure for the residual group.
+Among consumers who still held medical collections on the CFPB Consumer Credit Panel in June 2023, the **average total medical collections balance** rose from about **$2,091** (March 2022) to about **$3,149**. The under-$500 tranche that dominated the pre-change distribution ??? CFPB printed roughly **65%** of medical collections balances under $500 in March 2022 ??? was wiped from reports. What remains is the right tail: larger unpaid accounts, often tied to emergency or specialty episodes that insurance did not fully cover.
+Mean credit score among remaining holders moved the wrong direction for a ???cleanup??? story. It fell from **598.2** to **582.0**. Removing small-balance and paid tradelines disproportionately cleared near-prime and thin-file consumers whose only negative mark was a modest medical bill. The residual population is more concentrated in deep subprime ??? which is exactly what the score-band panel in the dashboard is built to show.
+| Metric | Pre-change anchor | Post-change anchor | Direction |
+| --- | ---: | ---: | --- |
+| Medical share of 3P collections tradelines | 57% (Q1 2022) | 36% (Q1 2023) | ???21 pp |
+| Consumers with ???1 medical collection | ~14% (Mar 2022) / ~27M (Aug 2022) | ~5% (Jun 2023) / 4.1% ?? ~9.7M (Aug 2024) | Sharp drop |
+| Avg balance among remaining holders | ~$2,091 (Mar 2022) | ~$3,149 (Jun 2023) | Higher |
+| Mean score among remaining holders | 598.2 | 582.0 | Lower |
+| Highest state prevalence (Urban Aug 2024) | ??? | Oklahoma 8.8% | South-high |
+## Medical share of collections is still the plurality story
+A 36% medical share is lower than 57%, and it is still enormous relative to any other single collections category the CFPB???s Market Snapshot tracks. Auto, retail, and telecom collections do not individually approach that weight. For lenders, mortgage underwriters, and landlords who still pull reports that include collections, medical debt remains the **modal** third-party collections mark even after the industry???s voluntary purge.
+That matters for interpretation. Headlines that say ???medical debt is off credit reports??? are describing the **prevalence** collapse, not the **composition** of what remains. Composition is the better object for credit-decisioning risk: among consumers who still show collections, medical is still the largest slice. Among consumers who never had collections, the policy change is mostly invisible. The distributional story lives in the middle ??? people who lost a small medical mark and people who kept a large one.
+Desk-estimated state medical shares of remaining collections tradelines in our panel run from the mid-40s in high-prevalence Southern states down toward the mid-20s in lower-prevalence coastal states. Those cells are **estimated**, calibrated to the national 36% floor and to the South-high geography in CFPB maps ??? not a bureau microdata dump. Treat them as rank-order geometry, not audit-grade state shares.
+## State ladder: Oklahoma at 8.8%, ban states at zero
+Urban Institute???s ban-impact brief is the cleanest public state print for August 2024. **Oklahoma** leads disclosed prevalence at **8.8%**. **Colorado** and **New York** print **0%** under 2023 state bans on medical debt credit reporting. Between those poles, the desk ladder in the dashboard places Mississippi, Louisiana, Texas, Alabama, and Arkansas in the high-single-digit band ??? South-heavy, Medicaid non-expansion or late-expansion geography overlapping with higher uninsured rates and thinner hospital financial assistance uptake.
+Northeast and Pacific states cluster lower: Massachusetts, California, Hawaii, and Utah print in the low-single digits in our calibrated ladder. That geography is not a morality play about bill-paying culture. It tracks **insurance coverage**, **hospital charity-care policies**, **state reporting bans**, and the pre-existing density of medical collections before the national removals. States that started with thicker medical-collections stocks still have thicker residuals after the under-$500 cut, because large balances were never the target of the April 2023 purge.
+Medicaid expansion is a useful but incomplete covariate. Several expansion states still sit above the national 4.1% mean; several non-expansion states dominate the top of the ladder. Expansion reduces the flow of new uninsured acute episodes; it does not automatically clear legacy specialty balances already in collections. The dashboard???s region filter makes the South vs. Northeast contrast readable without pretending expansion is a sufficient statistic.
+## Score bands: deep subprime holds nearly half the residual
+Among remaining medical-collections holders in June 2023, the mean score of **582** implies a heavy left-tail mix. Our desk band estimates ??? calibrated to that mean, not disclosed as CFPB tables ??? put roughly **48%** of remaining holders in deep subprime (<580), **28%** in subprime (580???619), **16%** in near-prime (620???659), and only **8%** at prime and above.
+Prevalence *within* band tells a parallel story. Deep-subprime consumers are estimated near **18.5%** prevalence for medical collections; prime-plus consumers nearer **1.1%**. Medical share of collections tradelines inside the deep-subprime band is estimated above **50%** ??? meaning that for the most credit-constrained consumers, medical is still the default collections mark. Average balances also rise as scores fall: deep-subprime holders near **$3,700** versus prime-plus near **$2,000** in the desk cut.
+This is the population the reporting changes did **not** fully clear. Small-balance removals helped thin-file and near-prime consumers whose only scar was a $200 ER co-pay gone to collections. They did less for consumers with multi-thousand-dollar unpaid balances and scores already below 580 ??? the group for whom a medical collections tradeline is both more common and more consequential for credit access.
+## Age mix shifted toward working-age holders
+CFPB age tables show prevalence falling in every age group, but not evenly. Adults **62 and older** saw prevalence drop from **8.4%** to **2.7%** ??? a large absolute cut that also reduced their share of the remaining holder mix from about **18%** to about **15%**. The **30???44** group rose as a share of remaining holders (about **33.5%** to **37.4%**), consistent with working-age families absorbing more of the residual large-balance stock.
+That age shift matters for lenders and for policy. Medical collections that remain are less a story about Medicare-covered seniors with small unpaid balances and more a story about prime-working-age households navigating high-deductible plans, out-of-network surprises, and specialty bills that insurance only partially covered. The under-$500 purge removed a lot of senior small-balance noise; the residual tape looks younger and more balance-heavy.
+## Caveats the dashboard will not hide
+Credit records are **not** the universe of medical debt owed. Many providers never report to bureaus; many balances sit with providers or early-out agencies before third-party placement; charity-care write-offs never become tradelines. A consumer with zero medical collections can still owe a hospital. Conversely, a medical collections tradeline can overstate current obligation if the consumer has settled or is in a payment plan that the furnisher has not updated.
+State cells outside Oklahoma, Colorado, and New York are **desk estimates** ranked to Urban and CFPB geography ??? labeled in the data module. Score-band shares are estimates calibrated to the disclosed mean score of 582, not bureau micro-tabulations. Medical share of collections at the state level is estimated from the national 36% anchor and prevalence rank order. The national prevalence path between disclosed March 2022 / June 2023 / August 2024 anchors interpolates some intermediate quarters.
+VantageScore???s decision to exclude medical collections from score calculation, and FICO???s phased approach, further separate **report presence** from **score impact**. This post measures what remains **on reports**, not the full mapping from those tradelines into every scorecard in production.
+## What the residual 36% share implies
+The policy success is real: tens of millions of consumers no longer carry a medical collections mark, and the medical share of collections tradelines fell by more than a third. The policy incompleteness is also real: **36%** of third-party collections tradelines are still medical; **~9.7 million** consumers still show medical debt in collections; remaining balances average above **$3,000**; and the mean score of that residual group is **582**.
+For desks that price credit risk, the useful frame is not ???medical debt is gone.??? It is ???medical debt on reports is rarer, larger, and more concentrated among already-stressed borrowers ??? and it still dominates the collections tape.??? State bans in Colorado and New York show one path to a true zero on reports. The national industry changes show a different path: a thinner, heavier residual. The dashboard is built so you can toggle between those views ??? share, prevalence, geography, and score band ??? without confusing a prevalence collapse for a composition wipeout.`,
+  },
+'@
+# Insert post at start of samplePosts array
+$path = "src/data/posts.ts"
+$raw = Get-Content -Raw $path
+$needle = "export const samplePosts: Post[] = [`r`n"
+if (-not $raw.Contains("export const samplePosts: Post[] = [")) { throw "needle missing" }
+if ($raw.Contains('id: "medical-collections-on-consumer-credit-reports-2026"')) { Write-Output "post already present"; exit 0 }
+$insert = "export const samplePosts: Post[] = [`r`n" + $post + "`r`n"
+$raw2 = $raw.Replace("export const samplePosts: Post[] = [`r`n", $insert)
+# try LF-only
+if ($raw2 -eq $raw) {
+  $insert = "export const samplePosts: Post[] = [`n" + $post + "`n"
+  $raw2 = $raw.Replace("export const samplePosts: Post[] = [`n", $insert)
+}
+if ($raw2 -eq $raw) { throw "replace failed" }
+Set-Content -Path $path -Value $raw2 -NoNewline
+Write-Output "posts.ts updated"
+Select-String -Path $path -Pattern 'medical-collections-on-consumer-credit-reports-2026' | Select-Object -First 3
+[cot:tool] done shell $post = @'
+  {
+    id: "medical-collections-on-consumer-credit-reports-2026",
+    slug: "medical-collections-on-consumer-credit-reports-2026",
+    title:
+      "Medical Collections on Credit Reports: Medical Share Fell From 57% to 36% ??? Remaining Holders Mean Score 582",
+    excerpt:
+      "After the 2022???23 bureau reporting changes, medical collections still account for 36% of third-party collections tradelines. Prevalence fell to 4.1%, but remaining balances concentrate among deep-subprime consumers ??? Oklahoma at 8.8%.",
+    category: "Health Economics",
+    themeId: "medical-debt-collections",
+    imageUrl:
+      "/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic illustration of fading credit-report cards beside a teal medical cross and amber residual balance bars, Visual Capitalist-style health economics editorial",
+    publishedAt: "2026-08-25T18:00:00Z",
+    featured: true,
+    visualization: "medical-collections-on-consumer-credit-reports-2026",
+    layout: "default",
+    content: `Credit reports used to treat medical bills like any other unpaid balance. A hospital statement that sat unpaid for 180 days could become a third-party collections tradeline ??? and for years, medical collections were the **plurality** of those tradelines. The Consumer Financial Protection Bureau???s Market Snapshot put the medical share of third-party collections tradelines at **57% in Q1 2022**. Fifteen months later, after the industry???s paid-medical, one-year delay, and under-$500 removals, that share printed **36%** in the CFPB???s FDCPA Annual Report for Q1 2023.
+That is the headline of this desk: the **medical share of collections** compressed by **21 percentage points**, but it did not vanish. Roughly one in three remaining collections tradelines is still medical. The interactive dashboard above walks the share path, consumer prevalence, a state ladder, credit-score bands among remaining holders, a prevalence??share scatter, and age mix. The narrative below answers the sharper question: **who still carries medical collections after the 2022???23 reporting changes ??? by state and by score band?**
+## What the 2022???23 reporting changes actually removed
+Three industry changes matter, and they are not the same as a statutory ban. In **July 2022**, the nationwide consumer reporting agencies stopped reporting **paid** medical collections and extended the reporting delay from 180 days to **one year**. In **April 2023**, they removed unpaid medical collections with balances **under $500**. Separately, Colorado and New York enacted state bans that Urban Institute???s August 2024 credit-bureau panel prints as **0%** prevalence ??? a policy floor, not a measurement error.
+Those steps were designed to clear paid and small-balance medical tradelines that were weakly predictive of repayment risk yet heavily punitive for consumers who had already paid or who owed amounts smaller than many credit-card late fees. They were **not** designed to erase large unpaid hospital or specialty balances that remain in collections after a year. The CFPB???s March 2024 Data Point makes that asymmetry visible in the aggregates: the **share of consumers** with at least one medical collections tradeline fell from about **14% in March 2022** to about **5% in June 2023**, while **nationwide medical collections balances** fell only about **38%**. Fewer people on the tape; larger average tickets among those who remain.
+## Prevalence collapsed; residual balances did not
+Urban Institute???s August 2024 panel updates the stock: about **4.1%** of consumers ??? roughly **9.7 million** ??? still have medical debt in collections on their credit reports, down from about **27 million** in August 2022. That is a two-thirds cut in headcount. It is not a two-thirds cut in economic exposure for the residual group.
+Among consumers who still held medical collections on the CFPB Consumer Credit Panel in June 2023, the **average total medical collections balance** rose from about **$2,091** (March 2022) to about **$3,149**. The under-$500 tranche that dominated the pre-change distribution ??? CFPB printed roughly **65%** of medical collections balances under $500 in March 2022 ??? was wiped from reports. What remains is the right tail: larger unpaid accounts, often tied to emergency or specialty episodes that insurance did not fully cover.
+Mean credit score among remaining holders moved the wrong direction for a ???cleanup??? story. It fell from **598.2** to **582.0**. Removing small-balance and paid tradelines disproportionately cleared near-prime and thin-file consumers whose only negative mark was a modest medical bill. The residual population is more concentrated in deep subprime ??? which is exactly what the score-band panel in the dashboard is built to show.
+| Metric | Pre-change anchor | Post-change anchor | Direction |
+| --- | ---: | ---: | --- |
+| Medical share of 3P collections tradelines | 57% (Q1 2022) | 36% (Q1 2023) | ???21 pp |
+| Consumers with ???1 medical collection | ~14% (Mar 2022) / ~27M (Aug 2022) | ~5% (Jun 2023) / 4.1% ?? ~9.7M (Aug 2024) | Sharp drop |
+| Avg balance among remaining holders | ~$2,091 (Mar 2022) | ~$3,149 (Jun 2023) | Higher |
+| Mean score among remaining holders | 598.2 | 582.0 | Lower |
+| Highest state prevalence (Urban Aug 2024) | ??? | Oklahoma 8.8% | South-high |
+## Medical share of collections is still the plurality story
+A 36% medical share is lower than 57%, and it is still enormous relative to any other single collections category the CFPB???s Market Snapshot tracks. Auto, retail, and telecom collections do not individually approach that weight. For lenders, mortgage underwriters, and landlords who still pull reports that include collections, medical debt remains the **modal** third-party collections mark even after the industry???s voluntary purge.
+That matters for interpretation. Headlines that say ???medical debt is off credit reports??? are describing the **prevalence** collapse, not the **composition** of what remains. Composition is the better object for credit-decisioning risk: among consumers who still show collections, medical is still the largest slice. Among consumers who never had collections, the policy change is mostly invisible. The distributional story lives in the middle ??? people who lost a small medical mark and people who kept a large one.
+Desk-estimated state medical shares of remaining collections tradelines in our panel run from the mid-40s in high-prevalence Southern states down toward the mid-20s in lower-prevalence coastal states. Those cells are **estimated**, calibrated to the national 36% floor and to the South-high geography in CFPB maps ??? not a bureau microdata dump. Treat them as rank-order geometry, not audit-grade state shares.
+## State ladder: Oklahoma at 8.8%, ban states at zero
+Urban Institute???s ban-impact brief is the cleanest public state print for August 2024. **Oklahoma** leads disclosed prevalence at **8.8%**. **Colorado** and **New York** print **0%** under 2023 state bans on medical debt credit reporting. Between those poles, the desk ladder in the dashboard places Mississippi, Louisiana, Texas, Alabama, and Arkansas in the high-single-digit band ??? South-heavy, Medicaid non-expansion or late-expansion geography overlapping with higher uninsured rates and thinner hospital financial assistance uptake.
+Northeast and Pacific states cluster lower: Massachusetts, California, Hawaii, and Utah print in the low-single digits in our calibrated ladder. That geography is not a morality play about bill-paying culture. It tracks **insurance coverage**, **hospital charity-care policies**, **state reporting bans**, and the pre-existing density of medical collections before the national removals. States that started with thicker medical-collections stocks still have thicker residuals after the under-$500 cut, because large balances were never the target of the April 2023 purge.
+Medicaid expansion is a useful but incomplete covariate. Several expansion states still sit above the national 4.1% mean; several non-expansion states dominate the top of the ladder. Expansion reduces the flow of new uninsured acute episodes; it does not automatically clear legacy specialty balances already in collections. The dashboard???s region filter makes the South vs. Northeast contrast readable without pretending expansion is a sufficient statistic.
+## Score bands: deep subprime holds nearly half the residual
+Among remaining medical-collections holders in June 2023, the mean score of **582** implies a heavy left-tail mix. Our desk band estimates ??? calibrated to that mean, not disclosed as CFPB tables ??? put roughly **48%** of remaining holders in deep subprime (<580), **28%** in subprime (580???619), **16%** in near-prime (620???659), and only **8%** at prime and above.
+Prevalence *within* band tells a parallel story. Deep-subprime consumers are estimated near **18.5%** prevalence for medical collections; prime-plus consumers nearer **1.1%**. Medical share of collections tradelines inside the deep-subprime band is estimated above **50%** ??? meaning that for the most credit-constrained consumers, medical is still the default collections mark. Average balances also rise as scores fall: deep-subprime holders near **$3,700** versus prime-plus near **$2,000** in the desk cut.
+This is the population the reporting changes did **not** fully clear. Small-balance removals helped thin-file and near-prime consumers whose only scar was a $200 ER co-pay gone to collections. They did less for consumers with multi-thousand-dollar unpaid balances and scores already below 580 ??? the group for whom a medical collections tradeline is both more common and more consequential for credit access.
+## Age mix shifted toward working-age holders
+CFPB age tables show prevalence falling in every age group, but not evenly. Adults **62 and older** saw prevalence drop from **8.4%** to **2.7%** ??? a large absolute cut that also reduced their share of the remaining holder mix from about **18%** to about **15%**. The **30???44** group rose as a share of remaining holders (about **33.5%** to **37.4%**), consistent with working-age families absorbing more of the residual large-balance stock.
+That age shift matters for lenders and for policy. Medical collections that remain are less a story about Medicare-covered seniors with small unpaid balances and more a story about prime-working-age households navigating high-deductible plans, out-of-network surprises, and specialty bills that insurance only partially covered. The under-$500 purge removed a lot of senior small-balance noise; the residual tape looks younger and more balance-heavy.
+## Caveats the dashboard will not hide
+Credit records are **not** the universe of medical debt owed. Many providers never report to bureaus; many balances sit with providers or early-out agencies before third-party placement; charity-care write-offs never become tradelines. A consumer with zero medical collections can still owe a hospital. Conversely, a medical collections tradeline can overstate current obligation if the consumer has settled or is in a payment plan that the furnisher has not updated.
+State cells outside Oklahoma, Colorado, and New York are **desk estimates** ranked to Urban and CFPB geography ??? labeled in the data module. Score-band shares are estimates calibrated to the disclosed mean score of 582, not bureau micro-tabulations. Medical share of collections at the state level is estimated from the national 36% anchor and prevalence rank order. The national prevalence path between disclosed March 2022 / June 2023 / August 2024 anchors interpolates some intermediate quarters.
+VantageScore???s decision to exclude medical collections from score calculation, and FICO???s phased approach, further separate **report presence** from **score impact**. This post measures what remains **on reports**, not the full mapping from those tradelines into every scorecard in production.
+## What the residual 36% share implies
+The policy success is real: tens of millions of consumers no longer carry a medical collections mark, and the medical share of collections tradelines fell by more than a third. The policy incompleteness is also real: **36%** of third-party collections tradelines are still medical; **~9.7 million** consumers still show medical debt in collections; remaining balances average above **$3,000**; and the mean score of that residual group is **582**.
+For desks that price credit risk, the useful frame is not ???medical debt is gone.??? It is ???medical debt on reports is rarer, larger, and more concentrated among already-stressed borrowers ??? and it still dominates the collections tape.??? State bans in Colorado and New York show one path to a true zero on reports. The national industry changes show a different path: a thinner, heavier residual. The dashboard is built so you can toggle between those views ??? share, prevalence, geography, and score band ??? without confusing a prevalence collapse for a composition wipeout.`,
+  },
+'@
+# Insert post at start of samplePosts array
+$path = "src/data/posts.ts"
+$raw = Get-Content -Raw $path
+$needle = "export const samplePosts: Post[] = [`r`n"
+if (-not $raw.Contains("export const samplePosts: Post[] = [")) { throw "needle missing" }
+if ($raw.Contains('id: "medical-collections-on-consumer-credit-reports-2026"')) { Write-Output "post already present"; exit 0 }
+$insert = "export const samplePosts: Post[] = [`r`n" + $post + "`r`n"
+$raw2 = $raw.Replace("export const samplePosts: Post[] = [`r`n", $insert)
+# try LF-only
+if ($raw2 -eq $raw) {
+  $insert = "export const samplePosts: Post[] = [`n" + $post + "`n"
+  $raw2 = $raw.Replace("export const samplePosts: Post[] = [`n", $insert)
+}
+if ($raw2 -eq $raw) { throw "replace failed" }
+Set-Content -Path $path -Value $raw2 -NoNewline
+Write-Output "posts.ts updated"
+Select-String -Path $path -Pattern 'medical-collections-on-consumer-credit-reports-2026' | Select-Object -First 3
+[cot:thought] Post insertion succeeded. Next steps are writing the QA script, updating smoke tests and backend manifest, counting words, and committing phase 3.
+[cot:tool] start edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\qa-medical-collections-on-consumer-credit-reports-2026.mjs
+[cot:tool] done edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\qa-medical-collections-on-consumer-credit-reports-2026.mjs
+[cot:tool] start edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\smoke-test-viz-posts.mjs
+[cot:tool] done edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\smoke-test-viz-posts.mjs
+[cot:tool] start edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\artifacts\backend-manifest.json
+[cot:tool] start shell # word count of content field (rough)
+$m = Select-String -Path "src/data/posts.ts" -Pattern 'Medical Collections on Credit Reports' -Context 0,0
+# extract content between first content:` and closing `,
+$raw = Get-Content -Raw "src/data/posts.ts"
+$start = $raw.IndexOf('id: "medical-collections-on-consumer-credit-reports-2026"')
+$chunk = $raw.Substring($start, [Math]::Min(25000, $raw.Length - $start))
+$contentStart = $chunk.IndexOf('content: `') + 10
+$contentEnd = $chunk.IndexOf('`,', $contentStart)
+$content = $chunk.Substring($contentStart, $contentEnd - $contentStart)
+$words = ($content -split '\s+').Count
+$h2 = ([regex]::Matches($content, '(?m)^## ')).Count
+Write-Output "words=$words h2=$h2"
+# verify hero + theme registry
+Test-Path "public/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png"
+Select-String -Path "src/data/theme-registry.ts" -Pattern 'medical-collections-on-consumer-credit-reports-2026' | Select-Object -First 2
+[cot:tool] done edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\artifacts\backend-manifest.json
+[cot:tool] done shell # word count of content field (rough)
+$m = Select-String -Path "src/data/posts.ts" -Pattern 'Medical Collections on Credit Reports' -Context 0,0
+# extract content between first content:` and closing `,
+$raw = Get-Content -Raw "src/data/posts.ts"
+$start = $raw.IndexOf('id: "medical-collections-on-consumer-credit-reports-2026"')
+$chunk = $raw.Substring($start, [Math]::Min(25000, $raw.Length - $start))
+$contentStart = $chunk.IndexOf('content: `') + 10
+$contentEnd = $chunk.IndexOf('`,', $contentStart)
+$content = $chunk.Substring($contentStart, $contentEnd - $contentStart)
+$words = ($content -split '\s+').Count
+$h2 = ([regex]::Matches($content, '(?m)^## ')).Count
+Write-Output "words=$words h2=$h2"
+# verify hero + theme registry
+Test-Path "public/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png"
+Select-String -Path "src/data/theme-registry.ts" -Pattern 'medical-collections-on-consumer-credit-reports-2026' | Select-Object -First 2
+[cot:thought] The draft reached 1813 words and eight H2 headings. Phase three commits the prose and hero. Phase four runs QA and smoke tests.
+[cot:thought] Then the deploy runs. Two commits will precede
+[cot:thought] the deploy. The first covers the prose and hero. The second covers QA and smoke testing.
+[cot:thought] Word count and H2s clear the bar. Committing prose+hero and QA+smoke, then running local deploy.
+[cot:tool] start shell git add -A; git status -sb; git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "wip(medical-collections-on-consumer-credit-reports-2026): post prose + hero"
+[cot:tool] done shell git add -A; git status -sb; git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "wip(medical-collections-on-consumer-credit-reports-2026): post prose + hero"
+[cot:thought] QA and smoke tests were already staged and committed. Phases 3 and 4 are
+[cot:thought] combined. Deploying with isolated ports.
+[cot:tool] start shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; npx tsx "E:\AI Projects\data-insights-blog\scripts\update-agent-job.mjs" --job job-mt7d9t10-qwub9 --status qa --activity "Running npm run deploy on ports 4184/4185"; if (Test-Path "artifacts/conveyor-sync.json") { (Get-Content "artifacts/conveyor-sync.json" | ConvertFrom-Json).phase } else { "no-sync" }
+[cot:tool] start await
+[cot:tool] done await
+[cot:tool] done shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; npx tsx "E:\AI Projects\data-insights-blog\scripts\update-agent-job.mjs" --job job-mt7d9t10-qwub9 --status qa --activity "Running npm run deploy on ports 4184/4185"; if (Test-Path "artifacts/conveyor-sync.json") { (Get-Content "artifacts/conveyor-sync.json" | ConvertFrom-Json).phase } else { "no-sync" }
+[cot:thought] The sync process is idle. I will now run the deployment script with the specified ports.
+[cot:thought] The deployment will
+[cot:thought] take a while.
+[cot:tool] start shell $env:SMOKE_PORT='4184'; $env:SMOKE_QA_PORT='4185'; npm run deploy
+[cot:tool] done shell $env:SMOKE_PORT='4184'; $env:SMOKE_QA_PORT='4185'; npm run deploy
+[cot:thought] An invalid UTF-8 sequence was found in posts.ts. PowerShell Set-Content likely introduced the encoding issue.
+[cot:thought] Fixing a UTF-8 encoding issue in `posts.ts` from the PowerShell write.
+[cot:tool] start shell # Find invalid bytes near index 306 and check BOM/encoding
+$bytes = [System.IO.File]::ReadAllBytes("src/data/posts.ts")
+Write-Output "len=$($bytes.Length) first16=$([BitConverter]::ToString($bytes[0..15]))"
+# find non-utf8-ish high bytes early
+$bad = @()
+for ($i=0; $i -lt [Math]::Min(5000, $bytes.Length); $i++) {
+  if ($bytes[$i] -eq 0x80 -or ($bytes[$i] -ge 0x80 -and $bytes[$i] -le 0xFF)) {
+    # check if valid utf-8 start later; just log high bytes
+    if ($bytes[$i] -eq 0x97 -or $bytes[$i] -eq 0x96 -or $bytes[$i] -eq 0x93 -or $bytes[$i] -eq 0x94 -or $bytes[$i] -eq 0x91 -or $bytes[$i] -eq 0x92 -or $bytes[$i] -eq 0xA0 -or $bytes[$i] -eq 0x85) {
+      $bad += $i
+    }
+  }
+}
+Write-Output "windows1252 smart-punct indices (first 30): $($bad[0..29] -join ',')"
+# show context around index 306
+$start = 280; $end = 340
+$slice = $bytes[$start..$end]
+Write-Output "bytes@$start..$end=$([BitConverter]::ToString($slice))"
+# decode as default and show chars around 306
+$text = [System.Text.Encoding]::GetEncoding(1252).GetString($bytes[0..800])
+Write-Output $text.Substring(250, 120)
+[cot:tool] done shell # Find invalid bytes near index 306 and check BOM/encoding
+$bytes = [System.IO.File]::ReadAllBytes("src/data/posts.ts")
+Write-Output "len=$($bytes.Length) first16=$([BitConverter]::ToString($bytes[0..15]))"
+# find non-utf8-ish high bytes early
+$bad = @()
+for ($i=0; $i -lt [Math]::Min(5000, $bytes.Length); $i++) {
+  if ($bytes[$i] -eq 0x80 -or ($bytes[$i] -ge 0x80 -and $bytes[$i] -le 0xFF)) {
+    # check if valid utf-8 start later; just log high bytes
+    if ($bytes[$i] -eq 0x97 -or $bytes[$i] -eq 0x96 -or $bytes[$i] -eq 0x93 -or $bytes[$i] -eq 0x94 -or $bytes[$i] -eq 0x91 -or $bytes[$i] -eq 0x92 -or $bytes[$i] -eq 0xA0 -or $bytes[$i] -eq 0x85) {
+      $bad += $i
+    }
+  }
+}
+Write-Output "windows1252 smart-punct indices (first 30): $($bad[0..29] -join ',')"
+# show context around index 306
+$start = 280; $end = 340
+$slice = $bytes[$start..$end]
+Write-Output "bytes@$start..$end=$([BitConverter]::ToString($slice))"
+# decode as default and show chars around 306
+$text = [System.Text.Encoding]::GetEncoding(1252).GetString($bytes[0..800])
+Write-Output $text.Substring(250, 120)
+[cot:thought] PowerShell converted Unicode em-dashes and special characters to Windows-1252 encoding.
+[cot:thought] The entire file likely
+[cot:thought] was re-saved in Windows-1252. PowerShell's Set-Content probably defaulted to UTF-16 or Windows-1252, corrupting the original UTF-8 em-dashes.
+[cot:thought] Checking whether existing
+[cot:thought] UTF-8 multi-byte sequences remain intact. If the corruption is limited to the recent insert, the rest of the file may not need full re-encoding.
+[cot:tool] start shell $bytes = [System.IO.File]::ReadAllBytes("src/data/posts.ts")
+# count utf-8 emdash E2 80 94 vs cp1252 97
+$utf8Em = 0; $cpEm = 0
+for ($i=0; $i -lt $bytes.Length-2; $i++) {
+  if ($bytes[$i] -eq 0xE2 -and $bytes[$i+1] -eq 0x80 -and $bytes[$i+2] -eq 0x94) { $utf8Em++ }
+}
+for ($i=0; $i -lt $bytes.Length; $i++) { if ($bytes[$i] -eq 0x97) { $cpEm++ } }
+Write-Output "utf8Em=$utf8Em cp1252Em=$cpEm"
+# check git for clean version of surrounding posts encoding
+git show HEAD~1:src/data/posts.ts | Select-Object -First 1 | Out-Null
+$prev = git show HEAD1:src/data/posts.ts 2>$null
+# get bytes from previous commit version of posts.ts (before our bad write was committed - HEAD has bad file)
+# Our commit included the bad file. Previous commit was dashboard. Check if posts.ts existed then.
+git log --oneline -5 -- src/data/posts.ts
+# Extract posts.ts from before our commit and check encoding
+$tmp = [System.IO.Path]::GetTempFileName()
+git show 5fe4c4f:src/data/posts.ts | Out-File -Encoding utf8NoBOM -FilePath "$tmp.prev" -ErrorAction SilentlyContinue
+# use git cat-file
+git show 5fe4c4f:src/data/posts.ts > "$PWD\_posts_prev.ts" 2>&1 | Select-Object -First 0
+# powershell redirect may also corrupt - use .NET from git stdout bytes
+$psi = New-Object System.Diagnostics.ProcessStartInfo
+$psi.FileName = "git"
+$psi.Arguments = "show 5fe4c4f:src/data/posts.ts"
+$psi.RedirectStandardOutput = $true
+$psi.UseShellExecute = $false
+$psi.CreateNoWindow = $true
+$p = [System.Diagnostics.Process]::Start($psi)
+$ms = New-Object System.IO.MemoryStream
+$p.StandardOutput.BaseStream.CopyTo($ms)
+$p.WaitForExit()
+$prevBytes = $ms.ToArray()
+$utf8EmPrev = 0
+for ($i=0; $i -lt $prevBytes.Length-2; $i++) {
+  if ($prevBytes[$i] -eq 0xE2 -and $prevBytes[$i+1] -eq 0x80 -and $prevBytes[$i+2] -eq 0x94) { $utf8EmPrev++ }
+}
+Write-Output "prevLen=$($prevBytes.Length) prevUtf8Em=$utf8EmPrev prevFirst=$([BitConverter]::ToString($prevBytes[0..7]))"
+[cot:tool] done shell $bytes = [System.IO.File]::ReadAllBytes("src/data/posts.ts")
+# count utf-8 emdash E2 80 94 vs cp1252 97
+$utf8Em = 0; $cpEm = 0
+for ($i=0; $i -lt $bytes.Length-2; $i++) {
+  if ($bytes[$i] -eq 0xE2 -and $bytes[$i+1] -eq 0x80 -and $bytes[$i+2] -eq 0x94) { $utf8Em++ }
+}
+for ($i=0; $i -lt $bytes.Length; $i++) { if ($bytes[$i] -eq 0x97) { $cpEm++ } }
+Write-Output "utf8Em=$utf8Em cp1252Em=$cpEm"
+# check git for clean version of surrounding posts encoding
+git show HEAD~1:src/data/posts.ts | Select-Object -First 1 | Out-Null
+$prev = git show HEAD1:src/data/posts.ts 2>$null
+# get bytes from previous commit version of posts.ts (before our bad write was committed - HEAD has bad file)
+# Our commit included the bad file. Previous commit was dashboard. Check if posts.ts existed then.
+git log --oneline -5 -- src/data/posts.ts
+# Extract posts.ts from before our commit and check encoding
+$tmp = [System.IO.Path]::GetTempFileName()
+git show 5fe4c4f:src/data/posts.ts | Out-File -Encoding utf8NoBOM -FilePath "$tmp.prev" -ErrorAction SilentlyContinue
+# use git cat-file
+git show 5fe4c4f:src/data/posts.ts > "$PWD\_posts_prev.ts" 2>&1 | Select-Object -First 0
+# powershell redirect may also corrupt - use .NET from git stdout bytes
+$psi = New-Object System.Diagnostics.ProcessStartInfo
+$psi.FileName = "git"
+$psi.Arguments = "show 5fe4c4f:src/data/posts.ts"
+$psi.RedirectStandardOutput = $true
+$psi.UseShellExecute = $false
+$psi.CreateNoWindow = $true
+$p = [System.Diagnostics.Process]::Start($psi)
+$ms = New-Object System.IO.MemoryStream
+$p.StandardOutput.BaseStream.CopyTo($ms)
+$p.WaitForExit()
+$prevBytes = $ms.ToArray()
+$utf8EmPrev = 0
+for ($i=0; $i -lt $prevBytes.Length-2; $i++) {
+  if ($prevBytes[$i] -eq 0xE2 -and $prevBytes[$i+1] -eq 0x80 -and $prevBytes[$i+2] -eq 0x94) { $utf8EmPrev++ }
+}
+Write-Output "prevLen=$($prevBytes.Length) prevUtf8Em=$utf8EmPrev prevFirst=$([BitConverter]::ToString($prevBytes[0..7]))"
+[cot:thought] The file contains mixed encoding artifacts: 5177 UTF-8 em-dashes from the original text and 331 Windows-1252 0x97 bytes from the inserted post.
+[cot:thought] I will convert the
+[cot:thought] 331 invalid Windows-1252 bytes to proper UTF-8 sequences. The replacements are: 0x97 to E2 80 94, 0x96 to E2 80 93, 0x93/0x94 to E2 80 9C/D, 0x91/0x92 to E2 80 98/99, 0x85 to E2 80 A6, and 0xA0 to C2 A0.
+[cot:thought] A naive byte replacement
+[cot:thought] would corrupt valid UTF-8 sequences, since 0x97 can appear as a continuation byte.
+[cot:thought] The safer approach is to restore the file from a clean git snapshot and rewrite only the inserted post section.
+[cot:thought] Decoding the entire
+[cot:thought] buffer as Latin-1 would break valid UTF-8 multi-byte sequences. A targeted fix is preferable: parse the file as UTF-8, then replace only the isolated CP1252 smart-punctuation bytes that are invalid as standalone UTF-8 sequences.
+[cot:thought] Repairing Windows-1252 smart punctuation that broke UTF-8 in the inserted post.
+[cot:tool] start shell node --input-type=module -e "
+import fs from 'fs';
+import { execSync } from 'child_process';
+// Restore clean posts.ts from before bad write, then re-insert post via UTF-8
+const clean = execSync('git show 5fe4c4f:src/data/posts.ts', { maxBuffer: 50*1024*1024 });
+const post = String.raw\`  {
+    id: \"medical-collections-on-consumer-credit-reports-2026\",
+    slug: \"medical-collections-on-consumer-credit-reports-2026\",
+    title:
+      \"Medical Collections on Credit Reports: Medical Share Fell From 57% to 36% ??? Remaining Holders Mean Score 582\",
+    excerpt:
+      \"After the 2022???23 bureau reporting changes, medical collections still account for 36% of third-party collections tradelines. Prevalence fell to 4.1%, but remaining balances concentrate among deep-subprime consumers ??? Oklahoma at 8.8%.\",
+    category: \"Health Economics\",
+    themeId: \"medical-debt-collections\",
+    imageUrl:
+      \"/images/health-economics-medical-collections-on-consumer-credit-reports-2026-hero.png\",
+    imageAlt:
+      \"Dark navy cinematic illustration of fading credit-report cards beside a teal medical cross and amber residual balance bars, Visual Capitalist-style health economics editorial\",
+    publishedAt: \"2026-08-25T18:00:00Z\",
+    featured: true,
+    visualization: \"medical-collections-on-consumer-credit-reports-2026\",
+    layout: \"default\",
+    content: \`PLACEHOLDER\`,
+  },
+\`;
+const content = fs.readFileSync('scripts/_medical_post_content.tmp.md', 'utf8');
+"; echo "need write content file first"
+[cot:tool] done shell node --input-type=module -e "
+import fs from 'fs';
+import { execSync } from 'child_process';
+// Restore clean posts.ts from before bad write, then re-insert post via UTF-8
+const b=fs.readFileSync('src/data/posts.ts');
+let cp=0; for (const x of b) if (x===0x97) cp++;
+console.log('remaining 0x97', cp);
+// try parse with TextDecoder fatal
+try { new TextDecoder('utf-8',{fatal:true}).decode(b); console.log('utf8 fatal ok'); }
+catch(e){ console.log('utf8 fatal fail', e.message); }
+"
+Remove-Item scripts/_fix-posts-utf8.mjs -Force
+Remove-Item _posts_prev.ts -ErrorAction SilentlyContinue
+# kill background shell if still running
+[cot:tool] done shell node -e "
+const fs=require('fs');
+const b=fs.readFileSync('src/data/posts.ts');
+let cp=0; for (const x of b) if (x===0x97) cp++;
+console.log('remaining 0x97', cp);
+// try parse with TextDecoder fatal
+try { new TextDecoder('utf-8',{fatal:true}).decode(b); console.log('utf8 fatal ok'); }
+catch(e){ console.log('utf8 fatal fail', e.message); }
+"
+Remove-Item scripts/_fix-posts-utf8.mjs -Force
+Remove-Item _posts_prev.ts -ErrorAction SilentlyContinue
+# kill background shell if still running
+[cot:thought] UTF-8 decoding succeeded despite 308 remaining bytes. The remaining bytes
+[cot:thought] are valid UTF-8 continuation bytes. The original invalid bytes were fixed. Retrying deployment now. The fix script was deleted. The encoding fix will be committed with QA changes before deploying.
+[cot:thought] UTF-8 validates. Retrying deploy.
+[cot:tool] start shell git add -A; git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "wip(medical-collections-on-consumer-credit-reports-2026): qa + smoke"; $env:SMOKE_PORT='4184'; $env:SMOKE_QA_PORT='4185'; npm run deploy
+[cot:tool] done shell git add -A; git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "wip(medical-collections-on-consumer-credit-reports-2026): qa + smoke"; $env:SMOKE_PORT='4184'; $env:SMOKE_QA_PORT='4185'; npm run deploy
+[cot:thought] A type error in theme-registry.ts stems from importing `./novel-themes.ts` with an extension.
+[cot:thought] Checking whether the
+[cot:thought] extension mismatch is pre-existing or introduced by a recent merge. The priority is fixing blockers to get the build green for the post.
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\theme-registry.ts
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\theme-registry.ts
+[cot:tool] start glob
+[cot:tool] start shell if (Test-Path "artifacts/conveyor-sync.json") { (Get-Content "artifacts/conveyor-sync.json" | ConvertFrom-Json).phase } else { "none" }; git log -1 --oneline -- src/data/theme-registry.ts; git blame -L 7,7 src/data/theme-registry.ts 2>$null | Select-Object -First 1
+[cot:tool] done glob
+[cot:tool] done shell if (Test-Path "artifacts/conveyor-sync.json") { (Get-Content "artifacts/conveyor-sync.json" | ConvertFrom-Json).phase } else { "none" }; git log -1 --oneline -- src/data/theme-registry.ts; git blame -L 7,7 src/data/theme-registry.ts 2>$null | Select-Object -First 1
+[cot:thought] A pre-existing repository issue involves an import with a dot. The import needs its
+[cot:thought] `.ts` extension removed to resolve the issue. This minimal fix is required to ship.
+[cot:thought] Fixing a pre-existing `.ts` import that blocks the build.
+[cot:tool] start edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\theme-registry.ts
+[cot:tool] start shell $env:SMOKE_PORT='4184'; $env:SMOKE_QA_PORT='4185'; npm run deploy
+[cot:tool] done edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\src\data\theme-registry.ts
+[cot:tool] done shell $env:SMOKE_PORT='4184'; $env:SMOKE_QA_PORT='4185'; npm run deploy
+[cot:thought] The build succeeded. Smoke tests are now running. Waiting for deployment
+[cot:thought] to finish.
+[cot:tool] start await
+[cot:tool] done await
+[cot:thought] Checking the end of the output file.
+[cot:tool] start read C:\Users\ether\.cursor\projects\C-Users-ether-AppData-Local-data-insights-blog-workers-worker-3\terminals\520980.txt
+[cot:tool] done read C:\Users\ether\.cursor\projects\C-Users-ether-AppData-Local-data-insights-blog-workers-worker-3\terminals\520980.txt
+[cot:thought] The deployment passed successfully. Smoke testing passed.
+[cot:thought] The next steps are verifying the HTML output, committing the post, marking the job ready, and printing the worker-ready status. A timestamp discrepancy was noted between the post and another article on the homepage.
+[cot:thought] The homepage may omit
+[cot:thought] the post due to sorting logic. The dedicated QA script will be run next, followed by the final commit and job-ready status.
+[cot:thought] Deploy passed. Running the post QA script, then final commit and ready mark.
+[cot:tool] start shell Test-Path "out/blog/medical-collections-on-consumer-credit-reports-2026.html"; Test-Path "out/blog/medical-collections-on-consumer-credit-reports-2026/index.html"; $env:SMOKE_PORT='4184'; node scripts/qa-medical-collections-on-consumer-credit-reports-2026.mjs
+[cot:tool] done shell Test-Path "out/blog/medical-collections-on-consumer-credit-reports-2026.html"; Test-Path "out/blog/medical-collections-on-consumer-credit-reports-2026/index.html"; $env:SMOKE_PORT='4184'; node scripts/qa-medical-collections-on-consumer-credit-reports-2026.mjs
+[cot:thought] Audit returned no issues, but the pass flag was falsy. Checking the return
+[cot:thought] shape of auditVizInteractions.
+[cot:tool] start grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\lib\viz-interaction-qa.mjs
+[cot:tool] start read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\qa-uninsurance-by-state-after-medicaid-unwinding-2026.mjs
+[cot:tool] done read C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\qa-uninsurance-by-state-after-medicaid-unwinding-2026.mjs
+[cot:tool] done grep C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\lib\viz-interaction-qa.mjs
+[cot:thought] The audit response contains no `passed` field. The QA script should
+[cot:thought] check `issues.length === 0` instead of asserting on `passed`.
+[cot:tool] start edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\qa-medical-collections-on-consumer-credit-reports-2026.mjs
+[cot:tool] start shell $env:SMOKE_PORT='4184'; node scripts/qa-medical-collections-on-consumer-credit-reports-2026.mjs
+[cot:tool] done edit C:\Users\ether\AppData\Local\data-insights-blog-workers\worker-3\scripts\qa-medical-collections-on-consumer-credit-reports-2026.mjs
+[cot:tool] done shell $env:SMOKE_PORT='4184'; node scripts/qa-medical-collections-on-consumer-credit-reports-2026.mjs
+[cot:thought] QA passed. Final commit and ready status are next. Checking that the conveyor sync remains idle.
+[cot:tool] start shell if (Test-Path "artifacts/conveyor-sync.json") { (Get-Content "artifacts/conveyor-sync.json" | ConvertFrom-Json).phase } else { "none" }; git add -A; git status -sb; git log -5 --oneline; git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "$(@'
+feat(post): medical-collections-on-consumer-credit-reports-2026
+'@)"; git status -sb
+[cot:tool] done shell if (Test-Path "artifacts/conveyor-sync.json") { (Get-Content "artifacts/conveyor-sync.json" | ConvertFrom-Json).phase } else { "none" }; git add -A; git status -sb; git log -5 --oneline; git commit --trailer "Co-authored-by: Cursor <cursoragent@cursor.com>" -m "$(@'
+feat(post): medical-collections-on-consumer-credit-reports-2026
+'@)"; git status -sb
+[cot:thought] Marking the job ready with a headline statistic.
+[cot:tool] start shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; npx tsx "E:\AI Projects\data-insights-blog\scripts\update-agent-job.mjs" --job job-mt7d9t10-qwub9 --status ready --activity "Ready for merge" --headline "Medical share of collections 57%???36%; remaining holders mean score 582; Oklahoma prevalence 8.8%"; Write-Output "WorkerReady: medical-collections-on-consumer-credit-reports-2026 | job=job-mt7d9t10-qwub9 | worker=3"
+[cot:tool] done shell $env:BLOG_REPO_ROOT='E:\AI Projects\data-insights-blog'; npx tsx "E:\AI Projects\data-insights-blog\scripts\update-agent-job.mjs" --job job-mt7d9t10-qwub9 --status ready --activity "Ready for merge" --headline "Medical share of collections 57%???36%; remaining holders mean score 582; Oklahoma prevalence 8.8%"; Write-Output "WorkerReady: medical-collections-on-consumer-credit-reports-2026 | job=job-mt7d9t10-qwub9 | worker=3"
+[cot:thought] The blog post has been finalized and committed. The worker exited cleanly.Shipped medical collections post on the job branch.
+[cot:thought] **Headline:** Medical share of collections **57%???36%**; remaining holders mean score **582**; Oklahoma prevalence **8.
+[cot:thought] 8%**
+[cot:thought] - Local `npm run deploy` passed (ports 4184/4185) - Dedicated QA passed - Final commit: `feat(post): medical-collections-on-consumer-credit-reports-2026` - Job marked `ready`
+[cot:system] task_notification
+[cot:system] task_notification
+[cot:system] task_notification
+[cot:thought] WorkerReady: medical-collections-on-consumer-credit-reports-2026 | job=job-mt7d9t10-qwub9 | worker=3Preparing a brief update on the task result.
+[cot:thought] The medical collections
+[cot:thought] post shipped successfully. Deployment passed and the job is now ready. No follow-up actions are needed.
+[cot:thought] Post is done and the job is marked ready: medical collections share **57%???36%**, residual holders mean score **582**, Oklahoma prevalence **8.
+[cot:thought] 8%**. Local deploy and QA passed on branch `post/medical-collections-on-consumer-credit-reports-2026-w3`.
+[cot:thought] WorkerReady: medical-collections-on-consumer-credit-reports-2026 | job=job-mt7d9t10-qwub9 | worker=3
+[cot:system] result ok 1777044ms ΓÇö Starting the medical-collections post in short phases. Checking sync status and scaffolding the data module first.Sync is idle. Inspecting registration patterns and a data-module shape (no post prose).Existing files found for this slug ??? 
+[2026-08-25 14:47:47] INFO: job already ready - skipping exit remap of 0
+[2026-08-25 14:47:47] Job job-mt7d9t10-qwub9 marked ready
+[2026-08-25 14:47:48] git: HEAD is now at 69057f4 merge(post): us-farmland-values-usda-nass-2026 from worker 4 (path-selective)
+[2026-08-25 14:47:48] Worker 3 finished (exit=0)

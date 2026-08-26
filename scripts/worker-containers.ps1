@@ -29,7 +29,8 @@ function Invoke-WorkerCompose {
     $prev = $ErrorActionPreference
     $ErrorActionPreference = "Continue"
     try {
-        & docker compose --project-directory $RepoRoot -f $ComposeFile --profile workers @ComposeArgs
+        & docker compose --project-directory $RepoRoot -f $ComposeFile --profile workers @ComposeArgs 2>&1 | ForEach-Object { Write-Host $_ }
+        # Write-Host bypasses the success stream, so only the int reaches the caller.
         return [int]$LASTEXITCODE
     } finally {
         $ErrorActionPreference = $prev

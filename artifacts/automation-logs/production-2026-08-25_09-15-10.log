@@ -1,0 +1,487 @@
+[2026-08-25 09:15:11] Another orchestrator is active (PID 38468). Exiting.
+[2026-08-25 09:15:12] Starting orchestrator (orch-20260825-091510)
+[2026-08-25 09:15:12] Transport mitigations: producers=4 spawnStagger=20s (env BLOG_PRODUCTION_WORKER_COUNT / BLOG_WORKER_SPAWN_STAGGER_SEC)
+[2026-08-25 09:15:12] Bootstrapping worker clones + Docker containers...
+[2026-08-25 09:15:45] Seeding topic failure flags from history...
+[2026-08-25 09:15:45] flags seed: {"blockedStems":12,"blockedThemes":0,"failures":63}
+[2026-08-25 09:15:45] Recovering any orphaned merge state...
+[2026-08-25 09:15:46] merge recover: {
+  "recover": true,
+  "recovered": false,
+  "reason": "no stash state"
+}
+[2026-08-25 09:15:46] Stale job job-mt7d9t11-wuxjn (state-sales-tax-bases-vs-the-service-economy-2026) age=40.0095919816667m - failing + killing worker
+[2026-08-25 09:15:48] Worker 1 marked busy but process gone - clearing slot (job=job-mt8okg12-3mm67)
+[2026-08-25 09:15:49] Worker 2 marked busy but process gone - clearing slot (job=job-mt7dc405-udk0y)
+[2026-08-25 09:15:50] Worker 3 marked busy but process gone - clearing slot (job=job-mt7d9t11-wuxjn)
+[2026-08-25 09:15:51] Worker 4 marked busy but process gone - clearing slot (job=job-mt7d9t10-qwub9)
+[2026-08-25 09:15:52] Worker 5 marked busy but process gone - clearing slot (job=job-mt7d9t10-hl71a)
+[2026-08-25 09:15:55] Assigning job job-mt7dc405-kiifo -> worker 1
+[2026-08-25 09:15:57] Spawned worker 1 shell pid=25448 for job-mt7dc405-kiifo (attempt 1)
+[2026-08-25 09:16:01] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-25 09:16:21] Assigning job job-mt7d9t10-mb1hz -> worker 2
+[2026-08-25 09:16:23] Spawned worker 2 shell pid=23320 for job-mt7d9t10-mb1hz (attempt 1)
+[2026-08-25 09:16:28] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-25 09:16:48] Assigning job job-mt7d7i3l-7hkqx -> worker 3
+[2026-08-25 09:16:49] Spawned worker 3 shell pid=28900 for job-mt7d7i3l-7hkqx (attempt 1)
+[2026-08-25 09:16:54] Staggering next agent spawn by 20s (avoid concurrent Cursor connects)
+[2026-08-25 09:17:14] Assigning job job-mt7d7i3l-kdd4s -> worker 4
+[2026-08-25 09:17:16] Spawned worker 4 shell pid=29912 for job-mt7d7i3l-kdd4s (attempt 1)
+[2026-08-25 09:17:25] Assigning recovery job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) -> worker 5
+[2026-08-25 09:17:25] Assigning job job-mt7d9t10-qwub9 -> worker 5
+[2026-08-25 09:17:27] Spawned worker 5 shell pid=38564 for job-mt7d9t10-qwub9 (attempt 1)
+[2026-08-25 09:17:32] Merging ready job job-mt7dc405-udk0y (real-wage-growth-by-wage-quintile-2026) from post/real-wage-growth-by-wage-quintile-2026-w2
+[2026-08-25 09:18:55] merge-ready-job exit=0
+[2026-08-25 09:18:55] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/real-wage-growth-by-wage-quintile-2026-w2"
+  ],
+  "log": [
+    "merge start slug=real-wage-growth-by-wage-quintile-2026 branch=post/real-wage-growth-by-wage-quintile-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/real-wage-growth-by-wage-quintile-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/labor-skills-real-wage-growth-by-wage-quintile-2026-hero.png, scripts/qa-real-wage-growth-by-wage-quintile-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/RealWageGrowthByWageQuintile2026Dashboard.tsx, src/data/posts.ts, src/data/real-wage-growth-by-wage-quintile-2026-data.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/real-wage-growth-by-wage-quintile-2026-w2"
+  ]
+}
+[2026-08-25 09:18:55] Blessed merge ok - syncing worker clones from main
+[2026-08-25 09:19:56] Shipped: real-wage-growth-by-wage-quintile-2026 | duration_sec=3462
+[2026-08-25 09:19:56] Closed branch(es) after merge: post/real-wage-growth-by-wage-quintile-2026-w2
+[2026-08-25 09:24:40] Merging ready job job-mt7d9t10-hl71a (platform-earnings-swings-and-household-reliance-2026) from post/platform-earnings-swings-and-household-reliance-2026-w3
+[2026-08-25 09:24:40] Blessing platform-earnings-swings-and-household-reliance-2026 (post/platform-earnings-swings-and-household-reliance-2026-w3) - pausing other workers
+[2026-08-25 09:25:15] merge-ready-job exit=0
+[2026-08-25 09:25:15] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/platform-earnings-swings-and-household-reliance-2026-w3"
+  ],
+  "log": [
+    "merge start slug=platform-earnings-swings-and-household-reliance-2026 branch=post/platform-earnings-swings-and-household-reliance-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/platform-earnings-swings-and-household-reliance-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 8",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (8 files): public/images/consumer-finance-platform-earnings-swings-and-household-reliance-2026-hero.png, scripts/qa-platform-earnings-swings-and-household-reliance-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/PlatformEarningsSwingsAndHouseholdReliance2026Dashboard.tsx, src/data/platform-earnings-swings-and-household-reliance-2026-data.ts, src/data/posts.ts, src/types/post.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/platform-earnings-swings-and-household-reliance-2026-w3"
+  ]
+}
+[2026-08-25 09:25:15] Blessed merge ok - syncing worker clones from main
+[2026-08-25 09:25:45] sync-worker-clones exit=2  abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply ca1c0f1... # wip(cheap-metro-rent-convergence-2026): dashboard + viz wireup"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/cropland-values-versus-farm-incomes-2026-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-shipped",
+      "detail": null
+    }
+  ]
+}
+[2026-08-25 09:25:48] Shipped: platform-earnings-swings-and-household-reliance-2026 | duration_sec=0
+[2026-08-25 09:25:48] Closed branch(es) after merge: post/platform-earnings-swings-and-household-reliance-2026-w3
+[2026-08-25 09:41:43] Merging ready job job-mt7d9t11-wuxjn (state-sales-tax-bases-vs-the-service-economy-2026) from post/state-sales-tax-bases-vs-the-service-economy-2026-w3
+[2026-08-25 09:41:45] Blessing state-sales-tax-bases-vs-the-service-economy-2026 (post/state-sales-tax-bases-vs-the-service-economy-2026-w3) - pausing other workers
+[2026-08-25 09:42:32] merge-ready-job exit=0
+[2026-08-25 09:42:32] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/state-sales-tax-bases-vs-the-service-economy-2026-w3"
+  ],
+  "log": [
+    "merge start slug=state-sales-tax-bases-vs-the-service-economy-2026 branch=post/state-sales-tax-bases-vs-the-service-economy-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/state-sales-tax-bases-vs-the-service-economy-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 6",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/economics-state-sales-tax-bases-vs-the-service-economy-2026-hero.png, scripts/qa-state-sales-tax-bases-vs-the-service-economy-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/StateSalesTaxBasesVsTheServiceEconomy2026Dashboard.tsx, src/data/posts.ts, src/data/state-sales-tax-bases-vs-the-service-economy-2026-data.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/state-sales-tax-bases-vs-the-service-economy-2026-w3"
+  ]
+}
+[2026-08-25 09:42:32] Blessed merge ok - syncing worker clones from main
+[2026-08-25 09:43:18] sync-worker-clones exit=2 ta-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/3)\rRebasing (2/3)\rerror: could not apply 226dafc... wip(medical-collections-on-consumer-credit-reports-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 226dafc... # wip(med"
+    }
+  ]
+}
+[2026-08-25 09:43:22] Shipped: state-sales-tax-bases-vs-the-service-economy-2026 | duration_sec=0
+[2026-08-25 09:43:22] Closed branch(es) after merge: post/state-sales-tax-bases-vs-the-service-economy-2026-w3
+[2026-08-25 10:13:11] Assigning job job-mt7d7i1p-u23o8 -> worker 1
+[2026-08-25 10:13:13] Spawned worker 1 shell pid=23648 for job-mt7d7i1p-u23o8 (attempt 1)
+[2026-08-25 10:13:20] Merging ready job job-mt7dc405-kiifo (investor-home-purchases-vs-first-time-buyers-2026) from post/investor-home-purchases-vs-first-time-buyers-2026-w1
+[2026-08-25 10:13:20] Blessing investor-home-purchases-vs-first-time-buyers-2026 (post/investor-home-purchases-vs-first-time-buyers-2026-w1) - pausing other workers
+[2026-08-25 10:14:19] merge-ready-job exit=0
+[2026-08-25 10:14:20] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/investor-home-purchases-vs-first-time-buyers-2026-w1"
+  ],
+  "log": [
+    "merge start slug=investor-home-purchases-vs-first-time-buyers-2026 branch=post/investor-home-purchases-vs-first-time-buyers-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/investor-home-purchases-vs-first-time-buyers-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 7",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/real-estate-investor-home-purchases-vs-first-time-buyers-2026-hero.png, scripts/qa-investor-home-purchases-vs-first-time-buyers-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/InvestorHomePurchasesVsFirstTimeBuyers2026Dashboard.tsx, src/data/investor-home-purchases-vs-first-time-buyers-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/investor-home-purchases-vs-first-time-buyers-2026-w1"
+  ]
+}
+[2026-08-25 10:14:20] Blessed merge ok - syncing worker clones from main
+[2026-08-25 10:16:28] sync-worker-clones exit=2 ta-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/5)\rRebasing (2/5)\rerror: could not apply 226dafc... wip(medical-collections-on-consumer-credit-reports-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 226dafc... # wip(med"
+    }
+  ]
+}
+[2026-08-25 10:16:49] Shipped: investor-home-purchases-vs-first-time-buyers-2026 | duration_sec=3645
+[2026-08-25 10:16:49] Closed branch(es) after merge: post/investor-home-purchases-vs-first-time-buyers-2026-w1
+[2026-08-25 10:26:41] Stale job job-mt8okg12-3mm67 (cheap-metro-rent-convergence-2026) age=40.463036725m - failing + killing worker
+[2026-08-25 10:30:57] Merging ready job job-mt7d9t10-mb1hz (cropland-values-versus-farm-incomes-2026) from post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:30:58] Defer merge of cropland-values-versus-farm-incomes-2026 - worker 2 still finishing this job
+[2026-08-25 10:31:21] Merging ready job job-mt7d9t10-mb1hz (cropland-values-versus-farm-incomes-2026) from post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:31:21] Defer merge of cropland-values-versus-farm-incomes-2026 - worker 2 still finishing this job
+[2026-08-25 10:31:47] Merging ready job job-mt7d9t10-mb1hz (cropland-values-versus-farm-incomes-2026) from post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:31:48] Defer merge of cropland-values-versus-farm-incomes-2026 - worker 2 still finishing this job
+[2026-08-25 10:32:16] Merging ready job job-mt7d9t10-mb1hz (cropland-values-versus-farm-incomes-2026) from post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:32:17] Defer merge of cropland-values-versus-farm-incomes-2026 - worker 2 still finishing this job
+[2026-08-25 10:32:44] Merging ready job job-mt7d9t10-mb1hz (cropland-values-versus-farm-incomes-2026) from post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:32:44] Defer merge of cropland-values-versus-farm-incomes-2026 - worker 2 still finishing this job
+[2026-08-25 10:33:10] Merging ready job job-mt7d9t10-mb1hz (cropland-values-versus-farm-incomes-2026) from post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:33:10] Defer merge of cropland-values-versus-farm-incomes-2026 - worker 2 still finishing this job
+[2026-08-25 10:33:22] Merging ready job job-mt7d9t10-mb1hz (cropland-values-versus-farm-incomes-2026) from post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:33:23] Defer merge of cropland-values-versus-farm-incomes-2026 - worker 2 still finishing this job
+[2026-08-25 10:33:31] Assigning job job-mt7d7hyr-9mudj -> worker 2
+[2026-08-25 10:33:32] Spawned worker 2 shell pid=32940 for job-mt7d7hyr-9mudj (attempt 1)
+[2026-08-25 10:33:38] Merging ready job job-mt7d9t10-mb1hz (cropland-values-versus-farm-incomes-2026) from post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:33:38] Blessing cropland-values-versus-farm-incomes-2026 (post/cropland-values-versus-farm-incomes-2026-w2) - pausing other workers
+[2026-08-25 10:34:11] merge-ready-job exit=0
+[2026-08-25 10:34:11] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/cropland-values-versus-farm-incomes-2026-w2"
+  ],
+  "log": [
+    "merge start slug=cropland-values-versus-farm-incomes-2026 branch=post/cropland-values-versus-farm-incomes-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/cropland-values-versus-farm-incomes-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/food-agriculture-cropland-values-versus-farm-incomes-2026-hero.png, scripts/qa-cropland-values-versus-farm-incomes-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/CroplandValuesVersusFarmIncomes2026Dashboard.tsx, src/data/cropland-values-versus-farm-incomes-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/cropland-values-versus-farm-incomes-2026-w2"
+  ]
+}
+[2026-08-25 10:34:11] Blessed merge ok - syncing worker clones from main
+[2026-08-25 10:34:41] sync-worker-clones exit=2 ta-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/data/theme-registry.ts\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/5)\rRebasing (2/5)\rerror: could not apply 226dafc... wip(medical-collections-on-consumer-credit-reports-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 226dafc... # wip(med"
+    }
+  ]
+}
+[2026-08-25 10:34:42] Shipped: cropland-values-versus-farm-incomes-2026 | duration_sec=4688
+[2026-08-25 10:34:42] Closed branch(es) after merge: post/cropland-values-versus-farm-incomes-2026-w2
+[2026-08-25 10:43:13] Stale job job-mt7d9t10-qwub9 (medical-collections-on-consumer-credit-reports-2026) age=40.2029220883333m - failing + killing worker
+[2026-08-25 10:43:13] Stopping worker 5 process(es) (fail job-mt7d9t10-qwub9: stale_40.2029220883333m)
+[2026-08-25 10:43:17] Worker 5 marked busy but process gone - clearing slot (job=job-mt7d9t10-qwub9)
+[2026-08-25 10:43:20] W5 idle (no recovery candidate) - assigning producer job-mt7d7hyk-zfasd (us-farmland-values-usda-nass-2026)
+[2026-08-25 10:43:20] Assigning job job-mt7d7hyk-zfasd -> worker 5
+[2026-08-25 10:43:21] Spawned worker 5 shell pid=10440 for job-mt7d7hyk-zfasd (attempt 1)
+[2026-08-25 10:47:08] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:47:08] Defer merge of uninsurance-by-state-after-medicaid-unwinding-2026 - worker 3 still finishing this job
+[2026-08-25 10:47:35] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:47:36] Defer merge of uninsurance-by-state-after-medicaid-unwinding-2026 - worker 3 still finishing this job
+[2026-08-25 10:48:11] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:48:11] Defer merge of uninsurance-by-state-after-medicaid-unwinding-2026 - worker 3 still finishing this job
+[2026-08-25 10:48:50] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:48:51] Defer merge of uninsurance-by-state-after-medicaid-unwinding-2026 - worker 3 still finishing this job
+[2026-08-25 10:49:31] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:49:32] Defer merge of uninsurance-by-state-after-medicaid-unwinding-2026 - worker 3 still finishing this job
+[2026-08-25 10:50:00] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:50:00] Defer merge of uninsurance-by-state-after-medicaid-unwinding-2026 - worker 3 still finishing this job
+[2026-08-25 10:50:31] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:50:32] Defer merge of uninsurance-by-state-after-medicaid-unwinding-2026 - worker 3 still finishing this job
+[2026-08-25 10:50:57] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:50:57] Defer merge of uninsurance-by-state-after-medicaid-unwinding-2026 - worker 3 still finishing this job
+[2026-08-25 10:51:26] Assigning job job-mt8s96hs-dytub -> worker 3
+[2026-08-25 10:51:33] Spawned worker 3 shell pid=31704 for job-mt8s96hs-dytub (attempt 1)
+[2026-08-25 10:51:38] Merging ready job job-mt7d7i3l-7hkqx (uninsurance-by-state-after-medicaid-unwinding-2026) from post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:51:39] Blessing uninsurance-by-state-after-medicaid-unwinding-2026 (post/uninsurance-by-state-after-medicaid-unwinding-2026-w3) - pausing other workers
+[2026-08-25 10:52:36] merge-ready-job exit=0
+[2026-08-25 10:52:36] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/uninsurance-by-state-after-medicaid-unwinding-2026-w3"
+  ],
+  "log": [
+    "merge start slug=uninsurance-by-state-after-medicaid-unwinding-2026 branch=post/uninsurance-by-state-after-medicaid-unwinding-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/uninsurance-by-state-after-medicaid-unwinding-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 6",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/health-economics-uninsurance-by-state-after-medicaid-unwinding-2026-hero.png, scripts/qa-uninsurance-by-state-after-medicaid-unwinding-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/UninsuranceByStateAfterMedicaidUnwinding2026Dashboard.tsx, src/data/posts.ts, src/data/theme-registry.ts, src/data/uninsurance-by-state-after-medicaid-unwinding-2026-data.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/uninsurance-by-state-after-medicaid-unwinding-2026-w3"
+  ]
+}
+[2026-08-25 10:52:36] Blessed merge ok - syncing worker clones from main
+[2026-08-25 10:53:15] sync-worker-clones exit=2 \\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/2)\rRebasing (2/2)\rerror: could not apply b010a49... wip(us-farmland-values-usda-nass-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply b010a49... # wip(us-farmland-values-usda-nass-2026): dashboard + viz wireup"
+    }
+  ]
+}
+[2026-08-25 10:53:17] Shipped: uninsurance-by-state-after-medicaid-unwinding-2026 | duration_sec=5780
+[2026-08-25 10:53:17] Closed branch(es) after merge: post/uninsurance-by-state-after-medicaid-unwinding-2026-w3
+[2026-08-25 10:53:31] Assigning job job-mt8sbuov-9ewkb -> worker 4
+[2026-08-25 10:53:34] Spawned worker 4 shell pid=6032 for job-mt8sbuov-9ewkb (attempt 1)
+[2026-08-25 10:53:39] Merging ready job job-mt7d7i3l-kdd4s (high-propensity-applications-vs-employer-firms-2026) from post/high-propensity-applications-vs-employer-firms-2026-w4
+[2026-08-25 10:53:39] Blessing high-propensity-applications-vs-employer-firms-2026 (post/high-propensity-applications-vs-employer-firms-2026-w4) - pausing other workers
+[2026-08-25 10:54:11] merge-ready-job exit=0
+[2026-08-25 10:54:11] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/high-propensity-applications-vs-employer-firms-2026-w4"
+  ],
+  "log": [
+    "merge start slug=high-propensity-applications-vs-employer-firms-2026 branch=post/high-propensity-applications-vs-employer-firms-2026-w4",
+    "worktree: using existing branch tip",
+    "fetched post/high-propensity-applications-vs-employer-firms-2026-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 1",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/economics-high-propensity-applications-vs-employer-firms-2026-hero.png, scripts/qa-high-propensity-applications-vs-employer-firms-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/HighPropensityApplicationsVsEmployerFirms2026Dashboard.tsx, src/data/high-propensity-applications-vs-employer-firms-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/high-propensity-applications-vs-employer-firms-2026-w4"
+  ]
+}
+[2026-08-25 10:54:11] Blessed merge ok - syncing worker clones from main
+[2026-08-25 10:54:32] sync-worker-clones exit=2 apply d11512e... wip(health-insurance-coverage-gaps-census-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.m"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/cash-rents-versus-land-prices-by-state-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/coverage-gaps-in-gig-and-small-firm-work-2026-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-25 10:54:33] Shipped: high-propensity-applications-vs-employer-firms-2026 | duration_sec=5827
+[2026-08-25 10:54:33] Closed branch(es) after merge: post/high-propensity-applications-vs-employer-firms-2026-w4
+[2026-08-25 10:55:47] Merging ready job job-mt7d7i1p-u23o8 (state-sales-tax-base-erosion-2026) from post/state-sales-tax-base-erosion-2026-w1
+[2026-08-25 10:55:47] Defer merge of state-sales-tax-base-erosion-2026 - worker 1 still finishing this job
+[2026-08-25 10:56:08] Merging ready job job-mt7d7i1p-u23o8 (state-sales-tax-base-erosion-2026) from post/state-sales-tax-base-erosion-2026-w1
+[2026-08-25 10:56:08] Defer merge of state-sales-tax-base-erosion-2026 - worker 1 still finishing this job
+[2026-08-25 10:56:30] Assigning job job-mt8sfpvh-uw2h7 -> worker 1
+[2026-08-25 10:56:30] Spawned worker 1 shell pid=39540 for job-mt8sfpvh-uw2h7 (attempt 1)
+[2026-08-25 10:56:34] Merging ready job job-mt7d7i1p-u23o8 (state-sales-tax-base-erosion-2026) from post/state-sales-tax-base-erosion-2026-w1
+[2026-08-25 10:56:35] Blessing state-sales-tax-base-erosion-2026 (post/state-sales-tax-base-erosion-2026-w1) - pausing other workers
+[2026-08-25 10:57:02] merge-ready-job exit=0
+[2026-08-25 10:57:02] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/state-sales-tax-base-erosion-2026-w1"
+  ],
+  "log": [
+    "merge start slug=state-sales-tax-base-erosion-2026 branch=post/state-sales-tax-base-erosion-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/state-sales-tax-base-erosion-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 18 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/economics-state-sales-tax-base-erosion-2026-hero.png, scripts/qa-state-sales-tax-base-erosion-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/StateSalesTaxBaseErosion2026Dashboard.tsx, src/data/posts.ts, src/data/state-sales-tax-base-erosion-2026-data.ts, src/data/theme-registry.ts",
+    "restored WIP stash",
+    "closed shipped branch(es): post/state-sales-tax-base-erosion-2026-w1"
+  ]
+}
+[2026-08-25 10:57:02] Blessed merge ok - syncing worker clones from main
+[2026-08-25 10:57:13] sync-worker-clones exit=2 \\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": false,
+      "action": "rebase_conflict",
+      "detail": "Auto-merging src/components/PostVisualization.tsx\nCONFLICT (content): Merge conflict in src/components/PostVisualization.tsx\nAuto-merging src/types/post.ts\nCONFLICT (content): Merge conflict in src/types/post.ts\nRebasing (1/3)\rRebasing (2/3)\rerror: could not apply b010a49... wip(us-farmland-values-usda-nass-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply b010a49... # wip(us-farmland-values-usda-nass-2026): dashboard + viz wireup"
+    }
+  ]
+}
+[2026-08-25 10:57:14] Shipped: state-sales-tax-base-erosion-2026 | duration_sec=2633
+[2026-08-25 10:57:14] Closed branch(es) after merge: post/state-sales-tax-base-erosion-2026-w1
+[2026-08-25 11:24:11] Merging ready job job-mt7d7hyr-9mudj (health-insurance-coverage-gaps-census-2026) from post/health-insurance-coverage-gaps-census-2026-w2
+[2026-08-25 11:24:12] Defer merge of health-insurance-coverage-gaps-census-2026 - worker 2 still finishing this job
+[2026-08-25 11:24:33] Merging ready job job-mt7d7hyr-9mudj (health-insurance-coverage-gaps-census-2026) from post/health-insurance-coverage-gaps-census-2026-w2
+[2026-08-25 11:24:33] Defer merge of health-insurance-coverage-gaps-census-2026 - worker 2 still finishing this job
+[2026-08-25 11:24:54] Merging ready job job-mt7d7hyr-9mudj (health-insurance-coverage-gaps-census-2026) from post/health-insurance-coverage-gaps-census-2026-w2
+[2026-08-25 11:24:55] Defer merge of health-insurance-coverage-gaps-census-2026 - worker 2 still finishing this job
+[2026-08-25 11:25:27] Merging ready job job-mt7d7hyr-9mudj (health-insurance-coverage-gaps-census-2026) from post/health-insurance-coverage-gaps-census-2026-w2
+[2026-08-25 11:25:28] Defer merge of health-insurance-coverage-gaps-census-2026 - worker 2 still finishing this job
+[2026-08-25 11:25:52] Merging ready job job-mt7d7hyr-9mudj (health-insurance-coverage-gaps-census-2026) from post/health-insurance-coverage-gaps-census-2026-w2
+[2026-08-25 11:25:52] Blessing health-insurance-coverage-gaps-census-2026 (post/health-insurance-coverage-gaps-census-2026-w2) - pausing other workers
+[2026-08-25 11:26:52] merge-ready-job exit=0
+[2026-08-25 11:26:52] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/health-insurance-coverage-gaps-census-2026-w2"
+  ],
+  "log": [
+    "merge start slug=health-insurance-coverage-gaps-census-2026 branch=post/health-insurance-coverage-gaps-census-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/health-insurance-coverage-gaps-census-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 14 files",
+    "post files differing from HEAD: 0",
+    "stashed partial blocking=1",
+    "WARN posts.ts was dirty G현 path-selective ship keeps branch version on conflict",
+    "selective commit ok (9 files): public/images/health-economics-health-insurance-coverage-gaps-census-2026-hero.png, scripts/qa-health-insurance-coverage-gaps-census-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/HealthInsuranceCoverageGapsCensus2026Dashboard.tsx, src/data/health-insurance-coverage-gaps-census-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "WARN stash apply had conflicts; kept merged versions",
+    "resolved stash conflicts keeping merge: src/data/posts.ts",
+    "closed shipped branch(es): post/health-insurance-coverage-gaps-census-2026-w2"
+  ]
+}
+[2026-08-25 11:26:52] Blessed merge ok - syncing worker clones from main
+[2026-08-25 11:27:18] sync-worker-clones exit=2 CONFLICT (content): Merge conflict in src/data/posts.ts\nRebasing (1/5)\rRebasing (2/5)\rRebasing (3/5)\rerror: could not apply ac70f84... wip(cash-rents-versus-land-prices-by-state-2026): post prose + hero\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply ac70f84... # wip(cash-rents-versus-land-prices-by-state-2026): post prose + hero"
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    }
+  ]
+}
+[2026-08-25 11:27:19] Shipped: health-insurance-coverage-gaps-census-2026 | duration_sec=3221
+[2026-08-25 11:27:19] Closed branch(es) after merge: post/health-insurance-coverage-gaps-census-2026-w2
+[2026-08-25 11:27:28] Assigning job job-mt8thgi2-axs3u -> worker 2
+[2026-08-25 11:27:30] Spawned worker 2 shell pid=16524 for job-mt8thgi2-axs3u (attempt 1)
+[2026-08-25 11:37:18] Stale job job-mt7d7hyk-zfasd (us-farmland-values-usda-nass-2026) age=40.0389299633333m - failing + killing worker
+[2026-08-25 11:37:18] Stopping worker 5 process(es) (fail job-mt7d7hyk-zfasd: stale_40.0389299633333m)
+[2026-08-25 11:37:21] Worker 5 marked busy but process gone - clearing slot (job=job-mt7d7hyk-zfasd)
+[2026-08-25 11:37:22] W5 idle (no recovery candidate) - assigning producer job-mt8tw9pd-tqodk (remote-sales-tax-collection-after-wayfair-2026)
+[2026-08-25 11:37:22] Assigning job job-mt8tw9pd-tqodk -> worker 5
+[2026-08-25 11:37:22] Spawned worker 5 shell pid=3224 for job-mt8tw9pd-tqodk (attempt 1)

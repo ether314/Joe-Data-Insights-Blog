@@ -1,15 +1,15 @@
-/**
- * AI power & grid — late-Aug 202608 concentration / market-share lens.
+﻿/**
+ * AI power & grid â€” late-Aug 202608 concentration / market-share lens.
  * Core question: How concentrated is this system at the top of the distribution?
  * (Can electricity and grid build-out keep pace with AI load?)
  *
  * Vintage delta vs ai-power-grid-concentration-2026q3:
- * 1. IEA regional stock ladder (Top-1 45% / Top-3 85%) — carried (still no new census)
- * 2. Gartner 2026 electricity composition (US 36% of 565 TWh) — carried
- * 3. NEW path meters — IEA Electricity Mid-Year Update 2026 (US demand +1.8%/2026,
+ * 1. IEA regional stock ladder (Top-1 45% / Top-3 85%) â€” carried (still no new census)
+ * 2. Gartner 2026 electricity composition (US 36% of 565 TWh) â€” carried
+ * 3. NEW path meters â€” IEA Electricity Mid-Year Update 2026 (US demand +1.8%/2026,
  *    services H1 +3%; price geography) + LBNL Queued Up 2026 (US active 2,061 GW,
- *    −10% y/y; gas queue +86% to 253 GW)
- * 4. Dual-ledger 2030 gap (IEA ~950 vs Gartner >1,200) — carried path meter
+ *    âˆ’10% y/y; gas queue +86% to 253 GW)
+ * 4. Dual-ledger 2030 gap (IEA ~950 vs Gartner >1,200) â€” carried path meter
  *
  * Primary sources: IEA Energy and AI regional shares (carried); Gartner 10 Jun 2026
  * (carried); IEA Electricity Mid-Year Update 2026; LBNL Queued Up 2026 Edition;
@@ -19,7 +19,7 @@
 export type Confidence = "disclosed" | "estimated" | "carried" | "restated";
 
 export const SOURCE_NOTE =
-  "Late-Aug 202608 concentration lens vs Q3 print. IEA regional Top-1/Top-3 stock shares (US 45% / US+China+Europe 85%), growth US+China ~80%, cluster intensity, and Gartner US 36% of 565 TWh are carried — no superseding IEA period census. Mid-Year Update 2026 supplies US demand-path meters (+1.8% 2026 / +3% 2027; services H1 +3%) and wholesale price geography. LBNL Queued Up 2026 restates US active interconnection at 2,061 GW (−10% y/y) with gas in queue +86% to 253 GW. Dual-ledger 2030 gap (~250 TWh) remains a path meter, not a share rewrite. Confidence tags separate disclosed Aug meters from carried share ladders.";
+  "Late-Aug 202608 concentration lens vs Q3 print. IEA regional Top-1/Top-3 stock shares (US 45% / US+China+Europe 85%), growth US+China ~80%, cluster intensity, and Gartner US 36% of 565 TWh are carried â€” no superseding IEA period census. Mid-Year Update 2026 supplies US demand-path meters (+1.8% 2026 / +3% 2027; services H1 +3%) and wholesale price geography. LBNL Queued Up 2026 restates US active interconnection at 2,061 GW (âˆ’10% y/y) with gas in queue +86% to 253 GW. Dual-ledger 2030 gap (~250 TWh) remains a path meter, not a share rewrite. Confidence tags separate disclosed Aug meters from carried share ladders.";
 
 export const SOURCES = [
   {
@@ -44,18 +44,18 @@ export const SOURCES = [
   },
   {
     label: "US data-center power vs grid capacity",
-    url: "/blog/us-data-center-power-vs-grid-capacity-2025",
+    url: "/blog/global-ai-data-center-build-tracker",
   },
   {
-    label: "IEA — Electricity Mid-Year Update 2026",
+    label: "IEA â€” Electricity Mid-Year Update 2026",
     url: "https://www.iea.org/reports/electricity-mid-year-update-2026",
   },
   {
-    label: "LBNL — Queued Up: 2026 Edition",
+    label: "LBNL â€” Queued Up: 2026 Edition",
     url: "https://emp.lbl.gov/queues",
   },
   {
-    label: "Gartner — DC electricity +26% in 2026 (10 Jun 2026, carried)",
+    label: "Gartner â€” DC electricity +26% in 2026 (10 Jun 2026, carried)",
     url: "https://www.gartner.com/en/newsroom/press-releases/2026-06-10-gartner-says-data-center-electricity-demand-to-grow-26-percent-in-2026",
   },
 ] as const;
@@ -65,20 +65,20 @@ export const PRIOR_CONCENTRATION_PATH = "/blog/ai-power-grid-concentration-2026"
 export const PRIOR_AUG_PATH = "/blog/ai-power-grid-update-202608";
 export const PRIOR_Q3_UPDATE_PATH = "/blog/ai-power-grid-update-2026q3";
 export const PRIOR_RESEARCH_PATH = "/blog/ai-power-grid-research-2026";
-export const US_GRID_PATH = "/blog/us-data-center-power-vs-grid-capacity-2025";
+export const US_GRID_PATH = "/blog/global-ai-data-center-build-tracker";
 
 export const HEADLINE = {
   /** Carried IEA stock ladder (2024 DC electricity) */
   top1SharePct: 45,
   top1Label: "United States",
   top3SharePct: 85,
-  top3Label: "US · China · Europe",
+  top3Label: "US Â· China Â· Europe",
   priorTop1SharePct: 45,
   priorTop3SharePct: 85,
   chinaSharePct: 25,
   europeSharePct: 15,
   regionalHhi: 3004,
-  /** Gartner 2026 composition — carried perimeter */
+  /** Gartner 2026 composition â€” carried perimeter */
   gartnerUsShare2026Pct: 36,
   gartnerUsTwh2026: 204,
   gartnerWorldTwh2026: 565,
@@ -86,20 +86,20 @@ export const HEADLINE = {
   gartnerAiServerShare2026Pct: 31,
   gartnerUsAiDedicatedTwh2026: 68,
   usShareDeltaPpVsIea: -9,
-  /** Growth concentration — carried */
+  /** Growth concentration â€” carried */
   usChinaGrowthSharePct: 80,
   usGrowthDeltaTwh: 240,
   chinaGrowthDeltaTwh: 175,
   europeGrowthDeltaTwh: 45,
   usDcShareOfGrowthPct: 50,
   usDemandAdd5yrTwh: 420,
-  /** Dual ledger — carried */
+  /** Dual ledger â€” carried */
   ieaCentral2030Twh: 950,
   gartner2030Twh: 1200,
   dualLedgerGapTwh: 250,
   dcTwh2024: 415,
   dcShare2024Pct: 1.5,
-  /** Clusters / local — carried */
+  /** Clusters / local â€” carried */
   usFiveClusterSharePct: 50,
   novaGlobalCapacitySharePct: 13,
   novaItLoadGw: 4.9,
@@ -115,7 +115,7 @@ export const HEADLINE = {
   worldYoy2027Pct: 3.8,
   euJapanQ2PriceYoyPct: 30,
   usQ2PriceYoyPct: 0,
-  /** LBNL Queued Up 2026 — Aug restatement */
+  /** LBNL Queued Up 2026 â€” Aug restatement */
   usActiveTotalGw: 2061,
   usActiveGenGw: 1312,
   usActiveStorageGw: 749,
@@ -181,7 +181,7 @@ export const SCOREBOARD: ScoreboardRow[] = [
     extraValue: `~${HEADLINE.regionalHhi}`,
     color: "#0ea5e9",
     confidence: "carried",
-    note: "Still no new IEA period census — stock ladder flat",
+    note: "Still no new IEA period census â€” stock ladder flat",
   },
   {
     id: "gartner",
@@ -197,7 +197,7 @@ export const SCOREBOARD: ScoreboardRow[] = [
     extraValue: `${HEADLINE.gartnerUsTwh2026} / ${HEADLINE.gartnerWorldTwh2026}`,
     color: "#f59e0b",
     confidence: "carried",
-    note: "Different perimeter than IEA stock — not a rewrite",
+    note: "Different perimeter than IEA stock â€” not a rewrite",
   },
   {
     id: "growth",
@@ -245,7 +245,7 @@ export const SCOREBOARD: ScoreboardRow[] = [
     extraValue: `${HEADLINE.usActiveTotalGw} GW / ${HEADLINE.usQueueYoyPct}%`,
     color: "#8b5cf6",
     confidence: "disclosed",
-    note: "Aug tip: gas +86% while total queue −10%",
+    note: "Aug tip: gas +86% while total queue âˆ’10%",
   },
 ];
 
@@ -371,9 +371,9 @@ export const US_SHARE_COMPARE: ShareCompareRow[] = [
   {
     id: "growth",
     lens: "IEA growth to 2030",
-    short: "Growth Δ",
+    short: "Growth Î”",
     usSharePct: 45.3,
-    year: "2024→30",
+    year: "2024â†’30",
     perimeter: "Incremental DC TWh (Base Case)",
     confidence: "carried",
     fill: "#f43f5e",
@@ -492,7 +492,7 @@ export const VINTAGE_DELTAS: VintageDelta[] = [
     unit: "GW",
     delta: 749,
     direction: "scope",
-    note: "Gen-only proxy → gen+storage Queued Up 2026",
+    note: "Gen-only proxy â†’ gen+storage Queued Up 2026",
     confidence: "disclosed",
   },
   {
@@ -503,12 +503,12 @@ export const VINTAGE_DELTAS: VintageDelta[] = [
     unit: "GW",
     delta: 117,
     direction: "up",
-    note: "+86% y/y — AI firm-power bid into queues",
+    note: "+86% y/y â€” AI firm-power bid into queues",
     confidence: "disclosed",
   },
   {
     id: "medianYears",
-    metric: "US median IR→COD",
+    metric: "US median IRâ†’COD",
     q3: 5,
     aug: 5.5,
     unit: "yr",
@@ -585,7 +585,7 @@ export const US_QUEUE_TECH: QueueTechRow[] = [
     yoyPct: 86,
     fill: "#f43f5e",
     confidence: "disclosed",
-    note: "Only major tech rising — firm-power bid",
+    note: "Only major tech rising â€” firm-power bid",
   },
   {
     id: "wind",
@@ -851,7 +851,7 @@ export const PACE_CLOCKS: PaceRow[] = [
     short: "Campus",
     years: 2.5,
     kind: "demand",
-    note: "Typical 2–3 years once power is secured",
+    note: "Typical 2â€“3 years once power is secured",
     confidence: "estimated",
   },
   {
@@ -865,11 +865,11 @@ export const PACE_CLOCKS: PaceRow[] = [
   },
   {
     id: "queue",
-    label: "US median interconnection (IR→COD)",
+    label: "US median interconnection (IRâ†’COD)",
     short: "Queue median",
     years: 5.5,
     kind: "grid",
-    note: "LBNL Queued Up 2026 — +0.5 yr vs prior print",
+    note: "LBNL Queued Up 2026 â€” +0.5 yr vs prior print",
     confidence: "disclosed",
   },
   {
@@ -878,7 +878,7 @@ export const PACE_CLOCKS: PaceRow[] = [
     short: "Transmission",
     years: 6,
     kind: "grid",
-    note: "IEA — typically 4–8 years",
+    note: "IEA â€” typically 4â€“8 years",
     confidence: "carried",
   },
 ];
@@ -903,7 +903,7 @@ export const QUEUE_METERS: QueueMeter[] = [
     kind: "active",
     fill: "#8b5cf6",
     confidence: "disclosed",
-    note: "LBNL Queued Up 2026 (−10% y/y)",
+    note: "LBNL Queued Up 2026 (âˆ’10% y/y)",
   },
   {
     id: "ia",
@@ -923,7 +923,7 @@ export const QUEUE_METERS: QueueMeter[] = [
     kind: "gas",
     fill: "#f43f5e",
     confidence: "disclosed",
-    note: "+86% y/y — firm-power concentration",
+    note: "+86% y/y â€” firm-power concentration",
   },
   {
     id: "stalled",
@@ -933,7 +933,7 @@ export const QUEUE_METERS: QueueMeter[] = [
     kind: "stalled",
     fill: "#64748b",
     confidence: "carried",
-    note: "IEA Electricity 2026 — carried worldwide stock",
+    note: "IEA Electricity 2026 â€” carried worldwide stock",
   },
 ];
 
@@ -959,7 +959,7 @@ export const LENS_COMPARE: LensCompare[] = [
   },
   {
     id: "growth",
-    label: "Growth Δ",
+    label: "Growth Î”",
     short: "Growth",
     top1Pct: 45.3,
     top3Pct: 78.3,
@@ -1021,7 +1021,7 @@ export const PRICE_SHOCK: PriceShockRow[] = [
     short: "US",
     q2YoyPct: 0,
     fill: "#0ea5e9",
-    note: "Flat — gas not setting marginal price the same way",
+    note: "Flat â€” gas not setting marginal price the same way",
     confidence: "disclosed",
   },
   {

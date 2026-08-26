@@ -556,7 +556,7 @@ export function EnergySystemsResearchDashboard() {
     : null;
 
   return (
-    <div className="w-full min-w-0 space-y-4">
+    <div data-viz="energy-systems-research-2026" className="w-full min-w-0 space-y-4">
       <div className="rounded-xl border border-amber-200/80 bg-gradient-to-br from-slate-900 via-slate-900 to-amber-950 px-5 py-5 text-white shadow-sm sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-wider text-amber-200/90">
           Energy systems — source, mix, and trade

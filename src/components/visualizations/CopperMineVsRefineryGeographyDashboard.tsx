@@ -480,7 +480,7 @@ export function CopperMineVsRefineryGeographyDashboard() {
     setHighlight((prev) => (prev === c ? null : c));
 
   return (
-    <div className="not-prose mx-auto w-full max-w-5xl space-y-4">
+    <div data-viz="copper-mine-vs-refinery-geography-2026" className="not-prose mx-auto w-full max-w-5xl space-y-4">
       <div className="rounded-xl border border-orange-200 bg-gradient-to-br from-orange-50 to-teal-50 px-5 py-4">
         <p className="text-xs font-semibold uppercase tracking-wider text-orange-800">
           Copper mine vs refinery geography

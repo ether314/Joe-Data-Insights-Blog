@@ -1,5 +1,5 @@
 ﻿# Watchdog: every run checks if blog production is active; starts it if not.
-# Schedule: scripts\register-blog-production-watchdog.ps1 (logon + every 5 minutes)
+# Schedule: scripts\register-blog-production-watchdog.ps1 (logon only; the in-app loop already polls)
 #
 # -DryRun reports the decision without killing or starting anything.
 # Thresholds can be overridden via WATCHDOG_STALE_MINUTES / WATCHDOG_CPU_DELTA_SECONDS (QA only).
@@ -28,6 +28,7 @@ $StreamPort = if ($env:STREAM_PORT) { [int]$env:STREAM_PORT } else { 4177 }
 $StaleMinutes = if ($env:WATCHDOG_STALE_MINUTES) { [double]$env:WATCHDOG_STALE_MINUTES } else { 40 }
 $CpuDeltaSeconds = if ($env:WATCHDOG_CPU_DELTA_SECONDS) { [double]$env:WATCHDOG_CPU_DELTA_SECONDS } else { 0.5 }
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
+. (Join-Path $RepoRoot "scripts\lib\hidden-process.ps1")
 [void](Ensure-BlogAutomationPath)
 $JobsFile = Join-Path $RepoRoot "artifacts\agent-jobs.json"
 $WorktreeRoot = Get-BlogWorkerRoot $RepoRoot
@@ -53,7 +54,16 @@ New-Item -ItemType Directory -Path $LogDir -Force | Out-Null
 function Write-Log($Message) {
     $prefix = if ($DryRun) { "[DRYRUN] " } else { "" }
     $line = "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] $prefix$Message"
-    Add-Content -Path $LogFile -Value $line
+    for ($i = 0; $i -lt 3; $i++) {
+        try {
+            Add-Content -Path $LogFile -Value $line -ErrorAction Stop
+            break
+        } catch [System.IO.IOException] {
+            Start-Sleep -Milliseconds (25 * ($i + 1))
+        } catch {
+            break
+        }
+    }
     Write-Host $line
 }
 
@@ -61,11 +71,30 @@ function Read-Lock {
     if (-not (Test-Path $LockFile)) {
         return $null
     }
-    try {
-        return Get-Content $LockFile -Raw | ConvertFrom-Json
-    } catch {
-        return $null
+    # The orchestrator rewrites the lock every loop; a read landing mid-write used
+    # to parse as null and misclassify a live orchestrator as legacy mode. Retry
+    # briefly, then fall back to the previous good snapshot instead of null.
+    $script:LockReadDegraded = $false
+    $lastErr = $null
+    for ($i = 0; $i -lt 4; $i++) {
+        try {
+            return Get-Content $LockFile -Raw -ErrorAction Stop | ConvertFrom-Json -ErrorAction Stop
+        } catch {
+            $lastErr = $_
+            Start-Sleep -Milliseconds (50 * ($i + 1))
+        }
     }
+    if ($script:LastGoodLockJson) {
+        try {
+            $fallback = $script:LastGoodLockJson | ConvertFrom-Json
+            Write-Log "WARN: lock file unreadable ($($lastErr.Exception.Message)); using last good snapshot"
+            $script:LockReadDegraded = $true
+            return $fallback
+        } catch {}
+    }
+    $script:LockReadDegraded = $true
+    Write-Log "WARN: lock file unreadable ($($lastErr.Exception.Message))"
+    return $null
 }
 
 function Test-ProcessAlive([int]$ProcessId) {
@@ -110,7 +139,7 @@ function Test-OrchestratorMode($Lock) {
 
 # Legacy single-writer mode: agent CLI runs as a node.exe descendant of the production
 # shell. Parallel orchestrator mode does NOT host agent CLIs as children - workers are
-# sibling Start-Process shells - so missing agentChild must not trigger a restart.
+# sibling hidden shells - so missing agentChild must not trigger a restart.
 function Test-AgentChildPresent($Procs) {
     if (-not $Procs -or $Procs.Count -eq 0) { return $false }
 
@@ -343,6 +372,26 @@ function Test-StartInProgress {
     return $true
 }
 
+function Write-OrchestratorLastWords {
+    # Forensics only: when the watchdog decides the orchestrator is gone/stale,
+    # snapshot what it last emitted so restart causes are attributable later.
+    $oStdout = Join-Path $LogDir "orchestrator-stdout.log"
+    $oStderr = Join-Path $LogDir "orchestrator-stderr.log"
+    try {
+        $tail = @(Get-Content $oStdout -Tail 3 -ErrorAction SilentlyContinue |
+            ForEach-Object { $t = "$_"; if ($t.Length -gt 200) { $t.Substring(0, 200) } else { $t } })
+        if ($tail.Count -gt 0) {
+            Write-Log ("orchestrator stdout tail: " + ($tail -join " ||| "))
+        }
+        $errFile = Get-Item $oStderr -ErrorAction SilentlyContinue
+        if ($errFile) {
+            Write-Log ("orchestrator stderr bytes={0:N0} lastWrite={1:yyyy-MM-dd HH:mm:ss}" -f $errFile.Length, $errFile.LastWriteTime)
+        }
+    } catch {
+        # Never let forensics break the restart path.
+    }
+}
+
 function Start-ProductionAgent {
     if ($DryRun) {
         Write-Log "would start production agent"
@@ -351,9 +400,13 @@ function Start-ProductionAgent {
 
     Write-Log "Starting orchestrator in background"
     New-Item -ItemType File -Path $StartingFile -Force | Out-Null
-    # Path has spaces ("AI Projects") - quote -File in a single ArgumentList string.
-    $psArgs = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Minimized -File `"$ProductionScript`""
-    $proc = Start-Process -FilePath "powershell.exe" -ArgumentList $psArgs -WorkingDirectory $RepoRoot -PassThru
+    # Path has spaces ("AI Projects") - quote -File in a single argument string.
+    # CreateNoWindow via Start-HiddenProcess (do not use Start-Process -WindowStyle Hidden).
+    $psArgs = "-NoProfile -ExecutionPolicy Bypass -File `"$ProductionScript`""
+    $stdout = Join-Path $LogDir "orchestrator-stdout.log"
+    $stderr = Join-Path $LogDir "orchestrator-stderr.log"
+    $proc = Start-HiddenProcess -FilePath "powershell.exe" -ArgumentList $psArgs -WorkingDirectory $RepoRoot `
+        -RedirectStandardOutput $stdout -RedirectStandardError $stderr
     Write-Log "Spawned orchestrator shell PID $($proc.Id)"
 
     # Agent CLI can take 60-90s before the production shell shows up in process queries.
@@ -412,11 +465,10 @@ function Ensure-WatchdogLoop {
     }
     Write-Log "Watchdog loop not running - starting"
     $argList = "-NoProfile -ExecutionPolicy Bypass -File `"$LoopScript`""
-    $proc = Start-Process -FilePath "powershell.exe" `
-        -ArgumentList $argList `
-        -WorkingDirectory $RepoRoot `
-        -WindowStyle Minimized `
-        -PassThru
+    $stdout = Join-Path $LogDir "watchdog-loop-stdout.log"
+    $stderr = Join-Path $LogDir "watchdog-loop-stderr.log"
+    $proc = Start-HiddenProcess -FilePath "powershell.exe" -ArgumentList $argList -WorkingDirectory $RepoRoot `
+        -RedirectStandardOutput $stdout -RedirectStandardError $stderr
     Start-Sleep -Seconds 2
     $alive = $false
     if ($proc -and $proc.Id) {
@@ -489,18 +541,38 @@ function Ensure-StreamDashboard {
 $lock = Read-Lock
 if ($lock -and $lock.status -eq "paused") {
     Write-Log "Automation paused (lock status=paused). No action."
-    exit 0
+    return
+}
+
+# Remember the last successfully parsed lock for torn-read fallback.
+try {
+    if ($null -ne $lock) { $script:LastGoodLockJson = $lock | ConvertTo-Json -Depth 10 }
+} catch {}
+
+# A freshly (re)started orchestrator needs time before staleness logic applies:
+# its lock may not exist yet and CPU baseline starts at zero. Without this grace
+# window the watchdog has killed healthy orchestrators minutes after start.
+$orchStartGraceMin = 5
+$graceActive = $false
+if ($script:LastGoodLockJson) {
+    try {
+        $g = $script:LastGoodLockJson | ConvertFrom-Json
+        if ($g.startedAt) {
+            $ageMin = ((Get-Date).ToUniversalTime() - [DateTime]::Parse($g.startedAt).ToUniversalTime()).TotalMinutes
+            if ($ageMin -lt $orchStartGraceMin) { $graceActive = $true }
+        }
+    } catch {}
 }
 
 # Keep stream, in-session watchdog loop, and worker containers alive.
-# Scheduled task + this check restart them if Cursor/session/crash took them down.
+# Logon scheduled task + the in-app loop restart them if Cursor/session/crash took them down.
 Ensure-StreamDashboard
 Ensure-WatchdogLoop
 Ensure-WorkerContainers
 
 if (Test-StartInProgress) {
     Write-Log "Production start already in progress (.starting file). No action."
-    exit 0
+    return
 }
 
 $pidFromFile = $null
@@ -516,49 +588,59 @@ $procs = @(Get-ProductionProcesses)
 $processRunning = $pidAlive -or ($procs.Count -gt 0)
 
 if ($processRunning) {
+    if ($graceActive) {
+        Write-Log "Production within start grace window (<${orchStartGraceMin}m since startedAt). Skipping staleness check."
+        return
+    }
+    if ($script:LockReadDegraded) {
+        Write-Log "Lock read degraded this cycle - skipping staleness check to avoid a false kill."
+        return
+    }
     $staleReasons = @(Get-StaleReasons $lock $procs)
     if ($staleReasons.Count -gt 0) {
         Write-Log "Stale production detected: $($staleReasons -join '; '). Restarting."
+        Write-OrchestratorLastWords
         Stop-ProductionProcesses
         Clear-RunningLock $lock ("Restarting after stale: " + ($staleReasons -join "; "))
         $processRunning = $false
         $lock = $null
     } else {
         Write-Log "Production active (lock=$(if ($lock) { $lock.status } else { 'none' })). Activity: $script:ActivitySummary"
-        exit 0
+        return
     }
 }
 
 if ($processRunning -and $lock -and $lock.status -ne "running") {
     Write-Log "Production process running but lock=$($lock.status). No action."
-    exit 0
+    return
 }
 
 if (-not $processRunning) {
     if ($lock -and $lock.status -eq "running") {
         Write-Log "Lock says running but no process found. Clearing stale lock."
+        Write-OrchestratorLastWords
         Clear-RunningLock $lock "Cleared by watchdog: process not found."
     }
 
     if (-not (Test-Path $ProductionScript)) {
         Write-Log "ERROR: Production script missing at $ProductionScript"
-        exit 1
+        return
     }
 
     if (-not (Get-Command agent -ErrorAction SilentlyContinue)) {
         Write-Log "ERROR: Cursor agent CLI not found"
-        exit 1
+        return
     }
 
     $auth = & agent status 2>&1 | Out-String
     if ($auth -match "Not logged in") {
         Write-Log "ERROR: agent CLI not logged in. Run: agent login"
-        exit 1
+        return
     }
 
     Start-ProductionAgent
-    exit 0
+    return
 }
 
 Write-Log "Unexpected watchdog state. No action."
-exit 0
+return

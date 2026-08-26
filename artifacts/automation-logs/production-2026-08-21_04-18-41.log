@@ -1,0 +1,631 @@
+[2026-08-21 04:18:42] Starting orchestrator (orch-20260821-041841)
+[2026-08-21 04:18:42] Transport mitigations: producers=4 spawnStagger=20s (env BLOG_PRODUCTION_WORKER_COUNT / BLOG_WORKER_SPAWN_STAGGER_SEC)
+[2026-08-21 04:18:42] Bootstrapping worker clones + Docker containers...
+[2026-08-21 04:19:20] Seeding topic failure flags from history...
+[2026-08-21 04:19:20] flags seed: {"blockedStems":3,"blockedThemes":1,"failures":4}
+[2026-08-21 04:19:20] Recovering any orphaned merge state...
+[2026-08-21 04:19:20] merge recover: {
+  "recover": true,
+  "recovered": false,
+  "reason": "no stash state"
+}
+[2026-08-21 04:24:10] Merging ready job job-mt2ndy5j-1ljmw (macro-growth-trade-geography-2026) from post/macro-growth-trade-geography-2026-w2
+[2026-08-21 04:24:10] WARN: orchestrator loop error (continuing): The process cannot access the file 'E:\AI Projects\data-insights-blog\artifacts\agent-jobs.json' because it is being used by another process.
+[2026-08-21 04:24:32] Assigning job job-mt2oo8bp-nkmkw -> worker 2
+[2026-08-21 04:24:33] Spawned worker 2 shell pid=7312 for job-mt2oo8bp-nkmkw (attempt 1)
+[2026-08-21 04:24:37] Merging ready job job-mt2nkwe8-q8d5q (geopolitics-institutions-geography-2026) from post/geopolitics-institutions-geography-2026-w5
+[2026-08-21 04:24:37] Defer merge of geopolitics-institutions-geography-2026 - worker 5 still finishing this job
+[2026-08-21 04:24:44] Merging ready job job-mt2nkwe8-q8d5q (geopolitics-institutions-geography-2026) from post/geopolitics-institutions-geography-2026-w5
+[2026-08-21 04:24:44] Defer merge of geopolitics-institutions-geography-2026 - worker 5 still finishing this job
+[2026-08-21 04:25:06] W5 idle (no recovery candidate) - assigning producer job-mt2ooyuq-j7vt1 (fiscal-industrial-policy-geography-202608)
+[2026-08-21 04:25:06] Assigning job job-mt2ooyuq-j7vt1 -> worker 5
+[2026-08-21 04:25:07] Spawned worker 5 shell pid=31616 for job-mt2ooyuq-j7vt1 (attempt 1)
+[2026-08-21 04:25:11] Merging ready job job-mt2nkwe8-q8d5q (geopolitics-institutions-geography-2026) from post/geopolitics-institutions-geography-2026-w5
+[2026-08-21 04:25:11] Blessing geopolitics-institutions-geography-2026 (post/geopolitics-institutions-geography-2026-w5) - pausing other workers
+[2026-08-21 04:25:25] merge-ready-job exit=0
+[2026-08-21 04:25:25] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/geopolitics-institutions-geography-2026-w5"
+  ],
+  "log": [
+    "merge start slug=geopolitics-institutions-geography-2026 branch=post/geopolitics-institutions-geography-2026-w5",
+    "worktree: using existing branch tip",
+    "fetched post/geopolitics-institutions-geography-2026-w5 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 42 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/politics-geopolitics-institutions-geography-2026-hero.png, scripts/qa-geopolitics-institutions-geography-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/GeopoliticsInstitutionsGeography2026Dashboard.tsx, src/data/geopolitics-institutions-geography-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/geopolitics-institutions-geography-2026-w5"
+  ]
+}
+[2026-08-21 04:25:25] Blessed merge ok - syncing worker clones from main
+[2026-08-21 04:25:32] sync-worker-clones exit=0 id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/energy-systems-concentration-202608-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/bank-commercial-credit-concentration-2026q3-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/fiscal-industrial-policy-geography-202608-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 04:25:33] Shipped: geopolitics-institutions-geography-2026 | duration_sec=1894
+[2026-08-21 04:25:33] Closed branch(es) after merge: post/geopolitics-institutions-geography-2026-w5
+[2026-08-21 04:25:40] Merging ready job job-mt2ndy5j-1ljmw (macro-growth-trade-geography-2026) from post/macro-growth-trade-geography-2026-w2
+[2026-08-21 04:25:40] Blessing macro-growth-trade-geography-2026 (post/macro-growth-trade-geography-2026-w2) - pausing other workers
+[2026-08-21 04:25:54] merge-ready-job exit=0
+[2026-08-21 04:25:54] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/macro-growth-trade-geography-2026-w2"
+  ],
+  "log": [
+    "merge start slug=macro-growth-trade-geography-2026 branch=post/macro-growth-trade-geography-2026-w2",
+    "worktree: using existing branch tip",
+    "fetched post/macro-growth-trade-geography-2026-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 42 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/economics-macro-growth-trade-geography-2026-hero.png, scripts/qa-macro-growth-trade-geography-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MacroGrowthTradeGeography2026Dashboard.tsx, src/data/macro-growth-trade-geography-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/macro-growth-trade-geography-2026-w2"
+  ]
+}
+[2026-08-21 04:25:54] Blessed merge ok - syncing worker clones from main
+[2026-08-21 04:26:02] sync-worker-clones exit=0 id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/energy-systems-concentration-202608-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/bank-commercial-credit-concentration-2026q3-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/fiscal-industrial-policy-geography-202608-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 04:26:03] Shipped: macro-growth-trade-geography-2026 | duration_sec=2244
+[2026-08-21 04:26:03] Closed branch(es) after merge: post/macro-growth-trade-geography-2026-w2
+[2026-08-21 04:30:17] Merging ready job job-mt2nfvie-nq6qa (bank-commercial-credit-concentration-2026q3) from post/bank-commercial-credit-concentration-2026q3-w3
+[2026-08-21 04:30:17] Defer merge of bank-commercial-credit-concentration-2026q3 - worker 3 still finishing this job
+[2026-08-21 04:30:39] Assigning job job-mt2ow3og-n91mj -> worker 3
+[2026-08-21 04:30:39] Spawned worker 3 shell pid=3012 for job-mt2ow3og-n91mj (attempt 1)
+[2026-08-21 04:30:43] Merging ready job job-mt2nfvie-nq6qa (bank-commercial-credit-concentration-2026q3) from post/bank-commercial-credit-concentration-2026q3-w3
+[2026-08-21 04:30:43] Blessing bank-commercial-credit-concentration-2026q3 (post/bank-commercial-credit-concentration-2026q3-w3) - pausing other workers
+[2026-08-21 04:30:57] merge-ready-job exit=0
+[2026-08-21 04:30:57] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/bank-commercial-credit-concentration-2026q3-w3"
+  ],
+  "log": [
+    "merge start slug=bank-commercial-credit-concentration-2026q3 branch=post/bank-commercial-credit-concentration-2026q3-w3",
+    "worktree: using existing branch tip",
+    "fetched post/bank-commercial-credit-concentration-2026q3-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 34 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/finance-bank-commercial-credit-concentration-2026q3-hero.png, scripts/qa-bank-commercial-credit-concentration-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/BankCommercialCreditConcentration2026q3Dashboard.tsx, src/data/bank-commercial-credit-concentration-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/bank-commercial-credit-concentration-2026q3-w3"
+  ]
+}
+[2026-08-21 04:30:57] Blessed merge ok - syncing worker clones from main
+[2026-08-21 04:36:50] sync-worker-clones exit=2 get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 2c5a5cc... # wip(ai-financing-geography-2026): dashboard + viz wireup"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/energy-systems-concentration-202608-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/ai-power-grid-geography-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/fiscal-industrial-policy-geography-202608-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 04:36:50] Shipped: bank-commercial-credit-concentration-2026q3 | duration_sec=2805
+[2026-08-21 04:36:50] Closed branch(es) after merge: post/bank-commercial-credit-concentration-2026q3-w3
+[2026-08-21 04:38:42] Assigning job job-mt2p6gnu-9wus9 -> worker 3
+[2026-08-21 04:38:42] Spawned worker 3 shell pid=14768 for job-mt2p6gnu-9wus9 (attempt 1)
+[2026-08-21 04:47:12] Merging ready job job-mt2ooyuq-j7vt1 (fiscal-industrial-policy-geography-202608) from post/fiscal-industrial-policy-geography-202608-w5
+[2026-08-21 04:47:12] Defer merge of fiscal-industrial-policy-geography-202608 - worker 5 still finishing this job
+[2026-08-21 04:47:33] W5 idle (no recovery candidate) - assigning producer job-mt2phu88-wbi4e (macro-growth-trade-geography-2026q3)
+[2026-08-21 04:47:33] Assigning job job-mt2phu88-wbi4e -> worker 5
+[2026-08-21 04:47:33] Spawned worker 5 shell pid=22960 for job-mt2phu88-wbi4e (attempt 1)
+[2026-08-21 04:47:37] Merging ready job job-mt2ooyuq-j7vt1 (fiscal-industrial-policy-geography-202608) from post/fiscal-industrial-policy-geography-202608-w5
+[2026-08-21 04:47:37] Blessing fiscal-industrial-policy-geography-202608 (post/fiscal-industrial-policy-geography-202608-w5) - pausing other workers
+[2026-08-21 04:47:52] merge-ready-job exit=0
+[2026-08-21 04:47:52] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/fiscal-industrial-policy-geography-202608-w5"
+  ],
+  "log": [
+    "merge start slug=fiscal-industrial-policy-geography-202608 branch=post/fiscal-industrial-policy-geography-202608-w5",
+    "worktree: using existing branch tip",
+    "fetched post/fiscal-industrial-policy-geography-202608-w5 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 5",
+    "post allowlist on branch: 50 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/politics-fiscal-industrial-policy-geography-202608-hero.png, scripts/qa-fiscal-industrial-policy-geography-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/FiscalIndustrialPolicyGeography202608Dashboard.tsx, src/data/fiscal-industrial-policy-geography-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/fiscal-industrial-policy-geography-202608-w5"
+  ]
+}
+[2026-08-21 04:47:52] Blessed merge ok - syncing worker clones from main
+[2026-08-21 04:48:03] sync-worker-clones exit=2  the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 2c5a5cc... # wip(ai-financing-geography-2026): dashboard + viz wireup"
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/ai-supply-chain-geography-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-geography-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 04:48:04] Shipped: fiscal-industrial-policy-geography-202608 | duration_sec=1375
+[2026-08-21 04:48:04] Closed branch(es) after merge: post/fiscal-industrial-policy-geography-202608-w5
+[2026-08-21 04:48:11] Merging ready job job-mt2o7tri-she6o (ai-financing-geography-2026) from post/ai-financing-geography-2026-w1
+[2026-08-21 04:48:11] Defer merge of ai-financing-geography-2026 - worker 1 still finishing this job
+[2026-08-21 04:48:32] Merging ready job job-mt2o7tri-she6o (ai-financing-geography-2026) from post/ai-financing-geography-2026-w1
+[2026-08-21 04:48:32] Defer merge of ai-financing-geography-2026 - worker 1 still finishing this job
+[2026-08-21 04:48:53] Merging ready job job-mt2obcgv-9eleb (ai-capex-intensity-concentration-202608) from post/ai-capex-intensity-concentration-202608-w4
+[2026-08-21 04:48:53] Defer merge of ai-capex-intensity-concentration-202608 - worker 4 still finishing this job
+[2026-08-21 04:49:15] Assigning job job-mt2pk0j1-ehxlq -> worker 4
+[2026-08-21 04:49:15] Spawned worker 4 shell pid=28600 for job-mt2pk0j1-ehxlq (attempt 1)
+[2026-08-21 04:49:19] Merging ready job job-mt2obcgv-9eleb (ai-capex-intensity-concentration-202608) from post/ai-capex-intensity-concentration-202608-w4
+[2026-08-21 04:49:20] Blessing ai-capex-intensity-concentration-202608 (post/ai-capex-intensity-concentration-202608-w4) - pausing other workers
+[2026-08-21 04:49:31] merge-ready-job exit=0
+[2026-08-21 04:49:31] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-capex-intensity-concentration-202608-w4"
+  ],
+  "log": [
+    "merge start slug=ai-capex-intensity-concentration-202608 branch=post/ai-capex-intensity-concentration-202608-w4",
+    "worktree: using existing branch tip",
+    "fetched post/ai-capex-intensity-concentration-202608-w4 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+    "branch commits ahead of HEAD: 2",
+    "post allowlist on branch: 74 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/capital-markets-ai-capex-intensity-concentration-202608-hero.png, scripts/qa-ai-capex-intensity-concentration-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiCapexIntensityConcentration202608Dashboard.tsx, src/data/ai-capex-intensity-concentration-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-capex-intensity-concentration-202608-w4"
+  ]
+}
+[2026-08-21 04:49:31] Blessed merge ok - syncing worker clones from main
+[2026-08-21 04:49:37] sync-worker-clones exit=0 -intensity-concentration-202608-w4",
+  "workers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "reset-parking",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/ai-supply-chain-geography-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/demographic-cash-flows-geography-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-geography-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 04:49:37] Shipped: ai-capex-intensity-concentration-202608 | duration_sec=1941
+[2026-08-21 04:49:37] Closed branch(es) after merge: post/ai-capex-intensity-concentration-202608-w4
+[2026-08-21 04:49:43] Assigning job job-mt2pkn80-7z58v -> worker 1
+[2026-08-21 04:49:44] Spawned worker 1 shell pid=23052 for job-mt2pkn80-7z58v (attempt 1)
+[2026-08-21 04:49:48] Merging ready job job-mt2o7tri-she6o (ai-financing-geography-2026) from post/ai-financing-geography-2026-w1
+[2026-08-21 04:49:48] Blessing ai-financing-geography-2026 (post/ai-financing-geography-2026-w1) - pausing other workers
+[2026-08-21 04:49:59] merge-ready-job exit=0
+[2026-08-21 04:49:59] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-financing-geography-2026-w1"
+  ],
+  "log": [
+    "merge start slug=ai-financing-geography-2026 branch=post/ai-financing-geography-2026-w1",
+    "worktree: using existing branch tip",
+    "fetched post/ai-financing-geography-2026-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 42 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/capital-markets-ai-financing-geography-2026-hero.png, scripts/qa-ai-financing-geography-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiFinancingGeography2026Dashboard.tsx, src/data/ai-financing-geography-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-financing-geography-2026-w1"
+  ]
+}
+[2026-08-21 04:49:59] Blessed merge ok - syncing worker clones from main
+[2026-08-21 04:50:06] sync-worker-clones exit=2 prose + hero\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConflict false\"\nCould not apply 838bd72... # wip(energy-systems-concentration-202608): post prose + hero"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/ai-supply-chain-geography-2026-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "rebased post/demographic-cash-flows-geography-2026q3-w4",
+      "detail": null
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-geography-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 04:50:06] Shipped: ai-financing-geography-2026 | duration_sec=2229
+[2026-08-21 04:50:06] Closed branch(es) after merge: post/ai-financing-geography-2026-w1
+[2026-08-21 04:57:59] Merging ready job job-mt2oo8bp-nkmkw (energy-systems-concentration-202608) from post/energy-systems-concentration-202608-w2
+[2026-08-21 04:57:59] Defer merge of energy-systems-concentration-202608 - worker 2 still finishing this job
+[2026-08-21 04:58:20] Merging ready job job-mt2oo8bp-nkmkw (energy-systems-concentration-202608) from post/energy-systems-concentration-202608-w2
+[2026-08-21 04:58:20] Defer merge of energy-systems-concentration-202608 - worker 2 still finishing this job
+[2026-08-21 04:58:41] Assigning job job-mt2pw5wk-fxmce -> worker 2
+[2026-08-21 04:58:41] Spawned worker 2 shell pid=31364 for job-mt2pw5wk-fxmce (attempt 1)
+[2026-08-21 04:58:46] Merging ready job job-mt2p6gnu-9wus9 (ai-supply-chain-geography-2026) from post/ai-supply-chain-geography-2026-w3
+[2026-08-21 04:58:46] Defer merge of ai-supply-chain-geography-2026 - worker 3 still finishing this job
+[2026-08-21 04:58:52] Merging ready job job-mt2p6gnu-9wus9 (ai-supply-chain-geography-2026) from post/ai-supply-chain-geography-2026-w3
+[2026-08-21 04:58:52] Defer merge of ai-supply-chain-geography-2026 - worker 3 still finishing this job
+[2026-08-21 04:59:13] Merging ready job job-mt2p6gnu-9wus9 (ai-supply-chain-geography-2026) from post/ai-supply-chain-geography-2026-w3
+[2026-08-21 04:59:13] Defer merge of ai-supply-chain-geography-2026 - worker 3 still finishing this job
+[2026-08-21 04:59:34] Assigning job job-mt2pxato-8fg9j -> worker 3
+[2026-08-21 04:59:35] Spawned worker 3 shell pid=27640 for job-mt2pxato-8fg9j (attempt 1)
+[2026-08-21 04:59:39] Merging ready job job-mt2p6gnu-9wus9 (ai-supply-chain-geography-2026) from post/ai-supply-chain-geography-2026-w3
+[2026-08-21 04:59:39] Blessing ai-supply-chain-geography-2026 (post/ai-supply-chain-geography-2026-w3) - pausing other workers
+[2026-08-21 04:59:51] merge-ready-job exit=0
+[2026-08-21 04:59:51] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/ai-supply-chain-geography-2026-w3"
+  ],
+  "log": [
+    "merge start slug=ai-supply-chain-geography-2026 branch=post/ai-supply-chain-geography-2026-w3",
+    "worktree: using existing branch tip",
+    "fetched post/ai-supply-chain-geography-2026-w3 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 42 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/industry-ai-supply-chain-geography-2026-hero.png, scripts/qa-ai-supply-chain-geography-2026.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/AiSupplyChainGeography2026Dashboard.tsx, src/data/ai-supply-chain-geography-2026-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/ai-supply-chain-geography-2026-w3"
+  ]
+}
+[2026-08-21 04:59:51] Blessed merge ok - syncing worker clones from main
+[2026-08-21 04:59:59] sync-worker-clones exit=0 rkers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "rebased post/fiscal-plumbing-concentration-202608-w1",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/measurement-science-geography-2026-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/chokepoint-commodities-geography-2026q3-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-geography-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 05:00:00] Shipped: ai-supply-chain-geography-2026 | duration_sec=1276
+[2026-08-21 05:00:00] Closed branch(es) after merge: post/ai-supply-chain-geography-2026-w3
+[2026-08-21 05:00:07] Merging ready job job-mt2oo8bp-nkmkw (energy-systems-concentration-202608) from post/energy-systems-concentration-202608-w2
+[2026-08-21 05:00:07] Blessing energy-systems-concentration-202608 (post/energy-systems-concentration-202608-w2) - pausing other workers
+[2026-08-21 05:00:24] merge-ready-job exit=0
+[2026-08-21 05:00:24] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/energy-systems-concentration-202608-w2"
+  ],
+  "log": [
+    "merge start slug=energy-systems-concentration-202608 branch=post/energy-systems-concentration-202608-w2",
+    "worktree: using existing branch tip",
+    "fetched post/energy-systems-concentration-202608-w2 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+    "branch commits ahead of HEAD: 4",
+    "post allowlist on branch: 38 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/energy-energy-systems-concentration-202608-hero.png, scripts/qa-energy-systems-concentration-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/EnergySystemsConcentration202608Dashboard.tsx, src/data/energy-systems-concentration-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/energy-systems-concentration-202608-w2"
+  ]
+}
+[2026-08-21 05:00:24] Blessed merge ok - syncing worker clones from main
+[2026-08-21 05:00:34] sync-worker-clones exit=0 rkers": [
+    {
+      "id": 1,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+      "ok": true,
+      "action": "rebased post/fiscal-plumbing-concentration-202608-w1",
+      "detail": null
+    },
+    {
+      "id": 2,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-2",
+      "ok": true,
+      "action": "rebased post/measurement-science-geography-2026-w2",
+      "detail": null
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "rebased post/chokepoint-commodities-geography-2026q3-w3",
+      "detail": null
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "rebased post/macro-growth-trade-geography-2026q3-w5",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 05:00:34] Shipped: energy-systems-concentration-202608 | duration_sec=2158
+[2026-08-21 05:00:34] Closed branch(es) after merge: post/energy-systems-concentration-202608-w2
+[2026-08-21 05:05:54] Merging ready job job-mt2phu88-wbi4e (macro-growth-trade-geography-2026q3) from post/macro-growth-trade-geography-2026q3-w5
+[2026-08-21 05:05:55] Defer merge of macro-growth-trade-geography-2026q3 - worker 5 still finishing this job
+[2026-08-21 05:06:16] Merging ready job job-mt2phu88-wbi4e (macro-growth-trade-geography-2026q3) from post/macro-growth-trade-geography-2026q3-w5
+[2026-08-21 05:06:16] Defer merge of macro-growth-trade-geography-2026q3 - worker 5 still finishing this job
+[2026-08-21 05:06:37] Merging ready job job-mt2phu88-wbi4e (macro-growth-trade-geography-2026q3) from post/macro-growth-trade-geography-2026q3-w5
+[2026-08-21 05:06:37] Defer merge of macro-growth-trade-geography-2026q3 - worker 5 still finishing this job
+[2026-08-21 05:07:02] Merging ready job job-mt2phu88-wbi4e (macro-growth-trade-geography-2026q3) from post/macro-growth-trade-geography-2026q3-w5
+[2026-08-21 05:07:02] Defer merge of macro-growth-trade-geography-2026q3 - worker 5 still finishing this job
+[2026-08-21 05:07:24] Merging ready job job-mt2phu88-wbi4e (macro-growth-trade-geography-2026q3) from post/macro-growth-trade-geography-2026q3-w5
+[2026-08-21 05:07:24] Blessing macro-growth-trade-geography-2026q3 (post/macro-growth-trade-geography-2026q3-w5) - pausing other workers
+[2026-08-21 05:08:19] merge-ready-job exit=0
+[2026-08-21 05:08:19] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/macro-growth-trade-geography-2026q3-w5"
+  ],
+  "log": [
+    "merge start slug=macro-growth-trade-geography-2026q3 branch=post/macro-growth-trade-geography-2026q3-w5",
+    "worktree: using existing branch tip",
+    "fetched post/macro-growth-trade-geography-2026q3-w5 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 46 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/economics-macro-growth-trade-geography-2026q3-hero.png, scripts/qa-macro-growth-trade-geography-2026q3.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/MacroGrowthTradeGeography2026q3Dashboard.tsx, src/data/macro-growth-trade-geography-2026q3-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/macro-growth-trade-geography-2026q3-w5"
+  ]
+}
+[2026-08-21 05:08:19] Blessed merge ok - syncing worker clones from main
+[2026-08-21 05:08:29] sync-worker-clones exit=2 (1/2)\rRebasing (2/2)\rerror: could not apply ed65892... wip(measurement-science-geography-2026): dashboard + viz wireup\nhint: Resolve all conflicts manually, mark them as resolved with\nhint: \"git add/rm <conflicted_files>\", then run \"git rebase --continue\".\nhint: You can instead skip this commit: run \"git rebase --skip\".\nhint: To abort and get back to the state before \"git rebase\", run \"git rebase --abort\".\nhint: Disable this message with \"git config set advice.mergeConf"
+    },
+    {
+      "id": 3,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-3",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 4,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-4",
+      "ok": true,
+      "action": "fetch-only-dirty",
+      "detail": "in-progress clone has local changes; rebase deferred"
+    },
+    {
+      "id": 5,
+      "path": "C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-5",
+      "ok": true,
+      "action": "reset-excluded",
+      "detail": null
+    }
+  ]
+}
+[2026-08-21 05:08:30] Shipped: macro-growth-trade-geography-2026q3 | duration_sec=1253
+[2026-08-21 05:08:30] Closed branch(es) after merge: post/macro-growth-trade-geography-2026q3-w5
+[2026-08-21 05:08:37] W5 idle (no recovery candidate) - assigning producer job-mt2q8xna-buful (ai-capex-spend-geography-2026q3)
+[2026-08-21 05:08:37] Assigning job job-mt2q8xna-buful -> worker 5
+[2026-08-21 05:08:38] Spawned worker 5 shell pid=21528 for job-mt2q8xna-buful (attempt 1)
+[2026-08-21 05:09:09] Merging ready job job-mt2pk0j1-ehxlq (demographic-cash-flows-geography-2026q3) from post/demographic-cash-flows-geography-2026q3-w4
+[2026-08-21 05:09:09] Defer merge of demographic-cash-flows-geography-2026q3 - worker 4 still finishing this job
+[2026-08-21 05:09:30] Merging ready job job-mt2pk0j1-ehxlq (demographic-cash-flows-geography-2026q3) from post/demographic-cash-flows-geography-2026q3-w4
+[2026-08-21 05:09:30] Defer merge of demographic-cash-flows-geography-2026q3 - worker 4 still finishing this job
+[2026-08-21 05:09:52] Merging ready job job-mt2pk0j1-ehxlq (demographic-cash-flows-geography-2026q3) from post/demographic-cash-flows-geography-2026q3-w4
+[2026-08-21 05:09:52] Defer merge of demographic-cash-flows-geography-2026q3 - worker 4 still finishing this job
+[2026-08-21 05:10:13] Assigning job job-mt2qazli-vnf5u -> worker 4
+[2026-08-21 05:10:13] Spawned worker 4 shell pid=11848 for job-mt2qazli-vnf5u (attempt 1)
+[2026-08-21 05:10:17] Merging ready job job-mt2pkn80-7z58v (fiscal-plumbing-concentration-202608) from post/fiscal-plumbing-concentration-202608-w1
+[2026-08-21 05:10:17] Defer merge of fiscal-plumbing-concentration-202608 - worker 1 still finishing this job
+[2026-08-21 05:10:25] Merging ready job job-mt2pkn80-7z58v (fiscal-plumbing-concentration-202608) from post/fiscal-plumbing-concentration-202608-w1
+[2026-08-21 05:10:25] Defer merge of fiscal-plumbing-concentration-202608 - worker 1 still finishing this job
+[2026-08-21 05:10:47] Assigning job job-mt2qbpwr-i4559 -> worker 1
+[2026-08-21 05:10:47] Spawned worker 1 shell pid=27192 for job-mt2qbpwr-i4559 (attempt 1)
+[2026-08-21 05:10:52] Merging ready job job-mt2pkn80-7z58v (fiscal-plumbing-concentration-202608) from post/fiscal-plumbing-concentration-202608-w1
+[2026-08-21 05:10:52] Blessing fiscal-plumbing-concentration-202608 (post/fiscal-plumbing-concentration-202608-w1) - pausing other workers
+[2026-08-21 05:11:06] merge-ready-job exit=0
+[2026-08-21 05:11:06] merge-ready-job out: {
+  "ok": true,
+  "shipped": true,
+  "branchDeleted": true,
+  "deletedBranches": [
+    "post/fiscal-plumbing-concentration-202608-w1"
+  ],
+  "log": [
+    "merge start slug=fiscal-plumbing-concentration-202608 branch=post/fiscal-plumbing-concentration-202608-w1",
+    "worktree: using existing branch tip",
+    "fetched post/fiscal-plumbing-concentration-202608-w1 from worker clone C:\\Users\\ether\\AppData\\Local\\data-insights-blog-workers\\worker-1",
+    "branch commits ahead of HEAD: 3",
+    "post allowlist on branch: 38 files",
+    "post files differing from HEAD: 0",
+    "no stash (dirty-nonblocking)",
+    "selective commit ok (9 files): public/images/global-systems-fiscal-plumbing-concentration-202608-hero.png, scripts/qa-fiscal-plumbing-concentration-202608.mjs, scripts/smoke-test-viz-posts.mjs, src/components/PostVisualization.tsx, src/components/visualizations/FiscalPlumbingConcentration202608Dashboard.tsx, src/data/fiscal-plumbing-concentration-202608-data.ts, src/data/posts.ts, src/data/theme-registry.ts",
+    "closed shipped branch(es): post/fiscal-plumbing-concentration-202608-w1"
+  ]
+}
+[2026-08-21 05:11:06] Blessed merge ok - syncing worker clones from main

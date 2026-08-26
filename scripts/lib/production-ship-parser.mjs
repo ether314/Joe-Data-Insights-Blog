@@ -316,5 +316,21 @@ export function persistShipHistory(historyPath, rows) {
     signal: r.signal,
     logFile: r.logFile,
   }));
-  fs.writeFileSync(historyPath, JSON.stringify(payload, null, 2), "utf8");
+  const body = JSON.stringify(payload, null, 2);
+  // Windows can transiently fail the open (UNKNOWN / EPERM while AV or another
+  // process holds the file). Retry a few times before giving up so one bad
+  // tick cannot crash the stream server.
+  let lastErr = null;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    try {
+      const tmp = `${historyPath}.${process.pid}.tmp`;
+      fs.writeFileSync(tmp, body, "utf8");
+      fs.renameSync(tmp, historyPath);
+      return;
+    } catch (err) {
+      lastErr = err;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 250 * (attempt + 1));
+    }
+  }
+  console.warn(`[ship-history] persist failed after retries: ${lastErr && lastErr.code ? lastErr.code : lastErr}`);
 }

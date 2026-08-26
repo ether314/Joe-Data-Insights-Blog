@@ -200,7 +200,7 @@ export function MacroGrowthTradeGeography2026q3Dashboard() {
   }));
 
   return (
-    <div className="space-y-6">
+    <div data-viz="macro-growth-trade-geography-2026q3" className="space-y-6">
       <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-5 py-4 text-white shadow-sm">
         <p className="text-xs font-semibold uppercase tracking-wider text-amber-300">
           Q3 2026 geography lens · growth · trade · prices

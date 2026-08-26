@@ -10,7 +10,8 @@ $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $LogDir = Join-Path $RepoRoot "artifacts\automation-logs"
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
-[void](Ensure-BlogGitOnPath)
+. (Join-Path $RepoRoot "scripts\lib\hidden-process.ps1")
+[void](Ensure-BlogAutomationPath)
 $WatchdogScript = Join-Path $RepoRoot "scripts\watch-blog-production.ps1"
 $WorkerScript = Join-Path $RepoRoot "scripts\start-cursor-worker.ps1"
 $StreamScript = Join-Path $RepoRoot "scripts\production-stream-server.mjs"
@@ -57,13 +58,17 @@ function Test-WorkerRunning {
 }
 
 function Start-WorkerIfNeeded {
+    if (-not (Test-Path $WorkerScript)) {
+        Write-Log "Cursor worker script not present ($WorkerScript) - skip self-hosted worker"
+        return
+    }
     if (Test-WorkerRunning) {
         Write-Log "Cursor worker already running for $RepoRoot"
         return
     }
     Write-Log "Starting Cursor self-hosted worker ($WorkerName)"
-    $workerArgs = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$WorkerScript`""
-    Start-Process -FilePath "powershell.exe" -ArgumentList $workerArgs -WorkingDirectory $RepoRoot | Out-Null
+    $workerArgs = "-NoProfile -ExecutionPolicy Bypass -File `"$WorkerScript`""
+    Start-HiddenProcess -FilePath "powershell.exe" -ArgumentList $workerArgs -WorkingDirectory $RepoRoot | Out-Null
     Start-Sleep -Seconds 4
     if (-not (Test-WorkerRunning)) {
         Write-Log "WARN: Worker may still be starting - check agent worker debug"
@@ -222,14 +227,13 @@ function Stop-ExistingWatchdogLoop {
 function Start-WatchdogLoop {
     Stop-ExistingWatchdogLoop
     $loopFile = Join-Path $RepoRoot "scripts\cursor-watchdog-loop.ps1"
-    # Path has spaces ("AI Projects") - must quote -File path in a single ArgumentList string.
-    # WindowStyle is a Start-Process parameter (Hidden exits immediately on this host).
+    # Path has spaces ("AI Projects") - must quote -File path in a single argument string.
+    # CreateNoWindow via Start-HiddenProcess (Start-Process -WindowStyle Hidden kills loops here).
     $argList = "-NoProfile -ExecutionPolicy Bypass -File `"$loopFile`""
-    $proc = Start-Process -FilePath "powershell.exe" `
-        -ArgumentList $argList `
-        -WorkingDirectory $RepoRoot `
-        -WindowStyle Minimized `
-        -PassThru
+    $stdout = Join-Path $LogDir "watchdog-loop-stdout.log"
+    $stderr = Join-Path $LogDir "watchdog-loop-stderr.log"
+    $proc = Start-HiddenProcess -FilePath "powershell.exe" -ArgumentList $argList -WorkingDirectory $RepoRoot `
+        -RedirectStandardOutput $stdout -RedirectStandardError $stderr
     Start-Sleep -Seconds 4
     $loopPid = $null
     if (Test-Path $LoopPidFile) {
@@ -267,7 +271,7 @@ Start-LocalBlogIfNeeded
 Start-StreamDashboardIfNeeded
 Start-WatchdogLoop
 Write-Log "Running immediate watchdog check (starts orchestrator if idle)..."
-& powershell -NoProfile -ExecutionPolicy Bypass -File $WatchdogScript
+& $WatchdogScript
 Write-Log "=== Done ==="
 Write-Log "Orchestrator: scripts/run-blog-orchestrator.ps1 (spawns workers 1-4 + recovery 5 in Docker clones)"
 Write-Log "Worker clones: $WorktreeRoot (containers blog-worker-1..5)"

@@ -209,7 +209,7 @@ export function DemographicCashFlowsResearchDashboard() {
   );
 
   return (
-    <div className="w-full space-y-4">
+    <div data-viz="demographic-cash-flows-research-2026" className="w-full space-y-4">
       <div className="rounded-xl border border-teal-900/20 bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 px-5 py-5 text-white shadow-sm sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-teal-200/80">
           Demographic cash flows — age, migration, and money

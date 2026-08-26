@@ -509,7 +509,7 @@ export function ChokepointCommoditiesResearchDashboard() {
     : null;
 
   return (
-    <div className="space-y-4">
+    <div data-viz="chokepoint-commodities-research-2026" className="space-y-4">
       <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-950 px-5 py-5 text-white shadow-sm sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-wider text-teal-200/90">
           Chokepoint commodities · cross-mineral ledger

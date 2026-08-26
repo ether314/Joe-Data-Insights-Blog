@@ -139,7 +139,7 @@ export function BrokerageBonusesDashboard() {
     "rounded border border-slate-300 bg-white px-2 py-1 text-xs font-medium text-slate-900 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-1 focus:ring-cyan-200";
 
   return (
-    <div className="site-content flex h-full min-h-0 w-full flex-col gap-2">
+    <div data-viz="brokerage-bonuses" className="site-content flex h-full min-h-0 w-full flex-col gap-2">
       <div className="flex shrink-0 flex-wrap items-end gap-x-4 gap-y-2">
         <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-slate-600">
           <span>
