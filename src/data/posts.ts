@@ -2,6 +2,104 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-caffeine-drink-disappearance-versus-beverage-cpi-2026",
+    slug: "us-caffeine-drink-disappearance-versus-beverage-cpi-2026",
+    title:
+      "Coffee Disappearance Recovered After 1995 — Soft Drinks Peaked, Then Prices Outran Both",
+    excerpt:
+      "USDA coffee green-bean per capita rose ~30% from its 1995 trough to 2015, still below 1970. Soft-drink gallons peaked at 53 in 1997. Beverage CPI indexed to 1990 hit 229 by 2025.",
+    category: "Food & Agriculture",
+    themeId: "caffeine-beverage-cpi",
+    imageUrl:
+      "/images/food-and-agriculture-us-caffeine-drink-disappearance-versus-beverage-cpi-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero with coffee bag and soda bottle silhouettes, amber volume recovery trail, teal declining soda line, rose CPI climb, bold 10.2 LB and CPI 229 callouts",
+    publishedAt: "2026-08-26T22:00:00Z",
+    featured: true,
+    visualization: "us-caffeine-drink-disappearance-versus-beverage-cpi-2026",
+    layout: "default",
+    content: `Did Americans keep drinking more coffee and soda while shelf prices jumped? The short answer from USDA disappearance and BLS price indexes is **no — not as a single rising volume story**. Coffee green-bean pounds per capita recovered after a mid-1990s trough but never reclaimed the early-1970s levels. Carbonated soft drinks rose hard through the 1980s–90s, peaked near **53 gallons** per person in **1997** on the USDA Statistical Abstract series, and then drifted lower on the sparse industry extension that fills the gap after ERS removed Beverage Marketing Corporation soft-drink files from the Food Availability system. Meanwhile the BLS **nonalcoholic beverages** CPI (CUUR0000SAF116), rebased to **1990 = 100**, sits near **229** in **2025** — more than double the base year — and coffee’s own item index has accelerated again in 2025–26.
+
+The interactive dashboard above races volume indexes against beverage CPI, then flips through decade bars, a price–volume scatter, era snapshots, volume−price gaps, and a selected-year table. The rest of this piece walks the sources, the split between coffee and soda, and the caveats that keep the story honest.
+
+## What “disappearance” actually measures
+
+USDA Economic Research Service **food availability** (often called disappearance) is a balance-sheet residual: production plus imports and stock changes, minus measurable nonfood uses and exports, divided by population. It is a national **supply available for consumption** proxy, not a household diary or scanner panel. For coffee, ERS converts roasted and instant forms onto a **green-bean equivalent** and also publishes retail-weight pounds. Fluid gallons in this post follow ERS’s documented conversion of **60 six-ounce cups per retail pound** of regular roasted coffee (and the parallel instant factor in the source table), which works out to **2.8125 gallons per retail pound**.
+
+That framing matters when prices enter the frame. CPI tracks what shoppers pay for a fixed market basket. Disappearance tracks how much coffee (or soda) the marketing system absorbs. The two can diverge for years: prices can spike while volume stagnates, or volume can boom while real prices ease. The question here is specifically whether **per-capita volumes kept rising** through the same decades when **beverage CPI** climbed — and especially through the post-2019 inflation spike.
+
+## Coffee: a trough, then a partial climb
+
+On the archived ERS coffee table (series through **2015**), green-bean per capita starts the modern window high: about **13.6 lb** in **1970**. It falls through the frost-shock 1970s, drifts near **10 lb** in the 1980s, then slides to a trough near **7.9 lb** in **1995**. From that low to the last ERS print in **2015** (**10.2 lb**), coffee disappearance rises roughly **30%**. Indexed to **1990 = 100**, 2015 coffee volume sits near **99** — essentially flat versus 1990 — while nonalcoholic beverage CPI on the same base is already near **185**.
+
+So coffee’s post-trough recovery is real, and it is **not** a continuous boom from 1970. Specialty café culture, single-serve pods, and foodservice roast demand can coexist with a per-capita green-bean series that never recovers the Vietnam-era peak. The dashboard’s dual-axis race makes that visible: the amber volume area rebounds after 1995; the rose CPI line keeps walking higher.
+
+ERS has not refreshed the coffee availability workbook past 2015 in the archived FADS download. That is a hard stop for official disappearance, not a claim that Americans stopped drinking coffee. Any 2016–2026 coffee-volume story would need import, roast, or industry panel data with different definitions — outside this post’s USDA spine.
+
+## Soft drinks: the boom that stopped
+
+Carbonated soft drinks tell the opposite mid-period story. The USDA / Statistical Abstract gallons series (sourced to ERS Food Consumption, Prices, and Expenditures and related unpublished worksheets) rises from **24.3 gallons** per capita in **1970** to **46.3** in **1990** and **53.0** in **1997** — the peak year in that published government table. Diet and regular both participated; the Abstract’s diet share grew from a couple of gallons in 1970 to more than **11** by the mid-1990s while regular kept climbing.
+
+Then the official series ends. At Beverage Marketing Corporation’s request, ERS **removed** BMC soft-drink (and related) series from the Food Availability website, and the Census of Manufactures path that briefly replaced BMC also ages out of the Abstract’s annual refresh. For the post-1998 window this post therefore uses **sparse industry-extension markers** (openly cited Beverage Digest / IBISWorld-style levels): roughly **53** around 2000, drifting toward the low-**40s** by the early 2020s (**42.9** in a 2021 print; **41.9** in a 2025 estimate). Those points are labeled as extensions in the dashboard table — useful for direction, not for pretending ERS still publishes annual CSD disappearance.
+
+The directional punchline does not depend on the tenth of a gallon: **soda volumes peaked before the big CPI acceleration of the 2020s**, and the extension sits **below** the 1990 USDA level even as beverage CPI more than doubles.
+
+## Prices: the line that did keep rising
+
+BLS CPI-U **nonalcoholic beverages** (CUUR0000SAF116) annual averages move from **129.3** in **1990** to **252.5** in **2019**, **295.6** in **2025** (eleven published months; October missing during the appropriations lapse), and about **300.1** for the **2026** year-to-date average through July. On a **1990 = 100** scale that is roughly **195** by 2019 and **229** by 2025 — a steady march, then a sharper post-2021 step.
+
+Item indexes sharpen the caffeine lens. **Coffee CPI** (CUUR0000SEFP01) is famously jagged: the mid-1990s commodity spike, the 2011 run-up, a softer late-2010s stretch near the 2019 average of **193**, then a jump to **266** in **2025** and a **2026** YTD average near **298**. **Carbonated drinks CPI** (CUUR0000SEFW01) is smoother: **123.6** in 1990, **230.1** in 2019, **278.5** in 2025. From 2019 to 2025, coffee’s item index rises about **38%**, soda’s about **21%**, and the broader nonalcoholic beverage index about **17%**.
+
+Volumes did not mirror that price path. Coffee disappearance was already flat-to-recovering on a 1990 base when CPI was compounding. Soda disappearance was rolling over while soda CPI kept grinding higher.
+
+## Decade math: when volume and price disagreed
+
+The dashboard’s decade bars summarize the mismatch:
+
+- **1990s:** Coffee volume ends the decade still below the 1990 base after the mid-decade trough; CSD gallons (through the 1997 USDA peak) are up mid-teens percent versus 1990; beverage CPI is up about **31%** by 1999.
+- **2000s:** Coffee green-bean per capita edges lower into 2009; the CSD extension falls from the ~53 peak region toward the mid-**40s**; beverage CPI rises another **~26%**.
+- **2010s:** Coffee recovers into the 2015 ERS close; CSD extension keeps easing; beverage CPI adds another **~13%** by 2019.
+- **2020s (partial):** No ERS coffee print; CSD extension is roughly flat-to-down from 2021 to 2025; beverage CPI rises about **15%** from 2020 to 2025.
+
+That is the opposite of “volumes kept rising while prices jumped.” Prices jumped on a volume path that was **recovering selectively (coffee)** or **already in long decline (soda)**.
+
+## Price–volume scatter and the widening gap
+
+On the scatter panel, each coffee year is a point with beverage CPI index on the X axis and coffee volume index on the Y axis (both 1990 = 100). Early-1990s points cluster near the diagonal. As X marches past **150** and **180**, Y stays near **90–100**. The 45-degree reference line is the “volume kept up with prices” fiction; coffee points fall below it for most of the post-2000 window.
+
+The gap panel subtracts beverage CPI index from volume index. Coffee’s gap deepens into large negative territory by 2015. CSD’s gap turns negative once the boom ends and CPI keeps compounding — and the sparse extension years sit deeper still.
+
+## Selected years at a glance
+
+| Year | Coffee (green-bean lb) | CSD (gal) | CSD source | Bev CPI | Coffee CPI | Soda CPI |
+|------|------------------------:|----------:|:-----------|--------:|-----------:|---------:|
+| 1970 | 13.63 | 24.3 | USDA/Abstract | — | — | — |
+| 1990 | 10.33 | 46.3 | USDA/Abstract | 129.3 | 117.5 | 123.6 |
+| 1995 | 7.88 | 51.6 | USDA/Abstract | 153.9 | 163.1 | 143.9 |
+| 1997 | 9.10 | 53.0 | USDA/Abstract | 162.8 | 168.0 | 148.2 |
+| 2015 | 10.23 | 43.5 | Industry ext. | 239.5 | 205.5 | 215.0 |
+| 2019 | — | — | — | 252.5 | 193.2 | 230.1 |
+| 2025 | — | 41.9 | Industry ext. | 295.6 | 265.7 | 278.5 |
+
+Coffee gallons (ERS retail conversion) move with retail pounds: about **22 gal** per capita in 1990 and **22 gal** again in 2015 — another reminder that the green-bean recovery from 1995 did not recreate a 1970s fluid boom.
+
+## Caveats and confidence
+
+**Disappearance ≠ intake.** Plate waste, preparation waste, and foodservice vs at-home splits are not fully observed. Coffee’s green-bean series is sensitive to roast and instant conversion factors.
+
+**Soft-drink continuity is broken.** USDA’s published gallons through 1997 are the high-confidence spine. Post-1998 markers are industry composites used only to show direction after ERS removed BMC files. Do not treat 2010 or 2025 CSD cells as ERS official disappearance.
+
+**CPI basket vs volume mix.** Nonalcoholic beverages include juices, bottled water, and other non-caffeine items. Coffee and carbonated item indexes are the tighter caffeine price lenses; the headline beverage CPI is the broad shelf-price context the brief requested.
+
+**Calendar quirks.** 2025 CPI annuals omit October during the appropriations lapse. 2026 figures in the data module are January–July averages, not full-year prints.
+
+**No causal claim.** This post does not estimate demand elasticities or attribute volume decline to sugar taxes, bottled-water substitution, or energy-drink cannibalization. It answers a narrower question: whether the official volume series kept rising through the price climb. They did not — coffee recovered from a trough without reclaiming old highs; soda peaked in the late 1990s; beverage CPI kept rising into 2025–26.
+
+## Bottom line for the aisle
+
+If the mental model is “Americans drank ever more caffeine drinks while prices exploded,” the USDA–BLS tape rejects it. Coffee disappearance **partially healed** after 1995 and then **froze in the official record** after 2015. Soft-drink gallons **topped out** near the turn of the millennium on the government series and look **lower** on the industry extension. Prices, especially the broad nonalcoholic beverage CPI and the coffee item index after 2021, are the series that **kept climbing**. Gallons and pounds did not keep pace with that CPI path.`,
+  },
+  {
     id: "coffee-and-carbonated-drink-cpi-versus-typical-wages-2026",
     slug: "coffee-and-carbonated-drink-cpi-versus-typical-wages-2026",
     title:

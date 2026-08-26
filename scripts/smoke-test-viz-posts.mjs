@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-caffeine-drink-disappearance-versus-beverage-cpi-2026",
+    marker: "Gallons and pounds versus beverage CPI",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "coffee-and-carbonated-drink-cpi-versus-typical-wages-2026",
     marker: "Coffee vs wage index race",
     forbidden: "Loading interactive charts",
