@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "epa-lead-service-line-unknown-share-by-state-2026",
+    slug: "epa-lead-service-line-unknown-share-by-state-2026",
+    title:
+      "EPA Lead Inventories: 23.5M Service Lines Still Unknown — PA and TX Dominate the Fog",
+    excerpt:
+      "Late-2025 EPA LCRR inventories still label ~23.7% of reported service lines as unknown material. Confirmed lead + GRR is ~2.94M; EPA projects ~4M after prorating unknowns. Pennsylvania (~2.34M) and Texas (~2.29M) hold the largest unknown piles.",
+    category: "Global Systems",
+    themeId: "lead-service-lines",
+    imageUrl:
+      "/images/global-systems-epa-lead-service-line-unknown-share-by-state-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic underground service-line cross-section with teal known pipes and ghostly amber unknown pipes under a city street, Visual Capitalist-style water-infrastructure editorial",
+    publishedAt: "2026-08-25T21:00:00Z",
+    featured: true,
+    visualization: "epa-lead-service-line-unknown-share-by-state-2026",
+    layout: "default",
+    content: `The United States just finished the first near-census of drinking-water **service line materials** under the Lead and Copper Rule Revisions. Water systems had to classify every connection as lead, galvanized requiring replacement (GRR), non-lead, or **lead-status unknown**, then report those counts through state primacy agencies to EPA. The public SDWIS Service Line Inventory dashboard that followed is the best national picture yet — and it still leaves a fog thick enough to matter for funding, replacement timelines, and household risk.
+
+The headline is blunt. About **23.5 million** reported service lines remain unknown material — roughly **23.7%** of the inventory stack EPA and analysts have tallied from the late-2025 release. Confirmed lead plus GRR sits near **2.94 million**. Using state-specific ratios of known lead among known materials, EPA projects that about **1 million** of those unknowns are likely lead or GRR, bringing the national replacement target to roughly **4 million** lines. That is a sharp cut from the **9 million** figure tied to the 7th Drinking Water Infrastructure Needs Survey, but it is not a declaration that the remaining work is small. It is a declaration that **material certainty** and **lead certainty** are different problems — and that unknown share is now a first-order policy variable.
+
+The dashboard above ranks states by unknown share and unknown count, stacks material mixes, plots unknown share against confirmed lead burden, walks the survey-to-inventory vintage, and shows how unknowns concentrate in a handful of large states.
+
+## Why “unknown” is not a residual category
+
+Under the LCRR inventory rules, unknown is a formal classification: the utility cannot document that a line is lead, GRR, or non-lead with evidence that meets the rule’s standards. That can mean missing paper records for a century-old neighborhood, split ownership where the customer-side segment was never inspected, or a deliberate caution after customer-notification requirements made overconfident “lead” labels costly.
+
+Unknowns are therefore not noise at the edge of a clean map. They are a **managed uncertainty** that shapes who gets annual notices, how states score replacement need for Bipartisan Infrastructure Law allotments, and how quickly a system can claim it is done. EPIC’s reading of the same EPA release notes that roughly **one-third of states** still report more than **30%** of lines as unknown — a coverage failure at the scale of entire primacy programs, not a handful of incomplete Excel sheets.
+
+Caveat: non-lead counts reported to EPA were optional under the initial inventory cadence until November 2027. Most states still provided them; Maryland and New Hampshire were notable gaps that analysts and EPA filled with SDWIS connection totals or state correspondence. Unknown shares that divide by incomplete denominators can inflate. The desk treats published totals as the best public frame, not as an audited property-by-property census.
+
+## National stack: three million confirmed, twenty-three million unresolved
+
+Across reporting systems, the late-2025 aggregates look roughly like this:
+
+| Material class | Lines (approx.) | Share of reported stack |
+| --- | ---: | ---: |
+| Non-lead | 73.0 million | 73.4% |
+| Lead-status unknown | 23.5 million | 23.7% |
+| Lead | 1.97 million | 2.0% |
+| Galvanized requiring replacement | 0.97 million | 1.0% |
+
+More than half of reporting systems say they have **no** lead service lines at all — a useful reminder that the national lead problem is geographically concentrated even while the **unknown** problem is broadly distributed. About **3,060** systems reportedly classified **all** lines as unknown; about **15,600** reported a mix. The inventory is therefore both a lead map and an identification-capacity map.
+
+EPA’s proration method for unknowns matters for money. For allotments, the agency applies each state’s ratio of reported lead (and GRR) to total **known** materials, then attributes a slice of that state’s unknowns to the lead column. Illinois’s known-lead ratio is among the highest — on the order of **one in six** known lines — so a given unknown in Illinois “costs” more projected lead than an unknown in a low-ratio Sun Belt state. That is why a state can dominate the **unknown count** without dominating the **projected lead** ranking, and vice versa.
+
+## Which states own the remaining confirmed lead
+
+On projected LSL+GRR, the top of the EPA-derived ladder is still a Midwestern and Northeastern story. **Illinois** leads with about **632,000** projected lines, followed by **Ohio (~407,000)**, **New York (~383,000)**, **Michigan (~294,000)**, and **Pennsylvania (~265,000)**. Indiana, New Jersey, and Wisconsin fill out the next tier. The top ten projected states account for roughly **73%** of national projected need and about **61%** of confirmed lead+GRR in published rollups — a classic heavy-tail infrastructure problem.
+
+Confirmed counts tell a slightly different story than projections. Michigan and Wisconsin show relatively high confirmed lead+GRR against moderate unknown piles, which means their inventories have already forced a large share of the hard labels into the open. Pennsylvania is the opposite extreme: only about **109,000** confirmed lead+GRR against **~2.34 million** unknowns inside a ~3.85 million-line inventory. Texas posts **~2.29 million** unknowns inside a ~9.35 million-line system — an enormous absolute fog, but a lower known-lead ratio that keeps projected lead far below Illinois.
+
+Chicago remains the single largest municipal node in secondary rollups of the same dashboard, with hundreds of thousands of projected lines and a large unknown residual after reclassification. That city-level concentration is why state rankings alone understate where crews, traffic disruption, and customer-side replacement fights will actually land.
+
+## Unknown share versus unknown mass
+
+Share and mass diverge. New Mexico and Pennsylvania sit in the EPIC band where **fewer than half** of reported lines have an identified material — a share crisis. Oregon, Alaska, California, Colorado, and Washington sit above **90%** identified — a clarity band that makes full replacement planning look tractable even when absolute inventories are large.
+
+California’s accepted statewide table is the cleanest public illustration of a high-identification West: essentially **zero** reported lead, about **12,000** GRR, **~588,000** unknowns (**~5.9%**), and **~9.4 million** non-lead. Absolute unknowns still number in the mid-hundreds of thousands, but the share problem is contained. Contrast Pennsylvania’s majority-unknown inventory: there, the operational question is not “finish the last 6%,” it is “build an identification machine before the replacement machine.”
+
+Texas shows how population scale manufactures unknown **mass** even when share is not the worst in the country. Florida, Georgia, and other large southern inventories behave similarly in the desk panel: non-trivial unknown counts, relatively thin confirmed lead rows, and projected lead that depends heavily on how aggressively unknowns get prorated.
+
+## What changed when inventories replaced surveys
+
+The path from AWWA-era estimates (~6.1 million LSLs in mid-2010s survey work) to the 7th DWINSA (~9 million projected, with large unreported and unknown wedges) to the LCRR inventory (~3 million confirmed, ~4 million projected) is not a simple story of pipes disappearing. Coverage exploded — from a few thousand survey respondents to tens of thousands of systems in SDWIS. Reported lead+GRR fell by more than half even as more systems entered the frame. Non-lead reporting jumped. Unknowns held near **24 million**.
+
+Three mechanisms sit under that shift. First, non-respondents in the inventory regime were often treated as non-lead for national projection purposes — a conservative funding assumption that likely understates true lead in incomplete states. Second, customer notification and public inventories pushed utilities to prefer **unknown** over a premature lead label; Chicago’s swing from hundreds of thousands of claimed LSLs with no unknowns to a much smaller lead count plus a quarter-million unknowns is the cautionary exhibit. Third, BIL-funded inventory work and statistical verification tools moved many previous unknowns into the non-lead column — genuine information gain, not just relabeling.
+
+The desk’s vintage panel therefore shows projected need collapsing from survey-era highs while the unknown stock barely budges. That is the political economy of the next two years: replacement dollars track projected lead, but household anxiety and annual notices track the unknown column.
+
+## Funding, deadlines, and what the fog still hides
+
+EPA has already used inventory-based need for FY25/FY26 lead service line replacement allotments. States with high known-lead ratios and large unknown stocks will continue to draw more replacement capital — and more pressure to convert unknowns into knowns before the next inventory refresh. LCRI timelines push systems toward full lead and GRR removal on a roughly decade-scale clock, with deferred deadlines available when the replacement share of connections is extreme. None of that works cleanly if a third of a state’s lines still lack a material label.
+
+What this panel cannot claim: it is not the live SDWIS query for every PWSID; several state rows outside the published top-ten and California table are desk composites scaled to national leftovers and EPIC coverage bands. Unreported systems (New Mexico’s incomplete submissions; New York’s large unreported connection residual in secondary analyses) sit outside the unknown column entirely. Customer-side versus system-side splits, gooseneck connectors due in the 2027 inventory update, and local verification quality all move cell values. Treat the dashboard as a **priority map for identification effort**, not as a property-level exposure model.
+
+Still, the directional result is stable across EPA’s dashboard, EPIC’s national read, and independent state rollups. Nearly a quarter of the reported inventory is still fog. Confirmed lead is concentrated in a familiar industrial-belt set of states. The largest unknown piles sit in Pennsylvania and Texas. Until those two facts move together — fewer unknowns **and** fewer confirmed lead lines — the country’s lead-pipe problem remains half a replacement program and half a records program.`,
+    tags: [
+      "lead service lines",
+      "EPA LCRR",
+      "drinking water",
+      "unknown material",
+      "infrastructure",
+    ],
+    format: "deep-dive",
+    keyPoints: [
+      "23.5M service lines (~23.7%) still unknown material in late-2025 EPA inventories",
+      "Confirmed lead+GRR ~2.94M; EPA projects ~4M after prorating unknowns",
+      "PA (~2.34M) and TX (~2.29M) hold the largest unknown piles",
+      "IL leads projected LSL+GRR (~632k); top 10 states ~73% of projected need",
+    ],
+  },
+  {
     id: "imls-library-visits-versus-electronic-circulation-2026",
     slug: "imls-library-visits-versus-electronic-circulation-2026",
     title:

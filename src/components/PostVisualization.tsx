@@ -3934,6 +3934,21 @@ const ImlsLibraryVisitsVersusElectronicCirculation2026Dashboard = dynamic(
   },
 );
 
+const EpaLeadServiceLineUnknownShareByState2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/EpaLeadServiceLineUnknownShareByState2026Dashboard"
+    ).then((m) => m.EpaLeadServiceLineUnknownShareByState2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -4969,6 +4984,10 @@ export function PostVisualization({
 
   if (type === "imls-library-visits-versus-electronic-circulation-2026") {
     return <ImlsLibraryVisitsVersusElectronicCirculation2026Dashboard />;
+  }
+
+  if (type === "epa-lead-service-line-unknown-share-by-state-2026") {
+    return <EpaLeadServiceLineUnknownShareByState2026Dashboard />;
   }
 
   return null;

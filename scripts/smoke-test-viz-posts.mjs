@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "epa-lead-service-line-unknown-share-by-state-2026",
+    marker: "EPA LCRR inventories · unknown-material share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "imls-library-visits-versus-electronic-circulation-2026",
     marker: "Visits vs e-circ index",
     forbidden: "Loading interactive charts",
