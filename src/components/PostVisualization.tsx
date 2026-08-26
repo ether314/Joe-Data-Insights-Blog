@@ -4073,6 +4073,21 @@ const OhioAndMississippiLockAgeVersusDelayHours2026Dashboard = dynamic(
   },
 );
 
+const SchoolAgeSmokeDaysInWesternMetros2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/SchoolAgeSmokeDaysInWesternMetros2026Dashboard"
+    ).then((m) => m.SchoolAgeSmokeDaysInWesternMetros2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5144,6 +5159,10 @@ export function PostVisualization({
 
   if (type === "ohio-and-mississippi-lock-age-versus-delay-hours-2026") {
     return <OhioAndMississippiLockAgeVersusDelayHours2026Dashboard />;
+  }
+
+  if (type === "school-age-smoke-days-in-western-metros-2026") {
+    return <SchoolAgeSmokeDaysInWesternMetros2026Dashboard />;
   }
 
   return null;

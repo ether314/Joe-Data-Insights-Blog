@@ -301,7 +301,8 @@ export interface Post {
     | "homeschool-and-private-share-of-school-age-kids-2026"
     | "lead-pipe-replacement-pace-versus-inventory-2026"
     | "library-operating-revenue-per-capita-by-state-2026"
-    | "ohio-and-mississippi-lock-age-versus-delay-hours-2026";
+    | "ohio-and-mississippi-lock-age-versus-delay-hours-2026"
+    | "school-age-smoke-days-in-western-metros-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

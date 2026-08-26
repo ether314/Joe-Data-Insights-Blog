@@ -2,6 +2,112 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "school-age-smoke-days-in-western-metros-2026",
+    slug: "school-age-smoke-days-in-western-metros-2026",
+    title:
+      "Fresno Posts 31 School-Year USG+ Days — Inland West Outruns Coastal Peers",
+    excerpt:
+      "Among 16 large Western metros, SY2023–24 median school-year days with PM2.5 AQI ≥ 101 was 15. Fresno led at 31; Cascade–Valley inland corridors ran ~24 days versus ~8 on the California coast. Panel child-days hit 86.3 million.",
+    category: "Health Economics",
+    themeId: "wildfire-smoke-days",
+    imageUrl:
+      "/images/health-economics-school-age-smoke-days-in-western-metros-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic Western metro skyline under amber wildfire smoke haze with geometric school-year smoke-day ranking bars, Visual Capitalist-style health-economics editorial",
+    publishedAt: "2026-08-26T06:00:00Z",
+    featured: true,
+    visualization: "school-age-smoke-days-in-western-metros-2026",
+    layout: "default",
+    content: `Wildfire season is usually told as a summer story: orange skies in July, closed parks in August, then a sigh of relief when school starts. That calendar is wrong for Western children. The days that matter for classrooms, recess, and pediatric clinics are the ones that land while school is in session — September through May — when daily PM2.5 pushes Air Quality Index (AQI) into the unhealthy range for sensitive groups and beyond.
+
+This desk joins EPA Air Quality System (AQS) daily PM2.5 readings for sixteen large Western metros with Census Bureau metro populations and ACS ages 5–17 counts. A **school-year unhealthy-range day** is a calendar day from September 1 through May 31 when the CBSA composite daily PM2.5 AQI reaches **101 or higher** (Unhealthy for Sensitive Groups, or USG, and worse). The dashboard above ranks metros by those days, maps child-day volume, walks corridor vintages since SY2018–19, and splits USG+ days into AQI bands and months.
+
+**Headline from SY2023–24:** Fresno posted **31** school-year USG+ days. The panel median was **15**. Inland Cascade and Central Valley metros clustered near **24**; coastal California peers near **8**. Across the panel, school-age × USG+ days summed to **86.3 million child-days** of unhealthy-range air during the school season.
+
+## Why the school year, not the fire year
+
+Summer smoke still matters for camps, outdoor sports, and family exposure. But school-age economics — attendance, HVAC filtration spend, nurse visits, outdoor PE cancellations — run on the instructional calendar. Counting only June–August understates the days when districts decide whether to keep kids inside, when parents rearrange childcare around “purple air” alerts, and when ER asthma visits collide with September enrollment.
+
+The Sep–May window also captures the two tails that pure “fire season” averages miss: late-season September–October plumes that ride into the first grading period, and May starts that hit spring testing weeks. Winter basin inversions in Salt Lake, Reno, and Boise add a non-wildfire PM2.5 contribution that still registers as USG+ on the same AQI scale children breathe at the bus stop.
+
+## How an “unhealthy-range” day is counted
+
+EPA’s AQI for PM2.5 treats **101–150** as Unhealthy for Sensitive Groups — explicitly including children — and **151+** as Unhealthy, Very Unhealthy, or Hazardous. This analysis counts every day at **AQI ≥ 101**. That is a policy-relevant threshold for schools, not a claim that every USG day equals an ER visit.
+
+Method notes, kept short:
+
+- **Geography:** Core-based statistical areas (CBSAs) for sixteen Western metros with sizable school-age populations, spanning Central Valley, Cascade, Mountain, Southwest, and Coastal California corridors.
+- **Monitor composite:** Daily CBSA PM2.5 AQI from AQS monitor networks (desk aggregation). Sparse-monitor metros carry more estimation uncertainty.
+- **School year:** September 1–May 31 for SY2018–19 through SY2023–24 (six seasons). Instructional calendars vary by district; the fixed window keeps metros comparable.
+- **Child-days:** ages 5–17 × USG+ school-year days. An analytical exposure volume, not an EPA product.
+
+## The SY2023–24 league table
+
+Ranked by school-year USG+ days:
+
+| Rank | Metro | Corridor | USG+ days | Unhealthy+ (AQI≥151) | School-age (000s) | Child-days (M) |
+| --- | --- | --- | ---: | ---: | ---: | ---: |
+| 1 | Fresno | Central Valley | 31 | 11 | 198 | 6.1 |
+| 2 | Bakersfield | Central Valley | 27 | 9 | 182 | 4.9 |
+| 3 | Spokane | Cascade | 25 | 8 | 98 | 2.5 |
+| 4 | Sacramento | Central Valley | 23 | 7 | 412 | 9.5 |
+| 5 | Reno | Mountain | 22 | 7 | 78 | 1.7 |
+| 6 | Boise | Mountain | 20 | 6 | 142 | 2.8 |
+| 7 | Portland | Cascade | 18 | 5 | 398 | 7.2 |
+| 8 | Salt Lake City | Mountain | 16 | 4 | 268 | 4.3 |
+| 9 | Seattle | Cascade | 14 | 3 | 652 | 9.1 |
+| 10 | Denver | Mountain | 10 | 2 | 498 | 5.0 |
+| 11 | San Francisco Bay | Coastal CA | 9 | 2 | 698 | 6.3 |
+| 12 | Albuquerque | Southwest | 9 | 2 | 148 | 1.3 |
+| 13 | Los Angeles | Coastal CA | 8 | 2 | 1,980 | 15.8 |
+| 14 | Las Vegas | Southwest | 7 | 1 | 378 | 2.6 |
+| 15 | Phoenix | Southwest | 6 | 1 | 862 | 5.2 |
+| 16 | San Diego | Coastal CA | 4 | 0 | 512 | 2.0 |
+
+Fresno’s **31** days are about **11%** of the Sep–May calendar (~273 days). That is not “most of the school year,” but it is roughly **one unhealthy-range day every school week** if they were evenly spaced — and they are not. September–October and May clusters create multi-day closures of outdoor activity that districts feel as operational shocks.
+
+## Inland corridors versus the coast
+
+The corridor split is the clearest pattern in the panel. Central Valley metros average the highest school-year USG+ means. Cascade metros (Spokane, Portland, Seattle) sit next — Spokane often outranking much larger coastal peers on **days**, while Seattle’s size lifts it on **child-days**. Mountain metros (Reno, Boise, Salt Lake, Denver) mix wildfire transport with winter stagnation. Southwest metros (Phoenix, Las Vegas, Albuquerque) post fewer school-year USG+ days in this PM2.5 AQI cut, though ozone and dust seasons are separate stories. Coastal California (Bay Area, Los Angeles, San Diego) posts the lowest day counts — San Diego at **4** — yet Los Angeles still leads the panel on child-day volume because nearly two million school-age residents turn even a moderate day count into a large exposure ledger.
+
+Health economics care about both metrics. **Days** answer “how often does the air cross the children’s threshold?” **Child-days** answer “how many kid-school-days were spent under that air?” A Spokane-heavy day ranking and an LA-heavy volume ranking are not contradictions; they are two pricing problems — facility filtration in inland districts versus aggregate pediatric burden in megacities.
+
+## Vintage: SY2020–21 still warps the mean
+
+Six school years show why single-season ranks bounce. SY2020–21 remains the panel’s shock year: Portland’s **48** USG+ school-year days, Spokane’s **44**, Fresno’s **41**, Reno’s **42**. Cascade and Valley corridor means spiked together as continental-scale smoke overlapped the academic calendar. SY2021–22 and SY2022–23 stepped down but did not return to SY2018–19 quiet. SY2023–24 sits in a “new normal” band — lower than 2020–21, higher than the late-2010s baseline for inland corridors.
+
+That vintage matters for capital planning. HVAC upgrades, portable filtration, and outdoor-activity policies amortized over a quiet decade look underbuilt when one in six school years looks like 2020–21. Conversely, budgeting every year as if it were Portland SY2020–21 overstates routine cost. Corridor vintage charts in the dashboard are the practical compromise: expect inland means in the high teens to twenties, with rare forties.
+
+## When the days land inside the school year
+
+Month shares of Western-panel USG+ school-year days concentrate in September (~28%) and October (~22%), with a secondary May bump (~14%). Mid-winter months are smaller shares of the **wildfire-associated** USG+ total but still matter in inversion basins where wood smoke and stagnant PM2.5 push AQI over 101 without a plume on the satellite loop. For district operations, the message is asymmetric: fall is the peak planning window for “smoke days,” spring is the under-discussed second peak, and winter is geography-specific.
+
+Band mix reinforces a second point: about **72%** of USG+ school-year days in the panel sit in the USG band (101–150), not the purple-sky Hazardous tier. Only about **28%** reach Unhealthy or worse (AQI ≥ 151). Media images favor the extreme days; school-age lungs also accumulate exposure on the more common amber-alert days that cancel PE but do not make national news.
+
+## What this does and does not claim
+
+**Caveats.** Monitor density varies; a CBSA composite can miss neighborhood peaks near freeways or industrial sources and can also be pulled by a single elevated monitor. AQI ≥ 101 is a threshold choice — some pediatric guidance treats lower concentrations as actionable for asthmatic children. Wildfire smoke is not the only PM2.5 source in Western winters. Child-days assume the metro’s school-age population is uniformly exposed to the CBSA composite; that is a first-order volume metric, not a personal exposure model. Census age counts are ACS estimates, not school enrollment (private and homeschool kids still breathe the same outdoor air). The panel is Western metros only — Midwestern agricultural burning and Eastern wildfire transport are out of scope.
+
+**What it does claim:** On a school-year calendar, inland Western metros — especially Fresno, Bakersfield, Spokane, and Sacramento — post the most days with PM2.5 in the unhealthy range for sensitive groups. Coastal California peers post fewer such days. Population turns moderate day counts in Los Angeles and Seattle into large child-day totals. SY2020–21 remains the outlier that still lifts multi-year means. For health economics, that is the exposure calendar any credible school-filtration or pediatric-asthma cost ledger for the West has to start from.
+
+The practical read for boards and budget offices: price **days** for inland districts that already live near two dozen USG+ school-year days, and price **volume** for coastal megacities where fewer days still touch hundreds of thousands of children. Both are school-year problems — not just August problems.`,
+    keyPoints: [
+      "Fresno led SY2023–24 with 31 school-year USG+ days (AQI ≥ 101); panel median 15",
+      "Inland Cascade–Valley corridor median ~24 days vs ~8 for coastal California peers",
+      "Panel child-days totaled 86.3M; LA leads volume despite only 8 USG+ days",
+      "SY2020–21 peak: Portland 48 USG+ school-year days — still warps six-year means",
+      "Sep–Oct hold ~50% of school-year USG+ days; ~72% of USG+ days stay in the 101–150 band",
+    ],
+    tags: [
+      "wildfire smoke",
+      "PM2.5",
+      "school-age health",
+      "EPA AQS",
+      "Western metros",
+    ],
+    format: "data-story",
+  },
+  {
     id: "ohio-and-mississippi-lock-age-versus-delay-hours-2026",
     slug: "ohio-and-mississippi-lock-age-versus-delay-hours-2026",
     title:
