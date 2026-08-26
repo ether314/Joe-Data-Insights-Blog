@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026",
+    marker: "Share below HPRD floor",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "stranded-spent-fuel-at-shutdown-reactor-sites-2026",
     marker: "Headline — 20 Group A sites, 12,310 MTU onsite",
     forbidden: "Loading interactive charts",

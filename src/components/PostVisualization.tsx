@@ -4255,6 +4255,21 @@ const StrandedSpentFuelAtShutdownReactorSites2026Dashboard = dynamic(
   },
 );
 
+const CmsPbjHoursPerResidentDayVersusTheFederalFloor2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/CmsPbjHoursPerResidentDayVersusTheFederalFloor2026Dashboard"
+    ).then((m) => m.CmsPbjHoursPerResidentDayVersusTheFederalFloor2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5374,6 +5389,10 @@ export function PostVisualization({
 
   if (type === "stranded-spent-fuel-at-shutdown-reactor-sites-2026") {
     return <StrandedSpentFuelAtShutdownReactorSites2026Dashboard />;
+  }
+
+  if (type === "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026") {
+    return <CmsPbjHoursPerResidentDayVersusTheFederalFloor2026Dashboard />;
   }
 
   return null;

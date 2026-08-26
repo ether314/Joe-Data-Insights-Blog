@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026",
+    slug: "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026",
+    title:
+      "CMS PBJ Staffing: 35.6% of Nursing Homes Still Below the 3.48 HPRD Floor",
+    excerpt:
+      "In Q4 2024 Payroll-Based Journal filings, 64.4% of reporting certified nursing homes cleared the 3.48 total-nurse hours-per-resident-day benchmark — leaving roughly 35.6%, or about 5,190 homes, still below the published federal floor. Nurse-aide hours remain the widest gap.",
+    category: "Health Economics",
+    themeId: "nursing-home-staffing-cms",
+    imageUrl:
+      "/images/health-economics-cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz graphic of a nursing-home staffing HPRD gauge against a rose federal floor line at 3.48 hours per resident day",
+    publishedAt: "2026-08-26T10:00:00Z",
+    featured: true,
+    visualization: "cms-pbj-hours-per-resident-day-versus-the-federal-floor-2026",
+    layout: "default",
+    content: `Nursing homes report who worked, for how long, and against what census. That is the point of the CMS Payroll-Based Journal (PBJ): a daily, payroll-tied ledger of nurse hours that Care Compare then compresses into hours per resident day (HPRD). When federal regulators published numerical minimums in April 2024 — **3.48** total nurse HPRD, including at least **0.55** registered-nurse (RN) HPRD and **2.45** nurse-aide (NA) HPRD — those numbers became the natural yardstick for reading PBJ prints. The interactive dashboard above scores the latest quarter against that yardstick: how many homes still sit below the floor, which staff type drives the gap, and how ownership, size, and geography shift the picture.
+
+The core answer for the **Q4 2024** PBJ vintage is blunt. Of **14,573** homes reporting nurse staffing, **64.4%** posted total nurse staff at or above **3.48** HPRD. That leaves **35.6%** — roughly **5,190** facilities — still below the published total-nurse floor, even as the national mean total nurse HPRD sits at **3.75**. Means above the floor and a large minority below it are not a contradiction; they are a distribution with a long low tail.
+
+## What the federal floor actually said
+
+CMS’s Minimum Staffing Standards final rule (CMS-3442-F) set three interlocking numerical requirements for long-term care facilities. Facilities had to provide at least **3.48** HPRD of total direct nursing care. Inside that total, at least **0.55** HPRD had to come from RNs and at least **2.45** HPRD from nurse aides. The remaining **0.48** HPRD could be filled by any mix of RN, licensed practical / vocational nurse (LPN/LVN), or aide hours. Separately, the rule required an RN on site **24 hours a day, 7 days a week**, with limited hardship pathways.
+
+Those numbers were never meant as a clinical optimum. CMS and later ASPE analysis treated them as a **national baseline** — a floor under the lowest-staffed homes — while the enhanced facility-assessment process still required staffing to resident acuity. A 2001 federal time-motion study that many advocates still cite pointed toward roughly **4.1** total care-staff HPRD and **0.75** RN HPRD for adequate care; LTCCC’s Q4 2024 summary shows only **28.3%** of providers at or above that higher **4.1** bar. The 3.48 floor is the more policy-relevant benchmark for this article because it was the number CMS wrote into the rule.
+
+Implementation was staggered: non-rural homes faced earlier deadlines for the total HPRD and 24/7 RN pieces; rural homes received longer runways for the RN and NA component floors. In **December 2025**, CMS repealed the numerical HPRD minimums and the 24/7 RN mandate as enforceable federal standards. That repeal does not erase the measurement question. PBJ still reports hours. Care Compare still publishes HPRD. Analysts, state surveyors, and families still need a shared reference line. This desk keeps CMS-3442-F’s published floors as that reference — a federal benchmark, not a claim that every home is currently cited against it.
+
+## The headline share below the total floor
+
+Q4 2024 is the latest clean national PBJ print used here. National mean **total nurse staff** HPRD was **3.75**, up a tick from **3.73** in Q3. The share of providers at or above **3.48** rose from **63.4%** to **64.4%**. Invert that and the below-floor share is **35.6%**, down from **36.6%** one quarter earlier. The quarterly path in the dashboard shows a slow grind: estimated below-floor shares near the low-40s in early 2023, then a gradual descent toward the mid-30s by late 2024. Progress is real and glacial.
+
+ASPE’s May 2024 Care Compare brief — a slightly earlier vintage with **N ≈ 14,413** after merges — found **59%** of homes at or above 3.48, or **41%** below. The Q4 2024 PBJ print is a few points better on the total floor. That improvement should not be over-read: definitions of which nurse categories enter “total nurse staff” can differ slightly across summaries, and ASPE’s brief also drops a few percent of homes for missing HPRD or census fields. Directionally, both vintages agree that a large minority of the certified stock still fails the total-nurse line.
+
+MDS daily average census in Q4 2024 was about **1.23 million** residents. A 35.6% facility share below the floor does not map one-for-one onto resident exposure — larger homes are more often below the total HPRD line — but it is enough to say that hundreds of thousands of residents live in buildings whose payroll hours still miss the published federal benchmark.
+
+## Nurse aides, not RNs, are the widest gap
+
+Breaking the floor into components changes the story. ASPE’s May 2024 cut found:
+
+| Standard | Floor | Share at/above | Share below | National mean |
+| --- | ---: | ---: | ---: | ---: |
+| Total nurse HPRD | 3.48 | 59% (May) / 64.4% (Q4) | 41% / 35.6% | 3.78 / 3.75 |
+| RN HPRD | 0.55 | 50% | 50% | 0.65 |
+| Nurse aide HPRD | 2.45 | 30% | 70% | 2.26 |
+| ≥24 RN hours / facility-day | 24 hrs | 78% | 22% | ~48 hrs |
+
+The **nurse-aide** standard is the binding constraint for most of the industry. Seventy percent of homes sat below **2.45** NA HPRD in the ASPE snapshot, and the national mean NA HPRD (**2.26**) itself sits under the floor. RN hours look better at the mean (**0.65** versus a **0.55** floor) even though half of homes still miss the RN line — again a distribution story. Total hours can clear 3.48 while the aide and RN pieces fail, or vice versa, because LPN/LVN hours fill the 0.48 residual and because homes mix skill mixes differently.
+
+MedPAC’s March 2026 skilled nursing chapter adds a case-mix-adjusted lens: median facility risk-adjusted RN HPRD in **2024** was about **0.5**, similar to recent years and below the unadjusted Care Compare mean. Freestanding and for-profit SNFs sat lower than hospital-based and nonprofit peers. That MedPAC median is not the same series as PBJ’s raw RN HPRD, but it reinforces that “average above the floor” is a weak comfort when the median facility is near or under the RN bar once acuity is held constant.
+
+ASPE’s illustrative **100-bed** example shows how close many below-floor homes already are. Among 100-bed facilities below the NA floor, mean NA HPRD was **1.97** — about **2** additional aides per 8-hour shift to reach 2.45. Among those below the total floor, mean total HPRD was **3.07** — about **1.7** nurse staff per shift. The gap is wide in headcount of homes and often narrow in hours for the typical below-floor building. That is why a slow quarterly climb in the at-or-above share is plausible without a sudden labor-market miracle.
+
+## Ownership and size bend the distribution
+
+For-profit homes dominate the certified stock and dominate the below-floor counts. In ASPE’s May 2024 cut, **52%** of for-profit facilities cleared the total 3.48 floor — meaning **48%** did not — versus **80%** of nonprofit facilities (**20%** below). The RN and NA gaps are similar in shape: **42%** of for-profits at or above the RN floor versus **74%** of nonprofits; **22%** versus **51%** on the aide floor. Those gaps are on the order of **25–30 percentage points**. They line up with a long research literature linking ownership form to staffing intensity, and with MedPAC’s freestanding / for-profit RN medians.
+
+Size works in the opposite direction from what a casual “big building, more staff” intuition suggests for **HPRD**. Homes with fewer than **50** certified beds were the most likely to clear each HPRD floor in ASPE’s brief (**79%** at or above total 3.48 among the smallest band in our size table). Larger bands show higher below-floor shares on total HPRD even as they more often clear a crude **24 RN hours per facility-day** threshold — because absolute RN hours scale with census. Urban homes more often provide ≥24 RN hours per day (**82%** versus **68%** rural); rural homes more often clear the NA and RN **HPRD** floors. Geography and ownership interact with local wage markets and Medicaid rate design; the dashboard’s region filter is a starting cut, not a causal model.
+
+## States: means above the floor, shares that still miss
+
+State mean total nurse HPRD in Q4 2024 ranged from **Alaska** at **6.16** and **Oregon** at **5.04** down to **Illinois** at **3.27**, **Missouri** at **3.30**, and **Texas** at **3.33**. Several large states sit with means near or under 3.48, which almost guarantees high below-floor shares. Desk estimates calibrated to those means put Illinois, Missouri, Texas, Georgia, and New Mexico among the highest below-floor states (roughly **50–58%**), while Alaska, Oregon, North Dakota, and Hawaii sit in the single digits to low teens. These state below-floor shares are **estimates**, not a CMS-published table; treat them as ranked signals consistent with disclosed state means and the national **35.6%** rate.
+
+Contract staffing — agency and other non-employee nurse hours as a share of total nurse hours — varies just as sharply. Vermont’s contract share exceeded **26%** in the Q4 2024 LTCCC summary; several Gulf and Southern states sat near **1–3%**. High contract shares can prop up HPRD in tight labor markets while raising unit cost and continuity risk. The scatter view lets you toggle the Y-axis between estimated below-floor share and contract share against the same mean-HPRD X-axis.
+
+## Caveats, repeal, and how to read the floor
+
+Several limits matter. First, PBJ hours are **paid** hours tied to job codes, not a direct observation of bedside minutes. Admin RN and director-of-nursing hours enter some “total nurse” summaries and are excluded from others; always check the footnote. Second, HPRD divides hours by MDS-derived census; census errors and short-stay churn move the ratio. Third, neither PBJ nor Care Compare timestamps RN presence across a 24-hour clock, so “≥24 RN hours per facility-day” is only an approximation of 24/7 coverage. Fourth, hardship exemptions and state staffing rules mean a home below 3.48 was not automatically out of compliance even while the federal numerical rule was in force. Fifth, the **December 2025** repeal removed those numerical federal minimums; enhanced facility assessment remains, and states may keep or tighten their own ratios. Sixth, our state below-floor percentages and some quarterly path points before Q3 2024 are desk constructs — labeled as estimated or carried in the data module.
+
+What survives the caveats is the distributional fact. In the latest full PBJ quarter, about **one in three** reporting certified nursing homes still posted total nurse hours below the **3.48** HPRD line CMS wrote as a national floor. Half missed the RN piece in the ASPE cut. Seven in ten missed the aide piece. For-profit ownership and larger bed size tilt toward the underside of the floor; small and nonprofit homes clear it more often. The mean can sit above 3.48 while thousands of buildings — and the residents inside them — do not. That is the PBJ story the floor was designed to illuminate, whether or not the floor remains enforceable tomorrow.
+`,
+    keyPoints: [
+      "Q4 2024 PBJ: 35.6% of reporting homes below the 3.48 total-nurse HPRD floor (64.4% at/above)",
+      "Nurse-aide 2.45 HPRD is the widest gap — ~70% of homes below in ASPE’s May 2024 cut",
+      "For-profit below-floor share (~48%) is far higher than nonprofit (~20%) on total HPRD",
+      "CMS repealed the numerical floors in Dec 2025; PBJ still measures hours against that benchmark",
+    ],
+    tags: [
+      "nursing homes",
+      "CMS",
+      "PBJ",
+      "staffing",
+      "HPRD",
+      "health economics",
+    ],
+    format: "data-story",
+  },
+  {
     id: "stranded-spent-fuel-at-shutdown-reactor-sites-2026",
     slug: "stranded-spent-fuel-at-shutdown-reactor-sites-2026",
     title:
