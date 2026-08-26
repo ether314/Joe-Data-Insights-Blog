@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "deceased-donor-kidney-discard-versus-offer-filters-2026",
+    marker: "Headline — overall nonuse 29.3% in 2024; KDPI ≥85% still ~69.5%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "state-prison-population-versus-violent-crime-rates-2026",
     marker: "Prisoners per 100k vs violent rate",
     forbidden: "Loading interactive charts",

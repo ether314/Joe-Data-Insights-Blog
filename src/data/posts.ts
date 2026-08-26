@@ -2,6 +2,90 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "deceased-donor-kidney-discard-versus-offer-filters-2026",
+    slug: "deceased-donor-kidney-discard-versus-offer-filters-2026",
+    title:
+      "Kidney Discard Did Not Fall With Offer Filters: KDPI ≥85% Nonuse Still Near 70%",
+    excerpt:
+      "OPTN/SRTR nonuse of recovered deceased-donor kidneys rose to 29.3% in 2024 even as Offer Filters spread to roughly 60% of programs. High-KDPI organs remain the bottleneck—about 69.5% unused—while low-KDPI discard stays near 4%.",
+    category: "Health Economics",
+    themeId: "organ-waitlist-unos",
+    imageUrl:
+      "/images/health-economics-deceased-donor-kidney-discard-versus-offer-filters-2026-hero.png",
+    imageAlt:
+      "Dark navy data-viz hero with a stylized kidney and rising crimson high-KDPI discard bars against teal low-KDPI bars",
+    publishedAt: "2026-08-26T12:00:00Z",
+    featured: true,
+    visualization: "deceased-donor-kidney-discard-versus-offer-filters-2026",
+    layout: "default",
+    content: `Every recovered kidney that never reaches a recipient is a lost transplant and a bill the dialysis system keeps paying. The Organ Procurement and Transplantation Network (OPTN) and the Scientific Registry of Transplant Recipients (SRTR) track that failure as **nonuse**: kidneys recovered for transplant but not transplanted. From 2012 to 2024, overall nonuse climbed from **18.7% to 29.3%**—even while deceased-donor kidney transplant counts set records and while centers gained a new efficiency tool, **Offer Filters**, meant to skip futile offers and shorten cold time.
+
+The interactive dashboard above asks the allocation desk’s real question: did discard fall as filters and broader sharing rolled out, or did **high Kidney Donor Profile Index (KDPI)** organs keep going unused? The short answer is the second. Overall nonuse rose through the KAS250 era and kept rising after filters went national in January 2022. For KDPI **≥85%**, nonuse hit **72.5% in 2023** and remained about **69.5% in 2024**—roughly **2.4×** the all-kidney rate.
+
+## What nonuse measures—and what it does not
+
+Nonuse is not the same as “every declined offer.” SRTR’s Annual Data Report (ADR) Kidney chapters define the rate as the share of kidneys **recovered for transplant** that never leave the operating theater for a recipient. That denominator already assumes an organ procurement organization (OPO) judged the kidney transplantable enough to recover. Biopsy, cold ischemia, donor age, donation after circulatory death (DCD), and match-run exhaustion all sit inside the outcome.
+
+What the rate does not separately price is the health-economics counterfactual: years of dialysis avoided, graft-years gained, or Medicare End-Stage Renal Disease (ESRD) spending displaced. CMS transplant Conditions for Coverage and OPO payment redesigns have pushed utilization rhetoric for a decade; the ADR series is still the cleanest public utilization thermometer. When we say discard rose, we mean recovered kidneys went unused—not that donation itself stalled.
+
+## Allocation rewired geography before filters arrived
+
+Two policy layers matter more than any single tool. **KAS** (December 2014) replaced the old expanded-criteria binary with longevity matching and KDPI. **KAS250** (March 2021) replaced donation-service-area–first kidney distribution with a **250-nautical-mile** circle around the donor hospital. Broader sharing was meant to improve equity of access. It also lengthened typical logistics chains.
+
+Independent analyses of the KAS250 transition (including Mohan and colleagues’ work on discard after the March 2021 change) found overall discard rising from roughly **21% to 25%** across the policy cut, with medium- and high-KDPI kidneys absorbing most of the extra nonuse while low-KDPI discard stayed near **3%**. Reasons shifted toward **list exhaustion**—no accepting center left before the clock ran out—consistent with more centers in the match run and more cold time. SRTR’s subsequent ADR chapters show the climb continuing: **24.6% (2021), 26.6% (2022), 27.9% (2023), 29.3% (2024)**.
+
+## Offer Filters were built for efficiency, not for high-KDPI appetite
+
+OPTN **Offer Filters** went national for kidney in **January 2022** after pilots. Centers can declare, in advance, donor and organ criteria they will not accept for listed candidates. Offers that match those rules skip the program, so the next willing center sees the organ sooner. In principle, that should cut futile screening work and shrink the window in which a hard-to-place kidney ages out.
+
+Adoption was voluntary for years. By late 2024, UNOS reported that about **60%** of kidney programs had **at least one filter** enabled. OPTN concept papers on “optimizing usage” then moved toward **model-suggested default filters** with program opt-out—an intermediate step toward the National Academies’ call for stronger offer-acceptance discipline. Default enablement is a process change. It is not, by itself, a guarantee that centers will expand the set of KDPI ≥85% kidneys they intend to transplant.
+
+## Discard by KDPI band: the stubborn high-risk stack
+
+The dashboard’s headline panel groups nonuse by KDPI band. Low-KDPI kidneys remain rare discards—near **3–4%**. Mid bands drift upward with the system. The **≥85%** band is a different economy:
+
+| Year | Overall nonuse | KDPI ≥85% nonuse | Notes |
+| --- | ---: | ---: | --- |
+| 2012 | 18.7% | — | ADR baseline for overall |
+| 2021 | 24.6% | 66.6% | First full KAS250 calendar stretch |
+| 2022 | 26.6% | ~70% | Offer Filters national; high band near plateau |
+| 2023 | 27.9% | 72.5% | Peak disclosed high-KDPI nonuse |
+| 2024 | 29.3% | 69.5% | Filters ~60% of programs; high band still ~70% |
+
+That table is the story. Offer-filter uptake and overall transplant volume both moved in the “more activity” direction. High-KDPI nonuse did not collapse. Slight 2024 softening from the 2023 peak still leaves seven in ten recovered high-KDPI kidneys unused.
+
+Complexity correlates in the 2024 ADR reinforce the same geometry. Nonuse was **68.9%** for donors aged **65+**, **40.8%** when a procurement biopsy was performed versus **6.4%** without, **36.4%** for **DCD** donors, and **44.1%** when donor creatinine was **≥1.5 mg/dL**. Filters can route around centers that never accept those profiles; they cannot invent a recipient at a center that has screened them out of its list.
+
+## Candidate willingness never became the missing demand curve
+
+Utilization is a two-sided market. On the waitlist side, ADR figures show that willingness to accept a **KDPI ≥85%** kidney remains concentrated among older candidates—and even there it is incomplete. In 2024, about **63.7%** of candidates aged **65+** and **47.8%** of those aged **50–64** were willing to accept a high-KDPI offer. Younger age bands sit far lower. The post-2014 trend was a long, gradual decline in high-KDPI willingness across ages until the series stabilized rather than reversed.
+
+HCV-positive donor kidneys tell a contrasting story: willingness rose sharply once direct-acting antivirals made transmission manageable, and nonuse of those kidneys fell even as overall nonuse rose. That contrast matters for interpretation. When clinical risk becomes treatable and culturally accepted, utilization moves. High KDPI is still framed as shorter expected graft life, higher delayed graft function risk, and harder CMS/quality optics—not as a solvable infection.
+
+## Why filters and discards can rise together
+
+Three mechanisms reconcile rising filter adoption with rising nonuse.
+
+First, **filters optimize the path to the next historical accepter**; they do not expand the set of accepters. If the marginal high-KDPI kidney still exhausts the list of programs willing to take it, nonuse stays high—only the failed offers arrive faster.
+
+Second, **KAS250 increased logistical load**. Longer travel and more centers in the run raise the probability that an organ hits a hard stop after many declines. Analyses after the policy change documented a larger share of discards attributed to inability to place the organ. Filters mitigate noise; they do not erase distance or OR scheduling friction.
+
+Third, **volume and case-mix shifted**. More recovered kidneys—including more DCD and medically complex donors—raise the absolute number of hard-to-place organs. A stable high-KDPI nonuse rate on a larger complex denominator still means more unused grafts. CMS and OPTN utilization pressure can increase recovery ambition without a matching acceptance culture.
+
+## Caveats and reading rules
+
+Treat intermediate KDPI-band years without a printed ADR single-year rate as **estimated** bridges between disclosed anchors; the ≥85% and overall series for 2021–2024 are the hard public points. Discard-reason shares after KAS250 are directional composites from published research, not a full national taxonomy table. Filter-adoption percentages before the ~60% UNOS figure are path estimates for the dashboard’s dual-axis panel. October 2024 KDPI revisions that remove race and HCV from the score will reshuffle labels; future ADR chapters will need to re-map “high KDPI” carefully. Continuous-distribution modeling for kidneys remains a separate equity-and-efficiency redesign; this piece does not claim filters substitute for that redesign.
+
+None of these caveats overturn the central empirical pattern: **from Offer Filters’ national launch through 2024, overall nonuse rose, and high-KDPI nonuse remained near 70%.** Efficiency tools without acceptance expansion leave the expensive unused organ problem largely intact.
+
+## What would count as real utilization progress
+
+A credible improvement story would show three things moving together: (1) overall nonuse falling or plateauing while recovery stays high; (2) KDPI ≥85% nonuse dropping well below the ~70% plateau—not just oscillating a few points; and (3) candidate and center acceptance of medically complex kidneys rising in the ADR waitlist and offer-acceptance metrics, not only filter count. Default model filters, offer-acceptance collaboratives, and payment incentives may help on logistics. The missing variable is still willingness to transplant the organs that dominate the unused stack.
+
+Until that willingness shows up in the nonuse series, the health-economics reading is blunt. The system got better at skipping hopeless offers. It did not get much better at using the kidneys most likely to be discarded.
+`,
+  },
+  {
     id: "state-prison-population-versus-violent-crime-rates-2026",
     slug: "state-prison-population-versus-violent-crime-rates-2026",
     title:
