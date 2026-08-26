@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ohio-and-mississippi-lock-age-versus-delay-hours-2026",
+    marker: "Age–delay scatter cloud",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "library-operating-revenue-per-capita-by-state-2026",
     marker: "Revenue per capita spread",
     forbidden: "Loading interactive charts",

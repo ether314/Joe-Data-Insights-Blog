@@ -4056,6 +4056,23 @@ const LibraryOperatingRevenuePerCapitaByState2026Dashboard = dynamic(
   },
 );
 
+const OhioAndMississippiLockAgeVersusDelayHours2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/OhioAndMississippiLockAgeVersusDelayHours2026Dashboard"
+    ).then(
+      (m) => m.OhioAndMississippiLockAgeVersusDelayHours2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5123,6 +5140,10 @@ export function PostVisualization({
 
   if (type === "library-operating-revenue-per-capita-by-state-2026") {
     return <LibraryOperatingRevenuePerCapitaByState2026Dashboard />;
+  }
+
+  if (type === "ohio-and-mississippi-lock-age-versus-delay-hours-2026") {
+    return <OhioAndMississippiLockAgeVersusDelayHours2026Dashboard />;
   }
 
   return null;

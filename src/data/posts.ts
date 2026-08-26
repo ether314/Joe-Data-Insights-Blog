@@ -2,6 +2,117 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ohio-and-mississippi-lock-age-versus-delay-hours-2026",
+    slug: "ohio-and-mississippi-lock-age-versus-delay-hours-2026",
+    title:
+      "Ohio & Mississippi Locks: Mid-Age Chambers Out-Delay the Oldest",
+    excerpt:
+      "Across 30 mainstem locks, the 60–79 year age band posts a 2.14-hour median delay per lockage versus 0.60 hours for locks 80+ — a 3.57× gap. Age–delay correlation is −0.44; Markland (66 yrs) leads delays, not 112-year-old Lock 19.",
+    category: "Industry",
+    themeId: "inland-waterway-locks",
+    imageUrl:
+      "/images/industry-ohio-and-mississippi-lock-age-versus-delay-hours-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic inland lock chambers at dusk with amber barge lights on the river and subtle teal chart accents, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-26T06:00:00Z",
+    featured: true,
+    visualization: "ohio-and-mississippi-lock-age-versus-delay-hours-2026",
+    layout: "default",
+    content: `Asset managers, shippers, and congressional staffers often treat lock **age** as a proxy for lock **friction**. The intuition is tidy: concrete cracks, miter gates fatigue, and the oldest chambers should therefore stack the longest average delay hours per lockage. The U.S. Army Corps of Engineers’ Lock Performance Monitoring System (LPMS) lets us test that claim on the two rivers that matter most for Midwest grain and Ohio Valley industry — the Ohio mainstem and the Upper Mississippi.
+
+This desk assembled a **30-lock panel** with year-placed-in-operation for the primary chamber (from USACE Lock Characteristics and district fact sheets, ages measured to **2025**) and **CY2023** average vessel delay hours per lockage plus annual lockages from public Corps Locks / LPMS annual usage summaries. The interactive dashboard scatters age against delay, bins medians by age band and traffic intensity, contrasts river slopes, and slices chamber layouts.
+
+The punchline is not “old equals slow.” Across the full panel, Pearson correlation between age and delay is **−0.44** — older locks, on average, post **shorter** delays. The **60–79 year** band’s median delay is **2.14 hours** per lockage; the **80+** band’s median is **0.60 hours** — a **3.57×** gap. The highest-delay lock in the panel is **Markland** on the Ohio (**2.86 h**, age **66**), not **Lock 19 (Keokuk)** at **112** years (**0.95 h**).
+
+## What “average delay hours per lockage” actually counts
+
+LPMS delay is not a press-release outage clock. It is vessel time spent waiting to enter or complete a lockage relative to unimpeded processing — queues that form when chamber capacity, tow size, hydrology, or temporary restrictions force barges to hold. A lock can be “open” while still posting high average delay if traffic arrives faster than chambers can turn. Conversely, a quiet 1930s 600-foot chamber can look serene in the annual average even if its concrete is older than the interstate system.
+
+That distinction matters for the age hypothesis. Age is a stock variable on the asset book. Delay is a flow variable on the operating ledger. If traffic intensity, chamber geometry (single 600′ versus twin 1,200′), and seasonal hydrographs dominate the flow, age will fail as a univariate predictor — which is exactly what the scatter shows.
+
+Corps Locks also publishes near-real-time queue and status feeds. Those are useful for voyage planning; they are noisy for structural comparison. Annual averages compress a year of ice, high water, scheduled dewaterings, and harvest pulses into one number per lock. That compression is a feature for this question: we want the structural pattern, not Tuesday’s flotilla.
+
+## Two rivers, two age stocks
+
+The Ohio mainstem panel (18 locks) is mostly a mid-century modernization story. Many high-lift replacements opened between the late 1950s and early 1980s — Greenup and Markland in **1959**, Meldahl in **1964**, Belleville in **1968**, through Smithland in **1980** — with later additions such as **R.C. Byrd (1993)** and **Olmsted (2018)**. Median age on the Ohio slice is **55.5 years**; median delay is **1.52 hours**.
+
+The Mississippi slice (12 locks) leans older. Upper Mississippi 9-foot-channel chambers from the 1930s still dominate many river miles; **Lock 19** at Keokuk dates to **1913**. Melvin Price (**1989**) and Lock 27 (**1953**) are younger, high-volume exceptions near St. Louis. Median age on the Mississippi slice is **88 years**; median delay is only **0.68 hours**.
+
+Put the medians side by side and the age-proxy story already frays. The older river stock posts the **lower** median delay. That is not a celebration of 1930s concrete; it is a traffic and chamber-size story. Many elderly Upper Mississippi locks are single 600-foot chambers with lower annual lockage counts. Busy Ohio twin 1,200-foot projects absorb more of the system’s commercial pulse — and more of its queue time.
+
+## The scatter cloud: oldest is not slowest
+
+On the dashboard’s age–delay scatter, bubble size tracks annual lockages (thousands). Ohio points (teal) cluster mid-age with higher delays; Mississippi points (amber) stretch rightward toward 80–110 years with delays mostly under one hour — except Melvin Price and Lock 27, which sit high on delay despite (or because of) heavy tonnage.
+
+**Markland** anchors the top of the delay axis at **2.86 hours** and **66 years**. **Meldahl** (**2.38 h**, 61 yrs) and **McAlpine** (**2.45 h**, 64 yrs) sit nearby. **Olmsted**, only **7 years** old, posts **0.68 hours** — young and relatively smooth in this window. **Dashields** (**96 yrs**) and **Lock 2** (**95 yrs**) sit near the bottom of the delay axis despite belonging to the oldest cohort.
+
+If age alone drove delay, the cloud would slope up and to the right. It does not. The full-panel correlation of **−0.44** is the quantitative version of that visual. Split by river, Ohio’s age–delay correlation is essentially flat (**−0.01**); Mississippi’s is strongly negative (**−0.76**) because the oldest, quieter chambers pull the right side of the plot down while Melvin Price (young, busy) pulls the left side up.
+
+## Median delay by age band flips the intuition
+
+Desk medians by age band make the inversion explicit:
+
+| Age band | Locks (n) | Median age | Median delay (h) |
+| --- | ---: | ---: | ---: |
+| Under 40 yrs | 3 | 32 | 1.05 |
+| 40–59 yrs | 8 | 50 | 1.59 |
+| 60–79 yrs | 7 | 66 | 2.14 |
+| 80+ yrs | 12 | 89 | 0.60 |
+
+The **60–79** band — the Ohio modernization cohort plus Lock 27 — is the delay peak. The **80+** band, dominated by Upper Mississippi 600-foot chambers, is the delay floor. Calling the oldest locks the “worst performers” on average delay hours would mis-rank the operating problem. It would also mis-target which projects deserve scrutiny for queue relief versus which deserve scrutiny for long-horizon structural risk.
+
+Age still matters for **condition and risk**. Miter-gate failures, unscheduled dewaterings, and capital replacement backlogs concentrate on aging assets. That is a different metric family from average delay hours per lockage. Conflating the two produces bad briefing slides.
+
+## Traffic intensity sorts delay better than birth year
+
+When the same locks are binned by annual lockages rather than age, the delay order looks familiar to anyone who has watched harvest tows stack below a busy Ohio chamber:
+
+- **Under 5,000** lockages: median delay near the low end of the panel.
+- **5,000–10,000**: median delay rises into the mid-band.
+- **10,000+**: median delay sits highest — and median **age** inside that bin is **not** the oldest cohort.
+
+**Melvin Price** (age **36**, **~15.6k** lockages, **2.22 h** delay) is the clearest counterexample to “old equals slow.” It replaced Lock and Dam 26 and sits on one of the heaviest Upper Mississippi approaches. **Lock 27** (**72 yrs**, **~12.8k** lockages, **1.88 h**) behaves like a high-traffic peer, not like a quiet 1930s pool lock further upstream.
+
+Chamber layout reinforces the point. Twin 1,200-foot projects exist because traffic demanded them; they still queue when tow arrival rates spike. Single 600-foot chambers constrain tow size but often see fewer commercial lockages in this panel. Median delay by chamber type therefore tracks commercial intensity at least as much as structural vintage.
+
+## River slope contrast: median age versus median delay
+
+The composed river chart stacks median age as bars and median delay as a line. Ohio: younger median age, higher median delay. Mississippi: older median age, lower median delay. That slope contrast is the article’s title claim in two numbers — **55.5 years / 1.52 h** versus **88 years / 0.68 h**.
+
+None of this argues that Mississippi locks are “fine.” Many need major rehabilitation. It argues that **average delay hours per lockage** in a recent LPMS year are a poor ranking key if the policy goal is “fix the oldest first to cut queues.” If the goal is “cut queue hours where shippers actually wait,” the 60–79 Ohio cohort and the Melvin Price / Lock 27 node deserve the first look. If the goal is “retire structural risk before a gate fails,” age and condition assessments belong on a different dashboard.
+
+## Caveats: what this panel does not settle
+
+Several limits keep the finding honest.
+
+**Sample, not census.** Thirty curated mainstem locks are not every Corps chamber. Illinois, Tennessee, Cumberland, and Gulf Intracoastal locks are out of scope. Within-river selection favors commercially visible projects.
+
+**One delay year.** CY2023 (nearest complete public annual window used here) embeds that year’s hydrograph, maintenance calendar, and commodity pulse. Multi-year averages can move individual ranks; they are unlikely to invert the band-level pattern that the oldest cohort is not the delay peak.
+
+**Age definition.** “Year placed in operation” for the primary chamber ignores auxiliary chambers, later twinning (McAlpine’s second 1,200-foot chamber opened in **2009**), and major rehabilitations that reset condition without resetting birth year. Age is an imperfect condition proxy by construction.
+
+**Delay is not unavailability.** Scheduled and unscheduled closed-chamber hours are a related but distinct LPMS product. A lock can post modest average delay in years without a long outage, then spike when a gate fails. This article answers the age-versus-**delay** question, not age-versus-outage-hours.
+
+**Desk medians and correlations.** Band medians and Pearson coefficients are calculated on this panel; they are not a Corps-published index. Confidence tags on individual rows mark disclosed project dates versus carried characteristic dates.
+
+**Operational noise.** Tow size mix, recreational traffic, ice, and temporary restrictions all enter LPMS delay. They do not appear as separate columns here.
+
+## Reading the asset book without the wrong proxy
+
+Congressional testimony and industry letters often pair “aging inland waterways” with “congestion.” Both statements can be true in different places. The LPMS age–delay scatter says they are not the same statement. On this Ohio–Mississippi panel, **median lock age and median delay hours move in opposite directions across rivers**, and the **oldest age band posts the lowest median delay**.
+
+For operators, the practical read is voyage-level: watch live queues and Notices to Navigation Interests at Markland, Meldahl, McAlpine, Melvin Price, and Lock 27 — not a birth-year sort of the characteristic sheet. For asset planners, keep age and condition on the capital side of the ledger, and keep delay hours on the operations side. Mixing the two into a single “oldest locks are the delay problem” slogan fails the public data.
+
+The interactive panels above let you filter by river and chamber layout, switch between the scatter cloud, age-band bars, river contrast, chamber pie, and traffic bins, and see how the **−0.44** correlation and the **3.57×** mid-versus-old band gap hold under those cuts. The oldest mainstem locks are not, as a class, the ones posting the longest average delay hours per lockage.`,
+    format: "data-story",
+    keyPoints: [
+      "30-lock Ohio + Mississippi panel: age–delay Pearson r = −0.44 (older ≠ slower)",
+      "60–79 yr band median delay 2.14 h vs 80+ band 0.60 h (3.57×)",
+      "Ohio median age 55.5 yrs / delay 1.52 h; Mississippi 88 yrs / 0.68 h",
+      "Highest delay: Markland 2.86 h at age 66 — not Lock 19 (112 yrs, 0.95 h)",
+    ],
+  },
+  {
     id: "library-operating-revenue-per-capita-by-state-2026",
     slug: "library-operating-revenue-per-capita-by-state-2026",
     title:
