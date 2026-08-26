@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "stranded-spent-fuel-at-shutdown-reactor-sites-2026",
+    marker: "Headline — 20 Group A sites, 12,310 MTU onsite",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "kidney-wait-time-versus-dsa-transplant-rates-2026",
     marker: "Median wait 61→58 months after KAS250",
     forbidden: "Loading interactive charts",

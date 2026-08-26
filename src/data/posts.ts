@@ -2,6 +2,87 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "stranded-spent-fuel-at-shutdown-reactor-sites-2026",
+    slug: "stranded-spent-fuel-at-shutdown-reactor-sites-2026",
+    title:
+      "Stranded Spent Fuel: 20 Shutdown US Sites Still Host 12,310 MTU with No Repository Path",
+    excerpt:
+      "PNNL’s end-2022 inventory puts about 12,310 metric tons of uranium at 20 all-shutdown reactor campuses. Eighteen of those sites are dry-storage-only; six EIA-flagged ISFSI-only LWR licenses still hold roughly 1,729 MTU of the oldest stranded fuel while Yucca Mountain and consolidated interim storage remain closed paths.",
+    category: "Energy",
+    themeId: "spent-nuclear-fuel-storage",
+    imageUrl:
+      "/images/energy-stranded-spent-fuel-at-shutdown-reactor-sites-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic view of dry-cask spent fuel storage pads at a decommissioned reactor site under dusk light",
+    publishedAt: "2026-08-26T10:00:00Z",
+    featured: true,
+    visualization: "stranded-spent-fuel-at-shutdown-reactor-sites-2026",
+    layout: "default",
+    content: `When a US power reactor permanently shuts down, the electricity stops. The used fuel usually does not leave. Until the federal government opens a geologic repository — or an accepted consolidated interim storage facility that can actually take commercial canisters — that inventory stays on the former generating campus, increasingly in dry casks on an Independent Spent Fuel Storage Installation (ISFSI).
+
+Pacific Northwest National Laboratory’s 2024 inventory report (PNNL-33938 Rev. 1.1), built from DOE’s GC-859 survey through **31 December 2022**, labels these campuses **Group A**: every reactor on the site is permanently shutdown, and spent nuclear fuel (SNF) remains on site. That census counts **25 reactors on 20 sites** holding about **12,310 metric tons of uranium (MTU)** in **39,221 assemblies**. Roughly **13.5%** of the commercial light-water inventory still sitting at nuclear power reactor sites is already stranded at places that no longer make power.
+
+The interactive dashboard above ranks those sites by remaining MTU, maps Census regions, splits license status (classic ISFSI-only versus active decommissioning with an onsite pad), plots years-since-shutdown against mass, and walks the cumulative cohort path as early retirements stack onto the 1990s wave.
+
+## What “stranded” means in this cut
+
+**Stranded** here is an institutional label, not a physics claim. The fuel is cooled, packaged, and regulated. What is missing is an **offsite acceptance path**. The Nuclear Waste Policy Act still points toward a geologic repository; Yucca Mountain’s license process remains unfinished; private consolidated interim storage proposals have faced litigation and have not opened a commercial receiving lane. GAO’s spent-fuel oversight work keeps returning to the same structural fact: utilities (and their ratepayers / DOE judgments) finance onsite storage because the federal disposal system has not taken title and shipped the waste.
+
+We therefore count **Group A sites with remaining SNF** — not every historical reactor that ever closed. Prototype and special cases (Fort St. Vrain’s HTGR fuel under a different custody story; TMI-2 debris) sit outside the LWR Group A MTU totals PNNL publishes. The dashboard’s site ladder is the commercial LWR stranded set as of the inventory date.
+
+## Twenty campuses, two storage postures
+
+PNNL splits Group A by how the fuel is stored at year-end 2022:
+
+| Subgroup | Meaning | Sites (approx.) | Remaining MTU |
+| --- | --- | ---: | ---: |
+| A1 | Dry storage only | 18 | ~9,683 |
+| A2 | Wet pool + dry still present | 2 | ~2,627 (of which ~1,004 still in pools) |
+| Group A total | All units shutdown | 20 | ~12,310 |
+
+**A1** is the dominant story. Decommissioning programs move assemblies from spent-fuel pools into dry casks so the pool island can be dismantled. Once that transfer finishes, the site can look like an empty industrial parcel with a fenced pad of vertical or horizontal casks — sometimes under a slimmed **ISFSI-only** materials license after the Part 50 plant license is terminated.
+
+**A2** at the inventory date was a short list: **Indian Point** (New York) and **Palisades** (Michigan) still showed mixed wet-and-dry inventories while decommissioning (and, later, restart talk at Palisades) played out. Those campuses are still “shutdown-site stranded” in the Group A sense for end-2022 even if their next chapter differs from a Maine Yankee–style pad.
+
+## ISFSI-only licenses: the oldest stranded pads
+
+The Energy Information Administration’s shutdown reactor table flags a stricter status: **ISFSI Only** — the generating plant is gone as a licensed reactor; what remains is a storage license. For commercial LWR campuses in that bucket (excluding Fort St. Vrain’s HTGR), the end-2022 inventory still shows fuel at **Big Rock Point**, **Haddam Neck**, **Maine Yankee**, **Rancho Seco**, **Trojan**, and **Yankee Rowe**. Those **six** pads hold about **1,729 MTU** — a minority of Group A mass, but the clearest illustration of the policy failure: communities finished decommissioning decades ago and still host the canisters.
+
+Maine Yankee alone accounts for roughly **542 MTU** in **60** SNF casks. Trojan holds about **359 MTU**; Haddam Neck about **414 MTU**. These are not temporary construction laydown yards. Humboldt Bay’s **1976** shutdown and La Crosse’s **1987** exit show how long “temporary” onsite storage can run even when the license label differs.
+
+## Post-2000 early retirements thickened the pile
+
+Pre-2000 A1 inventory is about **2,815 MTU**. Post-2000 A1 dry inventory is larger — about **6,868 MTU** — because the 2010s wave of economic and steam-generator–era retirements moved big BWR and PWR cores into dry storage quickly: Crystal River, Kewaunee, San Onofre, Vermont Yankee, Fort Calhoun, Oyster Creek, Pilgrim, Three Mile Island Unit 1, Duane Arnold, and peers.
+
+**San Onofre** is the mass outlier among West Coast shutdowns at roughly **1,609 MTU** and **123** SNF casks. **Zion**’s twin units leave about **1,019 MTU** on the Illinois lakeshore. Northeast campuses such as Oyster Creek (~**802 MTU**), Pilgrim (~**735 MTU**), and Vermont Yankee (~**706 MTU**) show how coastal and riverine communities inherit pad security, emergency planning, and local tax-base fights long after megawatts disappear from the grid.
+
+The cohort chart in the dashboard makes the compounding visible: each early retirement adds a step to cumulative stranded MTU. The slope steepens after 2013 even though classic ISFSI-only licenses were mostly locked in during the 1990s.
+
+## Geography is uneven — and politically sticky
+
+Census-region totals (from the site table) concentrate stranded mass in the **Northeast** and **West**, with a substantial **Midwest** share and a thinner **South** footprint dominated by Crystal River. That pattern matters for consent-based siting debates: the communities already hosting shutdown-site ISFSIs are not randomly distributed, and they have spent years arguing that “temporary” storage without a federal offtake is a de facto national policy.
+
+NRC’s decommissioning site finder tracks the active DECON and SAFSTOR dockets — San Onofre, Pilgrim, Indian Point, and others — alongside the quieter ISFSI-only pads. From a fuel-management perspective the distinction is thinner than the license paperwork suggests: both sets need secure dry storage, aging-management programs, and a destination that does not yet exist.
+
+## Caveats and what this cut is not
+
+- **Inventory date.** Figures are **end-2022** GC-859 / PNNL. Transfers after that date, further pool de-inventory, or restart pathways (notably Palisades discussions) can move a site between A1 and A2 or even out of Group A if operations resume.
+- **MTU vs. canisters vs. risk.** Heavier MTU sites are not automatically “riskier.” Cask design, seismic setting, coastal exposure, and security posture differ. We chart mass and years stranded because they answer the stranded-count question; they are not a hazard ranking.
+- **ISFSI-only vs. DECON-with-ISFSI.** EIA’s ISFSI Only flag is a license-status lens. Many A1 sites still carry broader decommissioning licenses while looking operationally like pads. We show both so readers can toggle the strict versus inclusive stranded set.
+- **No repository ≠ unsafe storage.** Dry cask storage is an NRC-licensed activity with decades of operating experience. The policy failure is **disposal and title transfer**, not an implication that pads are failing today.
+- **Excluded inventories.** DOE-managed research fuel, Morris away-from-reactor storage, reprocessed West Valley material, Fort St. Vrain HTGR, and TMI-2 debris are outside this LWR Group A campus total.
+
+## Why the count keeps rising until something opens
+
+Every additional permanent shutdown without an offtake path adds a Group A site or thickens an existing pad. Operating fleets still hold the majority of US commercial SNF in pools and at-reactor ISFSIs, but the **shutdown-site share** is the politically sharp edge: neighbors see the plant disappear while the fuel remains, often under a thinner local tax base and a promise of temporary storage that has already lasted a generation.
+
+Until a geologic repository or an actually receiving consolidated interim storage facility opens, the honest headline stays simple. **Twenty** all-shutdown campuses still host on the order of **12,310 MTU**. **Eighteen** of them are already dry-only. **Six** classic ISFSI-only LWR licenses still babysit roughly **1,729 MTU** of the oldest stranded commercial fuel — with nowhere federal to send it.
+
+## Sources and method
+
+Site masses, cask counts, and Group A / A1 / A2 labels come from PNNL-33938 Rev. 1.1 Tables 2.1, 2.5, 2.7, and 2.8. ISFSI Only license labels follow EIA’s U.S. Nuclear Reactor Shutdown List. Decommissioning context is cross-checked against the NRC power-reactor decommissioning finder. Repository-path framing draws on GAO’s commercial spent-fuel management findings. Multi-unit campuses are collapsed to one site row (Indian Point, San Onofre, Zion). Years stranded measure last-unit shutdown through the end-2022 inventory date.`,
+  },
+  {
     id: "kidney-wait-time-versus-dsa-transplant-rates-2026",
     slug: "kidney-wait-time-versus-dsa-transplant-rates-2026",
     title:
