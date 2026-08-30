@@ -4796,6 +4796,23 @@ const HudPointInTimeShelteredVersusUnshelteredCounts2026Dashboard = dynamic(
   },
 );
 
+const UndergraduateEnrollmentVersusHighSchoolGraduateCohorts2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UndergraduateEnrollmentVersusHighSchoolGraduateCohorts2026Dashboard"
+    ).then(
+      (m) => m.UndergraduateEnrollmentVersusHighSchoolGraduateCohorts2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6051,6 +6068,10 @@ export function PostVisualization({
 
   if (type === "hud-point-in-time-sheltered-versus-unsheltered-counts-2026") {
     return <HudPointInTimeShelteredVersusUnshelteredCounts2026Dashboard />;
+  }
+
+  if (type === "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026") {
+    return <UndergraduateEnrollmentVersusHighSchoolGraduateCohorts2026Dashboard />;
   }
 
   return null;

@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026",
+    marker: "Undergrad headcount vs HS graduate cohort",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "hud-point-in-time-sheltered-versus-unsheltered-counts-2026",
     marker: "Sheltered vs unsheltered stack",
     forbidden: "Loading interactive charts",

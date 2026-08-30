@@ -2,6 +2,98 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026",
+    slug: "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026",
+    title:
+      "−14.8% vs −5.5%: Undergrad Headcount Versus HS Graduate Cohorts",
+    excerpt:
+      "NCES fall undergraduate enrollment fell from 18.1 million in 2010 to 15.4 million in 2022 while recent high-school completer cohorts stayed near 3.0–3.2 million — the enrollment gap is mostly intensity, not a vanishing graduating class.",
+    category: "Economics",
+    themeId: "college-enrollment-nces",
+    imageUrl:
+      "/images/economics-undergraduate-enrollment-versus-high-school-graduate-cohorts-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual-ribbon graphic with descending teal undergraduate enrollment curve versus a flat amber high-school graduate cohort ribbon, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-30T18:00:00Z",
+    featured: true,
+    visualization:
+      "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026",
+    layout: "default",
+    format: "data-story",
+    keyPoints: [
+      "Fall undergrad headcount: 18.08M (2010) → 15.40M (2022), −14.8% from the peak",
+      "CPS recent HS completers: 3.16M (2010) → 2.99M (2022), only −5.5%; 3.22M by 2024",
+      "Undergrads per completer: 5.72 → 5.15 — a ~10% compression of intensity",
+      "Almost all of the lost headcount sits in 2-year institutions (−39%); 4-year rose +3%",
+    ],
+    content: `Two series, not one story. The National Center for Education Statistics publishes fall undergraduate enrollment in degree-granting postsecondary institutions through the IPEDS Fall Enrollment component (Digest table 303.70). Separately, the October Current Population Survey counts recent high-school completers ages 16 to 24 and the share enrolled in college by that October (Digest table 302.10). Pair them and the post-2010 campus story stops looking like a simple “fewer graduates.” From **2010 to 2022**, undergrad headcount fell **14.8%** while the completer cohort fell only **5.5%**. The ratio of undergrads to same-year completers compressed from **5.72** to **5.15**.
+
+The interactive dashboard above keeps that pairing open. **Dual track** indexes both series (toggle **2010 = 100** or **2019 = 100**). **Ratio** plots undergrads per completer. **2yr vs 4yr** shows where the headcount left. **Immediate rate** splits October enrollment of recent completers into 2-year and 4-year paths. **Gap** contrasts the 2010 peak, a 2022 counterfactual that holds the 2010 ratio, and the observed 2022 stock. **Scatter** places each year in completer-index × undergrad-index space.
+
+## Peak headcount, softer pipelines
+
+Fall 2010 remains the modern high-water mark for undergraduate enrollment: **18.08 million** students. By fall 2022 — the latest actual IPEDS cut used here — the stock was **15.40 million**, a loss of **2.69 million** seats, or **14.8%**. That decline was not a one-year pandemic shock. Enrollment drifted lower through the 2010s, then stepped down again in **2020–21**. The pandemic years account for a large slice of the cumulative drop from peak, but they sit on top of a decade-long slide rather than inventing it.
+
+High-school completer counts tell a quieter story. CPS estimates put recent completers at **3.16 million** in 2010 and **2.99 million** in 2022 (−5.5%). Completer prints bounce with sampling noise — 2012 printed **3.20 million**, 2021 printed a soft **2.73 million**, and **2024** rebounded to **3.22 million**. The important qualitative point is stability near **three million**, not a collapse that could mechanically explain a **2.7 million** undergrad drawdown on its own.
+
+## The intensity meter: undergrads per completer
+
+Dividing fall undergrad headcount by that year’s completer count is a rough **intensity** meter. It is not a yield rate for a single graduating class: undergrad stock includes continuing students, adult learners, international students, and multi-year spells. It does ask a useful desk question — how many undergrads does the system carry per recent completer?
+
+| Year | Undergrad (M) | HS completers (K) | Ratio | Immediate college % |
+| --- | ---: | ---: | ---: | ---: |
+| 2010 | 18.08 | 3,160 | 5.72 | 68.1 |
+| 2015 | 17.05 | 2,965 | 5.75 | 69.2 |
+| 2019 | 16.56 | 3,178 | 5.21 | 66.2 |
+| 2020 | 15.88 | 3,118 | 5.09 | 62.7 |
+| 2021 | 15.45 | 2,731 | 5.66 | 61.8 |
+| 2022 | 15.40 | 2,987 | 5.15 | 62.0 |
+
+From **2010 to 2022** the ratio fell about **10%**. Hold the **2010** ratio against the **2022** completer count and the implied undergrad stock is about **17.1 million**. Observed enrollment was **15.4 million** — a gap near **1.7 million** students relative to that simple counterfactual. Cohort shrinkage explains part of the undergrad decline; the larger remainder is weaker attachment of enrollment to each completer cohort.
+
+## Immediate enrollment softened — mostly at 2-year colleges
+
+CPS immediate college enrollment — the share of recent completers enrolled in a 2- or 4-year institution by October — peaked near **70%** in **2009** and printed **68.1%** in **2010**. By **2022** it was **62.0%**; **2024** recovered only to **62.8%**. The composition shift inside that total is sharper than the headline.
+
+In **2010**, **26.7%** of recent completers were at 2-year colleges and **41.4%** at 4-year institutions. By **2022**, the 2-year immediate rate had fallen to **16.9%** while the 4-year rate rose to **45.1%**. In **2024** the 2-year rate bounced to **20.7%** and the 4-year rate eased to **42.1%**, but the decade-scale pattern remains: **community-college immediate enrollment absorbed most of the rate loss**. That matches the IPEDS level split below.
+
+## Almost all of the lost headcount is 2-year
+
+IPEDS undergrad enrollment by institution level makes the stock story concrete. **2-year** undergrad enrollment fell from **7.68 million** in 2010 to **4.66 million** in 2022 — a **39%** decline. **4-year** undergrad enrollment rose from **10.40 million** to **10.74 million** (+**3.3%**). The national undergrad drawdown is, to a first approximation, a community-college and 2-year-sector story, not a uniform retreat from bachelor’s campuses.
+
+That matters for interpretation. A desk that reads “college enrollment is down 15%” as “selective 4-year demand collapsed” misplaces the geography of the loss. Four-year stocks held or edged up even as total headcount fell. Two-year stocks shed millions of students — the same sector where immediate enrollment rates among recent completers fell hardest.
+
+## Why cohorts alone do not close the gap
+
+Three mechanisms sit between a stable graduating class and a thinner undergrad stock.
+
+**First, participation intensity.** Lower immediate enrollment rates, especially into 2-year colleges, mean fewer completers enter the stock each autumn. Even a flat completer count produces a smaller inflow if the October take-up rate falls five to six percentage points.
+
+**Second, continuing-student dynamics.** Undergrad headcount is a stock. Retention, stop-out, and time-to-degree change how many prior cohorts remain enrolled. A weaker inflow compounds if continuing enrollment also softens.
+
+**Third, composition beyond recent high-school completers.** Adult learners, international undergraduates, and nontraditional pathways are inside IPEDS totals but outside the CPS “recent completer” frame. For-profit and 2-year private segments also reshaped during the 2010s. The ratio compression is therefore a system-wide intensity signal, not a pure high-school-to-college conversion rate.
+
+A useful arithmetic check: if completers had fallen **14.8%** like undergrad headcount, the 2022 completer print would be near **2.69 million**. Actual 2022 completers were **2.99 million**. The cohort did not shrink enough to carry the enrollment decline by itself.
+
+## Caveats and concept bridges
+
+**Completers ≠ public diploma graduates alone.** Table 302.10 counts ages 16–24 who completed high school or an equivalency credential. Public high-school diploma graduates (Digest graduation tables) are a related but narrower series. Treat CPS completers as the cohort companion NCES pairs with immediate enrollment rates.
+
+**Ratio ≠ single-cohort yield.** Dividing a multi-year undergrad stock by one year’s completers produces an intensity index, not the share of that class that eventually enrolls. Use the immediate enrollment rate for the October take-up question.
+
+**IPEDS actuals stop at fall 2022 in this cut.** Digest table 303.70 prints later years as projections. This post does not treat those projected undergrad levels as observed headcount. Completer and immediate-rate series extend through **2024** from Digest 2025 table 302.10.
+
+**Sampling error on CPS.** Completer counts and enrollment rates carry standard errors. Year-to-year jumps (for example 2021’s soft completer print) can reflect noise as well as real demography. Multi-year slopes are the more reliable read.
+
+**Degree-granting perimeter.** IPEDS figures cover degree-granting institutions participating in Title IV aid. Changes in institutional coverage and sector classification over decades can affect long comparisons; the 2010–2022 window used here is the clean post-recession peak-to-trough span.
+
+## What to watch next
+
+Three prints will decide whether the intensity gap narrows. First, whether fall undergrad headcount in subsequent IPEDS actuals climbs back toward the mid-16 millions or stalls near **15.4–16 million**. Second, whether the immediate 2-year enrollment rate sustains its **2024** bounce above **20%** or reverts toward the **2022–23** lows near **16%**. Third, whether completer cohorts stay near **3.2 million** as the smaller birth cohorts of the late 2000s move through high school — a demographic headwind that would make intensity, not cohort size, even more decisive for total enrollment.
+
+Until those prints move, the headline remains a dual meter: **undergraduate headcount down nearly 15% from the 2010 peak** against **high-school completer cohorts that barely shrank**. The graduating class did not disappear. The system’s undergrad intensity did.`,
+  },
+  {
     id: "hud-point-in-time-sheltered-versus-unsheltered-counts-2026",
     slug: "hud-point-in-time-sheltered-versus-unsheltered-counts-2026",
     title:

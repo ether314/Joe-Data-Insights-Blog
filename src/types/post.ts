@@ -347,7 +347,8 @@ export interface Post {
     | "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026"
     | "fema-major-disaster-declarations-versus-public-assistance-dollars-2026"
     | "north-america-battery-recycling-capacity-versus-ev-sales-2026"
-    | "hud-point-in-time-sheltered-versus-unsheltered-counts-2026";
+    | "hud-point-in-time-sheltered-versus-unsheltered-counts-2026"
+    | "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];
