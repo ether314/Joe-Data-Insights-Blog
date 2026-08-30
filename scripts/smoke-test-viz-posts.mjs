@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026",
+    marker: "Heat deaths vs CONUS hot-summer footprint",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "federal-student-loan-balances-versus-borrowers-in-repayment-2026",
     marker: "39% of ED-managed dollars in repayment",
     forbidden: "Loading interactive charts",

@@ -343,7 +343,8 @@ export interface Post {
     | "food-at-home-cpi-versus-typical-worker-wages-2026"
     | "cbp-southwest-land-border-encounters-versus-prior-peaks-2026"
     | "homeownership-rate-under-thirty-five-versus-older-cohorts-2026"
-    | "federal-student-loan-balances-versus-borrowers-in-repayment-2026";
+    | "federal-student-loan-balances-versus-borrowers-in-repayment-2026"
+    | "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026",
+    slug: "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026",
+    title:
+      "2,325 Heat Deaths in 2023: CDC Mortality Versus Contiguous U.S. Extreme-Heat Footprint",
+    excerpt:
+      "CDC-coded heat deaths more than doubled from 1,069 in 1999 to 2,325 in 2023 as the share of Contiguous U.S. land with unusually hot summers widened. Post-2016 mean deaths (1,242) nearly double the earlier era (681).",
+    category: "Global Systems",
+    themeId: "heat-related-deaths-cdc",
+    imageUrl:
+      "/images/global-systems-cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic thumbnail with Contiguous U.S. heat silhouette and bold 2,325 heat-deaths callout in amber and rose, Visual Capitalist-style editorial art",
+    publishedAt: "2026-08-30T21:00:00Z",
+    featured: true,
+    visualization: "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026",
+    layout: "default",
+    content: `Death certificates and climate grids do not speak the same dialect, but they now point in the same direction. On the vital-statistics side, Howard and colleagues, writing in *JAMA* in August 2024, counted **2,325** U.S. deaths in **2023** with heat coded as an underlying or contributing cause — more than double the **1,069** recorded in **1999**. On the climate side, EPA’s Climate Indicators series (built from NOAA’s U.S. Climate Extremes Index) shows that a larger share of Contiguous U.S. land has been spending summer inside the historical upper tail of the temperature distribution, especially after the mid-2010s.
+
+The core question for this piece is deliberately narrow: **did U.S. heat-related mortality rise as Contiguous U.S. extreme summer heat became more geographically widespread?** The interactive dashboard above puts CDC-coded deaths beside the NOAA/EPA extreme-heat footprint, NWS Storm Data fatalities, five-year trailing means, and a pre-/post-2016 era comparison. The prose below walks the definitions, the dual trend, the joinpoint break, the agency gap, and the caveats that keep this from being a causal heat-wave epidemiology paper.
+
+## What “heat death” and “extreme heat” mean here
+
+CDC WONDER’s Multiple Cause of Death file is the mortality spine. Following Howard et al. and CDC MMWR QuickStats practice, a death counts when ICD-10 codes **P81 / P81.0** (environmental hyperthermia of newborn), **T67** (effects of heat and light), or **X30** (exposure to excessive natural heat) appear as underlying *or* contributing causes. Man-made heat (W92) is excluded. That definition is stricter than statistical “excess deaths during hot weeks” models — which often imply thousands of attributable deaths per year — and looser than counting only X30 as the single underlying cause.
+
+Extreme heat, for the national footprint series, is not a single station’s day count. EPA Figure 1 / NOAA CEI Steps **1b** and **2b** measure the **percent of Contiguous U.S. land area** that experienced unusually hot summer **daily highs** and **daily lows** — “unusual” meaning the historical top decile for that location’s summer months. That is adjacent to, not identical with, a literal nationwide average of “days above the 95th percentile.” It is the public, annually updated national series that answers “how much of the Lower 48 sat in the extreme upper tail this summer?” We pair it with NOAA Climate at a Glance Contiguous U.S. **June–August maximum-temperature anomalies** (°F versus 1901–2000) as an intensity companion.
+
+| Year | CDC heat deaths | NWS heat fatalities | Hot summer highs (% CONUS) | Hot summer nights (% CONUS) | JJA Tmax anomaly (°F) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1999 | 1,069 | 502 | 4.8 | 3.4 | +0.01 |
+| 2004 | 311 | 6 | 1.4 | 4.9 | −1.65 |
+| 2012 | 1,136* | 156 | 46.3 | 25.2 | +2.79 |
+| 2016 | 714* | 94 | 24.2 | 49.4 | +1.83 |
+| 2020 | 1,153 | 350 | 32.1 | 46.2 | +2.06 |
+| 2021 | 1,600 | 375 | 41.4 | 69.3 | +2.14 |
+| 2022 | 1,714 | 383 | 28.0 | 65.7 | +2.27 |
+| 2023 | 2,325 | 555 | 21.4 | 33.0 | +1.39 |
+
+\\*Estimated year in our annual module (rescaled to the JAMA 1999–2023 total of **21,518**); other table rows are disclosed anchors from JAMA, MMWR QuickStats, or USAFacts CDC citations. Full-year confidence flags live in the data file.
+
+## Two curves, one joinpoint
+
+From **1999 through 2015**, mean annual CDC-coded heat deaths in our assembled series sat near **681**, while the mean share of Contiguous U.S. land with unusually hot summer highs averaged about **16%**. From **2016 through 2023** — the joinpoint Howard et al. identified in age-adjusted rates — mean deaths rose to about **1,242**, and the mean hot-highs footprint to about **26%**. Hot summer **nights** jumped even harder: era means move from roughly **22%** of CONUS to about **46%**.
+
+That night-time widening matters clinically. Days that never cool below the historical upper tail leave less recovery time for cardiovascular and renal stress, especially for older adults, outdoor workers, and people without reliable air conditioning. The dashboard’s dual-axis view and five-year trailing means show mortality and night-time extremes rising together even in years when daytime hot-highs footprint alone is not at a record (2023 is the clearest recent example: **2,325** deaths on a **21%** hot-highs footprint but still elevated nights and a warm summer anomaly).
+
+Correlation across the full 1999–2023 window is positive but imperfect — Pearson **r ≈ 0.60** between hot-highs footprint and CDC deaths in our module. Heat mortality is also a function of who is exposed, where, for how long, and with what housing and occupational buffers. A national footprint percentage cannot see a Phoenix mobile-home park or a Midwest harvest crew.
+
+## Why 2023 is not just “another hot summer”
+
+**2023** is the disclosed peak: **2,325** CDC-coded heat deaths, a **117%** rise versus 1999’s **1,069**, with age-adjusted rates climbing from **0.38** to **0.62** per 100,000 person-years in the JAMA letter. NWS Storm Data logged **555** heat fatalities the same year — also a modern high on that operational ledger, but still only about **24%** of the CDC tally.
+
+The gap is structural, not a rounding error. Storm Data captures deaths that local Weather Forecast Offices attribute to heat in hazard reports. NVSS captures what certifiers write on death certificates, including contributing-cause heat codes that never appear in a storm narrative. When desks quote “heat deaths,” they need to say which ledger they mean. The dashboard’s CDC-versus-NWS panel makes that agency gap visible on selected high-impact years.
+
+## Footprint terciles and the scatter story
+
+Grouping years into terciles by hot-highs footprint produces a clean gradient: cooler-footprint years average lower CDC deaths; hottest-footprint years average higher. The scatter panel (hot-highs % versus deaths, bubble size scaled to hot-night footprint, rose markers for post-2016) shows the same pattern without forcing a single regression through every heat-wave spike.
+
+**2011–2012** and **2006** sit as classic dual-stress years — wide hot footprints and elevated deaths. **2004** sits at the opposite corner: disclosed **311** deaths, a **1.4%** hot-highs footprint, and a **−1.65°F** summer Tmax anomaly. **2021–2022** cluster in the high-death, high-footprint quadrant with especially large night-time extremes (**69%** and **66%** of CONUS with unusually hot summer lows).
+
+## What NWS warnings do — and do not — add
+
+National Weather Service Excessive Heat Warnings and Heat Advisories are the public’s operational alarm system. A 2022 *Bulletin of the American Meteorological Society* analysis found roughly **112,000** unique heat-alert zone-days across 2010–2019, with median locations seeing about **2.3** alert days per year and hotspots approaching **25**. Those products are not yet published as a single, stable, annual national count comparable to CEI or NVSS, and issuance criteria vary by Weather Forecast Office. For that reason this post uses CEI footprint + Climate at a Glance anomalies as the climate exposure spine and NWS **fatality** statistics as the operational mortality companion — not a warning-count time series that would imply false precision.
+
+## Caveats that should travel with every chart
+
+**Undercount.** Multiple-cause ICD coding still misses deaths where heat was a precipitating stressor but never written on the certificate. Excess-mortality studies typically imply a larger burden than the coded tally.
+
+**Mixed confidence on annual CDC levels.** Anchors for **1999, 2004, 2018, 2020–2023** are disclosed from JAMA, MMWR, or USAFacts CDC citations. Other years in our module are estimated from NWS fatalities and CEI hot-highs share, then rescaled so the 1999–2023 sum equals the JAMA total of **21,518**. Trend direction is robust; exact non-anchor year levels are not litigable digit-by-digit.
+
+**Definition drift.** MMWR QuickStats (through 2020) uses P81.0; Howard et al. cite P81. Totals differ slightly by code choice. We flag sources rather than pretending one query string rules them all.
+
+**CEI is area, not person-days.** A percent-of-land metric weights empty high plains the same as dense metros unless you overlay population. Hot nights have expanded faster than hot days in several recent summers — a population-weighted exposure series would likely look worse, not better.
+
+**Adaptation cuts both ways.** Air-conditioning penetration, cooling centers, occupational rules, and heat-health warning systems should *reduce* deaths per unit of heat. Rising coded deaths alongside a wider extreme footprint therefore suggests exposure and vulnerability are outrunning adaptation on the national ledger — not that adaptation is absent.
+
+**2024–2025 provisional.** Final NVSS multiple-cause files lag. Do not treat 2023 as a permanent ceiling.
+
+## Bottom line for desks
+
+Yes — on the national series that matter for a dual chart, **heat-related mortality and Contiguous U.S. extreme-heat footprint both stepped up after the mid-2010s**, with **2023** setting the coded-death high at **2,325**. The rise is clearer in age-adjusted rates and in era means than in any single year’s scatter point. NWS Storm Data confirms directionally higher operational heat fatalities but captures only a fraction of certificate-coded burden. Use CEI / Climate at a Glance for the climate axis, CDC WONDER for the mortality axis, and keep the agency gap in the footnote.
+
+**Primary sources:** [CDC WONDER Multiple Cause of Death](https://wonder.cdc.gov/mcd.html); [Howard et al., JAMA 2024](https://jamanetwork.com/journals/jama/fullarticle/2822854); [CDC MMWR QuickStats](https://www.cdc.gov/mmwr/volumes/71/wr/mm7134a5.htm); [EPA High and Low Temperatures indicator](https://www.epa.gov/climate-indicators/climate-change-indicators-high-and-low-temperatures); [NOAA CEI](https://www.ncei.noaa.gov/access/monitoring/cei/); [NOAA Climate at a Glance](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/); [NWS hazard statistics](https://www.weather.gov/hazstat/).`,
+    tags: [
+      "heat mortality",
+      "CDC WONDER",
+      "NOAA CEI",
+      "extreme heat",
+      "climate health",
+    ],
+    format: "data-story",
+    keyPoints: [
+      "CDC-coded heat deaths rose from 1,069 (1999) to 2,325 (2023), a 117% increase",
+      "Post-2016 mean annual deaths (~1,242) nearly double the 1999–2015 mean (~681)",
+      "Mean CONUS area with unusually hot summer highs rose from ~16% to ~26% across those eras",
+      "Hot summer nights widened faster than hot daytime highs in several recent years",
+      "NWS Storm Data fatalities track directionally but remain far below CDC multiple-cause counts",
+    ],
+  },
+  {
     id: "federal-student-loan-balances-versus-borrowers-in-repayment-2026",
     slug: "federal-student-loan-balances-versus-borrowers-in-repayment-2026",
     title:
