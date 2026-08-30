@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "homeownership-rate-under-thirty-five-versus-older-cohorts-2026",
+    marker: "Age ladder snapshot",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "cbp-southwest-land-border-encounters-versus-prior-peaks-2026",
     marker: "Monthly SW border encounters vs prior peak",
     forbidden: "Loading interactive charts",

@@ -341,7 +341,8 @@ export interface Post {
     | "credit-card-90-day-delinquency-versus-revolving-balances-2026"
     | "median-age-at-first-marriage-versus-never-married-share-2026"
     | "food-at-home-cpi-versus-typical-worker-wages-2026"
-    | "cbp-southwest-land-border-encounters-versus-prior-peaks-2026";
+    | "cbp-southwest-land-border-encounters-versus-prior-peaks-2026"
+    | "homeownership-rate-under-thirty-five-versus-older-cohorts-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

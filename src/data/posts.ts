@@ -2,6 +2,97 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "homeownership-rate-under-thirty-five-versus-older-cohorts-2026",
+    slug: "homeownership-rate-under-thirty-five-versus-older-cohorts-2026",
+    title:
+      "43.4 Points: Homeownership Under 35 Versus Householders 65+",
+    excerpt:
+      "Census CPS/HVS puts the under-35 homeownership rate at 35.2% in 2026 Q2 against 78.6% for householders 65 and older — a 43.4-point gap that is 1.8 points wider than the same quarter in 2019.",
+    category: "Real Estate",
+    themeId: "homeownership-by-age-census",
+    imageUrl:
+      "/images/real-estate-homeownership-rate-under-thirty-five-versus-older-cohorts-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic graphic contrasting a low teal under-35 housing silhouette with a taller amber 65+ house and a bold 43.4 pp ownership gap callout",
+    publishedAt: "2026-08-30T21:00:00Z",
+    featured: true,
+    visualization: "homeownership-rate-under-thirty-five-versus-older-cohorts-2026",
+    layout: "default",
+    content: `## The age ladder still defines who owns
+
+The Census Bureau's Current Population Survey / Housing Vacancy Survey (CPS/HVS) remains the cleanest high-frequency read on who owns the homes Americans occupy. In the second quarter of 2026, the national homeownership rate sat at **65.0%**. That headline hides a steep age ladder: householders under 35 owned at **35.2%**, while householders 65 and older owned at **78.6%**. The gap between those bookends is **43.4 percentage points**.
+
+That shape is not new. Ownership has risen with age for decades because down payments, credit depth, dual incomes, and household formation accumulate over time. What matters for the 2019-2026 window is whether the ladder steepened again after the pandemic spike. On a matched second-quarter basis, the under-35 rate fell **1.2 points** from 36.4% in 2019 Q2 to 35.2% in 2026 Q2, while the 65+ rate rose **0.6 points** from 78.0% to 78.6%. The gap therefore widened by **1.8 points**.
+
+The dashboard above walks the age ladder, the dual cohort path, the long gap series, the pairing of FHFA house prices with young ownership, an ACS cross-check, and estimated regional gaps. The prose below answers the core question with the published Census quarters and the caveats that keep a survey rate from being a personal timeline.
+
+## How large is the under-35 versus 65+ gap?
+
+| Year (annual avg) | Under 35 | 35-44 | 45-54 | 55-64 | 65+ | Gap (65+ minus under 35) |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 2015 | 35.0 | 58.5 | 70.0 | 75.4 | 78.9 | 43.9 |
+| 2019 | 36.7 | 60.1 | 70.1 | 75.2 | 78.6 | 41.9 |
+| 2020 | 39.2 | 62.7 | 71.1 | 76.5 | 80.0 | 40.9 |
+| 2022 | 39.0 | 62.2 | 70.5 | 75.1 | 79.1 | 40.1 |
+| 2024 | 37.1 | 61.8 | 70.7 | 76.1 | 79.0 | 41.9 |
+| 2025 | 37.1 | 60.8 | 69.8 | 75.9 | 78.6 | 41.5 |
+| 2026 H1 | 36.0 | 61.0 | 69.5 | 75.4 | 78.5 | 42.5 |
+
+Annual averages smooth quarter noise. They show the gap compressed during 2020-2022, when pandemic-era demand and low mortgage rates briefly lifted younger ownership, then re-opened as rates and prices reset. By 2024 the annual gap was back to the 2019 level (about 41.9 points); the 2026 first-half average sits wider still at **42.5 points**, and the latest quarter print is **43.4**.
+
+Middle rungs matter for interpretation. Householders ages 35-44 own near **61%** — almost twice the under-35 rate — while ages 55-64 sit in the mid-70s. The biggest cliff remains the jump into the mid-30s, which is exactly where first-time purchase conditions, student-debt amortization, and dual-earner household formation usually kick hardest. The 45-54 band, historically a high-ownership decade, has been flatter than the senior peak since the mid-2010s, but it still sits more than **30 points** above the under-35 rate.
+
+## Did the gap widen since 2019?
+
+Yes — on the comparison that matches the press-release cadence. **2019 Q2 to 2026 Q2** is the cleanest like-for-like: gap **41.6 to 43.4 pp** (+1.8). Using full-year averages, 2019's **41.87** versus 2025's **41.52** looks flat-to-slightly-narrower, but that comparison underweights the soft 2026 under-35 print and the fact that 65+ rates barely moved off the high-70s band.
+
+The composition of the widening is asymmetric. Nearly all of the Q2 gap increase comes from younger householders losing ownership share, not from seniors suddenly owning far more. Seniors were already near the ceiling of the modern series; under-35 ownership is the moving piece. The 2020 Q2 spike — under-35 ownership briefly at **40.6%** — remains the outlier that compressed the gap to the low-40s before the unwind.
+
+Quarterly paths since 2019 also show a late soft patch: after recovering into the high-30s through 2022-23, under-35 ownership drifted to **36.3%** by 2024 Q4 and then to **35.2%** in 2026 Q2. That is below the 2019 Q2 starting point and close to the mid-2010s trough zone when viewed on a second-quarter basis.
+
+## Prices rose while young ownership slipped
+
+The Federal Housing Finance Agency purchase-only House Price Index (seasonally adjusted) is roughly **65%** above its 2019 level by early 2026. Mortgage rates that spent years near 3% now clear far higher. Those two forces raise the cash and income hurdles for first-time buyers more than for older owners who locked cheap debt, bought decades earlier, or already hold substantial equity.
+
+A scatter of cumulative FHFA gains versus the under-35 rate since 2019 shows the uncomfortable pairing: as the price index climbed, young ownership faded from the 2020-22 bounce. Correlation is not a full causal model — household formation timing, student debt, delayed marriage, and metro mix also matter — but the timing matches an affordability squeeze concentrated at the bottom of the age ladder. Senior ownership, by contrast, barely budged while the same price index rose, which is consistent with a stock of owners who are not shopping at today's entry prices.
+
+## ACS agrees on the shape, not every decimal
+
+The American Community Survey's tenure-by-age tables (B25007-style composites) are annual and methodologically different from CPS/HVS, yet they tell the same story: under-35 ownership in the mid-to-high 30s, 65+ ownership near the high 70s, and a gap around **40-43 points**. ACS and HVS gaps track within a few points across 2019-2023. That cross-check reduces the risk that the HVS quarterly path is only a sampling artifact.
+
+ACS is better for state and metro detail; HVS is better for timely national age cuts. Using both keeps the narrative honest: the ownership gap by age is a Census-consistent fact, not a single-survey quirk. Where ACS and HVS differ by a point or two, treat the gap's **order of magnitude** as disclosed and the exact decimal as survey-sensitive.
+
+## Regions stretch the same ladder
+
+Published HVS regional homeownership rates are highest in the Midwest and South and lowest in the Northeast and West. Age detail by region is thinner in the public quarterly packet, so regional under-35 / 65+ cuts in the dashboard are estimated and tagged accordingly. Even so, the pattern is consistent: coastal and Western young householders sit furthest from senior ownership rates, while the Midwest keeps a higher under-35 floor. The national gap is not a single-coast story, but geography amplifies it — especially where entry prices and insurance costs raise the cash hurdle for first buyers.
+
+## What the long series still says
+
+Back to 1994, second-quarter under-35 ownership peaked near the mid-40s in the mid-2000s housing boom, then collapsed through the foreclosure crisis to the mid-30s by 2015-16. The 65+ series stayed high — often **78-81%** — so the gap's modern peak near **44.5 points** in 2012 was a young-owner crash as much as a senior boom. Today's 43.4-point Q2 reading is not the all-time widest in the Table 19 window, but it is back in the upper range of the post-crisis era and wider than 2019.
+
+The boom-bust memory matters for policy narratives. A temporary pandemic lift in young ownership looked like a catch-up; the subsequent fade looks more like a return to the post-2012 regime in which senior ownership is sticky and under-35 ownership is the shock absorber for prices and rates.
+
+## Caveats and reading rules
+
+CPS/HVS rates are survey estimates with published margins of error; small quarter-to-quarter moves can be noise. Inventory controls and population controls are periodically revised, which can shift levels slightly without changing the age ordering. The homeownership rate is owner-occupied households divided by occupied households — it is not the share of adults who own, and it is sensitive to who is counted as a householder. Young adults living with parents are not householders, so the under-35 rate describes young *householders*, not all young adults.
+
+Annual ACS figures are not identical to HVS. Regional age cuts in this piece are estimated where Census does not publish a full quarterly age-by-region grid. FHFA HPI measures repeat-sales prices for financed purchases, not the full cost of becoming an owner (taxes, insurance, down-payment norms, and local supply rules). None of these series alone prove that any individual cohort is permanently locked out; they do show that the national age gap remains wide and, on the Q2 comparison, wider than in 2019.
+
+## Bottom line
+
+As of **2026 Q2**, Census puts under-35 homeownership at **35.2%** and 65+ homeownership at **78.6%**. The **43.4-point** gap is **1.8 points** wider than in **2019 Q2**, driven mainly by younger householders falling back while senior ownership holds near the modern ceiling. Prices are far above 2019; the age ladder did not flatten with them.
+`,
+    tags: ["homeownership", "census", "housing", "age cohorts", "HVS"],
+    format: "data-story",
+    keyPoints: [
+      "2026 Q2 under-35 ownership 35.2% vs 65+ at 78.6% — gap 43.4 pp",
+      "Gap widened 1.8 pp versus 2019 Q2 (41.6 → 43.4)",
+      "Under-35 rate down 1.2 pp since 2019 Q2; 65+ up 0.6 pp",
+      "FHFA purchase-only HPI ~65% above 2019 levels",
+      "ACS tenure-by-age composites confirm a ~40–43 pp gap",
+    ],
+  },
+  {
     id: "cbp-southwest-land-border-encounters-versus-prior-peaks-2026",
     slug: "cbp-southwest-land-border-encounters-versus-prior-peaks-2026",
     title:
