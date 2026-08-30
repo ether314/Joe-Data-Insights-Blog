@@ -4744,6 +4744,24 @@ const CdcHeatRelatedDeathsVersusNoaaExtremeHeatDays2026Dashboard = dynamic(
   },
 );
 
+const FemaMajorDisasterDeclarationsVersusPublicAssistanceDollars2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FemaMajorDisasterDeclarationsVersusPublicAssistanceDollars2026Dashboard"
+    ).then(
+      (m) =>
+        m.FemaMajorDisasterDeclarationsVersusPublicAssistanceDollars2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5987,6 +6005,10 @@ export function PostVisualization({
 
   if (type === "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026") {
     return <CdcHeatRelatedDeathsVersusNoaaExtremeHeatDays2026Dashboard />;
+  }
+
+  if (type === "fema-major-disaster-declarations-versus-public-assistance-dollars-2026") {
+    return <FemaMajorDisasterDeclarationsVersusPublicAssistanceDollars2026Dashboard />;
   }
 
   return null;

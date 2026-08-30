@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "fema-major-disaster-declarations-versus-public-assistance-dollars-2026",
+    marker: "Declarations vs PA dollars by fiscal year",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026",
     marker: "Heat deaths vs CONUS hot-summer footprint",
     forbidden: "Loading interactive charts",

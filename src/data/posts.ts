@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "fema-major-disaster-declarations-versus-public-assistance-dollars-2026",
+    slug: "fema-major-disaster-declarations-versus-public-assistance-dollars-2026",
+    title:
+      "88 Declarations, Not 88 Equal Bills: FEMA Major Disasters vs Public Assistance Dollars",
+    excerpt:
+      "Unique FEMA major disaster declarations roughly doubled from FY2015 to a FY2024 peak of 88 — but federal Public Assistance dollars did not climb with them. Two declaration years (FY2017 hurricanes at $66B and FY2020 COVID PA at $105B) dominate the decade’s obligations.",
+    category: "Politics",
+    themeId: "fema-disaster-declarations",
+    imageUrl:
+      "/images/politics-fema-major-disaster-declarations-versus-public-assistance-dollars-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual-series graphic with teal stepped declaration bars and amber spike line for Public Assistance dollars, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-30T20:00:00Z",
+    featured: true,
+    visualization: "fema-major-disaster-declarations-versus-public-assistance-dollars-2026",
+    layout: "default",
+    content: `Every Stafford Act major disaster declaration is a binary political and administrative event: the President signs, FEMA opens the programs authorized in the declaration, and counties appear on a map. Dollars are not binary. Federal Public Assistance (PA) obligations arrive through project worksheets that can take months or years to estimate, approve, and fund — and a handful of mega-disasters can outweigh dozens of routine severe-storm declarations.
+
+That is the core finding from an OpenFEMA pull on **2026-08-30**. Counting **unique** disasterNumber values with declarationType = DR by federal fiscal year, major disaster declarations rose from **44** in FY2015 to a window peak of **88** in FY2024. Summing federalObligatedAmount from Public Assistance Funded Projects Summaries by the **declaration** fiscal year of each disaster, PA dollars do **not** follow that climb. They spike: about **$66 billion** for FY2017 declarations (Harvey, Irma, Maria and peers) and about **$105 billion** for FY2020 declarations — of which roughly **$98 billion** is Biological (COVID-19) Public Assistance. Strip those two years and the rest of the decade mostly sits in the low-to-mid single-digit billions.
+
+The interactive dashboard above pairs unique DR counts with PA dollars, lets you exclude Biological events, stacks incident types, maps where the decade's PA concentrated, and shows how two fiscal years capture most of the obligated total.
+
+## How we count declarations (and how not to)
+
+OpenFEMA's Disaster Declarations Summaries file is tempting to misuse. Each row is a **designated area** (typically a county or equivalent), not a unique presidential declaration. FY2024 alone has **1,214** county-level DR rows but only **88** unique disaster numbers. Using raw row counts would invent a phantom surge of "declarations."
+
+This desk counts **distinct disasterNumber** values where declarationType equals DR (major disaster), grouped by fyDeclared. Emergency (EM) and fire management (FM) declarations are excluded so the series matches the Stafford Act instrument that typically unlocks the broadest PA permanent-work authorities. Most unique DRs in the window also have paProgramDeclared = true; the few that do not still appear in the declaration count.
+
+Fiscal years matter. A late-September storm can land in a different FY than a calendar-year NOAA tally. We keep FEMA on federal FY and show NOAA's calendar-year billion-dollar disaster counts as a separate context series — not as a one-to-one match.
+
+## How we attribute Public Assistance dollars
+
+PA dollars come from OpenFEMA Public Assistance Funded Projects Summaries v1. For each applicant-level summary row we take federalObligatedAmount, map declarationDate into a federal fiscal year (October–September), and sum. That attributes money to the **year the disaster was declared**, not the year a particular obligation hit FEMA's books.
+
+Two consequences follow. First, large disasters keep accruing obligations for years; FY2017's **$66B** is the cumulative federal PA attributed to that declaration cohort as of the snapshot, not a single-year cash appropriation. Second, FY2024 and FY2025 are still settling — projects remain open, so those totals will rise. Treat the newest years as incomplete, not as evidence that disasters suddenly got cheap.
+
+We also compute a non-biological series by subtracting Biological incident dollars. That matters almost entirely in FY2020, when COVID PA swamped weather PA.
+
+## Did counts and dollars rise together?
+
+No. The dual-axis panel makes the divergence obvious.
+
+| Fiscal year | Unique major disasters (DR) | Weather/climate DRs | Federal PA ($B) | PA excluding Biological ($B) | PA $M per unique DR |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2015 | 44 | 44 | 1.02 | 1.02 | 23 |
+| 2016 | 41 | 41 | 2.37 | 2.37 | 58 |
+| 2017 | 60 | 60 | 66.24 | 66.24 | 1,104 |
+| 2018 | 55 | 55 | 2.74 | 2.74 | 50 |
+| 2019 | 68 | 68 | 7.01 | 7.01 | 103 |
+| 2020 | 100 | 43 | 105.07 | 7.06 | 1,051 |
+| 2021 | 59 | 57 | 8.25 | 8.25 | 140 |
+| 2022 | 52 | 52 | 6.84 | 6.84 | 132 |
+| 2023 | 68 | 68 | 3.43 | 3.43 | 50 |
+| 2024 | 88 | 88 | 7.82 | 7.82 | 89 |
+| 2025 | 61 | 61 | 3.93 | 3.93 | 64 |
+
+Declaration counts trend upward unevenly and peak in **FY2024** at **88**. PA dollars peak in **FY2020** and **FY2017**. FY2023 posted **68** unique major disasters — more than FY2017's **60** — yet carried only about **$3.4B** in attributed PA versus FY2017's **$66B**. Frequency and fiscal severity are different objects.
+
+The scatter view of the same years shows a tight cluster of ordinary years and two extreme outliers. Bubble size scales with dollars per declaration; the outliers are not "busy" years in the sense of many medium bills — they are years where a few events, or one program class, rewrote the total.
+
+## What FY2017 and FY2020 actually were
+
+FY2017's PA total is a hurricane story. OpenFEMA summaries attribute about **$64B** of that year's federal PA to Hurricane incident types — Puerto Rico and the U.S. Virgin Islands alone account for tens of billions across the decade's jurisdiction ranking. The declaration count that year (**60**) was elevated but not unprecedented; the dollars were.
+
+FY2020's declaration count (**100**) looks like a record until you split incident types: **57** of those unique DRs are Biological. Weather/climate major disasters that year number about **43** — closer to FY2015–FY2016 than to FY2024. Of **$105B** in attributed PA, about **$98B** is Biological. Toggle Biological off in the dashboard and FY2020 collapses to roughly **$7B**, near FY2019 and FY2021.
+
+Mixing COVID PA into a "climate disaster cost" narrative therefore manufactures a second climate spike that the weather series does not support. Keeping Biological visible is still useful for Stafford Act fiscal history — Congress and FEMA did route enormous PA through that channel — but it answers a different question than "are storms getting more expensive every year."
+
+## Incident mix: many storms, few dollar drivers
+
+Stacked unique-DR counts by OpenFEMA incidentType show that **severe storms** and **floods** supply most of the declaration volume in ordinary years. Hurricanes are fewer in count but dominate dollars when they arrive. FY2024's declaration peak is mostly severe storms (**39**) and floods (**21**), with tropical storms and hurricanes adding a smaller count share — yet hurricane and tropical-storm PA still lead that year's dollar mix (**$3.3B** and **$3.0B** respectively in the summary cut).
+
+NOAA's calendar-year billion-dollar disaster series (CPI-adjusted) reinforces the same fat-tail intuition from the insurance and loss side: **2017** remains an extreme cost year (~**$396B** in NOAA's all-disaster cost column), while event counts climb later (28 in 2023, 27 in 2024) without automatically matching 2017's damage print. FEMA PA is not NOAA's loss estimate — PA is a federal cost-share program for eligible public and certain nonprofit work — but both series warn against equating "more named events" with "proportionally more money."
+
+## Where the decade's PA concentrated
+
+Jurisdiction rankings for FY2015–FY2025 declaration cohorts put **Puerto Rico** (~**$39B**) and the **Virgin Islands** (~**$22B**) at the top on all-PA dollars, driven by the 2017 hurricane cohort. **California**, **New York**, and **Texas** also clear ~**$19–21B**, but a large share of those totals is Biological. Switch the dashboard to non-biological PA and the ranking reshuffles toward territories and Gulf/Atlantic hurricane states: Puerto Rico and the Virgin Islands stay on top; Florida and Louisiana rise relative to COVID-heavy northeastern and western states.
+
+That geography is a reminder that Stafford Act PA is not a uniform national insurance product. It follows presidential designations, eligible applicants, and project approval — and it can concentrate for a decade on a small set of catastrophic events.
+
+## Caveats and what this desk is not claiming
+
+**Incomplete recent years.** FY2024–FY2025 PA totals will rise as open projects obligate. Do not read a soft FY2025 print as proof that disasters became cheaper.
+
+**Declaration-year attribution is not cash-year spending.** A Maria-related obligation recorded in 2021 still sits in the FY2017 declaration bucket here. Budgeteers watching the Disaster Relief Fund by fiscal year of obligation will see a different path.
+
+**PA is not total federal disaster cost.** Individuals and Households Program, Hazard Mitigation Grant Program, NFIP claims, Small Business Administration disaster loans, and DRF outlays for other purposes are outside this cut. CBO and CRS DRF analyses cover a wider fiscal object.
+
+**Incident type labels are FEMA's.** Severe Storm versus Flood versus Tropical Storm can blur at the margins; we use OpenFEMA's fields as published.
+
+**Unique DR counts still compress severity.** Eighty-eight declarations can be eighty-eight modest events or a mix that includes one catastrophe. Dollars and incident mix are required to read the year.
+
+**NOAA alignment is contextual only.** Calendar years and federal fiscal years differ; NOAA costs are insured and uninsured loss estimates, not PA grants.
+
+## Bottom line for readers and desks
+
+Over FY2015–FY2025, FEMA **major disaster declaration counts** and **Public Assistance dollars** did not rise together. Counts climbed toward a FY2024 peak of **88** unique DRs. Dollars were dominated by **FY2017** hurricane recovery (~**$66B**) and **FY2020** COVID PA (~**$105B**, mostly Biological). In ordinary years, more declarations often mean more paperwork — not a proportional jump in federal PA. For policy debates that start from "disasters are happening more often, therefore the bill must be rising in lockstep," the OpenFEMA record says: check the tails before you trust the trend.`,
+  },
+  {
     id: "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026",
     slug: "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026",
     title:
