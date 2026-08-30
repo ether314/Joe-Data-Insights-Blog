@@ -337,7 +337,8 @@ export interface Post {
     | "motor-vehicle-insurance-cpi-versus-median-weekly-earnings-2026"
     | "airline-fares-cpi-versus-jet-fuel-prices-2026"
     | "us-pet-owning-households-versus-veterinary-cpi-2026"
-    | "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026";
+    | "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026"
+    | "credit-card-90-day-delinquency-versus-revolving-balances-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

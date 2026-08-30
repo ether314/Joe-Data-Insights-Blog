@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "credit-card-90-day-delinquency-versus-revolving-balances-2026",
+    marker: "Card 90+ vs revolving balances",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026",
     marker: "EV vs gasoline cents per mile",
     forbidden: "Loading interactive charts",

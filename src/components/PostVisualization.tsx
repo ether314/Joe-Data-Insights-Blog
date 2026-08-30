@@ -4629,6 +4629,23 @@ const EvElectricityCostPerMileVersusGasolineCostPerMile2026Dashboard = dynamic(
   },
 );
 
+const CreditCard90DayDelinquencyVersusRevolvingBalances2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/CreditCard90DayDelinquencyVersusRevolvingBalances2026Dashboard"
+    ).then(
+      (m) => m.CreditCard90DayDelinquencyVersusRevolvingBalances2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5844,6 +5861,10 @@ export function PostVisualization({
 
   if (type === "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026") {
     return <EvElectricityCostPerMileVersusGasolineCostPerMile2026Dashboard />;
+  }
+
+  if (type === "credit-card-90-day-delinquency-versus-revolving-balances-2026") {
+    return <CreditCard90DayDelinquencyVersusRevolvingBalances2026Dashboard />;
   }
 
   return null;

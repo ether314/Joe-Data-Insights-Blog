@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "credit-card-90-day-delinquency-versus-revolving-balances-2026",
+    slug: "credit-card-90-day-delinquency-versus-revolving-balances-2026",
+    title:
+      "6.97% vs $1.35T: Card 90+ Delinquency Versus Revolving Credit",
+    excerpt:
+      "NY Fed credit-card transitions into 90+ day delinquency sit near 7% while Fed G.19 revolving credit outstanding climbs to $1.35 trillion — stress stayed elevated even as the revolving stock kept expanding.",
+    category: "Consumer Finance",
+    themeId: "credit-card-delinquency-fed",
+    imageUrl:
+      "/images/consumer-finance-credit-card-90-day-delinquency-versus-revolving-balances-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual-meter graphic with amber 6.97% credit-card delinquency curve and teal $1.35T revolving credit stock ribbon, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-30T16:00:00Z",
+    featured: true,
+    visualization: "credit-card-90-day-delinquency-versus-revolving-balances-2026",
+    layout: "default",
+    format: "data-story",
+    keyPoints: [
+          "Card 90+ transition flow: 6.97% in 2026Q2 vs 5.32% in 2019Q4 and a 3.04% trough in 2022Q1",
+          "G.19 revolving outstanding: $1.351T in 2026Q2, up ~24% from 2019Q4 and ~42% from the 2021Q1 trough",
+          "Peak card stress printed 7.18% in 2024Q2; the latest print is still within 0.21 pp of that high",
+          "Cards lead the product ladder for serious-delinquency flow — well above auto (~3%) and mortgage (~1.5%)"
+    ],
+    content: `Two meters, not one. The New York Fed’s Consumer Credit Panel prints an annualized **flow into serious delinquency** — the share of credit-card balances that newly reach **90 or more days past due** in a quarter. The Federal Reserve’s G.19 release prints **revolving consumer credit outstanding**, the seasonally adjusted stock of revolving balances on lenders’ books. In **2026Q2**, those meters read **6.97%** and **$1.351 trillion**. The first number is near a post-pandemic high. The second is a new high for the modern G.19 revolving series. That pairing is the story: card stress did not fall back to its pre-pandemic lane while the revolving stock kept climbing.
+
+The interactive dashboard above holds the pairing open. Toggle **Stress vs stock** for a dual-axis read of the CCP card 90+ flow against G.19 revolving dollars. Switch to **Indexed gap** to rebase both series to **2019Q4 = 100** and watch the combined elevation. **Product ladder** puts cards beside auto, mortgage, HELOC, and other consumer debt on the same 90+ flow scale. **Balance scatter** plots each quarter as a point in stock–stress space, with bubble size from CCP card balances.
+
+## What “90+ flow” actually measures
+
+The NY Fed’s serious-delinquency transition is **not** the stock share of balances already 90+ days late. It is a **flow**: balances that have newly become at least 90 days late in the reference quarter, divided by balances that were current or less than 90 days past due in the previous quarter, then **annualized**. That definition matters for desks that confuse a transition rate with a backlog rate. A high flow can coexist with a rising or falling stock of seriously delinquent dollars, depending on cure, charge-off, and balance growth.
+
+For credit cards, the flow printed **5.32%** in **2019Q4**, collapsed to a trough of **3.04%** in **2022Q1** during the stimulus and forbearance window, then climbed through **2023–24** to a peak of **7.18%** in **2024Q2** (matched again in **2024Q4**). By **2026Q2** the print was **6.97%** — only **0.21 percentage points** below the peak, and still **1.65 pp** above the 2019Q4 baseline. The rebound from the trough is nearly **four percentage points**.
+
+The same workbook’s **stock** share of card balances already 90+ days delinquent sits near **13%** in the latest quarter. Stock and flow move together directionally, but they are not substitutes. Flow answers “how fast is new serious delinquency arriving?” Stock answers “how thick is the already-late pile?” This post stays with the flow meter the NY Fed headlines in its release tables.
+
+## Revolving stock did not wait for stress to cool
+
+G.19 revolving credit outstanding (FRED **REVOLSL**, seasonally adjusted) is a Board concept that covers revolving consumer credit owned and securitized — mostly credit cards, but not identical to the CCP’s Equifax card-balance perimeter. Treat it as the **stock companion**, not a one-for-one twin of CCP card dollars.
+
+Quarter-end prints tell a clear path. Revolving stood near **$1.09 trillion** in **2019Q4**, fell to about **$952 billion** in **2021Q1** as households paid down revolving lines, then climbed almost without interruption through the hiking cycle. By **2026Q2** the stock was **$1.351 trillion** — roughly **24%** above the pre-pandemic quarter and about **42%** above the trough. CCP card balances show the same shape in Equifax dollars: **$0.93 trillion** in 2019Q4, a pandemic dip, then **$1.26 trillion** by 2026Q2.
+
+The awkward fact for a “stress is healing” narrative is timing. Card 90+ flow peaked in **2024** and has since **leveled near 7%**, not retraced toward 5%. Revolving stock, meanwhile, kept printing new highs into **2026**. The system is carrying more revolving dollars at a still-elevated rate of new serious delinquency.
+
+| Checkpoint | Card 90+ flow | G.19 revolving | CCP cards |
+| --- | ---: | ---: | ---: |
+| 2019Q4 (pre-pandemic) | 5.32% | $1,092B | $0.93T |
+| 2021Q1 / 2022Q1 troughs | 3.04% (stress) | $952B (stock) | $0.77T |
+| 2024Q2 (stress peak) | 7.18% | $1,331B | $1.14T |
+| 2026Q2 (latest) | 6.97% | $1,351B | $1.26T |
+
+## Indexed: both series above the 2019 tape
+
+Rebasing to **2019Q4 = 100** makes the co-movement easier to see without dual axes. The revolving index sits near **124** in 2026Q2. The card 90+ index sits near **131**. Define **combined elevation** as the sum of those two excesses over 100: about **+55** index points. That is not a causal claim — it is a compact way to say “stock is thicker *and* new serious delinquency is hotter than the eve of the pandemic.”
+
+During the 2020–21 window the indexes diverged the other way: revolving fell and card transitions collapsed, so combined elevation went deeply negative. From **2022** onward both legs turned up. By late **2024** the stress index was already north of **130** while the stock index was still climbing through mid-**120s**. The ribbon panel in the dashboard is that arithmetic over time.
+
+## Cards still lead the product ladder
+
+Serious-delinquency flow is product-conditioned. In **2026Q2**, the NY Fed’s annualized 90+ transitions read roughly:
+
+- Credit cards: **6.97%**
+- Other consumer: **5.19%**
+- Auto loans: **3.00%**
+- Mortgage: **1.52%**
+- HELOC: **1.15%**
+
+Cards remain the clear leader for new serious delinquency among major consumer products (student loans are a separate reporting story after the pandemic pause and re-reporting, so they are not the clean comparator here). Auto sits in a middle band near **3%**. Mortgage and HELOC stay far lower on the flow meter even as their transitions have edged up from pandemic floors.
+
+That ladder matters for portfolio desks. A system can look “fine” on mortgage-weighted aggregates while revolving products still dominate the loss-arrival rate. G.19’s revolving stock is the dollar pile those card transitions act on.
+
+## How the path got here
+
+Three phases organize the 2018–2026 tape.
+
+**Phase 1 — Pre-pandemic baseline (2018–2019).** Card 90+ flow hovered in a **4.7–5.3%** band. Revolving stock drifted slowly higher around **$1.0–1.1 trillion**. Nothing in that window looks like either the stimulus trough or the 2024–26 plateau.
+
+**Phase 2 — Paydown and suppressed transitions (2020–2021).** Stimulus checks, forbearance, and a temporary cash buffer drove revolving balances down and cut the arrival rate of new 90+ card balances. The stress trough (**3.04%** in 2022Q1) and the stock trough (**$952B** in 2021Q1) are the clean low points in this cut.
+
+**Phase 3 — Releveraging with sticky stress (2022–2026).** As balances refilled and rates rose, card 90+ flow climbed through **2023** and peaked near **7.2%** in **2024**. Since then the flow has **leveled**, not collapsed. Revolving stock kept growing into **2026Q2**. The desk question is no longer “will stress rise from the trough?” — it already has. The live question is whether a ~**7%** transition rate can coexist with a still-rising revolving stock without forcing a sharper contraction in new credit or a faster charge-off cycle.
+
+## Caveats and concept bridges
+
+**CCP cards ≠ G.19 revolving.** The Equifax-based CCP card balance is a large share of revolving credit, but G.19 includes a broader revolving perimeter and uses a different consolidation of owned and securitized receivables. Directional co-movement is the claim; dollar identity is not.
+
+**Flow ≠ stock delinquency.** The 90+ transition rate annualizes *new* serious delinquency. The percent of balances already 90+ days late is a separate page in the NY Fed report (near **13%** for cards in the latest print). Do not paste a flow print into a stock model.
+
+**Annualization and seasonality.** Transition rates are annualized shares. G.19 levels here are seasonally adjusted quarter-ends. Short-horizon month-to-month noise in revolving can differ from the quarterly CCP cadence.
+
+**Student loans distort “ALL” aggregates.** Re-reporting of federal student loan delinquencies after the pandemic pause lifts some all-product averages. Product-level card and auto prints remain the cleaner stress read for this post.
+
+**Revisions.** G.19 and CCP vintages revise. The figures here follow the **August 2026** HHDC workbook and the **August 7, 2026** G.19 release (June 2026 data). Later prints can restate levels without changing the qualitative pairing.
+
+## What to watch next
+
+Three prints will decide whether this is a plateau or a turn. First, whether the card 90+ flow breaks meaningfully below **6.5%** or re-tests the **7.2%** peak. Second, whether G.19 revolving can keep printing above **$1.35 trillion** if charge-offs accelerate. Third, whether CCP card balances and G.19 revolving continue to climb in parallel, or whether the concept bridge widens as lenders tighten lines.
+
+Until those prints move, the headline remains a dual meter: **card serious-delinquency transitions near 7%** against a **revolving credit stock at $1.35 trillion**. Stress stayed elevated. The stock kept growing. That is the 2026Q2 read from the NY Fed panel and the Board’s G.19 release.`,
+  },
+  {
     id: "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026",
     slug: "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026",
     title:
