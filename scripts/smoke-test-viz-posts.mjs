@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "food-at-home-cpi-versus-typical-worker-wages-2026",
+    marker: "Food-at-home index vs wages",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "median-age-at-first-marriage-versus-never-married-share-2026",
     marker: "First-marriage age vs never-married share",
     forbidden: "Loading interactive charts",

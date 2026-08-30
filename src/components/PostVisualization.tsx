@@ -4663,6 +4663,21 @@ const MedianAgeAtFirstMarriageVersusNeverMarriedShare2026Dashboard = dynamic(
   },
 );
 
+const FoodAtHomeCpiVersusTypicalWorkerWages2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FoodAtHomeCpiVersusTypicalWorkerWages2026Dashboard"
+    ).then((m) => m.FoodAtHomeCpiVersusTypicalWorkerWages2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-64 items-center justify-center rounded-xl border border-slate-700/40 bg-slate-950 text-sm text-slate-400">
+        Loading interactive charts…
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5886,6 +5901,10 @@ export function PostVisualization({
 
   if (type === "median-age-at-first-marriage-versus-never-married-share-2026") {
     return <MedianAgeAtFirstMarriageVersusNeverMarriedShare2026Dashboard />;
+  }
+
+  if (type === "food-at-home-cpi-versus-typical-worker-wages-2026") {
+    return <FoodAtHomeCpiVersusTypicalWorkerWages2026Dashboard />;
   }
 
   return null;

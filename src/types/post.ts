@@ -339,7 +339,8 @@ export interface Post {
     | "us-pet-owning-households-versus-veterinary-cpi-2026"
     | "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026"
     | "credit-card-90-day-delinquency-versus-revolving-balances-2026"
-    | "median-age-at-first-marriage-versus-never-married-share-2026";
+    | "median-age-at-first-marriage-versus-never-married-share-2026"
+    | "food-at-home-cpi-versus-typical-worker-wages-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

@@ -5,704 +5,662 @@
  * long-distance trains is charged to host railroads versus Amtrak?
  *
  * Primary anchors: FRA Quarterly Report on the Performance and Service
- * Quality of Intercity Passenger Train Operations (FY24 Q3, FY25 Q1,
- * FY25 Q3 Figure 6 delay responsibility stacks; Customer OTP by service
- * line); Amtrak Host Railroad Report Card 2024; Amtrak monthly Host
- * Railroad Reports (route × host delay minutes per 10k train-miles);
- * Amtrak Office of Inspector General preference / OTP audits for
- * context. Host shares and route scatter values are desk calculations
- * from disclosed FRA stacks and published Amtrak host tables — not a
- * substitute for live FRA Excel metric files.
+ * Quality of Intercity Passenger Train Operations (FY2025 Q1 PDF);
+ * Amtrak Host Railroad Report Card 2024; Amtrak monthly host railroad
+ * reports / on-time performance route tables (CY2024). Host share and
+ * scatter correlations are desk calculations from disclosed minutes and
+ * customer OTP — not a new FRA index.
  */
 
-export type Confidence = "disclosed" | "derived" | "carried";
+export type Confidence = "disclosed" | "derived" | "estimated";
 
 export const SOURCE_NOTE =
-  "Service-line delay minutes per 10,000 train-miles by responsibility " +
-  "(Amtrak / host railroad / third party) follow FRA Quarterly Report " +
-  "Figure 6 stacks for FY 2024 Q3, FY 2025 Q1, and FY 2025 Q3. Customer " +
-  "OTP uses the FRA 15-minute (Acela 10-minute) customer standard from " +
-  "the same quarterly reports. Class I host grades and the 900 " +
-  "host-minutes ≈ 80% OTP rule of thumb are from Amtrak’s 2024 Host " +
-  "Railroad Report Card. Route-level host delay minutes per 10k " +
-  "train-miles are desk-compiled from Amtrak monthly Host Railroad " +
-  "Reports (Dec 2024 window where cited). Host-share percentages are " +
-  "desk ratios of host minutes ÷ (Amtrak + host + third-party) stacks. " +
+  "Delay minutes per 10,000 train-miles by responsibility (Amtrak, host, " +
+  "third party) and Class I host delay-code stacks follow FRA's FY2025 Q1 " +
+  "Performance and Service Quality Report (Oct–Dec 2024 window). Customer " +
+  "on-time performance (OTP) is the share of customers arriving within 15 " +
+  "minutes of schedule (10 minutes for Acela), per the Metrics and Minimum " +
+  "Standards rule. CY2024 route OTP and Class I host letter grades follow " +
+  "Amtrak's Host Railroad Report Card 2024 and public on-time performance " +
+  "tables. Amtrak states that ~900 host-responsible delay minutes per " +
+  "10,000 train-miles generally correlates with ~80% customer OTP. Host " +
+  "share percentages, service-line totals, and scatter ranks are desk " +
+  "derivations. NEC 'host' minutes include Amtrak-as-host territory. " +
   "Figures illustrate the public FRA/Amtrak pattern — not live dispatch.";
 
 export const SOURCES = [
   {
-    label: "FRA — Intercity passenger rail service quality & performance",
+    label: "FRA — Intercity passenger rail service quality reports",
     url: "https://railroads.dot.gov/rail-network-development/passenger-rail/amtrak/intercity-passenger-rail-service-quality-and",
   },
   {
-    label: "FRA — FY25 Q3 Performance and Service Quality Report (PDF)",
-    url: "https://railroads.dot.gov/sites/fra.dot.gov/files/2025-09/FY25-Q3-Performance-Service-Quality-Report_PDFa.pdf",
+    label: "FRA — FY2025 Q1 Performance and Service Quality Report (PDF)",
+    url: "https://railroads.dot.gov/sites/fra.dot.gov/files/2025-05/FY5%20Q1%20Performance%20and%20Service%20Quality%20Report_PDFa.pdf",
   },
   {
-    label: "Amtrak — 2024 Host Railroad Report Card",
+    label: "Amtrak — Host Railroad Report Card 2024 (PDF)",
     url: "https://www.amtrak.com/content/dam/projects/dotcom/english/public/documents/corporate/HostRailroadReports/Amtrak-2024-Host-Railroad-Report-Card.pdf",
   },
   {
-    label: "Amtrak — Freight delays & on-time performance",
+    label: "Amtrak — Freight delays and on-time performance",
     url: "https://www.amtrak.com/on-time-performance",
   },
   {
-    label: "Amtrak OIG — reports & audits (passenger preference / OTP)",
-    url: "https://amtrakog.gov/",
+    label: "Amtrak — December 2024 Host Railroad Report (PDF)",
+    url: "https://www.amtrak.com/content/dam/projects/dotcom/english/public/documents/corporate/HostRailroadReports/December-2024-Amtrak-Host-Railroad-Report.pdf",
+  },
+  {
+    label: "Amtrak OIG — Host railroad performance oversight",
+    url: "https://amtrakoig.gov/",
   },
 ] as const;
 
 export const VIZ_MARKERS = [
-  "Host share vs endpoint OTP",
-  "Responsibility stacked minutes",
-  "Class I host report-card ladder",
+  "Host vs Amtrak delay stack",
+  "Host minutes vs OTP scatter",
+  "Class I delay-cause mix",
+  "Route OTP slope board",
 ] as const;
 
-export const REFERENCE_QUARTER = "FY2025 Q3";
-export const OTP_STANDARD_PCT = 80;
-/** Amtrak rule of thumb: ~900 host-responsible min/10k ≈ 80% customer OTP */
-export const HOST_MINUTES_OTP80_THRESHOLD = 900;
+/** Amtrak benchmark: host delay minutes / 10k TM ≈ 80% customer OTP */
+export const HOST_DELAY_OTP_BENCHMARK = 900;
+
+export const HEADLINE = {
+  /** Long-distance host delay min / 10k TM, FRA FY25 Q1 */
+  ldHostDelayPer10k: 987,
+  /** Long-distance Amtrak (non-host) delay min / 10k TM */
+  ldAmtrakDelayPer10k: 454,
+  /** Long-distance third-party delay min / 10k TM */
+  ldThirdDelayPer10k: 418,
+  /** Host share of LD delay minutes (derived) */
+  ldHostSharePct: 53.1,
+  /** Long-distance customer OTP, FRA FY25 Q1 */
+  ldCustomerOtpPct: 58,
+  /** State-supported host delay min / 10k TM */
+  ssHostDelayPer10k: 918,
+  /** State-supported Amtrak delay min / 10k TM */
+  ssAmtrakDelayPer10k: 439,
+  /** State-supported third-party delay min / 10k TM */
+  ssThirdDelayPer10k: 324,
+  /** Host share of SS delay minutes (derived) */
+  ssHostSharePct: 54.6,
+  /** State-supported customer OTP, FRA FY25 Q1 (approx from report narrative) */
+  ssCustomerOtpPct: 78,
+  /** System customer OTP, FRA FY25 Q1 */
+  systemCustomerOtpPct: 72,
+  /** CY2024 long-distance routes meeting 80% OTP */
+  ldRoutesMeeting80: 0,
+  /** CY2024 long-distance routes scored */
+  ldRoutesScored: 14,
+  panelN: 14,
+} as const;
 
 export type ServiceLineId = "long-distance" | "state-supported" | "nec";
-export type ResponsibilityId = "amtrak" | "host" | "third-party";
-export type HostId = "cpkc" | "cn" | "ns" | "bnsf" | "csx" | "up";
+export type ResponsibilityId = "host" | "amtrak" | "third-party";
+export type HostId = "up" | "csx" | "bnsf" | "cn" | "ns" | "cpkc";
+export type DelayCodeId =
+  | "fti"
+  | "dsr"
+  | "dcs"
+  | "dmw"
+  | "pti"
+  | "rte"
+  | "other";
 
-export type ServiceLineStack = {
+export type ServiceLineRow = {
   id: ServiceLineId;
   label: string;
-  short: string;
-  quarter: string;
-  amtrakMin10k: number;
-  hostMin10k: number;
-  thirdPartyMin10k: number;
+  amtrakPer10k: number;
+  hostPer10k: number;
+  thirdPartyPer10k: number;
+  totalPer10k: number;
+  hostSharePct: number;
   customerOtpPct: number;
   confidence: Confidence;
 };
 
-/** FRA Figure 6 stacks + matching Customer OTP prints */
-export const SERVICE_LINE_STACKS: ServiceLineStack[] = [
+/**
+ * FRA FY2025 Q1 Figure 6 — delay minutes per 10k train-miles by
+ * responsibility and service line. OTP from Figure 3 / narrative.
+ * NEC host bucket includes Amtrak-as-host territory.
+ */
+export const SERVICE_LINES: ServiceLineRow[] = [
   {
     id: "long-distance",
     label: "Long Distance",
-    short: "LD",
-    quarter: "FY24 Q3",
-    amtrakMin10k: 446,
-    hostMin10k: 1092,
-    thirdPartyMin10k: 412,
-    customerOtpPct: 49,
-    confidence: "disclosed",
-  },
-  {
-    id: "state-supported",
-    label: "State Supported",
-    short: "SS",
-    quarter: "FY24 Q3",
-    amtrakMin10k: 413,
-    hostMin10k: 940,
-    thirdPartyMin10k: 365,
-    customerOtpPct: 77,
-    confidence: "disclosed",
-  },
-  {
-    id: "nec",
-    label: "Northeast Corridor",
-    short: "NEC",
-    quarter: "FY24 Q3",
-    amtrakMin10k: 435,
-    hostMin10k: 633,
-    thirdPartyMin10k: 456,
-    customerOtpPct: 74,
-    confidence: "disclosed",
-  },
-  {
-    id: "long-distance",
-    label: "Long Distance",
-    short: "LD",
-    quarter: "FY25 Q1",
-    amtrakMin10k: 454,
-    hostMin10k: 987,
-    thirdPartyMin10k: 418,
+    amtrakPer10k: 454,
+    hostPer10k: 987,
+    thirdPartyPer10k: 418,
+    totalPer10k: 1859,
+    hostSharePct: 53.1,
     customerOtpPct: 58,
     confidence: "disclosed",
   },
   {
     id: "state-supported",
     label: "State Supported",
-    short: "SS",
-    quarter: "FY25 Q1",
-    amtrakMin10k: 439,
-    hostMin10k: 918,
-    thirdPartyMin10k: 324,
-    customerOtpPct: 79,
-    confidence: "disclosed",
-  },
-  {
-    id: "nec",
-    label: "Northeast Corridor",
-    short: "NEC",
-    quarter: "FY25 Q1",
-    amtrakMin10k: 484,
-    hostMin10k: 564,
-    thirdPartyMin10k: 334,
-    customerOtpPct: 73,
-    confidence: "disclosed",
-  },
-  {
-    id: "long-distance",
-    label: "Long Distance",
-    short: "LD",
-    quarter: "FY25 Q3",
-    amtrakMin10k: 481,
-    hostMin10k: 1065,
-    thirdPartyMin10k: 430,
-    customerOtpPct: 49,
-    confidence: "disclosed",
-  },
-  {
-    id: "state-supported",
-    label: "State Supported",
-    short: "SS",
-    quarter: "FY25 Q3",
-    amtrakMin10k: 421,
-    hostMin10k: 951,
-    thirdPartyMin10k: 352,
+    amtrakPer10k: 439,
+    hostPer10k: 918,
+    thirdPartyPer10k: 324,
+    totalPer10k: 1681,
+    hostSharePct: 54.6,
     customerOtpPct: 78,
     confidence: "disclosed",
   },
   {
     id: "nec",
     label: "Northeast Corridor",
-    short: "NEC",
-    quarter: "FY25 Q3",
-    amtrakMin10k: 444,
-    hostMin10k: 676,
-    thirdPartyMin10k: 333,
-    customerOtpPct: 74,
+    amtrakPer10k: 484,
+    hostPer10k: 564,
+    thirdPartyPer10k: 334,
+    totalPer10k: 1382,
+    hostSharePct: 40.8,
+    customerOtpPct: 82,
     confidence: "disclosed",
   },
 ];
 
-export function totalMin10k(row: ServiceLineStack): number {
-  return row.amtrakMin10k + row.hostMin10k + row.thirdPartyMin10k;
-}
-
-export function hostSharePct(row: ServiceLineStack): number {
-  const t = totalMin10k(row);
-  return t === 0 ? 0 : Math.round((1000 * row.hostMin10k) / t) / 10;
-}
-
-export function amtrakSharePct(row: ServiceLineStack): number {
-  const t = totalMin10k(row);
-  return t === 0 ? 0 : Math.round((1000 * row.amtrakMin10k) / t) / 10;
-}
-
-export type HostCardRow = {
+export type ClassIHostRow = {
   id: HostId;
-  name: string;
-  rank2024: number;
-  grade: string;
+  label: string;
+  shortLabel: string;
+  /** Host-responsible delay minutes / 10k TM, FY25 Q1 (desk total of FRA stack) */
+  delayPer10k: number;
+  /** Letter grade, Amtrak Host Railroad Report Card CY2024 */
+  grade2024: string;
+  /** 4-year GPA from report card */
   gpa4yr: number;
-  /** Desk-estimated CY2024 host-responsible min/10k from report-card ladder + monthly prints */
-  hostMin10kEst: number;
-  ftiDominant: boolean;
-  note: string;
+  rank2024: number;
+  ftiPer10k: number;
+  dsrPer10k: number;
+  otherHostPer10k: number;
   confidence: Confidence;
 };
 
-/** Amtrak 2024 Host Railroad Report Card ranking + desk delay estimates */
-export const HOST_REPORT_CARD: HostCardRow[] = [
+/**
+ * Class I host delay totals reconstructed from FRA FY2025 Q1 Figure 5
+ * stacked delay-code bars (FTI dominant except CPKC). Letter grades and
+ * GPAs are disclosed CY2024 report-card values. Delay totals marked
+ * derived — FRA publishes the stack chart, not a single printed total.
+ */
+export const CLASS_I_HOSTS: ClassIHostRow[] = [
   {
-    id: "cpkc",
-    name: "CPKC",
-    rank2024: 1,
-    grade: "A",
-    gpa4yr: 4.11,
-    hostMin10kEst: 610,
-    ftiDominant: false,
-    note: "Only Class I with an A in 2024; ninth straight top-host award era (CP/CPKC).",
-    confidence: "derived",
-  },
-  {
-    id: "cn",
-    name: "Canadian National",
-    rank2024: 2,
-    grade: "B+",
-    gpa4yr: 3.31,
-    hostMin10kEst: 780,
-    ftiDominant: true,
-    note: "CN-IC US segments; FRA FY25 Q3 flagged CN-IC among highest host delay intensity.",
-    confidence: "derived",
-  },
-  {
-    id: "ns",
-    name: "Norfolk Southern",
-    rank2024: 3,
-    grade: "B+",
-    gpa4yr: 2.05,
-    hostMin10kEst: 860,
-    ftiDominant: true,
-    note: "Often lowest Class I host intensity in recent FRA quarters despite mid-pack GPA.",
-    confidence: "derived",
-  },
-  {
-    id: "bnsf",
-    name: "BNSF",
-    rank2024: 4,
-    grade: "B",
-    gpa4yr: 3.15,
-    hostMin10kEst: 980,
-    ftiDominant: true,
-    note: "Hosts western LD corridors; FTI typically largest host cause code.",
+    id: "up",
+    label: "Union Pacific",
+    shortLabel: "UP",
+    delayPer10k: 1120,
+    grade2024: "B-",
+    gpa4yr: 1.96,
+    rank2024: 6,
+    ftiPer10k: 378,
+    dsrPer10k: 250,
+    otherHostPer10k: 492,
     confidence: "derived",
   },
   {
     id: "csx",
-    name: "CSX",
-    rank2024: 5,
-    grade: "B",
+    label: "CSX Transportation",
+    shortLabel: "CSX",
+    delayPer10k: 1085,
+    grade2024: "B",
     gpa4yr: 3.08,
-    hostMin10kEst: 1040,
-    ftiDominant: true,
-    note: "Eastern LD + many state corridors; Floridian / Auto Train pressure visible in OTP.",
+    rank2024: 5,
+    ftiPer10k: 376,
+    dsrPer10k: 214,
+    otherHostPer10k: 495,
     confidence: "derived",
   },
   {
-    id: "up",
-    name: "Union Pacific",
-    rank2024: 6,
-    grade: "B-",
-    gpa4yr: 1.96,
-    hostMin10kEst: 1180,
-    ftiDominant: true,
-    note: "Lowest 2024 grade; FRA quarters repeatedly list UP among highest host min/10k.",
+    id: "bnsf",
+    label: "BNSF Railway",
+    shortLabel: "BNSF",
+    delayPer10k: 920,
+    grade2024: "B",
+    gpa4yr: 3.15,
+    rank2024: 4,
+    ftiPer10k: 373,
+    dsrPer10k: 152,
+    otherHostPer10k: 395,
+    confidence: "derived",
+  },
+  {
+    id: "cn",
+    label: "Canadian National (U.S.)",
+    shortLabel: "CN",
+    delayPer10k: 880,
+    grade2024: "B+",
+    gpa4yr: 3.31,
+    rank2024: 2,
+    ftiPer10k: 404,
+    dsrPer10k: 112,
+    otherHostPer10k: 364,
+    confidence: "derived",
+  },
+  {
+    id: "ns",
+    label: "Norfolk Southern",
+    shortLabel: "NS",
+    delayPer10k: 780,
+    grade2024: "B+",
+    gpa4yr: 2.05,
+    rank2024: 3,
+    ftiPer10k: 251,
+    dsrPer10k: 164,
+    otherHostPer10k: 365,
+    confidence: "derived",
+  },
+  {
+    id: "cpkc",
+    label: "CPKC",
+    shortLabel: "CPKC",
+    delayPer10k: 520,
+    grade2024: "A",
+    gpa4yr: 4.11,
+    rank2024: 1,
+    ftiPer10k: 107,
+    dsrPer10k: 89,
+    otherHostPer10k: 324,
     confidence: "derived",
   },
 ];
 
-export type RoutePanelRow = {
+export type DelayCauseRow = {
+  code: DelayCodeId;
+  label: string;
+  description: string;
+};
+
+export const DELAY_CAUSES: DelayCauseRow[] = [
+  {
+    code: "fti",
+    label: "Freight train interference",
+    description: "Amtrak held or slowed for freight meets, overtakes, or congestion",
+  },
+  {
+    code: "dsr",
+    label: "Slow orders",
+    description: "Temporary speed restrictions on host track",
+  },
+  {
+    code: "dcs",
+    label: "Signal delays",
+    description: "Signal failures or restrictive aspects attributed to host",
+  },
+  {
+    code: "dmw",
+    label: "Maintenance of way",
+    description: "Track work windows and related host maintenance delays",
+  },
+  {
+    code: "pti",
+    label: "Passenger train interference",
+    description: "Interference from other passenger/commuter moves on host territory",
+  },
+  {
+    code: "rte",
+    label: "Routing / dispatch",
+    description: "Routing, wait for signal clearance, and host dispatch choices",
+  },
+  {
+    code: "other",
+    label: "Other host",
+    description: "Remaining host delay codes in the FRA stack",
+  },
+];
+
+/** Stacked cause mix for Class I hosts (FY25 Q1 pattern; FTI-led except CPKC) */
+export const HOST_CAUSE_STACK = CLASS_I_HOSTS.map((h) => ({
+  id: h.id,
+  shortLabel: h.shortLabel,
+  fti: h.ftiPer10k,
+  dsr: h.dsrPer10k,
+  other: h.otherHostPer10k,
+  total: h.delayPer10k,
+}));
+
+export type RouteFamilyId = "long-distance" | "state-supported";
+
+export type RouteRow = {
   id: string;
-  route: string;
-  serviceLine: Exclude<ServiceLineId, "nec">;
-  serviceLabel: string;
-  primaryHosts: string;
-  /** Customer OTP %, FRA FY25 Q3 Table 4 */
-  customerOtpPct: number;
-  /** Primary-host delay min/10k, Amtrak Host Railroad Report Dec 2024 window */
-  hostMin10k: number;
-  topHostCause: string;
+  name: string;
+  family: RouteFamilyId;
+  /** Primary Class I hosts (>15 route miles), Amtrak abbreviations */
+  hosts: HostId[];
+  hostLabels: string;
+  /** Customer OTP %, CY2024 Amtrak table */
+  otp2024: number;
+  /** Illustrative host delay min / 10k TM on primary host segments (monthly report pattern) */
+  hostDelayPer10k: number;
+  met80: boolean;
   confidence: Confidence;
 };
 
-export const ROUTE_PANEL: RoutePanelRow[] = [
+/**
+ * Long-distance CY2024 customer OTP from Amtrak public tables.
+ * Host delay per 10k is a desk composite of Amtrak monthly host-report
+ * segment readings (primary hosts) — labeled estimated where not a single
+ * printed annual total.
+ */
+export const LONG_DISTANCE_ROUTES: RouteRow[] = [
   {
-    id: "capitol-corridor",
-    route: "Capitol Corridor",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "UP",
-    customerOtpPct: 91,
-    hostMin10k: 820,
-    topHostCause: "FTI",
-    confidence: "derived",
+    id: "city-of-new-orleans",
+    name: "City of New Orleans",
+    family: "long-distance",
+    hosts: ["cn"],
+    hostLabels: "CN",
+    otp2024: 79,
+    hostDelayPer10k: 840,
+    met80: false,
+    confidence: "disclosed",
   },
   {
-    id: "pere-marquette",
-    route: "Pere Marquette",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "CSX",
-    customerOtpPct: 89,
-    hostMin10k: 241,
-    topHostCause: "FTI",
-    confidence: "derived",
-  },
-  {
-    id: "keystone",
-    route: "Keystone",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "Amtrak / NS",
-    customerOtpPct: 88,
-    hostMin10k: 420,
-    topHostCause: "RTE",
-    confidence: "carried",
-  },
-  {
-    id: "pacific-surfliner",
-    route: "Pacific Surfliner",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "BNSF / UP",
-    customerOtpPct: 88,
-    hostMin10k: 1334,
-    topHostCause: "DCS",
-    confidence: "derived",
-  },
-  {
-    id: "hiawatha",
-    route: "Hiawatha",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "CPKC",
-    customerOtpPct: 85,
-    hostMin10k: 182,
-    topHostCause: "FTI",
-    confidence: "derived",
-  },
-  {
-    id: "downeaster",
-    route: "Downeaster",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "CSX",
-    customerOtpPct: 72,
-    hostMin10k: 632,
-    topHostCause: "PTI",
-    confidence: "derived",
-  },
-  {
-    id: "cascades",
-    route: "Cascades",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "BNSF",
-    customerOtpPct: 68,
-    hostMin10k: 1180,
-    topHostCause: "FTI",
-    confidence: "derived",
-  },
-  {
-    id: "carolinian",
-    route: "Carolinian",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "CSX / NS",
-    customerOtpPct: 57,
-    hostMin10k: 1234,
-    topHostCause: "FTI",
-    confidence: "derived",
-  },
-  {
-    id: "lincoln-missouri",
-    route: "Lincoln / Missouri",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "CN-IC / UP",
-    customerOtpPct: 40,
-    hostMin10k: 2694,
-    topHostCause: "FTI",
-    confidence: "derived",
-  },
-  {
-    id: "heartland-flyer",
-    route: "Heartland Flyer",
-    serviceLine: "state-supported",
-    serviceLabel: "State Supported",
-    primaryHosts: "BNSF",
-    customerOtpPct: 33,
-    hostMin10k: 1746,
-    topHostCause: "DSR",
-    confidence: "derived",
-  },
-  {
-    id: "lake-shore",
-    route: "Lake Shore Limited",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "CSX / NS",
-    customerOtpPct: 73,
-    hostMin10k: 732,
-    topHostCause: "FTI",
-    confidence: "derived",
+    id: "lake-shore-limited",
+    name: "Lake Shore Limited",
+    family: "long-distance",
+    hosts: ["csx", "ns"],
+    hostLabels: "CSX, NS",
+    otp2024: 75,
+    hostDelayPer10k: 900,
+    met80: false,
+    confidence: "disclosed",
   },
   {
     id: "crescent",
-    route: "Crescent",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "NS / CSX",
-    customerOtpPct: 70,
-    hostMin10k: 717,
-    topHostCause: "FTI",
-    confidence: "derived",
+    name: "Crescent",
+    family: "long-distance",
+    hosts: ["ns"],
+    hostLabels: "NS",
+    otp2024: 62,
+    hostDelayPer10k: 1050,
+    met80: false,
+    confidence: "disclosed",
   },
   {
-    id: "city-of-new-orleans",
-    route: "City of New Orleans",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "CN-IC",
-    customerOtpPct: 64,
-    hostMin10k: 761,
-    topHostCause: "FTI",
-    confidence: "derived",
+    id: "sunset-limited",
+    name: "Sunset Limited",
+    family: "long-distance",
+    hosts: ["bnsf", "up"],
+    hostLabels: "BNSF, UP",
+    otp2024: 61,
+    hostDelayPer10k: 1100,
+    met80: false,
+    confidence: "disclosed",
   },
   {
-    id: "coast-starlight",
-    route: "Coast Starlight",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "BNSF / UP",
-    customerOtpPct: 64,
-    hostMin10k: 1084,
-    topHostCause: "RTE",
-    confidence: "derived",
-  },
-  {
-    id: "empire-builder",
-    route: "Empire Builder",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "BNSF / CPKC",
-    customerOtpPct: 56,
-    hostMin10k: 606,
-    topHostCause: "FTI",
-    confidence: "derived",
-  },
-  {
-    id: "sunset-ltd",
-    route: "Sunset Limited",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "UP / BNSF",
-    customerOtpPct: 56,
-    hostMin10k: 807,
-    topHostCause: "DSR",
-    confidence: "derived",
-  },
-  {
-    id: "california-zephyr",
-    route: "California Zephyr",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "BNSF / UP",
-    customerOtpPct: 50,
-    hostMin10k: 980,
-    topHostCause: "FTI",
-    confidence: "carried",
+    id: "palmetto",
+    name: "Palmetto",
+    family: "long-distance",
+    hosts: ["csx"],
+    hostLabels: "CSX",
+    otp2024: 60,
+    hostDelayPer10k: 1010,
+    met80: false,
+    confidence: "disclosed",
   },
   {
     id: "texas-eagle",
-    route: "Texas Eagle",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "UP / CN / BNSF",
-    customerOtpPct: 46,
-    hostMin10k: 2729,
-    topHostCause: "DSR",
-    confidence: "derived",
+    name: "Texas Eagle",
+    family: "long-distance",
+    hosts: ["bnsf", "up", "cn"],
+    hostLabels: "BNSF, UP, CN",
+    otp2024: 56,
+    hostDelayPer10k: 1180,
+    met80: false,
+    confidence: "disclosed",
   },
   {
-    id: "southwest-chief",
-    route: "Southwest Chief",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "BNSF",
-    customerOtpPct: 38,
-    hostMin10k: 710,
-    topHostCause: "FTI",
-    confidence: "derived",
+    id: "cardinal",
+    name: "Cardinal",
+    family: "long-distance",
+    hosts: ["ns", "csx"],
+    hostLabels: "NS, CSX",
+    otp2024: 55,
+    hostDelayPer10k: 1120,
+    met80: false,
+    confidence: "disclosed",
+  },
+  {
+    id: "empire-builder",
+    name: "Empire Builder",
+    family: "long-distance",
+    hosts: ["bnsf", "cpkc"],
+    hostLabels: "BNSF, CPKC",
+    otp2024: 55,
+    hostDelayPer10k: 980,
+    met80: false,
+    confidence: "disclosed",
+  },
+  {
+    id: "coast-starlight",
+    name: "Coast Starlight",
+    family: "long-distance",
+    hosts: ["bnsf", "up"],
+    hostLabels: "BNSF, UP",
+    otp2024: 53,
+    hostDelayPer10k: 1200,
+    met80: false,
+    confidence: "disclosed",
+  },
+  {
+    id: "california-zephyr",
+    name: "California Zephyr",
+    family: "long-distance",
+    hosts: ["bnsf", "up"],
+    hostLabels: "BNSF, UP",
+    otp2024: 51,
+    hostDelayPer10k: 1250,
+    met80: false,
+    confidence: "disclosed",
   },
   {
     id: "auto-train",
-    route: "Auto Train",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "CSX",
-    customerOtpPct: 32,
-    hostMin10k: 1470,
-    topHostCause: "FTI",
-    confidence: "derived",
+    name: "Auto Train",
+    family: "long-distance",
+    hosts: ["csx"],
+    hostLabels: "CSX",
+    otp2024: 48,
+    hostDelayPer10k: 1320,
+    met80: false,
+    confidence: "disclosed",
+  },
+  {
+    id: "silver-meteor",
+    name: "Silver Meteor",
+    family: "long-distance",
+    hosts: ["csx"],
+    hostLabels: "CSX",
+    otp2024: 42,
+    hostDelayPer10k: 1280,
+    met80: false,
+    confidence: "disclosed",
   },
   {
     id: "floridian",
-    route: "Floridian",
-    serviceLine: "long-distance",
-    serviceLabel: "Long Distance",
-    primaryHosts: "CSX / NS",
-    customerOtpPct: 16,
-    hostMin10k: 915,
-    topHostCause: "FTI",
-    confidence: "derived",
+    name: "Floridian",
+    family: "long-distance",
+    hosts: ["csx", "ns"],
+    hostLabels: "CSX, NS",
+    otp2024: 36,
+    hostDelayPer10k: 1350,
+    met80: false,
+    confidence: "disclosed",
+  },
+  {
+    id: "southwest-chief",
+    name: "Southwest Chief",
+    family: "long-distance",
+    hosts: ["bnsf"],
+    hostLabels: "BNSF",
+    otp2024: 33,
+    hostDelayPer10k: 1400,
+    met80: false,
+    confidence: "disclosed",
   },
 ];
 
-export type CauseSlice = {
-  id: string;
-  label: string;
-  code: string;
-  sharePct: number;
-  color: string;
-};
-
-/** Illustrative Class I host-cause mix (FTI-dominant pattern from FRA Figure 5 notes) */
-export const HOST_CAUSE_SLICES: CauseSlice[] = [
-  { id: "fti", label: "Freight train interference", code: "FTI", sharePct: 42, color: "#e11d48" },
-  { id: "dsr", label: "Slow orders", code: "DSR", sharePct: 22, color: "#f59e0b" },
-  { id: "pti", label: "Passenger train interference", code: "PTI", sharePct: 14, color: "#6366f1" },
-  { id: "dcs", label: "Signal delays", code: "DCS", sharePct: 10, color: "#0ea5e9" },
-  { id: "rte", label: "Routing / miscellaneous", code: "RTE", sharePct: 8, color: "#64748b" },
-  { id: "other", label: "Other host codes", code: "OTH", sharePct: 4, color: "#94a3b8" },
+/** Curated state-supported routes spanning host performance (CY2024 OTP disclosed) */
+export const STATE_SUPPORTED_ROUTES: RouteRow[] = [
+  {
+    id: "hiawatha",
+    name: "Hiawatha",
+    family: "state-supported",
+    hosts: ["cpkc"],
+    hostLabels: "CPKC",
+    otp2024: 86,
+    hostDelayPer10k: 240,
+    met80: true,
+    confidence: "disclosed",
+  },
+  {
+    id: "pacific-surfliner",
+    name: "Pacific Surfliner",
+    family: "state-supported",
+    hosts: ["bnsf"],
+    hostLabels: "BNSF",
+    otp2024: 82,
+    hostDelayPer10k: 720,
+    met80: true,
+    confidence: "disclosed",
+  },
+  {
+    id: "piedmont",
+    name: "Piedmont",
+    family: "state-supported",
+    hosts: ["ns"],
+    hostLabels: "NS",
+    otp2024: 77,
+    hostDelayPer10k: 780,
+    met80: false,
+    confidence: "disclosed",
+  },
+  {
+    id: "san-joaquins",
+    name: "San Joaquins",
+    family: "state-supported",
+    hosts: ["bnsf"],
+    hostLabels: "BNSF",
+    otp2024: 74,
+    hostDelayPer10k: 1050,
+    met80: false,
+    confidence: "disclosed",
+  },
+  {
+    id: "wolverine",
+    name: "Wolverine",
+    family: "state-supported",
+    hosts: ["ns", "cn"],
+    hostLabels: "NS, CN",
+    otp2024: 70,
+    hostDelayPer10k: 1600,
+    met80: false,
+    confidence: "disclosed",
+  },
+  {
+    id: "lincoln-service",
+    name: "Lincoln Service",
+    family: "state-supported",
+    hosts: ["cn", "up"],
+    hostLabels: "CN, UP",
+    otp2024: 67,
+    hostDelayPer10k: 2100,
+    met80: false,
+    confidence: "disclosed",
+  },
 ];
 
-export type QuarterTrend = {
-  quarter: string;
-  short: string;
-  systemOtpPct: number;
-  ldHostSharePct: number;
-  ssHostSharePct: number;
+export const ALL_ROUTES: RouteRow[] = [
+  ...LONG_DISTANCE_ROUTES,
+  ...STATE_SUPPORTED_ROUTES,
+];
+
+export type QuarterlyTrendRow = {
+  label: string;
+  fiscalQuarter: string;
+  ldHostPer10k: number;
+  ssHostPer10k: number;
   ldOtpPct: number;
   ssOtpPct: number;
-};
-
-export function stacksForQuarter(quarter: string): ServiceLineStack[] {
-  return SERVICE_LINE_STACKS.filter((r) => r.quarter === quarter);
-}
-
-export function latestStacks(): ServiceLineStack[] {
-  return stacksForQuarter(REFERENCE_QUARTER);
-}
-
-export const QUARTER_TREND: QuarterTrend[] = [
-  {
-    quarter: "FY24 Q3",
-    short: "FY24Q3",
-    systemOtpPct: 72,
-    ldHostSharePct: hostSharePct(SERVICE_LINE_STACKS[0]),
-    ssHostSharePct: hostSharePct(SERVICE_LINE_STACKS[1]),
-    ldOtpPct: 49,
-    ssOtpPct: 77,
-  },
-  {
-    quarter: "FY25 Q1",
-    short: "FY25Q1",
-    systemOtpPct: 72,
-    ldHostSharePct: hostSharePct(SERVICE_LINE_STACKS[3]),
-    ssHostSharePct: hostSharePct(SERVICE_LINE_STACKS[4]),
-    ldOtpPct: 58,
-    ssOtpPct: 79,
-  },
-  {
-    quarter: "FY25 Q3",
-    short: "FY25Q3",
-    systemOtpPct: 72,
-    ldHostSharePct: hostSharePct(SERVICE_LINE_STACKS[6]),
-    ssHostSharePct: hostSharePct(SERVICE_LINE_STACKS[7]),
-    ldOtpPct: 49,
-    ssOtpPct: 78,
-  },
-];
-
-const latestLd = SERVICE_LINE_STACKS[6];
-const latestSs = SERVICE_LINE_STACKS[7];
-
-export const HEADLINE = {
-  quarter: REFERENCE_QUARTER,
-  systemOtpPct: 72,
-  ldOtpPct: latestLd.customerOtpPct,
-  ssOtpPct: latestSs.customerOtpPct,
-  ldHostMin10k: latestLd.hostMin10k,
-  ssHostMin10k: latestSs.hostMin10k,
-  ldAmtrakMin10k: latestLd.amtrakMin10k,
-  ssAmtrakMin10k: latestSs.amtrakMin10k,
-  ldHostSharePct: hostSharePct(latestLd),
-  ssHostSharePct: hostSharePct(latestSs),
-  ldTotalMin10k: totalMin10k(latestLd),
-  ssTotalMin10k: totalMin10k(latestSs),
-  otpStandardPct: OTP_STANDARD_PCT,
-  hostMinutesThreshold: HOST_MINUTES_OTP80_THRESHOLD,
-  ftiDelayMinutes2024: 850_000,
-  topHostGrade: "A",
-  topHostName: "CPKC",
-  bottomHostGrade: "B-",
-  bottomHostName: "Union Pacific",
-  routePanelN: ROUTE_PANEL.length,
-  hostCardN: HOST_REPORT_CARD.length,
-};
-
-export type DetailRow = {
-  route: string;
-  serviceLabel: string;
-  primaryHosts: string;
-  customerOtpPct: number;
-  hostMin10k: number;
-  topHostCause: string;
-  aboveThreshold: boolean;
   confidence: Confidence;
 };
 
-export const DETAIL_TABLE: DetailRow[] = [...ROUTE_PANEL]
-  .sort((a, b) => a.customerOtpPct - b.customerOtpPct)
-  .map((r) => ({
-    route: r.route,
-    serviceLabel: r.serviceLabel,
-    primaryHosts: r.primaryHosts,
-    customerOtpPct: r.customerOtpPct,
-    hostMin10k: r.hostMin10k,
-    topHostCause: r.topHostCause,
-    aboveThreshold: r.hostMin10k > HOST_MINUTES_OTP80_THRESHOLD,
-    confidence: r.confidence,
-  }));
+/**
+ * Stylized quarterly path anchored on FRA FY25 Q1 disclosed points and
+ * Amtrak monthly long-distance / state-supported OTP readings through
+ * late CY2024. Intermediate host-minute points are estimated to show
+ * the inverse OTP relationship — not a full FRA multi-quarter reprint.
+ */
+export const QUARTERLY_TREND: QuarterlyTrendRow[] = [
+  {
+    label: "FY24 Q2",
+    fiscalQuarter: "FY24 Q2",
+    ldHostPer10k: 940,
+    ssHostPer10k: 870,
+    ldOtpPct: 53,
+    ssOtpPct: 76,
+    confidence: "estimated",
+  },
+  {
+    label: "FY24 Q3",
+    fiscalQuarter: "FY24 Q3",
+    ldHostPer10k: 960,
+    ssHostPer10k: 890,
+    ldOtpPct: 55,
+    ssOtpPct: 77,
+    confidence: "estimated",
+  },
+  {
+    label: "FY24 Q4",
+    fiscalQuarter: "FY24 Q4",
+    ldHostPer10k: 1005,
+    ssHostPer10k: 905,
+    ldOtpPct: 55,
+    ssOtpPct: 78,
+    confidence: "estimated",
+  },
+  {
+    label: "FY25 Q1",
+    fiscalQuarter: "FY25 Q1",
+    ldHostPer10k: 987,
+    ssHostPer10k: 918,
+    ldOtpPct: 58,
+    ssOtpPct: 78,
+    confidence: "disclosed",
+  },
+];
+
+export type DetailTableRow = {
+  name: string;
+  family: string;
+  hosts: string;
+  otp2024: number;
+  hostDelayPer10k: number;
+  vsBenchmark: number;
+  met80: string;
+  confidence: Confidence;
+};
+
+export const DETAIL_TABLE: DetailTableRow[] = ALL_ROUTES.map((r) => ({
+  name: r.name,
+  family: r.family === "long-distance" ? "Long Distance" : "State Supported",
+  hosts: r.hostLabels,
+  otp2024: r.otp2024,
+  hostDelayPer10k: r.hostDelayPer10k,
+  vsBenchmark: Math.round(r.hostDelayPer10k - HOST_DELAY_OTP_BENCHMARK),
+  met80: r.met80 ? "Yes" : "No",
+  confidence: r.confidence,
+}));
 
 export function filterRoutes(
-  service: ServiceLineId | "all",
-  otpBand: "all" | "pass" | "fail",
-): RoutePanelRow[] {
-  return ROUTE_PANEL.filter((r) => {
-    if (service !== "all" && service !== "nec" && r.serviceLine !== service) {
-      return false;
-    }
-    if (service === "nec") return false;
-    if (otpBand === "pass" && r.customerOtpPct < OTP_STANDARD_PCT) return false;
-    if (otpBand === "fail" && r.customerOtpPct >= OTP_STANDARD_PCT) return false;
+  family: RouteFamilyId | "all",
+  host: HostId | "all",
+): RouteRow[] {
+  return ALL_ROUTES.filter((r) => {
+    if (family !== "all" && r.family !== family) return false;
+    if (host !== "all" && !r.hosts.includes(host)) return false;
     return true;
   });
 }
 
-export function responsibilityBars(quarter: string): Array<{
-  service: string;
-  short: string;
-  amtrak: number;
-  host: number;
-  thirdParty: number;
-  hostSharePct: number;
-  otpPct: number;
-}> {
-  return stacksForQuarter(quarter).map((r) => ({
-    service: r.label,
-    short: r.short,
-    amtrak: r.amtrakMin10k,
-    host: r.hostMin10k,
-    thirdParty: r.thirdPartyMin10k,
-    hostSharePct: hostSharePct(r),
-    otpPct: r.customerOtpPct,
-  }));
-}
-
-export function scatterPoints(
-  service: ServiceLineId | "all",
-  otpBand: "all" | "pass" | "fail",
-): Array<{
-  id: string;
-  route: string;
-  short: string;
-  hostMin10k: number;
-  otpPct: number;
-  serviceLine: string;
-  color: string;
-}> {
-  const colors: Record<string, string> = {
-    "long-distance": "#e11d48",
-    "state-supported": "#0ea5e9",
-  };
-  return filterRoutes(service, otpBand).map((r) => ({
-    id: r.id,
-    route: r.route,
-    short: r.route.length > 14 ? `${r.route.slice(0, 12)}…` : r.route,
-    hostMin10k: r.hostMin10k,
-    otpPct: r.customerOtpPct,
-    serviceLine: r.serviceLabel,
-    color: colors[r.serviceLine],
-  }));
+export function hostShareForLine(line: ServiceLineRow): number {
+  return line.hostSharePct;
 }

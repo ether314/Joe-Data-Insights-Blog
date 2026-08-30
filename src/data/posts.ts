@@ -2,6 +2,105 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "food-at-home-cpi-versus-typical-worker-wages-2026",
+    slug: "food-at-home-cpi-versus-typical-worker-wages-2026",
+    title:
+      "Food 132.8 vs Wages 137.2: Grocery CPI Versus Typical Pay Since 2019",
+    excerpt:
+      "Rebased to 2019 = 100, BLS food-at-home CPI sat at 132.8 in 2026Q2 while CPS median usual weekly earnings reached 137.2. Groceries briefly led pay by +5.6 pp in late 2022 — then wages closed the gap.",
+    category: "Economics",
+    themeId: "grocery-at-home-cpi",
+    imageUrl:
+      "/images/economics-food-at-home-cpi-versus-typical-worker-wages-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic chart thumbnail with orange food-at-home CPI line at 132.8 and teal wage index at 137.2 on a 2019 equals 100 scale, Visual Capitalist-style editorial art",
+    publishedAt: "2026-08-30T18:00:00Z",
+    featured: true,
+    visualization: "food-at-home-cpi-versus-typical-worker-wages-2026",
+    layout: "default",
+    content: `The grocery receipt and the paycheck do not share a calendar. Food-at-home prices print monthly in the Consumer Price Index; median usual weekly earnings arrive as a quarterly Bureau of Labor Statistics (BLS) Current Population Survey (CPS) release. Put both on the same scale — **2019 calendar averages = 100** — and the core question becomes mechanical: **how far has food-at-home CPI run ahead of typical worker wages since 2019?**
+
+As of **2026Q2**, the answer is no longer “ahead.” The food-at-home index sits at **132.8**. Median usual weekly earnings of full-time wage and salary workers sit at **137.2**. That is a **4.3 percentage-point wage lead** on the rebased scale, with the median paycheck at **$1,258** per week. Groceries did briefly outrun pay during the 2022–23 inflation spike — peaking at a **+5.6 pp** food lead in **2022Q4** — but the catch-up since then is the story the dual-track chart tells most clearly.
+
+The interactive dashboard above holds the indexes, the gap ribbon, shelf sub-categories, average-price cartons, food-away comparison, epoch averages, and a wage scatter. The prose below walks the method, the spike, the shelf composition, and the caveats that keep this from being a household budget calculator.
+
+## How the 2019 = 100 scales are built
+
+Three BLS CPI-U series and one CPS earnings series do almost all the work.
+
+**Food at home** is \\\`CUUR0000SAF11\\\` — the not-seasonally-adjusted CPI-U for grocery-store food. **Food away from home** (\\\`CUUR0000SEFV\\\`) covers restaurants and related meals. **All-items CPI-U** (\\\`CUUR0000SA0\\\`) is the broad consumer basket. Each series is divided by its **2019 monthly average** and multiplied by 100.
+
+**Wages** are \\\`LES1252881500\\\` — seasonally adjusted **median usual weekly earnings** of full-time wage and salary workers. The 2019 quarterly average was **$917**. Each later quarter is rebased the same way. Gap = food index − wage index (percentage points). Burden = food ÷ wages × 100, so 2019 equals 100 by construction.
+
+Average price (APU) series for **Grade A eggs (dozen)**, **milk (gallon)**, and **white bread (pound)** are rebased the same way for shelf color — they are not CPI weights, and a carton spike can dwarf the all-food-at-home index without rewriting the basket.
+
+This is a **relative-pace** comparison, not a claim about the share of paychecks spent on groceries. A household that already devoted a large slice of income to food felt 2022 differently than a household that did not. The indexes only say which series moved faster from a common starting year.
+
+## The spike years when groceries led pay
+
+From 2019 through early 2021, wages usually sat slightly ahead of food-at-home on this scale. The pandemic wage print jumped in 2020 as lower-wage hours fell out of the full-time median — a composition effect that briefly **widened** the wage lead (trough gap **−5.1 pp** in **2020Q2**). That is not a story about cheaper milk; it is a story about who remained in the full-time earnings sample.
+
+Then grocery inflation accelerated. Year-over-year food-at-home CPI peaked near **13.5%** in **August 2022**. On the rebased quarterly panel, food crossed above wages in **2022** and stayed ahead through much of **2023**. The annual averages make the handoff plain:
+
+| Year | Food-at-home idx | Wage idx | Away idx | All-items idx | Gap (food−wage) | Median $/week |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 100.0 | 100.0 | 100.0 | 100.0 | 0.0 | 917 |
+| 2020 | 103.5 | 107.3 | 103.4 | 101.2 | −3.8 | 984 |
+| 2021 | 107.1 | 108.8 | 108.0 | 106.0 | −1.7 | 998 |
+| 2022 | 119.3 | 115.4 | 116.3 | 114.5 | +3.9 | 1,058 |
+| 2023 | 125.3 | 121.6 | 124.6 | 119.2 | +3.7 | 1,116 |
+| 2024 | 126.8 | 126.5 | 129.7 | 122.7 | +0.3 | 1,160 |
+| 2025 | 129.6 | 131.3 | 134.4 | 125.9 | −1.7 | 1,204 |
+| 2026 YTD | 132.4 | 135.8 | 138.4 | 129.5 | −3.4 | 1,246 |
+
+By **2024** the annual gap had already collapsed toward zero. By **2025–26** wages were ahead again. The 2022Q4 peak lead of **+5.6 pp** was real — and temporary on this metric.
+
+## What the shelf ladder shows inside “food at home”
+
+“Food at home” is a basket, not a single aisle. Rebased to 2019, the July 2026 sub-indexes sort roughly as:
+
+- **Meats, poultry, fish, and eggs** — **140.4**
+- **Fruits and vegetables** — **139.0**
+- **Nonalcoholic beverages** — **134.4**
+- **Cereals and bakery products** — **133.7**
+- **Dairy and related products** — **122.8**
+- **Other food at home** — **119.3**
+
+Protein and produce did more of the climbing than dairy or the residual “other” category. That composition matters for any claim about “the grocery bill”: a household heavy on eggs and fresh produce lived a different inflation path than one heavy on shelf-stable staples.
+
+Average price data sharpen the point without pretending to be the CPI. Grade A eggs averaged about **$1.40/dozen** in 2019, spiked to **$6.23** in **March 2025** during the avian-influenza wave, and printed **$2.19** in **July 2026**. Milk and bread indexes sit nearer **140–142** on the same 2019 = 100 scale — elevated, but not egg-cartouche chaos. The carton-path panel is there to show **amplitude**, not to redefine the food-at-home index.
+
+## Food away from home kept climbing after groceries cooled
+
+Restaurant meals are a different labor-and-rent story. On the same 2019 = 100 scale, **food away from home** reached **138.8** by **2026Q2** — ahead of both groceries (**132.8**) and wages (**137.2**). Monthly July 2026 prints put food-at-home near **133.0** and food-away near **139.5**, while all-items CPI-U sits near **130.6**.
+
+That ordering is the quiet sequel to the grocery spike: grocery YoY rates cooled after 2022, but dining-out prices kept a stickier climb. Households that substituted restaurants for home cooking after 2019 did not escape food inflation — they often paid the faster track.
+
+## Why wages closed the gap without erasing the memory of 2022
+
+Median usual weekly earnings rose from the **$917** 2019 average to **$1,258** in **2026Q2** — a **37.2%** nominal gain on the rebased index (**137.2**). Food-at-home rose **32.8%** on the same scale. Arithmetic favors wages over the full window even though the **2022–23** interval favored groceries.
+
+Three forces sit under that catch-up. First, **nominal wage growth** remained firm after the CPI peak as labor markets stayed tight. Second, **grocery inflation decelerated** — the YoY food-at-home rate fell from double digits to low single digits. Third, the **2020 composition bump** in the median reminds us that CPS earnings are not a fixed worker’s paycheck; they are a survey median of whoever is full-time that quarter.
+
+None of those forces refund the 2022 overpayment in the cart. An index catch-up is a statement about **relative levels versus 2019**, not about cumulative dollars already spent at elevated prices. Households that bought eggs at $6 still paid $6.
+
+## Caveats, confidence, and what this chart is not
+
+**Caveats.** Food-at-home CPI is a **national urban** price index, not a rural market basket and not a scanner receipt for any one retailer. Median usual weekly earnings cover **full-time wage and salary workers** — not the self-employed, not part-time-only schedules, and not benefits. Rebasing to 2019 is a desk choice; a 2015 or 2021 base would change the visual gap without changing the underlying levels. October 2025 CPI cells were disrupted by the federal appropriations lapse in the broader CPI program; this build uses disclosed prints through **July 2026** for monthly food and **2026Q2** for wages. APU egg, milk, and bread series are **city average prices**, not CPI elementary indexes, and egg spikes dominate the visual scale.
+
+**Confidence.** Levels are disclosed BLS series. Indexes, gaps, and burden ratios are **derived**. Treat them as transparent arithmetic on public data, not as a BLS-published “food versus wages” official product.
+
+**What this is not.** It is not a food-insecurity measure, not a SNAP adequacy test, and not a claim that groceries are “cheap” because wages lead on a 2019 = 100 chart. It is a pace race between two official series. On that race, groceries won a loud mid-stretch — and typical pay has since retaken the lead.
+`,
+    tags: ["CPI", "food at home", "wages", "BLS", "grocery inflation"],
+    format: "data-story",
+    keyPoints: [
+      "2026Q2 food-at-home index 132.8 vs wage index 137.2 (2019 = 100)",
+      "Peak grocery lead +5.6 pp in 2022Q4; wages ahead by 4.3 pp by 2026Q2",
+      "Food-away-from-home (138.8) outran groceries; meats/eggs category leads shelf",
+    ],
+  },
+  {
     id: "median-age-at-first-marriage-versus-never-married-share-2026",
     slug: "median-age-at-first-marriage-versus-never-married-share-2026",
     title:

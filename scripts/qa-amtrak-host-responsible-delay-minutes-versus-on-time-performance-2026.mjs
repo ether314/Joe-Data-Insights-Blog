@@ -1,8 +1,8 @@
 /**
  * QA: amtrak-host-responsible-delay-minutes-versus-on-time-performance-2026
- * // smoke-marker: Host share vs endpoint OTP
- * // viz-types: host-share vs OTP scatter, responsibility stacked bars,
- * // Class I host ladder bars, host-cause pie, quarterly dual-axis composed
+ * // smoke-marker: Host vs Amtrak delay stack
+ * // viz-types: stacked host/Amtrak/third delay, host-vs-OTP scatter,
+ * // Class I cause mix bars, dual-axis OTP slope path
  * // | layout: default
  */
 import assert from "node:assert/strict";
@@ -12,31 +12,26 @@ import { chromium } from "playwright";
 import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
 import { auditVizInteractions } from "./lib/viz-interaction-qa.mjs";
 import {
+  ALL_ROUTES,
+  CLASS_I_HOSTS,
   DETAIL_TABLE,
   HEADLINE,
-  HOST_REPORT_CARD,
-  QUARTER_TREND,
-  ROUTE_PANEL,
-  SERVICE_LINE_STACKS,
+  LONG_DISTANCE_ROUTES,
+  SERVICE_LINES,
   VIZ_MARKERS,
-  hostSharePct,
 } from "../src/data/amtrak-host-responsible-delay-minutes-versus-on-time-performance-2026-data.ts";
 
-assert.equal(ROUTE_PANEL.length, HEADLINE.routePanelN);
-assert.equal(ROUTE_PANEL.length, 21);
-assert.equal(DETAIL_TABLE.length, 21);
-assert.equal(HOST_REPORT_CARD.length, HEADLINE.hostCardN);
-assert.equal(HOST_REPORT_CARD.length, 6);
-assert.ok(SERVICE_LINE_STACKS.length >= 9);
-assert.ok(QUARTER_TREND.length >= 3);
-assert.equal(HEADLINE.ldHostSharePct, 53.9);
-assert.equal(HEADLINE.ssHostSharePct, 55.2);
-assert.equal(HEADLINE.ldOtpPct, 49);
-assert.equal(HEADLINE.ssOtpPct, 78);
-assert.equal(HEADLINE.ldHostMin10k, 1065);
-assert.equal(HEADLINE.ssHostMin10k, 951);
-assert.equal(hostSharePct(SERVICE_LINE_STACKS[6]), 53.9);
-assert.ok(VIZ_MARKERS.includes("Host share vs endpoint OTP"));
+assert.equal(LONG_DISTANCE_ROUTES.length, HEADLINE.panelN);
+assert.equal(LONG_DISTANCE_ROUTES.length, 14);
+assert.equal(DETAIL_TABLE.length, ALL_ROUTES.length);
+assert.ok(SERVICE_LINES.length >= 3);
+assert.ok(CLASS_I_HOSTS.length >= 6);
+assert.equal(HEADLINE.ldHostDelayPer10k, 987);
+assert.equal(HEADLINE.ldAmtrakDelayPer10k, 454);
+assert.equal(HEADLINE.ldHostSharePct, 53.1);
+assert.equal(HEADLINE.ldCustomerOtpPct, 58);
+assert.equal(HEADLINE.ldRoutesMeeting80, 0);
+assert.ok(VIZ_MARKERS.includes("Host vs Amtrak delay stack"));
 
 const root = process.cwd();
 const slug =
@@ -55,7 +50,7 @@ async function main() {
     console.error("✗ Missing out/ — run npm run build first");
     process.exit(1);
   }
-  const port = Number(process.env.SMOKE_PORT || 4186);
+  const port = Number(process.env.SMOKE_PORT || 4184);
   const server = await startStaticServer(outDir, port);
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -74,35 +69,27 @@ async function main() {
       console.log(`✓ ${m}`);
     }
 
-    await clickBtn(page, "Responsibility");
+    await clickBtn(page, "Host minutes vs OTP scatter");
     await page
-      .getByText("Responsibility stacked minutes", { exact: false })
+      .getByText("Host minutes vs OTP scatter", { exact: false })
       .first()
       .waitFor({ timeout: 10000 });
-    await clickBtn(page, "Host ladder");
+    await clickBtn(page, "Class I delay-cause mix");
     await page
-      .getByText("Class I host report-card ladder", { exact: false })
+      .getByText("Class I delay-cause mix", { exact: false })
       .first()
       .waitFor({ timeout: 10000 });
-    await clickBtn(page, "Host causes");
+    await clickBtn(page, "Route OTP slope board");
     await page
-      .getByText("Host delay cause mix", { exact: false })
-      .first()
-      .waitFor({ timeout: 10000 });
-    await clickBtn(page, "Quarter path");
-    await page
-      .getByText("Host share of delay minutes vs OTP path", { exact: false })
+      .getByText("Route OTP slope board", { exact: false })
       .first()
       .waitFor({ timeout: 10000 });
     await clickBtn(page, "Long Distance");
-    await clickBtn(page, "State Supported");
-    await clickBtn(page, "LD + State");
-    await clickBtn(page, "Below 80%");
-    await clickBtn(page, "All OTP");
-    await clickBtn(page, "FY24 Q3");
-    await clickBtn(page, "FY25 Q3");
-    await clickBtn(page, "Host vs OTP");
-    console.log("✓ view + service + OTP + quarter controls");
+    await clickBtn(page, "CSX");
+    await clickBtn(page, "All routes");
+    await clickBtn(page, "All hosts");
+    await clickBtn(page, "Host vs Amtrak delay stack");
+    console.log("✓ view + family + host controls");
 
     await auditVizInteractions(page, { slug });
     console.log(`✓ ${slug} QA passed`);
