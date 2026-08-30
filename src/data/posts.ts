@@ -2,6 +2,107 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "airline-fares-cpi-versus-jet-fuel-prices-2026",
+    slug: "airline-fares-cpi-versus-jet-fuel-prices-2026",
+    title:
+      "Airline Fares CPI vs Jet-Fuel Prices: How Closely Do Tickets Track Gulf Coast Fuel Since 2019?",
+    excerpt:
+      "On a 2019 = 100 scale, July 2026 airline fares sit at 117 while U.S. Gulf Coast jet fuel is at 181 — a 64-point gap, with fuel leading fares by about one month (r ≈ 0.77).",
+    category: "Transport & Logistics",
+    themeId: "airline-fares-jet-fuel",
+    imageUrl:
+      "/images/transport-logistics-airline-fares-cpi-versus-jet-fuel-prices-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial graphic with sky-blue airfare and amber jet-fuel trend lines beside a jet wing silhouette",
+    publishedAt: "2026-08-30T16:00:00Z",
+    featured: true,
+    visualization: "airline-fares-cpi-versus-jet-fuel-prices-2026",
+    format: "data-story",
+    tags: [
+      "airline fares",
+      "jet fuel",
+      "CPI",
+      "EIA",
+      "BLS",
+      "pass-through",
+      "aviation costs",
+    ],
+    keyPoints: [
+      "July 2026: airfare CPI index 117.2 vs Gulf Coast jet-fuel index 181.2 (2019 = 100).",
+      "Same-month Pearson correlation is 0.72; a one-month fuel lead lifts it to 0.77.",
+      "June 2022 jet fuel peaked near $4.12/gal (index 219); fares peaked a month earlier at index 130.",
+      "April 2020 inverted the gap: fuel collapsed to $0.61/gal while fares fell less, leaving a +44 pp gap.",
+      "Annual pass-through ratios stayed below 100 every year after 2020 — tickets never fully matched fuel’s rebound.",
+    ],
+    content: `Fuel is the largest variable cost on a commercial airframe, so desks often treat jet-kerosene prices as a near-mechanical driver of ticket prices. The Bureau of Labor Statistics **airline fares** CPI and the Energy Information Administration **U.S. Gulf Coast kerosene-type jet fuel** spot series let us test that intuition with the same calendar: rebase both to their **2019** averages (= 100) and watch whether consumer tickets keep pace with the barrel.
+
+As of **July 2026**, they do not. Airline fares sit at **117.2** on that scale — up about **17%** versus 2019 — while Gulf Coast jet fuel prints **181.2**, up about **81%**, at **$3.403** per gallon. The **fare − fuel** gap is **−64** index points. Same-month Pearson correlation across ninety overlapping months is **0.724**; shifting fuel one month ahead of fares raises it to **0.774**. Tickets move with fuel, but they do not mirror it.
+
+The dashboard above races the dual indexes, paints the gap ribbon, tracks a pass-through ratio, scatters monthly pairs, bars lag correlations, compares epoch averages, and overlays year-over-year swings. What follows is the narrative behind those panels.
+
+## Two series, one 2019 yardstick
+
+Airline fares enter as BLS series **CUUR0000SETG01** — CPI-U airline fares for the U.S. city average, not seasonally adjusted, indexed to 1982–84 = 100 in the agency’s native scale. Jet fuel enters as EIA’s Gulf Coast spot FOB for kerosene-type jet fuel (**EER_EPJK_PF4_RGC_DPG**), also published on FRED as **MJFUELUSGULF**, in dollars per gallon. We average each series over calendar **2019**, then divide every later month by that base and multiply by 100.
+
+That rebase is deliberate. Raw CPI levels and dollar-per-gallon prices are not comparable units. Indexing both to the last “normal” pre-pandemic year puts them on a shared percentage footing without pretending that a one-point move in each series has the same economic weight. The **gap** is simply fare index minus fuel index. The **pass-through ratio** is fare ÷ fuel × 100; values under 100 mean fuel has outrun tickets relative to 2019.
+
+One cell is missing: **October 2025** airline fares CPI was unpublished during the federal appropriations lapse. That month is omitted from pairwise charts; fuel still has a print. Confidence on levels is high — both agencies disclose the source values — while indexes, gaps, and correlations are derived.
+
+## The dual track since 2019
+
+In **2019** both indexes hover near 100 by construction, with seasonal airfare peaks in late spring and early summer and jet fuel near **$1.88**/gal on the year average. **2020** breaks the co-movement. Demand for seats collapses; fares fall to an annual index near **82**. Fuel falls harder, to about **$1.10**/gal on the year (**index 58.6**). April 2020 is the extreme: Gulf Coast jet fuel dips to **$0.606**/gal (**index 32.3**) while fares sit near **76.6**, producing a **+44.3** point gap — the widest *positive* gap in the sample. Fuel cratered faster than published ticket prices.
+
+**2021** is the reopen. Fuel climbs back toward its 2019 dollars (**index ~99** for the year) while fares remain depressed near **82**. The gap flips negative and stays there. By **2022**, Russia’s invasion of Ukraine and a tight refining complex push Gulf Coast jet fuel to a June peak of **$4.12**/gal (**index 219.4**). Airline fares peak a month earlier, in May, at **129.9**. Even at that ticket spike, the gap in April 2022 reaches **−96.5** points — fuel’s indexed surge simply outpaces what consumers saw at the booking engine.
+
+**2023–2024** cool the fuel curve. Annual fuel indexes fall from **179** (2022) toward the mid-**120s**, while fares settle near **100–98** — essentially flat versus 2019 in annual average terms. **2025** keeps fares near **96** on the year even as fuel averages near **114**. **2026 year-to-date** through July reopens the wedge: fares average about **119** while fuel averages about **174**, with spring 2026 again printing fuel above **$3.90**/gal before a June soft patch.
+
+## Pass-through never recovered to parity
+
+If tickets fully absorbed fuel’s path, the pass-through ratio would hover near **100**. After 2020 it does not. Annual ratios land near **140** in the collapse year (fuel fell more), then **83** (2021), **60** (2022), **70** (2023), **80** (2024), **84** (2025), and about **68** for **2026 YTD**. July 2026’s monthly ratio is **64.7**.
+
+That does not mean airlines ignored fuel. Hedging, capacity discipline, ancillary fees outside the CPI basket, and competitive matching all mute the CPI. BLS airline fares measure what urban consumers pay for passenger air transportation in the CPI sample — not jet-A invoices on an airline’s income statement, and not every bag fee. The pass-through chart is therefore a *consumer* pass-through metric, not a cost-accounting identity.
+
+## Fuel leads tickets by about a month
+
+Scatterplots of monthly fuel index against fare index show a clear positive slope with a wide cloud — Pearson **r = 0.724**. Lagging fuel forward by one month lifts correlation to **0.774**; two months stays high at **0.757**; by six months the link fades toward **0.54**. The lag bars in the dashboard highlight that one-month lead as the sample maximum.
+
+A one-month lead is economically plausible. Spot Gulf Coast prices move daily; published fares embed advance bookings, inventory controls, and seasonal schedule banks. Fuel shocks hit cost desks immediately and ticket menus with a delay. The correlation still leaves roughly **40%** of fare-index variance unexplained even at the best lag — demand, competitive intensity, and non-fuel costs matter.
+
+## Year-over-year swings: fuel is the louder series
+
+YoY percentage changes make the asymmetry vivid. Jet fuel’s year-over-year moves routinely exceed **±50%** around the 2020 trough and 2022 spike; airfare CPI YoY also spiked in spring 2022 (reopening plus fuel) but with a narrower amplitude and a faster fade. By 2023–2025, fuel YoY oscillates around a softer mid-cycle while fares often print low-single-digit or negative YoY even when absolute fuel dollars remain well above 2019.
+
+For travelers, that pattern feels like “tickets are expensive” even when the CPI says fares are only modestly above 2019: **absolute** fuel is still roughly **$3.40**/gal versus **$1.88** in 2019, and carriers price into a demand environment that recovered faster than the 2020 trough. The index comparison is about *relative* movement since the base year, not about whether flying feels cheap.
+
+## Annual summary table
+
+| Year | Fare index (2019=100) | Fuel index (2019=100) | Fuel $/gal | Gap (pp) | Pass-through |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 100.0 | 100.0 | 1.878 | 0.0 | 100.0 |
+| 2020 | 82.0 | 58.6 | 1.101 | +23.4 | 139.9 |
+| 2021 | 82.0 | 98.8 | 1.854 | −16.8 | 83.0 |
+| 2022 | 106.7 | 179.3 | 3.368 | −72.6 | 59.5 |
+| 2023 | 100.7 | 143.8 | 2.701 | −43.1 | 70.0 |
+| 2024 | 98.1 | 122.7 | 2.304 | −24.6 | 80.0 |
+| 2025 | 96.2 | 113.8 | 2.137 | −17.6 | 84.5 |
+| 2026 YTD | 119.1 | 173.9 | 3.266 | −54.8 | 68.5 |
+
+*2026 YTD uses January–July months present in both series. October 2025 fares omitted from monthly joins.*
+
+## What BTS complaint traffic adds — and does not
+
+The Bureau of Transportation Statistics **Air Travel Consumer Report** tracks mishandled bags, oversales, and consumer complaints. Those operational series are useful context for *service quality* during reopen and schedule recovery, but they are not a price index. We cite the report as a companion public source for aviation consumer conditions; we do **not** fold complaint counts into the fare–fuel correlation. Price pass-through and operational friction can move together in crises without sharing a causal identity.
+
+## Caveats and reading rules
+
+Several limits keep the story honest. First, **NSA** airfare CPI retains strong seasonality; summer peaks can look like “inflation” when they are calendar. Second, Gulf Coast **spot** jet fuel is a benchmark, not every carrier’s hedged average cost. Third, CPI airline fares exclude many ancillaries that have grown as a share of passenger revenue. Fourth, **October 2025** is missing for fares. Fifth, correlation is not a structural pass-through elasticity; a regression of fares on lagged fuel with capacity and demand controls would be a different study. Sixth, rebasing to 2019 makes 2020–21 look like “cheap tickets” relative to fuel — true on this scale, false as a statement that flying was pleasant or available.
+
+## Bottom line for the brief
+
+Has BLS airline fares CPI followed EIA Gulf Coast jet fuel closely since 2019? **Closely enough to show a clear positive link, not closely enough to call them the same story.** Fuel’s indexed path is steeper, spikier, and usually one month ahead. As of July 2026 the gap sits near **−64** points: tickets are higher than 2019, but jet fuel is higher still. Anyone pricing hedges, leisure demand, or CPI contributions from air travel should watch both series — and expect the fuel line to move first.
+`,
+  },
+  {
     id: "motor-vehicle-insurance-cpi-versus-median-weekly-earnings-2026",
     slug: "motor-vehicle-insurance-cpi-versus-median-weekly-earnings-2026",
     title:

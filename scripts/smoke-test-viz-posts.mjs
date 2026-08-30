@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "airline-fares-cpi-versus-jet-fuel-prices-2026",
+    marker: "Airfare index vs jet fuel",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "motor-vehicle-insurance-cpi-versus-median-weekly-earnings-2026",
     marker: "Auto-insurance index vs wage index",
     forbidden: "Loading interactive charts",
