@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "median-age-at-first-marriage-versus-never-married-share-2026",
+    marker: "First-marriage age vs never-married share",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "credit-card-90-day-delinquency-versus-revolving-balances-2026",
     marker: "Card 90+ vs revolving balances",
     forbidden: "Loading interactive charts",

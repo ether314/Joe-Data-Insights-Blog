@@ -1,7 +1,7 @@
 /**
  * QA: npl-sites-with-construction-complete-versus-remaining-construction-2026
- * // viz-types: donut, horizontal bars, funnel bars, composed dual-axis, area, scatter, pie | layout: default
- * // smoke-marker: Construction-complete share of final NPL
+ * // viz-types: horizontal bars, donut pie, composed area+bar+line, stacked bars+line, stacked lead bars, milestone bars, funding scatter | layout: default
+ * // smoke-marker: Headline — 58.7% of final NPL construction-complete
  */
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -10,34 +10,39 @@ import { chromium } from "playwright";
 import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
 import { auditVizInteractions } from "./lib/viz-interaction-qa.mjs";
 import {
+  ANALYTICS,
   ANNUAL_SITEWIDE_CC,
-  CONSTRUCTION_ACTIVITY,
   FINAL_NPL_SPLIT,
   HEADLINE,
-  MILESTONE_COMPARE,
-  NPL_ROSTER,
-  PIPELINE_STAGES,
-  SAA_STATUS,
-  SPLIT_ROWS,
+  LEAD_MIX,
+  MILESTONE_LADDER,
+  PROJECT_FLOW,
+  STATUS_UNIVERSE,
+  SUMMARY_TABLE,
 } from "../src/data/npl-sites-with-construction-complete-versus-remaining-construction-2026-data.ts";
 
-assert.equal(NPL_ROSTER.final, 1343);
-assert.equal(NPL_ROSTER.deleted, 459);
-assert.equal(FINAL_NPL_SPLIT.constructionCompleteOnFinal, 788);
-assert.equal(FINAL_NPL_SPLIT.remainingConstruction, 555);
-assert.ok(HEADLINE.constructionCompleteSharePct > 58 && HEADLINE.constructionCompleteSharePct < 60);
-assert.equal(HEADLINE.fy2025SiteWideCc, 1);
-assert.equal(HEADLINE.fy2025ProjectCompletions, 72);
-assert.ok(ANNUAL_SITEWIDE_CC.length >= 10);
-assert.ok(CONSTRUCTION_ACTIVITY.length >= 4);
-assert.ok(PIPELINE_STAGES.length >= 4);
-assert.ok(MILESTONE_COMPARE.length >= 4);
-assert.ok(SAA_STATUS.length === 2);
-assert.ok(SPLIT_ROWS.length === 2);
+assert.equal(HEADLINE.finalNpl, 1343);
+assert.equal(HEADLINE.cumulativeCc, 1247);
+assert.equal(HEADLINE.ccOnFinalNpl, 788);
+assert.equal(HEADLINE.unfinishedOnFinalNpl, 555);
+assert.equal(HEADLINE.ccSharePct, 58.7);
+assert.equal(HEADLINE.unfinishedSharePct, 41.3);
+assert.equal(FINAL_NPL_SPLIT.length, 2);
+assert.equal(STATUS_UNIVERSE.length, 4);
+assert.ok(ANNUAL_SITEWIDE_CC.length >= 8);
+assert.equal(PROJECT_FLOW.length, 2);
+assert.equal(LEAD_MIX.length, 2);
+assert.ok(MILESTONE_LADDER.length >= 5);
+assert.ok(SUMMARY_TABLE.length >= 8);
+assert.equal(ANALYTICS.unfinishedSites, 555);
 
 const root = process.cwd();
-const slug = "npl-sites-with-construction-complete-versus-remaining-construction-2026";
-const markers = ["Construction-complete share of final NPL"];
+const slug =
+  "npl-sites-with-construction-complete-versus-remaining-construction-2026";
+const markers = [
+  "Headline — 58.7% of final NPL construction-complete",
+  "Final NPL split",
+];
 
 async function clickBtn(page, name) {
   console.log(`→ click ${name}`);
@@ -51,7 +56,7 @@ async function main() {
     console.error("✗ Missing out/ — run npm run build first");
     process.exit(1);
   }
-  const port = Number(process.env.SMOKE_PORT || 4180);
+  const port = Number(process.env.SMOKE_PORT || 4184);
   const server = await startStaticServer(outDir, port);
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -69,16 +74,17 @@ async function main() {
       });
       console.log(`✓ ${m}`);
     }
+    await clickBtn(page, "Status universe");
+    await clickBtn(page, "CC cumulative path");
+    await clickBtn(page, "Project vs sitewide");
+    await clickBtn(page, "Who leads starts");
+    await clickBtn(page, "Milestone ladder");
+    await clickBtn(page, "Funding vs flow");
     await clickBtn(page, "Final NPL split");
+    await clickBtn(page, "Final + deleted");
+    await clickBtn(page, "FY2020–2025");
     await clickBtn(page, "Final NPL only");
-    await clickBtn(page, "Cumulative ever-listed frame");
-    await clickBtn(page, "Final + proposed");
-    await clickBtn(page, "Pipeline funnel");
-    await clickBtn(page, "Annual site-wide CC");
-    await clickBtn(page, "Project activity");
-    await clickBtn(page, "Protection milestones");
-    await clickBtn(page, "SAA status");
-    await clickBtn(page, "Final NPL split");
+    await clickBtn(page, "FY2016–2025");
     await auditVizInteractions(page, { slug });
     console.log("✓ QA passed");
   } finally {
@@ -88,6 +94,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error(err);
+  console.error("✗ QA failed", err);
   process.exit(1);
 });

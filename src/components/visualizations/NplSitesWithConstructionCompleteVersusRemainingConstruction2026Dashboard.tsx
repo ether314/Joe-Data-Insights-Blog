@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import {
   Area,
-  AreaChart,
   Bar,
   BarChart,
   CartesianGrid,
@@ -22,615 +21,478 @@ import {
   ZAxis,
 } from "recharts";
 import {
+  ANALYTICS,
   ANNUAL_SITEWIDE_CC,
-  CONSTRUCTION_ACTIVITY,
-  DENOMINATOR_OPTIONS,
+  FINAL_NPL_SPLIT,
+  FUNDING,
   HEADLINE,
-  IIJA_CONTEXT,
-  MILESTONE_COMPARE,
-  PIPELINE_STAGES,
+  LEAD_MIX,
+  MILESTONE_LADDER,
+  PROJECT_FLOW,
   SAA_STATUS,
   SOURCE_NOTE,
-  SPLIT_ROWS,
-  VIEW_OPTIONS,
-  shareUnderDenominator,
-  type DenominatorMode,
-  type ViewMode,
+  filterAnnualCc,
+  statusForMode,
+  type UniverseMode,
+  type YearFilter,
 } from "@/data/npl-sites-with-construction-complete-versus-remaining-construction-2026-data";
 
+type Panel =
+  | "final-split"
+  | "status-pie"
+  | "cc-path"
+  | "project-flow"
+  | "lead-mix"
+  | "milestone-ladder"
+  | "funding-scatter";
+
 const COLORS = {
-  cc: "#0f766e",
-  remaining: "#c2410c",
-  project: "#0369a1",
-  sitewide: "#7c2d12",
-  heuc: "#4f46e5",
-  gmi: "#0891b2",
-  swrau: "#ca8a04",
+  cc: "#0e7490",
+  unfinished: "#b45309",
   deleted: "#64748b",
+  proposed: "#7c3aed",
+  navy: "#0f2744",
+  rose: "#9f1239",
+  teal: "#0e7490",
+  amber: "#b45309",
   grid: "#e2e8f0",
-  saaActive: "#b45309",
-  saaCc: "#0d9488",
-  area: "#134e4a",
+  gov: "#1e3a5f",
+  prp: "#0e7490",
+  fed: "#b45309",
 };
 
-function ChartCard({
-  title,
-  subtitle,
-  children,
-}: {
-  title: string;
-  subtitle: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-      <h3 className="text-sm font-semibold text-slate-900">{title}</h3>
-      <p className="mt-0.5 text-xs text-slate-500">{subtitle}</p>
-      <div className="mt-3 h-72 w-full">{children}</div>
-    </div>
-  );
+const PANEL_LABELS: { id: Panel; label: string }[] = [
+  { id: "final-split", label: "Final NPL split" },
+  { id: "status-pie", label: "Status universe" },
+  { id: "cc-path", label: "CC cumulative path" },
+  { id: "project-flow", label: "Project vs sitewide" },
+  { id: "lead-mix", label: "Who leads starts" },
+  { id: "milestone-ladder", label: "Milestone ladder" },
+  { id: "funding-scatter", label: "Funding vs flow" },
+];
+
+const UNIVERSE_OPTS: { id: UniverseMode; label: string }[] = [
+  { id: "final-only", label: "Final NPL only" },
+  { id: "final-plus-deleted", label: "Final + deleted" },
+  { id: "full-book", label: "Full NPL book" },
+];
+
+const YEAR_OPTS: { id: YearFilter; label: string }[] = [
+  { id: "all", label: "FY2016–2025" },
+  { id: "recent", label: "FY2020–2025" },
+  { id: "fy2025", label: "FY2025 only" },
+];
+
+const PIE_COLORS: Record<string, string> = {
+  "cc-on-final": COLORS.cc,
+  "unfinished-final": COLORS.unfinished,
+  deleted: COLORS.deleted,
+  proposed: COLORS.proposed,
+};
+
+function fmt(n: number) {
+  return n.toLocaleString("en-US");
 }
 
 export function NplSitesWithConstructionCompleteVersusRemainingConstruction2026Dashboard() {
-  const [view, setView] = useState<ViewMode>("final-split");
-  const [denom, setDenom] = useState<DenominatorMode>("final");
-  const [showProjects, setShowProjects] = useState(true);
-  const [yearFrom, setYearFrom] = useState(2015);
+  const [panel, setPanel] = useState<Panel>("final-split");
+  const [universe, setUniverse] = useState<UniverseMode>("final-only");
+  const [years, setYears] = useState<YearFilter>("all");
 
-  const share = useMemo(() => shareUnderDenominator(denom), [denom]);
+  const statusSlices = useMemo(() => statusForMode(universe), [universe]);
+  const annualCc = useMemo(() => filterAnnualCc(years), [years]);
 
-  const annualFiltered = useMemo(
-    () => ANNUAL_SITEWIDE_CC.filter((r) => r.fiscalYear >= yearFrom),
-    [yearFrom],
+  const leadChart = useMemo(
+    () =>
+      LEAD_MIX.map((r) => ({
+        fy: `FY${r.fiscalYear}`,
+        Government: r.government,
+        PRP: r.prp,
+        "Federal facility": r.federalFacility,
+      })),
+    [],
   );
 
-  const activityScatter = useMemo(
+  const flowChart = useMemo(
     () =>
-      CONSTRUCTION_ACTIVITY.filter((r) => r.fiscalYear >= yearFrom).map((r) => ({
-        ...r,
-        x: r.projectCompletions,
-        y: r.siteWideCc,
-        z: r.starts || 40,
+      PROJECT_FLOW.map((r) => ({
+        fy: `FY${r.fiscalYear}`,
+        Started: r.started,
+        Ongoing: r.ongoingPrior,
+        "Projects done": r.completedProjects,
+        "Sitewide CC": r.sitewideCc,
       })),
-    [yearFrom],
+    [],
   );
 
-  const pieData = useMemo(() => {
-    const complete = Math.max(0, share.complete);
-    const remaining = Math.max(0, share.remaining);
-    return [
-      { name: "Construction complete", value: complete, fill: COLORS.cc },
-      { name: "Remaining / unfinished", value: remaining, fill: COLORS.remaining },
-    ];
-  }, [share]);
-
-  const funnelData = useMemo(
+  const fundingScatter = useMemo(
     () =>
-      PIPELINE_STAGES.map((s) => ({
-        name: s.label,
-        value: s.value,
-        fill:
-          s.id === "remaining"
-            ? COLORS.remaining
-            : s.id === "sitewide-cc-fy"
-              ? COLORS.sitewide
-              : s.id === "project-complete-fy"
-                ? COLORS.project
-                : COLORS.cc,
-      })),
+      FUNDING.map((f) => {
+        const flow = PROJECT_FLOW.find((p) => p.fiscalYear === f.fiscalYear);
+        return {
+          fy: f.fiscalYear,
+          constructionM: f.constructionObligatedM,
+          projectsDone: flow?.completedProjects ?? 0,
+          sitewideCc: flow?.sitewideCc ?? 0,
+          label: `FY${f.fiscalYear}`,
+        };
+      }),
     [],
   );
 
   return (
     <div
-      className="space-y-4"
       data-viz="npl-sites-with-construction-complete-versus-remaining-construction-2026"
+      className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6"
     >
-      <div className="rounded-xl border border-teal-800/20 bg-gradient-to-br from-slate-900 via-teal-950 to-slate-900 p-5 text-slate-100">
-        <p className="text-xs font-medium uppercase tracking-wide text-teal-300/90">
-          Construction-complete share of NPL
-        </p>
-        <p className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
-          {HEADLINE.constructionCompleteSharePct}% of final NPL sites are
-          construction-complete
-        </p>
-        <p className="mt-2 max-w-3xl text-sm text-slate-300">
-          {HEADLINE.constructionCompleteOnFinal.toLocaleString()} sites on the
-          final list have finished physical construction;{" "}
-          {HEADLINE.remainingConstruction.toLocaleString()} still have unfinished
-          construction. FY 2025 added only {HEADLINE.fy2025SiteWideCc} site-wide
-          completion against {HEADLINE.fy2025ProjectCompletions} remedial project
-          completions.
-        </p>
-        <p className="mt-3 text-[11px] leading-relaxed text-slate-400">
-          {/* smoke-marker: Construction-complete share of final NPL */}
-          Construction-complete share of final NPL · derived from EPA cumulative
-          CC stock minus deleted sites
-        </p>
+      <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            Superfund NPL · construction milestone
+          </p>
+          <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
+            Headline — {HEADLINE.ccSharePct}% of final NPL construction-complete (
+            {fmt(HEADLINE.ccOnFinalNpl)} sites); {fmt(HEADLINE.unfinishedOnFinalNpl)}{" "}
+            still unfinished
+          </h3>
+          <p className="mt-1 max-w-3xl text-sm text-slate-600">
+            End-FY2025 final list: {fmt(HEADLINE.finalNpl)} sites. Cumulative sitewide
+            construction complete: {fmt(HEADLINE.cumulativeCc)}. Unfinished share:{" "}
+            {HEADLINE.unfinishedSharePct}%.
+          </p>
+        </div>
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs font-medium text-slate-500">Panel</span>
-        {VIEW_OPTIONS.map((opt) => (
+      <div className="mb-3 flex flex-wrap gap-2">
+        {PANEL_LABELS.map((p) => (
           <button
-            key={opt.id}
+            key={p.id}
             type="button"
-            onClick={() => setView(opt.id)}
-            className={`rounded-md px-2.5 py-1 text-xs font-medium transition ${
-              view === opt.id
-                ? "bg-teal-800 text-white"
+            onClick={() => setPanel(p.id)}
+            className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
+              panel === p.id
+                ? "bg-slate-900 text-white"
                 : "bg-slate-100 text-slate-700 hover:bg-slate-200"
             }`}
           >
-            {opt.label}
+            {p.label}
           </button>
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs font-medium text-slate-500">Denominator</span>
-        {DENOMINATOR_OPTIONS.map((opt) => (
+      <div className="mb-4 flex flex-wrap gap-2">
+        {UNIVERSE_OPTS.map((o) => (
           <button
-            key={opt.id}
+            key={o.id}
             type="button"
-            onClick={() => setDenom(opt.id)}
-            className={`rounded-md px-2.5 py-1 text-xs font-medium transition ${
-              denom === opt.id
-                ? "bg-orange-700 text-white"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+            onClick={() => setUniverse(o.id)}
+            className={`rounded-md border px-2.5 py-1 text-xs font-medium ${
+              universe === o.id
+                ? "border-teal-700 bg-teal-50 text-teal-900"
+                : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
             }`}
           >
-            {opt.label}
+            {o.label}
           </button>
         ))}
-        <label className="ml-2 flex items-center gap-1.5 text-xs text-slate-600">
-          <input
-            type="checkbox"
-            checked={showProjects}
-            onChange={(e) => setShowProjects(e.target.checked)}
-            className="rounded border-slate-300"
-          />
-          Show project completions on annual chart
-        </label>
-        <label className="flex items-center gap-1.5 text-xs text-slate-600">
-          From FY
-          <select
-            value={yearFrom}
-            onChange={(e) => setYearFrom(Number(e.target.value))}
-            className="rounded border border-slate-300 bg-white px-1.5 py-0.5 text-xs"
+        {YEAR_OPTS.map((o) => (
+          <button
+            key={o.id}
+            type="button"
+            onClick={() => setYears(o.id)}
+            className={`rounded-md border px-2.5 py-1 text-xs font-medium ${
+              years === o.id
+                ? "border-amber-700 bg-amber-50 text-amber-900"
+                : "border-slate-200 bg-white text-slate-600 hover:border-slate-300"
+            }`}
           >
-            {[2015, 2018, 2020, 2022].map((y) => (
-              <option key={y} value={y}>
-                {y}
-              </option>
-            ))}
-          </select>
-        </label>
+            {o.label}
+          </button>
+        ))}
       </div>
 
-      <p className="text-xs text-slate-500">
-        Active frame: {share.note} →{" "}
-        <span className="font-semibold text-teal-800">
-          {share.completePct.toFixed(1)}%
-        </span>{" "}
-        complete ({share.complete.toLocaleString()} / {share.denom.toLocaleString()}
-        ).
+      <div className="h-[360px] w-full sm:h-[400px]">
+        {panel === "final-split" && (
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              layout="vertical"
+              data={FINAL_NPL_SPLIT}
+              margin={{ top: 8, right: 24, left: 8, bottom: 8 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke={COLORS.grid} />
+              <XAxis type="number" tick={{ fontSize: 12 }} />
+              <YAxis
+                type="category"
+                dataKey="label"
+                width={160}
+                tick={{ fontSize: 12 }}
+              />
+              <Tooltip
+                formatter={(v, name, item) => {
+                  const row = item?.payload as { sharePct?: number } | undefined;
+                  return [
+                    `${fmt(Number(v ?? 0))} sites (${row?.sharePct ?? "—"}%)`,
+                    name === "sites" ? "Sites" : String(name),
+                  ];
+                }}
+              />
+              <Bar dataKey="sites" radius={[0, 4, 4, 0]}>
+                {FINAL_NPL_SPLIT.map((row) => (
+                  <Cell
+                    key={row.id}
+                    fill={
+                      row.id === "construction-complete"
+                        ? COLORS.cc
+                        : COLORS.unfinished
+                    }
+                  />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        )}
+
+        {panel === "status-pie" && (
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                data={statusSlices}
+                dataKey="sites"
+                nameKey="label"
+                cx="50%"
+                cy="50%"
+                innerRadius={70}
+                outerRadius={120}
+                paddingAngle={2}
+                label={(props) => {
+                  const name = String(props.name ?? "");
+                  const value = Number(props.value ?? 0);
+                  return `${name}: ${fmt(value)}`;
+                }}
+              >
+                {statusSlices.map((s) => (
+                  <Cell key={s.id} fill={PIE_COLORS[s.id] ?? COLORS.navy} />
+                ))}
+              </Pie>
+              <Tooltip
+                formatter={(v, _n, item) => {
+                  const row = item?.payload as
+                    | { shareOfUniversePct?: number; label?: string }
+                    | undefined;
+                  return [
+                    `${fmt(Number(v ?? 0))} (${row?.shareOfUniversePct ?? "—"}% of universe)`,
+                    row?.label ?? "Sites",
+                  ];
+                }}
+              />
+              <Legend />
+            </PieChart>
+          </ResponsiveContainer>
+        )}
+
+        {panel === "cc-path" && (
+          <ResponsiveContainer width="100%" height="100%">
+            <ComposedChart data={annualCc} margin={{ top: 8, right: 16, left: 0, bottom: 8 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke={COLORS.grid} />
+              <XAxis dataKey="fiscalYear" tick={{ fontSize: 12 }} />
+              <YAxis
+                yAxisId="left"
+                tick={{ fontSize: 12 }}
+                label={{ value: "Annual CC", angle: -90, position: "insideLeft", fontSize: 11 }}
+              />
+              <YAxis
+                yAxisId="right"
+                orientation="right"
+                domain={["dataMin - 20", "dataMax + 10"]}
+                tick={{ fontSize: 12 }}
+                label={{ value: "Cumulative", angle: 90, position: "insideRight", fontSize: 11 }}
+              />
+              <Tooltip />
+              <Legend />
+              <Area
+                yAxisId="right"
+                type="monotone"
+                dataKey="cumulativeCc"
+                name="Cumulative CC"
+                fill="#99f6e4"
+                stroke={COLORS.teal}
+                fillOpacity={0.35}
+              />
+              <Bar
+                yAxisId="left"
+                dataKey="sitewideCc"
+                name="Annual sitewide CC"
+                fill={COLORS.rose}
+                radius={[3, 3, 0, 0]}
+              />
+              <Line
+                yAxisId="right"
+                type="monotone"
+                dataKey="cumulativeCc"
+                name="Cumulative (line)"
+                stroke={COLORS.navy}
+                strokeWidth={2}
+                dot={false}
+              />
+            </ComposedChart>
+          </ResponsiveContainer>
+        )}
+
+        {panel === "project-flow" && (
+          <ResponsiveContainer width="100%" height="100%">
+            <ComposedChart data={flowChart} margin={{ top: 8, right: 16, left: 0, bottom: 8 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke={COLORS.grid} />
+              <XAxis dataKey="fy" tick={{ fontSize: 12 }} />
+              <YAxis yAxisId="left" tick={{ fontSize: 12 }} />
+              <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 12 }} />
+              <Tooltip />
+              <Legend />
+              <Bar yAxisId="left" dataKey="Started" stackId="a" fill={COLORS.gov} />
+              <Bar yAxisId="left" dataKey="Ongoing" stackId="a" fill={COLORS.teal} />
+              <Bar
+                yAxisId="left"
+                dataKey="Projects done"
+                fill={COLORS.amber}
+                radius={[3, 3, 0, 0]}
+              />
+              <Line
+                yAxisId="right"
+                type="monotone"
+                dataKey="Sitewide CC"
+                stroke={COLORS.rose}
+                strokeWidth={3}
+                dot={{ r: 5 }}
+              />
+            </ComposedChart>
+          </ResponsiveContainer>
+        )}
+
+        {panel === "lead-mix" && (
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={leadChart} margin={{ top: 8, right: 16, left: 0, bottom: 8 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke={COLORS.grid} />
+              <XAxis dataKey="fy" tick={{ fontSize: 12 }} />
+              <YAxis tick={{ fontSize: 12 }} />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="Government" stackId="lead" fill={COLORS.gov} />
+              <Bar dataKey="PRP" stackId="lead" fill={COLORS.prp} />
+              <Bar
+                dataKey="Federal facility"
+                stackId="lead"
+                fill={COLORS.fed}
+                radius={[3, 3, 0, 0]}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        )}
+
+        {panel === "milestone-ladder" && (
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              layout="vertical"
+              data={MILESTONE_LADDER}
+              margin={{ top: 8, right: 24, left: 8, bottom: 8 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke={COLORS.grid} />
+              <XAxis type="number" tick={{ fontSize: 12 }} />
+              <YAxis
+                type="category"
+                dataKey="label"
+                width={200}
+                tick={{ fontSize: 11 }}
+              />
+              <Tooltip
+                formatter={(v, _n, item) => {
+                  const row = item?.payload as { note?: string } | undefined;
+                  return [
+                    `${fmt(Number(v ?? 0))} — ${row?.note ?? ""}`,
+                    "Cumulative sites",
+                  ];
+                }}
+              />
+              <Bar dataKey="sites" fill={COLORS.navy} radius={[0, 4, 4, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        )}
+
+        {panel === "funding-scatter" && (
+          <ResponsiveContainer width="100%" height="100%">
+            <ScatterChart margin={{ top: 16, right: 24, left: 8, bottom: 16 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke={COLORS.grid} />
+              <XAxis
+                type="number"
+                dataKey="constructionM"
+                name="Construction $M"
+                tick={{ fontSize: 12 }}
+                label={{
+                  value: "Construction obligations ($M)",
+                  position: "insideBottom",
+                  offset: -4,
+                  fontSize: 11,
+                }}
+              />
+              <YAxis
+                type="number"
+                dataKey="projectsDone"
+                name="Projects done"
+                tick={{ fontSize: 12 }}
+                label={{
+                  value: "Projects completed",
+                  angle: -90,
+                  position: "insideLeft",
+                  fontSize: 11,
+                }}
+              />
+              <ZAxis type="number" dataKey="sitewideCc" range={[80, 400]} name="Sitewide CC" />
+              <Tooltip
+                cursor={{ strokeDasharray: "3 3" }}
+                formatter={(v, name) => [fmt(Number(v ?? 0)), String(name)]}
+                labelFormatter={(_, payload) =>
+                  (payload?.[0]?.payload as { label?: string } | undefined)
+                    ?.label ?? "Fiscal year"
+                }
+              />
+              <Scatter data={fundingScatter} fill={COLORS.teal}>
+                {fundingScatter.map((d) => (
+                  <Cell key={d.fy} fill={d.fy === 2025 ? COLORS.rose : COLORS.teal} />
+                ))}
+              </Scatter>
+            </ScatterChart>
+          </ResponsiveContainer>
+        )}
+      </div>
+
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        <div className="rounded-lg bg-slate-50 p-3">
+          <p className="text-xs text-slate-500">Unfinished on final NPL</p>
+          <p className="text-xl font-semibold text-amber-800">
+            {fmt(ANALYTICS.unfinishedSites)}
+          </p>
+        </div>
+        <div className="rounded-lg bg-slate-50 p-3">
+          <p className="text-xs text-slate-500">FY2025 project completions / sitewide CC</p>
+          <p className="text-xl font-semibold text-slate-900">
+            {ANALYTICS.projectsPerSitewideCcFy2025} : 1
+          </p>
+        </div>
+        <div className="rounded-lg bg-slate-50 p-3">
+          <p className="text-xs text-slate-500">SAA construction-complete share</p>
+          <p className="text-xl font-semibold text-teal-800">
+            {ANALYTICS.saaCcSharePct}%
+          </p>
+          <p className="text-xs text-slate-500">
+            {SAA_STATUS[1].sites} of {SAA_STATUS[0].sites + SAA_STATUS[1].sites} SAA
+            agreements
+          </p>
+        </div>
+      </div>
+
+      <p className="mt-4 text-xs leading-relaxed text-slate-500">{SOURCE_NOTE}</p>
+      <p className="mt-1 text-[11px] text-slate-400">
+        Path rows: {ANNUAL_SITEWIDE_CC.length} fiscal years · Universe mode: {universe} ·
+        Year filter: {years}
       </p>
-
-      {view === "final-split" && (
-        <div className="grid gap-4 lg:grid-cols-2">
-          <ChartCard
-            title="Final NPL construction status"
-            subtitle="Donut of construction-complete vs remaining under the selected denominator"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={pieData}
-                  dataKey="value"
-                  nameKey="name"
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={58}
-                  outerRadius={95}
-                  paddingAngle={2}
-                  label={({ name, percent }) =>
-                    `${name?.split(" ")[0]} ${((percent ?? 0) * 100).toFixed(0)}%`
-                  }
-                >
-                  {pieData.map((d) => (
-                    <Cell key={d.name} fill={d.fill} />
-                  ))}
-                </Pie>
-                <Tooltip
-                  formatter={(v) =>
-                    typeof v === "number" ? v.toLocaleString() : String(v)
-                  }
-                />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
-          </ChartCard>
-          <ChartCard
-            title="Absolute site counts"
-            subtitle="Paired horizontal bars — complete vs unfinished under selected frame"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                layout="vertical"
-                data={pieData}
-                margin={{ left: 24, right: 16 }}
-              >
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis type="number" tick={{ fontSize: 11 }} />
-                <YAxis
-                  type="category"
-                  dataKey="name"
-                  width={130}
-                  tick={{ fontSize: 11 }}
-                />
-                <Tooltip />
-                <Bar dataKey="value" radius={[0, 4, 4, 0]}>
-                  {pieData.map((d) => (
-                    <Cell key={d.name} fill={d.fill} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </ChartCard>
-        </div>
-      )}
-
-      {view === "pipeline" && (
-        <div className="grid gap-4 lg:grid-cols-2">
-          <ChartCard
-            title="Cleanup pipeline stages"
-            subtitle="Final roster → CC-on-final → remaining → FY25 project vs site-wide completions"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={funnelData} margin={{ bottom: 48 }}>
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis
-                  dataKey="name"
-                  interval={0}
-                  angle={-28}
-                  textAnchor="end"
-                  height={70}
-                  tick={{ fontSize: 10 }}
-                />
-                <YAxis tick={{ fontSize: 11 }} />
-                <Tooltip />
-                <Bar dataKey="value" radius={[4, 4, 0, 0]}>
-                  {funnelData.map((d) => (
-                    <Cell key={d.name} fill={d.fill} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </ChartCard>
-          <ChartCard
-            title="IIJA construction funding context"
-            subtitle={`$${IIJA_CONTEXT.authorizationBb}B authorization; $${IIJA_CONTEXT.obligatedThroughFy2024Bb}B obligated through FY24 at ${IIJA_CONTEXT.sitesFundedThroughFy2024} sites`}
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                data={[
-                  {
-                    label: "IIJA authorization",
-                    bb: IIJA_CONTEXT.authorizationBb,
-                  },
-                  {
-                    label: "Obligated thru FY24",
-                    bb: IIJA_CONTEXT.obligatedThroughFy2024Bb,
-                  },
-                  {
-                    label: "FY25 construction $ (B)",
-                    bb: IIJA_CONTEXT.fy2025ConstructionObligatedM / 1000,
-                  },
-                ]}
-              >
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis dataKey="label" tick={{ fontSize: 10 }} />
-                <YAxis
-                  tick={{ fontSize: 11 }}
-                  label={{
-                    value: "$ billions",
-                    angle: -90,
-                    position: "insideLeft",
-                    style: { fontSize: 10 },
-                  }}
-                />
-                <Tooltip
-                  formatter={(v) =>
-                    typeof v === "number" ? `$${v.toFixed(2)}B` : String(v)
-                  }
-                />
-                <Bar dataKey="bb" fill={COLORS.project} radius={[4, 4, 0, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
-          </ChartCard>
-        </div>
-      )}
-
-      {view === "annual" && (
-        <div className="grid gap-4 lg:grid-cols-2">
-          <ChartCard
-            title="Annual site-wide construction completions"
-            subtitle="EPA accomplishment metrics — site-wide CC has slowed even as project completions stay high"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <ComposedChart data={annualFiltered}>
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis dataKey="fiscalYear" tick={{ fontSize: 11 }} />
-                <YAxis yAxisId="left" tick={{ fontSize: 11 }} />
-                {showProjects && (
-                  <YAxis
-                    yAxisId="right"
-                    orientation="right"
-                    tick={{ fontSize: 11 }}
-                  />
-                )}
-                <Tooltip />
-                <Legend />
-                <Bar
-                  yAxisId="left"
-                  dataKey="annualCc"
-                  name="Site-wide CC"
-                  fill={COLORS.sitewide}
-                  radius={[3, 3, 0, 0]}
-                />
-                {showProjects && (
-                  <Line
-                    yAxisId="right"
-                    type="monotone"
-                    dataKey="projectCompletions"
-                    name="Project completions"
-                    stroke={COLORS.project}
-                    strokeWidth={2}
-                    dot={{ r: 3 }}
-                    connectNulls
-                  />
-                )}
-              </ComposedChart>
-            </ResponsiveContainer>
-          </ChartCard>
-          <ChartCard
-            title="Cumulative construction-complete stock"
-            subtitle="Running total of NPL sites that ever reached site-wide construction completion"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={annualFiltered}>
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis dataKey="fiscalYear" tick={{ fontSize: 11 }} />
-                <YAxis
-                  domain={["dataMin - 20", "dataMax + 10"]}
-                  tick={{ fontSize: 11 }}
-                />
-                <Tooltip />
-                <Area
-                  type="monotone"
-                  dataKey="cumulativeCc"
-                  name="Cumulative CC"
-                  stroke={COLORS.area}
-                  fill={COLORS.cc}
-                  fillOpacity={0.35}
-                  strokeWidth={2}
-                />
-              </AreaChart>
-            </ResponsiveContainer>
-          </ChartCard>
-        </div>
-      )}
-
-      {view === "activity" && (
-        <div className="grid gap-4 lg:grid-cols-2">
-          <ChartCard
-            title="Project completions vs site-wide CC"
-            subtitle="Scatter: many OU-level project finishes buy few whole-site construction completions"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <ScatterChart margin={{ top: 8, right: 12, bottom: 8, left: 8 }}>
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis
-                  type="number"
-                  dataKey="x"
-                  name="Project completions"
-                  tick={{ fontSize: 11 }}
-                  label={{
-                    value: "Remedial project completions",
-                    position: "insideBottom",
-                    offset: -2,
-                    style: { fontSize: 10 },
-                  }}
-                />
-                <YAxis
-                  type="number"
-                  dataKey="y"
-                  name="Site-wide CC"
-                  tick={{ fontSize: 11 }}
-                  label={{
-                    value: "Site-wide CC",
-                    angle: -90,
-                    position: "insideLeft",
-                    style: { fontSize: 10 },
-                  }}
-                />
-                <ZAxis type="number" dataKey="z" range={[60, 280]} />
-                <Tooltip
-                  cursor={{ strokeDasharray: "3 3" }}
-                  formatter={(v, name) => [v, String(name)]}
-                  labelFormatter={(_, payload) => {
-                    const p = payload?.[0]?.payload;
-                    return p ? `FY ${p.fiscalYear}` : "";
-                  }}
-                />
-                <Scatter data={activityScatter} fill={COLORS.project}>
-                  {activityScatter.map((d) => (
-                    <Cell
-                      key={d.fiscalYear}
-                      fill={d.siteWideCc <= 2 ? COLORS.remaining : COLORS.cc}
-                    />
-                  ))}
-                </Scatter>
-              </ScatterChart>
-            </ResponsiveContainer>
-          </ChartCard>
-          <ChartCard
-            title="Starts, oversight, and completions"
-            subtitle="Recent FY construction activity (null starts omitted from bar)"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <ComposedChart
-                data={CONSTRUCTION_ACTIVITY.filter((r) => r.fiscalYear >= yearFrom)}
-              >
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis dataKey="fiscalYear" tick={{ fontSize: 11 }} />
-                <YAxis tick={{ fontSize: 11 }} />
-                <Tooltip />
-                <Legend />
-                <Bar
-                  dataKey="starts"
-                  name="New starts"
-                  fill={COLORS.project}
-                  radius={[3, 3, 0, 0]}
-                />
-                <Bar
-                  dataKey="priorYearOversight"
-                  name="Prior-year oversight"
-                  fill={COLORS.gmi}
-                  radius={[3, 3, 0, 0]}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="projectCompletions"
-                  name="Project completions"
-                  stroke={COLORS.sitewide}
-                  strokeWidth={2}
-                />
-              </ComposedChart>
-            </ResponsiveContainer>
-          </ChartCard>
-        </div>
-      )}
-
-      {view === "milestones" && (
-        <div className="grid gap-4 lg:grid-cols-2">
-          <ChartCard
-            title="Protection milestones vs construction stock"
-            subtitle="Human exposure / groundwater control can precede or diverge from construction complete"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                layout="vertical"
-                data={[...MILESTONE_COMPARE]}
-                margin={{ left: 8, right: 12 }}
-              >
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis type="number" tick={{ fontSize: 11 }} />
-                <YAxis
-                  type="category"
-                  dataKey="label"
-                  width={160}
-                  tick={{ fontSize: 10 }}
-                />
-                <Tooltip />
-                <Bar dataKey="value" radius={[0, 4, 4, 0]}>
-                  {MILESTONE_COMPARE.map((m) => (
-                    <Cell
-                      key={m.id}
-                      fill={
-                        m.id === "cum-cc"
-                          ? COLORS.cc
-                          : m.id === "heuc"
-                            ? COLORS.heuc
-                            : m.id === "gmi"
-                              ? COLORS.gmi
-                              : m.id === "swrau"
-                                ? COLORS.swrau
-                                : COLORS.deleted
-                      }
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </ChartCard>
-          <ChartCard
-            title="Roster composition (end FY 2025)"
-            subtitle="Proposed, final, and deleted — deletion is a later gate than construction complete"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={[
-                    { name: "Final", value: 1343, fill: COLORS.project },
-                    { name: "Deleted", value: 459, fill: COLORS.deleted },
-                    { name: "Proposed", value: 38, fill: COLORS.swrau },
-                  ]}
-                  dataKey="value"
-                  nameKey="name"
-                  cx="50%"
-                  cy="50%"
-                  outerRadius={95}
-                  label
-                >
-                  <Cell fill={COLORS.project} />
-                  <Cell fill={COLORS.deleted} />
-                  <Cell fill={COLORS.swrau} />
-                </Pie>
-                <Tooltip />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
-          </ChartCard>
-        </div>
-      )}
-
-      {view === "saa" && (
-        <div className="grid gap-4 lg:grid-cols-2">
-          <ChartCard
-            title="Superfund Alternative Approach status"
-            subtitle="SAA sites sit outside classic NPL listing but track the same construction-complete gate"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={[...SAA_STATUS]}>
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis dataKey="label" tick={{ fontSize: 11 }} />
-                <YAxis tick={{ fontSize: 11 }} />
-                <Tooltip />
-                <Bar dataKey="sites" radius={[4, 4, 0, 0]}>
-                  {SAA_STATUS.map((s) => (
-                    <Cell
-                      key={s.id}
-                      fill={s.id === "active" ? COLORS.saaActive : COLORS.saaCc}
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </ChartCard>
-          <ChartCard
-            title="Headline split (fixed final-NPL frame)"
-            subtitle="Reference bars that ignore the denominator control — always final-NPL derived"
-          >
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={[...SPLIT_ROWS]}>
-                <CartesianGrid stroke={COLORS.grid} strokeDasharray="3 3" />
-                <XAxis dataKey="label" tick={{ fontSize: 11 }} />
-                <YAxis tick={{ fontSize: 11 }} />
-                <Tooltip />
-                <Bar dataKey="sites" radius={[4, 4, 0, 0]}>
-                  {SPLIT_ROWS.map((r) => (
-                    <Cell key={r.id} fill={r.fill} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </ChartCard>
-        </div>
-      )}
-
-      <p className="text-[11px] leading-relaxed text-slate-500">{SOURCE_NOTE}</p>
     </div>
   );
 }

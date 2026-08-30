@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "median-age-at-first-marriage-versus-never-married-share-2026",
+    slug: "median-age-at-first-marriage-versus-never-married-share-2026",
+    title:
+      "30.8 and 28.4: Median Age at First Marriage Versus Never-Married Share Ages 25–34",
+    excerpt:
+      "Census Table MS-2 puts men’s median age at first marriage at a record 30.8 in 2025 and women’s at 28.4 — about eight years above the 1956 trough. Alongside that delay, roughly half of adults ages 25–34 have never married, up from about 12% in 1960.",
+    category: "Economics",
+    themeId: "first-marriage-timing",
+    imageUrl:
+      "/images/economics-median-age-at-first-marriage-versus-never-married-share-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual-series graphic with rising teal and rose first-marriage age curves beside ascending never-married share bars for ages 25–34, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-30T16:00:00Z",
+    featured: true,
+    visualization: "median-age-at-first-marriage-versus-never-married-share-2026",
+    layout: "default",
+    content: `Two Census facts travel together, and desks often treat them as the same story. They are not. The **median age at first marriage** answers when people who marry do so. The **never-married share** of adults ages 25–34 answers how many people in that age band have not married yet. A rising median is consistent with later marriage, with less marriage, or with both. Separating the two requires putting Table MS-2 next to marital-status cuts — and that pairing is the point of this brief.
+
+In **2025**, the Census Bureau’s Table MS-2 estimates put men’s median age at first marriage at **30.8 years** — the highest reading in a series that begins in 1890 — and women’s at **28.4**. Those prints sit roughly **eight years** above the mid-1950s trough (22.5 for men and 20.1 for women in **1956**). Alongside the age series, published Census and Pew Research tabulations show that the never-married share of adults ages **25–34** has climbed from about **12% in 1960** to roughly **half** in the early 2020s — on the order of **57% of men** and **49% of women** in the latest desk composite. Delay and non-marriage both moved. The interactive dashboard above holds them on one canvas: dual-track path, age series, never-married bars, age×share scatter, state ladder, and a sex-gap / education panel.
+
+## What Table MS-2 actually measures
+
+MS-2 reports the estimated **median age at first marriage** by sex. Half of first marriages in the reference period occur at younger ages than the median; half occur at older ages. The series is built from decennial Census estimates for 1890–1940 and from the Current Population Survey’s Annual Social and Economic Supplement from 1947 forward. Starting in **2019**, the estimates include same-sex married couples — a documented coverage change that sits on top of a long-running rise already visible before 2019.
+
+The median is silent on people who never marry. It is also silent on remarriage. Those limits are features for this brief, not bugs: MS-2 isolates first-marriage timing. When commentators say “Americans marry later,” they are usually summarizing this line. When they say “Americans are not marrying,” they need a different table.
+
+## The 1956 trough — not a vanished tradition of early marriage
+
+Ask when Americans married young, and cultural memory often points to a deep past. The MS-2 record points somewhere narrower. In **1890**, the median man married at **26.1** and the median woman at **22.0** — already older than the **1956** lows of **22.5** and **20.1**. The mid-century decade is the trough of the series, not a timeless baseline.
+
+From that trough the line climbs, with few interruptions, for seven decades. Selected MS-2 anchors:
+
+| Year | Men | Women | Sex gap (yrs) |
+| --- | ---: | ---: | ---: |
+| 1956 | 22.5 | 20.1 | 2.4 |
+| 1970 | 23.2 | 20.8 | 2.4 |
+| 1990 | 26.1 | 23.9 | 2.2 |
+| 2010 | 28.2 | 26.1 | 2.1 |
+| 2020 | 30.5 | 28.1 | 2.4 |
+| 2025 | 30.8 | 28.4 | 2.4 |
+
+Men’s 2025 print is a record. Women’s 2025 print sits just below the **28.6** reached in 2021 and 2024. The sex gap has narrowed from about **4.1 years in 1890** to **2.4 years** today as women’s ages rose faster over the long run — even though the recent gap has been sticky near two years.
+
+## Never-married share ages 25–34: the second series
+
+If MS-2 were the only chart on the wall, a reader could still ask whether later marriage simply compresses the calendar or whether a larger share of young adults remain never married at ages that once implied family formation. Historical marital-status reports and Pew Research Center analyses of Census and ACS microdata answer that question for the **25–34** band.
+
+In **1960**, about **16%** of men ages 25–34 had never married; the combined share for both sexes was about **12%**. Census P20 age-band averages put 1970 near **14%** for men and **8%** for women in that ten-year band. By **1980** the men’s average of the 25–29 and 30–34 bands was already about **25%**; by **1992** it was about **39%** for men and **26%** for women. Pew’s 2010 cut — **52%** of men and **42%** of women ages 25–34 never married — is the clean modern anchor. Recent ACS/CPS composites push the combined share into the low **50s**, with men still several points above women.
+
+That is not the same fact as a rising median. A society can marry later while nearly everyone still marries by 40. The United States has been doing something stronger: the stock of never-married adults in the prime family-formation ages has roughly **quadrupled** since 1960 on the combined measure Pew highlighted for the early 2010s, and the line has not rolled over.
+
+Fine age bands sharpen the picture. In 1970, about **19%** of men ages 25–29 and **9%** of men ages 30–34 had never married. By the early 2020s those bands sit far higher — on the order of two-thirds of men in their late twenties and close to half of men in their early thirties in estimated ACS-era cuts. Women track lower at each age but follow the same shape.
+
+## Delay and non-marriage on one scatter
+
+Put median age on the x-axis and the never-married share on the y-axis for years where both series are available, and the points march up and to the right. The 1960s and 1970s cluster near the lower-left: early twenties medians and never-married shares near or below 15%. The 1990s sit mid-chart. The 2010–2023 points sit in the upper-right: medians near 28–31 and never-married shares near or above 50%.
+
+Correlation is not a causal claim. Housing costs, student debt, women’s educational attainment, cohabitation, and shifting preferences all appear in the literature. MS-2 and the never-married share document the **scale** of the shift; they do not assign weights to mechanisms. The dashboard’s dual-track panel is useful precisely because it refuses to collapse the two series into one slogan.
+
+## Geography: Northeast highs, Mountain West lows
+
+National medians hide state dispersion. ACS 2024 Table B12007 estimates assembled by the National Center for Family and Marriage Research put the U.S. median near **30.8 for men** and **28.8 for women** — close to the CPS MS-2 national path. Massachusetts, Connecticut, and New Hampshire print men’s medians near **32.4**. Utah and Arkansas sit near **27.2** for men; Utah women’s median is about **25.2**. The Northeast and coastal high-education states occupy the top of the ladder; several Mountain West and South Central states occupy the bottom.
+
+State ranks are not destiny for any household. They do show that “the” U.S. marriage age is a blend of labor markets and norms that differ by several years across state lines — enough to matter for how desks compare peer cohorts.
+
+## Education, first birth, and caveats
+
+Education cuts (modeled from ACS marital-status × attainment patterns) push in the expected direction: bachelor-or-higher cohorts show later median ages and higher never-married shares at 25–34 than high-school or less-than-high-school groups. That gradient helps explain why state ladders and national medians moved together as college attainment rose.
+
+Vital statistics add a parallel milestone. NCHS estimates put the **mean age of mothers at first birth** at **21.4 in 1970** and **27.5 in 2023** — a climb that rhymes with later marriage without being identical to it. First birth and first marriage are related sequences, not the same event; cohabitation and nonmarital births sit in between for many cohorts.
+
+Caveats belong in the open. Recent never-married shares for the exact 25–34 band are **composites** where the published age bands require averaging; confidence tags in the data module mark disclosed Pew/Census anchors versus estimated recent years. MS-2 is a median for people who marry, not a lifetime marriage probability. ACS state medians (B12007) and CPS MS-2 are related but not identical survey systems. Same-sex coverage begins in 2019. None of those caveats reverse the headline: first marriage is later than at any point in the modern record for men, near the modern high for women, and the never-married share of 25–34-year-olds is several times its 1960 level.
+
+## What the paired series imply for desks
+
+For labor, housing, and household-formation desks, the practical implication is sequencing. When the median first marriage sits near **30–31** for men and **28–29** for women, and when half or more of 25–34-year-olds have never married, “young adult” household formation is no longer a synonym for newlywed household formation. Roommate and parental coresidence patterns, dual-earner timing, and fertility calendars all inherit that delay. The MS-2 line tells you the marriage calendar moved. The never-married share tells you the stock of unmarried adults in the critical decade did not merely stretch — it thickened.
+
+The dashboard’s controls let you isolate men, women, or combined series; filter the state ladder by Census region; and toggle from the dual-track path into scatter and education panels. Use MS-2 for timing. Use the never-married panels for stock. Keep them labeled separately — that is the analytical gain over a single chart with a single moral.
+`,
+    format: "data-story",
+    keyPoints: [
+      "MS-2 2025: men 30.8 (record), women 28.4 — ~+8 years vs 1956 trough",
+      "Never-married ages 25–34: ~12% in 1960 → ~53% latest composite",
+      "Pew 2010 anchor: 52% of men and 42% of women ages 25–34 never married",
+      "ACS 2024 state medians: Northeast ~32+, Utah/Arkansas near 27 for men",
+    ],
+  },
+  {
     id: "credit-card-90-day-delinquency-versus-revolving-balances-2026",
     slug: "credit-card-90-day-delinquency-versus-revolving-balances-2026",
     title:

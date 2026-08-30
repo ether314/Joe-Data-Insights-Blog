@@ -4646,6 +4646,23 @@ const CreditCard90DayDelinquencyVersusRevolvingBalances2026Dashboard = dynamic(
   },
 );
 
+const MedianAgeAtFirstMarriageVersusNeverMarriedShare2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/MedianAgeAtFirstMarriageVersusNeverMarriedShare2026Dashboard"
+    ).then(
+      (m) => m.MedianAgeAtFirstMarriageVersusNeverMarriedShare2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -5865,6 +5882,10 @@ export function PostVisualization({
 
   if (type === "credit-card-90-day-delinquency-versus-revolving-balances-2026") {
     return <CreditCard90DayDelinquencyVersusRevolvingBalances2026Dashboard />;
+  }
+
+  if (type === "median-age-at-first-marriage-versus-never-married-share-2026") {
+    return <MedianAgeAtFirstMarriageVersusNeverMarriedShare2026Dashboard />;
   }
 
   return null;
