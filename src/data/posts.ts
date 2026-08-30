@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "cbp-southwest-land-border-encounters-versus-prior-peaks-2026",
+    slug: "cbp-southwest-land-border-encounters-versus-prior-peaks-2026",
+    title:
+      "3.7% of Peak: CBP Southwest Land-Border Encounters Versus 2022–2023 Highs",
+    excerpt:
+      "U.S. Border Patrol southwest land-border encounters in July 2026 were 9,295 — about 3.7% of the December 2023 peak of 249,740. The interactive below maps monthly totals against those prior highs by calendar month and fiscal year.",
+    category: "Politics",
+    themeId: "cbp-southwest-encounters",
+    imageUrl:
+      "/images/politics-cbp-southwest-land-border-encounters-versus-prior-peaks-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic border-horizon graphic with a tall crimson peak bar falling to a thin teal floor line, Visual Capitalist-style editorial thumbnail for southwest land-border encounter peaks",
+    publishedAt: "2026-08-30T18:00:00Z",
+    featured: true,
+    visualization: "cbp-southwest-land-border-encounters-versus-prior-peaks-2026",
+    layout: "default",
+    content: `The operational question for any desk watching southwest land-border enforcement is not whether recent months are “low” in the abstract. It is how low they are **relative to the last two peak years**. U.S. Customs and Border Protection (CBP) publishes monthly southwest land-border encounter totals that combine U.S. Border Patrol (USBP) Title 8 apprehensions between ports of entry with Office of Field Operations (OFO) Title 8 inadmissibles at ports — and, while it was active, Title 42 expulsions. The continuous series that travels cleanly from the 2022–2023 surge into fiscal year 2026 is the **Border Patrol** southwest land-border encounter count. On that series, **July 2026** printed **9,295** encounters. **December 2023**, the highest month in the modern tables used here, printed **249,740**. July sits at roughly **3.7%** of that peak — a **96%** decline on the same metric.
+
+Full CBP southwest land-border encounters (USBP + OFO) ran even higher at the crest: about **302,000** in December 2023 on the compiled demographic totals, consistent with CBP’s own operational update that month. Port-of-entry processing mattered at the peaks. It does not change the directional story for the latest prints: the floor that opened in early 2025 is a different regime from the 200k-per-month world of 2022 and late 2023.
+
+The dashboard above is built for that comparison — peak path, peak-ratio ribbon, same-month ladder, USBP/OFO mix, fiscal-year stack, and calendar overlay — rather than a single KPI strip.
+
+## What “encounters” count — and what they do not
+
+CBP’s southwest land-border **encounter** concept is an **event** count. An individual who is expelled or removed and later re-encountered appears more than once. Unique-person tallies, when CBP publishes them, run lower than raw encounters; they answer a different question. This brief stays with encounters because that is the series CBP updates monthly on the nationwide and southwest land-border pages, and because peak-to-latest ratios need a consistent numerator and denominator.
+
+USBP encounters are primarily between ports of entry. OFO encounters are primarily at ports. Title 42 public-health expulsions ran from March 2020 through **May 11, 2023** and are folded into encounter totals for those months. After Title 42 ended, the mix shifted toward Title 8 processing even as volumes rebounded into the autumn 2023 surge. None of those definitional layers erase the December 2023 crest or the 2025–2026 floor; they do mean year-over-year comparisons across the May 2023 breakpoint should be read with the authority change in view.
+
+Live CBP extracts remain subject to revision until fiscal-year close. The figures here follow published monthly tables and widely used compilations of those tables (including Pew Research Center’s Border Patrol monthly series through late 2025 and CBP’s FY2026 nationwide table through July 2026).
+
+## The 2022–2023 peak months on one ladder
+
+Two calendar peaks dominate the recent record. In **May 2022**, USBP southwest encounters reached **224,370** — the spring crest while Title 42 was still in force — and full CBP encounters (USBP + OFO) were about **241,000**. In **December 2023**, USBP hit **249,740** and full encounters about **302,000**. Between those anchors sat a December 2022 USBP print of **222,018** and a September 2023 print of **218,763**, both still in the same order of magnitude as the later all-time high.
+
+Selected months against the December 2023 USBP peak:
+
+| Month | USBP encounters | Full CBP (USBP+OFO) | Share of Dec 2023 USBP peak |
+| --- | ---: | ---: | ---: |
+| Dec 2023 (peak) | 249,740 | ~301,982 | 100% |
+| May 2022 (spring peak) | 224,370 | ~241,136 | 89.8% |
+| Sep 2023 | 218,763 | ~269,735 | 87.6% |
+| Jul 2022 | 181,834 | ~200,162 | 72.8% |
+| Jul 2023 | 132,642 | ~183,479 | 53.1% |
+| Jul 2026 (latest) | 9,295 | n/a on FY2026 USBP table | 3.7% |
+
+Same-month matching is the cleanest way to strip seasonality out of the narrative. July 2026 is not merely lower than an arbitrary peak month; it is about **5%** of July 2022 and about **7%** of July 2023 on the USBP series. The same-month ladder in the dashboard extends that logic across the calendar.
+
+## From peak to floor: the path after December 2023
+
+The descent was not a single cliff. January 2024 opened at **124,215** USBP encounters — already half the prior month — then drifted through the spring in the 110k–140k band. By July 2024 the print was **56,400**. The second half of calendar 2024 stayed in the mid-tens of thousands. January 2025 printed **29,105**. February 2025 broke into single-digit thousands (**8,349**) and stayed there: every full month from February 2025 through July 2026 has been below **11,000** on the USBP southwest series, with a trough of **4,592** in July 2025.
+
+That floor is lower than the early-pandemic April 2020 USBP print of **16,182** that often served as the previous “how low can it go” reference. It is also lower than typical monthly prints from the late 2010s outside of brief enforcement shocks. Fiscal **2025** closed at **237,538** USBP southwest encounters — the lowest fiscal-year total since **1970** on the Pew/CBP historical compilation — after fiscal years **2022** (**2.21 million**) and **2023** (**2.05 million**) had each cleared two million.
+
+FY2026 year-to-date through July (ten months) sits near **81,000** USBP encounters. Even if the remaining two months doubled the recent monthly pace, the fiscal year would remain an order of magnitude below the 2022–2023 peaks.
+
+## USBP versus ports at the crest
+
+Full CBP southwest land-border encounters matter for resource and asylum-processing stories because OFO volume was not a rounding error at the peaks. In December 2023, OFO accounted for roughly **52,000** of the ~302,000 total — about **17%**. In September 2023 the OFO share was larger still relative to USBP. Stacked bars for May 2022, December 2022, September 2023, and December 2023 show Border Patrol still carrying the majority, but ports absorbing a material minority that pure “gotaways between the ports” rhetoric leaves out.
+
+The FY2026 nationwide table published for this brief’s latest months highlights southwest **Border Patrol** apprehensions. Treating July 2026’s **9,295** as a USBP figure keeps the peak-ratio honest. Readers who need port-of-entry inadmissibles for the floor months should pull the southwest land-border encounters dashboard CSV from CBP’s document library when the OFO breakout is required for a separate claim.
+
+## Fiscal years compress the monthly drama
+
+Monthly charts show the spike and the collapse. Fiscal-year totals show the cumulative load on processing systems. FY2022’s **2.21 million** USBP southwest encounters remain the record in the modern encounter-definition era. FY2023 stayed above **2.0 million**. FY2024 fell to **1.53 million** — still elevated versus the 2010s — before FY2025’s collapse to **0.24 million**. The interactive fiscal-year panel is deliberately a bar stack of annual totals, not another monthly line: desks that staff detention, asylum, and court dockets inherit fiscal-year volumes even when the political conversation latches onto a single month.
+
+A useful ratio for briefings: FY2025’s entire year (**237,538**) is roughly equal to **one peak month** from late 2023. December 2023 alone exceeded that fiscal-year total.
+
+## Caveats that should travel with every peak ratio
+
+Several caveats belong next to the 3.7% headline. First, **encounters ≠ unique people**; recidivism inflates event counts relative to individuals. Second, **Title 42’s end** in May 2023 changed processing pathways even as volumes later rebounded, so mechanism stories differ across the peak era. Third, **OFO-inclusive totals** are shown for peak months where compiled; the latest FY2026 nationwide extract used here is USBP-forward for the southwest border line. Fourth, CBP’s live systems revise; final fiscal-year workbooks can differ slightly from mid-year dashboard extracts. Fifth, enforcement intensity, Mexican interdiction, asylum rule changes, and app-based scheduling all moved during 2024–2026 — this brief measures the **outcome series**, not a single causal weight.
+
+None of those caveats restore a 200k-per-month reading to July 2026. On the published Border Patrol southwest land-border series, the latest month is a few percent of the December 2023 peak, a few percent of the May 2022 spring crest on a same-month basis against 2022, and part of a fiscal-year path that no longer resembles the 2022–2023 load.
+
+## What the peak comparison is for
+
+Peak ratios are a briefing tool, not a policy verdict. They tell operations and politics desks whether the current month is in the same statistical neighborhood as the last crisis window. On that narrow question, the answer is no: July 2026’s **9,295** USBP southwest encounters are **3.7%** of December 2023’s **249,740**, and the calendar overlay shows 2026 months lying almost flat against the 2022 and 2023 seasonal curves. Use the dashboard’s window and metric toggles to hold the peak era, the post-January 2024 descent, or FY2026 alone — and keep USBP and full-encounter claims labeled separately when OFO is in the numerator.
+`,
+    format: "data-story",
+    keyPoints: [
+      "Jul 2026 USBP SW encounters: 9,295 — 3.7% of Dec 2023 peak (249,740)",
+      "Dec 2023 full CBP SW encounters ~302k; May 2022 spring USBP peak 224,370",
+      "FY2025 USBP SW total 237,538 — lowest fiscal year since 1970 on Pew/CBP series",
+      "Every full month Feb 2025–Jul 2026 printed below 11,000 USBP SW encounters",
+    ],
+  },
+  {
     id: "food-at-home-cpi-versus-typical-worker-wages-2026",
     slug: "food-at-home-cpi-versus-typical-worker-wages-2026",
     title:

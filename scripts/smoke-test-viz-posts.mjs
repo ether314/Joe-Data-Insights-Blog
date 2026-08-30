@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "cbp-southwest-land-border-encounters-versus-prior-peaks-2026",
+    marker: "Monthly SW border encounters vs prior peak",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "food-at-home-cpi-versus-typical-worker-wages-2026",
     marker: "Food-at-home index vs wages",
     forbidden: "Loading interactive charts",
