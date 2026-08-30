@@ -4762,6 +4762,23 @@ const FemaMajorDisasterDeclarationsVersusPublicAssistanceDollars2026Dashboard = 
   },
 );
 
+const NorthAmericaBatteryRecyclingCapacityVersusEvSales2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/NorthAmericaBatteryRecyclingCapacityVersusEvSales2026Dashboard"
+    ).then(
+      (m) => m.NorthAmericaBatteryRecyclingCapacityVersusEvSales2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6009,6 +6026,10 @@ export function PostVisualization({
 
   if (type === "fema-major-disaster-declarations-versus-public-assistance-dollars-2026") {
     return <FemaMajorDisasterDeclarationsVersusPublicAssistanceDollars2026Dashboard />;
+  }
+
+  if (type === "north-america-battery-recycling-capacity-versus-ev-sales-2026") {
+    return <NorthAmericaBatteryRecyclingCapacityVersusEvSales2026Dashboard />;
   }
 
   return null;

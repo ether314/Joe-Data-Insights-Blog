@@ -2,6 +2,87 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "north-america-battery-recycling-capacity-versus-ev-sales-2026",
+    slug: "north-america-battery-recycling-capacity-versus-ev-sales-2026",
+    title:
+      "North America Battery Recycling Covers Only ~13% of Pack Tons Implied by EV Sales",
+    excerpt:
+      "A desk book of operating hydromet and hybrid recovery nameplate in the U.S. and Canada totals about 98 kt/yr — against ~777 kt of pack mass implied by ~1.85 million North American EV sales. Even adding under-construction plants lifts coverage only to ~31%.",
+    category: "Energy",
+    themeId: "lithium-ion-recycling",
+    imageUrl:
+      "/images/energy-north-america-battery-recycling-capacity-versus-ev-sales-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero of battery packs dissolving into recycled metal streams beside a short teal recycling-capacity bar and a taller rose EV pack-tons bar",
+    publishedAt: "2026-08-30T22:00:00Z",
+    featured: true,
+    visualization:
+      "north-america-battery-recycling-capacity-versus-ev-sales-2026",
+    layout: "default",
+    content: `Every new electric vehicle sold in North America places hundreds of kilograms of lithium-ion pack mass onto the road. Recycling plants advertise nameplate throughput in the same units — kilotonnes of battery or black-mass input per year. Put those two stocks side by side and the arithmetic is blunt. This desk’s reconstruction of **operating** hydromet and hybrid recovery capacity in the United States and Canada sums to about **98 kt/yr**. Annual pack mass implied by roughly **1.85 million** North American light EV sales at a mix-weighted **~420 kg** pack is about **777 kt**. Operating coverage is therefore only about **13%**. Fold in under-construction nameplate and the book rises to about **238 kt**, or roughly **31%** of pack tons from sales — still a multi-hundred-kilotonne gap.
+
+That gap is **not** a claim that end-of-life EV packs are overflowing landfills today. Most packs sold in 2024–2025 will not reach recyclers until the early 2030s. The comparison answers a different, forward-looking question that policymakers and offtake desks actually ask: if North America insisted on matching **this year’s** pack placements with **domestic recovery nameplate**, how short is the plant book? The interactive dashboard above walks the capacity gap, a 2022–2028 coverage path, a filtered plant ladder, feedstock mix, country scatter, and technology-route stacks.
+
+## How pack tons from sales are built
+
+IEA Global EV Outlook 2025 puts **U.S. electric-car sales at 1.6 million in 2024**, with the sales share clearing **10%** even as year-on-year growth slowed to roughly **10%** after a much hotter 2023 [IEA GEO 2025]. Canada and Mexico add smaller but non-trivial volumes. This desk uses about **1.85 million** combined North American light EV sales for the 2025e reference year (U.S. ~1.6 M, Canada ~0.18 M, Mexico ~0.07 M) — a planning figure, not a registration census.
+
+Pack mass is the harder conversion. U.S. electric sales are **SUV-heavy** — IEA notes that SUVs exceed about **75%** of U.S. electric-car sales — so average packs sit well above compact-city BEV norms [IEA GEO 2025]. A mid-size battery-electric SUV often carries **70–100 kWh** of cells. At pack-level energy densities near **150–180 Wh/kg**, that is roughly **400–550 kg** of pack hardware before accessories. Plug-in hybrids pull the mix down. The desk’s **420 kg** average is a transparent midpoint for a BEV-dominated, SUV-skewed North American mix. Multiply: **1.85 M × 0.420 t ≈ 777 kt** of pack mass placed in a single year.
+
+Caveat: pack tons are **not** cathode-metal tons. Modules include aluminum, copper, plastics, thermal systems, and BMS mass. Recyclers quote input capacity on battery or black-mass feed, which is closer to pack/module mass than to contained lithium alone. The comparison is therefore intentional: both sides of the ledger are **mass through a plant gate**, not USGS-style refined metal.
+
+## What Argonne and DOE put on the U.S. capacity baseline
+
+Argonne National Laboratory’s work for DOE’s *Securing Materials for the U.S. Electric Vehicle Industry* (February 2024) estimated domestic U.S. battery recycling capacity near **35,000 tons** as of the 2023 reference window, with about **76,000 tons** of additional planned capacity in a two-to-four-year install horizon — implying a path toward roughly **111 kt/yr** of U.S. recovery-scale capacity if those projects land [DOE/Argonne 2024; InsideEVs summary of the report]. Separately, DOE’s Vehicle Technologies Office has highlighted **intermediate processing** facilities that reclaim materials from batteries and manufacturing scrap on the order of **~175 kt** handled in 2023, with expansion toward a few hundred kilotonnes if announced intermediate capacity materializes.
+
+Those figures are the reason this post separates **recovery** (hydromet / hybrid upgrading toward battery-grade or precursor outputs) from **pretreatment** (spokes that produce black mass). Argonne’s own flow papers warn that declared capacities **cannot simply be added** when material passes through multiple companies [Argonne Batteries 2023]. This desk’s operating recovery book (~98 kt for NA) sits above the Argonne U.S.-only ~35 kt baseline because it includes Canadian recovery sites and later 2024–2025 ramps (notably Redwood’s Nevada campus and Ascend’s Georgia Base 1). Pretreatment operating capacity is booked separately near **~210 kt** so spokes are not double-counted onto hubs.
+
+## The plant book: operating, under construction, announced
+
+Representative operating recovery nameplate in the desk book includes Redwood Materials’ Nevada Battery Materials Campus (hybrid thermal + hydromet, ~40 kt in the booked operating slice), Ascend Elements’ Covington Base 1 (~30 kt hydromet / hydro-to-cathode), Cirba Solutions’ Ohio and British Columbia assets, Retriev’s Canadian legacy line, and smaller U.S. hydromet entries. Under-construction nameplate in the same book includes Ascend’s Apex 1 Kentucky project, further Nevada campus expansion, Cirba’s South Carolina plant, and the Li-Cycle Rochester Hub at announced hydromet scale — the last carried with explicit restart risk after prior construction pauses.
+
+Announced-but-not-yet-steel projects — including American Battery Technology Company’s DOE-backed second plant at a disclosed design near **100 kt/yr** — are kept out of the operating+UC coverage statistic so the **31%** figure does not lean on press-release capacity. The dashboard’s plant ladder lets you filter by status, technology, and country.
+
+| Segment | Desk nameplate (kt/yr) | Share of 777 kt pack mass |
+| --- | ---: | ---: |
+| Operating recovery (NA) | 98 | 12.6% |
+| Operating + under construction | 238 | 30.6% |
+| Pretreatment / intermediate (operating) | 210 | 27.0% |
+| Pack tons from NA EV sales (reference) | 777 | 100% |
+| Gap vs operating recovery | 679 | — |
+| Gap vs operating + UC | 539 | — |
+
+## Feedstock reality: scrap first, EV end-of-life later
+
+Capacity coverage against **sales** pack tons overstates near-term feedstock stress and understates long-run stress. Argonne’s tracking of U.S. flows shows that **manufacturing scrap** and consumer electronics dominate material available for recycling in the years before large EV cohorts retire [Argonne Batteries 2023]. This desk’s feedstock mix for operating lines puts roughly **58%** on cell/pack manufacturing scrap, **18%** on consumer electronics end-of-life, only about **14%** on EV/hybrid pack end-of-life, and the remainder on stationary and trade residuals.
+
+That mix explains why plants can run hard today without “solving” the pack-ton gap from new EV sales. Scrap is a **flow from factories**, not a lagged stock from 8–12 year vehicle lives. USGS Mineral Commodity Summaries continue to frame lithium, cobalt, and nickel as markets where secondary supply matters at the margin while primary production and imports still set the tone [USGS MCS]. Recycling closes a strategic loop; it does not yet substitute for primary units at EV-scale tonnage.
+
+## Country split: United States carries the mass and the plants
+
+Almost all of the pack-ton ledger is U.S. mass. At **1.6 million** electric cars and the same pack assumption, U.S. pack placements are about **672 kt**. Canada’s smaller sales book (~76 kt of pack) sits against a thinner recovery base (~13 kt operating in this reconstruction), while Mexico’s rising EV sales still face near-zero domestic recovery nameplate in the desk book. Coverage ratios therefore look slightly higher in Canada on a percentage basis and worse in Mexico — but the absolute North American gap is a **U.S. industrial build** problem.
+
+IEA also notes that North American manufacturing and sales have diverged: Mexico’s electric-car output jumped while U.S. production softened in 2024 [IEA GEO 2025]. Recycling plants do not automatically follow final-assembly geography. Black-mass logistics, environmental permits, and offtake contracts with cathode plants matter more than where the badge is screwed on.
+
+## Technology routes: hydromet and hybrid, not a pyromet continent
+
+Unlike parts of Europe and East Asia where large pyrometallurgical smelters historically took a share of battery feed, the North American announced book is overwhelmingly **hydrometallurgical** or **hybrid** (thermal pretreatment plus hydromet refining). Redwood’s reductive calciner plus hydromet train is the clearest hybrid example at commercial scale; Ascend’s hydro-to-cathode pathway aims to jump from dissolved metals toward precursor outputs. Pretreatment spokes (Li-Cycle and peers) produce black mass that still needs a recovery home — which is why counting spokes and hubs as additive capacity would inflate the coverage ratio.
+
+Pyromet-led nameplate is treated as negligible in this desk’s NA recovery sum. That is a **route choice**, not a moral ranking: hydromet can recover lithium more cleanly in many flowsheets, but it is capital-intensive, chemistry-sensitive, and slow to commission. Every delayed hub is another year where pack tons from sales compound faster than steel in the ground.
+
+## Caveats the dashboard cannot paper over
+
+Nameplate is not utilization. A 40 kt plant running at 60% on off-spec scrap is not 40 kt of closed-loop cathode salts. Company disclosures mix **battery input tons**, **black-mass tons**, and **recovered product tons**; the desk maps announcements onto an input-ton convention and flags confidence as disclosed, estimated, or carried. Rochester-style pauses show that under-construction lists are option value, not inventory. Pack-weight assumptions move with chemistry (LFP packs can be heavier for the same range) and with segment mix. Finally, matching sales pack tons is a **stress test**, not a claim that every new pack should be recycled in the year it is sold — physics and warranties forbid that.
+
+What the stress test still shows is useful. Even with a generous under-construction overlay, North American recovery nameplate remains a few hundred kilotonnes short of annual pack placements. Pretreatment capacity is larger, but pretreatment without recovery only relocates the bottleneck into black-mass piles and export containers. USGS critical-mineral framing and DOE supply-chain programs both treat secondary recovery as necessary infrastructure for EV scale. The plant book says the infrastructure is real — and still small relative to the mass Detroit, Ontario, and Mexican assembly lines put on wheels each year.
+
+Sources:
+[DOE/Argonne 2024]: U.S. Department of Energy / Argonne National Laboratory — Securing Materials for the U.S. Electric Vehicle Industry (Feb 2024). https://www.energy.gov/eere/vehicles/articles/securing-materials-us-electric-vehicle-industry
+[IEA GEO 2025]: International Energy Agency — Global EV Outlook 2025. https://www.iea.org/reports/global-ev-outlook-2025
+[USGS MCS]: U.S. Geological Survey — Mineral Commodity Summaries (lithium, cobalt, nickel). https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries
+[Argonne Batteries 2023]: Dunn et al. — Tracking Flows of End-of-Life Battery Materials and Manufacturing Scrap. Batteries 2023, 9, 360 / OSTI. https://www.osti.gov/pages/servlets/purl/2328133`,
+  },
+  {
     id: "fema-major-disaster-declarations-versus-public-assistance-dollars-2026",
     slug: "fema-major-disaster-declarations-versus-public-assistance-dollars-2026",
     title:

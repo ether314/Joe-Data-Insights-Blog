@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "north-america-battery-recycling-capacity-versus-ev-sales-2026",
+    marker: "Recycling tons vs pack tons",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "fema-major-disaster-declarations-versus-public-assistance-dollars-2026",
     marker: "Declarations vs PA dollars by fiscal year",
     forbidden: "Loading interactive charts",

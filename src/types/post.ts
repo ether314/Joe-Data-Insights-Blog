@@ -345,7 +345,8 @@ export interface Post {
     | "homeownership-rate-under-thirty-five-versus-older-cohorts-2026"
     | "federal-student-loan-balances-versus-borrowers-in-repayment-2026"
     | "cdc-heat-related-deaths-versus-noaa-extreme-heat-days-2026"
-    | "fema-major-disaster-declarations-versus-public-assistance-dollars-2026";
+    | "fema-major-disaster-declarations-versus-public-assistance-dollars-2026"
+    | "north-america-battery-recycling-capacity-versus-ev-sales-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];
