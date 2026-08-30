@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "federal-student-loan-balances-versus-borrowers-in-repayment-2026",
+    marker: "39% of ED-managed dollars in repayment",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "homeownership-rate-under-thirty-five-versus-older-cohorts-2026",
     marker: "Age ladder snapshot",
     forbidden: "Loading interactive charts",

@@ -2,6 +2,100 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "federal-student-loan-balances-versus-borrowers-in-repayment-2026",
+    slug: "federal-student-loan-balances-versus-borrowers-in-repayment-2026",
+    title:
+      "39% of Federal Student Loan Dollars Sit With Borrowers in Repayment",
+    excerpt:
+      "As of March 31, 2026, only $633B of the $1.64T ED-managed book is in current repayment or delinquency. Forbearance, deferment, default, and in-school statuses still hold the majority of outstanding balances.",
+    category: "Consumer Finance",
+    themeId: "federal-student-loans",
+    imageUrl:
+      "/images/consumer-finance-federal-student-loan-balances-versus-borrowers-in-repayment-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic abstract bars comparing federal student loan dollars in repayment versus forbearance and default, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-30T17:00:00Z",
+    featured: true,
+    visualization:
+      "federal-student-loan-balances-versus-borrowers-in-repayment-2026",
+    layout: "default",
+    content: `Headline debt figures treat the federal student loan book as if every outstanding dollar is “owed and being paid.” Federal Student Aid’s March 31, 2026 portfolio print says otherwise. Of the **$1.64 trillion** Education Department–managed stock — Direct Loans plus ED-held FFEL and Perkins — only about **$633 billion, or 39%**, sits with recipients who have at least one loan in **current repayment or delinquency**. The rest of the book is parked in forbearance, deferment, default, in-school, grace, or other nonpayment statuses that do not require a monthly bill.
+
+That split is the question this piece answers. Not “how big is student debt,” and not “who should get forgiveness,” but **what share of outstanding Direct Loan and ED-managed dollars is actually with borrowers expected to pay right now**. The dashboard above walks the status mix over recent quarters, the forbearance path from the pandemic peak, the recipient-versus-dollar ladder, active-repayment delinquency inside the paying cohort, and income-driven repayment concentration.
+
+## The book that is not in repayment
+
+FSA’s GENERAL-26-38 refresh puts the full outstanding federal portfolio at **$1.7 trillion** across **42.6 million** recipients. Direct Loans are more than **90%** of that stock; FFEL is about **9%**; Perkins is a rounding error. The **federally managed** slice — the piece ED services and reports by loan status — is **$1.64 trillion** across **40.9 million** recipient accounts, more than **95%** of the total portfolio.
+
+Inside that managed book, status is not a single label per person. FSA counts recipients at the **loan** level, so a borrower with one loan in deferment and another in forbearance appears in both buckets. Shares of recipients therefore can (and do) sum past 100%. Dollar shares are the cleaner book-level cut for the repayment question.
+
+| Status (Mar 31, 2026) | Balance | Share of $1.64T | Recipients with ≥1 loan in status |
+| --- | ---: | ---: | ---: |
+| Current repayment or delinquency | $633B | 39% | 17.2M (42%) |
+| Forbearance (incl. residual SAVE) | $485B | ~30% | 8.4M (~20%) |
+| Default (≥360 days) | $220B | >13% | ~9M |
+| Deferment | $157B | ~10% | 3.6M (9%) |
+| In-school + grace (balance share) | — | >8% | >14% in-school; 3% grace |
+
+Source: FSA GENERAL-26-38 (data through March 31, 2026). Recipient counts can double-count multi-status borrowers. In-school/grace dollar share is disclosed as a combined balance share; residual “other” statuses (bankruptcy, disability) fill the remaining managed stock.
+
+Read the table left to right: repayment is the largest **single** dollar bucket, but it is still a **minority** of the managed portfolio. Forbearance alone is almost three-tenths of outstanding dollars. Default is already more than one dollar in eight. Add deferment and school-related nonpayment, and a clear majority of the book is not in active monthly repayment.
+
+## Forbearance is shrinking — and still enormous
+
+Forbearance is the status that most confuses casual readers of the debt stock. During the pandemic payment pause it ballooned to **$1.14 trillion** in June 2023. Before the pause, in February 2020, forbearance held only about **$133 billion**. By June 2025 it was still **$582 billion** across **10.3 million** recipients, heavily inflated by litigation-driven **SAVE** plan forbearance. December 2025 cut that to **$504 billion** / **8.8 million** recipients. March 2026 prints **$485 billion** / **8.4 million** — a further decline as some SAVE borrowers begin exiting forbearance.
+
+That path matters for the repayment-share question. Every dollar that leaves forbearance does not automatically land in “current.” Some borrowers resume scheduled payments. Some land in income-driven plans with very low monthly amounts. Some slip into delinquency and, after 360 days, into default. The March 2026 print already shows the default wave: roughly **1.3 million** additional defaulted borrowers versus the prior quarter, taking the default stock to about **nine million** borrowers and **$220 billion**.
+
+Forbearance at nearly half a trillion dollars is still roughly **3.6×** the pre-pause baseline. The repayment share cannot rise much while that parked stock remains large — even if the headline portfolio keeps growing with new originations.
+
+## Recipients and dollars tell slightly different stories
+
+About **42%** of managed recipients have at least one loan in current repayment or delinquency, but those loans hold only **39%** of dollars. Default is the inverse skew: roughly **nine million** borrowers (a large recipient footprint once overlaps are considered) hold **$220 billion**, more than **13%** of the managed book. Forbearance sits in between: about one-fifth of recipients, nearly three-tenths of dollars — meaning the average forbearance balance is heavier than the average repayment balance.
+
+That recipient-versus-dollar gap is why desk charts that show only borrower counts understate the fiscal weight of pause statuses. A borrower with a large graduate balance in SAVE forbearance moves the dollar needle more than several small undergraduate balances in current repayment. The interactive scatter in the dashboard plots each status on both axes so the overweight and underweight buckets are visible at a glance.
+
+Average balance language is fragile here because of loan-level double counting, but the directional pattern is robust: **nonpayment statuses concentrate dollars**, while repayment concentrates people relative to dollars.
+
+## Inside the paying cohort, delinquency is still elevated
+
+Restrict the lens to **active repayment** — borrowers whose loans are in a repayment status and who are expected to make a monthly payment — and the picture sharpens. As of March 2026, more than **80%** of ED-serviced recipients in active repayment are current (on time or under 31 days delinquent). That leaves **20%**, about **3.5 million** recipients, more than 30 days late. Roughly **1.4 million** of those are in late-stage delinquency and at risk of defaulting within about six months.
+
+By dollars, the active-repayment **31+ day** delinquency rate is **15.5%**, versus **12.7%** in December 2019 — the last quarter before the payment pause, at the end of a multi-year decline in delinquency. The post-pause book is larger, the servicing stack has been rebuilt, and a cohort that spent years without required payments is being re-billed. Elevated delinquency inside the “paying” slice is therefore not a footnote; it is the early-warning series for the next default wave.
+
+FSA also publishes institutional **nonpayment rates** for borrowers who entered repayment between January 2020 and May 2025 and were more than 90 days delinquent. The May 2026 refresh shows about **2,000** institutions at or above a **25%** nonpayment rate — roughly **200** more schools than the February 2026 print. That metric is not the official cohort default rate, but it is a clearer near-term signal while CDR calculations are still distorted by pandemic flexibilities.
+
+## Income-driven plans hold most of the repayment-plan dollars
+
+Income-driven repayment (IDR) is not a loan status in the same sense as forbearance or default, but it reshapes what “in repayment” means for cash flow. As of March 2026, about **13 million** Direct Loan and ED-serviced FFEL borrowers in repayment, deferment, or forbearance are enrolled in an IDR plan — including SAVE borrowers still in nonpayment. That is **44%** of the ED-serviced repayment-plan population by unduplicated borrowers.
+
+By dollars the concentration is sharper: **$784 billion**, or **62%** of the ED-serviced repayment-plan universe, sits in IDR, up from **$728 billion** / **55%** a year earlier. Part of the rise is compositional — borrowers moving into default drop out of the repayment-plan denominator in ways that can lift IDR’s share among those who remain. Part of it is genuine enrollment and balance growth on income-driven menus.
+
+For budget readers, the implication is straightforward. Even among dollars that are notionally in a repayment plan, a majority are on schedules tied to income, not on fixed standard amortization. Cash collections per dollar of outstanding balance are therefore not a simple function of the 39% repayment-status share.
+
+## How NY Fed and CBO frames sit beside FSA status
+
+The New York Fed’s Consumer Credit Panel tracks household student-loan **balances** on credit reports — on the order of **$1.66 trillion** in recent quarters — but it does not partition that stock into FSA’s administrative statuses. Private loans are in the CCP total; ED’s forbearance-versus-repayment cut is not. Use the Fed series for household leverage and delinquency transitions on the credit file; use FSA for the federal program’s operational mix.
+
+CBO’s student-loan baseline and budget options speak to subsidy costs, income-driven plan design, and long-run federal outlays. Those projections embed assumptions about repayment, forgiveness, and default that are downstream of the status mix FSA publishes each quarter. When forbearance is half a trillion dollars and default is already past $200 billion, baseline cash flows and reestimate risk move even if the headline $1.7 trillion stock looks stable.
+
+## Caveats and reading rules
+
+A few limits should travel with every share cited here. **Loan-level recipient counts** double-count multi-status borrowers; do not sum recipient percentages across statuses and call the result a population share. **Active repayment** excludes grace, in-school, deferment, forbearance, bankruptcy, and disability — so delinquency rates inside that cohort are not delinquency rates for the whole $1.64 trillion book. **SAVE forbearance** is still unwinding; subsequent quarterly prints will shift the forbearance and repayment columns. **IDR enrollment** includes borrowers whose loans are in deferment or forbearance, so “IDR dollars” are not a subset of the $633 billion repayment-status bucket. **Vintage comparability** is weak across the payment-pause years; FSA itself warns that recent data are not cleanly comparable to pre-2020 prints. Desk-carried residuals in our dashboard (in-school/other) are labeled estimated where FSA discloses a balance share without a matching recipient cut that sums cleanly.
+
+None of those caveats erase the headline. On the latest FSA print, **most federally managed student-loan dollars are not with borrowers in current repayment**. Until forbearance keeps falling and the post-pause default wave stabilizes, the 39% repayment-dollar share is the clearest single window into how much of the book is actually on a monthly bill.
+
+### Sources
+
+- [FSA GENERAL-26-38 — Updated Reports to FSA Data Center (data through Mar 31, 2026)](https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2026-06-23/federal-student-aid-posts-updated-reports-fsa-data-center)
+- [FSA GENERAL-26-15 — Updated Reports (data through Dec 31, 2025)](https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2026-03-13/federal-student-aid-posts-updated-reports-fsa-data-center)
+- [FSA — Updated Reports (data through Jun 30, 2025)](https://fsapartners.ed.gov/knowledge-center/library/electronic-announcements/2025-08-21/federal-student-aid-posts-updated-reports-fsa-data-center)
+- [FSA Data Center](https://studentaid.gov/data-center)
+- [NY Fed — Quarterly Report on Household Debt and Credit](https://www.newyorkfed.org/microeconomics/hhdc)
+- [CBO — Education / student loan topics](https://www.cbo.gov/topics/education)
+`,
+  },
+  {
     id: "homeownership-rate-under-thirty-five-versus-older-cohorts-2026",
     slug: "homeownership-rate-under-thirty-five-versus-older-cohorts-2026",
     title:

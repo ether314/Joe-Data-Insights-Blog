@@ -15,500 +15,626 @@ import {
   ResponsiveContainer,
   Scatter,
   ScatterChart,
-  Tooltip,
   XAxis,
   YAxis,
   ZAxis,
 } from "recharts";
+import { Tooltip } from "@/components/charts/SortedTooltip";
 import {
-  ANALYTICS,
-  DELINQUENCY_DETAIL,
-  DELINQUENCY_STRIP,
-  DOLLAR_VS_RECIPIENT,
-  FORBEARANCE_ANCHORS,
+  ACTIVE_REPAY_SPLIT,
+  FORBEARANCE_PATH,
   HEADLINE,
-  IDR_SPLIT,
-  QUARTERS,
+  IDR_VINTAGE,
+  RECIPIENT_VS_DOLLAR,
   SOURCE_NOTE,
-  STATUS_META,
-  STATUS_MIX,
+  STATUS_MARCH_2026,
+  STATUS_VINTAGE,
+  VIZ_MARKERS,
+  fmtBn,
+  fmtM,
+  fmtPct,
 } from "@/data/federal-student-loan-balances-versus-borrowers-in-repayment-2026-data";
 
-type Panel =
-  | "status-stack"
-  | "dollar-vs-heads"
-  | "repay-path"
-  | "forbear-anchors"
-  | "avg-balance"
-  | "idr-pie"
-  | "delinq-strip";
+// viz-types: status stacked area, forbearance path composed, recipient×dollar
+// scatter, active-repay pie, IDR dual bars, status ladder bars
+// | layout: default
+// smoke-marker: 39% of ED-managed dollars in repayment
 
-type Metric = "dollars" | "recipients";
-type Window = "full" | "postPause";
+type ViewId =
+  | "mix"
+  | "forbearance"
+  | "ladder"
+  | "scatter"
+  | "delinq"
+  | "idr";
 
-const PANEL_META: Record<Panel, { title: string; subtitle: string }> = {
-  "status-stack": {
-    title: "Federally managed balances by loan status",
-    subtitle: `As of ${HEADLINE.asOfLabel}, only ${HEADLINE.repaymentSharePct}% of the $${HEADLINE.portfolioBn}B portfolio sits in repayment or delinquency`,
-  },
-  "dollar-vs-heads": {
-    title: "Dollar share versus recipient share",
-    subtitle:
-      "Forbearance holds more dollars than heads; default does the reverse",
-  },
-  "repay-path": {
-    title: "Repayment and forbearance shares of the portfolio",
-    subtitle:
-      "Payment-pause peak → SAVE forbearance hangover → slow return toward repayment",
-  },
-  "forbear-anchors": {
-    title: "Forbearance balances across policy regimes",
-    subtitle: `$${HEADLINE.prePauseForbearanceBn}B pre-pause → $${HEADLINE.peakPauseForbearanceBn}B peak → $${HEADLINE.forbearanceBn}B latest`,
-  },
-  "avg-balance": {
-    title: "Average outstanding balance per status recipient",
-    subtitle: `Forbearance averages $${HEADLINE.avgForbearanceBalanceK}k — well above repayment’s $${HEADLINE.avgRepaymentBalanceK}k`,
-  },
-  "idr-pie": {
-    title: "Income-driven plans inside the repay / defer / forbear universe",
-    subtitle: `${HEADLINE.idrShareOfRepayPlanDollarsPct}% of those dollars · ${HEADLINE.idrBorrowerSharePct}% of those borrowers`,
-  },
-  "delinq-strip": {
-    title: "Active-repayment currency (ED-serviced)",
-    subtitle: `${HEADLINE.activeRepayCurrentSharePct}% current by heads · ${DELINQUENCY_DETAIL.dollarDelinq31Pct}% of dollars are 31+ days late`,
-  },
+type MetricMode = "dollars" | "recipients";
+
+const NAVY = "#0f172a";
+const TEAL = "#0d9488";
+const AMBER = "#d97706";
+const ROSE = "#e11d48";
+const SLATE = "#64748b";
+const INDIGO = "#4f46e5";
+const SKY = "#0284c8";
+
+const STATUS_COLORS: Record<string, string> = {
+  repayment: TEAL,
+  forbearance: AMBER,
+  deferment: SKY,
+  default: ROSE,
+  inSchoolGraceOther: SLATE,
 };
 
-const fmtBn = (n: number) => `$${n.toFixed(0)}B`;
-const fmtPct = (n: number) => `${n.toFixed(1)}%`;
-const asNum = (v: unknown) => (typeof v === "number" ? v : Number(v) || 0);
+function ChartCard({
+  title,
+  subtitle,
+  children,
+}: {
+  title: string;
+  subtitle?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="w-full min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-100 bg-slate-50 px-5 py-4">
+        <h3 className="text-lg font-bold text-slate-900">{title}</h3>
+        {subtitle && <p className="mt-1 text-sm text-slate-500">{subtitle}</p>}
+      </div>
+      <div className="p-4 sm:p-6">{children}</div>
+    </div>
+  );
+}
+
+function ToggleGroup<T extends string>({
+  options,
+  value,
+  onChange,
+}: {
+  options: { id: T; label: string }[];
+  value: T;
+  onChange: (v: T) => void;
+}) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {options.map((o) => (
+        <button
+          key={o.id}
+          type="button"
+          onClick={() => onChange(o.id)}
+          className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+            value === o.id
+              ? "bg-slate-900 text-white"
+              : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+          }`}
+        >
+          {o.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function FederalStudentLoanBalancesVersusBorrowersInRepayment2026Dashboard() {
-  const [panel, setPanel] = useState<Panel>("status-stack");
-  const [metric, setMetric] = useState<Metric>("dollars");
-  const [window, setWindow] = useState<Window>("full");
+  const [view, setView] = useState<ViewId>("mix");
+  const [metric, setMetric] = useState<MetricMode>("dollars");
+  const slug =
+    "federal-student-loan-balances-versus-borrowers-in-repayment-2026";
 
-  const quarterData = useMemo(
+  const stackedVintage = useMemo(
     () =>
-      window === "postPause"
-        ? QUARTERS.filter((q) => q.sortKey >= "2025-06")
-        : QUARTERS,
-    [window],
+      STATUS_VINTAGE.map((v) => {
+        const other = Math.max(
+          0,
+          v.managedBn - v.repaymentBn - v.forbearanceBn - v.defermentBn - v.defaultBn,
+        );
+        return {
+          period: v.period,
+          repayment: v.repaymentBn,
+          forbearance: v.forbearanceBn,
+          deferment: v.defermentBn,
+          default: v.defaultBn,
+          other,
+          repaymentShare: v.repaymentDollarSharePct,
+        };
+      }),
+    [],
   );
 
-  const stackData = useMemo(() => {
+  const ladderData = useMemo(() => {
+    const rows = [...STATUS_MARCH_2026];
     if (metric === "dollars") {
-      return STATUS_MIX.map((s) => ({
-        name: STATUS_META[s.id].short,
-        value: s.balanceBn as number,
-        fill: STATUS_META[s.id].color,
-      }));
+      return rows
+        .sort((a, b) => b.balanceBn - a.balanceBn)
+        .map((r) => ({
+          name: r.shortLabel,
+          value: r.balanceBn,
+          share: r.dollarSharePct,
+          fill: STATUS_COLORS[r.id],
+        }));
     }
-    return STATUS_MIX.map((s) => ({
-      name: STATUS_META[s.id].short,
-      value: s.recipientsM as number,
-      fill: STATUS_META[s.id].color,
-    }));
+    return rows
+      .sort((a, b) => b.recipientsM - a.recipientsM)
+      .map((r) => ({
+        name: r.shortLabel,
+        value: r.recipientsM,
+        share: r.recipientSharePct,
+        fill: STATUS_COLORS[r.id],
+      }));
   }, [metric]);
 
-  const dualData = useMemo(
+  const scatterData = useMemo(
     () =>
-      DOLLAR_VS_RECIPIENT.map((d) => ({
-        ...d,
-        short: STATUS_META[d.id as keyof typeof STATUS_META].short,
-        fill: STATUS_META[d.id as keyof typeof STATUS_META].color,
+      RECIPIENT_VS_DOLLAR.map((r) => ({
+        name: r.status,
+        recipients: r.recipientsM,
+        dollars: r.balanceBn,
+        avgK: r.avgBalanceK,
+        dollarShare: r.dollarSharePct,
       })),
     [],
   );
 
-  const avgScatter = useMemo(
+  const delinqPie = useMemo(
     () =>
-      STATUS_MIX.map((s) => ({
-        short: STATUS_META[s.id].short,
-        avgBalanceK: s.avgBalanceK,
-        sharePct: metric === "dollars" ? s.sharePct : s.recipientSharePct,
-        balanceBn: s.balanceBn,
-        fill: STATUS_META[s.id].color,
+      ACTIVE_REPAY_SPLIT.map((s) => ({
+        name: s.label,
+        value: metric === "dollars" ? s.dollarSharePct : s.recipientSharePct,
+        recipientsM: s.recipientsM,
       })),
     [metric],
   );
 
-  const meta = PANEL_META[panel];
+  const forbearanceComposed = useMemo(
+    () =>
+      FORBEARANCE_PATH.map((f) => {
+        const vintage = STATUS_VINTAGE.find((v) => v.sortKey === f.sortKey);
+        return {
+          period: f.period,
+          forbearance: f.balanceBn,
+          repaymentShare: vintage?.repaymentDollarSharePct ?? null,
+          label: f.label,
+        };
+      }),
+    [],
+  );
 
   return (
     <div
-      className="overflow-hidden rounded-xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white"
-      data-viz="federal-student-loan-balances-versus-borrowers-in-repayment-2026"
+      className="w-full space-y-6"
+      data-viz={slug}
+      data-viz-markers={VIZ_MARKERS.join(" | ")}
     >
-      <div className="border-b border-slate-200 bg-slate-900 px-4 py-3 text-slate-100 sm:px-5">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-teal-300">
-          {ANALYTICS.categoryLabel} · {ANALYTICS.smokeMarker}
+      <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-5 py-6 text-white sm:px-8">
+        <p className="text-xs font-semibold uppercase tracking-wider text-teal-300">
+          Federally managed portfolio · Mar 31, 2026
         </p>
-        <h3 className="mt-1 text-base font-semibold leading-snug sm:text-lg">
-          {HEADLINE.repaymentSharePct}% of ED-managed loan dollars are in
-          repayment — {HEADLINE.dollarsNotInActiveRepaymentSharePct}% are not
-        </h3>
-        <p className="mt-1 text-sm text-slate-300">
-          {HEADLINE.asOfLabel}: ${HEADLINE.repaymentBn}B repayment · $
-          {HEADLINE.forbearanceBn}B forbearance · ${HEADLINE.defaultBn}B default
-          · ${HEADLINE.portfolioBn}B federally managed
+        <p className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+          {VIZ_MARKERS[0]}
         </p>
+        <p className="mt-2 max-w-3xl text-sm text-slate-300">
+          Of the ${HEADLINE.managedPortfolioT}T ED-managed book,{" "}
+          {fmtBn(HEADLINE.repaymentBalanceBn)} sits with borrowers in current
+          repayment or delinquency — while {VIZ_MARKERS[1]} still parks nearly
+          three-tenths of the stock outside monthly billing.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-4 text-sm">
+          <span className="rounded-md bg-white/10 px-3 py-1">
+            Default {fmtBn(HEADLINE.defaultBn)}
+          </span>
+          <span className="rounded-md bg-white/10 px-3 py-1">
+            {VIZ_MARKERS[2]}
+          </span>
+          <span className="rounded-md bg-white/10 px-3 py-1">
+            IDR {fmtPct(HEADLINE.idrDollarSharePct)} of plan $
+          </span>
+        </div>
       </div>
 
-      <div className="flex flex-wrap gap-2 border-b border-slate-200 px-4 py-3 sm:px-5">
-        {(
-          [
-            ["status-stack", "Status mix"],
-            ["dollar-vs-heads", "Dollars vs heads"],
-            ["repay-path", "Repay path"],
-            ["forbear-anchors", "Forbear anchors"],
-            ["avg-balance", "Avg balance"],
-            ["idr-pie", "IDR split"],
-            ["delinq-strip", "Delinquency"],
-          ] as const
-        ).map(([id, label]) => (
-          <button
-            key={id}
-            type="button"
-            onClick={() => setPanel(id)}
-            className={`rounded-md px-2.5 py-1.5 text-xs font-medium transition ${
-              panel === id
-                ? "bg-teal-800 text-white"
-                : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-
-      <div className="flex flex-wrap items-center gap-3 border-b border-slate-100 px-4 py-2.5 text-xs sm:px-5">
-        <span className="font-medium text-slate-500">Metric</span>
-        {(
-          [
-            ["dollars", "Dollars"],
-            ["recipients", "Recipients"],
-          ] as const
-        ).map(([id, label]) => (
-          <button
-            key={id}
-            type="button"
-            onClick={() => setMetric(id)}
-            className={`rounded-md px-2 py-1 font-medium ${
-              metric === id
-                ? "bg-slate-800 text-white"
-                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-        <span className="ml-2 font-medium text-slate-500">Window</span>
-        {(
-          [
-            ["full", "Full path"],
-            ["postPause", "Since Jun 2025"],
-          ] as const
-        ).map(([id, label]) => (
-          <button
-            key={id}
-            type="button"
-            onClick={() => setWindow(id)}
-            className={`rounded-md px-2 py-1 font-medium ${
-              window === id
-                ? "bg-slate-800 text-white"
-                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-
-      <div className="px-4 py-3 sm:px-5">
-        <h4 className="text-sm font-semibold text-slate-900">{meta.title}</h4>
-        <p className="mt-0.5 text-xs text-slate-500">{meta.subtitle}</p>
-      </div>
-
-      <div className="h-[340px] px-2 pb-2 sm:px-4">
-        {panel === "status-stack" && (
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={stackData}
-              layout="vertical"
-              margin={{ top: 8, right: 24, left: 8, bottom: 8 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis
-                type="number"
-                tick={{ fontSize: 11 }}
-                tickFormatter={(v) =>
-                  metric === "dollars" ? `$${v}B` : `${v}M`
-                }
-              />
-              <YAxis
-                type="category"
-                dataKey="name"
-                width={100}
-                tick={{ fontSize: 11 }}
-              />
-              <Tooltip
-                formatter={(v) =>
-                  metric === "dollars"
-                    ? fmtBn(asNum(v))
-                    : `${asNum(v).toFixed(1)}M recipients`
-                }
-              />
-              <Bar dataKey="value" radius={[0, 4, 4, 0]}>
-                {stackData.map((d) => (
-                  <Cell key={d.name} fill={d.fill} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <ToggleGroup
+          value={view}
+          onChange={setView}
+          options={[
+            { id: "mix", label: "Status mix path" },
+            { id: "forbearance", label: "Forbearance path" },
+            { id: "ladder", label: "Status ladder" },
+            { id: "scatter", label: "Recipients × dollars" },
+            { id: "delinq", label: "Active-repay delinq" },
+            { id: "idr", label: "IDR share" },
+          ]}
+        />
+        {(view === "ladder" || view === "delinq") && (
+          <ToggleGroup
+            value={metric}
+            onChange={setMetric}
+            options={[
+              { id: "dollars", label: "By dollars" },
+              { id: "recipients", label: "By recipients" },
+            ]}
+          />
         )}
+      </div>
 
-        {panel === "dollar-vs-heads" && (
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={dualData}
-              margin={{ top: 8, right: 16, left: 0, bottom: 8 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="short" tick={{ fontSize: 11 }} />
-              <YAxis
-                tick={{ fontSize: 11 }}
-                tickFormatter={(v) => `${v}%`}
-                domain={[0, 50]}
-              />
-              <Tooltip formatter={(v) => fmtPct(asNum(v))} />
-              <Legend />
-              <Bar
-                dataKey="dollarSharePct"
-                name="Dollar share"
-                fill="#0f766e"
-                radius={[3, 3, 0, 0]}
-              />
-              <Bar
-                dataKey="recipientSharePct"
-                name="Recipient share"
-                fill="#94a3b8"
-                radius={[3, 3, 0, 0]}
-              />
-            </BarChart>
-          </ResponsiveContainer>
-        )}
+      {view === "mix" && (
+        <ChartCard
+          title="Status dollars across recent quarters"
+          subtitle="Stacked balances ($B) on the ED-managed book; line = repayment dollar share"
+        >
+          <div className="h-[380px] w-full min-w-0">
+            <ResponsiveContainer width="100%" height="100%">
+              <ComposedChart data={stackedVintage} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <XAxis dataKey="period" tick={{ fill: SLATE, fontSize: 12 }} />
+                <YAxis
+                  yAxisId="left"
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  tickFormatter={(v) => `$${v}`}
+                />
+                <YAxis
+                  yAxisId="right"
+                  orientation="right"
+                  domain={[30, 50]}
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  tickFormatter={(v) => `${v}%`}
+                />
+                <Tooltip
+                  formatter={(value, name) => {
+                    if (name === "repaymentShare") return [fmtPct(Number(value)), "Repayment $ share"];
+                    return [fmtBn(Number(value)), String(name)];
+                  }}
+                />
+                <Legend />
+                <Area
+                  yAxisId="left"
+                  type="monotone"
+                  dataKey="repayment"
+                  stackId="1"
+                  fill={TEAL}
+                  stroke={TEAL}
+                  name="Repayment"
+                />
+                <Area
+                  yAxisId="left"
+                  type="monotone"
+                  dataKey="forbearance"
+                  stackId="1"
+                  fill={AMBER}
+                  stroke={AMBER}
+                  name="Forbearance"
+                />
+                <Area
+                  yAxisId="left"
+                  type="monotone"
+                  dataKey="deferment"
+                  stackId="1"
+                  fill={SKY}
+                  stroke={SKY}
+                  name="Deferment"
+                />
+                <Area
+                  yAxisId="left"
+                  type="monotone"
+                  dataKey="default"
+                  stackId="1"
+                  fill={ROSE}
+                  stroke={ROSE}
+                  name="Default"
+                />
+                <Area
+                  yAxisId="left"
+                  type="monotone"
+                  dataKey="other"
+                  stackId="1"
+                  fill={SLATE}
+                  stroke={SLATE}
+                  name="In-school/other"
+                />
+                <Line
+                  yAxisId="right"
+                  type="monotone"
+                  dataKey="repaymentShare"
+                  stroke={NAVY}
+                  strokeWidth={2.5}
+                  dot={{ r: 4 }}
+                  name="Repayment $ %"
+                />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+        </ChartCard>
+      )}
 
-        {panel === "repay-path" && (
-          <ResponsiveContainer width="100%" height="100%">
-            <ComposedChart
-              data={quarterData}
-              margin={{ top: 8, right: 16, left: 0, bottom: 8 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="label" tick={{ fontSize: 11 }} />
-              <YAxis
-                yAxisId="share"
-                tick={{ fontSize: 11 }}
-                tickFormatter={(v) => `${v}%`}
-                domain={[0, 80]}
-              />
-              <YAxis
-                yAxisId="bn"
-                orientation="right"
-                tick={{ fontSize: 11 }}
-                tickFormatter={(v) => `$${v}B`}
-              />
-              <Tooltip />
-              <Legend />
-              <Area
-                yAxisId="share"
-                type="monotone"
-                dataKey="forbearanceSharePct"
-                name="Forbearance %"
-                fill="#fed7aa"
-                stroke="#c2410c"
-                fillOpacity={0.45}
-              />
-              <Line
-                yAxisId="share"
-                type="monotone"
-                dataKey="repaymentSharePct"
-                name="Repayment %"
-                stroke="#0f766e"
-                strokeWidth={2.5}
-                dot={{ r: 4 }}
-              />
-              <Bar
-                yAxisId="bn"
-                dataKey="defaultBn"
-                name="Default $"
-                fill="#7f1d1d"
-                opacity={0.55}
-                barSize={18}
-              />
-            </ComposedChart>
-          </ResponsiveContainer>
-        )}
-
-        {panel === "forbear-anchors" && (
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={[...FORBEARANCE_ANCHORS]}
-              margin={{ top: 8, right: 16, left: 0, bottom: 8 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis dataKey="label" tick={{ fontSize: 11 }} />
-              <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `$${v}B`} />
-              <Tooltip
-                formatter={(v, _n, props) => [
-                  fmtBn(asNum(v)),
-                  (props?.payload as { tag?: string })?.tag ?? "Forbearance",
-                ]}
-              />
-              <Bar dataKey="bn" name="Forbearance $" radius={[4, 4, 0, 0]}>
-                {FORBEARANCE_ANCHORS.map((d) => (
-                  <Cell
-                    key={d.label}
-                    fill={
-                      d.bn >= 1000
-                        ? "#7f1d1d"
-                        : d.bn >= 500
-                          ? "#c2410c"
-                          : "#ea580c"
+      {view === "forbearance" && (
+        <ChartCard
+          title="Forbearance stock from pre-pause to SAVE unwind"
+          subtitle="Bars: forbearance balances ($B). Line: repayment dollar share where disclosed."
+        >
+          <div className="h-[380px] w-full min-w-0">
+            <ResponsiveContainer width="100%" height="100%">
+              <ComposedChart data={forbearanceComposed} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <XAxis dataKey="period" tick={{ fill: SLATE, fontSize: 12 }} />
+                <YAxis
+                  yAxisId="left"
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  tickFormatter={(v) => `$${v}B`}
+                />
+                <YAxis
+                  yAxisId="right"
+                  orientation="right"
+                  domain={[0, 50]}
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  tickFormatter={(v) => `${v}%`}
+                />
+                <Tooltip
+                  formatter={(value, name) => {
+                    if (name === "repaymentShare") {
+                      return value == null ? ["—", "Repayment $ share"] : [fmtPct(Number(value)), "Repayment $ share"];
                     }
-                  />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        )}
+                    return [fmtBn(Number(value)), "Forbearance"];
+                  }}
+                />
+                <Legend />
+                <Bar yAxisId="left" dataKey="forbearance" fill={AMBER} name="Forbearance $B" radius={[4, 4, 0, 0]} />
+                <Line
+                  yAxisId="right"
+                  type="monotone"
+                  dataKey="repaymentShare"
+                  stroke={TEAL}
+                  strokeWidth={2.5}
+                  connectNulls={false}
+                  dot={{ r: 4 }}
+                  name="Repayment $ %"
+                />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+        </ChartCard>
+      )}
 
-        {panel === "avg-balance" && (
-          <ResponsiveContainer width="100%" height="100%">
-            <ScatterChart margin={{ top: 12, right: 24, left: 8, bottom: 12 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis
-                type="number"
-                dataKey="sharePct"
-                name={metric === "dollars" ? "Dollar share %" : "Recipient share %"}
-                tick={{ fontSize: 11 }}
-                tickFormatter={(v) => `${v}%`}
-                domain={[0, 50]}
-              />
-              <YAxis
-                type="number"
-                dataKey="avgBalanceK"
-                name="Avg balance $k"
-                tick={{ fontSize: 11 }}
-                tickFormatter={(v) => `$${v}k`}
-                domain={[0, 70]}
-              />
-              <ZAxis type="number" dataKey="balanceBn" range={[80, 400]} />
-              <Tooltip
-                cursor={{ strokeDasharray: "3 3" }}
-                formatter={(v, name) => {
-                  const n = asNum(v);
-                  const key = String(name);
-                  if (key === "avgBalanceK") return [`$${n}k`, "Avg balance"];
-                  if (key === "sharePct") return [fmtPct(n), "Share"];
-                  return [n, key];
-                }}
-                labelFormatter={(_, payload) =>
-                  (payload?.[0]?.payload as { short?: string })?.short ?? ""
-                }
-              />
-              <Scatter data={avgScatter} name="Status">
-                {avgScatter.map((d) => (
-                  <Cell key={d.short} fill={d.fill} />
-                ))}
-              </Scatter>
-            </ScatterChart>
-          </ResponsiveContainer>
-        )}
-
-        {panel === "idr-pie" && (
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={[...IDR_SPLIT]}
-                dataKey={
-                  metric === "dollars" ? "dollarSharePct" : "borrowerSharePct"
-                }
-                nameKey="label"
-                cx="50%"
-                cy="50%"
-                innerRadius={68}
-                outerRadius={110}
-                paddingAngle={2}
-                label={(props) => {
-                  const name = String(props.name ?? "");
-                  const pct = ((props.percent ?? 0) * 100).toFixed(0);
-                  return `${name.split(" ")[0]} ${pct}%`;
-                }}
+      {view === "ladder" && (
+        <ChartCard
+          title={
+            metric === "dollars"
+              ? "March 2026 status ladder by outstanding dollars"
+              : "March 2026 status ladder by recipient accounts"
+          }
+          subtitle="Sorted descending. Recipient shares can overlap across statuses."
+        >
+          <div className="h-[380px] w-full min-w-0">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                data={ladderData}
+                layout="vertical"
+                margin={{ top: 8, right: 24, left: 8, bottom: 0 }}
               >
-                {IDR_SPLIT.map((d) => (
-                  <Cell key={d.id} fill={d.color} />
-                ))}
-              </Pie>
-              <Tooltip
-                formatter={(v, _n, props) => {
-                  const n = asNum(v);
-                  const row = props?.payload as {
-                    balanceBn?: number;
-                    borrowersM?: number;
-                  };
-                  return metric === "dollars"
-                    ? [`${n}% · ${fmtBn(row?.balanceBn ?? 0)}`, "Dollar share"]
-                    : [
-                        `${n}% · ${row?.borrowersM ?? 0}M borrowers`,
-                        "Borrower share",
-                      ];
-                }}
-              />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-        )}
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" horizontal={false} />
+                <XAxis
+                  type="number"
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  tickFormatter={(v) =>
+                    metric === "dollars" ? `$${v}B` : `${v}M`
+                  }
+                />
+                <YAxis
+                  type="category"
+                  dataKey="name"
+                  width={110}
+                  tick={{ fill: NAVY, fontSize: 12 }}
+                />
+                <Tooltip
+                  formatter={(value, _n, props) => {
+                    const share = (props?.payload as { share?: number })?.share;
+                    const primary =
+                      metric === "dollars"
+                        ? fmtBn(Number(value))
+                        : fmtM(Number(value));
+                    return [
+                      share != null ? `${primary} (${fmtPct(share, 1)})` : primary,
+                      metric === "dollars" ? "Balance" : "Recipients",
+                    ];
+                  }}
+                />
+                <Bar dataKey="value" radius={[0, 4, 4, 0]}>
+                  {ladderData.map((d) => (
+                    <Cell key={d.name} fill={d.fill} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </ChartCard>
+      )}
 
-        {panel === "delinq-strip" && (
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={[...DELINQUENCY_STRIP]}
-              layout="vertical"
-              margin={{ top: 24, right: 40, left: 8, bottom: 24 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-              <XAxis
-                type="number"
-                domain={[0, 100]}
-                tick={{ fontSize: 11 }}
-                tickFormatter={(v) => `${v}%`}
-              />
-              <YAxis
-                type="category"
-                dataKey="label"
-                width={140}
-                tick={{ fontSize: 11 }}
-              />
-              <Tooltip
-                formatter={(v) =>
-                  `${asNum(v)}% of active-repay recipients`
-                }
-              />
-              <Bar dataKey="sharePct" radius={[0, 4, 4, 0]} barSize={36}>
-                {DELINQUENCY_STRIP.map((d) => (
-                  <Cell key={d.id} fill={d.color} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        )}
-      </div>
+      {view === "scatter" && (
+        <ChartCard
+          title="Recipients versus dollars by status"
+          subtitle="Bubble size ≈ average balance per recipient ($k). Diagonal = equal recipient and dollar shares."
+        >
+          <div className="h-[380px] w-full min-w-0">
+            <ResponsiveContainer width="100%" height="100%">
+              <ScatterChart margin={{ top: 12, right: 16, left: 0, bottom: 8 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <XAxis
+                  type="number"
+                  dataKey="recipients"
+                  name="Recipients"
+                  unit="M"
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  label={{ value: "Recipients (M)", position: "insideBottom", offset: -2, fill: SLATE }}
+                />
+                <YAxis
+                  type="number"
+                  dataKey="dollars"
+                  name="Dollars"
+                  unit="B"
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  label={{ value: "Balance ($B)", angle: -90, position: "insideLeft", fill: SLATE }}
+                />
+                <ZAxis type="number" dataKey="avgK" range={[80, 400]} />
+                <Tooltip
+                  cursor={{ strokeDasharray: "3 3" }}
+                  formatter={(value, name) => {
+                    if (name === "recipients") return [fmtM(Number(value)), "Recipients"];
+                    if (name === "dollars") return [fmtBn(Number(value)), "Balance"];
+                    return [String(value), String(name)];
+                  }}
+                  labelFormatter={(_, payload) =>
+                    (payload?.[0]?.payload as { name?: string })?.name ?? ""
+                  }
+                />
+                <Scatter data={scatterData} fill={INDIGO}>
+                  {scatterData.map((d) => {
+                    const slice = STATUS_MARCH_2026.find((s) => s.shortLabel === d.name);
+                    return (
+                      <Cell
+                        key={d.name}
+                        fill={slice ? STATUS_COLORS[slice.id] : INDIGO}
+                      />
+                    );
+                  })}
+                </Scatter>
+              </ScatterChart>
+            </ResponsiveContainer>
+          </div>
+          <ul className="mt-3 flex flex-wrap gap-3 text-xs text-slate-600">
+            {scatterData.map((d) => (
+              <li key={d.name}>
+                <span className="font-semibold text-slate-800">{d.name}</span>
+                : avg ~${d.avgK}k / recipient
+              </li>
+            ))}
+          </ul>
+        </ChartCard>
+      )}
 
-      <p className="border-t border-slate-100 px-4 py-2.5 text-[10px] leading-relaxed text-slate-400 sm:px-5">
-        {SOURCE_NOTE}
-      </p>
+      {view === "delinq" && (
+        <ChartCard
+          title="Inside active repayment: current vs delinquent"
+          subtitle="Denominator = borrowers expected to pay (excludes forbearance, deferment, in-school, grace)."
+        >
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="h-[320px] w-full min-w-0">
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={delinqPie}
+                    dataKey="value"
+                    nameKey="name"
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={110}
+                    paddingAngle={2}
+                    label={({ name, value }) =>
+                      `${String(name).split(" ")[0]} ${fmtPct(Number(value), 1)}`
+                    }
+                  >
+                    {delinqPie.map((d) => (
+                      <Cell
+                        key={d.name}
+                        fill={
+                          d.name.startsWith("Current")
+                            ? TEAL
+                            : d.name.startsWith("Late")
+                              ? ROSE
+                              : AMBER
+                        }
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip
+                    formatter={(value) => [
+                      fmtPct(Number(value), 1),
+                      metric === "dollars" ? "Dollar share" : "Recipient share",
+                    ]}
+                  />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+            <div className="flex flex-col justify-center space-y-3 text-sm text-slate-700">
+              <p>
+                More than <strong>80%</strong> of ED-serviced recipients in
+                active repayment are current (&lt;31 days), but that still leaves
+                about <strong>{fmtM(3.5)}</strong> recipients 31+ days past due —
+                including <strong>{fmtM(HEADLINE.lateStageDelinqM)}</strong> in
+                late-stage delinquency.
+              </p>
+              <p>
+                By dollars, the active-repayment 31+ rate is{" "}
+                <strong>{fmtPct(HEADLINE.activeDelinqDollarPct, 1)}</strong> —
+                above the December 2019 pre-pause print of 12.7%.
+              </p>
+            </div>
+          </div>
+        </ChartCard>
+      )}
+
+      {view === "idr" && (
+        <ChartCard
+          title="Income-driven repayment share of the plan universe"
+          subtitle="Bars: IDR balances ($B). Line: IDR dollar share of ED-serviced repayment-plan balances."
+        >
+          <div className="h-[380px] w-full min-w-0">
+            <ResponsiveContainer width="100%" height="100%">
+              <ComposedChart data={IDR_VINTAGE} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                <XAxis dataKey="period" tick={{ fill: SLATE, fontSize: 12 }} />
+                <YAxis
+                  yAxisId="left"
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  tickFormatter={(v) => `$${v}B`}
+                />
+                <YAxis
+                  yAxisId="right"
+                  orientation="right"
+                  domain={[40, 70]}
+                  tick={{ fill: SLATE, fontSize: 12 }}
+                  tickFormatter={(v) => `${v}%`}
+                />
+                <Tooltip
+                  formatter={(value, name) => {
+                    if (name === "dollarSharePct") return [fmtPct(Number(value)), "IDR $ share"];
+                    if (name === "borrowerSharePct") return [fmtPct(Number(value)), "IDR borrower share"];
+                    return [fmtBn(Number(value)), "IDR balance"];
+                  }}
+                />
+                <Legend />
+                <Bar
+                  yAxisId="left"
+                  dataKey="balanceBn"
+                  fill={INDIGO}
+                  name="IDR $B"
+                  radius={[4, 4, 0, 0]}
+                />
+                <Line
+                  yAxisId="right"
+                  type="monotone"
+                  dataKey="dollarSharePct"
+                  stroke={TEAL}
+                  strokeWidth={2.5}
+                  name="IDR $ %"
+                  dot={{ r: 4 }}
+                />
+                <Line
+                  yAxisId="right"
+                  type="monotone"
+                  dataKey="borrowerSharePct"
+                  stroke={AMBER}
+                  strokeWidth={2}
+                  strokeDasharray="4 4"
+                  name="IDR borrower %"
+                  dot={{ r: 3 }}
+                />
+              </ComposedChart>
+            </ResponsiveContainer>
+          </div>
+        </ChartCard>
+      )}
+
+      <p className="text-xs leading-relaxed text-slate-500">{SOURCE_NOTE}</p>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 /**
  * QA: federal-student-loan-balances-versus-borrowers-in-repayment-2026
- * // viz-types: horizontal bar, dual bar, composed area/line/bar, forbearance bars, scatter, pie, delinquency strip | layout: default
- * // smoke-marker: Balance share in repayment
+ * // viz-types: status stacked area, forbearance path composed, recipient×dollar scatter, active-repay pie, IDR dual bars, status ladder bars | layout: default
+ * // smoke-marker: 39% of ED-managed dollars in repayment
  */
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -10,36 +10,30 @@ import { chromium } from "playwright";
 import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
 import { auditVizInteractions } from "./lib/viz-interaction-qa.mjs";
 import {
-  ANALYTICS,
-  FORBEARANCE_ANCHORS,
+  FORBEARANCE_PATH,
   HEADLINE,
-  IDR_SPLIT,
-  QUARTERS,
-  STATUS_MIX,
-  SUMMARY_TABLE,
+  IDR_VINTAGE,
+  RECIPIENT_VS_DOLLAR,
+  STATUS_MARCH_2026,
+  STATUS_VINTAGE,
+  VIZ_MARKERS,
 } from "../src/data/federal-student-loan-balances-versus-borrowers-in-repayment-2026-data.ts";
 
-assert.equal(HEADLINE.asOfLabel, "Mar 2026");
-assert.equal(HEADLINE.portfolioBn, 1640);
-assert.equal(HEADLINE.repaymentBn, 633);
-assert.equal(HEADLINE.repaymentSharePct, 38.6);
+assert.equal(HEADLINE.repaymentDollarSharePct, 39);
+assert.equal(HEADLINE.repaymentBalanceBn, 633);
 assert.equal(HEADLINE.forbearanceBn, 485);
 assert.equal(HEADLINE.defaultBn, 220);
-assert.equal(HEADLINE.idrShareOfRepayPlanDollarsPct, 62);
-assert.ok(STATUS_MIX.length >= 5);
-assert.ok(QUARTERS.length >= 5);
-assert.equal(FORBEARANCE_ANCHORS.length, 6);
-assert.equal(IDR_SPLIT.length, 2);
-assert.equal(SUMMARY_TABLE.length, 5);
-assert.equal(ANALYTICS.smokeMarker, "Balance share in repayment");
-assert.equal(QUARTERS.at(-1)?.label, "Mar 2026");
+assert.equal(HEADLINE.managedPortfolioT, 1.64);
+assert.ok(STATUS_MARCH_2026.length >= 5);
+assert.ok(STATUS_VINTAGE.length >= 4);
+assert.ok(FORBEARANCE_PATH.length >= 4);
+assert.ok(RECIPIENT_VS_DOLLAR.length >= 4);
+assert.ok(IDR_VINTAGE.length >= 2);
+assert.ok(VIZ_MARKERS.length >= 3);
 
 const root = process.cwd();
 const slug = "federal-student-loan-balances-versus-borrowers-in-repayment-2026";
-const markers = [
-  "Balance share in repayment",
-  "Consumer Finance · Balance share in repayment",
-];
+const markers = [...VIZ_MARKERS];
 
 async function clickBtn(page, name) {
   console.log(`→ click ${name}`);
@@ -53,7 +47,7 @@ async function main() {
     console.error("✗ Missing out/ — run npm run build first");
     process.exit(1);
   }
-  const port = Number(process.env.SMOKE_PORT || 4180);
+  const port = Number(process.env.SMOKE_PORT || 4182);
   const server = await startStaticServer(outDir, port);
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -71,21 +65,18 @@ async function main() {
       });
       console.log(`✓ ${m}`);
     }
-    await clickBtn(page, "Dollars vs heads");
-    await clickBtn(page, "Repay path");
-    await clickBtn(page, "Forbear anchors");
-    await clickBtn(page, "Avg balance");
-    await clickBtn(page, "IDR split");
-    await clickBtn(page, "Delinquency");
-    await clickBtn(page, "Recipients");
-    await clickBtn(page, "Since Jun 2025");
-    await clickBtn(page, "Status mix");
-    await clickBtn(page, "Dollars");
-    await clickBtn(page, "Full path");
+    await clickBtn(page, "Status mix path");
+    await clickBtn(page, "Forbearance path");
+    await clickBtn(page, "Status ladder");
+    await clickBtn(page, "By recipients");
+    await clickBtn(page, "By dollars");
+    await clickBtn(page, "Recipients × dollars");
+    await clickBtn(page, "Active-repay delinq");
+    await clickBtn(page, "By recipients");
+    await clickBtn(page, "By dollars");
+    await clickBtn(page, "IDR share");
     await auditVizInteractions(page, { slug });
-    console.log(
-      "✓ federal-student-loan-balances-versus-borrowers-in-repayment-2026 QA passed",
-    );
+    console.log("✓ QA passed");
   } finally {
     await browser.close();
     await stopStaticServer(server);
@@ -93,6 +84,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error(err);
+  console.error("✗ QA failed", err);
   process.exit(1);
 });
