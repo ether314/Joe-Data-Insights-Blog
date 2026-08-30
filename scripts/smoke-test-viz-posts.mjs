@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026",
+    marker: "EV vs gasoline cents per mile",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "us-pet-owning-households-versus-veterinary-cpi-2026",
     marker: "Pet households vs veterinary CPI",
     forbidden: "Loading interactive charts",

@@ -2,6 +2,138 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026",
+    slug: "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026",
+    title:
+      "5.2¢ vs 11.1¢: EV Electricity Cost per Mile Versus Gasoline in 2025",
+    excerpt:
+      "At EIA's 2025 residential electricity average and regular gasoline price, a typical EV at 0.30 kWh/mi costs about 5.2¢ per mile to fuel at home — while a 28 mpg gasoline car costs about 11.1¢. The gap survives regional power and pump swings, but efficiency still decides the margin.",
+    category: "Energy",
+    themeId: "ev-vs-gasoline-operating-cost",
+    imageUrl:
+      "/images/energy-ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual cost-per-mile graphic with teal EV charging motif at 5.2 cents per mile and amber gasoline pump motif at 11.1 cents per mile, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-26T20:00:00Z",
+    featured: true,
+    visualization: "ev-electricity-cost-per-mile-versus-gasoline-cost-per-mile-2026",
+    layout: "default",
+    content: `The operating-cost debate for electric vehicles often collapses into slogans: electricity is “cheap,” gasoline is “expensive,” or the reverse after a bad summer at the pump. Those slogans hide the only comparison that travels cleanly across vehicles and years — **cents per mile**. Take the Energy Information Administration’s calendar-year 2025 residential electricity average of **17.30 cents per kilowatt-hour**, pair it with a midsize battery-electric vehicle that uses about **0.30 kWh per mile** at the wall, and home charging costs roughly **5.2¢ per mile**. Take EIA’s 2025 regular gasoline average of **$3.097 per gallon**, pair it with a **28 mpg** gasoline car, and the same mile costs about **11.1¢**. Gasoline is still a little more than **twice** as expensive per mile at those national anchors — even after three consecutive years of falling nominal pump prices.
+
+That arithmetic is deliberately narrow. It ignores purchase price, insurance, tires, maintenance, and the time cost of charging. It also treats residential average revenue per kWh as a stand-in for what a household actually pays on an EV tariff, and it assumes Level-2 home charging rather than public DC fast charging. Those caveats matter. They do not erase the headline: on a pure fuel-and-electrons basis, the typical EV still undercuts the typical ICE car by about **six cents a mile**, or roughly **$700 a year** at 12,000 miles.
+
+The interactive dashboard above holds efficiency fixed where useful, then lets you move residential power, gasoline, kWh/mi, and mpg. The national dual-line panel tracks how the gap evolved from 2016 through 2025. The sensitivity heatmap shows how quickly a high power rate or a thirsty EV can erase the advantage. The PADD scatter puts regional gasoline prints next to electricity proxies. The break-even curve asks a sharper question: **how many miles per gallon would a gasoline car need to match the EV’s electricity cost per mile?**
+
+## How cents per mile is built
+
+Two formulas do almost all the work.
+
+**EV electricity cost per mile** = residential cents per kWh × kilowatt-hours per mile.
+
+**Gasoline cost per mile** = (dollars per gallon × 100) ÷ miles per gallon.
+
+EIA’s residential series is average revenue per kWh sold to residential customers, including taxes — a national (or state) **revenue/sales proxy**, not a quoted residential tariff schedule. That is the right public series for a desk comparison, and it is also why a household on a time-of-use or EV-specific rate can beat or miss the national print. Gasoline prices are annual averages of EIA’s weekly retail regular-grade survey, all formulations, including taxes.
+
+Efficiency is the other half of the story. The Department of Energy’s Fact of the Week #1373 (December 2024) notes that model-year 2024 EVs span roughly **1.49 to 4.17 miles per kWh** on the EPA combined cycle — about **0.67 to 0.24 kWh per mile**. Gasoline vehicles, including traditional hybrids, span roughly **9 to 57 mpg**. A “typical” midsize BEV near **3.3 mi/kWh (0.30 kWh/mi)** and a “typical” midsize ICE near **28 mpg** are mid-pack anchors, not claims about every driveway.
+
+MPGe — miles per gallon equivalent — is useful for energy-content comparisons because EPA treats **33.7 kWh** as the energy in one gallon of gasoline. It is **not** a price comparison. A 100 MPGe sticker does not mean the EV costs one-hundredth of a gallon of gasoline to drive a mile; it means the vehicle travels 100 miles on 33.7 kWh of electricity. Cents per mile converts that energy use into what households actually pay.
+
+## The 2025 national snapshot
+
+Calendar 2025 is a useful stress test because the two price series moved in opposite directions for the third straight year on gasoline. EIA reports that regular gasoline averaged about **$3.10 per gallon** in 2025, down roughly **21 cents** from 2024 and well below the 2022 spike near **$3.95**. Residential electricity, meanwhile, continued its climb: **12.55¢/kWh** in 2016, **15.04¢** in 2022, **16.48¢** in 2024, and **17.30¢** in 2025.
+
+Hold efficiency fixed at 0.30 kWh/mi and 28 mpg and the history is blunt:
+
+| Year | Residential ¢/kWh | Regular gas $/gal | EV ¢/mi | Gas ¢/mi | Gas ÷ EV |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2016 | 12.55 | 2.14 | 3.77 | 7.64 | 2.03× |
+| 2020 | 13.15 | 2.17 | 3.95 | 7.74 | 1.96× |
+| 2022 | 15.04 | 3.95 | 4.51 | 14.11 | 3.13× |
+| 2024 | 16.48 | 3.30 | 4.94 | 11.80 | 2.39× |
+| 2025 | 17.30 | 3.10 | 5.19 | 11.06 | 2.13× |
+
+The EV line drifts upward with power prices. The gasoline line spikes in 2022, then retreats. The **ratio** compresses from more than 3× at the 2022 peak toward roughly **2.1×** in 2025 — still a clear electricity advantage at these efficiencies, but a narrower one than the post-invasion gasoline spike suggested.
+
+At 12,000 annual miles, the 2025 national pair is about **$623** of residential electricity versus **$1,327** of gasoline, a gap near **$704**. Change annual miles and the dollar gap scales linearly; the cents-per-mile gap does not.
+
+## Efficiency decides the margin more than the slogan
+
+National averages hide the vehicle you actually own. An efficient EV near **4.2 mi/kWh (0.24 kWh/mi)** at 17.30¢/kWh costs about **4.2¢/mi**. A large or truck-like EV near **2.4 mi/kWh (0.42 kWh/mi)** costs about **7.3¢/mi**. On the gasoline side, a **22 mpg** crossover at $3.10/gal costs about **14.1¢/mi**; a strong hybrid at **45 mpg** costs about **6.9¢/mi**.
+
+That last pairing is the uncomfortable one for EV advocates who argue from national averages alone: a thrifty hybrid can approach, and in some power markets beat, a thirsty EV on fuel-and-electrons cost. It does not overturn the midsize-to-midsize comparison. It does mean the honest sentence is conditional: **at typical midsize efficiencies and national 2025 prices, electricity still wins; at the extremes of the DOE/EPA ranges, the winner is a local calculation.**
+
+The break-even mpg question makes the same point without picking a rival vehicle. At 17.30¢/kWh and 0.30 kWh/mi, EV cost is 5.19¢/mi. The gasoline mpg that matches that cost is:
+
+mpg* = ($/gal × 100) ÷ 5.19 ≈ **59.7 mpg** at $3.10/gal.
+
+Very few non-hybrid gasoline cars live there. Many hybrids do. Plug-in hybrids complicate the picture further because their gasoline and electricity shares depend on how often the battery is charged — a behavioral variable this piece does not pretend to settle.
+
+## Where you live still moves the decimal
+
+EIA’s PADD regular gasoline averages for 2025 stretch from about **$2.68 on the Gulf Coast** to about **$4.09 on the West Coast**. Residential electricity is even more geographically uneven: New England and parts of the Pacific sit far above the national 17.30¢ print, while parts of the interior South and Mountain West sit below it.
+
+Pairing PADD gasoline with census-division electricity proxies (derived, not a perfect geographic match) shows the operating-cost map is not a single national story:
+
+| Region proxy | Gas $/gal | Power ¢/kWh | EV ¢/mi | Gas ¢/mi | Ratio |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Gulf Coast | 2.68 | 14.2 | 4.26 | 9.56 | 2.24× |
+| Midwest | 2.94 | 16.8 | 5.04 | 10.51 | 2.09× |
+| East Coast | 2.98 | 20.5 | 6.15 | 10.64 | 1.73× |
+| New England | 2.99 | 28.5 | 8.55 | 10.67 | 1.25× |
+| Rocky Mountain | 3.02 | 14.8 | 4.44 | 10.79 | 2.43× |
+| West Coast | 4.09 | 24.8 | 7.44 | 14.62 | 1.96× |
+
+Two lessons jump out. First, **cheap gasoline does not automatically erase the EV advantage** if electricity is also relatively cheap — the Gulf pairing still shows gasoline roughly **2.2×** electricity per mile at our fixed efficiencies. Second, **expensive electricity can shrink the advantage dramatically** even when gasoline is only average: the New England proxy compresses the ratio toward **1.25×**. West Coast drivers face high numbers on both sides; the EV still wins on this narrow metric, but absolute cents per mile are elevated for everyone.
+
+Public DC fast charging sits outside this map. Retail DCFC prices often run well above residential averages on a per-kWh basis, and session fees can dominate short charges. Households that rarely charge at home will not experience the 5.2¢ national headline.
+
+## What the dashboard is for
+
+The interactive panels are built to keep the comparison honest under user assumptions rather than to crown a permanent winner.
+
+- **National trend** holds 0.30 kWh/mi and 28 mpg fixed so price history is visible without confounding efficiency mix shifts.
+- **EV sensitivity** is a heatmap of residential ¢/kWh against kWh/mi — the two levers that set electricity cents per mile.
+- **PADD regions** scatter EV versus gasoline cents per mile under the same efficiency anchors.
+- **Break-even mpg** redraws the gasoline mpg required to match your live electricity cost as you move the power and efficiency sliders.
+
+Use the scenario presets for a quick jump to national 2025, an efficient EV, a large EV versus hybrid ICE, New England-high power, Gulf cheap gas, or West Coast prices. Then nudge the sliders. If your utility bill shows 14¢/kWh off-peak and your car’s trip computer says 0.28 kWh/mi, the live readout is closer to your driveway than any national slogan.
+
+## Caveats and what this piece is not
+
+**Tariffs vs averages.** EIA residential cents per kWh are average revenue per unit sold. Inclining-block rates, fixed customer charges, demand charges, and EV time-of-use discounts all change the marginal cost of the next charging kWh.
+
+**Charging path.** Home Level-2 is the default. Workplace charging, condo access limits, and public DCFC can raise or lower effective ¢/kWh.
+
+**Vehicle class.** Comparing a compact EV to a three-row gasoline SUV is not the same analysis as midsize-to-midsize. Weight, aerodynamics, and four-wheel-drive packages move both kWh/mi and mpg.
+
+**Total cost of ownership.** Fuel-and-electrons is not TCO. Depreciation, insurance, maintenance, tires, and incentives can dominate for some buyers and some model years.
+
+**Taxes and externalities.** Both series include retail taxes as EIA measures them. Neither embeds carbon prices, congestion, or local air-quality damages.
+
+**Geography mismatch.** PADD gasoline districts and electricity census divisions do not share identical borders. Regional rows are illustrative pairings, marked derived on the electricity side.
+
+**Vintage.** Figures track published annual EIA prints through 2025 and DOE/EPA MY2024 efficiency ranges. Weekly gasoline and monthly electricity will continue to move.
+
+## Bottom line
+
+At EIA’s 2025 national residential electricity and regular gasoline averages, a typical EV at **0.30 kWh/mi** costs about **5.2¢ per mile** to charge at home, while a typical gasoline car at **28 mpg** costs about **11.1¢ per mile** to fuel. That is still roughly a **2.1×** gasoline premium on a cents-per-mile basis — narrower than the 2022 spike, wider than a New England-high-power pairing, and contingent on efficiency. The right operating-cost question is not whether electricity is “cheap.” It is **which price print and which efficiency you bring to the mile.**`,
+    tags: [
+      "electric vehicles",
+      "gasoline",
+      "electricity prices",
+      "operating costs",
+      "EIA",
+      "fuel economy",
+    ],
+    format: "deep-dive",
+    keyPoints: [
+      "2025 national averages: ~5.2¢/mi for a typical EV on residential power vs ~11.1¢/mi for a 28 mpg gasoline car",
+      "Gasoline still costs roughly 2.1× electricity per mile at those anchors",
+      "New England-high power rates compress the EV advantage; Gulf cheap gas compresses it from the other side",
+      "A gasoline car needs roughly 60 mpg to match the typical EV's electricity cents-per-mile at national 2025 prices",
+    ],
+  },
+  {
     id: "us-pet-owning-households-versus-veterinary-cpi-2026",
     slug: "us-pet-owning-households-versus-veterinary-cpi-2026",
     title:
