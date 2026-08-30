@@ -2,6 +2,88 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "us-pet-owning-households-versus-veterinary-cpi-2026",
+    slug: "us-pet-owning-households-versus-veterinary-cpi-2026",
+    title:
+      "Pet Households Hold Steady While Veterinary CPI Nearly Quadruples",
+    excerpt:
+      "AVMA puts dogs in 42.6% of U.S. households and cats in 32.6%. BLS veterinarian-services CPI sits at 393 on a 1997=100 scale versus ~201 for all-items — a 193-point outrun.",
+    category: "Economics",
+    themeId: "companion-animal-economy",
+    imageUrl:
+      "/images/economics-us-pet-owning-households-versus-veterinary-cpi-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero of dog and cat silhouettes beside a clinic window with amber rising price curves, visualizing pet ownership versus veterinary inflation",
+    publishedAt: "2026-08-30T16:00:00Z",
+    featured: true,
+    visualization: "us-pet-owning-households-versus-veterinary-cpi-2026",
+    layout: "default",
+    content: `The United States is a pet economy. According to the American Veterinary Medical Association’s 2025 Pet Ownership and Demographic Sourcebook, **58.6%** of households — about **77.5 million** homes — keep at least one companion animal. Dogs live in **42.6%** of households (**56.3 million** homes; **87.3 million** animals). Cats live in **32.6%** (**43.1 million** homes; **76.3 million** animals). Those shares answer the first half of the brief: pet ownership is not a niche lifestyle. It is a majority household fact, with dogs still the modal species and cats a large, overlapping second.
+
+The second half of the brief is a price question. The Bureau of Labor Statistics CPI-U item for **veterinarian services** (series **CUUR0000SS62054**, December 1997 = 100) averaged **393.2** in calendar **2025**. Rebased all-items CPI-U (**CUUR0000SA0**) sits near **200.6** on the same 1997 = 100 scale. That is a **193-point** gap: clinic prices have nearly **quadrupled** since the series began, while the broad urban basket has roughly **doubled**. On a shorter 2019 = 100 window the same story softens but does not reverse — veterinary CPI prints about **147** versus **126** for all-items, a **21-point** post-pandemic outrun.
+
+The dashboard above races those CPI series, fills the gap as an area, plots ownership waves, maps species shares on a radar, compares year-over-year inflation bars, and scatters dog-household shares against the veterinary index. Toggle the index base (1997 vs 2019), the ownership frame (AVMA vs APPA), and the species focus without leaving the chart.
+
+## How large is the companion-animal footprint?
+
+AVMA’s 2025 public tables are the cleanest published household shares for dogs and cats. Dogs average **1.6** animals per owning household; cats average **1.8**. Mean veterinary spending reported in the same release is **$598** per dog-owning household per year and **$529** per cat-owning household — not the full cost of petkeeping, but a useful anchor for the services stratum that BLS prices.
+
+Other species remain small in household share but real in absolute counts: fish (**2.6%** of households), reptiles (**1.8%**), birds (**1.6%**), small mammals (**0.8%**), poultry (**0.7%**), rabbits (**0.6%**), and horses (**0.4%**). The radar panel compresses that hierarchy: dogs and cats dominate the household-percent scale; everything else sits near the origin.
+
+APPA’s National Pet Owners Survey / State of the Industry frame runs **higher**. APPA reported **66%** any-pet ownership in the early-2020s wave (**86.9 million** households) and, for 2025, dog ownership at **53%** (**71 million** households) and cat ownership at **39%** (**53 million**). Industry expenditures reached **$158 billion** in 2025. Those numbers are not interchangeable with AVMA’s — different instruments, sampling frames, and species definitions — but they confirm direction: petkeeping is a mass market, and veterinary care is a large share of the wallet (APPA puts vet care near **29%** of dog-owner spend and **28%** of cat-owner spend in recent reports).
+
+## Ownership waves, not a single number
+
+Household ownership is a sparse survey history, not a monthly CPI. AVMA waves used here run **1996 → 2011 → 2016 → 2020 → 2022 → 2024 → 2025**. Dog household share rose from **31.6%** in 1996 to a **45.5%** print in 2024, then eased to **42.6%** in 2025. Cat share fell into the mid-2010s (about **25%** in 2016) before recovering to **32.1%** in 2024 and **32.6%** in 2025. The 2025 dog dip against a still-elevated level is a reminder that survey waves move; it is not proof of a sudden destocking of the national kennel.
+
+What matters for the economics story is the **level**, not the last one-year tick. Even at 42.6%, dog ownership remains more than ten percentage points above the mid-1990s baseline. Cat ownership has regained roughly seven points from its mid-2010s trough. Any-pet ownership at 58.6% (AVMA) or the higher APPA any-pet prints both say the same institutional thing: a large share of U.S. consumer units faces veterinary price growth as a recurring budget line.
+
+## Veterinary CPI versus all-items CPI
+
+BLS began publishing the veterinarian-services item in **1997**. The annual averages climb almost without pause: **100** in 1997, **198** by 2010, **267** in 2019, **314** in 2022, **344** in 2023, **369** in 2024, and **393** in 2025. A provisional 2026 composite near **411** continues the slope. All-items CPI, rebased to 1997 = 100, reaches only about **201** by 2025. Average annual inflation over that span is roughly **5.0%** for veterinary services versus **2.5%** for all-items — veterinary inflation running about **twice** the broad rate.
+
+The post-2019 window isolates the pandemic and reopening shock. Veterinary CPI rose **47%** from 2019 to 2025; all-items rose about **26%**. Year-over-year bars show the acute years: veterinary services jumped **8.8%** in 2022 and **9.4%** in 2023, while all-items peaked at **8.0%** in 2022 and cooled to **4.1%** in 2023. Clinic inflation stayed hot longer.
+
+| Year | Vet CPI (1997=100) | All-items (1997=100) | Gap (pp) | Vet YoY % | All YoY % |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1997 | 100.0 | 100.0 | 0.0 | — | — |
+| 2010 | 198.4 | 135.9 | 62.5 | 3.7 | 1.7 |
+| 2019 | 267.2 | 159.3 | 107.9 | 4.1 | 1.8 |
+| 2022 | 314.3 | 182.4 | 131.9 | 8.8 | 8.0 |
+| 2023 | 343.9 | 189.8 | 154.1 | 9.4 | 4.1 |
+| 2024 | 369.4 | 195.5 | 173.9 | 7.4 | 3.0 |
+| 2025 | 393.2 | 200.6 | 192.7 | 6.5 | 2.6 |
+
+The table is the brief in seven rows: ownership is widespread; veterinary prices have permanently diverged from the all-items path.
+
+## What the price index does — and does not — measure
+
+CPI for veterinarian services tracks the **price of a fixed basket of clinical services**, not the household’s total pet budget and not the quality-adjusted cost of a healthier animal. A higher index can reflect labor costs, pharmaceuticals, imaging, after-hours capacity, malpractice insurance, and the mix of procedures urban consumers buy. It does **not** say every household paid 3.9× more cash for the same visit; substitution, insurance, and deferred care all sit outside the strip.
+
+Nor does CPI measure access. Rural clinic closures, appointment wait times, and the shift toward specialty medicine can raise effective costs without appearing as a separate series. AVMA’s own spending averages ($598 / $529) are survey means, not CPI strata. Treat them as complementary: CPI shows **unit prices**; AVMA shows **reported annual outlays** among owners.
+
+## Why ownership and prices belong on one page
+
+Putting household shares beside veterinary CPI is not a claim that ownership *causes* inflation or that inflation *causes* ownership. It is a demand-context chart. When nearly three in five households keep a pet, veterinary services are a recurring consumer category with political and household salience — closer to dental or auto repair than to a luxury discretionary item. When that category’s CPI outruns all-items by nearly a factor of two in cumulative terms, the distributional question writes itself: who absorbs the gap, who postpones care, and which species and income bands show the sharpest cutbacks.
+
+APPA’s 2025 industry note already hints at behavioral adjustment — more value-seeking, some owners spending less overall even as ownership holds. That is consistent with a world where unit clinic prices rise faster than the broad CPI while households refuse to exit petkeeping entirely. The scatter panel (dog household share vs veterinary index by survey year) is deliberately sparse: it shows coexistence of high ownership with rising prices, not a fitted elasticity.
+
+## Caveats and confidence
+
+- **Survey frames differ.** AVMA and APPA should not be averaged. Use AVMA for the dog/cat household shares featured in the headline; use APPA as a higher parallel estimate and for industry spend.
+- **Ownership years are discrete.** Linear lines between waves are visual guides, not continuous official series.
+- **2026 CPI is provisional.** Treat the latest composite as directional until BLS publishes a full annual average.
+- **CPI ≠ expenditure.** Households can face higher prices and still report stable or falling total spend if they visit less often or shift to lower-intensity care.
+- **Species overlap.** Dog and cat household shares are not additive; many homes keep both.
+- **Opt-in weighting.** AVMA’s 2025 release notes an opt-in online survey weighted to Census household demographics — better than an unweighted convenience sample, still not a census.
+
+Confidence is **high** on BLS annual CPI levels, **medium-high** on AVMA point estimates, and **medium** on APPA levels used only for contrast.
+
+## Bottom line
+
+**58.6%** of U.S. households own a pet on the AVMA 2025 print; dogs sit in **42.6%** and cats in **32.6%**. Over the same long window in which those shares stayed elevated, BLS veterinarian-services CPI climbed to roughly **3.9×** its 1997 base while all-items CPI climbed to about **2.0×**. The outrun is the story: a mass pet-owning public facing clinic inflation that has systematically beaten the headline consumer price index for nearly three decades.`,
+  },
+  {
     id: "airline-fares-cpi-versus-jet-fuel-prices-2026",
     slug: "airline-fares-cpi-versus-jet-fuel-prices-2026",
     title:

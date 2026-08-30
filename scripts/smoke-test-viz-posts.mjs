@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "us-pet-owning-households-versus-veterinary-cpi-2026",
+    marker: "Pet households vs veterinary CPI",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "airline-fares-cpi-versus-jet-fuel-prices-2026",
     marker: "Airfare index vs jet fuel",
     forbidden: "Loading interactive charts",

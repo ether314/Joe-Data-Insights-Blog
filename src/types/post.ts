@@ -335,7 +335,8 @@ export interface Post {
     | "us-caffeine-drink-disappearance-versus-beverage-cpi-2026"
     | "sports-admissions-cpi-versus-median-weekly-earnings-2026"
     | "motor-vehicle-insurance-cpi-versus-median-weekly-earnings-2026"
-    | "airline-fares-cpi-versus-jet-fuel-prices-2026";
+    | "airline-fares-cpi-versus-jet-fuel-prices-2026"
+    | "us-pet-owning-households-versus-veterinary-cpi-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];
