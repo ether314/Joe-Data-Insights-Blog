@@ -4779,6 +4779,23 @@ const NorthAmericaBatteryRecyclingCapacityVersusEvSales2026Dashboard = dynamic(
   },
 );
 
+const HudPointInTimeShelteredVersusUnshelteredCounts2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/HudPointInTimeShelteredVersusUnshelteredCounts2026Dashboard"
+    ).then(
+      (m) => m.HudPointInTimeShelteredVersusUnshelteredCounts2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6030,6 +6047,10 @@ export function PostVisualization({
 
   if (type === "north-america-battery-recycling-capacity-versus-ev-sales-2026") {
     return <NorthAmericaBatteryRecyclingCapacityVersusEvSales2026Dashboard />;
+  }
+
+  if (type === "hud-point-in-time-sheltered-versus-unsheltered-counts-2026") {
+    return <HudPointInTimeShelteredVersusUnshelteredCounts2026Dashboard />;
   }
 
   return null;

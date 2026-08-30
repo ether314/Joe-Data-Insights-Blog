@@ -2,6 +2,89 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "hud-point-in-time-sheltered-versus-unsheltered-counts-2026",
+    slug: "hud-point-in-time-sheltered-versus-unsheltered-counts-2026",
+    title:
+      "85% Sheltered: How the Latest HUD PIT Increase Split Between Shelter and the Street",
+    excerpt:
+      "Of the 118,376 people added to the January 2024 Point-in-Time count, 100,762 were sheltered and 17,614 were unsheltered — about 85% of the jump was emergency shelter, transitional housing, or safe havens.",
+    category: "Politics",
+    themeId: "hud-pit-homelessness",
+    imageUrl:
+      "/images/politics-hud-point-in-time-sheltered-versus-unsheltered-counts-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split scene with teal shelter facade and amber street-bench glow flanking a stacked teal-over-amber ribbon, Visual Capitalist-style thumbnail for sheltered versus unsheltered PIT counts",
+    publishedAt: "2026-08-30T20:00:00Z",
+    featured: true,
+    visualization: "hud-point-in-time-sheltered-versus-unsheltered-counts-2026",
+    layout: "default",
+    content: `When the U.S. Department of Housing and Urban Development (HUD) releases a new Point-in-Time (PIT) total, the headline is almost always the national sum. The operational question underneath is different: **how much of the latest increase was unsheltered people versus people already inside emergency shelter, transitional housing, or safe havens?** On the January **2024** count — still the largest single-year jump in the modern AHAR series — the answer is not close. Of the **118,376** additional people counted versus January **2023**, **100,762** (**85.1%**) were sheltered and **17,614** (**14.9%**) were unsheltered.
+
+That split matters because “homelessness rose 18%” and “street homelessness exploded” are not the same claim. Sheltered growth can reflect new bed capacity, restored congregate density after COVID distancing, disaster-related temporary shelters, asylum-seeker placements into hotel and congregate beds, or simply more people who would otherwise have been outdoors finding a night of shelter. Unsheltered growth is the harder visibility problem: cars, tents, abandoned buildings, and outdoor locations that January volunteers can miss even when CoCs try to cover every known hotspot.
+
+The dashboard above is built for that composition story — stacked national series, increase waterfall, share donut, state shelter mix, emergency shelter versus transitional housing versus street split, and household-type panels — rather than a single KPI strip.
+
+## What the Point-in-Time count measures
+
+HUD’s Annual Homelessness Assessment Report (AHAR) Part 1 aggregates unduplicated one-night estimates from Continuums of Care (CoCs). **Sheltered** homelessness means people staying in emergency shelters, transitional housing programs, or safe havens on the night of the count. **Unsheltered** homelessness means a primary nighttime location that is a public or private place not designed for regular sleeping — streets, vehicles, parks, abandoned buildings, and similar settings.
+
+The legal definition does **not** include doubled-up households, couch surfing, or people who will lose housing tomorrow but still have a lease tonight. Those situations are real housing insecurity; they are outside the PIT frame. The count is also a **lower bound** on street homelessness in any community where outdoor populations are hard to find on a cold January night. HUD itself notes that capacity differences and count methods mean the true unsheltered number can exceed what CoCs report.
+
+Most CoCs run both sheltered and unsheltered counts annually, but HUD only requires an unsheltered count every other year. In **2024**, **22** CoCs conducted a sheltered-only count and carried forward prior-year unsheltered figures. That carry-forward dampens measured change in those geographies; it should travel with any national unsheltered delta.
+
+## The 2023→2024 increase was mostly sheltered
+
+January **2023** printed **653,104** people experiencing homelessness: **396,494** sheltered and **256,610** unsheltered. January **2024** printed **771,480**: **497,256** sheltered and **274,224** unsheltered. The total rose **18.1%**. Sheltered homelessness rose **25.4%**. Unsheltered homelessness rose **6.9%**.
+
+Put another way, for every person added to the unsheltered tally, roughly **six** people were added to the sheltered tally. Communities told HUD the sheltered surge reflected expanded emergency shelter beds, the unwind of eviction moratoria and pandemic prevention programs, scarce affordable housing, disaster displacement, and rising numbers of people immigrating into local shelter systems. Unsheltered increases tracked many of the same housing-market pressures — plus, in some places, insufficient shelter capacity for the people already outdoors.
+
+Composition of the latest large PIT increase:
+
+| Component | People | Share of +118,376 | YoY % |
+| --- | ---: | ---: | ---: |
+| Sheltered (ES / TH / SH) | +100,762 | 85.1% | +25.4% |
+| Unsheltered | +17,614 | 14.9% | +6.9% |
+| Total PIT | +118,376 | 100% | +18.1% |
+
+Inside the sheltered bucket, the January **2024** CoC national populations report shows **431,478** people in emergency shelter and **65,778** in transitional housing. Emergency shelter now dominates the sheltered stock; transitional housing has been declining for years as programs convert to permanent housing or reclassify as emergency shelter. The “sheltered increase” story is therefore mostly an **emergency shelter** story, not a rebirth of long-stay transitional models.
+
+## January 2025 pulled back — still mostly on the sheltered side
+
+The **2025** AHAR Part 1 (January 2025 count, released May 2026) recorded **745,652** people: **479,332** sheltered and **266,320** unsheltered. That is a **3.3%** decline from the 2024 peak — the first overall reduction since **2016**. Sheltered homelessness fell by about **17,924** people; unsheltered fell by about **7,904**. Roughly **69%** of the national decline was sheltered people leaving the one-night sheltered count, not a collapse of the street tally.
+
+That symmetry is useful for briefing: the largest recent **increase** was majority sheltered, and the first subsequent **decrease** was also majority sheltered. Street counts moved in the same directions, but they were never the majority of the year-over-year arithmetic in either year. Families with children drove much of the 2025 improvement nationally even as individuals remained near record highs — a reminder that household-type mix and shelter status move together, not as independent dials.
+
+## States do not share one shelter mix
+
+National averages hide two Americas of shelter status. California’s January **2024** PIT counted about **187,084** people, with roughly **two-thirds** unsheltered. New York counted about **158,019**, with roughly **96%** sheltered — a system shaped by right-to-shelter norms and a large congregate and hotel inventory, including asylum-seeker placements that CoCs explicitly flagged as drivers of the **53%** statewide increase. Massachusetts and Illinois also printed large percentage jumps that were overwhelmingly sheltered. Oregon, Florida, and Washington sat closer to a half-unsheltered mix.
+
+Hawaii’s **87%** jump after the Maui wildfires is a clean example of why sheltered increments can dominate a statewide total: disaster-related emergency shelter added thousands of people who would not appear in a street-only narrative. Illinois’s triple-digit percentage increase similarly reflected reporting and capacity dynamics concentrated in the sheltered count. Sorting large-count states by unsheltered share in the dashboard makes the policy geography visible without pretending every CoC faces the same bed math.
+
+## Household type reshapes who is outdoors
+
+Families with children are overwhelmingly sheltered when they are counted at all. In January **2024**, about **259,473** people in households with at least one adult and one child were counted; only about **18,557** of them were unsheltered. Individuals without children account for most of the unsheltered population — and for most chronic homelessness. HUD reported about **152,585** individuals with chronic patterns of homelessness in 2024, with roughly **65%** of that group unsheltered.
+
+Age reinforces the pattern. Children and young adults make up a large share of the sheltered population; adults ages **35–54** make up nearly half of people counted outdoors. Any briefing that treats “the unsheltered” as demographically interchangeable with “all homelessness” will mis-specify both shelter demand and outreach staffing.
+
+## Caveats that should travel with every sheltered-share claim
+
+Several caveats belong next to the **85%** headline. First, **PIT is one night in January**, not an annual flow; people who cycle through shelter and the street across a year are undercounted relative to HMIS annual estimates. Second, **unsheltered undercount risk** is structural — cars parked outside survey routes, people who refuse contact, and CoCs that skip a full outdoor enumeration. Third, **22 CoCs** carried forward prior-year unsheltered data in 2024, muting measured outdoor change in those areas. Fourth, **shelter expansion can raise the PIT** even when street conditions improve, because newly available beds pull previously uncounted or previously outdoor people into the sheltered frame. Fifth, **2024 gender and race reporting changes** limit some demographic year-over-year comparisons even when shelter-status totals remain comparable. Sixth, the **2025** decline does not erase the 2024 level; the national total remains far above the **2016** trough of about **550,000**.
+
+None of those caveats reverse the arithmetic of the latest large increase. On HUD’s published national series, **about six in seven** of the people added between January 2023 and January 2024 were counted in shelter or transitional housing, not outdoors.
+
+## What the sheltered-versus-unsheltered split is for
+
+Composition is a briefing tool for budgets, bed inventory, and street outreach — not a verdict on which form of homelessness “matters more.” Sheltered growth asks whether emergency capacity, hotel contracts, and transitional conversions are absorbing demand that housing markets are not. Unsheltered growth asks whether outreach, encampment responses, and permanent housing placements are keeping pace with people who never enter the shelter door. On the narrow question this brief asks — how the latest large PIT increase split — the published answer is clear: **85% sheltered, 15% unsheltered**, with January 2025’s partial pullback still majority sheltered. Use the dashboard’s window and change-focus toggles to hold the 2023→2024 jump, the longer 2007–2025 stack, or the 2025 decline alone.
+`,
+    format: "data-story",
+    keyPoints: [
+      "2023→2024 PIT +118,376: 100,762 sheltered (85%) vs 17,614 unsheltered (15%)",
+      "Sheltered rose 25.4%; unsheltered rose 6.9%; total rose 18.1% to 771,480",
+      "Jan 2025 pulled back to 745,652 — first overall drop since 2016; ~69% of decline was sheltered",
+      "2024 mix: 431,478 emergency shelter, 65,778 transitional housing, 274,224 unsheltered",
+    ],
+  },
+  {
     id: "north-america-battery-recycling-capacity-versus-ev-sales-2026",
     slug: "north-america-battery-recycling-capacity-versus-ev-sales-2026",
     title:

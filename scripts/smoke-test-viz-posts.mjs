@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "hud-point-in-time-sheltered-versus-unsheltered-counts-2026",
+    marker: "Sheltered vs unsheltered stack",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "north-america-battery-recycling-capacity-versus-ev-sales-2026",
     marker: "Recycling tons vs pack tons",
     forbidden: "Loading interactive charts",
