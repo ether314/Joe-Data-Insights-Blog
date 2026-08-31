@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "domestic-passenger-yield-versus-load-factor-2026",
+    marker: "Yield vs load factor",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "uscis-n-400-pending-forms-versus-completions-2026",
     marker: "Headline — pending 393,563 → 648,583",
     forbidden: "Loading interactive charts",

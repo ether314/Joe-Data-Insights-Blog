@@ -2,6 +2,118 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "domestic-passenger-yield-versus-load-factor-2026",
+    slug: "domestic-passenger-yield-versus-load-factor-2026",
+    title:
+      "Domestic Passenger Yield vs Load Factor: Did Cents-per-Mile Pricing Rise While Planes Stayed Full?",
+    excerpt:
+      "April 2026 domestic yield prints 17.12¢/RPM — up 14% from 2019 — while load factor holds 79.6%, only five points below the pre-COVID baseline and within shouting distance of July 2024’s 87.5% record.",
+    category: "Transport & Logistics",
+    themeId: "airline-fares-jet-fuel",
+    imageUrl:
+      "/images/transport-logistics-domestic-passenger-yield-versus-load-factor-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial graphic with ascending sky-blue yield line and flat violet load-factor line beside a subtle aircraft wing silhouette",
+    publishedAt: "2026-08-31T04:00:00Z",
+    featured: true,
+    visualization: "domestic-passenger-yield-versus-load-factor-2026",
+    format: "data-story",
+    tags: [
+      "passenger yield",
+      "load factor",
+      "BTS",
+      "Form 41",
+      "domestic aviation",
+      "RPM",
+      "PRASM",
+      "airline economics",
+    ],
+    keyPoints: [
+      "April 2026 domestic yield: 17.12¢/RPM (+14.4% vs 2019); load factor 79.6% (−5.0 pts vs 2019).",
+      "July 2024 domestic LF peaked at 87.48% — near the highest monthly print in the BTS series.",
+      "June 2022 yield peaked at 19.24¢/RPM while LF still ran 86.2% — pricing power with full cabins.",
+      "PRASM proxy (yield × LF ÷ 100) sits at 13.63¢/ASM in April 2026 vs 12.54¢ in 2019.",
+      "Post-2021 yield–LF correlation turns mildly positive (r ≈ 0.31) after the COVID trough inverted the relationship.",
+    ],
+    content: `Airline desks often frame the recovery as a capacity story: did carriers refill the cabin after 2020, and did they get paid for it? The Bureau of Transportation Statistics publishes two lines that answer both halves. **Domestic passenger yield** — passenger transport revenue divided by domestic revenue passenger-miles (RPM), in cents per mile — is the unit-price lens. **Domestic load factor** — RPM divided by available seat-miles (ASM) for scheduled domestic service — is the fullness lens. Put them on the same calendar and the question becomes concrete: did yield rise while load factor stayed near record highs?
+
+As of **April 2026**, yes. Domestic yield prints **17.12¢/RPM**, up **14.4%** from the **2019** baseline (**14.98¢**). Load factor is **79.6%**, only **5.0** percentage points below the **2019** annual average (**84.0%**) and well above the COVID trough (**38.2%** in April 2020). July **2024** still holds the sample peak at **87.48%** LF — among the highest monthly domestic prints in the TranStats series. Yield has retreated from its **June 2022** spike (**19.24¢/RPM**) but remains materially above pre-pandemic norms. Planes are full by historical standards; tickets cost more per mile flown.
+
+The dashboard above runs a dual-axis yield/LF track, a PRASM proxy bridge, a yield–LF scatter, major-carrier yield bars, epoch comparisons, and year-over-year swings. What follows is the accounting behind those panels.
+
+## Yield and load factor are different denominators
+
+**Yield** is revenue per *flown* passenger-mile. It rises when average fares, ancillary bundles, or cabin mix shift toward higher-yield inventory — or when shorter stage lengths change the RPM denominator. BTS assembles it from DOT **Form 41 Schedule P-1.2** passenger transport revenues and **T-100 / T1** domestic RPM. It is not the same as BLS airline-fares CPI (a consumer price index) or BTS average itinerary fare (a ticket-level survey). Yield is an industry revenue intensity measure.
+
+**Load factor** is RPM ÷ ASM — how much of the scheduled seat capacity actually carried paying passengers. It can rise because demand is strong, because carriers trim capacity, or because operational recovery fills seats left empty in 2020–21. BTS publishes monthly domestic scheduled LF in its Airline Traffic Data tables; values from **2024** onward in this desk copy are taken directly from TranStats prints.
+
+**PRASM** (passenger revenue per available seat-mile) is yield × load factor ÷ 100 when expressed in compatible cents units. Our **PRASM proxy** uses that identity on the same monthly tape. It is a useful bridge metric: yield can fall while LF rises (more bodies, lower average price) or both can rise (the 2022 pricing window). The proxy peaked near **16.13¢/ASM** in **2022 Q2** and sits near **13.63¢** in April **2026** versus **12.54¢** in **2019**.
+
+## The 2019 yardstick and the COVID inversion
+
+Calendar **2019** is the last “normal” year before the pandemic shock. Annual domestic yield averaged **14.93¢/RPM**; load factor averaged **84.0%**. Summer months routinely printed LF in the mid-**86%** range. That is the benchmark.
+
+**2020** inverts every relationship. April **2020** is the nadir: yield **11.86¢**, LF **38.2%**. Revenue collapsed faster than ASM cuts could absorb; carriers flew nearly empty shells on skeleton schedules. Yield did not fall as far as LF in percentage terms — fixed cost recovery and refund policies kept some revenue on the books — but both series cratered. Annual **2020** averages land near **13.10¢** yield and **61.6%** LF.
+
+**2021** is the refill. Load factor climbs from the **60s** toward **80%** by year-end while yield recovers more slowly (**14.55¢** annual average). The scatter panel colors this era amber: high LF volatility with yield still below the 2022 peak.
+
+## 2022: pricing power with full cabins
+
+**2022** is the stress-test year for the brief’s core question. Jet fuel surged; labor markets tightened; leisure demand roared back. Domestic yield jumped **24.1%** year-over-year to an annual **18.05¢/RPM**. Load factor still averaged **83.3%** — only one point below **2019**. June **2022** combines the sample yield peak (**19.24¢**) with **86.2%** LF. Carriers were not discounting to fill seats; they were filling seats *and* raising unit revenue.
+
+The PRASM proxy annual average reaches **15.04¢/ASM** in **2022**, roughly **20%** above **2019**. That is the revenue outcome investors cared about: capacity discipline plus fare strength, not a return to 2010s fare wars.
+
+## 2023–2025: yield softens, LF stays elevated
+
+**2023** sees yield ease **1.4%** to **17.79¢** while LF slips only **0.2** points to **83.1%**. The post-spike normalization is real on price, marginal on fullness. **2024** is the load-factor banner year: the annual domestic LF average is **83.6%**, with July at **87.48%**. Yield drifts down **2.4%** to **17.36¢** — still **16%** above **2019** in level terms.
+
+**2025** continues the pattern: yield **17.01¢** (−**2.0%** YoY), LF **81.6%** (−**2.4** pts). Softer than **2024**’s summer peaks, but nowhere near the **70s** that would signal a demand air pocket. The industry is running hot on occupancy by pre-COVID standards even as unit revenue inches down from the **2022** apex.
+
+## 2026 year-to-date: yield sticky, LF seasonally soft
+
+Through **April 2026**, yield averages **17.09¢** (+**0.5%** vs **2025** YTD pace) while LF averages **79.7%**. January–April is seasonally weaker than summer; **79.6%** in April is consistent with early-year troughs in **2024** and **2025** (January prints in the high **77–78%** range). The answer to the headline question remains yes: yield is up double digits versus **2019**; LF is down only single-digit points from baseline and touched record monthly highs within the last two years.
+
+| Year | Yield (¢/RPM) | LF (%) | PRASM proxy (¢/ASM) | Yield YoY % | LF YoY (pts) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 14.93 | 84.0 | 12.54 | — | — |
+| 2020 | 13.10 | 61.6 | 8.07 | −12.3 | −26.7 |
+| 2021 | 14.55 | 77.9 | 11.33 | +11.1 | +16.3 |
+| 2022 | 18.05 | 83.3 | 15.04 | +24.1 | +5.4 |
+| 2023 | 17.79 | 83.1 | 14.78 | −1.4 | −0.2 |
+| 2024 | 17.36 | 83.6 | 14.51 | −2.4 | +0.5 |
+| 2025 | 17.01 | 81.6 | 13.88 | −2.0 | −2.0 |
+| 2026 YTD | 17.09 | 79.7 | 13.62 | +0.5 | −1.9 |
+
+The table is the brief in eight rows: yield stepped up after **2022** and held; LF recovered to the low-to-mid **80s** and printed record summer months.
+
+## Major-carrier dispersion
+
+Form 41 entity filings show the same directional story with carrier-specific levels. **American**, **Delta**, and **United** domestic yields in **2026 YTD** cluster in the **17–18¢** range versus **14.7–15.4¢** in **2019** — roughly **+16%** each. **Southwest** runs lower absolute yield (**15.42¢** vs **13.28¢** in **2019**, +**16%**) with LF near **78.6%**. **Alaska** posts the largest yield lift (+**19.5%**) with LF still above **84%**. The carrier bars are not a ranking of “best” airline economics; they show that the yield lift is broad-based, not a single-network artifact.
+
+## What yield × LF does not tell you
+
+These series are system domestic scheduled aggregates. They mix first-class and basic-economy inventory, mainline and regional operators, and stage-length shifts. A longer average stage length mechanically lowers yield (same ticket dollars spread over more miles) while LF can look healthier on dense trunk routes. Form 41 reporting lags real time by weeks; **2026** monthly yield splits here are interpolated between quarter filings.
+
+Load factor ignores cargo belly revenue, loyalty-program economics, and credit-card partnerships — the other half of airline P&L. High LF with rising yield is consistent with pricing power; it is also consistent with capacity that never fully returned on some markets. BTS traffic data and Form 41 financials can disagree slightly on RPM definitions at the margin; we use BTS-published LF and Form-41-derived yield throughout for consistency with the agency’s own profile tables.
+
+Yield is not consumer out-of-pocket fare. Taxes, fees, and bag charges sit inside passenger transport revenue accounts but the CPI shopper experience can diverge. No causality claim is made between yield and LF in this piece — the post-**2021** correlation (**r ≈ 0.31**) is descriptive, not structural.
+
+## Caveats and confidence
+
+- **Scheduled domestic only.** Charter, all-cargo, and international entities are outside this tape.
+- **2024–2026 LF** monthly values are BTS TranStats disclosed prints; earlier months are desk-interpolated between quarterly Form 41 yield anchors.
+- **Carrier bars** use entity-level Form 41 domestic yields for six large carriers; they are illustrative, not a weighted system average.
+- **PRASM proxy** is yield × LF ÷ 100, not a separately reported BTS field.
+- **2026** is partial-year through April; summer LF typically runs **3–5** points above spring.
+- **Revision risk:** Form 41 restatements can nudge yield a few tenths of a cent retroactively.
+
+Confidence is **high** on BTS load-factor levels for **2024–2026**, **medium-high** on system yield quarterly anchors, and **medium** on monthly yield interpolation and carrier-level splits.
+
+## Bottom line
+
+Domestic passenger yield has **risen** — **17.12¢/RPM** in April **2026**, **+14.4%** versus **2019** — while load factor has **stayed near record territory**: **79.6%** in that month, annual averages in the low **80s** since **2022**, and a July **2024** peak of **87.48%**. The COVID trough broke the pairing; the recovery restored full cabins and kept much of the unit-revenue gain. Cents per mile moved up; the seats stayed sold.`,
+  },
+  {
     id: "uscis-n-400-pending-forms-versus-completions-2026",
     slug: "uscis-n-400-pending-forms-versus-completions-2026",
     title:

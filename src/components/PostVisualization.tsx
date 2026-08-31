@@ -4930,6 +4930,21 @@ const UscisN400PendingFormsVersusCompletions2026Dashboard = dynamic(
   },
 );
 
+const DomesticPassengerYieldVersusLoadFactor2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/DomesticPassengerYieldVersusLoadFactor2026Dashboard"
+    ).then((m) => m.DomesticPassengerYieldVersusLoadFactor2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6217,6 +6232,10 @@ export function PostVisualization({
 
   if (type === "uscis-n-400-pending-forms-versus-completions-2026") {
     return <UscisN400PendingFormsVersusCompletions2026Dashboard />;
+  }
+
+  if (type === "domestic-passenger-yield-versus-load-factor-2026") {
+    return <DomesticPassengerYieldVersusLoadFactor2026Dashboard />;
   }
 
   return null;
