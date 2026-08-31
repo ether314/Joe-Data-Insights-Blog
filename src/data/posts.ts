@@ -2,6 +2,82 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "credit-card-interest-rates-versus-new-account-openings-2026",
+    slug: "credit-card-interest-rates-versus-new-account-openings-2026",
+    title:
+      "20.94% Card APR Versus New Accounts Still 17% Below the 2022 Peak",
+    excerpt:
+      "Commercial-bank all-accounts credit-card APRs print at 20.94% in May 2026 — 6.4 points above the 2021 trough — while large-bank new accounts in 2026 Q1 remain 17.9% below the 2022 quarterly peak.",
+    category: "Consumer Finance",
+    themeId: "credit-card-delinquency-fed",
+    imageUrl:
+      "/images/consumer-finance-credit-card-interest-rates-versus-new-account-openings-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual-path graphic with a rising rose APR curve over teal descending new-account bars and a translucent credit-card silhouette, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-30T22:00:00Z",
+    featured: true,
+    visualization: "credit-card-interest-rates-versus-new-account-openings-2026",
+    layout: "default",
+    content: `The price of revolving credit and the pace of new revolving accounts no longer move together. Federal Reserve G.19 commercial-bank interest rates on credit-card plans print an all-accounts average of **20.94%** in **May 2026** (2026 Q2 survey month) — only **0.82** percentage points below the **21.76%** peak in **2024 Q3**, and still **6.43** points above the **14.51%** trough in **2021 Q4**. Over the same post-hike window, Philadelphia Fed FR Y-14M large-bank originations show quarterly new accounts at **17.12 million** in **2026 Q1**, **17.9%** below the **20.86 million** cycle high in **2022 Q3**. Calendar-year openings fell from **79.2 million** in **2022** to **68.9 million** in **2024** and only edged to **69.6 million** in **2025**. The dashboard above pairs those series: dual-axis path, APR×accounts scatter, annual ladders, underwriting mix, and regime bars.
+
+## What each series actually measures
+
+G.19 **terms of credit** are survey averages of commercial-bank interest rates on credit-card plans. The Board publishes two cuts that matter for this question. **All accounts** (FRED \`TERMCBCCALLNS\`) blends interest-bearing and non-interest-bearing balances; it is the cleaner “sticker APR” path for the industry. **Accounts assessed interest** (\`TERMCBCCINTNS\`) covers only revolvers who paid finance charges — it sits higher, peaking at **23.37%** in **2024 Q3** and printing **22.15%** in **May 2026**. Neither series is a consumer-facing offer distribution; both are bank-reported averages.
+
+New-account volume here is not a household census. The Philadelphia Fed’s Large Bank Credit Card Data aggregates FR Y-14M filings from BHCs, IHCs, and covered savings-and-loan holding companies with **$100 billion** or more in assets that meet card-portfolio materiality thresholds. \`RCCCONUMACT\` counts new accounts; \`RCCCOORG\` sums original credit limits in dollars; \`RCCCOACTPCTSCORELT660\` tracks the share of those new accounts with scores below **660**. The panel is large-bank heavy by design. The New York Fed Consumer Credit Panel supplies stock context — credit-card balances stood near **$1.26 trillion** in **2026 Q2** — but does not replace the Y-14M origination pulse for this dual-axis cut.
+
+## The APR ascent that did not reverse
+
+From **2019** through early **2022**, all-accounts APRs lived in a narrow band around **14.5–15.1%**. The break came with the policy-rate cycle. By **2022 Q3** the all-accounts print was **16.27%**; by **2022 Q4** it was **19.07%**; by **2023 Q4** it was **21.47%**. The peak arrived in **2024 Q3** at **21.76%**. Since then the series has drifted only modestly: **21.47%** (2024 Q4), **21.37%** / **21.16%** / **21.39%** / **20.97%** across **2025**, then **21.00%** and **20.94%** in the first two **2026** prints. That is a plateau, not a unwind. Assessed-interest APRs tell the same story with a higher intercept: they crossed **22%** in **2023 Q2**, topped **23.37%** in **2024 Q3**, and remain above **22%** in the latest print.
+
+For households that revolve, the economic meaning is blunt. A **6-plus** point lift on an interest-bearing balance compounds into larger minimum payments and slower principal paydown even when nominal purchase volume holds up. CFPB market reporting has separately documented that general-purpose purchase volume kept climbing into **2024** even as APRs rose — a reminder that price and activity are not the same object.
+
+## New accounts: peak in 2022, cooler thereafter
+
+Y-14M new-account counts rebuilt quickly after the **2020 Q2** collapse (**9.2 million**). By **2021 Q4** they were **20.58 million**; **2022 Q2–Q4** printed **20.35**, **20.86**, and **20.57 million** — the cycle crest. **2023** stayed hot: four quarters between **18.17** and **19.95 million**, summing to **77.5 million** for the year. The break is **2024**. First-quarter openings fell to **16.80 million** (−**7.4%** year over year and −**17%** quarter over quarter, in line with the Philadelphia Fed’s own narrative), and the rest of **2024** never recovered the **19–21 million** band. Full-year **2024** openings were **68.9 million**, roughly **13%** below **2022**.
+
+**2025** did not restore the prior pace. The year opened at a soft **15.40 million** in Q1 — the weakest post-2021 quarter — then recovered into the mid-to-high teens, finishing at **18.93 million** in Q4. The annual total (**69.6 million**) is essentially flat versus **2024** and still **about 12%** below the **2022** peak year. **2026 Q1** printed **17.12 million**, still **17.9%** under the **2022 Q3** high-water mark. Credit-limit dollars tell a parallel story: peak **$114.8 billion** in **2023 Q2**, softest recent print **$97.1 billion** in **2025 Q1**, latest **$105.5 billion** in **2026 Q1**.
+
+## Underwriting tightened even as sticker APRs stayed high
+
+The composition of who got approved shifted with the rate path. The share of large-bank new accounts with scores below **660** peaked near **25.2%** in **2021 Q4**, then ground down to a trough of **15.6%** in **2024 Q3**. Implied average original limits rose from roughly **$4.5k** in late **2021** to about **$6.1k** by **2026 Q1**. Banks did not simply slam the door; they redirected capacity toward higher-score borrowers with larger assigned lines while the subprime share of *new* accounts compressed. That mix shift helps explain why dollar limit originations fell less than account counts from the **2023** peak: fewer thin-file accounts, larger limits on the accounts that clear.
+
+A modest reopening in the sub-660 share — back to **19.2%** by **2026 Q1** — has not restored **2022**-style volume. The underwriting panel in the dashboard shows the two lines diverging: sub-660 share down, average limit up, through the heart of the high-APR regime.
+
+## Three regimes on one chart
+
+Collapsing the quarterly path into regimes clarifies the answer to the brief. In a **pre-hike plateau** (**2019 Q1–2022 Q1**), average all-accounts APR was about **14.8%** and average quarterly openings about **17.0 million**. During the **APR ascent** (**2022 Q2–2023 Q4**), average APR jumped to roughly **19.2%** while openings stayed near **19.9 million** — price rose first; volume had not yet cooled. In the **high-APR, slower-openings** window (**2024 Q1–2026 Q1**), average APR sits near **21.3%** while average quarterly openings fall to about **17.3 million**. The scatter view makes the same point geometrically: elevated-APR quarters cluster left-of-peak on the account axis.
+
+| Metric | 2021 trough / late-2021 | Cycle peak | Latest print |
+| --- | --- | --- | --- |
+| All-accounts APR (G.19) | 14.51% (2021 Q4) | 21.76% (2024 Q3) | 20.94% (2026 Q2) |
+| Assessed-interest APR | 16.44% (2021 Q4) | 23.37% (2024 Q3) | 22.15% (2026 Q2) |
+| Large-bank new accounts / quarter | 20.58M (2021 Q4) | 20.86M (2022 Q3) | 17.12M (2026 Q1) |
+| Credit-limit originations / quarter | $93.2B (2021 Q4) | $114.8B (2023 Q2) | $105.5B (2026 Q1) |
+| Sub-660 share of new accounts | 25.2% (2021 Q4) | 15.6% trough (2024 Q3) | 19.2% (2026 Q1) |
+| Calendar-year new accounts | 73.0M (2021) | 79.2M (2022) | 69.6M (2025) |
+
+## What the dual path means for households and issuers
+
+For issuers, a high APR plateau with cooler origination volume is a portfolio-management equilibrium, not a paradox. Existing revolvers carry finance-charge yields near cycle highs; new-account acquisition can be paced to credit performance and funding costs without chasing **2022** unit volume. For households, the combination is less friendly: fewer new lines at the margin, especially for lower-score applicants during the trough, while the cost of carrying balances on accounts that already exist remains elevated. NY Fed CCP stock still shows a large revolving book — **$1.26 trillion** in **2026 Q2** — so the APR plateau bites a wide stock even when the flow of *new* accounts slows.
+
+Seasonality still matters. First quarters routinely soft-print after holiday openings, and **2025 Q1** / **2026 Q1** fit that pattern. The annual totals remove most of that noise: **2024** and **2025** are both well below **2022–2023**. That is the durable signal.
+
+## Caveats and what this desk is not claiming
+
+Several limits apply. First, Y-14M is a large-bank panel, not the universe of credit unions, smaller banks, or fintech-issued cards outside the reporting perimeter; national CFPB origination charts can diverge in level even when they rhyme in direction. Second, G.19 APRs are commercial-bank averages, not the distribution of offers a shopper sees on comparison sites, and they do not isolate promotional 0% periods. Third, account counts and credit-limit dollars answer different questions — a stable dollar total with fewer accounts is a larger average line, not identical credit supply. Fourth, **2026 Q2** openings are not yet in the Y-14M print used here; the dashboard carries Q1 account and limit levels beside the newer G.19 APR for visual continuity and flags that carry explicitly. Fifth, panel revisions can rewrite history when firms enter or exit FR Y-14M reporting.
+
+This desk also does not equate slower openings with weaker household demand alone. Underwriting, marketing appetite, competitive rewards economics, and charge-off expectations all gate origination. The joint fact remains: **commercial-bank card APRs stayed elevated above 20.9% while large-bank new-account pace cooled from its 2022 peak and has not recovered.** That is the answer to the core question.
+
+## Sources
+
+- Federal Reserve Board, G.19 Consumer Credit (terms of credit at commercial banks)
+- FRED series TERMCBCCALLNS and TERMCBCCINTNS
+- Federal Reserve Bank of Philadelphia, Large Bank Credit Card and Mortgage Data (FR Y-14M); FRED RCCCONUMACT, RCCCOORG, RCCCOACTPCTSCORELT660
+- Federal Reserve Bank of New York, Quarterly Report on Household Debt and Credit (Consumer Credit Panel)
+- Consumer Financial Protection Bureau, The Consumer Credit Card Market (2025 report to Congress)`,
+  },
+  {
     id: "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026",
     slug: "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026",
     title:

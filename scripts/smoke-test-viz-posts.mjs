@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "credit-card-interest-rates-versus-new-account-openings-2026",
+    marker: "All-accounts APR 20.94%",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026",
     marker: "Pet-food and pet-care indexes vs all-items",
     forbidden: "Loading interactive charts",

@@ -4863,6 +4863,23 @@ const PetFoodAndPetCareInflationVersusAllItemsCpi2026Dashboard = dynamic(
   },
 );
 
+const CreditCardInterestRatesVersusNewAccountOpenings2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/CreditCardInterestRatesVersusNewAccountOpenings2026Dashboard"
+    ).then(
+      (m) => m.CreditCardInterestRatesVersusNewAccountOpenings2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6134,6 +6151,10 @@ export function PostVisualization({
 
   if (type === "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026") {
     return <PetFoodAndPetCareInflationVersusAllItemsCpi2026Dashboard />;
+  }
+
+  if (type === "credit-card-interest-rates-versus-new-account-openings-2026") {
+    return <CreditCardInterestRatesVersusNewAccountOpenings2026Dashboard />;
   }
 
   return null;
