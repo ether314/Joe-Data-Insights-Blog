@@ -350,7 +350,8 @@ export interface Post {
     | "hud-point-in-time-sheltered-versus-unsheltered-counts-2026"
     | "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026"
     | "high-hazard-potential-dams-without-emergency-action-plans-2026"
-    | "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026";
+    | "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026"
+    | "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

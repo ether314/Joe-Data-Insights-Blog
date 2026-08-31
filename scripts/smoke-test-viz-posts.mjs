@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026",
+    marker: "Pet-food and pet-care indexes vs all-items",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026",
     marker: "Streaming vs cable TV service indexes",
     forbidden: "Loading interactive charts",

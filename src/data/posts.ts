@@ -2,6 +2,103 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026",
+    slug: "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026",
+    title:
+      "Pet Food 141.2 and Pet Care 147.6 vs All-Items 132.7: CPI Since 2019",
+    excerpt:
+      "Rebased to January 2019 = 100, BLS pet-food CPI sits at 141.2 and other pet services (incl. veterinary) at 147.6 in July 2026 — both ahead of all-items CPI-U at 132.7. Pet care’s lead is 14.9 percentage points; pet food’s is 8.5.",
+    category: "Economics",
+    themeId: "companion-animal-economy",
+    imageUrl:
+      "/images/economics-pet-food-and-pet-care-inflation-versus-all-items-cpi-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic thumbnail with amber pet-food and teal pet-care index lines rising above a slate all-items CPI baseline on a January 2019 equals 100 scale, Visual Capitalist-style editorial art",
+    publishedAt: "2026-08-30T22:00:00Z",
+    featured: true,
+    visualization: "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026",
+    layout: "default",
+    content: `Pet ownership turns grocery and clinic receipts into a recurring household cost center. The Bureau of Labor Statistics (BLS) already prices those receipts inside the Consumer Price Index: **pet food** as its own item strip, and **other pet services including veterinary** as the care-side strip that covers clinic visits and related services. Put both beside **all-items CPI-U** on a shared **January 2019 = 100** scale and the core question is mechanical: **did pet-food and pet-care indexes rise faster than all-items CPI after 2019?**
+
+As of **July 2026**, the answer is yes on both counts. Pet food prints **141.2** (+**41.2%** from the January 2019 base). Other pet services including veterinary print **147.6** (+**47.6%**). All-items CPI-U prints **132.7** (+**32.7%**). That is an **8.5** percentage-point food lead and a **14.9** percentage-point care lead over the broad basket — not a rounding error, and not a one-month quirk. Pet food has sat above all-items in **83** of **90** sample months; pet care has led in **85**.
+
+The dashboard above is built for that race: a triple-track index, dual gap ribbons, year-over-year pace, epoch bars, a scatter against the all-items diagonal, and a relative-burden ratio. The prose below walks the method, the food climb, the steeper care climb, the 2022 spike, the annual ledger, and the caveats that keep this from being a household budget calculator.
+
+## How the 2019 = 100 scales are built
+
+Three not-seasonally-adjusted CPI-U series do almost all of the work.
+
+**Pet food** is \`CUUR0000SEFV01\` — the published item index for pet food purchased for home use. **Other pet services including veterinary** is \`CUUR0000SEGD03\` — the care strip that includes veterinary and related pet services outside the food aisle. **All-items CPI-U** is \`CUUR0000SA0\` — the broad urban consumer basket. Each monthly level is divided by its **January 2019** level and multiplied by 100, so the series start together at 100 and later readings are cumulative percentage changes from that month.
+
+Parent baskets appear in the data module for context: **pets and pet products** (\`CUUR0000SEFV\`) and the broader **pet services including veterinary** parent (\`CUUR0000SEGD\`). The headline comparison uses the more specific food and “other pet services” strips against all-items, because those are the series that map cleanly onto the grocery-bowl and clinic-bill story the brief asks about.
+
+**Gap** = series index − all-items index, in percentage points on the rebased scale. **Burden** = series ÷ all-items × 100, so January 2019 equals 100 by construction and readings above 100 mean the pet series pulled ahead of the broad basket. Neither gap nor burden is a share of household spending; both are relative-pace meters.
+
+## The answer in one chart: both pet series outran all-items
+
+The triple-track panel is the simplest read. From the shared January 2019 origin, all three lines rise through the pandemic years, steepen in 2021–23, and then settle into a higher plateau. The ordering that matters for the brief is stable by mid-sample: **care above food above all-items**. By July 2026 the stack is **147.6 / 141.2 / 132.7**.
+
+That ordering is not an artifact of a single print. Across **90** months from January 2019 through July 2026 (one early observation dropped where a source cell was incomplete), pet food’s index exceeds all-items in **83** months and pet care’s in **85**. The maximum food lead in the sample is **+10.3** pp (**December 2025**). The maximum care lead is the latest reading itself — **+14.9** pp in **July 2026** — which means the care gap has not yet mean-reverted on this scale.
+
+Year-over-year, the latest month is less dramatic than the cumulative gap: pet food **+3.4%**, pet care **+5.4%**, all-items **+3.4%**. The stock of inflation since 2019 is the story; the latest flow still shows care running hotter than the broad basket.
+
+## Pet food's quieter climb
+
+Pet food did not need double-digit year-over-year prints every month to finish ahead of all-items. Its peak YoY in this sample is **+9.0%** in **August 2022** — almost matching all-items’ own sample peak of **+9.1%** in **June 2022** — but the food index kept a slightly higher path after the spike cooled. On the rebased scale that compounds into a mid–single-digit percentage-point lead that widened into late 2025 before settling near **+8.5** pp.
+
+Think of pet food as a grocery-adjacent item with its own supply chain: protein meals, specialty diets, wet and dry formats, and branded premiumization that CPI captures as quality-adjusted price change. When broad food-at-home inflation ran hot in 2022, pet food moved with it. When broad inflation cooled, pet food did not fully give back the relative gain versus all-items — which is why the July 2026 food index still sits near **141** while all-items sits near **133**.
+
+The gap ribbon for food is the cleanest way to see that stickiness: it lifts through 2022–23, holds a positive band through 2024–25, and remains clearly above zero in mid-2026. A household that buys the same bag every month felt the 2022 step-up as a higher baseline, not as a temporary surcharge.
+
+## Pet-care services pulled further ahead
+
+The care strip is steeper. Other pet services including veterinary reach **147.6** by July 2026 — a **47.6%** cumulative rise from January 2019 — against **32.7%** for all-items. The **14.9** pp lead is the widest care gap in the sample and arrives at the end of the window, not in the middle of the 2022 spike. Peak care YoY was **+10.3%** in **April 2022**, but the cumulative index kept grinding higher even after YoY rates normalized.
+
+That pattern fits a services story more than a commodity story. Clinic labor, pharmaceuticals, diagnostics, and visit complexity do not reverse as quickly as a bag of kibble on promotion. CPI’s veterinary-inclusive strip is not a vet-invoice database, and it is not a claim about utilization — more visits would raise household outlays even if prices were flat — but it is the official price path for the services category the brief names. On that path, care has outrun both pet food and the all-items basket for most of the post-2019 window.
+
+Epoch averages underline the handoff. Pre-pandemic months sit near parity. The pandemic block lifts all three series. The 2022–23 spike lifts care and food together above all-items. The 2024–July 2026 block leaves care with the largest average lead of any epoch in the dashboard.
+
+## What the 2022 inflation spike did to the gaps
+
+The spike years matter because they permanently reset the levels even after YoY rates came down. All-items YoY peaked near **9.1%** in mid-2022; pet food and pet care printed peaks in the same neighborhood. On a rebased cumulative chart, those months look like a steep shared ramp. The interesting part is what happened **after** the ramp: all-items decelerated, while the pet series retained more of the level gain relative to the 2019 origin.
+
+Gap ribbons make the asymmetry visible. Food’s lead over all-items expands through the spike and then plateaus in positive territory. Care’s lead expands and then keeps expanding into 2025–26. That is why a reader who only watches year-over-year headlines can miss the stock: a 3–5% YoY print on top of an already elevated index still leaves the series far above the 2019 base — and still above all-items on the shared scale.
+
+The scatter panel is a second view of the same fact. Points above the 45-degree diagonal are months when the pet index exceeded all-items from the same January 2019 origin. Both food and care clouds sit mostly above that diagonal after the early sample; care sits further above.
+
+## Annual ledger since 2019
+
+Calendar-year averages (partial years noted) put the cumulative race in a table:
+
+| Year | Pet food idx | Pet care idx | All-items idx | Food−all (pp) | Care−all (pp) | Months |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 101.6 | 102.1 | 101.6 | +0.0 | +0.5 | 12 |
+| 2020 | 104.5 | 104.6 | 102.8 | +1.7 | +1.8 | 12 |
+| 2021 | 109.3 | 109.3 | 107.7 | +1.6 | +1.7 | 12 |
+| 2022 | 118.6 | 119.0 | 116.3 | +2.3 | +2.7 | 12 |
+| 2023 | 125.8 | 126.3 | 121.1 | +4.7 | +5.3 | 12 |
+| 2024 | 130.4 | 133.0 | 124.6 | +5.8 | +8.4 | 12 |
+| 2025 | 135.8 | 138.8 | 127.9 | +7.9 | +11.0 | 11 |
+| 2026 YTD | 140.1 | 145.6 | 131.6 | +8.5 | +14.0 | 7 |
+
+The table’s message is monotonic on the care side after 2021: the care−all gap widens almost every year. Food’s gap also widens after 2021, with a smaller slope. Neither series falls back to the all-items path once the 2022–23 inflation wave passes. July 2026’s monthly print (**141.2 / 147.6 / 132.7**) sits in line with the 2026 year-to-date averages, so the latest month is not an outlier relative to the partial year.
+
+## Caveats and what these indexes do not measure
+
+These are **price indexes**, not household expenditure totals. A clinic that raises fees while a household skips wellness visits can print higher CPI and lower out-of-pocket spending at the same time. Conversely, more pets per household or more specialty diets raise spending even if prices are flat. The rebased chart only answers the relative-pace question in the brief.
+
+The series are **not seasonally adjusted**. Seasonal patterns in veterinary demand or promotional pet-food pricing can wobble month-to-month readings; that is why the dashboard also shows annual averages and epoch blocks. January 2019 is a convenient common origin for a post-2019 comparison; it is not a claim that 2019 was a “normal” equilibrium year for pet markets.
+
+Item definitions matter. **Other pet services including veterinary** is not identical to every dollar a household spends on boarding, grooming, insurance, or pet-sitting. **Pet food** is not a brand-level scanner dataset. Substitution inside the CPI basket can mute some of what a single-SKU shopper feels at checkout. Weighting inside all-items CPI-U means pet categories are a small slice of the broad index even when they outrun it — a large lead on a small weight still moves a household’s pet budget more than it moves headline inflation.
+
+Finally, this is a **United States CPI-U** story. Local clinic markets, rural versus urban feed prices, and currency effects for imported specialty foods are outside the national index. Treat the July 2026 stack — **141.2 / 147.6 / 132.7** — as a national relative-pace scoreboard, not a receipt for any one address.
+
+## Takeaway for the companion-animal bill
+
+Did BLS pet-food and pet-care indexes rise faster than all-items CPI after 2019? **Yes.** On a January 2019 = 100 scale, July 2026 leaves pet food about **eight and a half** points above all-items and pet care about **fifteen** points above — with care still widening. The 2022 inflation spike raised all three series; the years since then left the companion-animal strips on a higher plateau relative to the broad basket. For anyone tracking the cost of keeping animals fed and treated, the official price path has been running ahead of headline CPI for most of the post-2019 sample, and the care side remains the steeper of the two.
+`,
+  },
+  {
     id: "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026",
     slug: "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026",
     title:
