@@ -4831,6 +4831,23 @@ const HighHazardPotentialDamsWithoutEmergencyActionPlans2026Dashboard = dynamic(
   },
 );
 
+const StreamingVideoCpiVersusCableAndSatelliteTvCpi2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/StreamingVideoCpiVersusCableAndSatelliteTvCpi2026Dashboard"
+    ).then(
+      (m) => m.StreamingVideoCpiVersusCableAndSatelliteTvCpi2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-64 items-center justify-center rounded-xl border border-slate-700/40 bg-slate-950 text-sm text-slate-400">
+        Loading interactive charts…
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6094,6 +6111,10 @@ export function PostVisualization({
 
   if (type === "high-hazard-potential-dams-without-emergency-action-plans-2026") {
     return <HighHazardPotentialDamsWithoutEmergencyActionPlans2026Dashboard />;
+  }
+
+  if (type === "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026") {
+    return <StreamingVideoCpiVersusCableAndSatelliteTvCpi2026Dashboard />;
   }
 
   return null;

@@ -2,6 +2,90 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026",
+    slug: "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026",
+    title:
+      "11 Points Closed: Streaming Video CPI Versus Cable and Satellite TV Since 2019",
+    excerpt:
+      "Cable, satellite, and live-streaming TV CPI is up 27.6% since 2019, while purchase/subscription/rental-of-video CPI is up 14.2%. The stream−cable gap bottomed at −24.4 pp in March 2023 and has closed 11 points to −13.4 as of July 2026.",
+    category: "Economics",
+    themeId: "streaming-versus-cable-cpi",
+    imageUrl:
+      "/images/economics-streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dual-path graphic with amber cable-TV dish silhouette and sky-blue streaming play icon flanking a teal closing-gap ribbon, Visual Capitalist-style thumbnail for streaming versus cable CPI",
+    publishedAt: "2026-08-30T21:00:00Z",
+    featured: true,
+    visualization: "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026",
+    layout: "default",
+    content: `Households did not swap one bill for another overnight. They stacked apps on top of broadband while traditional multichannel TV held a large and rising price path. The Bureau of Labor Statistics (BLS) does not publish a single “Netflix CPI,” but it does publish a usable pair: **cable, satellite, and live streaming television service** (CUUR0000SERA02) on one side, and **purchase, subscription, and rental of video** (CUUR0000SERA04) — the closest published proxy for third-party video subscriptions and rentals — on the other. Rebased to 2019 calendar-year averages = 100, **July 2026** prints cable at **127.6** (+**27.6%**) and video purchase/subscription/rental at **114.2** (+**14.2%**). The stream−cable gap is **−13.4** percentage points. That gap bottomed at **−24.4** pp in **March 2023** and has since closed **11** points — a catch-up story, not a completed convergence.
+
+The dashboard above is built for that race: dual indexes, gap area, year-over-year pace, annual ladder, quarterly scatter, and a latest-level bundle bar that also brings in internet services and all-items CPI-U.
+
+## What each BLS series actually prices
+
+**Cable, satellite, and live streaming television service** covers residential TV subscriptions: basic and expanded cable, satellite, live TV delivered on internet-connected devices when it is part of a TV-provider product, premium movie channels, and related equipment and fees. BLS’s residential telecommunications factsheet is explicit about what is **out**: standalone, third-party pre-recorded video-on-demand streaming services (the familiar app stacks) are excluded from that cable index.
+
+**Purchase, subscription, and rental of video** (SERA04) is the recreation-group series that picks up purchases, subscriptions, and rentals of video content outside that cable/satellite live-TV frame. It is imperfect as a pure “streaming-only” meter — physical and transactional rental still exist in the item concept historically — but it is the published index desks can rebase and compare without inventing a private price panel. A sibling entry-level series, **subscription and rental of video and video games** (SS62055), runs hotter (+**46.1%** since 2019 as of July 2026) because games ride along; this brief treats SERA04 as the cleaner video-content comparator and shows SS62055 as a sensitivity check in the bundle panel.
+
+**Internet services** (CUUR0000SEEE03) matter because streaming without broadband is a theoretical product. Internet CPI is up **14.3%** since 2019 on the same rebase — almost identical to SERA04’s **14.2%** — while all-items CPI-U is up **30.6%**. Cable TV service has roughly matched the all-items climb; the video subscription/rental proxy has not.
+
+## The 2019–2023 divergence
+
+Through the pandemic and the early cord-cutting years, the two video paths diverged hard. Cable’s 2019-average-based index climbed steadily: **104.3** in 2020, **108.6** in 2021, **112.9** in 2022, **118.8** in 2023. Video purchase/subscription/rental **fell** in the first three of those years on the same scale — annual averages of **93.0**, **89.2**, and **91.9** — before a modest 2023 rebound to **96.4**. Competitive promotions, expanding library competition, and a still-maturing subscription stack kept measured video-content prices soft even as traditional TV packages kept ratcheting.
+
+The gap (stream index − cable index) opened from near zero in 2019 to an annual average of **−22.4** pp in 2023. The monthly trough was **−24.4** pp in March 2023. That is the arithmetic behind “streaming still looked cheap relative to cable on BLS meters” even as households complained about stacking too many apps: the cable meter rose; the video subscription/rental meter lagged.
+
+Calendar-year averages on the 2019 = 100 scale:
+
+| Year | Cable TV idx | Video sub/rental idx | Gap (pp) | Internet idx | All-items idx |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 100.0 | 100.0 | 0.0 | 100.0 | 100.0 |
+| 2020 | 104.3 | 93.0 | −11.4 | 101.4 | 101.2 |
+| 2021 | 108.6 | 89.2 | −19.4 | 102.9 | 106.0 |
+| 2022 | 112.9 | 91.9 | −21.0 | 104.6 | 114.5 |
+| 2023 | 118.8 | 96.4 | −22.4 | 108.5 | 119.2 |
+| 2024 | 121.6 | 101.9 | −19.7 | 111.7 | 122.7 |
+| 2025 | 124.4 | 106.3 | −18.1 | 111.1 | 125.9 |
+| 2026 (Jan–Jul) | 126.5 | 113.2 | −13.3 | 114.1 | 129.5 |
+
+## The catch-up since the 2023 trough
+
+From the March 2023 trough, the story flips from “streaming soft” to “streaming accelerating.” Video purchase/subscription/rental crossed back above its 2019 average in 2024 (annual **101.9**) and kept climbing: **106.3** in 2025, **113.2** for the January–July 2026 average, **114.2** in the July 2026 print. Cable kept rising too — to **127.6** in July — but more slowly on a year-over-year basis.
+
+July 2026 year-over-year rates make the catch-up visible without a long chart: video sub/rental **+7.8%**, cable **+2.8%**, internet **+3.5%**, all-items **+3.4%**. Peak cable YoY in this window was **6.6%** (September 2023). Peak video sub/rental YoY was **10.0%** (December 2025). The gap closed from **−24.4** pp to **−13.4** pp — **11** points of repair — while remaining clearly negative. Streaming has not “caught” cable on the cumulative 2019 base; it has stopped falling further behind at the same pace.
+
+## Internet is the silent co-bill
+
+Any household that cancelled a $80–$120 multichannel package and kept three $12–$18 apps still pays a broadband bill. On the CPI meters, internet services have behaved more like the video subscription/rental proxy than like cable TV: **+14.3%** since 2019 versus cable’s **+27.6%**. That does not mean broadband is cheap in dollars — CPI indexes are not average ticket prices — but it does mean measured internet **price change** has not been the explosive leg of the entertainment stack since 2019. The expensive leg, on BLS’s published paths, remains traditional multichannel TV service.
+
+When the dashboard overlay adds internet and all-items, the visual is consistent: cable tracks near the all-items climb; video sub/rental and internet form a lower pair; the gap ribbon between cable and video is the briefing object.
+
+## Why “closing the gap” is not the same as “streaming got cheap”
+
+Three distinct claims get tangled in consumer commentary. First, **levels**: many households still pay less per month for a few apps than for a full cable tier — that is a bill-composition fact, not what these indexes measure. Second, **cumulative price change since 2019**: cable’s index rose nearly twice as much as the video subscription/rental proxy (**27.6%** vs **14.2%**). Third, **recent acceleration**: since the 2023 trough, video subscription/rental inflation has outrun cable on a YoY basis, closing **11** pp of the gap without erasing it.
+
+If a desk only quotes the third claim (“streaming prices are soaring”), it misses that cable is still higher on the 2019 = 100 ladder. If it only quotes the second (“streaming is still the bargain path”), it misses the post-2023 catch-up that is already in the monthly prints. The honest one-liner for July 2026 is: **streaming’s published proxy remains ~13 pp behind cable on a 2019 base, but that deficit is 11 pp narrower than the March 2023 trough.**
+
+## Caveats that should travel with every gap print
+
+Several caveats belong next to the −13.4 pp headline. First, **SERA04 is not a pure SVOD index** — it is purchase, subscription, and rental of video; transactional and physical residue can still move the series. Second, **cable’s item includes live-streaming TV products sold by TV providers**, so “cable versus streaming” is not a clean brick-versus-app split; it is multichannel/live-TV service versus the broader video purchase/subscription/rental item. Third, BLS **excludes** standalone third-party SVOD from the cable index by design — which is why SERA04 is needed as the comparator, imperfect as it is. Fourth, indexes are **not average household bills**; mix shifts, promotions, and quality adjustments (including telecommunications hedonics BLS documents for bundled plans) can move indexes without matching any one provider’s list price. Fifth, **October 2025** is missing from the published extract used here and is dropped from monthly panels; annual 2025 averages use the eleven available months. Sixth, **SS62055** (video and video games) runs much hotter and should not be substituted silently for SERA04 when the claim is about video content alone.
+
+None of those caveats restore a zero gap or erase the trough-to-latest closure. On the published NSA CPI-U series, rebased to 2019, video purchase/subscription/rental still sits below cable — and closer than it was in early 2023.
+
+## What the comparison is for
+
+The stream-versus-cable CPI gap is a briefing tool for media, broadband, and household-budget desks — not a verdict on which product households “should” buy. It answers a narrow question: since 2019, how far has the published video subscription/rental price path closed on cable and satellite television service? As of **July 2026**, cable is **+27.6%**, video sub/rental is **+14.2%**, the gap is **−13.4** pp, and **11** points of the **−24.4** pp trough have been closed. Use the dashboard’s window and overlay toggles to hold the 2020–23 divergence, the post-2023 catch-up, or the full 2019–2026 race — and keep SERA04, SS62055, and the cable live-streaming item labeled as the distinct BLS concepts they are.
+`,
+    format: "data-story",
+    keyPoints: [
+      "Jul 2026: cable CPI +27.6% vs 2019; video purchase/sub/rental +14.2%; gap −13.4 pp",
+      "Gap trough −24.4 pp in Mar 2023; 11 pp closed by Jul 2026",
+      "Jul 2026 YoY: video sub/rental +7.8% vs cable +2.8%; internet +3.5%",
+      "Internet services +14.3% since 2019 — tracks video sub/rental, not cable",
+    ],
+  },
+  {
     id: "high-hazard-potential-dams-without-emergency-action-plans-2026",
     slug: "high-hazard-potential-dams-without-emergency-action-plans-2026",
     title:

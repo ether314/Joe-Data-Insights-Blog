@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026",
+    marker: "Streaming vs cable TV service indexes",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "high-hazard-potential-dams-without-emergency-action-plans-2026",
     marker: "High-hazard dams lacking an EAP",
     forbidden: "Loading interactive charts",
