@@ -2,6 +2,94 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "structurally-deficient-bridges-versus-daily-traffic-2026",
+    slug: "structurally-deficient-bridges-versus-daily-traffic-2026",
+    title:
+      "6.8% Poor Spans, 168.6M ADT: Structurally Deficient Bridges Versus Daily Traffic",
+    excerpt:
+      "FHWA’s 2024 National Bridge Inventory still lists 42,080 Poor bridges — 6.8% of the stock — yet those spans carry 168.6 million average daily traffic, about 3.4% of inventory ADT.",
+    category: "Transport & Logistics",
+    themeId: "nbi-deficient-bridges",
+    imageUrl:
+      "/images/transport-logistics-structurally-deficient-bridges-versus-daily-traffic-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic bridge silhouette with rose-highlighted deficient spans and amber traffic light streams crossing the deck, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-30T20:00:00Z",
+    featured: true,
+    visualization:
+      "structurally-deficient-bridges-versus-daily-traffic-2026",
+    layout: "default",
+    format: "data-story",
+    keyPoints: [
+      "42,080 of 623,218 NBI bridges (6.8%) are Poor — the post-2018 successor to structurally deficient",
+      "Those Poor spans still carry 168.6 million ADT, or 3.4% of inventory average daily traffic",
+      "NHS Poor share is 3.0%; non-NHS is 7.9% — traffic-critical corridors look cleaner on count share",
+      "Urban spans account for ~80% of Poor ADT even though most Poor bridges sit in rural counties",
+    ],
+    content: `Ask how many U.S. highway bridges are “structurally deficient” and you will get a vocabulary fight before you get a number. The Federal Highway Administration retired that label after the 2017 Pavement and Bridge Condition Performance Measures rule. Beginning with the 2018 National Bridge Inventory (NBI) archive, the summary condition is **Good**, **Fair**, or **Poor**. Poor means any of deck, superstructure, substructure, or culvert is rated **4 or lower** on the NBI condition scale. News desks and state DOTs still say structurally deficient in plain language; this desk treats **Poor** as the operational successor and keeps both phrases in view so readers are not lost in the rename.
+
+The 2024 final inventory is unambiguous on the count. Of **623,218** public highway bridges, **42,080** are Poor — **6.8%** of the stock. That is the share of *spans*. The harder question in the brief is traffic: how much average daily traffic (ADT) still crosses those spans? Summing FHWA’s Bridge Condition by Functional Classification ADT tables for 2024 puts **168.6 million** ADT on Poor bridges — about **3.4%** of the inventory’s ADT total near **4.94 billion**. The mismatch is the story. Poor bridges are a larger slice of the *count* than of *traffic*, yet the residual ADT is still enormous in absolute terms: more than a hundred million vehicle-days of exposure every day on structures the inventory itself flags as Poor.
+
+The interactive dashboard above keeps that pairing open. **Count vs ADT** stacks Poor against Good+Fair for bridge count, inventory ADT, and deck area. **Condition mix** shows the national Good/Fair/Poor donut and splits Poor ADT into rural versus urban. **Functional class** ranks Interstate-to-local intensity with toggles for setting and metric. **Decade path** traces Poor count share down from roughly **9.8%** in 2010 toward **6.8%** in 2024 alongside a softer ADT-share line. **NHS vs non-NHS** contrasts the National Highway System’s **3.0%** Poor share with **7.9%** off the NHS. **State scatter** plots Poor share against ADT still riding Poor spans.
+
+## Poor is not closed — and ADT is not unique trips
+
+A Poor rating is not an automatic closure order. When officials determine a bridge is unsafe, they close it or post weight limits; CRS notes that roughly **43,600** bridges carried a weight restriction in a recent national cut, a related but separate ledger from the Poor count. Most Poor bridges remain open. ADT in the NBI is the average daily traffic *on that structure*, not a national unique-trip census. Summing ADT across bridges double-counts vehicles that cross multiple spans in a day. That is exactly how FHWA and BTS publish the tables, and it is the right unit for an inventory exposure question: how much traffic loading sits on Poor decks.
+
+The national ADT sum on all bridges is about **4.94 billion**. The Poor subset is **168.6 million**, or **3.4%**. Deck area tells a middle story: Poor bridges account for about **4.9%** of inventory deck area (**19.8 million** of **407 million** square meters). Count share (**6.8%**) exceeds deck share, which exceeds ADT share — consistent with a stock where many Poor bridges are smaller, lower-volume rural structures, while a minority of larger urban Poor bridges pull traffic and area upward.
+
+## The decade path: fewer Poor spans, stubborn residual traffic
+
+CRS highway-bridge briefs that cite the NBI put the national Poor share near **9.8%** in **2010**, **9.4%** in **2012** (**57,049** Poor bridges), **8.3%** in **2015**, **7.5%** in **2019**, and **6.7%** in the **2025** print (**41,685** Poor). The 2024 FHWA final used here sits at **6.8%** with **42,080** Poor bridges. The count has fallen by roughly **15,000** Poor spans since 2012 even as the total inventory grew. That is real progress on the rehabilitation and replacement ledger.
+
+It is not the same as eliminating traffic exposure. Desk-bridged ADT shares that track published count shares fall from roughly **5%** of inventory ADT early in the 2010s toward the **3.4%** FHWA 2024 print. The slope is down; the floor is not zero. Every percentage point of national ADT still represents tens of millions of vehicle-days on Poor structures. Policymakers who celebrate the count decline without watching the ADT residual are reading only half the meter.
+
+| Vintage | Poor bridges | Poor share of count | Poor share of ADT | Source frame |
+| --- | ---: | ---: | ---: | --- |
+| 2012 | 57,049 | 9.4% | ~4.9% (bridged) | CRS R47194 / desk ADT bridge |
+| 2015 | — | 8.3% | ~4.4% (bridged) | CRS R44459 |
+| 2019 | — | 7.5% | ~3.9% (bridged) | CRS R44459 |
+| 2024 | 42,080 | 6.8% | 3.4% | FHWA condition24 + fcadt24 |
+| 2025 | 41,685 | 6.7% | — | CRS R47194 |
+
+## NHS corridors look cleaner; local systems carry the count
+
+On the National Highway System — the backbone Congress and FHWA watch for freight and interstate mobility — **4,389** of **147,439** bridges are Poor (**3.0%**). Off the NHS, **37,691** of **475,779** bridges are Poor (**7.9%**). Almost **90%** of Poor bridges by count sit outside the NHS. That split explains why national headlines can sound alarming while Interstate travelers see fewer posted distress signals: the inventory’s worst *count* concentration is on lower-order roads.
+
+Traffic cuts the other way on absolute volume. Urban Poor ADT is about **135.5 million**; rural Poor ADT is about **33.1 million**. Roughly **80%** of ADT on Poor bridges is urban even though CRS and FHWA repeatedly note that about **80%** of *Poor bridges* are rural. Rural America owns the count problem; metro corridors own most of the traffic still rolling on Poor decks. Replacement dollars follow that asymmetry — urban Poor spans are larger, more expensive, and more disruptive to stage — which is why deck-area and ADT metrics matter alongside simple bridge counts.
+
+## Functional class: collectors punch above Interstates on Poor intensity
+
+BTS’s Transportation Statistics Annual Report figure on bridges in Poor condition versus ADT (built from FHWA functional-classification tables) makes the class ladder visible. Rural major collectors show Poor *count* shares near **10.5%**, with Poor ADT shares near **5.6%**. Rural Interstates sit near **2.6%** Poor by count and about **2.3%** by ADT. Urban Interstates are similar on ADT share (~**2.9%**) even though their absolute Poor ADT — **53.0 million** — dominates every other class because urban Interstate volumes are enormous.
+
+Toggle the dashboard’s functional-class panel to **Poor ADT volume** and urban Interstates leap to the top. Toggle to **Poor count share** and rural collectors and locals climb. That is not a contradiction; it is two valid prioritization lenses. A state DOT chasing *how many* Poor bridges it owns will land in rural collector country. A freight desk chasing *how much traffic* still loads Poor decks will land on urban Interstate and principal arterial spans.
+
+## States: Iowa leads share; California leads Poor ADT
+
+State panels rearrange the ranking again. **Iowa** prints **4,544** Poor bridges on a **23,719**-bridge inventory — a **19.2%** Poor share, among the highest in the 2024 table — yet its summed Poor ADT is only about **1.2 million**. **California**’s Poor share is a comparatively modest **5.9%** (**1,527** of **25,848**), but Poor ADT sums to about **28.7 million**, the largest volume in the illustrative state set. **New York**, **Illinois**, **Pennsylvania**, and **Massachusetts** also combine mid-to-high Poor shares with multi-million Poor ADT totals. **Texas** and **Georgia** show the opposite corner: large inventories with Poor shares near **1–2%** and moderate Poor ADT.
+
+**West Virginia** (**18.6%** Poor share) and **Rhode Island** (**15.2%**) illustrate small-inventory, high-share systems where almost one in five or one in six spans is Poor. **Puerto Rico** prints a **13.9%** Poor share with about **4.4 million** Poor ADT — a territory-scale reminder that the inventory is not only a 50-state story. The scatter panel encodes the trade: horizontal axis is Poor share, vertical is Poor ADT in millions, bubble size tracks Poor bridge count.
+
+## What the meters do not say
+
+Poor is a *condition* summary, not a failure prediction. Two bridges rated 4 can differ sharply in load posting, fracture-critical details, scour risk, and inspection frequency. ADT is an average; peak-hour and truck shares are not in these national rollups. The 2018 definitional cut from “structurally deficient” to “Poor” is close but not identical to the pre-2018 SD flag — long time series should be read as a family of related meters, not a single unbroken series. Mid-decade ADT shares in the trend table are desk bridges where FHWA did not republish a matched ADT-on-Poor national percentage; the **2024** ADT share is the hard FHWA print.
+
+Funding is another ledger. IIJA and state programs move billions into bridge repair, but obligation rates, local match capacity, and design-bid-build timelines mean the inventory turns slowly. A falling Poor count with a stubborn ADT residual is exactly what a system looks like when the easiest rural replacements clear first and the high-traffic urban Poor spans take longer to stage.
+
+## Reading the 2026 desk in one line
+
+**6.8%** of NBI spans are Poor — the modern “structurally deficient” stock. They still carry **168.6 million** ADT, **3.4%** of inventory traffic and **4.9%** of deck area. NHS corridors are cleaner on count share (**3.0%**) than non-NHS roads (**7.9%**). Urban decks absorb most of the remaining traffic exposure. The national count is better than a decade ago; the residual vehicle loading on Poor structures is still a daily operations and capital-planning fact, not a historical footnote.
+
+### Sources
+
+- [FHWA — Bridge Condition by Highway System 2024](https://www.fhwa.dot.gov/bridge/nbi/no10/condition24.cfm)
+- [FHWA — Bridge Condition by Functional Classification ADT 2024](https://www.fhwa.dot.gov/bridge/nbi/no10/fcadt24.cfm)
+- [FHWA — Tables of Frequently Requested NBI Information](https://www.fhwa.dot.gov/bridge/britab.cfm)
+- [BTS — Bridges in Poor Condition and Avg Daily Traffic on Bridges 2024](https://www.bts.gov/browse-statistical-products-and-data/info-gallery/bridges-poor-condition-and-avg-daily-traffic-0)
+- [CRS — Highway Bridges: Conditions, Funding Programs, and Issues (R47194)](https://www.everycrsreport.com/reports/R47194.html)
+`,
+  },
+  {
     id: "va-disability-claims-pending-versus-average-days-to-complete-2026",
     slug: "va-disability-claims-pending-versus-average-days-to-complete-2026",
     title:

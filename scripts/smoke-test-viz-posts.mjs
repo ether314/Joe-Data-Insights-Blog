@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "structurally-deficient-bridges-versus-daily-traffic-2026",
+    marker: "Structurally deficient bridges versus daily traffic",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "va-disability-claims-pending-versus-average-days-to-complete-2026",
     marker: "Pending vs days-to-complete",
     forbidden: "Loading interactive charts",
