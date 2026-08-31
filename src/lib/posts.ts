@@ -1,5 +1,5 @@
 import { samplePosts } from "@/data/posts";
-import type { Category, Post } from "@/types/post";
+import type { Category, Post, PostSearchRecord } from "@/types/post";
 import { categorySlug } from "@/types/post";
 
 /**
@@ -52,4 +52,16 @@ export async function getPostsGroupedByCategory(): Promise<
   return grouped;
 }
 
+
+export async function getPostSearchIndex(): Promise<PostSearchRecord[]> {
+  const posts = await getAllPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    category: post.category,
+    themeId: post.themeId,
+    tags: post.tags,
+  }));
+}
 export { categorySlug };

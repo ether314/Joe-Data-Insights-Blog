@@ -2,6 +2,106 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "npl-sites-with-construction-complete-versus-remaining-construction-2026",
+    slug: "npl-sites-with-construction-complete-versus-remaining-construction-2026",
+    title:
+      "58.7% of Final NPL Sites Are Construction Complete — 555 Still Building",
+    excerpt:
+      "At end FY2025, EPA’s final National Priorities List held 1,343 sites. About 788 are estimated past sitewide construction completion; roughly 555 still have unfinished remedial construction. The on-final CC share has clung near 59% since FY2019.",
+    category: "Global Systems",
+    themeId: "epa-superfund-npl",
+    imageUrl:
+      "/images/global-systems-npl-sites-with-construction-complete-versus-remaining-construction-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split between a finished remediated landscape and an active containment site, teal and amber accents for construction-complete versus remaining construction",
+    publishedAt: "2026-08-26T22:00:00Z",
+    featured: true,
+    visualization:
+      "npl-sites-with-construction-complete-versus-remaining-construction-2026",
+    layout: "default",
+    content: `The question this dashboard answers is narrow and stubborn: **of the sites still on EPA’s final National Priorities List, how many have finished physical construction, and how many have not?**
+
+At the end of fiscal year 2025, EPA’s Superfund remedial accomplishments report put **1,343 final** NPL sites on the list, alongside **38 proposed** and **459 deleted**. Cumulative sitewide construction completions for NPL sites stood at **1,247** once FY2025’s single sitewide completion is layered onto the FY2024 disclosed total of **1,246**. Subtracting deleted sites from that cumulative milestone leaves an estimated **788 final sites that are construction complete** — **58.7%** of the final list — and about **555 final sites (41.3%) that still have remaining construction**.
+
+That split is the headline. Everything else in the charts — RAPC throughput, new-start lead mix, Superfund Alternative Approach (SAA) status, the milestone ladder — exists to explain why finishing *projects* is not the same as finishing *sites*, and why the construction-complete share of the live list refuses to climb.
+
+## What “construction complete” actually means
+
+EPA’s construction-completion milestone is a **sitewide** flag. It means all physical construction required for the cleanup of the *entire* site is finished, even though final cleanup levels may not yet be met. The agency’s own example is a groundwater treatment plant that is built and operating while contaminants continue to be pulled for years. Construction complete is therefore **not** synonymous with “safe forever,” “deleted from the NPL,” or “ready for unrestricted reuse.”
+
+That distinction matters for reading the remaining-construction count. The **555** figure is not a count of abandoned projects. It is an estimate of final NPL sites that have **not yet** cleared the sitewide physical-construction bar. Many of those sites already host active remedial construction; EPA reported **546** remedial construction projects started in prior years that were still under construction or oversight in FY2025, plus **69** new starts.
+
+Sitewide completion is rare relative to project completion. In FY2025, EPA and other project leads finished **72** remedial construction projects (the RAPC measure) but recorded only **one** sitewide construction completion. In FY2024 the ratio was **73** RAPCs to **four** sitewide completions. The dashboard’s “RAPC vs sitewide” panel is the visual version of that gap.
+
+## How the on-final share is estimated
+
+EPA publishes cumulative construction completions and separately publishes final / deleted / proposed inventory. It does **not** always publish a one-line “X final sites are construction complete today” table. This desk therefore estimates on-final construction complete as:
+
+**cumulative NPL construction completions − deleted NPL sites**.
+
+The rationale is EPA policy itself: deleted NPL sites are included on the construction-completion list. If nearly every deleted site has already passed the milestone, the residual after subtracting deletions is a workable estimate of construction-complete sites that remain *listed*. Caveats belong in plain view:
+
+- A small number of deletions or listing corrections could misalign the residual in either direction.
+- Cumulative totals for some mid-window years (FY2021–FY2023) are **back-calculated** from the disclosed FY2020 cumulative of **1,221** plus disclosed annual sitewide NPL completions.
+- Superfund Alternative Approach agreements (**51** still in active remediation, **18** construction complete at end FY2025) sit **outside** the final-NPL pie and are charted separately.
+
+Treat **788 / 555 / 58.7%** as best available desk estimates anchored to EPA’s disclosed inventory and milestones, not as a SEMS extract row.
+
+## The share that will not move
+
+The stacked history panel is almost boring — and that is the finding. From FY2019 through FY2025, the estimated on-final construction-complete share sits between about **58.7% and 59.2%**. Remaining construction on the final list stays in a narrow band around **540–555** sites even as the final inventory itself drifts between roughly **1,322 and 1,343**.
+
+| Fiscal year | Final NPL | Deleted | Cum. NPL CC | On-final CC (est.) | Remaining (est.) | On-final CC share |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| FY2019 | 1,333 | 424 | 1,211 | 787 | 546 | 59.0% |
+| FY2020 | 1,327 | 438 | 1,221 | 783 | 544 | 59.0% |
+| FY2021 | 1,322 | 447 | 1,229* | 782 | 540 | 59.2% |
+| FY2022 | 1,334 | 452 | 1,238* | 786 | 548 | 58.9% |
+| FY2023 | 1,336 | 456 | 1,242* | 786 | 550 | 58.8% |
+| FY2024 | 1,340 | 458 | 1,246 | 788 | 552 | 58.8% |
+| FY2025 | 1,343 | 459 | 1,247* | 788 | 555 | 58.7% |
+
+\\*Cumulative CC derived from prior disclosed total plus annual sitewide completions; FY2024 cumulative and all inventory columns are EPA-disclosed in the annual accomplishments series.
+
+New listings and slow sitewide completions roughly offset each other. EPA added sites to the final list in every year of the window while sitewide completions fell from the high single digits / low teens early in the window to **four** in FY2023 and FY2024 and **one** in FY2025. The live list therefore keeps a large construction-complete middle and a stubborn unfinished tail.
+
+## Projects finish; sites lag
+
+Remedial action project completion (RAPC) is EPA’s incremental construction measure. A single NPL site can require several RAPCs before the entire property qualifies as construction complete. That is why FY2025 can look busy at the project layer — **69** new starts, **546** continuing projects, **72** RAPCs finished, **$766 million** obligated for construction and post-construction work — while the sitewide counter barely ticks.
+
+Lead mix for FY2025 new starts was relatively balanced: **27** government-led, **20** potentially responsible party (PRP)-led, and **22** federal-facility-led. Federal facilities matter disproportionately for complexity; GAO and EPA both note that remaining NPL work skews toward harder media (sediment, fractured rock, emerging contaminants) and toward sites where funding, liability, or technical surprises stretch timelines.
+
+The pipeline bands panel deliberately mixes *site* counts and *project* counts on one axis. Read the labels. **555** remaining-construction *sites* is not comparable one-for-one to **546** ongoing *projects*; some sites host multiple projects, and some projects sit on sites that are already close to sitewide completion.
+
+## Why the remaining 555 stay hard
+
+GAO’s March 2025 Superfund statement (GAO-25-108408) frames the same geography of friction that EPA practitioners describe: discovery of new contaminants or a larger plume than expected; absence of viable PRPs; technical complexity; and resource limits in appropriations and regional staffing. Those factors do not show up as a second pie slice, but they explain why RAPC throughput in the 70s can coexist with single-digit sitewide completions.
+
+IIJA’s Superfund construction surge cleared a backlog of *ready-to-construct* projects in the early 2020s. Clearing a funding queue is not the same as converting the remaining final list to construction complete. Once the easy funded starts are underway, the residual inventory is enriched with long-duration remedies — exactly the sites that inflate the **555** count without quickly becoming the **+1** sitewide completion.
+
+Post-construction obligations also compete for attention. Sites that *are* construction complete still need five-year reviews, operation and maintenance, and sometimes optimization studies. EPA conducted **302** five-year reviews in FY2025. Construction complete is a milestone, not an exit.
+
+## Deletion is a later door
+
+Deletion from the NPL is a separate, later signal: EPA and the state agree no further response is needed to protect human health and the environment. In FY2025 EPA deleted **one** full site and parts of three more, bringing cumulative deletions to **459**. Partial deletions (159 actions at 118 sites as of the FY2025 report) show that even exit is granular.
+
+The milestone ladder therefore reads left-to-right as proposed → final → remaining construction / construction complete → deleted. Construction complete sits in the middle of that ladder for hundreds of listed sites. Communities living next to a construction-complete NPL site still share a listed Superfund address; lenders and redevelopers often wait for deletion or for Sitewide Ready for Anticipated Use (SWRAU) before treating the property as ordinary land.
+
+SWRAU itself requires construction complete plus institutional controls and cleanup goals for media that affect land use. It is a reuse readiness measure, not a substitute for the construction split this post tracks.
+
+## Caveats and reading rules
+
+- **Estimate label.** On-final CC and remaining construction are desk-derived from EPA cumulative CC and deleted counts. Prefer the share (±1 pp of 59%) over false precision in the integer residual.
+- **FY inventory timing.** End-of-year accomplishment reports can differ slightly from mid-year Federal Register listing updates (for example, March 2026 listing notices also cite 1,343 final sites).
+- **SAA boundary.** The 58.7% figure is a **final NPL** share. Adding SAA construction-complete sites would change the denominator and is not done here.
+- **Construction ≠ risk control.** Human-exposure and groundwater-migration control measures are separate EPA tallies and can move without sitewide construction completion.
+- **No sequel framing.** This is a standalone cut of the construction milestone versus remaining build — not a geography atlas of every NPL polygon and not a funding deep-dive.
+
+## Bottom line for the brief
+
+**About three in five final NPL sites (≈58.7%, or 788 of 1,343) are estimated construction complete. About two in five (≈41.3%, or 555 sites) still have unfinished construction.** Project-level work remains active — dozens of RAPCs per year, hundreds of ongoing projects — but sitewide completions have slowed to a trickle. Until sitewide completions outrun new final listings by a meaningful margin, the construction-complete share of the live list will keep looking like a flat line near **59%**.`,
+  },
+  {
     id: "auto-insurance-cpi-versus-used-car-and-repair-prices-2026",
     slug: "auto-insurance-cpi-versus-used-car-and-repair-prices-2026",
     title:

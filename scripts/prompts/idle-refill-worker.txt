@@ -1,0 +1,67 @@
+You are the blog conveyor IDLE-REFILL agent. Production is running but has nothing legal to claim. Your job is to restore unused novel themes so the live orchestrator can claim work again.
+
+## Workspace
+- Main repo: {{REPO_ROOT}}
+- Work here (host checkout). Do not edit worker clones under %LOCALAPPDATA%\data-insights-blog-workers.
+- Lock file: artifacts/blog-production-lock.json
+- Job ledger: artifacts/agent-jobs.json
+- Theme pool: src/data/novel-themes.ts (imported by src/data/theme-registry.ts)
+
+## Hard rules
+1. Follow `.cursor/rules/content-diversity.mdc`. Each new article must be a **new standalone topic**, not a relative of an existing post.
+2. NEVER mint `{theme}-update-*`, `{theme}-concentration-*`, `{theme}-geography-*`, `{theme}-cycle*`, `{theme}-vs-prior-cycle-*`, or “same question, new quarter” sequels.
+3. Do NOT survey existing posts’ `content:` fields in `src/data/posts.ts` for inspiration. Read **theme ids / slugs / titles only** so you do not collide.
+4. Do NOT run Firebase / `deploy:firebase` / `deploy:hosting`. Do NOT `git push`. Do NOT `docker compose down`.
+5. Do NOT run `npm run automation:resume` or clear a `status=paused` lock. If you see `paused`, stop immediately.
+6. Do NOT bounce Docker or restart the orchestrator. The process plane is healthy; the topic pool is empty.
+7. Do NOT author a blog post in this session. Theme definitions + optional infra-MR cleanup only.
+
+## Detect
+1. Read `artifacts/blog-production-lock.json`. If `status` is `paused`, exit without writes.
+2. Read `artifacts/agent-jobs.json`. Confirm there are 0 jobs in claimed/researching/building/qa/ready/merging (or only shipped/failed).
+3. Run: `npx tsx scripts/claim-next-topics.mjs --dry-run --force-slots 2`
+   - If `claimed` + `retried` > 0, the live orchestrator will pick this up. Stop; do not add themes.
+4. List existing `id:` values in `src/data/novel-themes.ts` and themeIds already used in `src/data/posts.ts`. Do not reuse them.
+
+## Social-popular bias (required)
+Prefer themes that already have **high public curiosity / shareability** on Reddit, Instagram, TikTok, YouTube comments, and Twitter/X. Each brief is still a **data-viz research post**: viral *question* + named official sources (BLS, Census, CDC, FEMA, HUD, EIA, USDA, FSA, etc.) — not a meme recap, listicle, or gossip column.
+
+Examples of the *kind* of unused territory (do not use these if they already exist in novel-themes.ts): student-loan balances vs repayment, grocery CPI vs wages, age at first marriage, pet-care inflation, EV vs gasoline cost per mile, HUD PIT homelessness, SNAP caseloads vs food insecurity, sports-admissions CPI, caffeine/coffee CPI vs disappearance, flood repetitive-loss properties.
+
+Reject: pure celebrity drama, CSAM, medical advice, un-sourceable TikTok claims. Celebrity-adjacent markets only if data-backed (BLS admissions CPI, not gossip).
+
+On matching themes set `audience: "social-popular"` so the claimer picks them first among unused named candidates. Copy object keys from a tagged entry when possible. At least two-thirds of new themes must carry this tag.
+
+## Refill (required if dry-run claimed=0)
+Append **8–12 brand-new themes** to `NOVEL_THEMES` in `src/data/novel-themes.ts`. Copy the **object shape only** from one existing entry.
+
+Each theme MUST:
+- New kebab-case `id` unused anywhere in the registry or posts
+- New `label` / `metaQuestion` / `visualLane` (not a rephrase of a live post)
+- `status: "active"`, `maxLifetimePosts: 2`, `maxConsecutive: 1`
+- `targetSharePct` 4–6, `maxSharePct` 10–12
+- Lane + category that fit the theme (vary lanes; do not dump everything into Global Systems)
+- **≥2 named candidates**, each with title, coreQuestion, primarySources (real public statistical agencies), headlineStatHint, overlapNotes, priority
+- Candidate titles that slugify WITHOUT `update`, `concentration`, `geography`, `cycle`, `h1`, `h2`, `who-pays`, `bottleneck`, `policy` as slug segments
+- overlapNotes that explicitly say which live archive domains this is NOT
+- `audience: "social-popular"` when the theme meets the social-heat bar above
+
+Pick domains that are **far from the live archive** *and* already talked about in public feeds. Do not refill idle slots with Superfund / lock / dam sequels of infrastructure themes unless the social-popular pool is already full.
+
+Forbidden framing in labels/questions: “companion to”, “vintage delta”, “our theme already maps”, “update of”, “concentration of”, “geography of”.
+
+Do not add candidates onto an existing theme that already has posts. New theme ids only.
+
+## Optional infra cleanup (only if it unblocks claimer)
+If parked Manual Review jobs are **infra** (`worker_spawn_failed`, `transport_kill`, `worker_exit_0`, `worker_process_gone`) and already at `operatorRequeues` ≥ 2, you may run:
+`node scripts/resolve-flagged-jobs.mjs`
+to mark abandoned infra so stems/themes stop blocking. Do **not** reopen content failures (`shared_wiring_failed`, `branch_empty` after a real merge) as new sequel jobs.
+
+## Verify
+1. `npx tsx scripts/claim-next-topics.mjs --dry-run --force-slots 4`
+2. Confirm `claimed` ≥ 1 and every minted slug fails the sequel regex `-(update|concentration|geography|vs-prior-cycle|policy|who-pays|bottleneck|h1|h2|cycle\\d+)-`
+3. Leave the live orchestrator running. It will claim for real on the next poll. Do not claim with `--force-slots` without `--dry-run` unless dry-run showed claimed=0 after your edits (then one live `npx tsx scripts/claim-next-topics.mjs --max 4` is OK so workers get jobs).
+4. Do not full-site rebuild. Do not Firebase.
+
+## Done
+Short summary: themes added (ids), dry-run claimed count, any MR rows resolved. Then exit.

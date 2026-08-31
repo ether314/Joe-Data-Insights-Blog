@@ -358,7 +358,8 @@ export interface Post {
     | "uscis-n-400-pending-forms-versus-completions-2026"
     | "domestic-passenger-yield-versus-load-factor-2026"
     | "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026"
-    | "auto-insurance-cpi-versus-used-car-and-repair-prices-2026";
+    | "auto-insurance-cpi-versus-used-car-and-repair-prices-2026"
+    | "npl-sites-with-construction-complete-versus-remaining-construction-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];
@@ -367,6 +368,12 @@ export interface Post {
   keyPoints?: string[];
 }
 
+
+/** Lightweight fields for client-side site search (no full content body). */
+export type PostSearchRecord = Pick<
+  Post,
+  "slug" | "title" | "excerpt" | "category" | "themeId" | "tags"
+>;
 export const CATEGORIES: Category[] = [
   "Economics",
   "Politics",

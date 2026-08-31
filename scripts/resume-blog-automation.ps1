@@ -4,6 +4,8 @@ $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $LockFile = Join-Path $RepoRoot "artifacts\blog-production-lock.json"
 $WatchdogTask = "CursorBlogProductionWatchdog"
+$IdleWatchdogTask = "CursorBlogIdleHourlyWatchdog"
+$IdleRegisterScript = Join-Path $RepoRoot "scripts\register-blog-idle-hourly-watchdog.ps1"
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
 $StartScript = Join-Path $RepoRoot "scripts\start-blog-automation-in-app.ps1"
 $RegisterScript = Join-Path $RepoRoot "scripts\register-blog-production-watchdog.ps1"
@@ -63,6 +65,8 @@ $prevEap = $ErrorActionPreference
 $ErrorActionPreference = "Continue"
 cmd /c "schtasks /Query /TN `"$WatchdogTask`" >nul 2>&1"
 $taskExists = ($LASTEXITCODE -eq 0)
+cmd /c "schtasks /Query /TN `"$IdleWatchdogTask`" >nul 2>&1"
+$idleTaskExists = ($LASTEXITCODE -eq 0)
 $ErrorActionPreference = $prevEap
 if (-not $taskExists) {
     Write-Host "Scheduled task $WatchdogTask missing - registering OS watchdog..."
@@ -70,6 +74,16 @@ if (-not $taskExists) {
 } else {
     schtasks /Change /TN $WatchdogTask /ENABLE | Out-Null
     Write-Host "Enabled scheduled task: $WatchdogTask"
+}
+
+if (-not $idleTaskExists) {
+    if (Test-Path $IdleRegisterScript) {
+        Write-Host "Scheduled task $IdleWatchdogTask missing - registering idle-hourly watchdog..."
+        & powershell -NoProfile -ExecutionPolicy Bypass -File $IdleRegisterScript
+    }
+} else {
+    schtasks /Change /TN $IdleWatchdogTask /ENABLE | Out-Null
+    Write-Host "Enabled scheduled task: $IdleWatchdogTask"
 }
 
 & powershell -NoProfile -ExecutionPolicy Bypass -File $StartScript

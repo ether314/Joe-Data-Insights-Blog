@@ -64,9 +64,10 @@ for (const t of eligible.slice(0, 8)) {
 if (eligible.length > 8) console.log(`  … +${eligible.length - 8} more`);
 
 const diversity = getDiversityBacklog(pairs);
-console.log(`\nUnused novel candidates (${diversity.length}), first 8:`);
+console.log(`\nUnused novel candidates (${diversity.length}), first 8 (social-popular first among lifetime 0):`);
 for (const c of diversity.slice(0, 8)) {
-  console.log(`  • ${c.slugHint}  [${c.themeId}]  lifetime=${c.lifetime}`);
+  const social = c.audience === "social-popular" ? " social" : "";
+  console.log(`  • ${c.slugHint}  [${c.themeId}]  lifetime=${c.lifetime}${social}`);
 }
 if (diversity.length > 8) console.log(`  … +${diversity.length - 8} more`);
 console.log("");

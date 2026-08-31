@@ -733,6 +733,16 @@ try {
                 if ($diagTrim.Length -gt 900) { $diagTrim = $diagTrim.Substring($diagTrim.Length - 900) }
                 Write-Log ("claim-next-topics diag (dry-run): exit=$LASTEXITCODE " + $diagTrim)
             }
+            try {
+                $lcPath = Join-Path $RepoRoot "artifacts\last-claim.json"
+                if (Test-Path $lcPath) {
+                    $lc = (Get-Content $lcPath -Raw -ErrorAction Stop) -replace '^\uFEFF', '' | ConvertFrom-Json
+                    if ($lc.poolExhausted) {
+                        $spawnNote = if ($lc.refillSpawn) { ($lc.refillSpawn | ConvertTo-Json -Compress) } else { "none" }
+                        Write-Log "Novel topic pool exhausted (remainingSlots=$($lc.remainingSlots)); refill spawn=$spawnNote"
+                    }
+                }
+            } catch {}
         }
 
         $jobsObj = Read-Jobs

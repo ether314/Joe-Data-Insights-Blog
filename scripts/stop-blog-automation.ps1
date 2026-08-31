@@ -11,6 +11,7 @@ $StreamPidFile = Join-Path $RepoRoot "artifacts\production-stream.pid"
 $StartingFile = Join-Path $RepoRoot "artifacts\blog-production.starting"
 $LogDir = Join-Path $RepoRoot "artifacts\automation-logs"
 $WatchdogTask = "CursorBlogProductionWatchdog"
+$IdleWatchdogTask = "CursorBlogIdleHourlyWatchdog"
 
 New-Item -ItemType Directory -Path $LogDir -Force | Out-Null
 
@@ -107,6 +108,11 @@ $taskExists = ($LASTEXITCODE -eq 0)
 if ($taskExists) {
     schtasks /Change /TN $WatchdogTask /DISABLE | Out-Null
     Write-Log "Disabled scheduled task: $WatchdogTask"
+}
+cmd /c "schtasks /Query /TN `"$IdleWatchdogTask`" >nul 2>&1"
+if ($LASTEXITCODE -eq 0) {
+    schtasks /Change /TN $IdleWatchdogTask /DISABLE | Out-Null
+    Write-Log "Disabled scheduled task: $IdleWatchdogTask"
 }
 $ErrorActionPreference = $prevEap
 

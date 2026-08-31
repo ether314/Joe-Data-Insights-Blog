@@ -44,13 +44,31 @@ function Test-IndependentGitClone {
 function Ensure-BlogAutomationPath {
     # Scheduled tasks inherit a stripped PATH. Merge Machine + User so
     # docker, node, and agent resolve the same way as an interactive shell.
+    # Unique-merge only: concatenating current PATH on every call (watchdog
+    # loop dotsources this every 10 min in-process) balloons until Windows
+    # throws "Environment variable name or value is too long".
     $machinePath = [Environment]::GetEnvironmentVariable("Path", "Machine")
     $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
-    $parts = @()
-    if ($userPath) { $parts += $userPath }
-    if ($machinePath) { $parts += $machinePath }
-    if ($env:PATH) { $parts += $env:PATH }
-    $env:PATH = ($parts -join ";")
+    $seen = [System.Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
+    $parts = [System.Collections.Generic.List[string]]::new()
+    foreach ($chunk in @($userPath, $machinePath, $env:PATH)) {
+        if ([string]::IsNullOrWhiteSpace($chunk)) { continue }
+        foreach ($seg in ($chunk -split ';')) {
+            $s = $seg.Trim()
+            if (-not $s) { continue }
+            if ($seen.Add($s)) { [void]$parts.Add($s) }
+        }
+    }
+    $budget = 24000
+    $kept = [System.Collections.Generic.List[string]]::new()
+    $len = 0
+    foreach ($p in $parts) {
+        $add = $p.Length + 1
+        if ($kept.Count -gt 0 -and ($len + $add) -gt $budget) { break }
+        [void]$kept.Add($p)
+        $len += $add
+    }
+    $env:PATH = ($kept -join ';')
     try {
         return (Ensure-BlogGitOnPath)
     } catch {

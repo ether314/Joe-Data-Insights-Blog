@@ -3,11 +3,17 @@
  * Claim up to N topics into artifacts/agent-jobs.json (never-idle producers).
  *
  * Order per free slot:
- *   1) unused named candidates (novel themes first) — never {theme}-update /
- *      concentration / geography sequels of the existing article base
+ *   1) unused named candidates (lifetime 0, then audience "social-popular",
+ *      then high priority) — never {theme}-update / concentration / geography
+ *      sequels of the existing article base
  *   2) {theme}-research-{year} only when that theme has ZERO lifetime posts
+ *      (social-popular unused themes first)
  *   3) operator retry of parked infra jobs (cap OPERATOR_REQUEUE_MAX)
  *   4) more unused diversity candidates so producers stay busy
+ *
+ * When named novel candidates are exhausted and free slots remain, spawn the
+ * novel-theme refill agent once (pid + cooldown). Do not wait for the hourly
+ * watchdog. Dry-run never spawns. Respects lock status=paused.
  *
  * Usage: node scripts/claim-next-topics.mjs [--max 4] [--run-id local-...]
  *        [--include-recovery-idle] [--force-slots N] [--dry-run]
@@ -35,10 +41,15 @@ import {
   unresolvedManualReviewThemes,
 } from "./lib/agent-jobs.mjs";
 import {
+  THEME_REGISTRY,
   getEligibleThemes,
   getDiversityBacklog,
   lifetimePostCount,
 } from "../src/data/theme-registry.ts";
+function isSocialPopularTheme(theme) {
+  return Boolean(theme && theme.audience === "social-popular");
+}
+import { spawnNovelThemeRefill } from "./lib/spawn-novel-theme-refill.mjs";
 
 /** Banned sequel families — these made the archive a hall of mirrors. */
 const SEQUEL_SLUG_RE =
@@ -373,24 +384,35 @@ function main() {
     return true;
   };
 
-  // (1) Unused named candidates — novel themes (lifetime 0) first.
+  // (1) Unused named candidates — lifetime 0, then social-popular, then high priority.
   const diversity = getDiversityBacklog(pairs, claimedSlugs);
   for (const c of diversity) {
     if (openSlots <= 0) break;
     takeDiversityRow(c);
   }
 
-  // (1b) Brand-new theme research slug only if that theme has ZERO lifetime posts.
+  // (1b) Research slug for themes with ZERO lifetime posts (ignore lane caps).
+  const zeroLifetimeThemes = THEME_REGISTRY.filter(
+    (theme) =>
+      theme.status === "active" &&
+      lifetimePostCount(pairs, theme.id) === 0 &&
+      !recoveryThemes.has(theme.id) &&
+      !claimedThemes.has(theme.id) &&
+      !isThemeBlocked(data, theme.id) &&
+      !deferThemes.has(theme.id),
+  ).sort((a, b) => {
+    const aSocial = isSocialPopularTheme(a) ? 1 : 0;
+    const bSocial = isSocialPopularTheme(b) ? 1 : 0;
+    if (aSocial !== bSocial) return bSocial - aSocial;
+    return a.id.localeCompare(b.id);
+  });
   for (const theme of eligible) {
-    if (openSlots <= 0) break;
-    if (recoveryThemes.has(theme.id) || claimedThemes.has(theme.id) || isThemeBlocked(data, theme.id)) {
-      continue;
-    }
-    if (deferThemes.has(theme.id)) continue;
     if (lifetimePostCount(pairs, theme.id) > 0) {
       skipped.push({ themeId: theme.id, reason: "theme_already_has_posts_no_sequel" });
-      continue;
     }
+  }
+  for (const theme of zeroLifetimeThemes) {
+    if (openSlots <= 0) break;
     const researchBase = `${slugify(theme.id)}-research`;
     if (stemTakenLocal(data, claimedSlugs, researchBase)) {
       skipped.push({ themeId: theme.id, stem: researchBase, reason: "research_stem_taken" });
@@ -443,6 +465,7 @@ function main() {
     }
   }
 
+  const poolExhausted = created.length === 0 && retried.length === 0 && openSlots > 0;
   const result = {
     claimed: created.length,
     retried: retried.length,
@@ -458,9 +481,16 @@ function main() {
     retries: retried,
     skipped: skipped.slice(0, 24),
     remainingSlots: openSlots,
+    poolExhausted,
     blockedStems: data.flags?.blockedStems || [],
     blockedThemes: data.flags?.blockedThemes || [],
   };
+  if (poolExhausted) {
+    result.refillSpawn = spawnNovelThemeRefill({
+      source: "claim-next-topics",
+      dryRun: args.dryRun,
+    });
+  }
   if (!args.dryRun) writeJobs(data);
   persistClaimResult(result, args.dryRun);
   console.log(JSON.stringify(result, null, 2));
