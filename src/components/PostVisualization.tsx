@@ -4813,6 +4813,24 @@ const UndergraduateEnrollmentVersusHighSchoolGraduateCohorts2026Dashboard = dyna
   },
 );
 
+const HighHazardPotentialDamsWithoutEmergencyActionPlans2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/HighHazardPotentialDamsWithoutEmergencyActionPlans2026Dashboard"
+    ).then(
+      (m) =>
+        m.HighHazardPotentialDamsWithoutEmergencyActionPlans2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6072,6 +6090,10 @@ export function PostVisualization({
 
   if (type === "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026") {
     return <UndergraduateEnrollmentVersusHighSchoolGraduateCohorts2026Dashboard />;
+  }
+
+  if (type === "high-hazard-potential-dams-without-emergency-action-plans-2026") {
+    return <HighHazardPotentialDamsWithoutEmergencyActionPlans2026Dashboard />;
   }
 
   return null;

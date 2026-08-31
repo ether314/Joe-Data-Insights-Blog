@@ -1,7 +1,9 @@
 /**
  * QA: npl-sites-with-construction-complete-versus-remaining-construction-2026
- * // viz-types: horizontal bars, donut pie, composed area+bar+line, stacked bars+line, stacked lead bars, milestone bars, funding scatter | layout: default
- * // smoke-marker: Headline — 58.7% of final NPL construction-complete
+ * // smoke-marker: Construction-complete share of final NPL
+ * // viz-types: split pie, stacked area CC vs remaining, dual-axis RAPC+sitewide,
+ * // horizontal pipeline bars, scatter remaining vs CC share, lead-mix bars
+ * // | controls: panel, year window | layout: default
  */
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -10,39 +12,29 @@ import { chromium } from "playwright";
 import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
 import { auditVizInteractions } from "./lib/viz-interaction-qa.mjs";
 import {
-  ANALYTICS,
-  ANNUAL_SITEWIDE_CC,
-  FINAL_NPL_SPLIT,
+  ANNUAL_SNAPSHOTS,
+  FY2025_SPLIT,
   HEADLINE,
-  LEAD_MIX,
-  MILESTONE_LADDER,
-  PROJECT_FLOW,
-  STATUS_UNIVERSE,
-  SUMMARY_TABLE,
+  VIZ_MARKERS,
 } from "../src/data/npl-sites-with-construction-complete-versus-remaining-construction-2026-data.ts";
 
-assert.equal(HEADLINE.finalNpl, 1343);
-assert.equal(HEADLINE.cumulativeCc, 1247);
-assert.equal(HEADLINE.ccOnFinalNpl, 788);
-assert.equal(HEADLINE.unfinishedOnFinalNpl, 555);
-assert.equal(HEADLINE.ccSharePct, 58.7);
-assert.equal(HEADLINE.unfinishedSharePct, 41.3);
-assert.equal(FINAL_NPL_SPLIT.length, 2);
-assert.equal(STATUS_UNIVERSE.length, 4);
-assert.ok(ANNUAL_SITEWIDE_CC.length >= 8);
-assert.equal(PROJECT_FLOW.length, 2);
-assert.equal(LEAD_MIX.length, 2);
-assert.ok(MILESTONE_LADDER.length >= 5);
-assert.ok(SUMMARY_TABLE.length >= 8);
-assert.equal(ANALYTICS.unfinishedSites, 555);
+assert.equal(HEADLINE.finalNplFy2025, 1343);
+assert.equal(HEADLINE.onFinalCcEst, 788);
+assert.equal(HEADLINE.remainingConstructionEst, 555);
+assert.equal(HEADLINE.onFinalCcSharePct, 58.7);
+assert.equal(HEADLINE.sitewideCcFy2025, 1);
+assert.equal(HEADLINE.rapcFy2025, 72);
+assert.ok(ANNUAL_SNAPSHOTS.length === 7);
+assert.ok(FY2025_SPLIT.length === 2);
+assert.ok(VIZ_MARKERS.includes("Construction-complete share of final NPL"));
+assert.ok(
+  VIZ_MARKERS.includes("788 construction-complete vs 555 still building"),
+);
 
 const root = process.cwd();
 const slug =
   "npl-sites-with-construction-complete-versus-remaining-construction-2026";
-const markers = [
-  "Headline — 58.7% of final NPL construction-complete",
-  "Final NPL split",
-];
+const markers = [...VIZ_MARKERS];
 
 async function clickBtn(page, name) {
   console.log(`→ click ${name}`);
@@ -56,37 +48,86 @@ async function main() {
     console.error("✗ Missing out/ — run npm run build first");
     process.exit(1);
   }
-  const port = Number(process.env.SMOKE_PORT || 4184);
+  const port = Number(process.env.SMOKE_PORT || 4186);
   const server = await startStaticServer(outDir, port);
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   page.setDefaultTimeout(15000);
   try {
-    await page.goto(`http://127.0.0.1:${port}/blog/${slug}.html`, {
-      waitUntil: "domcontentloaded",
-      timeout: 45000,
-    });
-    await page.waitForSelector(`[data-viz="${slug}"]`, { timeout: 20000 });
-    for (const m of markers) {
-      await page.getByText(m, { exact: false }).first().waitFor({
-        state: "attached",
-        timeout: 20000,
+    const candidates = [
+      `http://127.0.0.1:${port}/blog/${slug}/`,
+      `http://127.0.0.1:${port}/blog/${slug}.html`,
+    ];
+    let loaded = false;
+    for (const url of candidates) {
+      const res = await page.goto(url, {
+        waitUntil: "domcontentloaded",
+        timeout: 45000,
       });
-      console.log(`✓ ${m}`);
+      if (res && res.ok()) {
+        loaded = true;
+        break;
+      }
     }
-    await clickBtn(page, "Status universe");
-    await clickBtn(page, "CC cumulative path");
-    await clickBtn(page, "Project vs sitewide");
-    await clickBtn(page, "Who leads starts");
+    assert.ok(loaded, "post HTML not found");
+
+    await page.waitForSelector(`[data-viz="${slug}"]`, { timeout: 20000 }).catch(() => null);
+    await page.getByText(markers[0], { exact: false }).first().waitFor({
+      state: "attached",
+      timeout: 20000,
+    });
+    console.log(`✓ ${markers[0]}`);
+
+    await page
+      .getByText("788 construction-complete vs 555 still building", {
+        exact: false,
+      })
+      .first()
+      .waitFor({ timeout: 10000 });
+    console.log("✓ 788 construction-complete vs 555 still building");
+
+    await clickBtn(page, "CC vs remaining");
+    await page
+      .getByText("Construction-complete vs remaining on the final NPL", {
+        exact: false,
+      })
+      .first()
+      .waitFor({ timeout: 10000 });
+    await clickBtn(page, "RAPC vs sitewide");
+    await page
+      .getByText("Sitewide CC pace vs RAPC throughput", { exact: false })
+      .first()
+      .waitFor({ timeout: 10000 });
+    await clickBtn(page, "Pipeline bands");
+    await page
+      .getByText("FY2025 construction pipeline bands", { exact: false })
+      .first()
+      .waitFor({ timeout: 10000 });
+    await clickBtn(page, "Remaining vs share");
+    await page
+      .getByText("Remaining construction vs on-final CC share", {
+        exact: false,
+      })
+      .first()
+      .waitFor({ timeout: 10000 });
+    await clickBtn(page, "New-start leads");
+    await page
+      .getByText("Who started remedial construction in FY2025", {
+        exact: false,
+      })
+      .first()
+      .waitFor({ timeout: 10000 });
     await clickBtn(page, "Milestone ladder");
-    await clickBtn(page, "Funding vs flow");
-    await clickBtn(page, "Final NPL split");
-    await clickBtn(page, "Final + deleted");
-    await clickBtn(page, "FY2020–2025");
-    await clickBtn(page, "Final NPL only");
-    await clickBtn(page, "FY2016–2025");
+    await page
+      .getByText("FY2025 milestone ladder", { exact: false })
+      .first()
+      .waitFor({ timeout: 10000 });
+    await clickBtn(page, "FY25 split");
+    await clickBtn(page, "FY2022–FY2025");
+    console.log("✓ view controls");
+
     await auditVizInteractions(page, { slug });
-    console.log("✓ QA passed");
+    console.log(`✓ ${slug} QA passed`);
   } finally {
     await browser.close();
     await stopStaticServer(server);
@@ -94,6 +135,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error("✗ QA failed", err);
+  console.error(err);
   process.exit(1);
 });

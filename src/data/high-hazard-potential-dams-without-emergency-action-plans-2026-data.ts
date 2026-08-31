@@ -68,9 +68,12 @@ export const HEADLINE = {
   poorOrUnsatisfactoryCount: 2500,
   /** Inventory growth since 2012 */
   hhpGrowthSince2012Pct: 20,
-  /** 2018 federal vs state EAP shares (CRS) */
+  /** 2018 federal vs state EAP shares (CRS historical) */
   federalEapShare2018Pct: 74,
   stateEapShare2018Pct: 80,
+  /** Jan 2023 EAP shares (CRS R45981 update) */
+  federalEapShare2023Pct: 97,
+  stateEapShare2023Pct: 82,
   /** ASDSO rehab need ($B) */
   nonFederalRehabNeedBb: 165.2,
   nonFederalHhpRehabNeedBb: 37.4,
@@ -196,6 +199,22 @@ export const OWNERSHIP_EAP_COMPARE = [
     year: 2018,
     eapSharePct: 80,
     withoutSharePct: 20,
+    confidence: "crs" as Confidence,
+  },
+  {
+    id: "federal-2023",
+    regime: "Federally owned HHP",
+    year: 2023,
+    eapSharePct: 97,
+    withoutSharePct: 3,
+    confidence: "crs" as Confidence,
+  },
+  {
+    id: "state-2023",
+    regime: "State-regulated HHP",
+    year: 2023,
+    eapSharePct: 82,
+    withoutSharePct: 18,
     confidence: "crs" as Confidence,
   },
   {

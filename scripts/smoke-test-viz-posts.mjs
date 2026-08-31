@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "high-hazard-potential-dams-without-emergency-action-plans-2026",
+    marker: "High-hazard dams lacking an EAP",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026",
     marker: "Undergrad headcount vs HS graduate cohort",
     forbidden: "Loading interactive charts",

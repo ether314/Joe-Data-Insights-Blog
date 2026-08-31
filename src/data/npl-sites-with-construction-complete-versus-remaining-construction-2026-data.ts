@@ -1,19 +1,21 @@
 /**
- * NPL sites with construction complete versus remaining construction (2026).
+ * NPL construction-complete vs remaining construction — FY2019–FY2025 desk synthesis.
+ * Core question: What share of current final NPL sites have construction complete,
+ * and how many still have unfinished remedial construction?
  *
- * Core question: What share of current NPL sites have construction complete,
- * and how many still have construction unfinished?
+ * Anchors: EPA Superfund Remedial Annual Accomplishments (FY2019–FY2025);
+ * EPA NPL site totals / construction-completion definitions; GAO-25-108408.
  *
- * Headline (EPA Superfund Remedial Annual Accomplishments, FY2024–FY2025):
- * among 1,343 final NPL sites at end of FY2025, an estimated 788 (~58.7%)
- * have already reached sitewide construction complete while remaining on the
- * list; about 555 (~41.3%) still have unfinished remedial construction.
+ * "On-final CC" = cumulative NPL construction completions minus deleted NPL sites.
+ * That residual approximates final sites that have reached the sitewide construction
+ * milestone and remain listed. Labelled estimated because EPA does not publish a
+ * single table of final-only CC vs not-yet-CC each fiscal year.
  */
 
 export type Confidence = "disclosed" | "estimated" | "derived";
 
 export const SOURCE_NOTE =
-  "Primary: EPA Superfund Remedial Annual Accomplishments Metrics — Fiscal Year 2025 (NPL counts: 38 proposed / 1,343 final / 459 deleted; FY2025 sitewide construction complete: 1 site; remedial construction projects started 69 / ongoing 546 / completed 72) and Fiscal Year 2024 (cumulative sitewide construction complete: 1,246 NPL sites; annual sitewide CC: 4). Construction-complete sites still on the final NPL are estimated as cumulative CC (1,246 + 1 FY2025 = 1,247) minus deleted sites (459), under the program rule that deletion follows completed cleanup. GAO-25-108408 (March 2025 NPL snapshot: 1,340 active / 41 proposed / 459 deleted) cited for backlog and timeliness context. Sitewide Ready for Anticipated Use (SWRAU) net total 950 is from FY2024 metrics. Project-lead splits and SAA counts are EPA-disclosed; shares of unfinished construction are derived.";
+  "Final/proposed/deleted NPL counts and annual sitewide construction completions follow EPA Superfund Remedial Annual Accomplishments (FY2019–FY2025). Cumulative NPL construction completions: 1,246 at end FY2024 (EPA); +1 sitewide completion in FY2025 → 1,247. On-final construction-complete counts are desk-derived as cumulative NPL CC minus deleted sites (EPA construction-completion policy includes deleted NPL sites). RAPC = remedial action / remedial construction project completions. GAO-25-108408 supplies program-context for why remaining construction sites can stall.";
 
 export const SOURCES = [
   {
@@ -21,7 +23,7 @@ export const SOURCES = [
     url: "https://www.epa.gov/superfund/superfund-remedial-annual-accomplishments-metrics-fiscal-year-2025",
   },
   {
-    label: "EPA — Superfund Remedial Annual Accomplishments Metrics FY2024",
+    label: "EPA — Superfund Remedial Annual Accomplishments Metrics (FY2024 page)",
     url: "https://www.epa.gov/superfund/superfund-remedial-annual-accomplishments-metrics",
   },
   {
@@ -29,400 +31,360 @@ export const SOURCES = [
     url: "https://www.epa.gov/superfund/previous-superfund-remedial-annual-accomplishments",
   },
   {
-    label: "GAO-25-108408 — Superfund: Many Factors Can Affect Cleanup",
-    url: "https://www.gao.gov/products/gao-25-108408",
+    label: "EPA — Construction completion definition & RAPC",
+    url: "https://www.epa.gov/superfund/superfund-remedial-action-project-completion-and-construction-completions",
   },
   {
-    label: "EPA — Superfund Accomplishments Report Fiscal Year 2025",
-    url: "https://www.epa.gov/superfund/superfund-accomplishments-report-fiscal-year-2025",
+    label: "EPA — Construction Completions at NPL Sites (by state)",
+    url: "https://www.epa.gov/superfund/construction-completions-npl-sites-state",
+  },
+  {
+    label: "GAO-25-108408 — Superfund cleanup factors",
+    url: "https://www.gao.gov/products/gao-25-108408",
   },
 ] as const;
 
-/** End FY2025 NPL book (EPA FY2025 accomplishments) */
-export const NPL_BOOK = {
-  proposed: 38,
-  final: 1_343,
-  deleted: 459,
-  /** Cumulative sitewide construction complete through FY2024 */
-  cumulativeCcFy2024: 1_246,
-  /** Sitewide CC added in FY2025 */
-  sitewideCcFy2025: 1,
-  confidence: "disclosed" as Confidence,
-};
-
-/** Derived construction-complete / unfinished split on the final NPL */
+/** Headline beats for cards / excerpt */
 export const HEADLINE = {
-  finalNpl: NPL_BOOK.final,
-  cumulativeCc: NPL_BOOK.cumulativeCcFy2024 + NPL_BOOK.sitewideCcFy2025, // 1,247
-  deleted: NPL_BOOK.deleted,
-  /** CC sites still listed as final */
-  ccOnFinalNpl: NPL_BOOK.cumulativeCcFy2024 + NPL_BOOK.sitewideCcFy2025 - NPL_BOOK.deleted, // 788
-  unfinishedOnFinalNpl:
-    NPL_BOOK.final -
-    (NPL_BOOK.cumulativeCcFy2024 + NPL_BOOK.sitewideCcFy2025 - NPL_BOOK.deleted), // 555
-  ccSharePct: Math.round(
-    ((NPL_BOOK.cumulativeCcFy2024 + NPL_BOOK.sitewideCcFy2025 - NPL_BOOK.deleted) /
-      NPL_BOOK.final) *
-      1000,
-  ) / 10, // 58.7
-  unfinishedSharePct: Math.round(
-    ((NPL_BOOK.final -
-      (NPL_BOOK.cumulativeCcFy2024 + NPL_BOOK.sitewideCcFy2025 - NPL_BOOK.deleted)) /
-      NPL_BOOK.final) *
-      1000,
-  ) / 10, // 41.3
-  confidence: "estimated" as Confidence,
-};
+  finalNplFy2025: 1343,
+  deletedNplFy2025: 459,
+  proposedNplFy2025: 38,
+  cumulativeCcNplFy2025: 1247,
+  onFinalCcEst: 788,
+  remainingConstructionEst: 555,
+  onFinalCcSharePct: 58.7,
+  remainingSharePct: 41.3,
+  sitewideCcFy2025: 1,
+  sitewideCcFy2024: 4,
+  rapcFy2025: 72,
+  newConstructionStartsFy2025: 69,
+  ongoingConstructionProjectsFy2025: 546,
+  constructionObligationsFy2025UsdM: 766,
+  saaActiveRemediation: 51,
+  saaConstructionComplete: 18,
+} as const;
 
-export type StatusSliceId =
-  | "cc-on-final"
-  | "unfinished-final"
-  | "deleted"
-  | "proposed";
+export const VIZ_MARKERS = [
+  "Construction-complete share of final NPL",
+  "788 construction-complete vs 555 still building",
+  "Sitewide CC pace vs RAPC throughput",
+  "On-final CC share held near 59%",
+] as const;
 
-export type StatusSlice = {
-  id: StatusSliceId;
+export type SnapshotRow = {
+  fy: number;
   label: string;
-  sites: number;
-  shareOfUniversePct: number;
-  confidence: Confidence;
-};
-
-const universe =
-  NPL_BOOK.final + NPL_BOOK.deleted + NPL_BOOK.proposed; // 1,840
-
-/** Full NPL status universe for pie / stacked views */
-export const STATUS_UNIVERSE: StatusSlice[] = [
-  {
-    id: "cc-on-final",
-    label: "Construction complete (still final)",
-    sites: HEADLINE.ccOnFinalNpl,
-    shareOfUniversePct: Math.round((HEADLINE.ccOnFinalNpl / universe) * 1000) / 10,
-    confidence: "estimated",
-  },
-  {
-    id: "unfinished-final",
-    label: "Construction unfinished (final)",
-    sites: HEADLINE.unfinishedOnFinalNpl,
-    shareOfUniversePct:
-      Math.round((HEADLINE.unfinishedOnFinalNpl / universe) * 1000) / 10,
-    confidence: "estimated",
-  },
-  {
-    id: "deleted",
-    label: "Deleted from NPL",
-    sites: NPL_BOOK.deleted,
-    shareOfUniversePct: Math.round((NPL_BOOK.deleted / universe) * 1000) / 10,
-    confidence: "disclosed",
-  },
-  {
-    id: "proposed",
-    label: "Proposed for NPL",
-    sites: NPL_BOOK.proposed,
-    shareOfUniversePct: Math.round((NPL_BOOK.proposed / universe) * 1000) / 10,
-    confidence: "disclosed",
-  },
-];
-
-export type FinalSplitRow = {
-  id: "construction-complete" | "construction-unfinished";
-  label: string;
-  sites: number;
-  sharePct: number;
-  confidence: Confidence;
-};
-
-/** Binary split on current final NPL — the brief’s core answer */
-export const FINAL_NPL_SPLIT: FinalSplitRow[] = [
-  {
-    id: "construction-complete",
-    label: "Construction complete",
-    sites: HEADLINE.ccOnFinalNpl,
-    sharePct: HEADLINE.ccSharePct,
-    confidence: "estimated",
-  },
-  {
-    id: "construction-unfinished",
-    label: "Construction unfinished",
-    sites: HEADLINE.unfinishedOnFinalNpl,
-    sharePct: HEADLINE.unfinishedSharePct,
-    confidence: "estimated",
-  },
-];
-
-export type AnnualCcRow = {
-  fiscalYear: number;
-  sitewideCc: number;
-  cumulativeCc: number;
-  confidence: Confidence;
+  proposed: number;
+  final: number;
+  deleted: number;
+  cumulativeCcNpl: number;
+  cumulativeCcConfidence: Confidence;
+  onFinalCcEst: number;
+  remainingConstructionEst: number;
+  onFinalCcSharePct: number;
+  sitewideCcAnnual: number;
+  rapcCompleted: number;
+  notes: string;
 };
 
 /**
- * Annual sitewide construction-complete counts + running cumulative.
- * FY2016–FY2019 cumulatives reconstructed from EPA prior-year disclosures;
- * FY2020+ use published cumulative or annual adds.
+ * Annual NPL inventory + construction milestones.
+ * Cumulative CC for FY2021–FY2023 back-calculated from FY2020 disclosed 1,221
+ * plus disclosed annual sitewide NPL completions (8, 9, 4).
  */
-export const ANNUAL_SITEWIDE_CC: AnnualCcRow[] = [
-  { fiscalYear: 2016, sitewideCc: 11, cumulativeCc: 1_188, confidence: "disclosed" },
-  { fiscalYear: 2017, sitewideCc: 7, cumulativeCc: 1_195, confidence: "disclosed" },
-  { fiscalYear: 2018, sitewideCc: 10, cumulativeCc: 1_205, confidence: "disclosed" },
-  { fiscalYear: 2019, sitewideCc: 6, cumulativeCc: 1_211, confidence: "disclosed" },
-  { fiscalYear: 2020, sitewideCc: 10, cumulativeCc: 1_221, confidence: "disclosed" },
-  { fiscalYear: 2021, sitewideCc: 8, cumulativeCc: 1_229, confidence: "derived" },
-  { fiscalYear: 2022, sitewideCc: 9, cumulativeCc: 1_238, confidence: "derived" },
-  { fiscalYear: 2023, sitewideCc: 4, cumulativeCc: 1_242, confidence: "derived" },
-  { fiscalYear: 2024, sitewideCc: 4, cumulativeCc: 1_246, confidence: "disclosed" },
-  { fiscalYear: 2025, sitewideCc: 1, cumulativeCc: 1_247, confidence: "derived" },
-];
-
-export type ProjectFlowRow = {
-  fiscalYear: number;
-  started: number;
-  ongoingPrior: number;
-  completedProjects: number;
-  sitewideCc: number;
-  confidence: Confidence;
-};
-
-/** Remedial construction project flow vs rare sitewide CC milestone */
-export const PROJECT_FLOW: ProjectFlowRow[] = [
+export const ANNUAL_SNAPSHOTS: SnapshotRow[] = [
   {
-    fiscalYear: 2024,
-    started: 86,
-    ongoingPrior: 550,
-    completedProjects: 73,
-    sitewideCc: 4,
-    confidence: "disclosed",
+    fy: 2019,
+    label: "FY2019",
+    proposed: 48,
+    final: 1333,
+    deleted: 424,
+    cumulativeCcNpl: 1211,
+    cumulativeCcConfidence: "disclosed",
+    onFinalCcEst: 787,
+    remainingConstructionEst: 546,
+    onFinalCcSharePct: 59.0,
+    sitewideCcAnnual: 6,
+    rapcCompleted: 89,
+    notes: "EPA: 1,211 NPL + 8 SAA cumulative CC",
   },
   {
-    fiscalYear: 2025,
-    started: 69,
-    ongoingPrior: 546,
-    completedProjects: 72,
-    sitewideCc: 1,
-    confidence: "disclosed",
+    fy: 2020,
+    label: "FY2020",
+    proposed: 48,
+    final: 1327,
+    deleted: 438,
+    cumulativeCcNpl: 1221,
+    cumulativeCcConfidence: "disclosed",
+    onFinalCcEst: 783,
+    remainingConstructionEst: 544,
+    onFinalCcSharePct: 59.0,
+    sitewideCcAnnual: 10,
+    rapcCompleted: 91,
+    notes: "EPA: 1,221 NPL + 9 SAA; 10 NPL + 1 SAA sitewide in year",
+  },
+  {
+    fy: 2021,
+    label: "FY2021",
+    proposed: 51,
+    final: 1322,
+    deleted: 447,
+    cumulativeCcNpl: 1229,
+    cumulativeCcConfidence: "derived",
+    onFinalCcEst: 782,
+    remainingConstructionEst: 540,
+    onFinalCcSharePct: 59.2,
+    sitewideCcAnnual: 8,
+    rapcCompleted: 75,
+    notes: "Cumulative = FY2020 1,221 + 8 sitewide NPL",
+  },
+  {
+    fy: 2022,
+    label: "FY2022",
+    proposed: 39,
+    final: 1334,
+    deleted: 452,
+    cumulativeCcNpl: 1238,
+    cumulativeCcConfidence: "derived",
+    onFinalCcEst: 786,
+    remainingConstructionEst: 548,
+    onFinalCcSharePct: 58.9,
+    sitewideCcAnnual: 9,
+    rapcCompleted: 74,
+    notes: "Cumulative = prior + 9 sitewide NPL",
+  },
+  {
+    fy: 2023,
+    label: "FY2023",
+    proposed: 41,
+    final: 1336,
+    deleted: 456,
+    cumulativeCcNpl: 1242,
+    cumulativeCcConfidence: "derived",
+    onFinalCcEst: 786,
+    remainingConstructionEst: 550,
+    onFinalCcSharePct: 58.8,
+    sitewideCcAnnual: 4,
+    rapcCompleted: 69,
+    notes: "Cumulative = prior + 4 sitewide NPL",
+  },
+  {
+    fy: 2024,
+    label: "FY2024",
+    proposed: 42,
+    final: 1340,
+    deleted: 458,
+    cumulativeCcNpl: 1246,
+    cumulativeCcConfidence: "disclosed",
+    onFinalCcEst: 788,
+    remainingConstructionEst: 552,
+    onFinalCcSharePct: 58.8,
+    sitewideCcAnnual: 4,
+    rapcCompleted: 73,
+    notes: "EPA discloses 1,246 cumulative NPL CC",
+  },
+  {
+    fy: 2025,
+    label: "FY2025",
+    proposed: 38,
+    final: 1343,
+    deleted: 459,
+    cumulativeCcNpl: 1247,
+    cumulativeCcConfidence: "derived",
+    onFinalCcEst: 788,
+    remainingConstructionEst: 555,
+    onFinalCcSharePct: 58.7,
+    sitewideCcAnnual: 1,
+    rapcCompleted: 72,
+    notes: "FY2024 1,246 + 1 sitewide completion; end-FY inventory from FY2025 report",
+  },
+];
+
+export type SplitSlice = {
+  id: "constructionComplete" | "remainingConstruction";
+  label: string;
+  sites: number;
+  sharePct: number;
+  color: string;
+};
+
+export const FY2025_SPLIT: SplitSlice[] = [
+  {
+    id: "constructionComplete",
+    label: "Construction complete (still on final NPL)",
+    sites: HEADLINE.onFinalCcEst,
+    sharePct: HEADLINE.onFinalCcSharePct,
+    color: "#0d9488",
+  },
+  {
+    id: "remainingConstruction",
+    label: "Remaining construction (not yet sitewide CC)",
+    sites: HEADLINE.remainingConstructionEst,
+    sharePct: HEADLINE.remainingSharePct,
+    color: "#c2410c",
+  },
+];
+
+export type PipelineBand = {
+  id: string;
+  label: string;
+  value: number;
+  unit: "sites" | "projects" | "usdM";
+  color: string;
+  detail: string;
+};
+
+/** FY2025 construction pipeline bands — mix of site and project metrics */
+export const FY2025_PIPELINE: PipelineBand[] = [
+  {
+    id: "remaining",
+    label: "Final NPL still building",
+    value: 555,
+    unit: "sites",
+    color: "#c2410c",
+    detail: "Estimated final sites without sitewide construction completion",
+  },
+  {
+    id: "onFinalCc",
+    label: "Final NPL construction complete",
+    value: 788,
+    unit: "sites",
+    color: "#0d9488",
+    detail: "Estimated final sites past the sitewide CC milestone",
+  },
+  {
+    id: "ongoingProjects",
+    label: "Ongoing remedial construction projects",
+    value: 546,
+    unit: "projects",
+    color: "#0369a1",
+    detail: "Projects started in prior years still under construction/oversight",
+  },
+  {
+    id: "newStarts",
+    label: "New remedial construction starts",
+    value: 69,
+    unit: "projects",
+    color: "#7c3aed",
+    detail: "27 government + 20 PRP + 22 federal-facility led",
+  },
+  {
+    id: "rapcDone",
+    label: "Remedial construction projects completed",
+    value: 72,
+    unit: "projects",
+    color: "#15803d",
+    detail: "Discrete RAPC completions — many sites need several before sitewide CC",
+  },
+  {
+    id: "sitewideCc",
+    label: "Sitewide construction completions",
+    value: 1,
+    unit: "sites",
+    color: "#0f766e",
+    detail: "Entire-site physical construction finished in FY2025",
   },
 ];
 
 export type LeadMixRow = {
-  fiscalYear: number;
-  government: number;
-  prp: number;
-  federalFacility: number;
-  confidence: Confidence;
+  id: "government" | "prp" | "federalFacility";
+  label: string;
+  starts: number;
+  color: string;
 };
 
-/** Who started new remedial construction projects */
-export const LEAD_MIX: LeadMixRow[] = [
-  {
-    fiscalYear: 2024,
-    government: 49,
-    prp: 16,
-    federalFacility: 21,
-    confidence: "disclosed",
-  },
-  {
-    fiscalYear: 2025,
-    government: 27,
-    prp: 20,
-    federalFacility: 22,
-    confidence: "disclosed",
-  },
+export const FY2025_NEW_START_LEAD: LeadMixRow[] = [
+  { id: "government", label: "Government-led", starts: 27, color: "#0369a1" },
+  { id: "prp", label: "PRP-led", starts: 20, color: "#ca8a04" },
+  { id: "federalFacility", label: "Federal facility-led", starts: 22, color: "#7c3aed" },
 ];
 
 export type SaaRow = {
-  id: "active-remediation" | "construction-complete";
+  id: "active" | "cc";
   label: string;
   sites: number;
-  fiscalYear: number;
-  confidence: Confidence;
+  color: string;
 };
 
-/** Superfund Alternative Approach agreements (FY2025) */
 export const SAA_STATUS: SaaRow[] = [
   {
-    id: "active-remediation",
-    label: "SAA — active remediation",
+    id: "active",
+    label: "SAA still in active remediation",
     sites: 51,
-    fiscalYear: 2025,
-    confidence: "disclosed",
+    color: "#ea580c",
   },
   {
-    id: "construction-complete",
-    label: "SAA — construction complete",
+    id: "cc",
+    label: "SAA construction complete",
     sites: 18,
-    fiscalYear: 2025,
-    confidence: "disclosed",
+    color: "#0d9488",
   },
 ];
 
 export type MilestoneLadderRow = {
-  id: string;
+  stage: string;
+  count: number;
+  kind: "inventory" | "milestone" | "exit";
+  color: string;
+};
+
+/** FY2025 ladder from listing through deletion */
+export const FY2025_MILESTONE_LADDER: MilestoneLadderRow[] = [
+  { stage: "Proposed NPL", count: 38, kind: "inventory", color: "#94a3b8" },
+  { stage: "Final NPL", count: 1343, kind: "inventory", color: "#475569" },
+  {
+    stage: "Final · remaining construction",
+    count: 555,
+    kind: "milestone",
+    color: "#c2410c",
+  },
+  {
+    stage: "Final · construction complete",
+    count: 788,
+    kind: "milestone",
+    color: "#0d9488",
+  },
+  { stage: "Deleted from NPL (cumulative)", count: 459, kind: "exit", color: "#15803d" },
+];
+
+export type DualAxisRow = {
+  fy: number;
   label: string;
-  sites: number;
-  note: string;
-  confidence: Confidence;
+  sitewideCc: number;
+  rapc: number;
+  remainingEst: number;
+  ccSharePct: number;
 };
 
-/**
- * Pipeline ladder from exposures controlled → construction complete → SWRAU → deleted.
- * Numbers are cumulative program totals (not mutually exclusive stages).
- */
-export const MILESTONE_LADDER: MilestoneLadderRow[] = [
-  {
-    id: "heuc",
-    label: "Human exposures under control",
-    sites: 1_505,
-    note: "End FY2025 cumulative",
-    confidence: "disclosed",
-  },
-  {
-    id: "gmc",
-    label: "Groundwater migration controlled",
-    sites: 1_191,
-    note: "End FY2025 cumulative",
-    confidence: "disclosed",
-  },
-  {
-    id: "cc",
-    label: "Sitewide construction complete",
-    sites: HEADLINE.cumulativeCc,
-    note: "Through FY2025 (NPL)",
-    confidence: "derived",
-  },
-  {
-    id: "swrau",
-    label: "Sitewide ready for anticipated use",
-    sites: 950,
-    note: "Net total end FY2024",
-    confidence: "disclosed",
-  },
-  {
-    id: "deleted",
-    label: "Deleted from NPL",
-    sites: 459,
-    note: "End FY2025",
-    confidence: "disclosed",
-  },
-];
-
-export type FundingRow = {
-  fiscalYear: number;
-  constructionObligatedM: number;
-  preConstructionObligatedM: number;
-  confidence: Confidence;
-};
-
-export const FUNDING: FundingRow[] = [
-  {
-    fiscalYear: 2024,
-    constructionObligatedM: 1_300,
-    preConstructionObligatedM: 417,
-    confidence: "disclosed",
-  },
-  {
-    fiscalYear: 2025,
-    constructionObligatedM: 766,
-    preConstructionObligatedM: 308,
-    confidence: "disclosed",
-  },
-];
-
-export type SummaryTableRow = {
-  metric: string;
-  value: string;
-  source: string;
-  confidence: Confidence;
-};
-
-export const SUMMARY_TABLE: SummaryTableRow[] = [
-  {
-    metric: "Final NPL sites (end FY2025)",
-    value: "1,343",
-    source: "EPA FY2025 accomplishments",
-    confidence: "disclosed",
-  },
-  {
-    metric: "Cumulative sitewide construction complete",
-    value: "1,247",
-    source: "EPA FY2024 cumulative 1,246 + FY2025 add 1",
-    confidence: "derived",
-  },
-  {
-    metric: "CC sites still on final NPL",
-    value: String(HEADLINE.ccOnFinalNpl),
-    source: "Cumulative CC − deleted",
-    confidence: "estimated",
-  },
-  {
-    metric: "Construction unfinished on final NPL",
-    value: String(HEADLINE.unfinishedOnFinalNpl),
-    source: "Final − CC-on-final",
-    confidence: "estimated",
-  },
-  {
-    metric: "CC share of final NPL",
-    value: `${HEADLINE.ccSharePct}%`,
-    source: "Derived",
-    confidence: "estimated",
-  },
-  {
-    metric: "Unfinished share of final NPL",
-    value: `${HEADLINE.unfinishedSharePct}%`,
-    source: "Derived",
-    confidence: "estimated",
-  },
-  {
-    metric: "Deleted from NPL (cumulative)",
-    value: "459",
-    source: "EPA FY2025 accomplishments",
-    confidence: "disclosed",
-  },
-  {
-    metric: "FY2025 remedial construction projects completed",
-    value: "72",
-    source: "EPA FY2025 accomplishments",
-    confidence: "disclosed",
-  },
-  {
-    metric: "FY2025 sitewide construction complete",
-    value: "1",
-    source: "EPA FY2025 accomplishments",
-    confidence: "disclosed",
-  },
-  {
-    metric: "SWRAU net total (end FY2024)",
-    value: "950",
-    source: "EPA FY2024 accomplishments",
-    confidence: "disclosed",
-  },
-];
-
-export type UniverseMode = "final-only" | "final-plus-deleted" | "full-book";
-export type YearFilter = "all" | "recent" | "fy2025";
-
-export function filterAnnualCc(years: YearFilter): AnnualCcRow[] {
-  if (years === "fy2025") return ANNUAL_SITEWIDE_CC.filter((r) => r.fiscalYear === 2025);
-  if (years === "recent") return ANNUAL_SITEWIDE_CC.filter((r) => r.fiscalYear >= 2020);
-  return ANNUAL_SITEWIDE_CC;
+export function dualAxisSeries(fromFy = 2019): DualAxisRow[] {
+  return ANNUAL_SNAPSHOTS.filter((r) => r.fy >= fromFy).map((r) => ({
+    fy: r.fy,
+    label: r.label,
+    sitewideCc: r.sitewideCcAnnual,
+    rapc: r.rapcCompleted,
+    remainingEst: r.remainingConstructionEst,
+    ccSharePct: r.onFinalCcSharePct,
+  }));
 }
 
-export function statusForMode(mode: UniverseMode): StatusSlice[] {
-  if (mode === "final-only") {
-    return STATUS_UNIVERSE.filter(
-      (s) => s.id === "cc-on-final" || s.id === "unfinished-final",
-    );
-  }
-  if (mode === "final-plus-deleted") {
-    return STATUS_UNIVERSE.filter((s) => s.id !== "proposed");
-  }
-  return STATUS_UNIVERSE;
+export function stackedSplitRows(fromFy = 2019) {
+  return ANNUAL_SNAPSHOTS.filter((r) => r.fy >= fromFy).map((r) => ({
+    fy: r.fy,
+    label: r.label,
+    constructionComplete: r.onFinalCcEst,
+    remainingConstruction: r.remainingConstructionEst,
+    ccSharePct: r.onFinalCcSharePct,
+  }));
 }
 
-export const ANALYTICS = {
-  projectsPerSitewideCcFy2025: 72, // 72 project completions for 1 sitewide CC
-  projectsPerSitewideCcFy2024: Math.round(73 / 4), // ~18
-  unfinishedSites: HEADLINE.unfinishedOnFinalNpl,
-  ccSharePct: HEADLINE.ccSharePct,
-  saaCcSharePct: Math.round((18 / (51 + 18)) * 1000) / 10, // 26.1
-};
+export function fmtInt(n: number): string {
+  return Math.round(n).toLocaleString("en-US");
+}
+
+export function fmtPct(n: number, digits = 1): string {
+  return `${n.toFixed(digits)}%`;
+}
+
+export function fmtUsdM(n: number): string {
+  return `$${n.toLocaleString("en-US")}M`;
+}

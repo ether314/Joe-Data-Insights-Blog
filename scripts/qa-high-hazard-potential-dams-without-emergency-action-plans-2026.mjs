@@ -26,7 +26,7 @@ assert.equal(HEADLINE.nidHighHazard, 16700);
 assert.ok(EAP_STATUS_SPLIT.length === 2);
 assert.ok(EAP_COVERAGE_TREND.length >= 6);
 assert.ok(DIVISION_EAP_GAPS.length === 9);
-assert.ok(OWNERSHIP_EAP_COMPARE.length === 3);
+assert.ok(OWNERSHIP_EAP_COMPARE.length >= 3);
 assert.ok(STATE_EAP_PANEL.length >= 8);
 assert.equal(
   DIVISION_EAP_GAPS.reduce((s, r) => s + r.hhpDams, 0),

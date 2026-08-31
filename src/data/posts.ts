@@ -2,6 +2,92 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "high-hazard-potential-dams-without-emergency-action-plans-2026",
+    slug: "high-hazard-potential-dams-without-emergency-action-plans-2026",
+    title:
+      "18% of State-Regulated High-Hazard Dams Still Lack an Emergency Action Plan",
+    excerpt:
+      "ASCE’s 2025 Dams card, citing ASDSO and NID program metrics, puts EAP coverage at about 82% for state-regulated high-hazard potential dams — leaving roughly 2,400 structures without a filed emergency action plan even as the high-hazard inventory grows.",
+    category: "Global Systems",
+    themeId: "nid-high-hazard-dams",
+    imageUrl:
+      "/images/global-systems-high-hazard-potential-dams-without-emergency-action-plans-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic dam at night with amber downstream valley glow and cyan inundation-map accents, bold 18% and NO EAP callouts, Visual Capitalist-style editorial",
+    publishedAt: "2026-08-30T19:00:00Z",
+    featured: true,
+    visualization:
+      "high-hazard-potential-dams-without-emergency-action-plans-2026",
+    layout: "default",
+    format: "explainer",
+    content: `A high-hazard potential dam is not a prediction that the structure will fail. In the National Inventory of Dams (NID) vocabulary maintained by the U.S. Army Corps of Engineers, **hazard potential** is a consequence classification: if the dam fails, loss of life is expected. As of August 2024, ASCE’s Dams infrastructure card counts **more than 16,700** such dams in the United States. That inventory has grown about **20% since 2012**, mostly because downstream development reclassified structures that once sat above emptier valleys.
+
+The preparedness question is narrower and more actionable. An **emergency action plan (EAP)** is the document that names who calls whom, how inundation maps are used, and which preplanned steps reduce damage and fatalities if an uncontrolled release begins. ASCE’s 2025 Dams card, drawing on Association of State Dam Safety Officials (ASDSO) and NID program metrics, reports that **more than 11,000** state-regulated high-hazard potential dams — **nearly 82%** of that state-regulated high-hazard set — have an EAP on file. The residual is the headline: **about 18% still do not**.
+
+Implied against that 82% / 11,000 frame, roughly **2,400** state-regulated high-hazard dams remain without a filed EAP. The interactive dashboard above walks the national status split, the long climb-and-plateau of coverage, census-division gap composites, federal-versus-state ownership comparisons, a condition-by-preparedness overlay, and an illustrative state scatter. The point is not that EAP filing has failed. Coverage more than doubled since the late 1990s. The point is that **the residual is stuck**, even while the high-hazard map keeps expanding.
+
+## What “high hazard” and “EAP” actually mean
+
+Hazard potential is a **failure-consequence label**, not a condition grade. A well-maintained dam above a densely settled floodplain can be high hazard. A deteriorated embankment above remote pasture can be low or significant hazard. ASCE emphasizes that about **15%** — more than **2,500** — of the nation’s high-hazard dams are assessed **poor or unsatisfactory**. Those two ledgers travel together in risk conversations and diverge in practice: an EAP does not repair a deficient spillway, and a satisfactory inspection does not evacuate a valley.
+
+FEMA and ASDSO describe an EAP as identifying emergency conditions, specifying preplanned actions to limit property damage and loss of life, and triggering when failure or uncontrolled release is imminent. Useful EAPs include notification trees, inundation mapping, and exercise history. The 2020 Edenville Dam failure in Michigan is repeatedly cited because an EAP exercise informed orderly downstream evacuations and no casualties were reported — a reminder that **paper plans only matter when they have been practiced**.
+
+State dam safety programs regulate the large majority of NID dams (about **69%** of the inventory in long-running ASDSO framing). Federal agencies own a minority of structures but often operate under their own EAP regimes. That ownership split is why national sentences carefully say **state-regulated** high-hazard dams when quoting the 82% figure.
+
+## The national residual: ~18% without an EAP
+
+| Metric (2024 ASCE / ASDSO frame) | Value |
+| --- | ---: |
+| NID high-hazard potential dams | >16,700 |
+| State-regulated HHP with EAP | >11,000 (~82%) |
+| Implied state-regulated HHP without EAP | ~2,400 (~18%) |
+| HHP in poor / unsatisfactory condition | >2,500 (~15%) |
+| HHP inventory growth since 2012 | ~20% |
+| Non-federal HHP rehab need (ASDSO) | $37.4B |
+
+The arithmetic is deliberately framed as **implied**. ASCE publishes “more than 11,000” and “nearly 82%,” not a single audited NID extract reprinted here. Desk math that treats 11,000 as the with-EAP floor at 82% yields about **13,415** state-regulated high-hazard dams and about **2,415** without an EAP. Those are order-of-magnitude companions to the published percentages, not a substitute for querying the live NID \`EAP\` field state by state.
+
+Even so, the policy reading is stable. Roughly **one in six** state-regulated high-hazard dams still lacks the minimum preparedness document that federal and state dam-safety orthodoxy has pushed for a generation. Against a national high-hazard inventory north of 16,700, the residual is large enough to matter for emergency managers, insurers, and downstream land-use boards — and small enough, relative to the 1999 baseline, that complacency is the greater risk than panic.
+
+## A quarter-century climb that flattened
+
+Congressional Research Service reporting (R45981) tracks the long arc: state-regulated high-hazard EAP coverage rose from **35% in 1999** to **80% in 2018**. FEMA’s mid-2000s Emergency Action Planning guide for state-regulated high-hazard dams put the share near **49%** in that era’s NID update. ASDSO annuals placed coverage around **75% by 2014**. ASCE’s 2021 card described **81%** with EAPs as of 2018 (with a 77% prior-year print). The 2025 card’s **~82%** for 2024 is essentially flat versus the early-2020s.
+
+That is the uncomfortable shape of the series: steep gains for fifteen-plus years, then a **plateau**. Coverage did not reverse. It stopped closing the last fifth of the gap. Meanwhile the high-hazard inventory itself expanded — ASCE’s **+20% since 2012** — as suburbs, industrial parks, and critical facilities filled floodplains that older classifications treated as empty. Holding an 82% rate while the denominator grows means **absolute EAP counts can rise without shrinking the unprotected share**.
+
+The dashboard’s trend and inventory-index panels make that tension visible. An EAP share line that stalls near 82% beside a high-hazard inventory index that keeps climbing is not a story of finished work. It is a story of **running to stand still** on the residual.
+
+## Federal owners, state programs, and the 2018 gap
+
+CRS’s 2018 cut is still the cleanest published ownership comparison: **74%** of federally owned high-hazard potential dams had EAPs, versus **80%** of state-regulated ones. Federal fleets are smaller and professionally staffed, which makes the lower federal share in that year noteworthy — a reminder that ownership labels do not automatically buy preparedness. By 2024, the state-regulated print had edged to **~82%**, narrowing but not eliminating the residual.
+
+State capacity remains uneven. ASCE notes that a typical state dam inspector may oversee on the order of **190** dams when construction oversight is included, and ASDSO staffing ratios for high-hazard dams per full-time equivalent have historically ranged from single digits to well over 100. Alabama’s recent move toward an opt-in dam safety program after years without a full program is a reminder that **regulatory architecture itself** still varies. EAP mandates, exercise requirements, and inundation-map standards are not uniform across fifty state codes.
+
+Census-division composites in the dashboard — labeled as desk composites scaled to the national residual — put higher without-EAP shares in parts of the East South Central and other mid-coverage belts, and lower gaps in New England and Pacific panels. Treat those as **ordinal exposure sketches**, not official ASDSO state report cards. The interactive state scatter uses the same honesty rule: illustrative points for visualization, not a claim that any one state’s filed percentage was scraped from the NID this morning.
+
+## Condition is not preparedness — and both still lag
+
+Crossing ASCE’s poor/unsatisfactory share (~15% of high-hazard dams) with EAP status produces an uncomfortable four-cell story. Some deficient dams have plans; some apparently sound dams do not. The highest-consequence cell is the overlap: structures that are both **structurally concerning** and **unprepared for notification**. The dashboard’s stacked condition panel is an illustrative overlay — it does not come from a published ASCE crosstab — but it forces the right question: closing the EAP gap and funding rehabilitation are **complements**, not substitutes.
+
+Rehab money underscores the asymmetry. ASDSO’s non-federal rehabilitation need estimate sits at **$165.2 billion**, of which **$37.4 billion** is attributed to non-federal high-hazard potential dams. The High Hazard Potential Dam Rehabilitation Grant Program has been authorized far above what recent appropriations delivered; ASCE notes zero HHPD funding in FY2023 and FY2024 in its funding critique. EAPs are cheap relative to spillway rebuilds. That is exactly why an **18% residual** is hard to defend: the missing plans are not the billion-dollar projects.
+
+## How to read the dashboard without over-claiming
+
+Six panels answer different questions. The donut isolates the 82/18 national split for state-regulated high-hazard dams. The coverage trend shows the climb from 35% toward the plateau. Division gap bars and the gap-metric toggle switch between without-EAP **counts** and **shares** so a small division with a high rate does not hide behind a large division with more absolute dams. Ownership compare restates the CRS federal-versus-state cut beside the 2024 state print. Condition × EAP stacks the illustrative overlay. The state scatter plots inventory size against gap rate with bubble size for dams lacking plans.
+
+Two controls matter for interpretation. **Gap metric** changes whether rankings emphasize percentage or headcount. **Division** filters the division bars and state scatter so regional desks can isolate a belt without rewriting the national headline. Source notes under the charts mark which rows are published ASCE/CRS/FEMA figures and which are composites.
+
+## Caveats and what would move the 18%
+
+Several caveats should travel with every share of this piece. First, **hazard potential is not failure probability**; quoting high-hazard counts without that disclaimer invites scare headlines. Second, the **82% / 18%** figures are ASCE’s state-regulated framing citing ASDSO/NID program metrics — they are not an independent recount of every NID row in this article. Third, **division and state panels are desk composites** calibrated to the national residual; they preserve ordinal structure for charts and must not be cited as audited state dashboards. Fourth, **EAP “on file” is not the same as “exercised this year”**; stale plans and missing inundation maps can inflate apparent preparedness. Fifth, **federal and state EAP definitions and reporting clocks differ**, which is why ownership comparisons need year labels. Sixth, **condition assessments and EAP fields update on different cycles**, so any crosstab is a conceptual overlay unless built from a single NID extract dated the same day.
+
+What would move the headline? A NID public summary that publishes a current national with/without EAP count for all high-hazard dams (not only the state-regulated share); state program reports that retire the last low-coverage cohorts; restored HHPD and National Dam Safety Program appropriations that couple plan completion with rehabilitation; and exercise requirements that convert filed PDFs into practiced notification trees. Until then, the durable national fact pattern is this: **high-hazard dams number more than 16,700, state-regulated EAP coverage sits near 82%, and roughly one in six of those state-regulated high-hazard structures still lacks an emergency action plan.**
+
+## Sources and method notes
+
+Primary anchors are ASCE’s 2025 Dams infrastructure report card (inventory, EAP coverage, condition share, rehab needs, funding critique); the USACE National Inventory of Dams and FEMA’s NID overview pages; ASDSO state dam safety program framing; CRS Report R45981 on dam safety and the federal role (1999–2018 EAP trajectory; 2018 federal vs state shares); and FEMA P-608 on emergency action planning for state-regulated high-hazard potential dams (mid-2000s coverage context). Implied without-EAP headcounts follow from the published “more than 11,000” / “nearly 82%” pairing. Division and illustrative state rows are labeled composite in the data module and exist to visualize residual geography, not to replace live NID queries.`,
+  },
+  {
     id: "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026",
     slug: "undergraduate-enrollment-versus-high-school-graduate-cohorts-2026",
     title:
