@@ -3,96 +3,79 @@
 import { useMemo, useState } from "react";
 import {
   Area,
+  AreaChart,
   Bar,
   BarChart,
   CartesianGrid,
   Cell,
-  ComposedChart,
   Legend,
   Line,
-  Pie,
-  PieChart,
+  LineChart,
   ResponsiveContainer,
   Scatter,
   ScatterChart,
+  Tooltip as RechartsTooltip,
   XAxis,
   YAxis,
   ZAxis,
 } from "recharts";
 import { Tooltip } from "@/components/charts/SortedTooltip";
 import {
-  CONDITION_SPLIT,
-  COUNT_VS_ADT,
-  FUNCTIONAL_CLASS,
+  CONDITION_MIX,
+  DETAIL_TABLE,
   HEADLINE,
-  HIGHWAY_SYSTEM,
-  POOR_TREND,
-  RURAL_URBAN_POOR_ADT,
   SOURCE_NOTE,
   VIZ_MARKERS,
+  conditionTreemap,
+  crossingSplitSeries,
   fmtAdt,
-  fmtCount,
   fmtPct,
-  functionalClassFiltered,
-  stateScatterRows,
-  type StateRow,
+  funcExposureRows,
+  scatterPoints,
+  trendSeries,
+  type MetricMode,
 } from "@/data/structurally-deficient-bridges-versus-daily-traffic-2026-data";
 
-// viz-types: donut condition, stacked count-vs-ADT, FC grouped bars, area+line trend,
-// highway system bars, rural/urban donut, state scatter | layout: default
-// smoke-marker: Structurally deficient bridges versus daily traffic
+// viz-types: dual-line poor-share trend, condition stacked bars,
+// functional-class grouped exposure bars, state scatter, crossing area stack
+// | layout: default
+// smoke-marker: Poor-share trend vs deck area
 
-type Panel =
-  | "condition"
-  | "mismatch"
-  | "functional"
-  | "trend"
-  | "system"
-  | "scatter";
+type ViewId = "trend" | "mix" | "exposure" | "scatter" | "crossings";
+type RealmFilter = "all" | "rural" | "urban";
 
-type FcSetting = "All" | "Rural" | "Urban";
-type RegionFilter = "All" | StateRow["region"];
-type FcMetric = "poorAdtSharePct" | "poorCountSharePct" | "poorAdt";
-
-const ROSE = "#e11d48";
 const TEAL = "#0d9488";
 const AMBER = "#d97706";
-const SKY = "#0284c7";
+const INDIGO = "#4f46e5";
+const ROSE = "#e11d48";
 const SLATE = "#64748b";
-const GRID = "#e2e8f0";
+const EMERALD = "#059669";
 
-const PANEL_META: Record<Panel, { title: string; subtitle: string }> = {
-  condition: {
-    title: "NBI inventory: Good, Fair, Poor",
-    subtitle:
-      "FHWA 2024 final — Poor is the post-2018 successor to “structurally deficient”",
-  },
-  mismatch: {
-    title: "Poor share of count vs ADT vs deck area",
-    subtitle:
-      "6.8% of spans are Poor, but only 3.4% of inventory ADT still crosses them — yet that is still 168.6M ADT",
-  },
-  functional: {
-    title: "Poor intensity by functional class",
-    subtitle:
-      "Collectors and locals show higher Poor count shares; Interstates keep Poor ADT shares near 2–3%",
-  },
-  trend: {
-    title: "Poor share fell; residual ADT exposure remains",
-    subtitle:
-      "National Poor count share ~9.8% (2010) → 6.8% (2024); paired ADT share ~5.2% → 3.4%",
-  },
-  system: {
-    title: "NHS vs non-NHS Poor intensity",
-    subtitle:
-      "NHS Poor share 3.0% vs non-NHS 7.9% — traffic-critical corridors are cleaner on count share",
-  },
-  scatter: {
-    title: "States: Poor share vs ADT still on Poor spans",
-    subtitle:
-      "Bubble size ≈ Poor bridge count; Iowa leads share, California leads Poor ADT volume",
-  },
+const CONDITION_COLORS: Record<string, string> = {
+  good: EMERALD,
+  fair: INDIGO,
+  poor: ROSE,
 };
+
+const VIEWS: { id: ViewId; label: string }[] = [
+  { id: "trend", label: "Poor-share trend vs deck area" },
+  { id: "mix", label: "Condition mix treemap" },
+  { id: "exposure", label: "Functional class ADT exposure" },
+  { id: "scatter", label: "State poor share scatter" },
+  { id: "crossings", label: "Daily crossing split" },
+];
+
+const REALMS: { id: RealmFilter; label: string }[] = [
+  { id: "all", label: "All realms" },
+  { id: "rural", label: "Rural" },
+  { id: "urban", label: "Urban" },
+];
+
+const METRICS: { id: MetricMode; label: string }[] = [
+  { id: "count", label: "Bridge count" },
+  { id: "deck", label: "Deck area" },
+  { id: "adt", label: "ADT proxy" },
+];
 
 function ChartCard({
   title,
@@ -104,17 +87,34 @@ function ChartCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-100 bg-slate-50 px-5 py-4">
-        <h3 className="text-lg font-bold text-slate-900">{title}</h3>
-        {subtitle ? <p className="mt-1 text-sm text-slate-500">{subtitle}</p> : null}
-      </div>
-      <div className="p-4 sm:p-6">{children}</div>
+    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+      <h3 className="text-sm font-semibold text-slate-900">{title}</h3>
+      {subtitle ? (
+        <p className="mt-0.5 text-xs text-slate-500">{subtitle}</p>
+      ) : null}
+      <div className="mt-3 h-72 w-full">{children}</div>
     </div>
   );
 }
 
-function ControlChip({
+function ControlRow({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <span className="text-xs font-medium uppercase tracking-wide text-slate-500">
+        {label}
+      </span>
+      <div className="flex flex-wrap gap-1.5">{children}</div>
+    </div>
+  );
+}
+
+function ToggleBtn({
   active,
   onClick,
   children,
@@ -127,7 +127,7 @@ function ControlChip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+      className={`rounded-md px-2.5 py-1 text-xs font-medium transition ${
         active
           ? "bg-slate-900 text-white"
           : "bg-slate-100 text-slate-700 hover:bg-slate-200"
@@ -139,501 +139,208 @@ function ControlChip({
 }
 
 export function StructurallyDeficientBridgesVersusDailyTraffic2026Dashboard() {
-  const [panel, setPanel] = useState<Panel>("mismatch");
-  const [fcSetting, setFcSetting] = useState<FcSetting>("All");
-  const [fcMetric, setFcMetric] = useState<FcMetric>("poorAdtSharePct");
-  const [region, setRegion] = useState<RegionFilter>("All");
+  const [view, setView] = useState<ViewId>("trend");
+  const [realm, setRealm] = useState<RealmFilter>("all");
+  const [metric, setMetric] = useState<MetricMode>("count");
 
-  const fcRows = useMemo(() => {
-    const rows = functionalClassFiltered(fcSetting).map((r) => ({
-      ...r,
-      shortLabel: r.label.replace("Rural ", "R ").replace("Urban ", "U "),
-    }));
-    return [...rows].sort((a, b) => {
-      if (fcMetric === "poorAdt") return b.poorAdt - a.poorAdt;
-      if (fcMetric === "poorCountSharePct")
-        return b.poorCountSharePct - a.poorCountSharePct;
-      return b.poorAdtSharePct - a.poorAdtSharePct;
-    });
-  }, [fcSetting, fcMetric]);
-
-  const scatter = useMemo(() => stateScatterRows(region), [region]);
-
-  const trendRows = useMemo(
-    () =>
-      POOR_TREND.map((r) => ({
-        ...r,
-        adtShare: r.poorAdtSharePct ?? undefined,
-      })),
-    [],
-  );
-
-  const mismatchStack = useMemo(
-    () =>
-      COUNT_VS_ADT.map((r) => ({
-        metric: r.metric,
-        Poor: r.poorPct,
-        "Not poor": r.nonPoorPct,
-      })),
-    [],
-  );
-
-  const meta = PANEL_META[panel];
+  const trendData = useMemo(() => trendSeries(), []);
+  const mixData = useMemo(() => conditionTreemap(metric), [metric]);
+  const exposureData = useMemo(() => funcExposureRows(realm), [realm]);
+  const scatterData = useMemo(() => scatterPoints(), []);
+  const crossingData = useMemo(() => crossingSplitSeries(), []);
 
   return (
     <div
-      className="space-y-4"
       data-viz="structurally-deficient-bridges-versus-daily-traffic-2026"
+      className="my-8 space-y-4"
     >
-      <div className="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-rose-950 px-5 py-5 text-white shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-wider text-rose-200/90">
-          {VIZ_MARKERS[0]}
-        </p>
-        <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-          {fmtAdt(HEADLINE.poorAdt)}{" "}
-          <span className="text-lg font-semibold text-rose-100 sm:text-xl">
-            ADT still crosses Poor / structurally deficient spans
-          </span>
-        </p>
-        <p className="mt-2 max-w-3xl text-sm text-slate-300">
-          {fmtCount(HEADLINE.poorBridges)} of {fmtCount(HEADLINE.totalBridges)}{" "}
-          NBI bridges ({fmtPct(HEADLINE.poorSharePct)}) are Poor — {fmtPct(
-            HEADLINE.poorAdtSharePct,
-          )}{" "}
-          of inventory ADT, against a {fmtPct(HEADLINE.poorDeckSharePct)} share
-          of deck area.
-        </p>
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        {(
-          [
-            ["mismatch", "Count vs ADT"],
-            ["condition", "Condition mix"],
-            ["functional", "Functional class"],
-            ["trend", "Decade path"],
-            ["system", "NHS vs non-NHS"],
-            ["scatter", "State scatter"],
-          ] as const
-        ).map(([id, label]) => (
-          <ControlChip
-            key={id}
-            active={panel === id}
-            onClick={() => setPanel(id)}
-          >
-            {label}
-          </ControlChip>
-        ))}
-      </div>
-
-      {(panel === "functional" || panel === "scatter") && (
-        <div className="flex flex-wrap items-center gap-2">
-          {panel === "functional" ? (
-            <>
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Setting
-              </span>
-              {(["All", "Rural", "Urban"] as const).map((s) => (
-                <ControlChip
-                  key={s}
-                  active={fcSetting === s}
-                  onClick={() => setFcSetting(s)}
-                >
-                  {s}
-                </ControlChip>
-              ))}
-              <span className="ml-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Metric
-              </span>
-              <ControlChip
-                active={fcMetric === "poorAdtSharePct"}
-                onClick={() => setFcMetric("poorAdtSharePct")}
-              >
-                Poor ADT share (%)
-              </ControlChip>
-              <ControlChip
-                active={fcMetric === "poorCountSharePct"}
-                onClick={() => setFcMetric("poorCountSharePct")}
-              >
-                Poor count share (%)
-              </ControlChip>
-              <ControlChip
-                active={fcMetric === "poorAdt"}
-                onClick={() => setFcMetric("poorAdt")}
-              >
-                Poor ADT volume
-              </ControlChip>
-            </>
-          ) : (
-            <>
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                Region
-              </span>
-              {(
-                [
-                  "All",
-                  "Northeast",
-                  "Midwest",
-                  "South",
-                  "West",
-                  "Territory",
-                ] as const
-              ).map((r) => (
-                <ControlChip
-                  key={r}
-                  active={region === r}
-                  onClick={() => setRegion(r)}
-                >
-                  {r === "All" ? "All regions" : r}
-                </ControlChip>
-              ))}
-            </>
-          )}
+      <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <p className="text-xs text-slate-500">Poor spans (NBI 2024)</p>
+            <p className="text-lg font-semibold text-slate-900">
+              {HEADLINE.poorSharePct}% · {HEADLINE.poorBridges.toLocaleString()}
+            </p>
+          </div>
+          <div>
+            <p className="text-xs text-slate-500">Daily crossings on poor spans</p>
+            <p className="text-lg font-semibold text-slate-900">
+              {HEADLINE.dailyCrossingsPoorM}M ({HEADLINE.poorCrossingSharePct}%)
+            </p>
+          </div>
+          <div>
+            <p className="text-xs text-slate-500">Mean ADT — poor vs all</p>
+            <p className="text-lg font-semibold text-slate-900">
+              {fmtAdt(HEADLINE.avgAdtPoor)} vs {fmtAdt(HEADLINE.avgAdtAll)}
+            </p>
+          </div>
+          <div>
+            <p className="text-xs text-slate-500">Poor deck-area share</p>
+            <p className="text-lg font-semibold text-slate-900">
+              {HEADLINE.poorDeckAreaSharePct}% vs {HEADLINE.poorSharePct}% count
+            </p>
+          </div>
         </div>
-      )}
+      </div>
 
-      <ChartCard title={meta.title} subtitle={meta.subtitle}>
-        {panel === "condition" ? (
-          <div className="grid gap-6 lg:grid-cols-2">
-            <div className="h-80 min-w-0">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={[...CONDITION_SPLIT]}
-                    dataKey="bridges"
-                    nameKey="label"
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={58}
-                    outerRadius={100}
-                    paddingAngle={2}
-                  >
-                    {CONDITION_SPLIT.map((row) => (
-                      <Cell key={row.id} fill={row.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip
-                    formatter={(value, name) => [
-                      fmtCount(Number(value ?? 0)),
-                      String(name),
-                    ]}
-                  />
-                  <Legend />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="flex flex-col justify-center gap-3">
-              {CONDITION_SPLIT.map((row) => (
-                <div
-                  key={row.id}
-                  className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3"
-                >
-                  <p className="text-sm font-medium text-slate-600">{row.label}</p>
-                  <p className="mt-1 text-2xl font-bold text-slate-900">
-                    {fmtCount(row.bridges)}{" "}
-                    <span className="text-base font-semibold text-slate-500">
-                      ({fmtPct(row.sharePct)})
-                    </span>
-                  </p>
-                </div>
-              ))}
-              <div className="h-40 min-w-0">
-                <ResponsiveContainer width="100%" height="100%">
-                  <PieChart>
-                    <Pie
-                      data={[...RURAL_URBAN_POOR_ADT]}
-                      dataKey="adt"
-                      nameKey="label"
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={36}
-                      outerRadius={58}
-                    >
-                      {RURAL_URBAN_POOR_ADT.map((row) => (
-                        <Cell key={row.id} fill={row.color} />
-                      ))}
-                    </Pie>
-                    <Tooltip
-                      formatter={(value) => [
-                        fmtAdt(Number(value ?? 0)),
-                        "Poor ADT",
-                      ]}
-                    />
-                    <Legend />
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
-              <p className="text-xs text-slate-500">
-                Urban spans carry {fmtPct(HEADLINE.urbanPoorAdtShareOfPoorPct, 0)}{" "}
-                of Poor ADT even though most Poor bridges sit in rural counties.
-              </p>
-            </div>
-          </div>
+      <div className="space-y-2 rounded-xl border border-slate-200 bg-white p-4">
+        <ControlRow label="View">
+          {VIEWS.map((v) => (
+            <ToggleBtn key={v.id} active={view === v.id} onClick={() => setView(v.id)}>
+              {v.label}
+            </ToggleBtn>
+          ))}
+        </ControlRow>
+        {view === "exposure" ? (
+          <ControlRow label="Realm">
+            {REALMS.map((r) => (
+              <ToggleBtn key={r.id} active={realm === r.id} onClick={() => setRealm(r.id)}>
+                {r.label}
+              </ToggleBtn>
+            ))}
+          </ControlRow>
         ) : null}
+        {view === "mix" ? (
+          <ControlRow label="Metric">
+            {METRICS.map((m) => (
+              <ToggleBtn key={m.id} active={metric === m.id} onClick={() => setMetric(m.id)}>
+                {m.label}
+              </ToggleBtn>
+            ))}
+          </ControlRow>
+        ) : null}
+        <p className="text-[10px] text-slate-400">{VIZ_MARKERS.join(" · ")}</p>
+      </div>
 
-        {panel === "mismatch" ? (
-          <div className="h-96 min-w-0">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={mismatchStack} layout="vertical" margin={{ left: 8 }}>
-                <CartesianGrid stroke={GRID} strokeDasharray="3 3" />
-                <XAxis type="number" domain={[0, 100]} tickFormatter={(v) => `${v}%`} />
-                <YAxis type="category" dataKey="metric" width={150} tick={{ fontSize: 12 }} />
-                <Tooltip
-                  formatter={(value, name) => [
-                    fmtPct(Number(value ?? 0)),
-                    String(name),
-                  ]}
-                />
-                <Legend />
-                <Bar dataKey="Poor" stackId="a" fill={ROSE} name="Poor / deficient" />
-                <Bar
-                  dataKey="Not poor"
-                  stackId="a"
-                  fill={SLATE}
-                  name="Good + Fair"
-                />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        ) : null}
+      {view === "trend" ? (
+        <ChartCard
+          title="Poor-share trend vs deck area"
+          subtitle="Bridge count share (rose) vs deck-area share (teal) — NBI 2014–2024"
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={trendData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+              <XAxis dataKey="year" tick={{ fontSize: 11 }} />
+              <YAxis tick={{ fontSize: 11 }} domain={[0, 10]} unit="%" />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="poorShare" name="Poor count share" stroke={ROSE} strokeWidth={2} dot={{ r: 3 }} />
+              <Line type="monotone" dataKey="deckShare" name="Poor deck share" stroke={TEAL} strokeWidth={2} dot={{ r: 3 }} />
+            </LineChart>
+          </ResponsiveContainer>
+        </ChartCard>
+      ) : null}
 
-        {panel === "functional" ? (
-          <div className="h-[420px] min-w-0">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart
-                data={fcRows}
-                margin={{ bottom: 72, left: 8 }}
-              >
-                <CartesianGrid stroke={GRID} strokeDasharray="3 3" />
-                <XAxis
-                  dataKey="shortLabel"
-                  interval={0}
-                  angle={-32}
-                  textAnchor="end"
-                  height={80}
-                  tick={{ fontSize: 10 }}
-                />
-                <YAxis
-                  tickFormatter={(v) =>
-                    fcMetric === "poorAdt" ? fmtAdt(Number(v)) : `${v}%`
-                  }
-                />
-                <Tooltip
-                  formatter={(value) =>
-                    fcMetric === "poorAdt"
-                      ? [fmtAdt(Number(value ?? 0)), "Poor ADT"]
-                      : [fmtPct(Number(value ?? 0)), "Share"]
-                  }
-                  labelFormatter={(label) => String(label)}
-                />
-                <Bar
-                  dataKey={fcMetric}
-                  name={
-                    fcMetric === "poorAdt"
-                      ? "Poor ADT"
-                      : fcMetric === "poorCountSharePct"
-                        ? "Poor count share"
-                        : "Poor ADT share"
-                  }
-                  radius={[4, 4, 0, 0]}
-                >
-                  {fcRows.map((row) => (
-                    <Cell
-                      key={row.id}
-                      fill={row.setting === "Urban" ? ROSE : SKY}
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        ) : null}
+      {view === "mix" ? (
+        <ChartCard
+          title="Condition mix treemap"
+          subtitle={`Good / Fair / Poor split by ${metric === "count" ? "bridge count" : metric === "deck" ? "deck area" : "ADT weight"}`}
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={mixData} layout="vertical" margin={{ top: 8, right: 16, left: 80, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+              <XAxis type="number" tick={{ fontSize: 11 }} tickFormatter={(v) => fmtPct(Number(v), 0)} />
+              <YAxis type="category" dataKey="name" tick={{ fontSize: 11 }} width={72} />
+              <RechartsTooltip formatter={(v) => [fmtPct(Number(v), 1), "Share"]} />
+              <Bar dataKey="sharePct" name="Share of total" radius={[0, 4, 4, 0]}>
+                {mixData.map((entry) => (
+                  <Cell key={entry.id} fill={CONDITION_COLORS[entry.id] ?? SLATE} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </ChartCard>
+      ) : null}
 
-        {panel === "trend" ? (
-          <div className="h-96 min-w-0">
-            <ResponsiveContainer width="100%" height="100%">
-              <ComposedChart data={trendRows}>
-                <CartesianGrid stroke={GRID} strokeDasharray="3 3" />
-                <XAxis dataKey="year" />
-                <YAxis
-                  yAxisId="left"
-                  domain={[0, 12]}
-                  tickFormatter={(v) => `${v}%`}
-                  label={{
-                    value: "Poor share of count",
-                    angle: -90,
-                    position: "insideLeft",
-                    style: { fontSize: 11, fill: SLATE },
-                  }}
-                />
-                <YAxis
-                  yAxisId="right"
-                  orientation="right"
-                  domain={[0, 8]}
-                  tickFormatter={(v) => `${v}%`}
-                  label={{
-                    value: "Poor share of ADT",
-                    angle: 90,
-                    position: "insideRight",
-                    style: { fontSize: 11, fill: SLATE },
-                  }}
-                />
-                <Tooltip
-                  formatter={(value, name) => [
-                    value == null ? "n/a" : fmtPct(Number(value)),
-                    String(name),
-                  ]}
-                />
-                <Legend />
-                <Area
-                  yAxisId="left"
-                  type="monotone"
-                  dataKey="poorSharePct"
-                  name="Poor count share"
-                  fill={ROSE}
-                  fillOpacity={0.15}
-                  stroke={ROSE}
-                  strokeWidth={2}
-                />
-                <Line
-                  yAxisId="right"
-                  type="monotone"
-                  dataKey="adtShare"
-                  name="Poor ADT share"
-                  stroke={TEAL}
-                  strokeWidth={2}
-                  dot={{ r: 4 }}
-                  connectNulls={false}
-                />
-              </ComposedChart>
-            </ResponsiveContainer>
-          </div>
-        ) : null}
+      {view === "exposure" ? (
+        <ChartCard
+          title="Functional class ADT exposure"
+          subtitle="Poor-span count share vs ADT share — where traffic meets deficiency"
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={exposureData} margin={{ top: 8, right: 16, left: 0, bottom: 48 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+              <XAxis dataKey="label" tick={{ fontSize: 10 }} angle={-35} textAnchor="end" height={56} />
+              <YAxis tick={{ fontSize: 11 }} unit="%" />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="countShare" name="Poor count share" fill={AMBER} radius={[2, 2, 0, 0]} />
+              <Bar dataKey="adtShare" name="Poor ADT share" fill={INDIGO} radius={[2, 2, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </ChartCard>
+      ) : null}
 
-        {panel === "system" ? (
-          <div className="grid gap-6 lg:grid-cols-2">
-            <div className="h-80 min-w-0">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={[...HIGHWAY_SYSTEM]}>
-                  <CartesianGrid stroke={GRID} strokeDasharray="3 3" />
-                  <XAxis dataKey="label" tick={{ fontSize: 11 }} interval={0} />
-                  <YAxis tickFormatter={(v) => `${v}%`} domain={[0, 10]} />
-                  <Tooltip
-                    formatter={(value) => [fmtPct(Number(value ?? 0)), "Poor share"]}
-                  />
-                  <Bar dataKey="poorSharePct" name="Poor share of bridges" radius={[4, 4, 0, 0]}>
-                    {HIGHWAY_SYSTEM.map((row) => (
-                      <Cell
-                        key={row.id}
-                        fill={
-                          row.id === "nhs"
-                            ? TEAL
-                            : row.id === "non-nhs"
-                              ? ROSE
-                              : AMBER
-                        }
-                      />
-                    ))}
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-            <div className="flex flex-col justify-center gap-3">
-              {HIGHWAY_SYSTEM.map((row) => (
-                <div
-                  key={row.id}
-                  className="rounded-lg border border-slate-100 bg-slate-50 px-4 py-3"
-                >
-                  <p className="text-sm font-medium text-slate-600">{row.label}</p>
-                  <p className="mt-1 text-xl font-bold text-slate-900">
-                    {fmtCount(row.poor)} Poor / {fmtCount(row.bridges)}{" "}
-                    <span className="text-base font-semibold text-slate-500">
-                      ({fmtPct(row.poorSharePct)})
-                    </span>
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : null}
+      {view === "scatter" ? (
+        <ChartCard
+          title="State poor share scatter"
+          subtitle="Poor-span share vs mean ADT on those spans — bubble size = daily crossings (000s)"
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <ScatterChart margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+              <XAxis type="number" dataKey="poorShare" name="Poor share" unit="%" tick={{ fontSize: 11 }} domain={[0, 24]} />
+              <YAxis type="number" dataKey="avgAdt" name="Mean ADT" tick={{ fontSize: 11 }} />
+              <ZAxis type="number" dataKey="crossingsK" range={[40, 400]} />
+              <RechartsTooltip
+                cursor={{ strokeDasharray: "3 3" }}
+                formatter={(v, name) => {
+                  const n = Number(v);
+                  if (name === "Mean ADT") return [fmtAdt(n), name];
+                  if (name === "Poor share") return [`${n.toFixed(1)}%`, name];
+                  return [v, name];
+                }}
+                labelFormatter={(_, payload) => payload?.[0]?.payload?.state ?? ""}
+              />
+              <Scatter data={scatterData} fill={TEAL} name="States" />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </ChartCard>
+      ) : null}
 
-        {panel === "scatter" ? (
-          <div className="h-96 min-w-0">
-            <ResponsiveContainer width="100%" height="100%">
-              <ScatterChart margin={{ bottom: 12, left: 8, right: 12 }}>
-                <CartesianGrid stroke={GRID} strokeDasharray="3 3" />
-                <XAxis
-                  type="number"
-                  dataKey="x"
-                  name="Poor share"
-                  unit="%"
-                  tickFormatter={(v) => `${v}%`}
-                  label={{
-                    value: "Poor share of state bridges",
-                    position: "insideBottom",
-                    offset: -4,
-                    style: { fontSize: 11, fill: SLATE },
-                  }}
-                />
-                <YAxis
-                  type="number"
-                  dataKey="y"
-                  name="Poor ADT"
-                  tickFormatter={(v) => `${v}M`}
-                  label={{
-                    value: "Poor ADT (millions)",
-                    angle: -90,
-                    position: "insideLeft",
-                    style: { fontSize: 11, fill: SLATE },
-                  }}
-                />
-                <ZAxis type="number" dataKey="z" range={[60, 400]} />
-                <Tooltip
-                  cursor={{ strokeDasharray: "3 3" }}
-                  formatter={(value, name) => {
-                    if (name === "Poor share") return [fmtPct(Number(value)), name];
-                    if (name === "Poor ADT")
-                      return [`${Number(value).toFixed(1)}M`, name];
-                    return [String(value), String(name)];
-                  }}
-                  labelFormatter={(_, payload) => {
-                    const p = payload?.[0]?.payload as
-                      | { state?: string; poor?: number }
-                      | undefined;
-                    return p?.state
-                      ? `${p.state} (${fmtCount(p.poor ?? 0)} Poor)`
-                      : "";
-                  }}
-                />
-                <Scatter data={scatter} fill={ROSE}>
-                  {scatter.map((row) => (
-                    <Cell
-                      key={row.abbr}
-                      fill={
-                        row.region === "Northeast"
-                          ? ROSE
-                          : row.region === "Midwest"
-                            ? AMBER
-                            : row.region === "South"
-                              ? SKY
-                              : row.region === "West"
-                                ? TEAL
-                                : SLATE
-                      }
-                    />
-                  ))}
-                </Scatter>
-              </ScatterChart>
-            </ResponsiveContainer>
-          </div>
-        ) : null}
-      </ChartCard>
+      {view === "crossings" ? (
+        <ChartCard
+          title="Daily crossing split"
+          subtitle="Millions of daily vehicle crossings on poor vs non-poor spans"
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={crossingData} margin={{ top: 8, right: 16, left: 0, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+              <XAxis dataKey="year" tick={{ fontSize: 11 }} />
+              <YAxis tick={{ fontSize: 11 }} tickFormatter={(v) => `${v}M`} />
+              <RechartsTooltip formatter={(v) => [`${Number(v).toFixed(1)}M`, "Crossings"]} />
+              <Legend />
+              <Area type="monotone" dataKey="nonPoorM" name="Non-poor crossings" stackId="1" stroke={EMERALD} fill={EMERALD} fillOpacity={0.5} />
+              <Area type="monotone" dataKey="poorM" name="Poor crossings" stackId="1" stroke={ROSE} fill={ROSE} fillOpacity={0.7} />
+            </AreaChart>
+          </ResponsiveContainer>
+        </ChartCard>
+      ) : null}
+
+      <div className="overflow-x-auto rounded-xl border border-slate-200">
+        <table className="min-w-full divide-y divide-slate-200 text-sm">
+          <thead className="bg-slate-50">
+            <tr>
+              <th className="px-4 py-2 text-left font-medium text-slate-600">Metric</th>
+              <th className="px-4 py-2 text-left font-medium text-slate-600">All bridges</th>
+              <th className="px-4 py-2 text-left font-medium text-slate-600">Poor spans</th>
+              <th className="px-4 py-2 text-left font-medium text-slate-600">Notes</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-100 bg-white">
+            {DETAIL_TABLE.map((row) => (
+              <tr key={row.metric}>
+                <td className="px-4 py-2 font-medium text-slate-900">{row.metric}</td>
+                <td className="px-4 py-2 text-slate-700">{row.allBridges}</td>
+                <td className="px-4 py-2 text-slate-700">{row.poorBridges}</td>
+                <td className="px-4 py-2 text-xs text-slate-500">{row.notes}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <p className="text-xs leading-relaxed text-slate-500">{SOURCE_NOTE}</p>
-      <p className="sr-only">
-        Structurally deficient bridges versus daily traffic — interactive FHWA
-        NBI Poor condition and ADT dashboard.
-      </p>
     </div>
   );
 }

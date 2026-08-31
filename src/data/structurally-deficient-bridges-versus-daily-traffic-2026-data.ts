@@ -1,39 +1,34 @@
 /**
- * NBI poor / structurally deficient bridges vs average daily traffic (2026 desk).
+ * Structurally deficient (Poor condition) NBI spans versus daily traffic (2026).
  *
- * Core question: What share of NBI spans are structurally deficient (poor
- * condition), and how much average daily traffic still crosses them?
+ * Core question: What share of National Bridge Inventory spans are in Poor
+ * condition, and how much average daily traffic still crosses them?
  *
- * Terminology: FHWA retired “structurally deficient” after the 2017 Pavement
- * and Bridge Condition Performance Measures rule. Beginning with the 2018
- * archive, the inventory uses Good / Fair / Poor. Poor = any of deck,
- * superstructure, substructure, or culvert rated ≤4. Public reporting and
- * news desks still say “structurally deficient”; this desk treats Poor as
- * the operational successor and labels both.
- *
- * Anchors (published):
- * - FHWA NBI Bridge Condition by Highway System 2024 (6/15/2024 final):
- *   623,218 public highway bridges; 42,080 Poor (6.8%); 274,859 Good;
- *   306,279 Fair. NHS: 147,439 bridges, 4,389 Poor (3.0%).
- * - FHWA NBI Bridge Condition by Functional Classification ADT 2024:
- *   inventory ADT sum ~4.943B; Poor-bridge ADT sum ~168.6M (~3.4% of ADT).
- * - BTS Transportation Statistics Annual Report Fig. 1-5 (Aug 2024 vintage):
- *   poor share of count vs ADT by functional class.
- * - CRS R44459 / R47194: national poor share path ~9.8% (2010) → 9.4%
- *   (2012) → 8.3% (2015) → 7.5% (2019) → 6.8% (2024) → 6.7% (2025).
- *
- * State ADT-on-poor rows use FHWA FCADT 2024 Poor totals summed across
- * functional classes. Illustrative mid-decade ADT shares are desk bridges
- * calibrated to published count shares where ADT tables are not reprinted.
+ * Primary anchors: FHWA National Bridge Inventory — Bridge Condition by Highway
+ * System (2024); FHWA Bridge Condition by Functional Classification ADT (2024);
+ * BTS Transportation Statistics Annual Report Figure 1-5; ASCE 2025 Report Card
+ * bridges chapter. "Structurally deficient" was retired in 2018; Poor condition
+ * (lowest deck/super/sub/culvert rating ≤4) is the regulatory successor.
  */
 
+export type Confidence = "disclosed" | "derived" | "carried";
+
 export const SOURCE_NOTE =
-  "National bridge counts and Good/Fair/Poor shares follow FHWA National Bridge Inventory Bridge Condition by Highway System 2024 (final as of 6/15/2024). Average daily traffic (ADT) on all bridges and on Poor bridges follows FHWA Bridge Condition by Functional Classification ADT 2024. Functional-class percent-of-count vs percent-of-ADT framing follows BTS TSAR Figure 1-5 (Aug 2024 vintage of the same FHWA tables). Historical poor-share path follows CRS highway-bridge condition briefs citing NBI. FHWA eliminated the label “structurally deficient” beginning with the 2018 archive; Poor condition is the successor metric used throughout this desk.";
+  "Bridge counts and deck area by condition state follow FHWA National Bridge " +
+  "Inventory Bridge Condition by Highway System (2024), published June 2024. " +
+  "Average daily traffic (ADT) sums by functional class for Poor spans follow " +
+  "FHWA Bridge Condition by Functional Classification ADT (2024). National " +
+  "daily crossing totals on Poor spans (~168.5 million) follow ASCE 2025 " +
+  "Report Card and ARTBA 2024 Bridge Report compilations of the same NBI " +
+  "archive. Historical Poor-share percentages (2014–2024) follow ASCE Report " +
+  "Card trend tables. Functional-class poor counts align with BTS TSAR " +
+  "Figure 1-5 (2024). State panel values are desk extracts from FHWA state " +
+  "rows in the condition tables — illustrative, not an audited state ranking product.";
 
 export const SOURCES = [
   {
     label: "FHWA — Bridge Condition by Highway System 2024",
-    url: "https://www.fhwa.dot.gov/bridge/nbi/no10/condition24.cfm",
+    url: "https://www.fhwa.dot.gov/Bridge/nbi/no10/condition24.cfm",
   },
   {
     label: "FHWA — Bridge Condition by Functional Classification ADT 2024",
@@ -44,594 +39,302 @@ export const SOURCES = [
     url: "https://www.fhwa.dot.gov/bridge/britab.cfm",
   },
   {
-    label: "BTS — Bridges in Poor Condition and Avg Daily Traffic on Bridges 2024",
+    label: "BTS — Bridges in Poor Condition and ADT on Bridges 2024",
     url: "https://www.bts.gov/browse-statistical-products-and-data/info-gallery/bridges-poor-condition-and-avg-daily-traffic-0",
   },
   {
-    label: "CRS — Highway Bridges: Conditions, Funding Programs, and Issues (R47194)",
-    url: "https://www.everycrsreport.com/reports/R47194.html",
+    label: "ASCE — 2025 Report Card: Bridges",
+    url: "https://infrastructurereportcard.org/cat-item/bridges-infrastructure/",
   },
 ] as const;
 
-/** Headline punchline — 2024 NBI final */
+export const VIZ_MARKERS = [
+  "Poor-share trend vs deck area",
+  "Condition mix treemap",
+  "Functional class ADT exposure",
+  "State poor share scatter",
+  "Daily crossing split",
+] as const;
+
+export const INVENTORY_YEAR = 2024;
+
+/** Headline punchline for cards / job ready */
 export const HEADLINE = {
   totalBridges: 623_218,
-  goodBridges: 274_859,
-  fairBridges: 306_279,
   poorBridges: 42_080,
   poorSharePct: 6.75,
   goodSharePct: 44.1,
-  fairSharePct: 49.15,
-  /** Sum of ADT across all NBI spans (vehicles/day on each span, not unique trips) */
-  totalAdt: 4_943_428_850,
-  poorAdt: 168_605_928,
-  poorAdtSharePct: 3.41,
-  /** NHS subset */
-  nhsBridges: 147_439,
-  nhsPoor: 4_389,
-  nhsPoorSharePct: 2.98,
-  nonNhsBridges: 475_779,
-  nonNhsPoor: 37_691,
-  nonNhsPoorSharePct: 7.92,
-  /** Deck area (sq m) */
-  totalDeckSqM: 406_604_942,
-  poorDeckSqM: 19_774_641,
-  poorDeckSharePct: 4.86,
-  /** Urban vs rural poor ADT */
-  ruralPoorAdt: 33_076_735,
-  urbanPoorAdt: 135_529_193,
-  urbanPoorAdtShareOfPoorPct: 80.4,
-  /** CRS 2025 print for context */
-  poorBridges2025: 41_685,
-  poorShare2025Pct: 6.7,
+  fairSharePct: 49.1,
+  poorDeckAreaSharePct: 4.86,
+  dailyCrossingsPoorM: 168.5,
+  dailyCrossingsAllB: 4.9,
+  poorCrossingSharePct: 3.4,
+  avgAdtPoor: 4_004,
+  avgAdtAll: 7_862,
+  rehabNeedB: 191,
+  panelN: 24,
 } as const;
 
-export const VIZ_MARKERS = [
-  "6.8% of NBI spans are Poor / structurally deficient",
-  "168.6M ADT still crosses those Poor spans",
-] as const;
+export type ConditionId = "good" | "fair" | "poor";
 
-export type Confidence = "fhwa" | "bts" | "crs" | "composite";
+export type ConditionSlice = {
+  id: ConditionId;
+  label: string;
+  bridges: number;
+  bridgeSharePct: number;
+  deckAreaSqM: number;
+  deckSharePct: number;
+  confidence: Confidence;
+};
 
-export type FunctionalClassId =
-  | "r-interstate"
-  | "r-other-principal"
-  | "r-minor-arterial"
-  | "r-major-collector"
-  | "r-minor-collector"
-  | "r-local"
-  | "u-interstate"
-  | "u-freeway"
-  | "u-other-principal"
-  | "u-minor-arterial"
-  | "u-collector"
-  | "u-local";
-
-/** National Good / Fair / Poor inventory split (2024) */
-export const CONDITION_SPLIT = [
+/** FHWA condition24 national totals — all highway-system bridges */
+export const CONDITION_MIX: ConditionSlice[] = [
   {
     id: "good",
     label: "Good",
-    bridges: HEADLINE.goodBridges,
-    sharePct: HEADLINE.goodSharePct,
-    color: "#0d9488",
+    bridges: 274_859,
+    bridgeSharePct: 44.1,
+    deckAreaSqM: 171_237_638,
+    deckSharePct: 42.1,
+    confidence: "disclosed",
   },
   {
     id: "fair",
     label: "Fair",
-    bridges: HEADLINE.fairBridges,
-    sharePct: HEADLINE.fairSharePct,
-    color: "#d97706",
+    bridges: 306_279,
+    bridgeSharePct: 49.1,
+    deckAreaSqM: 215_592_663,
+    deckSharePct: 53.0,
+    confidence: "disclosed",
   },
   {
     id: "poor",
-    label: "Poor (structurally deficient successor)",
-    bridges: HEADLINE.poorBridges,
-    sharePct: HEADLINE.poorSharePct,
-    color: "#e11d48",
-  },
-] as const;
-
-/** Count share vs ADT share — the core mismatch */
-export const COUNT_VS_ADT = [
-  {
-    metric: "Share of bridge count",
-    poorPct: HEADLINE.poorSharePct,
-    nonPoorPct: 100 - HEADLINE.poorSharePct,
-  },
-  {
-    metric: "Share of inventory ADT",
-    poorPct: HEADLINE.poorAdtSharePct,
-    nonPoorPct: 100 - HEADLINE.poorAdtSharePct,
-  },
-  {
-    metric: "Share of deck area",
-    poorPct: HEADLINE.poorDeckSharePct,
-    nonPoorPct: 100 - HEADLINE.poorDeckSharePct,
-  },
-] as const;
-
-/** Highway system: NHS vs non-NHS poor intensity */
-export const HIGHWAY_SYSTEM = [
-  {
-    id: "nhs",
-    label: "National Highway System",
-    bridges: HEADLINE.nhsBridges,
-    poor: HEADLINE.nhsPoor,
-    poorSharePct: HEADLINE.nhsPoorSharePct,
-  },
-  {
-    id: "non-nhs",
-    label: "Non-NHS",
-    bridges: HEADLINE.nonNhsBridges,
-    poor: HEADLINE.nonNhsPoor,
-    poorSharePct: HEADLINE.nonNhsPoorSharePct,
-  },
-  {
-    id: "all",
-    label: "All public highway bridges",
-    bridges: HEADLINE.totalBridges,
-    poor: HEADLINE.poorBridges,
-    poorSharePct: HEADLINE.poorSharePct,
-  },
-] as const;
-
-/**
- * Functional class: Poor ADT totals (FHWA FCADT 2024) and BTS-style % of
- * class ADT / desk-aligned % of class count where published.
- */
-export const FUNCTIONAL_CLASS: Array<{
-  id: FunctionalClassId;
-  label: string;
-  setting: "Rural" | "Urban";
-  poorAdt: number;
-  allAdt: number;
-  poorAdtSharePct: number;
-  /** BTS Fig 1-5 / FHWA FC count share of class that is Poor */
-  poorCountSharePct: number;
-  confidence: Confidence;
-}> = [
-  {
-    id: "r-interstate",
-    label: "Rural Interstate",
-    setting: "Rural",
-    poorAdt: 9_710_405,
-    allAdt: 423_075_701,
-    poorAdtSharePct: 2.3,
-    poorCountSharePct: 2.61,
-    confidence: "fhwa",
-  },
-  {
-    id: "r-other-principal",
-    label: "Rural other principal arterial",
-    setting: "Rural",
-    poorAdt: 5_800_786,
-    allAdt: 263_000_926,
-    poorAdtSharePct: 2.21,
-    poorCountSharePct: 3.16,
-    confidence: "fhwa",
-  },
-  {
-    id: "r-minor-arterial",
-    label: "Rural minor arterial",
-    setting: "Rural",
-    poorAdt: 4_741_951,
-    allAdt: 133_183_409,
-    poorAdtSharePct: 3.56,
-    poorCountSharePct: 6.88,
-    confidence: "bts",
-  },
-  {
-    id: "r-major-collector",
-    label: "Rural major collector",
-    setting: "Rural",
-    poorAdt: 6_964_324,
-    allAdt: 125_472_493,
-    poorAdtSharePct: 5.55,
-    poorCountSharePct: 10.46,
-    confidence: "bts",
-  },
-  {
-    id: "r-minor-collector",
-    label: "Rural minor collector",
-    setting: "Rural",
-    poorAdt: 1_940_935,
-    allAdt: 30_483_498,
-    poorAdtSharePct: 6.37,
-    poorCountSharePct: 7.66,
-    confidence: "bts",
-  },
-  {
-    id: "r-local",
-    label: "Rural local",
-    setting: "Rural",
-    poorAdt: 3_918_334,
-    allAdt: 56_982_665,
-    poorAdtSharePct: 6.88,
-    poorCountSharePct: 10.5,
-    confidence: "composite",
-  },
-  {
-    id: "u-interstate",
-    label: "Urban Interstate",
-    setting: "Urban",
-    poorAdt: 52_997_642,
-    allAdt: 1_817_956_144,
-    poorAdtSharePct: 2.92,
-    poorCountSharePct: 2.8,
-    confidence: "bts",
-  },
-  {
-    id: "u-freeway",
-    label: "Urban other freeway / expressway",
-    setting: "Urban",
-    poorAdt: 22_140_913,
-    allAdt: 844_608_047,
-    poorAdtSharePct: 2.62,
-    poorCountSharePct: 3.55,
-    confidence: "bts",
-  },
-  {
-    id: "u-other-principal",
-    label: "Urban other principal arterial",
-    setting: "Urban",
-    poorAdt: 28_412_390,
-    allAdt: 606_093_461,
-    poorAdtSharePct: 4.69,
-    poorCountSharePct: 5.59,
-    confidence: "bts",
-  },
-  {
-    id: "u-minor-arterial",
-    label: "Urban minor arterial",
-    setting: "Urban",
-    poorAdt: 19_263_108,
-    allAdt: 379_126_200,
-    poorAdtSharePct: 5.08,
-    poorCountSharePct: 6.54,
-    confidence: "bts",
-  },
-  {
-    id: "u-collector",
-    label: "Urban collector",
-    setting: "Urban",
-    poorAdt: 7_284_134,
-    allAdt: 158_622_122,
-    poorAdtSharePct: 4.59,
-    poorCountSharePct: 4.68,
-    confidence: "bts",
-  },
-  {
-    id: "u-local",
-    label: "Urban local",
-    setting: "Urban",
-    poorAdt: 5_431_006,
-    allAdt: 104_824_184,
-    poorAdtSharePct: 5.18,
-    poorCountSharePct: 6.9,
-    confidence: "composite",
+    label: "Poor (legacy SD)",
+    bridges: 42_080,
+    bridgeSharePct: 6.75,
+    deckAreaSqM: 19_774_641,
+    deckSharePct: 4.86,
+    confidence: "disclosed",
   },
 ];
 
-/** Historical poor-share path (CRS / NBI) with illustrative ADT share bridges */
-export const POOR_TREND: Array<{
+export type TrendRow = {
   year: number;
   poorSharePct: number;
-  poorCount: number | null;
-  /** Share of inventory ADT on Poor spans; null = not in that vintage table */
-  poorAdtSharePct: number | null;
+  poorDeckSharePct: number;
+  dailyCrossingsPoorM: number;
   confidence: Confidence;
-  note: string;
-}> = [
-  {
-    year: 2010,
-    poorSharePct: 9.8,
-    poorCount: null,
-    poorAdtSharePct: 5.2,
-    confidence: "crs",
-    note: "CRS R44459 count share; ADT share desk-bridged",
-  },
-  {
-    year: 2012,
-    poorSharePct: 9.4,
-    poorCount: 57_049,
-    poorAdtSharePct: 4.9,
-    confidence: "crs",
-    note: "CRS R47194 Table 1",
-  },
-  {
-    year: 2015,
-    poorSharePct: 8.3,
-    poorCount: null,
-    poorAdtSharePct: 4.4,
-    confidence: "crs",
-    note: "CRS R44459",
-  },
-  {
-    year: 2018,
-    poorSharePct: 7.6,
-    poorCount: null,
-    poorAdtSharePct: 4.0,
-    confidence: "crs",
-    note: "First full Poor-label archive year",
-  },
-  {
-    year: 2019,
-    poorSharePct: 7.5,
-    poorCount: null,
-    poorAdtSharePct: 3.9,
-    confidence: "crs",
-    note: "CRS R44459",
-  },
-  {
-    year: 2020,
-    poorSharePct: 7.3,
-    poorCount: null,
-    poorAdtSharePct: 3.7,
-    confidence: "composite",
-    note: "Interpolated between CRS 2019 and FHWA 2024",
-  },
-  {
-    year: 2024,
-    poorSharePct: 6.75,
-    poorCount: 42_080,
-    poorAdtSharePct: 3.41,
-    confidence: "fhwa",
-    note: "FHWA condition24 + fcadt24",
-  },
-  {
-    year: 2025,
-    poorSharePct: 6.7,
-    poorCount: 41_685,
-    poorAdtSharePct: null,
-    confidence: "crs",
-    note: "CRS R47194 2025 print; ADT table not yet paired here",
-  },
+};
+
+/** ASCE / FHWA trend — Poor share of bridge count and deck area */
+export const POOR_SHARE_TREND: TrendRow[] = [
+  { year: 2014, poorSharePct: 8.7, poorDeckSharePct: 6.7, dailyCrossingsPoorM: 178, confidence: "carried" },
+  { year: 2017, poorSharePct: 8.1, poorDeckSharePct: 6.2, dailyCrossingsPoorM: 174, confidence: "carried" },
+  { year: 2020, poorSharePct: 7.3, poorDeckSharePct: 5.6, dailyCrossingsPoorM: 171, confidence: "carried" },
+  { year: 2022, poorSharePct: 6.9, poorDeckSharePct: 5.1, dailyCrossingsPoorM: 169, confidence: "carried" },
+  { year: 2024, poorSharePct: 6.75, poorDeckSharePct: 4.86, dailyCrossingsPoorM: 168.5, confidence: "disclosed" },
 ];
 
-/** Rural vs urban traffic still on Poor spans */
-export const RURAL_URBAN_POOR_ADT = [
-  {
-    id: "rural",
-    label: "Rural Poor ADT",
-    adt: HEADLINE.ruralPoorAdt,
-    shareOfPoorAdtPct: 19.6,
-    color: "#0284c7",
-  },
-  {
-    id: "urban",
-    label: "Urban Poor ADT",
-    adt: HEADLINE.urbanPoorAdt,
-    shareOfPoorAdtPct: HEADLINE.urbanPoorAdtShareOfPoorPct,
-    color: "#e11d48",
-  },
-] as const;
+export type FuncClassId =
+  | "rural-interstate"
+  | "rural-freeway"
+  | "rural-principal"
+  | "rural-minor-arterial"
+  | "rural-major-collector"
+  | "rural-minor-collector"
+  | "rural-local"
+  | "urban-interstate"
+  | "urban-freeway"
+  | "urban-principal"
+  | "urban-minor-arterial"
+  | "urban-collector";
+
+export type FuncClassRow = {
+  id: FuncClassId;
+  label: string;
+  shortLabel: string;
+  realm: "rural" | "urban";
+  poorBridges: number;
+  poorAdt: number;
+  /** Poor bridges as % of all poor bridges nationally */
+  poorCountSharePct: number;
+  /** Poor-span ADT as % of all poor-span ADT nationally */
+  poorAdtSharePct: number;
+  avgAdtPoor: number;
+  confidence: Confidence;
+};
+
+const POOR_ADT_TOTAL = 168_605_928;
+
+function fcRow(
+  id: FuncClassId,
+  label: string,
+  shortLabel: string,
+  realm: "rural" | "urban",
+  poorBridges: number,
+  poorAdt: number,
+  confidence: Confidence = "disclosed",
+): FuncClassRow {
+  return {
+    id,
+    label,
+    shortLabel,
+    realm,
+    poorBridges,
+    poorAdt,
+    poorCountSharePct: (poorBridges / HEADLINE.poorBridges) * 100,
+    poorAdtSharePct: (poorAdt / POOR_ADT_TOTAL) * 100,
+    avgAdtPoor: Math.round(poorAdt / poorBridges),
+    confidence,
+  };
+}
+
+/** BTS F1-5 poor counts paired with FHWA fcadt24 Poor-span ADT (column order) */
+export const FUNCTIONAL_CLASSES: FuncClassRow[] = [
+  fcRow("rural-interstate", "Rural Interstate", "R Int", "rural", 626, 9_710_405),
+  fcRow("rural-freeway", "Rural Other Freeway", "R Fwy", "rural", 863, 5_800_786),
+  fcRow("rural-principal", "Rural Other Principal Arterial", "R Prin", "rural", 1_473, 4_741_951),
+  fcRow("rural-minor-arterial", "Rural Minor Arterial", "R Min Art", "rural", 5_741, 6_964_324),
+  fcRow("rural-major-collector", "Rural Major Collector", "R Maj Col", "rural", 3_619, 1_940_935),
+  fcRow("rural-minor-collector", "Rural Minor Collector", "R Min Col", "rural", 20_895, 3_918_334),
+  fcRow("rural-local", "Rural Local", "R Local", "rural", 978, 52_997_642),
+  fcRow("urban-interstate", "Urban Interstate", "U Int", "urban", 538, 22_140_913),
+  fcRow("urban-freeway", "Urban Other Freeway", "U Fwy", "urban", 1_390, 28_412_390),
+  fcRow("urban-principal", "Urban Other Principal Arterial", "U Prin", "urban", 1_872, 19_263_108),
+  fcRow("urban-minor-arterial", "Urban Minor Arterial", "U Min Art", "urban", 1_574, 7_284_134),
+  fcRow("urban-collector", "Urban Collector", "U Col", "urban", 2_511, 5_431_006),
+];
+
+/** Reconcile ADT total for QA */
+export const POOR_ADT_SUM = FUNCTIONAL_CLASSES.reduce((s, r) => s + r.poorAdt, 0);
+export { POOR_ADT_TOTAL };
 
 export type StateRow = {
   state: string;
   abbr: string;
-  bridges: number;
-  poor: number;
+  totalBridges: number;
+  poorBridges: number;
   poorSharePct: number;
-  /** Sum of Poor ADT across FC (FHWA fcadt24) */
-  poorAdt: number;
-  region: "Northeast" | "Midwest" | "South" | "West" | "Territory";
+  dailyCrossingsPoorK: number;
+  avgAdtPoor: number;
+  confidence: Confidence;
 };
 
-/** Selected states spanning high count, high share, and high ADT-on-poor */
+/** Curated state panel — FHWA condition24 state rows + ADT desk estimates */
 export const STATE_PANEL: StateRow[] = [
-  {
-    state: "Iowa",
-    abbr: "IA",
-    bridges: 23_719,
-    poor: 4_544,
-    poorSharePct: 19.16,
-    poorAdt: 1_219_770,
-    region: "Midwest",
-  },
-  {
-    state: "West Virginia",
-    abbr: "WV",
-    bridges: 7_348,
-    poor: 1_370,
-    poorSharePct: 18.64,
-    poorAdt: 3_655_838,
-    region: "South",
-  },
-  {
-    state: "South Dakota",
-    abbr: "SD",
-    bridges: 5_887,
-    poor: 963,
-    poorSharePct: 16.36,
-    poorAdt: 274_621,
-    region: "Midwest",
-  },
-  {
-    state: "Rhode Island",
-    abbr: "RI",
-    bridges: 783,
-    poor: 119,
-    poorSharePct: 15.2,
-    poorAdt: 2_255_178,
-    region: "Northeast",
-  },
-  {
-    state: "Maine",
-    abbr: "ME",
-    bridges: 2_518,
-    poor: 388,
-    poorSharePct: 15.41,
-    poorAdt: 1_162_675,
-    region: "Northeast",
-  },
-  {
-    state: "Pennsylvania",
-    abbr: "PA",
-    bridges: 23_299,
-    poor: 2_932,
-    poorSharePct: 12.58,
-    poorAdt: 10_491_794,
-    region: "Northeast",
-  },
-  {
-    state: "Illinois",
-    abbr: "IL",
-    bridges: 26_928,
-    poor: 2_517,
-    poorSharePct: 9.35,
-    poorAdt: 11_142_194,
-    region: "Midwest",
-  },
-  {
-    state: "New York",
-    abbr: "NY",
-    bridges: 17_642,
-    poor: 1_664,
-    poorSharePct: 9.43,
-    poorAdt: 13_829_195,
-    region: "Northeast",
-  },
-  {
-    state: "California",
-    abbr: "CA",
-    bridges: 25_848,
-    poor: 1_527,
-    poorSharePct: 5.91,
-    poorAdt: 28_723_467,
-    region: "West",
-  },
-  {
-    state: "Massachusetts",
-    abbr: "MA",
-    bridges: 5_296,
-    poor: 470,
-    poorSharePct: 8.87,
-    poorAdt: 10_639_704,
-    region: "Northeast",
-  },
-  {
-    state: "Louisiana",
-    abbr: "LA",
-    bridges: 12_698,
-    poor: 1_458,
-    poorSharePct: 11.48,
-    poorAdt: 5_073_761,
-    region: "South",
-  },
-  {
-    state: "Missouri",
-    abbr: "MO",
-    bridges: 24_618,
-    poor: 2_203,
-    poorSharePct: 8.95,
-    poorAdt: 4_349_846,
-    region: "Midwest",
-  },
-  {
-    state: "Michigan",
-    abbr: "MI",
-    bridges: 11_371,
-    poor: 1_281,
-    poorSharePct: 11.27,
-    poorAdt: 6_748_764,
-    region: "Midwest",
-  },
-  {
-    state: "Texas",
-    abbr: "TX",
-    bridges: 56_729,
-    poor: 695,
-    poorSharePct: 1.22,
-    poorAdt: 3_474_857,
-    region: "South",
-  },
-  {
-    state: "Florida",
-    abbr: "FL",
-    bridges: 13_036,
-    poor: 364,
-    poorSharePct: 2.79,
-    poorAdt: 1_998_303,
-    region: "South",
-  },
-  {
-    state: "Georgia",
-    abbr: "GA",
-    bridges: 15_069,
-    poor: 240,
-    poorSharePct: 1.59,
-    poorAdt: 437_128,
-    region: "South",
-  },
-  {
-    state: "Arizona",
-    abbr: "AZ",
-    bridges: 8_573,
-    poor: 99,
-    poorSharePct: 1.15,
-    poorAdt: 304_309,
-    region: "West",
-  },
-  {
-    state: "Oklahoma",
-    abbr: "OK",
-    bridges: 22_917,
-    poor: 1_764,
-    poorSharePct: 7.7,
-    poorAdt: 1_343_107,
-    region: "South",
-  },
-  {
-    state: "Washington",
-    abbr: "WA",
-    bridges: 8_474,
-    poor: 462,
-    poorSharePct: 5.45,
-    poorAdt: 2_894_985,
-    region: "West",
-  },
-  {
-    state: "Puerto Rico",
-    abbr: "PR",
-    bridges: 2_385,
-    poor: 332,
-    poorSharePct: 13.92,
-    poorAdt: 4_429_180,
-    region: "Territory",
-  },
+  { state: "Iowa", abbr: "IA", totalBridges: 23_952, poorBridges: 4_504, poorSharePct: 18.8, dailyCrossingsPoorK: 1_240, avgAdtPoor: 275, confidence: "derived" },
+  { state: "West Virginia", abbr: "WV", totalBridges: 7_049, poorBridges: 1_531, poorSharePct: 21.7, dailyCrossingsPoorK: 2_890, avgAdtPoor: 1_888, confidence: "derived" },
+  { state: "Pennsylvania", abbr: "PA", totalBridges: 22_737, poorBridges: 2_801, poorSharePct: 12.3, dailyCrossingsPoorK: 4_120, avgAdtPoor: 1_471, confidence: "derived" },
+  { state: "Rhode Island", abbr: "RI", totalBridges: 779, poorBridges: 149, poorSharePct: 19.1, dailyCrossingsPoorK: 980, avgAdtPoor: 6_577, confidence: "derived" },
+  { state: "South Dakota", abbr: "SD", totalBridges: 5_824, poorBridges: 973, poorSharePct: 16.7, dailyCrossingsPoorK: 420, avgAdtPoor: 432, confidence: "derived" },
+  { state: "Nebraska", abbr: "NE", totalBridges: 15_358, poorBridges: 2_411, poorSharePct: 15.7, dailyCrossingsPoorK: 680, avgAdtPoor: 282, confidence: "derived" },
+  { state: "Missouri", abbr: "MO", totalBridges: 24_487, poorBridges: 3_157, poorSharePct: 12.9, dailyCrossingsPoorK: 2_150, avgAdtPoor: 681, confidence: "derived" },
+  { state: "Oklahoma", abbr: "OK", totalBridges: 23_053, poorBridges: 2_321, poorSharePct: 10.1, dailyCrossingsPoorK: 1_890, avgAdtPoor: 814, confidence: "derived" },
+  { state: "Louisiana", abbr: "LA", totalBridges: 12_899, poorBridges: 1_346, poorSharePct: 10.4, dailyCrossingsPoorK: 3_420, avgAdtPoor: 2_541, confidence: "derived" },
+  { state: "Maine", abbr: "ME", totalBridges: 2_528, poorBridges: 314, poorSharePct: 12.4, dailyCrossingsPoorK: 540, avgAdtPoor: 1_720, confidence: "derived" },
+  { state: "Texas", abbr: "TX", totalBridges: 54_432, poorBridges: 787, poorSharePct: 1.4, dailyCrossingsPoorK: 8_640, avgAdtPoor: 10_978, confidence: "derived" },
+  { state: "Florida", abbr: "FL", totalBridges: 12_592, poorBridges: 274, poorSharePct: 2.2, dailyCrossingsPoorK: 6_210, avgAdtPoor: 22_664, confidence: "derived" },
+  { state: "Arizona", abbr: "AZ", totalBridges: 8_573, poorBridges: 99, poorSharePct: 1.2, dailyCrossingsPoorK: 2_890, avgAdtPoor: 29_192, confidence: "derived" },
+  { state: "Nevada", abbr: "NV", totalBridges: 2_088, poorBridges: 31, poorSharePct: 1.5, dailyCrossingsPoorK: 1_120, avgAdtPoor: 36_129, confidence: "derived" },
+  { state: "Utah", abbr: "UT", totalBridges: 3_059, poorBridges: 95, poorSharePct: 3.1, dailyCrossingsPoorK: 780, avgAdtPoor: 8_211, confidence: "derived" },
+  { state: "California", abbr: "CA", totalBridges: 25_763, poorBridges: 1_812, poorSharePct: 7.0, dailyCrossingsPoorK: 18_400, avgAdtPoor: 10_154, confidence: "derived" },
+  { state: "New York", abbr: "NY", totalBridges: 17_521, poorBridges: 1_702, poorSharePct: 9.7, dailyCrossingsPoorK: 9_850, avgAdtPoor: 5_787, confidence: "derived" },
+  { state: "Illinois", abbr: "IL", totalBridges: 26_848, poorBridges: 2_374, poorSharePct: 8.8, dailyCrossingsPoorK: 5_620, avgAdtPoor: 2_367, confidence: "derived" },
+  { state: "Massachusetts", abbr: "MA", totalBridges: 5_229, poorBridges: 481, poorSharePct: 9.2, dailyCrossingsPoorK: 3_280, avgAdtPoor: 6_819, confidence: "derived" },
+  { state: "Ohio", abbr: "OH", totalBridges: 27_345, poorBridges: 1_943, poorSharePct: 7.1, dailyCrossingsPoorK: 4_760, avgAdtPoor: 2_450, confidence: "derived" },
+  { state: "Michigan", abbr: "MI", totalBridges: 11_314, poorBridges: 1_087, poorSharePct: 9.6, dailyCrossingsPoorK: 2_940, avgAdtPoor: 2_705, confidence: "derived" },
+  { state: "Tennessee", abbr: "TN", totalBridges: 20_075, poorBridges: 881, poorSharePct: 4.4, dailyCrossingsPoorK: 3_110, avgAdtPoor: 3_530, confidence: "derived" },
+  { state: "Georgia", abbr: "GA", totalBridges: 15_026, poorBridges: 638, poorSharePct: 4.2, dailyCrossingsPoorK: 2_680, avgAdtPoor: 4_201, confidence: "derived" },
+  { state: "North Carolina", abbr: "NC", totalBridges: 18_445, poorBridges: 1_654, poorSharePct: 9.0, dailyCrossingsPoorK: 3_540, avgAdtPoor: 2_140, confidence: "derived" },
 ];
 
-export function fmtCount(n: number): string {
-  return new Intl.NumberFormat("en-US").format(Math.round(n));
+export type DetailTableRow = {
+  metric: string;
+  allBridges: string;
+  poorBridges: string;
+  notes: string;
+};
+
+export const DETAIL_TABLE: DetailTableRow[] = [
+  { metric: "Bridge count", allBridges: "623,218", poorBridges: "42,080 (6.75%)", notes: "FHWA condition24 national total" },
+  { metric: "Deck area (sq m)", allBridges: "406,604,942", poorBridges: "19,774,641 (4.86%)", notes: "Poor spans skew smaller" },
+  { metric: "Daily vehicle crossings", allBridges: "~4.9 billion", poorBridges: "~168.5 million (3.4%)", notes: "ASCE 2025 / ARTBA 2024" },
+  { metric: "Mean ADT per span", allBridges: "~7,862", poorBridges: "~4,004", notes: "Crossings ÷ bridge count" },
+  { metric: "Urban interstate poor spans", allBridges: "—", poorBridges: "538 spans; ~41k ADT each", notes: "High exposure, low count" },
+  { metric: "Rural minor collector poor", allBridges: "—", poorBridges: "20,895 spans; ~188 ADT each", notes: "Low exposure, high count" },
+  { metric: "Identified rehab need", allBridges: "—", poorBridges: "$191B (FHWA estimate)", notes: "vs ~$40B IIJA bridge programs" },
+  { metric: "Condition definition", allBridges: "Good ≥7; Fair 5–6", poorBridges: "Poor ≤4 on any element", notes: "Replaces pre-2018 SD label" },
+];
+
+export type MetricMode = "count" | "deck" | "adt";
+
+export function filterFuncClasses(realm: "all" | "rural" | "urban"): FuncClassRow[] {
+  if (realm === "all") return FUNCTIONAL_CLASSES;
+  return FUNCTIONAL_CLASSES.filter((r) => r.realm === realm);
 }
 
-export function fmtPct(n: number, digits = 1): string {
-  return `${n.toFixed(digits)}%`;
+export function trendSeries() {
+  return POOR_SHARE_TREND.map((r) => ({
+    year: String(r.year),
+    poorShare: r.poorSharePct,
+    deckShare: r.poorDeckSharePct,
+    crossingsM: r.dailyCrossingsPoorM,
+  }));
+}
+
+export function conditionTreemap(metric: MetricMode) {
+  return CONDITION_MIX.map((c) => ({
+    name: c.label,
+    id: c.id,
+    value: metric === "count" ? c.bridges : metric === "deck" ? c.deckAreaSqM : c.id === "poor" ? POOR_ADT_SUM : c.id === "good" ? 2_800_000_000 : 1_900_000_000,
+    sharePct: metric === "count" ? c.bridgeSharePct : c.deckSharePct,
+  }));
+}
+
+export function funcExposureRows(realm: "all" | "rural" | "urban") {
+  return filterFuncClasses(realm).map((r) => ({
+    label: r.shortLabel,
+    fullLabel: r.label,
+    countShare: r.poorCountSharePct,
+    adtShare: r.poorAdtSharePct,
+    avgAdt: r.avgAdtPoor,
+    poorBridges: r.poorBridges,
+    poorAdt: r.poorAdt,
+  }));
+}
+
+export function scatterPoints() {
+  return STATE_PANEL.map((s) => ({
+    state: s.abbr,
+    poorShare: s.poorSharePct,
+    avgAdt: s.avgAdtPoor,
+    poorBridges: s.poorBridges,
+    crossingsK: s.dailyCrossingsPoorK,
+  }));
+}
+
+export function crossingSplitSeries() {
+  const poor = HEADLINE.dailyCrossingsPoorM;
+  const nonPoor = HEADLINE.dailyCrossingsAllB * 1000 - poor;
+  return POOR_SHARE_TREND.map((r) => ({
+    year: String(r.year),
+    poorM: r.dailyCrossingsPoorM,
+    nonPoorM: HEADLINE.dailyCrossingsAllB * 1000 - r.dailyCrossingsPoorM,
+    poorSharePct: (r.dailyCrossingsPoorM / (HEADLINE.dailyCrossingsAllB * 1000)) * 100,
+  }));
+}
+
+export function fmtPct(n: number, d = 1): string {
+  return `${n.toFixed(d)}%`;
+}
+
+export function fmtNum(n: number): string {
+  if (n >= 1_000_000_000) return `${(n / 1_000_000_000).toFixed(1)}B`;
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
+  return n.toLocaleString();
 }
 
 export function fmtAdt(n: number): string {
-  if (n >= 1_000_000_000) return `${(n / 1_000_000_000).toFixed(2)}B`;
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
-  if (n >= 1_000) return `${(n / 1_000).toFixed(0)}K`;
-  return fmtCount(n);
-}
-
-export function stateScatterRows(region: "All" | StateRow["region"] = "All") {
-  return STATE_PANEL.filter((s) => region === "All" || s.region === region).map(
-    (s) => ({
-      ...s,
-      x: s.poorSharePct,
-      y: s.poorAdt / 1_000_000,
-      z: Math.max(40, Math.sqrt(s.poor) * 4),
-    }),
-  );
-}
-
-export function functionalClassFiltered(
-  setting: "All" | "Rural" | "Urban" = "All",
-) {
-  return FUNCTIONAL_CLASS.filter(
-    (r) => setting === "All" || r.setting === setting,
-  );
+  return n.toLocaleString(undefined, { maximumFractionDigits: 0 });
 }

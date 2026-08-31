@@ -1,7 +1,9 @@
 /**
  * QA: structurally-deficient-bridges-versus-daily-traffic-2026
- * // viz-types: donut condition, stacked count-vs-ADT, FC grouped bars, area+line trend, highway system bars, state scatter | layout: default
- * // smoke-marker: Structurally deficient bridges versus daily traffic
+ * // smoke-marker: Poor-share trend vs deck area
+ * // viz-types: dual-line poor-share trend, condition stacked bars,
+ * // functional-class grouped exposure bars, state scatter, crossing area stack
+ * // | layout: default
  */
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -10,32 +12,30 @@ import { chromium } from "playwright";
 import { startStaticServer, stopStaticServer } from "./lib/static-server.mjs";
 import { auditVizInteractions } from "./lib/viz-interaction-qa.mjs";
 import {
-  CONDITION_SPLIT,
-  FUNCTIONAL_CLASS,
+  CONDITION_MIX,
+  DETAIL_TABLE,
+  FUNCTIONAL_CLASSES,
   HEADLINE,
-  HIGHWAY_SYSTEM,
-  POOR_TREND,
+  POOR_ADT_SUM,
   STATE_PANEL,
+  VIZ_MARKERS,
 } from "../src/data/structurally-deficient-bridges-versus-daily-traffic-2026-data.ts";
 
+assert.equal(STATE_PANEL.length, HEADLINE.panelN);
+assert.equal(STATE_PANEL.length, 24);
+assert.equal(DETAIL_TABLE.length, 8);
+assert.equal(CONDITION_MIX.length, 3);
+assert.equal(FUNCTIONAL_CLASSES.length, 12);
 assert.equal(HEADLINE.poorBridges, 42_080);
-assert.equal(HEADLINE.totalBridges, 623_218);
-assert.equal(HEADLINE.poorAdt, 168_605_928);
-assert.ok(Math.abs(HEADLINE.poorSharePct - 6.75) < 0.01);
-assert.ok(Math.abs(HEADLINE.poorAdtSharePct - 3.41) < 0.01);
-assert.ok(CONDITION_SPLIT.length === 3);
-assert.ok(FUNCTIONAL_CLASS.length === 12);
-assert.ok(HIGHWAY_SYSTEM.length === 3);
-assert.ok(POOR_TREND.length >= 6);
-assert.ok(STATE_PANEL.length >= 12);
-assert.equal(
-  CONDITION_SPLIT.reduce((s, r) => s + r.bridges, 0),
-  HEADLINE.totalBridges,
-);
+assert.equal(HEADLINE.poorSharePct, 6.75);
+assert.equal(HEADLINE.dailyCrossingsPoorM, 168.5);
+assert.equal(HEADLINE.poorCrossingSharePct, 3.4);
+assert.ok(Math.abs(POOR_ADT_SUM - 168_605_928) < 2);
+assert.ok(VIZ_MARKERS.includes("Poor-share trend vs deck area"));
 
 const root = process.cwd();
 const slug = "structurally-deficient-bridges-versus-daily-traffic-2026";
-const markers = ["Structurally deficient bridges versus daily traffic"];
+const markers = [...VIZ_MARKERS];
 
 async function clickBtn(page, name) {
   console.log(`→ click ${name}`);
@@ -49,7 +49,7 @@ async function main() {
     console.error("✗ Missing out/ — run npm run build first");
     process.exit(1);
   }
-  const port = Number(process.env.SMOKE_PORT || 4188);
+  const port = Number(process.env.SMOKE_PORT || 4180);
   const server = await startStaticServer(outDir, port);
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
@@ -67,20 +67,20 @@ async function main() {
       });
       console.log(`✓ ${m}`);
     }
-    await clickBtn(page, "Condition mix");
-    await clickBtn(page, "Functional class");
-    await clickBtn(page, "Rural");
-    await clickBtn(page, "Poor count share (%)");
-    await clickBtn(page, "Poor ADT volume");
-    await clickBtn(page, "All");
-    await clickBtn(page, "Decade path");
-    await clickBtn(page, "NHS vs non-NHS");
-    await clickBtn(page, "State scatter");
-    await clickBtn(page, "Midwest");
-    await clickBtn(page, "All regions");
-    await clickBtn(page, "Count vs ADT");
-    await auditVizInteractions(page, { slug });
-    console.log("✓ QA passed");
+
+    await clickBtn(page, "Functional class ADT exposure");
+    await page
+      .getByText("Functional class ADT exposure", { exact: false })
+      .first()
+      .waitFor({ timeout: 10000 });
+    await clickBtn(page, "Urban");
+    await clickBtn(page, "State poor share scatter");
+    await clickBtn(page, "Daily crossing split");
+    await clickBtn(page, "Condition mix treemap");
+    await clickBtn(page, "Deck area");
+
+    await auditVizInteractions(page, slug);
+    console.log(`✓ QA passed: ${slug}`);
   } finally {
     await browser.close();
     await stopStaticServer(server);
