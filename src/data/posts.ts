@@ -2,6 +2,100 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026",
+    slug: "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026",
+    title:
+      "Winter Colony Loss Hit 40% as Almond Acres Still Need ~2.8M Rented Hives",
+    excerpt:
+      "BIP/AIA winter loss reached 40.2% in 2024–25 while California almond bearing acres held near 1.39 million. At a conventional 2 colonies per acre, implied hive demand (~2.78M) now exceeds the USDA Jan-1 U.S. stock (~2.63M).",
+    category: "Food & Agriculture",
+    themeId: "usda-honey-bee-colonies",
+    imageUrl:
+      "/images/food-agriculture-usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic almond orchard rows meeting migratory hive stacks, amber acreage area and rose winter-loss line overlay, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-30T20:00:00Z",
+    featured: true,
+    visualization:
+      "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026",
+    layout: "default",
+    format: "explainer",
+    content: `Every February, California's Central Valley becomes the largest temporary livestock market in American agriculture. Almond bloom still depends on rented honey bee colonies trucked in from across the country. The interactive dashboard above asks a narrow question with two public clocks: **how high are winter and annual colony loss rates**, and **how large is the almond acreage that still needs those rented hives**?
+
+The latest prints do not line up comfortably. The 2024–25 national survey from Auburn University and the Apiary Inspectors of America (continuing the Bee Informed Partnership / AIA loss series) estimated **40.2%** winter loss and **55.6%** annual loss — record or near-record mortality rates. USDA NASS, meanwhile, put California **bearing almond acres at 1.39 million** for the 2025 crop. At the industry's conventional stocking rate of about **two colonies per acre**, that acreage implies roughly **2.78 million** hives for a single crop. USDA NASS counted only about **2.63 million** U.S. colonies on January 1, 2025 for operations with five or more colonies. Loss rates and pollination demand are not the same series — but they now collide in the same winter window.
+
+## Two clocks that share one February
+
+Colony **loss rates** from BIP / AIA are mortality rates, not population change. Beekeepers can lose a third of their stock over winter and still enter almond bloom with a rebuilt inventory if they split, buy packages, or import queens aggressively in the preceding months. High loss therefore does not automatically mean fewer colonies on January 1 — it means more replacement work, more cash burn, and more fragile logistics before the first Nonpareil flowers open.
+
+Almond **bearing acres** are a slower clock. USDA NASS California almond tables show bearing acreage climbing from **950,000** in 2015 to **1.39 million** by 2025 — about a **46%** increase in a decade. Nonbearing plantings have slowed from the mid-2010s boom, but the bearing base that must be pollinated each February remains near its peak. Conventional mature orchards still budget roughly **two hives per acre**; heavier set targets and older varieties can push toward **2.5**. Newer self-fertile plantings can lean lower, which is why the dashboard's stocking ladder shows **1.5 / 2.0 / 2.5** scenarios rather than a single official "hive census."
+
+The policy and market question is whether **rising acreage that still needs rented bees** is compatible with **winter loss rates that keep clearing the ~20–22% "acceptable" threshold** beekeepers themselves report in the same surveys.
+
+## Winter loss versus the almond acreage ramp
+
+Pair each winter season with the almond bloom that follows:
+
+| Bloom year | Winter season | Winter loss | Annual loss | CA bearing acres (000s) | Implied demand @ 2/acre (M) | U.S. Jan-1 colonies (M) | Demand / stock |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 2016 | 2015-16 | 28.1% | 40.5% | 970 | 1.94 | 2.59 | 75% |
+| 2018 | 2017-18 | 30.7% | 40.1% | 1,090 | 2.18 | 2.64 | 83% |
+| 2019 | 2018-19 | 37.7% | 40.4% | 1,180 | 2.36 | 2.67 | 88% |
+| 2021 | 2020-21 | 33.5% | 50.8% | 1,310 | 2.62 | 2.92 | 90% |
+| 2023 | 2022-23 | 37.4% | 48.2% | 1,380 | 2.76 | 2.70 | 102% |
+| 2024 | 2023-24 | 37.3% | 55.1% | 1,380 | 2.76 | 2.67 | 103% |
+| 2025 | 2024-25 | 40.2% | 55.6% | 1,390 | 2.78 | 2.63 | 106% |
+
+Two patterns stand out. First, **winter loss is volatile** — 21–23% troughs in 2016–17 and 2019–20, then 37%+ peaks in 2018–19, 2022–23, 2023–24, and a new high at **40.2%** in 2024–25. Second, **almond acres are not volatile downward**. Even after soft almond prices in 2022–23 and grower removals of some young plantings, bearing acres stayed glued near **1.38–1.39 million**. The dual-axis panel in the dashboard makes the asymmetry visible: the rose loss line spikes and dips; the teal acreage area only ratchets up.
+
+## When implied demand crossed the national stock
+
+Hive demand here is a **scenario**, not a USDA contract count. Multiply bearing acres by two colonies per acre and you get a February labor ask. Compare that ask with NASS January 1 colony inventories for operations with five or more colonies — the commercial and serious sideline universe that actually moves for almonds.
+
+Through the late 2010s, implied demand usually sat **under** the national Jan-1 stock: about **75–90%** of inventory. From the **2022–23** season onward, the ratio flips above **100%**. That does not mean California literally needs every U.S. colony. It means the conventional stocking math for one crop now exceeds the published national commercial inventory on the date that matters for bloom logistics. Migratory colonies that NASS attributes to California in January are already mostly almond-bound; colonies still sitting in the Dakotas, Florida, or Texas have to move, and replacements after a 40% winter must be built before trucks roll.
+
+The demand-versus-stock panel plots both levels and the share line. The share crossing 100% is the visual headline: almond acres kept their claim on the national hive pool even as loss rates made that pool more expensive to maintain.
+
+## Annual loss is the quieter, harder number
+
+Winter gets the press. **Annual** loss — April to April — is often worse because summer mortality compounds with winter. AIA's 2023–24 survey put annual loss at **55.1%**, then called 2024–25 at **55.6%**. BIP's 2020–21 print was already **50.8%**. Those rates do not mean the national colony count halves each year; they mean commercial operators are continuously replacing stock through splits, packages, and nucs. Replacement capacity is finite, especially when queens, labor, and feed costs jump in the same seasons Varroa and viruses spike.
+
+For almond desks, annual loss matters because it shapes **how many colonies enter fall** — and therefore how brutal the winter rebuild must be before February contracts. A 55% annual mortality environment with 1.39 million bearing acres is a different risk regime from a 40% annual environment with 950,000 acres a decade earlier.
+
+## Stocking rates still decide the gap
+
+Not every acre needs two hives forever. Self-fertile varieties and thinner bloom sets can cut demand. The stocking ladder panel holds 2025 acres fixed and varies colonies per acre:
+
+- **1.5 / acre** → about **2.09M** colonies (~79% of Jan-1 stock)
+- **2.0 / acre** → about **2.78M** (~106%)
+- **2.5 / acre** → about **3.48M** (~132%)
+
+Self-fertile adoption is real but incomplete. As long as the bearing base is dominated by varieties that still rent bees at conventional rates, the **2.0** scenario remains the planning default growers and brokers use. The ladder is there to show how sensitive the "shortage" narrative is to agronomy, not to declare a hard physical shortfall.
+
+## What the scatter does not prove
+
+Plot winter (or annual) loss against almond acres and you will see later years clustering at high acres and high loss. That is **not** evidence that almond acres *cause* colony loss. Almond bloom is a concentrated pesticide, forage, and transport stress window, and researchers debate its contribution relative to Varroa, viruses, nutrition, and weather. This post does not estimate a causal elasticity. It documents **coincidence under constraint**: the crop that rents the largest share of U.S. commercial colonies is near peak acreage in the same winters when survey mortality is near peak.
+
+Treat the scatter as a risk map for logistics desks — high-acre, high-loss years are the ones where pollination pricing and trucking scramble hardest — not as a regression claim.
+
+## Caveats and source boundaries
+
+Several boundaries keep the story honest:
+
+1. **BIP / AIA loss rates are survey totals**, not a census. Coverage is a minority of colonies (often mid-teens percent of the honey-producing inventory). Bootstrapped confidence intervals are wide in recent years.
+2. **NASS Honey Bee Colonies** covers operations with **five or more** colonies and uses a different questionnaire than BIP. Jan-1 totals are the right stock anchor for commercial logistics, but they are not identical to BIP's "colonies at risk" denominators.
+3. **Implied hive demand** assumes a uniform 2 colonies per acre. Actual contracts vary by variety, bloom density, and grower preference. Self-fertile acres pull the true aggregate below the 2.0 line; heavy-set contracts push it above.
+4. **Loss ≠ inventory decline.** High mortality with aggressive replacement can leave Jan-1 counts roughly flat — which is exactly what the long NASS series shows around **2.6–2.9 million**. The stress shows up in costs and fragility, not always in the headline colony total.
+5. **California acres are not national pollination demand.** Almonds dominate the February peak, but other crops rent bees later. This piece isolates almonds because they set the winter bottleneck.
+
+Sources for the dashboard and table: USDA NASS California Almond Forecast (May 2025 acreage), USDA NASS Honey Bee Colonies reports (Jan-1 inventories), and BIP / AIA published national total loss rates through the 2024–25 survey.
+
+## Why the dual series still matters
+
+If winter loss had drifted back toward the long-run average near **29%** while acres held, the story would be "expensive but manageable replacement." If acres had rolled over while losses spiked, the story would be "beekeeping stress without a growing February ask." The uncomfortable case is the one in the data: **acres near peak, losses at records, and a 2-per-acre demand scenario that now exceeds the published Jan-1 national stock**. That is the chart pair the dashboard is built to keep in view — not as panic copy, but as a measurable tension between a perennial crop's pollination math and a livestock system that must remake itself every year before the first almond bloom.
+`,
+  },
+  {
     id: "domestic-passenger-yield-versus-load-factor-2026",
     slug: "domestic-passenger-yield-versus-load-factor-2026",
     title:

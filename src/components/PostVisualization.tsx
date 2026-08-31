@@ -4945,6 +4945,23 @@ const DomesticPassengerYieldVersusLoadFactor2026Dashboard = dynamic(
   },
 );
 
+const UsdaHoneyBeeColonyLossVersusAlmondPollinationAcres2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UsdaHoneyBeeColonyLossVersusAlmondPollinationAcres2026Dashboard"
+    ).then(
+      (m) => m.UsdaHoneyBeeColonyLossVersusAlmondPollinationAcres2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6236,6 +6253,10 @@ export function PostVisualization({
 
   if (type === "domestic-passenger-yield-versus-load-factor-2026") {
     return <DomesticPassengerYieldVersusLoadFactor2026Dashboard />;
+  }
+
+  if (type === "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026") {
+    return <UsdaHoneyBeeColonyLossVersusAlmondPollinationAcres2026Dashboard />;
   }
 
   return null;

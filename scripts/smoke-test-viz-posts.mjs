@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026",
+    marker: "Winter loss vs almond acres",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "domestic-passenger-yield-versus-load-factor-2026",
     marker: "Yield vs load factor",
     forbidden: "Loading interactive charts",
