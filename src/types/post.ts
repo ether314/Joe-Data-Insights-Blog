@@ -352,7 +352,8 @@ export interface Post {
     | "high-hazard-potential-dams-without-emergency-action-plans-2026"
     | "streaming-video-cpi-versus-cable-and-satellite-tv-cpi-2026"
     | "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026"
-    | "credit-card-interest-rates-versus-new-account-openings-2026";
+    | "credit-card-interest-rates-versus-new-account-openings-2026"
+    | "va-disability-claims-pending-versus-average-days-to-complete-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

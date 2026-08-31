@@ -2,6 +2,93 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "va-disability-claims-pending-versus-average-days-to-complete-2026",
+    slug: "va-disability-claims-pending-versus-average-days-to-complete-2026",
+    title:
+      "VA Rating Claims: Pending Inventory Fell 42% From Peak as Average Days to Complete Dropped Below 80",
+    excerpt:
+      "VBA Monday Morning Workload Reports show rating-bundle pending claims peaking near 1.10 million in October 2023, a backlog crest of about 418,000 in January 2024, and an August 2026 read of roughly 633,000 pending with average days to complete (FYTD) near 76 — well below the PACT Act surge.",
+    category: "Politics",
+    themeId: "va-disability-claims",
+    imageUrl:
+      "/images/politics-va-disability-claims-pending-versus-average-days-to-complete-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic editorial showing stacked claim folders fading into a descending timeline of average days, amber backlog bars shrinking beside cyan speed markers, Visual Capitalist-style data aesthetic",
+    publishedAt: "2026-08-30T21:00:00Z",
+    featured: true,
+    visualization:
+      "va-disability-claims-pending-versus-average-days-to-complete-2026",
+    layout: "default",
+    format: "explainer",
+    content: `The Department of Veterans Affairs rates disability compensation claims on a clock that veterans feel in weeks and Congress tracks in months. Two numbers dominate that clock: **how many rating claims are still pending**, and **how many days, on average, it takes VBA to finish the ones it completes**. After the Honoring our PACT Act of 2022 opened new presumptive toxic-exposure pathways, both series spiked. The question for 2026 is whether the surge left a permanent plateau — or whether inventory and speed have both come back down.
+
+This cut uses the Veterans Benefits Administration **Monday Morning Workload Report (MMWR)** Rating Bundle for **USA – All Missions Total**, plus the Transformation national end-product view for claim mix. Average days pending (ADP) describes how old the open inventory is; average days to complete (ADC) — month-to-date and fiscal-year-to-date — describes how long finished claims took. A claim is **backlogged** once it has sat in inventory more than **125 days**. Those definitions matter because pending can fall while backlog share rises if the remaining stock is older, and early-month ADC MTD can look artificially fast when few claims have completed yet.
+
+The interactive dashboard above walks a dual-axis of pending inventory against ADC, the backlog share of pending, a scatter of pending versus ADC FYTD by phase, end-product ladders from peak to latest, original-versus-supplemental mix, and fiscal-year completion totals. The narrative below anchors the same workbook numbers.
+
+## What the PACT Act surge did to the rating bundle
+
+PACT Act claims did not arrive as a gentle ramp. VBA’s published Rating Bundle inventory climbed from about **709,000** pending in early January 2023 to a series peak of **1,098,487** on **October 7, 2023** — a little more than **1.10 million** open rating-bundle claims. That peak sits roughly **55%** above the January 2023 level in this desk cut. The agency was simultaneously receiving new toxic-exposure filings, completing record volumes, and watching older claims age past the 125-day line.
+
+Inventory is not the same as backlog. Pending peaked in October 2023; the **backlog** crest arrived later, at **417,855** on **January 6, 2024**, when nearly **40%** of pending claims were older than 125 days. That lag is the aging math: even as total pending started to ease after October, a large cohort crossed the backlog threshold in late 2023 and early 2024. Average days to complete followed a similar delayed crest — ADC MTD printed **158.6 days** on that same early-January 2024 workbook, with ADC FYTD near **150 days**.
+
+VA leadership publicly framed the surge as a temporary overload rather than a permanent new normal, citing hiring, automation of rating-bundle steps, and a deliberate choice not to starve non-PACT work. The MMWR series is the ledger that tests that claim: if pending and ADC both compress after the crest, the surge looks like a wave; if either sticks, the wave left a higher waterline.
+
+## Pending inventory: from 1.10 million to about 633,000
+
+By **August 22, 2026**, Rating Bundle pending stood at **632,774** — down **42.4%** from the October 2023 peak. The path was not a straight line. Mid-2024 still showed inventories near **970,000**; December 2024 remained above **950,000**. The steeper descent shows up in 2025: July 2025 pending near **742,000**, September 2025 near **634,000**, and a January 2026 trough around **576,000** before a modest rebound into the low-to-mid 600,000s by late August.
+
+That rebound deserves a caveat. Pending rose from the January 2026 trough even while backlog stayed near decade-low shares. Receipts, seasonal filing patterns, and the mix of supplemental versus original claims can lift inventory without restoring the 2023–2024 backlog crisis. The cleaner story is the peak-to-latest drop: more than **465,000** fewer pending rating-bundle claims than at the October 2023 crest.
+
+| Workbook date | Pending | Backlog (>125d) | Backlog share | ADP (days) | ADC FYTD (days) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Jan 7, 2023 | 709,131 | 200,456 | 28.3% | 109.4 | 129.9 |
+| Oct 7, 2023 (peak pending) | 1,098,487 | 306,747 | 27.9% | 104.4 | 140.2 |
+| Jan 6, 2024 (peak backlog) | 1,048,765 | 417,855 | 39.8% | 122.4 | 149.9 |
+| Sep 27, 2025 | 634,240 | 134,048 | 21.1% | 86.4 | 121.0 |
+| Aug 22, 2026 (latest) | 632,774 | 71,364 | 11.3% | 62.9 | 76.2 |
+
+The table’s last row is the headline for backlog pressure: **71,364** claims older than 125 days, or about **11.3%** of pending — versus nearly **40%** at the January 2024 crest. Backlog is down **82.9%** from that peak in this series.
+
+## Average days to complete after the surge
+
+Did speed improve once the surge crest passed? The FYTD ADC series says yes. Pre-surge January 2023 ADC FYTD was already elevated at about **130 days**. During the crest window it ran near **150 days**. By late FY2025 (September 2025 workbook) ADC FYTD had compressed to about **121 days**, and by August 22, 2026 it printed **76.2 days** — roughly **half** the early-2024 FYTD pace and well below the January 2023 baseline in this cut.
+
+ADC MTD is noisier. Early-month prints can swing when the completion base is thin: the August 1, 2026 workbook showed ADC MTD near **48 days** on only a few hundred month-to-date completions, while August 22 MTD settled near **69 days** on a much larger base. Prefer **ADC FYTD** for fiscal-year speed and mid/late-month ADC MTD for point-in-time reads. Average days pending followed a cleaner descent — from **122 days** at the backlog peak to about **63 days** in late August 2026 — meaning the open inventory is not only smaller but younger.
+
+VA press releases in 2025–2026 have highlighted record-low average processing times and backlog milestones under 100,000 and then under 70,000. The MMWR Rating Bundle numbers in this desk cut are consistent with that direction even when the exact press-round figure and the Rating Bundle All Missions Total differ slightly by scope and as-of date. Treat press headlines as communication; treat the workbook as the reproducible series.
+
+## Completions: record throughput, not a quiet year
+
+Inventory falls for two reasons: fewer receipts, or more completions. The fiscal-year completion totals lean hard on the second. VA reported about **2.49 million** compensation and pension completions in FY2024 and a new record of **3,001,734** in FY2025 — more than **3.0 million** decisions in a single fiscal year. That is not a story of a quiet claims shop waiting out the surge; it is a story of output rising enough to chew through an elevated stock while new PACT-related and non-PACT claims continued to arrive.
+
+Throughput does not automatically mean every veteran’s wait fell evenly. Supplemental entitlement claims dominate the Transformation mix — roughly three-quarters of pending in both the October 2023 peak view and the August 2026 latest view. Original entitlement is a smaller slice of inventory but often a larger share of political attention because it is a veteran’s first rating decision. End-product detail shows EP 020 increase claims still the largest pending bucket, with EP 040 AMA supplemental and EP 110/010 originals carrying higher backlog shares than increase work even after the national backlog collapse.
+
+## End products and original-versus-supplemental mix
+
+At the October 28, 2023 Transformation peak view, EP 020 (increases) alone held about **527,000** pending claims. By August 22, 2026 that bucket was about **269,000**. EP 040 AMA supplemental fell from about **269,000** to about **197,000**; EP 110 originals with seven or fewer issues from about **152,000** to about **87,000**. Survivors (EP 140) and pension originals (EP 180) are smaller absolute stocks but still show backlog-share compression.
+
+The mix pie barely moved in percentage terms: original entitlement near **25%** of pending at peak and about **25%** again in August 2026; supplemental near **74–75%**. Absolute levels fell across the board. That stability is useful: the post-surge inventory is smaller, not a radically different species of claim. What changed more is age structure — backlog shares inside each major EP — more than the original/supplemental composition of the pile.
+
+## Caveats, definitions, and what this desk cut does not claim
+
+Several limits keep the story honest. First, **Rating Bundle USA – All Missions Total** is not identical to every public “claims backlog” press figure; press rooms sometimes cite compensation and pension backlog or other inventory frames. Second, **ADC MTD** early in a month is a thin sample — do not treat a single early-August print as the year’s speed. Third, **completed** counts in MMWR are workload metrics, not grant rates; faster average days do not by themselves say approval rates rose or fell. Fourth, PACT-related versus non-PACT splits appear in separate PACT Act dashboards and can show different average days than the all-missions Rating Bundle average. Fifth, fiscal-year completion totals reset each October 1, so mid-year FYTD completion levels are not comparable to full-year records without that calendar in mind.
+
+This post also does not forecast FY2027 receipts. A new legislative expansion, exam-capacity shock, or systems outage could rebuild inventory even with today’s faster ADC. The evidence in the August 2026 workbook is historical: pending well below the 2023 peak, backlog near an **11%** share of pending, and ADC FYTD near **76 days** after a crest near **150**.
+
+## Reading the dashboard and the bottom line
+
+Use the dual-axis panel for the core question — pending (or backlog) against ADC across the full window, the surge window, or since January 2025. Switch ADC FYTD versus ADC MTD to see how much early-month noise matters. The backlog-share area chart isolates aging pressure. The scatter colors phases from pre-surge through post-recovery. The EP ladder and mix panels show *which* claims remain; the FY completions bars show *how much* output cleared the pile.
+
+**Bottom line:** VBA’s Rating Bundle did absorb a PACT Act–era surge that pushed pending near **1.10 million** and backlog near **418,000**. By late August 2026, pending was about **633,000** (−42% from peak), backlog about **71,000** (−83% from peak), and ADC FYTD about **76 days** — substantially faster than the surge crest and faster than the early-2023 baseline in this series. Average days to complete did fall after the PACT Act surge. The remaining question for veterans is distributional — which end products and which stations still sit above the national average — not whether the national inventory is still stuck at the 2023 peak.`,
+    keyPoints: [
+      "Rating-bundle pending peaked at 1,098,487 on Oct 7, 2023; latest Aug 22, 2026 read is 632,774 (−42.4%).",
+      "Backlog (>125 days) peaked at 417,855 on Jan 6, 2024 and stood at 71,364 (11.3% of pending) by Aug 22, 2026 (−82.9%).",
+      "ADC FYTD fell from ~150 days near the crest to 76.2 days by Aug 22, 2026 — below the Jan 2023 baseline (~130 days).",
+      "FY2025 completions hit a record 3,001,734 compensation and pension claims, helping chew through elevated inventory.",
+    ],
+  },
+  {
     id: "credit-card-interest-rates-versus-new-account-openings-2026",
     slug: "credit-card-interest-rates-versus-new-account-openings-2026",
     title:

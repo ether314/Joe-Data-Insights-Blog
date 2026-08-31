@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "va-disability-claims-pending-versus-average-days-to-complete-2026",
+    marker: "Pending vs days-to-complete",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "credit-card-interest-rates-versus-new-account-openings-2026",
     marker: "All-accounts APR 20.94%",
     forbidden: "Loading interactive charts",
