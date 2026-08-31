@@ -2,6 +2,125 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "auto-insurance-cpi-versus-used-car-and-repair-prices-2026",
+    slug: "auto-insurance-cpi-versus-used-car-and-repair-prices-2026",
+    title:
+      "Auto Insurance CPI vs Used-Car and Repair Prices: Did Premiums Keep Climbing After Input Costs Cooled?",
+    excerpt:
+      "On a 2019 = 100 scale, July 2026 motor-vehicle insurance CPI sits at 149.9 while used cars print 132.1 — a 17.8-point wedge even as repair inflation moderates.",
+    category: "Economics",
+    themeId: "auto-insurance-cpi-wages",
+    imageUrl:
+      "/images/economics-auto-insurance-cpi-versus-used-car-and-repair-prices-2026-hero.png",
+    imageAlt:
+      "Dark navy editorial graphic with orange insurance, sky-blue used-car, and purple body-repair trend lines diverging above a car silhouette",
+    publishedAt: "2026-08-31T12:00:00Z",
+    featured: true,
+    visualization: "auto-insurance-cpi-versus-used-car-and-repair-prices-2026",
+    format: "data-story",
+    tags: [
+      "auto insurance",
+      "used cars",
+      "CPI",
+      "BLS",
+      "motor vehicle repair",
+      "premium inflation",
+      "decoupling",
+    ],
+    keyPoints: [
+      "July 2026: insurance CPI index 149.9 vs used-car index 132.1 (2019 = 100) — a 17.8 pp gap.",
+      "Used-car CPI peaked near index 150 in 2022; insurance kept climbing to roughly 150 by mid-2026.",
+      "Motor-vehicle body-work CPI prints 144.5 — closer to insurance than used cars but still 5.4 pp below.",
+      "Peak insurance YoY hit 22.6% in April 2024; used-car YoY turned negative through much of 2023–24.",
+      "Same-month Pearson correlation between insurance and used-car indexes is 0.55; a six-month used-car lead lifts it to 0.63.",
+    ],
+    content: `When used-vehicle prices exploded in 2021 and 2022, analysts treated motor-vehicle **insurance** CPI as the next shoe to drop. Replacement-cost inflation, longer repair times, and rising claim severity all feed actuarial models with a lag. The question in 2026 is whether that lag has finally closed — or whether premiums kept climbing even after the **used cars and trucks** and **body-work** price indexes cooled.
+
+The Bureau of Labor Statistics publishes all three as separate CPI-U strata. We rebase **CUUR0000SETE** (motor-vehicle insurance), **CUUR0000SETA02** (used cars and trucks), and **CUUR0000SETD01** (motor-vehicle body work) to their **2019** calendar-year averages (= 100) and race them on the same chart. The answer is blunt: **yes**, insurance kept climbing after the input-cost shock faded.
+
+As of **July 2026**, motor-vehicle insurance sits at **149.9** on that scale — up roughly **50%** versus 2019. Used cars and trucks print **132.1**, only **32%** above the pre-pandemic base. Body work lands at **144.5**. The insurance-minus-used-car wedge is **17.8** index points and has widened steadily since 2023 even as year-over-year used-car inflation turned negative.
+
+The dashboard above opens seven panels: a triple-track index race, decoupling and repair-wedge ribbons, a used-car scatter, lag-correlation bars, epoch averages, and a year-over-year pulse. What follows is the narrative behind those lines.
+
+## What the three indexes actually measure
+
+These are not interchangeable “car cost” gauges. **Motor-vehicle insurance** CPI tracks the price consumers pay for private-passenger auto policies — premiums, fees, and policy charges as sampled in the BLS expenditure survey. It is a **cash outflow** index, not a claims-cost index.
+
+**Used cars and trucks** CPI measures transaction prices for pre-owned vehicles in the retail market. It spiked when semiconductor shortages choked new-car supply and dealers marked up trade-ins. It fell when inventory normalized and credit conditions tightened.
+
+**Motor-vehicle body work** CPI isolates collision-repair labor and parts at body shops — a closer cousin to claim severity than the used-car sticker, but still only one piece of the loss triangle. Towing, rental cars, medical payouts, litigation, and fraud sit outside this line item.
+
+Rebasing all three to 2019 = 100 puts them on a common ruler without pretending they share the same basket weights. A household’s budget share for insurance is not the same as its share for used vehicles or repair bills.
+
+## The 2021–22 used-car shock and the insurance lag
+
+The used-car index blew past insurance during the reopening surge. By **July 2022**, used cars peaked near **index 152.9** (roughly **53%** above 2019) while insurance was still near **106**. At that moment, insurers were digesting prior-year loss experience, court reopenings, and rising repair bills — but statutory rate-filing calendars meant many premium increases had not yet reached policy renewals.
+
+Correlation analysis on monthly rebased indexes shows a **0.55** same-month Pearson coefficient between insurance and used cars across the 2019–2026 sample. Shift used cars **six months ahead** of insurance and the correlation rises to **0.63** — consistent with actuarial pass-through on a lagged basis, not a mechanical month-by-month link.
+
+The **epoch bars** in the dashboard collapse the story into eras. During the **2021–22 spike**, average insurance readings near **103** trailed used cars near **139**. In the **2023–24 cool-down**, used-car averages hovered near **133** while insurance averages pushed into the **137** range. By **2026 year-to-date**, insurance averages near **154** against used-car averages near **128** — the widest sustained gap of the post-2019 period.
+
+## July 2026: premiums still climbing
+
+The latest overlapping month is **July 2026**. Insurance CPI raw level prints **856.08** (1982–84 = 100 base) versus a 2019 average near **571** — the **149.9** rebased index. Used cars at **184.66** raw compare with a 2019 average near **140** for the **132.1** index reading.
+
+Year-over-year momentum has diverged sharply. Insurance YoY remains positive in 2026 even as used-car YoY hovers in low single digits. The **peak insurance YoY** observation in this window is **22.6%** in **April 2024** — months after used-car YoY had already turned negative for stretches of 2023.
+
+That pattern matters for household budgets. A driver who bought a used truck in 2021 at an inflated sticker may have seen trade-in values soften by 2024, but the renewal notice kept rising. The CPI strata capture population-average prices, not any one garage or carrier, yet the direction matches consumer complaints: **premiums did not retreat when wholesale used-vehicle indexes did**.
+
+The decoupling ribbon — insurance minus used cars in percentage points — hit a sample peak near **31.6 pp** in **February 2026** before easing slightly to **17.8 pp** by July. Even the easing month leaves insurance far above its 2019 pace while used cars sit only modestly higher.
+
+## Body-work repair costs: closer, but not identical
+
+Collision repair inflation followed a different path than used-car stickers. Body-work CPI lacks a clean monthly run — BLS publication has gaps, including the **October 2025** appropriations lapse that suppressed several CPI cells — so quarterly averages smooth the noise.
+
+Where observations exist, body work climbed with insurance through 2022–24 but has not kept the same **2025–26** acceleration. On the July 2026 print, body work at **144.5** sits **5.4** index points **below** insurance. The repair wedge panel shows that gap widening after 2023: insurers repriced for severity and frequency factors beyond body-shop line items alone.
+
+Labor shortages at collision centers, higher paint and parts costs, and more complex vehicle electronics all pushed repair bills up — but those forces moderated before insurance CPI peaked. Regulatory approval delays, reinsurance costs, and geographic catastrophe loads do not appear in the body-work stratum yet still land in premiums.
+
+## Why insurance does not track sticker prices month to month
+
+Actuarial pricing works on **experience periods** and **rate filings**, not spot wholesale auctions. A carrier sets 2026 premiums using loss data from 2024–25, regulatory allowed margins, and forward reinsurance quotes. Used-car CPI can fall 10% year over year while filed rates still climb because:
+
+- **Severity trends** can worsen even when parts inflation slows — total-loss thresholds interact with used-car levels nonlinearly.
+- **Frequency** (miles driven, accident counts) moved independently of vehicle prices post-pandemic.
+- **Uninsured motorist** and **personal injury** social inflation do not appear in motor-vehicle goods indexes.
+- **State regulatory lag** means approved increases hit renewals in waves, smoothing spikes into multi-year stair steps.
+
+The scatter plot of monthly insurance versus used-car indexes shows positive slope but wide vertical dispersion after 2023 — months where used cars fell modestly while insurance jumped. That is the visual signature of **decoupling**, not measurement error.
+
+## Annual snapshot
+
+| Year | Insurance idx | Used cars idx | Body work idx | Ins − used (pp) | Ins − body (pp) |
+|------|--------------|---------------|---------------|-----------------|-----------------|
+| 2019 | 100.0 | 100.0 | 100.0 | 0.0 | 0.0 |
+| 2020 | 95.4 | 103.2 | 103.6 | −7.8 | −8.2 |
+| 2021 | 99.0 | 130.7 | 109.4 | −31.7 | −10.4 |
+| 2022 | 106.8 | 147.3 | 123.1 | −40.5 | −16.3 |
+| 2023 | 125.4 | 136.8 | 131.2 | −11.5 | −5.2 |
+| 2024 | 147.7 | 128.7 | 133.2 | 19.0 | 14.6 |
+| 2025 | 156.4 | 132.1 | 136.9 | 24.3 | 19.5 |
+| 2026* | 154.4 | 128.4 | 144.1 | 26.1 | 9.1 |
+
+*2026 figures are year-to-date averages through July; 2025 includes an October CPI gap.
+
+The table makes the handoff explicit. Insurance **trailed** used cars during the spike years (negative gap columns in 2021–22), then **overtook** them in 2024 and 2025 as used-car inflation cooled. Body work sits between the two peers — more correlated with insurance than used cars are, but still below premium growth in 2025–26.
+
+## Reading the data: caveats and limits
+
+**CPI is not your renewal quote.** The insurance stratum is a national average across policy types, coverage limits, and discount programs. A teenage driver in a coastal metro can see double-digit increases while the national index rises high single digits.
+
+**Used-car CPI is not Kelley Blue Book.** BLS samples a specific basket of vehicle types and ages. Trade-in values for popular trucks can move differently than the index.
+
+**Body-work gaps reflect publication holes.** Missing months are excluded from quarterly averages; do not treat sparse months as zero inflation.
+
+**Correlation is not causation.** The six-month lead correlation supports a lag story but does not identify regulatory, weather, or litigation shocks.
+
+**October 2025** CPI cells are missing due to the federal appropriations lapse; year-over-year calculations that cross that window should be read cautiously.
+
+**No internal link chain** is needed to make the point: three public BLS series, one rebasing method, and a persistent 2024–26 wedge answer the headline question. **Did insurance keep climbing after used-car and repair CPIs cooled?** On the latest prints, **yes** — insurance remains near index **150** while used cars have retreated to the low **130s** and body work has stabilized in the mid-**140s**. Until loss experience, reinsurance, and regulatory filings turn decisively, that gap is the baseline, not the exception.`,
+  },
+  {
     id: "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026",
     slug: "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026",
     title:

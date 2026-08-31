@@ -4962,6 +4962,21 @@ const UsdaHoneyBeeColonyLossVersusAlmondPollinationAcres2026Dashboard = dynamic(
   },
 );
 
+const AutoInsuranceCpiVersusUsedCarAndRepairPrices2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/AutoInsuranceCpiVersusUsedCarAndRepairPrices2026Dashboard"
+    ).then((m) => m.AutoInsuranceCpiVersusUsedCarAndRepairPrices2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6257,6 +6272,10 @@ export function PostVisualization({
 
   if (type === "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026") {
     return <UsdaHoneyBeeColonyLossVersusAlmondPollinationAcres2026Dashboard />;
+  }
+
+  if (type === "auto-insurance-cpi-versus-used-car-and-repair-prices-2026") {
+    return <AutoInsuranceCpiVersusUsedCarAndRepairPrices2026Dashboard />;
   }
 
   return null;

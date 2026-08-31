@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "auto-insurance-cpi-versus-used-car-and-repair-prices-2026",
+    marker: "Insurance vs used-car and repair indexes",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026",
     marker: "Winter loss vs almond acres",
     forbidden: "Loading interactive charts",
