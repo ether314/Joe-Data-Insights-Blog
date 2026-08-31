@@ -354,7 +354,8 @@ export interface Post {
     | "pet-food-and-pet-care-inflation-versus-all-items-cpi-2026"
     | "credit-card-interest-rates-versus-new-account-openings-2026"
     | "va-disability-claims-pending-versus-average-days-to-complete-2026"
-    | "structurally-deficient-bridges-versus-daily-traffic-2026";
+    | "structurally-deficient-bridges-versus-daily-traffic-2026"
+    | "uscis-n-400-pending-forms-versus-completions-2026";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

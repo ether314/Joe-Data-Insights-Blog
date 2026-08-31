@@ -17,6 +17,11 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "uscis-n-400-pending-forms-versus-completions-2026",
+    marker: "Headline — pending 393,563 → 648,583",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "structurally-deficient-bridges-versus-daily-traffic-2026",
     marker: "Structurally deficient bridges versus daily traffic",
     forbidden: "Loading interactive charts",

@@ -2,6 +2,91 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "uscis-n-400-pending-forms-versus-completions-2026",
+    slug: "uscis-n-400-pending-forms-versus-completions-2026",
+    title:
+      "N-400 Backlog: Pending Naturalization Forms Hit 660k as Quarterly Completions Lag Receipts",
+    excerpt:
+      "USCIS civilian N-400 pending inventory climbed from 393,563 in FY2024 Q1 to 648,583 by FY2026 Q2 — a 65% rise — while quarterly completions in that window repeatedly fell short of receipts and median processing time stretched from 4.7 to 7.4 months.",
+    category: "Politics",
+    themeId: "uscis-naturalization-backlog",
+    imageUrl:
+      "/images/politics-uscis-n-400-pending-forms-versus-completions-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic USCIS naturalization queue with rising amber pending bars and teal completion flow lines, Visual Capitalist-style editorial data visualization",
+    publishedAt: "2026-08-31T06:00:00Z",
+    featured: true,
+    visualization: "uscis-n-400-pending-forms-versus-completions-2026",
+    layout: "default",
+    content: `Every naturalization story eventually lands on Form N-400 — the Application for Naturalization. For applicants, the form is a threshold: English and civics tests, biometrics, interviews, and the oath ceremony. For agency desks, it is inventory math. **Receipts** add cases to the queue. **Completions** — USCIS counts approvals and denials together in its quarterly workload tables — remove them. **Pending** is the stock left at the end of each fiscal quarter.
+
+The question this cut asks is blunt: **did pending N-400 inventory fall as completions rose, or are receipts still filling the queue?** On the eight quarters USCIS published in its FY2026 Q2 workload file, the answer is the second story. Civilian pending climbed from **393,563** at FY2024 Q1 to **648,583** at FY2026 Q2 — a **65%** increase and the highest point in that published series. Total pending including military naturalization categories reached **660,692**. Quarterly completions in FY2026 Q2 (**95,990** civilian) trailed receipts (**135,586**). Median processing time stretched from **4.7** months at FY2024 Q4 to **7.4** months at FY2026 Q2. The interactive dashboard above maps the dual path of pending versus completions, receipts-versus-outflows flow, military stack, annual fiscal-year context, processing-month drift, a field-office scatter cloud, and denial-share composition so readers can see when the queue drained — and when it refilled anyway.
+
+## Two clocks that do not always agree
+
+Pending inventory and quarterly completions are related but not synchronized. A quarter with strong completions can still leave pending higher if receipts arrive faster. Conversely, completions can dip while pending inches up because cases age in place awaiting interview slots, security checks, or post-adjudicative updates.
+
+USCIS publishes N-400 workload in its **Immigration and Citizenship Data** quarterly extracts — the same files Congress mandated in the Consolidated Appropriations Act reporting line for form-level receipts, approvals, denials, pending counts, and processing times. The FY2026 Q2 file (quarterly_all_forms_fy2026_q2_v1.xlsx) carries eight fiscal quarters for civilian Application for Naturalization, from FY2024 Q1 through FY2026 Q2. (FY2024 Q2 is absent from that published slice — a gap readers should note when comparing year-over-year quarters.)
+
+| Fiscal quarter | Received | Completions | Pending | Median processing |
+| --- | ---: | ---: | ---: | ---: |
+| FY2024 Q1 | 191,731 | 196,401 | 393,563 | 5.2 mo |
+| FY2024 Q4 | 271,180 | 220,503 | 507,412 | 4.7 mo |
+| FY2025 Q3 | 245,879 | 260,025 | 519,918 | 5.5 mo |
+| FY2026 Q2 | 135,586 | 95,990 | 648,583 | 7.4 mo |
+
+The table’s asymmetry is the headline. Only **FY2024 Q3** and **FY2025 Q3** show completions materially above receipts in the civilian series. **FY2024 Q4** is the inflection: receipts jumped to **271,180** while completions slid to **220,503**, draining net capacity and pushing pending above half a million. After that, pending never retreated below **519,918**, even when individual quarters cleared more cases than they received.
+
+## Annual context: record receipts, softer completions
+
+Quarterly files tell the near-term plumbing. USCIS’s **FY2024 Annual Statistical Report** anchors the longer fiscal-year arc. Agency-wide, USCIS received about **994,100** N-400 filings in FY2024 — **166,500** more than FY2023 — while completing roughly **903,600**, down **74,500** from the prior year. Persons actually naturalized totaled **818,500** in FY2024 versus **878,500** in FY2023, with military naturalizations rising to about **16,300**.
+
+That annual pattern mirrors the quarterly stock story: **FY2022** remains the recent peak for completions (**1,075,700**) against **781,200** receipts — a clearance rate above 130% that would shrink any queue if sustained. By FY2024, receipts outran completions again. The annual panel in the dashboard plots receipts, completions, and naturalized persons for FY2020–FY2024 so readers can see the post-pandemic surge and the more recent softening without mistaking one strong quarter for a structural fix.
+
+Receipts respond to eligibility waves — permanent residents who waited the statutory period, mid-decade surges in green-card grants, election-cycle citizenship drives, and fee-policy changes. Completions respond to adjudicator headcount, interview capacity, field-office geography, and policy shifts on interview waivers and evidence requests. When those two response curves diverge, pending is where the tension shows up first.
+
+## Receipts still win most quarters
+
+The flow-balance view is the mechanical heart of the piece. For each quarter, net drain equals completions minus receipts. Positive net drain shrinks inventory; negative net drain adds to pending even if completions are numerically large.
+
+In the civilian series, **FY2024 Q4**, **FY2025 Q1**, **FY2025 Q2**, **FY2025 Q4**, and **FY2026 Q2** all show receipts exceeding completions. FY2026 Q2 is especially stark: completions collapsed to **95,990** — partly a function of quarter length and reporting cutoffs in USCIS’s published tables — while receipts, though lower than peak 2025 quarters, still outpaced outflows by nearly **40,000** cases. Pending jumped **123,591** from FY2025 Q4 to FY2026 Q2, the largest two-quarter rise in the published window.
+
+That is not the profile of a queue that is “healing because completions rose.” It is a queue that **mostly refilled** once receipts reasserted dominance. Completions did rise in several mid-2025 quarters — FY2025 Q2 completions hit **254,306** — but those bursts were not large enough, or not sustained enough, to reverse the half-million-case plateau established after FY2024 Q4.
+
+## Military naturalization: smaller stack, faster clock, same direction
+
+USCIS separates **Application for Naturalization (Military)** in the same quarterly files. Military pending is far smaller — **12,109** at FY2026 Q2 versus **648,583** civilian — but it follows a similar upward path, from **6,882** at FY2024 Q1. Processing times for military categories often read lower (**2.0** months at FY2025 Q1) because statutory expedite authorities and smaller caseloads can shorten the path for service members.
+
+The stacked-bar panel lets readers toggle civilian-only versus total pending. Including military adds roughly **12k** cases at the latest quarter — not the driver of the national story, but relevant for veterans’ advocates tracking whether expedited channels are themselves congested. FY2024 military naturalizations in the annual report rose **34%** year over year even as overall naturalizations fell, underscoring that growth in one channel does not automatically relieve civilian wait months.
+
+## Field offices: where the inventory sits
+
+National pending is an aggregation of field-office queues, and USCIS’s quarterly N-400 by field office files show uneven geography. The dashboard’s office cloud plots pending inventory against median processing months for a FY2025 Q4 snapshot of the largest stacks — **Miami**, **Los Angeles**, **Queens**, **Houston**, and **San Francisco** among the highest pending counts, with San Francisco carrying some of the longest median clocks (**7.8** months in that quarter).
+
+Regional filters in the chart isolate Northeast, Southeast, Midwest, Southwest, and West offices. The spread matters politically: naturalization backlogs are not only a “border state” phenomenon; high-pending offices sit in coastal metros with large immigrant populations and dense interview schedules. When national completions dip, these offices are where applicants feel the delay first — in biometrics reuse timelines, interview reschedules, and oath ceremony batching.
+
+USCIS’s public **processing-times** tool and office-level workload files are the operational companions to the national quarterly tables. This article does not reproduce every office row; it highlights that **pending concentration** and **processing-month dispersion** can widen even when national receipt counts moderate.
+
+## Denials, completions definition, and what “throughput” means
+
+USCIS quarterly **completions** sum approvals and denials — not approvals alone. Denial shares in the civilian series hover around **10–11%** of completions in most quarters, with slight variation. The denial-share panel stacks approved versus denied counts and plots the denial percentage line so readers do not confuse higher completions with higher naturalization rates.
+
+A quarter with more denials still counts as higher completions in USCIS workload accounting because the case left the pending stack. Policy analysts therefore separate **naturalization ceremonies** (persons sworn in) from **case completions** (administrative closure). The annual naturalized-persons line in the FY panel is the closer proxy for citizenship output; quarterly completions are the better proxy for queue drainage.
+
+## Caveats, gaps, and confidence
+
+Several limits bind this analysis. **First**, the published eight-quarter slice omits FY2024 Q2; year-over-year comparisons that skip from Q1 to Q3 understate or overstate seasonal receipt patterns. **Second**, USCIS revises quarterly files when systems reconcile post-adjudicative outcomes; figures here match the FY2026 Q2 v1 extract retrieved in August 2026. **Third**, pending is a stock at quarter-end, not a flow; big oath batches can temporarily lower pending even when underlying receipt pressure persists. **Fourth**, field-office panels sample top pending offices from one quarterly file — useful for geography, not a census of every USCIS site. **Fifth**, processing time is a published median for the form category; individual cases deviate sharply based on interview waivers, Requests for Evidence, and name-check delays. **Sixth**, this cut is Form N-400 only; it does not capture the I-485 adjustment path to citizenship or consular naturalization of children.
+
+DHS **Yearbook of Immigration Statistics** provides longer-run naturalization counts and demographic detail; USCIS annual and quarterly products remain the authoritative source for operational backlog math. Readers comparing this piece to oath-ceremony headlines should align definitions before inferring “backlog cleared.”
+
+## What to watch next
+
+Three levers will shape the next quarterly print. **Receipt seasonality** — FY2024 Q4’s receipt spike shows how election-adjacent filing waves can refill inventory even when adjudication capacity is flat. **Adjudicator and interview capacity** — without sustained completions above **260k** per quarter nationally, pending near **650k** will not unwind quickly. **Processing-time publication** — median months already rebounded from the FY2024 Q4 trough; further increases would signal that aging cases, not just new receipts, are inflating the stock.
+
+For applicants, the practical read is unchanged: eligibility does not guarantee timeliness. For desks tracking immigration operations, the analytic read is sharper: **pending N-400 inventory did not fall because completions rose** in the recent published window. Receipts and completion shortfalls rebuilt the queue to series highs, and the median clock lengthened again. Until completions consistently outpace receipts for several consecutive quarters — the profile seen briefly in FY2022 at the annual level — the naturalization backlog remains in refill mode, not drain mode.
+`,
+  },
+  {
     id: "structurally-deficient-bridges-versus-daily-traffic-2026",
     slug: "structurally-deficient-bridges-versus-daily-traffic-2026",
     title:
