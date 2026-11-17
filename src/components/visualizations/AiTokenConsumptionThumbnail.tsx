@@ -9,11 +9,11 @@ import {
 } from "@/data/ai-token-consumption-data";
 
 const juneBars = [...JUNE_2026_SLICE]
-  .sort((a, b) => b.tokensTrillions - a.tokensTrillions)
+  .sort((a, b) => b.tokensTrillionsPerDay - a.tokensTrillionsPerDay)
   .slice(0, 7)
   .map((r) => ({
     name: r.brand.split(" ")[0].slice(0, 6),
-    tokens: r.tokensTrillions,
+    tokens: r.tokensTrillionsPerDay,
     fill: ORIGIN_COLORS[r.origin],
   }));
 
@@ -35,7 +35,7 @@ export function AiTokenConsumptionThumbnail() {
       </div>
       <div className="relative z-10">
         <p className="text-xs font-medium uppercase tracking-wider text-cyan-400">Token volume</p>
-        <p className="mt-1 text-lg font-bold text-white">{STATS.totalJun2026Label} / month</p>
+        <p className="mt-1 text-lg font-bold text-white">{STATS.totalJun2026Label}</p>
         <p className="mt-1 text-sm text-slate-300">
           Jun 2026 · China {STATS.chinaShareLabel} vs US {STATS.usShareLabel} ·{" "}
           {GLOBAL_SUMMARY.brandCount} providers

@@ -7,7 +7,7 @@ import { CATEGORIES } from "@/types/post";
 export const metadata: Metadata = {
   title: "Categories",
   description:
-    "Browse visual analytics and data stories by topic — Economics, Politics, Finance, and Technology.",
+    "Browse original visual analyses by topic — Economics, Politics, Finance, Technology, and the other Theta Scribe desks.",
 };
 
 export default async function CategoriesPage() {
@@ -32,13 +32,13 @@ export default async function CategoriesPage() {
             ← Back to home
           </Link>
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-            Browse by topic
+            Browse by desk
           </p>
-          <h1 className="mt-2 text-4xl font-bold sm:text-5xl">All Categories</h1>
+          <h1 className="mt-2 font-serif text-4xl font-bold sm:text-5xl">Topics</h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">
-            {totalPosts} interactive visual {totalPosts === 1 ? "story" : "stories"}{" "}
-            organized across {CATEGORIES.length} topics. Pick a category to see every
-            post in that collection.
+            {totalPosts} original visual essays across {CATEGORIES.length} research desks.
+            Each category is a beat — economics, energy, health, logistics — not a doorway of
+            recycled templates. Pick a desk to read the essays in that collection.
           </p>
         </div>
       </div>

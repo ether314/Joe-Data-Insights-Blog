@@ -40,8 +40,7 @@ async function browserSmoke(port) {
   await page.goto(url, { waitUntil: "networkidle", timeout: 30000 });
   await page.getByText("June 2026 provider comparison", { exact: false }).first().waitFor({ timeout: 20000 });
   await page.getByText("US vs China token volume", { exact: false }).first().waitFor({ timeout: 5000 });
-  await page.getByText("OpenRouter routed volume", { exact: false }).first().waitFor({ timeout: 5000 });
-  await page.getByText("Price per million input tokens", { exact: false }).first().waitFor({ timeout: 5000 });
+  await page.getByText("First-party API tokens per day", { exact: false }).first().waitFor({ timeout: 5000 });
   await page.getByText("China's official national token volume", { exact: false }).first().waitFor({ timeout: 5000 });
 
   const showing = page.getByText(/Showing \d+ of \d+ records/);
@@ -118,9 +117,8 @@ const staticChecks = [
   ["Dashboard uses JUNE_2026_SLICE", dashboardSrc.includes("JUNE_2026_SLICE")],
   ["Origin dimension exported", dataSrc.includes("export const BRAND_ORIGIN")],
   ["China providers present", ["bytedance", "alibaba", "deepseek", "tencent", "moonshot", "zhipu", "minimax", "xiaomi", "baidu"].every((id) => dataSrc.includes(`"${id}"`))],
-  ["OpenRouter split exported", dataSrc.includes("export const OPENROUTER_SPLIT")],
   ["China national series exported", dataSrc.includes("export const CHINA_NATIONAL_DAILY")],
-  ["Price comparison exported", dataSrc.includes("export const PRICE_PER_MTOK")],
+  ["First-party API rate series exported", dataSrc.includes("export const API_RATE_POINTS")],
   ["Dashboard has origin filter", dashboardSrc.includes('id="token-origin"')],
   ["Dashboard bundled", findInChunks("June 2026 provider comparison") || findInChunks("US vs China token volume")],
 ];

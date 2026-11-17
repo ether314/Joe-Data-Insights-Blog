@@ -29,6 +29,7 @@ $StaleMinutes = if ($env:WATCHDOG_STALE_MINUTES) { [double]$env:WATCHDOG_STALE_M
 $CpuDeltaSeconds = if ($env:WATCHDOG_CPU_DELTA_SECONDS) { [double]$env:WATCHDOG_CPU_DELTA_SECONDS } else { 0.5 }
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
 . (Join-Path $RepoRoot "scripts\lib\hidden-process.ps1")
+. (Join-Path $RepoRoot "scripts\lib\drain-mode.ps1")
 [void](Ensure-BlogAutomationPath)
 $JobsFile = Join-Path $RepoRoot "artifacts\agent-jobs.json"
 $WorktreeRoot = Get-BlogWorkerRoot $RepoRoot
@@ -400,6 +401,9 @@ function Start-ProductionAgent {
 
     Write-Log "Starting orchestrator in background"
     New-Item -ItemType File -Path $StartingFile -Force | Out-Null
+    if (Set-BlogDrainEnv -RepoRoot $RepoRoot) {
+        Write-Log "Drain-only: spawning orchestrator with BLOG_CLAIM_BACKLOG_ONLY=1"
+    }
     # Path has spaces ("AI Projects") - quote -File in a single argument string.
     # CreateNoWindow via Start-HiddenProcess (do not use Start-Process -WindowStyle Hidden).
     $psArgs = "-NoProfile -ExecutionPolicy Bypass -File `"$ProductionScript`""

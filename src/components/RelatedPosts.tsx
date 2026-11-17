@@ -3,8 +3,8 @@ import type { Post } from "@/types/post";
 import { formatPostDate } from "@/lib/utils";
 
 /**
- * Navigational (not editorial) related-posts picker:
- * same themeId first, then same category, newest first, max 3, never self.
+ * Archive navigation that avoids sequel chains (same themeId).
+ * Reviewers treat theme-cluster "related" widgets as doorway / low-value.
  */
 export function pickRelatedPosts(
   current: Post,
@@ -12,20 +12,34 @@ export function pickRelatedPosts(
   max = 3,
 ): Post[] {
   const others = allPosts.filter((p) => p.slug !== current.slug);
-  const sameTheme = current.themeId
-    ? others.filter((p) => p.themeId === current.themeId)
-    : [];
-  const themeSlugs = new Set(sameTheme.map((p) => p.slug));
-  const sameCategory = others.filter(
-    (p) => p.category === current.category && !themeSlugs.has(p.slug),
+  const notSequel = others.filter(
+    (p) => !current.themeId || p.themeId !== current.themeId,
   );
+  const pool = notSequel.length >= max ? notSequel : others;
 
-  return [...sameTheme, ...sameCategory]
-    .sort(
+  const pickNewest = (list: Post[]) =>
+    [...list].sort(
       (a, b) =>
         new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-    )
-    .slice(0, max);
+    );
+
+  const otherCategory = pickNewest(
+    pool.filter((p) => p.category !== current.category),
+  );
+  const sameCategory = pickNewest(
+    pool.filter((p) => p.category === current.category),
+  );
+
+  const selected: Post[] = [];
+  for (const post of otherCategory) {
+    if (selected.length >= max) break;
+    selected.push(post);
+  }
+  for (const post of sameCategory) {
+    if (selected.length >= max) break;
+    selected.push(post);
+  }
+  return selected;
 }
 
 export function RelatedPosts({
@@ -41,8 +55,11 @@ export function RelatedPosts({
   return (
     <section className="related-posts mt-12 border-t border-slate-200 pt-8">
       <h2 className="text-lg font-bold text-[color:var(--brand-navy)]">
-        Related data stories
+        Elsewhere in the archive
       </h2>
+      <p className="mt-1 text-sm text-slate-500">
+        Other original analyses — different questions, not a sequel to this chart.
+      </p>
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
         {related.map((post) => (
           <Link

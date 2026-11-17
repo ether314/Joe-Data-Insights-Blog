@@ -8,10 +8,8 @@
 import { spawn } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { REPO_ROOT, isDrainOnly } from "./drain-mode.mjs";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-export const REPO_ROOT = path.resolve(__dirname, "../..");
 export const REFILL_PID_FILE = path.join(REPO_ROOT, "artifacts", "novel-theme-refill.pid");
 export const REFILL_STAMP_FILE = path.join(REPO_ROOT, "artifacts", "novel-theme-refill.stamp.json");
 export const REFILL_LOG = path.join(REPO_ROOT, "artifacts", "automation-logs", "novel-theme-refill.log");
@@ -95,6 +93,10 @@ export function spawnNovelThemeRefill(opts = {}) {
   try {
     if (opts.dryRun) {
       return { skipped: "dry-run" };
+    }
+    if (isDrainOnly()) {
+      logLine(`skip source=${source}: drain-only`);
+      return { skipped: "drain-only" };
     }
     if (process.platform !== "win32") {
       logLine(`skip source=${source}: not windows`);

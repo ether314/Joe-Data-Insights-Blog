@@ -11,6 +11,7 @@ $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 $LogDir = Join-Path $RepoRoot "artifacts\automation-logs"
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
 . (Join-Path $RepoRoot "scripts\lib\hidden-process.ps1")
+. (Join-Path $RepoRoot "scripts\lib\drain-mode.ps1")
 [void](Ensure-BlogAutomationPath)
 $WatchdogScript = Join-Path $RepoRoot "scripts\watch-blog-production.ps1"
 $WorkerScript = Join-Path $RepoRoot "scripts\start-cursor-worker.ps1"
@@ -256,6 +257,9 @@ function Start-WatchdogLoop {
 }
 
 Write-Log "=== Blog automation startup (Docker-isolated workers) ==="
+if (Set-BlogDrainEnv -RepoRoot $RepoRoot) {
+    Write-Log "Drain-only mode: BLOG_CLAIM_BACKLOG_ONLY=1 (children inherit; no mint / no novel-theme refill)"
+}
 Test-AgentCli
 Ensure-Worktrees
 $containerScript = Join-Path $RepoRoot "scripts\worker-containers.ps1"

@@ -583,9 +583,9 @@ function deployViaCli() {
     console.log(
       `[deploy] CLI fallback attempt ${attempt}/${maxAttempts} concurrency=${env.FIREBASE_HOSTING_UPLOAD_CONCURRENCY}`,
     );
-    const result = spawnSync(
-      "npx",
-      ["firebase-tools@latest", "deploy", "--only", "hosting", "--non-interactive"],
+const result = spawnSync(
+  "npx",
+  ["firebase-tools@latest", "deploy", "--only", "hosting", "--non-interactive"],
       { cwd: root, stdio: "inherit", shell: true, env },
     );
     const status = result.status ?? 1;

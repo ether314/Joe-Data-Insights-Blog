@@ -3,20 +3,26 @@
  * Claim up to N topics into artifacts/agent-jobs.json (never-idle producers).
  *
  * Order per free slot:
- *   1) unused named candidates (lifetime 0, then audience "social-popular",
+ *   1) operator retry of parked infra jobs (cap OPERATOR_REQUEUE_MAX)
+ *   2) unused named candidates (lifetime 0, then audience "social-popular",
  *      then high priority) — never {theme}-update / concentration / geography
  *      sequels of the existing article base
- *   2) {theme}-research-{year} only when that theme has ZERO lifetime posts
+ *   3) {theme}-research-{year} only when that theme has ZERO lifetime posts
  *      (social-popular unused themes first)
- *   3) operator retry of parked infra jobs (cap OPERATOR_REQUEUE_MAX)
  *   4) more unused diversity candidates so producers stay busy
  *
  * When named novel candidates are exhausted and free slots remain, spawn the
  * novel-theme refill agent once (pid + cooldown). Do not wait for the hourly
  * watchdog. Dry-run never spawns. Respects lock status=paused.
  *
+ * Drain / backlog-only (--backlog-only, BLOG_CLAIM_BACKLOG_ONLY=1, or
+ * artifacts/blog-drain-only.flag): skip minting unused named candidates,
+ * {theme}-research-* topics, wishlist rows, and novel-theme refill. Only
+ * listOperatorRetryJobs / recovery of the existing queue.
+ *
  * Usage: node scripts/claim-next-topics.mjs [--max 4] [--run-id local-...]
  *        [--include-recovery-idle] [--force-slots N] [--dry-run]
+ *        [--backlog-only]
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -50,6 +56,7 @@ function isSocialPopularTheme(theme) {
   return Boolean(theme && theme.audience === "social-popular");
 }
 import { spawnNovelThemeRefill } from "./lib/spawn-novel-theme-refill.mjs";
+import { isDrainOnly } from "./lib/drain-mode.mjs";
 
 /** Banned sequel families — these made the archive a hall of mirrors. */
 const SEQUEL_SLUG_RE =
@@ -65,6 +72,7 @@ function parseArgs(argv) {
     includeRecoveryIdle: false,
     forceSlots: null,
     dryRun: false,
+    backlogOnly: false,
   };
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === "--max") out.max = Number(argv[++i]) || PRODUCTION_WORKER_COUNT;
@@ -72,6 +80,7 @@ function parseArgs(argv) {
     if (argv[i] === "--include-recovery-idle") out.includeRecoveryIdle = true;
     if (argv[i] === "--force-slots") out.forceSlots = Number(argv[++i]) || 0;
     if (argv[i] === "--dry-run") out.dryRun = true;
+    if (argv[i] === "--backlog-only") out.backlogOnly = true;
   }
   return out;
 }
@@ -246,6 +255,7 @@ function pushJob(data, pick, now) {
 
 function main() {
   const args = parseArgs(process.argv.slice(2));
+  const drainOnly = Boolean(args.backlogOnly) || isDrainOnly(process.argv.slice(2));
   const data = readJobs();
   if (args.runId) data.runId = args.runId;
 
@@ -288,6 +298,7 @@ function main() {
     blockedStems: data.flags?.blockedStems?.length || 0,
     blockedThemes: data.flags?.blockedThemes?.length || 0,
     recoveryThemes: [...recoveryThemes],
+    backlogOnly: drainOnly,
   };
   if (openSlots === 0) {
     console.log(JSON.stringify(emptyPayload, null, 2));
@@ -318,7 +329,8 @@ function main() {
   };
 
   // (0) Operator wishlist: highest-priority untaken item claims before backlog.
-  while (openSlots > 0) {
+  // Drain-only never mints, including wishlist rows.
+  while (openSlots > 0 && !drainOnly) {
     const wish = nextWishlistItem(data, claimedSlugs);
     if (!wish) break;
     const slug = `${slugify(wish.stem)}-${yearTag()}`.replace(/--+/g, "-");
@@ -384,15 +396,37 @@ function main() {
     return true;
   };
 
-  // (1) Unused named candidates — lifetime 0, then social-popular, then high priority.
-  const diversity = getDiversityBacklog(pairs, claimedSlugs);
+  // (1) Operator retry of parked infra (same slug, cap 2) — not a new sequel.
+  if (openSlots > 0) {
+    for (const failed of listOperatorRetryJobs(data)) {
+      if (openSlots <= 0) break;
+      if (
+        failed.themeId &&
+        activeJobs(data).some((j) => j.themeId === failed.themeId && j.id !== failed.id)
+      ) {
+        skipped.push({ themeId: failed.themeId, slug: failed.slug, reason: "theme_already_active" });
+        continue;
+      }
+      const reopened = reopenJobForOperatorRetry(data, failed.id);
+      if (!reopened) continue;
+      retried.push({ id: reopened.id, slug: reopened.slug, operatorRequeues: reopened.operatorRequeues });
+      if (reopened.themeId) claimedThemes.add(reopened.themeId);
+      if (reopened.slug) claimedSlugs.add(reopened.slug);
+      openSlots--;
+    }
+  }
+
+  // (2) Unused named candidates — lifetime 0, then social-popular, then high priority.
+  const diversity = drainOnly ? [] : getDiversityBacklog(pairs, claimedSlugs);
   for (const c of diversity) {
     if (openSlots <= 0) break;
     takeDiversityRow(c);
   }
 
-  // (1b) Research slug for themes with ZERO lifetime posts (ignore lane caps).
-  const zeroLifetimeThemes = THEME_REGISTRY.filter(
+  // (2b) Research slug for themes with ZERO lifetime posts (ignore lane caps).
+  const zeroLifetimeThemes = drainOnly
+    ? []
+    : THEME_REGISTRY.filter(
     (theme) =>
       theme.status === "active" &&
       lifetimePostCount(pairs, theme.id) === 0 &&
@@ -406,9 +440,11 @@ function main() {
     if (aSocial !== bSocial) return bSocial - aSocial;
     return a.id.localeCompare(b.id);
   });
-  for (const theme of eligible) {
-    if (lifetimePostCount(pairs, theme.id) > 0) {
-      skipped.push({ themeId: theme.id, reason: "theme_already_has_posts_no_sequel" });
+  if (!drainOnly) {
+    for (const theme of eligible) {
+      if (lifetimePostCount(pairs, theme.id) > 0) {
+        skipped.push({ themeId: theme.id, reason: "theme_already_has_posts_no_sequel" });
+      }
     }
   }
   for (const theme of zeroLifetimeThemes) {
@@ -436,28 +472,8 @@ function main() {
     });
   }
 
-  // (2) Operator retry of parked infra (same slug, cap 2) — not a new sequel.
-  if (openSlots > 0) {
-    for (const failed of listOperatorRetryJobs(data)) {
-      if (openSlots <= 0) break;
-      if (
-        failed.themeId &&
-        activeJobs(data).some((j) => j.themeId === failed.themeId && j.id !== failed.id)
-      ) {
-        skipped.push({ themeId: failed.themeId, slug: failed.slug, reason: "theme_already_active" });
-        continue;
-      }
-      const reopened = reopenJobForOperatorRetry(data, failed.id);
-      if (!reopened) continue;
-      retried.push({ id: reopened.id, slug: reopened.slug, operatorRequeues: reopened.operatorRequeues });
-      if (reopened.themeId) claimedThemes.add(reopened.themeId);
-      if (reopened.slug) claimedSlugs.add(reopened.slug);
-      openSlots--;
-    }
-  }
-
   // (3) Never-idle: more unused diversity candidates (refresh after claims).
-  if (openSlots > 0) {
+  if (openSlots > 0 && !drainOnly) {
     const more = getDiversityBacklog(pairs, claimedSlugs);
     for (const c of more) {
       if (openSlots <= 0) break;
@@ -469,6 +485,7 @@ function main() {
   const result = {
     claimed: created.length,
     retried: retried.length,
+    backlogOnly: drainOnly,
     runId: data.runId,
     format: claimFormat,
     jobs: created.map((j) => ({
@@ -486,10 +503,14 @@ function main() {
     blockedThemes: data.flags?.blockedThemes || [],
   };
   if (poolExhausted) {
-    result.refillSpawn = spawnNovelThemeRefill({
-      source: "claim-next-topics",
-      dryRun: args.dryRun,
-    });
+    if (drainOnly) {
+      result.refillSpawn = { skipped: "drain-only" };
+    } else {
+      result.refillSpawn = spawnNovelThemeRefill({
+        source: "claim-next-topics",
+        dryRun: args.dryRun,
+      });
+    }
   }
   if (!args.dryRun) writeJobs(data);
   persistClaimResult(result, args.dryRun);

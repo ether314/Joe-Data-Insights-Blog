@@ -7,10 +7,16 @@ $WatchdogTask = "CursorBlogProductionWatchdog"
 $IdleWatchdogTask = "CursorBlogIdleHourlyWatchdog"
 $IdleRegisterScript = Join-Path $RepoRoot "scripts\register-blog-idle-hourly-watchdog.ps1"
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
+. (Join-Path $RepoRoot "scripts\lib\drain-mode.ps1")
 $StartScript = Join-Path $RepoRoot "scripts\start-blog-automation-in-app.ps1"
 $RegisterScript = Join-Path $RepoRoot "scripts\register-blog-production-watchdog.ps1"
 $BootstrapScript = Join-Path $RepoRoot "scripts\bootstrap-worktrees.ps1"
 $WorktreeRoot = Get-BlogWorkerRoot $RepoRoot
+
+$drainOnly = Set-BlogDrainEnv -RepoRoot $RepoRoot
+if ($drainOnly) {
+    Write-Host "Drain-only mode: BLOG_CLAIM_BACKLOG_ONLY=1 (flag artifacts/blog-drain-only.flag)"
+}
 
 $lastSlug = $null
 $productionRunning = $false
@@ -52,8 +58,13 @@ if (-not $productionRunning) {
         runId = $null
         trigger = "manual-resume"
         lastSlug = $lastSlug
-        notes = "Resumed via resume-blog-automation.ps1 (Docker-isolated workers)."
+        notes = if ($drainOnly) {
+            "Resumed via resume-blog-automation.ps1 (Docker-isolated workers). Drain-only: no mint / no novel-theme refill."
+        } else {
+            "Resumed via resume-blog-automation.ps1 (Docker-isolated workers)."
+        }
         mode = "docker-isolated-workers"
+        drainOnly = [bool]$drainOnly
     }
     $lock | ConvertTo-Json | Set-Content -Path $LockFile -Encoding UTF8
 } else {

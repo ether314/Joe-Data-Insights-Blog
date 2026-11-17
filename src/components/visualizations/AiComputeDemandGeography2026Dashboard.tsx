@@ -551,7 +551,7 @@ export function AiComputeDemandGeography2026Dashboard() {
         <div className="grid gap-6 lg:grid-cols-2">
           <ChartCard
             title="Token origin geography"
-            subtitle={`June 2026 major-brands series · ${fmtTokensT(HEADLINE.tokenTotalT)}/mo perimeter`}
+            subtitle={`June 2026 major-brands series · ${fmtTokensT(HEADLINE.tokenTotalTPerDay)}/day perimeter`}
           >
             <div className="h-80 w-full min-w-0">
               <ResponsiveContainer width="100%" height="100%">

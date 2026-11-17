@@ -26,6 +26,8 @@ export interface Post {
   imageUrl: string;
   imageAlt: string;
   publishedAt: string;
+  /** ISO date of the last substantive refresh; shown in the post header and sitemap when set */
+  updatedAt?: string;
   featured?: boolean;
   /** Renders an interactive visualization instead of static images */
   visualization?:
@@ -359,7 +361,15 @@ export interface Post {
     | "domestic-passenger-yield-versus-load-factor-2026"
     | "usda-honey-bee-colony-loss-versus-almond-pollination-acres-2026"
     | "auto-insurance-cpi-versus-used-car-and-repair-prices-2026"
-    | "npl-sites-with-construction-complete-versus-remaining-construction-2026";
+    | "npl-sites-with-construction-complete-versus-remaining-construction-2026"
+    | "federal-firefighting-contract-aviation-hours-2026"
+    | "bead-allocations-versus-fcc-unserved-locations-2026"
+    | "motor-vehicle-theft-rates-versus-violent-crime-rates-2026"
+    | "first-time-buyer-share-versus-30-year-mortgage-rates-2026"
+    | "pit-homelessness-versus-rental-vacancy-in-large-cocs-2026"
+    | "summer-heat-deaths-in-sun-belt-metros-versus-national-trend-2026"
+    | "world-currency-pegs"
+    | "us-foreign-aid-obligations-fy1946-fy2025";
   /** Canvas-style posts: viz is the page body, minimal prose */
   layout?: "default" | "canvas" | "fullscreen";
   tags?: string[];

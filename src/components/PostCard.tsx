@@ -126,6 +126,7 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
             {post.title}
           </h3>
           <p className="mt-2 text-sm text-slate-300">{formatPostDate(post.publishedAt)}</p>
+          <p className="mt-1 text-xs font-medium text-slate-400">Theta Scribe</p>
         </div>
       </Link>
     );
@@ -148,7 +149,7 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
             {post.title}
           </h4>
           <p className="mt-1 text-xs text-slate-500">
-            {formatPostDate(post.publishedAt)}
+            Theta Scribe · {formatPostDate(post.publishedAt)}
           </p>
         </div>
       </Link>
@@ -178,7 +179,7 @@ export function PostCard({ post, variant = "default" }: PostCardProps) {
           {post.excerpt}
         </p>
         <p className="mt-3 text-xs font-medium text-slate-400">
-          {formatPostDate(post.publishedAt)}
+          Theta Scribe · {formatPostDate(post.publishedAt)}
         </p>
       </div>
     </Link>

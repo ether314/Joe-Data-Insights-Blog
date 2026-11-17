@@ -302,7 +302,8 @@ function renderTable(block: string, key: number): ReactNode {
   const bodyRows = lines.slice(2);
 
   return (
-    <table key={key}>
+    <div className="table-scroll" key={key}>
+    <table>
       <thead>
         <tr>
           {headerCells.map((cell, j) => (
@@ -323,11 +324,43 @@ function renderTable(block: string, key: number): ReactNode {
         })}
       </tbody>
     </table>
+    </div>
   );
 }
 
+/** Windows line endings and stray leading/trailing whitespace must not change how blocks split. */
+function normalizePostBody(content: string): string {
+  return content.replace(/\r\n?/g, "\n").trim();
+}
+
+/**
+ * Some posts separate table rows with blank lines. Rows that arrive as consecutive one-line
+ * blocks are joined back into a single table block (a block that starts a new table is not joined).
+ */
+function isTableRowBlock(block: string): boolean {
+  const lines = block.split("\n").filter((line) => line.trim().length > 0);
+  return lines.length > 0 && lines.every(isTableRow);
+}
+
+function mergeAdjacentTableRows(blocks: string[]): string[] {
+  const merged: string[] = [];
+  for (const block of blocks) {
+    const prev = merged[merged.length - 1];
+    if (prev !== undefined && isTableRowBlock(prev) && isTableRowBlock(block) && !isTableBlock(block)) {
+      merged[merged.length - 1] = `${prev}\n${block}`;
+    } else {
+      merged.push(block);
+    }
+  }
+  return merged;
+}
+
 export function renderPostContent(content: string): ReactNode[] {
-  const blocks = content.split("\n\n");
+  const blocks = mergeAdjacentTableRows(
+    normalizePostBody(content)
+      .split("\n\n")
+      .filter((block) => block.trim().length > 0),
+  );
   return blocks.map((block, i) => {
     if (block.startsWith("## ")) {
       return (
@@ -378,4 +411,18 @@ export function renderPostContent(content: string): ReactNode[] {
 
     return <p key={i}>{renderInlineMarkdown(block)}</p>;
   });
+}
+
+/**
+ * Number of entries across all `Sources:` citation runs in a post body.
+ * Reconstructed 2026-11-16: the original (uncommitted) implementation was lost with the
+ * working-tree copy of this file; validated against live "Primary sources (N)" values.
+ */
+export function countCitedSources(content: string): number {
+  let count = 0;
+  for (const block of normalizePostBody(content).split("\n\n")) {
+    const run = splitSourcesRun(block);
+    if (run) count += run.entries.length;
+  }
+  return count;
 }

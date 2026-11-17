@@ -17,6 +17,31 @@ const baseUrl = live
 
 const POSTS = [
   {
+    slug: "pit-homelessness-versus-rental-vacancy-in-large-cocs-2026",
+    marker: "PIT count vs home-state rental vacancy",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "first-time-buyer-share-versus-30-year-mortgage-rates-2026",
+    marker: "First-time share 21%",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "motor-vehicle-theft-rates-versus-violent-crime-rates-2026",
+    marker: "MV theft vs violent index",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "bead-allocations-versus-fcc-unserved-locations-2026",
+    marker: "BEAD dollars per unserved location by state",
+    forbidden: "Loading interactive charts",
+  },
+  {
+    slug: "federal-firefighting-contract-aviation-hours-2026",
+    marker: "Exclusive-use vs CWN hours",
+    forbidden: "Loading interactive charts",
+  },
+  {
     slug: "auto-insurance-cpi-versus-used-car-and-repair-prices-2026",
     marker: "Insurance vs used-car and repair indexes",
     forbidden: "Loading interactive charts",
@@ -1676,6 +1701,14 @@ async function smokePost(page, { slug, marker, forbidden }) {
   await page.goto(url, { waitUntil: "networkidle", timeout: 45000 });
   await page.getByText(marker, { exact: false }).first().waitFor({ timeout: 25000 });
 
+  // Static export SSR can paint the marker before client Suspense finishes; wait for
+  // the loading fallback to clear so we do not false-fail on hydration races.
+  await page
+    .getByText(forbidden, { exact: false })
+    .first()
+    .waitFor({ state: "hidden", timeout: 20000 })
+    .catch(() => {});
+
   const stuck = await page.getByText(forbidden, { exact: false }).isVisible().catch(() => false);
 
   const relevantConsole = consoleErrors.filter(
@@ -1706,6 +1739,18 @@ async function main() {
 
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
+  // AdSense / GTM occasionally throw opaque pageerrors (e.g. "int64") unrelated to viz.
+  await page.route("**/*", (route) => {
+    const u = route.request().url();
+    if (
+      /googlesyndication|pagead2|doubleclick|googletagmanager|google-analytics|adsbygoogle|fundingchoicesmessages/i.test(
+        u,
+      )
+    ) {
+      return route.abort();
+    }
+    return route.continue();
+  });
 
   let failed = 0;
   try {

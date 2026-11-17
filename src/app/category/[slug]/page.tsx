@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PostCard } from "@/components/PostCard";
 import { getPostsByCategory } from "@/lib/posts";
 import { CATEGORIES, categorySlug, slugToCategory } from "@/types/post";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: category,
-    description: `Theta Scribe — research and data stories in ${category}.`,
+    description: `Theta Scribe — original visual analysis in ${category}. Public datasets, cited sources.`,
   };
 }
 
@@ -36,19 +37,28 @@ export default async function CategoryPage({ params }: PageProps) {
       <div className="bg-[#0f1629] text-white">
         <div className="blog-header site-container">
           <p className="mb-1 text-sm font-medium uppercase tracking-wider text-cyan-400">
-            Category
+            Research desk
           </p>
           <h1 className="site-category-title">{category}</h1>
-          <p className="mt-1.5 text-slate-400">
-            {posts.length} visual {posts.length === 1 ? "story" : "stories"}
+          <p className="mt-1.5 max-w-2xl text-slate-400">
+            {posts.length} original visual {posts.length === 1 ? "essay" : "essays"} in this beat —
+            each with its own figure and sourced argument, not a sequel of the last chart.
           </p>
         </div>
       </div>
 
       <div className="site-content site-container py-12">
         {posts.length === 0 ? (
-          <p className="text-center text-slate-500">
-            No posts in this category yet. Check back soon!
+          <p className="text-center text-slate-600">
+            No stories in this topic in the current archive. Browse{" "}
+            <Link href="/categories" className="font-semibold text-cyan-800 underline underline-offset-2">
+              all topics
+            </Link>{" "}
+            or the{" "}
+            <Link href="/blog" className="font-semibold text-cyan-800 underline underline-offset-2">
+              full catalog
+            </Link>
+            .
           </p>
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

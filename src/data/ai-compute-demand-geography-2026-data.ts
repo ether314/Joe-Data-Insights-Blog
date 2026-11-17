@@ -81,7 +81,7 @@ export const HEADLINE = {
   tokenOtherOriginPct: 0.5,
   tokenTop1BrandPct: 29.2,
   tokenTop1Brand: "ByteDance (Doubao)",
-  tokenTotalT: 18503,
+  tokenTotalTPerDay: 617,
 
   /** Pipeline / growth geography */
   pipelineSites: 915,
@@ -311,21 +311,21 @@ export type TokenOrigin = {
   origin: string;
   short: string;
   sharePct: number;
-  tokensT: number;
+  tokensTPerDay: number;
   topBrand: string;
   confidence: Confidence;
   fill: string;
   note?: string;
 };
 
-/** Token throughput by brand origin — June 2026 major-brands series. */
+/** Token throughput by brand origin — June 2026 major-brands series (trillions of tokens per day). */
 export const TOKEN_ORIGINS: TokenOrigin[] = [
   {
     id: "china",
     origin: "China",
     short: "China",
     sharePct: 61.8,
-    tokensT: 11435,
+    tokensTPerDay: 381.2,
     topBrand: "ByteDance",
     confidence: "estimated",
     fill: "#f43f5e",
@@ -336,7 +336,7 @@ export const TOKEN_ORIGINS: TokenOrigin[] = [
     origin: "United States",
     short: "US",
     sharePct: 37.7,
-    tokensT: 6976,
+    tokensTPerDay: 232.5,
     topBrand: "Google",
     confidence: "estimated",
     fill: "#0ea5e9",
@@ -347,7 +347,7 @@ export const TOKEN_ORIGINS: TokenOrigin[] = [
     origin: "Other / residual",
     short: "Other",
     sharePct: 0.5,
-    tokensT: 92,
+    tokensTPerDay: 3.1,
     topBrand: "—",
     confidence: "desk",
     fill: "#64748b",
@@ -360,7 +360,7 @@ export type TokenBrandGeo = {
   label: string;
   origin: "United States" | "China" | "Other";
   sharePct: number;
-  tokensT: number;
+  tokensTPerDay: number;
   fill: string;
   note?: string;
 };
@@ -371,7 +371,7 @@ export const TOKEN_BRANDS_GEO: TokenBrandGeo[] = [
     label: "ByteDance",
     origin: "China",
     sharePct: 29.2,
-    tokensT: 5400,
+    tokensTPerDay: 180,
     fill: "#f43f5e",
   },
   {
@@ -379,7 +379,7 @@ export const TOKEN_BRANDS_GEO: TokenBrandGeo[] = [
     label: "Google",
     origin: "United States",
     sharePct: 19.0,
-    tokensT: 3520,
+    tokensTPerDay: 117.3,
     fill: "#4285f4",
   },
   {
@@ -387,7 +387,7 @@ export const TOKEN_BRANDS_GEO: TokenBrandGeo[] = [
     label: "Alibaba (Qwen)",
     origin: "China",
     sharePct: 11.3,
-    tokensT: 2100,
+    tokensTPerDay: 70,
     fill: "#ff6a00",
   },
   {
@@ -395,7 +395,7 @@ export const TOKEN_BRANDS_GEO: TokenBrandGeo[] = [
     label: "OpenAI",
     origin: "United States",
     sharePct: 9.2,
-    tokensT: 1700,
+    tokensTPerDay: 56.7,
     fill: "#10b981",
   },
   {
@@ -403,7 +403,7 @@ export const TOKEN_BRANDS_GEO: TokenBrandGeo[] = [
     label: "Zhipu / Z.ai",
     origin: "China",
     sharePct: 5.1,
-    tokensT: 950,
+    tokensTPerDay: 31.7,
     fill: "#14b8a6",
   },
   {
@@ -411,7 +411,7 @@ export const TOKEN_BRANDS_GEO: TokenBrandGeo[] = [
     label: "Tencent",
     origin: "China",
     sharePct: 3.8,
-    tokensT: 700,
+    tokensTPerDay: 23.3,
     fill: "#12b7f5",
   },
   {
@@ -419,7 +419,7 @@ export const TOKEN_BRANDS_GEO: TokenBrandGeo[] = [
     label: "All other brands",
     origin: "Other",
     sharePct: 22.4,
-    tokensT: 4133,
+    tokensTPerDay: 137.8,
     fill: "#64748b",
   },
 ];

@@ -7,7 +7,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/ops/", "/ops/social-outreach"],
     },
     sitemap: "https://ether-data-insights-blog.web.app/sitemap.xml",
+    host: "https://ether-data-insights-blog.web.app",
   };
 }

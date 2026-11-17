@@ -89,7 +89,7 @@ export const HEADLINE = {
   tokenTop3Labels: "ByteDance + Google + Alibaba",
   tokenChinaOriginPct: 61.8,
   tokenUsOriginPct: 37.7,
-  tokenTotalT: 18503,
+  tokenTotalTPerDay: 617,
 } as const;
 
 export type PerimeterId = "ownership" | "cloud" | "region" | "tokens";
@@ -497,19 +497,19 @@ export type TokenBrandRow = {
   label: string;
   origin: "United States" | "China" | "Other";
   sharePct: number;
-  tokensT: number;
+  tokensTPerDay: number;
   color: string;
   note: string;
 };
 
-/** Top brand ladder — June 2026 token series (T tokens/mo). */
+/** Top brand ladder — June 2026 token series (T tokens/day). */
 export const TOKEN_BRANDS: TokenBrandRow[] = [
   {
     id: "bytedance",
     label: "ByteDance",
     origin: "China",
     sharePct: 29.2,
-    tokensT: 5400,
+    tokensTPerDay: 180,
     color: "#f43f5e",
     note: "Doubao + TikTok AI surfaces — Top-1 tokens, tiny ownership",
   },
@@ -518,7 +518,7 @@ export const TOKEN_BRANDS: TokenBrandRow[] = [
     label: "Google",
     origin: "United States",
     sharePct: 19.0,
-    tokensT: 3520,
+    tokensTPerDay: 117.3,
     color: "#4285f4",
     note: "Owns ~25% of chips; #2 in tokens",
   },
@@ -527,7 +527,7 @@ export const TOKEN_BRANDS: TokenBrandRow[] = [
     label: "Alibaba (Qwen)",
     origin: "China",
     sharePct: 11.3,
-    tokensT: 2100,
+    tokensTPerDay: 70,
     color: "#ff6a00",
     note: "Qwen MaaS + app surfaces",
   },
@@ -536,7 +536,7 @@ export const TOKEN_BRANDS: TokenBrandRow[] = [
     label: "OpenAI",
     origin: "United States",
     sharePct: 9.2,
-    tokensT: 1700,
+    tokensTPerDay: 56.7,
     color: "#10b981",
     note: "Token share without disclosed chip ownership",
   },
@@ -545,7 +545,7 @@ export const TOKEN_BRANDS: TokenBrandRow[] = [
     label: "Zhipu / Z.ai",
     origin: "China",
     sharePct: 5.1,
-    tokensT: 950,
+    tokensTPerDay: 31.7,
     color: "#14b8a6",
     note: "GLM MaaS — supply-constrained",
   },
@@ -554,7 +554,7 @@ export const TOKEN_BRANDS: TokenBrandRow[] = [
     label: "Tencent",
     origin: "China",
     sharePct: 3.8,
-    tokensT: 700,
+    tokensTPerDay: 23.3,
     color: "#12b7f5",
     note: "Hunyuan surfaces",
   },
@@ -563,7 +563,7 @@ export const TOKEN_BRANDS: TokenBrandRow[] = [
     label: "All other brands",
     origin: "Other",
     sharePct: 22.4,
-    tokensT: 4133,
+    tokensTPerDay: 137.8,
     color: "#64748b",
     note: "Residual of June 2026 major-brands series",
   },

@@ -96,8 +96,8 @@ export function ExploreCategoriesSection({ counts }: ExploreCategoriesSectionPro
               Explore by Category
             </h2>
             <p className="mt-3 max-w-xl text-slate-400">
-              Dive into economics, politics, finance, and technology — each with
-              interactive charts and data-driven stories.
+              Original visual essays grouped by beat — each topic is a desk, not a doorway of
+              recycled templates.
             </p>
           </div>
           <Link

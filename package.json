@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/fix-segment-payloads.mjs",
+    "build": "next build && node scripts/fix-segment-payloads.mjs && node scripts/sync-static-article-assets.mjs",
     "start": "next start",
     "lint": "eslint",
     "export": "next build",

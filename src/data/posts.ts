@@ -2,6 +2,538 @@ import type { Post } from "@/types/post";
 
 export const samplePosts: Post[] = [
   {
+    id: "ai-voice-video-music-price-vs-quality-2026",
+    slug: "ai-voice-video-music-price-vs-quality-2026",
+    title:
+      "Charted: AI Models Tied for First in Voice and Video Cost 7× to 12× Apart",
+    excerpt:
+      "On blind-vote leaderboards, 7 video models and 7 voice models are statistically tied with the leader, at tracked prices 7× and 12× apart. Across 75 voice models, price barely predicts quality (rank correlation 0.12).",
+    category: "Technology",
+    themeId: "ai-media-price-vs-quality",
+    imageUrl:
+      "/images/technology-ai-voice-video-music-price-vs-quality-2026-hero.jpg",
+    imageAlt:
+      "Dark navy field of price-versus-quality dots for AI voice and video models, with a dashed amber best-value frontier, cyan dots on the models tied for first and a faint audio waveform along the bottom",
+    publishedAt: "2026-10-11T12:00:00Z",
+    featured: false,
+    tags: [
+      "AI voice",
+      "AI video",
+      "AI music",
+      "text-to-speech",
+      "price per minute",
+      "Artificial Analysis",
+      "arena Elo",
+      "model pricing",
+    ],
+    content: "Standalone interactive article. The page itself is the static file public/blog/ai-voice-video-music-price-vs-quality-2026.html (restored from the live site on 2026-11-16); this entry feeds the archive, search, related posts and the sitemap.",
+  },
+  {
+    id: "us-foreign-aid-obligations-fy1946-fy2025",
+    slug: "us-foreign-aid-obligations-fy1946-fy2025",
+    title:
+      "Charted: Four Countries Took 25% of All US Foreign Aid Since 1946 — FY2025 Obligations Halved",
+    excerpt:
+      "ForeignAssistance.gov obligations in constant FY2025 dollars: $3.76 trillion all-time across 204 country recipients — 68.5% economic / 31.5% military. Israel (~$373B), Egypt (~$229B), Afghanistan (~$204B), and Ukraine (~$155B) dominate the ledger; FY2025 fell to $48.3B from a $105.3B FY2023 peak.",
+    category: "Politics",
+    themeId: "us-foreign-aid-obligations",
+    imageUrl:
+      "/images/politics-us-foreign-aid-obligations-fy1946-fy2025-hero.png",
+    imageAlt:
+      "Dark navy cinematic data visualization showing concentrated US foreign aid flows funneling toward Israel, Egypt, Afghanistan, and Ukraine with stacked economic and military obligation bars",
+    publishedAt: "2026-09-03T14:00:00Z",
+    featured: false,
+    visualization: "us-foreign-aid-obligations-fy1946-fy2025",
+    layout: "canvas",
+    format: "data-story",
+    tags: [
+      "foreign aid",
+      "ForeignAssistance.gov",
+      "Greenbook",
+      "obligations",
+      "military assistance",
+    ],
+    keyPoints: [
+      "All-time US foreign assistance obligations total $3.76 trillion in constant FY2025 dollars (FY1946–FY2025) — 68.5% economic, 31.5% military.",
+      "Four recipients — Israel, Egypt, Afghanistan, and Ukraine — account for roughly one quarter of every inflation-adjusted dollar obligated since 1946.",
+      "FY2023 peaked near $105.3B (Ukraine surge + legacy programs); FY2025 obligations fell to $48.3B — a post-peak retrenchment visible in the annual stacked chart.",
+      "World and regional aid pots are allocated to countries proportionally so country rankings include unallocated spend; this is obligations, not disbursements.",
+    ],
+    content: "US foreign assistance is often debated one budget year at a time — a supplemental here, a drawdown there, an USAID reorganization headline. The **ForeignAssistance.gov** obligation ledger tells a longer story: **$3.76 trillion** in constant **FY2025 dollars** across **FY1946–FY2025**, split **68.5%** economic and **31.5%** military. That is not a single crisis spike; it is eight decades of concentrated partnership, occupation, reconstruction, and security cooperation compressed into one inflation-adjusted series.\n\nThe interactive dashboard above is the full canvas cut: decade pills, economic/military filters, region and country search, an annual stacked obligations line, economic-vs-military pie, top-12 recipient bars, regional bars, a bubble map, and a sortable country table. The punchline is **concentration over time** — and a sharp **FY2025** downshift after the **FY2023** peak.\n\n## The all-time ledger in four numbers\n\n| Recipient | All-time obligations (FY2025$) | Share of total |\n| --- | ---: | ---: |\n| Israel | **~$373B** | **9.9%** |\n| Egypt | **~$229B** | **6.1%** |\n| Afghanistan | **~$204B** | **5.4%** |\n| Ukraine | **~$155B** | **4.1%** |\n\nThose four countries alone account for roughly **one quarter** of every inflation-adjusted obligation dollar since **1946**. Israel and Egypt are Cold War and Camp David legacies — decades of security assistance compounding in constant dollars. Afghanistan is two decades of wartime reconstruction and security force funding. Ukraine is the fastest-rising line on the chart: negligible before **2022**, then among the largest annual recipients within three fiscal years.\n\nBelow the top four, the long tail is real — **204** country-level recipients appear in the table — but the distribution is steep. A handful of treaty allies, frontline states, and post-conflict theaters absorb most of the cumulative total.\n\n## FY2023 peak, FY2025 retrenchment\n\nThe annual stacked chart is where the recent politics show up in the data. **FY2023** obligations reached about **$105.3B** — the high-water mark in the modern series, driven by Ukraine supplemental flows layered on existing Middle East and global health lines. **FY2024** stepped down to roughly **$88.0B**. **FY2025** fell further to about **$48.3B** — less than half the FY2023 peak.\n\nThat sequence matters for two reasons. First, it confirms that the post-2022 aid surge was **level**, not **stock** — the all-time concentration table still belongs to Israel and Egypt, but Ukraine's row moves fast. Second, FY2025's print is a useful anchor for forward debates: the dashboard includes FY2025 as a complete fiscal year but **excludes partial FY2026** rows from ForeignAssistance.gov, which would distort any \"current year\" read.\n\nToggle the **2020s** decade chip to isolate this downshift without losing the long-run context.\n\n## Economic vs military: one-third of the pile is security assistance\n\nThe pie panel splits obligations in view between **economic** and **military** objectives using the official Greenbook / funding-account taxonomy. All-time, roughly **68.5%** is economic (development, health, humanitarian, governance) and **31.5%** is military (FMF, IMET, drawdowns, security-force assistance).\n\nThat split is not uniform by recipient. Click **Israel** or **Egypt** on the bubble map and the military share dominates the country line. Click **Afghanistan** during the 2000s–2010s window and economic reconstruction lanes widen. Ukraine post-2022 shows both large economic/state-building lines and security assistance stacked together — which is why the bubble map uses fill opacity to encode military share.\n\n## How to read the dashboard\n\nStart with **All years** and **Economic + military** to see the full **$3.76T** perimeter. Use decade pills to compare the **Marshall Plan 1950s**, **Vietnam/Cold War 1960s–70s**, **post-Cold War 1990s**, **War on Terror 2000s**, and **Ukraine era 2020s** — the same country names recur, but the era mix changes.\n\nFilter **Military only** to see security-assistance concentration; filter **Middle East and North Africa** to see how regional bars collapse toward a few treaty partners. Search **Ukraine** or **Israel** to jump the table. Click any table row or map bubble to isolate that country in the annual chart. Sort the table by **% all-time** to see how thin the long tail is below the top dozen.\n\nThe **region bars** answer a different question than the **country bars**: Middle East and North Africa, Europe and Eurasia, and South and Central Asia dominate regional totals — but the country table shows that dominance is often **two or three names**, not broad diffusion.\n\n## US obligations vs DAC ODA — a deliberate contrast\n\nThis post measures **US foreign assistance obligations** from ForeignAssistance.gov — American outlays on a Greenbook-consistent basis, inflation-adjusted to FY2025 dollars, including military assistance and bilateral programs. It is **not** the same perimeter as [OECD DAC official development assistance](/blog/oecd-dac-oda-first-drop-2024), which tracks **grant-equivalent ODA** from all rich-country donors on a multilateral reporting standard.\n\nThe contrast is useful: DAC ODA fell **7.1%** in **2024** to **$212.1B** across all DAC members, with only four countries hitting the **0.7% of GNI** target. The US alone obligated **~$48.3B** in **FY2025** on this ledger — a different fiscal year, definition, and unit. Analysts comparing \"US aid cuts\" headlines to \"global ODA decline\" should align perimeter first; this dashboard is the American obligations side.\n\n## Methodology\n\n**Unit:** Obligations in **million FY2025 USD** (USAID GDP deflator; FY2025 = 1.00).\n\n**Coverage:** FY1946–FY2025 from ForeignAssistance.gov, August **2026** extract. FY2026 partial rows excluded.\n\n**Economic vs military:** Greenbook objective categories through FY2019; funding-account classification FY2020–FY2025. INCLE and NADR remain economic; FMF, IMET, and drawdowns are military.\n\n**World and regional pots:** Unallocated World and regional accounts are spread to countries in proportion to each country's attributed aid that fiscal year (regional pots stay in-region; World pots go to all countries). All-time totals are unchanged; country shares include this allocation.\n\n**Not included:** Disbursements, appropriations, loan face values without grant-equivalent adjustment, or pre-1946 flows. Historical entities (e.g., South Vietnam) remain separate rows.\n\n**Source:** [ForeignAssistance.gov](https://foreignassistance.gov/data) · [Greenbook reports](https://foreignassistance.gov/reports).",
+  },
+  {
+    id: "world-currency-pegs",
+    slug: "world-currency-pegs",
+    title:
+      "155 Countries Still Lock Their Exchange Rate to Someone Else's Currency",
+    excerpt:
+      "IMF AREAER 2023 de facto classes, updated through September 2026 — two world maps and a country table covering hard pegs, soft parities, dirty floats, crawl-likes, and the dual-rate regimes where the official price is not the price you get.",
+    category: "Global Systems",
+    themeId: "world-currency-pegs-areaer",
+    imageUrl: "/images/global-systems-world-currency-pegs-hero.png",
+    imageAlt:
+      "Dark navy cinematic world map with countries colored by anchor currency — blue USD pegs across the Gulf and Caribbean, cyan EUR pegs in the CFA franc zone",
+    publishedAt: "2026-09-02T20:00:00Z",
+    featured: true,
+    visualization: "world-currency-pegs",
+    layout: "canvas",
+    format: "data-story",
+    tags: ["currency", "IMF AREAER", "exchange rate", "anchor currency", "peg"],
+    keyPoints: [
+      "USD remains the dominant anchor — GCC dollar pegs, dollarization in Latin America, Hong Kong's currency board, and the East Caribbean quasi-board all import Fed policy.",
+      "The CFA franc zone (655.957 XOF/XAF per euro) and Denmark's ERM II peg (7.46038 DKK per euro) are the largest euro-linked blocs still intact in 2026.",
+      "Dual-rate systems in Iraq, Lebanon, Iran, Cuba, and Myanmar mean the published peg is not the rate most people actually pay — yellow outlines flag those rows on the map.",
+      "Bulgaria joined the euro area on 1 January 2026; Bolivia abandoned its 6.96 peg in June 2026 — the table marks both as recent exits.",
+    ],
+    content: "Most major currencies float. A smaller but economically weighty set does not. The IMF's **Annual Report on Exchange Arrangements and Exchange Rate Restrictions (AREAER) 2023**, updated through **September 2026**, classifies every jurisdiction's *de facto* exchange-rate regime — not what the central bank says on its website, but what the spot rate actually did over the past six months.\n\nThis dashboard maps that universe in two views and one table: **Map 1** colors each country by **anchor currency** (USD, EUR, GBP, basket, or other); **Map 2** colors by **IMF de facto class** (no separate legal tender, currency board, conventional peg, crawl-like, stabilized arrangement, other managed). The table below lists all **155** rows with parity, flexibility rule, years on the peg, five-year realized volatility versus the anchor, and current status.\n\n## Why pegs still matter in 2026\n\nExchange-rate pegs are not museum pieces. They determine whether a Gulf petrostate imports the Fed's rate path, whether a Caribbean island can defend 2.70 East Caribbean dollars per U.S. dollar through a debt restructuring, and whether a Hong Kong dollar convertibility undertaking triggers when capital flows reverse.\n\nThe **impossible trinity** still binds: a country cannot simultaneously maintain (1) a fixed exchange rate, (2) an independent monetary policy, and (3) open capital markets. Hard and conventional pegs with open or partially open capital accounts therefore **import** the anchor's interest-rate path. That is why GCC policy rates track the Fed and why Danmarks Nationalbank sets rates versus the ECB — Denmark has not used FX intervention since **December 2022**, holding the krone with rates alone.\n\n## Map 1: USD still dominates the anchor ledger\n\nColor the world by what each jurisdiction locks to, and **blue (USD)** covers the largest land and population mass among pegged economies:\n\n- **Gulf Cooperation Council** — Saudi Arabia (3.75 SAR/USD since 1986), UAE (3.6725), Bahrain, Qatar, Oman, Jordan; Kuwait uses an undisclosed dollar-heavy basket with a daily fix.\n- **Dollarization and currency boards** — Ecuador, El Salvador, Panama (since 1904), Timor-Leste, Kosovo, Montenegro (euroized without ECB membership), Marshall Islands / Micronesia / Palau under the Compact of Free Association.\n- **Currency boards with legal convertibility** — Hong Kong (7.75–7.85 band; convertibility undertakings triggered May–August 2025), Djibouti (177.721 DJF/USD), Bosnia (1.95583 BAM/EUR board), Brunei–Singapore interchangeability at par.\n- **East Caribbean quasi-board** — eight ECCU members at **2.70 XCD/USD**; statutory FX cover ≥60%, actual backing ~99% in 2026.\n\n**Cyan (EUR/DKK)** covers the CFA franc zones (**655.957** XOF/XAF per euro — 81 years in the franc zone), CFP franc territories (119.3317 XPF/EUR), Denmark's ERM II (7.46038 DKK/EUR, the only remaining ERM II member), Cabo Verde, Comoros, and Bosnia's euro board.\n\n## Map 2: IMF classes are finer-grained than \"peg\"\n\nThe IMF's de facto taxonomy distinguishes arrangements that look similar in headlines:\n\n| IMF class | What it means | Examples in this dataset |\n| --- | --- | --- |\n| No separate legal tender | No national FX rate | Ecuador, Panama, Kosovo, Liechtenstein (CHF) |\n| Currency board | Convertibility rule + passive central bank | Hong Kong, Djibouti, ECCU, Bosnia |\n| Conventional peg | Published parity or narrow band | GCC, CFA, Denmark ERM II, Bahamas 2.00 |\n| Stabilized arrangement | Rate inside 2% band for six months, no published peg | Guyana, Honduras, Lebanon (post-crash), Ukraine (wartime) |\n| Crawl-like | Pre-announced or de facto sloping path | China (CFETS basket + 2% USD band), India (since Nov 2024 Article IV), Algeria, Vietnam |\n| Other managed | Residual; often dual-rate | Iran, Cuba, Haiti, South Sudan |\n\n**Stressed** pegs (red ring on Map 2) include Lebanon (official **89,500** LBP/USD after the 1,507 peg collapsed), Iraq (~**18%** Baghdad cash premium over the 1,310 bank sell rate), Libya (SDR peg with a large parallel premium), and Maldives (rufiyaa at the weak edge of its ±20% band).\n\n**Dual / parallel rates** (yellow country outline) mark jurisdictions where the official window is not where most transactions clear — Iraq, Iran, Cuba, Turkmenistan, Eritrea, and others.\n\n## Five-year realized volatility: tight vs fiction\n\nFor hard and conventional single-currency pegs with clean data, five-year annualized volatility versus the listed anchor (Yahoo daily, Sep 2021–Sep 2026) clusters near zero:\n\n- **Bermuda, Brunei, CMA members (Namibia, Lesotho, Eswatini), Bhutan** — **0%** (legal 1:1 or dollarization; `vq: z`).\n- **UAE** — **0.17%**; **Hong Kong** — **0.73%** inside a 1.3% convertibility band (the noisy board on purpose).\n- **Denmark** — **0.36%** versus EUR despite a ±2.25% official ERM II band.\n\nAt the other extreme, **Lebanon** prints **210%** realized vol, **Bolivia** **17.2%** as it exited the 6.96 peg in June 2026, and **Ukraine** **11.3%** under wartime management. A published peg with double-digit vol is usually a label, not a market.\n\n## Recent exits and entries (2024–2026)\n\nThe table flags regime changes that AREAER labels alone miss:\n\n- **Bulgaria** — lev board at 1.95583 ended **1 January 2026** when Bulgaria joined the euro area (status: Exited → euro-area float).\n- **Curaçao / Sint Maarten** — Netherlands Antillean guilder replaced by Caribbean guilder (**XCG**) on **31 March 2025** at the same **1.79** USD peg.\n- **Bolivia** — official **6.96** BOB/USD abandoned **26–29 June 2026**; daily TCO from weighted bank trades (~12.1–12.3 by August 2026).\n- **Nigeria, Egypt, Ethiopia** — spent 2023–24 closing parallel gaps by floating (not in the live peg count).\n- **Iraq** — correspondent-bank FX normalisation from **January 2025**; still dual-rate at end-Aug 2026.\n\n## How to read the table\n\nEach row is one jurisdiction (sovereign or territory). **\"How it's run\"** in the source canvas maps to the **Notes** column here — the dealing window, legal rule, or administrative allocation that actually implements the peg. **Status** = Intact, Stressed (parallel market or recent break), Exited (peg abandoned or euro joined), or Floating union (euro-area member with no national rate).\n\nFilter by anchor, peg kind, status, or region; sort any column. This is **not** a list of every managed float on earth — pure floaters (USD, JPY, GBP, AUD, BRL, MXN as independent policies) are gray on the map. Switzerland appears only as a **2015 exit** from the EUR floor, not a current peg.\n\n## Methodology\n\n**Classification:** IMF AREAER 2023 de facto exchange-rate arrangements, updated with IMF Article IV staff reports and central-bank primary sources through **2 September 2026** (HKMA, ECB/BNB, SNB, CBI, ECCB, CBCS, Banque de France).\n\n**Five-year volatility:** Annualized standard deviation of daily log returns versus the listed anchor currency, Yahoo Finance daily closes, **September 2021 – September 2026**, 252 trading days. `vq: c` = clean series; `n` = robust after dropping |daily move| > 0.5%; `z` = legal 1:1 / dollarization (reported 0%); `x` = missing or peg-broken.\n\n**Map geometry:** Equal Earth–style simplified country paths reused from the upstream research canvas; tiny island territories render as labeled dots.\n\n**What this is not:** A trading signal, a real-time FX feed, or a complete catalog of capital controls. WAEMU's planned **eco** successor to the CFA franc remains delayed; the **655.957** euro peg is what is live today.",
+  },
+  {
+    id: "summer-heat-deaths-in-sun-belt-metros-versus-national-trend-2026",
+    slug: "summer-heat-deaths-in-sun-belt-metros-versus-national-trend-2026",
+    title:
+      "Phoenix and Las Vegas Alone Took Nearly 12% of U.S. Heat-Coded Deaths",
+    excerpt:
+      "Across 2018–2023, Maricopa and Clark counties logged 1,039 CDC heat-coded deaths — about 11.9% of the national total — while U.S. heat mortality climbed from 1,008 to 2,325.",
+    category: "Global Systems",
+    themeId: "heat-related-deaths-cdc",
+    imageUrl:
+      "/images/global-systems-summer-heat-deaths-in-sun-belt-metros-versus-national-trend-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic Sun Belt skyline under a searing sun with orange heat-wave contours suggesting metro concentration of heat deaths",
+    publishedAt: "2026-09-02T18:00:00Z",
+    featured: true,
+    visualization:
+      "summer-heat-deaths-in-sun-belt-metros-versus-national-trend-2026",
+    layout: "default",
+    content: "National heat-coded mortality is no longer a flat background risk. CDC WONDER tallies that treat ICD-10 codes for exposure to excessive natural heat and related heat effects as an underlying or contributing cause show **2,325** U.S. deaths in **2023**, up from **1,008** in **2018** — a **131%** rise in six years. The geography of those certificates is not evenly spread. A small set of Sun Belt metros, led by **Phoenix** and **Las Vegas**, absorb a disproportionate share of the national count.\n\nThis piece asks a narrow question: **which large Sun Belt metros account for the largest share of recent CDC heat-coded deaths, and how does that metro concentration sit against the national climb?** The dashboard answers with metro share bars, a national trend panel, a rate-versus-summer-temperature scatter, and an attribution stack that holds five desert and Texas cores against the rest of the country.\n\n## How heat shows up on a death certificate\n\nCDC heat-coded deaths are not the same object as “everyone who died on a hot day.” The operational definition used in the JAMA 2024 research letter and related WONDER extracts flags certificates that list **X30** (exposure to excessive natural heat), **T67** (effects of heat and light), or **P81.0** (environmental hyperthermia of newborn) as underlying or contributing causes. Man-made heat (**W92**) is typically excluded when the goal is natural-heat exposure.\n\nThat coding choice matters for metro comparisons. Desert counties with aggressive medical-examiner protocols and long outdoor-exposure case histories print more heat codes. Humid Gulf and Southeast metros can see large all-cause mortality bumps during heat waves without a matching surge in X30/T67 mentions. Shares calculated from coded deaths therefore measure **where heat is written on the certificate**, not the full excess-mortality burden of heat.\n\nLocal medical-examiner series can be even wider. Maricopa County’s heat-associated death tallies have reached hundreds in a single recent summer under a case definition that includes heat as a contributing environmental factor beyond the narrow ICD set. Those local counts are useful for city operations; they are **not** interchangeable with WONDER when computing national shares. This dashboard stays on the CDC-coded side of that line.\n\n## The national climb after 2016\n\nJoinpoint work published in JAMA shows a structural break: age-adjusted heat-related mortality rates were roughly flat-to-down through the mid-2010s, then rose sharply. Anchored annual counts for the recent window are:\n\n| Year | Heat-coded deaths | Age-adjusted rate / 100k |\n| --- | ---: | ---: |\n| 2018 | 1,008 | 0.28 |\n| 2019 | 905 | 0.25 |\n| 2020 | 1,175 | 0.32 |\n| 2021 | 1,600 | 0.40 |\n| 2022 | 1,714 | 0.46 |\n| 2023 | 2,325 | 0.62 |\n\n**2018**, **2021**, **2022**, and **2023** are disclosed CDC / JAMA / USAFacts anchors. **2019** and **2020** are desk interpolations consistent with the published trend and should be treated as directional. Even with that caveat, the path is unambiguous: the United States roughly **doubled** heat-coded deaths between 2018 and 2023, and the 2023 print is the highest in the modern WONDER series.\n\nThe six-year sum used for metro shares in this desk is **8,727** national heat-coded deaths. That denominator is the reference for every share percentage below.\n\n## Phoenix and Las Vegas dominate the metro share table\n\nWhen county WONDER compilations for **2018–2023** are read as metro proxies, two Southwest cores lead by a wide margin:\n\n- **Phoenix (Maricopa County):** **648** deaths — **7.43%** of the national period total.\n- **Las Vegas (Clark County):** **391** deaths — **4.48%** of the national period total.\n\nTogether, those two counties alone account for about **11.9%** of all U.S. heat-coded deaths in the window. No other large metro in the panel clears four percent. Tucson (Pima) adds **113** deaths (**1.3%**). A five-metro Sun Belt core — Phoenix, Las Vegas, Tucson, Dallas–Fort Worth (Dallas + Tarrant), and Houston (Harris) — sums to **1,390** deaths, or **15.9%** of the national total.\n\nThat concentration is the headline. The United States added more than a thousand heat-coded deaths between 2018 and 2023; a meaningful slice of the cumulative ledger sits in a handful of desert and inland Southwest counties.\n\n## Rate versus share: Lake Havasu is not Phoenix\n\nShare and rate answer different questions. **Mohave County** (Lake Havasu City–Kingman) logged **239** heat-coded deaths over the same window — fewer than Las Vegas, but against a population near **217,000**. Its crude window rate is about **18.4** deaths per 100,000 residents, far above Phoenix’s **2.4** or Houston’s **0.31**.\n\nHigh-rate micropolitans matter for local public health. They do not dominate the **national share** ledger, because the denominator is population-scaled death volume. Phoenix’s share lead comes from combining a high desert climate with a metro population above **4.4 million**. Lake Havasu’s rate lead comes from extreme heat against a thin population base. The scatter panel plots NOAA summer daily highs against window rates with bubble size proportional to deaths so both stories stay visible.\n\nYuma County prints a similar pattern: **66** deaths and a **5.2** per-100,000 window rate — deadly for residents, modest in the national share ranking.\n\n## Texas and Florida metros: large populations, thin coding\n\nDallas–Fort Worth’s principal-county pair (Dallas + Tarrant) sums to **149** coded deaths — more than Tucson in absolute terms, but a window rate near **0.5** per 100,000 and a national share under **2%**. Harris County (Houston) shows **89** deaths and a **0.31** rate despite a population larger than Maricopa’s. Derived estimates for Miami and Atlanta sit even lower on the coded ledger.\n\nThose humid metros are not “safe” in an epidemiologic sense. Excess all-cause analyses and recent media modeling routinely argue that official heat codes understate Gulf and Southeast burdens, especially where death investigators are less likely to list heat on the certificate. For **share-of-coded-deaths**, however, the Southwest still concentrates the ink. Treating Houston or Miami as “low risk” because their WONDER cells are small would reverse the meaning of the metric.\n\nNOAA Climate Normals put summer daily highs in Phoenix and Las Vegas above **100°F**, while Houston and Miami sit in the low **90s** with much higher humidity. Dry-bulb extremes and heat-index extremes do not map one-to-one onto certificate coding. The dashboard’s climate axis is a context layer, not a causal claim that every degree of mean summer high produces a fixed share of national deaths.\n\n## Reading the Sun Belt stack against the national trend\n\nThe stack panel attributes each national year using the **fixed period share** of the five-metro Sun Belt core (**15.9%**). That is an attribution device, not a claim that those metros’ year-by-year WONDER extracts were pulled separately. It shows what a constant Southwest core share implies as the national total climbs from roughly **1,000** to **2,300** deaths: the absolute attributed core rises even when the percentage is held flat.\n\nIf coding intensity or homelessness-linked outdoor exposure in Maricopa and Clark rose faster than the national average — a pattern suggested by local examiner reports — the true recent-year share of those metros would be higher than the period-average attribution. The desk does not force that acceleration into the chart without year-by-metro WONDER extracts; the caveat is the point.\n\n## Caveats that change how you should use the numbers\n\nSeveral limits are structural, not cosmetic:\n\n1. **Definition mismatch.** WONDER ICD coding ≠ local “heat-associated” medical-examiner tallies ≠ excess all-cause heat mortality.\n2. **Geography proxies.** Several rows use principal counties as CBSA stand-ins. Peripheral counties can add deaths; San Bernardino is not folded into the Riverside row.\n3. **Derived cells.** Miami, Atlanta, and San Antonio figures are illustrative scalings where top-county lists did not disclose a clean CBSA total — marked as such in the data module.\n4. **Suppression and small cells.** CDC suppresses or flags unreliable rates for sparse counties; humid metros may look artificially quiet.\n5. **COVID-era confounding.** Excess-mortality methods struggle in 2020–2022; cause-specific heat codes avoid some of that noise but still inherit changes in investigation practice.\n6. **Climate normals ≠ event heat.** A 30-year summer mean does not capture a single 31-day streak above 110°F. Event timing drives spikes that annual metro sums blur.\n\nUse the share ranking to answer “where do coded deaths concentrate?” Use the rate ranking to answer “where is risk densest per resident?” Use the national trend to answer “is the country getting worse?” Do not collapse those three questions into one bar.\n\n## What the metro map implies for adaptation desks\n\nIf nearly **12%** of national heat-coded deaths already sit in two Southwest counties, cooling centers, street outreach, shade, and housing policy in Phoenix and Las Vegas are national-scale mortality interventions, not merely local amenities. If humid metros under-code heat, their emergency-management case for resilience funding should not wait for X30 counts to catch up with desert metros.\n\nThe interactive filters let you toggle **large metros only**, **Sun Belt only**, or **desert stations with summer highs ≥100°F**, and sort by deaths, share, or rate. Start on the share panel for the concentration story; switch to the scatter when someone asks why Lake Havasu outranks Houston on risk density; use the national trend when the question is whether 2023 was an outlier or the new slope.\n\n**Bottom line:** CDC heat-coded deaths surged nationally from **1,008** (2018) to **2,325** (2023). Inside that climb, **Phoenix and Las Vegas** alone absorbed about **11.9%** of the **2018–2023** national total, and a five-metro Sun Belt core held roughly **one in six** coded deaths — a metro concentration that the national trend line alone cannot show.",
+    tags: [
+      "heat mortality",
+      "CDC WONDER",
+      "Sun Belt",
+      "Phoenix",
+      "Las Vegas",
+      "climate health",
+    ],
+    format: "data-story",
+    keyPoints: [
+      "Phoenix (Maricopa) alone: 7.43% of U.S. heat-coded deaths, 2018–2023",
+      "Phoenix + Las Vegas: ~11.9% of the national period total",
+      "National heat-coded deaths rose 131% from 2018 (1,008) to 2023 (2,325)",
+      "Five-metro Sun Belt core holds ~15.9% of coded deaths",
+      "Lake Havasu’s rate (~18.4/100k) dwarfs Phoenix’s share-driven lead",
+    ],
+  },
+  {
+    id: "pit-homelessness-versus-rental-vacancy-in-large-cocs-2026",
+    slug: "pit-homelessness-versus-rental-vacancy-in-large-cocs-2026",
+    title:
+      "Largest PIT CoCs Do Not Always Print the Tightest Rental Vacancy",
+    excerpt:
+      "New York City's January 2025 PIT hit 125,683 while New York state's HVS rental vacancy sat at 5.3%. California CoCs stack high counts against a 4.8% state vacancy; Texas metros sit lower on the PIT ladder with ~11% vacancy.",
+    category: "Politics",
+    themeId: "hud-pit-homelessness",
+    imageUrl:
+      "/images/politics-pit-homelessness-versus-rental-vacancy-in-large-cocs-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic skyline with glowing scatter points mapping Point-in-Time homelessness counts against rental vacancy tightness",
+    publishedAt: "2026-09-02T16:30:00Z",
+    featured: true,
+    visualization:
+      "pit-homelessness-versus-rental-vacancy-in-large-cocs-2026",
+    layout: "default",
+    content: "Homelessness policy debates often collapse two different housing facts into one slogan: *the places with the most people counted outdoors must also have the tightest rental markets*. Continuum of Care (CoC) Point-in-Time (PIT) counts and Census Housing Vacancy Survey (HVS) rental vacancy rates are the two series that desks reach for when that claim shows up in hearings. They do not always move together.\r\n\r\nThis cut asks a narrower question. Among the Continuums with the largest January 2025 PIT totals, do the biggest counts sit in the jurisdictions that also print the lowest rental vacancy rates? The interactive dashboard pairs HUD CoC PIT totals with each Continuum's **primary-state** HVS rental vacancy rate — the disclosed annual series available for every state — and layers national vacancy trend and HUD Picture of Subsidized Households framing for the assisted stock that sits between empty units and the street count.\r\n\r\n## What the January 2025 PIT actually shows\r\n\r\nHUD's 2025 Annual Homelessness Assessment Report (AHAR) Part 1 places the national PIT near **745,652** people on a single January night. Roughly half of that population lives in Continuums that contain one of the fifty largest U.S. cities. Absolute scale is brutally uneven. **New York City** alone reports **125,683** people — about one in six of the national total. **Los Angeles City & County** reports **67,777**. After those two megacontinuums, the ladder drops into the mid-teens of thousands: Seattle/King County (**16,936**), Metropolitan Denver (**10,774**), San Jose/Santa Clara (**10,711**), and Portland/Multnomah (**10,526**).\r\n\r\nSeventeen urban or suburban Continuums still clear **5,000** people. That concentration matters politically because federal CoC grants, local shelter capacity, and mayoral accountability all track *counts*, not per-capita rates. A Continuum can look \"smaller\" on a rate basis and still dominate the national ledger in people.\r\n\r\n## How rental vacancy enters the frame\r\n\r\nCensus HVS rental vacancy is the share of rental units that are vacant and available. Nationally, the quarterly series (FRED RRVRUSQ156N) climbed from the mid-5% range in 2022 into the **mid-7%** range by early 2026 — a clear loosening of the national rental market after the pandemic squeeze. State annual rates for **2025** still span a wide band: **Massachusetts** prints **3.4%**, **California** **4.8%**, **New York** **5.3%**, **Washington** **6.6%**, **Arizona** **8.4%**, **Florida** **10.2%**, and **Texas** **11.0%**.\r\n\r\nThat dispersion is the analytical hinge. If the largest PIT Continuums simply lived inside the tightest vacancy states, the scatter would slope down and to the left: bigger counts, lower vacancy. The panel does not draw that neat line.\r\n\r\n## The discordant ranks: size is not tightness\r\n\r\nNew York City owns the PIT crown, yet New York state's HVS rental vacancy (**5.3%**) sits in the middle of the large-CoC pack — looser than Massachusetts or California, tighter than Florida or Texas. Boston's Continuum is an order of magnitude smaller than New York's (**5,540** versus **125,683**) while Massachusetts prints the **tightest** vacancy among states that host a top-panel Continuum (**3.4%**). California hosts a stack of high-PIT Continuums — Los Angeles, San Jose, San Diego, Oakland, San Francisco, Orange County, Sacramento, Fresno, Stockton — against a **4.8%** state vacancy that is tight by national standards but not uniquely paired with any single Continuum's size.\r\n\r\nAt the other end, Houston and Austin sit near **3,300** people in the PIT panel while Texas vacancy runs near **11%**. Phoenix clears almost **10,000** people with Arizona vacancy at **8.4%**. Honolulu prints a mid-panel PIT (**4,920**) against Hawaii's **8.7%** vacancy. Large absolute homelessness and loose statewide rental markets can coexist; so can modest Continuum counts and extremely tight statewide vacancy.\r\n\r\n| CoC (short) | PIT (Jan 2025) | Home-state vacancy % | PIT / vacancy point |\r\n| --- | ---: | ---: | ---: |\r\n| New York City | 125,683 | 5.3 | 23,714 |\r\n| Los Angeles | 67,777 | 4.8 | 14,120 |\r\n| Seattle | 16,936 | 6.6 | 2,566 |\r\n| Denver | 10,774 | 5.8 | 1,858 |\r\n| San Jose | 10,711 | 4.8 | 2,231 |\r\n| Boston | 5,540 | 3.4 | 1,629 |\r\n| Miami | 3,615 | 10.2 | 354 |\r\n| Houston | 3,325 | 11.0 | 302 |\r\n\r\nThe **PIT per vacancy point** ratio is a desk shorthand, not a causal model. It simply shows how many counted people sit behind each percentage point of home-state vacancy. New York and Los Angeles dominate that ratio because their numerators are enormous, not because their vacancy readings are the lowest on the table.\r\n\r\n## California's stack versus the Sun Belt's slack\r\n\r\nFilter the dashboard to the West and the pattern sharpens. California Continuums occupy much of the upper PIT ladder while sharing the same **4.8%** state vacancy proxy. That is a political geography story as much as a housing-market story: multiple large Continuums inherit the same statewide vacancy reading even though Bay Area, Southern California, and Central Valley rental markets differ on the ground. The HVS state series cannot resolve those intra-state gaps; it can only show that California's large Continuums operate inside a relatively tight statewide envelope compared with Texas or Florida.\r\n\r\nSun Belt Continuums in the panel — Miami, Houston, Austin, and to a lesser extent Phoenix and Las Vegas — combine lower absolute PIT totals with looser vacancy. That does not prove that empty apartments absorb street homelessness. It does undercut the slogan that *every* large PIT Continuum is simultaneously living through a historically tight rental market. Some of the largest counts sit in tight states; some of the loosest vacancy readings sit under mid-sized Continuums.\r\n\r\n## Shelter systems and the Picture of Subsidized Households\r\n\r\nPIT totals mix sheltered and unsheltered people. New York City shelters about **96%** of its counted population; Boston about **98%**. Los Angeles shelters about **35%**; several other California Continuums print unsheltered majorities above **55%**. Vacancy tightness and shelter policy are different dials. A Continuum can run a high sheltered share inside a middling vacancy state (New York) or a low sheltered share inside a tight vacancy state (Los Angeles). Treating vacancy alone as the homelessness explanation erases that institutional layer.\r\n\r\nHUD's **Picture of Subsidized Households** describes the assisted stock that sits between market vacancy and the PIT: Housing Choice Vouchers (roughly half of assisted households nationally), project-based multifamily contracts, and public housing. Vouchers only house people when private landlords accept them and when units clear inspection against payment standards — a friction that rises when vacancy is low and landlords can choose unassisted tenants. Project-based and public housing turn on unit availability and waitlists rather than market vacancy per se. The dashboard's assisted-mix panel is national framing, not invented CoC microdata: it reminds readers that federal assistance is a third market, not a residual of HVS vacancy.\r\n\r\n## National vacancy loosened while PIT stayed historically high\r\n\r\nFrom 2022 through early 2026, national rental vacancy drifted upward into the **7.0–7.3%** band. Over the same multi-year window, HUD PIT totals remained near record levels after the 2024 surge. The national cycle therefore weakens any claim that *contemporaneous* national vacancy alone explains Continuum-level PIT ranks. Local Continuum counts reflect migration into shelter systems, eviction timing, street outreach capacity, weather on count night, and one-night methodology limits — none of which appear in a quarterly vacancy percentage.\r\n\r\nThe politics still bind the two series together because both feed the same hearing rooms. Mayors cite vacancy when asking for production subsidies; Continuums cite PIT when asking for emergency shelter and CoC renewals. Putting them on one scatterplot is useful precisely because the ranks disagree.\r\n\r\n## Caveats and geography limits\r\n\r\nSeveral limits should stay on the page. First, **CoC ≠ state**. Pairing a Continuum with its primary-state HVS rate is a disclosed proxy, not a metro-matched ACS or HVS MSA table. Los Angeles and Fresno inherit the same California vacancy reading even though their rental markets differ. Second, **PIT is a one-night estimate** with known undercount risk for unsheltered people and sensitivity to weather and survey design. Third, **vacancy is not affordability**: a 7% vacancy rate can still leave extremely low-income renters with no units they can pay for. Fourth, **Picture of Subsidized Households** program shares here are national structure, not Continuum-level unit inventories. Fifth, correlation across twenty-four large Continuums is descriptive; it is not an identification strategy for \"vacancy causes homelessness\" or the reverse.\r\n\r\n## What the desk should take away\r\n\r\nThe largest Continuums do **not** automatically print the tightest vacancy. New York leads the count without leading tightness. California stacks multiple high-PIT Continuums inside a tight statewide vacancy envelope. Texas and Florida Continuums in the panel sit lower on absolute PIT while printing double-digit vacancy. National vacancy has loosened into the mid-7% range even as Continuum counts remain elevated. For legislative staff and city budget offices, the operational implication is blunt: production and vacancy policy, shelter capacity, and voucher utilization are related but not interchangeable levers — and Continuum size alone is a poor ranking of market tightness.",
+    format: "data-story",
+    keyPoints: [
+      "NYC leads the January 2025 PIT at 125,683; LA is second at 67,777",
+      "Home-state HVS vacancy for large CoCs spans 3.4% (MA) to 11.0% (TX)",
+      "California CoCs combine high PIT totals with a 4.8% state vacancy",
+      "National rental vacancy eased into the mid-7% range by early 2026",
+      "PIT rank and vacancy rank are discordant — size is not tightness",
+    ],
+  },
+  {
+    id: "first-time-buyer-share-versus-30-year-mortgage-rates-2026",
+    slug: "first-time-buyer-share-versus-30-year-mortgage-rates-2026",
+    title:
+      "First-Time Buyer Share Fell to 21% While 30-Year Rates Stayed Above 6%",
+    excerpt:
+      "NAR's Profile prints first-time buyers at a record-low 21% after Freddie Mac's 30-year average spent 2023–2025 above 6%. The typical first-time buyer is now 40 — seven years older than in 2021.",
+    category: "Real Estate",
+    themeId: "homeownership-by-age-census",
+    imageUrl:
+      "/images/real-estate-first-time-buyer-share-versus-30-year-mortgage-rates-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic hero with a house silhouette, ascending amber mortgage-rate curve crossing a 6% line, and a descending teal first-time buyer share ribbon",
+    publishedAt: "2026-09-02T20:00:00Z",
+    featured: true,
+    visualization:
+      "first-time-buyer-share-versus-30-year-mortgage-rates-2026",
+    layout: "default",
+    content: `When the Federal Reserve began lifting the policy rate in 2022, the housing market's financing channel moved almost immediately. Freddie Mac's Primary Mortgage Market Survey (PMMS) 30-year fixed contract rate jumped from a **2021** calendar-year average of **2.96%** to **5.34%** in **2022**, then locked in above **6%** for every full calendar year from **2023 through 2025**. The National Association of REALTORS® (NAR) Profile of Home Buyers and Sellers — the longest-running national survey of primary-residence purchasers — printed a parallel story on the buyer mix: first-time buyers fell from a recent peak of **34%** in the **2021** report to a record-low **21%** in the **2025** report.
+
+This desk asks a narrow question: **did first-time buyer share fall as 30-year fixed rates rose above 6%?** The annual answer is yes — with an important mid-cycle caveat. The Profile share collapsed to **26%** in the **2022** report as rates were still climbing, briefly rebounded to **32%** in **2023** when sales volumes thinned and bidding wars cooled, then fell to successive record lows of **24%** (**2024**) and **21%** (**2025**) while Freddie Mac averages stayed above **6%**. The typical first-time buyer aged from **33** to **40** over the same stretch. House-price appreciation, measured by the FHFA purchase-only House Price Index, cooled from a **20.4%** year-over-year peak in **2022 Q2** to roughly **3%** by **2026 Q2** — so the rate lock, not accelerating prices alone, is the financing shock that keeps showing up in the buyer mix.
+
+## How the series line up
+
+Three instruments sit behind the dashboard. **Freddie Mac PMMS** (mirrored on FRED as MORTGAGE30US) is a weekly survey of 30-year fixed contract rates; annual and quarterly averages here are arithmetic means of those weekly prints. **NAR's Profile of Home Buyers and Sellers** is an annual survey of recent primary-residence buyers, typically covering purchases from July of the prior year through June of the report year. The first-time share is the percentage of those owner-occupant buyers who report this purchase as their first home. **FHFA's purchase-only House Price Index** (USSTHPI) supplies the quarterly price path and same-quarter year-over-year rates.
+
+A fourth series — the **REALTORS® Confidence Index (RCI)** monthly first-time share among existing-home purchases — appears in a separate panel because it is a *different* instrument. RCI monthly prints often sit higher than Profile annuals because of survey design, cash-buyer mix, and the distinction between existing-home closings and the broader primary-residence sample. Treat the monthly path as a higher-frequency pulse, not a substitute for the Profile's annual levels.
+
+## The 6% threshold in the rate path
+
+The **6%** line is not a theory — it is an empirical regime break in this cycle. Weekly PMMS prints crossed **6%** in **September 2022** and, with only brief dips toward the mid-5s in a handful of weeks, remained in a **6–7%+** band into **late 2026**. Calendar-year averages tell the same story in coarser grain:
+
+| Year | Freddie Mac 30-yr avg | NAR FTB share | Median FTB age | FHFA HPI Q4 YoY |
+| --- | ---: | ---: | ---: | ---: |
+| 2021 | 2.96% | 34% | 33 | 18.0% |
+| 2022 | 5.34% | 26% | 36 | 10.8% |
+| 2023 | 6.81% | 32% | 35 | 5.2% |
+| 2024 | 6.72% | 24% | 38 | 5.4% |
+| 2025 | 6.60% | 21% | 40 | 3.5% |
+
+The **2021** row is the pre-hike reference: sub-3% money and a **34%** first-time mix. By **2023–2025**, every annual average cleared **6%**, and by **2025** the Profile share had given up **13 percentage points** from the 2021 peak. The interactive **Share vs rate** panel colors bars rose whenever the calendar-year average itself cleared **6%**, so the visual regime and the table above match.
+
+## Why 2023 briefly looked like a rebound
+
+The **2023** Profile print of **32%** is the cycle's most common misread. It arrives *after* the first above-6% year and looks like a recovery. Two market facts sit underneath it. First, existing-home sales volumes collapsed as payment shock and locked-in low-rate owners removed listings; thinner competition can raise the *share* of first-time buyers even when the absolute number of first-time closings is soft. Second, the Profile survey window (roughly mid-2022 to mid-2023 for that report) still mixes months when rates were climbing with months when they had already settled above **6%**. The rebound did not survive the next two Profiles: **24%** then **21%** as elevated rates persisted and inventory stayed scarce at affordable price points.
+
+Bucket the eleven Profile years from **2015–2025** by the Freddie Mac calendar-year average and the pattern is cleaner. **Sub-4%** years average a **33.1%** first-time share and a median first-time age near **32**. **Above-6%** years (**2023–2025**) average **25.7%** and an age near **38**. That is a **7.4 percentage-point** share gap and a roughly **five-year** age gap across rate regimes — the dashboard's **Rate regimes** view.
+
+## Prices cooled; the payment shock did not
+
+FHFA's purchase-only index shows why "rates alone" is incomplete and why "prices alone" is also incomplete. Year-over-year house-price growth peaked at **20.4%** in **2022 Q2** — the same quarter Freddie Mac's quarterly average printed **5.27%** and was still racing higher. By **2026 Q2**, HPI year-over-year had slowed to about **3%**, yet the 30-year average remained above **6%**. Payment affordability is a function of *both* price level and the mortgage rate. Softening price *growth* does not unwind the higher *level* of prices established in 2021–22, and a **6.5%** note on a larger principal still dominates the monthly payment for a credit-constrained first-time buyer.
+
+The **Rate vs HPI YoY** panel is built for that juxtaposition: an area for FHFA year-over-year appreciation and a line for the quarterly PMMS average, with an optional **6%** reference. Watch **2022 Q4** — the first full quarter with a rate average above **6%** — as the hinge between the price boom and the financing lock.
+
+## Age is the quiet twin of the share collapse
+
+Share is not the only composition signal. NAR's median age of first-time buyers rose from **33** in the **2021** Profile to **36** (**2022**), eased one year to **35** (**2023**), then jumped to **38** (**2024**) and **40** (**2025**). In the 1980s, NAR notes, the typical first-time buyer was in their late twenties. A market that admits fewer first-time buyers *and* admits them later is compressing lifetime housing-wealth accumulation: fewer moves, less equity compounding, and a larger rent-to-own gap for the households still waiting.
+
+The age line in the dashboard tracks that quietly while the dual-axis share/rate chart carries the headline. Together they say the same thing: the post-6% regime did not merely shuffle who closes — it delayed *when* first-time buyers close.
+
+## Monthly RCI versus the annual Profile
+
+The monthly RCI path in the dashboard does **not** print a smooth collapse to **21%**. Selected months from **2021 through mid-2026** show first-time shares oscillating in the high-20s to low-30s even while PMMS averages sit above **6%**. That is not a contradiction of the Profile — it is a reminder that instruments differ. RCI asks REALTORS® about recent existing-home buyers; the Profile surveys owner-occupant primary-residence purchasers across new and existing stock and excludes investors and vacation homes. Cash-heavy repeat buyers, builder incentives on new homes, and seasonal composition can all move the monthly mix without rewriting the Profile's annual low.
+
+Use the monthly panel to see *timing* around the September 2022 cross of **6%**; use the Profile annuals for *level* comparisons across decades. Do not splice them into a single continuous series.
+
+## Caveats and what the desk is not claiming
+
+Several limits keep this from being a causal identification paper. The Profile survey window straddles calendar years, so pairing a report-year share with a calendar-year rate average is an approximate crosswalk, not a perfect contemporaneous match. First-time share is a *composition* statistic: it can rise when repeat buyers exit even if first-time closings fall in absolute terms. Inventory shortages, student-debt balances, local zoning constraints, and investor competition all affect entry independently of the mortgage rate. FHFA's national HPI smooths metro divergence — coastal and Sun Belt payment shocks differ. RCI monthly shares are not seasonally adjusted here and are sampled at selected months for the path chart rather than every print.
+
+The desk also does **not** claim that crossing **6%** is a universal historical law. In earlier decades, first-time shares near **40%** coexisted with higher nominal rates because price-to-income ratios and underwriting regimes differed. The claim is cycle-specific: **in the 2021–2025 window, the move from sub-3% money to a sustained above-6% band coincided with a collapse in NAR Profile first-time share to a record low, an aging of the first-time cohort, and a cooling — but not a reversal — of house-price growth.**
+
+## What to watch next
+
+Three prints will test whether the regime is easing or merely pausing. First, weekly PMMS: a sustained return of the 30-year average into the mid-5s would reopen payment capacity even if prices stay elevated. Second, the next NAR Profile: another print near **21%** (or lower) with rates still above **6%** would confirm composition scarring; a rebound toward the low-30s with rates still elevated would revive the 2023 "thin market" interpretation. Third, FHFA quarterly HPI: if year-over-year growth stays near **3%** while rates ease, the payment channel — not price acceleration — remains the binding constraint for first-time entry.
+
+Until those prints move together, the dashboard's simplest summary stands. **First-time share fell as the 30-year fixed rate rose above 6% and stayed there** — from **34%** to **21%** on the Profile, with the typical first-time buyer now **40** years old.
+`,
+    format: "data-story",
+    keyPoints: [
+      "NAR Profile first-time share: 34% (2021) → 21% (2025)",
+      "Freddie Mac 30-year annual avg stayed ≥6% in 2023–2025",
+      "Median first-time buyer age: 33 (2021) → 40 (2025)",
+      "Above-6% years average 25.7% FTB share vs 33.1% in sub-4% years",
+      "FHFA HPI YoY cooled from 20.4% (2022 Q2) to ~3% (2026 Q2)",
+    ],
+  },
+  {
+    id: "motor-vehicle-theft-rates-versus-violent-crime-rates-2026",
+    slug: "motor-vehicle-theft-rates-versus-violent-crime-rates-2026",
+    title:
+      "MV Theft Index Hit 145 While Violent Crime Sat Near 99 — Then Both Retreated",
+    excerpt:
+      "Indexed to 2019, FBI motor-vehicle theft rose to 144.9 by 2023 while the violent-crime index slipped to 99.2. The 2024 retreat cut MV theft volume by about 19%, but the rate is still above its pre-pandemic baseline.",
+    category: "Politics",
+    themeId: "motor-vehicle-theft-nibrs",
+    imageUrl:
+      "/images/politics-motor-vehicle-theft-rates-versus-violent-crime-rates-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic street scene with a sedan silhouette and dual glowing index lines contrasting motor-vehicle theft against violent crime",
+    publishedAt: "2026-09-02T15:00:00Z",
+    featured: true,
+    visualization:
+      "motor-vehicle-theft-rates-versus-violent-crime-rates-2026",
+    layout: "default",
+    content: `The political argument about “crime” often treats every Part I offense as if it moved together. The FBI’s own rate series say otherwise. Indexed to **2019 = 100**, the national **motor-vehicle theft** rate climbed to **144.9** by **2023**, while the **violent-crime** index sat at **99.2** — a **45.7-point** divergence at the peak. In **2024** both series retreated: MV theft volume fell an estimated **18.6%**, the largest one-year drop the bureau has recorded for that offense, and violent crime fell about **4.5%**. The theft index closed the year near **117.7**, still above the 2019 baseline; the violent index closed near **94.6**.
+
+This dashboard answers a narrow question: **did MV theft per 100,000 rise faster than violent crime after 2019, and has it since cooled?** The answer is yes on both counts — with important caveats about the NIBRS transition, incomplete 2021 coverage, and the difference between offense rates and public safety narratives.
+
+## Why index both series to 2019
+
+Raw rates live on different scales. Violent crime in 2019 ran about **366.7** offenses per 100,000 inhabitants; motor-vehicle theft ran about **219.9**. Plotting levels alone invites a false visual: violent crime looks “larger” every year simply because its base is higher. Rebasing both series to **2019 = 100** puts the *path* in the same frame. The desk then defines a **divergence gap** as MV-theft index minus violent index. Before 2019 that gap mostly hovered near zero. After 2021 it exploded.
+
+The interactive panels let you flip between **index** and **rate** modes, trim the window to post-2019 or the full 2009–2024 span, and filter regional or selected-state views. Use the dual-index panel for the national story; use the gap panel when you want the wedge itself; use the scatter when you want to see which states printed the widest percentage-point spreads.
+
+## The national path: slow climb, sharp peak, partial retreat
+
+From **2015 through 2019**, both series were relatively calm. MV theft rates drifted from **222.2** to **219.9** per 100,000; violent rates eased from **373.7** to **366.7**. The pandemic year **2020** lifted both — violent to about **398.5**, MV theft to **248.1** — but the indexes stayed within a few points of each other. The real break arrives in **2022–2023**.
+
+By **2022**, the MV theft rate reached **284.5** (index **129.4**) while violent sat near **377.1** (index **102.8**). In **2023**, FBI nation summaries put MV theft at roughly **318.7** per 100,000 — the highest rate since **2007** — for an index of **144.9**. Violent crime, by contrast, had already slipped back under its 2019 level to **363.8** (index **99.2**). That is the headline asymmetry: **theft surged while violence cooled**.
+
+| Year | MV theft rate | Violent rate | MV index | Violent index | Gap (pts) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2019 | 219.9 | 366.7 | 100.0 | 100.0 | 0.0 |
+| 2020 | 248.1 | 398.5 | 112.8 | 108.7 | 4.1 |
+| 2021 | 241.5 | 387.0 | 109.8 | 105.5 | 4.3 |
+| 2022 | 284.5 | 377.1 | 129.4 | 102.8 | 26.6 |
+| 2023 | 318.7 | 363.8 | 144.9 | 99.2 | 45.7 |
+| 2024 | 258.8 | 347.0 | 117.7 | 94.6 | 23.1 |
+
+Rates are offenses per 100,000 inhabitants. Indexes rebase each series to 2019. **2021** is flagged incomplete under the NIBRS transition; treat that year as directional, not definitive. **2024** violent rate is desk-estimated from the FBI’s reported **−4.5%** volume decline applied to the 2023 rate; revise when CDE publishes a finalized rate table.
+
+## Property crime did not move as a bloc
+
+A second trap is treating “property crime” as one object. Inside the property basket, **burglary** kept falling while **motor-vehicle theft** rose. Indexed to 2019, burglary’s rate path is a long decline; larceny-theft is softer but still below its late-2010s levels; MV theft is the outlier that climbed through **2023**. The offense-mix panel shows that split as bars for burglary and larceny indexes with an MV-theft line on top.
+
+That composition matters for politics and for insurance. Campaign ads that cite “property crime is up” can be true in a metro where car theft dominates the local mix and false in a county where burglary still drives the story. National averages hide that substitution. Insurers and city councils felt the MV-theft spike through premiums, parking enforcement, and catalytic-converter / keyless-entry crime patterns that do not show up in the violent-crime ledger at all.
+
+## Regions and selected states: the West printed the steepest climb
+
+Census-region composites (desk synthesis from FBI regional tables) show **West** MV theft rising about **55%** from 2019 to 2023 versus a slight decline in regional violent rates. The **Midwest** and **South** also show large MV-theft percentage gains with flat-to-down violence. The **Northeast** starts from a lower theft base but still prints a large percentage increase.
+
+Selected-state scatter points (not a 50-state census) put **Maryland**, **New York**, **Minnesota**, and **Nevada** among the widest divergence spreads — large MV-theft percentage gains against flat or falling violent rates. Western states such as **Colorado**, **Washington**, and **California** combine high absolute theft rates with steep post-2019 climbs; several then posted sharp **2024** declines (Washington, Nevada, Oregon, and Colorado among the largest percentage drops in NICB compilations). High base rates plus large swings are why the West dominates the narrative even when percentage changes elsewhere look similar.
+
+## Why NCVS reporting still matters for reading UCR
+
+Motor-vehicle theft is unusually well reported to police. BJS Criminal Victimization estimates put the share of completed vehicle thefts reported to law enforcement near **80%** in recent years — far above most other property offenses. That high reporting rate is why the UCR / NIBRS path is a credible signal for this offense rather than a mirage of changing victim willingness to call 911. The volume + NCVS panel juxtaposes national stolen-vehicle counts (roughly **801k** in 2019, peaking near **1.02 million** in 2023, then **851k** in 2024) against that reporting share.
+
+NCVS and UCR still answer different questions. NCVS estimates victimization whether or not an offense enters a police file; UCR counts offenses known to law enforcement. For car theft, the two usually move in the same direction. For under-reported crimes, they can diverge. Do not import the MV-theft lesson wholesale into robbery or aggravated assault debates without checking the reporting share.
+
+## Caveats: NIBRS transition, coverage, and what rates cannot say
+
+Several measurement issues belong in plain view:
+
+- **NIBRS transition.** The FBI’s shift from the Summary Reporting System to NIBRS reduced national coverage in **2021**. That year’s estimates are below a fully representative level and are **not strictly comparable** to adjacent years. The dashboard flags 2021 and treats the 2022–2024 recovery of coverage as improving but still estimated.
+- **Agency participation.** Even in 2024, with coverage near **96%** of the U.S. population, missing agencies and late submissions can revise rates. Prefer directional claims over false precision to the tenth of a point.
+- **Rape definition and violent composite.** Violent crime aggregates murder, rape (revised definition), robbery, and aggravated assault. Definitional changes and hierarchy rules affect the composite; offense-level paths can differ from the index.
+- **Rates are not clearance, and clearance is not safety.** A falling violent rate does not prove every neighborhood is safer. A rising MV-theft rate does not prove every stolen car becomes a violent crime. Carjacking is a separate (much smaller) NIBRS category and is not the same as theft of an unattended vehicle.
+- **State panels are illustrative.** The scatter uses a curated set of high-signal states from FBI/NICB compilations. It is a lens, not a complete atlas.
+- **2024 violent rate.** Volume declines are disclosed; the exact national rate may revise when CDE finalizes Table-style estimates. The desk’s **347.0** figure is an estimate anchored to the **−4.5%** national volume change.
+
+## What the 2024 retreat does — and does not — settle
+
+The 2024 drop in motor-vehicle theft is historically large. It closes a meaningful share of the 2019–2023 gap, and it arrives alongside continued declines in violent crime. That combination weakens any claim that “crime” as a single object is still accelerating nationally. It does **not** return MV theft to its 2019 rate, and it does not erase the multi-year insurance and city-policy damage from the peak years. Recovery rates, model-specific theft patterns (including widely discussed immobilizer vulnerabilities), and metro-level hot spots remain live operational questions outside this national index comparison.
+
+For desks that need a one-line takeaway: **after 2019, FBI motor-vehicle theft per 100,000 rose much faster than violent crime, peaked in 2023 with roughly a 45-point index gap, and partially retreated in 2024 while remaining above its pre-pandemic baseline.** Use the dual-index and gap panels to keep that claim honest as revised estimates land.
+`,
+    format: "data-story",
+    keyPoints: [
+      "MV theft index hit 144.9 in 2023 vs violent 99.2 (2019=100)",
+      "Peak divergence gap: 45.7 index points",
+      "2024 MV theft volume −18.6%; rate still above 2019",
+      "Burglary fell while MV theft rose inside property crime",
+      "NCVS: ~80% of completed vehicle thefts reported to police",
+    ],
+  },
+  {
+    id: "bead-allocations-versus-fcc-unserved-locations-2026",
+    slug: "bead-allocations-versus-fcc-unserved-locations-2026",
+    title:
+      "$614K per Unserved Address in DC, $4.3K in Texas: BEAD Allocations Versus the FCC Fabric",
+    excerpt:
+      "NTIA’s $42.45B BEAD program splits each state’s check across a $100M floor, a high-cost unserved pool, and remaining unserved shares on the FCC National Broadband Map. Dividing those allocations by Version 2 fabric unserved counts shows a 140× spread — from District of Columbia floor effects above $600K per location to roughly $4,263 in Texas.",
+    category: "Technology",
+    themeId: "ntia-bead-broadband",
+    imageUrl:
+      "/images/technology-bead-allocations-versus-fcc-unserved-locations-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic US map with glowing unserved broadband dots and amber BEAD dollar flow, teal and rose bars comparing dollars per unserved location by state, Visual Capitalist-style editorial thumbnail",
+    publishedAt: "2026-08-31T02:00:00Z",
+    featured: true,
+    visualization: "bead-allocations-versus-fcc-unserved-locations-2026",
+    layout: "default",
+    content: `When NTIA announced **$42.45 billion** in Broadband Equity, Access, and Deployment (BEAD) allocations on **June 26, 2023**, the headline numbers were state totals: **$3.31 billion** for Texas, **$1.86 billion** for California, **$1.74 billion** for Missouri. Those figures answer “how much money?” They do not, by themselves, answer “how much money **per remaining gap location** on the FCC’s location fabric?” That second question is what state broadband offices, ISPs, and fiscal watchdogs actually trade when they stress-test whether BEAD can close the digital divide or merely subsidize expensive geographies.
+
+This brief divides each jurisdiction’s disclosed BEAD allocation by unserved Broadband Serviceable Locations (BSLs) on the **FCC National Broadband Map Version 2** (May 2023 release) — the map vintage NTIA used for the statutory formula. The result is a ranking of **BEAD dollars per unserved location**. At the top sits the **District of Columbia** at roughly **$614,000** per unserved BSL; among large states, **Texas** sits near the bottom at about **$4,263** per unserved location despite receiving the largest single allocation. The spread is not a coding error. It is the mechanical output of a three-part formula written into the Infrastructure Investment and Jobs Act (IIJA).
+
+The interactive dashboard above lets you rank jurisdictions, scatter unserved counts against allocation size, decompose the statutory **$100 million** baseline from variable shares, compare census regions, and inspect the distribution of $/unserved bands.
+
+## What BEAD is buying — and what “unserved” means
+
+BEAD is the largest single federal broadband infrastructure program in U.S. history. Congress gave NTIA **$42.45 billion** to pass through to states, the District of Columbia, and five territories, which then run competitive subgrantee selection processes. Eligible project locations are **unserved** (no 25/3 Mbps reliable service) and **underserved** (below 100/20 Mbps) BSLs on the FCC fabric, minus locations with enforceable federal deployment commitments.
+
+For **allocation**, however, the IIJA tells NTIA to use only **unserved** counts — plus a separate high-cost unserved component — not underserved locations. That distinction matters: a state can have millions of underserved suburban locations that will eventually be eligible for subgrants but **did not** drive its initial BEAD check. NTIA’s public materials describe roughly **eight million** unserved locations nationally on the Version 2 map, against **113 million** total fabric locations — on the order of **7%** unserved at the snapshot used for allocation.
+
+Underserved locations enter later, when states run challenge processes and publish final eligible lists. GAO’s BEAD implementation work emphasizes that those lists will diverge from the allocation vintage as providers file corrections, states adjudicate challenges, and other federal programs (RDOF, ARPA, ReConnect) remove overlapping locations.
+
+## The three-bucket allocation formula
+
+Congress did not allocate BEAD as a flat per-location grant. NTIA’s published methodology describes three components:
+
+| Component | Statutory pool | What it rewards |
+| --- | --- | --- |
+| Baseline | **$100M** per state, DC, and Puerto Rico; **$25M** per smaller territory | Presence in the program — every eligible entity gets a floor |
+| High-cost unserved | **$4.245B** (10% of program) | Share of unserved locations in NTIA-defined high-cost areas (80%+ unserved block groups with above-average build costs) |
+| Remaining unserved | **~$32.9B** | Share of all unserved locations nationally |
+
+The baseline alone consumes about **$5.3 billion** of the **$42.45 billion** envelope. That is why small unserved counts produce extreme **$/unserved** ratios: **Delaware**, **Rhode Island**, and **North Dakota** show six-figure dollars per unserved location not because NTIA overshot rural fiber costs, but because **$100 million** divided by a few thousand (or fewer) unserved BSLs is arithmetic.
+
+High-cost unserved is the second wrinkle. NTIA published a list of qualifying census block groups — only **702** block groups nationwide met the statutory filters in the methodology file — and directed **10%** of BEAD through that lens. States with sparse populations and expensive terrain (think **Alaska**, **Montana**, **Missouri**’s high-cost geographies) can receive variable dollars disproportionate to a simple unserved headcount. Industry analysts noted early that the high-cost definition favors block groups that are almost entirely unserved, which can under-weight states whose unserved locations are scattered in lower-density patterns.
+
+Everything left flows through the **remaining unserved** pool, proportional to each state’s share of national unserved locations on the map. That is why **Texas** can lead in total dollars yet look “cheap” on a per-unserved basis: **777,115** disclosed unserved BSLs on the June 2023 map vintage spread the **$3.31 billion** allocation thin.
+
+## Reading the ranking: floor states versus volume states
+
+Our jurisdiction table merges **disclosed** NTIA allocation dollars with unserved counts. **Alabama** (**191,164** unserved; **$1.40 billion** allocation) and **Texas** (**777,115** unserved; **$3.31 billion**) use unserved totals documented in state and industry filings tied to the same map generation. Other states use unserved counts **estimated** by apportioning the national **~8.35 million** unserved total according to each jurisdiction’s variable allocation share, calibrated to those anchors — transparently an modeling step, not a second FCC bulk download.
+
+Even with estimation noise, the rank order is stable:
+
+- **Floor-dominated jurisdictions** — **DC**, **Delaware**, **Rhode Island**, **North Dakota** — cluster above **$15,000–$600,000** per unserved location because unserved numerators are tiny relative to the **$100M** (or near-floor) checks.
+- **Large southern and midwestern states** — **Texas**, **California**, **North Carolina**, **Georgia** — land near **$4,000–$5,000** per unserved location because unserved numerators are six figures.
+- **Western rural states** — **Montana**, **Wyoming**, **Idaho** — sit mid-pack (**$5,000–$7,000**) reflecting moderate unserved counts plus meaningful variable and high-cost shares.
+
+The **median** among the 50 states and DC in this snapshot is about **$5,271** per unserved location — a useful “typical intensity” line when comparing a given state’s plan to the national middle.
+
+## Why the FCC fabric denominator matters
+
+BEAD is often discussed as if money follows people. It follows **locations** — specific latitude/longitude points in CostQuest’s Broadband Serviceable Location Fabric that the FCC treats as the unit of account for provider filings. A miscounted apartment building, a challenged fixed-wireless polygon, or a carrier correction can shift a state’s unserved count by tens of thousands without changing a single household’s lived experience overnight.
+
+NTIA locked allocations to **Version 2** of the National Broadband Map after months of challenge activity, but **subgrantee eligibility** continues to update as new map vintages publish and state challenge processes run. Alabama’s BEAD planning documents, for example, moved from May 2023 counts to later fabric releases when building challenge lists. That means **$/unserved at allocation** is a fiscal snapshot, not a guarantee of **$/location at construction**.
+
+Map vintage also explains why two analysts can both claim to use “FCC data” yet produce different unserved totals: licensed versus unlicensed fixed wireless, low-latency thresholds, and treatment of satellite offerings all affect bucket assignment. NTIA’s NOFO defines “reliable broadband” narrowly; debates over technology codes materially moved states like **Michigan** and **Missouri** between map releases.
+
+## Regional patterns — not a simple rural/urban story
+
+Grouping states into census regions shows **Northeast** and **South** averages near **$5,000–$6,000** per unserved location, with **West** and **Midwest** close behind — the spread within regions is wider than the spread between regional means. Rural character alone does not predict intensity: **Mississippi** and **West Virginia** carry large unserved inventories relative to allocation and therefore look more like **Texas** than like **Alaska** on $/unserved.
+
+Territories (**Puerto Rico**, **Guam**, **American Samoa**, etc.) receive **$25M–$334M** checks with small unserved denominators in public summaries, producing high implied $/unserved if naively divided — but territorial fabric licensing and deployment cost structures differ from the contiguous states. The dashboard defaults to excluding territories for rank charts precisely because the baseline **$25M** floor dominates.
+
+## Implementation reality: GAO and the moving target
+
+GAO’s BEAD implementation reviews highlight delays between allocation, Initial Proposal approval, challenge processes, and subgrantee selection — a multi-year pipeline during which unserved counts fall as other programs build and as the map refreshes. NTIA’s **Internet for All** timeline envisioned Initial Proposals within **180 days** of formal allocation notice; states moved at different speeds, and NTIA approval rolls on a case-by-case basis before entities may draw down the first **20%** of funds.
+
+For policymakers, the practical implication of our **$/unserved** metric is twofold:
+
+1. **Affordability of universal service** — States with low $/unserved and large unserved inventories must stretch BEAD across many locations; cost models (fiber preference, extremely high-cost thresholds, match requirements) dominate whether the formula dollars suffice.
+2. **Equity of the formula itself** — States with high $/unserved because of the baseline may finish BEAD builds with substantial balances for adoption and equity programs; states with low $/unserved may face tighter capital accounts even with larger headline allocations.
+
+Neither outcome was hidden in the IIJA text. It was visible the moment analysts divided **June 2023** allocations by **Version 2** unserved counts.
+
+## Caveats and data limits
+
+**Allocation dollars are disclosed; many state unserved counts are estimated here** except where cited from Alabama and Texas primary filings. A full FCC location-level aggregation was not re-run for this brief; estimates apportion the national unserved total using variable allocation shares calibrated to those anchors.
+
+**Underserved locations are excluded from the denominator** even though they are BEAD-eligible for projects. A state-heavy in underserved suburban fringe may look better on $/unserved than its true cost-to-100/20 challenge implies.
+
+**High-cost unserved locations are proxied in NTIA’s block-group list**, not re-counted location-by-location in this analysis.
+
+**Post-allocation map updates** (December 2023, 2024, and beyond vintages) reduced national unserved totals but **did not change** NTIA’s announced BEAD splits.
+
+**Territories and DC** are included in NTIA’s 56-entity allocation table but behave differently in rank views because of baseline floors and small denominators.
+
+## What to watch next
+
+Three indicators will stress-test whether this allocation snapshot aged well:
+
+- **State challenge-process outcomes** — final unserved lists versus Version 2 denominators used here.
+- **Subgrantee award per location** — obligated dollars divided by locations actually built, which introduces technology choice and match waivers.
+- **FCC map vintage drift** — continued declines in unserved counts from incremental RDOF/BEAD-adjacent builds before shovel-ready projects start.
+
+BEAD was always a formula-driven program tied to a map snapshot. Measuring **dollars per unserved location** makes that dependency visible — and shows why **Texas** and **DC** can share the same program yet inhabit different fiscal planets.`,
+  },
+  {
+    id: "federal-firefighting-contract-aviation-hours-2026",
+    slug: "federal-firefighting-contract-aviation-hours-2026",
+    title:
+      "Federal Firefighting Contract Aviation Hours: 81% of LAT/VLAT Time Ran Exclusive-Use in 2021 — CWN Rates Still 54% Higher per Day",
+    excerpt:
+      "USDA Forest Service calendar-year billing shows large airtanker hours split 81% exclusive-use vs 19% call-when-needed in CY2021 after a 2020 surge year when CWN carried nearly half of LAT/VLAT flight time. Published contract benchmarks still price CWN daily availability 54% above EU.",
+    category: "Global Systems",
+    themeId: "wildfire-suppression-budget",
+    imageUrl:
+      "/images/global-systems-federal-firefighting-contract-aviation-hours-2026-hero.png",
+    imageAlt:
+      "Dark navy cinematic split between exclusive-use and call-when-needed airtanker contract channels over a wildfire ridgeline, indigo and amber hour-share overlay, Visual Capitalist editorial style",
+    publishedAt: "2026-09-01T12:00:00Z",
+    featured: true,
+    visualization: "federal-firefighting-contract-aviation-hours-2026",
+    layout: "default",
+    content: `When a western megafire pushes past initial attack, incident commanders order **large airtankers** and **Type 1 helicopters** through two different procurement channels. **Exclusive-use (EU)** contracts — the Forest Service also labels them EXU in billing systems — pay vendors a daily availability retainer across a mandatory availability period so aircraft sit crewed and ready at tanker bases. **Call-when-needed (CWN)** contracts keep vendors on a basic ordering agreement: no guaranteed days, no guaranteed hours, but the agency can activate aircraft when fire activity outruns the EU fleet. The policy fight is familiar: EU buys readiness; CWN buys flexibility. The accounting question is sharper: **what share of heavy aviation hours actually flies on each contract type, and how did unit costs move when CWN surged?**
+
+This dashboard joins USDA Forest Service **calendar-year aviation utilization reports** (CY2017–CY2021) with published EU vs CWN tariff benchmarks. The headline for CY2021: **6,247 of 7,678 LAT/VLAT flight hours (81.4%)** billed on exclusive-use contracts, while CWN accounted for the remaining **1,431 hours (18.6%)**. That rebound followed CY2020, when a pandemic-era surge pulled CWN up to **3,950 hours — 46.1% of the LAT/VLAT total**. On rates, a 2018 desk composite of next-generation large airtankers still shows CWN **daily availability 54% above EU** and **hourly flight rates 18% above EU**, even though CY2021's blended IBS flight-time cost fell to about **$8,715 per hour** from **$9,525** in the surge year.
+
+## What the Forest Service counts as a flight hour
+
+The utilization reports summarize **Incident Business System (IBS)** billing extracted through FAMWEB. Flight hours are calendar-year totals (January–December), not fiscal-year suppression appropriations and not acres burned. The **airtanker category** includes all fixed-wing retardant delivery by large airtankers (LAT) and very large airtankers (VLAT); single-engine airtankers and scoopers are tracked elsewhere. **Type 1 helicopters** are the heaviest rotor-wing tier on the national contract list — the category most comparable to LAT/VLAT for extended attack on large fires.
+
+Important caveat: the reports **do not filter to "large-fire" incident codes**. LAT/VLAT assets are ordered overwhelmingly when fires escape initial attack, but the hour tables are contract-channel totals, not a NIFC fire-size cut. Treat the series as **federal heavy-air suppression capacity utilization**, not a precise large-fire-only denominator.
+
+## LAT/VLAT hours swing with fire years — and with surge policy
+
+The five-year LAT/VLAT panel shows how contract-channel shares move when total demand shifts.
+
+| Calendar year | EXU hours | CWN hours | Total hours | EXU share | Era |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 2017 | 6,829 | 594 | 7,423 | 92.0% | Quiet |
+| 2018 | 4,699 | 1,487 | 6,186 | 76.0% | Quiet |
+| 2019 | 2,764 | 663 | 3,427 | 80.7% | Quiet |
+| 2020 | 4,625 | 3,950 | 8,575 | 53.9% | Surge |
+| 2021 | 6,247 | 1,431 | 7,678 | 81.4% | Rebound |
+
+CY2019 was the quietest year in the panel at **3,427 total hours**, with CWN LATs logging just **608 hours**. CY2020 flipped the mix: total hours jumped to **8,575**, and **CWN LAT hours alone hit 3,707** — six times the 2019 CWN LAT tally and triple the five-year CWN LAT average published in the CY2021 report. The Forest Service explicitly tied that pattern to **COVID-19 surge aircraft**, extended CWN activations, and the first heavy use of surge capacity alongside EU assets.
+
+CY2021 partially normalized the contract split even though total hours (**7,678**) stayed well above the quiet-year trough. EXU LAT hours rose to **5,355**, while CWN LAT fell to **757** — below the five-year CWN LAT average. CWN VLAT hours, however, remained elevated at **673**, delivering **5.3 million gallons** of retardant, suggesting surge VLAT capacity stayed economically attractive even as LAT CWN activations cooled.
+
+## Type 1 helicopters tell a different contract story
+
+Rotor-wing hours dominate agency aviation totals — helicopters were **53% of all Forest Service flight hours in CY2021** — but the **contract channel** for Type 1 heavy helos diverged from airtankers in those two years.
+
+In CY2020, **19,293 of 19,434 Type 1 helicopter hours (99.3%)** billed as CWN. The aviation report notes **28 Type 1 helicopters operated under modified CWN contracts** while traditional exclusive-use Type 1 acquisitions were delayed, plus **42 additional surge helicopters** contracted during the pandemic response. EU Type 1 hours that year totaled just **141**.
+
+CY2021 went further: **zero Type 1 EU hours** against **23,228 CWN hours** because the agency awarded **48 Type 1 CWN/surge task orders** after cancelling the planned Type 1 exclusive-use acquisition. Type 2 and Type 3 helicopters still flew meaningful EU hours (**5,359** and **9,654** respectively in CY2021), but the largest rotor-wing tier — the one most often paired with LAT/VLAT on extended attacks — was **entirely CWN-billed** in the published tables.
+
+That asymmetry matters for budget desks: a headline "81% EXU share" for airtankers coexists with a rotor-wing tier that was **100% CWN on Type 1** during the same window.
+
+## Unit costs: availability retainers vs flight-time tariffs
+
+Forest Service airtanker contracts bill on two rails: **daily availability** (aircraft crewed and ready) and **hourly flight time** (retardant missions and repositioning). CY2021 LAT/VLAT expenditures totaled **$180.3 million** in IBS: **$111.8 million (62%)** availability, **$66.9 million (37%)** flight time, and roughly **$1.9 million** standby/other. CY2020 was more expensive at **$206.6 million** total despite similar hour volume, with flight-time pay at **$81.7 million** — implying about **$9,525 per flight hour** blended across EU and CWN versus **$8,715** in CY2021.
+
+Those blended figures are **desk ratios**, not published contract tariffs. They mix EU aircraft (flying more hours on retainer already paid) with CWN activations (higher daily and hourly schedules when ordered). They also include VLAT and LAT models with different fuel burns and retardant capacities.
+
+Published **2018 contract benchmarks** for next-generation large airtankers (BAe-146, RJ85, C-130 composite) remain the cleanest EU vs CWN spread:
+
+| Rate component | Exclusive use | Call when needed | CWN premium |
+| --- | ---: | ---: | ---: |
+| Daily availability | $30,150 | $46,341 | +54% |
+| Hourly flight | $7,601 | $8,970 | +18% |
+
+The Forest Service's **Large Airtanker Modernization Strategy (2018)** summarized the trade even more bluntly: EU LAT all-in costs run about **half** of CWN assets because the retainer buys guaranteed capacity before the first drop. CWN can sit unused — or sit overseas when US demand spikes. Wildfire Today reported that in July 2021 the agency sought **16 CWN airtankers** but could activate only **five**; others were committed abroad.
+
+## Why the mix shifted in 2020 and rebounded in 2021
+
+Three mechanisms show up repeatedly in agency reports and aviation press.
+
+**Surge task orders.** CY2020 introduced surge aircraft across airtankers, scoopers, helicopters, and aerial supervision at negotiated CWN rates. CY2021 continued **90-day CWN surge contracts** (three LATs, two VLATs) alongside EU MAP aircraft.
+
+**Contract acquisition gaps.** Type 1 helicopter EU acquisitions were cancelled or delayed, forcing CWN bridges. Airtanker EU counts fell to **18 EXU and five CWN** on the CY2021 fleet summary — tighter than the CY2020 table listing **13 EXU and 22 CWN** large airtanker line items — but EXU hours still dominated because MAP aircraft fly continuously while many CWN line items never receive orders in mild years.
+
+**Fire demand and cooperator billing.** Roughly **half of CY2021 LAT/VLAT hours** supported non-Forest Service fires — **32% state/local** and **18% Department of the Interior** — under cost-recovery policies. Heavy EU utilization therefore reflects **national pool demand**, not only FS-managed incidents.
+
+## Reading the scatter: more CWN hours ≠ cheaper flight time
+
+The dashboard's hours-versus-$/hour scatter plots CY2020 and CY2021 only (earlier years lack full pay-code disclosure in the desk extract). CY2020 combined **higher total hours** with **higher implied flight $/hour** despite the CWN-heavy mix. CY2021 reduced total LAT/VLAT cost **13%** year over year while shifting hours back toward EU. That pattern fits the contract economics: CWN daily rates punish short activations, while EU spreads availability over more flight hours when fire seasons run long.
+
+## Caveats for analysts and appropriators
+
+**Calendar year vs fire season.** Billing follows calendar-year IBS closes; late-season fires can push hours across year boundaries.
+
+**Dual awards and substitutions.** Some aircraft hold both EU and CWN contracts; vendors substitute tails for maintenance. Fleet counts in summary tables **do not equal** utilized aircraft counts.
+
+**MAFFS and foreign cooperators excluded.** Military Modular Airborne Fire Fighting System hours (**945** fire-support hours in CY2021) and foreign agreement aircraft (e.g., New South Wales) are **not in LAT/VLAT hour totals** but still matter for large-fire capacity.
+
+**MATOC transition.** Since 2023 the Forest Service has moved VLAT/LAT procurement toward **Multiple Award Task Order Contracts (MATOC)**, blending legacy EU/CWN labels. Extend the panel only with new annual reports — do not extrapolate 2021 shares into 2024 fleet counts without fresh IBS extracts.
+
+**Helicopter generalization.** Type 1 CWN dominance in CY2020–2021 may normalize when EU Type 1 contracts return; do not assume rotor-wing shares mirror airtanker shares.
+
+## What to watch next
+
+Appropriations staff typically monitor **EU MAP sizes**, **CWN activation success rates**, and **UTF (unable to fill) tanker requests** — the Wildfire Today series tracks UTF percentages back to 2000. On costs, watch whether **availability share** of LAT/VLAT bills stays above **60%** as EU fleets rebuild: that ratio signals how much of suppression aviation spend buys readiness versus retardant delivery. On operations, the interagency **Aerial Firefighting Use and Effectiveness (AFUE)** study lineage remains the authoritative path toward mission-level effectiveness metrics — but for contract structure, **IBS hour splits by pay code** remain the ground truth this dashboard charts.
+
+The bottom line for CY2021: **exclusive-use contracts still carried four-fifths of large airtanker flight hours**, yet **call-when-needed tariffs remained structurally more expensive**, and the heaviest helicopter tier billed **entirely through CWN**. Federal wildfire aviation is not one contract story — it is a stack of readiness bets, surge valves, and rate schedules that only line up when you separate fixed-wing retardant hours from rotor-wing tiers and read availability separately from flight time.`,
+  },
+  {
     id: "npl-sites-with-construction-complete-versus-remaining-construction-2026",
     slug: "npl-sites-with-construction-complete-versus-remaining-construction-2026",
     title:
@@ -15089,7 +15621,7 @@ Filter the scatter to **United States** and the inland corridor story sharpens f
 
 ## Tokens: China-origin lead against US ownership HQ
 
-Open **Tokens**. The June 2026 major-brands series (~**18,503T** tokens/mo perimeter) rolls to China origin ~**61.8%**, United States ~**37.7%**, and a thin residual. ByteDance alone is ~**29.2%** of the brand ladder — Top-1 on tokens without Top-1 chip ownership. Google is ~**19%** of tokens while owning ~**25%** of chips. Alibaba (Qwen) ~**11.3%** and OpenAI ~**9.2%** complete the next tier.
+Open **Tokens**. The June 2026 major-brands series (~**617T** tokens/day perimeter) rolls to China origin ~**61.8%**, United States ~**37.7%**, and a thin residual. ByteDance alone is ~**29.2%** of the brand ladder — Top-1 on tokens without Top-1 chip ownership. Google is ~**19%** of tokens while owning ~**25%** of chips. Alibaba (Qwen) ~**11.3%** and OpenAI ~**9.2%** complete the next tier.
 
 Filter brands to **China** or **US** to see the origin stacks without the residual. The ownership-by-HQ bar beside the token pie is the post’s central hinge: US Big-5 HQ geography still clears ~**71%** of world H100e stock, China aggregate owners ~**5%** — almost the *inverse* of token-origin leadership. The [token consumption series](/blog/major-ai-brands-token-consumption-2022-2026) already showed brand ladders; geography makes the *origin* disagreement operational for desks that confuse “who owns GPUs” with “whose products route the tokens.”
 
@@ -19939,7 +20471,7 @@ Geography and ownership can diverge. US-HQ operators dominate hyperscale revenue
 
 ## Tokens: ByteDance is Top-1 — ownership does not follow
 
-Switch to **Tokens vs chips**. The June 2026 slice of the [major AI brands token series](/blog/major-ai-brands-token-consumption-2022-2026) totals about **18,500 trillion tokens/month** across tracked brands. **ByteDance (Doubao) leads at ~29.2%**, Google follows at **~19%**, Alibaba (Qwen) at **~11.3%**. Top-3 brands therefore clear **~59.6%**. China-origin brands as a group hold about **61.8%** of that month’s volume; US-origin brands about **37.7%**.
+Switch to **Tokens vs chips**. The June 2026 slice of the [major AI brands token series](/blog/major-ai-brands-token-consumption-2022-2026) totals about **617 trillion tokens/day** across tracked brands. **ByteDance (Doubao) leads at ~29.2%**, Google follows at **~19%**, Alibaba (Qwen) at **~11.3%**. Top-3 brands therefore clear **~59.6%**. China-origin brands as a group hold about **61.8%** of that month’s volume; US-origin brands about **37.7%**.
 
 That is the divergence that makes concentration analysis useful. Google is **#1 in chips (~25%)** and **#2 in tokens (~19%)** — roughly aligned. ByteDance is **#1 in tokens (~29%)** with a negligible ownership seat inside China’s ~**5%** aggregate. OpenAI holds mid-single-digit token share with **no disclosed chip ownership**. Microsoft and Amazon sit **ownership-heavy** relative to first-party token share because Azure and AWS rent capacity to other brands. The scatter’s upper-left is *usage without chips*; the lower-right is *owns more than it first-parties*.
 
@@ -19955,7 +20487,7 @@ Do not average token Top-1 with ownership Top-1. They answer different questions
 
 ## Caveats and methodology
 
-- **Perimeters are not interchangeable.** Ownership is H100-equivalent stock; cloud Top-3 is hyperscale *capacity*; regional shares are AI-relevant power draw; tokens are monthly throughput across vendor surfaces.
+- **Perimeters are not interchangeable.** Ownership is H100-equivalent stock; cloud Top-3 is hyperscale *capacity*; regional shares are AI-relevant power draw; tokens are daily throughput across vendor surfaces.
 - **Ownership shares for residual non-Google entities** below the Big-5 aggregate are staff-aligned estimates that sum to Epoch’s disclosed hyperscaler total; treat Top-3 as order-of-magnitude concentration, not a prospectus table.
 - **Synergy market capacity hints** inside the dual-hub / top-20 bands are illustrative within disclosed concentration prints (17% / 60% / 79%).
 - **Token figures include internal workloads** (Search AI Overviews, recommendation, moderation). US and China headlines inflate the same way, so ratios remain useful; absolute “economy tokens” are overstated.
@@ -29667,75 +30199,62 @@ Supply-chain records compiled from **TrendForce** (HBM market sizing, supplier s
     id: "ai-token-consumption",
     slug: "major-ai-brands-token-consumption-2022-2026",
     title:
-      "Charted: Chinese Models Now Process More AI Tokens Than American Ones (2022–June 2026)",
+      "Charted: Chinese Models Now Process More AI Tokens Than American Ones (Updated November 2026)",
     excerpt:
-      "19 providers, 836 monthly records. ByteDance's Doubao alone claims 180 trillion tokens a day — more than China's own government says the entire country processes. Chinese models passed American ones on OpenRouter in February 2026, and the gap between what companies claim and what the market pays for is the real story.",
-    content: `## The blind spot in every Western token chart
+      "19 providers, 836 records, refreshed November 16. China's national count now tops 500 trillion tokens a day, Google's API is running at about 46 trillion tokens a day, and the gap between what companies claim and what the market pays for is still the real story.",
+    content: `## November 2026 update: what changed since June
 
-Tokens are the atomic unit of AI economics — they drive inference cost, API pricing, and data centre power draw. Almost no lab publishes a clean "tokens processed" figure, so most public estimates are built from whatever US companies happen to mention on stage.
+This piece was first published on July 10 and refreshed on November 16 with every new disclosure we could verify. The model below still ends in June 2026: apart from Google, no provider has published a comparable figure since, and extrapolating the other eighteen would mean inventing data. The new evidence sits on top of it instead.
 
-That produces a badly distorted picture. An earlier version of this dataset tracked eight American and Canadian brands and put global volume near 3.8 quadrillion tokens a month. **It was missing the single largest token processor on earth, and eight more Chinese providers behind it.**
+- **China's national count now tops 500 trillion tokens a day.** It was reported as of June 2026 ([TechNode](https://technode.com/2026/08/28/chinas-daily-ai-token-usage-tops-500-trillion-as-compute-demand-grows/), citing CCTV) and repeated in October by Tencent Cloud's Dowson Tong, who dated it to July. The March figure was 140 trillion a day. That is a 3.6x jump in one quarter, faster than any single provider disclosed, and the counting rules are unpublished. It does soften the puzzle below: ByteDance's 180 trillion a day is now about 36% of the national figure instead of exceeding it.
+- **Google's API is running at about 46 trillion tokens a day.** Alphabet's [Q3 call](https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/) on October 28 put first-party model APIs at roughly 46 trillion tokens a day (Google quotes the meter per minute; this is the same rate over a day): up 40% in a quarter and more than 4x in a year.
+- **Most labs stayed quiet.** ByteDance's newest figure is still June's 180 trillion a day. OpenAI's DevDay and Alibaba's Apsara conference produced no new throughput number in the coverage we reviewed.
 
-The rebuilt dashboard above tracks **836 monthly records** across **19 providers** — ten Chinese, seven American, plus Mistral and Cohere — from November 2022 through June 2026. Rows sitting on a published figure are flagged **disclosed**; the rest are interpolated between anchors.
+## The blind spot in every Western token chart
+
+Tokens are the atomic unit of AI economics — they drive inference cost, API pricing, and data center power draw. Almost no lab publishes a clean "tokens processed" figure, so most public estimates are built from whatever US companies happen to mention on stage.
+
+That produces a badly distorted picture. An earlier version of this dataset tracked eight American and Canadian brands and put global volume near 127 trillion tokens a day. **It was missing the single largest token processor on earth, and eight more Chinese providers behind it.**
+
+The rebuilt dashboard above tracks **836 records** across **19 providers** — ten Chinese, seven American, plus Mistral and Cohere — from November 2022 through June 2026. Rows sitting on a published figure are flagged **disclosed**; the rest are interpolated between anchors.
 
 ## The numbers do not reconcile, and that is the story
 
-China's National Data Administration says the **entire country** processes 140 trillion tokens a day (March 2026). ByteDance says **one of its model families** does 180 trillion. Both cannot be true on a common basis.
+China's National Data Administration said the **entire country** processed 140 trillion tokens a day in March 2026. Three months later ByteDance said **one of its model families** does 180 trillion a day. Both could not be true on a common basis, and then the national figure was restated at more than 500 trillion a day, a 3.6x jump in a quarter that no provider's disclosures explain. The arithmetic now works; the definitions still do not, because nobody publishes counting rules.
 
-At Volcano Engine's FORCE conference in June 2026, president Tan Dai disclosed that the **Doubao model family processes over 180 trillion tokens per day** — roughly **5.4 quadrillion per month**, or 1,500x its May 2024 launch volume. ByteDance has published a figure at nearly every FORCE conference since December 2024, which makes it the fullest public series of any provider on earth:
+At Volcano Engine's FORCE conference in June 2026, president Tan Dai disclosed that the **Doubao model family processes over 180 trillion tokens per day** — 1,500x its May 2024 launch volume of 120 billion a day. ByteDance has published a figure at nearly every FORCE conference since December 2024, which makes it the fullest public series of any provider on earth:
 
-| Date | Tokens per day | Monthly equivalent |
+| Date | Tokens per day | Multiple of launch |
 |------|----------------|--------------------|
-| May 2024 (launch) | 120B | 3.6T |
-| Dec 2024 | 4T | 120T |
-| Mar 2025 | 12.7T | 381T |
-| Sep 2025 | 30T | 900T |
-| Dec 2025 | 50T | 1,500T |
-| Mar 2026 | 120T | 3,600T |
-| **Jun 2026** | **180T** | **5,400T** |
+| May 2024 (launch) | 120B | 1x |
+| Dec 2024 | 4T | 33x |
+| Mar 2025 | 12.7T | 106x |
+| Sep 2025 | 30T | 250x |
+| Dec 2025 | 50T | 417x |
+| Mar 2026 | 120T | 1,000x |
+| **Jun 2026** | **180T** | **1,500x** |
 
 Tan Dai also confirmed the crucial caveat himself: the figure **"includes both internal and external use, as well as usage within the Doubao App itself."** It is a company-wide inference meter, not a sales figure.
 
-That makes it comparable to exactly one Western number. Google disclosed **3.2 quadrillion tokens per month** at I/O 2026 — also all-surfaces, spanning Search, YouTube, Workspace and Gemini — up 7x from 480 trillion a year earlier. OpenAI and Anthropic disclose nothing at all; OpenAI's only public throughput figure is **15 billion API tokens per minute** as of March 2026.
+That makes it comparable to exactly one Western number. Google disclosed about **107 trillion tokens per day** at I/O 2026 — also all-surfaces, spanning Search, YouTube, Workspace and Gemini — up almost 7x from roughly 16 trillion a day a year earlier. OpenAI and Anthropic disclose nothing at all; OpenAI's only public throughput figure is about **22 trillion API tokens per day** as of March 2026 (OpenAI quotes the meter per minute).
 
-Doubao's claim exceeding Google's, on a far smaller user base, should not be read as a clean result. ByteDance credits AI **video generation** for much of the growth, and video tokenises into enormous counts. The company has not published its counting rules.
+Doubao's claim exceeding Google's, on a far smaller user base, should not be read as a clean result. ByteDance credits AI **video generation** for much of the growth, and video tokenizes into enormous counts. The company has not published its counting rules.
 
 ## What the market actually pays for
 
-Set the headline claims aside and look at what customers buy. IDC measures public-cloud model services sold to **external customers only**, explicitly excluding first-party calls from Douyin, the Doubao app and Jimeng. On that basis China ran **1,944 trillion tokens across all of 2025** — about 5.3T/day, against headline claims 10 to 20 times larger.
+Set the headline claims aside and look at what customers buy. IDC measures public-cloud model services sold to **external customers only**, explicitly excluding first-party calls from Douyin, the Doubao app and Jimeng. On that basis China averaged about **5.3 trillion tokens a day** across 2025, against headline claims 10 to 20 times larger.
 
-The revenue attached to that volume is the most striking number in the dataset. China's entire public-cloud model market earned **RMB 3.07 billion (~$430 million)** in 2025. That works out to roughly **22 cents per million tokens**, blended nationwide. Vercel's gateway data shows the same divergence from the demand side: DeepSeek took 17% of routed token volume while accounting for about 1% of spend.
+The revenue attached to that volume is the most striking number in the dataset. China's entire public-cloud model market earned **RMB 3.07 billion (~$430 million)** in 2025. That works out to roughly **22 cents per million tokens**, blended nationwide.
 
 A useful rule of thumb: **divide Chinese headline figures by five to ten** to approximate commercially-served tokens.
 
-## February 2026: the crossover
+## Why Chinese volume runs so high
 
-The cleanest evidence comes from **OpenRouter**, which routes third-party developer traffic across labs and publishes volume by model. What makes it credible is its audience: **47% of its developers are American and only 6% are Chinese**, so Chinese models winning there reflects global demand, not domestic accounting.
-
-In the week of **9–15 February 2026**, Chinese models processed **4.12 trillion tokens** against **2.94 trillion** for American models — the first time Chinese models led. They have held the lead since. By mid-2026 Chinese-origin models were **46.4%** of all routed volume against 35.7% for American ones. Anthropic's share halved from 29.1% to 13.3% in twelve months; Meta's Llama fell below 1%.
-
-Beware the higher numbers in circulation. Widely-quoted figures of 61% are single-week, top-ten-only measurements. The defensible all-model figure is 46%.
-
-## Price is the mechanism — but it is now reversing
-
-Developers switched on cost per unit of work, not benchmark scores:
-
-| Model | Lab | Origin | $/M in | $/M out |
-|-------|-----|--------|--------|---------|
-| GPT-5.5 | OpenAI | US | $5.00 | — |
-| Qwen3.7-Max | Alibaba | China | $2.50 | $7.50 |
-| Kimi K2.6 | Moonshot | China | ~$0.90 | ~$3.75 |
-| Mistral Large 3 | Mistral | Europe | $0.50 | $1.50 |
-| DeepSeek V4 Pro | DeepSeek | China | $0.435 | $0.87 |
-| Tencent Hy3 | Tencent | China | ~$0.14 | ~$0.56 |
-| DeepSeek V4 Flash | DeepSeek | China | $0.14 | $0.28 |
-| MiMo-V2.5 | Xiaomi | China | $0.14 | $0.28 |
-
-DeepSeek V4 Pro's output price sits roughly **34x below GPT-5.5**. Cache-hit discounts go further still — DeepSeek charges $0.0028 per million on cached input, optimising hard for repetitive agentic prefill.
+Price helped Chinese labs win developers, but that edge is eroding.
 
 **But the "China is cheap" story is inverting, and almost nobody has written it.** Zhipu raised API prices **83%** cumulatively and still reports customers queuing. Alibaba told analysts its "ability to supply this demand is not able to keep up" and expects to **raise** prices while costs fall. Kimi K3 launched in July 2026 at premium pricing rather than undercutting. Alibaba Cloud raised AI compute prices up to 34% in March 2026. The 2024–25 price war is over; the binding constraint has moved from demand to supply.
 
-Two structural factors still amplify Chinese volume. **Open weights** mean DeepSeek, Qwen and GLM run on hardware their authors do not own and cannot meter — Qwen passed **1 billion cumulative Hugging Face downloads** in January 2026, overtaking Llama, with 200,000+ derivative models. Every Chinese token figure is therefore a floor. And **agentic workloads** multiply consumption: the open-source agent framework OpenClaw, which spread across every Chinese cloud in weeks from February 2026, can burn 200,000 tokens in a single session. Coding rose from 11% of OpenRouter tokens in early 2025 to over 50% by year-end.
+Two structural factors still amplify Chinese volume. **Open weights** mean DeepSeek, Qwen and GLM run on hardware their authors do not own and cannot meter — Qwen passed **1 billion cumulative Hugging Face downloads** in January 2026, overtaking Llama, with 200,000+ derivative models. Every Chinese token figure is therefore a floor. And **agentic workloads** multiply consumption: the open-source agent framework OpenClaw, which spread across every Chinese cloud in weeks from February 2026, can burn 200,000 tokens in a single session.
 
 ## The official Chinese numbers
 
@@ -29745,6 +30264,7 @@ China is the only country publishing an official national series:
 - **June 2025:** over 30 trillion/day
 - **End 2025:** 100 trillion/day
 - **March 2026:** over 140 trillion/day
+- **Mid-2026:** over 500 trillion/day (reported as of June by state media; Tencent Cloud's Dowson Tong later dated it to July)
 
 Frost & Sullivan's enterprise study — which includes private and on-premises deployment — found corporate calls rising from 10.2T/day in H1 2025 to **37.0T/day in H2 2025**, with Alibaba Qwen at 32.1% share, Doubao at 21.3% and DeepSeek at 18.4%.
 
@@ -29753,23 +30273,26 @@ Note that IDC and Frost & Sullivan rank different leaders and **both are correct
 ## Read these numbers carefully
 
 1. **Headline figures are company-wide meters, not sales.** ByteDance's own executives say so. Only ByteDance and Google publish on a comparable all-surfaces basis.
-2. **Summing providers overshoots the national total by about 64%** — open weights get re-served by third-party clouds and counted twice.
-3. **Chinese tokenisation is a red herring.** Measured on identical meaning, Chinese needs only 8–12% more tokens on Chinese-native tokenizers. It explains almost none of the volume gap.
+2. **Summing providers no longer matches the national total in either direction.** Against March's 140 trillion a day the provider stack overshot, partly because open weights get re-served by third-party clouds and counted twice; against the 500 trillion a day reported for mid-2026 it falls about 24% short.
+3. **Chinese tokenization is a red herring.** Measured on identical meaning, Chinese needs only 8–12% more tokens on Chinese-native tokenizers. It explains almost none of the volume gap.
 4. **The unit itself is unstable.** Reasoning models emit far more tokens per answer than 2023-era chat, and agentic requests use roughly 15x more tokens than human chat. A meaningful part of the "1,000x growth" is redefinition, not usage.
-5. **Two crossover dates, both real.** DeepSeek's R1 moment briefly put Chinese providers ahead in early 2025 before US providers regained the lead; the durable crossover in this dataset is January 2026. On OpenRouter's routed traffic it is February 2026.
+5. **A brief lead, then a durable one.** DeepSeek's R1 moment briefly put Chinese providers ahead in early 2025 before US providers regained the lead; the durable crossover in this dataset is January 2026.
 
 ## What to watch
 
-- **Whether US labs start disclosing** — Google publishes throughput every quarter; OpenAI and Anthropic still do not
+- **Whether US labs start disclosing** — Google publishes throughput every quarter (about 46 trillion API tokens a day at Q3 2026); OpenAI and Anthropic still do not
 - **Huawei's memory supply** — DeepSeek has said further price cuts depend on Ascend 950 supernodes scaling. The real ceiling is CXMT's HBM stacking yield, not logic dies, which makes Chinese token prices a function of Chinese memory yield
 - **Whether rising prices slow adoption** — the switching argument weakens if the 30x spread compresses
 - **DeepSeek's shape** — its curve is non-monotonic, and charts drawing it as smooth exponential growth are wrong
-- **A standardised metric** — an audited "tokens served" definition would resolve most of the ambiguity here`,
+- **A standardized metric** — an audited "tokens served" definition would resolve most of the ambiguity here
+- **A definition for China's 500 trillion a day** — until the national count says what a "call" is, it cannot be reconciled with provider meters
+- **ByteDance's next disclosure** — its newest figure is still June's 180 trillion a day`,
     category: "Technology",
     imageUrl: "/images/technology-major-ai-brands-token-consumption-2022-2026-hero.png",
     imageAlt:
-      "Global AI token consumption 2022–2026 — Chinese providers led by ByteDance Doubao overtake US providers in monthly token volume",
+      "Global AI token consumption 2022–2026 — Chinese providers led by ByteDance Doubao overtake US providers in token volume",
     publishedAt: "2026-07-10T18:00:00Z",
+    updatedAt: "2026-11-16T18:00:00Z",
     featured: true,
     visualization: "ai-token-consumption",
     layout: "canvas",

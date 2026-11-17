@@ -1,22 +1,37 @@
+import fs from "node:fs";
+import path from "node:path";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { AnalysisNote } from "@/components/AnalysisNote";
+import { ArticleTrustFooter } from "@/components/ArticleTrustFooter";
+import { Byline } from "@/components/Byline";
 import { FullscreenShell } from "@/components/FullscreenShell";
+import { ArticleJsonLd } from "@/components/JsonLd";
 import { PostImage } from "@/components/PostImage";
 import { PostVisualization } from "@/components/PostVisualization";
 import { RelatedPosts } from "@/components/RelatedPosts";
-import { renderPostContent } from "@/lib/markdown";
+import { countCitedSources, renderPostContent } from "@/lib/markdown";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
-import { formatPostDate } from "@/lib/utils";
+import { SITE_NAME } from "@/lib/site";
 import { categorySlug } from "@/types/post";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+/**
+ * Hand-built articles ship as ready-made HTML in public/blog/<slug>.html. Next must not
+ * generate a competing page for them, but the post entry still feeds the archive, search,
+ * related posts and the sitemap.
+ */
+function hasStaticArticle(slug: string): boolean {
+  return fs.existsSync(path.join(process.cwd(), "public", "blog", `${slug}.html`));
+}
+
 export async function generateStaticParams() {
   const posts = await getAllPosts();
-  return posts.map((post) => ({ slug: post.slug }));
+  return posts.filter((post) => !hasStaticArticle(post.slug)).map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -27,10 +42,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.excerpt,
+    authors: [{ name: SITE_NAME }],
+    publisher: SITE_NAME,
     openGraph: {
+      type: "article",
       title: post.title,
       description: post.excerpt,
-      images: [{ url: post.imageUrl }],
+      publishedTime: post.publishedAt,
+      authors: [SITE_NAME],
+      images: [{ url: post.imageUrl, alt: post.imageAlt }],
     },
   };
 }
@@ -43,7 +63,7 @@ function renderContent(content: string) {
 function estimateReadingMinutes(markdown: string): number {
   const plain = markdown
     .replace(/```[\s\S]*?```/g, " ")
-    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
     .replace(/https?:\/\/\S+/g, " ")
     .replace(/[#>*_`|-]/g, " ");
   const words = plain.split(/\s+/).filter(Boolean).length;
@@ -61,10 +81,13 @@ export default async function BlogPostPage({ params }: PageProps) {
   const hasVisualization = Boolean(post.visualization);
   const isFullscreenLayout = post.layout === "fullscreen";
   const isCanvasLayout = post.layout === "canvas" || isFullscreenLayout;
+  const sourceCount = countCitedSources(post.content);
+  const readingMinutes = estimateReadingMinutes(post.content);
 
   if (isFullscreenLayout && hasVisualization) {
     return (
       <FullscreenShell>
+        <ArticleJsonLd post={post} />
         <article className="flex h-full min-h-0 w-full flex-col">
           <div className="blog-header-compact shrink-0 w-full border-b border-white/10 bg-[#0f1629] text-white">
             <div className="site-container">
@@ -77,23 +100,32 @@ export default async function BlogPostPage({ params }: PageProps) {
                     {post.category}
                   </Link>
                   <span className="blog-header-meta text-slate-600">·</span>
+                  <span className="blog-header-meta shrink-0 text-slate-400">Visual essay</span>
+                  <span className="blog-header-meta text-slate-600">·</span>
                   <h1 className="site-page-title min-w-0">{post.title}</h1>
                   <span className="blog-header-meta hidden text-slate-600 sm:inline">·</span>
-                  <p className="blog-header-meta hidden text-slate-400 sm:inline">
-                    {formatPostDate(post.publishedAt)}
-                  </p>
+                  <Byline
+                    publishedAt={post.publishedAt}
+                    className="blog-header-meta hidden text-slate-400 sm:inline"
+                    compact
+                  />
                 </div>
                 <Link
-                  href="/"
+                  href="/blog"
                   className="shrink-0 text-sm font-medium text-slate-400 hover:text-cyan-300"
                 >
-                  ← All posts
+                  ← Archive
                 </Link>
               </div>
             </div>
           </div>
-          <div className="site-content flex min-h-0 flex-1 flex-col site-container py-2">
+          <div className="site-viz-frame site-content flex min-h-0 flex-1 flex-col site-container py-2">
             <PostVisualization type={post.visualization!} />
+          </div>
+          <div className="shrink-0 border-t border-slate-200 bg-white">
+            <div className="site-container py-4">
+              <ArticleTrustFooter category={post.category} compact />
+            </div>
           </div>
         </article>
       </FullscreenShell>
@@ -102,9 +134,10 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <article className="w-full">
+      <ArticleJsonLd post={post} />
       <div className="w-full bg-[#0f1629] text-white">
         <div className="blog-header site-container">
-          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0">
+          <div className="flex flex-wrap items-center gap-2">
             <Link
               href={`/category/${categorySlug(post.category)}`}
               className="blog-header-meta font-semibold uppercase text-cyan-400 hover:text-cyan-300"
@@ -112,15 +145,21 @@ export default async function BlogPostPage({ params }: PageProps) {
               {post.category}
             </Link>
             <span className="blog-header-meta text-slate-600">·</span>
-            <h1 className="site-page-title">{post.title}</h1>
+            <span className="blog-header-meta rounded border border-white/15 bg-white/5 px-2 py-0.5 text-[0.6875rem] font-semibold uppercase tracking-wide text-slate-300">
+              Visual essay · original analysis
+            </span>
           </div>
+          <h1 className="site-page-title mt-2">{post.title}</h1>
           {isCanvasLayout ? (
             <p className="blog-header-meta mt-1 max-w-none leading-snug text-slate-400">{post.excerpt}</p>
           ) : null}
-          <p className="blog-header-meta mt-0.5 text-slate-500">
-            {formatPostDate(post.publishedAt)} ·{" "}
-            {estimateReadingMinutes(post.content)} min read
-          </p>
+          <Byline
+            publishedAt={post.publishedAt}
+            updatedAt={post.updatedAt}
+            readingMinutes={readingMinutes}
+            className="blog-header-meta mt-1.5 text-slate-400"
+            showIntent
+          />
         </div>
       </div>
 
@@ -143,6 +182,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         )}
 
+        <AnalysisNote hasVisualization={hasVisualization} sourceCount={sourceCount} />
+
         {post.keyPoints && post.keyPoints.length > 0 && !isCanvasLayout && (
           <aside className="key-takeaways mb-8 rounded-xl border-l-4 border-cyan-500 bg-slate-50 p-5">
             <h2 className="key-takeaways-title">Key takeaways</h2>
@@ -160,7 +201,9 @@ export default async function BlogPostPage({ params }: PageProps) {
         )}
 
         {hasVisualization ? (
-          <div className={`site-content w-full min-w-0 ${isCanvasLayout ? "mb-8" : "mb-12"}`}>
+          <div
+            className={`site-viz-frame site-content w-full min-w-0 ${isCanvasLayout ? "mb-8" : "mb-12"}`}
+          >
             <PostVisualization type={post.visualization!} embedded={isCanvasLayout} />
           </div>
         ) : (
@@ -177,24 +220,25 @@ export default async function BlogPostPage({ params }: PageProps) {
         )}
 
         {isCanvasLayout && post.layout === "canvas" && post.content.trim() && (
-          <div className="prose-content max-w-none border-t border-slate-200 pt-8">
+          <div className="prose-content border-t border-slate-200 pt-8">
             {renderContent(post.content)}
           </div>
         )}
 
         {!isCanvasLayout && post.content.trim() && (
-          <div className="prose-content max-w-none border-t border-slate-200 pt-8">
+          <div className="prose-content border-t border-slate-200 pt-8">
             {renderContent(post.content)}
           </div>
         )}
 
-        <div className={`${isCanvasLayout ? "mt-8" : "mt-12"} border-t border-slate-200 pt-8`}>
+        <div className={`${isCanvasLayout ? "mt-8" : "mt-12"} space-y-8 border-t border-slate-200 pt-8`}>
+          <ArticleTrustFooter category={post.category} />
           <RelatedPosts current={post} posts={allPosts} />
           <Link
-            href="/"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-800"
+            href="/blog"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-600 hover:text-cyan-800"
           >
-            ← Back to all posts
+            ← Back to the archive
           </Link>
         </div>
       </div>

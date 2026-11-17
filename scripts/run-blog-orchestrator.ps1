@@ -8,6 +8,7 @@ $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
 . (Join-Path $RepoRoot "scripts\lib\worker-pause.ps1")
 . (Join-Path $RepoRoot "scripts\lib\hidden-process.ps1")
+. (Join-Path $RepoRoot "scripts\lib\drain-mode.ps1")
 [void](Ensure-BlogAutomationPath)
 $LogDir = Join-Path $RepoRoot "artifacts\automation-logs"
 $LockFile = Join-Path $RepoRoot "artifacts\blog-production-lock.json"
@@ -84,6 +85,7 @@ function Write-Lock($Status, $Notes) {
         lastSlug = if ($script:LastSlug) { $script:LastSlug } else { $lastSlug }
         notes = $Notes
         mode = "docker-isolated-workers"
+        drainOnly = [bool](Test-BlogDrainOnly -RepoRoot $RepoRoot)
     }
     $payload | ConvertTo-Json | Set-Content -Path $LockFile -Encoding UTF8
 }
@@ -619,6 +621,9 @@ if (Test-Path $LockFile) {
 }
 
 $PID | Out-File -FilePath $PidFile -Encoding ascii -Force
+if (Set-BlogDrainEnv -RepoRoot $RepoRoot) {
+    Write-Log "Drain-only mode: BLOG_CLAIM_BACKLOG_ONLY=1 (no mint, no novel-theme refill)"
+}
 Write-Log "Starting orchestrator ($RunId)"
 Write-Log "Transport mitigations: producers=$WorkerCount spawnStagger=${SpawnStaggerSeconds}s (env BLOG_PRODUCTION_WORKER_COUNT / BLOG_WORKER_SPAWN_STAGGER_SEC)"
 Write-Lock "running" "Orchestrator started"
@@ -723,12 +728,18 @@ try {
             $claimArgs = $null
         }
         if ($claimArgs) {
+            if (Test-BlogDrainOnly -RepoRoot $RepoRoot) {
+                $env:BLOG_CLAIM_BACKLOG_ONLY = "1"
+                $claimArgs = @($claimArgs) + @("--backlog-only")
+            }
             $claimExit = Invoke-NodeTsx "scripts/claim-next-topics.mjs" $claimArgs
             if ($claimExit -ne 0) {
                 Write-Log "WARN: claim-next-topics exit=$claimExit"
                 # Diagnose without touching job state: dry-run replays the same logic.
                 # Exit 1 is an uncaught throw (the script never exits 1 by design).
-                $diag = & node scripts/claim-next-topics.mjs --dry-run --max 1 2>&1 | Out-String
+                $diagArgs = @("--dry-run", "--max", "1")
+                if (Test-BlogDrainOnly -RepoRoot $RepoRoot) { $diagArgs += "--backlog-only" }
+                $diag = & node scripts/claim-next-topics.mjs @diagArgs 2>&1 | Out-String
                 $diagTrim = $diag.Trim()
                 if ($diagTrim.Length -gt 900) { $diagTrim = $diagTrim.Substring($diagTrim.Length - 900) }
                 Write-Log ("claim-next-topics diag (dry-run): exit=$LASTEXITCODE " + $diagTrim)
@@ -738,8 +749,12 @@ try {
                 if (Test-Path $lcPath) {
                     $lc = (Get-Content $lcPath -Raw -ErrorAction Stop) -replace '^\uFEFF', '' | ConvertFrom-Json
                     if ($lc.poolExhausted) {
-                        $spawnNote = if ($lc.refillSpawn) { ($lc.refillSpawn | ConvertTo-Json -Compress) } else { "none" }
-                        Write-Log "Novel topic pool exhausted (remainingSlots=$($lc.remainingSlots)); refill spawn=$spawnNote"
+                        if (Test-BlogDrainOnly -RepoRoot $RepoRoot) {
+                            Write-Log "Drain-only: no retryable backlog (remainingSlots=$($lc.remainingSlots) retried=$($lc.retried))"
+                        } else {
+                            $spawnNote = if ($lc.refillSpawn) { ($lc.refillSpawn | ConvertTo-Json -Compress) } else { "none" }
+                            Write-Log "Novel topic pool exhausted (remainingSlots=$($lc.remainingSlots)); refill spawn=$spawnNote"
+                        }
                     }
                 }
             } catch {}

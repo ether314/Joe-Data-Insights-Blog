@@ -1,5 +1,12 @@
 /**
- * Global AI token consumption estimates (Nov 2022 – Jun 2026).
+ * Global AI token consumption estimates (Nov 2022 – Jun 2026), refreshed on
+ * 16 Nov 2026 with verified Jul–Nov 2026 disclosures (LATEST_UPDATES,
+ * API_RATE_POINTS, CHINA_NATIONAL_DAILY).
+ *
+ * The monthly model deliberately still ends in Jun 2026. Since then only Google
+ * has published a new comparable provider figure, so extending the other 18
+ * series would manufacture data by extrapolation. New evidence is layered on
+ * top as separate, dated, sourced panels instead.
  *
  * Core finding: Chinese model providers overtook US providers in routed API
  * token volume during Q1 2026. Earlier versions of this dataset tracked only
@@ -10,9 +17,12 @@
  * government statistics; unflagged anchors are derived from revenue, MAU,
  * pricing, or capacity proxies.
  *
- * Units: trillions of tokens processed per calendar month (input + output),
+ * Units: every volume is trillions of tokens processed per day (input + output),
  * across all surfaces the provider operates (first-party apps, internal
- * product surfaces, and external API).
+ * product surfaces, and external API). The anchor series below were authored as
+ * 30-day monthly totals (a disclosed daily figure x 30), so each record divides
+ * by DAYS_PER_MONTH. Disclosed per-minute and per-year meters are converted to
+ * daily rates.
  *
  * KNOWN SCOPE CAVEATS (see METHOD_NOTES):
  * - Vendor "all surfaces" figures include internal workloads (Google Search AI
@@ -60,8 +70,8 @@ export type TokenMonthlyRecord = {
   year: number;
   month: number;
   yearMonth: string;
-  tokensTrillions: number;
-  unit: "T tokens/mo";
+  tokensTrillionsPerDay: number;
+  unit: "T tokens/day";
   sourceType: SourceType;
   source: string;
   notes?: string;
@@ -74,8 +84,12 @@ export const DATA_YEAR_END = 2026;
 export const DATA_MONTH_START = "2022-11";
 export const DATA_MONTH_END = "2026-06";
 
+/** Date the dashboard was last checked against new disclosures. */
+export const DATA_REVIEWED = "2026-11-16";
+export const DATA_REVIEWED_LABEL = "16 Nov 2026";
+
 export const SOURCE_NOTE =
-  "Disclosed vendor keynotes and earnings calls, China National Data Administration statistics, OpenRouter routed-volume rankings, and analyst estimates. No uniform industry reporting standard for tokens processed.";
+  "Disclosed vendor keynotes and earnings calls, China national token statistics, OpenRouter routed-volume rankings, and analyst estimates. No uniform industry reporting standard for tokens processed.";
 
 export const BRAND_COLORS: Record<AiBrandId, string> = {
   openai: "#10b981",
@@ -152,9 +166,23 @@ export const ORIGIN_COLORS: Record<Origin, string> = {
 
 export const ORIGINS: Origin[] = ["United States", "China", "Europe", "Canada"];
 
+/** Days used to turn a monthly anchor into a daily rate (anchors are daily x 30). */
+export const DAYS_PER_MONTH = 30;
+
+/** Billions of tokens per minute to trillions per day (x 60 x 24 / 1,000). */
+function perMinuteToPerDay(billionsPerMinute: number): number {
+  return Math.round(billionsPerMinute * 1.44 * 100) / 100;
+}
+
+/** Trillions of tokens in a calendar year to trillions per day. */
+function perYearToPerDay(trillionsPerYear: number, year: number): number {
+  const days = new Date(Date.UTC(year, 1, 29)).getUTCMonth() === 1 ? 366 : 365;
+  return Math.round((trillionsPerYear / days) * 1000) / 1000;
+}
+
 type Anchor = {
   ym: string;
-  /** Trillions of tokens per month */
+  /** Trillions of tokens per 30-day month (daily figure x 30); divided by DAYS_PER_MONTH when records are built */
   t: number;
   disclosed?: boolean;
   note?: string;
@@ -162,7 +190,7 @@ type Anchor = {
 
 /**
  * Anchor points per provider. Disclosed anchors cite a public figure; the
- * `note` records the original unit so daily/minute conversions stay auditable.
+ * `note` states the disclosure as a daily rate so conversions stay auditable.
  */
 const ANCHORS: Record<AiBrandId, Anchor[]> = {
   openai: [
@@ -174,13 +202,13 @@ const ANCHORS: Record<AiBrandId, Anchor[]> = {
       ym: "2025-10",
       t: 470,
       disclosed: true,
-      note: "DevDay: 6B API tokens/min (263T/mo API) + first-party apps",
+      note: "DevDay: ~8.6T API tokens/day + first-party apps",
     },
     {
       ym: "2026-03",
       t: 1180,
       disclosed: true,
-      note: "WSJ/CFO Sarah Friar: 15B API tokens/min (657T/mo API) + apps",
+      note: "WSJ/CFO Sarah Friar: ~21.6T API tokens/day + apps",
     },
     { ym: "2026-06", t: 1700, note: "GPT-5.4 alone reported at 5T tokens/day" },
   ],
@@ -190,21 +218,21 @@ const ANCHORS: Record<AiBrandId, Anchor[]> = {
       ym: "2024-05",
       t: 9.7,
       disclosed: true,
-      note: "Pichai I/O 2026: '9.7 trillion tokens a month two years ago'",
+      note: "Pichai I/O 2026: ~320B tokens a day two years ago",
     },
     { ym: "2025-05", t: 480, disclosed: true, note: "Google I/O 2025 keynote" },
-    { ym: "2025-10", t: 1300, disclosed: true, note: "Google: ~1.3 quadrillion tokens/month" },
+    { ym: "2025-10", t: 1300, disclosed: true, note: "Google: ~43T tokens a day" },
     {
       ym: "2026-05",
       t: 3200,
       disclosed: true,
-      note: "Google I/O 2026: 3.2 quadrillion/month all surfaces; 19B API tokens/min",
+      note: "Google I/O 2026: ~107T tokens a day all surfaces; ~27T API tokens a day",
     },
     {
       ym: "2026-06",
       t: 3520,
       disclosed: true,
-      note: "Q2 2026 earnings: 22B API tokens/min, Gemini app 950M MAU",
+      note: "Q2 2026 earnings: ~32T API tokens a day, Gemini app 950M MAU",
     },
   ],
   anthropic: [
@@ -220,7 +248,7 @@ const ANCHORS: Record<AiBrandId, Anchor[]> = {
       ym: "2025-03",
       t: 33,
       disclosed: true,
-      note: "Azure AI Foundry: 100T+ tokens processed in the quarter",
+      note: "Azure AI Foundry: ~1.1T tokens a day (quarterly disclosure)",
     },
     { ym: "2026-06", t: 540, note: "Azure AI Foundry + M365 Copilot seats" },
   ],
@@ -384,13 +412,13 @@ const ANCHORS: Record<AiBrandId, Anchor[]> = {
 
 /** Default attribution shown on estimated rows. */
 const BRAND_SOURCE: Record<AiBrandId, string> = {
-  openai: "API tokens/min disclosures (DevDay, WSJ) + ChatGPT MAU × session tokens",
+  openai: "API token-rate disclosures (DevDay, WSJ) + ChatGPT MAU × session tokens",
   google: "Pichai I/O keynotes and Alphabet earnings calls (all surfaces)",
   anthropic: "API revenue run-rate ÷ blended $/MTok (Menlo Ventures, company disclosures)",
   microsoft: "Azure AI Foundry quarterly token disclosures + M365 Copilot seat estimates",
   meta: "Meta AI MAU × session tokens + Llama internal inference fleet",
   "amazon-bedrock": "AWS AI revenue share × Bedrock throughput proxy (re:Invent)",
-  xai: "Colossus GPU capacity × utilisation (xAI disclosures)",
+  xai: "Colossus GPU capacity × utilization (xAI disclosures)",
   bytedance: "Volcano Engine / Tan Dai disclosures at FORCE conferences (tokens/day)",
   alibaba: "Alibaba Cloud Bailian disclosures + Frost & Sullivan China GenAI share study",
   deepseek: "OpenRouter routed volume + Frost & Sullivan enterprise share + own API",
@@ -500,7 +528,8 @@ function buildRecords(): TokenMonthlyRecord[] {
     for (let i = 0; i < MONTH_LABELS.length; i++) {
       const yearMonth = MONTH_LABELS[i];
       const { year, month } = parseYearMonth(yearMonth);
-      const tokensTrillions = series[i];
+      const monthlyTotal = series[i];
+      const tokensTrillionsPerDay = monthlyTotal / DAYS_PER_MONTH;
       const prev = i > 0 ? series[i - 1] : null;
       const yoyPrev = i >= 12 ? series[i - 12] : null;
       const disclosed = disclosedByMonth.get(yearMonth);
@@ -513,13 +542,13 @@ function buildRecords(): TokenMonthlyRecord[] {
         year,
         month,
         yearMonth,
-        tokensTrillions,
-        unit: "T tokens/mo",
+        tokensTrillionsPerDay,
+        unit: "T tokens/day",
         sourceType: disclosed ? "disclosed" : "estimated",
         source: disclosed ? disclosed.note ?? BRAND_SOURCE[brandId] : BRAND_SOURCE[brandId],
         notes: noteByMonth.get(yearMonth),
-        momPct: prev !== null ? pctChange(tokensTrillions, prev) : null,
-        yoyPct: yoyPrev !== null ? pctChange(tokensTrillions, yoyPrev) : null,
+        momPct: prev !== null ? pctChange(monthlyTotal, prev) : null,
+        yoyPct: yoyPrev !== null ? pctChange(monthlyTotal, yoyPrev) : null,
       });
     }
   }
@@ -536,14 +565,14 @@ export const MONTHS = MONTH_LABELS;
 /** June 2026 slice — latest full month */
 export const JUNE_2026_SLICE = TOKEN_MONTHLY.filter((r) => r.yearMonth === "2026-06");
 
-export const JUNE_2026_TOTAL_T = JUNE_2026_SLICE.reduce(
-  (sum, r) => sum + r.tokensTrillions,
+export const JUNE_2026_TOTAL_PER_DAY = JUNE_2026_SLICE.reduce(
+  (sum, r) => sum + r.tokensTrillionsPerDay,
   0,
 );
 
 export function totalByMonth(yearMonth: string): number {
   return TOKEN_MONTHLY.filter((r) => r.yearMonth === yearMonth).reduce(
-    (s, r) => s + r.tokensTrillions,
+    (s, r) => s + r.tokensTrillionsPerDay,
     0,
   );
 }
@@ -551,10 +580,10 @@ export function totalByMonth(yearMonth: string): number {
 export function totalByOriginMonth(origin: Origin, yearMonth: string): number {
   return TOKEN_MONTHLY.filter(
     (r) => r.origin === origin && r.yearMonth === yearMonth,
-  ).reduce((s, r) => s + r.tokensTrillions, 0);
+  ).reduce((s, r) => s + r.tokensTrillionsPerDay, 0);
 }
 
-/** Aggregate token volume by origin for every tracked month. */
+/** Aggregate token volume (trillions per day) by origin for every tracked month. */
 export const ORIGIN_TREND = MONTH_LABELS.map((ym) => {
   const row: { yearMonth: string; total: number } & Record<string, number | string> = {
     yearMonth: ym,
@@ -596,101 +625,71 @@ export const CHINA_NATIONAL_DAILY: {
   { yearMonth: "2025-06", tokensTrillionsPerDay: 30, source: "State Council press conference" },
   { yearMonth: "2025-12", tokensTrillionsPerDay: 100, source: "National Data Administration" },
   { yearMonth: "2026-03", tokensTrillionsPerDay: 140, source: "Liu Liehong, Mar 2026 briefing" },
+  {
+    yearMonth: "2026-06",
+    tokensTrillionsPerDay: 500,
+    source:
+      "Reported as 'over 500T' as of June 2026 (TechNode, 28 Aug 2026, citing CCTV); Tencent's Dowson Tong later dated it July. Counting rules unpublished.",
+  },
 ];
 
 /**
- * OpenRouter routed-volume split by model origin. OpenRouter measures
- * third-party API demand only — it excludes first-party apps (ChatGPT,
- * Gemini app, Doubao app) and direct vendor APIs.
+ * Disclosed first-party API throughput, trillions of tokens per day. Only
+ * points a company actually published — no interpolation. Both are API meters
+ * (Google: first-party model APIs; OpenAI: API platform), not all-surfaces. The
+ * companies quote these meters per minute, so each value below is the disclosed
+ * figure converted to a daily rate (billions a minute x 1.44).
  */
-/**
- * Share of ALL routed models, not the top-10 subset. Widely quoted "61%"
- * figures are single-week, top-10-only and are not comparable across time.
- */
-export const OPENROUTER_SPLIT: {
-  label: string;
-  chinaPct: number;
-  usPct: number;
+export const API_RATE_POINTS: {
+  ym: string;
+  openai?: number;
+  google?: number;
   note: string;
 }[] = [
-  { label: "Dec 2024", chinaPct: 1.8, usPct: 82, note: "Chinese models a rounding error" },
-  { label: "Jun 2025", chinaPct: 11, usPct: 74, note: "Qwen + DeepSeek open-weight ramp" },
-  { label: "Dec 2025", chinaPct: 30, usPct: 55, note: "Coding passes 50% of all routed tokens" },
-  { label: "Feb 2026", chinaPct: 42, usPct: 40, note: "Crossover week: 4.12T vs 2.94T" },
-  { label: "Apr 2026", chinaPct: 44, usPct: 38, note: "DeepSeek V4 family launch, 24 Apr" },
-  { label: "Jun 2026", chinaPct: 46.4, usPct: 35.7, note: "Anthropic alone 14.8%; Llama below 1%" },
-  { label: "Jul 2026", chinaPct: 48, usPct: 34, note: "All five most-used models Chinese" },
+  { ym: "2025-10", openai: perMinuteToPerDay(6), note: "OpenAI DevDay 2025" },
+  { ym: "2026-03", openai: perMinuteToPerDay(15), note: "OpenAI CFO, via WSJ" },
+  { ym: "2026-05", google: perMinuteToPerDay(19), note: "Google I/O 2026" },
+  { ym: "2026-06", google: perMinuteToPerDay(22), note: "Alphabet Q2 2026 earnings" },
+  { ym: "2026-10", google: perMinuteToPerDay(32), note: "Alphabet Q3 2026 earnings, 28 Oct" },
 ];
 
-/** OpenRouter's user base is overwhelmingly non-Chinese, which is what makes it a neutral meter. */
-export const OPENROUTER_AUDIENCE = {
-  usDevelopersPct: 47.17,
-  chineseDevelopersPct: 6.01,
-  totalDevelopers: "5M+",
+export type LatestUpdate = {
+  date: string;
+  dateLabel: string;
+  kind: "official" | "earnings" | "gap";
+  title: string;
+  body: string;
+  source: string;
+  url?: string;
 };
 
-/** Top models by routed volume on OpenRouter, trailing month to late Jul 2026. */
-export const OPENROUTER_TOP_MODELS: {
-  model: string;
-  lab: string;
-  origin: Origin;
-  tokensT: number;
-}[] = [
-  { model: "hy3", lab: "Tencent", origin: "China", tokensT: 10.9 },
-  { model: "mimo-v2.5", lab: "Xiaomi", origin: "China", tokensT: 9.43 },
-  { model: "deepseek-v4-flash", lab: "DeepSeek", origin: "China", tokensT: 5.37 },
-  { model: "glm-5.2", lab: "Z.ai", origin: "China", tokensT: 3.63 },
-  { model: "minimax-m3", lab: "MiniMax", origin: "China", tokensT: 3.23 },
-  { model: "deepseek-v4-pro", lab: "DeepSeek", origin: "China", tokensT: 2.8 },
-  { model: "nemotron-3-ultra", lab: "NVIDIA", origin: "United States", tokensT: 2.71 },
-  { model: "claude-4.7-opus", lab: "Anthropic", origin: "United States", tokensT: 1.93 },
-  { model: "claude-4.8-opus", lab: "Anthropic", origin: "United States", tokensT: 1.91 },
-  { model: "claude-sonnet-5", lab: "Anthropic", origin: "United States", tokensT: 1.13 },
-];
-
-/** Published list prices per million tokens, USD, June 2026. */
-export const PRICE_PER_MTOK: {
-  model: string;
-  lab: string;
-  origin: Origin;
-  usdPerMTokIn: number;
-  usdPerMTokOut: number | null;
-}[] = [
-  { model: "GPT-5.5", lab: "OpenAI", origin: "United States", usdPerMTokIn: 5.0, usdPerMTokOut: null },
-  { model: "Qwen3.7-Max", lab: "Alibaba", origin: "China", usdPerMTokIn: 2.5, usdPerMTokOut: 7.5 },
-  { model: "Kimi K2.6", lab: "Moonshot", origin: "China", usdPerMTokIn: 0.9, usdPerMTokOut: 3.75 },
-  { model: "Mistral Large 3", lab: "Mistral", origin: "Europe", usdPerMTokIn: 0.5, usdPerMTokOut: 1.5 },
-  { model: "DeepSeek V4 Pro", lab: "DeepSeek", origin: "China", usdPerMTokIn: 0.435, usdPerMTokOut: 0.87 },
-  { model: "MiMo-V2.5-Pro", lab: "Xiaomi", origin: "China", usdPerMTokIn: 0.435, usdPerMTokOut: 0.87 },
-  { model: "Tencent Hy3", lab: "Tencent", origin: "China", usdPerMTokIn: 0.14, usdPerMTokOut: 0.56 },
-  { model: "DeepSeek V4 Flash", lab: "DeepSeek", origin: "China", usdPerMTokIn: 0.14, usdPerMTokOut: 0.28 },
-  { model: "MiMo-V2.5", lab: "Xiaomi", origin: "China", usdPerMTokIn: 0.14, usdPerMTokOut: 0.28 },
-];
-
-/**
- * The 2024–25 Chinese price war has reversed. Supply, not demand, is now the
- * binding constraint — the least-reported finding in the dataset.
- */
-export const PRICE_REVERSALS: { lab: string; change: string; detail: string }[] = [
+/** What changed after the Jun 2026 cut-off — each item verified against its source. */
+export const LATEST_UPDATES: LatestUpdate[] = [
   {
-    lab: "Zhipu / Z.ai",
-    change: "+83%",
-    detail: "Cumulative API price rise through Q1 2026, and still supply-constrained",
+    date: "2026-10-29",
+    dateLabel: "28 Aug · 29 Oct",
+    kind: "official",
+    title: "China's national count passes 500T tokens a day",
+    body: "Reported as of June 2026 and repeated by Tencent Cloud's Dowson Tong in October, who dated it to July. That is 3.6x the 140T of March — a jump no single provider disclosed, so the national basis has probably widened. The counting rules are unpublished.",
+    source: "TechNode, citing CCTV",
+    url: "https://technode.com/2026/08/28/chinas-daily-ai-token-usage-tops-500-trillion-as-compute-demand-grows/",
   },
   {
-    lab: "Alibaba Cloud",
-    change: "up to +34%",
-    detail: "AI compute and storage prices raised Mar 2026; guided to further token price rises",
+    date: "2026-10-28",
+    dateLabel: "28 Oct",
+    kind: "earnings",
+    title: "Google: ~46T API tokens a day, up 40% in a quarter",
+    body: "Alphabet's Q3 call put first-party model APIs at roughly 46 trillion tokens a day (Google quotes the meter per minute; this is the same rate over a day) — more than 4x a year earlier. The Gemini app also reached one billion users.",
+    source: "Alphabet Q3 2026 remarks",
+    url: "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/",
   },
   {
-    lab: "Moonshot",
-    change: "premium launch",
-    detail: "Kimi K3 shipped Jul 2026 at ¥20/¥100 per MTok rather than undercutting",
-  },
-  {
-    lab: "DeepSeek",
-    change: "cuts paused",
-    detail: "Further V4 Pro price cuts made conditional on Huawei Ascend 950 supply in H2 2026",
+    date: "2026-06-23",
+    dateLabel: "Since June",
+    kind: "gap",
+    title: "ByteDance, OpenAI and Alibaba have published no new token meter",
+    body: "ByteDance's newest figure is still June's 180T a day. Neither OpenAI's DevDay (29 Sep) nor Alibaba's Apsara conference (22 Sep) produced a new daily token figure in the coverage we reviewed, and Alibaba's Qwen rows remain derived estimates.",
+    source: "Event coverage reviewed 16 Nov 2026",
   },
 ];
 
@@ -701,12 +700,13 @@ export const PRICE_REVERSALS: { lab: string; change: string; detail: string }[] 
  */
 export const IDC_EXTERNAL_MAAS: {
   label: string;
-  tokensTrillionsPerYear: number;
+  /** IDC publishes annual totals; shown as the daily average over that year. */
+  tokensTrillionsPerDay: number;
   forecast?: boolean;
 }[] = [
-  { label: "2024", tokensTrillionsPerYear: 114.2 },
-  { label: "2025", tokensTrillionsPerYear: 1944 },
-  { label: "2026F", tokensTrillionsPerYear: 40000, forecast: true },
+  { label: "2024", tokensTrillionsPerDay: perYearToPerDay(114.2, 2024) },
+  { label: "2025", tokensTrillionsPerDay: perYearToPerDay(1944, 2025) },
+  { label: "2026F", tokensTrillionsPerDay: perYearToPerDay(40000, 2026), forecast: true },
 ];
 
 /** China's entire public-cloud MaaS revenue pool, against IDC's 2025 token volume. */
@@ -714,34 +714,17 @@ export const CHINA_MAAS_ECONOMICS = {
   year: 2025,
   revenueRmbBn: 3.07,
   revenueUsdM: 430,
-  tokensTrillions: 1944,
+  tokensTrillionsPerDay: perYearToPerDay(1944, 2025),
   blendedUsdPerMTok: 0.22,
 };
 
-/** QuestMobile monthly active users for China's AI-native apps. */
-export const CHINA_APP_MAU: {
-  app: string;
-  lab: string;
-  feb2025M: number | null;
-  jun2026M: number;
-  yoyPct: number | null;
-}[] = [
-  { app: "Doubao", lab: "ByteDance", feb2025M: 116, jun2026M: 382, yoyPct: 172.1 },
-  { app: "Qwen", lab: "Alibaba", feb2025M: null, jun2026M: 167, yoyPct: 5792.9 },
-  { app: "DeepSeek", lab: "DeepSeek", feb2025M: 194, jun2026M: 130, yoyPct: -20.3 },
-  { app: "Yuanbao", lab: "Tencent", feb2025M: 41.6, jun2026M: 49.8, yoyPct: null },
-  { app: "Ant Afu", lab: "Ant Group", feb2025M: null, jun2026M: 29.0, yoyPct: null },
-  { app: "Kimi", lab: "Moonshot", feb2025M: null, jun2026M: 7.45, yoyPct: -47 },
-];
-
 export const METHOD_NOTES = [
-  "Vendor headline figures are company-wide inference meters. Volcano Engine's president confirmed the 180T/day Doubao number includes internal ByteDance traffic and the Doubao app; Google's 3.2 quadrillion likewise spans Search, YouTube and Workspace. Only these two providers publish on a comparable all-surfaces basis.",
-  "Doubao's headline exceeding Google's should not be read as a clean result. ByteDance credits AI video generation for much of the growth, and video tokenises into very large counts. Cache-hit input, offline batch inference and recommendation-system calls may also be included. ByteDance has not published its counting rules.",
+  "Vendor headline figures are company-wide inference meters. Volcano Engine's president confirmed the 180T/day Doubao number includes internal ByteDance traffic and the Doubao app; Google's roughly 107T a day likewise spans Search, YouTube and Workspace. Only these two providers publish on a comparable all-surfaces basis.",
+  "Doubao's headline exceeding Google's should not be read as a clean result. ByteDance credits AI video generation for much of the growth, and video tokenizes into very large counts. Cache-hit input, offline batch inference and recommendation-system calls may also be included. ByteDance has not published its counting rules.",
   "Dividing Chinese headline figures by roughly 5–10 approximates commercially-served volume. IDC's external-only public-cloud data implies Volcano Engine's paid external volume averaged about 2.6T/day in 2025 against headline claims of 12.7–50T/day.",
-  "Summing providers overshoots China's official national figure by around 64%, because open-weight models are re-served by third-party clouds and get counted twice. Never treat the provider stack as a national total.",
+  `Summing providers is not a national total, and the mismatch has flipped sign. Against the 140T/day national count of March the Chinese provider stack overshot, because open-weight models are re-served by third-party clouds and counted twice. Against the 500T/day figure reported for mid-2026, the same ten providers (about ${Math.round(totalByOriginMonth("China", "2026-06"))}T/day in June) fall ${Math.round((1 - totalByOriginMonth("China", "2026-06") / 500) * 100)}% short — so either the national count uses a broader basis or the undisclosed provider rows run low. Nobody publishes the counting rules, so neither reading can be proven.`,
   "Chinese-language workloads inflate token counts by only about 8–12% on Chinese-native tokenizers for identical meaning (+7.8% DeepSeek-V2, +8.7% GLM-4, +12.3% Qwen 2.5). Real, but it explains almost none of the China–West volume gap.",
   "IDC and Frost & Sullivan rank different leaders and both are correct: IDC covers external public cloud only and puts Volcano Engine first at 49.5%; Frost & Sullivan includes private and on-premises deployment and puts Qwen first at 32.1%. The two share tables must never be mixed.",
-  "OpenRouter is the best neutral meter but is not the world. Its roughly 20T tokens/week is a small slice of global inference — Google alone runs about 27T/day through its APIs — and it over-represents price-sensitive agentic coding traffic.",
   "\"Tokens processed\" is not a stable unit over time. Reasoning models emit far more tokens per answer than 2023-era chat, agentic requests use roughly 15x more tokens than human chat, and cache-hit accounting has changed. Part of the 1,000x growth is redefinition of the unit rather than growth in usage.",
 ];
 
@@ -755,29 +738,29 @@ export const AGENT_INFLECTION = {
 
 export const GLOBAL_SUMMARY = {
   monthEnd: "2026-06",
-  totalTokensTrillionsJun2026: JUNE_2026_TOTAL_T,
-  chinaTokensJun2026: totalByOriginMonth("China", "2026-06"),
-  usTokensJun2026: totalByOriginMonth("United States", "2026-06"),
-  chinaSharePctJun2026: (totalByOriginMonth("China", "2026-06") / JUNE_2026_TOTAL_T) * 100,
+  totalTokensTrillionsPerDayJun2026: JUNE_2026_TOTAL_PER_DAY,
+  chinaTokensPerDayJun2026: totalByOriginMonth("China", "2026-06"),
+  usTokensPerDayJun2026: totalByOriginMonth("United States", "2026-06"),
+  chinaSharePctJun2026: (totalByOriginMonth("China", "2026-06") / JUNE_2026_TOTAL_PER_DAY) * 100,
   usSharePctJun2026:
-    (totalByOriginMonth("United States", "2026-06") / JUNE_2026_TOTAL_T) * 100,
+    (totalByOriginMonth("United States", "2026-06") / JUNE_2026_TOTAL_PER_DAY) * 100,
   topBrandJun2026: [...JUNE_2026_SLICE].sort(
-    (a, b) => b.tokensTrillions - a.tokensTrillions,
+    (a, b) => b.tokensTrillionsPerDay - a.tokensTrillionsPerDay,
   )[0],
   openaiSharePctJun2026:
-    (JUNE_2026_SLICE.find((r) => r.brandId === "openai")!.tokensTrillions /
-      JUNE_2026_TOTAL_T) *
+    (JUNE_2026_SLICE.find((r) => r.brandId === "openai")!.tokensTrillionsPerDay /
+      JUNE_2026_TOTAL_PER_DAY) *
     100,
   googleSharePctJun2026:
-    (JUNE_2026_SLICE.find((r) => r.brandId === "google")!.tokensTrillions /
-      JUNE_2026_TOTAL_T) *
+    (JUNE_2026_SLICE.find((r) => r.brandId === "google")!.tokensTrillionsPerDay /
+      JUNE_2026_TOTAL_PER_DAY) *
     100,
   bytedanceSharePctJun2026:
-    (JUNE_2026_SLICE.find((r) => r.brandId === "bytedance")!.tokensTrillions /
-      JUNE_2026_TOTAL_T) *
+    (JUNE_2026_SLICE.find((r) => r.brandId === "bytedance")!.tokensTrillionsPerDay /
+      JUNE_2026_TOTAL_PER_DAY) *
     100,
-  yoyTotalGrowthPctJun2026: pctChange(JUNE_2026_TOTAL_T, totalByMonth("2025-06"))!,
-  momTotalGrowthPctJun2026: pctChange(JUNE_2026_TOTAL_T, totalByMonth("2026-05"))!,
+  yoyTotalGrowthPctJun2026: pctChange(JUNE_2026_TOTAL_PER_DAY, totalByMonth("2025-06"))!,
+  momTotalGrowthPctJun2026: pctChange(JUNE_2026_TOTAL_PER_DAY, totalByMonth("2026-05"))!,
   recordCount: TOKEN_MONTHLY.length,
   brandCount: BRAND_IDS.length,
   chinaBrandCount: BRAND_IDS.filter((id) => BRAND_ORIGIN[id] === "China").length,
@@ -798,9 +781,15 @@ export function recordsByMonth(yearMonth: string): TokenMonthlyRecord[] {
 
 export function fmtTokensT(n: number): string {
   if (n >= 1000) return `${(n / 1000).toFixed(2)}Q`;
-  if (n >= 1) return `${n.toFixed(1)}T`;
+  if (n >= 100) return `${Math.round(n)}T`;
+  if (n >= 1) return `${+n.toFixed(1)}T`;
   if (n >= 0.001) return `${(n * 1000).toFixed(0)}B`;
   return `${(n * 1_000_000).toFixed(0)}M`;
+}
+
+/** Daily-rate label, e.g. "617T/day". */
+export function fmtTokensPerDay(n: number): string {
+  return `${fmtTokensT(n)}/day`;
 }
 
 /** Signed formatter — use for changes (MoM, YoY). */
@@ -820,7 +809,7 @@ export const STATS = {
   recordCount: GLOBAL_SUMMARY.recordCount,
   brandCount: GLOBAL_SUMMARY.brandCount,
   monthRange: `${DATA_MONTH_START} – ${DATA_MONTH_END}`,
-  totalJun2026Label: fmtTokensT(GLOBAL_SUMMARY.totalTokensTrillionsJun2026),
+  totalJun2026Label: fmtTokensPerDay(GLOBAL_SUMMARY.totalTokensTrillionsPerDayJun2026),
   yoyJun2026Label: fmtPct(GLOBAL_SUMMARY.yoyTotalGrowthPctJun2026),
   momJun2026Label: fmtPct(GLOBAL_SUMMARY.momTotalGrowthPctJun2026),
   chinaShareLabel: fmtShare(GLOBAL_SUMMARY.chinaSharePctJun2026),

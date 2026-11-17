@@ -639,7 +639,7 @@ export function AiComputeDemandConcentrationDashboard() {
 
           <ChartCard
             title="June 2026 token brand ladder"
-            subtitle={`Total ~${fmtT(HEADLINE.tokenTotalT)} tokens/mo across major brands`}
+            subtitle={`Total ~${fmtT(HEADLINE.tokenTotalTPerDay)} tokens/day across major brands`}
           >
             <div className="h-80 w-full min-w-0">
               <ResponsiveContainer width="100%" height="100%">

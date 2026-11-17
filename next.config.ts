@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Large post pages can exceed the 60s default when 11 workers share a machine.
+  staticPageGenerationTimeout: 180,
   // Parallel post workers can leave the viz union briefly out of sync; Docker
   // builds may set DOCKER_IGNORE_TS_ERRORS=1 so the static export still ships.
   typescript: {

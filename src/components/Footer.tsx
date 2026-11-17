@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { SITE_LINKTREE, SITE_LINKTREE_LABEL, SITE_NAME, SITE_TAGLINE } from "@/lib/site";
+
 function LinktreeIcon({ className = "" }: { className?: string }) {
   return (
     <svg
@@ -12,20 +15,92 @@ function LinktreeIcon({ className = "" }: { className?: string }) {
   );
 }
 
+const EXPLORE_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/blog", label: "Archive" },
+  { href: "/categories", label: "Topics" },
+] as const;
+
+const DESK_LINKS = [
+  { href: "/about", label: "About" },
+  { href: "/methodology", label: "Editorial standards" },
+  { href: "/contact", label: "Contact" },
+] as const;
+
+const LEGAL_LINKS = [
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Use" },
+] as const;
+
 export function Footer() {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="mt-auto border-t border-white/10 bg-[#0f1629] text-slate-400">
-      <div className="site-container flex items-center justify-center py-6 text-center text-xs">
-        <a
-          href="https://linktr.ee/ether690"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-cyan-500/40 hover:bg-cyan-500/10 hover:text-cyan-300"
-        >
-          <LinktreeIcon className="h-5 w-5 text-[#43e660]" />
-          <span>linktr.ee/ether690</span>
-        </a>
+      <div className="site-container py-12">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:col-span-1">
+            <p className="text-base font-bold text-white">{SITE_NAME}</p>
+            <p className="mt-1 text-xs uppercase tracking-widest text-cyan-400/90">
+              {SITE_TAGLINE}
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              Independent research desk. Original interactive charts from public datasets, with
+              sources named so you can check the originating file. Corrections welcome via Contact.
+            </p>
+            <a
+              href={SITE_LINKTREE}
+              target="_blank"
+              rel="me noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200 transition hover:border-cyan-500/40 hover:bg-cyan-500/10 hover:text-cyan-300"
+            >
+              <LinktreeIcon className="h-4 w-4 text-[#43e660]" />
+              <span>{SITE_LINKTREE_LABEL}</span>
+            </a>
+          </div>
+
+          <FooterColumn title="Publication" links={EXPLORE_LINKS} />
+          <FooterColumn title="The desk" links={DESK_LINKS} />
+          <FooterColumn title="Legal" links={LEGAL_LINKS} />
+        </div>
+
+        <div className="mt-10 border-t border-white/10 pt-6 text-xs leading-relaxed text-slate-500">
+          <p>
+            © {year} {SITE_NAME}. Independent research publication. This site uses cookies for
+            Google Analytics and Google AdSense.{" "}
+            <Link href="/privacy" className="text-slate-300 underline underline-offset-2 hover:text-cyan-300">
+              Privacy Policy
+            </Link>
+            .
+          </p>
+        </div>
       </div>
     </footer>
+  );
+}
+
+function FooterColumn({
+  title,
+  links,
+}: {
+  title: string;
+  links: readonly { href: string; label: string }[];
+}) {
+  return (
+    <div>
+      <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">{title}</p>
+      <ul className="mt-3 space-y-2">
+        {links.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className="text-sm text-slate-300 transition hover:text-cyan-300"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

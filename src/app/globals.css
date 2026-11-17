@@ -24,6 +24,12 @@ html {
   width: 100%;
 }
 
+.prose-content {
+  width: 100%;
+  max-width: none;
+  font-size: 1.0625rem;
+}
+
 .prose-content h2 {
   font-family: var(--font-serif);
   font-size: 1.5rem;
@@ -131,10 +137,18 @@ html {
   margin-top: 0;
 }
 
+.prose-content .table-scroll {
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
 .prose-content table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
   font-size: 0.9rem;
 }
 
@@ -145,6 +159,22 @@ html {
   text-align: left;
   line-height: 1.5;
   color: #475569;
+  vertical-align: top;
+}
+
+.prose-content .table-scroll th,
+.prose-content .table-scroll td {
+  border-top: none;
+  border-left: none;
+}
+
+.prose-content .table-scroll th:last-child,
+.prose-content .table-scroll td:last-child {
+  border-right: none;
+}
+
+.prose-content .table-scroll tr:last-child td {
+  border-bottom: none;
 }
 
 .prose-content th {
@@ -261,6 +291,23 @@ html[data-layout="fullscreen"] main > article {
 
 html[data-layout="fullscreen"] footer {
   display: none;
+}
+
+/* Keep Auto Ads from covering interactive charts; snippet stays in <head>. */
+.site-viz-frame {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+}
+
+.site-viz-frame ins.adsbygoogle,
+.site-viz-frame .google-auto-placed {
+  display: none !important;
+}
+
+body.adsense-thin-page ins.adsbygoogle,
+body.adsense-thin-page .google-auto-placed {
+  display: none !important;
 }
 
 /* Full viewport width with fluid side padding — scales with display size */

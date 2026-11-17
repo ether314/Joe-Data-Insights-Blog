@@ -4977,6 +4977,115 @@ const AutoInsuranceCpiVersusUsedCarAndRepairPrices2026Dashboard = dynamic(
   },
 );
 
+const FederalFirefightingContractAviationHours2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FederalFirefightingContractAviationHours2026Dashboard"
+    ).then((m) => m.FederalFirefightingContractAviationHours2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const BeadAllocationsVersusFccUnservedLocations2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/BeadAllocationsVersusFccUnservedLocations2026Dashboard"
+    ).then(
+      (m) => m.BeadAllocationsVersusFccUnservedLocations2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const MotorVehicleTheftRatesVersusViolentCrimeRates2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/MotorVehicleTheftRatesVersusViolentCrimeRates2026Dashboard"
+    ).then((m) => m.MotorVehicleTheftRatesVersusViolentCrimeRates2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const FirstTimeBuyerShareVersus30YearMortgageRates2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/FirstTimeBuyerShareVersus30YearMortgageRates2026Dashboard"
+    ).then((m) => m.FirstTimeBuyerShareVersus30YearMortgageRates2026Dashboard),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const PitHomelessnessVersusRentalVacancyInLargeCocs2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/PitHomelessnessVersusRentalVacancyInLargeCocs2026Dashboard"
+    ).then(
+      (m) => m.PitHomelessnessVersusRentalVacancyInLargeCocs2026Dashboard,
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-96 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+        <p className="text-sm text-slate-500">Loading interactive charts…</p>
+      </div>
+    ),
+  },
+);
+
+const UsForeignAidObligationsFy1946Fy2025Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/UsForeignAidObligationsFy1946Fy2025Dashboard"
+    ).then((m) => m.UsForeignAidObligationsFy1946Fy2025Dashboard),
+  {
+    ssr: false,
+  },
+);
+
+const WorldCurrencyPegs2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/WorldCurrencyPegs2026Dashboard"
+    ).then((m) => m.WorldCurrencyPegs2026Dashboard),
+  {
+    ssr: false,
+  },
+);
+
+const SummerHeatDeathsInSunBeltMetrosVersusNationalTrend2026Dashboard = dynamic(
+  () =>
+    import(
+      "@/components/visualizations/SummerHeatDeathsInSunBeltMetrosVersusNationalTrend2026Dashboard"
+    ).then((m) => m.SummerHeatDeathsInSunBeltMetrosVersusNationalTrend2026Dashboard),
+  {
+    ssr: false,
+  },
+);
+
 export function PostVisualization({
   type,
   embedded = false,
@@ -6276,6 +6385,38 @@ export function PostVisualization({
 
   if (type === "auto-insurance-cpi-versus-used-car-and-repair-prices-2026") {
     return <AutoInsuranceCpiVersusUsedCarAndRepairPrices2026Dashboard />;
+  }
+
+  if (type === "federal-firefighting-contract-aviation-hours-2026") {
+    return <FederalFirefightingContractAviationHours2026Dashboard />;
+  }
+
+  if (type === "bead-allocations-versus-fcc-unserved-locations-2026") {
+    return <BeadAllocationsVersusFccUnservedLocations2026Dashboard />;
+  }
+
+  if (type === "motor-vehicle-theft-rates-versus-violent-crime-rates-2026") {
+    return <MotorVehicleTheftRatesVersusViolentCrimeRates2026Dashboard />;
+  }
+
+  if (type === "first-time-buyer-share-versus-30-year-mortgage-rates-2026") {
+    return <FirstTimeBuyerShareVersus30YearMortgageRates2026Dashboard />;
+  }
+
+  if (type === "pit-homelessness-versus-rental-vacancy-in-large-cocs-2026") {
+    return <PitHomelessnessVersusRentalVacancyInLargeCocs2026Dashboard />;
+  }
+
+  if (type === "us-foreign-aid-obligations-fy1946-fy2025") {
+    return <UsForeignAidObligationsFy1946Fy2025Dashboard />;
+  }
+
+  if (type === "world-currency-pegs") {
+    return <WorldCurrencyPegs2026Dashboard />;
+  }
+
+  if (type === "summer-heat-deaths-in-sun-belt-metros-versus-national-trend-2026") {
+    return <SummerHeatDeathsInSunBeltMetrosVersusNationalTrend2026Dashboard />;
   }
 
   return null;

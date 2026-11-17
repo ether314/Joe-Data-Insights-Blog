@@ -19,6 +19,7 @@ $ErrorActionPreference = "Stop"
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
 . (Join-Path $RepoRoot "scripts\lib\worker-layout.ps1")
 . (Join-Path $RepoRoot "scripts\lib\hidden-process.ps1")
+. (Join-Path $RepoRoot "scripts\lib\drain-mode.ps1")
 [void](Ensure-BlogAutomationPath)
 
 $LockFile = Join-Path $RepoRoot "artifacts\blog-production-lock.json"
@@ -253,6 +254,10 @@ if ($SpawnAgent) {
             Write-Log "Lock status=paused. SpawnAgent skip (will not resume)."
             return
         }
+        if (Test-BlogDrainOnly -RepoRoot $script:RepoRoot) {
+            Write-Log "Drain-only flag set. SpawnAgent skip (no novel-theme refill)."
+            return
+        }
         $already = Test-IdleRefillAlreadyRunning
         if ($already) {
             Write-Log "Refill already running PID $already. SpawnAgent skip."
@@ -284,6 +289,8 @@ Write-Log "tick lock=$lockStatus pipeline=$pipeline workersUp=$workersUp refillP
 
 if ($lockStatus -eq "paused") {
     $action = "paused"
+} elseif (Test-BlogDrainOnly -RepoRoot $script:RepoRoot) {
+    $action = "drain-only"
 } elseif ($already) {
     $action = "already"
 } elseif (-not (($lockStatus -eq "running") -or ($workersUp -ge 5))) {
@@ -303,6 +310,9 @@ if ($lockStatus -eq "paused") {
 switch ($action) {
     "paused" {
         Write-Log "Lock status=paused (operator stop). Skip. Will not resume."
+    }
+    "drain-only" {
+        Write-Log "Drain-only mode (BLOG_CLAIM_BACKLOG_ONLY / blog-drain-only.flag). Skip novel-theme refill."
     }
     "already" {
         Write-Log "Idle-refill agent already running (PID $already). Skip."
